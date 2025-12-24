@@ -1,0 +1,47 @@
+main:
+  - title: "🏠 Home"
+    url: /
+
+topics:
+  - title: "Fundamentals"
+    children:
+      - title: "Arrays"
+        url: /01_arrays/
+      - title: "Strings"
+        url: /02_strings/
+      - title: "Linked Lists"
+        url: /03_linked_lists/
+      - title: "Stacks"
+        url: /04_stacks/
+      - title: "Queues"
+        url: /05_queues/
+      - title: "Hash Tables"
+        url: /06_hash_tables/
+        
+  - title: "Intermediate"
+    children:
+      - title: "Trees"
+        url: /07_trees/
+      - title: "BST"
+        url: /08_binary_search_trees/
+      - title: "Heaps"
+        url: /09_heaps/
+      - title: "Graphs"
+        url: /10_graphs/
+      - title: "Tries"
+        url: /11_tries/
+        
+  - title: "Algorithms"
+    children:
+      - title: "Sorting"
+        url: /14_sorting/
+      - title: "Searching"
+        url: /15_searching/
+      - title: "Recursion"
+        url: /16_recursion/
+      - title: "Backtracking"
+        url: /17_backtracking/
+      - title: "Dynamic Programming"
+        url: /18_dynamic_programming/
+      - title: "Greedy"
+        url: /19_greedy_algorithms/

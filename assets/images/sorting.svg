@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280">
+  <defs>
+    <linearGradient id="unsortGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ee5a5a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="sortGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="280" fill="#1a1a2e" rx="10"/>
+  
+  <!-- Title -->
+  <text x="300" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle">Sorting Algorithms Visualization</text>
+  
+  <!-- Unsorted array -->
+  <g transform="translate(50, 60)">
+    <text x="0" y="-10" font-family="Arial" font-size="14" fill="#ff6b6b">Unsorted Array</text>
+    
+    <rect x="0" y="0" width="30" height="80" fill="url(#unsortGrad)" rx="3"/>
+    <text x="15" y="100" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">64</text>
+    
+    <rect x="40" y="0" width="30" height="45" fill="url(#unsortGrad)" rx="3"/>
+    <text x="55" y="100" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">34</text>
+    
+    <rect x="80" y="0" width="30" height="30" fill="url(#unsortGrad)" rx="3"/>
+    <text x="95" y="100" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">25</text>
+    
+    <rect x="120" y="0" width="30" height="20" fill="url(#unsortGrad)" rx="3"/>
+    <text x="135" y="100" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">12</text>
+    
+    <rect x="160" y="0" width="30" height="35" fill="url(#unsortGrad)" rx="3"/>
+    <text x="175" y="100" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">22</text>
+    
+    <rect x="200" y="0" width="30" height="15" fill="url(#unsortGrad)" rx="3"/>
+    <text x="215" y="100" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">11</text>
+    
+    <rect x="240" y="0" width="30" height="90" fill="url(#unsortGrad)" rx="3"/>
+    <text x="255" y="100" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">90</text>
+  </g>
+  
+  <!-- Arrow -->
+  <g transform="translate(320, 100)">
+    <text x="0" y="-15" font-family="Arial" font-size="12" fill="#ffd93d" text-anchor="middle">Sort</text>
+    <line x1="-20" y1="0" x2="20" y2="0" stroke="#ffd93d" stroke-width="3"/>
+    <polygon points="25,0 15,-5 15,5" fill="#ffd93d"/>
+  </g>
+  
+  <!-- Sorted array -->
+  <g transform="translate(370, 60)">
+    <text x="0" y="-10" font-family="Arial" font-size="14" fill="#43e97b">Sorted Array</text>
+    
+    <rect x="0" y="0" width="30" height="15" fill="url(#sortGrad)" rx="3"/>
+    <text x="15" y="100" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">11</text>
+    
+    <rect x="40" y="0" width="30" height="20" fill="url(#sortGrad)" rx="3"/>
+    <text x="55" y="100" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">12</text>
+    
+    <rect x="80" y="0" width="30" height="35" fill="url(#sortGrad)" rx="3"/>
+    <text x="95" y="100" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">22</text>
+    
+    <rect x="120" y="0" width="30" height="30" fill="url(#sortGrad)" rx="3"/>
+    <text x="135" y="100" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">25</text>
+    
+    <rect x="160" y="0" width="30" height="45" fill="url(#sortGrad)" rx="3"/>
+    <text x="175" y="100" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">34</text>
+    
+    <rect x="200" y="0" width="30" height="80" fill="url(#sortGrad)" rx="3"/>
+    <text x="215" y="100" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">64</text>
+  </g>
+  
+  <!-- Comparison table -->
+  <g transform="translate(50, 190)">
+    <text x="0" y="0" font-family="Arial" font-size="13" fill="#888">Algorithm Comparison:</text>
+    
+    <rect x="0" y="15" width="125" height="60" fill="#1e3a5f" rx="5"/>
+    <text x="62" y="35" font-family="Arial" font-size="11" fill="#4facfe" text-anchor="middle">Quick Sort</text>
+    <text x="62" y="50" font-family="monospace" font-size="10" fill="#43e97b" text-anchor="middle">O(n log n) avg</text>
+    <text x="62" y="65" font-family="monospace" font-size="10" fill="#ff6b6b" text-anchor="middle">O(n²) worst</text>
+    
+    <rect x="140" y="15" width="125" height="60" fill="#1e3a5f" rx="5"/>
+    <text x="202" y="35" font-family="Arial" font-size="11" fill="#4facfe" text-anchor="middle">Merge Sort</text>
+    <text x="202" y="50" font-family="monospace" font-size="10" fill="#43e97b" text-anchor="middle">O(n log n)</text>
+    <text x="202" y="65" font-family="monospace" font-size="10" fill="#ffd93d" text-anchor="middle">Stable, O(n) space</text>
+    
+    <rect x="280" y="15" width="125" height="60" fill="#1e3a5f" rx="5"/>
+    <text x="342" y="35" font-family="Arial" font-size="11" fill="#4facfe" text-anchor="middle">Heap Sort</text>
+    <text x="342" y="50" font-family="monospace" font-size="10" fill="#43e97b" text-anchor="middle">O(n log n)</text>
+    <text x="342" y="65" font-family="monospace" font-size="10" fill="#ffd93d" text-anchor="middle">In-place, O(1)</text>
+    
+    <rect x="420" y="15" width="125" height="60" fill="#1e3a5f" rx="5"/>
+    <text x="482" y="35" font-family="Arial" font-size="11" fill="#4facfe" text-anchor="middle">Counting Sort</text>
+    <text x="482" y="50" font-family="monospace" font-size="10" fill="#43e97b" text-anchor="middle">O(n + k)</text>
+    <text x="482" y="65" font-family="monospace" font-size="10" fill="#ffd93d" text-anchor="middle">Non-comparison</text>
+  </g>
+</svg>
+

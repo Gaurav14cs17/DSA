@@ -1,0 +1,319 @@
+<!-- Custom CSS for DSA Mastery Blog by Gaurav Goswami -->
+<style>
+  /* ========================================
+     Custom Color Scheme - Cyber Gradient
+     ======================================== */
+  :root {
+    --primary-color: #00d4ff;
+    --secondary-color: #7928ca;
+    --accent-color: #ff0080;
+    --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --text-glow: 0 0 10px rgba(0, 212, 255, 0.5);
+  }
+
+  /* ========================================
+     Smooth Animations
+     ======================================== */
+  
+  /* Fade in animation for page load */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Gradient text animation */
+  @keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Pulse animation for badges */
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  /* Glow animation */
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 5px var(--primary-color); }
+    50% { box-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--secondary-color); }
+  }
+
+  /* Float animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* ========================================
+     Main Content Styling
+     ======================================== */
+  
+  /* Animate main content on load */
+  .main-content {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  /* Animated gradient text for headers */
+  h1, .gradient-text {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color), var(--primary-color));
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientFlow 4s ease infinite;
+  }
+
+  /* ========================================
+     Enhanced Code Blocks
+     ======================================== */
+  
+  .highlight, pre {
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+  }
+
+  /* ========================================
+     Table Enhancements
+     ======================================== */
+  
+  table {
+    border-radius: 12px;
+    overflow: hidden;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  th {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.85em;
+  }
+
+  tr {
+    transition: all 0.3s ease;
+  }
+
+  tr:hover {
+    background: var(--card-bg);
+    transform: scale(1.01);
+  }
+
+  /* ========================================
+     Card & Link Hover Effects
+     ======================================== */
+  
+  a {
+    transition: all 0.3s ease;
+  }
+
+  a:hover {
+    text-shadow: var(--text-glow);
+  }
+
+  /* Details/Summary styling */
+  details {
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  details:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 20px rgba(0, 212, 255, 0.1);
+  }
+
+  details[open] {
+    animation: fadeInUp 0.3s ease-out;
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  summary:hover {
+    background: rgba(0, 212, 255, 0.1);
+  }
+
+  /* ========================================
+     Badge Animations
+     ======================================== */
+  
+  img[src*="shields.io"] {
+    transition: all 0.3s ease;
+  }
+
+  img[src*="shields.io"]:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.2);
+  }
+
+  /* ========================================
+     Button Enhancements
+     ======================================== */
+  
+  .btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .btn:hover::before {
+    left: 100%;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.3);
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+  }
+
+  /* ========================================
+     Scroll Behavior & Scrollbar
+     ======================================== */
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #1a1a2e;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--primary-color), var(--secondary-color));
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(var(--accent-color), var(--primary-color));
+  }
+
+  /* ========================================
+     Navigation Enhancements
+     ======================================== */
+  
+  .nav-list-item {
+    transition: all 0.3s ease;
+  }
+
+  .nav-list-item:hover {
+    transform: translateX(5px);
+  }
+
+  /* ========================================
+     Mermaid Diagram Styling
+     ======================================== */
+  
+  .mermaid {
+    background: transparent !important;
+  }
+
+  /* ========================================
+     Footer Styling
+     ======================================== */
+  
+  .site-footer {
+    border-top: 1px solid rgba(0, 212, 255, 0.2);
+    background: linear-gradient(180deg, transparent, rgba(0, 212, 255, 0.05));
+  }
+
+  /* ========================================
+     Responsive Animations (reduce motion)
+     ======================================== */
+  
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* ========================================
+     Mobile Optimizations
+     ======================================== */
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+    
+    table {
+      font-size: 0.85em;
+    }
+    
+    details {
+      padding: 0.75rem;
+    }
+  }
+</style>
+
+<!-- Google Fonts - JetBrains Mono for code, Plus Jakarta Sans for text -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font override -->
+<style>
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  code, pre, .highlight {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+</style>
+
+<!-- Meta for author -->
+<meta name="author" content="Gaurav Goswami">
+<meta name="github" content="Gaurav14cs17">

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350">
+  <!-- Background -->
+  <rect width="600" height="350" fill="#0d1117" rx="10"/>
+  
+  <!-- Title -->
+  <text x="300" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle">Time Complexity Comparison</text>
+  
+  <!-- Grid -->
+  <g transform="translate(80, 50)">
+    <!-- Axes -->
+    <line x1="0" y1="220" x2="450" y2="220" stroke="#30363d" stroke-width="2"/>
+    <line x1="0" y1="0" x2="0" y2="220" stroke="#30363d" stroke-width="2"/>
+    
+    <!-- Y-axis label -->
+    <text x="-40" y="110" font-family="Arial" font-size="12" fill="#888" transform="rotate(-90, -40, 110)">Operations</text>
+    
+    <!-- X-axis label -->
+    <text x="225" y="250" font-family="Arial" font-size="12" fill="#888" text-anchor="middle">Input Size (n)</text>
+    
+    <!-- Grid lines -->
+    <line x1="0" y1="55" x2="450" y2="55" stroke="#21262d" stroke-width="1"/>
+    <line x1="0" y1="110" x2="450" y2="110" stroke="#21262d" stroke-width="1"/>
+    <line x1="0" y1="165" x2="450" y2="165" stroke="#21262d" stroke-width="1"/>
+    
+    <!-- O(1) - Constant -->
+    <line x1="0" y1="200" x2="400" y2="200" stroke="#43e97b" stroke-width="3"/>
+    <text x="410" y="205" font-family="monospace" font-size="11" fill="#43e97b">O(1)</text>
+    
+    <!-- O(log n) -->
+    <path d="M 0 200 Q 100 180 200 160 T 400 140" stroke="#00c6fb" stroke-width="3" fill="none"/>
+    <text x="410" y="145" font-family="monospace" font-size="11" fill="#00c6fb">O(log n)</text>
+    
+    <!-- O(n) - Linear -->
+    <line x1="0" y1="200" x2="400" y2="80" stroke="#ffd93d" stroke-width="3"/>
+    <text x="410" y="85" font-family="monospace" font-size="11" fill="#ffd93d">O(n)</text>
+    
+    <!-- O(n log n) -->
+    <path d="M 0 200 Q 150 120 300 60 T 400 30" stroke="#f093fb" stroke-width="3" fill="none"/>
+    <text x="410" y="35" font-family="monospace" font-size="11" fill="#f093fb">O(n log n)</text>
+    
+    <!-- O(n²) - Quadratic -->
+    <path d="M 0 200 Q 100 180 200 100 T 300 10" stroke="#ff6b6b" stroke-width="3" fill="none"/>
+    <text x="310" y="15" font-family="monospace" font-size="11" fill="#ff6b6b">O(n²)</text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(80, 290)">
+    <rect x="0" y="0" width="15" height="15" fill="#43e97b" rx="2"/>
+    <text x="22" y="12" font-family="Arial" font-size="11" fill="#888">Excellent</text>
+    
+    <rect x="90" y="0" width="15" height="15" fill="#00c6fb" rx="2"/>
+    <text x="112" y="12" font-family="Arial" font-size="11" fill="#888">Good</text>
+    
+    <rect x="165" y="0" width="15" height="15" fill="#ffd93d" rx="2"/>
+    <text x="187" y="12" font-family="Arial" font-size="11" fill="#888">Fair</text>
+    
+    <rect x="230" y="0" width="15" height="15" fill="#f093fb" rx="2"/>
+    <text x="252" y="12" font-family="Arial" font-size="11" fill="#888">Acceptable</text>
+    
+    <rect x="330" y="0" width="15" height="15" fill="#ff6b6b" rx="2"/>
+    <text x="352" y="12" font-family="Arial" font-size="11" fill="#888">Poor</text>
+  </g>
+</svg>
+

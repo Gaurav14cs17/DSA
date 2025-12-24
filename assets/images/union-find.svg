@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250">
+  <defs>
+    <linearGradient id="setAGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="setBGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="250" fill="#1a1a2e" rx="10"/>
+  
+  <!-- Title -->
+  <text x="300" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle">Union-Find (Disjoint Set)</text>
+  
+  <!-- Before Union -->
+  <g transform="translate(50, 60)">
+    <text x="90" y="0" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">Before Union</text>
+    
+    <!-- Set A -->
+    <ellipse cx="60" cy="80" rx="60" ry="70" fill="none" stroke="#667eea" stroke-width="2" stroke-dasharray="5,3"/>
+    <circle cx="60" cy="50" r="18" fill="url(#setAGrad)"/>
+    <text x="60" y="56" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle">1</text>
+    <circle cx="35" cy="100" r="15" fill="url(#setAGrad)" opacity="0.8"/>
+    <text x="35" y="105" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">2</text>
+    <circle cx="85" cy="100" r="15" fill="url(#setAGrad)" opacity="0.8"/>
+    <text x="85" y="105" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">3</text>
+    <line x1="60" y1="68" x2="35" y2="85" stroke="#667eea" stroke-width="2"/>
+    <line x1="60" y1="68" x2="85" y2="85" stroke="#667eea" stroke-width="2"/>
+    <text x="60" y="160" font-family="Arial" font-size="11" fill="#667eea" text-anchor="middle">Set A</text>
+    
+    <!-- Set B -->
+    <ellipse cx="180" cy="80" rx="45" ry="60" fill="none" stroke="#43e97b" stroke-width="2" stroke-dasharray="5,3"/>
+    <circle cx="180" cy="55" r="18" fill="url(#setBGrad)"/>
+    <text x="180" y="61" font-family="Arial" font-size="14" fill="#1a1a2e" text-anchor="middle">4</text>
+    <circle cx="180" cy="105" r="15" fill="url(#setBGrad)" opacity="0.8"/>
+    <text x="180" y="110" font-family="Arial" font-size="12" fill="#1a1a2e" text-anchor="middle">5</text>
+    <line x1="180" y1="73" x2="180" y2="90" stroke="#43e97b" stroke-width="2"/>
+    <text x="180" y="160" font-family="Arial" font-size="11" fill="#43e97b" text-anchor="middle">Set B</text>
+  </g>
+  
+  <!-- Arrow -->
+  <g transform="translate(290, 120)">
+    <text x="0" y="-15" font-family="Arial" font-size="12" fill="#ffd93d" text-anchor="middle">Union(3, 4)</text>
+    <line x1="-30" y1="0" x2="30" y2="0" stroke="#ffd93d" stroke-width="3"/>
+    <polygon points="35,0 25,-5 25,5" fill="#ffd93d"/>
+  </g>
+  
+  <!-- After Union -->
+  <g transform="translate(350, 60)">
+    <text x="110" y="0" font-family="Arial" font-size="14" fill="#888" text-anchor="middle">After Union</text>
+    
+    <!-- Combined Set -->
+    <ellipse cx="110" cy="85" rx="100" ry="75" fill="none" stroke="#4facfe" stroke-width="2"/>
+    
+    <!-- Original root 1 as new root -->
+    <circle cx="110" cy="45" r="20" fill="url(#setAGrad)"/>
+    <text x="110" y="51" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle">1</text>
+    
+    <!-- Level 1 -->
+    <circle cx="60" cy="100" r="16" fill="url(#setAGrad)" opacity="0.8"/>
+    <text x="60" y="105" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">2</text>
+    
+    <circle cx="110" cy="100" r="16" fill="url(#setAGrad)" opacity="0.8"/>
+    <text x="110" y="105" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">3</text>
+    
+    <circle cx="160" cy="100" r="16" fill="url(#setBGrad)" opacity="0.8"/>
+    <text x="160" y="105" font-family="Arial" font-size="12" fill="#1a1a2e" text-anchor="middle">4</text>
+    
+    <!-- Level 2 -->
+    <circle cx="160" cy="145" r="14" fill="url(#setBGrad)" opacity="0.7"/>
+    <text x="160" y="150" font-family="Arial" font-size="11" fill="#1a1a2e" text-anchor="middle">5</text>
+    
+    <!-- Edges -->
+    <line x1="110" y1="65" x2="60" y2="84" stroke="#667eea" stroke-width="2"/>
+    <line x1="110" y1="65" x2="110" y2="84" stroke="#667eea" stroke-width="2"/>
+    <line x1="110" y1="65" x2="160" y2="84" stroke="#43e97b" stroke-width="2"/>
+    <line x1="160" y1="116" x2="160" y2="131" stroke="#43e97b" stroke-width="2"/>
+    
+    <text x="110" y="175" font-family="Arial" font-size="11" fill="#4facfe" text-anchor="middle">Merged Set</text>
+  </g>
+  
+  <!-- Complexity -->
+  <g transform="translate(50, 220)">
+    <text x="0" y="0" font-family="Arial" font-size="12" fill="#888">With Path Compression + Union by Rank:</text>
+    <text x="280" y="0" font-family="monospace" font-size="12" fill="#43e97b">O(α(n)) ≈ O(1)</text>
+  </g>
+</svg>
+

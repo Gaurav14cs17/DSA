@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<article>
+  <header>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="fs-6 text-grey-dk-000">{{ page.description }}</p>
+    {% endif %}
+  </header>
+  
+  {{ content }}
+  
+  {% if page.nav_order %}
+  <nav class="mt-8 pt-4 border-top">
+    <div class="d-flex justify-content-between">
+      {% if page.prev_url %}
+      <a href="{{ page.prev_url | relative_url }}" class="btn btn-outline">
+        ← {{ page.prev_title | default: "Previous" }}
+      </a>
+      {% else %}
+      <span></span>
+      {% endif %}
+      
+      {% if page.next_url %}
+      <a href="{{ page.next_url | relative_url }}" class="btn btn-primary">
+        {{ page.next_title | default: "Next" }} →
+      </a>
+      {% endif %}
+    </div>
+  </nav>
+  {% endif %}
+</article>

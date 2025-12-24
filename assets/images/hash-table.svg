@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 280">
+  <defs>
+    <linearGradient id="hashGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="550" height="280" fill="#1a1a2e" rx="10"/>
+  
+  <!-- Title -->
+  <text x="275" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle">Hash Table</text>
+  
+  <!-- Hash Function -->
+  <g transform="translate(30, 60)">
+    <text x="0" y="15" font-family="Arial" font-size="14" fill="#fff">Key</text>
+    <rect x="40" y="0" width="80" height="30" fill="#2d4059" rx="5"/>
+    <text x="80" y="20" font-family="monospace" font-size="12" fill="#4facfe" text-anchor="middle">"apple"</text>
+    
+    <!-- Arrow to hash function -->
+    <line x1="125" y1="15" x2="160" y2="15" stroke="#888" stroke-width="2"/>
+    <polygon points="165,15 155,10 155,20" fill="#888"/>
+    
+    <!-- Hash function box -->
+    <rect x="170" y="-5" width="90" height="40" fill="url(#hashGrad)" rx="8"/>
+    <text x="215" y="20" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">hash(key)</text>
+    
+    <!-- Arrow to index -->
+    <line x1="265" y1="15" x2="300" y2="15" stroke="#888" stroke-width="2"/>
+    <polygon points="305,15 295,10 295,20" fill="#888"/>
+    
+    <text x="315" y="20" font-family="monospace" font-size="14" fill="#43e97b">= 3</text>
+  </g>
+  
+  <!-- Hash Table Array -->
+  <g transform="translate(380, 60)">
+    <text x="60" y="-5" font-family="Arial" font-size="12" fill="#888" text-anchor="middle">Buckets</text>
+    
+    <!-- Bucket 0 -->
+    <rect x="0" y="10" width="30" height="30" fill="#2d4059" rx="3" stroke="#4facfe" stroke-width="1"/>
+    <text x="15" y="30" font-family="monospace" font-size="12" fill="#666" text-anchor="middle">0</text>
+    <rect x="35" y="10" width="100" height="30" fill="#333" rx="3"/>
+    <text x="85" y="30" font-family="monospace" font-size="11" fill="#666" text-anchor="middle">empty</text>
+    
+    <!-- Bucket 1 -->
+    <rect x="0" y="45" width="30" height="30" fill="#2d4059" rx="3" stroke="#4facfe" stroke-width="1"/>
+    <text x="15" y="65" font-family="monospace" font-size="12" fill="#666" text-anchor="middle">1</text>
+    <rect x="35" y="45" width="100" height="30" fill="#1e4d3d" rx="3"/>
+    <text x="85" y="65" font-family="monospace" font-size="10" fill="#43e97b" text-anchor="middle">"banana":5</text>
+    
+    <!-- Bucket 2 -->
+    <rect x="0" y="80" width="30" height="30" fill="#2d4059" rx="3" stroke="#4facfe" stroke-width="1"/>
+    <text x="15" y="100" font-family="monospace" font-size="12" fill="#666" text-anchor="middle">2</text>
+    <rect x="35" y="80" width="100" height="30" fill="#333" rx="3"/>
+    <text x="85" y="100" font-family="monospace" font-size="11" fill="#666" text-anchor="middle">empty</text>
+    
+    <!-- Bucket 3 (highlighted) -->
+    <rect x="0" y="115" width="30" height="30" fill="#43e97b" rx="3"/>
+    <text x="15" y="135" font-family="monospace" font-size="12" fill="#1a1a2e" text-anchor="middle">3</text>
+    <rect x="35" y="115" width="100" height="30" fill="#43e97b" rx="3"/>
+    <text x="85" y="135" font-family="monospace" font-size="10" fill="#1a1a2e" text-anchor="middle">"apple":10</text>
+    <text x="-20" y="135" font-family="Arial" font-size="10" fill="#43e97b">→</text>
+    
+    <!-- Bucket 4 -->
+    <rect x="0" y="150" width="30" height="30" fill="#2d4059" rx="3" stroke="#4facfe" stroke-width="1"/>
+    <text x="15" y="170" font-family="monospace" font-size="12" fill="#666" text-anchor="middle">4</text>
+    <rect x="35" y="150" width="100" height="30" fill="#1e4d3d" rx="3"/>
+    <text x="85" y="170" font-family="monospace" font-size="10" fill="#43e97b" text-anchor="middle">"cherry":3</text>
+  </g>
+  
+  <!-- Complexity -->
+  <g transform="translate(30, 240)">
+    <rect x="0" y="0" width="150" height="30" fill="#1e3a5f" rx="5"/>
+    <text x="75" y="20" font-family="monospace" font-size="12" fill="#43e97b" text-anchor="middle">Insert: O(1) avg</text>
+    
+    <rect x="165" y="0" width="150" height="30" fill="#1e3a5f" rx="5"/>
+    <text x="240" y="20" font-family="monospace" font-size="12" fill="#43e97b" text-anchor="middle">Lookup: O(1) avg</text>
+    
+    <rect x="330" y="0" width="150" height="30" fill="#1e3a5f" rx="5"/>
+    <text x="405" y="20" font-family="monospace" font-size="12" fill="#43e97b" text-anchor="middle">Delete: O(1) avg</text>
+  </g>
+</svg>
+
