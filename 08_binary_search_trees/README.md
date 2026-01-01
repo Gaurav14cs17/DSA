@@ -10,6 +10,8 @@ permalink: /08_binary_search_trees/
 
 # 🔍 Binary Search Trees
 
+![BST Overview](./images/bst-overview.svg)
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Subtopics-3-blue?style=for-the-badge" alt="Subtopics">

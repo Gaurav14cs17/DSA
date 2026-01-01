@@ -10,7 +10,7 @@ permalink: /06_hash_tables/
 
 # #️⃣ Hash Tables
 
-![Hash Tables](../assets/images/hash-table.svg)
+![Hash Tables Overview](./images/hash-table-overview.svg)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-green?style=for-the-badge" alt="Difficulty">

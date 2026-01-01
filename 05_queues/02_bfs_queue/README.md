@@ -27,6 +27,20 @@ permalink: /05_queues/02_bfs_queue/
 
 ---
 
+## 🎨 Visual Diagrams
+
+<div align="center">
+
+### BFS Graph Traversal
+![BFS Graph Traversal](./image/bfs_graph_traversal.svg)
+
+### Level Order Tree Traversal
+![Level Order Tree](./image/level_order_tree.svg)
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ BFS Correctness for Shortest Path

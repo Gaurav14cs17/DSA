@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Hash Tables Overview</text>
+  <text x="450" y="65" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Key-Value Storage with O(1) Average Access</text>
+  
+  <!-- Hash Function -->
+  <text x="50" y="110" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">HASH FUNCTION</text>
+  
+  <g transform="translate(50, 130)">
+    <!-- Key -->
+    <rect x="0" y="0" width="80" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="40" y="25" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">"key"</text>
+    
+    <!-- Arrow to hash -->
+    <line x1="85" y1="20" x2="115" y2="20" stroke="#3b82f6" stroke-width="2"/>
+    
+    <!-- Hash function box -->
+    <rect x="120" y="0" width="100" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="170" y="25" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">h(key)</text>
+    
+    <!-- Arrow to index -->
+    <line x1="225" y1="20" x2="255" y2="20" stroke="#f97316" stroke-width="2"/>
+    
+    <!-- Index -->
+    <rect x="260" y="0" width="60" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="290" y="25" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">3</text>
+    
+    <text x="260" y="60" fill="#888888" font-size="11" font-family="Courier New, monospace">index = hash % size</text>
+  </g>
+  
+  <!-- Hash Table Structure -->
+  <text x="450" y="110" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">HASH TABLE STRUCTURE</text>
+  
+  <g transform="translate(450, 130)">
+    <!-- Buckets -->
+    <text x="-30" y="20" fill="#888888" font-size="11" font-family="Courier New, monospace">0</text>
+    <rect x="0" y="0" width="100" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="50" y="23" text-anchor="middle" fill="#888888" font-size="12" font-family="Courier New, monospace">null</text>
+    
+    <text x="-30" y="55" fill="#888888" font-size="11" font-family="Courier New, monospace">1</text>
+    <rect x="0" y="40" width="100" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="50" y="63" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">"cat"→5</text>
+    
+    <text x="-30" y="95" fill="#888888" font-size="11" font-family="Courier New, monospace">2</text>
+    <rect x="0" y="80" width="100" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="50" y="103" text-anchor="middle" fill="#888888" font-size="12" font-family="Courier New, monospace">null</text>
+    
+    <text x="-30" y="135" fill="#f97316" font-size="11" font-family="Courier New, monospace">3</text>
+    <rect x="0" y="120" width="100" height="35" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="50" y="143" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">"dog"→8</text>
+    
+    <!-- Collision chain -->
+    <line x1="100" y1="137" x2="130" y2="137" stroke="#f97316" stroke-width="2"/>
+    <rect x="130" y="120" width="100" height="35" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="180" y="143" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">"bat"→2</text>
+    <text x="180" y="170" text-anchor="middle" fill="#a78bfa" font-size="10" font-family="Courier New, monospace">collision chain</text>
+    
+    <text x="-30" y="175" fill="#888888" font-size="11" font-family="Courier New, monospace">4</text>
+    <rect x="0" y="160" width="100" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="50" y="183" text-anchor="middle" fill="#888888" font-size="12" font-family="Courier New, monospace">null</text>
+  </g>
+  
+  <!-- Two Sum Pattern -->
+  <text x="50" y="300" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">TWO SUM PATTERN</text>
+  
+  <g transform="translate(50, 320)">
+    <text x="0" y="15" fill="#888888" font-size="11" font-family="Courier New, monospace">arr = [2, 7, 11, 15], target = 9</text>
+    
+    <!-- HashMap visualization -->
+    <text x="0" y="45" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">map = {</text>
+    <text x="60" y="45" fill="#ffffff" font-size="11" font-family="Courier New, monospace">2: 0</text>
+    <text x="100" y="45" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">}</text>
+    
+    <text x="0" y="70" fill="#888888" font-size="11" font-family="Courier New, monospace">Check: 9 - 7 = 2 ∈ map?</text>
+    <text x="180" y="70" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">YES!</text>
+    
+    <text x="0" y="100" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">Result: [0, 1]</text>
+  </g>
+  
+  <!-- Frequency Counting -->
+  <text x="350" y="300" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">FREQUENCY COUNTING</text>
+  
+  <g transform="translate(350, 320)">
+    <text x="0" y="15" fill="#888888" font-size="11" font-family="Courier New, monospace">str = "aabbcc"</text>
+    
+    <rect x="0" y="30" width="180" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="90" y="50" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">Frequency Map</text>
+    <line x1="0" y1="58" x2="180" y2="58" stroke="#3b82f6" stroke-width="1"/>
+    <text x="20" y="78" fill="#ffffff" font-size="12" font-family="Courier New, monospace">'a' → 2</text>
+    <text x="90" y="78" fill="#ffffff" font-size="12" font-family="Courier New, monospace">'b' → 2</text>
+    <text x="20" y="98" fill="#ffffff" font-size="12" font-family="Courier New, monospace">'c' → 2</text>
+  </g>
+  
+  <!-- Set Operations -->
+  <text x="600" y="300" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">SET OPERATIONS</text>
+  
+  <g transform="translate(600, 320)">
+    <!-- Set A -->
+    <circle cx="60" cy="50" r="45" fill="none" stroke="#3b82f6" stroke-width="2"/>
+    <text x="40" y="40" fill="#ffffff" font-size="12" font-family="Courier New, monospace">1</text>
+    <text x="40" y="60" fill="#ffffff" font-size="12" font-family="Courier New, monospace">2</text>
+    <text x="30" y="10" fill="#3b82f6" font-size="10" font-family="Courier New, monospace">Set A</text>
+    
+    <!-- Set B -->
+    <circle cx="110" cy="50" r="45" fill="none" stroke="#4ade80" stroke-width="2"/>
+    <text x="120" y="40" fill="#ffffff" font-size="12" font-family="Courier New, monospace">3</text>
+    <text x="120" y="60" fill="#ffffff" font-size="12" font-family="Courier New, monospace">4</text>
+    <text x="130" y="10" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Set B</text>
+    
+    <!-- Intersection -->
+    <text x="80" y="55" fill="#f97316" font-size="12" font-weight="bold" font-family="Courier New, monospace">2</text>
+  </g>
+  
+  <!-- Time Complexity -->
+  <text x="50" y="460" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">TIME COMPLEXITY</text>
+  <g transform="translate(50, 480)">
+    <rect x="0" y="0" width="220" height="90" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="110" y="20" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">Average / Worst</text>
+    <line x1="0" y1="28" x2="220" y2="28" stroke="#3b82f6" stroke-width="1"/>
+    <text x="15" y="48" fill="#888888" font-size="11" font-family="Courier New, monospace">Insert</text>
+    <text x="130" y="48" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">O(1)</text>
+    <text x="180" y="48" fill="#f97316" font-size="11" font-weight="bold" font-family="Courier New, monospace">O(n)</text>
+    <text x="15" y="68" fill="#888888" font-size="11" font-family="Courier New, monospace">Search</text>
+    <text x="130" y="68" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">O(1)</text>
+    <text x="180" y="68" fill="#f97316" font-size="11" font-weight="bold" font-family="Courier New, monospace">O(n)</text>
+    <text x="15" y="88" fill="#888888" font-size="11" font-family="Courier New, monospace">Delete</text>
+    <text x="130" y="88" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">O(1)</text>
+    <text x="180" y="88" fill="#f97316" font-size="11" font-weight="bold" font-family="Courier New, monospace">O(n)</text>
+  </g>
+  
+  <!-- Key Patterns -->
+  <text x="320" y="460" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">KEY PATTERNS</text>
+  <g transform="translate(320, 480)">
+    <rect x="0" y="0" width="150" height="35" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="75" y="23" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="Courier New, monospace">Two Sum</text>
+    
+    <rect x="160" y="0" width="150" height="35" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="235" y="23" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="Courier New, monospace">Frequency Count</text>
+    
+    <rect x="320" y="0" width="150" height="35" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="395" y="23" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="Courier New, monospace">Set Operations</text>
+  </g>
+  
+  <!-- Subtopics -->
+  <text x="50" y="570" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">SUBTOPICS</text>
+  <g transform="translate(150, 555)">
+    <text x="0" y="15" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">01. Frequency Counting</text>
+    <text x="220" y="15" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">02. Two Sum Pattern</text>
+    <text x="420" y="15" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">03. Set Operations</text>
+  </g>
+</svg>
+

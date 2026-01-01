@@ -27,6 +27,23 @@ permalink: /05_queues/01_basic_queue/
 
 ---
 
+## 🎨 Visual Diagrams
+
+<div align="center">
+
+### Queue Operations
+![Queue Operations](./image/queue_operations.svg)
+
+### Circular Queue
+![Circular Queue](./image/circular_queue.svg)
+
+### Queue Using Two Stacks
+![Queue Two Stacks](./image/queue_two_stacks.svg)
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ FIFO Property
