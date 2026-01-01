@@ -10,6 +10,8 @@ permalink: /36_randomized_algorithms/
 
 # 🎲 Randomized Algorithms
 
+![Randomized Algorithms Overview](./images/randomized-overview.svg)
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Subtopics-5-blue?style=for-the-badge" alt="Subtopics">
@@ -29,6 +31,16 @@ permalink: /36_randomized_algorithms/
 | ⬅️ Previous | 📂 Current | ➡️ Next |
 |:------------|:----------:|--------:|
 | [← Persistent DS](../35_persistent_ds/README.md) | **Randomized Algorithms** | [Interval Trees →](../37_interval_trees/README.md) |
+
+---
+
+## 🎨 Visual Overview
+
+<div align="center">
+
+![Randomized Algorithms](./images/randomized-algorithms.svg)
+
+</div>
 
 ---
 

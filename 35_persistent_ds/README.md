@@ -10,6 +10,8 @@ permalink: /35_persistent_ds/
 
 # 💾 Persistent Data Structures
 
+![Persistent DS Overview](./images/persistent-overview.svg)
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Subtopics-2-blue?style=for-the-badge" alt="Subtopics">
@@ -29,6 +31,16 @@ permalink: /35_persistent_ds/
 | ⬅️ Previous | 📂 Current | ➡️ Next |
 |:------------|:----------:|--------:|
 | [← Sqrt Decomposition](../34_sqrt_decomposition/README.md) | **Persistent DS** | [Randomized Algorithms →](../36_randomized_algorithms/README.md) |
+
+---
+
+## 🎨 Visual Overview
+
+<div align="center">
+
+![Persistent Data Structures](./images/persistent-ds.svg)
+
+</div>
 
 ---
 

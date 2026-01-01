@@ -10,6 +10,8 @@ permalink: /33_matrix_exponentiation/
 
 # 🔢 Matrix Exponentiation
 
+![Matrix Exponentiation Overview](./images/matrix-exp-overview.svg)
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Subtopics-2-blue?style=for-the-badge" alt="Subtopics">
