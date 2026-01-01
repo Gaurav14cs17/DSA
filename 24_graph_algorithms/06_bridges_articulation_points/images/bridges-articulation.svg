@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 620">
+  <rect width="950" height="620" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Bridges &amp; Articulation Points</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Critical edges and vertices whose removal disconnects the graph</text>
+  
+  <!-- Graph Section -->
+  <text x="50" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">UNDIRECTED GRAPH</text>
+  
+  <!-- Nodes -->
+  <!-- Node 0 -->
+  <circle cx="100" cy="200" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="3"/>
+  <text x="100" y="205" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">0</text>
+  
+  <!-- Node 1 - Articulation Point -->
+  <circle cx="200" cy="200" r="25" fill="#3d1f0f" stroke="#f97316" stroke-width="4"/>
+  <text x="200" y="205" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="200" y="160" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">Art. Point</text>
+  
+  <!-- Node 2 -->
+  <circle cx="150" cy="290" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="3"/>
+  <text x="150" y="295" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+  
+  <!-- Node 3 - Articulation Point -->
+  <circle cx="300" cy="200" r="25" fill="#3d1f0f" stroke="#f97316" stroke-width="4"/>
+  <text x="300" y="205" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="300" y="160" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">Art. Point</text>
+  
+  <!-- Node 4 -->
+  <circle cx="400" cy="200" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="3"/>
+  <text x="400" y="205" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+  
+  <!-- Node 5 -->
+  <circle cx="350" cy="290" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="3"/>
+  <text x="350" y="295" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+  
+  <!-- Regular Edges (not bridges) -->
+  <line x1="100" y1="225" x2="135" y2="270" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="165" y1="270" x2="200" y2="225" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="125" y1="200" x2="175" y2="200" stroke="#3b82f6" stroke-width="2"/>
+  
+  <line x1="325" y1="200" x2="375" y2="200" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="380" y1="220" x2="365" y2="270" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="335" y1="270" x2="315" y2="220" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Bridge Edge (1-3) -->
+  <line x1="225" y1="200" x2="275" y2="200" stroke="#ef4444" stroke-width="4"/>
+  <text x="250" y="190" font-family="Courier New, monospace" font-size="10" fill="#ef4444" text-anchor="middle">BRIDGE</text>
+  
+  <!-- Definitions Section -->
+  <text x="500" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">DEFINITIONS</text>
+  
+  <rect x="500" y="125" width="420" height="100" fill="none" stroke="#3b82f6" stroke-width="2" rx="5"/>
+  
+  <text x="520" y="155" font-family="Courier New, monospace" font-size="12" fill="#ef4444" font-weight="bold">Bridge (Cut Edge):</text>
+  <text x="540" y="175" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Edge whose removal increases connected components</text>
+  
+  <text x="520" y="200" font-family="Courier New, monospace" font-size="12" fill="#f97316" font-weight="bold">Articulation Point (Cut Vertex):</text>
+  <text x="540" y="218" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Vertex whose removal increases connected components</text>
+  
+  <!-- Low-Link Values Section -->
+  <text x="50" y="360" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">LOW-LINK VALUES (Tarjan's)</text>
+  
+  <rect x="50" y="375" width="400" height="150" fill="none" stroke="#a78bfa" stroke-width="2" rx="5"/>
+  
+  <!-- Formula -->
+  <text x="70" y="405" font-family="Courier New, monospace" font-size="12" fill="#ffffff">low[v] = min(</text>
+  <text x="100" y="425" font-family="Courier New, monospace" font-size="11" fill="#4ade80">disc[v],</text>
+  <text x="100" y="445" font-family="Courier New, monospace" font-size="11" fill="#f97316">disc[u] for back edges (v,u),</text>
+  <text x="100" y="465" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">low[w] for tree edges (v,w)</text>
+  <text x="70" y="485" font-family="Courier New, monospace" font-size="12" fill="#ffffff">)</text>
+  
+  <!-- Table -->
+  <text x="260" y="405" font-family="Courier New, monospace" font-size="11" fill="#888888">Node  disc  low</text>
+  <text x="265" y="425" font-family="Courier New, monospace" font-size="11" fill="#ffffff">0     0     0</text>
+  <text x="265" y="445" font-family="Courier New, monospace" font-size="11" fill="#f97316">1     1     0</text>
+  <text x="265" y="465" font-family="Courier New, monospace" font-size="11" fill="#ffffff">2     2     0</text>
+  <text x="265" y="485" font-family="Courier New, monospace" font-size="11" fill="#f97316">3     3     3</text>
+  <text x="265" y="505" font-family="Courier New, monospace" font-size="11" fill="#ffffff">4     4     3</text>
+  
+  <!-- Detection Conditions -->
+  <text x="500" y="260" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">DETECTION CONDITIONS</text>
+  
+  <rect x="500" y="275" width="420" height="150" fill="none" stroke="#3b82f6" stroke-width="2" rx="5"/>
+  
+  <!-- Bridge condition -->
+  <text x="520" y="305" font-family="Courier New, monospace" font-size="12" fill="#ef4444" font-weight="bold">Bridge (u,v):</text>
+  <text x="540" y="325" font-family="Courier New, monospace" font-size="14" fill="#ffffff">low[v] &gt; disc[u]</text>
+  <text x="540" y="345" font-family="Courier New, monospace" font-size="11" fill="#888888">No back edge from v's subtree to u's ancestors</text>
+  
+  <!-- Articulation point condition -->
+  <text x="520" y="375" font-family="Courier New, monospace" font-size="12" fill="#f97316" font-weight="bold">Articulation Point u:</text>
+  <text x="540" y="395" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Root: ≥2 children in DFS tree</text>
+  <text x="540" y="415" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Non-root: low[v] ≥ disc[u]</text>
+  
+  <!-- Complexity -->
+  <text x="50" y="550" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COMPLEXITY</text>
+  <text x="50" y="575" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(V + E) - single DFS pass</text>
+  <text x="50" y="595" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Space: O(V)</text>
+  
+  <!-- Applications -->
+  <text x="300" y="550" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">APPLICATIONS</text>
+  <text x="300" y="575" font-family="Courier New, monospace" font-size="11" fill="#888888">• Network vulnerability analysis</text>
+  <text x="300" y="595" font-family="Courier New, monospace" font-size="11" fill="#888888">• Critical infrastructure planning</text>
+  
+  <!-- Result -->
+  <text x="600" y="450" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">RESULT</text>
+  
+  <rect x="600" y="465" width="300" height="130" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="5"/>
+  <text x="620" y="495" font-family="Courier New, monospace" font-size="12" fill="#ef4444" font-weight="bold">Bridges:</text>
+  <text x="640" y="515" font-family="Courier New, monospace" font-size="12" fill="#ffffff">(1, 3) - separates components</text>
+  
+  <text x="620" y="545" font-family="Courier New, monospace" font-size="12" fill="#f97316" font-weight="bold">Articulation Points:</text>
+  <text x="640" y="565" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Node 1 - low[3] ≥ disc[1]</text>
+  <text x="640" y="585" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Node 3 - low[4] ≥ disc[3]</text>
+  
+  <!-- Legend -->
+  <rect x="750" y="110" width="170" height="100" fill="none" stroke="#888888" stroke-width="1" rx="5"/>
+  <text x="760" y="130" font-family="Courier New, monospace" font-size="11" fill="#888888">LEGEND</text>
+  <circle cx="775" cy="150" r="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="790" y="155" font-family="Courier New, monospace" font-size="10" fill="#888888">Regular vertex</text>
+  <circle cx="775" cy="175" r="8" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="790" y="180" font-family="Courier New, monospace" font-size="10" fill="#888888">Articulation point</text>
+  <line x1="765" y1="200" x2="795" y2="200" stroke="#ef4444" stroke-width="3"/>
+  <text x="805" y="205" font-family="Courier New, monospace" font-size="10" fill="#888888">Bridge</text>
+</svg>

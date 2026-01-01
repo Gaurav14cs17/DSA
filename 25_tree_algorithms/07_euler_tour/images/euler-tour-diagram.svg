@@ -1,0 +1,152 @@
+<svg viewBox="0 0 950 680" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="680" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Euler Tour Techniques</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Flatten Tree for Range Queries | Subtree = Contiguous Range</text>
+  
+  <!-- Left: Original Tree -->
+  <text x="60" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">ORIGINAL TREE</text>
+  
+  <!-- Nodes -->
+  <circle cx="180" cy="160" r="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="180" y="166" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+  
+  <circle cx="100" cy="250" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="100" y="256" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+  
+  <circle cx="260" cy="250" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="260" y="256" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  
+  <circle cx="60" cy="340" r="22" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="60" y="346" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+  
+  <circle cx="140" cy="340" r="22" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="140" y="346" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+  
+  <circle cx="220" cy="340" r="22" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="220" y="346" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+  
+  <circle cx="300" cy="340" r="22" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="300" y="346" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+  
+  <!-- Edges -->
+  <line x1="180" y1="185" x2="100" y2="225" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="180" y1="185" x2="260" y2="225" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="100" y1="275" x2="60" y2="318" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="100" y1="275" x2="140" y2="318" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="260" y1="275" x2="220" y2="318" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="260" y1="275" x2="300" y2="318" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- DFS path arrows -->
+  <path d="M180,185 C160,200 120,210 100,225" fill="none" stroke="#4ade80" stroke-width="2" stroke-dasharray="4,2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ade80"/>
+    </marker>
+  </defs>
+  
+  <!-- In/Out times -->
+  <text x="205" y="145" font-family="Courier New, monospace" font-size="9" fill="#4ade80">[0,6]</text>
+  <text x="65" y="240" font-family="Courier New, monospace" font-size="9" fill="#3b82f6">[1,3]</text>
+  <text x="285" y="240" font-family="Courier New, monospace" font-size="9" fill="#3b82f6">[4,6]</text>
+  <text x="30" y="335" font-family="Courier New, monospace" font-size="9" fill="#f97316">[2,2]</text>
+  <text x="165" y="335" font-family="Courier New, monospace" font-size="9" fill="#f97316">[3,3]</text>
+  <text x="190" y="355" font-family="Courier New, monospace" font-size="9" fill="#a78bfa">[5,5]</text>
+  <text x="325" y="355" font-family="Courier New, monospace" font-size="9" fill="#a78bfa">[6,6]</text>
+  
+  <!-- Right: Euler Tour Array -->
+  <text x="430" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">EULER TOUR (DFS ORDER)</text>
+  
+  <!-- Array visualization -->
+  <rect x="400" y="125" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="425" y="150" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="425" y="175" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">0</text>
+  
+  <rect x="450" y="125" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="475" y="150" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="475" y="175" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">1</text>
+  
+  <rect x="500" y="125" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="525" y="150" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+  <text x="525" y="175" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">2</text>
+  
+  <rect x="550" y="125" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="575" y="150" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+  <text x="575" y="175" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">3</text>
+  
+  <rect x="600" y="125" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="625" y="150" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="625" y="175" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">4</text>
+  
+  <rect x="650" y="125" width="50" height="40" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="675" y="150" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+  <text x="675" y="175" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">5</text>
+  
+  <rect x="700" y="125" width="50" height="40" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="725" y="150" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+  <text x="725" y="175" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">6</text>
+  
+  <!-- Subtree ranges -->
+  <text x="430" y="210" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">SUBTREE = CONTIGUOUS RANGE</text>
+  
+  <!-- Range for subtree of 2 -->
+  <rect x="450" y="225" width="150" height="35" fill="none" stroke="#3b82f6" stroke-width="3" rx="5"/>
+  <text x="525" y="250" font-family="Courier New, monospace" font-size="12" fill="#3b82f6" text-anchor="middle">Subtree(2) = [1,3]</text>
+  
+  <!-- Range for subtree of 3 -->
+  <rect x="600" y="270" width="150" height="35" fill="none" stroke="#a78bfa" stroke-width="3" rx="5"/>
+  <text x="675" y="295" font-family="Courier New, monospace" font-size="12" fill="#a78bfa" text-anchor="middle">Subtree(3) = [4,6]</text>
+  
+  <!-- Key Property -->
+  <rect x="400" y="320" width="480" height="60" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="5"/>
+  <text x="640" y="345" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">KEY TRANSFORMATION</text>
+  <text x="640" y="370" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">Subtree query on v → Range query on [in[v], out[v]]</text>
+  
+  <!-- Ancestor Check -->
+  <text x="60" y="410" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">ANCESTOR CHECK (O(1))</text>
+  
+  <rect x="40" y="425" width="320" height="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="5"/>
+  <text x="200" y="450" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">u is ancestor of v if and only if:</text>
+  <text x="200" y="475" font-family="Courier New, monospace" font-size="12" fill="#4ade80" text-anchor="middle">in[u] ≤ in[v] AND out[v] ≤ out[u]</text>
+  
+  <!-- Example -->
+  <rect x="40" y="510" width="320" height="55" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="5"/>
+  <text x="200" y="535" font-family="Courier New, monospace" font-size="11" fill="#f97316" text-anchor="middle">Example: Is 2 ancestor of 4?</text>
+  <text x="200" y="555" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">in[2]=1 ≤ in[4]=2 ✓  out[4]=2 ≤ out[2]=3 ✓</text>
+  
+  <!-- Applications -->
+  <text x="430" y="410" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">APPLICATIONS</text>
+  
+  <rect x="400" y="425" width="200" height="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="5"/>
+  <text x="500" y="450" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#3b82f6" text-anchor="middle">Subtree Sum</text>
+  <text x="500" y="470" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">Range sum on [in,out]</text>
+  <text x="500" y="488" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">O(log n) with Fenwick</text>
+  
+  <rect x="620" y="425" width="200" height="70" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="5"/>
+  <text x="720" y="450" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">Subtree Update</text>
+  <text x="720" y="470" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">Range update [in,out]</text>
+  <text x="720" y="488" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">O(log n) with SegTree</text>
+  
+  <rect x="400" y="505" width="200" height="70" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="5"/>
+  <text x="500" y="530" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#a78bfa" text-anchor="middle">LCA via RMQ</text>
+  <text x="500" y="550" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">Min depth in tour</text>
+  <text x="500" y="568" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">O(1) query, O(n) space</text>
+  
+  <rect x="620" y="505" width="200" height="70" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="5"/>
+  <text x="720" y="530" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#f97316" text-anchor="middle">Path Queries</text>
+  <text x="720" y="550" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">Combine with LCA</text>
+  <text x="720" y="568" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">Foundation for HLD</text>
+  
+  <!-- Complexity -->
+  <rect x="40" y="590" width="320" height="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="5"/>
+  <text x="200" y="615" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">COMPLEXITY</text>
+  <text x="200" y="640" font-family="Courier New, monospace" font-size="11" fill="#60a5fa" text-anchor="middle">Build: O(n) | Space: O(n)</text>
+  <text x="200" y="655" font-family="Courier New, monospace" font-size="11" fill="#60a5fa" text-anchor="middle">Subtree query/update: O(log n)</text>
+  
+  <!-- Two Variants -->
+  <rect x="400" y="590" width="420" height="70" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="5"/>
+  <text x="610" y="615" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">TWO VARIANTS</text>
+  <text x="520" y="640" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Entry only: length = n</text>
+  <text x="520" y="655" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Entry+Exit: length = 2n-1 (for LCA)</text>
+</svg>

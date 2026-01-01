@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <rect width="900" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Minimum Spanning Tree - Kruskal's Algorithm</text>
+  <text x="450" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Greedy: Sort edges, add if no cycle (Union-Find)</text>
+  
+  <!-- Original Graph Section -->
+  <text x="50" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">ORIGINAL GRAPH</text>
+  
+  <!-- Nodes -->
+  <circle cx="150" cy="200" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="3"/>
+  <text x="150" y="205" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">0</text>
+  
+  <circle cx="280" cy="150" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="3"/>
+  <text x="280" y="155" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+  
+  <circle cx="280" cy="280" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="3"/>
+  <text x="280" y="285" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+  
+  <circle cx="410" cy="150" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="3"/>
+  <text x="410" y="155" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  
+  <circle cx="410" cy="280" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="3"/>
+  <text x="410" y="285" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+  
+  <!-- All Edges (gray background) -->
+  <line x1="175" y1="185" x2="255" y2="160" stroke="#555555" stroke-width="1"/>
+  <line x1="175" y1="215" x2="255" y2="270" stroke="#555555" stroke-width="1"/>
+  <line x1="280" y1="175" x2="280" y2="255" stroke="#555555" stroke-width="1"/>
+  <line x1="305" y1="150" x2="385" y2="150" stroke="#555555" stroke-width="1"/>
+  <line x1="305" y1="280" x2="385" y2="280" stroke="#555555" stroke-width="1"/>
+  <line x1="295" y1="170" x2="395" y2="260" stroke="#555555" stroke-width="1"/>
+  <line x1="410" y1="175" x2="410" y2="255" stroke="#555555" stroke-width="1"/>
+  
+  <!-- MST Edges (green) -->
+  <line x1="175" y1="215" x2="255" y2="270" stroke="#4ade80" stroke-width="3"/>
+  <text x="205" y="260" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">1</text>
+  
+  <line x1="280" y1="175" x2="280" y2="255" stroke="#4ade80" stroke-width="3"/>
+  <text x="265" y="220" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">2</text>
+  
+  <line x1="305" y1="280" x2="385" y2="280" stroke="#4ade80" stroke-width="3"/>
+  <text x="345" y="300" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">3</text>
+  
+  <line x1="305" y1="150" x2="385" y2="150" stroke="#4ade80" stroke-width="3"/>
+  <text x="345" y="140" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">4</text>
+  
+  <!-- Rejected edges with weights -->
+  <text x="190" y="165" font-family="Courier New, monospace" font-size="11" fill="#888888">5</text>
+  <text x="340" y="225" font-family="Courier New, monospace" font-size="11" fill="#888888">6</text>
+  <text x="425" y="220" font-family="Courier New, monospace" font-size="11" fill="#888888">7</text>
+  
+  <!-- Sorted Edges Section -->
+  <text x="500" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">SORTED EDGES</text>
+  
+  <rect x="500" y="125" width="380" height="180" fill="none" stroke="#3b82f6" stroke-width="2" rx="5"/>
+  
+  <!-- Edge list -->
+  <rect x="515" y="140" width="160" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="3"/>
+  <text x="595" y="158" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">(0,2) w=1 ✓</text>
+  
+  <rect x="515" y="170" width="160" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="3"/>
+  <text x="595" y="188" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">(1,2) w=2 ✓</text>
+  
+  <rect x="515" y="200" width="160" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="3"/>
+  <text x="595" y="218" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">(2,4) w=3 ✓</text>
+  
+  <rect x="515" y="230" width="160" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="3"/>
+  <text x="595" y="248" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">(1,3) w=4 ✓</text>
+  
+  <rect x="515" y="260" width="160" height="25" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="3,3" rx="3"/>
+  <text x="595" y="278" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">(0,1) w=5 ✗</text>
+  
+  <text x="700" y="155" font-family="Courier New, monospace" font-size="10" fill="#4ade80">Added</text>
+  <text x="700" y="185" font-family="Courier New, monospace" font-size="10" fill="#4ade80">Added</text>
+  <text x="700" y="215" font-family="Courier New, monospace" font-size="10" fill="#4ade80">Added</text>
+  <text x="700" y="245" font-family="Courier New, monospace" font-size="10" fill="#4ade80">Added (4 edges=V-1)</text>
+  <text x="700" y="275" font-family="Courier New, monospace" font-size="10" fill="#ef4444">Cycle! Skip</text>
+  
+  <!-- Union-Find Section -->
+  <text x="50" y="350" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">UNION-FIND DATA STRUCTURE</text>
+  
+  <rect x="50" y="370" width="400" height="120" fill="none" stroke="#a78bfa" stroke-width="2" rx="5"/>
+  
+  <!-- Initial state -->
+  <text x="70" y="395" font-family="Courier New, monospace" font-size="12" fill="#888888">Initial: {0} {1} {2} {3} {4}</text>
+  
+  <!-- After unions -->
+  <text x="70" y="420" font-family="Courier New, monospace" font-size="12" fill="#ffffff">After (0,2): {0,2} {1} {3} {4}</text>
+  <text x="70" y="440" font-family="Courier New, monospace" font-size="12" fill="#ffffff">After (1,2): {0,1,2} {3} {4}</text>
+  <text x="70" y="460" font-family="Courier New, monospace" font-size="12" fill="#ffffff">After (2,4): {0,1,2,4} {3}</text>
+  <text x="70" y="480" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Final: {0,1,2,3,4} - Connected!</text>
+  
+  <!-- Algorithm Steps -->
+  <text x="500" y="350" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">ALGORITHM</text>
+  
+  <rect x="500" y="370" width="380" height="120" fill="none" stroke="#3b82f6" stroke-width="2" rx="5"/>
+  
+  <text x="520" y="395" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1. Sort all edges by weight</text>
+  <text x="520" y="420" font-family="Courier New, monospace" font-size="12" fill="#4ade80">2. Initialize Union-Find</text>
+  <text x="520" y="445" font-family="Courier New, monospace" font-size="12" fill="#4ade80">3. For each edge (u,v) in order:</text>
+  <text x="540" y="465" font-family="Courier New, monospace" font-size="12" fill="#ffffff">if find(u) ≠ find(v): add, union</text>
+  <text x="520" y="485" font-family="Courier New, monospace" font-size="12" fill="#4ade80">4. Stop when V-1 edges added</text>
+  
+  <!-- Cut Property -->
+  <text x="50" y="530" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">CUT PROPERTY</text>
+  <rect x="50" y="545" width="350" height="50" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="5"/>
+  <text x="70" y="570" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Min weight edge crossing any cut</text>
+  <text x="70" y="588" font-family="Courier New, monospace" font-size="12" fill="#ffffff">is in some MST</text>
+  
+  <!-- Complexity -->
+  <text x="450" y="530" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COMPLEXITY</text>
+  <text x="450" y="555" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(E log E) = O(E log V)</text>
+  <text x="450" y="575" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Space: O(V) for Union-Find</text>
+  
+  <!-- Result -->
+  <text x="700" y="530" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">RESULT</text>
+  <text x="700" y="555" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">MST Weight: 10</text>
+  <text x="700" y="575" font-family="Courier New, monospace" font-size="12" fill="#888888">Edges: 4 (= V-1)</text>
+</svg>

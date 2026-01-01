@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <rect width="900" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Courier New, monospace" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">Inversion Counting with BIT</text>
+  <text x="450" y="58" font-family="Courier New, monospace" font-size="14" fill="#888888" text-anchor="middle">Count pairs (i,j) where i &lt; j but nums[i] &gt; nums[j] • O(n log n)</text>
+
+  <!-- Example Array -->
+  <text x="450" y="95" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">EXAMPLE: nums = [5, 2, 6, 1]</text>
+
+  <!-- Process visualization -->
+  <rect x="50" y="115" width="800" height="200" fill="#0f0f23" stroke="#3b82f6" stroke-width="2"/>
+  
+  <text x="70" y="145" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">Process RIGHT to LEFT, count smaller elements already seen:</text>
+
+  <!-- Step 1: Process 1 -->
+  <text x="70" y="175" font-family="Courier New, monospace" font-size="11" fill="#888888">Step 1:</text>
+  <text x="130" y="175" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Process nums[3] = 1</text>
+  <text x="350" y="175" font-family="Courier New, monospace" font-size="11" fill="#4ade80">BIT.query(0) = 0 smaller</text>
+  <text x="580" y="175" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">BIT.update(1)</text>
+  <text x="750" y="175" font-family="Courier New, monospace" font-size="11" fill="#f97316">count = 0</text>
+
+  <!-- Step 2: Process 6 -->
+  <text x="70" y="200" font-family="Courier New, monospace" font-size="11" fill="#888888">Step 2:</text>
+  <text x="130" y="200" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Process nums[2] = 6</text>
+  <text x="350" y="200" font-family="Courier New, monospace" font-size="11" fill="#4ade80">BIT.query(5) = 1 smaller</text>
+  <text x="580" y="200" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">BIT.update(6)</text>
+  <text x="750" y="200" font-family="Courier New, monospace" font-size="11" fill="#f97316">count = 1</text>
+
+  <!-- Step 3: Process 2 -->
+  <text x="70" y="225" font-family="Courier New, monospace" font-size="11" fill="#888888">Step 3:</text>
+  <text x="130" y="225" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Process nums[1] = 2</text>
+  <text x="350" y="225" font-family="Courier New, monospace" font-size="11" fill="#4ade80">BIT.query(1) = 1 smaller</text>
+  <text x="580" y="225" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">BIT.update(2)</text>
+  <text x="750" y="225" font-family="Courier New, monospace" font-size="11" fill="#f97316">count = 2</text>
+
+  <!-- Step 4: Process 5 -->
+  <text x="70" y="250" font-family="Courier New, monospace" font-size="11" fill="#888888">Step 4:</text>
+  <text x="130" y="250" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Process nums[0] = 5</text>
+  <text x="350" y="250" font-family="Courier New, monospace" font-size="11" fill="#4ade80">BIT.query(4) = 2 smaller</text>
+  <text x="580" y="250" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">BIT.update(5)</text>
+  <text x="750" y="250" font-family="Courier New, monospace" font-size="11" fill="#f97316">count = 4</text>
+
+  <!-- Result -->
+  <text x="450" y="290" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">Total Inversions: 4 → (5,2), (5,1), (2,1), (6,1)</text>
+
+  <!-- Coordinate Compression -->
+  <rect x="50" y="330" width="400" height="100" fill="#0f0f23" stroke="#f97316" stroke-width="2"/>
+  <text x="250" y="355" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560" text-anchor="middle">COORDINATE COMPRESSION</text>
+  
+  <text x="70" y="380" font-family="Courier New, monospace" font-size="11" fill="#ffffff">When values are large (10⁹):</text>
+  <text x="70" y="400" font-family="Courier New, monospace" font-size="11" fill="#888888">1. Sort unique values</text>
+  <text x="70" y="420" font-family="Courier New, monospace" font-size="11" fill="#888888">2. Map to ranks [1, 2, ..., n]</text>
+
+  <!-- Key Problems -->
+  <rect x="470" y="330" width="380" height="100" fill="#0f0f23" stroke="#4ade80" stroke-width="2"/>
+  <text x="660" y="355" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560" text-anchor="middle">KEY PROBLEMS</text>
+  
+  <text x="490" y="380" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• LC 315: Count Smaller After Self</text>
+  <text x="490" y="400" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• LC 493: Reverse Pairs (nums[i] &gt; 2*nums[j])</text>
+  <text x="490" y="420" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• LC 1649: Create Sorted Array</text>
+
+  <!-- Algorithm Box -->
+  <rect x="50" y="450" width="800" height="80" fill="#0f0f23" stroke="#a78bfa" stroke-width="2"/>
+  <text x="450" y="475" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560" text-anchor="middle">ALGORITHM PATTERN</text>
+  
+  <text x="70" y="500" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">for num in reversed(nums):</text>
+  <text x="280" y="500" font-family="Courier New, monospace" font-size="11" fill="#4ade80">count += BIT.query(rank[num] - 1)</text>
+  <text x="550" y="500" font-family="Courier New, monospace" font-size="11" fill="#888888"># count smaller seen</text>
+  
+  <text x="280" y="520" font-family="Courier New, monospace" font-size="11" fill="#f97316">BIT.update(rank[num])</text>
+  <text x="550" y="520" font-family="Courier New, monospace" font-size="11" fill="#888888"># mark this value seen</text>
+</svg>

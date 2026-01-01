@@ -1,0 +1,129 @@
+<svg viewBox="0 0 900 650" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Lowest Common Ancestor (LCA)</text>
+  <text x="450" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Binary Lifting Approach - O(log n) Query</text>
+  
+  <!-- Tree Structure -->
+  <text x="60" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">TREE STRUCTURE</text>
+  
+  <!-- Node definitions -->
+  <!-- Root node 1 -->
+  <circle cx="300" cy="160" r="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="300" y="166" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+  
+  <!-- Level 1 nodes -->
+  <circle cx="180" cy="250" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="180" y="256" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+  
+  <circle cx="420" cy="250" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="420" y="256" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  
+  <!-- Level 2 nodes -->
+  <circle cx="100" cy="340" r="25" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+  <text x="100" y="346" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+  
+  <circle cx="260" cy="340" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="260" y="346" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+  
+  <circle cx="340" cy="340" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="340" y="346" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+  
+  <circle cx="500" cy="340" r="25" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+  <text x="500" y="346" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+  
+  <!-- Level 3 nodes -->
+  <circle cx="60" cy="430" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="60" y="436" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">8</text>
+  
+  <circle cx="140" cy="430" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="140" y="436" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">9</text>
+  
+  <!-- Edges -->
+  <line x1="300" y1="185" x2="180" y2="225" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="300" y1="185" x2="420" y2="225" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="180" y1="275" x2="100" y2="315" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="180" y1="275" x2="260" y2="315" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="420" y1="275" x2="340" y2="315" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="420" y1="275" x2="500" y2="315" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="100" y1="365" x2="60" y2="405" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="100" y1="365" x2="140" y2="405" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- LCA path highlight -->
+  <path d="M100,340 Q180,290 180,250 L300,160 L420,250 Q450,290 500,340" fill="none" stroke="#f97316" stroke-width="3" stroke-dasharray="8,4"/>
+  
+  <!-- LCA indicator -->
+  <text x="300" y="130" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">LCA(4,7) = 1</text>
+  
+  <!-- Binary Lifting Table -->
+  <text x="620" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">BINARY LIFTING TABLE</text>
+  
+  <!-- Table header -->
+  <rect x="580" y="125" width="280" height="30" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="620" y="145" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Node</text>
+  <text x="690" y="145" font-family="Courier New, monospace" font-size="12" fill="#ffffff">2⁰</text>
+  <text x="750" y="145" font-family="Courier New, monospace" font-size="12" fill="#ffffff">2¹</text>
+  <text x="810" y="145" font-family="Courier New, monospace" font-size="12" fill="#ffffff">2²</text>
+  
+  <!-- Table rows -->
+  <rect x="580" y="155" width="280" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="620" y="172" font-family="Courier New, monospace" font-size="11" fill="#ffffff">4</text>
+  <text x="690" y="172" font-family="Courier New, monospace" font-size="11" fill="#ffffff">2</text>
+  <text x="750" y="172" font-family="Courier New, monospace" font-size="11" fill="#ffffff">1</text>
+  <text x="810" y="172" font-family="Courier New, monospace" font-size="11" fill="#ffffff">-</text>
+  
+  <rect x="580" y="180" width="280" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="620" y="197" font-family="Courier New, monospace" font-size="11" fill="#ffffff">7</text>
+  <text x="690" y="197" font-family="Courier New, monospace" font-size="11" fill="#ffffff">3</text>
+  <text x="750" y="197" font-family="Courier New, monospace" font-size="11" fill="#ffffff">1</text>
+  <text x="810" y="197" font-family="Courier New, monospace" font-size="11" fill="#ffffff">-</text>
+  
+  <rect x="580" y="205" width="280" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="620" y="222" font-family="Courier New, monospace" font-size="11" fill="#ffffff">8</text>
+  <text x="690" y="222" font-family="Courier New, monospace" font-size="11" fill="#ffffff">4</text>
+  <text x="750" y="222" font-family="Courier New, monospace" font-size="11" fill="#ffffff">2</text>
+  <text x="810" y="222" font-family="Courier New, monospace" font-size="11" fill="#ffffff">1</text>
+  
+  <!-- Formula -->
+  <text x="620" y="260" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">RECURRENCE</text>
+  <rect x="580" y="270" width="280" height="60" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="5"/>
+  <text x="720" y="295" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">up[v][k] = up[up[v][k-1]][k-1]</text>
+  <text x="720" y="315" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">2^k-th ancestor of v</text>
+  
+  <!-- Algorithm Steps -->
+  <text x="620" y="360" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">QUERY ALGORITHM</text>
+  
+  <rect x="580" y="375" width="280" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="1" rx="3"/>
+  <text x="590" y="392" font-family="Courier New, monospace" font-size="11" fill="#4ade80">1. Bring u,v to same depth</text>
+  
+  <rect x="580" y="405" width="280" height="25" fill="#3d1f0f" stroke="#f97316" stroke-width="1" rx="3"/>
+  <text x="590" y="422" font-family="Courier New, monospace" font-size="11" fill="#f97316">2. Binary search upward</text>
+  
+  <rect x="580" y="435" width="280" height="25" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1" rx="3"/>
+  <text x="590" y="452" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">3. Return common ancestor</text>
+  
+  <!-- Distance Formula -->
+  <text x="620" y="490" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">DISTANCE FORMULA</text>
+  <rect x="580" y="505" width="280" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="5"/>
+  <text x="720" y="532" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">dist(u,v) = depth[u] + depth[v]</text>
+  <text x="720" y="545" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">         - 2·depth[LCA(u,v)]</text>
+  
+  <!-- Complexity Box -->
+  <rect x="60" y="480" width="200" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="5"/>
+  <text x="160" y="505" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">COMPLEXITY</text>
+  <text x="160" y="530" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">Preprocess: O(n log n)</text>
+  <text x="160" y="550" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">Query: O(log n)</text>
+  
+  <!-- Legend -->
+  <text x="300" y="490" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">● Query nodes</text>
+  <circle cx="360" cy="486" r="8" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="300" y="510" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">● LCA result</text>
+  <circle cx="360" cy="506" r="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  
+  <!-- Depth labels -->
+  <text x="30" y="166" font-family="Courier New, monospace" font-size="11" fill="#888888">d=0</text>
+  <text x="30" y="256" font-family="Courier New, monospace" font-size="11" fill="#888888">d=1</text>
+  <text x="30" y="346" font-family="Courier New, monospace" font-size="11" fill="#888888">d=2</text>
+  <text x="30" y="436" font-family="Courier New, monospace" font-size="11" fill="#888888">d=3</text>
+</svg>

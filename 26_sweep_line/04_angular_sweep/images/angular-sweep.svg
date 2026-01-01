@@ -1,0 +1,117 @@
+<svg viewBox="0 0 900 650" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Angular Sweep (Radial Sweep)</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Rotating ray sweep from a center point</text>
+  
+  <!-- Main visualization - Circular area -->
+  <circle cx="250" cy="280" r="180" fill="none" stroke="#1e3a5f" stroke-width="1" stroke-dasharray="4,4"/>
+  
+  <!-- Center point -->
+  <circle cx="250" cy="280" r="8" fill="#f97316" stroke="#ffffff" stroke-width="2"/>
+  <text x="260" y="295" font-family="Courier New, monospace" font-size="12" fill="#f97316">origin</text>
+  
+  <!-- Angle arc indicator -->
+  <path d="M 250,280 L 340,200" stroke="#888888" stroke-width="1" stroke-dasharray="4,4"/>
+  <path d="M 290,280 A 40 40 0 0 0 280,252" fill="none" stroke="#4ade80" stroke-width="2"/>
+  <text x="300" y="260" font-family="Courier New, monospace" font-size="11" fill="#4ade80">θ</text>
+  
+  <!-- Sweep ray (current position) -->
+  <line x1="250" y1="280" x2="400" y2="180" stroke="#f97316" stroke-width="3"/>
+  <polygon points="400,180 385,185 390,195" fill="#f97316"/>
+  <text x="345" y="210" font-family="Courier New, monospace" font-size="11" fill="#f97316">sweep ray</text>
+  
+  <!-- Swept area (shaded sector) -->
+  <path d="M 250,280 L 430,280 A 180 180 0 0 0 400,180 Z" fill="#3d1f0f" opacity="0.3"/>
+  
+  <!-- Points scattered around -->
+  <g>
+    <!-- Points within sweep -->
+    <circle cx="350" cy="220" r="7" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="360" y="218" font-family="Courier New, monospace" font-size="10" fill="#4ade80">P₁</text>
+    
+    <circle cx="380" cy="260" r="7" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="390" y="258" font-family="Courier New, monospace" font-size="10" fill="#4ade80">P₂</text>
+    
+    <circle cx="320" cy="300" r="7" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="330" y="298" font-family="Courier New, monospace" font-size="10" fill="#4ade80">P₃</text>
+    
+    <!-- Points not yet swept -->
+    <circle cx="180" cy="180" r="7" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="165" y="175" font-family="Courier New, monospace" font-size="10" fill="#3b82f6">P₄</text>
+    
+    <circle cx="120" cy="280" r="7" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="105" y="275" font-family="Courier New, monospace" font-size="10" fill="#3b82f6">P₅</text>
+    
+    <circle cx="200" cy="380" r="7" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="210" y="390" font-family="Courier New, monospace" font-size="10" fill="#3b82f6">P₆</text>
+    
+    <circle cx="300" cy="400" r="7" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="310" y="410" font-family="Courier New, monospace" font-size="10" fill="#3b82f6">P₇</text>
+  </g>
+  
+  <!-- Axis lines -->
+  <line x1="70" y1="280" x2="430" y2="280" stroke="#3b82f6" stroke-width="1" opacity="0.5"/>
+  <line x1="250" y1="100" x2="250" y2="460" stroke="#3b82f6" stroke-width="1" opacity="0.5"/>
+  <text x="435" y="283" font-family="Courier New, monospace" font-size="10" fill="#888888">0°</text>
+  <text x="255" y="98" font-family="Courier New, monospace" font-size="10" fill="#888888">90°</text>
+  <text x="60" y="283" font-family="Courier New, monospace" font-size="10" fill="#888888">180°</text>
+  <text x="255" y="470" font-family="Courier New, monospace" font-size="10" fill="#888888">270°</text>
+  
+  <!-- Polar Angle Formula Box -->
+  <rect x="480" y="90" width="380" height="120" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="670" y="115" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Polar Angle Computation</text>
+  
+  <g font-family="Courier New, monospace" font-size="12" fill="#ffffff">
+    <text x="500" y="145">θ = atan2(y, x)</text>
+    <text x="500" y="170" fill="#888888">Range: [-π, π] or [0, 2π]</text>
+    <text x="500" y="195" fill="#4ade80">Cross product avoids trig errors!</text>
+  </g>
+  
+  <!-- Visible Points Problem Box -->
+  <rect x="480" y="230" width="380" height="150" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="670" y="255" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Maximum Visible Points</text>
+  
+  <g font-family="Courier New, monospace" font-size="11" fill="#ffffff">
+    <text x="500" y="285">Given: Points + viewing angle α</text>
+    <text x="500" y="310">Find: Max points visible at once</text>
+    <text x="500" y="340" fill="#4ade80">Algorithm:</text>
+    <text x="510" y="360" fill="#ffffff">1. Sort points by polar angle</text>
+    <text x="510" y="380" fill="#ffffff">2. Sliding window of width α</text>
+  </g>
+  
+  <!-- Angle Comparison Box -->
+  <rect x="480" y="400" width="380" height="130" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="670" y="425" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Angle Comparison (No atan2)</text>
+  
+  <g font-family="Courier New, monospace" font-size="11" fill="#ffffff">
+    <text x="500" y="455">Cross Product: a × b = aₓbᵧ - aᵧbₓ</text>
+    <text x="500" y="480" fill="#4ade80">&gt; 0: b is CCW from a</text>
+    <text x="500" y="500" fill="#ef4444">&lt; 0: b is CW from a</text>
+    <text x="500" y="520" fill="#a78bfa">= 0: collinear</text>
+  </g>
+  
+  <!-- Applications List -->
+  <rect x="50" y="500" width="400" height="100" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="250" y="525" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Applications</text>
+  
+  <g font-family="Courier New, monospace" font-size="11" fill="#ffffff">
+    <text x="70" y="550">• Visibility polygon computation</text>
+    <text x="70" y="570">• K closest points to origin</text>
+    <text x="270" y="550">• Sector queries</text>
+    <text x="270" y="570">• Angular sorting</text>
+  </g>
+  
+  <!-- Legend -->
+  <g font-family="Courier New, monospace" font-size="11">
+    <circle cx="500" cy="565" r="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="515" y="568" fill="#888888">Swept (in window)</text>
+    
+    <circle cx="650" cy="565" r="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="665" y="568" fill="#888888">Not yet swept</text>
+  </g>
+  
+  <!-- Complexity -->
+  <text x="450" y="630" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(n log n) | Space: O(n) | Sliding Window: O(n)</text>
+</svg>

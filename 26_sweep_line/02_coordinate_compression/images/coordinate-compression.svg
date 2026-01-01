@@ -1,0 +1,126 @@
+<svg viewBox="0 0 900 650" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Coordinate Compression</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Map large range to small indexed range</text>
+  
+  <!-- Before Section -->
+  <text x="450" y="110" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">BEFORE: Original Coordinates [0, 10⁹]</text>
+  
+  <!-- Original number line -->
+  <line x1="50" y1="160" x2="850" y2="160" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Original coordinates with gaps -->
+  <g font-family="Courier New, monospace">
+    <!-- Point at 5 -->
+    <circle cx="100" cy="160" r="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="100" y="145" text-anchor="middle" font-size="12" fill="#ffffff">5</text>
+    
+    <!-- Gap indicator -->
+    <text x="200" y="165" text-anchor="middle" font-size="18" fill="#888888">...</text>
+    
+    <!-- Point at 1000 -->
+    <circle cx="300" cy="160" r="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="300" y="145" text-anchor="middle" font-size="12" fill="#ffffff">1000</text>
+    
+    <!-- Gap indicator -->
+    <text x="400" y="165" text-anchor="middle" font-size="18" fill="#888888">...</text>
+    
+    <!-- Point at 50000 -->
+    <circle cx="500" cy="160" r="8" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="500" y="145" text-anchor="middle" font-size="12" fill="#ffffff">50000</text>
+    
+    <!-- Gap indicator -->
+    <text x="600" y="165" text-anchor="middle" font-size="18" fill="#888888">...</text>
+    
+    <!-- Point at 10^8 -->
+    <circle cx="700" cy="160" r="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="700" y="145" text-anchor="middle" font-size="12" fill="#ffffff">10⁸</text>
+    
+    <!-- Gap indicator -->
+    <text x="780" y="165" text-anchor="middle" font-size="18" fill="#888888">...</text>
+    
+    <!-- Point at 10^9 -->
+    <circle cx="850" cy="160" r="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="850" y="145" text-anchor="middle" font-size="12" fill="#ffffff">10⁹</text>
+  </g>
+  
+  <!-- Arrow down -->
+  <polygon points="450,200 440,220 460,220" fill="#4ade80"/>
+  <text x="470" y="215" font-family="Courier New, monospace" font-size="12" fill="#4ade80">compress()</text>
+  
+  <!-- After Section -->
+  <text x="450" y="260" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">AFTER: Compressed Indices [0, n-1]</text>
+  
+  <!-- Compressed number line -->
+  <line x1="200" y1="310" x2="700" y2="310" stroke="#4ade80" stroke-width="2"/>
+  
+  <!-- Compressed coordinates -->
+  <g font-family="Courier New, monospace">
+    <!-- Index 0 -->
+    <rect x="200" y="285" width="60" height="50" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="230" y="307" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">0</text>
+    <text x="230" y="325" text-anchor="middle" font-size="10" fill="#888888">→ 5</text>
+    
+    <!-- Index 1 -->
+    <rect x="300" y="285" width="60" height="50" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="330" y="307" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">1</text>
+    <text x="330" y="325" text-anchor="middle" font-size="10" fill="#888888">→ 1000</text>
+    
+    <!-- Index 2 (highlighted) -->
+    <rect x="400" y="285" width="60" height="50" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="430" y="307" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">2</text>
+    <text x="430" y="325" text-anchor="middle" font-size="10" fill="#888888">→ 50000</text>
+    
+    <!-- Index 3 -->
+    <rect x="500" y="285" width="60" height="50" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="530" y="307" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">3</text>
+    <text x="530" y="325" text-anchor="middle" font-size="10" fill="#888888">→ 10⁸</text>
+    
+    <!-- Index 4 -->
+    <rect x="600" y="285" width="60" height="50" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="630" y="307" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">4</text>
+    <text x="630" y="325" text-anchor="middle" font-size="10" fill="#888888">→ 10⁹</text>
+  </g>
+  
+  <!-- Algorithm Steps Box -->
+  <rect x="50" y="380" width="380" height="200" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="240" y="405" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Compression Steps</text>
+  
+  <g font-family="Courier New, monospace" font-size="12" fill="#ffffff">
+    <text x="70" y="435">1. Collect unique values:</text>
+    <text x="90" y="455" fill="#a78bfa">{5, 1000, 50000, 10⁸, 10⁹}</text>
+    
+    <text x="70" y="485">2. Sort values:</text>
+    <text x="90" y="505" fill="#a78bfa">[5, 1000, 50000, 10⁸, 10⁹]</text>
+    
+    <text x="70" y="535">3. Create mapping:</text>
+    <text x="90" y="555" fill="#4ade80">f(5)=0, f(1000)=1, ...</text>
+  </g>
+  
+  <!-- Use Cases Box -->
+  <rect x="470" y="380" width="380" height="200" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="660" y="405" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Key Applications</text>
+  
+  <g font-family="Courier New, monospace" font-size="12" fill="#ffffff">
+    <text x="490" y="435">• 2D Sweep Line (rectangles)</text>
+    <text x="490" y="460">• Skyline Problem</text>
+    <text x="490" y="485">• Segment Tree with sparse data</text>
+    <text x="490" y="510">• Range queries on large coords</text>
+    <text x="490" y="535">• Falling Squares</text>
+    <text x="490" y="560" fill="#888888">Space: O(n) instead of O(10⁹)</text>
+  </g>
+  
+  <!-- Properties -->
+  <g font-family="Courier New, monospace" font-size="11">
+    <text x="50" y="610" fill="#4ade80" font-weight="bold">✓ Order Preserved:</text>
+    <text x="200" y="610" fill="#ffffff">x &lt; y ⟹ f(x) &lt; f(y)</text>
+    
+    <text x="450" y="610" fill="#4ade80" font-weight="bold">✓ Dense Indexing:</text>
+    <text x="600" y="610" fill="#ffffff">Uses indices [0, k-1]</text>
+  </g>
+  
+  <!-- Complexity -->
+  <text x="450" y="640" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(n log n) | Space: O(n) | Query: O(1) with HashMap</text>
+</svg>

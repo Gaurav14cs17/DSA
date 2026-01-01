@@ -1,0 +1,158 @@
+<svg viewBox="0 0 950 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Tree Dynamic Programming</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Subtree DP, Rerooting, Multi-state Patterns</text>
+  
+  <!-- Left Section: Subtree DP -->
+  <text x="60" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">SUBTREE DP (Post-order)</text>
+  
+  <!-- Tree for Subtree DP -->
+  <circle cx="180" cy="160" r="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="180" y="166" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="180" y="140" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">dp=15</text>
+  
+  <circle cx="110" cy="240" r="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="110" y="246" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="110" y="220" font-family="Courier New, monospace" font-size="10" fill="#3b82f6" text-anchor="middle">dp=8</text>
+  
+  <circle cx="250" cy="240" r="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="246" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="250" y="220" font-family="Courier New, monospace" font-size="10" fill="#3b82f6" text-anchor="middle">dp=6</text>
+  
+  <circle cx="70" cy="320" r="22" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="70" y="326" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+  <text x="70" y="300" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">dp=3</text>
+  
+  <circle cx="150" cy="320" r="22" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="150" y="326" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+  <text x="150" y="300" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">dp=4</text>
+  
+  <!-- Edges -->
+  <line x1="180" y1="182" x2="110" y2="218" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="180" y1="182" x2="250" y2="218" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="110" y1="262" x2="70" y2="298" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="110" y1="262" x2="150" y2="298" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Arrows showing DP direction -->
+  <path d="M70,290 L85,260" stroke="#f97316" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M150,290 L130,260" stroke="#f97316" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M110,210 L150,180" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f97316"/>
+    </marker>
+  </defs>
+  
+  <!-- Formula Box -->
+  <rect x="40" y="360" width="250" height="55" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="5"/>
+  <text x="165" y="385" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">dp[v] = val[v] +</text>
+  <text x="165" y="405" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">Σ f(dp[child])</text>
+  
+  <!-- Middle Section: Rerooting DP -->
+  <text x="380" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">REROOTING DP (Two-pass)</text>
+  
+  <!-- Pass 1 -->
+  <text x="380" y="130" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Pass 1: Down (root → leaves)</text>
+  
+  <circle cx="500" cy="170" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="500" y="176" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">A</text>
+  
+  <circle cx="440" cy="240" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="440" y="246" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">B</text>
+  
+  <circle cx="560" cy="240" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="560" y="246" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">C</text>
+  
+  <circle cx="400" cy="310" r="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="400" y="316" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">D</text>
+  
+  <circle cx="480" cy="310" r="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="480" y="316" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">E</text>
+  
+  <!-- Edges -->
+  <line x1="500" y1="190" x2="440" y2="220" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="500" y1="190" x2="560" y2="220" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="440" y1="260" x2="400" y2="290" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="440" y1="260" x2="480" y2="290" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Pass 2 indicator -->
+  <text x="380" y="350" font-family="Courier New, monospace" font-size="11" fill="#f97316">Pass 2: Up (compute for all roots)</text>
+  
+  <rect x="360" y="360" width="280" height="55" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="5"/>
+  <text x="500" y="382" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">ans[child] = ans[parent]</text>
+  <text x="500" y="400" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">- subtree[child] + (n - subtree[child])</text>
+  
+  <!-- Right Section: Multi-state DP -->
+  <text x="700" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">MULTI-STATE DP</text>
+  <text x="700" y="125" font-family="Courier New, monospace" font-size="11" fill="#888888">(House Robber III)</text>
+  
+  <!-- Multi-state tree -->
+  <circle cx="800" cy="170" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="800" y="176" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">3</text>
+  
+  <circle cx="740" cy="240" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="740" y="246" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">2</text>
+  
+  <circle cx="860" cy="240" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="860" y="246" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">3</text>
+  
+  <circle cx="700" cy="310" r="20" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="700" y="316" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">3</text>
+  
+  <circle cx="780" cy="310" r="20" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="780" y="316" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+  
+  <line x1="800" y1="190" x2="740" y2="220" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="800" y1="190" x2="860" y2="220" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="740" y1="260" x2="700" y2="290" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="740" y1="260" x2="780" y2="290" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- State boxes -->
+  <rect x="670" y="360" width="230" height="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="5"/>
+  <text x="785" y="382" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">rob[v] = val + Σ skip[child]</text>
+  <text x="785" y="402" font-family="Courier New, monospace" font-size="11" fill="#f97316" text-anchor="middle">skip[v] = Σ max(rob, skip)</text>
+  <text x="785" y="420" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">Answer: max(rob[root], skip[root])</text>
+  
+  <!-- Bottom Section: DP Patterns -->
+  <text x="100" y="460" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COMMON DP PATTERNS</text>
+  
+  <!-- Pattern 1: Diameter -->
+  <rect x="40" y="480" width="200" height="90" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="5"/>
+  <text x="140" y="505" font-family="Courier New, monospace" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">DIAMETER</text>
+  <text x="140" y="525" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">Track max depth per subtree</text>
+  <text x="140" y="545" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">d = max(left + right)</text>
+  <text x="140" y="565" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">O(n) time</text>
+  
+  <!-- Pattern 2: Max Path Sum -->
+  <rect x="260" y="480" width="200" height="90" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="5"/>
+  <text x="360" y="505" font-family="Courier New, monospace" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">MAX PATH SUM</text>
+  <text x="360" y="525" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">Include or exclude branches</text>
+  <text x="360" y="545" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">max(left,0) + max(right,0)</text>
+  <text x="360" y="565" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">O(n) time</text>
+  
+  <!-- Pattern 3: Sum of Distances -->
+  <rect x="480" y="480" width="200" height="90" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="5"/>
+  <text x="580" y="505" font-family="Courier New, monospace" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">SUM OF DISTANCES</text>
+  <text x="580" y="525" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">Rerooting technique</text>
+  <text x="580" y="545" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="middle">Two-pass: down + up</text>
+  <text x="580" y="565" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">O(n) time</text>
+  
+  <!-- Pattern 4: Cameras -->
+  <rect x="700" y="480" width="200" height="90" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="5"/>
+  <text x="800" y="505" font-family="Courier New, monospace" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">TREE CAMERAS</text>
+  <text x="800" y="525" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">3 states per node</text>
+  <text x="800" y="545" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">monitored/camera/uncovered</text>
+  <text x="800" y="565" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">O(n) time</text>
+  
+  <!-- Decision Flow -->
+  <text x="100" y="600" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">PATTERN SELECTION</text>
+  
+  <rect x="40" y="615" width="860" height="60" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="5"/>
+  <text x="60" y="635" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Single answer for tree ──► Subtree DP</text>
+  <text x="60" y="655" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Answer for each node as root ──► Rerooting DP</text>
+  <text x="460" y="635" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Multiple choices per node ──► Multi-state DP</text>
+  <text x="460" y="655" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Need parent info ──► In/Out DP</text>
+</svg>

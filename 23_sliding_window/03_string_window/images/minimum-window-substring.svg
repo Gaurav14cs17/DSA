@@ -1,0 +1,164 @@
+<svg viewBox="0 0 950 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Minimum Window Substring</text>
+  <text x="475" y="68" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">S = "ADOBECODEBANC" | T = "ABC"</text>
+  
+  <!-- Have vs Need concept -->
+  <rect x="30" y="90" width="420" height="100" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="240" y="115" text-anchor="middle" fill="#a78bfa" font-size="14" font-weight="bold" font-family="Courier New, monospace">HAVE vs NEED PATTERN</text>
+  
+  <text x="50" y="140" fill="#ffffff" font-size="11" font-family="Courier New, monospace">need = {A:1, B:1, C:1}  required = 3</text>
+  <text x="50" y="160" fill="#888888" font-size="11" font-family="Courier New, monospace">have = current window frequencies</text>
+  <text x="50" y="180" fill="#4ade80" font-size="11" font-family="Courier New, monospace">VALID when: formed == required</text>
+  
+  <!-- Algorithm -->
+  <rect x="470" y="90" width="450" height="100" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="695" y="115" text-anchor="middle" fill="#3b82f6" font-size="14" font-weight="bold" font-family="Courier New, monospace">ALGORITHM</text>
+  
+  <text x="490" y="140" fill="#a78bfa" font-size="10" font-family="Courier New, monospace">1. Expand until VALID (formed == required)</text>
+  <text x="490" y="158" fill="#f97316" font-size="10" font-family="Courier New, monospace">2. Shrink while VALID, track minimum</text>
+  <text x="490" y="176" fill="#888888" font-size="10" font-family="Courier New, monospace">3. Repeat until end of string</text>
+  
+  <!-- Step 1: Initial expansion -->
+  <text x="30" y="220" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">STEP 1: Expand until valid (have all A, B, C)</text>
+  
+  <!-- String display -->
+  <rect x="30" y="235" width="32" height="32" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="46" y="257" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">A</text>
+  <rect x="67" y="235" width="32" height="32" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="83" y="257" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">D</text>
+  <rect x="104" y="235" width="32" height="32" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="120" y="257" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">O</text>
+  <rect x="141" y="235" width="32" height="32" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="157" y="257" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">B</text>
+  <rect x="178" y="235" width="32" height="32" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="194" y="257" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">E</text>
+  <rect x="215" y="235" width="32" height="32" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="231" y="257" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">C</text>
+  <rect x="252" y="235" width="32" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="268" y="257" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">O</text>
+  <rect x="289" y="235" width="32" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="305" y="257" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">D</text>
+  <rect x="326" y="235" width="32" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="342" y="257" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">E</text>
+  <rect x="363" y="235" width="32" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="379" y="257" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">B</text>
+  <rect x="400" y="235" width="32" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="416" y="257" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">A</text>
+  <rect x="437" y="235" width="32" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="453" y="257" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">N</text>
+  <rect x="474" y="235" width="32" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="490" y="257" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">C</text>
+  
+  <text x="30" y="228" fill="#4ade80" font-size="10" font-family="Courier New, monospace">L</text>
+  <text x="215" y="228" fill="#f97316" font-size="10" font-family="Courier New, monospace">R</text>
+  
+  <rect x="28" y="272" width="222" height="6" fill="none" stroke="#0f2f1f" stroke-width="2"/>
+  <text x="550" y="255" fill="#888888" font-size="11" font-family="Courier New, monospace">have={A:1,D:1,O:1,B:1,E:1,C:1}</text>
+  <text x="550" y="275" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">formed=3 ✓ VALID! len=6 "ADOBEC"</text>
+  
+  <!-- Step 2: Shrink -->
+  <text x="30" y="310" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">STEP 2: Shrink while valid (find minimum)</text>
+  
+  <rect x="30" y="325" width="32" height="32" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="3,2"/>
+  <text x="46" y="347" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">A</text>
+  <rect x="67" y="325" width="32" height="32" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="83" y="347" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">D</text>
+  <rect x="104" y="325" width="32" height="32" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="120" y="347" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">O</text>
+  <rect x="141" y="325" width="32" height="32" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="157" y="347" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">B</text>
+  <rect x="178" y="325" width="32" height="32" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="194" y="347" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">E</text>
+  <rect x="215" y="325" width="32" height="32" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="231" y="347" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">C</text>
+  
+  <text x="67" y="318" fill="#f97316" font-size="10" font-family="Courier New, monospace">L</text>
+  <text x="215" y="318" fill="#f97316" font-size="10" font-family="Courier New, monospace">R</text>
+  
+  <text x="550" y="345" fill="#ef4444" font-size="11" font-family="Courier New, monospace">Remove A: have={A:0,...}</text>
+  <text x="550" y="365" fill="#ef4444" font-size="12" font-weight="bold" font-family="Courier New, monospace">formed=2 ✗ INVALID! Stop shrinking</text>
+  
+  <!-- Continue expanding -->
+  <text x="30" y="400" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">STEP 3: Continue... Eventually find "BANC"</text>
+  
+  <rect x="30" y="415" width="32" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="46" y="437" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">A</text>
+  <rect x="67" y="415" width="32" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="83" y="437" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">D</text>
+  <rect x="104" y="415" width="32" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="120" y="437" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">O</text>
+  <rect x="141" y="415" width="32" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="157" y="437" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">B</text>
+  <rect x="178" y="415" width="32" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="194" y="437" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">E</text>
+  <rect x="215" y="415" width="32" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="231" y="437" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">C</text>
+  <rect x="252" y="415" width="32" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="268" y="437" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">O</text>
+  <rect x="289" y="415" width="32" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="305" y="437" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">D</text>
+  <rect x="326" y="415" width="32" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="342" y="437" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">E</text>
+  <rect x="363" y="415" width="32" height="32" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="379" y="437" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">B</text>
+  <rect x="400" y="415" width="32" height="32" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="416" y="437" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">A</text>
+  <rect x="437" y="415" width="32" height="32" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="453" y="437" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">N</text>
+  <rect x="474" y="415" width="32" height="32" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="490" y="437" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">C</text>
+  
+  <text x="363" y="408" fill="#4ade80" font-size="10" font-family="Courier New, monospace">L</text>
+  <text x="474" y="408" fill="#4ade80" font-size="10" font-family="Courier New, monospace">R</text>
+  
+  <rect x="361" y="452" width="148" height="6" fill="none" stroke="#4ade80" stroke-width="2"/>
+  <text x="550" y="435" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">len=4 "BANC" ★ MINIMUM!</text>
+  
+  <!-- Result Box -->
+  <rect x="30" y="480" width="420" height="90" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="240" y="510" text-anchor="middle" fill="#4ade80" font-size="18" font-weight="bold" font-family="Courier New, monospace">ANSWER: "BANC"</text>
+  <text x="240" y="540" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Courier New, monospace">Length: 4 | Start Index: 9</text>
+  <text x="240" y="560" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Time: O(|S| + |T|) | Space: O(|S| + |T|)</text>
+  
+  <!-- Key Points -->
+  <rect x="470" y="480" width="450" height="90" rx="8" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="695" y="510" text-anchor="middle" fill="#f97316" font-size="14" font-weight="bold" font-family="Courier New, monospace">KEY INSIGHTS</text>
+  <text x="490" y="535" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Track "formed" count instead of comparing maps</text>
+  <text x="490" y="555" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Shrink WHILE valid, not WHEN valid</text>
+  <text x="490" y="575" fill="#888888" font-size="10" font-family="Courier New, monospace">• formed++ when have[c] reaches need[c]</text>
+  
+  <!-- State tracking visualization -->
+  <rect x="30" y="590" width="890" height="90" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="475" y="620" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">STATE TRACKING: formed vs required</text>
+  
+  <text x="100" y="650" fill="#ffffff" font-size="11" font-family="Courier New, monospace">formed=0</text>
+  <text x="100" y="670" fill="#888888" font-size="10" font-family="Courier New, monospace">need all</text>
+  
+  <line x1="180" y1="655" x2="220" y2="655" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="220,650 235,655 220,660" fill="#4ade80"/>
+  
+  <text x="260" y="650" fill="#ffffff" font-size="11" font-family="Courier New, monospace">formed=1</text>
+  <text x="260" y="670" fill="#888888" font-size="10" font-family="Courier New, monospace">got A</text>
+  
+  <line x1="340" y1="655" x2="380" y2="655" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="380,650 395,655 380,660" fill="#4ade80"/>
+  
+  <text x="420" y="650" fill="#ffffff" font-size="11" font-family="Courier New, monospace">formed=2</text>
+  <text x="420" y="670" fill="#888888" font-size="10" font-family="Courier New, monospace">got B</text>
+  
+  <line x1="500" y1="655" x2="540" y2="655" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="540,650 555,655 540,660" fill="#4ade80"/>
+  
+  <text x="580" y="650" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">formed=3 ✓</text>
+  <text x="580" y="670" fill="#4ade80" font-size="10" font-family="Courier New, monospace">got C=VALID</text>
+  
+  <line x1="680" y1="655" x2="720" y2="655" stroke="#f97316" stroke-width="2"/>
+  <polygon points="720,650 735,655 720,660" fill="#f97316"/>
+  
+  <text x="760" y="650" fill="#f97316" font-size="11" font-family="Courier New, monospace">SHRINK</text>
+  <text x="760" y="670" fill="#888888" font-size="10" font-family="Courier New, monospace">find min</text>
+</svg>
+

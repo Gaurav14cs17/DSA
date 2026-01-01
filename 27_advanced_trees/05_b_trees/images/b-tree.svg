@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 650">
+  <rect width="950" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">B-Tree Structure (Order m=4)</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Multi-way search tree • Optimized for disk I/O • All leaves at same level</text>
+
+  <!-- B-Tree Example -->
+  <text x="475" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">B-TREE OF ORDER 4 (2-3-4 TREE)</text>
+
+  <!-- Root Node [17|35] -->
+  <rect x="375" y="130" width="200" height="45" fill="#2d1f3d" stroke="#a78bfa" stroke-width="3"/>
+  <line x1="475" y1="130" x2="475" y2="175" stroke="#a78bfa" stroke-width="1"/>
+  <text x="425" y="160" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">17</text>
+  <text x="525" y="160" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">35</text>
+  <text x="575" y="123" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">ROOT</text>
+
+  <!-- Pointers from root -->
+  <line x1="400" y1="175" x2="200" y2="240" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="475" y1="175" x2="475" y2="240" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="550" y1="175" x2="750" y2="240" stroke="#3b82f6" stroke-width="2"/>
+
+  <!-- Left Child [3|8|12] -->
+  <rect x="80" y="250" width="240" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="160" y1="250" x2="160" y2="295" stroke="#3b82f6" stroke-width="1"/>
+  <line x1="240" y1="250" x2="240" y2="295" stroke="#3b82f6" stroke-width="1"/>
+  <text x="120" y="280" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="200" y="280" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">8</text>
+  <text x="280" y="280" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">12</text>
+
+  <!-- Middle Child [20|27] -->
+  <rect x="375" y="250" width="200" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="475" y1="250" x2="475" y2="295" stroke="#3b82f6" stroke-width="1"/>
+  <text x="425" y="280" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">20</text>
+  <text x="525" y="280" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">27</text>
+
+  <!-- Right Child [40|52|68] -->
+  <rect x="630" y="250" width="240" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="710" y1="250" x2="710" y2="295" stroke="#3b82f6" stroke-width="1"/>
+  <line x1="790" y1="250" x2="790" y2="295" stroke="#3b82f6" stroke-width="1"/>
+  <text x="670" y="280" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">40</text>
+  <text x="750" y="280" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">52</text>
+  <text x="830" y="280" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">68</text>
+
+  <!-- Leaf level pointers -->
+  <line x1="110" y1="295" x2="60" y2="340" stroke="#4ade80" stroke-width="2"/>
+  <line x1="180" y1="295" x2="140" y2="340" stroke="#4ade80" stroke-width="2"/>
+  <line x1="260" y1="295" x2="220" y2="340" stroke="#4ade80" stroke-width="2"/>
+  <line x1="310" y1="295" x2="300" y2="340" stroke="#4ade80" stroke-width="2"/>
+
+  <!-- Leaf nodes -->
+  <rect x="30" y="350" width="60" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="60" y="373" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">1,2</text>
+  
+  <rect x="110" y="350" width="60" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="140" y="373" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">5,7</text>
+  
+  <rect x="190" y="350" width="60" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="220" y="373" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">9,10</text>
+  
+  <rect x="270" y="350" width="70" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="305" y="373" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">13,15</text>
+
+  <!-- Leaf indicator -->
+  <text x="200" y="405" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">LEAF LEVEL (Same Depth)</text>
+
+  <!-- Properties Box -->
+  <rect x="30" y="440" width="290" height="180" fill="#0f0f23" stroke="#3b82f6" stroke-width="2"/>
+  <text x="175" y="465" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">B-TREE PROPERTIES (Order m)</text>
+  
+  <text x="50" y="495" font-family="Courier New, monospace" font-size="11" fill="#4ade80">1.</text>
+  <text x="70" y="495" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Max m children per node</text>
+  
+  <text x="50" y="520" font-family="Courier New, monospace" font-size="11" fill="#4ade80">2.</text>
+  <text x="70" y="520" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Min ⌈m/2⌉ children (non-root)</text>
+  
+  <text x="50" y="545" font-family="Courier New, monospace" font-size="11" fill="#4ade80">3.</text>
+  <text x="70" y="545" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Root: 2+ children (if not leaf)</text>
+  
+  <text x="50" y="570" font-family="Courier New, monospace" font-size="11" fill="#4ade80">4.</text>
+  <text x="70" y="570" font-family="Courier New, monospace" font-size="11" fill="#ffffff">All leaves at same level</text>
+  
+  <text x="50" y="595" font-family="Courier New, monospace" font-size="11" fill="#4ade80">5.</text>
+  <text x="70" y="595" font-family="Courier New, monospace" font-size="11" fill="#ffffff">k children → k-1 keys</text>
+
+  <!-- Operations Box -->
+  <rect x="340" y="440" width="280" height="180" fill="#0f0f23" stroke="#f97316" stroke-width="2"/>
+  <text x="480" y="465" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">OPERATIONS</text>
+  
+  <text x="360" y="495" font-family="Courier New, monospace" font-size="12" fill="#f97316">Search:</text>
+  <text x="360" y="515" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Binary search + follow pointer</text>
+  
+  <text x="360" y="545" font-family="Courier New, monospace" font-size="12" fill="#f97316">Insert:</text>
+  <text x="360" y="565" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Insert → split if overflow</text>
+  
+  <text x="360" y="595" font-family="Courier New, monospace" font-size="12" fill="#f97316">Delete:</text>
+  <text x="360" y="615" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Remove → borrow/merge if underflow</text>
+
+  <!-- Why B-Trees Box -->
+  <rect x="640" y="440" width="280" height="180" fill="#0f0f23" stroke="#4ade80" stroke-width="2"/>
+  <text x="780" y="465" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">WHY B-TREES?</text>
+  
+  <text x="660" y="495" font-family="Courier New, monospace" font-size="11" fill="#ffffff">RAM access: ~100 ns</text>
+  <text x="660" y="515" font-family="Courier New, monospace" font-size="11" fill="#ef4444">Disk access: ~10 ms (100,000× slower)</text>
+  
+  <text x="660" y="545" font-family="Courier New, monospace" font-size="11" fill="#4ade80">B-Trees minimize disk I/O:</text>
+  <text x="670" y="565" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• Large nodes (match block size)</text>
+  <text x="670" y="580" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• Shallow tree (few accesses)</text>
+  <text x="670" y="595" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• Sequential in node (cache)</text>
+  
+  <text x="660" y="618" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">Used: NTFS, ext4, MySQL, PostgreSQL</text>
+
+  <!-- Complexity Footer -->
+  <text x="475" y="640" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">Height: O(log_m n) • Search/Insert/Delete: O(log n) • For m=1000: log₅₀₀(10⁶) ≈ 3 levels!</text>
+</svg>

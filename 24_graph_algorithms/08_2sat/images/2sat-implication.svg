@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580">
+  <rect width="900" height="580" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">2-SAT Problem - Implication Graph</text>
+  <text x="450" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Boolean satisfiability with clauses of size ≤ 2</text>
+  
+  <!-- Example Formula -->
+  <text x="50" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">CNF FORMULA</text>
+  
+  <rect x="50" y="125" width="350" height="50" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="5"/>
+  <text x="225" y="158" font-family="Courier New, monospace" font-size="16" fill="#ffffff" text-anchor="middle">(x₁ ∨ x₂) ∧ (¬x₁ ∨ x₃) ∧ (¬x₂ ∨ ¬x₃)</text>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="satarrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  
+  <!-- Implication Graph -->
+  <text x="50" y="200" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">IMPLICATION GRAPH</text>
+  
+  <!-- Positive literals -->
+  <circle cx="150" cy="280" r="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="150" y="285" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">x₁</text>
+  
+  <circle cx="250" cy="280" r="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="250" y="285" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">x₂</text>
+  
+  <circle cx="350" cy="280" r="22" fill="#1f0f0f" stroke="#ef4444" stroke-width="3"/>
+  <text x="350" y="285" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">x₃</text>
+  
+  <!-- Negative literals -->
+  <circle cx="150" cy="380" r="22" fill="#1f0f0f" stroke="#ef4444" stroke-width="3"/>
+  <text x="150" y="385" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">¬x₁</text>
+  
+  <circle cx="250" cy="380" r="22" fill="#1f0f0f" stroke="#ef4444" stroke-width="3"/>
+  <text x="250" y="385" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">¬x₂</text>
+  
+  <circle cx="350" cy="380" r="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="350" y="385" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">¬x₃</text>
+  
+  <!-- Implications from (x₁ ∨ x₂): ¬x₁ → x₂, ¬x₂ → x₁ -->
+  <line x1="172" y1="380" x2="228" y2="295" stroke="#3b82f6" stroke-width="2" marker-end="url(#satarrow)"/>
+  <line x1="228" y1="380" x2="172" y2="295" stroke="#3b82f6" stroke-width="2" marker-end="url(#satarrow)"/>
+  
+  <!-- Implications from (¬x₁ ∨ x₃): x₁ → x₃, ¬x₃ → ¬x₁ -->
+  <line x1="170" y1="270" x2="328" y2="270" stroke="#3b82f6" stroke-width="2" marker-end="url(#satarrow)"/>
+  <line x1="328" y1="380" x2="172" y2="380" stroke="#3b82f6" stroke-width="2" marker-end="url(#satarrow)"/>
+  
+  <!-- Implications from (¬x₂ ∨ ¬x₃): x₂ → ¬x₃, x₃ → ¬x₂ -->
+  <line x1="270" y1="290" x2="330" y2="365" stroke="#3b82f6" stroke-width="2" marker-end="url(#satarrow)"/>
+  <line x1="330" y1="290" x2="270" y2="365" stroke="#3b82f6" stroke-width="2" marker-end="url(#satarrow)"/>
+  
+  <!-- Conversion Rule -->
+  <text x="450" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">CONVERSION TO IMPLICATIONS</text>
+  
+  <rect x="450" y="125" width="420" height="80" fill="none" stroke="#3b82f6" stroke-width="2" rx="5"/>
+  <text x="470" y="155" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Clause (a ∨ b) becomes:</text>
+  <text x="490" y="180" font-family="Courier New, monospace" font-size="12" fill="#4ade80">¬a → b  and  ¬b → a</text>
+  
+  <!-- SCC-based Solution -->
+  <text x="450" y="230" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">SCC-BASED SOLUTION</text>
+  
+  <rect x="450" y="245" width="420" height="130" fill="none" stroke="#a78bfa" stroke-width="2" rx="5"/>
+  
+  <text x="470" y="275" font-family="Courier New, monospace" font-size="12" fill="#f97316" font-weight="bold">Satisfiability Check:</text>
+  <text x="490" y="295" font-family="Courier New, monospace" font-size="11" fill="#ffffff">∀ variable x: x and ¬x in different SCCs</text>
+  
+  <text x="470" y="330" font-family="Courier New, monospace" font-size="12" fill="#4ade80" font-weight="bold">Assignment:</text>
+  <text x="490" y="350" font-family="Courier New, monospace" font-size="11" fill="#ffffff">If SCC(x) after SCC(¬x) in topo order → x=FALSE</text>
+  <text x="490" y="370" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Otherwise → x=TRUE</text>
+  
+  <!-- Complexity -->
+  <text x="450" y="400" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COMPLEXITY</text>
+  <text x="450" y="425" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(V + E) = O(n + m)</text>
+  <text x="450" y="445" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Space: O(V + E)</text>
+  <text x="450" y="470" font-family="Courier New, monospace" font-size="11" fill="#888888">n = #variables, m = #clauses</text>
+  
+  <!-- Result -->
+  <text x="50" y="460" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">RESULT</text>
+  
+  <rect x="50" y="475" width="350" height="80" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="5"/>
+  <text x="225" y="505" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">SATISFIABLE</text>
+  <text x="70" y="530" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Solution: x₁=TRUE, x₂=TRUE, x₃=FALSE</text>
+  
+  <!-- Key Insight -->
+  <text x="450" y="500" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">KEY INSIGHT</text>
+  <rect x="450" y="515" width="420" height="40" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="5"/>
+  <text x="660" y="542" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">2-SAT: O(n+m) | 3-SAT: NP-Complete!</text>
+</svg>

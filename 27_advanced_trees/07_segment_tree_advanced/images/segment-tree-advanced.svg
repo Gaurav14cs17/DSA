@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 700">
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Advanced Segment Tree</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Lazy Propagation • 2D Queries • Persistent • Dynamic</text>
+
+  <!-- Lazy Propagation Section -->
+  <text x="240" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">LAZY PROPAGATION</text>
+  
+  <!-- Segment Tree with Lazy -->
+  <rect x="60" y="125" width="360" height="200" fill="#0f0f23" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Tree visualization -->
+  <!-- Root -->
+  <rect x="200" y="145" width="80" height="30" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="240" y="165" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">[0,7]</text>
+  <text x="290" y="162" font-family="Courier New, monospace" font-size="9" fill="#f97316">lazy:+5</text>
+  
+  <!-- Level 2 -->
+  <line x1="210" y1="175" x2="150" y2="195" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="270" y1="175" x2="330" y2="195" stroke="#3b82f6" stroke-width="2"/>
+  
+  <rect x="110" y="200" width="70" height="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="145" y="218" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">[0,3]</text>
+  
+  <rect x="300" y="200" width="70" height="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="335" y="218" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">[4,7]</text>
+  
+  <!-- Level 3 -->
+  <line x1="125" y1="228" x2="100" y2="248" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="165" y1="228" x2="190" y2="248" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="315" y1="228" x2="290" y2="248" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="355" y1="228" x2="380" y2="248" stroke="#3b82f6" stroke-width="2"/>
+  
+  <rect x="75" y="253" width="50" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="100" y="268" font-family="Courier New, monospace" font-size="9" fill="#ffffff" text-anchor="middle">[0,1]</text>
+  
+  <rect x="165" y="253" width="50" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="190" y="268" font-family="Courier New, monospace" font-size="9" fill="#ffffff" text-anchor="middle">[2,3]</text>
+  
+  <rect x="265" y="253" width="50" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="290" y="268" font-family="Courier New, monospace" font-size="9" fill="#ffffff" text-anchor="middle">[4,5]</text>
+  
+  <rect x="355" y="253" width="50" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="380" y="268" font-family="Courier New, monospace" font-size="9" fill="#ffffff" text-anchor="middle">[6,7]</text>
+  
+  <!-- Lazy explanation -->
+  <text x="240" y="300" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">lazy[node]: pending update for subtree</text>
+  <text x="240" y="315" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">Push lazy down before accessing children</text>
+
+  <!-- Persistent Section -->
+  <text x="710" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">PERSISTENT SEGMENT TREE</text>
+  
+  <rect x="530" y="125" width="360" height="200" fill="#0f0f23" stroke="#a78bfa" stroke-width="2"/>
+  
+  <!-- Path copying visualization -->
+  <text x="710" y="150" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">Path Copying - O(log n) nodes per version</text>
+  
+  <!-- Version 0 -->
+  <circle cx="600" cy="190" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="600" y="195" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">v0</text>
+  
+  <line x1="585" y1="205" x2="560" y2="230" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="615" y1="205" x2="640" y2="230" stroke="#3b82f6" stroke-width="2"/>
+  
+  <circle cx="550" cy="245" r="15" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <circle cx="650" cy="245" r="15" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  
+  <!-- Version 1 (modified path) -->
+  <circle cx="780" cy="190" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="780" y="195" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">v1</text>
+  <text x="810" y="188" font-family="Courier New, monospace" font-size="8" fill="#f97316">NEW</text>
+  
+  <line x1="765" y1="205" x2="740" y2="230" stroke="#f97316" stroke-width="2"/>
+  <line x1="795" y1="205" x2="820" y2="230" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3,2"/>
+  
+  <circle cx="730" cy="245" r="15" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="730" y="249" font-family="Courier New, monospace" font-size="8" fill="#ffffff" text-anchor="middle">NEW</text>
+  
+  <!-- Shared nodes -->
+  <path d="M 820 240 Q 800 260 650 260" stroke="#4ade80" stroke-width="1" stroke-dasharray="3,2" fill="none"/>
+  <text x="730" y="280" font-family="Courier New, monospace" font-size="8" fill="#4ade80" text-anchor="middle">Shared</text>
+  
+  <text x="710" y="310" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">Query any version • O(log n) per update</text>
+  <text x="710" y="325" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">Space: O(n + q·log n)</text>
+
+  <!-- 2D Segment Tree -->
+  <rect x="60" y="350" width="280" height="160" fill="#0f0f23" stroke="#4ade80" stroke-width="2"/>
+  <text x="200" y="375" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">2D SEGMENT TREE</text>
+  
+  <text x="80" y="400" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Tree of trees (rows → columns)</text>
+  <text x="80" y="420" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• 2D range queries on matrix</text>
+  <text x="80" y="445" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">Build: O(mn log m log n)</text>
+  <text x="80" y="465" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">Query: O(log m · log n)</text>
+  <text x="80" y="485" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">Update: O(log m · log n)</text>
+  <text x="80" y="505" font-family="Courier New, monospace" font-size="10" fill="#888888">Space: O(mn log m log n)</text>
+
+  <!-- Dynamic Segment Tree -->
+  <rect x="360" y="350" width="280" height="160" fill="#0f0f23" stroke="#f97316" stroke-width="2"/>
+  <text x="500" y="375" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">DYNAMIC SEGMENT TREE</text>
+  
+  <text x="380" y="400" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Create nodes on-demand</text>
+  <text x="380" y="420" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• For sparse data or large range</text>
+  <text x="380" y="445" font-family="Courier New, monospace" font-size="11" fill="#f97316">Range: [0, 10⁹] but few values</text>
+  <text x="380" y="470" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">Space: O(q · log C)</text>
+  <text x="380" y="490" font-family="Courier New, monospace" font-size="10" fill="#888888">q = queries, C = coordinate range</text>
+
+  <!-- Range Operations -->
+  <rect x="660" y="350" width="260" height="160" fill="#0f0f23" stroke="#3b82f6" stroke-width="2"/>
+  <text x="790" y="375" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">RANGE AGGREGATES</text>
+  
+  <text x="680" y="400" font-family="Courier New, monospace" font-size="11" fill="#4ade80">• Range Sum</text>
+  <text x="680" y="420" font-family="Courier New, monospace" font-size="11" fill="#4ade80">• Range Min/Max (RMQ)</text>
+  <text x="680" y="440" font-family="Courier New, monospace" font-size="11" fill="#4ade80">• Range GCD/LCM</text>
+  <text x="680" y="460" font-family="Courier New, monospace" font-size="11" fill="#4ade80">• Range AND/OR/XOR</text>
+  <text x="680" y="480" font-family="Courier New, monospace" font-size="11" fill="#4ade80">• Range Product</text>
+  <text x="680" y="505" font-family="Courier New, monospace" font-size="10" fill="#888888">Any associative operation</text>
+
+  <!-- Complexity Summary -->
+  <rect x="60" y="530" width="860" height="80" fill="#0f0f23" stroke="#a78bfa" stroke-width="2"/>
+  <text x="490" y="555" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">COMPLEXITY SUMMARY</text>
+  
+  <text x="150" y="580" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">Lazy Prop</text>
+  <text x="150" y="600" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">O(log n) update/query</text>
+  
+  <text x="320" y="580" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">2D Tree</text>
+  <text x="320" y="600" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">O(log²n) ops</text>
+  
+  <text x="490" y="580" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">Persistent</text>
+  <text x="490" y="600" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">O(log n) per version</text>
+  
+  <text x="660" y="580" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">Dynamic</text>
+  <text x="660" y="600" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">O(q log C) space</text>
+  
+  <text x="830" y="580" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">Range Agg</text>
+  <text x="830" y="600" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">O(log n) query</text>
+
+  <!-- Applications -->
+  <text x="490" y="640" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">Applications: Calendar Problems • Matrix Queries • Kth Element in Range • Version Control</text>
+  <text x="490" y="665" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">Range Module • Falling Squares • Count Good Triplets • Rectangle Area</text>
+</svg>

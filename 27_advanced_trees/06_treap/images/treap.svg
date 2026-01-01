@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 650">
+  <rect width="950" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Treap = Tree + Heap</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Randomized BST • BST by key, Max-Heap by priority • Expected O(log n)</text>
+
+  <!-- Example Treap -->
+  <text x="300" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">TREAP EXAMPLE</text>
+  
+  <!-- Legend -->
+  <text x="140" y="130" font-family="Courier New, monospace" font-size="10" fill="#888888">Format: (key, priority)</text>
+  
+  <!-- Root (50, 0.95) -->
+  <circle cx="300" cy="170" r="32" fill="#2d1f3d" stroke="#a78bfa" stroke-width="3"/>
+  <text x="300" y="165" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">50</text>
+  <text x="300" y="182" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">p=0.95</text>
+  <text x="345" y="155" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">MAX</text>
+
+  <!-- Left child (20, 0.82) -->
+  <line x1="272" y1="192" x2="200" y2="248" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="180" cy="270" r="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="180" y="265" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">20</text>
+  <text x="180" y="280" font-family="Courier New, monospace" font-size="9" fill="#f97316" text-anchor="middle">p=0.82</text>
+
+  <!-- Right child (80, 0.78) -->
+  <line x1="328" y1="192" x2="400" y2="248" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="420" cy="270" r="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="420" y="265" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">80</text>
+  <text x="420" y="280" font-family="Courier New, monospace" font-size="9" fill="#f97316" text-anchor="middle">p=0.78</text>
+
+  <!-- Level 3 -->
+  <line x1="156" y1="292" x2="110" y2="340" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="95" cy="360" r="24" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="95" y="355" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">10</text>
+  <text x="95" y="370" font-family="Courier New, monospace" font-size="8" fill="#f97316" text-anchor="middle">p=0.65</text>
+
+  <line x1="204" y1="292" x2="250" y2="340" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="265" cy="360" r="24" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="265" y="355" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">30</text>
+  <text x="265" y="370" font-family="Courier New, monospace" font-size="8" fill="#f97316" text-anchor="middle">p=0.45</text>
+
+  <line x1="396" y1="292" x2="355" y2="340" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="340" cy="360" r="24" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="340" y="355" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">70</text>
+  <text x="340" y="370" font-family="Courier New, monospace" font-size="8" fill="#f97316" text-anchor="middle">p=0.52</text>
+
+  <line x1="444" y1="292" x2="485" y2="340" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="500" cy="360" r="24" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="500" y="355" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">90</text>
+  <text x="500" y="370" font-family="Courier New, monospace" font-size="8" fill="#f97316" text-anchor="middle">p=0.33</text>
+
+  <!-- Properties annotation -->
+  <text x="300" y="420" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">BST: 10 &lt; 20 &lt; 30 &lt; 50 &lt; 70 &lt; 80 &lt; 90 ✓</text>
+  <text x="300" y="440" font-family="Courier New, monospace" font-size="11" fill="#f97316" text-anchor="middle">HEAP: Parent priority &gt; Children priorities ✓</text>
+
+  <!-- Split/Merge Section -->
+  <text x="750" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">SPLIT &amp; MERGE</text>
+  
+  <!-- Split visualization -->
+  <rect x="620" y="130" width="260" height="100" fill="#0f0f23" stroke="#f97316" stroke-width="2"/>
+  <text x="750" y="155" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316" text-anchor="middle">SPLIT(T, k)</text>
+  
+  <text x="640" y="180" font-family="Courier New, monospace" font-size="10" fill="#ffffff">1. Insert dummy with key=k, priority=∞</text>
+  <text x="640" y="195" font-family="Courier New, monospace" font-size="10" fill="#ffffff">2. Dummy becomes root (highest priority)</text>
+  <text x="640" y="210" font-family="Courier New, monospace" font-size="10" fill="#ffffff">3. Left subtree = keys &lt; k</text>
+  <text x="640" y="225" font-family="Courier New, monospace" font-size="10" fill="#ffffff">4. Right subtree = keys ≥ k</text>
+  
+  <!-- Merge visualization -->
+  <rect x="620" y="240" width="260" height="85" fill="#0f0f23" stroke="#4ade80" stroke-width="2"/>
+  <text x="750" y="265" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">MERGE(T1, T2)</text>
+  
+  <text x="640" y="290" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Requires: all keys in T1 &lt; all keys in T2</text>
+  <text x="640" y="305" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Compare root priorities, recurse</text>
+  <text x="640" y="320" font-family="Courier New, monospace" font-size="10" fill="#60a5fa">Time: O(log n) expected</text>
+
+  <!-- Insert Operation -->
+  <rect x="620" y="335" width="260" height="65" fill="#0f0f23" stroke="#a78bfa" stroke-width="2"/>
+  <text x="750" y="360" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa" text-anchor="middle">INSERT</text>
+  <text x="640" y="382" font-family="Courier New, monospace" font-size="10" fill="#ffffff">BST insert → rotate up to maintain heap</text>
+  <text x="640" y="397" font-family="Courier New, monospace" font-size="10" fill="#60a5fa">Time: O(log n) expected</text>
+
+  <!-- Two Properties Box -->
+  <rect x="50" y="475" width="280" height="150" fill="#0f0f23" stroke="#3b82f6" stroke-width="2"/>
+  <text x="190" y="500" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">TWO PROPERTIES</text>
+  
+  <text x="70" y="530" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1. BST Property (by key):</text>
+  <text x="80" y="550" font-family="Courier New, monospace" font-size="11" fill="#ffffff">left.key &lt; node.key &lt; right.key</text>
+  
+  <text x="70" y="580" font-family="Courier New, monospace" font-size="12" fill="#f97316">2. Max-Heap Property (by priority):</text>
+  <text x="80" y="600" font-family="Courier New, monospace" font-size="11" fill="#ffffff">node.priority &gt; children.priority</text>
+
+  <!-- Why Randomization Box -->
+  <rect x="350" y="475" width="280" height="150" fill="#0f0f23" stroke="#f97316" stroke-width="2"/>
+  <text x="490" y="500" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">WHY RANDOMIZATION?</text>
+  
+  <text x="370" y="530" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Random priorities create random</text>
+  <text x="370" y="550" font-family="Courier New, monospace" font-size="11" fill="#ffffff">insertion order effect</text>
+  
+  <text x="370" y="580" font-family="Courier New, monospace" font-size="11" fill="#4ade80">→ Random BST has O(log n) height</text>
+  <text x="370" y="600" font-family="Courier New, monospace" font-size="11" fill="#4ade80">→ Regardless of actual insert order!</text>
+
+  <!-- Complexity Box -->
+  <rect x="650" y="475" width="270" height="150" fill="#0f0f23" stroke="#4ade80" stroke-width="2"/>
+  <text x="785" y="500" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">COMPLEXITY</text>
+  
+  <text x="670" y="530" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">Search: O(log n) expected</text>
+  <text x="670" y="550" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">Insert: O(log n) expected</text>
+  <text x="670" y="570" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">Delete: O(log n) expected</text>
+  <text x="670" y="590" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">Split/Merge: O(log n) expected</text>
+  <text x="670" y="615" font-family="Courier New, monospace" font-size="10" fill="#888888">Worst case: O(n) but unlikely</text>
+
+  <!-- Footer -->
+  <text x="475" y="640" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">Simpler than AVL/Red-Black • Can be made persistent • Supports implicit key (array operations)</text>
+</svg>

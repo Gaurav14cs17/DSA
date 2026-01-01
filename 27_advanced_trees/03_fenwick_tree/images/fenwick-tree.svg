@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 650">
+  <rect width="950" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Fenwick Tree (Binary Indexed Tree)</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Efficient prefix sums with O(log n) update and query • LSB(i) = i &amp; (-i)</text>
+
+  <!-- Original Array -->
+  <text x="100" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">ORIGINAL ARRAY</text>
+  
+  <!-- Array indices -->
+  <text x="220" y="125" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">1</text>
+  <text x="290" y="125" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">2</text>
+  <text x="360" y="125" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">3</text>
+  <text x="430" y="125" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">4</text>
+  <text x="500" y="125" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">5</text>
+  <text x="570" y="125" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">6</text>
+  <text x="640" y="125" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">7</text>
+  <text x="710" y="125" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">8</text>
+
+  <!-- Array values -->
+  <rect x="195" y="135" width="50" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="220" y="160" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  
+  <rect x="265" y="135" width="50" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="290" y="160" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+  
+  <rect x="335" y="135" width="50" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="360" y="160" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">-1</text>
+  
+  <rect x="405" y="135" width="50" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="430" y="160" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+  
+  <rect x="475" y="135" width="50" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="500" y="160" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+  
+  <rect x="545" y="135" width="50" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="570" y="160" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+  
+  <rect x="615" y="135" width="50" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="640" y="160" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">-3</text>
+  
+  <rect x="685" y="135" width="50" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="710" y="160" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+
+  <!-- BIT Array -->
+  <text x="100" y="210" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">BIT ARRAY</text>
+  
+  <!-- BIT cells with ranges shown -->
+  <rect x="195" y="220" width="50" height="35" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="220" y="245" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="220" y="275" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">[1,1]</text>
+  
+  <rect x="265" y="220" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="290" y="245" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+  <text x="290" y="275" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">[1,2]</text>
+  
+  <rect x="335" y="220" width="50" height="35" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="360" y="245" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">-1</text>
+  <text x="360" y="275" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">[3,3]</text>
+  
+  <rect x="405" y="220" width="50" height="35" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="430" y="245" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">10</text>
+  <text x="430" y="275" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="middle">[1,4]</text>
+  
+  <rect x="475" y="220" width="50" height="35" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="500" y="245" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+  <text x="500" y="275" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">[5,5]</text>
+  
+  <rect x="545" y="220" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="570" y="245" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">9</text>
+  <text x="570" y="275" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">[5,6]</text>
+  
+  <rect x="615" y="220" width="50" height="35" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="640" y="245" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">-3</text>
+  <text x="640" y="275" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">[7,7]</text>
+  
+  <rect x="685" y="220" width="50" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="3"/>
+  <text x="710" y="245" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">17</text>
+  <text x="710" y="275" font-family="Courier New, monospace" font-size="10" fill="#3b82f6" text-anchor="middle">[1,8]</text>
+
+  <!-- Query Example -->
+  <text x="100" y="320" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">QUERY PREFIX SUM [1,7]</text>
+  
+  <!-- Query path visualization -->
+  <rect x="100" y="340" width="280" height="100" fill="#0f0f23" stroke="#4ade80" stroke-width="2"/>
+  
+  <text x="120" y="365" font-family="Courier New, monospace" font-size="12" fill="#ffffff">i = 7 → BIT[7] = -3</text>
+  <text x="270" y="365" font-family="Courier New, monospace" font-size="11" fill="#888888">7 = 111₂</text>
+  
+  <text x="120" y="390" font-family="Courier New, monospace" font-size="12" fill="#ffffff">i = 7 - LSB(7) = 6 → BIT[6] = 9</text>
+  <text x="270" y="390" font-family="Courier New, monospace" font-size="11" fill="#888888">6 = 110₂</text>
+  
+  <text x="120" y="415" font-family="Courier New, monospace" font-size="12" fill="#ffffff">i = 6 - LSB(6) = 4 → BIT[4] = 10</text>
+  <text x="270" y="415" font-family="Courier New, monospace" font-size="11" fill="#888888">4 = 100₂</text>
+  
+  <text x="120" y="435" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">Result: -3 + 9 + 10 = 16</text>
+
+  <!-- Update Example -->
+  <text x="420" y="320" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">UPDATE index 3 (+5)</text>
+  
+  <rect x="420" y="340" width="280" height="100" fill="#0f0f23" stroke="#f97316" stroke-width="2"/>
+  
+  <text x="440" y="365" font-family="Courier New, monospace" font-size="12" fill="#ffffff">i = 3 → BIT[3] += 5</text>
+  <text x="600" y="365" font-family="Courier New, monospace" font-size="11" fill="#888888">3 = 011₂</text>
+  
+  <text x="440" y="390" font-family="Courier New, monospace" font-size="12" fill="#ffffff">i = 3 + LSB(3) = 4 → BIT[4] += 5</text>
+  <text x="600" y="390" font-family="Courier New, monospace" font-size="11" fill="#888888">4 = 100₂</text>
+  
+  <text x="440" y="415" font-family="Courier New, monospace" font-size="12" fill="#ffffff">i = 4 + LSB(4) = 8 → BIT[8] += 5</text>
+  <text x="600" y="415" font-family="Courier New, monospace" font-size="11" fill="#888888">8 = 1000₂</text>
+  
+  <text x="440" y="435" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316">Updated: 3, 4, 8</text>
+
+  <!-- LSB Formula Box -->
+  <rect x="730" y="320" width="190" height="120" fill="#0f0f23" stroke="#a78bfa" stroke-width="2"/>
+  <text x="825" y="345" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">LSB FORMULA</text>
+  
+  <text x="825" y="375" font-family="Courier New, monospace" font-size="14" fill="#a78bfa" text-anchor="middle">LSB(i) = i &amp; (-i)</text>
+  
+  <text x="750" y="405" font-family="Courier New, monospace" font-size="11" fill="#ffffff">LSB(6) = 2</text>
+  <text x="750" y="420" font-family="Courier New, monospace" font-size="11" fill="#ffffff">LSB(8) = 8</text>
+  <text x="750" y="435" font-family="Courier New, monospace" font-size="11" fill="#ffffff">LSB(12) = 4</text>
+
+  <!-- Complexity and Operations -->
+  <rect x="100" y="470" width="330" height="160" fill="#0f0f23" stroke="#3b82f6" stroke-width="2"/>
+  <text x="265" y="495" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">OPERATIONS</text>
+  
+  <text x="120" y="525" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">update(i, delta):</text>
+  <text x="120" y="545" font-family="Courier New, monospace" font-size="11" fill="#ffffff">  while i ≤ n: BIT[i] += delta; i += LSB(i)</text>
+  
+  <text x="120" y="575" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">query(i):</text>
+  <text x="120" y="595" font-family="Courier New, monospace" font-size="11" fill="#ffffff">  while i &gt; 0: sum += BIT[i]; i -= LSB(i)</text>
+  
+  <text x="120" y="620" font-family="Courier New, monospace" font-size="12" fill="#4ade80">range(L, R) = query(R) - query(L-1)</text>
+
+  <!-- Applications -->
+  <rect x="460" y="470" width="240" height="160" fill="#0f0f23" stroke="#4ade80" stroke-width="2"/>
+  <text x="580" y="495" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">APPLICATIONS</text>
+  
+  <text x="480" y="525" font-family="Courier New, monospace" font-size="12" fill="#ffffff">• Prefix sum queries</text>
+  <text x="480" y="550" font-family="Courier New, monospace" font-size="12" fill="#ffffff">• Inversion counting</text>
+  <text x="480" y="575" font-family="Courier New, monospace" font-size="12" fill="#ffffff">• 2D range queries</text>
+  <text x="480" y="600" font-family="Courier New, monospace" font-size="12" fill="#ffffff">• DP optimization</text>
+  <text x="480" y="625" font-family="Courier New, monospace" font-size="12" fill="#ffffff">• Order statistics</text>
+
+  <!-- Complexity Summary -->
+  <rect x="730" y="470" width="190" height="160" fill="#0f0f23" stroke="#f97316" stroke-width="2"/>
+  <text x="825" y="495" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">COMPLEXITY</text>
+  
+  <text x="750" y="525" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Build: O(n)</text>
+  <text x="750" y="550" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Update: O(log n)</text>
+  <text x="750" y="575" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Query: O(log n)</text>
+  <text x="750" y="600" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Space: O(n)</text>
+  
+  <text x="825" y="625" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">1-indexed array</text>
+</svg>

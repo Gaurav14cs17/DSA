@@ -1,0 +1,142 @@
+<svg viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Rectangle Problems</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Overlap detection, union area, and histogram techniques</text>
+  
+  <!-- Rectangle Overlap Section -->
+  <text x="200" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Rectangle Overlap</text>
+  
+  <!-- Rectangle 1 -->
+  <rect x="60" y="120" width="150" height="100" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="135" y="175" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">R₁</text>
+  
+  <!-- Rectangle 2 (overlapping) -->
+  <rect x="140" y="160" width="150" height="100" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="215" y="215" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">R₂</text>
+  
+  <!-- Overlap region highlight -->
+  <rect x="140" y="160" width="70" height="60" rx="2" fill="#4ade80" opacity="0.4" stroke="#4ade80" stroke-width="2"/>
+  <text x="175" y="195" text-anchor="middle" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#4ade80">∩</text>
+  
+  <!-- Overlap formula -->
+  <g font-family="Courier New, monospace" font-size="10" fill="#ffffff">
+    <text x="320" y="140">Overlap if:</text>
+    <text x="320" y="160" fill="#4ade80">x₁ &lt; x₄ ∧ x₃ &lt; x₂</text>
+    <text x="320" y="180" fill="#4ade80">y₁ &lt; y₄ ∧ y₃ &lt; y₂</text>
+    <text x="320" y="210">Area = max(0, overlap_w)</text>
+    <text x="340" y="225">× max(0, overlap_h)</text>
+  </g>
+  
+  <!-- Rectangle Union Section -->
+  <text x="680" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Rectangle Union (2D Sweep)</text>
+  
+  <!-- Multiple rectangles for union -->
+  <rect x="520" y="120" width="100" height="80" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="580" y="150" width="120" height="90" rx="2" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="660" y="130" width="80" height="70" rx="2" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  
+  <!-- Sweep line for 2D -->
+  <line x1="600" y1="110" x2="600" y2="250" stroke="#ef4444" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="600" y="265" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">sweep</text>
+  
+  <!-- Active y-intervals indicator -->
+  <line x1="760" y1="130" x2="760" y2="200" stroke="#4ade80" stroke-width="4"/>
+  <text x="800" y="165" font-family="Courier New, monospace" font-size="10" fill="#4ade80">active</text>
+  <text x="800" y="180" font-family="Courier New, monospace" font-size="10" fill="#4ade80">height</text>
+  
+  <!-- Histogram Section -->
+  <text x="250" y="310" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Largest Rectangle in Histogram</text>
+  
+  <!-- Histogram bars -->
+  <g fill="#1e3a5f" stroke="#3b82f6" stroke-width="2">
+    <rect x="80" y="410" width="40" height="50" rx="2"/>
+    <rect x="125" y="380" width="40" height="80" rx="2"/>
+    <rect x="170" y="350" width="40" height="110" rx="2"/>
+    <rect x="215" y="370" width="40" height="90" rx="2"/>
+    <rect x="260" y="320" width="40" height="140" rx="2"/>
+    <rect x="305" y="400" width="40" height="60" rx="2"/>
+    <rect x="350" y="430" width="40" height="30" rx="2"/>
+  </g>
+  
+  <!-- Largest rectangle highlight -->
+  <rect x="170" y="370" width="130" height="90" fill="#4ade80" opacity="0.3" stroke="#4ade80" stroke-width="2"/>
+  <text x="235" y="420" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">MAX</text>
+  
+  <!-- Heights labels -->
+  <g font-family="Courier New, monospace" font-size="10" fill="#888888">
+    <text x="100" y="475" text-anchor="middle">2</text>
+    <text x="145" y="475" text-anchor="middle">4</text>
+    <text x="190" y="475" text-anchor="middle">6</text>
+    <text x="235" y="475" text-anchor="middle">5</text>
+    <text x="280" y="475" text-anchor="middle">8</text>
+    <text x="325" y="475" text-anchor="middle">3</text>
+    <text x="370" y="475" text-anchor="middle">1</text>
+  </g>
+  
+  <!-- Stack visualization -->
+  <g font-family="Courier New, monospace" font-size="11">
+    <text x="100" y="510" fill="#f97316" font-weight="bold">Stack-based O(n):</text>
+    <text x="100" y="530" fill="#ffffff">For each bar, find:</text>
+    <text x="110" y="550" fill="#4ade80">• Left boundary (first shorter)</text>
+    <text x="110" y="570" fill="#4ade80">• Right boundary (first shorter)</text>
+  </g>
+  
+  <!-- Perfect Rectangle Section -->
+  <text x="680" y="310" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Perfect Rectangle Check</text>
+  
+  <!-- Perfect rectangle made of smaller ones -->
+  <g fill="#0f2f1f" stroke="#4ade80" stroke-width="2">
+    <rect x="520" y="340" width="100" height="60" rx="2"/>
+    <rect x="620" y="340" width="80" height="60" rx="2"/>
+    <rect x="700" y="340" width="100" height="60" rx="2"/>
+    <rect x="520" y="400" width="150" height="70" rx="2"/>
+    <rect x="670" y="400" width="130" height="70" rx="2"/>
+  </g>
+  
+  <!-- Corner markers -->
+  <g fill="#f97316">
+    <circle cx="520" cy="340" r="5"/>
+    <circle cx="800" cy="340" r="5"/>
+    <circle cx="520" cy="470" r="5"/>
+    <circle cx="800" cy="470" r="5"/>
+  </g>
+  <text x="815" y="345" font-family="Courier New, monospace" font-size="9" fill="#f97316">outer</text>
+  <text x="815" y="358" font-family="Courier New, monospace" font-size="9" fill="#f97316">corners</text>
+  
+  <!-- Inner corners (should appear even times) -->
+  <g fill="#a78bfa" opacity="0.7">
+    <circle cx="620" cy="340" r="4"/>
+    <circle cx="700" cy="340" r="4"/>
+    <circle cx="620" cy="400" r="4"/>
+    <circle cx="670" cy="400" r="4"/>
+    <circle cx="520" cy="400" r="4"/>
+    <circle cx="800" cy="400" r="4"/>
+    <circle cx="670" cy="470" r="4"/>
+  </g>
+  
+  <!-- Perfect rectangle conditions -->
+  <g font-family="Courier New, monospace" font-size="10" fill="#ffffff">
+    <text x="520" y="510">Conditions:</text>
+    <text x="530" y="530" fill="#4ade80">1. Total area = sum of parts</text>
+    <text x="530" y="550" fill="#4ade80">2. Only 4 outer corners (odd count)</text>
+    <text x="530" y="570" fill="#4ade80">3. Inner corners appear even times</text>
+  </g>
+  
+  <!-- Maximal Rectangle in Matrix -->
+  <rect x="50" y="590" width="380" height="80" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="240" y="615" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560">Maximal Rectangle in 0/1 Matrix</text>
+  <g font-family="Courier New, monospace" font-size="10" fill="#ffffff">
+    <text x="70" y="640">Build histogram for each row</text>
+    <text x="70" y="660">Apply largest histogram rectangle</text>
+  </g>
+  
+  <!-- Complexity Summary -->
+  <rect x="470" y="590" width="380" height="80" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="660" y="615" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560">Complexity Summary</text>
+  <g font-family="Courier New, monospace" font-size="10" fill="#60a5fa">
+    <text x="490" y="640">Overlap: O(1) | Histogram: O(n)</text>
+    <text x="490" y="660">Union: O(n² log n) | Perfect: O(n)</text>
+  </g>
+</svg>
