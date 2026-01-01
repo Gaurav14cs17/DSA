@@ -1,0 +1,74 @@
+<svg viewBox="0 0 950 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">GCD/LCM Applications</text>
+  
+  <!-- Application 1: Fraction Simplification -->
+  <rect x="30" y="70" width="280" height="160" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="170" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">FRACTION SIMPLIFICATION</text>
+  
+  <text x="170" y="135" text-anchor="middle" font-family="Courier New, monospace" font-size="20" fill="#ffffff">48/36</text>
+  <text x="170" y="160" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">gcd(48, 36) = 12</text>
+  <text x="170" y="185" text-anchor="middle" font-family="Courier New, monospace" font-size="20" fill="#4ade80">= 4/3</text>
+  <text x="170" y="215" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Divide by GCD</text>
+  
+  <!-- Application 2: Synchronized Events -->
+  <rect x="335" y="70" width="280" height="160" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="475" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">SYNCHRONIZED EVENTS</text>
+  
+  <text x="475" y="130" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Event A: every 6 min</text>
+  <text x="475" y="150" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Event B: every 8 min</text>
+  <text x="475" y="180" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">When do they coincide?</text>
+  <text x="475" y="210" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#f97316">lcm(6, 8) = 24 min</text>
+  
+  <!-- Application 3: Coprime Check -->
+  <rect x="640" y="70" width="280" height="160" rx="10" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="780" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COPRIME CHECK</text>
+  
+  <text x="780" y="140" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">gcd(a, b) = 1?</text>
+  <text x="780" y="175" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">gcd(15, 28) = 1 ✓</text>
+  <text x="780" y="200" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ef4444">gcd(15, 21) = 3 ✗</text>
+  <text x="780" y="220" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Key for modular inverse</text>
+  
+  <!-- Application 4: Fraction Addition -->
+  <rect x="30" y="250" width="280" height="160" rx="10" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="170" y="280" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">FRACTION ADDITION</text>
+  
+  <text x="170" y="315" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">1/4 + 1/6</text>
+  <text x="170" y="345" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">LCD = lcm(4, 6) = 12</text>
+  <text x="170" y="375" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#4ade80">= 3/12 + 2/12 = 5/12</text>
+  
+  <!-- Application 5: Tiling Problem -->
+  <rect x="335" y="250" width="280" height="160" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="475" y="280" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">TILING PROBLEM</text>
+  
+  <text x="475" y="315" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Largest square tile for</text>
+  <text x="475" y="340" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">24×18 floor?</text>
+  <text x="475" y="375" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#3b82f6">gcd(24, 18) = 6</text>
+  <text x="475" y="400" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Use 6×6 tiles</text>
+  
+  <!-- Application 6: RSA Cryptography -->
+  <rect x="640" y="250" width="280" height="160" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="780" y="280" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">RSA CRYPTOGRAPHY</text>
+  
+  <text x="780" y="315" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Choose e coprime to φ(n)</text>
+  <text x="780" y="340" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">gcd(e, φ(n)) = 1</text>
+  <text x="780" y="370" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Find d: ed ≡ 1 mod φ(n)</text>
+  <text x="780" y="395" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">Extended GCD finds d</text>
+  
+  <!-- Common Patterns -->
+  <rect x="150" y="440" width="650" height="130" rx="10" fill="#0f0f23" stroke="#888888" stroke-width="1"/>
+  <text x="475" y="470" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COMMON PROBLEM PATTERNS</text>
+  
+  <text x="200" y="500" font-family="Courier New, monospace" font-size="12" fill="#4ade80">• Counting multiples in range</text>
+  <text x="200" y="520" font-family="Courier New, monospace" font-size="12" fill="#4ade80">• Finding common divisibility</text>
+  <text x="200" y="540" font-family="Courier New, monospace" font-size="12" fill="#4ade80">• String pattern matching</text>
+  
+  <text x="550" y="500" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">• Magical numbers (LCM)</text>
+  <text x="550" y="520" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">• Reducing fractions</text>
+  <text x="550" y="540" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">• Cyclic patterns</text>
+  
+  <!-- Footer -->
+  <text x="475" y="590" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">LeetCode: 1979, 1071, 914, 878, 2447</text>
+</svg>

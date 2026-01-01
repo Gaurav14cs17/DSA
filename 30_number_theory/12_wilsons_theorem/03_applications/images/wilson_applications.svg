@@ -1,0 +1,47 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Wilson's Theorem Applications</text>
+  
+  <!-- App 1: Quadratic Residues -->
+  <rect x="50" y="80" width="400" height="160" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="110" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">QUADRATIC RESIDUES</text>
+  
+  <text x="70" y="145" font-family="Courier New, monospace" font-size="11" fill="#ffffff">For prime p ≡ 1 (mod 4):</text>
+  <text x="70" y="170" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">x² ≡ -1 (mod p) has solution</text>
+  <text x="70" y="195" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">x = ((p-1)/2)! mod p</text>
+  <text x="70" y="225" font-family="Courier New, monospace" font-size="11" fill="#888888">Example: p=5, x=2! = 2</text>
+  <text x="70" y="245" font-family="Courier New, monospace" font-size="11" fill="#888888">2² = 4 ≡ -1 (mod 5) ✓</text>
+  
+  <!-- App 2: Factorial mod p -->
+  <rect x="480" y="80" width="370" height="160" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="665" y="110" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">FACTORIAL MOD p</text>
+  
+  <text x="500" y="145" font-family="Courier New, monospace" font-size="11" fill="#ffffff">From Wilson: (p-1)! ≡ -1 (mod p)</text>
+  <text x="500" y="175" font-family="Courier New, monospace" font-size="11" fill="#f97316">So (p-2)! ≡ 1 (mod p)</text>
+  <text x="500" y="200" font-family="Courier New, monospace" font-size="11" fill="#f97316">And (p-3)! ≡ (p-2)⁻¹ ≡ -1/2 (mod p)</text>
+  <text x="500" y="230" font-family="Courier New, monospace" font-size="11" fill="#888888">Can derive k! mod p for k near p</text>
+  
+  <!-- App 3: Composite detection -->
+  <rect x="50" y="260" width="400" height="120" rx="10" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="250" y="290" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COMPOSITE CHARACTERIZATION</text>
+  
+  <text x="70" y="325" font-family="Courier New, monospace" font-size="11" fill="#ffffff">For composite n &gt; 4:</text>
+  <text x="70" y="350" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">(n-1)! ≡ 0 (mod n)</text>
+  <text x="70" y="375" font-family="Courier New, monospace" font-size="11" fill="#888888">Because n's factors appear in (n-1)!</text>
+  
+  <!-- App 4: Special case -->
+  <rect x="480" y="260" width="370" height="120" rx="10" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="665" y="290" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">SPECIAL CASE: n = 4</text>
+  
+  <text x="500" y="325" font-family="Courier New, monospace" font-size="11" fill="#ffffff">n = 4 is only composite where</text>
+  <text x="500" y="350" font-family="Courier New, monospace" font-size="11" fill="#4ade80">(n-1)! ≢ 0 (mod n)</text>
+  <text x="500" y="375" font-family="Courier New, monospace" font-size="11" fill="#888888">3! = 6 ≡ 2 (mod 4)</text>
+  
+  <!-- Summary -->
+  <rect x="100" y="400" width="700" height="80" rx="10" fill="#0f0f23" stroke="#888888" stroke-width="1"/>
+  <text x="450" y="430" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">WILSON'S THEOREM SUMMARY</text>
+  <text x="450" y="460" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Primarily theoretical - used in proofs about primes and factorials</text>
+  <text x="450" y="478" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Miller-Rabin preferred for practical primality testing</text>
+</svg>

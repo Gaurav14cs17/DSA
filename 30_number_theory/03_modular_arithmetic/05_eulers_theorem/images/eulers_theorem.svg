@@ -1,0 +1,61 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Euler's Theorem &amp; Totient Function</text>
+  
+  <!-- Main theorem box -->
+  <rect x="150" y="70" width="600" height="80" rx="10" fill="#2d1f3d" stroke="#a78bfa" stroke-width="3"/>
+  <text x="450" y="105" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff">If gcd(a, n) = 1:</text>
+  <text x="450" y="135" text-anchor="middle" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="#a78bfa">a^φ(n) ≡ 1 (mod n)</text>
+  
+  <!-- Totient definition -->
+  <rect x="50" y="170" width="400" height="150" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="200" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">EULER'S TOTIENT φ(n)</text>
+  
+  <text x="70" y="235" font-family="Courier New, monospace" font-size="12" fill="#ffffff">φ(n) = count of k ≤ n where gcd(k,n) = 1</text>
+  
+  <text x="70" y="265" font-family="Courier New, monospace" font-size="12" fill="#888888">Examples:</text>
+  <text x="70" y="290" font-family="Courier New, monospace" font-size="12" fill="#4ade80">φ(7) = 6  (1,2,3,4,5,6 coprime to 7)</text>
+  <text x="70" y="310" font-family="Courier New, monospace" font-size="12" fill="#4ade80">φ(10) = 4 (1,3,7,9 coprime to 10)</text>
+  
+  <!-- Formula for computing phi -->
+  <rect x="480" y="170" width="370" height="150" rx="8" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="665" y="200" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COMPUTING φ(n)</text>
+  
+  <text x="500" y="235" font-family="Courier New, monospace" font-size="11" fill="#ffffff">For n = p₁^a₁ × p₂^a₂ × ... × pₖ^aₖ:</text>
+  <text x="500" y="265" font-family="Courier New, monospace" font-size="12" fill="#f97316">φ(n) = n × ∏(1 - 1/pᵢ)</text>
+  
+  <text x="500" y="300" font-family="Courier New, monospace" font-size="11" fill="#888888">Example: φ(12) = φ(2²×3)</text>
+  <text x="500" y="320" font-family="Courier New, monospace" font-size="11" fill="#888888">= 12 × (1-1/2) × (1-1/3) = 12 × 1/2 × 2/3 = 4</text>
+  
+  <!-- Special cases -->
+  <rect x="50" y="340" width="800" height="100" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="450" y="370" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">SPECIAL CASES</text>
+  
+  <text x="120" y="405" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">φ(p) = p-1</text>
+  <text x="120" y="425" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">(p prime)</text>
+  
+  <text x="300" y="405" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">φ(pᵏ) = pᵏ - pᵏ⁻¹</text>
+  <text x="300" y="425" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">(prime power)</text>
+  
+  <text x="500" y="405" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">φ(mn) = φ(m)φ(n)</text>
+  <text x="500" y="425" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">(gcd(m,n)=1)</text>
+  
+  <text x="700" y="405" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">φ(2ᵏ) = 2ᵏ⁻¹</text>
+  <text x="700" y="425" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">(k ≥ 1)</text>
+  
+  <!-- Relationship to Fermat -->
+  <rect x="50" y="460" width="400" height="110" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="250" y="490" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">FERMAT IS SPECIAL CASE</text>
+  <text x="70" y="520" font-family="Courier New, monospace" font-size="12" fill="#ffffff">When n = p (prime):</text>
+  <text x="70" y="545" font-family="Courier New, monospace" font-size="12" fill="#ffffff">φ(p) = p - 1</text>
+  <text x="70" y="565" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">→ a^(p-1) ≡ 1 (mod p)</text>
+  
+  <!-- RSA Application -->
+  <rect x="480" y="460" width="370" height="110" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="665" y="490" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">RSA CRYPTOGRAPHY</text>
+  <text x="500" y="520" font-family="Courier New, monospace" font-size="11" fill="#ffffff">n = p × q (large primes)</text>
+  <text x="500" y="545" font-family="Courier New, monospace" font-size="11" fill="#ffffff">φ(n) = (p-1)(q-1)</text>
+  <text x="500" y="565" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">Private key d = e⁻¹ mod φ(n)</text>
+</svg>

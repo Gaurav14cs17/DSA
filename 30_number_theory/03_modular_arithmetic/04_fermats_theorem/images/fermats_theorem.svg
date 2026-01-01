@@ -1,0 +1,52 @@
+<svg viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Fermat's Little Theorem</text>
+  
+  <!-- Main theorem box -->
+  <rect x="150" y="70" width="600" height="80" rx="10" fill="#2d1f3d" stroke="#a78bfa" stroke-width="3"/>
+  <text x="450" y="105" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">If p is prime and gcd(a, p) = 1:</text>
+  <text x="450" y="135" text-anchor="middle" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="#a78bfa">a^(p-1) ≡ 1 (mod p)</text>
+  
+  <!-- Corollary -->
+  <rect x="200" y="170" width="500" height="50" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="450" y="202" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#4ade80">Corollary: a^p ≡ a (mod p) for all integers a</text>
+  
+  <!-- Example -->
+  <rect x="50" y="240" width="400" height="180" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="270" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">EXAMPLE: p = 7, a = 3</text>
+  
+  <text x="70" y="305" font-family="Courier New, monospace" font-size="13" fill="#ffffff">3⁶ mod 7 = ?</text>
+  <text x="70" y="335" font-family="Courier New, monospace" font-size="13" fill="#ffffff">3¹ = 3</text>
+  <text x="70" y="355" font-family="Courier New, monospace" font-size="13" fill="#ffffff">3² = 9 ≡ 2 (mod 7)</text>
+  <text x="70" y="375" font-family="Courier New, monospace" font-size="13" fill="#ffffff">3³ = 27 ≡ 6 (mod 7)</text>
+  <text x="250" y="335" font-family="Courier New, monospace" font-size="13" fill="#ffffff">3⁴ ≡ 4 (mod 7)</text>
+  <text x="250" y="355" font-family="Courier New, monospace" font-size="13" fill="#ffffff">3⁵ ≡ 5 (mod 7)</text>
+  <text x="250" y="375" font-family="Courier New, monospace" font-size="13" fill="#4ade80">3⁶ ≡ 1 (mod 7) ✓</text>
+  
+  <text x="250" y="410" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">Powers cycle with period p-1 = 6</text>
+  
+  <!-- Application: Modular Inverse -->
+  <rect x="480" y="240" width="370" height="180" rx="8" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="665" y="270" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">APPLICATION: MODULAR INVERSE</text>
+  
+  <text x="500" y="305" font-family="Courier New, monospace" font-size="12" fill="#ffffff">From a^(p-1) ≡ 1 (mod p):</text>
+  <text x="500" y="335" font-family="Courier New, monospace" font-size="12" fill="#ffffff">a × a^(p-2) ≡ 1 (mod p)</text>
+  <text x="500" y="370" font-family="Courier New, monospace" font-size="14" fill="#f97316">Therefore: a⁻¹ ≡ a^(p-2) (mod p)</text>
+  
+  <text x="500" y="405" font-family="Courier New, monospace" font-size="11" fill="#888888">Example: 3⁻¹ mod 7 = 3⁵ mod 7 = 5</text>
+  <text x="500" y="425" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Verify: 3 × 5 = 15 ≡ 1 (mod 7) ✓</text>
+  
+  <!-- Warning about composites -->
+  <rect x="50" y="440" width="400" height="80" rx="8" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="250" y="470" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ef4444">⚠ WARNING: Only for primes!</text>
+  <text x="70" y="500" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Does NOT work for composite moduli.</text>
+  <text x="70" y="515" font-family="Courier New, monospace" font-size="11" fill="#888888">For composites, use Euler's theorem with φ(n)</text>
+  
+  <!-- Complexity -->
+  <rect x="480" y="440" width="370" height="80" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="665" y="470" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">COMPLEXITY</text>
+  <text x="665" y="500" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Inverse via Fermat: O(log p)</text>
+  <text x="665" y="520" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Using fast exponentiation</text>
+</svg>

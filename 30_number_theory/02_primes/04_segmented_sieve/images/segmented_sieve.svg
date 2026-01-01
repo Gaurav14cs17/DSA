@@ -1,0 +1,116 @@
+<svg viewBox="0 0 950 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Segmented Sieve</text>
+  <text x="475" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Find primes in range [L, R] with O(√R) memory</text>
+  
+  <!-- Problem setup -->
+  <rect x="50" y="90" width="850" height="60" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="475" y="115" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Problem: Find primes in [100, 130]</text>
+  <text x="475" y="138" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">Basic sieve would need O(R) = O(130) memory. Segmented uses O(√R) = O(11)</text>
+  
+  <!-- Step 1: Find small primes -->
+  <rect x="50" y="170" width="400" height="130" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="195" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 1: Sieve primes ≤ √130 ≈ 11</text>
+  
+  <!-- Small primes grid -->
+  <g transform="translate(70, 210)">
+    <rect x="0" y="0" width="35" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="17" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">2</text>
+    <rect x="45" y="0" width="35" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="62" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">3</text>
+    <rect x="90" y="0" width="35" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="107" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">5</text>
+    <rect x="135" y="0" width="35" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="152" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">7</text>
+    <rect x="180" y="0" width="35" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="197" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">11</text>
+  </g>
+  
+  <text x="250" y="280" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Small primes: {2, 3, 5, 7, 11}</text>
+  
+  <!-- Step 2: Mark composites in range -->
+  <rect x="500" y="170" width="400" height="130" rx="8" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="700" y="195" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 2: Find first multiple in [L, R]</text>
+  
+  <text x="520" y="225" font-family="Courier New, monospace" font-size="11" fill="#ffffff">p=2: start = ⌈100/2⌉×2 = 100</text>
+  <text x="520" y="245" font-family="Courier New, monospace" font-size="11" fill="#ffffff">p=3: start = ⌈100/3⌉×3 = 102</text>
+  <text x="520" y="265" font-family="Courier New, monospace" font-size="11" fill="#ffffff">p=5: start = ⌈100/5⌉×5 = 100</text>
+  <text x="520" y="285" font-family="Courier New, monospace" font-size="11" fill="#ffffff">p=7: start = ⌈100/7⌉×7 = 105</text>
+  
+  <!-- Range visualization -->
+  <text x="475" y="330" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 3: Mark multiples in segment [100, 130]</text>
+  
+  <!-- Grid of numbers 100-130 -->
+  <g transform="translate(50, 350)">
+    <!-- Row 1: 100-110 -->
+    <rect x="0" y="0" width="45" height="35" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="22" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">100</text>
+    
+    <rect x="55" y="0" width="45" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="77" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80">101</text>
+    
+    <rect x="110" y="0" width="45" height="35" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="132" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">102</text>
+    
+    <rect x="165" y="0" width="45" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="187" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80">103</text>
+    
+    <rect x="220" y="0" width="45" height="35" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="242" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">104</text>
+    
+    <rect x="275" y="0" width="45" height="35" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="297" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">105</text>
+    
+    <rect x="330" y="0" width="45" height="35" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="352" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">106</text>
+    
+    <rect x="385" y="0" width="45" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="407" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80">107</text>
+    
+    <rect x="440" y="0" width="45" height="35" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="462" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">108</text>
+    
+    <rect x="495" y="0" width="45" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="517" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80">109</text>
+    
+    <rect x="550" y="0" width="45" height="35" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="572" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">110</text>
+    
+    <!-- Row 2: 111-120 and more -->
+    <rect x="0" y="45" width="45" height="35" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="22" y="67" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">111</text>
+    
+    <rect x="55" y="45" width="45" height="35" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="77" y="67" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">112</text>
+    
+    <rect x="110" y="45" width="45" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="132" y="67" text-anchor="middle" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80">113</text>
+    
+    <rect x="165" y="45" width="45" height="35" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="187" y="67" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">114</text>
+    
+    <text x="250" y="67" font-family="Courier New, monospace" font-size="14" fill="#888888">. . .</text>
+    
+    <rect x="300" y="45" width="45" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="322" y="67" text-anchor="middle" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80">127</text>
+    
+    <rect x="355" y="45" width="45" height="35" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="377" y="67" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">128</text>
+    
+    <rect x="410" y="45" width="45" height="35" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="432" y="67" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">129</text>
+    
+    <rect x="465" y="45" width="45" height="35" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="487" y="67" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">130</text>
+  </g>
+  
+  <!-- Result -->
+  <rect x="150" y="480" width="650" height="50" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="475" y="512" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">Primes in [100, 130]: {101, 103, 107, 109, 113, 127}</text>
+  
+  <!-- Complexity -->
+  <rect x="150" y="545" width="650" height="40" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="475" y="572" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O((R-L+1) log log R + √R) | Space: O(√R + segment size)</text>
+</svg>

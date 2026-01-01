@@ -1,0 +1,102 @@
+<svg viewBox="0 0 900 650" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Fast Modular Exponentiation</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Compute a^n mod m in O(log n)</text>
+  
+  <!-- Core idea -->
+  <rect x="150" y="90" width="600" height="70" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="450" y="118" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">Binary Exponentiation: a^n = a^(n/2) × a^(n/2) × a^(n mod 2)</text>
+  <text x="450" y="145" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">Square and multiply based on binary representation of n</text>
+  
+  <!-- Example: 3^13 mod 7 -->
+  <text x="450" y="190" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#e94560">Example: 3¹³ mod 7 (13 = 1101₂)</text>
+  
+  <!-- Step-by-step visualization -->
+  <rect x="50" y="210" width="400" height="280" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="235" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">ITERATIVE APPROACH</text>
+  
+  <!-- Binary representation -->
+  <text x="70" y="265" font-family="Courier New, monospace" font-size="12" fill="#888888">13 in binary: 1 1 0 1</text>
+  <text x="70" y="285" font-family="Courier New, monospace" font-size="12" fill="#888888">Powers:       8 4 2 1</text>
+  
+  <!-- Steps table -->
+  <text x="80" y="320" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#888888">Step</text>
+  <text x="140" y="320" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#888888">bit</text>
+  <text x="190" y="320" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#888888">base</text>
+  <text x="260" y="320" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#888888">result</text>
+  <text x="350" y="320" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#888888">action</text>
+  
+  <line x1="70" y1="330" x2="430" y2="330" stroke="#3b82f6" stroke-width="1"/>
+  
+  <text x="80" y="350" font-family="Courier New, monospace" font-size="11" fill="#ffffff">init</text>
+  <text x="140" y="350" font-family="Courier New, monospace" font-size="11" fill="#888888">-</text>
+  <text x="190" y="350" font-family="Courier New, monospace" font-size="11" fill="#ffffff">3</text>
+  <text x="260" y="350" font-family="Courier New, monospace" font-size="11" fill="#ffffff">1</text>
+  <text x="350" y="350" font-family="Courier New, monospace" font-size="11" fill="#888888">start</text>
+  
+  <text x="80" y="375" font-family="Courier New, monospace" font-size="11" fill="#ffffff">1</text>
+  <text x="140" y="375" font-family="Courier New, monospace" font-size="11" fill="#4ade80">1</text>
+  <text x="190" y="375" font-family="Courier New, monospace" font-size="11" fill="#ffffff">3→2</text>
+  <text x="260" y="375" font-family="Courier New, monospace" font-size="11" fill="#ffffff">1×3=3</text>
+  <text x="350" y="375" font-family="Courier New, monospace" font-size="11" fill="#4ade80">multiply</text>
+  
+  <text x="80" y="400" font-family="Courier New, monospace" font-size="11" fill="#ffffff">2</text>
+  <text x="140" y="400" font-family="Courier New, monospace" font-size="11" fill="#ef4444">0</text>
+  <text x="190" y="400" font-family="Courier New, monospace" font-size="11" fill="#ffffff">2→4</text>
+  <text x="260" y="400" font-family="Courier New, monospace" font-size="11" fill="#ffffff">3</text>
+  <text x="350" y="400" font-family="Courier New, monospace" font-size="11" fill="#888888">skip</text>
+  
+  <text x="80" y="425" font-family="Courier New, monospace" font-size="11" fill="#ffffff">3</text>
+  <text x="140" y="425" font-family="Courier New, monospace" font-size="11" fill="#4ade80">1</text>
+  <text x="190" y="425" font-family="Courier New, monospace" font-size="11" fill="#ffffff">4→2</text>
+  <text x="260" y="425" font-family="Courier New, monospace" font-size="11" fill="#ffffff">3×4=5</text>
+  <text x="350" y="425" font-family="Courier New, monospace" font-size="11" fill="#4ade80">multiply</text>
+  
+  <text x="80" y="450" font-family="Courier New, monospace" font-size="11" fill="#ffffff">4</text>
+  <text x="140" y="450" font-family="Courier New, monospace" font-size="11" fill="#4ade80">1</text>
+  <text x="190" y="450" font-family="Courier New, monospace" font-size="11" fill="#ffffff">2→4</text>
+  <text x="260" y="450" font-family="Courier New, monospace" font-size="11" fill="#ffffff">5×2=3</text>
+  <text x="350" y="450" font-family="Courier New, monospace" font-size="11" fill="#4ade80">multiply</text>
+  
+  <text x="250" y="480" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">Result: 3¹³ mod 7 = 3</text>
+  
+  <!-- Recursive tree visualization -->
+  <rect x="480" y="210" width="370" height="280" rx="8" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="665" y="235" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">RECURSIVE VIEW</text>
+  
+  <!-- Tree -->
+  <text x="665" y="270" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">3¹³</text>
+  <line x1="665" y1="280" x2="665" y2="300" stroke="#f97316" stroke-width="2"/>
+  
+  <text x="665" y="315" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">3¹² × 3¹ (odd)</text>
+  <line x1="620" y1="325" x2="580" y2="345" stroke="#f97316" stroke-width="2"/>
+  <line x1="710" y1="325" x2="750" y2="345" stroke="#f97316" stroke-width="2"/>
+  
+  <text x="580" y="360" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">3⁶ × 3⁶</text>
+  <text x="750" y="360" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">× 3</text>
+  
+  <line x1="580" y1="370" x2="580" y2="385" stroke="#f97316" stroke-width="2"/>
+  
+  <text x="580" y="400" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">3³ × 3³</text>
+  <line x1="580" y1="410" x2="580" y2="425" stroke="#f97316" stroke-width="2"/>
+  
+  <text x="580" y="440" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">3² × 3¹ (odd)</text>
+  <line x1="580" y1="450" x2="580" y2="465" stroke="#f97316" stroke-width="2"/>
+  
+  <text x="580" y="480" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">3¹ = 3 (base)</text>
+  
+  <!-- Complexity comparison -->
+  <rect x="50" y="510" width="800" height="110" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="450" y="540" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COMPLEXITY COMPARISON</text>
+  
+  <text x="200" y="575" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ef4444">Naive: O(n)</text>
+  <text x="200" y="600" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">3¹³ = 3×3×3×...×3</text>
+  
+  <text x="450" y="575" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#4ade80">Fast: O(log n)</text>
+  <text x="450" y="600" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Only 4 multiplications!</text>
+  
+  <text x="700" y="575" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#60a5fa">For n = 10¹⁸</text>
+  <text x="700" y="600" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">~60 ops vs impossible</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Trailing Zeros in Factorial</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">How many zeros at the end of n! ?</text>
+  
+  <!-- Main insight -->
+  <rect x="100" y="90" width="700" height="90" rx="10" fill="#2d1f3d" stroke="#a78bfa" stroke-width="3"/>
+  <text x="450" y="120" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">KEY INSIGHT</text>
+  <text x="450" y="150" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">Trailing zeros = powers of 10 = min(powers of 2, powers of 5)</text>
+  <text x="450" y="170" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">Since powers of 2 &gt; powers of 5, answer = count of 5s</text>
+  
+  <!-- Formula -->
+  <rect x="50" y="200" width="400" height="130" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="230" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">LEGENDRE'S FORMULA</text>
+  
+  <text x="70" y="270" font-family="Courier New, monospace" font-size="13" fill="#3b82f6">ν_p(n!) = ⌊n/p⌋ + ⌊n/p²⌋ + ⌊n/p³⌋ + ...</text>
+  <text x="70" y="305" font-family="Courier New, monospace" font-size="11" fill="#ffffff">For trailing zeros, use p = 5</text>
+  
+  <!-- Example -->
+  <rect x="480" y="200" width="370" height="130" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="665" y="230" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">EXAMPLE: 100!</text>
+  
+  <text x="500" y="265" font-family="Courier New, monospace" font-size="11" fill="#ffffff">⌊100/5⌋ = 20  (multiples of 5)</text>
+  <text x="500" y="285" font-family="Courier New, monospace" font-size="11" fill="#ffffff">⌊100/25⌋ = 4  (multiples of 25)</text>
+  <text x="500" y="305" font-family="Courier New, monospace" font-size="11" fill="#ffffff">⌊100/125⌋ = 0</text>
+  <text x="500" y="325" font-family="Courier New, monospace" font-size="11" fill="#f97316">Total = 20 + 4 = 24 trailing zeros</text>
+  
+  <!-- Visualization -->
+  <rect x="50" y="350" width="800" height="120" rx="10" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="450" y="380" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">WHY IT WORKS</text>
+  
+  <text x="70" y="415" font-family="Courier New, monospace" font-size="11" fill="#ffffff">⌊n/5⌋ counts numbers contributing at least one 5</text>
+  <text x="70" y="435" font-family="Courier New, monospace" font-size="11" fill="#ffffff">⌊n/25⌋ counts numbers contributing a second 5 (like 25, 50, 75...)</text>
+  <text x="70" y="455" font-family="Courier New, monospace" font-size="11" fill="#ffffff">⌊n/125⌋ counts numbers contributing a third 5 (like 125, 250...)</text>
+  <text x="650" y="455" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Time: O(log n)</text>
+</svg>
