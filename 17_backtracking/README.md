@@ -10,7 +10,7 @@ permalink: /17_backtracking/
 
 # 🔙 Backtracking
 
-![Backtracking Overview](../assets/images/backtracking.svg)
+![Backtracking Overview](./images/backtracking-overview.svg)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">

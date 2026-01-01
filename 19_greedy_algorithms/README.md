@@ -10,7 +10,7 @@ permalink: /19_greedy_algorithms/
 
 # 🎯 Greedy Algorithms
 
-![Greedy Algorithms](../assets/images/greedy.svg)
+![Greedy Algorithms Overview](./images/greedy-overview.svg)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
