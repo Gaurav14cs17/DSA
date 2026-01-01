@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" fill="#ffffff" font-family="Courier New, monospace" font-size="26" font-weight="bold" text-anchor="middle">🌳 LI CHAO TREE</text>
+  <text x="450" y="65" fill="#888888" font-family="Courier New, monospace" font-size="16" text-anchor="middle">Dynamic CHT: Any Order Lines &amp; Queries</text>
+  
+  <!-- Comparison with CHT -->
+  <text x="450" y="105" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">CHT vs LI CHAO TREE</text>
+  
+  <g transform="translate(80, 120)">
+    <!-- CHT Box -->
+    <rect x="0" y="0" width="330" height="100" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="165" y="25" fill="#3b82f6" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">Standard CHT</text>
+    <text x="20" y="50" fill="#ffffff" font-family="Courier New, monospace" font-size="11">✓ Lines: monotonic slopes</text>
+    <text x="20" y="68" fill="#ffffff" font-family="Courier New, monospace" font-size="11">✓ Queries: monotonic x values</text>
+    <text x="20" y="86" fill="#4ade80" font-family="Courier New, monospace" font-size="11">⚡ O(1) amortized operations</text>
+    
+    <!-- Li Chao Box -->
+    <rect x="380" y="0" width="330" height="100" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="545" y="25" fill="#4ade80" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">Li Chao Tree</text>
+    <text x="400" y="50" fill="#ffffff" font-family="Courier New, monospace" font-size="11">✓ Lines: ANY order!</text>
+    <text x="400" y="68" fill="#ffffff" font-family="Courier New, monospace" font-size="11">✓ Queries: ANY order!</text>
+    <text x="400" y="86" fill="#f97316" font-family="Courier New, monospace" font-size="11">⚡ O(log C) per operation</text>
+  </g>
+  
+  <!-- Tree Structure -->
+  <text x="450" y="255" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">SEGMENT TREE STRUCTURE</text>
+  
+  <!-- Tree visualization -->
+  <g transform="translate(200, 270)">
+    <!-- Root node -->
+    <rect x="200" y="0" width="100" height="40" rx="5" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="250" y="18" fill="#f97316" font-family="Courier New, monospace" font-size="10" text-anchor="middle">[0, 1000]</text>
+    <text x="250" y="33" fill="#ffffff" font-family="Courier New, monospace" font-size="9" text-anchor="middle">L: y=-2x+100</text>
+    
+    <!-- Level 2 -->
+    <rect x="80" y="60" width="100" height="40" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="130" y="78" fill="#60a5fa" font-family="Courier New, monospace" font-size="10" text-anchor="middle">[0, 500]</text>
+    <text x="130" y="93" fill="#ffffff" font-family="Courier New, monospace" font-size="9" text-anchor="middle">L: y=-3x+80</text>
+    
+    <rect x="320" y="60" width="100" height="40" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="370" y="78" fill="#60a5fa" font-family="Courier New, monospace" font-size="10" text-anchor="middle">[501, 1000]</text>
+    <text x="370" y="93" fill="#ffffff" font-family="Courier New, monospace" font-size="9" text-anchor="middle">L: y=-1x+60</text>
+    
+    <!-- Level 3 -->
+    <rect x="20" y="120" width="80" height="35" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="60" y="142" fill="#a78bfa" font-family="Courier New, monospace" font-size="9" text-anchor="middle">[0, 250]</text>
+    
+    <rect x="120" y="120" width="80" height="35" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="160" y="142" fill="#a78bfa" font-family="Courier New, monospace" font-size="9" text-anchor="middle">[251, 500]</text>
+    
+    <rect x="300" y="120" width="80" height="35" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="340" y="142" fill="#a78bfa" font-family="Courier New, monospace" font-size="9" text-anchor="middle">[501, 750]</text>
+    
+    <rect x="400" y="120" width="80" height="35" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="440" y="142" fill="#a78bfa" font-family="Courier New, monospace" font-size="9" text-anchor="middle">[751, 1000]</text>
+    
+    <!-- Edges -->
+    <line x1="250" y1="40" x2="130" y2="60" stroke="#3b82f6" stroke-width="1.5"/>
+    <line x1="250" y1="40" x2="370" y2="60" stroke="#3b82f6" stroke-width="1.5"/>
+    <line x1="130" y1="100" x2="60" y2="120" stroke="#a78bfa" stroke-width="1"/>
+    <line x1="130" y1="100" x2="160" y2="120" stroke="#a78bfa" stroke-width="1"/>
+    <line x1="370" y1="100" x2="340" y2="120" stroke="#a78bfa" stroke-width="1"/>
+    <line x1="370" y1="100" x2="440" y2="120" stroke="#a78bfa" stroke-width="1"/>
+    
+    <!-- Key property -->
+    <rect x="120" y="170" width="260" height="35" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="250" y="193" fill="#4ade80" font-family="Courier New, monospace" font-size="11" text-anchor="middle">Each node: best line at midpoint</text>
+  </g>
+  
+  <!-- Add Line Algorithm -->
+  <text x="225" y="500" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">ADD LINE ALGORITHM</text>
+  
+  <g transform="translate(50, 515)">
+    <rect x="0" y="0" width="350" height="75" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="175" y="20" fill="#ffffff" font-family="Courier New, monospace" font-size="11" text-anchor="middle">1. Compare new line vs current at midpoint</text>
+    <text x="175" y="38" fill="#ffffff" font-family="Courier New, monospace" font-size="11" text-anchor="middle">2. Keep better at mid, recurse with worse</text>
+    <text x="175" y="56" fill="#4ade80" font-family="Courier New, monospace" font-size="11" text-anchor="middle">3. Recurse to side where worse might win</text>
+  </g>
+  
+  <!-- Query Algorithm -->
+  <text x="675" y="500" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">QUERY ALGORITHM</text>
+  
+  <g transform="translate(500, 515)">
+    <rect x="0" y="0" width="350" height="75" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="175" y="20" fill="#ffffff" font-family="Courier New, monospace" font-size="11" text-anchor="middle">1. Evaluate current node's line at x</text>
+    <text x="175" y="38" fill="#ffffff" font-family="Courier New, monospace" font-size="11" text-anchor="middle">2. Recurse to appropriate child</text>
+    <text x="175" y="56" fill="#4ade80" font-family="Courier New, monospace" font-size="11" text-anchor="middle">3. Return min(current, child result)</text>
+  </g>
+</svg>

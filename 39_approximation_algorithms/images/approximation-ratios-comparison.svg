@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <rect width="900" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Approximation Ratios Overview</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Best Known Bounds vs Lower Bounds</text>
+  
+  <!-- Table Header -->
+  <g transform="translate(50, 100)">
+    <rect x="0" y="0" width="800" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="100" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">Problem</text>
+    <text x="280" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">Best Algorithm</text>
+    <text x="460" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">Lower Bound</text>
+    <text x="650" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">Notes</text>
+  </g>
+  
+  <!-- Vertex Cover Row -->
+  <g transform="translate(50, 140)">
+    <rect x="0" y="0" width="800" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="100" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Vertex Cover</text>
+    <text x="280" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">2</text>
+    <text x="460" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#f97316">1.36 (UGC)</text>
+    <text x="650" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Classic result</text>
+  </g>
+  
+  <!-- Set Cover Row -->
+  <g transform="translate(50, 190)">
+    <rect x="0" y="0" width="800" height="50" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+    <text x="100" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">Set Cover</text>
+    <text x="280" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">ln n + 1</text>
+    <text x="460" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#4ade80">(1-ε)ln n</text>
+    <text x="650" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Tight bound!</text>
+  </g>
+  
+  <!-- TSP Metric Row -->
+  <g transform="translate(50, 240)">
+    <rect x="0" y="0" width="800" height="50" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+    <text x="100" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#f97316">TSP (metric)</text>
+    <text x="280" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316">1.5</text>
+    <text x="460" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#888888">1 (NP-hard)</text>
+    <text x="650" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Christofides</text>
+  </g>
+  
+  <!-- TSP General Row -->
+  <g transform="translate(50, 290)">
+    <rect x="0" y="0" width="800" height="50" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="5,3"/>
+    <text x="100" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ef4444">TSP (general)</text>
+    <text x="280" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ef4444">∞</text>
+    <text x="460" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ef4444">∞</text>
+    <text x="650" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">No poly approx!</text>
+  </g>
+  
+  <!-- Knapsack Row -->
+  <g transform="translate(50, 340)">
+    <rect x="0" y="0" width="800" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="100" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Knapsack</text>
+    <text x="280" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">1+ε (FPTAS)</text>
+    <text x="460" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#4ade80">1</text>
+    <text x="650" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Pseudo-poly exact</text>
+  </g>
+  
+  <!-- Bin Packing Row -->
+  <g transform="translate(50, 390)">
+    <rect x="0" y="0" width="800" height="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="100" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">Bin Packing</text>
+    <text x="280" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#3b82f6">OPT+O(log²)</text>
+    <text x="460" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#888888">1 (NP-hard)</text>
+    <text x="650" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">FFD: 11/9 OPT</text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(50, 470)">
+    <rect x="0" y="0" width="15" height="15" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="25" y="12" font-family="Courier New, monospace" font-size="11" fill="#888888">Near-optimal (PTAS/FPTAS exists)</text>
+    
+    <rect x="250" y="0" width="15" height="15" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="275" y="12" font-family="Courier New, monospace" font-size="11" fill="#888888">No polynomial approximation</text>
+    
+    <rect x="530" y="0" width="15" height="15" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+    <text x="555" y="12" font-family="Courier New, monospace" font-size="11" fill="#888888">Constant factor approximation</text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="450" y="530" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Lower bounds often derived from PCP theorem and hardness of approximation results</text>
+</svg>
+

@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <rect width="900" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" fill="#ffffff" font-family="Courier New, monospace" font-size="26" font-weight="bold" text-anchor="middle">💾 SPACE OPTIMIZATION</text>
+  <text x="450" y="65" fill="#888888" font-family="Courier New, monospace" font-size="16" text-anchor="middle">Rolling Arrays: O(n²) → O(n) Memory</text>
+  
+  <!-- Section 1: Standard 2D DP -->
+  <text x="225" y="100" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">STANDARD 2D DP (O(n²) space)</text>
+  
+  <!-- 2D Grid -->
+  <g transform="translate(80, 115)">
+    <!-- Row labels -->
+    <text x="-15" y="22" fill="#888888" font-family="Courier New, monospace" font-size="11" text-anchor="end">i=0</text>
+    <text x="-15" y="57" fill="#888888" font-family="Courier New, monospace" font-size="11" text-anchor="end">i=1</text>
+    <text x="-15" y="92" fill="#888888" font-family="Courier New, monospace" font-size="11" text-anchor="end">i=2</text>
+    <text x="-15" y="127" fill="#888888" font-family="Courier New, monospace" font-size="11" text-anchor="end">i=3</text>
+    
+    <!-- Col labels -->
+    <text x="17" y="-5" fill="#888888" font-family="Courier New, monospace" font-size="11" text-anchor="middle">j=0</text>
+    <text x="52" y="-5" fill="#888888" font-family="Courier New, monospace" font-size="11" text-anchor="middle">j=1</text>
+    <text x="87" y="-5" fill="#888888" font-family="Courier New, monospace" font-size="11" text-anchor="middle">j=2</text>
+    <text x="122" y="-5" fill="#888888" font-family="Courier New, monospace" font-size="11" text-anchor="middle">j=3</text>
+    <text x="157" y="-5" fill="#888888" font-family="Courier New, monospace" font-size="11" text-anchor="middle">j=4</text>
+    
+    <!-- Row 0 - completed -->
+    <rect x="0" y="5" width="30" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="15" y="25" fill="#4ade80" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">0</text>
+    <rect x="35" y="5" width="30" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="50" y="25" fill="#4ade80" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">1</text>
+    <rect x="70" y="5" width="30" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="85" y="25" fill="#4ade80" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">1</text>
+    <rect x="105" y="5" width="30" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="120" y="25" fill="#4ade80" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">2</text>
+    <rect x="140" y="5" width="30" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="155" y="25" fill="#4ade80" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">3</text>
+    
+    <!-- Row 1 - previous row -->
+    <rect x="0" y="40" width="30" height="30" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="15" y="60" fill="#a78bfa" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">1</text>
+    <rect x="35" y="40" width="30" height="30" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="50" y="60" fill="#a78bfa" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">1</text>
+    <rect x="70" y="40" width="30" height="30" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="85" y="60" fill="#a78bfa" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">2</text>
+    <rect x="105" y="40" width="30" height="30" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="120" y="60" fill="#a78bfa" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">3</text>
+    <rect x="140" y="40" width="30" height="30" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="155" y="60" fill="#a78bfa" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">5</text>
+    
+    <!-- Row 2 - current row (computing) -->
+    <rect x="0" y="75" width="30" height="30" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="15" y="95" fill="#f97316" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">1</text>
+    <rect x="35" y="75" width="30" height="30" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="50" y="95" fill="#f97316" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">2</text>
+    <rect x="70" y="75" width="30" height="30" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="85" y="95" fill="#f97316" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">?</text>
+    <rect x="105" y="75" width="30" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="120" y="95" fill="#ffffff" font-family="Courier New, monospace" font-size="12" text-anchor="middle">_</text>
+    <rect x="140" y="75" width="30" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="155" y="95" fill="#ffffff" font-family="Courier New, monospace" font-size="12" text-anchor="middle">_</text>
+    
+    <!-- Row 3 - future -->
+    <rect x="0" y="110" width="30" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="15" y="130" fill="#3b82f6" font-family="Courier New, monospace" font-size="12" text-anchor="middle">_</text>
+    <rect x="35" y="110" width="30" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="50" y="130" fill="#3b82f6" font-family="Courier New, monospace" font-size="12" text-anchor="middle">_</text>
+    <rect x="70" y="110" width="30" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="85" y="130" fill="#3b82f6" font-family="Courier New, monospace" font-size="12" text-anchor="middle">_</text>
+    <rect x="105" y="110" width="30" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="120" y="130" fill="#3b82f6" font-family="Courier New, monospace" font-size="12" text-anchor="middle">_</text>
+    <rect x="140" y="110" width="30" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="155" y="130" fill="#3b82f6" font-family="Courier New, monospace" font-size="12" text-anchor="middle">_</text>
+    
+    <!-- Dependency arrows -->
+    <path d="M50,70 L50,75 L85,75 L85,85" stroke="#f97316" stroke-width="2" fill="none" marker-end="url(#arrowOrange)"/>
+    <path d="M85,70 L85,75" stroke="#f97316" stroke-width="2" fill="none"/>
+    <path d="M70,95 L78,95" stroke="#f97316" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f97316"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4ade80"/>
+    </marker>
+  </defs>
+  
+  <!-- Memory indicator for 2D -->
+  <text x="300" y="170" fill="#ef4444" font-family="Courier New, monospace" font-size="11">Memory: n × m cells</text>
+  <text x="300" y="185" fill="#ef4444" font-family="Courier New, monospace" font-size="11">O(nm) space ❌</text>
+  
+  <!-- Arrow to optimized -->
+  <text x="450" y="180" fill="#f97316" font-family="Courier New, monospace" font-size="24" font-weight="bold" text-anchor="middle">→</text>
+  <text x="450" y="200" fill="#f97316" font-family="Courier New, monospace" font-size="11" text-anchor="middle">OPTIMIZE</text>
+  
+  <!-- Section 2: Space Optimized -->
+  <text x="675" y="100" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">SPACE OPTIMIZED (O(n) space)</text>
+  
+  <!-- Two arrays only -->
+  <g transform="translate(540, 125)">
+    <!-- Labels -->
+    <text x="-15" y="22" fill="#a78bfa" font-family="Courier New, monospace" font-size="11" text-anchor="end">prev</text>
+    <text x="-15" y="62" fill="#f97316" font-family="Courier New, monospace" font-size="11" text-anchor="end">curr</text>
+    
+    <!-- Prev array -->
+    <rect x="0" y="5" width="35" height="30" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="17" y="25" fill="#a78bfa" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">1</text>
+    <rect x="40" y="5" width="35" height="30" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="57" y="25" fill="#a78bfa" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">1</text>
+    <rect x="80" y="5" width="35" height="30" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="97" y="25" fill="#a78bfa" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">2</text>
+    <rect x="120" y="5" width="35" height="30" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="137" y="25" fill="#a78bfa" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">3</text>
+    <rect x="160" y="5" width="35" height="30" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="177" y="25" fill="#a78bfa" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">5</text>
+    
+    <!-- Curr array -->
+    <rect x="0" y="45" width="35" height="30" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="17" y="65" fill="#f97316" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">1</text>
+    <rect x="40" y="45" width="35" height="30" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="57" y="65" fill="#f97316" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">2</text>
+    <rect x="80" y="45" width="35" height="30" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="97" y="65" fill="#f97316" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">?</text>
+    <rect x="120" y="45" width="35" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="137" y="65" fill="#3b82f6" font-family="Courier New, monospace" font-size="12" text-anchor="middle">_</text>
+    <rect x="160" y="45" width="35" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="177" y="65" fill="#3b82f6" font-family="Courier New, monospace" font-size="12" text-anchor="middle">_</text>
+    
+    <!-- Dependency arrow -->
+    <path d="M57,35 Q77,50 97,55" stroke="#f97316" stroke-width="2" fill="none"/>
+    <path d="M97,35 L97,45" stroke="#f97316" stroke-width="2" fill="none"/>
+    <path d="M57,55 L78,55" stroke="#f97316" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Memory indicator for 1D -->
+  <text x="750" y="200" fill="#4ade80" font-family="Courier New, monospace" font-size="11">Memory: 2 × m cells</text>
+  <text x="750" y="215" fill="#4ade80" font-family="Courier New, monospace" font-size="11">O(m) space ✓</text>
+  
+  <!-- Swap Animation -->
+  <text x="675" y="250" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">SWAP OPERATION</text>
+  
+  <g transform="translate(540, 265)">
+    <rect x="0" y="0" width="120" height="25" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="60" y="17" fill="#a78bfa" font-family="Courier New, monospace" font-size="11" font-weight="bold" text-anchor="middle">prev = curr</text>
+    
+    <text x="135" y="17" fill="#f97316" font-family="Courier New, monospace" font-size="16">↻</text>
+    
+    <rect x="160" y="0" width="120" height="25" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="220" y="17" fill="#f97316" font-family="Courier New, monospace" font-size="11" font-weight="bold" text-anchor="middle">curr = new</text>
+  </g>
+  
+  <!-- Pattern Recognition -->
+  <text x="450" y="330" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">PATTERN RECOGNITION</text>
+  
+  <!-- Pattern boxes -->
+  <g transform="translate(50, 350)">
+    <!-- Pattern 1 -->
+    <rect x="0" y="0" width="250" height="80" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="125" y="25" fill="#ffffff" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">Two Arrays Pattern</text>
+    <text x="125" y="45" fill="#4ade80" font-family="Courier New, monospace" font-size="10" text-anchor="middle">dp[i][j] = f(dp[i-1][*])</text>
+    <text x="125" y="65" fill="#888888" font-family="Courier New, monospace" font-size="10" text-anchor="middle">Use prev[], curr[] arrays</text>
+    
+    <!-- Pattern 2 -->
+    <rect x="280" y="0" width="250" height="80" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="405" y="25" fill="#ffffff" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">Single Array + Reverse</text>
+    <text x="405" y="45" fill="#4ade80" font-family="Courier New, monospace" font-size="10" text-anchor="middle">0/1 Knapsack: for j in range(W,-1,-1)</text>
+    <text x="405" y="65" fill="#888888" font-family="Courier New, monospace" font-size="10" text-anchor="middle">Iterate right-to-left</text>
+    
+    <!-- Pattern 3 -->
+    <rect x="560" y="0" width="250" height="80" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="685" y="25" fill="#ffffff" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">O(1) Variables</text>
+    <text x="685" y="45" fill="#4ade80" font-family="Courier New, monospace" font-size="10" text-anchor="middle">dp[i] = f(dp[i-1], dp[i-2])</text>
+    <text x="685" y="65" fill="#888888" font-family="Courier New, monospace" font-size="10" text-anchor="middle">Use prev2, prev1 vars</text>
+  </g>
+  
+  <!-- Iteration Direction -->
+  <text x="450" y="470" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">ITERATION DIRECTION MATTERS!</text>
+  
+  <g transform="translate(100, 490)">
+    <!-- Forward iteration -->
+    <rect x="0" y="0" width="300" height="70" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="150" y="22" fill="#4ade80" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">UNBOUNDED: Left → Right</text>
+    <text x="150" y="42" fill="#ffffff" font-family="Courier New, monospace" font-size="10" text-anchor="middle">for j in range(w, W+1)</text>
+    <text x="150" y="58" fill="#888888" font-family="Courier New, monospace" font-size="10" text-anchor="middle">Can reuse item multiple times</text>
+    
+    <!-- Backward iteration -->
+    <rect x="350" y="0" width="300" height="70" rx="5" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="500" y="22" fill="#f97316" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">0/1 KNAPSACK: Right → Left</text>
+    <text x="500" y="42" fill="#ffffff" font-family="Courier New, monospace" font-size="10" text-anchor="middle">for j in range(W, w-1, -1)</text>
+    <text x="500" y="58" fill="#888888" font-family="Courier New, monospace" font-size="10" text-anchor="middle">Use each item at most once</text>
+  </g>
+  
+  <!-- Problems -->
+  <text x="450" y="590" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">CLASSIC PROBLEMS</text>
+  
+  <g transform="translate(70, 600)">
+    <rect x="0" y="0" width="170" height="30" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="85" y="20" fill="#ffffff" font-family="Courier New, monospace" font-size="11" text-anchor="middle">72. Edit Distance</text>
+    
+    <rect x="190" y="0" width="170" height="30" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="275" y="20" fill="#ffffff" font-family="Courier New, monospace" font-size="11" text-anchor="middle">1143. LCS</text>
+    
+    <rect x="380" y="0" width="170" height="30" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="465" y="20" fill="#ffffff" font-family="Courier New, monospace" font-size="11" text-anchor="middle">322. Coin Change</text>
+    
+    <rect x="570" y="0" width="170" height="30" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="655" y="20" fill="#ffffff" font-family="Courier New, monospace" font-size="11" text-anchor="middle">198. House Robber</text>
+  </g>
+</svg>

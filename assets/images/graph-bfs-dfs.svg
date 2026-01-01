@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300">
+  <defs>
+    <linearGradient id="bfsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00c6fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#005bea;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="dfsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="700" height="300" fill="#16213e" rx="10"/>
+  
+  <!-- BFS Section -->
+  <g transform="translate(30, 20)">
+    <text x="130" y="25" font-family="Arial" font-size="18" font-weight="bold" fill="#00c6fb" text-anchor="middle">BFS (Level Order)</text>
+    
+    <!-- Graph -->
+    <circle cx="130" cy="70" r="20" fill="url(#bfsGrad)"/>
+    <text x="130" y="76" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle">1</text>
+    
+    <circle cx="80" cy="130" r="18" fill="url(#bfsGrad)" opacity="0.8"/>
+    <text x="80" y="136" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle">2</text>
+    
+    <circle cx="180" cy="130" r="18" fill="url(#bfsGrad)" opacity="0.8"/>
+    <text x="180" y="136" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle">3</text>
+    
+    <circle cx="50" cy="190" r="15" fill="url(#bfsGrad)" opacity="0.6"/>
+    <text x="50" y="195" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">4</text>
+    
+    <circle cx="110" cy="190" r="15" fill="url(#bfsGrad)" opacity="0.6"/>
+    <text x="110" y="195" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">5</text>
+    
+    <circle cx="210" cy="190" r="15" fill="url(#bfsGrad)" opacity="0.6"/>
+    <text x="210" y="195" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">6</text>
+    
+    <!-- Edges -->
+    <line x1="130" y1="90" x2="80" y2="112" stroke="#00c6fb" stroke-width="2" opacity="0.5"/>
+    <line x1="130" y1="90" x2="180" y2="112" stroke="#00c6fb" stroke-width="2" opacity="0.5"/>
+    <line x1="80" y1="148" x2="50" y2="175" stroke="#00c6fb" stroke-width="2" opacity="0.5"/>
+    <line x1="80" y1="148" x2="110" y2="175" stroke="#00c6fb" stroke-width="2" opacity="0.5"/>
+    <line x1="180" y1="148" x2="210" y2="175" stroke="#00c6fb" stroke-width="2" opacity="0.5"/>
+    
+    <!-- Level labels -->
+    <text x="250" y="76" font-family="Arial" font-size="11" fill="#666">Level 0</text>
+    <text x="250" y="136" font-family="Arial" font-size="11" fill="#666">Level 1</text>
+    <text x="250" y="195" font-family="Arial" font-size="11" fill="#666">Level 2</text>
+    
+    <!-- Order -->
+    <rect x="30" y="230" width="220" height="40" fill="#1a3a5c" rx="5"/>
+    <text x="140" y="255" font-family="monospace" font-size="14" fill="#00c6fb" text-anchor="middle">1 → 2 → 3 → 4 → 5 → 6</text>
+  </g>
+  
+  <!-- Divider -->
+  <line x1="350" y1="30" x2="350" y2="270" stroke="#333" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- DFS Section -->
+  <g transform="translate(380, 20)">
+    <text x="130" y="25" font-family="Arial" font-size="18" font-weight="bold" fill="#f5576c" text-anchor="middle">DFS (Go Deep First)</text>
+    
+    <!-- Graph -->
+    <circle cx="130" cy="70" r="20" fill="url(#dfsGrad)"/>
+    <text x="130" y="76" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle">1</text>
+    
+    <circle cx="80" cy="130" r="18" fill="url(#dfsGrad)" opacity="0.85"/>
+    <text x="80" y="136" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle">2</text>
+    
+    <circle cx="180" cy="130" r="18" fill="url(#dfsGrad)" opacity="0.5"/>
+    <text x="180" y="136" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle">3</text>
+    
+    <circle cx="50" cy="190" r="15" fill="url(#dfsGrad)" opacity="0.7"/>
+    <text x="50" y="195" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">4</text>
+    
+    <circle cx="110" cy="190" r="15" fill="url(#dfsGrad)" opacity="0.6"/>
+    <text x="110" y="195" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">5</text>
+    
+    <circle cx="210" cy="190" r="15" fill="url(#dfsGrad)" opacity="0.4"/>
+    <text x="210" y="195" font-family="Arial" font-size="12" fill="#fff" text-anchor="middle">6</text>
+    
+    <!-- Edges with path highlight -->
+    <line x1="130" y1="90" x2="80" y2="112" stroke="#f5576c" stroke-width="3"/>
+    <line x1="130" y1="90" x2="180" y2="112" stroke="#f5576c" stroke-width="2" opacity="0.3"/>
+    <line x1="80" y1="148" x2="50" y2="175" stroke="#f5576c" stroke-width="3"/>
+    <line x1="80" y1="148" x2="110" y2="175" stroke="#f5576c" stroke-width="2" opacity="0.5"/>
+    <line x1="180" y1="148" x2="210" y2="175" stroke="#f5576c" stroke-width="2" opacity="0.3"/>
+    
+    <!-- Path arrows -->
+    <text x="250" y="100" font-family="Arial" font-size="11" fill="#666">Go deep</text>
+    <text x="250" y="160" font-family="Arial" font-size="11" fill="#666">Backtrack</text>
+    
+    <!-- Order -->
+    <rect x="30" y="230" width="220" height="40" fill="#3a1a2c" rx="5"/>
+    <text x="140" y="255" font-family="monospace" font-size="14" fill="#f5576c" text-anchor="middle">1 → 2 → 4 → 5 → 3 → 6</text>
+  </g>
+</svg>
+

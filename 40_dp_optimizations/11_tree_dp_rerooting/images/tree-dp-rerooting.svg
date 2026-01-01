@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" fill="#ffffff" font-family="Courier New, monospace" font-size="26" font-weight="bold" text-anchor="middle">🌲 TREE DP WITH REROOTING</text>
+  <text x="450" y="65" fill="#888888" font-family="Courier New, monospace" font-size="16" text-anchor="middle">All Roots in O(n): Two-Pass DFS</text>
+  
+  <!-- Problem -->
+  <text x="450" y="105" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">PROBLEM: Compute answer for EACH node as root</text>
+  
+  <g transform="translate(150, 120)">
+    <rect x="0" y="0" width="250" height="50" rx="4" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="125" y="20" fill="#ef4444" font-family="Courier New, monospace" font-size="11" text-anchor="middle">Naive: Run tree DP from each</text>
+    <text x="125" y="38" fill="#ef4444" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">O(n²)</text>
+    
+    <rect x="300" y="0" width="250" height="50" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="425" y="20" fill="#4ade80" font-family="Courier New, monospace" font-size="11" text-anchor="middle">Rerooting: Smart reuse</text>
+    <text x="425" y="38" fill="#4ade80" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">O(n)</text>
+  </g>
+  
+  <!-- Two Pass Visualization -->
+  <text x="250" y="200" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">PASS 1: DFS DOWN</text>
+  <text x="650" y="200" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">PASS 2: DFS UP (Reroot)</text>
+  
+  <!-- Tree for Pass 1 -->
+  <g transform="translate(100, 220)">
+    <!-- Root -->
+    <circle cx="150" cy="30" r="20" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="150" y="35" fill="#f97316" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">A</text>
+    
+    <!-- Children -->
+    <circle cx="80" cy="100" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="80" y="105" fill="#ffffff" font-family="Courier New, monospace" font-size="12" text-anchor="middle">B</text>
+    
+    <circle cx="220" cy="100" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="220" y="105" fill="#ffffff" font-family="Courier New, monospace" font-size="12" text-anchor="middle">C</text>
+    
+    <!-- Grandchildren -->
+    <circle cx="40" cy="170" r="15" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="40" y="175" fill="#a78bfa" font-family="Courier New, monospace" font-size="11" text-anchor="middle">D</text>
+    
+    <circle cx="120" cy="170" r="15" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="120" y="175" fill="#a78bfa" font-family="Courier New, monospace" font-size="11" text-anchor="middle">E</text>
+    
+    <!-- Edges -->
+    <line x1="135" y1="45" x2="90" y2="85" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="165" y1="45" x2="210" y2="85" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="68" y1="115" x2="48" y2="158" stroke="#a78bfa" stroke-width="1.5"/>
+    <line x1="92" y1="115" x2="112" y2="158" stroke="#a78bfa" stroke-width="1.5"/>
+    
+    <!-- Arrows showing down direction -->
+    <text x="100" y="60" fill="#4ade80" font-family="Courier New, monospace" font-size="12">↓</text>
+    <text x="180" y="60" fill="#4ade80" font-family="Courier New, monospace" font-size="12">↓</text>
+    <text x="50" y="140" fill="#4ade80" font-family="Courier New, monospace" font-size="12">↓</text>
+    <text x="100" y="140" fill="#4ade80" font-family="Courier New, monospace" font-size="12">↓</text>
+    
+    <!-- dp_down values -->
+    <text x="270" y="40" fill="#4ade80" font-family="Courier New, monospace" font-size="10">dp_down[A] = 2</text>
+    <text x="270" y="60" fill="#60a5fa" font-family="Courier New, monospace" font-size="10">dp_down[B] = 1</text>
+    <text x="270" y="80" fill="#60a5fa" font-family="Courier New, monospace" font-size="10">dp_down[C] = 0</text>
+  </g>
+  
+  <!-- Tree for Pass 2 -->
+  <g transform="translate(500, 220)">
+    <!-- Node being rerooted to -->
+    <circle cx="80" cy="100" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="80" y="105" fill="#4ade80" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">B</text>
+    
+    <!-- Former root becomes child -->
+    <circle cx="150" cy="30" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="150" y="35" fill="#ffffff" font-family="Courier New, monospace" font-size="12" text-anchor="middle">A</text>
+    
+    <!-- Original children of B -->
+    <circle cx="40" cy="170" r="15" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="40" y="175" fill="#a78bfa" font-family="Courier New, monospace" font-size="11" text-anchor="middle">D</text>
+    
+    <circle cx="120" cy="170" r="15" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="120" y="175" fill="#a78bfa" font-family="Courier New, monospace" font-size="11" text-anchor="middle">E</text>
+    
+    <!-- C is now under A -->
+    <circle cx="220" cy="100" r="15" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="220" y="105" fill="#a78bfa" font-family="Courier New, monospace" font-size="11" text-anchor="middle">C</text>
+    
+    <!-- Edges -->
+    <line x1="95" y1="85" x2="135" y2="45" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="68" y1="115" x2="48" y2="158" stroke="#a78bfa" stroke-width="1.5"/>
+    <line x1="92" y1="115" x2="112" y2="158" stroke="#a78bfa" stroke-width="1.5"/>
+    <line x1="165" y1="45" x2="210" y2="90" stroke="#a78bfa" stroke-width="1.5"/>
+    
+    <!-- Up arrow showing rerooting -->
+    <text x="115" y="60" fill="#f97316" font-family="Courier New, monospace" font-size="14">↑</text>
+    <text x="100" y="75" fill="#f97316" font-family="Courier New, monospace" font-size="9">reroot!</text>
+    
+    <!-- dp_up calculation -->
+    <text x="250" y="50" fill="#f97316" font-family="Courier New, monospace" font-size="10">dp_up[B] = from parent A</text>
+    <text x="250" y="70" fill="#888888" font-family="Courier New, monospace" font-size="9">= max(dp_up[A], best_sibling)+1</text>
+  </g>
+  
+  <!-- Key Insight -->
+  <g transform="translate(150, 450)">
+    <rect x="0" y="0" width="600" height="80" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="300" y="25" fill="#ffffff" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">KEY INSIGHT</text>
+    <text x="300" y="48" fill="#4ade80" font-family="Courier New, monospace" font-size="11" text-anchor="middle">answer[u] = max(dp_down[u], dp_up[u])</text>
+    <text x="300" y="68" fill="#888888" font-family="Courier New, monospace" font-size="10" text-anchor="middle">Combine info from children (down) and parent (up)</text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="450" y="560" fill="#888888" font-family="Courier New, monospace" font-size="11" text-anchor="middle">Track best and second-best child values for efficient rerooting</text>
+</svg>

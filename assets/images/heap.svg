@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 280">
+  <defs>
+    <linearGradient id="heapGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ee5a5a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="heapNodeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="500" height="280" fill="#1a1a2e" rx="10"/>
+  
+  <!-- Title -->
+  <text x="250" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle">Min Heap</text>
+  
+  <!-- Heap Tree -->
+  <g transform="translate(250, 55)">
+    <!-- Edges -->
+    <line x1="0" y1="25" x2="-80" y2="65" stroke="#555" stroke-width="2"/>
+    <line x1="0" y1="25" x2="80" y2="65" stroke="#555" stroke-width="2"/>
+    <line x1="-80" y1="95" x2="-120" y2="135" stroke="#555" stroke-width="2"/>
+    <line x1="-80" y1="95" x2="-40" y2="135" stroke="#555" stroke-width="2"/>
+    <line x1="80" y1="95" x2="40" y2="135" stroke="#555" stroke-width="2"/>
+    <line x1="80" y1="95" x2="120" y2="135" stroke="#555" stroke-width="2"/>
+    
+    <!-- Root (min) -->
+    <circle cx="0" cy="15" r="22" fill="url(#heapGrad)"/>
+    <text x="0" y="21" font-family="Arial" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+    <text x="35" y="21" font-family="Arial" font-size="10" fill="#ff6b6b">min</text>
+    
+    <!-- Level 1 -->
+    <circle cx="-80" cy="80" r="20" fill="url(#heapNodeGrad)"/>
+    <text x="-80" y="86" font-family="Arial" font-size="14" font-weight="bold" fill="#1a1a2e" text-anchor="middle">3</text>
+    
+    <circle cx="80" cy="80" r="20" fill="url(#heapNodeGrad)"/>
+    <text x="80" y="86" font-family="Arial" font-size="14" font-weight="bold" fill="#1a1a2e" text-anchor="middle">2</text>
+    
+    <!-- Level 2 -->
+    <circle cx="-120" cy="150" r="18" fill="url(#heapNodeGrad)"/>
+    <text x="-120" y="155" font-family="Arial" font-size="13" font-weight="bold" fill="#1a1a2e" text-anchor="middle">7</text>
+    
+    <circle cx="-40" cy="150" r="18" fill="url(#heapNodeGrad)"/>
+    <text x="-40" y="155" font-family="Arial" font-size="13" font-weight="bold" fill="#1a1a2e" text-anchor="middle">6</text>
+    
+    <circle cx="40" cy="150" r="18" fill="url(#heapNodeGrad)"/>
+    <text x="40" y="155" font-family="Arial" font-size="13" font-weight="bold" fill="#1a1a2e" text-anchor="middle">4</text>
+    
+    <circle cx="120" cy="150" r="18" fill="url(#heapNodeGrad)"/>
+    <text x="120" y="155" font-family="Arial" font-size="13" font-weight="bold" fill="#1a1a2e" text-anchor="middle">5</text>
+  </g>
+  
+  <!-- Array representation -->
+  <g transform="translate(50, 220)">
+    <text x="0" y="0" font-family="Arial" font-size="12" fill="#888">Array: </text>
+    <rect x="50" y="-15" width="35" height="30" fill="url(#heapGrad)" rx="3"/>
+    <text x="67" y="7" font-family="monospace" font-size="14" fill="#fff" text-anchor="middle">1</text>
+    
+    <rect x="90" y="-15" width="35" height="30" fill="url(#heapNodeGrad)" rx="3"/>
+    <text x="107" y="7" font-family="monospace" font-size="14" fill="#1a1a2e" text-anchor="middle">3</text>
+    
+    <rect x="130" y="-15" width="35" height="30" fill="url(#heapNodeGrad)" rx="3"/>
+    <text x="147" y="7" font-family="monospace" font-size="14" fill="#1a1a2e" text-anchor="middle">2</text>
+    
+    <rect x="170" y="-15" width="35" height="30" fill="url(#heapNodeGrad)" rx="3"/>
+    <text x="187" y="7" font-family="monospace" font-size="14" fill="#1a1a2e" text-anchor="middle">7</text>
+    
+    <rect x="210" y="-15" width="35" height="30" fill="url(#heapNodeGrad)" rx="3"/>
+    <text x="227" y="7" font-family="monospace" font-size="14" fill="#1a1a2e" text-anchor="middle">6</text>
+    
+    <rect x="250" y="-15" width="35" height="30" fill="url(#heapNodeGrad)" rx="3"/>
+    <text x="267" y="7" font-family="monospace" font-size="14" fill="#1a1a2e" text-anchor="middle">4</text>
+    
+    <rect x="290" y="-15" width="35" height="30" fill="url(#heapNodeGrad)" rx="3"/>
+    <text x="307" y="7" font-family="monospace" font-size="14" fill="#1a1a2e" text-anchor="middle">5</text>
+    
+    <!-- Index labels -->
+    <text x="67" y="35" font-family="monospace" font-size="9" fill="#666" text-anchor="middle">0</text>
+    <text x="107" y="35" font-family="monospace" font-size="9" fill="#666" text-anchor="middle">1</text>
+    <text x="147" y="35" font-family="monospace" font-size="9" fill="#666" text-anchor="middle">2</text>
+    <text x="187" y="35" font-family="monospace" font-size="9" fill="#666" text-anchor="middle">3</text>
+    <text x="227" y="35" font-family="monospace" font-size="9" fill="#666" text-anchor="middle">4</text>
+    <text x="267" y="35" font-family="monospace" font-size="9" fill="#666" text-anchor="middle">5</text>
+    <text x="307" y="35" font-family="monospace" font-size="9" fill="#666" text-anchor="middle">6</text>
+  </g>
+  
+  <!-- Operations -->
+  <g transform="translate(360, 220)">
+    <text x="0" y="0" font-family="monospace" font-size="11" fill="#43e97b">insert O(log n)</text>
+    <text x="0" y="20" font-family="monospace" font-size="11" fill="#f5576c">extract O(log n)</text>
+    <text x="0" y="40" font-family="monospace" font-size="11" fill="#ffd93d">peek O(1)</text>
+  </g>
+</svg>
+

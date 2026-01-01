@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" fill="#ffffff" font-family="Courier New, monospace" font-size="26" font-weight="bold" text-anchor="middle">🎲 SUM OVER SUBSETS (SOS) DP</text>
+  <text x="450" y="65" fill="#888888" font-family="Courier New, monospace" font-size="16" text-anchor="middle">Subset Enumeration: O(3ⁿ) → O(n·2ⁿ)</text>
+  
+  <!-- Problem Definition -->
+  <text x="450" y="105" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">PROBLEM: Sum Over All Subsets</text>
+  
+  <g transform="translate(200, 120)">
+    <rect x="0" y="0" width="500" height="60" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="250" y="25" fill="#ffffff" font-family="Courier New, monospace" font-size="14" text-anchor="middle">dp[mask] = Σ f[submask]</text>
+    <text x="250" y="48" fill="#888888" font-family="Courier New, monospace" font-size="12" text-anchor="middle">for all submask ⊆ mask</text>
+  </g>
+  
+  <!-- Example -->
+  <text x="450" y="210" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">EXAMPLE: mask = 101 (binary)</text>
+  
+  <g transform="translate(200, 225)">
+    <rect x="0" y="0" width="500" height="100" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="250" y="25" fill="#4ade80" font-family="Courier New, monospace" font-size="12" text-anchor="middle">Subsets of 101: {000, 001, 100, 101}</text>
+    
+    <text x="50" y="55" fill="#ffffff" font-family="Courier New, monospace" font-size="11">f[000]=1</text>
+    <text x="150" y="55" fill="#ffffff" font-family="Courier New, monospace" font-size="11">f[001]=2</text>
+    <text x="250" y="55" fill="#ffffff" font-family="Courier New, monospace" font-size="11">f[100]=5</text>
+    <text x="350" y="55" fill="#ffffff" font-family="Courier New, monospace" font-size="11">f[101]=6</text>
+    
+    <text x="250" y="85" fill="#f97316" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">dp[101] = 1 + 2 + 5 + 6 = 14</text>
+  </g>
+  
+  <!-- Algorithm -->
+  <text x="450" y="355" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">SOS DP ALGORITHM: Process One Bit at a Time</text>
+  
+  <g transform="translate(100, 375)">
+    <!-- Bit 0 -->
+    <rect x="0" y="0" width="220" height="90" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="110" y="20" fill="#60a5fa" font-family="Courier New, monospace" font-size="11" font-weight="bold" text-anchor="middle">BIT 0 (i=0)</text>
+    <text x="110" y="42" fill="#ffffff" font-family="Courier New, monospace" font-size="10" text-anchor="middle">if mask &amp; (1 &lt;&lt; 0):</text>
+    <text x="110" y="58" fill="#ffffff" font-family="Courier New, monospace" font-size="10" text-anchor="middle">  dp[mask] += dp[mask ^ 1]</text>
+    <text x="110" y="80" fill="#888888" font-family="Courier New, monospace" font-size="9" text-anchor="middle">Add contribution without bit 0</text>
+    
+    <!-- Arrow -->
+    <text x="235" y="45" fill="#ffffff" font-family="Courier New, monospace" font-size="16">→</text>
+    
+    <!-- Bit 1 -->
+    <rect x="260" y="0" width="220" height="90" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="370" y="20" fill="#60a5fa" font-family="Courier New, monospace" font-size="11" font-weight="bold" text-anchor="middle">BIT 1 (i=1)</text>
+    <text x="370" y="42" fill="#ffffff" font-family="Courier New, monospace" font-size="10" text-anchor="middle">if mask &amp; (1 &lt;&lt; 1):</text>
+    <text x="370" y="58" fill="#ffffff" font-family="Courier New, monospace" font-size="10" text-anchor="middle">  dp[mask] += dp[mask ^ 2]</text>
+    <text x="370" y="80" fill="#888888" font-family="Courier New, monospace" font-size="9" text-anchor="middle">Add contribution without bit 1</text>
+    
+    <!-- Arrow -->
+    <text x="495" y="45" fill="#ffffff" font-family="Courier New, monospace" font-size="16">→</text>
+    
+    <!-- Bit 2 -->
+    <rect x="520" y="0" width="220" height="90" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="630" y="20" fill="#4ade80" font-family="Courier New, monospace" font-size="11" font-weight="bold" text-anchor="middle">BIT 2 (i=2)</text>
+    <text x="630" y="42" fill="#ffffff" font-family="Courier New, monospace" font-size="10" text-anchor="middle">if mask &amp; (1 &lt;&lt; 2):</text>
+    <text x="630" y="58" fill="#ffffff" font-family="Courier New, monospace" font-size="10" text-anchor="middle">  dp[mask] += dp[mask ^ 4]</text>
+    <text x="630" y="80" fill="#4ade80" font-family="Courier New, monospace" font-size="9" text-anchor="middle">DONE! dp has all sums</text>
+  </g>
+  
+  <!-- Complexity -->
+  <g transform="translate(200, 490)">
+    <rect x="0" y="0" width="500" height="80" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="250" y="25" fill="#ffffff" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">COMPLEXITY COMPARISON</text>
+    <text x="100" y="55" fill="#ef4444" font-family="Courier New, monospace" font-size="12">Naive: O(3ⁿ)</text>
+    <text x="100" y="72" fill="#888888" font-family="Courier New, monospace" font-size="10">All subsets of all masks</text>
+    <text x="350" y="55" fill="#4ade80" font-family="Courier New, monospace" font-size="12">SOS DP: O(n·2ⁿ)</text>
+    <text x="350" y="72" fill="#888888" font-family="Courier New, monospace" font-size="10">n bits × 2ⁿ masks</text>
+  </g>
+</svg>

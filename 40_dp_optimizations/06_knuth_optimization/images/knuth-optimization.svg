@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <rect width="900" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" fill="#ffffff" font-family="Courier New, monospace" font-size="26" font-weight="bold" text-anchor="middle">🎯 KNUTH'S OPTIMIZATION</text>
+  <text x="450" y="65" fill="#888888" font-family="Courier New, monospace" font-size="16" text-anchor="middle">Range DP: O(n³) → O(n²)</text>
+  
+  <!-- Conditions -->
+  <text x="450" y="105" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">TWO CONDITIONS REQUIRED</text>
+  
+  <g transform="translate(80, 120)">
+    <rect x="0" y="0" width="350" height="80" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="175" y="25" fill="#60a5fa" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">1. QUADRANGLE INEQUALITY</text>
+    <text x="175" y="50" fill="#ffffff" font-family="Courier New, monospace" font-size="11" text-anchor="middle">cost[a][c] + cost[b][d] ≤</text>
+    <text x="175" y="68" fill="#ffffff" font-family="Courier New, monospace" font-size="11" text-anchor="middle">cost[a][d] + cost[b][c]</text>
+    
+    <rect x="380" y="0" width="350" height="80" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="555" y="25" fill="#60a5fa" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">2. MONOTONICITY</text>
+    <text x="555" y="50" fill="#ffffff" font-family="Courier New, monospace" font-size="11" text-anchor="middle">cost[b][c] ≤ cost[a][d]</text>
+    <text x="555" y="68" fill="#888888" font-family="Courier New, monospace" font-size="10" text-anchor="middle">for a ≤ b ≤ c ≤ d</text>
+  </g>
+  
+  <!-- Result -->
+  <g transform="translate(200, 220)">
+    <rect x="0" y="0" width="500" height="60" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="250" y="25" fill="#4ade80" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">RESULT: opt[i][j-1] ≤ opt[i][j] ≤ opt[i+1][j]</text>
+    <text x="250" y="48" fill="#888888" font-family="Courier New, monospace" font-size="11" text-anchor="middle">Search space for opt[i][j] is bounded by neighbors!</text>
+  </g>
+  
+  <!-- DP Table Visualization -->
+  <text x="450" y="310" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">FILLING DP TABLE BY LENGTH</text>
+  
+  <g transform="translate(280, 330)">
+    <!-- Grid -->
+    <rect x="0" y="0" width="40" height="40" rx="2" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="20" y="25" fill="#4ade80" font-family="Courier New, monospace" font-size="11" text-anchor="middle">0,0</text>
+    
+    <rect x="45" y="0" width="40" height="40" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="65" y="25" fill="#888888" font-family="Courier New, monospace" font-size="11" text-anchor="middle">0,1</text>
+    
+    <rect x="90" y="0" width="40" height="40" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="110" y="25" fill="#888888" font-family="Courier New, monospace" font-size="11" text-anchor="middle">0,2</text>
+    
+    <rect x="135" y="0" width="40" height="40" rx="2" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="155" y="25" fill="#f97316" font-family="Courier New, monospace" font-size="11" text-anchor="middle">0,3</text>
+    
+    <rect x="45" y="45" width="40" height="40" rx="2" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="65" y="70" fill="#4ade80" font-family="Courier New, monospace" font-size="11" text-anchor="middle">1,1</text>
+    
+    <rect x="90" y="45" width="40" height="40" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="110" y="70" fill="#888888" font-family="Courier New, monospace" font-size="11" text-anchor="middle">1,2</text>
+    
+    <rect x="135" y="45" width="40" height="40" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="155" y="70" fill="#888888" font-family="Courier New, monospace" font-size="11" text-anchor="middle">1,3</text>
+    
+    <rect x="90" y="90" width="40" height="40" rx="2" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="110" y="115" fill="#4ade80" font-family="Courier New, monospace" font-size="11" text-anchor="middle">2,2</text>
+    
+    <rect x="135" y="90" width="40" height="40" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="155" y="115" fill="#888888" font-family="Courier New, monospace" font-size="11" text-anchor="middle">2,3</text>
+    
+    <rect x="135" y="135" width="40" height="40" rx="2" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="155" y="160" fill="#4ade80" font-family="Courier New, monospace" font-size="11" text-anchor="middle">3,3</text>
+    
+    <!-- Legend -->
+    <text x="220" y="25" fill="#4ade80" font-family="Courier New, monospace" font-size="10">Base cases (len=1)</text>
+    <text x="220" y="45" fill="#3b82f6" font-family="Courier New, monospace" font-size="10">Computed earlier</text>
+    <text x="220" y="65" fill="#f97316" font-family="Courier New, monospace" font-size="10">Computing now</text>
+    <text x="220" y="95" fill="#888888" font-family="Courier New, monospace" font-size="10">Search k in:</text>
+    <text x="220" y="115" fill="#ffffff" font-family="Courier New, monospace" font-size="10">[opt[0][2], opt[1][3]]</text>
+  </g>
+  
+  <!-- Problems -->
+  <text x="450" y="520" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">CLASSIC PROBLEMS: Burst Balloons, Merge Stones, Cut Stick, Strange Printer</text>
+</svg>

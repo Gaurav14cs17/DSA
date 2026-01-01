@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 250">
+  <defs>
+    <linearGradient id="greedyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd93d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff9800;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="550" height="250" fill="#1a1a2e" rx="10"/>
+  
+  <!-- Title -->
+  <text x="275" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle">Greedy Algorithm - Activity Selection</text>
+  
+  <!-- Timeline -->
+  <g transform="translate(50, 70)">
+    <!-- Time axis -->
+    <line x1="0" y1="120" x2="450" y2="120" stroke="#555" stroke-width="2"/>
+    <text x="225" y="145" font-family="Arial" font-size="12" fill="#888" text-anchor="middle">Time →</text>
+    
+    <!-- Time markers -->
+    <line x1="0" y1="115" x2="0" y2="125" stroke="#555" stroke-width="1"/>
+    <text x="0" y="138" font-family="monospace" font-size="9" fill="#666" text-anchor="middle">0</text>
+    
+    <line x1="100" y1="115" x2="100" y2="125" stroke="#555" stroke-width="1"/>
+    <text x="100" y="138" font-family="monospace" font-size="9" fill="#666" text-anchor="middle">2</text>
+    
+    <line x1="200" y1="115" x2="200" y2="125" stroke="#555" stroke-width="1"/>
+    <text x="200" y="138" font-family="monospace" font-size="9" fill="#666" text-anchor="middle">4</text>
+    
+    <line x1="300" y1="115" x2="300" y2="125" stroke="#555" stroke-width="1"/>
+    <text x="300" y="138" font-family="monospace" font-size="9" fill="#666" text-anchor="middle">6</text>
+    
+    <line x1="400" y1="115" x2="400" y2="125" stroke="#555" stroke-width="1"/>
+    <text x="400" y="138" font-family="monospace" font-size="9" fill="#666" text-anchor="middle">8</text>
+    
+    <!-- Activities (selected highlighted) -->
+    <!-- A1: (0,2) - Selected -->
+    <rect x="0" y="0" width="100" height="20" fill="url(#greedyGrad)" rx="3"/>
+    <text x="50" y="14" font-family="Arial" font-size="11" fill="#1a1a2e" text-anchor="middle">A1 ✓</text>
+    
+    <!-- A2: (1,4) - Not selected (overlaps) -->
+    <rect x="50" y="25" width="150" height="20" fill="#444" rx="3" opacity="0.5"/>
+    <text x="125" y="39" font-family="Arial" font-size="11" fill="#888" text-anchor="middle">A2</text>
+    
+    <!-- A3: (2,5) - Selected -->
+    <rect x="100" y="50" width="150" height="20" fill="url(#greedyGrad)" rx="3"/>
+    <text x="175" y="64" font-family="Arial" font-size="11" fill="#1a1a2e" text-anchor="middle">A3 ✓</text>
+    
+    <!-- A4: (3,6) - Not selected (overlaps) -->
+    <rect x="150" y="75" width="150" height="20" fill="#444" rx="3" opacity="0.5"/>
+    <text x="225" y="89" font-family="Arial" font-size="11" fill="#888" text-anchor="middle">A4</text>
+    
+    <!-- A5: (5,8) - Selected -->
+    <rect x="250" y="50" width="150" height="20" fill="url(#greedyGrad)" rx="3"/>
+    <text x="325" y="64" font-family="Arial" font-size="11" fill="#1a1a2e" text-anchor="middle">A5 ✓</text>
+  </g>
+  
+  <!-- Key -->
+  <g transform="translate(50, 200)">
+    <rect x="0" y="0" width="20" height="15" fill="url(#greedyGrad)" rx="2"/>
+    <text x="30" y="12" font-family="Arial" font-size="11" fill="#888">Selected (3 activities)</text>
+    
+    <rect x="180" y="0" width="20" height="15" fill="#444" rx="2" opacity="0.5"/>
+    <text x="210" y="12" font-family="Arial" font-size="11" fill="#888">Not Selected (overlapping)</text>
+    
+    <text x="380" y="12" font-family="Arial" font-size="11" fill="#43e97b">Strategy: Sort by end time</text>
+  </g>
+</svg>
+

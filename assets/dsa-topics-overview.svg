@@ -1,0 +1,546 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#11998e"/>
+      <stop offset="100%" style="stop-color:#38ef7d"/>
+    </linearGradient>
+    
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+    
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb"/>
+      <stop offset="100%" style="stop-color:#f5576c"/>
+    </linearGradient>
+    
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff416c"/>
+      <stop offset="100%" style="stop-color:#ff4b2b"/>
+    </linearGradient>
+    
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5af19"/>
+      <stop offset="100%" style="stop-color:#f12711"/>
+    </linearGradient>
+    
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00c6ff"/>
+      <stop offset="100%" style="stop-color:#0072ff"/>
+    </linearGradient>
+    
+    <!-- Filters -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="900" fill="url(#bgGrad)"/>
+  <rect width="1200" height="900" fill="url(#grid)"/>
+  
+  <!-- Decorative Background Elements -->
+  <circle cx="100" cy="100" r="200" fill="rgba(102,126,234,0.05)"/>
+  <circle cx="1100" cy="800" r="250" fill="rgba(118,75,162,0.05)"/>
+  <circle cx="600" cy="450" r="400" fill="rgba(102,126,234,0.03)"/>
+  
+  <!-- Title Section -->
+  <g transform="translate(600, 50)">
+    <text x="0" y="0" text-anchor="middle" fill="white" font-size="36" font-weight="800" font-family="system-ui, sans-serif" filter="url(#shadow)">
+      📚 DSA COMPLETE TOPIC MAP
+    </text>
+    <text x="0" y="30" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="14" font-family="system-ui, sans-serif" letter-spacing="3">
+      40 TOPICS • 800+ PROBLEMS • COMPLETE ROADMAP
+    </text>
+  </g>
+  
+  <!-- Section 1: Core Data Structures (Green) -->
+  <g transform="translate(30, 100)">
+    <!-- Section Header -->
+    <rect x="0" y="0" width="280" height="40" rx="8" fill="url(#greenGrad)" filter="url(#shadow)"/>
+    <text x="140" y="26" text-anchor="middle" fill="white" font-size="14" font-weight="bold" font-family="system-ui, sans-serif">
+      📦 CORE DATA STRUCTURES
+    </text>
+    
+    <!-- Topic Cards -->
+    <g transform="translate(0, 50)">
+      <!-- Row 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="130" height="50" rx="6" fill="rgba(17,153,142,0.2)" stroke="rgba(56,239,125,0.4)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(56,239,125,0.9)" font-size="11" font-weight="bold">01</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Arrays</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">50+ problems</text>
+      </g>
+      <g transform="translate(140, 0)">
+        <rect width="130" height="50" rx="6" fill="rgba(17,153,142,0.2)" stroke="rgba(56,239,125,0.4)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(56,239,125,0.9)" font-size="11" font-weight="bold">02</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Strings</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">50+ problems</text>
+      </g>
+      
+      <!-- Row 2 -->
+      <g transform="translate(0, 58)">
+        <rect width="130" height="50" rx="6" fill="rgba(17,153,142,0.2)" stroke="rgba(56,239,125,0.4)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(56,239,125,0.9)" font-size="11" font-weight="bold">03</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Linked Lists</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">40+ problems</text>
+      </g>
+      <g transform="translate(140, 58)">
+        <rect width="130" height="50" rx="6" fill="rgba(17,153,142,0.2)" stroke="rgba(56,239,125,0.4)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(56,239,125,0.9)" font-size="11" font-weight="bold">04</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Stacks</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">35+ problems</text>
+      </g>
+      
+      <!-- Row 3 -->
+      <g transform="translate(0, 116)">
+        <rect width="130" height="50" rx="6" fill="rgba(17,153,142,0.2)" stroke="rgba(56,239,125,0.4)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(56,239,125,0.9)" font-size="11" font-weight="bold">05</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Queues</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">25+ problems</text>
+      </g>
+      <g transform="translate(140, 116)">
+        <rect width="130" height="50" rx="6" fill="rgba(17,153,142,0.2)" stroke="rgba(56,239,125,0.4)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(56,239,125,0.9)" font-size="11" font-weight="bold">06</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Hash Tables</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">40+ problems</text>
+      </g>
+      
+      <!-- Row 4 -->
+      <g transform="translate(0, 174)">
+        <rect width="130" height="50" rx="6" fill="rgba(17,153,142,0.2)" stroke="rgba(56,239,125,0.4)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(56,239,125,0.9)" font-size="11" font-weight="bold">07</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Trees</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">60+ problems</text>
+      </g>
+      <g transform="translate(140, 174)">
+        <rect width="130" height="50" rx="6" fill="rgba(17,153,142,0.2)" stroke="rgba(56,239,125,0.4)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(56,239,125,0.9)" font-size="11" font-weight="bold">08</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">BST</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">25+ problems</text>
+      </g>
+      
+      <!-- Row 5 -->
+      <g transform="translate(0, 232)">
+        <rect width="130" height="50" rx="6" fill="rgba(17,153,142,0.2)" stroke="rgba(56,239,125,0.4)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(56,239,125,0.9)" font-size="11" font-weight="bold">09</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Heaps</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">30+ problems</text>
+      </g>
+      <g transform="translate(140, 232)">
+        <rect width="130" height="50" rx="6" fill="rgba(17,153,142,0.2)" stroke="rgba(56,239,125,0.4)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(56,239,125,0.9)" font-size="11" font-weight="bold">10</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Graphs</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">80+ problems</text>
+      </g>
+      
+      <!-- Row 6 -->
+      <g transform="translate(0, 290)">
+        <rect width="130" height="50" rx="6" fill="rgba(17,153,142,0.2)" stroke="rgba(56,239,125,0.4)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(56,239,125,0.9)" font-size="11" font-weight="bold">11</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Tries</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">15+ problems</text>
+      </g>
+      <g transform="translate(140, 290)">
+        <rect width="130" height="50" rx="6" fill="rgba(17,153,142,0.2)" stroke="rgba(56,239,125,0.4)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(56,239,125,0.9)" font-size="11" font-weight="bold">12</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Segment Trees</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">15+ problems</text>
+      </g>
+      
+      <!-- Row 7 -->
+      <g transform="translate(70, 348)">
+        <rect width="130" height="50" rx="6" fill="rgba(17,153,142,0.2)" stroke="rgba(56,239,125,0.4)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(56,239,125,0.9)" font-size="11" font-weight="bold">13</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Union-Find</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">15+ problems</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Section 2: Essential Algorithms (Blue) -->
+  <g transform="translate(320, 100)">
+    <!-- Section Header -->
+    <rect x="0" y="0" width="280" height="40" rx="8" fill="url(#blueGrad)" filter="url(#shadow)"/>
+    <text x="140" y="26" text-anchor="middle" fill="white" font-size="14" font-weight="bold" font-family="system-ui, sans-serif">
+      🧮 ESSENTIAL ALGORITHMS
+    </text>
+    
+    <!-- Topic Cards -->
+    <g transform="translate(0, 50)">
+      <!-- Row 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="130" height="50" rx="6" fill="rgba(102,126,234,0.2)" stroke="rgba(118,75,162,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(167,139,250,1)" font-size="11" font-weight="bold">14</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Sorting</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">20+ problems</text>
+      </g>
+      <g transform="translate(140, 0)">
+        <rect width="130" height="50" rx="6" fill="rgba(102,126,234,0.2)" stroke="rgba(118,75,162,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(167,139,250,1)" font-size="11" font-weight="bold">15</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Binary Search</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">40+ problems</text>
+      </g>
+      
+      <!-- Row 2 -->
+      <g transform="translate(0, 58)">
+        <rect width="130" height="50" rx="6" fill="rgba(102,126,234,0.2)" stroke="rgba(118,75,162,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(167,139,250,1)" font-size="11" font-weight="bold">16</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Recursion</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">25+ problems</text>
+      </g>
+      <g transform="translate(140, 58)">
+        <rect width="130" height="50" rx="6" fill="rgba(102,126,234,0.2)" stroke="rgba(118,75,162,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(167,139,250,1)" font-size="11" font-weight="bold">17</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Backtracking</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">30+ problems</text>
+      </g>
+      
+      <!-- Row 3 -->
+      <g transform="translate(0, 116)">
+        <rect width="130" height="50" rx="6" fill="rgba(102,126,234,0.2)" stroke="rgba(118,75,162,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(167,139,250,1)" font-size="11" font-weight="bold">18</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Dynamic Prog.</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">100+ problems</text>
+      </g>
+      <g transform="translate(140, 116)">
+        <rect width="130" height="50" rx="6" fill="rgba(102,126,234,0.2)" stroke="rgba(118,75,162,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(167,139,250,1)" font-size="11" font-weight="bold">19</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Greedy</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">25+ problems</text>
+      </g>
+      
+      <!-- Row 4 -->
+      <g transform="translate(0, 174)">
+        <rect width="130" height="50" rx="6" fill="rgba(102,126,234,0.2)" stroke="rgba(118,75,162,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(167,139,250,1)" font-size="11" font-weight="bold">20</text>
+        <text x="35" y="20" fill="white" font-size="10" font-weight="600">Divide &amp; Conquer</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">15+ problems</text>
+      </g>
+      <g transform="translate(140, 174)">
+        <rect width="130" height="50" rx="6" fill="rgba(102,126,234,0.2)" stroke="rgba(118,75,162,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(167,139,250,1)" font-size="11" font-weight="bold">21</text>
+        <text x="35" y="20" fill="white" font-size="10" font-weight="600">Bit Manipulation</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">25+ problems</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Section 3: Problem Solving Patterns (Pink/Orange) -->
+  <g transform="translate(610, 100)">
+    <!-- Section Header -->
+    <rect x="0" y="0" width="280" height="40" rx="8" fill="url(#orangeGrad)" filter="url(#shadow)"/>
+    <text x="140" y="26" text-anchor="middle" fill="white" font-size="14" font-weight="bold" font-family="system-ui, sans-serif">
+      🎯 PROBLEM-SOLVING PATTERNS
+    </text>
+    
+    <!-- Topic Cards -->
+    <g transform="translate(0, 50)">
+      <!-- Row 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="130" height="50" rx="6" fill="rgba(240,147,251,0.15)" stroke="rgba(245,87,108,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(245,87,108,1)" font-size="11" font-weight="bold">22</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Two Pointers</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">30+ problems</text>
+      </g>
+      <g transform="translate(140, 0)">
+        <rect width="130" height="50" rx="6" fill="rgba(240,147,251,0.15)" stroke="rgba(245,87,108,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(245,87,108,1)" font-size="11" font-weight="bold">23</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Sliding Window</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">25+ problems</text>
+      </g>
+      
+      <!-- Row 2 -->
+      <g transform="translate(0, 58)">
+        <rect width="130" height="50" rx="6" fill="rgba(240,147,251,0.15)" stroke="rgba(245,87,108,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(245,87,108,1)" font-size="11" font-weight="bold">24</text>
+        <text x="35" y="20" fill="white" font-size="10" font-weight="600">Graph Algorithms</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">100+ problems</text>
+      </g>
+      <g transform="translate(140, 58)">
+        <rect width="130" height="50" rx="6" fill="rgba(240,147,251,0.15)" stroke="rgba(245,87,108,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(245,87,108,1)" font-size="11" font-weight="bold">25</text>
+        <text x="35" y="20" fill="white" font-size="10" font-weight="600">Tree Algorithms</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">80+ problems</text>
+      </g>
+      
+      <!-- Row 3 -->
+      <g transform="translate(0, 116)">
+        <rect width="130" height="50" rx="6" fill="rgba(240,147,251,0.15)" stroke="rgba(245,87,108,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(245,87,108,1)" font-size="11" font-weight="bold">26</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Sweep Line</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">20+ problems</text>
+      </g>
+      <g transform="translate(140, 116)">
+        <rect width="130" height="50" rx="6" fill="rgba(240,147,251,0.15)" stroke="rgba(245,87,108,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(245,87,108,1)" font-size="11" font-weight="bold">27</text>
+        <text x="35" y="20" fill="white" font-size="10" font-weight="600">Advanced Trees</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">30+ problems</text>
+      </g>
+      
+      <!-- Row 4 -->
+      <g transform="translate(0, 174)">
+        <rect width="130" height="50" rx="6" fill="rgba(240,147,251,0.15)" stroke="rgba(245,87,108,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(245,87,108,1)" font-size="11" font-weight="bold">28</text>
+        <text x="35" y="20" fill="white" font-size="10" font-weight="600">String Algorithms</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">40+ problems</text>
+      </g>
+      <g transform="translate(140, 174)">
+        <rect width="130" height="50" rx="6" fill="rgba(240,147,251,0.15)" stroke="rgba(245,87,108,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(245,87,108,1)" font-size="11" font-weight="bold">29</text>
+        <text x="35" y="20" fill="white" font-size="10" font-weight="600">Comp. Geometry</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">20+ problems</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Section 4: Advanced Topics (Red) -->
+  <g transform="translate(900, 100)">
+    <!-- Section Header -->
+    <rect x="0" y="0" width="280" height="40" rx="8" fill="url(#redGrad)" filter="url(#shadow)"/>
+    <text x="140" y="26" text-anchor="middle" fill="white" font-size="14" font-weight="bold" font-family="system-ui, sans-serif">
+      ⚡ ADVANCED TOPICS
+    </text>
+    
+    <!-- Topic Cards -->
+    <g transform="translate(0, 50)">
+      <!-- Row 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="130" height="50" rx="6" fill="rgba(255,65,108,0.15)" stroke="rgba(255,75,43,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(255,75,43,1)" font-size="11" font-weight="bold">30</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Number Theory</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">50+ problems</text>
+      </g>
+      <g transform="translate(140, 0)">
+        <rect width="130" height="50" rx="6" fill="rgba(255,65,108,0.15)" stroke="rgba(255,75,43,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(255,75,43,1)" font-size="11" font-weight="bold">31</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Combinatorics</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">50+ problems</text>
+      </g>
+      
+      <!-- Row 2 -->
+      <g transform="translate(0, 58)">
+        <rect width="130" height="50" rx="6" fill="rgba(255,65,108,0.15)" stroke="rgba(255,75,43,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(255,75,43,1)" font-size="11" font-weight="bold">32</text>
+        <text x="35" y="20" fill="white" font-size="11" font-weight="600">Game Theory</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">25+ problems</text>
+      </g>
+      <g transform="translate(140, 58)">
+        <rect width="130" height="50" rx="6" fill="rgba(255,65,108,0.15)" stroke="rgba(255,75,43,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(255,75,43,1)" font-size="11" font-weight="bold">33</text>
+        <text x="35" y="20" fill="white" font-size="10" font-weight="600">Matrix Exp.</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">25+ problems</text>
+      </g>
+      
+      <!-- Row 3 -->
+      <g transform="translate(0, 116)">
+        <rect width="130" height="50" rx="6" fill="rgba(255,65,108,0.15)" stroke="rgba(255,75,43,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(255,75,43,1)" font-size="11" font-weight="bold">34</text>
+        <text x="35" y="20" fill="white" font-size="10" font-weight="600">Sqrt Decomp.</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">20+ problems</text>
+      </g>
+      <g transform="translate(140, 116)">
+        <rect width="130" height="50" rx="6" fill="rgba(255,65,108,0.15)" stroke="rgba(255,75,43,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(255,75,43,1)" font-size="11" font-weight="bold">35</text>
+        <text x="35" y="20" fill="white" font-size="10" font-weight="600">Persistent DS</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">20+ problems</text>
+      </g>
+      
+      <!-- Row 4 -->
+      <g transform="translate(0, 174)">
+        <rect width="130" height="50" rx="6" fill="rgba(255,65,108,0.15)" stroke="rgba(255,75,43,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(255,75,43,1)" font-size="11" font-weight="bold">36</text>
+        <text x="35" y="20" fill="white" font-size="10" font-weight="600">Randomized</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">25+ problems</text>
+      </g>
+      <g transform="translate(140, 174)">
+        <rect width="130" height="50" rx="6" fill="rgba(255,65,108,0.15)" stroke="rgba(255,75,43,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(255,75,43,1)" font-size="11" font-weight="bold">37</text>
+        <text x="35" y="20" fill="white" font-size="10" font-weight="600">Interval Trees</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">30+ problems</text>
+      </g>
+      
+      <!-- Row 5 -->
+      <g transform="translate(0, 232)">
+        <rect width="130" height="50" rx="6" fill="rgba(255,65,108,0.15)" stroke="rgba(255,75,43,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(255,75,43,1)" font-size="11" font-weight="bold">38</text>
+        <text x="35" y="20" fill="white" font-size="10" font-weight="600">Online Algo.</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">25+ problems</text>
+      </g>
+      <g transform="translate(140, 232)">
+        <rect width="130" height="50" rx="6" fill="rgba(255,65,108,0.15)" stroke="rgba(255,75,43,0.5)" stroke-width="1"/>
+        <text x="10" y="20" fill="rgba(255,75,43,1)" font-size="11" font-weight="bold">39</text>
+        <text x="35" y="20" fill="white" font-size="10" font-weight="600">Approximation</text>
+        <text x="10" y="38" fill="rgba(255,255,255,0.5)" font-size="9">20+ problems</text>
+      </g>
+      
+      <!-- Row 6 - Featured -->
+      <g transform="translate(70, 290)">
+        <rect width="140" height="55" rx="6" fill="rgba(245,175,25,0.2)" stroke="url(#goldGrad)" stroke-width="2"/>
+        <text x="15" y="20" fill="url(#goldGrad)" font-size="11" font-weight="bold">40 ⭐</text>
+        <text x="50" y="20" fill="white" font-size="11" font-weight="700">DP Optimizations</text>
+        <text x="15" y="40" fill="rgba(255,255,255,0.6)" font-size="9">60+ problems • Featured</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Bottom Stats Section -->
+  <g transform="translate(0, 560)">
+    <!-- Difficulty Legend -->
+    <g transform="translate(60, 0)">
+      <rect x="0" y="0" width="500" height="80" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <text x="20" y="28" fill="white" font-size="13" font-weight="bold">DIFFICULTY LEVELS</text>
+      
+      <g transform="translate(20, 45)">
+        <circle cx="8" cy="8" r="8" fill="url(#greenGrad)"/>
+        <text x="25" y="12" fill="rgba(255,255,255,0.8)" font-size="11">Easy</text>
+        
+        <circle cx="98" cy="8" r="8" fill="url(#blueGrad)"/>
+        <text x="115" y="12" fill="rgba(255,255,255,0.8)" font-size="11">Medium</text>
+        
+        <circle cx="208" cy="8" r="8" fill="url(#redGrad)"/>
+        <text x="225" y="12" fill="rgba(255,255,255,0.8)" font-size="11">Hard</text>
+        
+        <circle cx="298" cy="8" r="8" fill="url(#goldGrad)"/>
+        <text x="315" y="12" fill="rgba(255,255,255,0.8)" font-size="11">Expert</text>
+      </g>
+    </g>
+    
+    <!-- Quick Stats -->
+    <g transform="translate(600, 0)">
+      <rect x="0" y="0" width="560" height="80" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <text x="20" y="28" fill="white" font-size="13" font-weight="bold">REPOSITORY STATS</text>
+      
+      <g transform="translate(20, 45)">
+        <text x="0" y="12" fill="url(#greenGrad)" font-size="18" font-weight="bold">13</text>
+        <text x="30" y="12" fill="rgba(255,255,255,0.6)" font-size="10">Data Structures</text>
+        
+        <text x="140" y="12" fill="url(#blueGrad)" font-size="18" font-weight="bold">8</text>
+        <text x="160" y="12" fill="rgba(255,255,255,0.6)" font-size="10">Algorithms</text>
+        
+        <text x="260" y="12" fill="url(#orangeGrad)" font-size="18" font-weight="bold">8</text>
+        <text x="280" y="12" fill="rgba(255,255,255,0.6)" font-size="10">Patterns</text>
+        
+        <text x="360" y="12" fill="url(#redGrad)" font-size="18" font-weight="bold">11</text>
+        <text x="385" y="12" fill="rgba(255,255,255,0.6)" font-size="10">Advanced</text>
+        
+        <text x="470" y="12" fill="url(#goldGrad)" font-size="18" font-weight="bold">800+</text>
+        <text x="520" y="12" fill="rgba(255,255,255,0.6)" font-size="10">Total</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Learning Path Flow -->
+  <g transform="translate(60, 670)">
+    <rect x="0" y="0" width="1100" height="100" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <text x="20" y="28" fill="white" font-size="13" font-weight="bold">📈 RECOMMENDED LEARNING PATH</text>
+    
+    <!-- Path Items -->
+    <g transform="translate(20, 50)">
+      <!-- Week 1-2 -->
+      <g transform="translate(0, 0)">
+        <rect width="120" height="35" rx="6" fill="url(#greenGrad)" opacity="0.3"/>
+        <text x="60" y="15" text-anchor="middle" fill="white" font-size="10" font-weight="bold">WEEK 1-2</text>
+        <text x="60" y="28" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="8">Arrays, Strings</text>
+      </g>
+      
+      <!-- Arrow -->
+      <path d="M 130 17 L 150 17 L 145 12 M 150 17 L 145 22" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none"/>
+      
+      <!-- Week 3-4 -->
+      <g transform="translate(160, 0)">
+        <rect width="120" height="35" rx="6" fill="url(#greenGrad)" opacity="0.4"/>
+        <text x="60" y="15" text-anchor="middle" fill="white" font-size="10" font-weight="bold">WEEK 3-4</text>
+        <text x="60" y="28" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="8">Stacks, Queues</text>
+      </g>
+      
+      <!-- Arrow -->
+      <path d="M 290 17 L 310 17 L 305 12 M 310 17 L 305 22" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none"/>
+      
+      <!-- Week 5-6 -->
+      <g transform="translate(320, 0)">
+        <rect width="120" height="35" rx="6" fill="url(#blueGrad)" opacity="0.4"/>
+        <text x="60" y="15" text-anchor="middle" fill="white" font-size="10" font-weight="bold">WEEK 5-6</text>
+        <text x="60" y="28" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="8">Search, Sort</text>
+      </g>
+      
+      <!-- Arrow -->
+      <path d="M 450 17 L 470 17 L 465 12 M 470 17 L 465 22" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none"/>
+      
+      <!-- Week 7-8 -->
+      <g transform="translate(480, 0)">
+        <rect width="120" height="35" rx="6" fill="url(#blueGrad)" opacity="0.5"/>
+        <text x="60" y="15" text-anchor="middle" fill="white" font-size="10" font-weight="bold">WEEK 7-8</text>
+        <text x="60" y="28" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="8">Trees, Graphs</text>
+      </g>
+      
+      <!-- Arrow -->
+      <path d="M 610 17 L 630 17 L 625 12 M 630 17 L 625 22" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none"/>
+      
+      <!-- Week 9-12 -->
+      <g transform="translate(640, 0)">
+        <rect width="120" height="35" rx="6" fill="url(#orangeGrad)" opacity="0.4"/>
+        <text x="60" y="15" text-anchor="middle" fill="white" font-size="10" font-weight="bold">WEEK 9-12</text>
+        <text x="60" y="28" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="8">DP, Patterns</text>
+      </g>
+      
+      <!-- Arrow -->
+      <path d="M 770 17 L 790 17 L 785 12 M 790 17 L 785 22" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none"/>
+      
+      <!-- Week 13+ -->
+      <g transform="translate(800, 0)">
+        <rect width="120" height="35" rx="6" fill="url(#redGrad)" opacity="0.4"/>
+        <text x="60" y="15" text-anchor="middle" fill="white" font-size="10" font-weight="bold">WEEK 13+</text>
+        <text x="60" y="28" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="8">Advanced</text>
+      </g>
+      
+      <!-- Final Arrow -->
+      <path d="M 930 17 L 950 17 L 945 12 M 950 17 L 945 22" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none"/>
+      
+      <!-- Goal -->
+      <g transform="translate(960, 0)">
+        <rect width="100" height="35" rx="6" fill="url(#goldGrad)" opacity="0.5"/>
+        <text x="50" y="15" text-anchor="middle" fill="white" font-size="10" font-weight="bold">🏆 MASTER</text>
+        <text x="50" y="28" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="8">Interview Ready!</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Footer -->
+  <g transform="translate(600, 810)">
+    <text x="0" y="0" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="11" font-family="system-ui, sans-serif">
+      Made with ❤️ by Gaurav Goswami • github.com/Gaurav14cs17/DSA
+    </text>
+    <text x="0" y="20" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10" font-family="system-ui, sans-serif">
+      Complete DSA Guide • Interview Preparation • Competitive Programming
+    </text>
+  </g>
+  
+  <!-- Decorative Code Elements -->
+  <g opacity="0.15">
+    <text x="50" y="850" fill="white" font-size="10" font-family="monospace">def master_dsa(): return success</text>
+    <text x="900" y="850" fill="white" font-size="10" font-family="monospace">O(log n) → O(1)</text>
+  </g>
+</svg>
+

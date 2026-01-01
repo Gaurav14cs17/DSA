@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280">
+  <defs>
+    <linearGradient id="dpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cellGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="280" fill="#1a1a2e" rx="10"/>
+  
+  <!-- Title -->
+  <text x="300" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">Dynamic Programming - Fibonacci</text>
+  
+  <!-- DP Table -->
+  <g transform="translate(50, 60)">
+    <text x="0" y="0" font-family="Arial" font-size="14" fill="#888">DP Table: dp[i] = dp[i-1] + dp[i-2]</text>
+    
+    <!-- Index row -->
+    <text x="30" y="40" font-family="monospace" font-size="12" fill="#666">i</text>
+    <text x="80" y="40" font-family="monospace" font-size="12" fill="#fff">0</text>
+    <text x="130" y="40" font-family="monospace" font-size="12" fill="#fff">1</text>
+    <text x="180" y="40" font-family="monospace" font-size="12" fill="#fff">2</text>
+    <text x="230" y="40" font-family="monospace" font-size="12" fill="#fff">3</text>
+    <text x="280" y="40" font-family="monospace" font-size="12" fill="#fff">4</text>
+    <text x="330" y="40" font-family="monospace" font-size="12" fill="#fff">5</text>
+    <text x="380" y="40" font-family="monospace" font-size="12" fill="#fff">6</text>
+    <text x="430" y="40" font-family="monospace" font-size="12" fill="#fff">7</text>
+    
+    <!-- DP cells -->
+    <rect x="60" y="50" width="40" height="35" fill="#2d4059" rx="5"/>
+    <text x="80" y="73" font-family="monospace" font-size="16" fill="#43e97b" text-anchor="middle">0</text>
+    
+    <rect x="110" y="50" width="40" height="35" fill="#2d4059" rx="5"/>
+    <text x="130" y="73" font-family="monospace" font-size="16" fill="#43e97b" text-anchor="middle">1</text>
+    
+    <rect x="160" y="50" width="40" height="35" fill="#2d4059" rx="5"/>
+    <text x="180" y="73" font-family="monospace" font-size="16" fill="#43e97b" text-anchor="middle">1</text>
+    
+    <rect x="210" y="50" width="40" height="35" fill="#2d4059" rx="5"/>
+    <text x="230" y="73" font-family="monospace" font-size="16" fill="#43e97b" text-anchor="middle">2</text>
+    
+    <rect x="260" y="50" width="40" height="35" fill="#2d4059" rx="5"/>
+    <text x="280" y="73" font-family="monospace" font-size="16" fill="#43e97b" text-anchor="middle">3</text>
+    
+    <rect x="310" y="50" width="40" height="35" fill="#2d4059" rx="5"/>
+    <text x="330" y="73" font-family="monospace" font-size="16" fill="#43e97b" text-anchor="middle">5</text>
+    
+    <rect x="360" y="50" width="40" height="35" fill="#2d4059" rx="5"/>
+    <text x="380" y="73" font-family="monospace" font-size="16" fill="#43e97b" text-anchor="middle">8</text>
+    
+    <rect x="410" y="50" width="40" height="35" fill="url(#cellGrad)" rx="5"/>
+    <text x="430" y="73" font-family="monospace" font-size="16" fill="#1a1a2e" font-weight="bold" text-anchor="middle">13</text>
+    
+    <!-- Arrows showing dependency -->
+    <path d="M 360 95 Q 380 120 400 95" stroke="#f5576c" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+    <path d="M 310 95 Q 360 130 400 95" stroke="#f5576c" stroke-width="2" fill="none"/>
+    <text x="355" y="135" font-family="Arial" font-size="11" fill="#f5576c">5 + 8 = 13</text>
+  </g>
+  
+  <!-- Key concepts -->
+  <g transform="translate(50, 180)">
+    <rect x="0" y="0" width="150" height="70" fill="#1e3a5f" rx="8"/>
+    <text x="75" y="25" font-family="Arial" font-size="13" fill="#4facfe" text-anchor="middle">🎯 Key Idea</text>
+    <text x="75" y="45" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">Store solutions to</text>
+    <text x="75" y="60" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle">subproblems</text>
+    
+    <rect x="170" y="0" width="150" height="70" fill="#1e3a5f" rx="8"/>
+    <text x="245" y="25" font-family="Arial" font-size="13" fill="#43e97b" text-anchor="middle">⚡ Time</text>
+    <text x="245" y="50" font-family="monospace" font-size="14" fill="#fff" text-anchor="middle">O(n)</text>
+    
+    <rect x="340" y="0" width="150" height="70" fill="#1e3a5f" rx="8"/>
+    <text x="415" y="25" font-family="Arial" font-size="13" fill="#f5576c" text-anchor="middle">💾 Space</text>
+    <text x="415" y="50" font-family="monospace" font-size="14" fill="#fff" text-anchor="middle">O(n) or O(1)</text>
+  </g>
+</svg>
+

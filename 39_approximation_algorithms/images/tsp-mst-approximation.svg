@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
+  <rect width="1000" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Metric TSP 2-Approximation</text>
+  <text x="500" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">MST-Based Algorithm (Triangle Inequality Required)</text>
+  
+  <!-- Step 1: Complete Graph -->
+  <text x="60" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Step 1: Complete Metric Graph</text>
+  
+  <g transform="translate(60, 130)">
+    <!-- Nodes in pentagon layout -->
+    <circle cx="100" cy="30" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="100" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">A</text>
+    
+    <circle cx="180" cy="80" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="180" y="85" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">B</text>
+    
+    <circle cx="150" cy="160" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="150" y="165" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">C</text>
+    
+    <circle cx="50" cy="160" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="50" y="165" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">D</text>
+    
+    <circle cx="20" cy="80" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="20" y="85" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">E</text>
+    
+    <!-- All edges (complete graph) - light -->
+    <line x1="100" y1="48" x2="165" y2="68" stroke="#888888" stroke-width="1" opacity="0.4"/>
+    <line x1="168" y1="94" x2="155" y2="144" stroke="#888888" stroke-width="1" opacity="0.4"/>
+    <line x1="132" y1="160" x2="68" y2="160" stroke="#888888" stroke-width="1" opacity="0.4"/>
+    <line x1="38" y1="148" x2="25" y2="98" stroke="#888888" stroke-width="1" opacity="0.4"/>
+    <line x1="35" y1="68" x2="85" y2="42" stroke="#888888" stroke-width="1" opacity="0.4"/>
+    
+    <!-- Diagonals -->
+    <line x1="100" y1="48" x2="150" y2="142" stroke="#888888" stroke-width="1" opacity="0.3"/>
+    <line x1="165" y1="72" x2="50" y2="142" stroke="#888888" stroke-width="1" opacity="0.3"/>
+    <line x1="162" y1="92" x2="38" y2="92" stroke="#888888" stroke-width="1" opacity="0.3"/>
+    <line x1="140" y1="145" x2="30" y2="68" stroke="#888888" stroke-width="1" opacity="0.3"/>
+    <line x1="55" y1="142" x2="90" y2="46" stroke="#888888" stroke-width="1" opacity="0.3"/>
+    
+    <text x="0" y="210" font-family="Courier New, monospace" font-size="11" fill="#888888">Complete graph with</text>
+    <text x="0" y="225" font-family="Courier New, monospace" font-size="11" fill="#888888">triangle inequality</text>
+  </g>
+  
+  <!-- Step 2: Build MST -->
+  <text x="300" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Step 2: Build MST</text>
+  
+  <g transform="translate(300, 130)">
+    <!-- Same nodes -->
+    <circle cx="100" cy="30" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="100" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316">A</text>
+    
+    <circle cx="180" cy="80" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="180" y="85" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316">B</text>
+    
+    <circle cx="150" cy="160" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="150" y="165" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316">C</text>
+    
+    <circle cx="50" cy="160" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="50" y="165" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316">D</text>
+    
+    <circle cx="20" cy="80" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="20" y="85" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316">E</text>
+    
+    <!-- MST edges (highlighted) -->
+    <line x1="100" y1="48" x2="165" y2="68" stroke="#f97316" stroke-width="3"/>
+    <line x1="168" y1="94" x2="155" y2="144" stroke="#f97316" stroke-width="3"/>
+    <line x1="132" y1="160" x2="68" y2="160" stroke="#f97316" stroke-width="3"/>
+    <line x1="38" y1="148" x2="25" y2="98" stroke="#f97316" stroke-width="3"/>
+    
+    <text x="0" y="210" font-family="Courier New, monospace" font-size="11" fill="#f97316">MST cost ≤ OPT_TSP</text>
+    <text x="0" y="225" font-family="Courier New, monospace" font-size="11" fill="#888888">(Remove edge from tour)</text>
+  </g>
+  
+  <!-- Step 3: DFS Preorder -->
+  <text x="540" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Step 3: DFS Preorder Walk</text>
+  
+  <g transform="translate(540, 130)">
+    <!-- Same nodes with visit order -->
+    <circle cx="100" cy="30" r="18" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="100" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">A</text>
+    <text x="100" y="10" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">①</text>
+    
+    <circle cx="180" cy="80" r="18" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="180" y="85" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">B</text>
+    <text x="200" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">②</text>
+    
+    <circle cx="150" cy="160" r="18" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="150" y="165" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">C</text>
+    <text x="175" y="165" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">③</text>
+    
+    <circle cx="50" cy="160" r="18" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="50" y="165" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">D</text>
+    <text x="25" y="165" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">④</text>
+    
+    <circle cx="20" cy="80" r="18" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="20" y="85" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">E</text>
+    <text x="0" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">⑤</text>
+    
+    <!-- DFS traversal arrows -->
+    <line x1="100" y1="48" x2="165" y2="68" stroke="#a78bfa" stroke-width="2"/>
+    <line x1="168" y1="94" x2="155" y2="144" stroke="#a78bfa" stroke-width="2"/>
+    <line x1="132" y1="160" x2="68" y2="160" stroke="#a78bfa" stroke-width="2"/>
+    <line x1="38" y1="148" x2="25" y2="98" stroke="#a78bfa" stroke-width="2"/>
+    
+    <text x="0" y="210" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">Order: A→B→C→D→E</text>
+    <text x="0" y="225" font-family="Courier New, monospace" font-size="11" fill="#888888">Each edge visited 2x</text>
+  </g>
+  
+  <!-- Step 4: Shortcut to Tour -->
+  <text x="780" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Step 4: Hamilton Tour</text>
+  
+  <g transform="translate(780, 130)">
+    <!-- Final tour -->
+    <circle cx="100" cy="30" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="100" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">A</text>
+    
+    <circle cx="180" cy="80" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="180" y="85" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">B</text>
+    
+    <circle cx="150" cy="160" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="150" y="165" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">C</text>
+    
+    <circle cx="50" cy="160" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="50" y="165" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">D</text>
+    
+    <circle cx="20" cy="80" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="20" y="85" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">E</text>
+    
+    <!-- Tour edges -->
+    <line x1="100" y1="48" x2="165" y2="68" stroke="#4ade80" stroke-width="3"/>
+    <line x1="168" y1="94" x2="155" y2="144" stroke="#4ade80" stroke-width="3"/>
+    <line x1="132" y1="160" x2="68" y2="160" stroke="#4ade80" stroke-width="3"/>
+    <line x1="38" y1="148" x2="25" y2="98" stroke="#4ade80" stroke-width="3"/>
+    <!-- Back to start -->
+    <line x1="35" y1="68" x2="85" y2="42" stroke="#4ade80" stroke-width="3"/>
+    
+    <text x="-10" y="210" font-family="Courier New, monospace" font-size="11" fill="#4ade80">A→B→C→D→E→A</text>
+    <text x="-10" y="225" font-family="Courier New, monospace" font-size="11" fill="#888888">Shortcut by Δ-ineq</text>
+  </g>
+  
+  <!-- Proof Section -->
+  <text x="60" y="410" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Proof of 2-Approximation</text>
+  
+  <g transform="translate(60, 430)">
+    <rect x="0" y="0" width="420" height="150" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    
+    <text x="20" y="30" font-family="Courier New, monospace" font-size="12" fill="#ffffff">1. cost(MST) ≤ cost(OPT_TSP)</text>
+    <text x="40" y="50" font-family="Courier New, monospace" font-size="11" fill="#888888">Remove one edge from optimal tour = spanning tree</text>
+    
+    <text x="20" y="80" font-family="Courier New, monospace" font-size="12" fill="#ffffff">2. cost(DFS walk) = 2 × cost(MST)</text>
+    <text x="40" y="100" font-family="Courier New, monospace" font-size="11" fill="#888888">Each MST edge traversed twice</text>
+    
+    <text x="20" y="130" font-family="Courier New, monospace" font-size="12" fill="#ffffff">3. cost(shortcut tour) ≤ cost(DFS walk)</text>
+    <text x="40" y="145" font-family="Courier New, monospace" font-size="11" fill="#888888">Triangle inequality: direct ≤ indirect path</text>
+  </g>
+  
+  <!-- Conclusion -->
+  <g transform="translate(520, 430)">
+    <rect x="0" y="0" width="400" height="150" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+    
+    <text x="20" y="35" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">Therefore:</text>
+    <text x="20" y="65" font-family="Courier New, monospace" font-size="14" fill="#ffffff">ALG ≤ 2 × MST ≤ 2 × OPT</text>
+    
+    <text x="20" y="100" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Christofides: 1.5-approximation</text>
+    <text x="20" y="120" font-family="Courier New, monospace" font-size="11" fill="#888888">Uses minimum matching on odd-degree vertices</text>
+    
+    <text x="20" y="145" font-family="Courier New, monospace" font-size="12" fill="#ef4444">General TSP: NO approximation (NP-hard gap)</text>
+  </g>
+  
+  <!-- Complexity -->
+  <text x="60" y="620" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(V² log V) with Prim's MST | Space: O(V²)</text>
+  <text x="60" y="640" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Approximation Ratio: 2 (requires metric/triangle inequality)</text>
+  
+  <!-- Footer -->
+  <text x="500" y="685" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">MST + DFS shortcutting gives 2-approximation for metric TSP</text>
+</svg>
+

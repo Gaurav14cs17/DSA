@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 650">
+  <rect width="950" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Set Cover Greedy Algorithm</text>
+  <text x="475" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">O(ln n) Approximation</text>
+  
+  <!-- Universe Label -->
+  <text x="60" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Universe U = {1, 2, 3, 4, 5, 6}</text>
+  
+  <!-- Available Sets -->
+  <text x="60" y="145" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Available Sets</text>
+  
+  <g transform="translate(60, 160)">
+    <!-- Set S1 -->
+    <rect x="0" y="0" width="120" height="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="10" y="20" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">S₁</text>
+    <text x="10" y="40" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">{1, 2, 3}</text>
+    
+    <!-- Set S2 -->
+    <rect x="140" y="0" width="120" height="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="150" y="20" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">S₂</text>
+    <text x="150" y="40" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">{2, 4}</text>
+    
+    <!-- Set S3 -->
+    <rect x="280" y="0" width="120" height="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="290" y="20" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">S₃</text>
+    <text x="290" y="40" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">{3, 4, 5}</text>
+    
+    <!-- Set S4 -->
+    <rect x="420" y="0" width="120" height="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="430" y="20" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">S₄</text>
+    <text x="430" y="40" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">{5, 6}</text>
+  </g>
+  
+  <!-- Iteration 1 -->
+  <text x="60" y="270" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Iteration 1: Pick S₁ (covers 3 elements)</text>
+  
+  <g transform="translate(60, 285)">
+    <!-- Universe elements -->
+    <circle cx="30" cy="25" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="30" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">1</text>
+    
+    <circle cx="80" cy="25" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="80" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">2</text>
+    
+    <circle cx="130" cy="25" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="130" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">3</text>
+    
+    <circle cx="180" cy="25" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="180" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">4</text>
+    
+    <circle cx="230" cy="25" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="230" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">5</text>
+    
+    <circle cx="280" cy="25" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="280" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">6</text>
+    
+    <!-- Selected set indicator -->
+    <rect x="350" y="0" width="100" height="50" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="4"/>
+    <text x="360" y="20" font-family="Courier New, monospace" font-size="12" fill="#f97316">Selected</text>
+    <text x="360" y="40" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316">S₁</text>
+    
+    <text x="500" y="30" font-family="Courier New, monospace" font-size="12" fill="#888888">Uncovered: {4, 5, 6}</text>
+  </g>
+  
+  <!-- Iteration 2 -->
+  <text x="60" y="380" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Iteration 2: Pick S₃ (covers 2 new: {4,5})</text>
+  
+  <g transform="translate(60, 395)">
+    <!-- Universe elements -->
+    <circle cx="30" cy="25" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="30" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">1</text>
+    
+    <circle cx="80" cy="25" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="80" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">2</text>
+    
+    <circle cx="130" cy="25" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="130" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">3</text>
+    
+    <circle cx="180" cy="25" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="180" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">4</text>
+    
+    <circle cx="230" cy="25" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="230" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">5</text>
+    
+    <circle cx="280" cy="25" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="280" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">6</text>
+    
+    <!-- Selected sets -->
+    <rect x="350" y="0" width="100" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+    <text x="360" y="20" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Selected</text>
+    <text x="360" y="40" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">S₁, S₃</text>
+    
+    <text x="500" y="30" font-family="Courier New, monospace" font-size="12" fill="#888888">Uncovered: {6}</text>
+  </g>
+  
+  <!-- Iteration 3 -->
+  <text x="60" y="490" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Iteration 3: Pick S₄ (covers {6})</text>
+  
+  <g transform="translate(60, 505)">
+    <!-- All covered -->
+    <circle cx="30" cy="25" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="30" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">1</text>
+    
+    <circle cx="80" cy="25" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="80" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">2</text>
+    
+    <circle cx="130" cy="25" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="130" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">3</text>
+    
+    <circle cx="180" cy="25" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="180" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">4</text>
+    
+    <circle cx="230" cy="25" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="230" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">5</text>
+    
+    <circle cx="280" cy="25" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="280" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">6</text>
+    
+    <!-- Final result -->
+    <rect x="350" y="0" width="130" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+    <text x="360" y="20" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Final Cover</text>
+    <text x="360" y="40" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">S₁, S₃, S₄</text>
+    
+    <text x="520" y="30" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">All covered! ✓</text>
+  </g>
+  
+  <!-- Analysis -->
+  <g transform="translate(620, 270)">
+    <rect x="0" y="0" width="280" height="200" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="4"/>
+    <text x="20" y="30" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">Approximation Analysis</text>
+    
+    <text x="20" y="60" font-family="Courier New, monospace" font-size="12" fill="#ffffff">• ALG picks 3 sets</text>
+    <text x="20" y="85" font-family="Courier New, monospace" font-size="12" fill="#ffffff">• OPT = 2: {S₁, S₄} works</text>
+    <text x="20" y="110" font-family="Courier New, monospace" font-size="12" fill="#ffffff">• Ratio: 3/2 = 1.5</text>
+    
+    <text x="20" y="145" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Guarantee: ALG ≤ Hₙ × OPT</text>
+    <text x="20" y="170" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">where Hₙ = 1 + 1/2 + ... + 1/n</text>
+    <text x="20" y="190" font-family="Courier New, monospace" font-size="12" fill="#4ade80">≈ ln(n) + 0.577</text>
+  </g>
+  
+  <!-- Complexity -->
+  <text x="60" y="600" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(|U| × |Sets|) | Approximation: Hₙ = O(ln n)</text>
+  
+  <!-- Footer -->
+  <text x="475" y="635" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Greedy achieves optimal polynomial-time approximation for Set Cover (unless P=NP)</text>
+</svg>
+
