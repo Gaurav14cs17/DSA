@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 450">
+  <defs>
+    <linearGradient id="bgGrad12" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="interval1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="interval2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e67e22;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d35400;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="merged" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e8449;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="separate" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9b59b6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8e44ad;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="850" height="450" fill="url(#bgGrad12)"/>
+  
+  <!-- Title -->
+  <text x="425" y="40" font-family="Segoe UI, Arial" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Merge Intervals Algorithm</text>
+  <text x="425" y="65" font-family="Segoe UI, Arial" font-size="14" fill="#88ccff" text-anchor="middle">Sort by start, then merge overlapping | O(n log n)</text>
+  
+  <!-- Timeline axis -->
+  <line x1="50" y1="130" x2="800" y2="130" stroke="#4a5568" stroke-width="2"/>
+  <text x="50" y="150" font-family="Consolas" font-size="11" fill="#aaa" text-anchor="middle">0</text>
+  <text x="150" y="150" font-family="Consolas" font-size="11" fill="#aaa" text-anchor="middle">3</text>
+  <text x="250" y="150" font-family="Consolas" font-size="11" fill="#aaa" text-anchor="middle">6</text>
+  <text x="400" y="150" font-family="Consolas" font-size="11" fill="#aaa" text-anchor="middle">10</text>
+  <text x="600" y="150" font-family="Consolas" font-size="11" fill="#aaa" text-anchor="middle">18</text>
+  
+  <!-- Input Label -->
+  <text x="60" y="100" font-family="Segoe UI, Arial" font-size="14" font-weight="bold" fill="#ffffff">Input: [[1,3], [2,6], [8,10], [15,18]]</text>
+  
+  <!-- Input Intervals -->
+  <g transform="translate(0, 160)">
+    <text x="60" y="20" font-family="Segoe UI, Arial" font-size="13" fill="#aaa">After sorting:</text>
+    
+    <!-- [1,3] -->
+    <rect x="75" y="35" width="100" height="30" rx="5" fill="url(#interval1)" stroke="#5dade2" stroke-width="2"/>
+    <text x="125" y="55" font-family="Consolas" font-size="12" fill="#fff" text-anchor="middle">[1, 3]</text>
+    
+    <!-- [2,6] - overlaps with [1,3] -->
+    <rect x="100" y="75" width="150" height="30" rx="5" fill="url(#interval2)" stroke="#f39c12" stroke-width="2"/>
+    <text x="175" y="95" font-family="Consolas" font-size="12" fill="#fff" text-anchor="middle">[2, 6]</text>
+    
+    <!-- Overlap indicator -->
+    <rect x="100" y="35" width="75" height="70" rx="0" fill="#27ae60" fill-opacity="0.2" stroke="#27ae60" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="137" y="125" font-family="Segoe UI" font-size="10" fill="#2ecc71" text-anchor="middle">overlap!</text>
+    
+    <!-- [8,10] -->
+    <rect x="340" y="55" width="60" height="30" rx="5" fill="url(#separate)" stroke="#bb8fce" stroke-width="2"/>
+    <text x="370" y="75" font-family="Consolas" font-size="12" fill="#fff" text-anchor="middle">[8, 10]</text>
+    
+    <!-- [15,18] -->
+    <rect x="550" y="55" width="100" height="30" rx="5" fill="url(#separate)" stroke="#bb8fce" stroke-width="2"/>
+    <text x="600" y="75" font-family="Consolas" font-size="12" fill="#fff" text-anchor="middle">[15, 18]</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M 425 310 L 425 330" stroke="#27ae60" stroke-width="3" fill="none" marker-end="url(#mergeArrow)"/>
+  <text x="460" y="325" font-family="Segoe UI, Arial" font-size="12" fill="#2ecc71">Merge</text>
+  <defs>
+    <marker id="mergeArrow" markerWidth="10" markerHeight="7" refX="5" refY="7" orient="auto">
+      <polygon points="0 0, 10 0, 5 7" fill="#27ae60"/>
+    </marker>
+  </defs>
+  
+  <!-- Result -->
+  <text x="60" y="360" font-family="Segoe UI, Arial" font-size="14" font-weight="bold" fill="#27ae60">Result: [[1,6], [8,10], [15,18]]</text>
+  
+  <g transform="translate(0, 365)">
+    <!-- [1,6] merged -->
+    <rect x="75" y="10" width="175" height="30" rx="5" fill="url(#merged)" stroke="#2ecc71" stroke-width="3"/>
+    <text x="162" y="30" font-family="Consolas" font-size="12" fill="#fff" text-anchor="middle">[1, 6] merged</text>
+    
+    <!-- [8,10] -->
+    <rect x="340" y="10" width="60" height="30" rx="5" fill="url(#separate)" stroke="#bb8fce" stroke-width="2"/>
+    <text x="370" y="30" font-family="Consolas" font-size="12" fill="#fff" text-anchor="middle">[8, 10]</text>
+    
+    <!-- [15,18] -->
+    <rect x="550" y="10" width="100" height="30" rx="5" fill="url(#separate)" stroke="#bb8fce" stroke-width="2"/>
+    <text x="600" y="30" font-family="Consolas" font-size="12" fill="#fff" text-anchor="middle">[15, 18]</text>
+  </g>
+  
+  <!-- Merge Condition Box -->
+  <rect x="600" y="170" width="220" height="110" rx="10" fill="#0d1b2a" stroke="#4a90a4" stroke-width="2"/>
+  <text x="710" y="200" font-family="Segoe UI, Arial" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Merge Condition:</text>
+  <text x="710" y="230" font-family="Consolas" font-size="13" fill="#88ccff" text-anchor="middle">if prev.end ≥ curr.start</text>
+  <text x="710" y="260" font-family="Segoe UI, Arial" font-size="12" fill="#aaa" text-anchor="middle">Merge: [prev.start,</text>
+  <text x="710" y="275" font-family="Segoe UI, Arial" font-size="12" fill="#aaa" text-anchor="middle">max(prev.end, curr.end)]</text>
+</svg>

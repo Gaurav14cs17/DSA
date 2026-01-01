@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 750">
+  <rect width="950" height="750" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Tree Construction from Traversals</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Preorder + Inorder → Unique Binary Tree</text>
+  
+  <!-- Input Arrays -->
+  <g transform="translate(50, 100)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">INPUT</text>
+    
+    <!-- Preorder Array -->
+    <text x="0" y="30" font-family="Courier New, monospace" font-size="12" fill="#888888">Preorder:</text>
+    <g transform="translate(90, 10)">
+      <rect x="0" y="0" width="35" height="35" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="17" y="23" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+      
+      <rect x="40" y="0" width="35" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="57" y="23" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">9</text>
+      
+      <rect x="80" y="0" width="35" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="97" y="23" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">20</text>
+      
+      <rect x="120" y="0" width="35" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="137" y="23" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">15</text>
+      
+      <rect x="160" y="0" width="35" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="177" y="23" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+    </g>
+    <text x="300" y="30" font-family="Courier New, monospace" font-size="11" fill="#f97316">← root is first</text>
+    
+    <!-- Inorder Array -->
+    <text x="0" y="75" font-family="Courier New, monospace" font-size="12" fill="#888888">Inorder:</text>
+    <g transform="translate(90, 55)">
+      <rect x="0" y="0" width="35" height="35" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+      <text x="17" y="23" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">9</text>
+      
+      <rect x="40" y="0" width="35" height="35" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="57" y="23" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+      
+      <rect x="80" y="0" width="35" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="97" y="23" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">15</text>
+      
+      <rect x="120" y="0" width="35" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="137" y="23" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">20</text>
+      
+      <rect x="160" y="0" width="35" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="177" y="23" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+    </g>
+    <text x="300" y="75" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">left</text>
+    <text x="340" y="75" font-family="Courier New, monospace" font-size="11" fill="#f97316">root</text>
+    <text x="380" y="75" font-family="Courier New, monospace" font-size="11" fill="#4ade80">right</text>
+  </g>
+  
+  <!-- Algorithm Steps -->
+  <g transform="translate(500, 100)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">ALGORITHM</text>
+    
+    <text x="0" y="30" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Step 1:</text>
+    <text x="60" y="30" font-family="Courier New, monospace" font-size="12" fill="#ffffff">preorder[0] = 3 is root</text>
+    
+    <text x="0" y="50" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Step 2:</text>
+    <text x="60" y="50" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Find 3 in inorder → idx=1</text>
+    
+    <text x="0" y="70" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Step 3:</text>
+    <text x="60" y="70" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Split: left=[9], right=[15,20,7]</text>
+    
+    <text x="0" y="90" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Step 4:</text>
+    <text x="60" y="90" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Recurse on subtrees</text>
+  </g>
+  
+  <!-- Construction Process -->
+  <g transform="translate(50, 220)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">CONSTRUCTION PROCESS</text>
+    
+    <!-- Step 1 -->
+    <g transform="translate(0, 30)">
+      <text x="0" y="0" font-family="Courier New, monospace" font-size="12" fill="#888888">Step 1: Root = 3</text>
+      <circle cx="80" cy="50" r="22" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="80" y="56" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+      <line x1="60" y1="72" x2="40" y2="100" stroke="#888888" stroke-width="1" stroke-dasharray="4"/>
+      <line x1="100" y1="72" x2="120" y2="100" stroke="#888888" stroke-width="1" stroke-dasharray="4"/>
+      <text x="35" y="115" font-family="Courier New, monospace" font-size="10" fill="#888888">?</text>
+      <text x="115" y="115" font-family="Courier New, monospace" font-size="10" fill="#888888">?</text>
+    </g>
+    
+    <!-- Step 2 -->
+    <g transform="translate(180, 30)">
+      <text x="0" y="0" font-family="Courier New, monospace" font-size="12" fill="#888888">Step 2: Left = 9</text>
+      <circle cx="80" cy="50" r="22" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="80" y="56" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+      <line x1="60" y1="72" x2="40" y2="100" stroke="#3b82f6" stroke-width="2"/>
+      <circle cx="40" cy="120" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="40" y="126" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">9</text>
+      <line x1="100" y1="72" x2="120" y2="100" stroke="#888888" stroke-width="1" stroke-dasharray="4"/>
+      <text x="115" y="115" font-family="Courier New, monospace" font-size="10" fill="#888888">?</text>
+    </g>
+    
+    <!-- Step 3 -->
+    <g transform="translate(360, 30)">
+      <text x="0" y="0" font-family="Courier New, monospace" font-size="12" fill="#888888">Step 3: Right = 20</text>
+      <circle cx="80" cy="50" r="22" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="80" y="56" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+      <line x1="60" y1="72" x2="40" y2="100" stroke="#3b82f6" stroke-width="2"/>
+      <circle cx="40" cy="120" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="40" y="126" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">9</text>
+      <line x1="100" y1="72" x2="130" y2="100" stroke="#3b82f6" stroke-width="2"/>
+      <circle cx="130" cy="120" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="130" y="126" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">20</text>
+    </g>
+    
+    <!-- Final Tree -->
+    <g transform="translate(560, 30)">
+      <text x="0" y="0" font-family="Courier New, monospace" font-size="12" fill="#888888">Final Tree</text>
+      <circle cx="80" cy="50" r="22" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="80" y="56" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+      <line x1="60" y1="72" x2="40" y2="100" stroke="#4ade80" stroke-width="2"/>
+      <circle cx="40" cy="120" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="40" y="126" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">9</text>
+      <line x1="100" y1="72" x2="130" y2="100" stroke="#4ade80" stroke-width="2"/>
+      <circle cx="130" cy="120" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="130" y="126" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">20</text>
+      <line x1="115" y1="140" x2="95" y2="170" stroke="#4ade80" stroke-width="2"/>
+      <circle cx="95" cy="190" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="95" y="195" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">15</text>
+      <line x1="145" y1="140" x2="165" y2="170" stroke="#4ade80" stroke-width="2"/>
+      <circle cx="165" cy="190" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="165" y="195" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+    </g>
+  </g>
+  
+  <!-- Catalan Numbers Section -->
+  <g transform="translate(50, 480)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">CATALAN NUMBERS - COUNT UNIQUE BSTs</text>
+    <text x="0" y="25" font-family="Courier New, monospace" font-size="12" fill="#888888">Number of structurally unique BSTs with n nodes</text>
+    
+    <!-- Formula -->
+    <text x="0" y="55" font-family="Courier New, monospace" font-size="14" fill="#60a5fa">Cₙ = (2n)! / ((n+1)! × n!)</text>
+    
+    <!-- Values Table -->
+    <g transform="translate(0, 80)">
+      <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">n:</text>
+      <g transform="translate(30, -15)">
+        <rect x="0" y="0" width="35" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+        <text x="17" y="20" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">0</text>
+        
+        <rect x="40" y="0" width="35" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+        <text x="57" y="20" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">1</text>
+        
+        <rect x="80" y="0" width="35" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+        <text x="97" y="20" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">2</text>
+        
+        <rect x="120" y="0" width="35" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+        <text x="137" y="20" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">3</text>
+        
+        <rect x="160" y="0" width="35" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+        <text x="177" y="20" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">4</text>
+        
+        <rect x="200" y="0" width="35" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+        <text x="217" y="20" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">5</text>
+      </g>
+      
+      <text x="0" y="40" font-family="Courier New, monospace" font-size="11" fill="#888888">Cₙ:</text>
+      <g transform="translate(30, 25)">
+        <rect x="0" y="0" width="35" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+        <text x="17" y="20" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">1</text>
+        
+        <rect x="40" y="0" width="35" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+        <text x="57" y="20" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">1</text>
+        
+        <rect x="80" y="0" width="35" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+        <text x="97" y="20" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">2</text>
+        
+        <rect x="120" y="0" width="35" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+        <text x="137" y="20" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">5</text>
+        
+        <rect x="160" y="0" width="35" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+        <text x="177" y="20" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">14</text>
+        
+        <rect x="200" y="0" width="35" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+        <text x="217" y="20" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">42</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Serialization Section -->
+  <g transform="translate(450, 480)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">SERIALIZATION</text>
+    <text x="0" y="25" font-family="Courier New, monospace" font-size="12" fill="#888888">Preorder with null markers (#)</text>
+    
+    <!-- Small Tree -->
+    <g transform="translate(50, 50)">
+      <line x1="40" y1="25" x2="10" y2="55" stroke="#3b82f6" stroke-width="2"/>
+      <line x1="40" y1="25" x2="70" y2="55" stroke="#3b82f6" stroke-width="2"/>
+      <line x1="70" y1="75" x2="50" y2="105" stroke="#3b82f6" stroke-width="2"/>
+      <line x1="70" y1="75" x2="90" y2="105" stroke="#3b82f6" stroke-width="2"/>
+      
+      <circle cx="40" cy="25" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="40" y="30" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+      
+      <circle cx="10" cy="70" r="16" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="10" y="75" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+      
+      <circle cx="70" cy="70" r="16" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="70" y="75" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+      
+      <circle cx="50" cy="115" r="14" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="50" y="120" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+      
+      <circle cx="90" cy="115" r="14" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="90" y="120" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+    </g>
+    
+    <!-- Arrow -->
+    <text x="200" y="115" font-family="Courier New, monospace" font-size="20" fill="#4ade80">→</text>
+    
+    <!-- Serialized Output -->
+    <text x="230" y="100" font-family="Courier New, monospace" font-size="12" fill="#888888">Serialized:</text>
+    <text x="230" y="125" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">"1,2,#,#,3,4,#,#,5,#,#"</text>
+  </g>
+  
+  <!-- Key Insight Box -->
+  <g transform="translate(50, 640)">
+    <rect x="0" y="0" width="850" height="60" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="20" y="25" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316">💡 KEY INSIGHT:</text>
+    <text x="20" y="45" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Preorder[0] = root. Find root in inorder to split left/right subtrees. Use hash map for O(1) lookup!</text>
+  </g>
+  
+  <!-- Complexity Info -->
+  <text x="475" y="730" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">Construction: O(n) time, O(n) space | Catalan DP: O(n²) time, O(n) space</text>
+</svg>
+

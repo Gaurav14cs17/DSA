@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <rect width="900" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Tree Traversal Orders</text>
+  <text x="450" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Preorder • Inorder • Postorder • Level Order</text>
+  
+  <!-- Tree Structure (centered) -->
+  <g transform="translate(450, 150)">
+    <!-- Edges -->
+    <line x1="0" y1="0" x2="-100" y2="70" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="0" y1="0" x2="100" y2="70" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="-100" y1="70" x2="-150" y2="140" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="-100" y1="70" x2="-50" y2="140" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="100" y1="70" x2="50" y2="140" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="100" y1="70" x2="150" y2="140" stroke="#3b82f6" stroke-width="2"/>
+    
+    <!-- Root Node (1) -->
+    <circle cx="0" cy="0" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="0" y="6" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    
+    <!-- Level 1 Nodes -->
+    <circle cx="-100" cy="70" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="-100" y="76" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    
+    <circle cx="100" cy="70" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="100" y="76" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+    
+    <!-- Level 2 Nodes -->
+    <circle cx="-150" cy="140" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="-150" y="146" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+    
+    <circle cx="-50" cy="140" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="-50" y="146" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+    
+    <circle cx="50" cy="140" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="50" y="146" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+    
+    <circle cx="150" cy="140" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="150" y="146" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+  </g>
+  
+  <!-- Traversal Results Section -->
+  <g transform="translate(0, 380)">
+    <!-- Preorder -->
+    <text x="50" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">PREORDER (NLR)</text>
+    <text x="50" y="25" font-family="Courier New, monospace" font-size="12" fill="#888888">Node → Left → Right</text>
+    
+    <g transform="translate(50, 45)">
+      <rect x="0" y="0" width="35" height="35" rx="5" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="17" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+      
+      <text x="45" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="55" y="0" width="35" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="72" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+      
+      <text x="100" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="110" y="0" width="35" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="127" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+      
+      <text x="155" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="165" y="0" width="35" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="182" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+      
+      <text x="210" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="220" y="0" width="35" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="237" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+      
+      <text x="265" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="275" y="0" width="35" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="292" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+      
+      <text x="320" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="330" y="0" width="35" height="35" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="347" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+    </g>
+    
+    <!-- Inorder -->
+    <text x="480" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">INORDER (LNR)</text>
+    <text x="480" y="25" font-family="Courier New, monospace" font-size="12" fill="#888888">Left → Node → Right</text>
+    
+    <g transform="translate(480, 45)">
+      <rect x="0" y="0" width="35" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="17" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+      
+      <text x="45" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="55" y="0" width="35" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="72" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+      
+      <text x="100" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="110" y="0" width="35" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="127" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+      
+      <text x="155" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="165" y="0" width="35" height="35" rx="5" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="182" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+      
+      <text x="210" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="220" y="0" width="35" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="237" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+      
+      <text x="265" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="275" y="0" width="35" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="292" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+      
+      <text x="320" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="330" y="0" width="35" height="35" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="347" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+    </g>
+    
+    <!-- Postorder -->
+    <text x="50" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">POSTORDER (LRN)</text>
+    <text x="50" y="135" font-family="Courier New, monospace" font-size="12" fill="#888888">Left → Right → Node</text>
+    
+    <g transform="translate(50, 155)">
+      <rect x="0" y="0" width="35" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="17" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+      
+      <text x="45" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="55" y="0" width="35" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="72" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+      
+      <text x="100" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="110" y="0" width="35" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="127" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+      
+      <text x="155" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="165" y="0" width="35" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="182" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+      
+      <text x="210" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="220" y="0" width="35" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="237" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+      
+      <text x="265" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="275" y="0" width="35" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="292" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+      
+      <text x="320" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="330" y="0" width="35" height="35" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="347" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    </g>
+    
+    <!-- Level Order -->
+    <text x="480" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">LEVEL ORDER (BFS)</text>
+    <text x="480" y="135" font-family="Courier New, monospace" font-size="12" fill="#888888">Level by Level</text>
+    
+    <g transform="translate(480, 155)">
+      <rect x="0" y="0" width="35" height="35" rx="5" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="17" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+      
+      <text x="45" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="55" y="0" width="35" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="72" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+      
+      <text x="100" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="110" y="0" width="35" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="127" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+      
+      <text x="155" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="165" y="0" width="35" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="182" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+      
+      <text x="210" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="220" y="0" width="35" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="237" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+      
+      <text x="265" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="275" y="0" width="35" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="292" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+      
+      <text x="320" y="23" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+      
+      <rect x="330" y="0" width="35" height="35" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="347" y="23" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+    </g>
+  </g>
+  
+  <!-- Complexity Info -->
+  <text x="450" y="670" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">Time: O(n) | Space: O(h) recursive, O(w) for BFS</text>
+</svg>
+

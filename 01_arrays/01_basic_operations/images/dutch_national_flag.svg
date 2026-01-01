@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#302b63;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#24243e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="zeroBox" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e53e3e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c53030;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="oneBox" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ecc94b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d69e2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="twoBox" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3182ce;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2b6cb0;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad2)"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Segoe UI, Arial" font-size="28" font-weight="bold" fill="#f7fafc" text-anchor="middle">Dutch National Flag Algorithm</text>
+  <text x="400" y="70" font-family="Segoe UI, Arial" font-size="16" fill="#a0aec0" text-anchor="middle">Three-way partitioning (Sort Colors)</text>
+  
+  <!-- Initial Array Label -->
+  <text x="60" y="115" font-family="Segoe UI, Arial" font-size="16" font-weight="bold" fill="#cbd5e0">Input:</text>
+  
+  <!-- Initial Array -->
+  <rect x="120" y="90" width="50" height="50" rx="6" fill="url(#twoBox)" stroke="#63b3ed" stroke-width="2"/>
+  <rect x="175" y="90" width="50" height="50" rx="6" fill="url(#zeroBox)" stroke="#fc8181" stroke-width="2"/>
+  <rect x="230" y="90" width="50" height="50" rx="6" fill="url(#twoBox)" stroke="#63b3ed" stroke-width="2"/>
+  <rect x="285" y="90" width="50" height="50" rx="6" fill="url(#oneBox)" stroke="#f6e05e" stroke-width="2"/>
+  <rect x="340" y="90" width="50" height="50" rx="6" fill="url(#oneBox)" stroke="#f6e05e" stroke-width="2"/>
+  <rect x="395" y="90" width="50" height="50" rx="6" fill="url(#zeroBox)" stroke="#fc8181" stroke-width="2"/>
+  
+  <!-- Initial Array values -->
+  <text x="145" y="125" font-family="JetBrains Mono, monospace" font-size="22" fill="#fff" text-anchor="middle">2</text>
+  <text x="200" y="125" font-family="JetBrains Mono, monospace" font-size="22" fill="#fff" text-anchor="middle">0</text>
+  <text x="255" y="125" font-family="JetBrains Mono, monospace" font-size="22" fill="#fff" text-anchor="middle">2</text>
+  <text x="310" y="125" font-family="JetBrains Mono, monospace" font-size="22" fill="#fff" text-anchor="middle">1</text>
+  <text x="365" y="125" font-family="JetBrains Mono, monospace" font-size="22" fill="#fff" text-anchor="middle">1</text>
+  <text x="420" y="125" font-family="JetBrains Mono, monospace" font-size="22" fill="#fff" text-anchor="middle">0</text>
+  
+  <!-- Arrow -->
+  <path d="M470,115 L520,115" stroke="#68d391" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#68d391"/>
+    </marker>
+  </defs>
+  
+  <!-- Final Array Label -->
+  <text x="535" y="115" font-family="Segoe UI, Arial" font-size="16" font-weight="bold" fill="#cbd5e0">Output:</text>
+  
+  <!-- Final Array -->
+  <rect x="600" y="90" width="50" height="50" rx="6" fill="url(#zeroBox)" stroke="#fc8181" stroke-width="2"/>
+  <rect x="655" y="90" width="50" height="50" rx="6" fill="url(#zeroBox)" stroke="#fc8181" stroke-width="2"/>
+  <rect x="710" y="90" width="50" height="50" rx="6" fill="url(#oneBox)" stroke="#f6e05e" stroke-width="2"/>
+  
+  <text x="625" y="125" font-family="JetBrains Mono, monospace" font-size="22" fill="#fff" text-anchor="middle">0</text>
+  <text x="680" y="125" font-family="JetBrains Mono, monospace" font-size="22" fill="#fff" text-anchor="middle">0</text>
+  <text x="735" y="125" font-family="JetBrains Mono, monospace" font-size="22" fill="#fff" text-anchor="middle">1</text>
+  
+  <!-- Second row -->
+  <rect x="490" y="90" width="50" height="50" rx="6" fill="url(#oneBox)" stroke="#f6e05e" stroke-width="2"/>
+  <rect x="545" y="90" width="50" height="50" rx="6" fill="url(#twoBox)" stroke="#63b3ed" stroke-width="2"/>
+  
+  <!-- Three Pointer Visualization -->
+  <text x="400" y="180" font-family="Segoe UI, Arial" font-size="20" font-weight="bold" fill="#e2e8f0" text-anchor="middle">Three Pointer Invariants</text>
+  
+  <!-- Invariant boxes -->
+  <rect x="50" y="200" width="700" height="90" rx="10" fill="#1a365d" fill-opacity="0.6" stroke="#4299e1" stroke-width="1"/>
+  
+  <!-- Array visualization with regions -->
+  <rect x="80" y="220" width="120" height="50" rx="5" fill="url(#zeroBox)" fill-opacity="0.6" stroke="#fc8181" stroke-width="2"/>
+  <text x="140" y="252" font-family="Segoe UI, Arial" font-size="14" fill="#fff" text-anchor="middle">0...low-1</text>
+  <text x="140" y="268" font-family="Segoe UI, Arial" font-size="12" fill="#fc8181" text-anchor="middle">All 0s</text>
+  
+  <rect x="210" y="220" width="150" height="50" rx="5" fill="url(#oneBox)" fill-opacity="0.6" stroke="#f6e05e" stroke-width="2"/>
+  <text x="285" y="252" font-family="Segoe UI, Arial" font-size="14" fill="#fff" text-anchor="middle">low...mid-1</text>
+  <text x="285" y="268" font-family="Segoe UI, Arial" font-size="12" fill="#ecc94b" text-anchor="middle">All 1s</text>
+  
+  <rect x="370" y="220" width="180" height="50" rx="5" fill="#4a5568" stroke="#a0aec0" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="460" y="252" font-family="Segoe UI, Arial" font-size="14" fill="#fff" text-anchor="middle">mid...high</text>
+  <text x="460" y="268" font-family="Segoe UI, Arial" font-size="12" fill="#a0aec0" text-anchor="middle">Unknown</text>
+  
+  <rect x="560" y="220" width="150" height="50" rx="5" fill="url(#twoBox)" fill-opacity="0.6" stroke="#63b3ed" stroke-width="2"/>
+  <text x="635" y="252" font-family="Segoe UI, Arial" font-size="14" fill="#fff" text-anchor="middle">high+1...n-1</text>
+  <text x="635" y="268" font-family="Segoe UI, Arial" font-size="12" fill="#63b3ed" text-anchor="middle">All 2s</text>
+  
+  <!-- Algorithm Steps -->
+  <rect x="50" y="310" width="700" height="120" rx="10" fill="#1e3a5f" fill-opacity="0.7" stroke="#38b2ac" stroke-width="1"/>
+  
+  <text x="400" y="340" font-family="Segoe UI, Arial" font-size="18" font-weight="bold" fill="#4fd1c5" text-anchor="middle">Algorithm Rules</text>
+  
+  <text x="80" y="370" font-family="JetBrains Mono, monospace" font-size="14" fill="#fc8181">if nums[mid] == 0:</text>
+  <text x="250" y="370" font-family="Segoe UI, Arial" font-size="14" fill="#e2e8f0">swap(low, mid), low++, mid++</text>
+  
+  <text x="80" y="395" font-family="JetBrains Mono, monospace" font-size="14" fill="#ecc94b">if nums[mid] == 1:</text>
+  <text x="250" y="395" font-family="Segoe UI, Arial" font-size="14" fill="#e2e8f0">mid++</text>
+  
+  <text x="80" y="420" font-family="JetBrains Mono, monospace" font-size="14" fill="#63b3ed">if nums[mid] == 2:</text>
+  <text x="250" y="420" font-family="Segoe UI, Arial" font-size="14" fill="#e2e8f0">swap(mid, high), high--</text>
+  
+  <text x="520" y="385" font-family="Segoe UI, Arial" font-size="14" fill="#68d391">Time: O(n)</text>
+  <text x="520" y="410" font-family="Segoe UI, Arial" font-size="14" fill="#68d391">Space: O(1)</text>
+</svg>
+

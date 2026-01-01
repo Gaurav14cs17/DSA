@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 480">
+  <defs>
+    <linearGradient id="bgPrefixConst" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="cellOriginal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#2563eb"/>
+    </linearGradient>
+    <linearGradient id="cellPrefix" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <filter id="shadowPrefix">
+      <feDropShadow dx="2" dy="3" stdDeviation="2" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="850" height="480" fill="url(#bgPrefixConst)"/>
+  
+  <!-- Title -->
+  <text x="425" y="35" text-anchor="middle" font-family="Segoe UI, Arial" font-size="24" font-weight="bold" fill="#10b981">
+    Prefix Sum Construction
+  </text>
+  <text x="425" y="58" text-anchor="middle" font-family="Segoe UI, Arial" font-size="14" fill="#8892b0">
+    P[i] = P[i-1] + A[i-1] with P[0] = 0 convention
+  </text>
+  
+  <!-- Original Array Section -->
+  <g transform="translate(50, 85)">
+    <text x="0" y="0" font-family="Segoe UI, Arial" font-size="16" font-weight="bold" fill="#3b82f6">Original Array A:</text>
+    
+    <g transform="translate(0, 15)" filter="url(#shadowPrefix)">
+      <rect x="0" y="0" width="60" height="50" rx="6" fill="url(#cellOriginal)" stroke="#60a5fa" stroke-width="2"/>
+      <rect x="65" y="0" width="60" height="50" rx="6" fill="url(#cellOriginal)" stroke="#60a5fa" stroke-width="2"/>
+      <rect x="130" y="0" width="60" height="50" rx="6" fill="url(#cellOriginal)" stroke="#60a5fa" stroke-width="2"/>
+      <rect x="195" y="0" width="60" height="50" rx="6" fill="url(#cellOriginal)" stroke="#60a5fa" stroke-width="2"/>
+      <rect x="260" y="0" width="60" height="50" rx="6" fill="url(#cellOriginal)" stroke="#60a5fa" stroke-width="2"/>
+      
+      <text x="30" y="32" text-anchor="middle" font-family="Consolas" font-size="20" font-weight="bold" fill="white">2</text>
+      <text x="95" y="32" text-anchor="middle" font-family="Consolas" font-size="20" font-weight="bold" fill="white">4</text>
+      <text x="160" y="32" text-anchor="middle" font-family="Consolas" font-size="20" font-weight="bold" fill="white">-1</text>
+      <text x="225" y="32" text-anchor="middle" font-family="Consolas" font-size="20" font-weight="bold" fill="white">5</text>
+      <text x="290" y="32" text-anchor="middle" font-family="Consolas" font-size="20" font-weight="bold" fill="white">3</text>
+      
+      <!-- Indices -->
+      <text x="30" y="68" text-anchor="middle" font-family="Consolas" font-size="11" fill="#94a3b8">0</text>
+      <text x="95" y="68" text-anchor="middle" font-family="Consolas" font-size="11" fill="#94a3b8">1</text>
+      <text x="160" y="68" text-anchor="middle" font-family="Consolas" font-size="11" fill="#94a3b8">2</text>
+      <text x="225" y="68" text-anchor="middle" font-family="Consolas" font-size="11" fill="#94a3b8">3</text>
+      <text x="290" y="68" text-anchor="middle" font-family="Consolas" font-size="11" fill="#94a3b8">4</text>
+    </g>
+  </g>
+  
+  <!-- Arrow down -->
+  <g transform="translate(200, 175)">
+    <path d="M 0 0 L 0 30" stroke="#10b981" stroke-width="3" marker-end="url(#arrowDown)"/>
+    <text x="20" y="20" font-family="Segoe UI" font-size="12" fill="#10b981">Build</text>
+  </g>
+  <defs>
+    <marker id="arrowDown" markerWidth="10" markerHeight="7" refX="5" refY="7" orient="auto">
+      <polygon points="0 0, 10 0, 5 7" fill="#10b981"/>
+    </marker>
+  </defs>
+  
+  <!-- Prefix Sum Array -->
+  <g transform="translate(50, 220)">
+    <text x="0" y="0" font-family="Segoe UI, Arial" font-size="16" font-weight="bold" fill="#10b981">Prefix Sum P:</text>
+    
+    <g transform="translate(0, 15)" filter="url(#shadowPrefix)">
+      <rect x="0" y="0" width="55" height="50" rx="6" fill="url(#cellPrefix)" stroke="#34d399" stroke-width="2"/>
+      <rect x="60" y="0" width="55" height="50" rx="6" fill="url(#cellPrefix)" stroke="#34d399" stroke-width="2"/>
+      <rect x="120" y="0" width="55" height="50" rx="6" fill="url(#cellPrefix)" stroke="#34d399" stroke-width="2"/>
+      <rect x="180" y="0" width="55" height="50" rx="6" fill="url(#cellPrefix)" stroke="#34d399" stroke-width="2"/>
+      <rect x="240" y="0" width="55" height="50" rx="6" fill="url(#cellPrefix)" stroke="#34d399" stroke-width="2"/>
+      <rect x="300" y="0" width="55" height="50" rx="6" fill="url(#cellPrefix)" stroke="#34d399" stroke-width="2"/>
+      
+      <text x="27" y="32" text-anchor="middle" font-family="Consolas" font-size="18" font-weight="bold" fill="white">0</text>
+      <text x="87" y="32" text-anchor="middle" font-family="Consolas" font-size="18" font-weight="bold" fill="white">2</text>
+      <text x="147" y="32" text-anchor="middle" font-family="Consolas" font-size="18" font-weight="bold" fill="white">6</text>
+      <text x="207" y="32" text-anchor="middle" font-family="Consolas" font-size="18" font-weight="bold" fill="white">5</text>
+      <text x="267" y="32" text-anchor="middle" font-family="Consolas" font-size="18" font-weight="bold" fill="white">10</text>
+      <text x="327" y="32" text-anchor="middle" font-family="Consolas" font-size="18" font-weight="bold" fill="white">13</text>
+      
+      <!-- Indices -->
+      <text x="27" y="68" text-anchor="middle" font-family="Consolas" font-size="11" fill="#94a3b8">0</text>
+      <text x="87" y="68" text-anchor="middle" font-family="Consolas" font-size="11" fill="#94a3b8">1</text>
+      <text x="147" y="68" text-anchor="middle" font-family="Consolas" font-size="11" fill="#94a3b8">2</text>
+      <text x="207" y="68" text-anchor="middle" font-family="Consolas" font-size="11" fill="#94a3b8">3</text>
+      <text x="267" y="68" text-anchor="middle" font-family="Consolas" font-size="11" fill="#94a3b8">4</text>
+      <text x="327" y="68" text-anchor="middle" font-family="Consolas" font-size="11" fill="#94a3b8">5</text>
+    </g>
+  </g>
+  
+  <!-- Calculation Steps Box -->
+  <g transform="translate(430, 85)">
+    <rect x="0" y="0" width="380" height="215" rx="10" fill="rgba(16, 185, 129, 0.08)" stroke="#10b981" stroke-width="1"/>
+    <text x="190" y="28" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" font-weight="bold" fill="#10b981">Step-by-Step Calculation</text>
+    
+    <text x="20" y="60" font-family="Consolas" font-size="13" fill="#fbbf24">P[0] = 0</text>
+    <text x="150" y="60" font-family="Segoe UI" font-size="12" fill="#8892b0">(convention/base)</text>
+    
+    <text x="20" y="90" font-family="Consolas" font-size="13" fill="white">P[1] = P[0] + A[0]</text>
+    <text x="180" y="90" font-family="Consolas" font-size="13" fill="#60a5fa">= 0 + 2 = 2</text>
+    
+    <text x="20" y="120" font-family="Consolas" font-size="13" fill="white">P[2] = P[1] + A[1]</text>
+    <text x="180" y="120" font-family="Consolas" font-size="13" fill="#60a5fa">= 2 + 4 = 6</text>
+    
+    <text x="20" y="150" font-family="Consolas" font-size="13" fill="white">P[3] = P[2] + A[2]</text>
+    <text x="180" y="150" font-family="Consolas" font-size="13" fill="#60a5fa">= 6 + (-1) = 5</text>
+    
+    <text x="20" y="180" font-family="Consolas" font-size="13" fill="white">P[4] = P[3] + A[3]</text>
+    <text x="180" y="180" font-family="Consolas" font-size="13" fill="#60a5fa">= 5 + 5 = 10</text>
+    
+    <text x="20" y="210" font-family="Consolas" font-size="13" fill="white">P[5] = P[4] + A[4]</text>
+    <text x="180" y="210" font-family="Consolas" font-size="13" fill="#60a5fa">= 10 + 3 = 13</text>
+  </g>
+  
+  <!-- Formula Box -->
+  <g transform="translate(50, 330)">
+    <rect x="0" y="0" width="760" height="130" rx="10" fill="rgba(59, 130, 246, 0.08)" stroke="#3b82f6" stroke-width="1"/>
+    
+    <text x="380" y="28" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" font-weight="bold" fill="#3b82f6">Key Formulas</text>
+    
+    <g transform="translate(30, 50)">
+      <rect x="0" y="0" width="220" height="60" rx="8" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981"/>
+      <text x="110" y="22" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#10b981">Build Prefix Sum</text>
+      <text x="110" y="48" text-anchor="middle" font-family="Consolas" font-size="14" fill="white">P[i] = P[i-1] + A[i-1]</text>
+    </g>
+    
+    <g transform="translate(270, 50)">
+      <rect x="0" y="0" width="220" height="60" rx="8" fill="rgba(251, 191, 36, 0.15)" stroke="#fbbf24"/>
+      <text x="110" y="22" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#fbbf24">Range Sum Query</text>
+      <text x="110" y="48" text-anchor="middle" font-family="Consolas" font-size="14" fill="white">sum(L,R) = P[R+1] - P[L]</text>
+    </g>
+    
+    <g transform="translate(510, 50)">
+      <rect x="0" y="0" width="220" height="60" rx="8" fill="rgba(139, 92, 246, 0.15)" stroke="#8b5cf6"/>
+      <text x="110" y="22" text-anchor="middle" font-family="Segoe UI" font-size="13" font-weight="bold" fill="#8b5cf6">Complexity</text>
+      <text x="110" y="42" text-anchor="middle" font-family="Consolas" font-size="12" fill="white">Build: O(n)</text>
+      <text x="110" y="58" text-anchor="middle" font-family="Consolas" font-size="12" fill="white">Query: O(1)</text>
+    </g>
+  </g>
+</svg>
+

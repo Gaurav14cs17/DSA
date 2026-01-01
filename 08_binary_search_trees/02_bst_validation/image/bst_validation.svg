@@ -1,0 +1,186 @@
+<svg viewBox="0 0 950 750" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="750" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">BST Validation</text>
+  <text x="475" y="65" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Range Checking • Inorder Property • Recovery</text>
+  
+  <!-- ========== VALID BST SECTION ========== -->
+  <text x="200" y="100" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">✅ VALID BST (Range Method)</text>
+  
+  <!-- Valid BST Tree with bounds -->
+  <line x1="200" y1="140" x2="120" y2="200" stroke="#4ade80" stroke-width="2"/>
+  <line x1="200" y1="140" x2="280" y2="200" stroke="#4ade80" stroke-width="2"/>
+  <line x1="120" y1="230" x2="80" y2="290" stroke="#4ade80" stroke-width="2"/>
+  <line x1="120" y1="230" x2="160" y2="290" stroke="#4ade80" stroke-width="2"/>
+  <line x1="280" y1="230" x2="240" y2="290" stroke="#4ade80" stroke-width="2"/>
+  <line x1="280" y1="230" x2="320" y2="290" stroke="#4ade80" stroke-width="2"/>
+  
+  <!-- Root: 50 with bounds -->
+  <circle cx="200" cy="130" r="24" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="200" y="136" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">50</text>
+  <text x="200" y="105" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">(-∞, +∞)</text>
+  
+  <!-- Left: 30 -->
+  <circle cx="120" cy="215" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="120" y="221" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">30</text>
+  <text x="120" y="195" text-anchor="middle" fill="#4ade80" font-size="9" font-family="Courier New, monospace">(-∞, 50)</text>
+  
+  <!-- Right: 70 -->
+  <circle cx="280" cy="215" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="280" y="221" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">70</text>
+  <text x="280" y="195" text-anchor="middle" fill="#4ade80" font-size="9" font-family="Courier New, monospace">(50, +∞)</text>
+  
+  <!-- 30's children -->
+  <circle cx="80" cy="300" r="16" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="80" y="305" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Courier New, monospace">20</text>
+  <text x="80" y="280" text-anchor="middle" fill="#4ade80" font-size="8" font-family="Courier New, monospace">(-∞, 30)</text>
+  
+  <circle cx="160" cy="300" r="16" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="160" y="305" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Courier New, monospace">40</text>
+  <text x="160" y="280" text-anchor="middle" fill="#4ade80" font-size="8" font-family="Courier New, monospace">(30, 50)</text>
+  
+  <!-- 70's children -->
+  <circle cx="240" cy="300" r="16" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="240" y="305" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Courier New, monospace">60</text>
+  <text x="240" y="280" text-anchor="middle" fill="#4ade80" font-size="8" font-family="Courier New, monospace">(50, 70)</text>
+  
+  <circle cx="320" cy="300" r="16" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="320" y="305" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Courier New, monospace">80</text>
+  <text x="320" y="280" text-anchor="middle" fill="#4ade80" font-size="8" font-family="Courier New, monospace">(70, +∞)</text>
+  
+  <!-- Valid check -->
+  <text x="200" y="340" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">All nodes in valid range ✓</text>
+  
+  <!-- ========== INVALID BST SECTION ========== -->
+  <text x="550" y="100" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">❌ INVALID BST</text>
+  
+  <!-- Invalid BST Tree -->
+  <line x1="550" y1="140" x2="480" y2="200" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="550" y1="140" x2="620" y2="200" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="620" y1="230" x2="580" y2="290" stroke="#ef4444" stroke-width="2"/>
+  <line x1="620" y1="230" x2="660" y2="290" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Root: 50 -->
+  <circle cx="550" cy="130" r="24" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="550" y="136" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">50</text>
+  
+  <!-- Left: 30 -->
+  <circle cx="480" cy="215" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="480" y="221" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">30</text>
+  
+  <!-- Right: 70 -->
+  <circle cx="620" cy="215" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="620" y="221" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">70</text>
+  
+  <!-- 70's left: 40 (INVALID!) -->
+  <circle cx="580" cy="300" r="16" fill="#1f0f0f" stroke="#ef4444" stroke-width="3"/>
+  <text x="580" y="305" text-anchor="middle" fill="#ef4444" font-size="14" font-weight="bold" font-family="Courier New, monospace">40</text>
+  <text x="580" y="280" text-anchor="middle" fill="#ef4444" font-size="8" font-family="Courier New, monospace">(50, 70) ✗</text>
+  
+  <!-- 70's right: 80 -->
+  <circle cx="660" cy="300" r="16" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="660" y="305" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Courier New, monospace">80</text>
+  
+  <!-- Invalid reason -->
+  <text x="550" y="340" text-anchor="middle" fill="#ef4444" font-size="12" font-weight="bold" font-family="Courier New, monospace">40 ∉ (50, 70) — violates BST!</text>
+  
+  <!-- ========== WRONG APPROACH WARNING ========== -->
+  <rect x="720" y="115" width="200" height="100" rx="8" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+  <text x="820" y="140" text-anchor="middle" fill="#ef4444" font-size="12" font-weight="bold" font-family="Courier New, monospace">⚠️ COMMON MISTAKE</text>
+  <text x="735" y="165" fill="#888888" font-size="10" font-family="Courier New, monospace">Only checking:</text>
+  <text x="735" y="185" fill="#ffffff" font-size="10" font-family="Courier New, monospace">left &lt; node &lt; right</text>
+  <text x="735" y="205" fill="#ef4444" font-size="10" font-family="Courier New, monospace">Must check ENTIRE</text>
+  <text x="735" y="220" fill="#ef4444" font-size="10" font-family="Courier New, monospace">subtree bounds!</text>
+  
+  <!-- ========== INORDER VALIDATION ========== -->
+  <rect x="30" y="370" width="280" height="140" rx="8" fill="#1e1e2e" stroke="#a78bfa" stroke-width="2"/>
+  <text x="170" y="395" text-anchor="middle" fill="#a78bfa" font-size="14" font-weight="bold" font-family="Courier New, monospace">📊 Inorder Method</text>
+  
+  <text x="45" y="425" fill="#888888" font-size="11" font-family="Courier New, monospace">Valid BST inorder:</text>
+  <text x="45" y="445" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">[20, 30, 40, 50, 60, 70, 80]</text>
+  <text x="45" y="470" fill="#888888" font-size="11" font-family="Courier New, monospace">Property:</text>
+  <text x="45" y="490" fill="#ffffff" font-size="11" font-family="Courier New, monospace">inorder[i] &lt; inorder[i+1] ∀ i</text>
+  
+  <!-- ========== RECOVER BST SECTION ========== -->
+  <text x="475" y="395" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">🔄 RECOVER BST (Two Nodes Swapped)</text>
+  
+  <!-- Adjacent swap example -->
+  <rect x="335" y="410" width="130" height="120" rx="6" fill="#1e1e2e" stroke="#f97316" stroke-width="1"/>
+  <text x="400" y="430" text-anchor="middle" fill="#f97316" font-size="11" font-weight="bold" font-family="Courier New, monospace">Adjacent Swap</text>
+  
+  <text x="350" y="455" fill="#888888" font-size="10" font-family="Courier New, monospace">Inorder:</text>
+  <text x="350" y="475" fill="#ffffff" font-size="10" font-family="Courier New, monospace">[1, <tspan fill="#ef4444" font-weight="bold">3, 2</tspan>, 4]</text>
+  <text x="350" y="500" fill="#888888" font-size="10" font-family="Courier New, monospace">1 violation:</text>
+  <text x="350" y="520" fill="#f97316" font-size="10" font-family="Courier New, monospace">first=3, second=2</text>
+  
+  <!-- Non-adjacent swap example -->
+  <rect x="485" y="410" width="150" height="120" rx="6" fill="#1e1e2e" stroke="#f97316" stroke-width="1"/>
+  <text x="560" y="430" text-anchor="middle" fill="#f97316" font-size="11" font-weight="bold" font-family="Courier New, monospace">Non-Adjacent Swap</text>
+  
+  <text x="500" y="455" fill="#888888" font-size="10" font-family="Courier New, monospace">Inorder:</text>
+  <text x="500" y="475" fill="#ffffff" font-size="10" font-family="Courier New, monospace">[1, <tspan fill="#ef4444" font-weight="bold">4</tspan>, 3, <tspan fill="#ef4444" font-weight="bold">2</tspan>, 5]</text>
+  <text x="500" y="500" fill="#888888" font-size="10" font-family="Courier New, monospace">2 violations:</text>
+  <text x="500" y="520" fill="#f97316" font-size="10" font-family="Courier New, monospace">first=4, second=2</text>
+  
+  <!-- ========== SORTED ARRAY TO BST ========== -->
+  <rect x="660" y="370" width="260" height="170" rx="8" fill="#1e1e2e" stroke="#4ade80" stroke-width="2"/>
+  <text x="790" y="395" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">🌳 Sorted Array → BST</text>
+  
+  <text x="675" y="420" fill="#888888" font-size="10" font-family="Courier New, monospace">Array: [1, 2, 3, 4, 5, 6, 7]</text>
+  <text x="675" y="440" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Mid = 4 (root)</text>
+  
+  <!-- Mini balanced tree -->
+  <line x1="790" y1="470" x2="750" y2="500" stroke="#4ade80" stroke-width="1"/>
+  <line x1="790" y1="470" x2="830" y2="500" stroke="#4ade80" stroke-width="1"/>
+  <line x1="750" y1="510" x2="730" y2="530" stroke="#4ade80" stroke-width="1"/>
+  <line x1="750" y1="510" x2="770" y2="530" stroke="#4ade80" stroke-width="1"/>
+  <line x1="830" y1="510" x2="810" y2="530" stroke="#4ade80" stroke-width="1"/>
+  <line x1="830" y1="510" x2="850" y2="530" stroke="#4ade80" stroke-width="1"/>
+  
+  <circle cx="790" cy="465" r="12" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="790" y="469" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">4</text>
+  
+  <circle cx="750" cy="505" r="10" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="750" y="509" text-anchor="middle" fill="#ffffff" font-size="9" font-family="Courier New, monospace">2</text>
+  
+  <circle cx="830" cy="505" r="10" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="830" y="509" text-anchor="middle" fill="#ffffff" font-size="9" font-family="Courier New, monospace">6</text>
+  
+  <circle cx="730" cy="530" r="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="730" y="533" text-anchor="middle" fill="#ffffff" font-size="8" font-family="Courier New, monospace">1</text>
+  
+  <circle cx="770" cy="530" r="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="770" y="533" text-anchor="middle" fill="#ffffff" font-size="8" font-family="Courier New, monospace">3</text>
+  
+  <circle cx="810" cy="530" r="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="810" y="533" text-anchor="middle" fill="#ffffff" font-size="8" font-family="Courier New, monospace">5</text>
+  
+  <circle cx="850" cy="530" r="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="850" y="533" text-anchor="middle" fill="#ffffff" font-size="8" font-family="Courier New, monospace">7</text>
+  
+  <!-- ========== VALIDATION CODE ========== -->
+  <rect x="30" y="555" width="440" height="160" rx="8" fill="#1e1e2e" stroke="#3b82f6" stroke-width="1"/>
+  <text x="250" y="580" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">Range Validation Code</text>
+  
+  <text x="45" y="610" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">def isValidBST(node, min_val, max_val):</text>
+  <text x="55" y="630" fill="#888888" font-size="11" font-family="Courier New, monospace">if not node: return True</text>
+  <text x="55" y="650" fill="#f97316" font-size="11" font-family="Courier New, monospace">if node.val &lt;= min_val or node.val &gt;= max_val:</text>
+  <text x="65" y="670" fill="#ef4444" font-size="11" font-family="Courier New, monospace">return False</text>
+  <text x="55" y="695" fill="#4ade80" font-size="11" font-family="Courier New, monospace">return isValid(left, min, node) and isValid(right, node, max)</text>
+  
+  <!-- ========== RECOVERY ALGORITHM ========== -->
+  <rect x="490" y="555" width="430" height="160" rx="8" fill="#1e1e2e" stroke="#f97316" stroke-width="1"/>
+  <text x="705" y="580" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">Recovery Algorithm</text>
+  
+  <text x="505" y="610" fill="#888888" font-size="11" font-family="Courier New, monospace">1. Inorder traverse, track prev</text>
+  <text x="505" y="635" fill="#888888" font-size="11" font-family="Courier New, monospace">2. If prev.val > curr.val:</text>
+  <text x="520" y="655" fill="#f97316" font-size="11" font-family="Courier New, monospace">• First time: first=prev, second=curr</text>
+  <text x="520" y="675" fill="#f97316" font-size="11" font-family="Courier New, monospace">• Second time: second=curr</text>
+  <text x="505" y="700" fill="#4ade80" font-size="11" font-family="Courier New, monospace">3. Swap first.val and second.val</text>
+  
+  <!-- Complexity Footer -->
+  <rect x="200" y="720" width="550" height="25" rx="5" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+  <text x="475" y="738" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Time: O(n) | Space: O(h) — Morris: O(1) space!</text>
+</svg>
+

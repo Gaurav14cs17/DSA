@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560">
+  <defs>
+    <linearGradient id="bgSweep" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e2f"/>
+      <stop offset="100%" style="stop-color:#2d2d44"/>
+    </linearGradient>
+    <linearGradient id="meeting1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff6b6b"/>
+      <stop offset="100%" style="stop-color:#ee5a5a"/>
+    </linearGradient>
+    <linearGradient id="meeting2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4ecdc4"/>
+      <stop offset="100%" style="stop-color:#3dbdb5"/>
+    </linearGradient>
+    <linearGradient id="meeting3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffe66d"/>
+      <stop offset="100%" style="stop-color:#ffd93d"/>
+    </linearGradient>
+    <linearGradient id="sweepLine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="100%" style="stop-color:#0099cc"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="560" fill="url(#bgSweep)"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-family="Segoe UI, Arial" font-size="24" font-weight="bold" fill="#00d4ff">
+    Meeting Rooms II - Sweep Line Algorithm
+  </text>
+  <text x="450" y="58" text-anchor="middle" font-family="Segoe UI, Arial" font-size="14" fill="#8892b0">
+    Find minimum number of meeting rooms required
+  </text>
+  
+  <!-- Input -->
+  <g transform="translate(50, 80)">
+    <rect x="0" y="0" width="800" height="50" rx="8" fill="rgba(0, 212, 255, 0.08)" stroke="#00d4ff" stroke-width="1"/>
+    <text x="20" y="30" font-family="Segoe UI" font-size="14" fill="#00d4ff" font-weight="bold">Input:</text>
+    <text x="80" y="30" font-family="Consolas" font-size="14" fill="white">[[0, 30], [5, 10], [15, 20]]</text>
+    <text x="350" y="30" font-family="Segoe UI" font-size="14" fill="#ffe66d" font-weight="bold">Output:</text>
+    <text x="420" y="30" font-family="Consolas" font-size="16" fill="#4ecdc4" font-weight="bold">2 rooms needed</text>
+  </g>
+  
+  <!-- Timeline Visualization -->
+  <g transform="translate(50, 150)">
+    <rect x="0" y="0" width="800" height="150" rx="10" fill="rgba(255, 107, 107, 0.05)" stroke="#ff6b6b" stroke-width="1"/>
+    <text x="20" y="25" font-family="Segoe UI, Arial" font-size="16" font-weight="bold" fill="#ff6b6b">Timeline Visualization</text>
+    
+    <!-- Time axis -->
+    <line x1="30" y1="120" x2="780" y2="120" stroke="#5d6d7e" stroke-width="2"/>
+    
+    <!-- Time markers -->
+    <text x="30" y="140" text-anchor="middle" font-family="Consolas" font-size="11" fill="#8892b0">0</text>
+    <text x="70" y="140" text-anchor="middle" font-family="Consolas" font-size="11" fill="#8892b0">5</text>
+    <text x="130" y="140" text-anchor="middle" font-family="Consolas" font-size="11" fill="#8892b0">10</text>
+    <text x="220" y="140" text-anchor="middle" font-family="Consolas" font-size="11" fill="#8892b0">15</text>
+    <text x="280" y="140" text-anchor="middle" font-family="Consolas" font-size="11" fill="#8892b0">20</text>
+    <text x="460" y="140" text-anchor="middle" font-family="Consolas" font-size="11" fill="#8892b0">30</text>
+    
+    <!-- Meeting 1: [0, 30] -->
+    <rect x="30" y="50" width="430" height="25" rx="5" fill="url(#meeting1)"/>
+    <text x="245" y="68" text-anchor="middle" font-family="Consolas" font-size="12" font-weight="bold" fill="white">Meeting 1: [0, 30]</text>
+    
+    <!-- Meeting 2: [5, 10] -->
+    <rect x="70" y="80" width="60" height="25" rx="5" fill="url(#meeting2)"/>
+    <text x="100" y="98" text-anchor="middle" font-family="Consolas" font-size="11" font-weight="bold" fill="white">[5, 10]</text>
+    
+    <!-- Meeting 3: [15, 20] -->
+    <rect x="220" y="80" width="60" height="25" rx="5" fill="url(#meeting3)"/>
+    <text x="250" y="98" text-anchor="middle" font-family="Consolas" font-size="11" font-weight="bold" fill="#1e1e2f">[15, 20]</text>
+    
+    <!-- Overlap indicator -->
+    <rect x="70" y="47" width="60" height="63" rx="3" fill="none" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="4,2"/>
+    <text x="100" y="42" text-anchor="middle" font-family="Segoe UI" font-size="10" fill="#ff6b6b">2 rooms!</text>
+    
+    <rect x="220" y="47" width="60" height="63" rx="3" fill="none" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="4,2"/>
+    <text x="250" y="42" text-anchor="middle" font-family="Segoe UI" font-size="10" fill="#ff6b6b">2 rooms!</text>
+  </g>
+  
+  <!-- Sweep Line Steps -->
+  <g transform="translate(50, 320)">
+    <rect x="0" y="0" width="380" height="220" rx="10" fill="rgba(78, 205, 196, 0.08)" stroke="#4ecdc4" stroke-width="1"/>
+    <text x="190" y="25" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" font-weight="bold" fill="#4ecdc4">Sweep Line Events</text>
+    
+    <!-- Events table header -->
+    <g transform="translate(20, 45)">
+      <rect x="0" y="0" width="340" height="25" rx="4" fill="rgba(0, 212, 255, 0.2)"/>
+      <text x="50" y="17" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="bold" fill="white">Time</text>
+      <text x="140" y="17" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="bold" fill="white">Event</text>
+      <text x="230" y="17" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="bold" fill="white">Rooms</text>
+      <text x="310" y="17" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="bold" fill="white">Max</text>
+    </g>
+    
+    <!-- Event rows -->
+    <g transform="translate(20, 75)">
+      <!-- Event 1: t=0 START -->
+      <rect x="0" y="0" width="340" height="22" rx="3" fill="rgba(255, 107, 107, 0.1)"/>
+      <text x="50" y="16" text-anchor="middle" font-family="Consolas" font-size="12" fill="white">0</text>
+      <text x="140" y="16" text-anchor="middle" font-family="Consolas" font-size="12" fill="#4ecdc4">START (+1)</text>
+      <text x="230" y="16" text-anchor="middle" font-family="Consolas" font-size="14" font-weight="bold" fill="white">1</text>
+      <text x="310" y="16" text-anchor="middle" font-family="Consolas" font-size="14" fill="#8892b0">1</text>
+      
+      <!-- Event 2: t=5 START -->
+      <rect x="0" y="25" width="340" height="22" rx="3" fill="rgba(78, 205, 196, 0.1)"/>
+      <text x="50" y="41" text-anchor="middle" font-family="Consolas" font-size="12" fill="white">5</text>
+      <text x="140" y="41" text-anchor="middle" font-family="Consolas" font-size="12" fill="#4ecdc4">START (+1)</text>
+      <text x="230" y="41" text-anchor="middle" font-family="Consolas" font-size="14" font-weight="bold" fill="#ffe66d">2</text>
+      <text x="310" y="41" text-anchor="middle" font-family="Consolas" font-size="14" fill="#ffe66d" font-weight="bold">2</text>
+      
+      <!-- Event 3: t=10 END -->
+      <rect x="0" y="50" width="340" height="22" rx="3" fill="rgba(100, 100, 100, 0.1)"/>
+      <text x="50" y="66" text-anchor="middle" font-family="Consolas" font-size="12" fill="white">10</text>
+      <text x="140" y="66" text-anchor="middle" font-family="Consolas" font-size="12" fill="#ff6b6b">END (-1)</text>
+      <text x="230" y="66" text-anchor="middle" font-family="Consolas" font-size="14" font-weight="bold" fill="white">1</text>
+      <text x="310" y="66" text-anchor="middle" font-family="Consolas" font-size="14" fill="#8892b0">2</text>
+      
+      <!-- Event 4: t=15 START -->
+      <rect x="0" y="75" width="340" height="22" rx="3" fill="rgba(255, 230, 109, 0.1)"/>
+      <text x="50" y="91" text-anchor="middle" font-family="Consolas" font-size="12" fill="white">15</text>
+      <text x="140" y="91" text-anchor="middle" font-family="Consolas" font-size="12" fill="#4ecdc4">START (+1)</text>
+      <text x="230" y="91" text-anchor="middle" font-family="Consolas" font-size="14" font-weight="bold" fill="#ffe66d">2</text>
+      <text x="310" y="91" text-anchor="middle" font-family="Consolas" font-size="14" fill="#8892b0">2</text>
+      
+      <!-- Event 5: t=20 END -->
+      <rect x="0" y="100" width="340" height="22" rx="3" fill="rgba(100, 100, 100, 0.1)"/>
+      <text x="50" y="116" text-anchor="middle" font-family="Consolas" font-size="12" fill="white">20</text>
+      <text x="140" y="116" text-anchor="middle" font-family="Consolas" font-size="12" fill="#ff6b6b">END (-1)</text>
+      <text x="230" y="116" text-anchor="middle" font-family="Consolas" font-size="14" font-weight="bold" fill="white">1</text>
+      <text x="310" y="116" text-anchor="middle" font-family="Consolas" font-size="14" fill="#8892b0">2</text>
+      
+      <!-- Event 6: t=30 END -->
+      <rect x="0" y="125" width="340" height="22" rx="3" fill="rgba(100, 100, 100, 0.1)"/>
+      <text x="50" y="141" text-anchor="middle" font-family="Consolas" font-size="12" fill="white">30</text>
+      <text x="140" y="141" text-anchor="middle" font-family="Consolas" font-size="12" fill="#ff6b6b">END (-1)</text>
+      <text x="230" y="141" text-anchor="middle" font-family="Consolas" font-size="14" font-weight="bold" fill="white">0</text>
+      <text x="310" y="141" text-anchor="middle" font-family="Consolas" font-size="14" fill="#8892b0">2</text>
+    </g>
+  </g>
+  
+  <!-- Algorithm Summary -->
+  <g transform="translate(470, 320)">
+    <rect x="0" y="0" width="380" height="220" rx="10" fill="rgba(255, 230, 109, 0.08)" stroke="#ffe66d" stroke-width="1"/>
+    <text x="190" y="25" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" font-weight="bold" fill="#ffe66d">Algorithm Steps</text>
+    
+    <g transform="translate(20, 50)">
+      <!-- Step 1 -->
+      <rect x="0" y="0" width="30" height="30" rx="15" fill="#00d4ff"/>
+      <text x="15" y="21" text-anchor="middle" font-family="Consolas" font-size="14" font-weight="bold" fill="white">1</text>
+      <text x="45" y="20" font-family="Segoe UI" font-size="13" fill="white">Create START (+1) and END (-1) events</text>
+      
+      <!-- Step 2 -->
+      <rect x="0" y="40" width="30" height="30" rx="15" fill="#4ecdc4"/>
+      <text x="15" y="61" text-anchor="middle" font-family="Consolas" font-size="14" font-weight="bold" fill="white">2</text>
+      <text x="45" y="60" font-family="Segoe UI" font-size="13" fill="white">Sort events by time</text>
+      
+      <!-- Step 3 -->
+      <rect x="0" y="80" width="30" height="30" rx="15" fill="#ffe66d"/>
+      <text x="15" y="101" text-anchor="middle" font-family="Consolas" font-size="14" font-weight="bold" fill="#1e1e2f">3</text>
+      <text x="45" y="100" font-family="Segoe UI" font-size="13" fill="white">Process events: rooms += delta</text>
+      
+      <!-- Step 4 -->
+      <rect x="0" y="120" width="30" height="30" rx="15" fill="#ff6b6b"/>
+      <text x="15" y="141" text-anchor="middle" font-family="Consolas" font-size="14" font-weight="bold" fill="white">4</text>
+      <text x="45" y="140" font-family="Segoe UI" font-size="13" fill="white">Track maximum concurrent rooms</text>
+    </g>
+    
+    <!-- Complexity -->
+    <g transform="translate(20, 180)">
+      <rect x="0" y="0" width="160" height="30" rx="5" fill="rgba(0, 212, 255, 0.2)"/>
+      <text x="80" y="20" text-anchor="middle" font-family="Consolas" font-size="12" fill="white">Time: O(n log n)</text>
+      
+      <rect x="180" y="0" width="160" height="30" rx="5" fill="rgba(78, 205, 196, 0.2)"/>
+      <text x="260" y="20" text-anchor="middle" font-family="Consolas" font-size="12" fill="white">Space: O(n)</text>
+    </g>
+  </g>
+</svg>
+
