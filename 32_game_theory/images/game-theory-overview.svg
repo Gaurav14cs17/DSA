@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380">
+  <rect width="900" height="380" fill="#0f0f23"/>
+  
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Game Theory</text>
+  <text x="450" y="58" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">Optimal strategies for competitive games</text>
+  
+  <!-- Nim Game -->
+  <text x="50" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">NIM GAME</text>
+  <g transform="translate(50, 115)">
+    <rect x="0" y="0" width="280" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Piles: [3, 4, 5]</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">XOR-sum = 3 ⊕ 4 ⊕ 5 = 2</text>
+    <text x="15" y="60" fill="#4ade80" font-size="10" font-family="Courier New, monospace">XOR ≠ 0: First player wins</text>
+    <text x="15" y="75" fill="#f97316" font-size="10" font-family="Courier New, monospace">XOR = 0: Second player wins</text>
+  </g>
+  
+  <!-- Minimax -->
+  <text x="400" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">MINIMAX</text>
+  <g transform="translate(400, 115)">
+    <circle cx="60" cy="20" r="15" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="60" y="25" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">3</text>
+    <text x="80" y="25" fill="#888888" font-size="9" font-family="Courier New, monospace">MAX</text>
+    
+    <line x1="48" y1="32" x2="25" y2="48" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="72" y1="32" x2="95" y2="48" stroke="#3b82f6" stroke-width="2"/>
+    
+    <circle cx="25" cy="60" r="15" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="25" y="65" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">3</text>
+    <text x="-5" y="65" fill="#888888" font-size="9" font-family="Courier New, monospace">min</text>
+    
+    <circle cx="95" cy="60" r="15" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="95" y="65" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">2</text>
+    
+    <text x="140" y="40" fill="#888888" font-size="10" font-family="Courier New, monospace">Maximize your</text>
+    <text x="140" y="55" fill="#888888" font-size="10" font-family="Courier New, monospace">minimum gain</text>
+  </g>
+  
+  <!-- Grundy Numbers -->
+  <text x="650" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">GRUNDY (SPRAGUE-GRUNDY)</text>
+  <g transform="translate(650, 115)">
+    <rect x="0" y="0" width="200" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">G(x) = mex({G(y)...})</text>
+    <text x="15" y="40" fill="#888888" font-size="10" font-family="Courier New, monospace">mex = min excludant</text>
+    <text x="15" y="60" fill="#4ade80" font-size="10" font-family="Courier New, monospace">G(game) = XOR of parts</text>
+  </g>
+  
+  <!-- Stone Games -->
+  <text x="50" y="230" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">COMMON PATTERNS</text>
+  <g transform="translate(50, 250)">
+    <text x="0" y="15" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Nim: XOR of piles</text>
+    <text x="0" y="35" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Stone Game: DP on intervals</text>
+    <text x="0" y="55" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Take-away games: Grundy numbers</text>
+    <text x="250" y="15" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Divisibility games</text>
+    <text x="250" y="35" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Combinatorial games</text>
+  </g>
+  
+  <!-- Key Insight -->
+  <text x="50" y="330" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">KEY INSIGHT</text>
+  <g transform="translate(50, 345)">
+    <text x="0" y="15" fill="#4ade80" font-size="11" font-family="Courier New, monospace">Losing state: all moves lead to winning states for opponent</text>
+  </g>
+</svg>
+
