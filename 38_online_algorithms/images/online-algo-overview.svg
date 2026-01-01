@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350">
+  <rect width="900" height="350" fill="#0f0f23"/>
+  
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Online Algorithms</text>
+  <text x="450" y="58" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">Make decisions without knowing future input</text>
+  
+  <!-- Concept -->
+  <text x="50" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">ONLINE vs OFFLINE</text>
+  <g transform="translate(50, 115)">
+    <rect x="0" y="0" width="180" height="60" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="90" y="20" text-anchor="middle" fill="#f97316" font-size="10" font-weight="bold" font-family="Courier New, monospace">ONLINE</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Process one by one</text>
+    <text x="15" y="55" fill="#888888" font-size="10" font-family="Courier New, monospace">No future knowledge</text>
+    
+    <rect x="200" y="0" width="180" height="60" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="290" y="20" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="bold" font-family="Courier New, monospace">OFFLINE</text>
+    <text x="215" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">All input available</text>
+    <text x="215" y="55" fill="#888888" font-size="10" font-family="Courier New, monospace">Can preprocess</text>
+  </g>
+  
+  <!-- Competitive Ratio -->
+  <text x="500" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">COMPETITIVE RATIO</text>
+  <g transform="translate(500, 115)">
+    <rect x="0" y="0" width="300" height="60" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="25" fill="#ffffff" font-size="10" font-family="Courier New, monospace">CR = Online Cost / Optimal Offline Cost</text>
+    <text x="15" y="45" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Lower is better (1 = optimal)</text>
+  </g>
+  
+  <!-- Examples -->
+  <text x="50" y="210" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">CLASSIC EXAMPLES</text>
+  <g transform="translate(50, 230)">
+    <text x="0" y="15" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Ski rental problem (rent vs buy)</text>
+    <text x="0" y="35" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Paging / Caching (LRU, LFU)</text>
+    <text x="0" y="55" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Secretary problem (optimal stopping)</text>
+    <text x="250" y="15" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Online bin packing</text>
+    <text x="250" y="35" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Load balancing</text>
+    <text x="250" y="55" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Job scheduling</text>
+  </g>
+  
+  <!-- Applications -->
+  <text x="550" y="210" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">APPLICATIONS</text>
+  <g transform="translate(550, 230)">
+    <text x="0" y="15" fill="#888888" font-size="10" font-family="Courier New, monospace">Streaming data</text>
+    <text x="0" y="35" fill="#888888" font-size="10" font-family="Courier New, monospace">Real-time systems</text>
+    <text x="0" y="55" fill="#888888" font-size="10" font-family="Courier New, monospace">Network routing</text>
+  </g>
+</svg>
+

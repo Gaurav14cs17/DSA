@@ -10,6 +10,8 @@ permalink: /38_online_algorithms/
 
 # 🌐 Online Algorithms
 
+![Online Algorithms Overview](./images/online-algo-overview.svg)
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Subtopics-4-blue?style=for-the-badge" alt="Subtopics">

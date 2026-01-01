@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350">
+  <rect width="900" height="350" fill="#0f0f23"/>
+  
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Interval Trees</text>
+  <text x="450" y="58" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">Efficiently query overlapping intervals</text>
+  
+  <!-- Structure -->
+  <text x="50" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">INTERVAL TREE STRUCTURE</text>
+  <g transform="translate(50, 115)">
+    <circle cx="100" cy="20" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#ffffff" font-size="9" font-family="Courier New, monospace">[8,20]</text>
+    <text x="130" y="25" fill="#888888" font-size="9" font-family="Courier New, monospace">max=25</text>
+    
+    <line x1="85" y1="35" x2="50" y2="55" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="115" y1="35" x2="150" y2="55" stroke="#3b82f6" stroke-width="2"/>
+    
+    <circle cx="50" cy="70" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="50" y="75" text-anchor="middle" fill="#ffffff" font-size="9" font-family="Courier New, monospace">[5,10]</text>
+    
+    <circle cx="150" cy="70" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="150" y="75" text-anchor="middle" fill="#ffffff" font-size="9" font-family="Courier New, monospace">[15,25]</text>
+    
+    <text x="0" y="115" fill="#888888" font-size="10" font-family="Courier New, monospace">Each node: interval + max endpoint in subtree</text>
+  </g>
+  
+  <!-- Operations -->
+  <text x="450" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">OPERATIONS</text>
+  <g transform="translate(450, 115)">
+    <rect x="0" y="0" width="350" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Insert interval:</text>
+    <text x="200" y="20" fill="#4ade80" font-size="10" font-family="Courier New, monospace">O(log n)</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Delete interval:</text>
+    <text x="200" y="40" fill="#4ade80" font-size="10" font-family="Courier New, monospace">O(log n)</text>
+    <text x="15" y="60" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Find overlapping:</text>
+    <text x="200" y="60" fill="#4ade80" font-size="10" font-family="Courier New, monospace">O(log n + k)</text>
+  </g>
+  
+  <!-- Query -->
+  <text x="50" y="250" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">OVERLAP QUERY</text>
+  <g transform="translate(50, 270)">
+    <text x="0" y="15" fill="#888888" font-size="10" font-family="Courier New, monospace">Two intervals [a,b] and [c,d] overlap if:</text>
+    <text x="0" y="35" fill="#4ade80" font-size="10" font-family="Courier New, monospace">a ≤ d AND c ≤ b</text>
+  </g>
+  
+  <!-- Applications -->
+  <text x="350" y="250" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">APPLICATIONS</text>
+  <g transform="translate(350, 270)">
+    <text x="0" y="15" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Calendar scheduling</text>
+    <text x="150" y="15" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Windowing queries</text>
+    <text x="0" y="35" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Computational geometry</text>
+    <text x="150" y="35" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Database queries</text>
+  </g>
+</svg>
+

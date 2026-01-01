@@ -10,6 +10,8 @@ permalink: /40_dp_optimizations/
 
 # ⚡ DP Optimizations
 
+![DP Optimizations Overview](./images/dp-opt-overview.svg)
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Techniques-12+-blue?style=for-the-badge" alt="Techniques">

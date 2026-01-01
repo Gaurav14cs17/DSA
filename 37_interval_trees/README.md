@@ -10,6 +10,8 @@ permalink: /37_interval_trees/
 
 # 📊 Interval Trees
 
+![Interval Trees Overview](./images/interval-tree-overview.svg)
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Subtopics-3-blue?style=for-the-badge" alt="Subtopics">
@@ -29,6 +31,16 @@ permalink: /37_interval_trees/
 | ⬅️ Previous | 📂 Current | ➡️ Next |
 |:------------|:----------:|--------:|
 | [← Randomized Algorithms](../36_randomized_algorithms/README.md) | **Interval Trees** | [Online Algorithms →](../38_online_algorithms/README.md) |
+
+---
+
+## 🎨 Visual Overview
+
+<div align="center">
+
+![Interval Trees](./images/interval-trees.svg)
+
+</div>
 
 ---
 
