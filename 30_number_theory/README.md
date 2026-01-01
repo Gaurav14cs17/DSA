@@ -10,6 +10,8 @@ permalink: /30_number_theory/
 
 # 🔢 Number Theory
 
+![Number Theory Overview](./images/number-theory-overview.svg)
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Topics-12-blue?style=for-the-badge" alt="Topics">
