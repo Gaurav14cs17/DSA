@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <rect width="900" height="400" fill="#0f0f23"/>
+  
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Computational Geometry</text>
+  <text x="450" y="58" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">Algorithms for geometric problems</text>
+  
+  <!-- Cross Product -->
+  <text x="50" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">CROSS PRODUCT</text>
+  <g transform="translate(50, 115)">
+    <line x1="50" y1="50" x2="120" y2="20" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="50" y1="50" x2="130" y2="70" stroke="#4ade80" stroke-width="2"/>
+    <circle cx="50" cy="50" r="4" fill="#f97316"/>
+    <text x="125" y="15" fill="#3b82f6" font-size="10" font-family="Courier New, monospace">A</text>
+    <text x="135" y="75" fill="#4ade80" font-size="10" font-family="Courier New, monospace">B</text>
+    
+    <text x="160" y="30" fill="#ffffff" font-size="10" font-family="Courier New, monospace">A × B = Ax*By - Ay*Bx</text>
+    <text x="160" y="50" fill="#888888" font-size="10" font-family="Courier New, monospace">&gt; 0: B is left of A</text>
+    <text x="160" y="70" fill="#888888" font-size="10" font-family="Courier New, monospace">&lt; 0: B is right of A</text>
+  </g>
+  
+  <!-- Convex Hull -->
+  <text x="450" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">CONVEX HULL</text>
+  <g transform="translate(450, 115)">
+    <!-- Points -->
+    <circle cx="30" cy="50" r="4" fill="#3b82f6"/>
+    <circle cx="60" cy="20" r="4" fill="#3b82f6"/>
+    <circle cx="100" cy="10" r="4" fill="#3b82f6"/>
+    <circle cx="130" cy="40" r="4" fill="#3b82f6"/>
+    <circle cx="110" cy="70" r="4" fill="#3b82f6"/>
+    <circle cx="60" cy="60" r="4" fill="#888888"/>
+    
+    <!-- Hull -->
+    <polygon points="30,50 60,20 100,10 130,40 110,70" fill="none" stroke="#4ade80" stroke-width="2"/>
+    
+    <text x="160" y="30" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Graham Scan: O(n log n)</text>
+    <text x="160" y="50" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Jarvis March: O(nh)</text>
+  </g>
+  
+  <!-- Line Intersection -->
+  <text x="50" y="220" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">LINE INTERSECTION</text>
+  <g transform="translate(50, 240)">
+    <line x1="0" y1="50" x2="100" y2="10" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="20" y1="10" x2="80" y2="60" stroke="#f97316" stroke-width="2"/>
+    <circle cx="50" cy="30" r="5" fill="#4ade80"/>
+    <text x="120" y="30" fill="#888888" font-size="10" font-family="Courier New, monospace">Use cross product</text>
+    <text x="120" y="50" fill="#888888" font-size="10" font-family="Courier New, monospace">to find intersection</text>
+  </g>
+  
+  <!-- Closest Pair -->
+  <text x="350" y="220" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">CLOSEST PAIR</text>
+  <g transform="translate(350, 240)">
+    <text x="0" y="15" fill="#888888" font-size="10" font-family="Courier New, monospace">Divide and conquer</text>
+    <text x="0" y="35" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Time: O(n log n)</text>
+  </g>
+  
+  <!-- Point in Polygon -->
+  <text x="550" y="220" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">POINT IN POLYGON</text>
+  <g transform="translate(550, 240)">
+    <text x="0" y="15" fill="#888888" font-size="10" font-family="Courier New, monospace">Ray casting algorithm</text>
+    <text x="0" y="35" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Time: O(n)</text>
+  </g>
+  
+  <!-- Applications -->
+  <text x="50" y="340" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">APPLICATIONS</text>
+  <g transform="translate(50, 355)">
+    <text x="0" y="15" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Graphics • GIS • Robotics • Game Dev • CAD</text>
+  </g>
+</svg>
+

@@ -8,6 +8,8 @@ permalink: /29_computational_geometry/
 
 # 📐 Computational Geometry
 
+![Computational Geometry Overview](./images/geometry-overview.svg)
+
 ## 📊 Metadata
 - **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
 - **Subtopics:** 6
