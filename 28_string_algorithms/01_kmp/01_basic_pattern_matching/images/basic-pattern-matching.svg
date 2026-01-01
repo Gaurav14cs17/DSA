@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 550">
+  <rect width="850" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="425" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Basic Pattern Matching</text>
+  <text x="425" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Finding all occurrences using KMP</text>
+  
+  <!-- Example Section -->
+  <text x="40" y="100" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Example: Find "AB" in "ABABDABACDABABCABAB"</text>
+  
+  <!-- Text with indices -->
+  <g transform="translate(40, 130)">
+    <text x="0" y="-5" font-family="Courier New, monospace" font-size="10" fill="#888888">Index:</text>
+    <text x="50" y="-5" font-family="Courier New, monospace" font-size="9" fill="#888888">0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18</text>
+  </g>
+  
+  <g transform="translate(40, 150)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">Text:</text>
+    <!-- Each character -->
+    <rect x="50" y="-12" width="22" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="61" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">A</text>
+    <rect x="74" y="-12" width="22" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="85" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">B</text>
+    <rect x="98" y="-12" width="22" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="109" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">A</text>
+    <rect x="122" y="-12" width="22" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="133" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">B</text>
+    <rect x="146" y="-12" width="22" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="157" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">D</text>
+    <rect x="170" y="-12" width="22" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="181" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">A</text>
+    <rect x="194" y="-12" width="22" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="205" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">B</text>
+    <rect x="218" y="-12" width="22" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="229" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">A</text>
+    <rect x="242" y="-12" width="22" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="253" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">C</text>
+    <rect x="266" y="-12" width="22" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="277" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">D</text>
+    <rect x="290" y="-12" width="22" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="301" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">A</text>
+    <rect x="314" y="-12" width="22" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="325" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">B</text>
+    <rect x="338" y="-12" width="22" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="349" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">A</text>
+    <rect x="362" y="-12" width="22" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="373" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">B</text>
+    <rect x="386" y="-12" width="22" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="397" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">C</text>
+    <rect x="410" y="-12" width="22" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="421" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">A</text>
+    <rect x="434" y="-12" width="22" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="445" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">B</text>
+    <rect x="458" y="-12" width="22" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="469" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">A</text>
+    <rect x="482" y="-12" width="22" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="493" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">B</text>
+  </g>
+  
+  <!-- Results box -->
+  <rect x="560" y="115" width="260" height="70" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5" rx="5"/>
+  <text x="580" y="140" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Matches Found:</text>
+  <text x="580" y="160" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Positions: [0, 2, 5, 10, 12, 15, 17]</text>
+  <text x="580" y="178" font-family="Courier New, monospace" font-size="11" fill="#888888">Total: 7 occurrences</text>
+  
+  <!-- LPS Array Section -->
+  <text x="40" y="210" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">LPS Array for Pattern "AB"</text>
+  
+  <g transform="translate(40, 235)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Pattern:</text>
+    <rect x="80" y="-12" width="30" height="22" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="95" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">A</text>
+    <rect x="114" y="-12" width="30" height="22" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="129" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">B</text>
+    
+    <text x="180" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">LPS:</text>
+    <rect x="220" y="-12" width="30" height="22" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="235" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">0</text>
+    <rect x="254" y="-12" width="30" height="22" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="269" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">0</text>
+  </g>
+  
+  <!-- Matching Process Visualization -->
+  <text x="40" y="290" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Matching Process</text>
+  
+  <g transform="translate(40, 310)">
+    <!-- Step 1 -->
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Step 1: i=0, j=0</text>
+    <text x="150" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">text[0]='A' = pattern[0]='A' → Match!</text>
+    
+    <!-- Step 2 -->
+    <text x="0" y="22" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Step 2: i=1, j=1</text>
+    <text x="150" y="22" font-family="Courier New, monospace" font-size="11" fill="#888888">text[1]='B' = pattern[1]='B' → Match!</text>
+    
+    <!-- Step 3 -->
+    <text x="0" y="44" font-family="Courier New, monospace" font-size="11" fill="#f97316">Step 3: j=2=m</text>
+    <text x="150" y="44" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Found pattern at position 0</text>
+    
+    <!-- Step 4 -->
+    <text x="0" y="66" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">Continue:</text>
+    <text x="150" y="66" font-family="Courier New, monospace" font-size="11" fill="#888888">j = lps[j-1] = lps[1] = 0, continue searching...</text>
+  </g>
+  
+  <!-- Algorithm Types -->
+  <text x="40" y="420" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Common Operations</text>
+  
+  <g transform="translate(40, 440)">
+    <rect x="0" y="0" width="230" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+    <text x="15" y="22" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff">Find All Occurrences</text>
+    <text x="15" y="42" font-family="Courier New, monospace" font-size="10" fill="#888888">Return list of all positions</text>
+    <text x="15" y="60" font-family="Courier New, monospace" font-size="10" fill="#4ade80">Time: O(n + m)</text>
+    
+    <rect x="250" y="0" width="230" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+    <text x="265" y="22" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff">Find First Occurrence</text>
+    <text x="265" y="42" font-family="Courier New, monospace" font-size="10" fill="#888888">Return first match or -1</text>
+    <text x="265" y="60" font-family="Courier New, monospace" font-size="10" fill="#4ade80">Time: O(n + m)</text>
+    
+    <rect x="500" y="0" width="230" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+    <text x="515" y="22" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff">Count Occurrences</text>
+    <text x="515" y="42" font-family="Courier New, monospace" font-size="10" fill="#888888">Return number of matches</text>
+    <text x="515" y="60" font-family="Courier New, monospace" font-size="10" fill="#4ade80">Time: O(n + m)</text>
+  </g>
+</svg>
+

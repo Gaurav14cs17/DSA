@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <rect width="900" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Rabin-Karp Algorithm</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Rolling Hash for Pattern Matching</text>
+  
+  <!-- Hash Function -->
+  <text x="40" y="100" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Polynomial Hash Function</text>
+  
+  <rect x="40" y="115" width="400" height="70" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5" rx="5"/>
+  <text x="60" y="140" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">h(s) = Σ s[i] · p^(m-1-i) mod M</text>
+  <text x="60" y="162" font-family="Courier New, monospace" font-size="11" fill="#888888">p = 31 (prime base), M = 10⁹+7 (modulus)</text>
+  <text x="60" y="180" font-family="Courier New, monospace" font-size="10" fill="#888888">Each character contributes: char_value × position_weight</text>
+  
+  <!-- Example Hash Calculation -->
+  <text x="40" y="215" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Example: Hash of "ABC"</text>
+  
+  <g transform="translate(40, 240)">
+    <rect x="0" y="0" width="40" height="30" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="20" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">A</text>
+    <text x="20" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">65</text>
+    
+    <rect x="50" y="0" width="40" height="30" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="70" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">B</text>
+    <text x="70" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">66</text>
+    
+    <rect x="100" y="0" width="40" height="30" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="120" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">C</text>
+    <text x="120" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">67</text>
+    
+    <text x="160" y="20" font-family="Courier New, monospace" font-size="11" fill="#888888">h = 65·31² + 66·31 + 67</text>
+    <text x="160" y="40" font-family="Courier New, monospace" font-size="11" fill="#4ade80">h = 62465 + 2046 + 67 = 64578</text>
+  </g>
+  
+  <!-- Rolling Hash Property -->
+  <text x="480" y="100" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Rolling Hash Property</text>
+  
+  <rect x="480" y="115" width="380" height="90" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+  <text x="500" y="140" font-family="Courier New, monospace" font-size="11" fill="#ffffff">When window slides from [i..i+m-1] to [i+1..i+m]:</text>
+  <text x="500" y="165" font-family="Courier New, monospace" font-size="11" fill="#4ade80">h_new = (h_old - s[i]·p^(m-1)) · p + s[i+m]</text>
+  <text x="500" y="190" font-family="Courier New, monospace" font-size="11" fill="#888888">Update hash in O(1) instead of O(m)!</text>
+  
+  <!-- Visual Sliding Window -->
+  <text x="40" y="310" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Sliding Window Example</text>
+  
+  <g transform="translate(40, 335)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Text: A B C D E F</text>
+    
+    <!-- Window position 1 -->
+    <text x="0" y="30" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">Window 1:</text>
+    <rect x="80" y="18" width="30" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="95" y="33" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">A</text>
+    <rect x="112" y="18" width="30" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="127" y="33" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">B</text>
+    <rect x="144" y="18" width="30" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="159" y="33" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">C</text>
+    <rect x="176" y="18" width="30" height="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="191" y="33" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">D</text>
+    <rect x="208" y="18" width="30" height="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="223" y="33" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">E</text>
+    <rect x="240" y="18" width="30" height="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="255" y="33" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">F</text>
+    <text x="290" y="33" font-family="Courier New, monospace" font-size="10" fill="#4ade80">h₁ = 64578</text>
+    
+    <!-- Arrow -->
+    <path d="M 140 50 L 140 65 L 172 65 L 172 50" fill="none" stroke="#f97316" stroke-width="1.5"/>
+    <text x="156" y="80" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#f97316">slide</text>
+    
+    <!-- Window position 2 -->
+    <text x="0" y="105" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">Window 2:</text>
+    <rect x="80" y="93" width="30" height="22" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="95" y="108" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ef4444">A</text>
+    <rect x="112" y="93" width="30" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="127" y="108" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">B</text>
+    <rect x="144" y="93" width="30" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="159" y="108" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">C</text>
+    <rect x="176" y="93" width="30" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="191" y="108" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">D</text>
+    <rect x="208" y="93" width="30" height="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="223" y="108" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">E</text>
+    <rect x="240" y="93" width="30" height="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="255" y="108" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">F</text>
+    <text x="290" y="108" font-family="Courier New, monospace" font-size="10" fill="#4ade80">h₂ = roll(h₁)</text>
+  </g>
+  
+  <!-- Double Hashing -->
+  <text x="480" y="310" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Double Hashing (Collision Prevention)</text>
+  
+  <rect x="480" y="330" width="380" height="120" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5" rx="5"/>
+  <text x="500" y="355" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Use two hash functions:</text>
+  <text x="500" y="378" font-family="Courier New, monospace" font-size="11" fill="#ffffff">h₁: p=31, M=10⁹+7</text>
+  <text x="500" y="396" font-family="Courier New, monospace" font-size="11" fill="#ffffff">h₂: p=53, M=10⁹+9</text>
+  <text x="500" y="420" font-family="Courier New, monospace" font-size="11" fill="#888888">P(both collide) ≈ 1/(M₁·M₂) ≈ 10⁻¹⁸</text>
+  <text x="500" y="440" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">Virtually eliminates false positives</text>
+  
+  <!-- Algorithm Steps -->
+  <text x="40" y="490" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Algorithm Steps</text>
+  
+  <g transform="translate(40, 510)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#4ade80">1. Compute hash of pattern: h_pattern</text>
+    <text x="0" y="20" font-family="Courier New, monospace" font-size="11" fill="#4ade80">2. Compute hash of first window: h_window</text>
+    <text x="0" y="40" font-family="Courier New, monospace" font-size="11" fill="#4ade80">3. For each position:</text>
+    <text x="20" y="58" font-family="Courier New, monospace" font-size="11" fill="#888888">• If h_window == h_pattern: verify match</text>
+    <text x="20" y="76" font-family="Courier New, monospace" font-size="11" fill="#888888">• Roll hash to next window position</text>
+  </g>
+  
+  <!-- Complexity Box -->
+  <rect x="480" y="480" width="380" height="100" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+  <text x="500" y="505" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff">Complexity Analysis</text>
+  <text x="500" y="530" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Average: O(n + m)</text>
+  <text x="500" y="550" font-family="Courier New, monospace" font-size="11" fill="#f97316">Worst: O(nm) - many hash collisions</text>
+  <text x="500" y="570" font-family="Courier New, monospace" font-size="11" fill="#888888">Space: O(1) - only store current hash</text>
+  
+  <!-- Applications -->
+  <text x="40" y="615" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Best For</text>
+  <text x="40" y="638" font-family="Courier New, monospace" font-size="11" fill="#888888">Multiple patterns • Substring equality • Binary search + hash • 2D pattern matching</text>
+</svg>
+

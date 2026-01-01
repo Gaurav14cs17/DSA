@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 680">
+  <rect width="950" height="680" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Aho-Corasick Algorithm</text>
+  <text x="475" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Multi-Pattern String Matching</text>
+  
+  <!-- Components -->
+  <text x="40" y="100" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Components</text>
+  
+  <g transform="translate(40, 120)">
+    <rect x="0" y="0" width="180" height="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+    <text x="90" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff">1. Trie</text>
+    <text x="90" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">Store all patterns</text>
+    
+    <rect x="200" y="0" width="180" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5" rx="5"/>
+    <text x="290" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80">2. Failure Links</text>
+    <text x="290" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">Like KMP for trie</text>
+    
+    <rect x="400" y="0" width="180" height="50" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5" rx="5"/>
+    <text x="490" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#f97316">3. Output Links</text>
+    <text x="490" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">Track all matches</text>
+  </g>
+  
+  <!-- Example Trie -->
+  <text x="40" y="210" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Example: Patterns {"he", "she", "his", "hers"}</text>
+  
+  <!-- Trie Visualization -->
+  <g transform="translate(150, 250)">
+    <!-- Root -->
+    <circle cx="150" cy="0" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="150" y="5" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff">R</text>
+    
+    <!-- Level 1: h, s -->
+    <line x1="135" y1="18" x2="80" y2="55" stroke="#3b82f6" stroke-width="2"/>
+    <text x="95" y="40" font-family="Courier New, monospace" font-size="10" fill="#888888">h</text>
+    <circle cx="80" cy="70" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="80" y="75" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">h</text>
+    
+    <line x1="165" y1="18" x2="220" y2="55" stroke="#3b82f6" stroke-width="2"/>
+    <text x="200" y="40" font-family="Courier New, monospace" font-size="10" fill="#888888">s</text>
+    <circle cx="220" cy="70" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="220" y="75" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">s</text>
+    
+    <!-- Level 2 from h: e, i -->
+    <line x1="65" y1="88" x2="30" y2="125" stroke="#f97316" stroke-width="2"/>
+    <text x="35" y="110" font-family="Courier New, monospace" font-size="10" fill="#888888">e</text>
+    <circle cx="30" cy="140" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="30" y="145" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">e</text>
+    <text x="30" y="165" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#4ade80">he✓</text>
+    
+    <line x1="95" y1="88" x2="130" y2="125" stroke="#f97316" stroke-width="2"/>
+    <text x="120" y="110" font-family="Courier New, monospace" font-size="10" fill="#888888">i</text>
+    <circle cx="130" cy="140" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="130" y="145" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">i</text>
+    
+    <!-- Level 2 from s: h -->
+    <line x1="220" y1="88" x2="220" y2="122" stroke="#f97316" stroke-width="2"/>
+    <text x="230" y="105" font-family="Courier New, monospace" font-size="10" fill="#888888">h</text>
+    <circle cx="220" cy="140" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="220" y="145" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">h</text>
+    
+    <!-- Level 3 from e (h->e): r -->
+    <line x1="30" y1="158" x2="30" y2="192" stroke="#4ade80" stroke-width="2"/>
+    <text x="40" y="180" font-family="Courier New, monospace" font-size="10" fill="#888888">r</text>
+    <circle cx="30" cy="210" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="30" y="215" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">r</text>
+    
+    <!-- Level 3 from i (h->i): s -->
+    <line x1="130" y1="158" x2="130" y2="192" stroke="#f97316" stroke-width="2"/>
+    <text x="140" y="180" font-family="Courier New, monospace" font-size="10" fill="#888888">s</text>
+    <circle cx="130" cy="210" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="130" y="215" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">s</text>
+    <text x="130" y="235" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#4ade80">his✓</text>
+    
+    <!-- Level 3 from h (s->h): e -->
+    <line x1="220" y1="158" x2="220" y2="192" stroke="#f97316" stroke-width="2"/>
+    <text x="230" y="180" font-family="Courier New, monospace" font-size="10" fill="#888888">e</text>
+    <circle cx="220" cy="210" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="220" y="215" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">e</text>
+    <text x="220" y="235" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#4ade80">she✓</text>
+    
+    <!-- Level 4: s (h->e->r->s) -->
+    <line x1="30" y1="228" x2="30" y2="262" stroke="#f97316" stroke-width="2"/>
+    <text x="40" y="250" font-family="Courier New, monospace" font-size="10" fill="#888888">s</text>
+    <circle cx="30" cy="280" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="30" y="285" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">s</text>
+    <text x="30" y="305" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#4ade80">hers✓</text>
+    
+    <!-- Failure links (dashed) -->
+    <path d="M 220 125 Q 260 100 150 18" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <text x="240" y="90" font-family="Courier New, monospace" font-size="9" fill="#ef4444">fail</text>
+    
+    <path d="M 235 195 Q 280 170 45 140" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <text x="270" y="160" font-family="Courier New, monospace" font-size="9" fill="#ef4444">fail→he</text>
+  </g>
+  
+  <!-- Algorithm Steps -->
+  <text x="500" y="210" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Build Process</text>
+  
+  <rect x="500" y="225" width="410" height="160" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+  <text x="520" y="250" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff">1. Build Trie</text>
+  <text x="540" y="270" font-family="Courier New, monospace" font-size="10" fill="#888888">Insert all patterns, mark outputs</text>
+  
+  <text x="520" y="295" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff">2. Compute Failure Links (BFS)</text>
+  <text x="540" y="315" font-family="Courier New, monospace" font-size="10" fill="#888888">fail[node] = longest proper suffix in trie</text>
+  
+  <text x="520" y="340" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff">3. Compute Output Links</text>
+  <text x="540" y="360" font-family="Courier New, monospace" font-size="10" fill="#888888">Merge outputs along failure chain</text>
+  <text x="540" y="378" font-family="Courier New, monospace" font-size="10" fill="#4ade80">out[v] = out[v] ∪ out[fail[v]]</text>
+  
+  <!-- Matching Process -->
+  <text x="500" y="410" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Matching: Text = "ushers"</text>
+  
+  <g transform="translate(500, 430)">
+    <rect x="0" y="0" width="24" height="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="12" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">u</text>
+    <rect x="26" y="0" width="24" height="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="38" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">s</text>
+    <rect x="52" y="0" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="64" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">h</text>
+    <rect x="78" y="0" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="90" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">e</text>
+    <rect x="104" y="0" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="116" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">r</text>
+    <rect x="130" y="0" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="142" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">s</text>
+  </g>
+  
+  <g transform="translate(500, 465)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Matches found:</text>
+    <text x="0" y="20" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• "she" at position 1</text>
+    <text x="0" y="38" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• "he" at position 2</text>
+    <text x="0" y="56" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• "hers" at position 2</text>
+  </g>
+  
+  <!-- Complexity -->
+  <rect x="40" y="550" width="420" height="80" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5" rx="5"/>
+  <text x="60" y="575" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Complexity</text>
+  <text x="60" y="598" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Construction: O(Σ|patterns|)</text>
+  <text x="60" y="616" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Matching: O(n + k) where k = total matches</text>
+  
+  <!-- Applications -->
+  <rect x="490" y="550" width="420" height="80" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5" rx="5"/>
+  <text x="510" y="575" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa">Applications</text>
+  <text x="510" y="598" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Virus/malware scanning</text>
+  <text x="510" y="616" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Dictionary matching • DNA analysis • Log parsing</text>
+  
+  <!-- Key insight -->
+  <text x="475" y="660" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Key: Combines Trie structure with KMP-style failure links for efficient multi-pattern matching</text>
+</svg>
+

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Substring Problems</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Binary Search + Hashing Pattern</text>
+  
+  <!-- Key Pattern -->
+  <rect x="40" y="85" width="820" height="70" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5" rx="5"/>
+  <text x="60" y="110" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa">Pattern: Binary Search on Length + Hash Check</text>
+  <text x="60" y="135" font-family="Courier New, monospace" font-size="11" fill="#ffffff">If property P(length) is monotonic → Binary search on answer + O(n) hash verification per length</text>
+  
+  <!-- Problem Examples -->
+  <text x="40" y="185" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Classic Problems</text>
+  
+  <g transform="translate(40, 205)">
+    <!-- Problem 1 -->
+    <rect x="0" y="0" width="260" height="90" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+    <text x="130" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#3b82f6">Longest Duplicate Substring</text>
+    <text x="130" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#ffffff">LeetCode 1044</text>
+    <text x="130" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">Binary search: max len with dup</text>
+    <text x="130" y="80" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#4ade80">O(n log n)</text>
+    
+    <!-- Problem 2 -->
+    <rect x="280" y="0" width="260" height="90" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+    <text x="410" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#3b82f6">Repeated DNA Sequences</text>
+    <text x="410" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#ffffff">LeetCode 187</text>
+    <text x="410" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">Fixed len=10, count duplicates</text>
+    <text x="410" y="80" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#4ade80">O(n)</text>
+    
+    <!-- Problem 3 -->
+    <rect x="560" y="0" width="260" height="90" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+    <text x="690" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#3b82f6">Longest Common Substring</text>
+    <text x="690" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#ffffff">Two Strings</text>
+    <text x="690" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">Hash s1, search in s2</text>
+    <text x="690" y="80" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#4ade80">O((n+m) log min(n,m))</text>
+  </g>
+  
+  <!-- Visual: Binary Search + Hash -->
+  <text x="40" y="330" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Binary Search + Hash Template</text>
+  
+  <g transform="translate(40, 350)">
+    <!-- Search visualization -->
+    <rect x="0" y="0" width="400" height="130" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+    <text x="200" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#3b82f6">Binary Search on Length</text>
+    
+    <!-- Length scale -->
+    <line x1="30" y1="50" x2="370" y2="50" stroke="#888888" stroke-width="1"/>
+    <text x="30" y="70" font-family="Courier New, monospace" font-size="9" fill="#888888">0</text>
+    <text x="200" y="70" font-family="Courier New, monospace" font-size="9" fill="#f97316">mid</text>
+    <text x="370" y="70" font-family="Courier New, monospace" font-size="9" fill="#888888">n</text>
+    
+    <!-- Check result -->
+    <circle cx="200" cy="50" r="5" fill="#f97316"/>
+    
+    <text x="200" y="95" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#ffffff">check(mid): O(n) hash all substrings</text>
+    <text x="200" y="115" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">If found → search right, else left</text>
+    
+    <!-- Hash Check visualization -->
+    <rect x="430" y="0" width="400" height="130" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5" rx="5"/>
+    <text x="630" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#4ade80">Hash Check for Length L</text>
+    
+    <text x="450" y="50" font-family="Courier New, monospace" font-size="9" fill="#ffffff">1. Roll hash through string: O(n)</text>
+    <text x="450" y="70" font-family="Courier New, monospace" font-size="9" fill="#ffffff">2. Store hashes in set: O(1) lookup</text>
+    <text x="450" y="90" font-family="Courier New, monospace" font-size="9" fill="#ffffff">3. Return True if duplicate found</text>
+    <text x="450" y="115" font-family="Courier New, monospace" font-size="9" fill="#4ade80">Total: O(n log n) for binary search</text>
+  </g>
+  
+  <!-- Complexity -->
+  <text x="40" y="505" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Pattern: O(log n) binary search iterations × O(n) hash check = O(n log n) total</text>
+</svg>
+

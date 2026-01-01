@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Collision Handling</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Double Hashing | Collision Probability Analysis</text>
+  
+  <!-- Single vs Double Hash -->
+  <text x="40" y="95" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Single Hash vs Double Hash</text>
+  
+  <g transform="translate(40, 115)">
+    <!-- Single Hash -->
+    <rect x="0" y="0" width="380" height="110" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5" rx="5"/>
+    <text x="190" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">Single Hash</text>
+    <text x="20" y="50" font-family="Courier New, monospace" font-size="10" fill="#ffffff">h(s) = Σ s[i] · p^(n-i) mod M</text>
+    <text x="20" y="70" font-family="Courier New, monospace" font-size="10" fill="#888888">p = 31, M = 10⁹+7</text>
+    <text x="20" y="95" font-family="Courier New, monospace" font-size="10" fill="#f97316">P(collision) ≈ 10⁻⁹</text>
+    
+    <!-- Double Hash -->
+    <rect x="420" y="0" width="380" height="110" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5" rx="5"/>
+    <text x="610" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Double Hash</text>
+    <text x="440" y="50" font-family="Courier New, monospace" font-size="10" fill="#ffffff">h₁ = hash(p=31, M=10⁹+7)</text>
+    <text x="440" y="70" font-family="Courier New, monospace" font-size="10" fill="#ffffff">h₂ = hash(p=53, M=10⁹+9)</text>
+    <text x="440" y="95" font-family="Courier New, monospace" font-size="10" fill="#4ade80">P(both collide) ≈ 10⁻¹⁸</text>
+  </g>
+  
+  <!-- Visual Comparison -->
+  <text x="40" y="260" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Collision Probability by Dataset Size</text>
+  
+  <g transform="translate(40, 280)">
+    <!-- Table -->
+    <rect x="0" y="0" width="700" height="130" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+    
+    <!-- Headers -->
+    <text x="90" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#3b82f6">Strings (n)</text>
+    <text x="280" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#f97316">Single Hash P</text>
+    <text x="500" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80">Double Hash P</text>
+    
+    <line x1="10" y1="35" x2="690" y2="35" stroke="#3b82f6" stroke-width="0.5"/>
+    
+    <!-- Row 1 -->
+    <text x="90" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">10³</text>
+    <text x="280" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">5 × 10⁻⁷</text>
+    <text x="500" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">5 × 10⁻²⁵</text>
+    
+    <!-- Row 2 -->
+    <text x="90" y="75" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">10⁴</text>
+    <text x="280" y="75" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">5 × 10⁻⁵</text>
+    <text x="500" y="75" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">5 × 10⁻²³</text>
+    
+    <!-- Row 3 -->
+    <text x="90" y="95" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">10⁵</text>
+    <text x="280" y="95" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#f97316">5 × 10⁻³ (0.5%)</text>
+    <text x="500" y="95" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">5 × 10⁻²¹</text>
+    
+    <!-- Row 4 -->
+    <text x="90" y="115" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">10⁶</text>
+    <text x="280" y="115" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">0.5% ⚠️</text>
+    <text x="500" y="115" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">5 × 10⁻¹⁹ ✓</text>
+  </g>
+  
+  <!-- When to use -->
+  <text x="40" y="440" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">When to Use Double Hashing</text>
+  
+  <g transform="translate(40, 460)">
+    <rect x="0" y="0" width="260" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="1" rx="3"/>
+    <text x="130" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">✓ Critical applications</text>
+    
+    <rect x="280" y="0" width="260" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="1" rx="3"/>
+    <text x="410" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">✓ Large datasets (n > 10⁶)</text>
+    
+    <rect x="560" y="0" width="260" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="1" rx="3"/>
+    <text x="690" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">✓ Adversarial input possible</text>
+  </g>
+  
+  <!-- Complexity -->
+  <text x="40" y="515" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Double Hash: 2× computation, ~0% collision rate | Always verify strings after hash match!</text>
+</svg>
+

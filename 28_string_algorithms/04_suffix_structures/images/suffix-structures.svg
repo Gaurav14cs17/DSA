@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 680">
+  <rect width="950" height="680" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Suffix Arrays &amp; LCP Arrays</text>
+  <text x="475" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Efficient Suffix Indexing</text>
+  
+  <!-- Suffix Array Definition -->
+  <text x="40" y="100" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Suffix Array for "banana$"</text>
+  
+  <g transform="translate(40, 125)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">All suffixes sorted:</text>
+  </g>
+  
+  <!-- Sorted Suffixes Table -->
+  <g transform="translate(40, 150)">
+    <rect x="0" y="0" width="40" height="22" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+    <text x="20" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">SA</text>
+    <rect x="45" y="0" width="150" height="22" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+    <text x="120" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">Suffix</text>
+    
+    <!-- Row 0 -->
+    <rect x="0" y="24" width="40" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="20" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">6</text>
+    <rect x="45" y="24" width="150" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="55" y="38" font-family="Courier New, monospace" font-size="10" fill="#ffffff">$</text>
+    
+    <!-- Row 1 -->
+    <rect x="0" y="46" width="40" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="20" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">5</text>
+    <rect x="45" y="46" width="150" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="55" y="60" font-family="Courier New, monospace" font-size="10" fill="#4ade80">a$</text>
+    
+    <!-- Row 2 -->
+    <rect x="0" y="68" width="40" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="20" y="82" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">3</text>
+    <rect x="45" y="68" width="150" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="55" y="82" font-family="Courier New, monospace" font-size="10" fill="#4ade80">ana$</text>
+    
+    <!-- Row 3 -->
+    <rect x="0" y="90" width="40" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="20" y="104" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">1</text>
+    <rect x="45" y="90" width="150" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="55" y="104" font-family="Courier New, monospace" font-size="10" fill="#4ade80">anana$</text>
+    
+    <!-- Row 4 -->
+    <rect x="0" y="112" width="40" height="20" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+    <text x="20" y="126" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#f97316">0</text>
+    <rect x="45" y="112" width="150" height="20" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+    <text x="55" y="126" font-family="Courier New, monospace" font-size="10" fill="#f97316">banana$</text>
+    
+    <!-- Row 5 -->
+    <rect x="0" y="134" width="40" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="20" y="148" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">4</text>
+    <rect x="45" y="134" width="150" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="55" y="148" font-family="Courier New, monospace" font-size="10" fill="#ffffff">na$</text>
+    
+    <!-- Row 6 -->
+    <rect x="0" y="156" width="40" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="20" y="170" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">2</text>
+    <rect x="45" y="156" width="150" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="55" y="170" font-family="Courier New, monospace" font-size="10" fill="#ffffff">nana$</text>
+  </g>
+  
+  <!-- SA Array Visualization -->
+  <g transform="translate(250, 150)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">SA = [6, 5, 3, 1, 0, 4, 2]</text>
+    
+    <rect x="0" y="15" width="30" height="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="15" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">6</text>
+    <rect x="32" y="15" width="30" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="47" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">5</text>
+    <rect x="64" y="15" width="30" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="79" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">3</text>
+    <rect x="96" y="15" width="30" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="111" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">1</text>
+    <rect x="128" y="15" width="30" height="22" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="143" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">0</text>
+    <rect x="160" y="15" width="30" height="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="175" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">4</text>
+    <rect x="192" y="15" width="30" height="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="207" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">2</text>
+  </g>
+  
+  <!-- LCP Array -->
+  <text x="500" y="100" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">LCP Array (Kasai's Algorithm)</text>
+  
+  <rect x="500" y="115" width="420" height="80" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5" rx="5"/>
+  <text x="520" y="140" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">LCP[i] = longest common prefix between</text>
+  <text x="520" y="160" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">         SA[i] and SA[i-1] suffixes</text>
+  <text x="520" y="185" font-family="Courier New, monospace" font-size="11" fill="#888888">LCP = [0, 0, 1, 3, 0, 0, 2]</text>
+  
+  <!-- LCP Example -->
+  <g transform="translate(500, 210)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="10" fill="#4ade80">LCP[3]=3: "ana$" vs "anana$" → "ana" (3 chars)</text>
+    <text x="0" y="18" font-family="Courier New, monospace" font-size="10" fill="#4ade80">LCP[6]=2: "na$" vs "nana$" → "na" (2 chars)</text>
+  </g>
+  
+  <!-- Applications Section -->
+  <text x="40" y="380" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Key Applications</text>
+  
+  <g transform="translate(40, 405)">
+    <rect x="0" y="0" width="280" height="90" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+    <text x="20" y="25" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff">Longest Repeated Substring</text>
+    <text x="20" y="45" font-family="Courier New, monospace" font-size="10" fill="#888888">Answer = max(LCP)</text>
+    <text x="20" y="65" font-family="Courier New, monospace" font-size="10" fill="#4ade80">For "banana": max(LCP)=3 → "ana"</text>
+    <text x="20" y="82" font-family="Courier New, monospace" font-size="10" fill="#888888">Time: O(n)</text>
+    
+    <rect x="300" y="0" width="280" height="90" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+    <text x="320" y="25" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff">Distinct Substrings Count</text>
+    <text x="320" y="45" font-family="Courier New, monospace" font-size="10" fill="#888888">Total = n(n+1)/2 - Σ LCP[i]</text>
+    <text x="320" y="65" font-family="Courier New, monospace" font-size="10" fill="#4ade80">Distinct = all substrings - repeats</text>
+    <text x="320" y="82" font-family="Courier New, monospace" font-size="10" fill="#888888">Time: O(n)</text>
+    
+    <rect x="600" y="0" width="280" height="90" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+    <text x="620" y="25" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff">Pattern Matching</text>
+    <text x="620" y="45" font-family="Courier New, monospace" font-size="10" fill="#888888">Binary search on SA</text>
+    <text x="620" y="65" font-family="Courier New, monospace" font-size="10" fill="#4ade80">Find pattern range in O(m log n)</text>
+    <text x="620" y="82" font-family="Courier New, monospace" font-size="10" fill="#888888">Can answer many queries</text>
+  </g>
+  
+  <!-- Construction Algorithm -->
+  <text x="40" y="530" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Construction Complexity</text>
+  
+  <g transform="translate(40, 555)">
+    <rect x="0" y="0" width="420" height="70" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5" rx="5"/>
+    <text x="20" y="25" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80">Suffix Array Construction</text>
+    <text x="20" y="45" font-family="Courier New, monospace" font-size="11" fill="#ffffff">O(n log² n) - Doubling algorithm</text>
+    <text x="20" y="62" font-family="Courier New, monospace" font-size="11" fill="#ffffff">O(n) - SA-IS algorithm (optimal)</text>
+    
+    <rect x="450" y="0" width="420" height="70" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5" rx="5"/>
+    <text x="470" y="25" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80">LCP Array Construction (Kasai's)</text>
+    <text x="470" y="45" font-family="Courier New, monospace" font-size="11" fill="#ffffff">O(n) - Linear time</text>
+    <text x="470" y="62" font-family="Courier New, monospace" font-size="11" fill="#888888">Uses inverse suffix array</text>
+  </g>
+  
+  <!-- Comparison with Suffix Tree -->
+  <text x="40" y="660" font-family="Courier New, monospace" font-size="11" fill="#888888">Suffix Array: O(n) space (4n bytes) | Suffix Tree: O(n) space (20n bytes) but O(m) queries</text>
+</svg>
+

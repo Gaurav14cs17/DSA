@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <rect width="900" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Basic Rolling Hash</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">O(1) Window Updates | Polynomial Hash Function</text>
+  
+  <!-- Hash Formula -->
+  <rect x="40" y="85" width="400" height="90" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5" rx="5"/>
+  <text x="60" y="110" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa">Polynomial Hash Formula</text>
+  <text x="60" y="135" font-family="Courier New, monospace" font-size="14" fill="#ffffff">h(s) = Σ s[i] · p^(n-1-i) mod M</text>
+  <text x="60" y="160" font-family="Courier New, monospace" font-size="11" fill="#888888">p = 31 (base), M = 10⁹+7 (modulus)</text>
+  
+  <!-- Rolling Property -->
+  <rect x="460" y="85" width="400" height="90" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5" rx="5"/>
+  <text x="480" y="110" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Rolling Property (O(1) update)</text>
+  <text x="480" y="135" font-family="Courier New, monospace" font-size="13" fill="#ffffff">h_new = (h_old - s[i]·p^(m-1))·p + s[i+m]</text>
+  <text x="480" y="160" font-family="Courier New, monospace" font-size="11" fill="#888888">Remove old char, shift, add new char</text>
+  
+  <!-- Visual Example -->
+  <text x="40" y="210" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Rolling Hash Example: Window Size = 3</text>
+  
+  <g transform="translate(40, 230)">
+    <!-- Text array -->
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Text:</text>
+    
+    <rect x="60" y="-18" width="30" height="25" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="4"/>
+    <text x="75" y="0" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ef4444">A</text>
+    
+    <rect x="92" y="-18" width="30" height="25" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="107" y="0" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">B</text>
+    
+    <rect x="124" y="-18" width="30" height="25" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="139" y="0" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">C</text>
+    
+    <rect x="156" y="-18" width="30" height="25" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="171" y="0" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">D</text>
+    
+    <rect x="188" y="-18" width="30" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="203" y="0" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#4ade80">E</text>
+    
+    <rect x="220" y="-18" width="30" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="235" y="0" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">F</text>
+    
+    <rect x="252" y="-18" width="30" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="267" y="0" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">G</text>
+    
+    <rect x="284" y="-18" width="30" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="299" y="0" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">H</text>
+    
+    <!-- Window indicator -->
+    <path d="M92 15 L186 15" stroke="#f97316" stroke-width="2"/>
+    <text x="139" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#f97316">Current Window: BCD</text>
+    
+    <!-- Legend -->
+    <rect x="380" y="-18" width="15" height="15" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3"/>
+    <text x="400" y="-6" font-family="Courier New, monospace" font-size="10" fill="#888888">Remove</text>
+    
+    <rect x="380" y="2" width="15" height="15" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="400" y="14" font-family="Courier New, monospace" font-size="10" fill="#888888">Add</text>
+  </g>
+  
+  <!-- Step by step -->
+  <text x="40" y="310" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Rolling Steps</text>
+  
+  <g transform="translate(40, 330)">
+    <rect x="0" y="0" width="260" height="55" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="3"/>
+    <text x="130" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#3b82f6">Step 1: Remove 'A'</text>
+    <text x="130" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">h = h - ord('A') × p²</text>
+    <text x="130" y="48" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">Remove highest power term</text>
+    
+    <rect x="280" y="0" width="260" height="55" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="3"/>
+    <text x="410" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#3b82f6">Step 2: Shift</text>
+    <text x="410" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">h = h × p</text>
+    <text x="410" y="48" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">Multiply by base</text>
+    
+    <rect x="560" y="0" width="260" height="55" fill="#0f2f1f" stroke="#4ade80" stroke-width="1" rx="3"/>
+    <text x="690" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#4ade80">Step 3: Add 'E'</text>
+    <text x="690" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">h = h + ord('E')</text>
+    <text x="690" y="48" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">Add new character</text>
+  </g>
+  
+  <!-- Parameters -->
+  <text x="40" y="420" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Recommended Parameters</text>
+  
+  <g transform="translate(40, 440)">
+    <rect x="0" y="0" width="200" height="60" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="3"/>
+    <text x="100" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">Lowercase (26)</text>
+    <text x="100" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">p = 31, M = 10⁹+7</text>
+    
+    <rect x="220" y="0" width="200" height="60" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="3"/>
+    <text x="320" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">Mixed Case (52)</text>
+    <text x="320" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">p = 53, M = 10⁹+7</text>
+    
+    <rect x="440" y="0" width="200" height="60" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="3"/>
+    <text x="540" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">Full ASCII (128)</text>
+    <text x="540" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">p = 257, M = 10⁹+7</text>
+  </g>
+  
+  <!-- Complexity -->
+  <text x="40" y="530" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Time: O(n) initial, O(1) roll | Space: O(1)</text>
+</svg>
+

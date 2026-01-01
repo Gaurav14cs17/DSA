@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580">
+  <rect width="900" height="580" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">String Hashing</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">O(1) Substring Comparison with Preprocessing</text>
+  
+  <!-- Hash Formula -->
+  <rect x="40" y="80" width="400" height="80" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5" rx="5"/>
+  <text x="60" y="105" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa">Polynomial Hash</text>
+  <text x="60" y="130" font-family="Courier New, monospace" font-size="11" fill="#ffffff">h(s) = Σ s[i] · p^(n-1-i) mod M</text>
+  <text x="60" y="152" font-family="Courier New, monospace" font-size="10" fill="#888888">p=31 (base), M=10⁹+7 (modulus)</text>
+  
+  <!-- Prefix Hash Technique -->
+  <text x="40" y="190" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Prefix Hash Array</text>
+  
+  <g transform="translate(40, 215)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">String: "abcde"</text>
+    
+    <text x="0" y="30" font-family="Courier New, monospace" font-size="10" fill="#888888">prefix[i] = hash of s[0..i-1]</text>
+    
+    <rect x="0" y="45" width="40" height="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="20" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">0</text>
+    <rect x="42" y="45" width="50" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="67" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">h(a)</text>
+    <rect x="94" y="45" width="50" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="119" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">h(ab)</text>
+    <rect x="146" y="45" width="50" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="171" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">h(abc)</text>
+    <rect x="198" y="45" width="55" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="225" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">h(abcd)</text>
+    <rect x="255" y="45" width="60" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="285" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">h(abcde)</text>
+  </g>
+  
+  <!-- Substring Hash Formula -->
+  <text x="480" y="190" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">O(1) Substring Hash</text>
+  
+  <rect x="480" y="210" width="380" height="90" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+  <text x="500" y="238" font-family="Courier New, monospace" font-size="11" fill="#ffffff">h(s[l..r]) = (prefix[r+1] - prefix[l] · p^(r-l+1)) mod M</text>
+  <text x="500" y="265" font-family="Courier New, monospace" font-size="10" fill="#888888">Precompute prefix[] and power[] arrays</text>
+  <text x="500" y="288" font-family="Courier New, monospace" font-size="10" fill="#4ade80">Compare any two substrings in O(1)!</text>
+  
+  <!-- Double Hashing -->
+  <text x="40" y="330" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Double Hashing (Collision Prevention)</text>
+  
+  <g transform="translate(40, 350)">
+    <rect x="0" y="0" width="200" height="70" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5" rx="5"/>
+    <text x="100" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#f97316">Hash 1</text>
+    <text x="100" y="42" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">p=31, M=10⁹+7</text>
+    <text x="100" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">P(collision) ≈ 10⁻⁹</text>
+    
+    <rect x="220" y="0" width="200" height="70" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5" rx="5"/>
+    <text x="320" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80">Hash 2</text>
+    <text x="320" y="42" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">p=53, M=10⁹+9</text>
+    <text x="320" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">P(collision) ≈ 10⁻⁹</text>
+    
+    <text x="450" y="35" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">Combined:</text>
+    <text x="450" y="55" font-family="Courier New, monospace" font-size="10" fill="#ffffff">P(both collide) ≈ 10⁻¹⁸</text>
+  </g>
+  
+  <!-- Applications -->
+  <text x="40" y="460" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Key Applications</text>
+  
+  <g transform="translate(40, 480)">
+    <rect x="0" y="0" width="200" height="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="3"/>
+    <text x="100" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Substring Equality</text>
+    <text x="100" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#4ade80">O(1) per check</text>
+    
+    <rect x="220" y="0" width="200" height="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="3"/>
+    <text x="320" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Longest Duplicate</text>
+    <text x="320" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#4ade80">Binary search + hash</text>
+    
+    <rect x="440" y="0" width="200" height="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="3"/>
+    <text x="540" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Distinct Substrings</text>
+    <text x="540" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#4ade80">Hash all substrings</text>
+    
+    <rect x="660" y="0" width="200" height="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="3"/>
+    <text x="760" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">String Rotation</text>
+    <text x="760" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#4ade80">Check in doubled string</text>
+  </g>
+  
+  <!-- Complexity -->
+  <text x="40" y="565" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Time: O(n) preprocessing, O(1) query | Space: O(n)</text>
+</svg>
+

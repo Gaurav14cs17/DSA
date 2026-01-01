@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 550">
+  <rect width="850" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="425" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">String Period Detection</text>
+  <text x="425" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Finding repeating patterns using KMP</text>
+  
+  <!-- Definition -->
+  <rect x="40" y="80" width="380" height="60" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5" rx="5"/>
+  <text x="60" y="105" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa">Period Definition</text>
+  <text x="60" y="125" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Period p: s[i] = s[i+p] for all 0 ≤ i &lt; n-p</text>
+  
+  <!-- Example 1: Repeating pattern -->
+  <text x="40" y="170" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Example: "abcabcabc" (Period = 3)</text>
+  
+  <g transform="translate(40, 195)">
+    <rect x="0" y="0" width="30" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="15" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#4ade80">a</text>
+    <rect x="32" y="0" width="30" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="47" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#4ade80">b</text>
+    <rect x="64" y="0" width="30" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="79" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#4ade80">c</text>
+    
+    <rect x="98" y="0" width="30" height="25" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="113" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#f97316">a</text>
+    <rect x="130" y="0" width="30" height="25" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="145" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#f97316">b</text>
+    <rect x="162" y="0" width="30" height="25" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="177" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#f97316">c</text>
+    
+    <rect x="196" y="0" width="30" height="25" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="211" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">a</text>
+    <rect x="228" y="0" width="30" height="25" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="243" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">b</text>
+    <rect x="260" y="0" width="30" height="25" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="275" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">c</text>
+    
+    <text x="320" y="17" font-family="Courier New, monospace" font-size="11" fill="#888888">= "abc" × 3</text>
+  </g>
+  
+  <!-- Period formula using KMP -->
+  <g transform="translate(40, 250)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">π[8] = 6 (border "abcabc")</text>
+    <text x="0" y="18" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Period = n - π[n-1] = 9 - 6 = 3</text>
+    <text x="0" y="36" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Check: n % period = 9 % 3 = 0 ✓</text>
+  </g>
+  
+  <!-- KMP Period Detection Formula -->
+  <rect x="480" y="80" width="340" height="130" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+  <text x="500" y="105" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff">Period Detection Formula</text>
+  <text x="500" y="130" font-family="Courier New, monospace" font-size="11" fill="#888888">If π[n-1] &gt; 0 and n % (n - π[n-1]) == 0:</text>
+  <text x="520" y="150" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Smallest period = n - π[n-1]</text>
+  <text x="520" y="170" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Number of repetitions = n / period</text>
+  <text x="500" y="195" font-family="Courier New, monospace" font-size="11" fill="#f97316">Time: O(n) | Space: O(n)</text>
+  
+  <!-- Rotation detection -->
+  <text x="40" y="330" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Rotation Detection</text>
+  
+  <g transform="translate(40, 350)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Is "cdeab" rotation of "abcde"?</text>
+    
+    <!-- Original string -->
+    <text x="0" y="25" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">s1:</text>
+    <rect x="30" y="13" width="24" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+    <text x="42" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">a</text>
+    <rect x="56" y="13" width="24" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+    <text x="68" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">b</text>
+    <rect x="82" y="13" width="24" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+    <text x="94" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">c</text>
+    <rect x="108" y="13" width="24" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+    <text x="120" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">d</text>
+    <rect x="134" y="13" width="24" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+    <text x="146" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">e</text>
+    
+    <!-- Doubled string -->
+    <text x="0" y="55" font-family="Courier New, monospace" font-size="10" fill="#4ade80">s1+s1:</text>
+    <rect x="50" y="43" width="24" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="62" y="57" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">a</text>
+    <rect x="76" y="43" width="24" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="88" y="57" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">b</text>
+    <rect x="102" y="43" width="24" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="114" y="57" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">c</text>
+    <rect x="128" y="43" width="24" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="140" y="57" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">d</text>
+    <rect x="154" y="43" width="24" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="166" y="57" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">e</text>
+    <rect x="180" y="43" width="24" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="192" y="57" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">a</text>
+    <rect x="206" y="43" width="24" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="218" y="57" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">b</text>
+    <rect x="232" y="43" width="24" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="244" y="57" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">c</text>
+    <rect x="258" y="43" width="24" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="270" y="57" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">d</text>
+    <rect x="284" y="43" width="24" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="296" y="57" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">e</text>
+    
+    <text x="330" y="57" font-family="Courier New, monospace" font-size="11" fill="#4ade80">← "cdeab" found!</text>
+  </g>
+  
+  <!-- Key insight box -->
+  <rect x="480" y="330" width="340" height="80" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5" rx="5"/>
+  <text x="500" y="355" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Rotation Insight</text>
+  <text x="500" y="378" font-family="Courier New, monospace" font-size="11" fill="#ffffff">s2 is rotation of s1</text>
+  <text x="500" y="396" font-family="Courier New, monospace" font-size="11" fill="#ffffff">⟺ s2 is substring of s1+s1</text>
+  
+  <!-- Multiple periods example -->
+  <text x="40" y="470" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Finding All Periods: "aaaaaa"</text>
+  
+  <g transform="translate(40, 490)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">n=6, π=[0,1,2,3,4,5]</text>
+    <text x="0" y="18" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Periods: 1, 2, 3, 6 (all divisors of n where n%(n-π[k])=0)</text>
+  </g>
+  
+  <!-- Complexity -->
+  <rect x="480" y="450" width="340" height="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+  <text x="500" y="475" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff">Complexity</text>
+  <text x="500" y="498" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Time: O(n) | Space: O(n)</text>
+  <text x="500" y="515" font-family="Courier New, monospace" font-size="10" fill="#888888">Finds smallest period in linear time</text>
+</svg>
+

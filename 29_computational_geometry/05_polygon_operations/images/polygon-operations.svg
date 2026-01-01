@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 750">
+  <rect width="950" height="750" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" fill="#ffffff" font-weight="bold" text-anchor="middle">Polygon Operations</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Area, Perimeter, Centroid &amp; Triangulation</text>
+  
+  <!-- Section 1: Shoelace Formula -->
+  <text x="50" y="110" font-family="Courier New, monospace" font-size="14" fill="#e94560" font-weight="bold">SHOELACE FORMULA (Area)</text>
+  
+  <g transform="translate(30, 130)">
+    <rect x="0" y="0" width="400" height="280" fill="#0f2f1f" fill-opacity="0.3" stroke="#4ade80" stroke-width="2" rx="5"/>
+    
+    <!-- Coordinate grid (light) -->
+    <line x1="50" y1="240" x2="350" y2="240" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="50" y1="240" x2="50" y2="20" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3,3"/>
+    
+    <!-- Grid lines -->
+    <line x1="50" y1="190" x2="350" y2="190" stroke="#1e3a5f" stroke-width="1"/>
+    <line x1="50" y1="140" x2="350" y2="140" stroke="#1e3a5f" stroke-width="1"/>
+    <line x1="50" y1="90" x2="350" y2="90" stroke="#1e3a5f" stroke-width="1"/>
+    <line x1="100" y1="240" x2="100" y2="40" stroke="#1e3a5f" stroke-width="1"/>
+    <line x1="150" y1="240" x2="150" y2="40" stroke="#1e3a5f" stroke-width="1"/>
+    <line x1="200" y1="240" x2="200" y2="40" stroke="#1e3a5f" stroke-width="1"/>
+    <line x1="250" y1="240" x2="250" y2="40" stroke="#1e3a5f" stroke-width="1"/>
+    <line x1="300" y1="240" x2="300" y2="40" stroke="#1e3a5f" stroke-width="1"/>
+    
+    <!-- Polygon -->
+    <polygon points="100,190 150,90 250,70 300,140 250,200" 
+             fill="#0f2f1f" fill-opacity="0.6" stroke="#4ade80" stroke-width="3"/>
+    
+    <!-- Vertices with labels -->
+    <circle cx="100" cy="190" r="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="80" y="205" font-family="Courier New, monospace" font-size="11" fill="#4ade80">(1,1)</text>
+    
+    <circle cx="150" cy="90" r="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="130" y="80" font-family="Courier New, monospace" font-size="11" fill="#4ade80">(2,3)</text>
+    
+    <circle cx="250" cy="70" r="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="255" y="65" font-family="Courier New, monospace" font-size="11" fill="#4ade80">(4,4)</text>
+    
+    <circle cx="300" cy="140" r="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="305" y="135" font-family="Courier New, monospace" font-size="11" fill="#4ade80">(5,2)</text>
+    
+    <circle cx="250" cy="200" r="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="255" y="218" font-family="Courier New, monospace" font-size="11" fill="#4ade80">(4,0.5)</text>
+    
+    <!-- CCW direction arrow -->
+    <path d="M 175 130 A 40 40 0 1 1 220 120" stroke="#f97316" stroke-width="2" fill="none"/>
+    <polygon points="220,115 215,125 225,125" fill="#f97316"/>
+    <text x="180" y="145" font-family="Courier New, monospace" font-size="10" fill="#f97316">CCW</text>
+    
+    <!-- Formula -->
+    <text x="20" y="300" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Area = ½|Σ(xᵢyᵢ₊₁ - xᵢ₊₁yᵢ)|</text>
+  </g>
+  
+  <!-- Shoelace Calculation -->
+  <g transform="translate(450, 130)">
+    <rect x="0" y="0" width="470" height="280" fill="#1e3a5f" fill-opacity="0.3" stroke="#3b82f6" stroke-width="2" rx="5"/>
+    
+    <text x="20" y="30" font-family="Courier New, monospace" font-size="14" fill="#ffffff" font-weight="bold">Calculation Steps:</text>
+    
+    <!-- Matrix visualization -->
+    <text x="20" y="60" font-family="Courier New, monospace" font-size="11" fill="#4ade80">x₀y₁ - x₁y₀ = 1×3 - 2×1 = 1</text>
+    <text x="20" y="80" font-family="Courier New, monospace" font-size="11" fill="#4ade80">x₁y₂ - x₂y₁ = 2×4 - 4×3 = -4</text>
+    <text x="20" y="100" font-family="Courier New, monospace" font-size="11" fill="#4ade80">x₂y₃ - x₃y₂ = 4×2 - 5×4 = -12</text>
+    <text x="20" y="120" font-family="Courier New, monospace" font-size="11" fill="#4ade80">x₃y₄ - x₄y₃ = 5×0.5 - 4×2 = -5.5</text>
+    <text x="20" y="140" font-family="Courier New, monospace" font-size="11" fill="#4ade80">x₄y₀ - x₀y₄ = 4×1 - 1×0.5 = 3.5</text>
+    
+    <line x1="20" y1="150" x2="280" y2="150" stroke="#3b82f6" stroke-width="1"/>
+    
+    <text x="20" y="170" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Sum = 1 - 4 - 12 - 5.5 + 3.5 = -17</text>
+    <text x="20" y="195" font-family="Courier New, monospace" font-size="14" fill="#4ade80" font-weight="bold">Area = ½|−17| = 8.5</text>
+    
+    <!-- Visual explanation -->
+    <rect x="300" y="30" width="150" height="180" fill="#0f2f1f" stroke="#4ade80" stroke-width="1" rx="3"/>
+    <text x="375" y="55" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">Signed Area:</text>
+    <text x="375" y="80" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">+ if CCW</text>
+    <text x="375" y="100" font-family="Courier New, monospace" font-size="10" fill="#ef4444" text-anchor="middle">− if CW</text>
+    
+    <text x="375" y="140" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">Use |area| for</text>
+    <text x="375" y="160" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">absolute value</text>
+    
+    <!-- Time complexity -->
+    <text x="20" y="230" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(n) | Space: O(1)</text>
+  </g>
+  
+  <!-- Section 2: Polygon Centroid -->
+  <text x="50" y="440" font-family="Courier New, monospace" font-size="14" fill="#e94560" font-weight="bold">POLYGON CENTROID</text>
+  
+  <g transform="translate(30, 460)">
+    <rect x="0" y="0" width="260" height="200" fill="#2d1f3d" fill-opacity="0.3" stroke="#a78bfa" stroke-width="2" rx="5"/>
+    
+    <!-- Polygon -->
+    <polygon points="50,160 80,60 180,50 220,120 180,180" 
+             fill="#2d1f3d" fill-opacity="0.5" stroke="#a78bfa" stroke-width="2"/>
+    
+    <!-- Centroid point -->
+    <circle cx="140" cy="110" r="8" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="150" y="105" font-family="Courier New, monospace" font-size="11" fill="#f97316" font-weight="bold">C</text>
+    
+    <!-- Lines to centroid -->
+    <line x1="50" y1="160" x2="140" y2="110" stroke="#888888" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="80" y1="60" x2="140" y2="110" stroke="#888888" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="180" y1="50" x2="140" y2="110" stroke="#888888" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="220" y1="120" x2="140" y2="110" stroke="#888888" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="180" y1="180" x2="140" y2="110" stroke="#888888" stroke-width="1" stroke-dasharray="3,3"/>
+    
+    <!-- Label -->
+    <text x="20" y="225" font-family="Courier New, monospace" font-size="10" fill="#888888">Center of mass</text>
+  </g>
+  
+  <!-- Section 3: Ear Clipping Triangulation -->
+  <text x="340" y="440" font-family="Courier New, monospace" font-size="14" fill="#e94560" font-weight="bold">EAR CLIPPING TRIANGULATION</text>
+  
+  <g transform="translate(320, 460)">
+    <rect x="0" y="0" width="600" height="200" fill="#3d1f0f" fill-opacity="0.3" stroke="#f97316" stroke-width="2" rx="5"/>
+    
+    <!-- Step 1: Original polygon -->
+    <g transform="translate(20, 20)">
+      <text x="60" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">Step 1</text>
+      <polygon points="60,140 30,60 90,30 140,60 130,110 100,130" 
+               fill="#3d1f0f" fill-opacity="0.5" stroke="#f97316" stroke-width="2"/>
+      <circle cx="30" cy="60" r="4" fill="#f97316"/>
+      <text x="15" y="55" font-family="Courier New, monospace" font-size="10" fill="#4ade80">ear</text>
+    </g>
+    
+    <!-- Step 2: First ear clipped -->
+    <g transform="translate(180, 20)">
+      <text x="60" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">Step 2</text>
+      <polygon points="60,140 90,30 140,60 130,110 100,130" 
+               fill="#3d1f0f" fill-opacity="0.5" stroke="#f97316" stroke-width="2"/>
+      <polygon points="60,140 30,60 90,30" fill="#0f2f1f" fill-opacity="0.5" stroke="#4ade80" stroke-width="1"/>
+      <circle cx="90" cy="30" r="4" fill="#f97316"/>
+      <text x="95" y="25" font-family="Courier New, monospace" font-size="10" fill="#4ade80">ear</text>
+    </g>
+    
+    <!-- Step 3: Second ear clipped -->
+    <g transform="translate(340, 20)">
+      <text x="60" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">Step 3</text>
+      <polygon points="60,140 140,60 130,110 100,130" 
+               fill="#3d1f0f" fill-opacity="0.5" stroke="#f97316" stroke-width="2"/>
+      <polygon points="60,140 30,60 90,30" fill="#0f2f1f" fill-opacity="0.3" stroke="#4ade80" stroke-width="1"/>
+      <polygon points="60,140 90,30 140,60" fill="#0f2f1f" fill-opacity="0.5" stroke="#4ade80" stroke-width="1"/>
+    </g>
+    
+    <!-- Final: All triangles -->
+    <g transform="translate(500, 20)">
+      <text x="60" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">Final</text>
+      <polygon points="60,140 30,60 90,30" fill="#0f2f1f" fill-opacity="0.3" stroke="#4ade80" stroke-width="1"/>
+      <polygon points="60,140 90,30 140,60" fill="#2d1f3d" fill-opacity="0.3" stroke="#a78bfa" stroke-width="1"/>
+      <polygon points="60,140 140,60 130,110" fill="#1e3a5f" fill-opacity="0.3" stroke="#3b82f6" stroke-width="1"/>
+      <polygon points="60,140 130,110 100,130" fill="#3d1f0f" fill-opacity="0.3" stroke="#f97316" stroke-width="1"/>
+    </g>
+    
+    <!-- Complexity note -->
+    <text x="20" y="185" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">Time: O(n²) | Output: n-2 triangles</text>
+  </g>
+  
+  <!-- Section 4: Rectangle Operations -->
+  <text x="50" y="700" font-family="Courier New, monospace" font-size="14" fill="#e94560" font-weight="bold">RECTANGLE OVERLAP</text>
+  
+  <g transform="translate(30, 710)">
+    <!-- Two overlapping rectangles -->
+    <rect x="20" y="0" width="120" height="80" fill="#1e3a5f" fill-opacity="0.5" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="80" y="30" width="120" height="80" fill="#0f2f1f" fill-opacity="0.5" stroke="#4ade80" stroke-width="2"/>
+    
+    <!-- Intersection area -->
+    <rect x="80" y="30" width="60" height="50" fill="#f97316" fill-opacity="0.4" stroke="#f97316" stroke-width="2"/>
+    
+    <text x="220" y="50" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Overlap if:</text>
+    <text x="220" y="70" font-family="Courier New, monospace" font-size="10" fill="#60a5fa">x₁ &lt; x₄ &amp;&amp; x₃ &lt; x₂</text>
+    <text x="220" y="90" font-family="Courier New, monospace" font-size="10" fill="#60a5fa">y₁ &lt; y₄ &amp;&amp; y₃ &lt; y₂</text>
+  </g>
+</svg>

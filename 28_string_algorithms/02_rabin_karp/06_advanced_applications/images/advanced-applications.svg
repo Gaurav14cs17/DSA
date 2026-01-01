@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Advanced Applications</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">2D Matching | Document Similarity | Deduplication</text>
+  
+  <!-- 2D Pattern Matching -->
+  <text x="40" y="95" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">2D Pattern Matching</text>
+  
+  <g transform="translate(40, 115)">
+    <rect x="0" y="0" width="380" height="120" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+    
+    <!-- Grid visualization -->
+    <g transform="translate(20, 25)">
+      <rect x="0" y="0" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+      <rect x="22" y="0" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+      <rect x="44" y="0" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+      <rect x="66" y="0" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+      <rect x="88" y="0" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+      
+      <rect x="0" y="22" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+      <rect x="22" y="22" width="20" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <rect x="44" y="22" width="20" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <rect x="66" y="22" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+      <rect x="88" y="22" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+      
+      <rect x="0" y="44" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+      <rect x="22" y="44" width="20" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <rect x="44" y="44" width="20" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <rect x="66" y="44" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+      <rect x="88" y="44" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+      
+      <rect x="0" y="66" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+      <rect x="22" y="66" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+      <rect x="44" y="66" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+      <rect x="66" y="66" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+      <rect x="88" y="66" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+    </g>
+    
+    <text x="160" y="45" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#3b82f6">Grid N×M</text>
+    <text x="160" y="65" font-family="Courier New, monospace" font-size="9" fill="#ffffff">1. Hash each row</text>
+    <text x="160" y="80" font-family="Courier New, monospace" font-size="9" fill="#ffffff">2. Column hash of row hashes</text>
+    <text x="160" y="95" font-family="Courier New, monospace" font-size="9" fill="#ffffff">3. Roll vertically</text>
+    <text x="160" y="115" font-family="Courier New, monospace" font-size="9" fill="#4ade80">O(N·M + n·m)</text>
+  </g>
+  
+  <!-- Document Similarity -->
+  <rect x="440" y="100" width="420" height="135" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5" rx="5"/>
+  <text x="650" y="125" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa">Document Similarity (Shingling)</text>
+  
+  <text x="460" y="150" font-family="Courier New, monospace" font-size="10" fill="#ffffff">1. Split into k-grams (shingles)</text>
+  <text x="460" y="170" font-family="Courier New, monospace" font-size="10" fill="#ffffff">2. Hash each shingle</text>
+  <text x="460" y="190" font-family="Courier New, monospace" font-size="10" fill="#ffffff">3. Jaccard similarity = |A∩B| / |A∪B|</text>
+  <text x="460" y="220" font-family="Courier New, monospace" font-size="9" fill="#888888">Used in: Plagiarism detection, Near-dup detection</text>
+  
+  <!-- Content-Defined Chunking -->
+  <text x="40" y="270" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Content-Defined Chunking (CDC)</text>
+  
+  <g transform="translate(40, 290)">
+    <rect x="0" y="0" width="820" height="90" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+    
+    <!-- Data stream -->
+    <rect x="20" y="25" width="780" height="20" fill="#0f0f23" stroke="#888888" stroke-width="1"/>
+    
+    <!-- Chunks -->
+    <rect x="20" y="25" width="150" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <rect x="172" y="25" width="200" height="20" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+    <rect x="374" y="25" width="120" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+    <rect x="496" y="25" width="180" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <rect x="678" y="25" width="120" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    
+    <!-- Labels -->
+    <text x="95" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#ffffff">Chunk 1</text>
+    <text x="272" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#ffffff">Chunk 2</text>
+    <text x="434" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#ffffff">Chunk 3</text>
+    <text x="586" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#ffffff">Chunk 4</text>
+    <text x="738" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#ffffff">Chunk 5</text>
+    
+    <text x="420" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Boundaries: when hash(window) mod avg_size = 0</text>
+    <text x="420" y="85" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">Used in: Dropbox, rsync, Git deduplication</text>
+  </g>
+  
+  <!-- Real World Applications -->
+  <text x="40" y="415" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Real-World Applications</text>
+  
+  <g transform="translate(40, 435)">
+    <rect x="0" y="0" width="190" height="55" fill="#0f2f1f" stroke="#4ade80" stroke-width="1" rx="3"/>
+    <text x="95" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#4ade80">Cloud Storage</text>
+    <text x="95" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#ffffff">Dropbox, Google Drive</text>
+    <text x="95" y="50" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#888888">Deduplication, sync</text>
+    
+    <rect x="210" y="0" width="190" height="55" fill="#0f2f1f" stroke="#4ade80" stroke-width="1" rx="3"/>
+    <text x="305" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#4ade80">Version Control</text>
+    <text x="305" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#ffffff">Git delta compression</text>
+    <text x="305" y="50" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#888888">Quick diff, blob dedup</text>
+    
+    <rect x="420" y="0" width="190" height="55" fill="#0f2f1f" stroke="#4ade80" stroke-width="1" rx="3"/>
+    <text x="515" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#4ade80">Plagiarism Detection</text>
+    <text x="515" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#ffffff">Turnitin, MOSS</text>
+    <text x="515" y="50" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#888888">Document fingerprinting</text>
+    
+    <rect x="630" y="0" width="190" height="55" fill="#0f2f1f" stroke="#4ade80" stroke-width="1" rx="3"/>
+    <text x="725" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#4ade80">Bioinformatics</text>
+    <text x="725" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#ffffff">DNA sequence matching</text>
+    <text x="725" y="50" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#888888">Genome comparison</text>
+  </g>
+  
+  <!-- Summary -->
+  <text x="40" y="510" font-family="Courier New, monospace" font-size="11" fill="#888888">Rabin-Karp: Simple idea, powerful applications. Foundation for many real-world string systems.</text>
+</svg>
+

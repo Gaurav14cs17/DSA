@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <rect width="900" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Courier New, monospace" font-size="26" fill="#ffffff" font-weight="bold" text-anchor="middle">Line Segment Intersection</text>
+  <text x="450" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Detecting &amp; Computing Intersection Points</text>
+  
+  <!-- Section 1: Basic Intersection Test -->
+  <text x="50" y="110" font-family="Courier New, monospace" font-size="14" fill="#e94560" font-weight="bold">SEGMENT INTERSECTION TEST</text>
+  
+  <g transform="translate(30, 130)">
+    <rect x="0" y="0" width="380" height="200" fill="#1e3a5f" fill-opacity="0.3" stroke="#3b82f6" stroke-width="2" rx="5"/>
+    
+    <!-- Segment AB -->
+    <line x1="40" y1="160" x2="280" y2="40" stroke="#4ade80" stroke-width="3"/>
+    <circle cx="40" cy="160" r="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <circle cx="280" cy="40" r="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="25" y="178" font-family="Courier New, monospace" font-size="12" fill="#4ade80" font-weight="bold">A</text>
+    <text x="285" y="38" font-family="Courier New, monospace" font-size="12" fill="#4ade80" font-weight="bold">B</text>
+    
+    <!-- Segment CD -->
+    <line x1="60" y1="50" x2="320" y2="150" stroke="#a78bfa" stroke-width="3"/>
+    <circle cx="60" cy="50" r="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <circle cx="320" cy="150" r="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="45" y="45" font-family="Courier New, monospace" font-size="12" fill="#a78bfa" font-weight="bold">C</text>
+    <text x="330" y="155" font-family="Courier New, monospace" font-size="12" fill="#a78bfa" font-weight="bold">D</text>
+    
+    <!-- Intersection point -->
+    <circle cx="165" cy="102" r="8" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="175" y="95" font-family="Courier New, monospace" font-size="14" fill="#f97316" font-weight="bold">P</text>
+    
+    <!-- Labels -->
+    <text x="10" y="220" font-family="Courier New, monospace" font-size="11" fill="#888888">Segments intersect if orientations differ</text>
+  </g>
+  
+  <!-- Orientation Conditions -->
+  <text x="470" y="110" font-family="Courier New, monospace" font-size="14" fill="#e94560" font-weight="bold">ORIENTATION CONDITIONS</text>
+  
+  <g transform="translate(450, 130)">
+    <rect x="0" y="0" width="420" height="200" fill="#0f2f1f" fill-opacity="0.3" stroke="#4ade80" stroke-width="2" rx="5"/>
+    
+    <!-- Condition 1 -->
+    <text x="20" y="30" font-family="Courier New, monospace" font-size="12" fill="#ffffff" font-weight="bold">Condition 1:</text>
+    <text x="20" y="50" font-family="Courier New, monospace" font-size="11" fill="#888888">A,B on opposite sides of line CD</text>
+    <text x="20" y="70" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">orient(C,D,A) × orient(C,D,B) &lt; 0</text>
+    
+    <!-- Visual for condition 1 -->
+    <g transform="translate(250, 20)">
+      <line x1="20" y1="40" x2="120" y2="40" stroke="#a78bfa" stroke-width="2"/>
+      <circle cx="60" cy="10" r="4" fill="#4ade80"/>
+      <circle cx="80" cy="70" r="4" fill="#4ade80"/>
+      <text x="65" y="10" font-family="Courier New, monospace" font-size="10" fill="#4ade80">A</text>
+      <text x="85" y="75" font-family="Courier New, monospace" font-size="10" fill="#4ade80">B</text>
+      <text x="10" y="44" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">C</text>
+      <text x="125" y="44" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">D</text>
+    </g>
+    
+    <!-- Condition 2 -->
+    <text x="20" y="110" font-family="Courier New, monospace" font-size="12" fill="#ffffff" font-weight="bold">Condition 2:</text>
+    <text x="20" y="130" font-family="Courier New, monospace" font-size="11" fill="#888888">C,D on opposite sides of line AB</text>
+    <text x="20" y="150" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">orient(A,B,C) × orient(A,B,D) &lt; 0</text>
+    
+    <!-- Visual for condition 2 -->
+    <g transform="translate(250, 100)">
+      <line x1="20" y1="40" x2="120" y2="40" stroke="#4ade80" stroke-width="2"/>
+      <circle cx="50" cy="10" r="4" fill="#a78bfa"/>
+      <circle cx="90" cy="70" r="4" fill="#a78bfa"/>
+      <text x="55" y="10" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">C</text>
+      <text x="95" y="75" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">D</text>
+      <text x="10" y="44" font-family="Courier New, monospace" font-size="10" fill="#4ade80">A</text>
+      <text x="125" y="44" font-family="Courier New, monospace" font-size="10" fill="#4ade80">B</text>
+    </g>
+    
+    <!-- Result -->
+    <text x="20" y="185" font-family="Courier New, monospace" font-size="12" fill="#4ade80" font-weight="bold">✓ Both conditions TRUE → Segments Intersect</text>
+  </g>
+  
+  <!-- Cases: Intersecting vs Non-intersecting -->
+  <text x="50" y="370" font-family="Courier New, monospace" font-size="14" fill="#e94560" font-weight="bold">INTERSECTION CASES</text>
+  
+  <!-- Case 1: Proper Intersection -->
+  <g transform="translate(30, 390)">
+    <rect x="0" y="0" width="200" height="150" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="5"/>
+    <text x="100" y="25" font-family="Courier New, monospace" font-size="12" fill="#4ade80" font-weight="bold" text-anchor="middle">PROPER INTERSECTION</text>
+    
+    <line x1="30" y1="120" x2="170" y2="50" stroke="#4ade80" stroke-width="2"/>
+    <line x1="40" y1="60" x2="160" y2="110" stroke="#a78bfa" stroke-width="2"/>
+    <circle cx="100" cy="85" r="5" fill="#f97316"/>
+    
+    <text x="100" y="145" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">✓ Intersects</text>
+  </g>
+  
+  <!-- Case 2: Endpoint Touch -->
+  <g transform="translate(260, 390)">
+    <rect x="0" y="0" width="200" height="150" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="5"/>
+    <text x="100" y="25" font-family="Courier New, monospace" font-size="12" fill="#f97316" font-weight="bold" text-anchor="middle">ENDPOINT TOUCH</text>
+    
+    <line x1="30" y1="110" x2="100" y2="70" stroke="#4ade80" stroke-width="2"/>
+    <line x1="100" y1="70" x2="170" y2="100" stroke="#a78bfa" stroke-width="2"/>
+    <circle cx="100" cy="70" r="5" fill="#f97316"/>
+    
+    <text x="100" y="145" font-family="Courier New, monospace" font-size="11" fill="#f97316" text-anchor="middle">✓ Collinear check</text>
+  </g>
+  
+  <!-- Case 3: Collinear Overlap -->
+  <g transform="translate(490, 390)">
+    <rect x="0" y="0" width="200" height="150" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="5"/>
+    <text x="100" y="25" font-family="Courier New, monospace" font-size="12" fill="#a78bfa" font-weight="bold" text-anchor="middle">COLLINEAR OVERLAP</text>
+    
+    <line x1="30" y1="85" x2="130" y2="85" stroke="#4ade80" stroke-width="2"/>
+    <line x1="80" y1="85" x2="170" y2="85" stroke="#a78bfa" stroke-width="2" stroke-dasharray="5,3"/>
+    <rect x="80" y="80" width="50" height="10" fill="#f97316" fill-opacity="0.3"/>
+    
+    <text x="100" y="145" font-family="Courier New, monospace" font-size="11" fill="#a78bfa" text-anchor="middle">✓ Bounding box check</text>
+  </g>
+  
+  <!-- Case 4: No Intersection -->
+  <g transform="translate(720, 390)">
+    <rect x="0" y="0" width="150" height="150" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,5" rx="5"/>
+    <text x="75" y="25" font-family="Courier New, monospace" font-size="12" fill="#ef4444" font-weight="bold" text-anchor="middle">NO INTERSECT</text>
+    
+    <line x1="20" y1="120" x2="80" y2="60" stroke="#4ade80" stroke-width="2"/>
+    <line x1="90" y1="110" x2="130" y2="50" stroke="#a78bfa" stroke-width="2"/>
+    
+    <text x="75" y="145" font-family="Courier New, monospace" font-size="11" fill="#ef4444" text-anchor="middle">✗ Separate</text>
+  </g>
+  
+  <!-- Sweep Line Algorithm -->
+  <text x="50" y="580" font-family="Courier New, monospace" font-size="14" fill="#e94560" font-weight="bold">SWEEP LINE ALGORITHM (Multiple Segments)</text>
+  
+  <g transform="translate(30, 600)">
+    <rect x="0" y="0" width="840" height="80" fill="#1e3a5f" fill-opacity="0.3" stroke="#3b82f6" stroke-width="2" rx="5"/>
+    
+    <!-- Sweep line -->
+    <line x1="250" y1="10" x2="250" y2="70" stroke="#f97316" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="255" y="20" font-family="Courier New, monospace" font-size="10" fill="#f97316">sweep</text>
+    
+    <!-- Segments -->
+    <line x1="50" y1="30" x2="300" y2="50" stroke="#4ade80" stroke-width="2"/>
+    <line x1="100" y1="60" x2="400" y2="25" stroke="#a78bfa" stroke-width="2"/>
+    <line x1="350" y1="20" x2="600" y2="55" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="500" y1="65" x2="750" y2="35" stroke="#4ade80" stroke-width="2"/>
+    
+    <!-- Events -->
+    <circle cx="50" cy="30" r="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <circle cx="100" cy="60" r="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+    <circle cx="300" cy="50" r="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <circle cx="350" cy="20" r="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    
+    <!-- Complexity -->
+    <text x="680" y="35" font-family="Courier New, monospace" font-size="12" fill="#ffffff" font-weight="bold">O((n+k) log n)</text>
+    <text x="680" y="55" font-family="Courier New, monospace" font-size="11" fill="#888888">k = intersections</text>
+  </g>
+</svg>

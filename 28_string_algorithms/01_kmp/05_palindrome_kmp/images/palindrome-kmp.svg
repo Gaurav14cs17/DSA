@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 520">
+  <rect width="850" height="520" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="425" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Palindrome with KMP</text>
+  <text x="425" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Shortest Palindrome Construction</text>
+  
+  <!-- Problem Statement -->
+  <rect x="40" y="80" width="380" height="80" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5" rx="5"/>
+  <text x="60" y="105" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa">Problem: Shortest Palindrome</text>
+  <text x="60" y="125" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Add minimum characters to FRONT</text>
+  <text x="60" y="143" font-family="Courier New, monospace" font-size="11" fill="#ffffff">to make string a palindrome</text>
+  
+  <!-- Example -->
+  <text x="40" y="190" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Example: s = "aacecaaa"</text>
+  
+  <g transform="translate(40, 215)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Original:</text>
+    <rect x="80" y="-12" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="92" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">a</text>
+    <rect x="106" y="-12" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="118" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">a</text>
+    <rect x="132" y="-12" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="144" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">c</text>
+    <rect x="158" y="-12" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="170" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">e</text>
+    <rect x="184" y="-12" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="196" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">c</text>
+    <rect x="210" y="-12" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="222" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">a</text>
+    <rect x="236" y="-12" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="248" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">a</text>
+    <rect x="262" y="-12" width="24" height="22" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="274" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#f97316">a</text>
+  </g>
+  
+  <!-- KMP approach -->
+  <text x="40" y="260" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">KMP Approach: s + "#" + reverse(s)</text>
+  
+  <g transform="translate(40, 285)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Combined:</text>
+    
+    <!-- s part -->
+    <rect x="80" y="-12" width="20" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="90" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">a</text>
+    <rect x="102" y="-12" width="20" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="112" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">a</text>
+    <rect x="124" y="-12" width="20" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="134" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">c</text>
+    <rect x="146" y="-12" width="20" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="156" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">e</text>
+    <rect x="168" y="-12" width="20" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="178" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">c</text>
+    <rect x="190" y="-12" width="20" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="200" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">a</text>
+    <rect x="212" y="-12" width="20" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="222" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">a</text>
+    <rect x="234" y="-12" width="20" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="244" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">a</text>
+    
+    <!-- separator -->
+    <rect x="256" y="-12" width="20" height="20" fill="#1f0f0f" stroke="#ef4444" stroke-width="1"/>
+    <text x="266" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">#</text>
+    
+    <!-- reverse part -->
+    <rect x="278" y="-12" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+    <text x="288" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">a</text>
+    <rect x="300" y="-12" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+    <text x="310" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">a</text>
+    <rect x="322" y="-12" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+    <text x="332" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">a</text>
+    <rect x="344" y="-12" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+    <text x="354" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">c</text>
+    <rect x="366" y="-12" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+    <text x="376" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">e</text>
+    <rect x="388" y="-12" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+    <text x="398" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">c</text>
+    <rect x="410" y="-12" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+    <text x="420" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">a</text>
+    <rect x="432" y="-12" width="20" height="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+    <text x="442" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">a</text>
+  </g>
+  
+  <!-- Analysis -->
+  <g transform="translate(40, 325)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">π[last] = 7 → longest palindrome prefix has length 7</text>
+    <text x="0" y="18" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Chars to add = n - π[last] = 8 - 7 = 1</text>
+    <text x="0" y="36" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Add: reverse(s[7:]) = "a"</text>
+  </g>
+  
+  <!-- Result -->
+  <text x="40" y="390" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Result: "aaacecaaa"</text>
+  
+  <g transform="translate(40, 415)">
+    <rect x="0" y="-12" width="24" height="22" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="12" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#f97316">a</text>
+    <rect x="26" y="-12" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="38" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">a</text>
+    <rect x="52" y="-12" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="64" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">a</text>
+    <rect x="78" y="-12" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="90" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">c</text>
+    <rect x="104" y="-12" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="116" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">e</text>
+    <rect x="130" y="-12" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="142" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">c</text>
+    <rect x="156" y="-12" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="168" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">a</text>
+    <rect x="182" y="-12" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="194" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">a</text>
+    <rect x="208" y="-12" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="220" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">a</text>
+    
+    <text x="260" y="4" font-family="Courier New, monospace" font-size="11" fill="#4ade80">← Palindrome!</text>
+  </g>
+  
+  <!-- Algorithm Box -->
+  <rect x="480" y="80" width="340" height="180" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+  <text x="500" y="105" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff">Algorithm</text>
+  <text x="500" y="130" font-family="Courier New, monospace" font-size="11" fill="#4ade80">1. Concatenate: s + "#" + reverse(s)</text>
+  <text x="500" y="150" font-family="Courier New, monospace" font-size="11" fill="#4ade80">2. Compute π array</text>
+  <text x="500" y="170" font-family="Courier New, monospace" font-size="11" fill="#4ade80">3. π[last] = longest palindrome prefix</text>
+  <text x="500" y="190" font-family="Courier New, monospace" font-size="11" fill="#4ade80">4. Add reverse(s[π[last]:]) to front</text>
+  <text x="500" y="220" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">Time: O(n) | Space: O(n)</text>
+  <text x="500" y="248" font-family="Courier New, monospace" font-size="10" fill="#888888">The "#" separator prevents false matches</text>
+  
+  <!-- Complexity box -->
+  <rect x="480" y="290" width="340" height="100" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5" rx="5"/>
+  <text x="500" y="315" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Key Insight</text>
+  <text x="500" y="340" font-family="Courier New, monospace" font-size="11" fill="#ffffff">π[last] finds longest prefix of s</text>
+  <text x="500" y="358" font-family="Courier New, monospace" font-size="11" fill="#ffffff">that matches suffix of reverse(s)</text>
+  <text x="500" y="378" font-family="Courier New, monospace" font-size="11" fill="#888888">= longest palindrome starting at index 0</text>
+  
+  <!-- LeetCode reference -->
+  <text x="40" y="470" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">LeetCode 214: Shortest Palindrome</text>
+  <text x="40" y="490" font-family="Courier New, monospace" font-size="11" fill="#888888">Classic application of KMP failure function</text>
+</svg>
+
