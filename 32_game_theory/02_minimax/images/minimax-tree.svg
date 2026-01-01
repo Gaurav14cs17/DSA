@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
+  <rect width="1000" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Minimax Algorithm</text>
+  <text x="500" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Optimal Decision Making in Zero-Sum Games</text>
+  
+  <!-- Legend -->
+  <g transform="translate(30, 90)">
+    <rect x="0" y="0" width="150" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="75" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">LEGEND</text>
+    
+    <circle cx="25" cy="42" r="12" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="55" y="47" font-family="Courier New, monospace" font-size="10" fill="#f97316">MAX player</text>
+    
+    <circle cx="25" cy="67" r="12" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="55" y="72" font-family="Courier New, monospace" font-size="10" fill="#3b82f6">MIN player</text>
+  </g>
+  
+  <!-- Root Node - MAX -->
+  <g transform="translate(500, 130)">
+    <circle cx="0" cy="0" r="30" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="0" y="5" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">MAX</text>
+    <text x="0" y="-45" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">Root (Player 1)</text>
+    <text x="50" y="5" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316">= 3</text>
+  </g>
+  
+  <!-- Lines from root to level 1 -->
+  <line x1="470" y1="150" x2="250" y2="230" stroke="#888888" stroke-width="2"/>
+  <line x1="530" y1="150" x2="750" y2="230" stroke="#888888" stroke-width="2"/>
+  
+  <!-- Level 1 - MIN nodes -->
+  <g transform="translate(250, 260)">
+    <circle cx="0" cy="0" r="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="3"/>
+    <text x="0" y="5" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">MIN</text>
+    <text x="50" y="5" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#3b82f6">= 3</text>
+  </g>
+  
+  <g transform="translate(750, 260)">
+    <circle cx="0" cy="0" r="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="3"/>
+    <text x="0" y="5" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">MIN</text>
+    <text x="50" y="5" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#3b82f6">= 2</text>
+  </g>
+  
+  <!-- Lines from level 1 to level 2 -->
+  <line x1="220" y1="280" x2="130" y2="360" stroke="#888888" stroke-width="2"/>
+  <line x1="280" y1="280" x2="370" y2="360" stroke="#888888" stroke-width="2"/>
+  <line x1="720" y1="280" x2="630" y2="360" stroke="#888888" stroke-width="2"/>
+  <line x1="780" y1="280" x2="870" y2="360" stroke="#888888" stroke-width="2"/>
+  
+  <!-- Level 2 - MAX nodes -->
+  <g transform="translate(130, 390)">
+    <circle cx="0" cy="0" r="25" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="0" y="5" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff">MAX</text>
+    <text x="40" y="5" font-family="Courier New, monospace" font-size="12" fill="#f97316">= 3</text>
+  </g>
+  
+  <g transform="translate(370, 390)">
+    <circle cx="0" cy="0" r="25" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="0" y="5" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff">MAX</text>
+    <text x="40" y="5" font-family="Courier New, monospace" font-size="12" fill="#f97316">= 5</text>
+  </g>
+  
+  <g transform="translate(630, 390)">
+    <circle cx="0" cy="0" r="25" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="0" y="5" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff">MAX</text>
+    <text x="40" y="5" font-family="Courier New, monospace" font-size="12" fill="#f97316">= 6</text>
+  </g>
+  
+  <g transform="translate(870, 390)">
+    <circle cx="0" cy="0" r="25" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="0" y="5" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff">MAX</text>
+    <text x="40" y="5" font-family="Courier New, monospace" font-size="12" fill="#f97316">= 2</text>
+  </g>
+  
+  <!-- Lines from level 2 to leaf nodes -->
+  <line x1="105" y1="410" x2="70" y2="470" stroke="#888888" stroke-width="1.5"/>
+  <line x1="155" y1="410" x2="190" y2="470" stroke="#888888" stroke-width="1.5"/>
+  
+  <line x1="345" y1="410" x2="310" y2="470" stroke="#888888" stroke-width="1.5"/>
+  <line x1="395" y1="410" x2="430" y2="470" stroke="#888888" stroke-width="1.5"/>
+  
+  <line x1="605" y1="410" x2="570" y2="470" stroke="#888888" stroke-width="1.5"/>
+  <line x1="655" y1="410" x2="690" y2="470" stroke="#888888" stroke-width="1.5"/>
+  
+  <line x1="845" y1="410" x2="810" y2="470" stroke="#888888" stroke-width="1.5"/>
+  <line x1="895" y1="410" x2="930" y2="470" stroke="#888888" stroke-width="1.5"/>
+  
+  <!-- Leaf nodes (evaluation scores) -->
+  <g transform="translate(70, 500)">
+    <rect x="-25" y="-20" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="0" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80">3</text>
+  </g>
+  
+  <g transform="translate(190, 500)">
+    <rect x="-25" y="-20" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="0" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80">1</text>
+  </g>
+  
+  <g transform="translate(310, 500)">
+    <rect x="-25" y="-20" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="0" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80">5</text>
+  </g>
+  
+  <g transform="translate(430, 500)">
+    <rect x="-25" y="-20" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="0" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80">4</text>
+  </g>
+  
+  <g transform="translate(570, 500)">
+    <rect x="-25" y="-20" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="0" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80">6</text>
+  </g>
+  
+  <g transform="translate(690, 500)">
+    <rect x="-25" y="-20" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="0" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80">2</text>
+  </g>
+  
+  <g transform="translate(810, 500)">
+    <rect x="-25" y="-20" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="0" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80">2</text>
+  </g>
+  
+  <g transform="translate(930, 500)">
+    <rect x="-25" y="-20" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="0" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80">0</text>
+  </g>
+  
+  <text x="500" y="555" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Terminal Nodes (Evaluation Scores)</text>
+  
+  <!-- Algorithm explanation -->
+  <g transform="translate(200, 580)">
+    <rect x="0" y="0" width="600" height="100" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    
+    <text x="300" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">Minimax Algorithm</text>
+    
+    <text x="20" y="50" font-family="Courier New, monospace" font-size="11" fill="#f97316">MAX nodes: Pick the MAXIMUM child value</text>
+    <text x="320" y="50" font-family="Courier New, monospace" font-size="11" fill="#888888">→ max(3,1)=3, max(5,4)=5, max(6,2)=6, max(2,0)=2</text>
+    
+    <text x="20" y="70" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">MIN nodes: Pick the MINIMUM child value</text>
+    <text x="320" y="70" font-family="Courier New, monospace" font-size="11" fill="#888888">→ min(3,5)=3, min(6,2)=2</text>
+    
+    <text x="20" y="90" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Root (MAX): max(3,2) = 3</text>
+    <text x="320" y="90" font-family="Courier New, monospace" font-size="11" fill="#4ade80">→ Choose LEFT branch for optimal play</text>
+  </g>
+  
+  <!-- Complexity -->
+  <text x="900" y="670" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(bᵈ) | Space: O(d)</text>
+</svg>
+

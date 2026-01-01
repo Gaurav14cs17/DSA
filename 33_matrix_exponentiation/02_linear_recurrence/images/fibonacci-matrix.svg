@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 600">
+  <rect width="950" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Fibonacci Matrix Transformation</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">F(n) = F(n-1) + F(n-2) expressed as matrix multiplication</text>
+  
+  <!-- Transformation formula -->
+  <text x="50" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">TRANSFORMATION MATRIX</text>
+  
+  <rect x="50" y="125" width="850" height="100" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- State vector before -->
+  <text x="120" y="160" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#a78bfa" text-anchor="middle">[F(n+1)]</text>
+  <text x="120" y="185" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#a78bfa" text-anchor="middle">[F(n)  ]</text>
+  
+  <text x="200" y="175" font-family="Courier New, monospace" font-size="24" font-weight="bold" fill="#ffffff">=</text>
+  
+  <!-- Transformation matrix -->
+  <rect x="230" y="140" width="100" height="70" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="280" y="165" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#f97316" text-anchor="middle">[1  1]</text>
+  <text x="280" y="195" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#f97316" text-anchor="middle">[1  0]</text>
+  
+  <text x="360" y="175" font-family="Courier New, monospace" font-size="24" font-weight="bold" fill="#ffffff">×</text>
+  
+  <!-- State vector after -->
+  <text x="430" y="160" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#a78bfa" text-anchor="middle">[F(n)  ]</text>
+  <text x="430" y="185" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#a78bfa" text-anchor="middle">[F(n-1)]</text>
+  
+  <!-- Explanation -->
+  <text x="550" y="155" font-family="Courier New, monospace" font-size="14" fill="#888888">F(n+1) = 1×F(n) + 1×F(n-1)</text>
+  <text x="550" y="175" font-family="Courier New, monospace" font-size="14" fill="#888888">F(n)   = 1×F(n) + 0×F(n-1)</text>
+  <text x="550" y="200" font-family="Courier New, monospace" font-size="12" fill="#4ade80">✓ Matches recurrence!</text>
+  
+  <!-- Step by step example -->
+  <text x="50" y="260" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">EXAMPLE: Computing F(5) = 5</text>
+  
+  <!-- F(0), F(1) -->
+  <rect x="50" y="280" width="100" height="70" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="100" y="300" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">Initial</text>
+  <text x="100" y="325" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">[F₁]=[ 1]</text>
+  <text x="100" y="345" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">[F₀] [ 0]</text>
+  
+  <!-- Arrow -->
+  <line x1="160" y1="315" x2="195" y2="315" stroke="#f97316" stroke-width="2" marker-end="url(#arrow1)"/>
+  <text x="177" y="305" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">×M</text>
+  
+  <!-- F(1), F(2) -->
+  <rect x="205" y="280" width="100" height="70" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="255" y="300" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">n=1</text>
+  <text x="255" y="325" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">[F₂]=[ 1]</text>
+  <text x="255" y="345" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">[F₁] [ 1]</text>
+  
+  <!-- Arrow -->
+  <line x1="315" y1="315" x2="350" y2="315" stroke="#f97316" stroke-width="2" marker-end="url(#arrow1)"/>
+  <text x="332" y="305" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">×M</text>
+  
+  <!-- F(2), F(3) -->
+  <rect x="360" y="280" width="100" height="70" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="410" y="300" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">n=2</text>
+  <text x="410" y="325" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">[F₃]=[ 2]</text>
+  <text x="410" y="345" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">[F₂] [ 1]</text>
+  
+  <!-- Arrow -->
+  <line x1="470" y1="315" x2="505" y2="315" stroke="#f97316" stroke-width="2" marker-end="url(#arrow1)"/>
+  <text x="487" y="305" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">×M</text>
+  
+  <!-- F(3), F(4) -->
+  <rect x="515" y="280" width="100" height="70" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="565" y="300" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">n=3</text>
+  <text x="565" y="325" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">[F₄]=[ 3]</text>
+  <text x="565" y="345" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">[F₃] [ 2]</text>
+  
+  <!-- Arrow -->
+  <line x1="625" y1="315" x2="660" y2="315" stroke="#f97316" stroke-width="2" marker-end="url(#arrow1)"/>
+  <text x="642" y="305" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">×M</text>
+  
+  <!-- F(4), F(5) - Result -->
+  <rect x="670" y="280" width="100" height="70" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="720" y="300" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">n=4</text>
+  <text x="720" y="325" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">[F₅]=[ 5]</text>
+  <text x="720" y="345" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">[F₄] [ 3]</text>
+  
+  <!-- Verification -->
+  <rect x="790" y="280" width="110" height="70" rx="5" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="845" y="305" font-family="Courier New, monospace" font-size="11" fill="#a78bfa" text-anchor="middle">Sequence</text>
+  <text x="845" y="330" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">0,1,1,2,3,5</text>
+  <text x="845" y="345" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">F₅ = 5 ✓</text>
+  
+  <!-- General formula -->
+  <text x="50" y="390" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">CLOSED FORM: F(n) in O(log n)</text>
+  
+  <rect x="50" y="405" width="850" height="80" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  
+  <text x="475" y="435" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">[F(n+1)]     [1  1]ⁿ     [F₁]     [1  1]ⁿ     [1]</text>
+  <text x="475" y="465" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">[F(n)  ]  =  [1  0]   ×  [F₀]  =  [1  0]   ×  [0]</text>
+  
+  <!-- Complexity comparison -->
+  <rect x="50" y="510" width="400" height="70" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="535" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Naive Iterative: O(n)</text>
+  <text x="250" y="560" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">Loop n times, add previous two</text>
+  
+  <rect x="500" y="510" width="400" height="70" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="700" y="535" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">Matrix Power: O(log n)</text>
+  <text x="700" y="560" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">Binary exponentiation on 2×2 matrix</text>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f97316"/>
+    </marker>
+  </defs>
+</svg>
+
