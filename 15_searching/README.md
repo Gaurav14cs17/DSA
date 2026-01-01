@@ -10,7 +10,7 @@ permalink: /15_searching/
 
 # 🔍 Binary Search
 
-![Binary Search](../assets/images/binary-search.svg)
+![Binary Search Overview](./images/searching-overview.svg)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
