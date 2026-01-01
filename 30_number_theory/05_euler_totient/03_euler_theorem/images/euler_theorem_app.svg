@@ -1,0 +1,42 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Euler's Theorem Applications</text>
+  
+  <!-- Main theorem -->
+  <rect x="200" y="70" width="500" height="60" rx="10" fill="#2d1f3d" stroke="#a78bfa" stroke-width="3"/>
+  <text x="450" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">If gcd(a, n) = 1:</text>
+  <text x="450" y="122" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#a78bfa">a^φ(n) ≡ 1 (mod n)</text>
+  
+  <!-- Application 1: Modular inverse -->
+  <rect x="50" y="150" width="400" height="140" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="180" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">MODULAR INVERSE</text>
+  <text x="70" y="210" font-family="Courier New, monospace" font-size="12" fill="#ffffff">a × a^(φ(n)-1) ≡ a^φ(n) ≡ 1 (mod n)</text>
+  <text x="70" y="240" font-family="Courier New, monospace" font-size="14" fill="#3b82f6">a⁻¹ ≡ a^(φ(n)-1) (mod n)</text>
+  <text x="70" y="275" font-family="Courier New, monospace" font-size="11" fill="#888888">Generalizes Fermat for composite moduli</text>
+  
+  <!-- Application 2: Power towers -->
+  <rect x="480" y="150" width="370" height="140" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="665" y="180" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">POWER TOWERS</text>
+  <text x="500" y="210" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Compute a^b^c mod n:</text>
+  <text x="500" y="235" font-family="Courier New, monospace" font-size="12" fill="#ffffff">1. Find b^c mod φ(n)</text>
+  <text x="500" y="260" font-family="Courier New, monospace" font-size="12" fill="#ffffff">2. Compute a^(result) mod n</text>
+  <text x="500" y="285" font-family="Courier New, monospace" font-size="11" fill="#f97316">Recursive when tower is deeper</text>
+  
+  <!-- Application 3: RSA -->
+  <rect x="50" y="310" width="400" height="150" rx="10" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="250" y="340" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">RSA CRYPTOGRAPHY</text>
+  <text x="70" y="370" font-family="Courier New, monospace" font-size="11" fill="#ffffff">n = p × q (primes)</text>
+  <text x="70" y="395" font-family="Courier New, monospace" font-size="11" fill="#ffffff">φ(n) = (p-1)(q-1)</text>
+  <text x="70" y="420" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Choose e coprime to φ(n)</text>
+  <text x="70" y="445" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Private key d = e⁻¹ mod φ(n)</text>
+  
+  <!-- Application 4: Cyclic groups -->
+  <rect x="480" y="310" width="370" height="150" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="665" y="340" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">MULTIPLICATIVE ORDER</text>
+  <text x="500" y="370" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Order of a mod n divides φ(n)</text>
+  <text x="500" y="400" font-family="Courier New, monospace" font-size="11" fill="#ffffff">ord(a) = min k where a^k ≡ 1</text>
+  <text x="500" y="435" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">Primitive root: ord(g) = φ(n)</text>
+  <text x="500" y="455" font-family="Courier New, monospace" font-size="10" fill="#888888">Exists for n = 1,2,4,p^k,2p^k</text>
+</svg>

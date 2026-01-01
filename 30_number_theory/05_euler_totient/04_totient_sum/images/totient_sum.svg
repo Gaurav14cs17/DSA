@@ -1,0 +1,32 @@
+<svg viewBox="0 0 900 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="450" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Totient Summation</text>
+  
+  <!-- Key formula -->
+  <rect x="200" y="70" width="500" height="60" rx="10" fill="#2d1f3d" stroke="#a78bfa" stroke-width="3"/>
+  <text x="450" y="108" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#a78bfa">Σ φ(d) = n  (sum over divisors d of n)</text>
+  
+  <!-- Example -->
+  <rect x="50" y="150" width="400" height="140" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="180" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">EXAMPLE: n = 6</text>
+  <text x="70" y="210" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Divisors of 6: 1, 2, 3, 6</text>
+  <text x="70" y="240" font-family="Courier New, monospace" font-size="12" fill="#ffffff">φ(1) + φ(2) + φ(3) + φ(6)</text>
+  <text x="70" y="265" font-family="Courier New, monospace" font-size="12" fill="#ffffff">= 1 + 1 + 2 + 2</text>
+  <text x="70" y="285" font-family="Courier New, monospace" font-size="14" fill="#4ade80">= 6 ✓</text>
+  
+  <!-- Interpretation -->
+  <rect x="480" y="150" width="370" height="140" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="665" y="180" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">INTERPRETATION</text>
+  <text x="500" y="215" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Each k in 1..n has gcd(k,n) = d</text>
+  <text x="500" y="240" font-family="Courier New, monospace" font-size="11" fill="#ffffff">for some divisor d of n</text>
+  <text x="500" y="270" font-family="Courier New, monospace" font-size="11" fill="#f97316">Count with gcd = d is φ(n/d)</text>
+  <text x="500" y="290" font-family="Courier New, monospace" font-size="10" fill="#888888">Total = Σ φ(n/d) = Σ φ(d) = n</text>
+  
+  <!-- Summatory function -->
+  <rect x="150" y="310" width="600" height="110" rx="10" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="450" y="340" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">SUMMATORY TOTIENT</text>
+  <text x="450" y="375" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">Φ(n) = Σ φ(k) for k=1 to n</text>
+  <text x="450" y="405" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Φ(n) ≈ 3n²/π² ≈ 0.304n²</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg viewBox="0 0 900 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="450" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Diophantine Applications</text>
+  
+  <!-- App 1 -->
+  <rect x="30" y="70" width="270" height="140" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="165" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560">WATER JUG PROBLEM</text>
+  <text x="50" y="130" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Measure d liters using</text>
+  <text x="50" y="150" font-family="Courier New, monospace" font-size="10" fill="#ffffff">jugs of a, b liters</text>
+  <text x="50" y="175" font-family="Courier New, monospace" font-size="10" fill="#3b82f6">ax + by = d</text>
+  <text x="50" y="195" font-family="Courier New, monospace" font-size="9" fill="#888888">Possible iff gcd(a,b) | d</text>
+  
+  <!-- App 2 -->
+  <rect x="315" y="70" width="270" height="140" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="450" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560">BEZOUT COEFFICIENTS</text>
+  <text x="335" y="130" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Express gcd(a,b) as</text>
+  <text x="335" y="150" font-family="Courier New, monospace" font-size="10" fill="#ffffff">linear combination</text>
+  <text x="335" y="175" font-family="Courier New, monospace" font-size="10" fill="#f97316">ax + by = gcd(a,b)</text>
+  <text x="335" y="195" font-family="Courier New, monospace" font-size="9" fill="#888888">Key for modular inverse</text>
+  
+  <!-- App 3 -->
+  <rect x="600" y="70" width="270" height="140" rx="10" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="735" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560">RESOURCE ALLOCATION</text>
+  <text x="620" y="130" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Distribute n items into</text>
+  <text x="620" y="150" font-family="Courier New, monospace" font-size="10" fill="#ffffff">groups of a and b</text>
+  <text x="620" y="175" font-family="Courier New, monospace" font-size="10" fill="#4ade80">ax + by = n (x,y ≥ 0)</text>
+  <text x="620" y="195" font-family="Courier New, monospace" font-size="9" fill="#888888">Count/enumerate solutions</text>
+  
+  <!-- App 4 -->
+  <rect x="30" y="230" width="270" height="140" rx="10" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="165" y="260" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560">SCHEDULING</text>
+  <text x="50" y="290" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Events every a and b days</text>
+  <text x="50" y="310" font-family="Courier New, monospace" font-size="10" fill="#ffffff">When do they coincide?</text>
+  <text x="50" y="335" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">ax - by = 0 (mod lcm)</text>
+  
+  <!-- App 5 -->
+  <rect x="315" y="230" width="270" height="140" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="450" y="260" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560">PUZZLE PROBLEMS</text>
+  <text x="335" y="290" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Chicken-rabbit problems</text>
+  <text x="335" y="310" font-family="Courier New, monospace" font-size="10" fill="#ffffff">x chickens + y rabbits</text>
+  <text x="335" y="335" font-family="Courier New, monospace" font-size="10" fill="#3b82f6">2x + 4y = legs</text>
+  <text x="335" y="355" font-family="Courier New, monospace" font-size="10" fill="#3b82f6">x + y = heads</text>
+  
+  <!-- App 6 -->
+  <rect x="600" y="230" width="270" height="140" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="735" y="260" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560">CRYPTOGRAPHY</text>
+  <text x="620" y="290" font-family="Courier New, monospace" font-size="10" fill="#ffffff">RSA key generation</text>
+  <text x="620" y="310" font-family="Courier New, monospace" font-size="10" fill="#ffffff">ed ≡ 1 (mod φ(n))</text>
+  <text x="620" y="335" font-family="Courier New, monospace" font-size="10" fill="#f97316">ed + kφ(n) = 1</text>
+  <text x="620" y="355" font-family="Courier New, monospace" font-size="9" fill="#888888">Extended GCD finds d</text>
+  
+  <!-- Related LeetCode -->
+  <rect x="250" y="390" width="400" height="40" rx="8" fill="#0f0f23" stroke="#888888" stroke-width="1"/>
+  <text x="450" y="415" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">LeetCode: 365 (Water Jugs), 2543 (Point Reachable)</text>
+</svg>

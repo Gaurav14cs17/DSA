@@ -1,0 +1,86 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Pascal's Triangle</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">C(n,r) = C(n-1,r-1) + C(n-1,r)</text>
+  
+  <!-- Triangle visualization -->
+  <g transform="translate(450, 100)">
+    <!-- Row 0 -->
+    <rect x="-20" y="0" width="40" height="30" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="0" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">1</text>
+    
+    <!-- Row 1 -->
+    <rect x="-50" y="40" width="40" height="30" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="-30" y="62" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">1</text>
+    <rect x="10" y="40" width="40" height="30" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="30" y="62" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">1</text>
+    
+    <!-- Row 2 -->
+    <rect x="-80" y="80" width="40" height="30" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="-60" y="102" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">1</text>
+    <rect x="-20" y="80" width="40" height="30" rx="5" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="0" y="102" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#f97316">2</text>
+    <rect x="40" y="80" width="40" height="30" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="60" y="102" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">1</text>
+    
+    <!-- Row 3 -->
+    <rect x="-110" y="120" width="40" height="30" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="-90" y="142" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">1</text>
+    <rect x="-50" y="120" width="40" height="30" rx="5" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="-30" y="142" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#f97316">3</text>
+    <rect x="10" y="120" width="40" height="30" rx="5" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="30" y="142" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#f97316">3</text>
+    <rect x="70" y="120" width="40" height="30" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="90" y="142" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">1</text>
+    
+    <!-- Row 4 -->
+    <rect x="-140" y="160" width="40" height="30" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="-120" y="182" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">1</text>
+    <rect x="-80" y="160" width="40" height="30" rx="5" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="-60" y="182" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#f97316">4</text>
+    <rect x="-20" y="160" width="40" height="30" rx="5" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="0" y="182" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">6</text>
+    <rect x="40" y="160" width="40" height="30" rx="5" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="60" y="182" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#f97316">4</text>
+    <rect x="100" y="160" width="40" height="30" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="120" y="182" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">1</text>
+    
+    <!-- Row 5 -->
+    <rect x="-170" y="200" width="40" height="30" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="-150" y="222" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">1</text>
+    <rect x="-110" y="200" width="40" height="30" rx="5" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="-90" y="222" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#f97316">5</text>
+    <rect x="-50" y="200" width="40" height="30" rx="5" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="-30" y="222" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">10</text>
+    <rect x="10" y="200" width="40" height="30" rx="5" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="30" y="222" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">10</text>
+    <rect x="70" y="200" width="40" height="30" rx="5" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="90" y="222" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#f97316">5</text>
+    <rect x="130" y="200" width="40" height="30" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="150" y="222" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">1</text>
+  </g>
+  
+  <!-- Properties -->
+  <rect x="50" y="350" width="380" height="210" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="240" y="380" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">PROPERTIES</text>
+  
+  <text x="70" y="415" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Row n sums to 2ⁿ</text>
+  <text x="70" y="440" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Symmetric: C(n,r) = C(n,n-r)</text>
+  <text x="70" y="465" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Hockey stick identity</text>
+  <text x="70" y="490" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• C(n,r) = n!/(r!(n-r)!)</text>
+  <text x="70" y="520" font-family="Courier New, monospace" font-size="11" fill="#4ade80">• C(n,r) = C(n-1,r-1) + C(n-1,r)</text>
+  <text x="70" y="545" font-family="Courier New, monospace" font-size="10" fill="#888888">Each cell = sum of two above</text>
+  
+  <!-- Applications -->
+  <rect x="470" y="350" width="380" height="210" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="660" y="380" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">APPLICATIONS</text>
+  
+  <text x="490" y="415" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Counting paths in grid</text>
+  <text x="490" y="440" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Binomial expansion (a+b)ⁿ</text>
+  <text x="490" y="465" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Probability calculations</text>
+  <text x="490" y="490" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Combinations selection</text>
+  <text x="490" y="520" font-family="Courier New, monospace" font-size="11" fill="#f97316">Build with DP: O(n²) time/space</text>
+  <text x="490" y="545" font-family="Courier New, monospace" font-size="10" fill="#888888">Or O(n) space with rolling array</text>
+</svg>

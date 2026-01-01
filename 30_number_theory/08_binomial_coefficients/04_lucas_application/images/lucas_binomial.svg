@@ -1,0 +1,35 @@
+<svg viewBox="0 0 900 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="450" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Lucas' Theorem for Binomials</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">When n is larger than precompute limit</text>
+  
+  <!-- Formula -->
+  <rect x="150" y="90" width="600" height="80" rx="10" fill="#2d1f3d" stroke="#a78bfa" stroke-width="3"/>
+  <text x="450" y="120" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">For prime p, write n = Σnᵢpⁱ and r = Σrᵢpⁱ in base p:</text>
+  <text x="450" y="150" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#a78bfa">C(n,r) ≡ ∏ C(nᵢ,rᵢ) (mod p)</text>
+  
+  <!-- When to use -->
+  <rect x="50" y="190" width="400" height="120" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="220" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">WHEN TO USE</text>
+  
+  <text x="70" y="255" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• n, r very large (10¹⁸)</text>
+  <text x="70" y="280" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• p is small prime</text>
+  <text x="70" y="305" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">• Can't precompute fact[n]</text>
+  
+  <!-- Example -->
+  <rect x="480" y="190" width="370" height="120" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="665" y="220" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">EXAMPLE: C(12,5) mod 3</text>
+  
+  <text x="500" y="255" font-family="Courier New, monospace" font-size="11" fill="#ffffff">12 = 110₃, 5 = 12₃</text>
+  <text x="500" y="280" font-family="Courier New, monospace" font-size="11" fill="#ffffff">C(12,5) ≡ C(1,1) × C(1,2) × C(0,0)</text>
+  <text x="500" y="305" font-family="Courier New, monospace" font-size="11" fill="#f97316">= 1 × 0 × 1 = 0 mod 3</text>
+  
+  <!-- Complexity -->
+  <rect x="150" y="330" width="600" height="90" rx="10" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="450" y="360" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COMPLEXITY</text>
+  <text x="200" y="395" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Time: O(p + log_p(n))</text>
+  <text x="500" y="395" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Space: O(p) for small lookup</text>
+  <text x="450" y="415" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Precompute C(i,j) for i,j &lt; p</text>
+</svg>

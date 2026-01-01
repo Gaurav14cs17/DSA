@@ -1,0 +1,44 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Combinations C(n,r)</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Choose r items from n items</text>
+  
+  <!-- Formula -->
+  <rect x="250" y="90" width="400" height="60" rx="10" fill="#2d1f3d" stroke="#a78bfa" stroke-width="3"/>
+  <text x="450" y="130" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#a78bfa">C(n,r) = n! / (r! × (n-r)!)</text>
+  
+  <!-- Example: C(5,2) -->
+  <rect x="50" y="170" width="400" height="180" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="200" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">EXAMPLE: C(5,2) = 10</text>
+  
+  <text x="70" y="235" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Choose 2 from {A, B, C, D, E}</text>
+  
+  <text x="70" y="270" font-family="Courier New, monospace" font-size="11" fill="#4ade80">AB  AC  AD  AE</text>
+  <text x="70" y="290" font-family="Courier New, monospace" font-size="11" fill="#4ade80">BC  BD  BE</text>
+  <text x="70" y="310" font-family="Courier New, monospace" font-size="11" fill="#4ade80">CD  CE</text>
+  <text x="70" y="330" font-family="Courier New, monospace" font-size="11" fill="#4ade80">DE</text>
+  
+  <text x="250" y="350" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">= 5!/(2!×3!) = 120/(2×6) = 10</text>
+  
+  <!-- Computation methods -->
+  <rect x="480" y="170" width="370" height="180" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="665" y="200" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COMPUTATION METHODS</text>
+  
+  <text x="500" y="235" font-family="Courier New, monospace" font-size="11" fill="#ffffff">1. Direct: n!/(r!(n-r)!)</text>
+  <text x="500" y="260" font-family="Courier New, monospace" font-size="11" fill="#ffffff">2. Pascal: C(n,r)=C(n-1,r-1)+C(n-1,r)</text>
+  <text x="500" y="285" font-family="Courier New, monospace" font-size="11" fill="#ffffff">3. Product: n×(n-1)×...×(n-r+1)/r!</text>
+  <text x="500" y="315" font-family="Courier New, monospace" font-size="11" fill="#f97316">4. Modular: fact[n] × inv_fact[r]</text>
+  <text x="520" y="335" font-family="Courier New, monospace" font-size="11" fill="#f97316">   × inv_fact[n-r] mod p</text>
+  
+  <!-- Identities -->
+  <rect x="150" y="370" width="600" height="100" rx="10" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="450" y="400" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">KEY IDENTITIES</text>
+  
+  <text x="200" y="435" font-family="Courier New, monospace" font-size="11" fill="#ffffff">C(n,0) = C(n,n) = 1</text>
+  <text x="450" y="435" font-family="Courier New, monospace" font-size="11" fill="#ffffff">C(n,r) = C(n,n-r)</text>
+  
+  <text x="200" y="460" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Σ C(n,k) = 2ⁿ</text>
+  <text x="450" y="460" font-family="Courier New, monospace" font-size="11" fill="#ffffff">C(n,r) = n/r × C(n-1,r-1)</text>
+</svg>
