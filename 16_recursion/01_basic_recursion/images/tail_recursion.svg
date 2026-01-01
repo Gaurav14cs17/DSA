@@ -1,0 +1,101 @@
+<svg viewBox="0 0 950 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Tail Recursion vs Regular Recursion</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Accumulator pattern enables O(1) space optimization</text>
+  
+  <!-- Left Panel: Regular Recursion -->
+  <rect x="30" y="90" width="420" height="400" rx="8" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+  <text x="240" y="120" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ef4444" text-anchor="middle">Regular Recursion</text>
+  <text x="240" y="145" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">Operation AFTER recursive call</text>
+  
+  <!-- Code block -->
+  <rect x="50" y="160" width="380" height="100" rx="4" fill="#0f0f23" stroke="#ef4444" stroke-width="1"/>
+  <text x="60" y="185" font-family="Courier New, monospace" font-size="13" fill="#a78bfa">def</text>
+  <text x="95" y="185" font-family="Courier New, monospace" font-size="13" fill="#4ade80"> factorial</text>
+  <text x="185" y="185" font-family="Courier New, monospace" font-size="13" fill="#ffffff">(n):</text>
+  <text x="70" y="210" font-family="Courier New, monospace" font-size="13" fill="#a78bfa">if</text>
+  <text x="95" y="210" font-family="Courier New, monospace" font-size="13" fill="#ffffff"> n &lt;= 1:</text>
+  <text x="80" y="230" font-family="Courier New, monospace" font-size="13" fill="#a78bfa">return</text>
+  <text x="140" y="230" font-family="Courier New, monospace" font-size="13" fill="#f97316"> 1</text>
+  <text x="70" y="252" font-family="Courier New, monospace" font-size="13" fill="#a78bfa">return</text>
+  <text x="130" y="252" font-family="Courier New, monospace" font-size="13" fill="#ffffff"> n *</text>
+  <text x="170" y="252" font-family="Courier New, monospace" font-size="13" fill="#4ade80"> factorial</text>
+  <text x="260" y="252" font-family="Courier New, monospace" font-size="13" fill="#ffffff">(n-1)</text>
+  
+  <!-- Stack visualization -->
+  <text x="240" y="290" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560" text-anchor="middle">Stack grows with each call</text>
+  
+  <rect x="80" y="305" width="140" height="30" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+  <text x="150" y="325" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">factorial(4)</text>
+  
+  <rect x="100" y="340" width="140" height="30" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+  <text x="170" y="360" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">factorial(3)</text>
+  
+  <rect x="120" y="375" width="140" height="30" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+  <text x="190" y="395" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">factorial(2)</text>
+  
+  <rect x="140" y="410" width="140" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="210" y="430" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">factorial(1)</text>
+  
+  <!-- Space indicator -->
+  <line x1="300" y1="310" x2="300" y2="440" stroke="#ef4444" stroke-width="2"/>
+  <text x="360" y="380" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle">O(n)</text>
+  <text x="360" y="400" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">space</text>
+  
+  <!-- Arrow between panels -->
+  <text x="475" y="290" font-family="Courier New, monospace" font-size="20" fill="#3b82f6" text-anchor="middle">→</text>
+  
+  <!-- Right Panel: Tail Recursion -->
+  <rect x="500" y="90" width="420" height="400" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="710" y="120" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">Tail Recursion</text>
+  <text x="710" y="145" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">Recursive call is LAST operation</text>
+  
+  <!-- Code block -->
+  <rect x="520" y="160" width="380" height="100" rx="4" fill="#0f0f23" stroke="#4ade80" stroke-width="1"/>
+  <text x="530" y="185" font-family="Courier New, monospace" font-size="13" fill="#a78bfa">def</text>
+  <text x="565" y="185" font-family="Courier New, monospace" font-size="13" fill="#4ade80"> factorial</text>
+  <text x="655" y="185" font-family="Courier New, monospace" font-size="13" fill="#ffffff">(n, acc=1):</text>
+  <text x="540" y="210" font-family="Courier New, monospace" font-size="13" fill="#a78bfa">if</text>
+  <text x="565" y="210" font-family="Courier New, monospace" font-size="13" fill="#ffffff"> n &lt;= 1:</text>
+  <text x="550" y="230" font-family="Courier New, monospace" font-size="13" fill="#a78bfa">return</text>
+  <text x="610" y="230" font-family="Courier New, monospace" font-size="13" fill="#f97316"> acc</text>
+  <text x="540" y="252" font-family="Courier New, monospace" font-size="13" fill="#a78bfa">return</text>
+  <text x="600" y="252" font-family="Courier New, monospace" font-size="13" fill="#4ade80"> factorial</text>
+  <text x="690" y="252" font-family="Courier New, monospace" font-size="13" fill="#ffffff">(n-1, n*acc)</text>
+  
+  <!-- Stack visualization -->
+  <text x="710" y="290" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560" text-anchor="middle">Frame reuse (optimized)</text>
+  
+  <rect x="570" y="305" width="200" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="670" y="325" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">factorial(4, 1)</text>
+  
+  <line x1="670" y1="340" x2="670" y2="355" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="670,365 665,355 675,355" fill="#4ade80"/>
+  
+  <rect x="570" y="370" width="200" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="670" y="390" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">factorial(3, 4)</text>
+  
+  <line x1="670" y1="405" x2="670" y2="420" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="670,430 665,420 675,420" fill="#4ade80"/>
+  
+  <text x="670" y="455" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">... same frame reused ...</text>
+  
+  <!-- Space indicator -->
+  <text x="830" y="380" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">O(1)</text>
+  <text x="830" y="400" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">space*</text>
+  
+  <!-- Bottom comparison -->
+  <rect x="100" y="510" width="350" height="60" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="275" y="535" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">4 * (3 * (2 * 1))</text>
+  <text x="275" y="555" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">Deferred multiplication</text>
+  
+  <rect x="500" y="510" width="350" height="60" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="675" y="535" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">acc: 1→4→12→24</text>
+  <text x="675" y="555" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">Accumulator carries result</text>
+  
+  <!-- Footnote -->
+  <text x="475" y="590" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">*Tail Call Optimization (TCO) required - available in some languages</text>
+</svg>
+

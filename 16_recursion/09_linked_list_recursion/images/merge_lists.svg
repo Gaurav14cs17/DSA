@@ -1,0 +1,89 @@
+<svg viewBox="0 0 900 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="450" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Merge Two Sorted Lists</text>
+  <text x="450" y="58" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">LeetCode 21 - Recursive approach</text>
+  
+  <!-- Input lists -->
+  <text x="100" y="95" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#3b82f6">L1: 1 → 3 → 5</text>
+  <text x="300" y="95" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa">L2: 2 → 4 → 6</text>
+  
+  <!-- Recursive calls -->
+  <text x="100" y="130" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560">Recursive Merge:</text>
+  
+  <!-- Call 1 -->
+  <rect x="100" y="145" width="350" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="120" y="165" font-family="Courier New, monospace" font-size="10" fill="#f97316">merge(1→3→5, 2→4→6)</text>
+  <text x="120" y="180" font-family="Courier New, monospace" font-size="10" fill="#4ade80">1 ≤ 2 → return 1, 1.next = merge(3→5, 2→4→6)</text>
+  
+  <!-- Call 2 -->
+  <rect x="130" y="195" width="350" height="40" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="150" y="215" font-family="Courier New, monospace" font-size="10" fill="#f97316">merge(3→5, 2→4→6)</text>
+  <text x="150" y="230" font-family="Courier New, monospace" font-size="10" fill="#4ade80">2 ≤ 3 → return 2, 2.next = merge(3→5, 4→6)</text>
+  
+  <!-- Call 3 -->
+  <rect x="160" y="245" width="350" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="180" y="265" font-family="Courier New, monospace" font-size="10" fill="#f97316">merge(3→5, 4→6)</text>
+  <text x="180" y="280" font-family="Courier New, monospace" font-size="10" fill="#4ade80">3 ≤ 4 → return 3, 3.next = merge(5, 4→6)</text>
+  
+  <!-- Call 4 -->
+  <rect x="190" y="295" width="350" height="40" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="210" y="315" font-family="Courier New, monospace" font-size="10" fill="#f97316">merge(5, 4→6)</text>
+  <text x="210" y="330" font-family="Courier New, monospace" font-size="10" fill="#4ade80">4 ≤ 5 → return 4, 4.next = merge(5, 6)</text>
+  
+  <!-- Result -->
+  <text x="100" y="375" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Result: 1 → 2 → 3 → 4 → 5 → 6 → NULL</text>
+  
+  <!-- Merged list visualization -->
+  <rect x="100" y="390" width="35" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="117" y="410" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">1</text>
+  
+  <line x1="135" y1="405" x2="155" y2="405" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="162,405 152,400 152,410" fill="#4ade80"/>
+  
+  <rect x="170" y="390" width="35" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="187" y="410" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">2</text>
+  
+  <line x1="205" y1="405" x2="225" y2="405" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="232,405 222,400 222,410" fill="#4ade80"/>
+  
+  <rect x="240" y="390" width="35" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="257" y="410" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">3</text>
+  
+  <line x1="275" y1="405" x2="295" y2="405" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="302,405 292,400 292,410" fill="#4ade80"/>
+  
+  <rect x="310" y="390" width="35" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="327" y="410" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">4</text>
+  
+  <line x1="345" y1="405" x2="365" y2="405" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="372,405 362,400 362,410" fill="#4ade80"/>
+  
+  <rect x="380" y="390" width="35" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="397" y="410" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">5</text>
+  
+  <line x1="415" y1="405" x2="435" y2="405" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="442,405 432,400 432,410" fill="#4ade80"/>
+  
+  <rect x="450" y="390" width="35" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="467" y="410" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">6</text>
+  
+  <!-- Algorithm box -->
+  <rect x="580" y="145" width="280" height="180" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="720" y="172" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560" text-anchor="middle">Algorithm</text>
+  
+  <text x="600" y="200" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">if</text>
+  <text x="620" y="200" font-family="Courier New, monospace" font-size="10" fill="#ffffff"> l1 is None: return l2</text>
+  <text x="600" y="220" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">if</text>
+  <text x="620" y="220" font-family="Courier New, monospace" font-size="10" fill="#ffffff"> l2 is None: return l1</text>
+  
+  <text x="600" y="250" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">if</text>
+  <text x="620" y="250" font-family="Courier New, monospace" font-size="10" fill="#ffffff"> l1.val ≤ l2.val:</text>
+  <text x="610" y="270" font-family="Courier New, monospace" font-size="10" fill="#ffffff">l1.next = merge(l1.next, l2)</text>
+  <text x="610" y="290" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">return</text>
+  <text x="660" y="290" font-family="Courier New, monospace" font-size="10" fill="#ffffff"> l1</text>
+  
+  <text x="600" y="315" font-family="Courier New, monospace" font-size="10" fill="#60a5fa">Time: O(n+m) | Space: O(n+m)</text>
+</svg>
+

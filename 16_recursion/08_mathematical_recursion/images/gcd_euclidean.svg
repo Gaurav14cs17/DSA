@@ -1,0 +1,70 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">GCD: Euclidean Algorithm</text>
+  <text x="450" y="58" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">gcd(a, b) = gcd(b, a mod b)</text>
+  
+  <!-- Example: gcd(48, 18) -->
+  <text x="450" y="95" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">Example: gcd(48, 18)</text>
+  
+  <!-- Step 1 -->
+  <rect x="100" y="115" width="700" height="55" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="130" y="140" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316">Step 1:</text>
+  <text x="220" y="140" font-family="Courier New, monospace" font-size="14" fill="#ffffff">gcd(48, 18)</text>
+  <text x="400" y="140" font-family="Courier New, monospace" font-size="14" fill="#888888">→ 48 = 18 × 2 + 12</text>
+  <text x="600" y="140" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">→ gcd(18, 12)</text>
+  <text x="200" y="160" font-family="Courier New, monospace" font-size="11" fill="#888888">a=48, b=18, a mod b = 12</text>
+  
+  <!-- Arrow -->
+  <line x1="450" y1="175" x2="450" y2="195" stroke="#f97316" stroke-width="2"/>
+  <polygon points="450,205 445,195 455,195" fill="#f97316"/>
+  
+  <!-- Step 2 -->
+  <rect x="100" y="210" width="700" height="55" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="130" y="235" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316">Step 2:</text>
+  <text x="220" y="235" font-family="Courier New, monospace" font-size="14" fill="#ffffff">gcd(18, 12)</text>
+  <text x="400" y="235" font-family="Courier New, monospace" font-size="14" fill="#888888">→ 18 = 12 × 1 + 6</text>
+  <text x="600" y="235" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">→ gcd(12, 6)</text>
+  <text x="200" y="255" font-family="Courier New, monospace" font-size="11" fill="#888888">a=18, b=12, a mod b = 6</text>
+  
+  <!-- Arrow -->
+  <line x1="450" y1="270" x2="450" y2="290" stroke="#f97316" stroke-width="2"/>
+  <polygon points="450,300 445,290 455,290" fill="#f97316"/>
+  
+  <!-- Step 3 -->
+  <rect x="100" y="305" width="700" height="55" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="130" y="330" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316">Step 3:</text>
+  <text x="220" y="330" font-family="Courier New, monospace" font-size="14" fill="#ffffff">gcd(12, 6)</text>
+  <text x="400" y="330" font-family="Courier New, monospace" font-size="14" fill="#888888">→ 12 = 6 × 2 + 0</text>
+  <text x="600" y="330" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">→ gcd(6, 0)</text>
+  <text x="200" y="350" font-family="Courier New, monospace" font-size="11" fill="#888888">a=12, b=6, a mod b = 0</text>
+  
+  <!-- Arrow -->
+  <line x1="450" y1="365" x2="450" y2="385" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="450,395 445,385 455,385" fill="#4ade80"/>
+  
+  <!-- Base case -->
+  <rect x="300" y="400" width="300" height="50" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="450" y="425" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">Base: gcd(6, 0) = 6</text>
+  <text x="450" y="445" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">When b = 0, return a</text>
+  
+  <!-- Result box -->
+  <rect x="650" y="405" width="200" height="80" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="750" y="435" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa" text-anchor="middle">Complexity</text>
+  <text x="670" y="460" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">Time: O(log min(a,b))</text>
+  <text x="670" y="478" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">Space: O(log min(a,b))</text>
+  
+  <!-- Code box -->
+  <rect x="50" y="405" width="200" height="80" rx="6" fill="#0f0f23" stroke="#3b82f6" stroke-width="2"/>
+  <text x="70" y="430" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">def</text>
+  <text x="100" y="430" font-family="Courier New, monospace" font-size="11" fill="#4ade80"> gcd</text>
+  <text x="135" y="430" font-family="Courier New, monospace" font-size="11" fill="#ffffff">(a, b):</text>
+  <text x="80" y="450" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">if</text>
+  <text x="100" y="450" font-family="Courier New, monospace" font-size="11" fill="#ffffff"> b == 0:</text>
+  <text x="90" y="468" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">return</text>
+  <text x="145" y="468" font-family="Courier New, monospace" font-size="11" fill="#ffffff"> a</text>
+  <text x="80" y="485" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">return</text>
+  <text x="135" y="485" font-family="Courier New, monospace" font-size="11" fill="#ffffff"> gcd(b, a%b)</text>
+</svg>
+

@@ -1,0 +1,89 @@
+<svg viewBox="0 0 950 550" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="35" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Nested Structure Parsing</text>
+  <text x="475" y="58" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Decode String: "3[a2[bc]]" → "abcbcabcbcabcbc"</text>
+  
+  <!-- Input visualization -->
+  <text x="475" y="100" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560" text-anchor="middle">Input String</text>
+  
+  <rect x="220" y="110" width="30" height="35" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="235" y="133" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#a78bfa" text-anchor="middle">3</text>
+  
+  <rect x="255" y="110" width="30" height="35" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="270" y="133" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#f97316" text-anchor="middle">[</text>
+  
+  <rect x="290" y="110" width="30" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="305" y="133" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">a</text>
+  
+  <rect x="325" y="110" width="30" height="35" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="340" y="133" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#a78bfa" text-anchor="middle">2</text>
+  
+  <rect x="360" y="110" width="30" height="35" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="375" y="133" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#f97316" text-anchor="middle">[</text>
+  
+  <rect x="395" y="110" width="30" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="410" y="133" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">b</text>
+  
+  <rect x="430" y="110" width="30" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="445" y="133" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">c</text>
+  
+  <rect x="465" y="110" width="30" height="35" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="480" y="133" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#f97316" text-anchor="middle">]</text>
+  
+  <rect x="500" y="110" width="30" height="35" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="515" y="133" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#f97316" text-anchor="middle">]</text>
+  
+  <!-- Bracket matching -->
+  <path d="M 270 150 Q 270 180 392 180 Q 515 180 515 150" stroke="#f97316" stroke-width="2" fill="none" stroke-dasharray="4,2"/>
+  <text x="392" y="200" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">outer bracket: ×3</text>
+  
+  <path d="M 375 150 Q 375 165 427 165 Q 480 165 480 150" stroke="#a78bfa" stroke-width="2" fill="none"/>
+  <text x="427" y="178" font-family="Courier New, monospace" font-size="9" fill="#a78bfa" text-anchor="middle">inner: ×2</text>
+  
+  <!-- Recursive call visualization -->
+  <text x="475" y="240" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">Recursive Parse Calls</text>
+  
+  <!-- Level 0 -->
+  <rect x="150" y="260" width="650" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="180" y="285" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#3b82f6">parse(0):</text>
+  <text x="280" y="285" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Read "3", see "[" → RECURSE</text>
+  <text x="550" y="285" font-family="Courier New, monospace" font-size="11" fill="#888888">| Result = 3 × inner</text>
+  <text x="180" y="302" font-family="Courier New, monospace" font-size="9" fill="#4ade80">returns "abcbcabcbcabcbc"</text>
+  
+  <!-- Arrow down -->
+  <line x1="475" y1="310" x2="475" y2="330" stroke="#f97316" stroke-width="2"/>
+  <polygon points="475,340 470,330 480,330" fill="#f97316"/>
+  
+  <!-- Level 1 -->
+  <rect x="200" y="345" width="550" height="50" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="230" y="370" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#a78bfa">parse(2):</text>
+  <text x="330" y="370" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Read "a", read "2", see "[" → RECURSE</text>
+  <text x="230" y="387" font-family="Courier New, monospace" font-size="9" fill="#4ade80">returns "abcbc" | Result = "a" + 2 × inner</text>
+  
+  <!-- Arrow down -->
+  <line x1="475" y1="395" x2="475" y2="415" stroke="#f97316" stroke-width="2"/>
+  <polygon points="475,425 470,415 480,415" fill="#f97316"/>
+  
+  <!-- Level 2 -->
+  <rect x="250" y="430" width="450" height="50" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="280" y="455" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80">parse(5):</text>
+  <text x="380" y="455" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Read "bc", see "]" → RETURN "bc"</text>
+  <text x="280" y="472" font-family="Courier New, monospace" font-size="9" fill="#4ade80">Base case: no more nested brackets</text>
+  
+  <!-- Unwinding -->
+  <rect x="720" y="330" width="180" height="160" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="810" y="358" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560" text-anchor="middle">Unwinding</text>
+  
+  <text x="740" y="385" font-family="Courier New, monospace" font-size="10" fill="#4ade80">L2: "bc"</text>
+  <text x="740" y="410" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">L1: "a" + 2×"bc"</text>
+  <text x="755" y="430" font-family="Courier New, monospace" font-size="10" fill="#ffffff">= "abcbc"</text>
+  <text x="740" y="455" font-family="Courier New, monospace" font-size="10" fill="#3b82f6">L0: 3 × "abcbc"</text>
+  <text x="755" y="475" font-family="Courier New, monospace" font-size="10" fill="#4ade80">= "abcbcabcbcabcbc"</text>
+  
+  <!-- Result -->
+  <rect x="200" y="500" width="550" height="40" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="475" y="527" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">"abcbcabcbcabcbc" ✓</text>
+</svg>
+

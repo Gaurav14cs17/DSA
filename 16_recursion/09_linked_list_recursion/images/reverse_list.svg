@@ -1,0 +1,99 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Reverse Linked List: Recursion</text>
+  <text x="450" y="58" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">LeetCode 206 - Recursive approach</text>
+  
+  <!-- Original List -->
+  <text x="100" y="95" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560">Original: 1 → 2 → 3 → 4 → NULL</text>
+  
+  <!-- Recursive call stack -->
+  <text x="100" y="130" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">Winding (Recurse to end):</text>
+  
+  <rect x="100" y="145" width="200" height="30" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="200" y="165" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">reverseList(1→2→3→4)</text>
+  
+  <line x1="300" y1="160" x2="330" y2="160" stroke="#f97316" stroke-width="2"/>
+  <polygon points="340,160 330,155 330,165" fill="#f97316"/>
+  
+  <rect x="350" y="145" width="180" height="30" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="440" y="165" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">reverseList(2→3→4)</text>
+  
+  <line x1="530" y1="160" x2="560" y2="160" stroke="#f97316" stroke-width="2"/>
+  <polygon points="570,160 560,155 560,165" fill="#f97316"/>
+  
+  <rect x="580" y="145" width="160" height="30" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="660" y="165" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">reverseList(3→4)</text>
+  
+  <line x1="660" y1="175" x2="660" y2="195" stroke="#f97316" stroke-width="2"/>
+  <polygon points="660,205 655,195 665,195" fill="#f97316"/>
+  
+  <rect x="580" y="210" width="160" height="30" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="660" y="230" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">reverseList(4)</text>
+  
+  <line x1="660" y1="240" x2="660" y2="260" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="660,270 655,260 665,260" fill="#4ade80"/>
+  
+  <rect x="580" y="275" width="160" height="30" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="660" y="295" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">BASE: return 4</text>
+  
+  <!-- Unwinding -->
+  <text x="100" y="335" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Unwinding (Reverse links):</text>
+  
+  <!-- Step 1 -->
+  <rect x="100" y="355" width="350" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="275" y="375" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">At node 3: head.next.next = head</text>
+  
+  <circle cx="140" cy="385" r="12" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="140" y="389" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  
+  <line x1="155" y1="385" x2="175" y2="385" stroke="#3b82f6" stroke-width="2"/>
+  <polygon points="185,385 175,380 175,390" fill="#3b82f6"/>
+  
+  <circle cx="200" cy="385" r="12" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="200" y="389" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">4</text>
+  
+  <path d="M 200 373 Q 200 360 170 360 Q 140 360 140 373" stroke="#4ade80" stroke-width="2" fill="none"/>
+  <polygon points="140,373 135,363 145,363" fill="#4ade80"/>
+  <text x="280" y="393" font-family="Courier New, monospace" font-size="9" fill="#4ade80">4.next = 3</text>
+  
+  <!-- Result -->
+  <text x="100" y="430" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Result: 4 → 3 → 2 → 1 → NULL</text>
+  
+  <rect x="100" y="445" width="40" height="35" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="120" y="468" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">4</text>
+  
+  <line x1="140" y1="462" x2="165" y2="462" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="175,462 165,457 165,467" fill="#4ade80"/>
+  
+  <rect x="185" y="445" width="40" height="35" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="205" y="468" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">3</text>
+  
+  <line x1="225" y1="462" x2="250" y2="462" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="260,462 250,457 250,467" fill="#4ade80"/>
+  
+  <rect x="270" y="445" width="40" height="35" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="290" y="468" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">2</text>
+  
+  <line x1="310" y1="462" x2="335" y2="462" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="345,462 335,457 335,467" fill="#4ade80"/>
+  
+  <rect x="355" y="445" width="40" height="35" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="375" y="468" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">1</text>
+  
+  <line x1="395" y1="462" x2="420" y2="462" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="430,462 420,457 420,467" fill="#4ade80"/>
+  
+  <rect x="440" y="450" width="50" height="25" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="465" y="468" font-family="Courier New, monospace" font-size="10" fill="#ef4444" text-anchor="middle">NULL</text>
+  
+  <!-- Key operations box -->
+  <rect x="550" y="350" width="300" height="130" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="700" y="378" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa" text-anchor="middle">Key Operations</text>
+  <text x="570" y="405" font-family="Courier New, monospace" font-size="10" fill="#ffffff">1. Recurse to end (find new head)</text>
+  <text x="570" y="425" font-family="Courier New, monospace" font-size="10" fill="#ffffff">2. head.next.next = head</text>
+  <text x="570" y="445" font-family="Courier New, monospace" font-size="10" fill="#ffffff">3. head.next = None</text>
+  <text x="570" y="465" font-family="Courier New, monospace" font-size="10" fill="#60a5fa">Time: O(n) | Space: O(n) stack</text>
+</svg>
+

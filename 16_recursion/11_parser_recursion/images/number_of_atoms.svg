@@ -1,0 +1,120 @@
+<svg viewBox="0 0 1000 750" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="750" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="500" y="35" font-family="Courier New, monospace" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">Number of Atoms: Step-by-Step Parser</text>
+  <text x="500" y="58" font-family="Courier New, monospace" font-size="14" fill="#888888" text-anchor="middle">LeetCode 726: "Mg(OH)2" → "H2MgO2"</text>
+  
+  <!-- Grammar Box -->
+  <rect x="30" y="75" width="280" height="110" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="170" y="100" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560" text-anchor="middle">Grammar Rules</text>
+  <text x="50" y="125" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Formula → (Group | Atom)*</text>
+  <text x="50" y="145" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Group   → '(' Formula ')' Num?</text>
+  <text x="50" y="165" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Atom    → UPPER lower* Num?</text>
+  
+  <!-- Input String -->
+  <text x="500" y="100" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">Input Formula</text>
+  
+  <rect x="380" y="115" width="40" height="40" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="400" y="142" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">M</text>
+  <text x="400" y="170" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">0</text>
+  
+  <rect x="425" y="115" width="40" height="40" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="445" y="142" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">g</text>
+  <text x="445" y="170" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">1</text>
+  
+  <rect x="470" y="115" width="40" height="40" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="490" y="142" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#f97316" text-anchor="middle">(</text>
+  <text x="490" y="170" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">2</text>
+  
+  <rect x="515" y="115" width="40" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="535" y="142" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">O</text>
+  <text x="535" y="170" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">3</text>
+  
+  <rect x="560" y="115" width="40" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="580" y="142" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">H</text>
+  <text x="580" y="170" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">4</text>
+  
+  <rect x="605" y="115" width="40" height="40" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="625" y="142" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#f97316" text-anchor="middle">)</text>
+  <text x="625" y="170" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">5</text>
+  
+  <rect x="650" y="115" width="40" height="40" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="670" y="142" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#a78bfa" text-anchor="middle">2</text>
+  <text x="670" y="170" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">6</text>
+  
+  <!-- Function mapping -->
+  <rect x="750" y="75" width="220" height="110" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="860" y="100" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa" text-anchor="middle">Grammar → Function</text>
+  <text x="770" y="125" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Formula → parseFormula()</text>
+  <text x="770" y="145" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Group   → parseGroup()</text>
+  <text x="770" y="165" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Atom    → parseAtom()</text>
+  
+  <!-- Step by Step -->
+  <text x="500" y="210" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">Execution Steps</text>
+  
+  <!-- Step 1: Parse Mg -->
+  <rect x="50" y="230" width="400" height="65" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="70" y="255" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Step 1: parseAtom() at pos=0</text>
+  <text x="80" y="278" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Read 'M' (uppercase), then 'g' (lowercase)</text>
+  <text x="80" y="292" font-family="Courier New, monospace" font-size="10" fill="#888888">No digit after → count = 1</text>
+  
+  <rect x="470" y="245" width="130" height="35" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="535" y="268" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">{"Mg": 1}</text>
+  
+  <!-- Step 2: See ( -->
+  <rect x="50" y="305" width="400" height="50" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="70" y="330" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">Step 2: See '(' at pos=2 → parseGroup()</text>
+  <text x="80" y="348" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Skip '(' and RECURSE into parseFormula()</text>
+  
+  <!-- Arrow down -->
+  <line x1="250" y1="360" x2="250" y2="385" stroke="#f97316" stroke-width="2"/>
+  <polygon points="250,395 245,385 255,385" fill="#f97316"/>
+  
+  <!-- Recursive call box -->
+  <rect x="80" y="400" width="350" height="140" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="3"/>
+  <text x="255" y="425" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#3b82f6" text-anchor="middle">RECURSION: parseFormula() at pos=3</text>
+  
+  <!-- Inside recursion -->
+  <text x="100" y="455" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• parseAtom() → Read 'O', count=1</text>
+  <text x="100" y="475" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• parseAtom() → Read 'H', count=1</text>
+  <text x="100" y="495" font-family="Courier New, monospace" font-size="10" fill="#f97316">• See ')' at pos=5 → STOP recursion</text>
+  
+  <rect x="280" y="505" width="130" height="28" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="345" y="525" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">{"O":1, "H":1}</text>
+  
+  <!-- Return from recursion -->
+  <line x1="430" y1="470" x2="480" y2="470" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="490,470 480,465 480,475" fill="#4ade80"/>
+  
+  <!-- Step 3: Parse number -->
+  <rect x="500" y="400" width="250" height="60" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="520" y="425" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa">Step 3: parseNumber()</text>
+  <text x="520" y="448" font-family="Courier New, monospace" font-size="10" fill="#ffffff">After ')', read '2'</text>
+  <text x="520" y="465" font-family="Courier New, monospace" font-size="10" fill="#4ade80">multiplier = 2</text>
+  
+  <!-- Step 4: Multiply -->
+  <rect x="500" y="475" width="250" height="70" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="520" y="500" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Step 4: Multiply group × 2</text>
+  <text x="520" y="523" font-family="Courier New, monospace" font-size="10" fill="#ffffff">{"O":1, "H":1} × 2</text>
+  <text x="520" y="540" font-family="Courier New, monospace" font-size="10" fill="#4ade80">= {"O":2, "H":2}</text>
+  
+  <!-- Final merge -->
+  <rect x="200" y="560" width="600" height="70" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="500" y="590" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">Step 5: Merge all counts</text>
+  <text x="500" y="615" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">{"Mg":1} + {"O":2, "H":2} = {"H":2, "Mg":1, "O":2}</text>
+  
+  <!-- Result -->
+  <rect x="350" y="650" width="300" height="50" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="4"/>
+  <text x="500" y="672" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">Sorted alphabetically:</text>
+  <text x="500" y="692" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">"H2MgO2" ✓</text>
+  
+  <!-- Key insight -->
+  <rect x="770" y="560" width="200" height="110" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="870" y="585" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#e94560" text-anchor="middle">Key Pattern</text>
+  <text x="785" y="610" font-family="Courier New, monospace" font-size="9" fill="#ffffff">• '(' → RECURSE</text>
+  <text x="785" y="630" font-family="Courier New, monospace" font-size="9" fill="#ffffff">• ')' → RETURN</text>
+  <text x="785" y="650" font-family="Courier New, monospace" font-size="9" fill="#ffffff">• Number → multiply</text>
+  <text x="785" y="670" font-family="Courier New, monospace" font-size="9" fill="#4ade80">• Merge all counts</text>
+</svg>
+

@@ -1,0 +1,170 @@
+<svg viewBox="0 0 950 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="35" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">2D Memoization: Unique Paths</text>
+  <text x="475" y="58" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">LeetCode 62: Count paths from top-left to bottom-right</text>
+  
+  <!-- Grid visualization -->
+  <text x="100" y="100" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Grid (3×4):</text>
+  
+  <!-- Draw 3x4 grid -->
+  <!-- Row 0 -->
+  <rect x="100" y="120" width="60" height="50" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="130" y="150" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">START</text>
+  <text x="130" y="165" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">(0,0)</text>
+  
+  <rect x="165" y="120" width="60" height="50" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="230" y="120" width="60" height="50" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="295" y="120" width="60" height="50" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Row 1 -->
+  <rect x="100" y="175" width="60" height="50" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="165" y="175" width="60" height="50" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="230" y="175" width="60" height="50" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="295" y="175" width="60" height="50" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Row 2 -->
+  <rect x="100" y="230" width="60" height="50" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="165" y="230" width="60" height="50" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="230" y="230" width="60" height="50" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="295" y="230" width="60" height="50" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="325" y="255" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">END</text>
+  <text x="325" y="270" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">(2,3)</text>
+  
+  <!-- Arrows showing directions -->
+  <line x1="160" y1="145" x2="175" y2="145" stroke="#f97316" stroke-width="2"/>
+  <polygon points="180,145 172,140 172,150" fill="#f97316"/>
+  
+  <line x1="130" y1="170" x2="130" y2="185" stroke="#f97316" stroke-width="2"/>
+  <polygon points="130,190 125,182 135,182" fill="#f97316"/>
+  
+  <text x="200" y="105" font-family="Courier New, monospace" font-size="10" fill="#888888">→ right or ↓ down only</text>
+  
+  <!-- Memo table -->
+  <text x="420" y="100" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Memoization Table:</text>
+  
+  <!-- Table header -->
+  <text x="420" y="125" font-family="Courier New, monospace" font-size="11" fill="#888888">col→</text>
+  <text x="480" y="125" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">0</text>
+  <text x="540" y="125" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">1</text>
+  <text x="600" y="125" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">2</text>
+  <text x="660" y="125" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">3</text>
+  
+  <!-- Row labels -->
+  <text x="420" y="145" font-family="Courier New, monospace" font-size="11" fill="#888888">row↓</text>
+  
+  <!-- Row 0 of memo table -->
+  <text x="440" y="170" font-family="Courier New, monospace" font-size="11" fill="#888888">0</text>
+  <rect x="455" y="150" width="50" height="35" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="480" y="172" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+  <rect x="515" y="150" width="50" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="540" y="172" font-family="Courier New, monospace" font-size="14" fill="#4ade80" text-anchor="middle">1</text>
+  <rect x="575" y="150" width="50" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="600" y="172" font-family="Courier New, monospace" font-size="14" fill="#4ade80" text-anchor="middle">1</text>
+  <rect x="635" y="150" width="50" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="660" y="172" font-family="Courier New, monospace" font-size="14" fill="#4ade80" text-anchor="middle">1</text>
+  
+  <!-- Row 1 of memo table -->
+  <text x="440" y="210" font-family="Courier New, monospace" font-size="11" fill="#888888">1</text>
+  <rect x="455" y="190" width="50" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="480" y="212" font-family="Courier New, monospace" font-size="14" fill="#4ade80" text-anchor="middle">1</text>
+  <rect x="515" y="190" width="50" height="35" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="540" y="212" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+  <rect x="575" y="190" width="50" height="35" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="600" y="212" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  <rect x="635" y="190" width="50" height="35" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="660" y="212" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+  
+  <!-- Row 2 of memo table -->
+  <text x="440" y="250" font-family="Courier New, monospace" font-size="11" fill="#888888">2</text>
+  <rect x="455" y="230" width="50" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="480" y="252" font-family="Courier New, monospace" font-size="14" fill="#4ade80" text-anchor="middle">1</text>
+  <rect x="515" y="230" width="50" height="35" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="540" y="252" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  <rect x="575" y="230" width="50" height="35" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="600" y="252" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+  <rect x="635" y="230" width="50" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="660" y="252" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">10</text>
+  
+  <!-- Result annotation -->
+  <line x1="690" y1="247" x2="730" y2="247" stroke="#4ade80" stroke-width="2"/>
+  <text x="740" y="252" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Result!</text>
+  
+  <!-- Formula explanation -->
+  <rect x="750" y="130" width="180" height="140" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="840" y="155" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560" text-anchor="middle">Recurrence</text>
+  <text x="770" y="185" font-family="Courier New, monospace" font-size="11" fill="#ffffff">dp[r][c] =</text>
+  <text x="780" y="210" font-family="Courier New, monospace" font-size="11" fill="#ffffff">dp[r-1][c] +</text>
+  <text x="780" y="230" font-family="Courier New, monospace" font-size="11" fill="#ffffff">dp[r][c-1]</text>
+  <text x="770" y="258" font-family="Courier New, monospace" font-size="10" fill="#888888">paths from</text>
+  <text x="770" y="270" font-family="Courier New, monospace" font-size="10" fill="#888888">above + left</text>
+  
+  <!-- Code section -->
+  <rect x="100" y="310" width="420" height="160" rx="6" fill="#0f0f23" stroke="#3b82f6" stroke-width="2"/>
+  <text x="120" y="340" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">@lru_cache(maxsize=None)</text>
+  <text x="120" y="365" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">def</text>
+  <text x="155" y="365" font-family="Courier New, monospace" font-size="12" fill="#4ade80"> uniquePaths</text>
+  <text x="260" y="365" font-family="Courier New, monospace" font-size="12" fill="#ffffff">(r, c):</text>
+  <text x="135" y="390" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">if</text>
+  <text x="160" y="390" font-family="Courier New, monospace" font-size="12" fill="#ffffff"> r == 0 </text>
+  <text x="220" y="390" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">or</text>
+  <text x="245" y="390" font-family="Courier New, monospace" font-size="12" fill="#ffffff"> c == 0:</text>
+  <text x="145" y="415" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">return</text>
+  <text x="200" y="415" font-family="Courier New, monospace" font-size="12" fill="#f97316"> 1</text>
+  <text x="135" y="440" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">return</text>
+  <text x="190" y="440" font-family="Courier New, monospace" font-size="12" fill="#ffffff"> uniquePaths(r-1, c) +</text>
+  <text x="190" y="460" font-family="Courier New, monospace" font-size="12" fill="#ffffff">       uniquePaths(r, c-1)</text>
+  
+  <!-- Call tree example -->
+  <rect x="550" y="310" width="380" height="180" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="740" y="335" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560" text-anchor="middle">Call Tree for uniquePaths(2,2)</text>
+  
+  <!-- Root -->
+  <rect x="690" y="350" width="80" height="28" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="730" y="369" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">dp(2,2)</text>
+  
+  <!-- Level 1 -->
+  <line x1="700" y1="378" x2="640" y2="405" stroke="#f97316" stroke-width="1"/>
+  <line x1="760" y1="378" x2="820" y2="405" stroke="#f97316" stroke-width="1"/>
+  
+  <rect x="580" y="408" width="80" height="25" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+  <text x="620" y="425" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">dp(1,2)</text>
+  
+  <rect x="800" y="408" width="80" height="25" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+  <text x="840" y="425" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">dp(2,1)</text>
+  
+  <!-- Level 2 -->
+  <line x1="600" y1="433" x2="575" y2="455" stroke="#a78bfa" stroke-width="1"/>
+  <line x1="640" y1="433" x2="665" y2="455" stroke="#a78bfa" stroke-width="1"/>
+  
+  <rect x="560" y="458" width="40" height="22" rx="2" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="580" y="473" font-family="Courier New, monospace" font-size="9" fill="#4ade80" text-anchor="middle">(0,2)</text>
+  
+  <rect x="650" y="458" width="40" height="22" rx="2" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="670" y="473" font-family="Courier New, monospace" font-size="9" fill="#4ade80" text-anchor="middle">(1,1)</text>
+  <text x="705" y="473" font-family="Courier New, monospace" font-size="8" fill="#a78bfa">cached</text>
+  
+  <line x1="820" y1="433" x2="795" y2="455" stroke="#a78bfa" stroke-width="1"/>
+  <line x1="860" y1="433" x2="885" y2="455" stroke="#a78bfa" stroke-width="1"/>
+  
+  <rect x="780" y="458" width="40" height="22" rx="2" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="800" y="473" font-family="Courier New, monospace" font-size="9" fill="#4ade80" text-anchor="middle">(1,1)</text>
+  <text x="825" y="473" font-family="Courier New, monospace" font-size="8" fill="#a78bfa">cached</text>
+  
+  <rect x="870" y="458" width="40" height="22" rx="2" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="890" y="473" font-family="Courier New, monospace" font-size="9" fill="#4ade80" text-anchor="middle">(2,0)</text>
+  
+  <!-- Complexity section -->
+  <rect x="100" y="510" width="420" height="70" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="310" y="535" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa" text-anchor="middle">Complexity Analysis</text>
+  <text x="130" y="560" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Time: O(m × n) - each cell computed once</text>
+  <text x="130" y="578" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Space: O(m × n) - cache + O(m+n) stack</text>
+  
+  <!-- Key insight -->
+  <rect x="550" y="510" width="380" height="70" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="740" y="535" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">Key Insight</text>
+  <text x="570" y="560" font-family="Courier New, monospace" font-size="11" fill="#ffffff">2D problems → 2D cache (memo[r][c])</text>
+  <text x="570" y="578" font-family="Courier New, monospace" font-size="11" fill="#ffffff">State = (row, col) position</text>
+</svg>
+

@@ -1,0 +1,110 @@
+<svg viewBox="0 0 950 650" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="35" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Decode String: Nested Recursion</text>
+  <text x="475" y="58" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">LeetCode 394: "3[a2[c]]" → "accaccacc"</text>
+  
+  <!-- Input string visualization -->
+  <text x="475" y="95" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">Input String</text>
+  
+  <rect x="260" y="105" width="30" height="35" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="275" y="128" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#a78bfa" text-anchor="middle">3</text>
+  
+  <rect x="295" y="105" width="30" height="35" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="310" y="128" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#f97316" text-anchor="middle">[</text>
+  
+  <rect x="330" y="105" width="30" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="345" y="128" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">a</text>
+  
+  <rect x="365" y="105" width="30" height="35" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="380" y="128" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#a78bfa" text-anchor="middle">2</text>
+  
+  <rect x="400" y="105" width="30" height="35" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="415" y="128" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#f97316" text-anchor="middle">[</text>
+  
+  <rect x="435" y="105" width="30" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="450" y="128" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">c</text>
+  
+  <rect x="470" y="105" width="30" height="35" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="485" y="128" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#f97316" text-anchor="middle">]</text>
+  
+  <rect x="505" y="105" width="30" height="35" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="520" y="128" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#f97316" text-anchor="middle">]</text>
+  
+  <!-- Bracket matching -->
+  <path d="M 310 145 Q 310 165 415 165 Q 520 165 520 145" stroke="#f97316" stroke-width="2" fill="none" stroke-dasharray="4,2"/>
+  <text x="415" y="185" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">outer bracket: repeat 3×</text>
+  
+  <path d="M 415 145 Q 415 158 450 158 Q 485 158 485 145" stroke="#a78bfa" stroke-width="2" fill="none"/>
+  <text x="450" y="172" font-family="Courier New, monospace" font-size="9" fill="#a78bfa" text-anchor="middle">inner: 2×</text>
+  
+  <!-- Recursion Tree -->
+  <text x="475" y="220" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">Recursive Execution</text>
+  
+  <!-- Level 0 -->
+  <rect x="350" y="235" width="250" height="40" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="475" y="260" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">decode(0): Start parsing</text>
+  
+  <!-- Arrow down -->
+  <line x1="475" y1="275" x2="475" y2="295" stroke="#3b82f6" stroke-width="2"/>
+  <polygon points="475,305 470,295 480,295" fill="#3b82f6"/>
+  
+  <!-- Step 1: Read 3 -->
+  <rect x="50" y="315" width="250" height="80" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="175" y="340" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa" text-anchor="middle">Step 1: Read digit '3'</text>
+  <text x="70" y="365" font-family="Courier New, monospace" font-size="11" fill="#ffffff">num = 3</text>
+  <text x="70" y="385" font-family="Courier New, monospace" font-size="11" fill="#888888">Continue until '['</text>
+  
+  <!-- Step 2: See [ -->
+  <rect x="350" y="315" width="250" height="80" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="475" y="340" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316" text-anchor="middle">Step 2: See '['</text>
+  <text x="370" y="365" font-family="Courier New, monospace" font-size="11" fill="#ffffff">RECURSE → decode(2)</text>
+  <text x="370" y="385" font-family="Courier New, monospace" font-size="11" fill="#888888">Parse content inside [...]</text>
+  
+  <!-- Arrow to inner recursion -->
+  <line x1="475" y1="395" x2="475" y2="415" stroke="#f97316" stroke-width="2"/>
+  <polygon points="475,425 470,415 480,415" fill="#f97316"/>
+  
+  <!-- Inner recursion box -->
+  <rect x="300" y="430" width="350" height="120" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="3"/>
+  <text x="475" y="455" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560" text-anchor="middle">Inner Recursion: decode(2)</text>
+  
+  <text x="320" y="480" font-family="Courier New, monospace" font-size="11" fill="#4ade80">• Read 'a' → result = "a"</text>
+  <text x="320" y="500" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">• Read '2', then '['</text>
+  <text x="320" y="520" font-family="Courier New, monospace" font-size="11" fill="#f97316">• RECURSE → decode(5) returns "c"</text>
+  <text x="320" y="540" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• result = "a" + 2×"c" = "acc"</text>
+  
+  <!-- Deepest recursion -->
+  <rect x="680" y="430" width="220" height="70" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="790" y="455" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">Innermost: decode(5)</text>
+  <text x="700" y="480" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Read 'c', then ']'</text>
+  <text x="700" y="495" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Return "c"</text>
+  
+  <!-- Arrow from inner -->
+  <line x1="680" y1="465" x2="655" y2="465" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="650,465 660,460 660,470" fill="#4ade80"/>
+  
+  <!-- Return arrow -->
+  <line x1="475" y1="555" x2="475" y2="575" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="475,585 470,575 480,575" fill="#4ade80"/>
+  
+  <!-- Final result box -->
+  <rect x="300" y="590" width="350" height="45" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="475" y="610" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">3 × "acc" =</text>
+  <text x="475" y="628" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">"accaccacc"</text>
+  
+  <!-- Algorithm summary -->
+  <rect x="50" y="430" width="220" height="120" rx="6" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+  <text x="160" y="455" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ef4444" text-anchor="middle">Key Pattern</text>
+  <text x="70" y="480" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• digit → build number</text>
+  <text x="70" y="500" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• '[' → recurse deeper</text>
+  <text x="70" y="520" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• ']' → return result</text>
+  <text x="70" y="540" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• char → append to result</text>
+  
+  <!-- Complexity -->
+  <rect x="680" y="520" width="220" height="55" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="790" y="545" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#a78bfa" text-anchor="middle">Complexity</text>
+  <text x="700" y="565" font-family="Courier New, monospace" font-size="10" fill="#60a5fa">Time: O(n × max_k)</text>
+</svg>
+

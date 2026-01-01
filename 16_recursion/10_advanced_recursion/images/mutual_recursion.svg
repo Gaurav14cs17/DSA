@@ -1,0 +1,79 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Mutual Recursion</text>
+  <text x="450" y="58" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Two functions calling each other</text>
+  
+  <!-- isEven/isOdd example -->
+  <text x="250" y="95" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">Example: isEven(4)</text>
+  
+  <!-- Function boxes -->
+  <rect x="100" y="115" width="150" height="80" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="3"/>
+  <text x="175" y="145" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#3b82f6" text-anchor="middle">isEven(n)</text>
+  <text x="175" y="170" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">if n==0: True</text>
+  <text x="175" y="185" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">else: isOdd(n-1)</text>
+  
+  <rect x="300" y="115" width="150" height="80" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="3"/>
+  <text x="375" y="145" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa" text-anchor="middle">isOdd(n)</text>
+  <text x="375" y="170" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">if n==0: False</text>
+  <text x="375" y="185" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">else: isEven(n-1)</text>
+  
+  <!-- Arrows between functions -->
+  <path d="M 250 155 Q 275 120 300 155" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 300 175 Q 275 210 250 175" stroke="#f97316" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ade80"/>
+    </marker>
+  </defs>
+  
+  <!-- Execution trace -->
+  <text x="650" y="95" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">Execution Trace</text>
+  
+  <rect x="530" y="115" width="240" height="180" rx="6" fill="#0f0f23" stroke="#3b82f6" stroke-width="2"/>
+  
+  <text x="550" y="140" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">isEven(4)</text>
+  <text x="560" y="160" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">→ isOdd(3)</text>
+  <text x="570" y="180" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">→ isEven(2)</text>
+  <text x="580" y="200" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">→ isOdd(1)</text>
+  <text x="590" y="220" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">→ isEven(0)</text>
+  <text x="600" y="245" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80">→ True (base)</text>
+  
+  <text x="650" y="280" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">Result: True ✓</text>
+  
+  <!-- Parser example -->
+  <text x="250" y="330" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">Parser Example</text>
+  
+  <rect x="50" y="350" width="120" height="60" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="110" y="378" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#3b82f6" text-anchor="middle">Expression</text>
+  <text x="110" y="395" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">term ((+|-) term)*</text>
+  
+  <rect x="200" y="350" width="100" height="60" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="250" y="378" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">Term</text>
+  <text x="250" y="395" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">factor ((*|/) factor)*</text>
+  
+  <rect x="330" y="350" width="100" height="60" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="380" y="378" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#a78bfa" text-anchor="middle">Factor</text>
+  <text x="380" y="395" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">(expr) | num</text>
+  
+  <!-- Arrows -->
+  <line x1="170" y1="380" x2="190" y2="380" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="200,380 190,375 190,385" fill="#4ade80"/>
+  
+  <line x1="300" y1="380" x2="320" y2="380" stroke="#a78bfa" stroke-width="2"/>
+  <polygon points="330,380 320,375 320,385" fill="#a78bfa"/>
+  
+  <path d="M 380 350 Q 380 320 240 320 Q 100 320 100 350" stroke="#f97316" stroke-width="2" fill="none" stroke-dasharray="4,2"/>
+  <text x="240" y="315" font-family="Courier New, monospace" font-size="9" fill="#f97316" text-anchor="middle">Factor calls Expression!</text>
+  
+  <!-- Key insight -->
+  <rect x="500" y="350" width="350" height="120" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="675" y="378" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560" text-anchor="middle">Key Insights</text>
+  <text x="520" y="405" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• Both functions need base cases</text>
+  <text x="520" y="425" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• Progress must be made (n decreases)</text>
+  <text x="520" y="445" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• Common in parsers, state machines</text>
+  <text x="520" y="465" font-family="Courier New, monospace" font-size="10" fill="#60a5fa">• Convert to single function if needed</text>
+</svg>
+

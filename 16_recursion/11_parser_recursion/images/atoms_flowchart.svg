@@ -1,0 +1,120 @@
+<svg viewBox="0 0 950 800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="800" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="30" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Parser Flowchart: Decision at Each Character</text>
+  
+  <!-- Input example -->
+  <rect x="350" y="50" width="250" height="35" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="475" y="73" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Input: K4(ON(SO3)2)2</text>
+  
+  <!-- Start -->
+  <ellipse cx="475" cy="120" rx="60" ry="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="475" y="127" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">START</text>
+  
+  <line x1="475" y1="145" x2="475" y2="175" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="475,185 470,175 480,175" fill="#4ade80"/>
+  
+  <!-- Read char -->
+  <rect x="375" y="190" width="200" height="45" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="475" y="218" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Read next char</text>
+  
+  <line x1="475" y1="235" x2="475" y2="265" stroke="#3b82f6" stroke-width="2"/>
+  <polygon points="475,275 470,265 480,265" fill="#3b82f6"/>
+  
+  <!-- Decision diamond: What type? -->
+  <polygon points="475,280 600,350 475,420 350,350" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="475" y="345" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">What is</text>
+  <text x="475" y="360" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">char?</text>
+  
+  <!-- Branch: Uppercase -->
+  <line x1="350" y1="350" x2="200" y2="350" stroke="#4ade80" stroke-width="2"/>
+  <text x="275" y="340" font-family="Courier New, monospace" font-size="10" fill="#4ade80">UPPER</text>
+  
+  <rect x="80" y="320" width="140" height="60" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="150" y="345" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">parseAtom()</text>
+  <text x="150" y="365" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">K, Ca, Mg, O, H</text>
+  
+  <!-- Atom details -->
+  <line x1="150" y1="380" x2="150" y2="420" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="150,430 145,420 155,420" fill="#4ade80"/>
+  
+  <rect x="60" y="435" width="180" height="100" rx="6" fill="#0f0f23" stroke="#4ade80" stroke-width="1"/>
+  <text x="150" y="458" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#4ade80" text-anchor="middle">Atom Parsing:</text>
+  <text x="75" y="480" font-family="Courier New, monospace" font-size="9" fill="#ffffff">1. Read UPPER</text>
+  <text x="75" y="498" font-family="Courier New, monospace" font-size="9" fill="#ffffff">2. Read lower* (opt)</text>
+  <text x="75" y="516" font-family="Courier New, monospace" font-size="9" fill="#ffffff">3. Read digits (opt)</text>
+  
+  <!-- Branch: ( -->
+  <line x1="475" y1="420" x2="475" y2="470" stroke="#f97316" stroke-width="2"/>
+  <text x="490" y="445" font-family="Courier New, monospace" font-size="10" fill="#f97316">'('</text>
+  
+  <rect x="375" y="475" width="200" height="60" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="475" y="500" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#f97316" text-anchor="middle">parseGroup()</text>
+  <text x="475" y="520" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">RECURSE!</text>
+  
+  <!-- Group details -->
+  <line x1="475" y1="535" x2="475" y2="565" stroke="#f97316" stroke-width="2"/>
+  <polygon points="475,575 470,565 480,565" fill="#f97316"/>
+  
+  <rect x="330" y="580" width="290" height="130" rx="6" fill="#0f0f23" stroke="#f97316" stroke-width="1"/>
+  <text x="475" y="605" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#f97316" text-anchor="middle">Group Parsing:</text>
+  <text x="345" y="630" font-family="Courier New, monospace" font-size="9" fill="#ffffff">1. Skip '('</text>
+  <text x="345" y="650" font-family="Courier New, monospace" font-size="9" fill="#a78bfa">2. RECURSE parseFormula()</text>
+  <text x="345" y="670" font-family="Courier New, monospace" font-size="9" fill="#ffffff">3. Skip ')'</text>
+  <text x="345" y="690" font-family="Courier New, monospace" font-size="9" fill="#ffffff">4. Read multiplier (opt)</text>
+  <text x="345" y="710" font-family="Courier New, monospace" font-size="9" fill="#4ade80">5. Multiply all counts</text>
+  
+  <!-- Branch: ) -->
+  <line x1="600" y1="350" x2="750" y2="350" stroke="#ef4444" stroke-width="2"/>
+  <text x="675" y="340" font-family="Courier New, monospace" font-size="10" fill="#ef4444">')'</text>
+  
+  <rect x="720" y="320" width="150" height="60" rx="6" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+  <text x="795" y="345" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ef4444" text-anchor="middle">STOP &amp; RETURN</text>
+  <text x="795" y="365" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">End of this level</text>
+  
+  <!-- Return arrow -->
+  <line x1="795" y1="380" x2="795" y2="430" stroke="#ef4444" stroke-width="2"/>
+  <line x1="795" y1="430" x2="580" y2="430" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="690" y="420" font-family="Courier New, monospace" font-size="9" fill="#ef4444" text-anchor="middle">return counts</text>
+  
+  <!-- Branch: digit -->
+  <line x1="600" y1="380" x2="700" y2="450" stroke="#a78bfa" stroke-width="2"/>
+  <text x="665" y="405" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">DIGIT</text>
+  
+  <rect x="680" y="460" width="140" height="50" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="750" y="485" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#a78bfa" text-anchor="middle">parseNumber()</text>
+  <text x="750" y="502" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">2, 12, 100</text>
+  
+  <!-- Branch: END -->
+  <line x1="350" y1="380" x2="250" y2="450" stroke="#4ade80" stroke-width="2"/>
+  <text x="285" y="405" font-family="Courier New, monospace" font-size="10" fill="#4ade80">END</text>
+  
+  <ellipse cx="200" cy="480" rx="60" ry="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="200" y="487" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">FINISH</text>
+  
+  <!-- Loop back arrow -->
+  <path d="M 80 450 Q 30 400 80 320" stroke="#4ade80" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+  <polygon points="80,320 75,332 88,328" fill="#4ade80"/>
+  <text x="40" y="385" font-family="Courier New, monospace" font-size="9" fill="#4ade80">next</text>
+  
+  <!-- Legend box -->
+  <rect x="700" y="580" width="220" height="180" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="810" y="610" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560" text-anchor="middle">Decision Summary</text>
+  
+  <rect x="720" y="625" width="15" height="15" fill="#4ade80"/>
+  <text x="745" y="637" font-family="Courier New, monospace" font-size="10" fill="#ffffff">A-Z → parseAtom</text>
+  
+  <rect x="720" y="650" width="15" height="15" fill="#f97316"/>
+  <text x="745" y="662" font-family="Courier New, monospace" font-size="10" fill="#ffffff">'(' → RECURSE</text>
+  
+  <rect x="720" y="675" width="15" height="15" fill="#ef4444"/>
+  <text x="745" y="687" font-family="Courier New, monospace" font-size="10" fill="#ffffff">')' → RETURN</text>
+  
+  <rect x="720" y="700" width="15" height="15" fill="#a78bfa"/>
+  <text x="745" y="712" font-family="Courier New, monospace" font-size="10" fill="#ffffff">0-9 → parseNum</text>
+  
+  <rect x="720" y="725" width="15" height="15" fill="#0f2f1f" stroke="#4ade80"/>
+  <text x="745" y="737" font-family="Courier New, monospace" font-size="10" fill="#ffffff">END → FINISH</text>
+</svg>
+
