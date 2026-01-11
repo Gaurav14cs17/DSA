@@ -31,7 +31,7 @@ permalink: /09_heaps/01_basic_heap/
 
 ### 1️⃣ Heap Property Maintenance
 
-**Insert (Sift Up):**
+**Insert (Shift Up):**
 
 ```
 Add at end → Bubble up until heap property restored
