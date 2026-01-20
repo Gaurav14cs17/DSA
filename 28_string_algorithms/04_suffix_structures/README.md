@@ -84,8 +84,11 @@ LCP = [0, 0, 1, 3, 0, 0, 2]
 ### Key Properties
 
 1. **Suffix array uniquely represents string**
+
 2. **All substring queries can be answered** using SA + LCP
+
 3. **Space:** O(n) vs O(n) for suffix tree (but simpler)
+
 4. **Pattern matching:** O(m log n) with binary search
 
 ---
@@ -598,8 +601,11 @@ print(f"Original: {inverse_bwt(bwt)}")
 ### Common Optimizations
 
 1. **Sparse Suffix Array:** Store every k-th suffix
+
 2. **Enhanced Suffix Array:** Add additional tables for faster queries
+
 3. **Compressed Suffix Array:** Use compression for space
+
 4. **Parallel Construction:** Build SA in parallel
 
 ---

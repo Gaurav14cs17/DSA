@@ -154,7 +154,9 @@ Every number except the missing one appears twice (once as index, once as value)
 #### The Algorithm
 
 1. **XOR all elements** → Get \(a \oplus b\)
+
 2. **Find any differing bit** → \(\text{diff} = \text{xor} \land (-\text{xor})\)
+
 3. **Partition by this bit** → Separate \(a\) and \(b\)
 
 #### 🔍 Mathematical Proof

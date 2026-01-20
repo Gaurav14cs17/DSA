@@ -93,9 +93,11 @@ This increases matching size by 1.
 
 ```
 1. Start with empty matching M = ∅
+
 2. For each unmatched vertex u in L:
     3. Try to find augmenting path starting from u using DFS
     4. If found, augment matching M
+
 5. Return M
 
 ```
@@ -109,8 +111,11 @@ This increases matching size by 1.
 **Time Complexity:** $O(E\sqrt{V})$ - significant improvement!
 
 **Key Ideas:**
+
 1. Find **maximal set** of shortest augmenting paths using BFS
+
 2. Augment all paths simultaneously using DFS
+
 3. Repeat until no augmenting paths exist
 
 **Improvement:** Processes multiple augmenting paths per iteration.
@@ -403,11 +408,17 @@ def min_vertex_cover(L, R, edges):
 ## 💡 Key Insights
 
 1. **Bipartite Check:** Use 2-coloring with BFS/DFS - no odd cycles
+
 2. **Augmenting Path:** Alternating path between unmatched vertices
+
 3. **Berge's Lemma:** Matching is maximum iff no augmenting path exists
+
 4. **Hungarian Algorithm:** Repeatedly find augmenting paths - O(VE)
+
 5. **Hopcroft-Karp:** Find multiple shortest augmenting paths - O(E√V)
+
 6. **König's Theorem:** Max matching = min vertex cover in bipartite graphs
+
 7. **Flow Reduction:** Bipartite matching reduces to max flow problem
 
 ---

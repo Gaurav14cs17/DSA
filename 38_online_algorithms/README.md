@@ -424,10 +424,15 @@ class SlidingWindowMax:
 ## 🔍 Interview Focus
 
 **Top 5 Must-Know:**
+
 1. **LRU Cache** - Most common cache interview question
+
 2. **Median from Stream** - Two heaps technique
+
 3. **Sliding Window Maximum** - Monotonic deque mastery
+
 4. **LFU Cache** - Complex frequency tracking
+
 5. **Insert Delete GetRandom** - Array + HashMap trick
 
 **Common Mistakes:**

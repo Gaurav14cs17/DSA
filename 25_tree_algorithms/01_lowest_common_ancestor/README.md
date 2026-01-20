@@ -85,7 +85,9 @@ permalink: /25_tree_algorithms/01_lowest_common_ancestor/
 ```
 
 **Query Algorithm:**
+
 1. Bring $u$ and $v$ to same level
+
 2. Binary search for LCA by jumping up in powers of 2
 
 **Complexity:**
@@ -109,8 +111,11 @@ permalink: /25_tree_algorithms/01_lowest_common_ancestor/
 - LCA$(u, v)$ = node with minimum depth in tour between first occurrences of $u$ and $v$
 
 **Steps:**
+
 1. Build Euler tour with depths
+
 2. Record first occurrence of each node
+
 3. LCA query = RMQ (Range Minimum Query) on depths
 
 **Complexity:**
@@ -128,8 +133,11 @@ permalink: /25_tree_algorithms/01_lowest_common_ancestor/
 **Union-Find based approach** for all queries at once.
 
 **Algorithm:**
+
 1. DFS through tree
+
 2. Union visited nodes
+
 3. Answer queries when both nodes visited
 
 **Complexity:** $O(n \cdot \alpha(n))$ for all queries
@@ -641,9 +649,13 @@ LCA Problem
 ## 🎯 Key Insights
 
 1. **Binary Lifting** most practical for online queries
+
 2. **Euler Tour + RMQ** optimal but complex to implement
+
 3. **Simple recursion** sufficient for single/few queries
+
 4. **Distance** = sum of depths minus 2 × LCA depth
+
 5. **K-th ancestor** easily solved with binary lifting
 
 ---

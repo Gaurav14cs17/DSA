@@ -42,6 +42,7 @@ a^13 = a^(1101₂)
 ### Algorithm
 
 1. If n is even: a^n = (a^(n/2))²
+
 2. If n is odd: a^n = a × a^(n-1)
 
 ---

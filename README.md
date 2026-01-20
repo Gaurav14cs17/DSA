@@ -264,8 +264,11 @@
 Contributions are welcome! Here's how you can help:
 
 1. 🐛 **Report bugs** - Open an issue
+
 2. 💡 **Suggest features** - Share your ideas
+
 3. 📝 **Improve docs** - Fix typos, add examples
+
 4. 🔧 **Submit PRs** - Add problems, optimize solutions
 
 ---

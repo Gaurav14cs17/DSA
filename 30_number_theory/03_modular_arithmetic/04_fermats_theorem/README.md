@@ -59,7 +59,9 @@ Thus: a^(p-1) ≡ 1 (mod p)
 ### Applications
 
 1. **Modular Inverse:** a⁻¹ ≡ a^(p-2) (mod p)
+
 2. **Primality Testing:** Fermat test
+
 3. **Reducing Exponents:** a^n ≡ a^(n mod (p-1)) (mod p)
 
 ---

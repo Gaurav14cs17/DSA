@@ -42,7 +42,9 @@ permalink: /27_advanced_trees/06_treap/
 **Treap = Tree + Heap:** Randomized BST that maintains both BST and heap properties.
 
 **Two properties:**
+
 1. **BST property:** Left child < parent < right child (by key)
+
 2. **Heap property:** Parent has higher priority than children (by random priority)
 
 **Each node:** `(key, priority)` where priority is random
@@ -112,9 +114,13 @@ If `px > py`, rotate right to make `x` parent of `y`.
 **Split(T, k):** Split treap into two: keys < k and keys ≥ k.
 
 **Algorithm:**
+
 1. Insert dummy node with key = k, priority = ∞
+
 2. Dummy becomes root (highest priority)
+
 3. Left subtree = keys < k, right subtree = keys ≥ k
+
 4. Return (left, right)
 
 **Time:** $O(\log n)$ expected
@@ -126,8 +132,11 @@ If `px > py`, rotate right to make `x` parent of `y`.
 **Merge(T1, T2):** Combine two treaps (all keys in T1 < all keys in T2).
 
 **Algorithm:**
+
 1. Compare priorities of roots
+
 2. Higher priority becomes root
+
 3. Recursively merge appropriate subtrees
 
 **Time:** $O(\log n)$ expected
@@ -505,11 +514,17 @@ def kth_smallest_in_bst(root: TreapNode, k: int) -> int:
 ## 💡 Key Insights
 
 1. **Simplicity:** Easier to implement than AVL/Red-Black
+
 2. **Randomization:** Random priorities ensure expected O(log n) height
+
 3. **No rebalancing logic:** Rotations driven by heap property
+
 4. **Persistent:** Can make persistent version easily
+
 5. **Split/Merge:** Powerful operations not in standard BST
+
 6. **Implicit treap:** Supports array operations with split/merge
+
 7. **Good in practice:** Despite worst-case O(n), performs well
 
 ---

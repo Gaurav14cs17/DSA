@@ -85,7 +85,9 @@ dp[node] = combine(dp[child₁], dp[child₂], ..., dp[childₖ])
 **Naive:** $O(n^2)$ - DFS from each node
 
 **Optimized:** $O(n)$ using two passes:
+
 1. **Down pass:** Compute answer for original root
+
 2. **Up pass:** Update answers when moving root to children
 
 **Key idea:** Reuse computation from parent when moving root.
@@ -630,9 +632,13 @@ Tree DP Problem
 ## 🎯 Key Insights
 
 1. **Post-order traversal** most common for tree DP
+
 2. **Rerooting** avoids O(n²) by reusing computation
+
 3. **Multi-state DP** models decision trees
+
 4. **Diameter/Max Path** pattern appears frequently
+
 5. **Tree = natural recursion** structure for DP
 
 ---

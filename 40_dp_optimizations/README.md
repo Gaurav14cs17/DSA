@@ -855,6 +855,7 @@ Reduces O(n²) work to O(n log n) per level!
 ### Theory
 
 **Conditions (both required):**
+
 1. **Quadrangle Inequality:**
    ```
    cost[a][c] + cost[b][d] ≤ cost[a][d] + cost[b][c]
@@ -1327,8 +1328,11 @@ Binary search λ to hit k groups
 **Standard Bitmask DP:** O(n·2ⁿ) or O(n²·2ⁿ)
 
 **Optimizations:**
+
 1. **Profile DP:** O(n·m·2^m) for n×m grid
+
 2. **Broken Profile:** Faster constant factor
+
 3. **Inclusion-Exclusion:** Reduce states
 
 ### Implementation (Broken Profile DP)

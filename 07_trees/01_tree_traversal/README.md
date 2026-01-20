@@ -506,22 +506,35 @@ Need order?
 ## 🎖️ Practice Roadmap
 
 **Week 1: Recursive Traversals**
+
 1. Solve #94 (Inorder Traversal) - Recursive first
+
 2. Solve #144 (Preorder Traversal) - Recursive
+
 3. Solve #145 (Postorder Traversal) - Recursive
+
 4. Solve #102 (Level Order) - BFS foundation
 
 **Week 2: Iterative Traversals**
+
 5. Solve #94 (Inorder) - Iterative with stack
+
 6. Solve #144 (Preorder) - Iterative
+
 7. Solve #145 (Postorder) - Iterative (harder!)
+
 8. Solve #103 (Zigzag Level Order) - BFS with flag
 
 **Week 3: Advanced**
+
 9. Solve #199 (Right Side View) - Level last element
+
 10. Solve #314 (Vertical Order) - Column tracking
+
 11. Solve #100 (Same Tree) - Simultaneous traversal
+
 12. Solve #101 (Symmetric Tree) - Mirror check
+
 13. Learn Morris Traversal - O(1) space magic
 
 ---

@@ -76,8 +76,11 @@ Valid orderings: `[A, B, C]`, `[B, A, C]`
 **Intuition:** Process vertices with no incoming edges first.
 
 **Algorithm:**
+
 1. Compute in-degree for all vertices
+
 2. Add all vertices with in-degree 0 to queue
+
 3. While queue not empty:
    - Remove vertex $u$, add to result
    - Decrease in-degree of all neighbors
@@ -644,9 +647,13 @@ Topological Sort
 ## 🎯 Key Insights
 
 1. **Topological sort exists iff DAG** (no cycles)
+
 2. **Kahn's algorithm** natural for level-by-level processing
+
 3. **DFS approach** simpler code, post-order reversed
+
 4. **Cycle detection** built into both algorithms
+
 5. **Many applications** in scheduling and dependency resolution
 
 ---

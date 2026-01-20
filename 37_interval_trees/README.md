@@ -397,10 +397,15 @@ def max_overlap(intervals):
 ## 🔍 Interview Focus
 
 **Top 5 Must-Know:**
+
 1. **Merge Intervals** - Sort + greedy pattern
+
 2. **Insert Interval** - Three-phase approach
+
 3. **My Calendar Series** - Building up complexity
+
 4. **Range Module** - Full interval management
+
 5. **Sweep Line** - Event-based processing
 
 **Common Mistakes:**

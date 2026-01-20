@@ -39,7 +39,9 @@ permalink: /20_divide_and_conquer/
 ### 1️⃣ D&C Paradigm
 
 1. **Divide:** Split problem into smaller subproblems
+
 2. **Conquer:** Solve subproblems recursively
+
 3. **Combine:** Merge solutions into final answer
 
 ---

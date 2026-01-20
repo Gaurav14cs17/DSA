@@ -386,14 +386,19 @@ Linked list merge sort: O(log n) stack only! ∎
 ## 🎯 Practice Roadmap
 
 ### Beginner
+
 1. **Merge Two Lists** (#21) - Basic merge
+
 2. **Add Two Numbers** (#2) - Carry propagation
 
 ### Intermediate
+
 3. **Sort List** (#148) - Full merge sort
+
 4. **Insertion Sort List** (#147) - Alternative sort
 
 ### Advanced
+
 5. **Merge K Lists** (#23) - Heap optimization
 
 ### Pro Tips

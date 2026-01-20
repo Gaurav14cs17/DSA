@@ -274,14 +274,23 @@ def catalan_recurrence(n: int) -> int:
 ## 📖 What Catalan Numbers Count
 
 1. **Balanced parentheses** with n pairs
+
 2. **Binary search trees** with n nodes
+
 3. **Full binary trees** with n+1 leaves
+
 4. **Dyck paths** from (0,0) to (n,n) not crossing y=x
+
 5. **Triangulations** of polygon with n+2 vertices
+
 6. **Non-crossing partitions** of n elements
+
 7. **Mountain ranges** with n up-strokes and n down-strokes
+
 8. **Ballot sequences** where A is never behind B
+
 9. **Rooted ordered trees** with n+1 vertices
+
 10. **Ways to cut convex polygon** into triangles
 
 ---

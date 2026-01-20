@@ -67,9 +67,12 @@ T(n) = T(n-1) + O(n) = O(n^2)
 ### 2️⃣ Median of Medians
 
 Guaranteed $O(n)$ by choosing better pivot:
+
 1. Divide into groups of 5
 2. Find median of each group
+
 3. Recursively find median of medians
+
 4. Use as pivot
 
 ---

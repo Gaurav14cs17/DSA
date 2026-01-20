@@ -207,8 +207,11 @@ def welford_merge(stats1: WelfordVariance, stats2: WelfordVariance) -> WelfordVa
 **Key Insight:** When we add a new value $x\_n$, the mean changes from $\mu\_{n-1}$ to $\mu\_n$. This means all previous deviations $(x\_i - \mu\_{n-1})$ need to be adjusted to $(x\_i - \mu\_n)$.
 
 **Strategy:**
+
 1. Express new variance in terms of old variance
+
 2. Account for the shift in mean
+
 3. Simplify to get a clean recurrence
 
 ---
@@ -335,8 +338,11 @@ M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n) \quad \blacksquare
 **Why does this work?**
 
 1. **Old elements shift:** When mean changes, all old deviations shift by the same amount
+
 2. **Cancellation:** The sum of deviations is always zero (definition of mean)
+
 3. **Two deltas:** We use both $\delta = x\_n - \mu\_{n-1}$ (before) and $x\_n - \mu\_n$ (after)
+
 4. **Factorization:** The algebra simplifies beautifully to a product of these two deltas
 
 **The "Aha!" moment:** Instead of recomputing all $n$ squared deviations, we just add a correction term that accounts for the mean shift!

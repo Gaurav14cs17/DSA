@@ -34,9 +34,13 @@ permalink: /34_sqrt_decomposition/02_mos_algorithm/
 ## 📐 Mo's Algorithm Principle
 
 ### Core Idea
+
 1. **Offline processing:** Know all queries beforehand
+
 2. **Sort queries** by block of left endpoint, then by right endpoint
+
 3. **Maintain answer** for current range [L, R]
+
 4. **Expand/contract** range incrementally
 
 ### Why It Works

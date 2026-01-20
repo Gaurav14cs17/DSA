@@ -107,9 +107,13 @@ A'[i] = A[(i - k + n) \mod n]
 ```
 
 **Proof:**
+
 1. $\text{Rev}(A) = [a\_n, a\_{n-1}, \ldots, a\_1]$
+
 2. $\text{Rev}(A[0..k-1]) = [a\_k, \ldots, a\_1]$
+
 3. $\text{Rev}(A[k..n-1]) = [a\_n, \ldots, a\_{k+1}]$
+
 4. Combined: $[a\_{n-k+1}, \ldots, a\_n, a\_1, \ldots, a\_{n-k}]$ ∎
 
 ---
@@ -498,18 +502,27 @@ Sort then scan:         O(n log n) → Often good solution
 ## 🎯 Practice Roadmap
 
 ### Beginner Level (Start Here!)
+
 1. **Remove Duplicates** (#26) - Learn two pointers
+
 2. **Move Zeroes** (#283) - Practice partitioning
+
 3. **Merge Sorted Array** (#88) - Master reverse fill
 
 ### Intermediate Level
+
 4. **Rotate Array** (#189) - Understand reversals
+
 5. **Sort Colors** (#75) - Master Dutch Flag
+
 6. **Remove Element** (#27) - Combine techniques
 
 ### Advanced Level
+
 7. **Find Duplicate** (#287) - Learn Floyd's algorithm
+
 8. **First Missing Positive** (#41) - Index as hash
+
 9. **Trapping Rain Water** (#42) - Two pointers mastery
 
 ### Mastery Challenge

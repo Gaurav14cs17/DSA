@@ -73,9 +73,13 @@ permalink: /25_tree_algorithms/08_virtual_trees/
 ### 3️⃣ Construction Algorithm
 
 **Steps:**
+
 1. Sort important nodes by DFS order (Euler tour)
+
 2. For consecutive nodes, add their LCA
+
 3. Build tree from this set using stack
+
 4. Result: compressed tree with only relevant nodes
 
 **Time:** $O(k \log k)$ for sorting + $O(k)$ for building = $O(k \log k)$
@@ -88,7 +92,9 @@ permalink: /25_tree_algorithms/08_virtual_trees/
 
 ```
 1. Sort nodes by in-time (DFS order)
+
 2. Stack maintains path from root to current node
+
 3. For each node u:
    - Pop stack until top is ancestor of u
    - LCA(top, u) becomes parent
@@ -515,9 +521,13 @@ Tree Problem
 ## 🎯 Key Insights
 
 1. **Compress tree** to only relevant nodes + LCAs
+
 2. **Size at most 2k - 1** for k important nodes
+
 3. **Build in O(k log k)** using sort + stack
+
 4. **Preserves tree structure** between important nodes
+
 5. **Useful when k << n** (sparse queries)
 
 ---

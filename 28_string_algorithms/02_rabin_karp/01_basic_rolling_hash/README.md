@@ -66,6 +66,7 @@ Want:
 h(s[i+1..i+m]) = s[i+1]·p^(m-1) + s[i+2]·p^(m-2) + ... + s[i+m]·p^0
 
 Solution:
+
 1. Subtract: h - s[i]·p^(m-1)
    = s[i+1]·p^(m-2) + ... + s[i+m-1]·p^0
 

@@ -49,9 +49,13 @@ Mathematically:
 
 ```
 1. Unique: Convex hull is unique for any point set
+
 2. Minimum perimeter: Has shortest perimeter enclosing all points
+
 3. Subset: Hull points are subset of input points
+
 4. At most n vertices: For n input points
+
 5. At least 3 vertices: For non-collinear points
 
 ```

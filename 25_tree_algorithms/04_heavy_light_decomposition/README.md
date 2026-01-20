@@ -108,9 +108,13 @@ permalink: /25_tree_algorithms/04_heavy_light_decomposition/
 ### 6️⃣ Implementation Steps
 
 1. **First DFS:** Compute subtree sizes
+
 2. **Mark heavy children:** Child with largest subtree
+
 3. **Second DFS:** Assign positions, mark chain heads
+
 4. **Build segment tree** on flattened array
+
 5. **Query/Update:** Decompose path into chains
 
 ---
@@ -118,12 +122,16 @@ permalink: /25_tree_algorithms/04_heavy_light_decomposition/
 ### 7️⃣ Query Algorithm
 
 **Path query from $u$ to $v$:**
+
 1. Find LCA of $u$ and $v$
+
 2. Process $u$ to LCA:
    - Jump to chain head
    - Query segment tree
    - Move to parent of chain head
+
 3. Process $v$ to LCA similarly
+
 4. Combine results
 
 ---
@@ -478,9 +486,13 @@ Tree Query Problem
 ## 🎯 Key Insights
 
 1. **Heavy child** = child with largest subtree
+
 2. **At most O(log n) chains** on any path
+
 3. **DFS order** makes chains contiguous
+
 4. **Segment tree** handles range queries efficiently
+
 5. **Can be extended** with lazy propagation for range updates
 
 ---

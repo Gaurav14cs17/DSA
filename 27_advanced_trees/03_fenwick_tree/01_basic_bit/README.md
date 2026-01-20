@@ -308,9 +308,13 @@ def count_subsequences_in_range(nums: List[int], min_sum: int, max_sum: int) -> 
 ## 💡 Key Patterns
 
 1. **Point Update + Range Query:** Standard BIT
+
 2. **Range Update + Point Query:** Difference array + BIT
+
 3. **Lazy Updates:** Defer computation until needed
+
 4. **Coordinate Compression:** Map large values to small indices
+
 5. **Multiple BITs:** Track different properties simultaneously
 
 ---

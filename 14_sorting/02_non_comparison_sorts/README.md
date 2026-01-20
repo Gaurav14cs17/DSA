@@ -58,8 +58,11 @@ T = O(n + k), \quad S = O(k)
 ```
 
 **Steps:**
+
 1. Count occurrences of each value
+
 2. Compute cumulative counts (positions)
+
 3. Build output array
 
 ---

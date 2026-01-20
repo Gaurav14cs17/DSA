@@ -77,8 +77,11 @@ Where $L$ = length of word.
 ### 4️⃣ Trie Invariants
 
 1. Root is always empty (no character)
+
 2. Each edge labeled with character
+
 3. Path from root = prefix
+
 4. `is_end` marks complete words
 
 ---

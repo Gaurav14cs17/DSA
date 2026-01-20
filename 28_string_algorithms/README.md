@@ -377,8 +377,11 @@ P[i] = min(P[2c - i], r - i) + expansion
 **Data Structure:** Trie + failure links
 
 **Components:**
+
 1. **Trie:** Store all patterns
+
 2. **Failure Links:** Jump to longest proper suffix
+
 3. **Output Links:** Find all matches ending at current state
 
 **Failure Link Computation:**
@@ -772,12 +775,19 @@ def longest_palindrome(s):
 This section contains **70+ problems** across **8 categories**:
 
 1. **[KMP Algorithm](./01_kmp/)** - Failure function, pattern matching (8 problems)
+
 2. **[Rabin-Karp](./02_rabin_karp/)** - Rolling hash, multiple patterns (8 problems)
+
 3. **[Z-Algorithm](./03_z_algorithm/)** - Z-function, linear matching (7 problems)
+
 4. **[Suffix Structures](./04_suffix_structures/)** - Suffix/LCP arrays (10 problems)
+
 5. **[Manacher's Algorithm](./05_manacher/)** - Palindrome detection (8 problems)
+
 6. **[Aho-Corasick](./06_aho_corasick/)** - Multi-pattern search (9 problems)
+
 7. **[Suffix Tree](./07_suffix_tree/)** - Ukkonen's algorithm (10 problems)
+
 8. **[String Hashing](./08_string_hashing/)** - Polynomial hash techniques (12 problems)
 
 ---
@@ -845,8 +855,11 @@ Hash + Binary Search: O(n log n) for longest
 ### Common Patterns
 
 1. **String + DP:** Edit distance, LCS
+
 2. **Hash + Sliding Window:** Substring problems
+
 3. **KMP + DP:** String matching with wildcards
+
 4. **Suffix Array + Binary Search:** Pattern queries
 
 ---
@@ -973,8 +986,11 @@ def smallest_period(s):
 **Problem:** Match pattern with '?' (any char) or '*' (any sequence)
 
 **Approach:**
+
 1. KMP with modified comparison
+
 2. Divide pattern at wildcards
+
 3. Use automaton-based matching
 
 ---
@@ -1000,9 +1016,13 @@ def smallest_period(s):
 ### Hash Function Quality
 
 **Good hash properties:**
+
 1. **Uniform distribution:** All values equally likely
+
 2. **Deterministic:** Same input → same output
+
 3. **Fast computation:** O(1) per character
+
 4. **Rolling property:** Update in O(1)
 
 **Polynomial hash advantages:**

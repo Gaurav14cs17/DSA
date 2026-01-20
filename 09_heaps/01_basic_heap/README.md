@@ -98,7 +98,9 @@ The series $\sum\_{h=0}^{\infty} \frac{h}{2^h} = 2$, so $T(n) = O(n)$. ∎
 ### 4️⃣ Heap Sort Time Complexity
 
 **Two phases:**
+
 1. Build heap: $O(n)$
+
 2. Extract max $n$ times: $n \times O(\log n) = O(n \log n)$
 
 ```math
@@ -128,8 +130,11 @@ The series $\sum\_{h=0}^{\infty} \frac{h}{2^h} = 2$, so $T(n) = O(n)$. ∎
 **Problem:** Optimal prefix-free encoding.
 
 **Algorithm:**
+
 1. Build min-heap of character frequencies
+
 2. Extract two minimum, merge, insert back
+
 3. Repeat until one node remains
 
 ```math
@@ -474,10 +479,15 @@ def lastStoneWeight(stones: list[int]) -> int:
 - ✗ Don't use heap when you only need min/max once (just use min()/max())
 
 ### ⚡ **Optimization Tricks:**
+
 1. **heapify() > n×push():** O(n) vs O(n log n)
+
 2. **In-place heap sort:** O(1) space, better than merge sort
+
 3. **Custom comparator:** Use tuples (priority, value)
+
 4. **Heap vs Sorting:** Heap better when n >> k
+
 5. **Replace() operation:** More efficient than pop() + push()
 
 ---

@@ -31,6 +31,7 @@ permalink: /18_dynamic_programming/
 ### 1️⃣ DP Requirements
 
 1. **Optimal Substructure:** Optimal solution contains optimal solutions to subproblems
+
 2. **Overlapping Subproblems:** Same subproblems solved multiple times
 
 ---

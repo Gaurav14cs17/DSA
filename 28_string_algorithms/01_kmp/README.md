@@ -734,8 +734,13 @@ def match_with_automaton(text, pattern):
 ## 🗺️ Subtopic Navigation
 
 1. [Basic Pattern Matching →](./01_basic_pattern_matching/)
+
 2. [Failure Function →](./02_failure_function/)
+
 3. [String Period →](./03_string_period/)
+
 4. [Prefix-Suffix Matching →](./04_prefix_suffix/)
+
 5. [Palindrome with KMP →](./05_palindrome_kmp/)
+
 6. [Multiple Patterns →](./06_multiple_patterns/)

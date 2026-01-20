@@ -267,23 +267,35 @@ permalink: /30_number_theory/
 
 ### For Beginners
 **Start Here:**
+
 1. [GCD & LCM](./01_gcd_lcm/) - Euclidean algorithm fundamentals
+
 2. [Modular Arithmetic Basics](./03_modular_arithmetic/01_basic_operations/)
+
 3. [Prime Testing](./02_primes/01_primality_testing/)
+
 4. [Count Divisors](./04_divisors/01_count_divisors/)
 
 ### For Intermediate
 **Focus On:**
+
 1. [Extended GCD](./01_gcd_lcm/02_extended_gcd/)
+
 2. [Fast Exponentiation](./03_modular_arithmetic/03_fast_exponentiation/)
+
 3. [Euler's Totient](./05_euler_totient/)
+
 4. [Binomial Coefficients](./08_binomial_coefficients/)
 
 ### For Advanced
 **Master These:**
+
 1. [Chinese Remainder Theorem](./06_chinese_remainder/)
+
 2. [Lucas' Theorem](./10_lucas_theorem/)
+
 3. [Segmented Sieve](./02_primes/04_segmented_sieve/)
+
 4. [Linear Diophantine](./07_linear_diophantine/)
 
 ---

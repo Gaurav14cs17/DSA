@@ -510,9 +510,13 @@ This section contains **50+ problems** across **6 categories**:
 **Good hash properties:**
 
 ```python
+
 1. Uniform distribution: P(h(x) = v) ≈ 1/M for all v
+
 2. Avalanche effect: Small change → large hash change
+
 3. Fast computation: O(1) per character
+
 4. Rolling property: O(1) window update
 
 ```
@@ -644,8 +648,13 @@ determines unique v (mod M1·M2)
 ## 🗺️ Subtopic Navigation
 
 1. [Basic Rolling Hash →](./01_basic_rolling_hash/)
+
 2. [Single Pattern →](./02_single_pattern/)
+
 3. [Multiple Patterns →](./03_multiple_patterns/)
+
 4. [Collision Handling →](./04_collision_handling/)
+
 5. [Substring Problems →](./05_substring_problems/)
+
 6. [Advanced Applications →](./06_advanced_applications/)

@@ -184,8 +184,11 @@ a ≡ b (mod m) ⟺ a mod m = b mod m
 ```
 
 **Properties:**
+
 1. **Reflexive:** a ≡ a (mod m)
+
 2. **Symmetric:** a ≡ b ⟹ b ≡ a (mod m)
+
 3. **Transitive:** a ≡ b and b ≡ c ⟹ a ≡ c (mod m)
 
 ### 2️⃣ Modular Operations
@@ -240,8 +243,11 @@ a × x ≡ 1 (mod m)
 **Existence:** Inverse exists ⟺ gcd(a, m) = 1 (a and m are coprime)
 
 **Methods to Find:**
+
 1. **Extended GCD:** ax + my = 1, x is the inverse
+
 2. **Fermat's Theorem:** If m is prime, a^(-1) ≡ a^(m-2) (mod m)
+
 3. **Euler's Theorem:** a^(-1) ≡ a^(φ(m)-1) (mod m)
 
 ### 4️⃣ Important Theorems
@@ -773,10 +779,15 @@ MOD3 = 998244353   # Prime, has primitive root
 ## 🗂️ Topics Covered
 
 1. **[Basic Operations](./01_basic_operations/)** - Add, multiply, subtract (5 problems)
+
 2. **[Modular Inverse](./02_modular_inverse/)** - GCD, Fermat methods (6 problems)
+
 3. **[Fast Exponentiation](./03_fast_exponentiation/)** - Binary method (6 problems)
+
 4. **[Fermat's Theorem](./04_fermats_theorem/)** - Applications (4 problems)
+
 5. **[Euler's Theorem](./05_eulers_theorem/)** - RSA, totient (4 problems)
+
 6. **[Applications](./06_applications/)** - Competitive problems (3 problems)
 
 ---
@@ -792,9 +803,14 @@ MOD3 = 998244353   # Prime, has primitive root
 ## 🗺️ Subtopic Navigation
 
 1. [Basic Operations →](./01_basic_operations/)
+
 2. [Modular Inverse →](./02_modular_inverse/)
+
 3. [Fast Exponentiation →](./03_fast_exponentiation/)
+
 4. [Fermat's Theorem →](./04_fermats_theorem/)
+
 5. [Euler's Theorem →](./05_eulers_theorem/)
+
 6. [Applications →](./06_applications/)
 

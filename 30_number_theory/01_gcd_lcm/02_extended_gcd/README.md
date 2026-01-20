@@ -160,8 +160,11 @@ So $x \bmod m$ is the modular inverse!
 **Finding Solutions:**
 
 1. Compute $\gcd(a, b) = d$ and find $x\_0, y\_0$ such that $ax\_0 + by\_0 = d$
+
 2. If $d \nmid c$, no solution exists
+
 3. Otherwise, scale: $(x, y) = (x\_0 \cdot c/d, y\_0 \cdot c/d)$ is one solution
+
 4. General solution:
 
 ```math

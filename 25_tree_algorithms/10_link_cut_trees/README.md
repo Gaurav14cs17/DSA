@@ -90,8 +90,11 @@ permalink: /25_tree_algorithms/10_link_cut_trees/
 **Access(v):** Bring v to root of its splay tree.
 
 **Steps:**
+
 1. Splay v in its current tree
+
 2. Cut right subtree (becomes separate path)
+
 3. Move up to parent path, repeat
 
 **Key:** Makes path from root to v preferred.
@@ -467,9 +470,13 @@ Dynamic Tree Problem
 ## 🎯 Key Insights
 
 1. **Link-Cut Trees** handle dynamic tree topology
+
 2. **O(log n) amortized** for all operations
+
 3. **Based on splay trees** - self-adjusting BSTs
+
 4. **Complex but powerful** - use only when needed
+
 5. **Alternative:** Euler Tour Trees (similar complexity)
 
 ---

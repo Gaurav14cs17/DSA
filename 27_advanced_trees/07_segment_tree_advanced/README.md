@@ -287,9 +287,13 @@ class DynamicSegmentTree:
 This section contains **40+ problems** organized into **5 categories**:
 
 1. **[Lazy Propagation](./01_lazy_propagation/)** - Range updates, calendar problems, fancy sequence (10 problems)
+
 2. **[2D Segment Tree](./02_2d_segment_tree/)** - 2D range sum, rectangle area, matrix queries (6 problems)
+
 3. **[Persistent Segment Tree](./03_persistent_segtree/)** - Version control, Kth in range, historical queries (6 problems)
+
 4. **[Dynamic Segment Tree](./04_dynamic_segtree/)** - Range module, calendar variants, sparse updates (8 problems)
+
 5. **[Range Queries](./05_range_queries/)** - Range min/max, GCD, XOR, concert tickets (10 problems)
 
 ---
@@ -309,11 +313,17 @@ This section contains **40+ problems** organized into **5 categories**:
 ## 💡 Key Insights
 
 1. **Lazy Propagation:** Defer updates until necessary - critical for range updates
+
 2. **2D Segment Tree:** Segment tree of segment trees - very memory intensive
+
 3. **Persistent:** Path copying creates O(log n) new nodes per update
+
 4. **Dynamic:** Only create nodes when needed - handles sparse/infinite ranges
+
 5. **Merge function:** Can handle min, max, gcd, xor - not just sum
+
 6. **Coordinate compression:** Often needed with dynamic segment trees
+
 7. **Memory tradeoff:** Persistent and 2D trees use significantly more space
 
 ---

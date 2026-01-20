@@ -272,8 +272,11 @@ Given intervals $I\_1, I\_2, \ldots, I\_n$ where $I\_i = [s\_i, e\_i]$:
 **Sweep Line Algorithm:**
 
 1. Create events: $(s\_i, \text{START})$ and $(e\_i, \text{END})$
+
 2. Sort events by time
+
 3. Track running count: +1 for START, -1 for END
+
 4. Maximum count = rooms needed
 
 **Proof of Correctness:**
@@ -738,12 +741,16 @@ Lesson: Right sort strategy simplifies problem!
 Let $OPT$ be an optimal solution, $G$ be greedy solution.
 
 1. Let $g\_1$ be greedy's first choice (earliest end)
+
 2. Let $o\_1$ be optimal's first choice
+
 3. If $g\_1 = o\_1$: continue recursively
+
 4. If $g\_1 \neq o\_1$: Replace $o\_1$ with $g\_1$ in $OPT$
    - $g\_1$ ends before $o\_1$ (by greedy choice)
    - All intervals after $o\_1$ are still valid after $g\_1$
    - This replacement doesn't decrease count
+
 5. By induction, $|G| = |OPT|$ ∎
 
 ### Interval Overlap Formula
@@ -870,18 +877,27 @@ class IntervalTreeNode:
 ## 🎯 Practice Roadmap
 
 ### Foundation (Start Here!)
+
 1. **Merge Intervals** (#56) - Master the basic pattern
+
 2. **Insert Interval** (#57) - Three-phase approach
+
 3. **Meeting Rooms** (#252) - Simple overlap check
 
 ### Building Skills
+
 4. **Meeting Rooms II** (#253) - Learn sweep line
+
 5. **Non-overlapping Intervals** (#435) - Greedy by end
+
 6. **Interval Intersections** (#986) - Two pointers
 
 ### Advanced Challenges
+
 7. **Employee Free Time** (#759) - Merge + gaps
+
 8. **Minimum Arrows** (#452) - Greedy variation
+
 9. **Remove Covered Intervals** (#1288) - Sorting tricks
 
 ### Expert Level

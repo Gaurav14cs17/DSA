@@ -519,18 +519,27 @@ By induction, DP computes optimal solution ∎
 ## 🎯 Practice Roadmap
 
 ### Beginner Level
+
 1. **Is Subsequence** (#392) - Learn greedy approach
+
 2. **Longest Common Subsequence** (#1143) - Master 2D DP
+
 3. **Delete Operation** (#583) - Apply LCS
 
 ### Intermediate Level
+
 4. **Edit Distance** (#72) - Three operations DP
+
 5. **Distinct Subsequences** (#115) - Count paths
+
 6. **Minimum ASCII Delete Sum** (#712) - Weighted variant
 
 ### Advanced Level
+
 7. **Longest Increasing Subsequence** (#300) - O(n log n) with patience sorting
+
 8. **Distinct Subsequences II** (#940) - Handle duplicates
+
 9. **Shortest Common Supersequence** (#1092) - Combine strings
 
 ### Expert Challenge

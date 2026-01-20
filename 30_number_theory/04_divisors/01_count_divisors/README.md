@@ -459,8 +459,11 @@ For n ≤ 10^18, maximum τ(n) ≈ 103680
 ## 📚 Common Interview Questions
 
 1. **Find all numbers ≤ n with exactly k divisors**
+
 2. **Find the number with most divisors in range [1, n]**
+
 3. **Count numbers with odd number of divisors** (Answer: √n, all perfect squares)
+
 4. **Find smallest number with exactly k divisors**
 
 ---

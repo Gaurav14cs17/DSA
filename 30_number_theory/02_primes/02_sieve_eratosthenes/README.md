@@ -42,10 +42,14 @@ permalink: /30_number_theory/02_primes/02_sieve_eratosthenes/
 
 ```
 1. Create list [0, 1, 2, 3, ..., n], mark 0 and 1 as not prime
+
 2. Start with first prime p = 2
 3. Mark all multiples of p (starting from p²) as composite
+
 4. Find next unmarked number > p, set as new p
+
 5. Repeat until p² > n
+
 6. Remaining unmarked numbers are prime
 
 ```

@@ -56,7 +56,9 @@ permalink: /10_graphs/07_mst/
 ### 3️⃣ Kruskal's Algorithm
 
 1. Sort edges by weight
+
 2. Add edges that don't form cycle (Union-Find)
+
 3. Stop when $V - 1$ edges added
 
 ```math
@@ -69,7 +71,9 @@ T = O(E \log E) = O(E \log V)
 ### 4️⃣ Prim's Algorithm
 
 1. Start from any vertex
+
 2. Add minimum-weight edge connecting tree to non-tree vertex
+
 3. Repeat until all vertices included
 
 ```math

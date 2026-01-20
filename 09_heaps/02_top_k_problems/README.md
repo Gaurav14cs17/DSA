@@ -71,6 +71,7 @@ permalink: /09_heaps/02_top_k_problems/
 **Two-phase approach:**
 
 1. Count frequencies: O(n)
+
 2. Top K by frequency: O(n log k) or O(n) with bucket sort
 
 ---

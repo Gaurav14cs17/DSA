@@ -71,8 +71,11 @@ permalink: /25_tree_algorithms/03_tree_construction/
 ### 3️⃣ Preorder + Inorder Reconstruction
 
 **Algorithm:**
+
 1. First element of preorder = root
+
 2. Find root in inorder → splits into left/right subtrees
+
 3. Recursively build left and right
 
 **Time:** $O(n)$ with hash map for indices  
@@ -95,8 +98,11 @@ Right subtree: [20, 15, 7] (preorder), [15, 20, 7] (inorder)
 ### 4️⃣ Inorder + Postorder Reconstruction
 
 **Algorithm:**
+
 1. Last element of postorder = root
+
 2. Find root in inorder → splits into left/right subtrees
+
 3. Recursively build left and right
 
 **Key difference:** Process right subtree first (since postorder ends with right).
@@ -648,9 +654,13 @@ Tree Construction
 ## 🎯 Key Insights
 
 1. **Inorder + any other traversal** uniquely determines tree
+
 2. **Hash map** for O(1) index lookup in inorder
+
 3. **BST from preorder** possible in O(n) using bounds
+
 4. **Serialization** needs null markers for reconstruction
+
 5. **Level-order** serialization more intuitive for debugging
 
 ---

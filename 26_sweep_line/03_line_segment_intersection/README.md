@@ -90,7 +90,9 @@ permalink: /26_sweep_line/03_line_segment_intersection/
 **Idea:** Sweep vertical line left to right, maintain active segments.
 
 **Data Structures:**
+
 1. **Event queue:** Sorted by x-coordinate (endpoints, intersections)
+
 2. **Status structure:** Active segments sorted by y-intersection with sweep line
 
 **Events:**
@@ -549,10 +551,15 @@ def valid_square(p1: List[int], p2: List[int],
 ## 💡 Key Insights
 
 1. **Cross product:** Fundamental for orientation tests
+
 2. **Orientation test:** Determines turn direction (CCW/CW/collinear)
+
 3. **General position:** Simplifies algorithms (no degeneracies)
+
 4. **Sweep line:** Reduces dimension, processes events in order
+
 5. **Precision:** Use integer arithmetic or epsilon comparisons
+
 6. **Convex hull:** Related problem using sweep/orientation tests
 
 ---

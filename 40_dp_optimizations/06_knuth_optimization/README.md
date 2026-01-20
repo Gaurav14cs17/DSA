@@ -11,6 +11,7 @@
 **Knuth's Optimization** reduces O(n³) to O(n²) for range DP problems.
 
 **Conditions (both required):**
+
 1. **Quadrangle Inequality:** `cost[a][c] + cost[b][d] ≤ cost[a][d] + cost[b][c]`
 2. **Monotonicity:** `cost[b][c] ≤ cost[a][d]` for a ≤ b ≤ c ≤ d
 

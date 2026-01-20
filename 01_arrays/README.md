@@ -486,10 +486,15 @@ Solve these first for maximum interview impact:
 ### Mistake #1: Jumping to Code
 ❌ **Wrong:** Start coding immediately  
 ✅ **Right:** 
+
 1. Clarify requirements
+
 2. Discuss examples
+
 3. Outline approach
+
 4. Discuss complexity
+
 5. Then code
 
 ### Mistake #2: Ignoring Edge Cases
@@ -505,9 +510,13 @@ Solve these first for maximum interview impact:
 ### Mistake #3: Not Optimizing
 ❌ **Wrong:** Stop after brute force works  
 ✅ **Right:** 
+
 1. Brute force first (show you can solve it)
+
 2. Analyze complexity
+
 3. Discuss optimization
+
 4. Implement better solution
 
 ---
@@ -796,8 +805,11 @@ Use this flowchart to quickly identify which technique to apply:
 Found a typo? Have a better explanation? Want to add more problems?
 
 1. Fork the repository
+
 2. Make your changes
+
 3. Submit a pull request
+
 4. Help others learn! 🚀
 
 ---

@@ -41,8 +41,11 @@ permalink: /27_advanced_trees/03_fenwick_tree/02_inversion_counting/
 **Inversion:** Pair $(i, j)$ where $i < j$ but $nums[i] > nums[j]$.
 
 **BIT Approach:**
+
 1. Process elements left to right
+
 2. For each element, count how many larger/smaller elements seen
+
 3. Use coordinate compression for large values
 
 **Time:** $O(n \log n)$

@@ -52,9 +52,13 @@ permalink: /26_sweep_line/06_closest_pair/
 ### 2️⃣ Divide and Conquer Algorithm
 
 **Algorithm:**
+
 1. Sort points by x-coordinate: $O(n \log n)$
+
 2. Divide into left and right halves
+
 3. Recursively find closest pairs in each half
+
 4. Combine: check pairs across the dividing line
 
 **Key optimization:** Only check points within distance $\delta$ of dividing line.
@@ -71,9 +75,13 @@ T(n) = 2T(n/2) + O(n) = O(n \log n)
 ### 3️⃣ Sweep Line Approach
 
 **Algorithm:**
+
 1. Sort points by x-coordinate
+
 2. Sweep left to right, maintaining active points within distance $\delta$
+
 3. For each point, check only points in "active window"
+
 4. Update $\delta$ when closer pair found
 
 **Active window:** Points with $x \in [x\_{\text{current}} - \delta, x\_{\text{current}}]$
@@ -568,10 +576,15 @@ def nearest_neighbor(root: KDNode,
 ## 💡 Key Insights
 
 1. **Avoid sqrt:** Compare squared distances when possible
+
 2. **Geometric constraint:** At most 6 points to check in strip
+
 3. **Active window:** Sweep line maintains points within δ distance
+
 4. **K-D tree:** Efficient for multiple queries, $O(\log n)$ per query
+
 5. **Distance metrics:** Euclidean, Manhattan, Chebyshev for different problems
+
 6. **Divide & conquer:** Optimal $O(n \log n)$ for closest pair
 
 ---

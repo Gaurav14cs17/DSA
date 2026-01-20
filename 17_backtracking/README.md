@@ -33,7 +33,9 @@ permalink: /17_backtracking/
 **Systematic exploration** of solution space:
 
 1. **Choose:** Make a decision
+
 2. **Explore:** Recurse with that decision
+
 3. **Unchoose:** Undo decision (backtrack)
 
 ---

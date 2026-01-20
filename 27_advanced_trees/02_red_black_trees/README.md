@@ -42,10 +42,15 @@ permalink: /27_advanced_trees/02_red_black_trees/
 **Definition:** Self-balancing BST with color property (RED or BLACK).
 
 **Five Properties:**
+
 1. Every node is either RED or BLACK
+
 2. Root is BLACK
+
 3. All leaves (NIL) are BLACK
+
 4. RED node has BLACK children (no consecutive REDs)
+
 5. All paths from node to descendant leaves have same number of BLACK nodes
 
 **Black Height:** Number of BLACK nodes on path to leaf (excluding node itself).
@@ -84,7 +89,9 @@ For root with black height $bh$:
 ### 3️⃣ Rotation & Recoloring
 
 **Operations to maintain properties:**
+
 1. **Rotation:** Change structure (like AVL)
+
 2. **Recoloring:** Change node colors
 
 **Time:** $O(1)$ per operation
@@ -528,10 +535,15 @@ def contains_nearby_almost_duplicate(nums: List[int], k: int, t: int) -> bool:
 ## 💡 Key Insights
 
 1. **Looser balance:** Height ≤ 2 log n (vs AVL's 1.44 log n)
+
 2. **Faster mutations:** Fewer rotations on insert/delete
+
 3. **Industry standard:** Used in Java TreeMap, C++ map, Linux kernel
+
 4. **Amortized performance:** Better for mixed read/write workloads
+
 5. **Black height:** Key invariant for proof of height bound
+
 6. **Color flips:** Often cheaper than rotations
 
 ---

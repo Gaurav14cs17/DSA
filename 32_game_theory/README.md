@@ -104,7 +104,9 @@ permalink: /32_game_theory/
 ```
 
 **Proof:**
+
 1. Terminal position (all piles empty): Nim-Sum = 0 → Previous player wins
+
 2. From Nim-Sum = 0, any move creates Nim-Sum ≠ 0
 3. From Nim-Sum ≠ 0, can always move to Nim-Sum = 0
 

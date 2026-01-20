@@ -93,7 +93,9 @@ permalink: /04_stacks/04_expression_evaluation/
 **Rules:**
 
 1. **Operand** → Output directly
+
 2. **`(`** → Push to stack
+
 3. **`)`** → Pop to output until `(`
 4. **Operator** → Pop higher/equal precedence, then push
 
@@ -128,6 +130,7 @@ Postfix: 3 4 2 * 1 5 - / +
 **Algorithm:**
 
 1. Operand → Push to stack
+
 2. Operator → Pop two operands, compute, push result
 
 **Example:**
@@ -517,18 +520,27 @@ Expression Problem
 ## 🎖️ Practice Roadmap
 
 **Week 1: Fundamentals**
+
 1. Solve #150 (Evaluate RPN) - Master postfix evaluation
+
 2. Implement infix to postfix converter
+
 3. Study operator precedence rules
 
 **Week 2: Basic Calculators**
+
 4. Solve #227 (Basic Calculator II) - Handle *, /
+
 5. Solve #224 (Basic Calculator) - Handle parentheses
+
 6. Solve #394 (Decode String) - Nested decoding
 
 **Week 3: Advanced**
+
 7. Solve #772 (Basic Calculator III) - Full expression
+
 8. Solve #726 (Number of Atoms) - Chemical formulas
+
 9. Implement your own expression parser
 
 ---

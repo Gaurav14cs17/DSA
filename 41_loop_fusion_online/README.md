@@ -33,7 +33,9 @@ permalink: /41_loop_fusion_online/
 **Loop Fusion with Online Algorithms** combines three powerful optimization techniques:
 
 1. **Loop Fusion**: Merging multiple loops into a single pass
+
 2. **Online Algorithms**: Processing data as it arrives without looking ahead
+
 3. **Recurrence Relations**: Using mathematical relations to maintain state efficiently
 
 **What You'll Learn:**
@@ -546,8 +548,11 @@ end
 ### Why This Works: The Associativity Trick
 
 The key insight is that we create **surrogate sequences** that:
+
 1. Have the same final value as the original computation
+
 2. Can be computed incrementally using recurrence relations
+
 3. Don't depend on future values
 
 For variance:

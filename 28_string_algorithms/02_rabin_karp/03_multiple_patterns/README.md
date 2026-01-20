@@ -34,11 +34,14 @@ Rabin-Karp excels at matching multiple patterns simultaneously by comparing a si
 
 ```
 1. Compute hashes for all patterns: O(km)
+
 2. Store in hash set: O(1) lookup
+
 3. For each text window:
    - Compute/roll window hash: O(1)
    - Check if in pattern set: O(1)
    - Verify if match: O(m)
+
 4. Total: O(n + km) average
 
 ```

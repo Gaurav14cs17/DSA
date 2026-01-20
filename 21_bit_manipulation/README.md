@@ -303,8 +303,11 @@ n&-n = 0...00100  (4) — only lowest set bit remains!
 ### Interview Script
 
 1. **Clarify**: "Are we dealing with 32-bit integers? Can numbers be negative?"
+
 2. **Pattern Match**: Identify XOR/Count/Bitmask pattern
+
 3. **Verbalize**: "I'll use `n & (n-1)` to clear bits because..."
+
 4. **Edge Cases**: Test with 0, 1, -1, INT_MAX, INT_MIN
 
 ---

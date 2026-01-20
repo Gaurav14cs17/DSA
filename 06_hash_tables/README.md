@@ -33,8 +33,11 @@ permalink: /06_hash_tables/
 A hash function $h: U \to \{0, 1, \ldots, m-1\}$ maps keys from universe $U$ to table indices.
 
 **Properties of Good Hash Functions:**
+
 1. **Deterministic:** Same key → same hash
+
 2. **Uniform Distribution:** $P(h(k) = i) \approx \frac{1}{m}$ for random $k$
+
 3. **Efficient:** O(1) computation
 
 ---

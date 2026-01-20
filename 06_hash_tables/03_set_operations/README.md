@@ -103,7 +103,9 @@ A \cap B = \{x : x \in A \land x \in B\}
 **Problem:** Find longest consecutive sequence in unsorted array.
 
 **Set Approach:**
+
 1. Build set of all elements
+
 2. For each potential sequence start (no predecessor), extend
 
 **Time:** O(n) - each element visited at most twice.
@@ -474,21 +476,33 @@ Unique elements needed?
 ## 🎖️ Practice Roadmap
 
 **Week 1: Fundamentals**
+
 1. Solve #217 (Contains Duplicate) - Basic set usage
+
 2. Solve #349 (Intersection) - Set operations
+
 3. Solve #136 (Single Number) - XOR trick
+
 4. Solve #268 (Missing Number) - Math formula
 
 **Week 2: Intermediate**
+
 5. Solve #128 (Longest Consecutive) - Set + smart iteration
+
 6. Solve #202 (Happy Number) - Cycle detection
+
 7. Solve #350 (Intersection II) - Counter for multiset
+
 8. Solve #219 (Contains Duplicate II) - Sliding window set
 
 **Week 3: Advanced**
+
 9. Solve #287 (Find Duplicate) - Floyd's cycle
+
 10. Solve #442 (Find All Duplicates) - Index as hash
+
 11. Solve #448 (Find Disappeared) - Index marking
+
 12. Solve #41 (First Missing Positive) - Index hash O(1) space
 
 ---

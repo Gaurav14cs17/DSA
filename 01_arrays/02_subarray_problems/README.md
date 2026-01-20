@@ -558,17 +558,25 @@ Total = n + (n-1) + ... + 1 = n(n+1)/2
 ## 🎯 Practice Roadmap
 
 ### Foundation (Must-Solve!)
+
 1. **Maximum Subarray** (#53) - Master Kadane's first!
+
 2. **Best Time to Buy Stock** (#121) - Kadane's variant
+
 3. **Subarray Sum Equals K** (#560) - Learn prefix + hash
 
 ### Building Mastery
+
 4. **Maximum Product** (#152) - Handle negatives
+
 5. **Continuous Subarray Sum** (#523) - Modulo arithmetic
+
 6. **Subarray Sums Divisible by K** (#974) - Advanced modulo
 
 ### Advanced Challenges
+
 7. **Shortest Subarray with Sum ≥ K** (#862) - Monotonic deque
+
 8. **Subarrays with K Different** (#992) - Sliding window
 
 ### Pro Level

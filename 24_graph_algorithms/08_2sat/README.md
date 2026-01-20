@@ -98,6 +98,7 @@ x_i \text{ and } \neg x_i \text{ are in different SCCs}
 **After checking satisfiability:**
 
 1. Find SCCs and topological order
+
 2. For each variable $x\_i$:
    - If SCC($x\_i$) comes after SCC($\neg x\_i$) in topo order → $x\_i$ = FALSE
    - Otherwise → $x\_i$ = TRUE
@@ -416,9 +417,13 @@ Boolean Constraint Problem
 ## 🎯 Key Insights
 
 1. **2-SAT polynomial**, 3-SAT NP-complete (dramatic difference!)
+
 2. **Reduce to graph problem** using implications
+
 3. **SCC-based solution** elegant and efficient
+
 4. **Many problems** can be modeled as 2-SAT
+
 5. **Assignment from SCC topological order**
 
 ---

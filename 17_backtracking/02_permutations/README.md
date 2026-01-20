@@ -55,9 +55,13 @@ If elements repeat with frequencies $f\_1, f\_2, \ldots, f\_k$:
 ### 3️⃣ Next Permutation
 
 Find next lexicographically greater permutation:
+
 1. Find largest $i$ where $a[i] < a[i+1]$
+
 2. Find largest $j$ where $a[j] > a[i]$
+
 3. Swap $a[i]$ and $a[j]$
+
 4. Reverse suffix after $i$
 
 ---

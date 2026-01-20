@@ -77,9 +77,13 @@ where $\phi(n)$ is Euler's totient function.
 ### 3️⃣ RSA Algorithm
 
 **Key Generation:**
+
 1. Choose primes $p, q$
+
 2. Compute $n = pq$, $\phi(n) = (p-1)(q-1)$
+
 3. Choose $e$ with $\gcd(e, \phi(n)) = 1$
+
 4. Compute $d = e^{-1} \mod \phi(n)$
 
 **Encryption:** $c = m^e \mod n$

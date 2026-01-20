@@ -99,9 +99,13 @@ permalink: /26_sweep_line/04_angular_sweep/
 **Problem:** Given point $p$ and obstacles, find visible region.
 
 **Algorithm:**
+
 1. Sort all obstacle vertices by angle from $p$
+
 2. Rotate ray from $p$ through all angles
+
 3. Track closest intersection with obstacles
+
 4. Build visibility polygon from visible vertices
 
 **Time:** $O(n \log n)$ where $n$ = total vertices
@@ -113,8 +117,11 @@ permalink: /26_sweep_line/04_angular_sweep/
 **Problem:** Find $k$ points closest to origin (or any point).
 
 **Angular Sweep Approach:**
+
 1. For each angle $\theta$, ray intersects points at various distances
+
 2. Use sweep to maintain closest $k$ points
+
 3. Can be optimized with proper data structures
 
 **Simpler:** Use heap or quickselect: $O(n)$ average
@@ -128,8 +135,11 @@ permalink: /26_sweep_line/04_angular_sweep/
 **Problem:** Count points in sector defined by angles $[\theta\_1, \theta\_2]$ and radii $[r\_1, r\_2]$.
 
 **Algorithm:**
+
 1. Sort points by angle
+
 2. Binary search for angular range
+
 3. Filter by radius
 
 **Time:** $O(n \log n)$ preprocessing, $O(\log n + k)$ query
@@ -530,10 +540,15 @@ def number_of_people_aware_of_secret(n: int, delay: int, forget: int) -> int:
 ## 💡 Key Insights
 
 1. **atan2 vs cross product:** Cross product avoids floating point errors
+
 2. **Circular sweep:** Duplicate points at +360° for wraparound
+
 3. **Sliding window:** For angular ranges, use circular window
+
 4. **Quickselect:** $O(n)$ average for k-closest without full sort
+
 5. **Collinearity:** Use cross product, not slope division
+
 6. **Visibility:** Angular sweep from viewpoint, track obstructions
 
 ---

@@ -827,17 +827,25 @@ def isPalindrome(head: ListNode) -> bool:
 ## 🎯 Practice Roadmap
 
 ### Foundation (Week 1)
+
 1. **Reverse Linked List** (#206) - Master 3-pointer technique
+
 2. **Palindrome List** (#234) - Combine mid-finding + reversal
+
 3. **Swap Pairs** (#24) - Simple pair swapping
 
 ### Intermediate (Week 2)
+
 4. **Reverse Between** (#92) - Partial reversal mastery
+
 5. **Reorder List** (#143) - Multiple patterns combined
+
 6. **Maximum Twin Sum** (#2130) - Application of reversal
 
 ### Advanced (Week 3)
+
 7. **Reverse in K-Group** (#25) - Group operations
+
 8. **Reverse Even Length Groups** (#2074) - Complex logic
 
 ### Mastery Challenge

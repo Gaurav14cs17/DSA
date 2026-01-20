@@ -474,9 +474,13 @@ def sortedArrayToBST(nums: list[int]) -> TreeNode:
 - ✗ Don't rebuild BST when you can just swap values
 
 ### ⚡ **Optimization Tricks:**
+
 1. **Inorder + prev tracking:** O(n) time, O(h) space
+
 2. **Morris traversal:** O(n) time, O(1) space!
+
 3. **Early termination:** Return false immediately on violation
+
 4. **For sorted array:** Binary split ensures O(log n) height
 
 ---

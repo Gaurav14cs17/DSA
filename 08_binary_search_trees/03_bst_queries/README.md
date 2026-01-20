@@ -516,10 +516,15 @@ def closestValue(root: TreeNode, target: float) -> int:
 - ✗ Don't use O(n) space when O(h) possible
 
 ### ⚡ **Optimization Tricks:**
+
 1. **K-th smallest:** Early termination saves time
+
 2. **LCA in BST:** O(h) iterative, no recursion needed
+
 3. **Two Sum:** Convert to sorted array → two pointers
+
 4. **Iterator:** Amortized O(1) by lazy evaluation
+
 5. **Range queries:** BST property enables aggressive pruning
 
 ---

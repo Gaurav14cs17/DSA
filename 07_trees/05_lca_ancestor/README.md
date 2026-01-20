@@ -469,18 +469,27 @@ LCA Problem
 ## 🎖️ Practice Roadmap
 
 **Week 1: Basic LCA**
+
 1. Solve #236 (LCA Binary Tree) - Master the pattern
+
 2. Solve #235 (LCA of BST) - BST optimization
+
 3. Solve #1650 (LCA with Parents) - Two pointers
 
 **Week 2: Advanced LCA**
+
 4. Solve #1123 (LCA Deepest Leaves) - Modified LCA
+
 5. Solve #1644 (LCA II) - Handle missing nodes
+
 6. Solve #1676 (LCA IV) - Multiple nodes
 
 **Week 3: Binary Lifting**
+
 7. Solve #1483 (Kth Ancestor) - Binary lifting
+
 8. Practice distance calculations
+
 9. Review all patterns
 
 ---

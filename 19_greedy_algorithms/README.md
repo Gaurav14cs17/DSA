@@ -71,9 +71,13 @@ If non-greedy choice exists, swap it with greedy choice → solution doesn't wor
 **Claim:** Greedy (select earliest finish time) is optimal.
 
 **Proof:**
+
 1. Let $A$ be greedy solution, $O$ be optimal
+
 2. If first activities differ, swap $O$'s first with $A$'s first
+
 3. $O$ doesn't worsen (greedy ends earliest)
+
 4. By induction, $|A| = |O|$ ∎
 
 ---

@@ -220,8 +220,11 @@ def wilson_check_optimized(n: int) -> bool:
 For prime p, the multiplicative group (ℤ/pℤ)* has order p-1.
 
 1. Each element a ∈ {1, 2, ..., p-1} has a unique inverse a⁻¹
+
 2. Elements equal to their own inverse satisfy a² ≡ 1 (mod p)
+
 3. For prime p, only a = 1 and a = p-1 satisfy this
+
 4. All other elements pair up: a × a⁻¹ ≡ 1
 
 Therefore:

@@ -67,9 +67,13 @@ permalink: /24_graph_algorithms/05_strongly_connected_components/
 ### 3️⃣ Kosaraju's Algorithm
 
 **Steps:**
+
 1. Run DFS on original graph, record finish times
+
 2. Compute transpose graph $G^T$
+
 3. Run DFS on $G^T$ in decreasing finish time order
+
 4. Each DFS tree in step 3 is one SCC
 
 **Why it works:** Second DFS visits nodes in topological order of SCC DAG.
@@ -531,9 +535,13 @@ SCC Problem
 ## 🎯 Key Insights
 
 1. **SCCs form DAG** when contracted
+
 2. **Kosaraju: two DFS passes** - simpler to understand
+
 3. **Tarjan: single pass** - more efficient in practice
+
 4. **Applications:** 2-SAT, reachability, optimization
+
 5. **Condensation graph** useful for many problems
 
 ---

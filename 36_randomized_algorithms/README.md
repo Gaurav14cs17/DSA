@@ -343,10 +343,15 @@ class SkipList:
 ## 🔍 Interview Focus
 
 **Top 5 Must-Know:**
+
 1. **Reservoir Sampling** - Stream processing classic
+
 2. **Fisher-Yates Shuffle** - Uniform permutation generation
+
 3. **Weighted Sampling** - Prefix sum technique
+
 4. **QuickSelect** - Expected O(n) selection
+
 5. **Rejection Sampling** - Generate constrained distributions
 
 **Common Mistakes:**

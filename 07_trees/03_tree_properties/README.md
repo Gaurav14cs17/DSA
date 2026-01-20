@@ -526,19 +526,29 @@ Time: O(log²n) - O(log n) binary search × O(log n) path check
 ## 🎖️ Practice Roadmap
 
 **Week 1: Basic Properties**
+
 1. Solve #104 (Max Depth) - Basic recursion
+
 2. Solve #111 (Min Depth) - BFS approach
+
 3. Solve #543 (Diameter) - Global max pattern
+
 4. Solve #110 (Balanced Tree) - Height difference
 
 **Week 2: Comparison Properties**
+
 5. Solve #100 (Same Tree) - Simultaneous DFS
+
 6. Solve #101 (Symmetric Tree) - Mirror check
+
 7. Solve #226 (Invert Tree) - Swap children
+
 8. Solve #572 (Subtree) - Nested comparison
 
 **Week 3: Advanced**
+
 9. Solve #222 (Count Complete Nodes) - Binary search
+
 10. Solve #958 (Check Completeness) - BFS validation
 
 ---

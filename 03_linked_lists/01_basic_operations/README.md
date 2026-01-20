@@ -845,18 +845,26 @@ def getLength(head: ListNode) -> int:
 ## 🎯 Practice Roadmap
 
 ### Foundation (Week 1)
+
 1. **Middle of List** (#876) - Master fast-slow pattern
+
 2. **Linked List Cycle** (#141) - Learn Floyd's Phase 1
 3. **Remove Elements** (#203) - Practice dummy node
 
 ### Building Skills (Week 2)
+
 4. **Cycle II** (#142) - Complete Floyd's algorithm
+
 5. **Intersection** (#160) - Length difference trick
+
 6. **Remove Nth From End** (#19) - Gap technique
 
 ### Advanced (Week 3)
+
 7. **Palindrome** (#234) - Combine multiple patterns
+
 8. **Delete Node** (#237) - Edge case thinking
+
 9. **Odd Even List** (#328) - Two-list pattern
 
 ### Mastery Challenge

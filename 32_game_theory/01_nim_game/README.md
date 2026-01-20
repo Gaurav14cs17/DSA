@@ -38,9 +38,13 @@ permalink: /32_game_theory/01_nim_game/
 **Setup:** $n$ piles of stones with sizes $a\_1, a\_2, \ldots, a\_n$
 
 **Rules:**
+
 1. Two players alternate turns
+
 2. On each turn, player removes **any positive number** of stones from **exactly one** pile
+
 3. Player who removes the **last stone wins** (normal play)
+
 4. Both players play optimally
 
 ---

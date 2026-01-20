@@ -54,9 +54,13 @@ permalink: /25_tree_algorithms/06_dsu_on_tree/
 **Naive approach:** DFS for each subtree = $O(n^2)$
 
 **Optimized approach:**
+
 1. Process light children, erase their data
+
 2. Process heavy child, keep its data
+
 3. Add contributions from light children
+
 4. Answer query for current node
 
 **Complexity:** $O(n \log n)$
@@ -67,10 +71,15 @@ permalink: /25_tree_algorithms/06_dsu_on_tree/
 
 ```
 For each node u:
+
 1. Recursively solve light children, remove their data
+
 2. Recursively solve heavy child, KEEP its data
+
 3. Add nodes from light subtrees one by one
+
 4. Compute answer for u
+
 5. If u is light child of parent, remove all data
 
 ```
@@ -492,9 +501,13 @@ Subtree Query Problem
 ## 🎯 Key Insights
 
 1. **Small to large** ensures $O(\log n)$ merges per element
+
 2. **Heavy child trick** keeps data between siblings
+
 3. **Total complexity** $O(n \log n)$ instead of $O(n^2)$
+
 4. **Works for** count, sum, distinct, mode, range queries
+
 5. **Similar to HLD** but different applications
 
 ---

@@ -45,7 +45,9 @@ Space: O(m)
 ### Optimized Approaches
 
 1. **Pattern preprocessing:** O(km) once
+
 2. **Combined matching:** O(n) per text
+
 3. **Total:** O(n + km) for preprocessing
 
 ---

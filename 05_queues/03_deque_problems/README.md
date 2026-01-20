@@ -94,7 +94,9 @@ permalink: /05_queues/03_deque_problems/
 **Monotonic Deque Approach:**
 
 1. Remove indices outside window from front
+
 2. Remove indices with smaller values from back
+
 3. Front is always the maximum
 
 ---
@@ -531,18 +533,27 @@ Sliding Window Optimization?
 ## 🎖️ Practice Roadmap
 
 **Week 1: Monotonic Deque Basics**
+
 1. Solve #239 (Sliding Window Maximum) - Master the template
+
 2. Implement sliding window minimum
+
 3. Solve #641 (Design Circular Deque) - Implementation
 
 **Week 2: Advanced Deque**
+
 4. Solve #862 (Shortest Subarray Sum ≥ K) - Prefix + deque
+
 5. Solve #1696 (Jump Game VI) - DP + deque
+
 6. Solve #1425 (Constrained Subsequence Sum) - DP optimization
 
 **Week 3: Expert Level**
+
 7. Solve #1499 (Max Value of Equation) - Creative deque use
+
 8. Implement 0-1 BFS
+
 9. Solve problems with 0-1 weighted graphs
 
 ---

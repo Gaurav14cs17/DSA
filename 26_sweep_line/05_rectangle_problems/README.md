@@ -79,8 +79,11 @@ A = \max(0, \min(x_2, x_4) - \max(x_1, x_3)) \times \max(0, \min(y_2, y_4) - \ma
 **Optimal:** $O(n \log n)$ with segment tree
 
 **Algorithm:**
+
 1. Sweep vertical line left to right
+
 2. Maintain active y-intervals at each x-position
+
 3. Calculate area contribution: $\text{width} \times \text{active\_height}$
 
 ---
@@ -111,8 +114,11 @@ A = \max(0, \min(x_2, x_4) - \max(x_1, x_3)) \times \max(0, \min(y_2, y_4) - \ma
 **Problem:** Check if $n$ rectangles form perfect large rectangle (no gaps/overlaps).
 
 **Conditions:**
+
 1. Total area = sum of individual areas
+
 2. Only 4 corners appear odd number of times (outer corners)
+
 3. All other points appear even number of times (internal corners)
 
 **Time:** $O(n)$ with hash set
@@ -547,10 +553,15 @@ def projection_area(grid: List[List[int]]) -> int:
 ## 💡 Key Insights
 
 1. **Overlap test:** Check projection on both axes
+
 2. **Stack technique:** Optimal for histogram problems
+
 3. **2D to 1D:** Reduce matrix problems to histogram
+
 4. **Corner tracking:** XOR-like behavior for perfect rectangle
+
 5. **Diagonal pairs:** For finding rectangles from points
+
 6. **Sweep line:** Efficient for union/intersection of many rectangles
 
 ---

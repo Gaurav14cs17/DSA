@@ -61,9 +61,13 @@ permalink: /26_sweep_line/01_interval_sweep/
 **Theorem:** Processing $n$ intervals requires $O(n \log n)$ time.
 
 **Proof:**
+
 1. Create $2n$ events (start + end for each interval)
+
 2. Sort events: $O(2n \log 2n) = O(n \log n)$
+
 3. Process events linearly: $O(2n) = O(n)$
+
 4. Total: $O(n \log n)$ ∎
 
 **Space:** $O(n)$ for events storage.
@@ -106,8 +110,11 @@ a < d \land c < b
 1. For each interval [s, e]:
    - Add event (s, +1)
    - Add event (e, -1)
+
 2. Sort events by time
+
 3. Process events, maintaining active count
+
 4. Return maximum active count
 
 ```
@@ -145,6 +152,7 @@ a < d \land c < b
 
 ```
 1. Sort intervals by start time
+
 2. For each interval:
    - If overlaps with last merged: extend
    - Otherwise: add as new merged interval
@@ -576,9 +584,13 @@ def employee_free_time_heap(schedule: List[List[Interval]]) -> List[Interval]:
 ## 💡 Key Insights
 
 1. **Event-based thinking:** Convert intervals to point events
+
 2. **Sort first:** Process events in time order
+
 3. **Track state:** Maintain active count/items during sweep
+
 4. **Difference array:** Efficient for range updates
+
 5. **Overlap formula:** `start1 < end2 && start2 < end1`
 
 ---

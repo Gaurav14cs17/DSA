@@ -96,7 +96,9 @@ Plus 1 for empty string = n(n+1)/2 + 1 ∎
 **Equivalent Conditions:**
 
 1. $\text{sorted}(S) = \text{sorted}(T)$
+
 2. $\vec{f}(S) = \vec{f}(T)$ (frequency vectors equal)
+
 3. $|S| = |T|$ and $S$ is a permutation of $T$
 
 **Frequency Vector (for lowercase letters):**

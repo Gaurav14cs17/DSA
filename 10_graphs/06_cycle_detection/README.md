@@ -57,8 +57,11 @@ permalink: /10_graphs/06_cycle_detection/
 ### 3️⃣ Graph Valid Tree Condition
 
 Graph with $n$ vertices is a tree iff:
+
 1. Connected
+
 2. Has exactly $n - 1$ edges
+
 3. No cycles
 
 ```math

@@ -115,7 +115,9 @@ c(S, T) = \sum_{u \in S, v \in T, (u,v) \in E} c(u,v)
 ### 5️⃣ Ford-Fulkerson Algorithm
 
 **Method:**
+
 1. Start with zero flow
+
 2. While augmenting path exists in residual graph:
    - Find augmenting path (BFS or DFS)
    - Compute bottleneck capacity
@@ -627,10 +629,15 @@ Network Flow Problem
 ## 🎯 Key Insights
 
 1. **Max-flow = Min-cut** fundamental theorem
+
 2. **Bipartite matching** reduces to max flow
+
 3. **Residual graph** crucial for finding augmenting paths
+
 4. **Edmonds-Karp** guarantees polynomial time
+
 5. **Dinic's algorithm** often fastest in practice
+
 6. **Push-relabel** good for dense graphs
 
 ---

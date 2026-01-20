@@ -191,6 +191,7 @@ C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
 | $C\_n$ | 1 | 1 | 2 | 5 | 14 | 42 |
 
 **Examples for $n=3$ ($C\_3 = 5$):**
+
 1. `((()))`
 2. `(()())`
 3. `(())()`
@@ -943,18 +944,27 @@ def scoreOfParentheses(s: str) -> int:
 ## 🎯 Practice Roadmap
 
 ### Week 1: Fundamentals
+
 1. **Valid Parentheses** (#20) - Master stack pattern
+
 2. **Min Add to Make Valid** (#921) - Learn counter approach
+
 3. **Max Nesting Depth** (#1614) - Simple depth tracking
 
 ### Week 2: Intermediate
+
 4. **Generate Parentheses** (#22) - Master backtracking
+
 5. **Min Remove to Make Valid** (#1249) - Two-pass technique
+
 6. **Valid Parenthesis String** (#678) - Range tracking with wildcards
 
 ### Week 3: Advanced
+
 7. **Longest Valid Parentheses** (#32) - Stack with indices
+
 8. **Remove Invalid Parentheses** (#301) - BFS/DFS approach
+
 9. **Score of Parentheses** (#856) - Calculation with stack
 
 ### Mastery Challenge

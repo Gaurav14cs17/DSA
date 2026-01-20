@@ -383,20 +383,31 @@ Time: O(n), Space: O(1) for fixed alphabet
 ## 🎖️ Practice Roadmap
 
 **Week 1: Fundamentals**
+
 1. Solve #242 (Valid Anagram) - Master Counter
+
 2. Solve #169 (Majority Element) - Learn Boyer-Moore
+
 3. Solve #387 (First Unique Character) - Frequency scan
+
 4. Solve #409 (Longest Palindrome) - Even/odd counts
 
 **Week 2: Intermediate**
+
 5. Solve #49 (Group Anagrams) - Hash grouping
+
 6. Solve #347 (Top K Frequent) - Bucket sort
+
 7. Solve #451 (Sort by Frequency) - Frequency sorting
+
 8. Solve #438 (Find All Anagrams) - Sliding window + freq
 
 **Week 3: Advanced**
+
 9. Solve #229 (Majority Element II) - Extended Boyer-Moore
+
 10. Solve #692 (Top K Frequent Words) - Heap + tiebreaker
+
 11. Solve #567 (Permutation in String) - Advanced sliding
 
 ---

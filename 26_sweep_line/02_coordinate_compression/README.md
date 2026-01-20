@@ -59,8 +59,11 @@ where $k$ = number of distinct coordinates.
 ### 2️⃣ Compression Algorithm
 
 **Steps:**
+
 1. Collect all unique coordinates: $C = \{c\_1, c\_2, \ldots, c\_k\}$
+
 2. Sort coordinates: $c\_1 < c\_2 < \cdots < c\_k$
+
 3. Create mapping: $f(c\_i) = i-1$ for $i = 1, 2, \ldots, k$
 
 **Time Complexity:**
@@ -85,9 +88,11 @@ where $k$ = number of distinct coordinates.
 
 ```
 1. Sweep vertical line left to right (x-axis)
+
 2. For each x-position:
    - Maintain active y-intervals
    - Use compressed y-coordinates
+
 3. Calculate contribution of current segment
 
 ```
@@ -109,9 +114,13 @@ Height function: $H(x) = \max\_{i: l\_i \leq x < r\_i} h\_i$
 **Key Points:** Where $H(x^-) \neq H(x^+)$
 
 **Algorithm:**
+
 1. Create events: $(l\_i, h\_i, \text{start})$ and $(r\_i, h\_i, \text{end})$
+
 2. Sort events by x-coordinate
+
 3. Maintain active heights (max heap)
+
 4. Output $(x, H(x))$ when height changes
 
 **Time:** $O(n \log n)$  
@@ -142,7 +151,9 @@ A = \sum_{i=1}^{k-1} (x_{i+1} - x_i) \cdot H(x_i)
 where $x\_1, \ldots, x\_k$ are sorted distinct x-coordinates.
 
 **Algorithm:**
+
 1. Compress x-coordinates
+
 2. For each x-segment $[x\_i, x\_{i+1})$:
    - Find active y-intervals
    - Merge y-intervals to get $H(x\_i)$
@@ -175,8 +186,11 @@ where $x\_1, \ldots, x\_k$ are sorted distinct x-coordinates.
 **Problem:** Track which intervals are active at position $x$.
 
 **Data structures:**
+
 1. **Sorted list:** Insert/remove in $O(n)$, merge in $O(n)$
+
 2. **Multiset (TreeMap):** Insert/remove in $O(\log n)$
+
 3. **Segment tree:** Range operations in $O(\log n)$
 
 **Merge overlapping intervals:**
@@ -665,10 +679,15 @@ def calculate_coverage(intervals: List[Tuple[int, int]]) -> int:
 ## 💡 Key Insights
 
 1. **Compression benefits:** Reduces $[0, 10^9]$ to $[0, n-1]$
+
 2. **Order preservation:** Maintains relative ordering of coordinates
+
 3. **2D strategy:** Sweep one axis, compress/process other axis
+
 4. **Event types:** Track start/end of intervals on each axis
+
 5. **Segment tree:** Accelerates range operations on compressed space
+
 6. **Active intervals:** Merge overlapping to calculate coverage
 
 ---

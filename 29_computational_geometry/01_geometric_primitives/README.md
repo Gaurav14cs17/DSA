@@ -87,8 +87,11 @@ Geometric interpretation:
 
 ```
 1. Anticommutative: u × v = -(v × u)
+
 2. Distributive: u × (v + w) = u × v + u × w
+
 3. Scalar multiple: (αu) × v = α(u × v)
+
 4. Zero if parallel: u × v = 0 ⟺ u ∥ v
 
 ```
@@ -117,9 +120,13 @@ where θ = angle between vectors
 
 ```
 1. Commutative: u · v = v · u
+
 2. Distributive: u · (v + w) = u · v + u · w
+
 3. u · v > 0: acute angle (< 90°)
+
 4. u · v = 0: perpendicular (90°)
+
 5. u · v < 0: obtuse angle (> 90°)
 
 ```

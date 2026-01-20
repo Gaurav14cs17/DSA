@@ -136,8 +136,11 @@ After zig-zig:
 ### 6️⃣ Advantages
 
 1. **No balance information:** Simpler than AVL/Red-Black
+
 2. **Cache-friendly:** Recently accessed nodes near root
+
 3. **Working set theorem:** Frequently accessed items are fast
+
 4. **Static optimality conjecture:** Competitive with optimal static tree (unproven)
 
 ---
@@ -547,11 +550,17 @@ def contains_nearby_duplicate(nums: list, k: int) -> bool:
 ## 💡 Key Insights
 
 1. **Self-adjusting:** No explicit balance factor stored
+
 2. **Zig-zig crucial:** Different from simple "rotate to root"
+
 3. **Cache-friendly:** Recent items stay near root
+
 4. **Amortized guarantees:** Individual ops can be $O(n)$, but average is $O(\log n)$
+
 5. **Working set property:** $k$ distinct accesses among $n$ items cost $O(k \log n)$
+
 6. **Simpler than AVL/RB:** Less bookkeeping, easier to implement
+
 7. **Good for sequential access:** Recently accessed items are fast
 
 ---

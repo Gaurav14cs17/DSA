@@ -42,10 +42,15 @@ permalink: /27_advanced_trees/05_b_trees/
 **B-Tree of order $m$:** Self-balancing multi-way search tree optimized for disk I/O.
 
 **Properties:**
+
 1. Every node has at most $m$ children
+
 2. Every non-leaf, non-root node has at least $\lceil m/2 \rceil$ children
+
 3. Root has at least 2 children (if not leaf)
+
 4. All leaves at same level
+
 5. Non-leaf with $k$ children contains $k-1$ keys
 
 **Typical:** $m = 1000$ or more (large branching factor)
@@ -103,9 +108,13 @@ where:
 
 ```
 1. Start at root
+
 2. Binary search within node for key or range
+
 3. If found, return
+
 4. Otherwise, follow appropriate child pointer
+
 5. Repeat until found or reach leaf
 
 ```
@@ -119,8 +128,11 @@ where:
 ### 5️⃣ Insert Operation
 
 **Algorithm:**
+
 1. Search for insertion point (leaf)
+
 2. Insert key into leaf
+
 3. If leaf overflows ($> m-1$ keys):
    - **Split** leaf into two nodes
    - Move median key up to parent
@@ -137,8 +149,11 @@ where:
 **More complex than insert:**
 
 **Cases:**
+
 1. **Key in leaf:** Simply remove
+
 2. **Key in internal node:** Replace with predecessor/successor, delete from leaf
+
 3. **Underflow** (< $\lceil m/2 \rceil - 1$ keys):
    - **Borrow** from sibling (rotation)
    - **Merge** with sibling (combine nodes)
@@ -504,11 +519,17 @@ def my_calendar_btree():
 ## 💡 Key Insights
 
 1. **Disk-optimized:** Designed for minimizing disk I/O
+
 2. **Large nodes:** Match disk block size (typically 4KB-8KB)
+
 3. **Shallow tree:** $\log\_{100}(1000000) \approx 3$ levels for million keys!
+
 4. **All leaves at same level:** Guaranteed balanced
+
 5. **Good locality:** Keys within node are sequential
+
 6. **B+ tree for DB:** All data in leaves, internal nodes pure index
+
 7. **Range queries:** B+ tree excels with leaf links
 
 ---

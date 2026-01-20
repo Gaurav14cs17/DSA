@@ -116,6 +116,7 @@ The sum converges to 2.
 ### 7️⃣ Heap Sort
 
 1. Build max-heap: O(n)
+
 2. Extract max n times: O(n log n)
 
 ```math

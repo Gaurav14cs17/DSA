@@ -34,11 +34,14 @@ Single pattern matching finds all occurrences of one pattern in text using rolli
 
 ```
 1. Compute hash of pattern: O(m)
+
 2. Compute hash of first window: O(m)
+
 3. For each position:
    a. Compare hashes: O(1)
    b. If match, verify string: O(m)
    c. Roll hash: O(1)
+
 4. Total: O(n + m) average, O(nm) worst
 
 ```

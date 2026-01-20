@@ -823,18 +823,27 @@ def subarraySumPattern(nums: list[int], target: int) -> int:
 ## 🎯 Practice Roadmap
 
 ### Foundation (Start Here!)
+
 1. **Running Sum of 1d Array** (#1480) - Build prefix array
+
 2. **Range Sum Query** (#303) - Basic queries
+
 3. **Find Pivot Index** (#724) - Left = Right
 
 ### Building Skills
+
 4. **Subarray Sum Equals K** (#560) - Prefix + HashMap
+
 5. **Product Except Self** (#238) - Prefix × Suffix
+
 6. **Continuous Subarray Sum** (#523) - Modulo arithmetic
 
 ### Advanced Mastery
+
 7. **Subarray Sums Divisible by K** (#974) - Modulo + counting
+
 8. **Range Sum Query 2D** (#304) - 2D prefix sum
+
 9. **Number of Submatrices That Sum to Target** (#1074) - 2D + hash
 
 ### Expert Level

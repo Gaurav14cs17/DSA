@@ -261,7 +261,9 @@ Result:
 **Problem:** Do segments AB and CD intersect?
 
 **Necessary conditions:**
+
 1. Orientation test: A, B must be on opposite sides of line CD
+
 2. Orientation test: C, D must be on opposite sides of line AB
 
 **Formula:**
@@ -619,8 +621,13 @@ Convert when needed for graphics applications
 ## 🗺️ Subtopic Navigation
 
 1. [Geometric Primitives →](./01_geometric_primitives/)
+
 2. [Convex Hull →](./02_convex_hull/)
+
 3. [Line Intersection →](./03_line_intersection/)
+
 4. [Point Location →](./04_point_location/)
+
 5. [Polygon Operations →](./05_polygon_operations/)
+
 6. [Closest Pair →](./06_closest_pair/)

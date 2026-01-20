@@ -86,8 +86,11 @@ Or unified: $\text{size} = (\text{rear} - \text{front} + n) \mod n$
 **Amortized Analysis:**
 
 Each element:
+
 1. Pushed to $S\_1$ once: O(1)
+
 2. Transferred to $S\_2$ once: O(1)
+
 3. Popped from $S\_2$ once: O(1)
 
 ```math
@@ -376,17 +379,25 @@ next(5): queue=[10,3,5], sum=18, avg=18/3=6.0
 ## 🎖️ Practice Roadmap
 
 **Week 1: Fundamentals**
+
 1. Implement basic queue (array & linked list)
+
 2. Solve #622 (Design Circular Queue)
+
 3. Solve #232 (Queue using Stacks)
 
 **Week 2: Applications**
+
 4. Solve #225 (Stack using Queues)
+
 5. Solve #346 (Moving Average)
+
 6. Solve #933 (Number of Recent Calls)
 
 **Week 3: Advanced**
+
 7. Solve #641 (Design Circular Deque)
+
 8. Implement priority queue from scratch
 
 ---

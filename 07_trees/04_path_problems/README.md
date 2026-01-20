@@ -382,9 +382,12 @@ Current path: [10, 5, 3, 3]
 Backtrack and explore other paths...
 
 Paths found:
+
 1. 10 → 5 → 3 (sum=18)... wait, we want exactly 8
 2. 5 → 3 (sum=8) ✓
+
 3. 10 → -3 → 11 (sum=18)... no
+
 4. -3 → 11 (sum=8) ✓
 
 Result: 3 paths with sum=8
@@ -494,17 +497,25 @@ Result: [[5, 4, 11, 2]]
 ## 🎖️ Practice Roadmap
 
 **Week 1: Basic Path Problems**
+
 1. Solve #112 (Path Sum) - DFS foundation
+
 2. Solve #257 (Binary Tree Paths) - All paths
+
 3. Solve #129 (Sum Numbers) - Build number pattern
 
 **Week 2: Advanced Path Problems**
+
 4. Solve #113 (Path Sum II) - Backtracking for all paths
+
 5. Solve #437 (Path Sum III) - Prefix sum technique
+
 6. Solve #124 (Max Path Sum) - Gain calculation
 
 **Week 3: Practice & Master**
+
 7. Solve #988 (Smallest String) - Lexicographic paths
+
 8. Review all patterns and optimize solutions
 
 ---

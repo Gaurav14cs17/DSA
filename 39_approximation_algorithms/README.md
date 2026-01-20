@@ -393,10 +393,15 @@ def bin_packing_ffd(items, bin_capacity):
 ## 🔍 Interview Focus
 
 **Top 5 Must-Know:**
+
 1. **Vertex Cover 2-Approximation** - Classic greedy matching
+
 2. **Knapsack FPTAS** - Scaling technique
+
 3. **Set Cover Greedy** - O(log n) approximation
+
 4. **Task Scheduling** - Greedy with constraints
+
 5. **Bin Packing FFD** - Practical heuristic
 
 **Common Mistakes:**

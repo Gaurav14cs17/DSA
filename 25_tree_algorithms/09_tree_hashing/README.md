@@ -91,8 +91,11 @@ where $p$ is a large prime.
 **For unrooted tree:** Need consistent root.
 
 **Solution:**
+
 1. Find **center(s)** of tree (1 or 2 nodes)
+
 2. Root at center(s)
+
 3. Compute hash
 
 **Center:** Node minimizing maximum distance to any leaf.
@@ -104,7 +107,9 @@ where $p$ is a large prime.
 **Aho, Hopcroft, Ullman algorithm** for tree isomorphism:
 
 1. Assign labels to leaves (level 0)
+
 2. Iteratively label internal nodes based on children
+
 3. Two trees isomorphic iff root labels match
 
 **Time:** $O(n \log n)$ due to sorting
@@ -116,8 +121,11 @@ where $p$ is a large prime.
 **Problem:** Find all occurrences of pattern tree in larger tree.
 
 **Solution:**
+
 1. Hash all subtrees
+
 2. Hash pattern
+
 3. Find matching hashes
 
 **Time:** $O(n)$ for hashing + $O(n)$ for matching
@@ -536,9 +544,13 @@ Tree Comparison Problem
 ## 🎯 Key Insights
 
 1. **Tree hash** identifies structure uniquely (probabilistically)
+
 2. **Post-order DFS** computes hash in O(n)
+
 3. **Unrooted trees** need center-based rooting
+
 4. **AHU algorithm** for collision-free isomorphism
+
 5. **Hashing useful** for duplicate detection
 
 ---

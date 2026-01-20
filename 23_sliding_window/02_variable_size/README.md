@@ -719,7 +719,9 @@ def balancedString(s: str) -> int:
 ### Key Questions to Ask
 
 1. "Am I looking for longest or shortest?"
+
 2. "What makes the window valid/invalid?"
+
 3. "Do I need exact count or at-most?"
 
 ### Common Mistakes

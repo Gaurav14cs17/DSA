@@ -85,8 +85,11 @@ This property proves correctness of both Kruskal's and Prim's.
 **Greedy approach:** Sort edges, add if doesn't create cycle.
 
 **Algorithm:**
+
 1. Sort all edges by weight
+
 2. Initialize Union-Find
+
 3. For each edge $(u, v, w)$ in sorted order:
    - If $\text{find}(u) \neq \text{find}(v)$: add edge, union sets
 
@@ -108,7 +111,9 @@ T = O(E \log E) = O(E \log V)
 **Greedy approach:** Grow tree from arbitrary vertex.
 
 **Algorithm:**
+
 1. Start with arbitrary vertex
+
 2. Repeatedly add minimum weight edge connecting tree to non-tree vertex
 
 **Time Complexity:**
@@ -126,9 +131,13 @@ T = O(E \log E) = O(E \log V)
 **Parallel-friendly MST algorithm.**
 
 **Algorithm:**
+
 1. Each vertex is a component
+
 2. Find cheapest edge from each component
+
 3. Add all these edges (merge components)
+
 4. Repeat until one component
 
 **Time:** $O(E \log V)$
@@ -531,9 +540,13 @@ MST Problem
 ## 🎯 Key Insights
 
 1. **MST is unique** if all edge weights are distinct
+
 2. **Both Kruskal's and Prim's** are greedy and optimal
+
 3. **Union-Find** essential for Kruskal's efficiency
+
 4. **Prim's with heap** better for dense graphs when using array
+
 5. **Cut property** proves correctness of both algorithms
 
 ---

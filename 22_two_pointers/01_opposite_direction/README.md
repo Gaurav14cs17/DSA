@@ -311,8 +311,10 @@ Total water = 6 units
 Find \(a + b + c = 0\) where \(a \leq b \leq c\).
 
 1. Sort the array: \(O(n \log n)\)
+
 2. For each \(a = nums[i]\):
    - Find \(b + c = -a\) using two pointers: \(O(n)\)
+
 3. Total: \(O(n^2)\)
 
 #### Handling Duplicates

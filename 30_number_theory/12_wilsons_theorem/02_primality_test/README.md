@@ -250,13 +250,17 @@ compare_methods(104729)  # Larger prime (10000th prime)
 ### Use Wilson's Test:
 
 1. **Educational purposes** - Understanding the theorem
+
 2. **Verification** - Double-checking other methods for small n
+
 3. **Proofs** - Theoretical arguments about primality
 
 ### Don't Use Wilson's Test:
 
 1. **Production code** - Use Miller-Rabin or AKS
+
 2. **Competitive programming** - Too slow
+
 3. **Cryptography** - Need primes with 100s of digits
 
 ---

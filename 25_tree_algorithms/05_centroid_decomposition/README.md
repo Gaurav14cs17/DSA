@@ -50,9 +50,13 @@ permalink: /25_tree_algorithms/05_centroid_decomposition/
 ### 2️⃣ Centroid Decomposition
 
 **Recursively decompose tree:**
+
 1. Find centroid of tree
+
 2. Remove centroid
+
 3. Recursively decompose resulting subtrees
+
 4. Build centroid tree
 
 **Depth of centroid tree:** $O(\log n)$
@@ -103,9 +107,13 @@ permalink: /25_tree_algorithms/05_centroid_decomposition/
 ### 6️⃣ Distance Counting
 
 **Count paths with specific property:**
+
 1. Root at centroid
+
 2. Count paths through centroid
+
 3. Subtract paths entirely in one subtree
+
 4. Recurse on subtrees
 
 **Key insight:** Every path passes through exactly one centroid ancestor.
@@ -472,9 +480,13 @@ Tree Problem
 ## 🎯 Key Insights
 
 1. **Centroid removes balanced part** of tree
+
 2. **Every path** passes through O(log n) centroids
+
 3. **Decomposition depth** = O(log n)
+
 4. **Total complexity** typically O(n log n)
+
 5. **Powerful for path problems** that are hard otherwise
 
 ---

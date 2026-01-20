@@ -571,9 +571,13 @@ Shortest Path Problem
 ## 🎯 Key Insights
 
 1. **Dijkstra requires non-negative weights** - use Bellman-Ford otherwise
+
 2. **0-1 BFS is faster than Dijkstra** for binary weights
+
 3. **Floyd-Warshall** good for dense graphs and all-pairs queries
+
 4. **SPFA** often faster than Bellman-Ford in practice
+
 5. **A*** optimal when good heuristic available
 
 ---

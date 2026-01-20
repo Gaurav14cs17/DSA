@@ -173,6 +173,7 @@ n & (n-1):  1 0 0 0 = 8 ≠ 0 ✗
 ### 3️⃣ Power of Four Detection
 
 A number \( n \) is a power of 4 if:
+
 1. It's a power of 2: `n & (n-1) == 0`
 2. The single bit is at an even position: `n & 0x55555555 == n`
 
@@ -286,7 +287,9 @@ n = ((n & 0xAAAAAAAA) >> 1)  | ((n & 0x55555555) << 1)   # Swap adjacent bits
 #### The Algorithm
 
 1. **XOR** gives sum without carry: \( a \oplus b \)
+
 2. **AND + shift** gives carry: \( (a \land b) << 1 \)
+
 3. Repeat until no carry
 
 #### 📊 Visual Example: 5 + 7 = 12

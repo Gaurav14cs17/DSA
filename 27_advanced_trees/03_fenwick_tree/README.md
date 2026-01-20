@@ -228,9 +228,13 @@ class FenwickTree:
 This section contains **30+ problems** organized into **5 categories**:
 
 1. **[Basic BIT](./01_basic_bit/)** - Point update, range query, stack increment (6 problems)
+
 2. **[Inversion Counting](./02_inversion_counting/)** - Count smaller, reverse pairs, create sorted array (8 problems)
+
 3. **[2D BIT](./03_2d_bit/)** - 2D range sum, matrix updates, rectangle queries (5 problems)
+
 4. **[Order Statistics](./04_order_statistics/)** - Kth smallest, K empty slots, dynamic median (5 problems)
+
 5. **[DP with BIT](./05_dp_with_bit/)** - LIS II, good triplets, DP optimization (6 problems)
 
 ---
@@ -251,11 +255,17 @@ This section contains **30+ problems** organized into **5 categories**:
 ## 💡 Key Insights
 
 1. **LSB magic:** $i \& (-i)$ isolates least significant bit
+
 2. **Logarithmic operations:** At most $\log n$ steps for update/query
+
 3. **1-indexed:** Fenwick tree is naturally 1-indexed (0 has no parent)
+
 4. **Range query:** Difference of two prefix sums
+
 5. **Coordinate compression:** Map large values to small indices
+
 6. **Simpler than Segment Tree:** For sum queries, BIT is easier
+
 7. **Not for range updates:** Use difference array or segment tree with lazy propagation
 
 ---

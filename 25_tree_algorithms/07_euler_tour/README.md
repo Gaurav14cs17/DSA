@@ -42,7 +42,9 @@ permalink: /25_tree_algorithms/07_euler_tour/
 **Euler Tour:** Flatten tree into array by recording entry/exit times in DFS.
 
 **Two variants:**
+
 1. **Node-based:** Record each node once (entry time only)
+
 2. **Edge-based:** Record each node twice (entry and exit)
 
 ---
@@ -483,9 +485,13 @@ Tree Query Problem
 ## 🎯 Key Insights
 
 1. **Subtree = contiguous range** in DFS order
+
 2. **Enables range data structures** on trees
+
 3. **O(1) ancestor checking** with in/out times
+
 4. **Combined with segment tree** for updates
+
 5. **Foundation for HLD** and other advanced techniques
 
 ---

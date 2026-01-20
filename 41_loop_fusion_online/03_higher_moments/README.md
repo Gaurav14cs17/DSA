@@ -214,9 +214,13 @@ print(f"Kurtosis: {stats.get_kurtosis():.2f}")  # Positive (heavy tail)
 **Key Challenge:** Cubing makes things more complex! $(a - b)^3$ has 4 terms, not 2.
 
 **Strategy:**
+
 1. Use same approach as Welford (adjust for mean shift)
+
 2. Apply binomial theorem: $(a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3$
+
 3. Use the fact that $\sum(x\_i - \bar{x}) = 0$ to cancel terms
+
 4. Carefully track which terms survive
 
 **Why is this harder?** Because we need to account for interactions with $M\_2$ (the second moment).
@@ -327,8 +331,11 @@ M_3^{(n)} = M_3^{(n-1)} + \frac{(n-1)(n-2)}{n^2}\delta_n^3 - \frac{3}{n}M_2^{(n-
 **Why does this work?**
 
 1. **Binomial expansion:** $(a - b)^3$ gives us 4 terms
+
 2. **Cancellation:** The linear term $\sum y\_i = 0$ vanishes
+
 3. **Coupling:** The $y\_i^2$ term couples with $M\_2$ (second moment)
+
 4. **Factorization:** The cubic terms factor nicely into $(n-1)(n-2)/n^2$
 
 **The pattern:**

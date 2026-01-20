@@ -106,7 +106,9 @@ print(f"Random sample of 5: {sample}")
 **Key Insight:** Use induction! If probability is correct after $i-1$ elements, show it's correct after $i$ elements.
 
 **Strategy:**
+
 1. Base case: First $k$ elements (trivial)
+
 2. Inductive step: Show probability stays correct when adding element $i$
 
 ---
@@ -148,6 +150,7 @@ Therefore:
 
 ```math
 P(j \text{ in reservoir after } i) = \frac{k}{i-1} \cdot \frac{i-1}{i} = \frac{k}{i}
+
 $$ ✓
 
 By induction, after $n$ elements, each has probability $k/n$. $\blacksquare$
@@ -234,8 +237,11 @@ print(f"Frequency of 'fox': {sketch.estimate('fox')}")  # 2
 **Key Insight:** Hash collisions cause overestimation. Use multiple hash functions and take minimum to reduce error.
 
 **Strategy:**
+
 1. Analyze error from one hash function (Markov's inequality)
+
 2. Show multiple hash functions reduce failure probability (independence)
+
 3. Set parameters to achieve desired $(\epsilon, \delta)$ guarantee
 
 ---

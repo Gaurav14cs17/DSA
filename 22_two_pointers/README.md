@@ -476,9 +476,13 @@ def find_cycle_start(head: ListNode) -> ListNode:
 ### Interview Script
 
 1. **Clarify**: "Is the array sorted?" "Can I modify in-place?"
+
 2. **Pattern Match**: Identify which two-pointer variant applies
+
 3. **Explain**: "I'll use two pointers because..."
+
 4. **Implement**: Start with the template, customize
+
 5. **Test**: Walk through with a simple example
 
 ---

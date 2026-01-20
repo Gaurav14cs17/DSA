@@ -39,15 +39,23 @@ permalink: /30_number_theory/01_gcd_lcm/04_binary_gcd/
 **Key Observations:**
 
 1. $\gcd(0, v) = v$
+
 2. $\gcd(2u, 2v) = 2 \cdot \gcd(u, v)$ (factor out 2)
+
 3. $\gcd(2u, v) = \gcd(u, v)$ if $v$ is odd
+
 4. $\gcd(u, v) = \gcd(|u-v|, \min(u,v))$ if both odd
 
 **Algorithm Steps:**
+
 1. Find common power of 2 factor
+
 2. Divide both numbers by 2 until one is odd
+
 3. Subtract smaller from larger (preserves GCD)
+
 4. Divide result by 2 if even
+
 5. Repeat until one number is 0
 6. Multiply by common power of 2
 

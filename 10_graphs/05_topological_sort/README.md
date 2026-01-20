@@ -45,8 +45,11 @@ permalink: /10_graphs/05_topological_sort/
 ### 2️⃣ Kahn's Algorithm (BFS)
 
 1. Compute in-degree of all vertices
+
 2. Add all vertices with in-degree 0 to queue
+
 3. Process queue: add to result, decrease neighbors' in-degree
+
 4. If any vertex becomes in-degree 0, add to queue
 
 ```math

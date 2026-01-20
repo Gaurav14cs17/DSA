@@ -46,8 +46,11 @@ f(n) = g(f(n-1), n)
 ```
 
 **Requirements:**
+
 1. **Base case:** Termination condition
+
 2. **Recursive case:** Problem reduction
+
 3. **Progress:** Each call moves toward base case
 
 ---

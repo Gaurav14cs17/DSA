@@ -43,9 +43,13 @@ nav_order: 6
 
 ```
 1. Sort points by x-coordinate
+
 2. Divide into left and right halves
+
 3. Recursively find closest pairs in each half
+
 4. Find closest pair across the dividing line
+
 5. Return minimum of three distances
 
 ```

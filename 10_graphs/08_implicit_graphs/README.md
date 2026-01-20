@@ -66,10 +66,15 @@ G_{implicit} = (V, E) \text{ where } V = f(\text{input}), E = g(\text{rules})
 **Theorem:** For array-based implicit graph, reachability from $s$ to $t$ can be determined in $O(n)$ time.
 
 **Proof:**
+
 1. Graph has $|V| = n$ vertices (array indices)
+
 2. Each vertex has at most $n$ outgoing edges
+
 3. $|E| \leq n^2$ worst case
+
 4. BFS/DFS: $O(|V| + |E|) = O(n + n^2) = O(n^2)$
+
 5. With greedy optimization (Jump Game): $O(n)$ ∎
 
 **Reachability Set:**
@@ -1324,9 +1329,13 @@ def oranges_rotting(grid: List[List[int]]) -> int:
 **Goal:** Speed and confidence
 
 21. **Shortest Bridge** (#934) - Mixed DFS+BFS
+
 22. **Similar String Groups** (#839) - String relationships
+
 23. **Most Stones Removed** (#947) - Clever component analysis
+
 24. **K-Similar Strings** (#854) - Complex state space
+
 25. **Largest Component by Factor** (#952) - Number theory meets graphs
 
 **Practice:**
@@ -1424,8 +1433,11 @@ Problem without "graph" keywords + Relationships = Hidden Graph
 ```
 
 **Universal Recognition Questions:**
+
 1. What are the entities? → **Vertices**
+
 2. How are they related? → **Edges**
+
 3. What am I finding? → **Algorithm**
 
 **Master These Core Patterns:**

@@ -139,7 +139,9 @@ a[\text{deque}[0]] \geq a[\text{deque}[1]] \geq ... \geq a[\text{deque}[n-1]]
 #### Why It Works
 
 1. **Smaller elements can't be maximum**: If \(a[j] \leq a[i]\) and \(j < i\), then \(j\) can never be maximum while \(i\) is in the window.
+
 2. **Remove from back**: Pop elements smaller than incoming.
+
 3. **Remove from front**: Pop elements outside window.
 
 #### 🔍 Proof of O(n)
@@ -162,8 +164,11 @@ Total operations: \(2n = O(n)\) ∎
 #### The Approach
 
 1. Create frequency map of pattern \(p\)
+
 2. Slide window of size \(|p|\) over string \(s\)
+
 3. Update window frequency incrementally
+
 4. Check if frequencies match
 
 #### Optimization: Match Counter

@@ -224,8 +224,11 @@ When $stored[i] < 0$: new minimum found!
 **Amortized Cost Proof:**
 
 Each element:
+
 1. Pushed to $S\_1$ once: 1 operation
+
 2. Moved to $S\_2$ once: 1 operation  
+
 3. Popped from $S\_2$ once: 1 operation
 
 Total: 3 operations per element
@@ -945,18 +948,27 @@ def baseball_game(operations: list[str]) -> int:
 ## 🎯 Practice Roadmap
 
 ### Week 1: Fundamentals
+
 1. **Implement basic stack** - Array & linked list versions
+
 2. **Min Stack** (#155) - Learn the technique
+
 3. **Valid Parentheses** (#20) - Basic matching
 
 ### Week 2: Applications
+
 4. **Queue using Stacks** (#232) - Understand amortized analysis
+
 5. **Remove Adjacent Duplicates** (#1047) - Pattern matching
+
 6. **Baseball Game** (#682) - Simulation practice
 
 ### Week 3: Advanced
+
 7. **Simplify Path** (#71) - String parsing
+
 8. **Exclusive Time** (#636) - Call stack simulation
+
 9. **Max Frequency Stack** (#895) - Complex design
 
 ---

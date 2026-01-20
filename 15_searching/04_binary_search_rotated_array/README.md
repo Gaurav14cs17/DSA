@@ -53,7 +53,9 @@ Rotated by 2: $[4, 5, 1, 2, 3]$
 ### 3️⃣ Search Logic
 
 1. Determine which half is sorted
+
 2. Check if target is in sorted half
+
 3. Narrow search accordingly
 
 ---

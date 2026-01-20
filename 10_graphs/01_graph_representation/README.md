@@ -996,17 +996,25 @@ def can_finish(num_courses: int, prerequisites: List[List[int]]) -> bool:
 ## 🎯 Practice Roadmap
 
 ### Week 1: Fundamentals
+
 1. Implement both representations (matrix & list)
+
 2. **Clone Graph** (#133) - Master the technique
+
 3. **Find Center** (#1791) - Easy warm-up
 
 ### Week 2: Properties
+
 4. **Graph Valid Tree** (#261) - Tree properties
+
 5. **Connected Components** (#323) - DFS mastery
+
 6. **Town Judge** (#997) - Degree analysis
 
 ### Week 3: Advanced
+
 7. **Course Schedule** (#207) - Cycle detection
+
 8. **Course Schedule II** (#210) - Topological sort
 
 ---

@@ -545,19 +545,29 @@ n > 10,000:  Consider Manacher's
 ## 🎯 Practice Roadmap
 
 ### Beginner Level
+
 1. **Valid Palindrome** (#125) - Learn two pointers
+
 2. **Palindrome Number** (#9) - Integer variant
+
 3. **Palindrome Linked List** (#234) - Apply to linked list
 
 ### Intermediate Level
+
 4. **Longest Palindromic Substring** (#5) - Master expand center
+
 5. **Palindromic Substrings** (#647) - Count all
+
 6. **Valid Palindrome II** (#680) - With one deletion
 
 ### Advanced Level
+
 7. **Palindrome Partitioning** (#131) - Backtracking
+
 8. **Palindrome Partitioning II** (#132) - Min cuts DP
+
 9. **Longest Palindromic Subsequence** (#516) - DP variant
+
 10. **Shortest Palindrome** (#214) - KMP application
 
 ### Expert Challenge

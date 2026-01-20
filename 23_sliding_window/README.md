@@ -583,9 +583,13 @@ def count_exact_k(arr: list, k: int) -> int:
 ### Interview Script
 
 1. **Identify Pattern**: "This is a sliding window problem because..."
+
 2. **Choose Type**: "I'll use fixed/variable size because..."
+
 3. **Define State**: "My window will track..."
+
 4. **Shrink Condition**: "I'll shrink when..."
+
 5. **Edge Cases**: Empty input, single element, all same
 
 ---

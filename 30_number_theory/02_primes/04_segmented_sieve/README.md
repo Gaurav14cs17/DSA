@@ -61,8 +61,11 @@ permalink: /30_number_theory/02_primes/04_segmented_sieve/
 **Implication:** To sieve range [L, R], we only need primes up to $\sqrt{R}$.
 
 **Algorithm:**
+
 1. Generate small primes up to √R using standard sieve
+
 2. Create boolean array for range [L, R] only
+
 3. For each small prime p, mark its multiples in [L, R]
 
 ---

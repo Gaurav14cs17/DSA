@@ -79,6 +79,7 @@ permalink: /24_graph_algorithms/06_bridges_articulation_points/
 **Vertex $u$ is articulation point iff:**
 
 1. **Root of DFS tree:** Has $\geq 2$ children
+
 2. **Non-root:** Has child $v$ where $\text{low}[v] \geq \text{disc}[u]$
 
 **Intuition:** No back edge from subtree of $v$ to ancestors of $u$.
@@ -90,8 +91,11 @@ permalink: /24_graph_algorithms/06_bridges_articulation_points/
 **2-edge-connected:** No bridges exist.
 
 **Finding components:**
+
 1. Find all bridges
+
 2. Remove bridges temporarily
+
 3. Connected components = 2-edge-connected components
 
 **Applications:** Network reliability, road networks.
@@ -103,7 +107,9 @@ permalink: /24_graph_algorithms/06_bridges_articulation_points/
 **Biconnected:** No articulation points.
 
 **Finding:**
+
 1. DFS with stack of edges
+
 2. When articulation point found, pop edges to form component
 
 **Property:** Biconnected components can overlap at articulation points.
@@ -481,9 +487,13 @@ Graph Vulnerability Problem
 ## 🎯 Key Insights
 
 1. **Bridges and articulation points** found in O(V+E) using Tarjan
+
 2. **Low-link values** crucial for detection
+
 3. **Bridge:** `low[v] > disc[u]` (strict inequality)
+
 4. **Articulation:** `low[v] ≥ disc[u]` (non-strict)
+
 5. **Applications:** Network reliability, vulnerability analysis
 
 ---

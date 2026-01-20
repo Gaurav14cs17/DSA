@@ -94,11 +94,15 @@ T1 T2
 **Single Left Rotation (RR case):** Mirror of right rotation
 
 **Left-Right Rotation (LR case):**
+
 1. Left rotate on left child
+
 2. Right rotate on root
 
 **Right-Left Rotation (RL case):**
+
 1. Right rotate on right child  
+
 2. Left rotate on root
 
 **Time:** $O(1)$ per rotation
@@ -604,10 +608,15 @@ def range_sum_bst(root: Optional[AVLNode], low: int, high: int) -> int:
 ## 💡 Key Insights
 
 1. **Strict balance:** Height difference ≤ 1 ensures O(log n) operations
+
 2. **Rotation types:** 4 cases (LL, RR, LR, RL) with 1-2 rotations each
+
 3. **Height bound:** $h \leq 1.44 \log n$ (tighter than Red-Black)
+
 4. **Insert rotations:** At most 1 rotation needed
+
 5. **Delete rotations:** At most 2 rotations (but may propagate up)
+
 6. **Optimal for lookups:** Faster than Red-Black due to stricter balance
 
 ---

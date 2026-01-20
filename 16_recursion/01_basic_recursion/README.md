@@ -50,7 +50,9 @@ permalink: /16_recursion/01_basic_recursion/
 Every recursive function needs:
 
 1. **Base Case:** When to stop
+
 2. **Recursive Case:** How to reduce problem
+
 3. **Progress:** Moving toward base case
 
 ---

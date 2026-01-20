@@ -786,11 +786,13 @@ R_4 &= R_1 \circ R_1 \circ R_1 \circ R_1 = R_0
 **Proof by Induction:**
 
 1. **Base:** Start at $(0, n-1)$ (top-right)
+
 2. **Step:** At position $(i, j)$:
    - If $M[i][j] > \text{target}$: move left (eliminate column $j$)
      - All elements in column $j$ are $\geq M[i][j] > \text{target}$ ✓
    - If $M[i][j] < \text{target}$: move down (eliminate row $i$)
      - All elements in row $i$ are $\leq M[i][j] < \text{target}$ ✓
+
 3. **Termination:** Either find target or exhaust all cells ∎
 
 ---
@@ -877,18 +879,27 @@ for i in range(m):
 ## 🎯 Practice Roadmap
 
 ### Foundation (Start Here!)
+
 1. **Transpose Matrix** (#867) - Basic 2D manipulation
+
 2. **Spiral Matrix** (#54) - Learn boundary tracking
+
 3. **Rotate Image** (#48) - Master transpose + reverse
 
 ### Building Skills
+
 4. **Search 2D Matrix II** (#240) - Staircase search
+
 5. **Set Matrix Zeroes** (#73) - In-place manipulation
+
 6. **Valid Sudoku** (#36) - Box indexing
 
 ### Advanced Challenges
+
 7. **Spiral Matrix II** (#59) - Generate spiral
+
 8. **Game of Life** (#289) - State encoding
+
 9. **Diagonal Traverse** (#498) - Direction control
 
 ### Expert Level

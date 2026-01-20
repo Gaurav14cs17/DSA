@@ -574,9 +574,13 @@ Therefore: T ≤ n + (n-1) = O(n)
 ### Common Applications
 
 1. **Pattern Matching:** Replace KMP with clearer code
+
 2. **Palindrome Problems:** Combine with reverse string
+
 3. **Period Detection:** Find repeating patterns
+
 4. **Prefix Queries:** Answer questions about prefixes
+
 5. **String Comparison:** Compare substrings efficiently
 
 ---

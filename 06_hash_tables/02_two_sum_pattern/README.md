@@ -434,20 +434,31 @@ Total: 2 subarrays
 ## 🎖️ Practice Roadmap
 
 **Week 1: Fundamentals**
+
 1. Solve #1 (Two Sum) - Master complement pattern
+
 2. Solve #167 (Two Sum II) - Two pointers on sorted
+
 3. Solve #653 (Two Sum IV BST) - Hash + tree traversal
+
 4. Solve #1099 (Two Sum Less Than K) - Sort + pointers
 
 **Week 2: K-Sum Problems**
+
 5. Solve #15 (3Sum) - Sort + two pointers
+
 6. Solve #16 (3Sum Closest) - Similar to 3Sum
+
 7. Solve #18 (4Sum) - Nested reduction
+
 8. Solve #454 (4Sum II) - Two-pair hash
 
 **Week 3: Subarray Problems**
+
 9. Solve #560 (Subarray Sum = K) - Prefix + hash
+
 10. Solve #523 (Continuous Subarray Sum) - Prefix mod
+
 11. Solve #974 (Subarray Sums Divisible by K) - Modulo trick
 
 ---

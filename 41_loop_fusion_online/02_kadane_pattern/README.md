@@ -75,7 +75,9 @@ M[i] = \max(M[i-1], S[i])
 ```
 
 **Key Insight:** At each position, either:
+
 1. Start a new subarray (if previous sum is negative)
+
 2. Extend the existing subarray
 
 ---
@@ -274,8 +276,11 @@ print(max_subarray_one_deletion(arr))  # Output: 4 (delete -2)
 **Key Insight:** At each position, we only need to know the maximum sum **ending** at the previous position. We don't need to know where it started!
 
 **Strategy:**
+
 1. Define what "maximum ending at position $i$" means
+
 2. Show the recurrence is correct (induction)
+
 3. Show the global maximum is found
 
 **Why induction?** Because each step depends on the previous step being correct.
@@ -342,7 +347,9 @@ Consider any subarray ending at position $i$. It either:
 **Proof:**
 
 The maximum subarray in $A[1..i]$ either:
+
 1. **Doesn't end at $i$:** Then it's in $A[1..i-1]$, so max = $M[i-1]$
+
 2. **Ends at $i$:** Then its sum is $S[i]$
 
 Therefore: $M[i] = \max(M[i-1], S[i])$ ✓
@@ -367,8 +374,11 @@ Decision: new  new  ext  new  ext  ext  ext  ext  ext
 ```
 
 **Why it works:**
+
 1. If $S[i-1] < 0$, extending makes things worse → start new
+
 2. If $S[i-1] \geq 0$, extending might help → extend
+
 3. We track the best we've seen so far in $M[i]$
 
 **Greedy Choice Property:** The locally optimal choice (extend or restart) leads to the globally optimal solution!

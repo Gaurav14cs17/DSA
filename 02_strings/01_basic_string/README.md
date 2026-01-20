@@ -66,7 +66,9 @@ f[c] = |\{i : S[i] = c\}|
 ### 3️⃣ First Unique Character
 
 **Algorithm:**
+
 1. Count frequencies: $f[c]$ for all $c$
+
 2. Find first index $i$ where $f[S[i]] = 1$
 
 **Time:** $O(n)$ for counting + $O(n)$ for search = $O(n)$
@@ -270,13 +272,19 @@ With sorting:          O(n log n) → When order matters
 ## 🎯 Practice Roadmap
 
 ### Beginner (Start Here!)
+
 1. **Reverse String** (#344) - Learn two pointers
+
 2. **First Unique Character** (#387) - Master frequency counting
+
 3. **Length of Last Word** (#58) - String parsing
 
 ### Intermediate
+
 4. **Reverse Words** (#151) - Two-pass technique
+
 5. **String Compression** (#443) - Two pointers advanced
+
 6. **Longest Common Prefix** (#14) - Vertical scanning
 
 ### Mastery Challenge

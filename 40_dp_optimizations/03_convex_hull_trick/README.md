@@ -76,6 +76,7 @@ Keep only lines that form convex hull
 ### When CHT Applies
 
 ✅ **Required:**
+
 1. DP transitions are **linear**: `dp[i] = m[j]·x[i] + b[j]`
 2. Need min/max over all j
 

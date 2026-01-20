@@ -180,8 +180,11 @@ If 15 doesn't exist, it becomes right child of 10!
 ```
 
 **Key Steps:**
+
 1. Compare with root: 15 < 20 → left
+
 2. Compare with 10: 15 > 10 → right
+
 3. Found null → create TreeNode(15)
 
 ---
@@ -434,9 +437,13 @@ def trimBST(root: TreeNode, low: int, high: int) -> TreeNode:
 - ✗ Don't use global variables for tree modifications
 
 ### ⚡ **Optimization Tricks:**
+
 1. **Iterative > Recursive** for space: O(1) vs O(h)
+
 2. **Early termination** in search when found
+
 3. **Prune aggressively** in range queries
+
 4. **Cache parent** if need to go back up
 
 ---

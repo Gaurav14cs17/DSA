@@ -76,8 +76,11 @@ permalink: /24_graph_algorithms/07_eulerian_path/
 **Finds Eulerian path/circuit in O(E):**
 
 1. Start at vertex with odd degree (or any if all even)
+
 2. Follow edges, removing as you go
+
 3. If stuck, backtrack and continue from vertex with remaining edges
+
 4. Reverse path at end
 
 **Uses stack for efficient backtracking.**
@@ -445,9 +448,13 @@ Eulerian Problem
 ## 🎯 Key Insights
 
 1. **Euler's theorem** (1736) - first graph theory result
+
 2. **Check degrees** to determine existence in O(V)
+
 3. **Hierholzer's algorithm** finds path in O(E)
+
 4. **Must be connected** (weakly for directed)
+
 5. **Applications:** routing, DNA sequencing, puzzles
 
 ---

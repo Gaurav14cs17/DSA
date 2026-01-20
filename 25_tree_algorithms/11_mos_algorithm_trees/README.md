@@ -486,9 +486,13 @@ Tree Query Problem
 ## 🎯 Key Insights
 
 1. **Flatten tree** using Euler tour
+
 2. **Convert path queries** to range queries
+
 3. **Sort queries** by Mo's order (block + endpoint)
+
 4. **Process in sorted order** with add/remove pointers
+
 5. **Complexity O((n+q)√n)** - good for many offline queries
 
 ---

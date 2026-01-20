@@ -159,6 +159,7 @@ while sub > 0:
 
 1. `sub - 1` turns off the lowest set bit and sets all lower bits to 1
 2. `& m` masks out bits not in original mask \(m\)
+
 3. This gives the largest submask smaller than `sub`
 
 #### 📊 Example: Submasks of m = 1011 (11)
@@ -860,8 +861,11 @@ def maxStudents(seats: list[list[str]]) -> int:
 ### Key Observations to Make
 
 1. **"The constraint is n ≤ 20"** → Think bitmask!
+
 2. **"Track which items are used"** → Bitmask DP
+
 3. **"All permutations/subsets"** → Enumerate with mask
+
 4. **"No common elements"** → Use AND to check overlap
 
 ### Common Optimizations

@@ -201,7 +201,9 @@ def mod_safe(n, m=MOD_1):
 ### Properties of Modular Arithmetic
 
 1. **(a + b) mod m = ((a mod m) + (b mod m)) mod m**
+
 2. **(a × b) mod m = ((a mod m) × (b mod m)) mod m**
+
 3. **(a - b) mod m = ((a mod m) - (b mod m) + m) mod m**
 
 ### Why MOD = 10^9 + 7?

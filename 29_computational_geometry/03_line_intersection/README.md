@@ -44,6 +44,7 @@ Line intersection problems determine if and where geometric segments intersect. 
    - A and B are on opposite sides of line CD
    - C and D are on opposite sides of line AB
    
+
 2. Collinear case:
    - All four points collinear
    - Segments overlap (bounding box check)

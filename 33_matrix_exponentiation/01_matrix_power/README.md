@@ -210,7 +210,9 @@ def matrix_2x2_power(M: tuple, n: int, mod: int) -> tuple:
 The binary exponentiation algorithm works by:
 
 1. **Decompose** the exponent into binary form (e.g., 10 = 1010₂ = 8 + 2)
+
 2. **Square repeatedly** to compute M¹, M², M⁴, M⁸...
+
 3. **Multiply selected powers** where the binary bit is 1
 
 This reduces O(n) operations to O(log n)!

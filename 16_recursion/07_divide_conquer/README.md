@@ -53,7 +53,9 @@ Three steps:
 
 ```
 1. DIVIDE:   Split problem into smaller subproblems
+
 2. CONQUER:  Solve subproblems recursively
+
 3. COMBINE:  Merge subproblem solutions
 
 ```

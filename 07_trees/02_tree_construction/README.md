@@ -378,6 +378,7 @@ C₃ = C₀×C₂ + C₁×C₁ + C₂×C₀
    = 5
 
 5 unique structures:
+
 1.  1         2.    1        3.    2        4.    3        5.    3
      \             \            /  \            /              /
       2             3          1    3          1             2
@@ -509,19 +510,29 @@ return node(1)
 ## 🎖️ Practice Roadmap
 
 **Week 1: Fundamentals**
+
 1. Solve #105 (Construct from Pre+In) - Master the pattern
+
 2. Solve #106 (Construct from In+Post) - Similar approach
+
 3. Solve #108 (Sorted Array to BST) - Binary split
 
 **Week 2: Advanced Construction**
+
 4. Solve #96 (Unique BSTs Count) - Catalan DP
+
 5. Solve #95 (Generate All BSTs) - Recursion
+
 6. Solve #1008 (BST from Preorder) - Bound tracking
+
 7. Solve #889 (Pre+Post construction) - Tricky!
 
 **Week 3: Serialization**
+
 8. Solve #297 (Serialize/Deserialize) - Encoding
+
 9. Solve #449 (Serialize/Deserialize BST) - Optimized
+
 10. Solve #109 (Sorted List to BST) - Inorder simulation
 
 ---

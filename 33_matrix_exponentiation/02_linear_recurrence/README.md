@@ -199,6 +199,7 @@ def linear_recurrence(coeffs: list[int], initial: list[int],
 
 1. **First row**: Coefficients `[c₁, c₂, ..., cₖ]`
 2. **Below**: Identity matrix shifted down by one row
+
 3. **Size**: k × k companion matrix
 
 ### Example Matrices:

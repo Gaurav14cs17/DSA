@@ -543,19 +543,29 @@ Area/Water problems?
 ## 🎖️ Practice Roadmap
 
 **Week 1: Fundamentals**
+
 1. Solve #496 (Next Greater Element I) - Master the template
+
 2. Solve #739 (Daily Temperatures) - Apply to real problem
+
 3. Solve #503 (Next Greater II) - Handle circular array
 
 **Week 2: Histogram & Water**
+
 4. Solve #84 (Largest Rectangle) - Classic problem
+
 5. Solve #42 (Trapping Rain Water) - Area calculation
+
 6. Solve #85 (Maximal Rectangle) - 2D extension
 
 **Week 3: Advanced**
+
 7. Solve #907 (Sum of Subarray Minimums) - Contribution technique
+
 8. Solve #316 (Remove Duplicate Letters) - Creative use
+
 9. Solve #402 (Remove K Digits) - Greedy + monotonic
+
 10. Solve #456 (132 Pattern) - Complex pattern
 
 ---

@@ -68,8 +68,11 @@ where $a, b, c \in \mathbb{Z}$ and we seek integer solutions $(x, y)$.
 ### 3️⃣ Finding One Solution
 
 **Method:**
+
 1. Compute $g, x\_0, y\_0$ such that $ax\_0 + by\_0 = g = \gcd(a,b)$
+
 2. Check if $g | c$
+
 3. Scale: $x = x\_0 \cdot (c/g)$, $y = y\_0 \cdot (c/g)$
 
 ---

@@ -53,7 +53,9 @@ Start from position where running sum first becomes non-negative.
 ### 3️⃣ Candy Distribution
 
 **Two-pass approach:**
+
 1. Left to right: higher rating than left → more candy
+
 2. Right to left: higher rating than right → more candy
 
 ---

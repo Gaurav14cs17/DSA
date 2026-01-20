@@ -39,8 +39,11 @@ permalink: /02_strings/02_anagram_problems/
 ```
 
 **Equivalent conditions:**
+
 1. $\text{sorted}(S) = \text{sorted}(T)$
+
 2. $\vec{f}(S) = \vec{f}(T)$ (frequency vectors equal)
+
 3. $|S| = |T|$ and $S$ is a permutation of $T$
 
 ---
@@ -459,13 +462,19 @@ Result: [0, 6]
 ## 🎯 Practice Roadmap
 
 ### Beginner Level
+
 1. **Valid Anagram** (#242) - Learn frequency counting
+
 2. **Ransom Note** (#383) - Apply same concept
+
 3. **Group Anagrams** (#49) - Use hash map
 
 ### Intermediate Level
+
 4. **Find All Anagrams** (#438) - Master sliding window
+
 5. **Permutation in String** (#567) - Similar pattern
+
 6. **Minimum Window** (#76) - Advanced window
 
 ### Pro Tips

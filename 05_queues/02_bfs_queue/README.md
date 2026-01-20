@@ -568,22 +568,35 @@ Turn 6: Reach "0202"
 ## 🎖️ Practice Roadmap
 
 **Week 1: Tree BFS**
+
 1. Solve #102 (Level Order Traversal) - Master level tracking
+
 2. Solve #103 (Zigzag Level Order) - Add direction flag
+
 3. Solve #199 (Right Side View) - Last element per level
+
 4. Solve #111 (Minimum Depth) - Early termination
 
 **Week 2: Grid BFS**
+
 5. Solve #733 (Flood Fill) - Basic grid BFS
+
 6. Solve #200 (Number of Islands) - Connected components
+
 7. Solve #994 (Rotting Oranges) - Multi-source BFS
+
 8. Solve #542 (01 Matrix) - Distance to nearest
+
 9. Solve #1091 (Shortest Path Binary Matrix) - 8-directional
 
 **Week 3: Advanced BFS**
+
 10. Solve #752 (Open the Lock) - State space BFS
+
 11. Solve #127 (Word Ladder) - Graph transformation
+
 12. Solve #286 (Walls and Gates) - Multi-source distance
+
 13. Solve #417 (Pacific Atlantic) - Dual BFS
 
 ---
