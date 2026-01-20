@@ -4,6 +4,7 @@ title: "Basic Recursion"
 parent: "Recursion"
 nav_order: 1
 permalink: /16_recursion/01_basic_recursion/
+
 ---
 
 <div align="center">
@@ -72,6 +73,7 @@ T(n) = T(n-1) + O(1) = O(n)
 Recursive call is the last operation:
 
 ```python
+
 # Tail recursive
 def f(n, acc):
     if n == 0: return acc

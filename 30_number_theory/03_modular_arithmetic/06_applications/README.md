@@ -5,6 +5,7 @@ parent: "Modular Arithmetic"
 grand_parent: "Number Theory"
 nav_order: 6
 permalink: /30_number_theory/03_modular_arithmetic/06_applications/
+
 ---
 
 <div align="center">
@@ -118,6 +119,7 @@ class Solution:
         
         result = 1
         for digit in b:
+
             # result = result^10 × a^digit
             result = pow_mod(result, 10) * pow_mod(a, digit) % MOD
         
@@ -264,6 +266,7 @@ def mod_divide(a: int, b: int, mod: int) -> int:
 ```python
 def sum_ap_mod(n: int, mod: int) -> int:
     """Compute 1 + 2 + ... + n mod p."""
+
     # n(n+1)/2 mod p = n × (n+1) × inverse(2) mod p
     return n * (n + 1) % mod * pow(2, mod - 2, mod) % mod
 ```
@@ -314,6 +317,7 @@ MOD3 = 998244353   # Prime with primitive root, good for NTT
 ### 2. Avoiding Overflow
 
 ```python
+
 # Safe multiplication for very large numbers
 def safe_mul(a: int, b: int, mod: int) -> int:
     return (a % mod) * (b % mod) % mod

@@ -5,6 +5,7 @@ parent: "Euler's Totient"
 grand_parent: "Number Theory"
 nav_order: 2
 permalink: /30_number_theory/05_euler_totient/02_totient_properties/
+
 ---
 
 <div align="center">
@@ -78,6 +79,7 @@ permalink: /30_number_theory/05_euler_totient/02_totient_properties/
 ### 4️⃣ General Product Rule
 
 For any m, n:
+
 ```math
 \phi(mn) = \phi(m) \cdot \phi(n) \cdot \frac{d}{\phi(d)}
 ```

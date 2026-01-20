@@ -4,6 +4,7 @@ title: "Reversal"
 parent: "Linked Lists"
 nav_order: 2
 permalink: /03_linked_lists/02_reversal/
+
 ---
 
 <div align="center">
@@ -98,11 +99,13 @@ T(n) = T(n-1) + O(1)
 **Mathematical Proof of Space:**
 
 Iterative uses fixed variables:
+
 ```math
 S_{\text{iter}}(n) = 3 \text{ pointers} = O(1)
 ```
 
 Recursive stacks n frames:
+
 ```math
 S_{\text{rec}}(n) = \sum_{i=1}^{n} O(1) = O(n)
 ```
@@ -450,6 +453,7 @@ def reverseList(head: ListNode) -> ListNode:
     current = head
     
     while current:
+
         # Save next node
         next_node = current.next
         
@@ -473,6 +477,7 @@ def reverseListRecursive(head: ListNode) -> ListNode:
     
     Time: O(n), Space: O(n) for call stack
     """
+
     # Base case
     if not head or not head.next:
         return head
@@ -539,6 +544,7 @@ def reverseKGroup(head: ListNode, k: int) -> ListNode:
     
     Time: O(n), Space: O(n/k) for recursion
     """
+
     # Check if k nodes available
     count = 0
     current = head
@@ -577,6 +583,7 @@ def swapPairs(head: ListNode) -> ListNode:
     prev = dummy
     
     while prev.next and prev.next.next:
+
         # Identify the pair
         first = prev.next
         second = prev.next.next
@@ -621,6 +628,7 @@ def reorderList(head: ListNode) -> None:
     # Step 3: Merge two halves
     first = head
     while second:
+
         # Save next pointers
         next1 = first.next
         next2 = second.next
@@ -834,6 +842,7 @@ A: Use dummy node, iterate through pairs. For each pair: extract second, insert 
 ### Pitfall 1: Losing Reference
 
 ```python
+
 # ❌ WRONG: Lost reference to rest of list
 current.next = prev  # Oops, lost rest of list!
 
@@ -845,6 +854,7 @@ current.next = prev       # Now safe to reverse
 ### Pitfall 2: Not Handling Single Node
 
 ```python
+
 # ❌ WRONG: Crashes on single node
 def reverse(head):
     prev = None
@@ -861,11 +871,13 @@ def reverse(head):
 ### Pitfall 3: Off-by-One in Partial Reversal
 
 ```python
+
 # ❌ WRONG: Wrong number of iterations
 for _ in range(right - left + 1):  # One too many!
 
 # ✅ CORRECT: Exactly (right - left) swaps
 for _ in range(right - left):
+
     # Move nodes to front
 ```
 

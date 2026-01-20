@@ -4,6 +4,7 @@ title: "Minimum Spanning Tree"
 parent: "Graphs"
 nav_order: 7
 permalink: /10_graphs/07_mst/
+
 ---
 
 <div align="center">
@@ -211,6 +212,7 @@ def minCostConnectPointsPrim(points: list[list[int]]) -> int:
     total_cost = 0
     
     for _ in range(n):
+
         # Find minimum unvisited vertex
         u = -1
         for i in range(n):

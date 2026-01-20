@@ -4,6 +4,7 @@ title: "Monotonic Stack"
 parent: "Stacks"
 nav_order: 3
 permalink: /04_stacks/03_monotonic_stack/
+
 ---
 
 <div align="center">

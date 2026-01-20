@@ -4,6 +4,7 @@ title: "Implicit Graphs - Hidden Relationships"
 parent: "Graphs"
 nav_order: 8
 permalink: /10_graphs/08_implicit_graphs/
+
 ---
 
 <div align="center">
@@ -541,6 +542,7 @@ def can_jump(nums: List[int]) -> bool:
     max_reach = 0
     
     for i in range(n):
+
         # If current position unreachable, fail
         if i > max_reach:
             return False
@@ -629,9 +631,11 @@ def can_finish(numCourses: int, prerequisites: List[List[int]]) -> bool:
     def has_cycle(course):
         """DFS to detect cycle from this course."""
         if state[course] == 1:
+
             # Found GRAY node in path → cycle!
             return True
         if state[course] == 2:
+
             # Already processed, no cycle from here
             return False
         
@@ -689,6 +693,7 @@ def find_order(numCourses: int, prerequisites: List[List[int]]) -> List[int]:
                 return False
         
         state[course] = 2
+
         # Add to result in post-order (after all prerequisites)
         order.append(course)
         return True
@@ -732,6 +737,7 @@ def num_islands(grid: List[List[str]]) -> int:
     
     def dfs(i, j):
         """Mark all cells in current island as visited."""
+
         # Boundary check and water check
         if (i < 0 or i >= m or j < 0 or j >= n or 
             grid[i][j] != '1'):

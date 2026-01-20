@@ -4,6 +4,7 @@ title: "Palindrome"
 parent: "Strings"
 nav_order: 3
 permalink: /02_strings/03_palindrome/
+
 ---
 
 <div align="center">
@@ -184,8 +185,10 @@ def longestPalindrome(s: str) -> str:
         return right - left - 1
     
     for i in range(len(s)):
+
         # Odd length (center at i)
         len1 = expand(i, i)
+
         # Even length (center between i and i+1)
         len2 = expand(i, i + 1)
         
@@ -267,6 +270,7 @@ def validPalindrome(s: str) -> bool:
     left, right = 0, len(s) - 1
     while left < right:
         if s[left] != s[right]:
+
             # Try removing left or right character
             return check(left + 1, right) or check(left, right - 1)
         left += 1

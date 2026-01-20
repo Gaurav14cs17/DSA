@@ -4,6 +4,7 @@ title: "Advanced Applications"
 parent: "Rabin-Karp Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 6
+
 ---
 
 # 🚀 Advanced Applications of Rabin-Karp
@@ -77,12 +78,14 @@ def search_2d_pattern(grid, pattern):
     power = pow(BASE, n - 1, MOD)
     
     for col in range(M - m + 1):
+
         # Compute column hash for this column
         col_hash = 0
         for i in range(n):
             col_hash = (col_hash * BASE + grid_row_hashes[i][col]) % MOD
         
         if col_hash == pattern_col_hash:
+
             # Verify actual match
             match = True
             for i in range(n):
@@ -185,6 +188,7 @@ def content_defined_chunking(data, avg_chunk_size=4096):
     window_size = 48  # Rabin window
     
     for i in range(len(data)):
+
         # Update hash
         h = (h * BASE + ord(data[i])) % MOD
         
@@ -294,6 +298,7 @@ def minhash_similarity(doc1, doc2, num_hashes=100):
     
     def compute_minhash_signature(doc, num_hashes, shingle_size=3):
         """Compute MinHash signature"""
+
         # Generate hash functions
         random.seed(42)
         hash_functions = [
@@ -313,6 +318,7 @@ def minhash_similarity(doc1, doc2, num_hashes=100):
             min_hash = float('inf')
             
             for shingle in shingles:
+
                 # Hash shingle
                 h = hash(shingle)
                 h = (a * h + b) % (2**32)
@@ -370,6 +376,7 @@ def minhash_similarity(doc1, doc2, num_hashes=100):
 ### Rabin Fingerprint
 
 ```python
+
 # Used in rsync, Low Bandwidth Network Filesystem
 # Polynomial over GF(2) instead of integers
 ```
@@ -377,6 +384,7 @@ def minhash_similarity(doc1, doc2, num_hashes=100):
 ### Locality-Sensitive Hashing
 
 ```python
+
 # For approximate nearest neighbor search
 # MinHash is one example
 ```
@@ -384,6 +392,7 @@ def minhash_similarity(doc1, doc2, num_hashes=100):
 ### Content-Addressable Storage
 
 ```python
+
 # Hash-based addressing
 # Used in Git, IPFS
 ```

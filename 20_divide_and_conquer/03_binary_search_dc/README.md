@@ -4,6 +4,7 @@ title: "Binary Search D&C"
 parent: "Divide and Conquer"
 nav_order: 3
 permalink: /20_divide_and_conquer/03_binary_search_dc/
+
 ---
 
 <div align="center">
@@ -171,6 +172,7 @@ def maxSubArray(nums: list[int]) -> int:
         return max(left_max, right_max, cross_max)
     
     def cross_sum(left, right, mid):
+
         # Left half contribution
         left_sum = float('-inf')
         curr_sum = 0

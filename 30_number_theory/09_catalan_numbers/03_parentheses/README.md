@@ -5,6 +5,7 @@ parent: "Catalan Numbers"
 grand_parent: "Number Theory"
 nav_order: 3
 permalink: /30_number_theory/09_catalan_numbers/03_parentheses/
+
 ---
 
 <div align="center">
@@ -110,6 +111,7 @@ class Solution:
         result = []
         
         def backtrack(current: str, open_count: int, close_count: int):
+
             # Base case: string complete
             if len(current) == 2 * n:
                 result.append(current)

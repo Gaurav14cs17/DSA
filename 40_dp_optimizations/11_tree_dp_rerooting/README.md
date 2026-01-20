@@ -29,6 +29,7 @@ def rerooting_dp(graph, n):
     Time: O(n)
     Space: O(n)
     """
+
     # Step 1: DFS down (compute subtree info)
     dp_down = [0] * n
     
@@ -61,6 +62,7 @@ def rerooting_dp(graph, n):
         # Reroot to each child
         for v in graph[u]:
             if v != parent:
+
                 # Best path through u (excluding v's subtree)
                 if children[0][1] == v:
                     best = children[1][0] if len(children) > 1 else 0

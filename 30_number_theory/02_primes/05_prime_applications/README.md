@@ -5,6 +5,7 @@ parent: "Prime Numbers"
 grand_parent: "Number Theory"
 nav_order: 5
 permalink: /30_number_theory/02_primes/05_prime_applications/
+
 ---
 
 <div align="center">
@@ -310,6 +311,7 @@ def nth_super_ugly(n: int, primes: list[int]) -> int:
         32
     """
     ugly = [1]
+
     # heap: (value, prime, index in ugly array)
     heap = [(p, p, 0) for p in primes]
     heapq.heapify(heap)
@@ -341,6 +343,7 @@ def find_twin_primes(limit: int) -> list[tuple[int, int]]:
         >>> find_twin_primes(100)
         [(3, 5), (5, 7), (11, 13), (17, 19), (29, 31), (41, 43), (59, 61), (71, 73)]
     """
+
     # Sieve
     is_prime = [True] * (limit + 3)
     is_prime[0] = is_prime[1] = False
@@ -373,6 +376,7 @@ def find_prime_gaps(limit: int) -> list[tuple[int, int, int]]:
     Time: O(n log log n)
     Space: O(n)
     """
+
     # Sieve
     is_prime = [True] * (limit + 1)
     is_prime[0] = is_prime[1] = False
@@ -481,6 +485,7 @@ def find_sophie_germain_primes(limit: int) -> list[int]:
         >>> find_sophie_germain_primes(100)
         [2, 3, 5, 11, 23, 29, 41, 53, 83, 89]
     """
+
     # Sieve up to 2*limit + 1
     max_val = 2 * limit + 1
     is_prime = [True] * (max_val + 1)

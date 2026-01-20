@@ -4,6 +4,7 @@ title: "BST Queries"
 parent: "Binary Search Trees"
 nav_order: 3
 permalink: /08_binary_search_trees/03_bst_queries/
+
 ---
 
 <div align="center">

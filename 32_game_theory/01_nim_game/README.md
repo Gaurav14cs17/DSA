@@ -4,6 +4,7 @@ title: "Nim Game"
 parent: "Game Theory"
 nav_order: 1
 permalink: /32_game_theory/01_nim_game/
+
 ---
 
 <div align="center">
@@ -78,6 +79,7 @@ Therefore, from W-position, can always move to L-position. $\blacksquare$
 ### 3️⃣ Nim-Sum Properties
 
 **XOR Properties:**
+
 ```math
 \begin{align}
 a \oplus a &= 0 \\
@@ -313,10 +315,12 @@ def can_win_misere_nim(piles: list[int]) -> bool:
             all_ones = False
     
     if all_ones:
+
         # Count piles (non-zero)
         count = sum(1 for p in piles if p > 0)
         return count % 2 == 1
     else:
+
         # Normal nim strategy
         return nim_sum != 0
 ```
@@ -338,10 +342,12 @@ def nim_with_moves(n: int, moves: list[int]) -> bool:
         >>> nim_with_moves(5, [1, 2, 3])
         False  # Grundy number is 0
     """
+
     # Calculate Grundy numbers
     grundy = [0] * (n + 1)
     
     for i in range(1, n + 1):
+
         # Find mex of successors
         successors = set()
         for move in moves:

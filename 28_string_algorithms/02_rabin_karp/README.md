@@ -4,6 +4,7 @@ title: "Rabin-Karp Algorithm"
 parent: "String Algorithms"
 nav_order: 2
 has_children: true
+
 ---
 
 # 🎲 Rabin-Karp Algorithm
@@ -221,6 +222,7 @@ class RabinKarp:
         
         # Roll through text
         for i in range(m, n):
+
             # Remove leftmost character
             window_hash = (window_hash - ord(text[i-m]) * power % self.MOD + self.MOD) % self.MOD
             
@@ -232,6 +234,7 @@ class RabinKarp:
             
             # Check if hashes match
             if window_hash == pattern_hash:
+
                 # Verify to avoid false positives
                 if text[i-m+1:i+1] == pattern:
                     matches.append(i - m + 1)
@@ -294,12 +297,14 @@ class DoubleHashRabinKarp:
         
         # Check first window
         if w_hash == p_hash:
+
             # Extremely high confidence, but still verify
             if text[:m] == pattern:
                 matches.append(0)
         
         # Roll through text
         for i in range(m, n):
+
             # Update hash 1
             h1 = w_hash[0]
             h1 = (h1 - ord(text[i-m]) * pow1 % self.MOD1 + self.MOD1) % self.MOD1
@@ -339,6 +344,7 @@ class DoubleHashRabinKarp:
 ### Hash Parameter Selection
 
 ```python
+
 # For lowercase strings (a-z)
 BASE = 31   # Prime near 26
 MOD = 10**9 + 7  # Large prime
@@ -361,6 +367,7 @@ BASE2 = 53
 ### Common Patterns
 
 ```python
+
 # 1. Single pattern matching
 rk = RabinKarp()
 matches = rk.search(text, pattern)
@@ -373,6 +380,7 @@ for pattern in patterns:
 hash1 = rk.hash_string(s1[i:j])
 hash2 = rk.hash_string(s2[k:l])
 if hash1 == hash2 and s1[i:j] == s2[k:l]:
+
     # Equal substrings
 
 # 4. Binary search + hash
@@ -465,6 +473,7 @@ This section contains **50+ problems** across **6 categories**:
 
 **Common pitfalls:**
 ```python
+
 # ❌ Wrong: Negative hash values
 hash = (hash - old * power) % MOD
 
@@ -501,6 +510,7 @@ n ≈ 37,000 strings before 50% collision chance
 ### Hash Space Analysis
 
 ```python
+
 # Single hash
 M = 10^9 + 7
 Expected collisions per 10^6 strings: ~500
@@ -529,6 +539,7 @@ h = rotate_left(h, 1)
 
 **3. Rabin fingerprint:**
 ```python
+
 # Uses irreducible polynomial over GF(2^k)
 h = (h * x + char) mod P(x)
 ```
@@ -546,6 +557,7 @@ a^(p-1) ≡ 1 (mod p)
 
 **Application:** Compute modular inverse
 ```python
+
 # To divide by a mod p:
 inv_a = pow(a, p - 2, p)  # Uses Fermat
 result = (b * inv_a) % p   # Equivalent to b/a mod p

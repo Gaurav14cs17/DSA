@@ -4,6 +4,7 @@ title: "Matrix Power"
 parent: "Matrix Exponentiation"
 nav_order: 1
 permalink: /33_matrix_exponentiation/01_matrix_power/
+
 ---
 
 <div align="center">

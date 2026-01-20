@@ -4,6 +4,7 @@ title: "BST Validation"
 parent: "Binary Search Trees"
 nav_order: 2
 permalink: /08_binary_search_trees/02_bst_validation/
+
 ---
 
 <div align="center">
@@ -87,6 +88,7 @@ Every node must satisfy:
 **Theorem:** Middle element as root creates balanced BST.
 
 **Proof:**
+
 ```math
 \text{height} = \lceil \log_2(n+1) \rceil - 1
 ```
@@ -94,6 +96,7 @@ Every node must satisfy:
 At each level, split array in half → balanced subtrees.
 
 **Recurrence:**
+
 ```math
 T(n) = 2T(n/2) + O(1) = O(n)
 ```
@@ -104,6 +107,7 @@ T(n) = 2T(n/2) + O(1) = O(n)
 
 **❌ Wrong Approach:**
 ```python
+
 # Only checks immediate children!
 return node.left.val < node.val < node.right.val  # WRONG!
 ```

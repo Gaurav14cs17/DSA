@@ -4,6 +4,7 @@ title: "String Period Detection"
 parent: "KMP Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 3
+
 ---
 
 # 🔄 String Period Detection with KMP
@@ -265,6 +266,7 @@ def max_repetitions(s, pattern):
             j += 1
         
         if j == m:
+
             # Found complete match
             current_count += 1
             max_count = max(max_count, current_count)
@@ -378,6 +380,7 @@ def are_cyclic_equivalent(s1, s2):
 
 # Examples
 print(find_cyclic_shifts("abc"))
+
 # ['abc', 'bca', 'cab']
 
 print(are_cyclic_equivalent("abc", "cab"))  # True

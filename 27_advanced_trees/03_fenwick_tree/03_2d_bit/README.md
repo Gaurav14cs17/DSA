@@ -5,6 +5,7 @@ parent: "Fenwick Tree (BIT)"
 grand_parent: "Advanced Trees"
 nav_order: 3
 permalink: /27_advanced_trees/03_fenwick_tree/03_2d_bit/
+
 ---
 
 <div align="center">

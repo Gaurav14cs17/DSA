@@ -4,6 +4,7 @@ title: "Anagram Problems"
 parent: "Strings"
 nav_order: 2
 permalink: /02_strings/02_anagram_problems/
+
 ---
 
 <div align="center">
@@ -152,6 +153,7 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
     
     groups = defaultdict(list)
     for s in strs:
+
         # Canonical form: sorted characters
         key = tuple(sorted(s))
         groups[key].append(s)
@@ -179,8 +181,10 @@ def findAnagrams(s: str, p: str) -> list[int]:
         result.append(0)
     
     for i in range(len(p), len(s)):
+
         # Add right character
         window[s[i]] += 1
+
         # Remove left character
         left_char = s[i - len(p)]
         window[left_char] -= 1
@@ -216,6 +220,7 @@ def minWindow(s: str, t: str) -> str:
     result = ""
     
     for right, char in enumerate(s):
+
         # Expand window
         window[char] = window.get(char, 0) + 1
         

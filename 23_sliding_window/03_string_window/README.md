@@ -4,6 +4,7 @@ title: "String Window"
 parent: "Sliding Window"
 nav_order: 3
 permalink: /23_sliding_window/03_string_window/
+
 ---
 
 <div align="center">
@@ -71,8 +72,8 @@ permalink: /23_sliding_window/03_string_window/
 
 #### For Window Problems
 
-A window is an anagram of pattern \(p\) if:
-- Window size = \(|p|\)
+A window is an anagram of pattern $p$ if:
+- Window size = $|p|$
 - Character frequencies match
 
 ---
@@ -84,8 +85,8 @@ A window is an anagram of pattern \(p\) if:
 
 #### State Variables
 
-- `need[c]` = frequency of character \(c\) required
-- `have[c]` = frequency of character \(c\) in current window
+- `need[c]` = frequency of character $c$ required
+- `have[c]` = frequency of character $c$ in current window
 - `formed` = count of characters satisfying `have[c] >= need[c]`
 - `required` = count of unique characters in pattern
 
@@ -116,7 +117,7 @@ if matches == 26:  # Single comparison
 
 #### Updating Matches
 
-When adding character \(c\):
+When adding character $c$:
 ```python
 if window[c] == pattern[c]:
     matches += 1
@@ -304,6 +305,7 @@ def minWindow(s: str, t: str) -> str:
         
         # Shrink while window is valid
         while formed == required:
+
             # Update minimum
             if right - left + 1 < min_len:
                 min_len = right - left + 1
@@ -346,6 +348,7 @@ def findAnagrams(s: str, p: str) -> list[int]:
     k = len(p)
     
     for i in range(len(s)):
+
         # Add current character
         s_count[ord(s[i]) - ord('a')] += 1
         
@@ -387,6 +390,7 @@ def findAnagramsOptimized(s: str, p: str) -> list[int]:
             matches += 1
     
     for i in range(len(s)):
+
         # Add current character
         idx = ord(s[i]) - ord('a')
         if s_count[idx] == p_count[idx]:
@@ -550,12 +554,14 @@ def findSubstring(s: str, words: list[str]) -> list[int]:
                 # All words matched
                 if count == word_count:
                     result.append(left)
+
                     # Slide window
                     left_word = s[left:left + word_len]
                     current_freq[left_word] -= 1
                     count -= 1
                     left += word_len
             else:
+
                 # Invalid word, reset
                 current_freq.clear()
                 count = 0
@@ -633,6 +639,7 @@ def numberOfSubstrings(s: str) -> int:
         
         # While window is valid (has all three)
         while count['a'] > 0 and count['b'] > 0 and count['c'] > 0:
+
             # All substrings from left to end of string are valid
             result += len(s) - right
             count[s[left]] -= 1

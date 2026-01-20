@@ -3,6 +3,7 @@ layout: default
 title: "Z-Algorithm"
 parent: "String Algorithms"
 nav_order: 3
+
 ---
 
 # 🔢 Z-Algorithm
@@ -106,6 +107,7 @@ def z_algorithm(s):
     l, r = 0, 0
     
     for i in range(1, n):
+
         # Case 1: i > r (outside current Z-box)
         if i > r:
             l, r = i, i
@@ -118,6 +120,7 @@ def z_algorithm(s):
             r -= 1  # r points to last matching character
         
         else:
+
             # Case 2: i <= r (inside current Z-box)
             k = i - l  # Mirror position in prefix
             
@@ -128,6 +131,7 @@ def z_algorithm(s):
             # Case 2b: Z[k] reaches or exceeds boundary
             else:
                 l = i
+
                 # Try to extend beyond r
                 while r < n and s[r - l] == s[r]:
                     r += 1
@@ -168,6 +172,7 @@ def z_search(text, pattern):
     matches = []
     for i in range(m + 1, len(s)):
         if z[i] == m:
+
             # Adjust index to text position
             matches.append(i - m - 1)
     
@@ -195,6 +200,7 @@ def z_algorithm_optimized(s):
     
     # Start with l=0, r=0
     for i in range(1, n):
+
         # If i is beyond r, compute Z[i] naively
         if i > r:
             l = r = i
@@ -203,6 +209,7 @@ def z_algorithm_optimized(s):
             z[i] = r - l
             r -= 1
         else:
+
             # i is within [l, r]
             k = i - l
             
@@ -210,6 +217,7 @@ def z_algorithm_optimized(s):
             if z[k] < r - i + 1:
                 z[i] = z[k]
             else:
+
                 # Otherwise, start from r and expand
                 l = i
                 while r < n and s[r - l] == s[r]:
@@ -254,6 +262,7 @@ def palindrome_prefixes(s):
     Time: O(n)
     Space: O(n)
     """
+
     # Create string: s + '#' + reverse(s)
     combined = s + '#' + s[::-1]
     z = z_algorithm(combined)
@@ -263,6 +272,7 @@ def palindrome_prefixes(s):
     
     # Check each prefix
     for i in range(1, n + 1):
+
         # Position in combined string
         pos = 2 * n + 1 - i
         if z[pos] == i:
@@ -293,6 +303,7 @@ def min_rotation(s):
     min_pos = 0
     
     for i in range(1, n):
+
         # Compare s[min_pos:] with s[i:]
         compare = s_doubled[min_pos:min_pos+n]
         candidate = s_doubled[i:i+n]
@@ -370,11 +381,13 @@ def match_k_mismatches_optimized(text, pattern, k):
     matches = []
     
     for start in range(n - m + 1):
+
         # Use Z-algorithm for each segment
         mismatches = 0
         pos = 0
         
         while pos < m and mismatches <= k:
+
             # Compare substring
             s = pattern[pos:] + '$' + text[start + pos:]
             z = z_algorithm(s)
@@ -408,6 +421,7 @@ def count_distinct_substrings_z(s):
     count = 1  # Empty string
     
     for i in range(n):
+
         # Compute Z-array for suffix starting at i
         suffix = s[i:]
         z = z_algorithm(suffix)
@@ -440,6 +454,7 @@ def find_period(s):
     # Check each potential period
     for period in range(1, n):
         if period + z[period] == n:
+
             # String can be formed by repeating first 'period' chars
             return period
     
@@ -563,6 +578,7 @@ def longest_palindrome_substring(s):
     start = 0
     
     for center in range(n):
+
         # Check palindrome centered at 'center'
         left = s[:center+1][::-1]
         right = s[center:]
@@ -598,6 +614,7 @@ def longest_common_prefix_multiple(strings):
     reference = strings[0]
     
     for s in strings[1:]:
+
         # Find common prefix with Z-algorithm
         combined = reference + '$' + s
         z = z_algorithm(combined)

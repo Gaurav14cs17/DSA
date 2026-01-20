@@ -4,6 +4,7 @@ title: "Backtracking"
 nav_order: 26
 has_children: true
 permalink: /17_backtracking/
+
 ---
 
 <div align="center">
@@ -135,6 +136,7 @@ def backtrack(state, choices):
     
     for choice in choices:
         if is_valid(choice, state):
+
             # Choose
             state.append(choice)
             

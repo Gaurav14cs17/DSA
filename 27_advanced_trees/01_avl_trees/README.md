@@ -4,6 +4,7 @@ title: "AVL Trees"
 parent: "Advanced Trees"
 nav_order: 1
 permalink: /27_advanced_trees/01_avl_trees/
+
 ---
 
 <div align="center">
@@ -230,6 +231,7 @@ class AVLTree:
         
         Time: O(1)
         """
+
         # Update height
         self.update_height(node)
         
@@ -238,17 +240,21 @@ class AVLTree:
         
         # Left-heavy (LL or LR case)
         if bf > 1:
+
             # LR case: left rotate on left child first
             if self.balance_factor(node.left) < 0:
                 node.left = self.rotate_left(node.left)
+
             # LL case: right rotate
             return self.rotate_right(node)
         
         # Right-heavy (RR or RL case)
         if bf < -1:
+
             # RL case: right rotate on right child first
             if self.balance_factor(node.right) > 0:
                 node.right = self.rotate_right(node.right)
+
             # RR case: left rotate
             return self.rotate_left(node)
         
@@ -266,6 +272,7 @@ class AVLTree:
     
     def _insert(self, node: Optional[AVLNode], val: int) -> AVLNode:
         """Helper for insert."""
+
         # Standard BST insert
         if not node:
             return AVLNode(val)
@@ -275,6 +282,7 @@ class AVLTree:
         elif val > node.val:
             node.right = self._insert(node.right, val)
         else:
+
             # Duplicate values not allowed
             return node
         
@@ -302,12 +310,14 @@ class AVLTree:
         elif val > node.val:
             node.right = self._delete(node.right, val)
         else:
+
             # Node to delete found
             if not node.left:
                 return node.right
             elif not node.right:
                 return node.left
             else:
+
                 # Two children: replace with inorder successor
                 successor = self._min_node(node.right)
                 node.val = successor.val
@@ -389,6 +399,7 @@ def balance_bst(root: Optional[AVLNode]) -> Optional[AVLNode]:
     
     Time: O(n), Space: O(n)
     """
+
     # Get inorder traversal (sorted)
     def inorder(node):
         if not node:
@@ -441,6 +452,7 @@ def sorted_list_to_bst(head: Optional['ListNode']) -> Optional[AVLNode]:
     
     Time: O(n), Space: O(log n)
     """
+
     # Convert list to array first
     arr = []
     curr = head

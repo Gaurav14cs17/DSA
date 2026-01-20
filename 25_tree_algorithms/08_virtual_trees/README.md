@@ -4,6 +4,7 @@ title: "Virtual Trees (Auxiliary Trees)"
 parent: "Tree Algorithms"
 nav_order: 8
 permalink: /25_tree_algorithms/08_virtual_trees/
+
 ---
 
 <div align="center">

@@ -4,6 +4,7 @@ title: "Shortest Path Algorithms"
 parent: "Graph Algorithms"
 nav_order: 1
 permalink: /24_graph_algorithms/01_shortest_path/
+
 ---
 
 <div align="center">

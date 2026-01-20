@@ -80,6 +80,7 @@ def dp_single_array(arr1, arr2):
     dp = [0] * (m + 1)
     
     for i in range(1, n + 1):
+
         # Save diagonal value
         prev_diag = 0
         
@@ -109,6 +110,7 @@ def dp_reverse(arr, target):
     dp = [0] * (target + 1)
     
     for i in range(n):
+
         # RIGHT TO LEFT!
         for j in range(target, arr[i] - 1, -1):
             dp[j] = max(dp[j], dp[j - arr[i]] + arr[i])
@@ -258,6 +260,7 @@ def can_partition(nums):
     dp[0] = True
     
     for num in nums:
+
         # RIGHT TO LEFT (important!)
         for j in range(target, num - 1, -1):
             dp[j] = dp[j] or dp[j - num]
@@ -343,6 +346,7 @@ After:   [... dp[i][j-1]    dp[i][j] ...]
 ### Direction Matters!
 
 ```python
+
 # 0/1 Knapsack: RIGHT TO LEFT
 for item in items:
     for w in range(W, weight[item] - 1, -1):

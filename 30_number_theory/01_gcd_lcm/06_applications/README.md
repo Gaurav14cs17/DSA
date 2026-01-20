@@ -5,6 +5,7 @@ parent: "GCD & LCM"
 grand_parent: "Number Theory"
 nav_order: 6
 permalink: /30_number_theory/01_gcd_lcm/06_applications/
+
 ---
 
 <div align="center">
@@ -146,6 +147,7 @@ def nthMagicalNumber(n: int, a: int, b: int) -> int:
     
     while left < right:
         mid = (left + right) // 2
+
         # Count numbers ≤ mid divisible by a or b
         count = mid // a + mid // b - mid // lcm_ab
         

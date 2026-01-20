@@ -5,6 +5,7 @@ parent: "Number Theory"
 nav_order: 5
 has_children: true
 permalink: /30_number_theory/05_euler_totient/
+
 ---
 
 <div align="center">
@@ -53,6 +54,7 @@ permalink: /30_number_theory/05_euler_totient/
 **Multiplicative property:** If $\gcd(m, n) = 1$: $\phi(mn) = \phi(m)\phi(n)$
 
 **General formula:** 
+
 ```math
 \phi(n) = n \prod_{p|n}\left(1 - \frac{1}{p}\right)
 ```

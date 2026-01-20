@@ -4,6 +4,7 @@ title: "Lowest Common Ancestor"
 parent: "Tree Algorithms"
 nav_order: 1
 permalink: /25_tree_algorithms/01_lowest_common_ancestor/
+
 ---
 
 <div align="center">
@@ -190,6 +191,7 @@ class LCA_Simple:
         
         Time: O(h), Space: O(h)
         """
+
         # Bring to same level
         while self.depth[p] > self.depth[q]:
             p = self.parent[p]
@@ -254,6 +256,7 @@ class LCA_BinaryLifting:
         
         Time: O(log n), Space: O(1)
         """
+
         # Make u deeper
         if self.depth[u] < self.depth[v]:
             u, v = v, u
@@ -431,6 +434,7 @@ def distanceK(root: TreeNode, target: TreeNode, k: int) -> List[int]:
     
     Time: O(n), Space: O(n)
     """
+
     # Build parent pointers
     parent = {}
     
@@ -545,9 +549,11 @@ def countPairs(n: int, edges: List[List[int]], queries: List[List[int]]) -> List
     # Count pairs for each distance threshold
     def count_close_pairs(threshold):
         count = 0
+
         # For each pair of leaves, check distance
         for i in range(len(leaves)):
             for j in range(i + 1, len(leaves)):
+
                 # BFS to find distance
                 queue = deque([(leaves[i], 0)])
                 visited = {leaves[i]}

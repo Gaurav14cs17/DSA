@@ -4,6 +4,7 @@ title: "Bit Manipulation"
 nav_order: 30
 has_children: true
 permalink: /21_bit_manipulation/
+
 ---
 
 <div align="center">
@@ -52,13 +53,13 @@ permalink: /21_bit_manipulation/
 
 ### 1️⃣ Binary Number System
 
-Every positive integer \( n \) can be uniquely represented as a sum of powers of 2:
+Every positive integer $n$ can be uniquely represented as a sum of powers of 2:
 
 ```math
 n = \sum_{i=0}^{k} b_i \cdot 2^i = b_k \cdot 2^k + b_{k-1} \cdot 2^{k-1} + \cdots + b_1 \cdot 2 + b_0
 ```
 
-where each \( b_i \in \{0, 1\} \) is called a **bit**.
+where each $b_i \in \{0, 1\}$ is called a **bit**.
 
 #### 📝 Example: Converting 42 to Binary
 
@@ -84,8 +85,8 @@ Bit:       1   0   1   0   1   0
 | **OR** | `\|` | 1 if either bit is 1 | `1\|1=1`, `1\|0=1`, `0\|0=0` |
 | **XOR** | `^` | 1 if bits are different | `1^1=0`, `1^0=1`, `0^0=0` |
 | **NOT** | `~` | Flip all bits | `~1=0`, `~0=1` |
-| **Left Shift** | `<<` | Multiply by \(2^k\) | `n << k = n × 2^k` |
-| **Right Shift** | `>>` | Divide by \(2^k\) | `n >> k = ⌊n / 2^k⌋` |
+| **Left Shift** | `<<` | Multiply by $2^k$ | `n << k = n × 2^k` |
+| **Right Shift** | `>>` | Divide by $2^k$ | `n >> k = ⌊n / 2^k⌋` |
 
 #### 🎨 Visual: Bitwise Operations
 
@@ -104,9 +105,9 @@ Bit:       1   0   1   0   1   0
 | Operation | Code | Mathematical Formula | Example |
 |-----------|------|---------------------|---------|
 | Get bit at position i | `(n >> i) & 1` | \((n \div 2^i) \mod 2\) | `(5 >> 1) & 1 = 0` |
-| Set bit at position i | `n \| (1 << i)` | \(n \lor 2^i\) | `5 \| (1 << 1) = 7` |
-| Clear bit at position i | `n & ~(1 << i)` | \(n \land \lnot 2^i\) | `7 & ~(1 << 1) = 5` |
-| Toggle bit at position i | `n ^ (1 << i)` | \(n \oplus 2^i\) | `5 ^ (1 << 1) = 7` |
+| Set bit at position i | `n \| (1 << i)` | $n \lor 2^i$ | `5 \| (1 << 1) = 7` |
+| Clear bit at position i | `n & ~(1 << i)` | $n \land \lnot 2^i$ | `7 & ~(1 << 1) = 5` |
+| Toggle bit at position i | `n ^ (1 << i)` | $n \oplus 2^i$ | `5 ^ (1 << 1) = 7` |
 | Clear lowest set bit | `n & (n - 1)` | Removes rightmost 1 | `12 & 11 = 8` |
 | Isolate lowest set bit | `n & (-n)` | \(n \land (\sim n + 1)\) | `12 & (-12) = 4` |
 | Check power of 2 | `n & (n - 1) == 0` | Only one bit set | `8 & 7 = 0 → True` |
@@ -120,7 +121,7 @@ This is the most powerful bit trick! It clears the lowest set bit.
 
 #### 🔍 Proof
 
-When we subtract 1 from \( n \):
+When we subtract 1 from $n$:
 - All bits to the right of the lowest set bit become 1
 - The lowest set bit becomes 0
 - All other bits remain unchanged
@@ -151,11 +152,11 @@ n&(n-1) = 1 0 0 0   (8)
 
 | Property | Formula | Use Case |
 |----------|---------|----------|
-| Self-Inverse | \(a \oplus a = 0\) | Cancel duplicates |
-| Identity | \(a \oplus 0 = a\) | Initialize result |
-| Commutative | \(a \oplus b = b \oplus a\) | Reorder freely |
+| Self-Inverse | $a \oplus a = 0$ | Cancel duplicates |
+| Identity | $a \oplus 0 = a$ | Initialize result |
+| Commutative | $a \oplus b = b \oplus a$ | Reorder freely |
 | Associative | \((a \oplus b) \oplus c = a \oplus (b \oplus c)\) | Group freely |
-| Swap | \(a \oplus b \oplus b = a\) | Swap without temp |
+| Swap | $a \oplus b \oplus b = a$ | Swap without temp |
 
 #### 🎯 Key Insight: Finding Unique Elements
 
@@ -165,7 +166,7 @@ If every element appears twice except one:
 \bigoplus_{i=0}^{n-1} \text{nums}[i] = \text{unique element}
 ```
 
-All pairs cancel out (\(a \oplus a = 0\)), leaving only the unique element!
+All pairs cancel out ($a \oplus a = 0$), leaving only the unique element!
 
 ---
 
@@ -177,7 +178,7 @@ In computers, negative numbers are represented using **two's complement**:
 -n = \sim n + 1 = 2^k - n
 ```
 
-where \( k \) is the number of bits.
+where $k$ is the number of bits.
 
 ```
 For 8-bit representation:

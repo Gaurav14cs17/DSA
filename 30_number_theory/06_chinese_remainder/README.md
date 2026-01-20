@@ -5,6 +5,7 @@ parent: "Number Theory"
 nav_order: 6
 has_children: true
 permalink: /30_number_theory/06_chinese_remainder/
+
 ---
 
 <div align="center">

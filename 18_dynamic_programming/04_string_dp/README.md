@@ -4,6 +4,7 @@ title: "String DP"
 parent: "Dynamic Programming"
 nav_order: 4
 permalink: /18_dynamic_programming/04_string_dp/
+
 ---
 
 <div align="center">
@@ -128,6 +129,7 @@ def isMatch(s: str, p: str) -> bool:
     for i in range(1, m + 1):
         for j in range(1, n + 1):
             if p[j - 1] == '*':
+
                 # Zero match or one+ match
                 dp[i][j] = dp[i][j - 2] or (
                     dp[i - 1][j] and (p[j - 2] == '.' or p[j - 2] == s[i - 1])

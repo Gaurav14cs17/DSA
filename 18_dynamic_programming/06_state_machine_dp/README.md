@@ -4,6 +4,7 @@ title: "State Machine DP"
 parent: "Dynamic Programming"
 nav_order: 6
 permalink: /18_dynamic_programming/06_state_machine_dp/
+
 ---
 
 <div align="center">
@@ -157,6 +158,7 @@ def maxProfitIV(k: int, prices: list[int]) -> int:
         return 0
     
     if k >= len(prices) // 2:
+
         # Unlimited transactions
         return sum(max(0, prices[i+1] - prices[i]) 
                    for i in range(len(prices) - 1))

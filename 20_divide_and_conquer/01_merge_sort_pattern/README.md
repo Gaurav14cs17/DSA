@@ -4,6 +4,7 @@ title: "Merge Sort Pattern"
 parent: "Divide and Conquer"
 nav_order: 1
 permalink: /20_divide_and_conquer/01_merge_sort_pattern/
+
 ---
 
 <div align="center">

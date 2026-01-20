@@ -4,6 +4,7 @@ title: "Strongly Connected Components"
 parent: "Graph Algorithms"
 nav_order: 5
 permalink: /24_graph_algorithms/05_strongly_connected_components/
+
 ---
 
 <div align="center">
@@ -172,6 +173,7 @@ class KosarajuSCC:
         Returns:
             Number of SCCs
         """
+
         # First DFS pass
         for i in range(self.n):
             if not self.visited[i]:
@@ -226,15 +228,18 @@ class TarjanSCC:
         # Explore neighbors
         for v in self.graph[u]:
             if self.disc[v] == -1:
+
                 # Not visited
                 self._dfs(v)
                 self.low[u] = min(self.low[u], self.low[v])
             elif self.on_stack[v]:
+
                 # Back edge to ancestor
                 self.low[u] = min(self.low[u], self.disc[v])
         
         # Root of SCC found
         if self.disc[u] == self.low[u]:
+
             # Pop SCC from stack
             while True:
                 v = self.stack.pop()
@@ -321,6 +326,7 @@ def canFinish(numCourses: int, prerequisites: List[List[int]]) -> bool:
     
     Time: O(V+E), Space: O(V+E)
     """
+
     # Build graph
     edges = [[b, a] for a, b in prerequisites]
     

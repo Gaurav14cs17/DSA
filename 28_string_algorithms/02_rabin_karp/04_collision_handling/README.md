@@ -4,6 +4,7 @@ title: "Collision Handling"
 parent: "Rabin-Karp Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 4
+
 ---
 
 # 🛡️ Collision Handling in Rabin-Karp
@@ -109,6 +110,7 @@ class DoubleHashRK:
         
         # Roll through text
         for i in range(m, n):
+
             # Update hash 1
             h1 = w_hash[0]
             h1 = (h1 - ord(text[i-m]) * pow1 % self.MOD1 + self.MOD1) % self.MOD1
@@ -181,6 +183,7 @@ def detect_collisions(strings, base=31, mod=10**9 + 7):
     
     for h, string_list in hash_to_strings.items():
         if len(string_list) > 1:
+
             # Check for actual collisions (different strings)
             seen = set()
             for s in string_list:
@@ -222,6 +225,7 @@ class AdaptiveHashRK:
     
     def search(self, text, pattern):
         """Search with adaptive hashing"""
+
         # Try single hash first
         matches_single = self._search_single(text, pattern)
         
@@ -284,6 +288,7 @@ class AdaptiveHashRK:
 ### Hash Parameter Selection
 
 ```python
+
 # Single hash
 MOD = 10**9 + 7  # Prime, fits in 32-bit
 BASE = 31        # Prime near alphabet size

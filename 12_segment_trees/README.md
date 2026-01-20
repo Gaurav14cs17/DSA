@@ -4,6 +4,7 @@ title: "Segment Trees"
 nav_order: 21
 has_children: false
 permalink: /12_segment_trees/
+
 ---
 
 <div align="center">
@@ -221,12 +222,15 @@ class LazySegmentTree:
         """Propagate lazy value to children."""
         if self.lazy[node] != 0:
             mid = (start + end) // 2
+
             # Update children
             self.tree[2 * node] += self.lazy[node] * (mid - start + 1)
             self.tree[2 * node + 1] += self.lazy[node] * (end - mid)
+
             # Propagate lazy
             self.lazy[2 * node] += self.lazy[node]
             self.lazy[2 * node + 1] += self.lazy[node]
+
             # Clear current lazy
             self.lazy[node] = 0
     

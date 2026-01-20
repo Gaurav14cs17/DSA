@@ -4,6 +4,7 @@ title: "Tree Construction"
 parent: "Trees"
 nav_order: 2
 permalink: /07_trees/02_tree_construction/
+
 ---
 
 <div align="center">
@@ -468,8 +469,8 @@ return node(1)
 ### 📐 Mathematical Background
 | Topic | Description | Link |
 |-------|-------------|------|
-| **Catalan Formula** | \( C_n = \frac{1}{n+1}\binom{2n}{n} \) | [OEIS](https://oeis.org/A000108) |
-| **Catalan Recurrence** | \( C_n = \sum_{i=0}^{n-1} C_i C_{n-1-i} \) | [Proof](https://en.wikipedia.org/wiki/Catalan_number#Second_proof) |
+| **Catalan Formula** | $C_n = \frac{1}{n+1}\binom{2n}{n}$ | [OEIS](https://oeis.org/A000108) |
+| **Catalan Recurrence** | $C_n = \sum_{i=0}^{n-1} C_i C_{n-1-i}$ | [Proof](https://en.wikipedia.org/wiki/Catalan_number#Second_proof) |
 
 ---
 
@@ -479,7 +480,7 @@ return node(1)
 
 > **⚡ Preorder[0] = Root:** First element in preorder is always root. Use it to split inorder!
 
-> **🔍 Catalan DP:** \( C_n = \sum C_i \times C_{n-1-i} \). For each root choice, multiply left × right subtree counts!
+> **🔍 Catalan DP:** $C_n = \sum C_i \times C_{n-1-i}$. For each root choice, multiply left × right subtree counts!
 
 > **📊 Serialization Needs Nulls:** Must include null markers to uniquely represent tree. Without nulls, ambiguous!
 

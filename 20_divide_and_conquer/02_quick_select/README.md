@@ -4,6 +4,7 @@ title: "Quick Select"
 parent: "Divide and Conquer"
 nav_order: 2
 permalink: /20_divide_and_conquer/02_quick_select/
+
 ---
 
 <div align="center">

@@ -4,6 +4,7 @@ title: "Dynamic Programming"
 nav_order: 27
 has_children: true
 permalink: /18_dynamic_programming/
+
 ---
 
 <div align="center">
@@ -98,6 +99,7 @@ Many 2D DP can be reduced to 1D:
 
 ```python
 def solve(input):
+
     # 1. Define state: what information do we need?
     # 2. Define recurrence: how do states relate?
     # 3. Define base cases

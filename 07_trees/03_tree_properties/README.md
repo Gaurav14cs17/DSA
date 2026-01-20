@@ -4,6 +4,7 @@ title: "Tree Properties"
 parent: "Trees"
 nav_order: 3
 permalink: /07_trees/03_tree_properties/
+
 ---
 
 <div align="center">

@@ -4,6 +4,7 @@ title: "Strings"
 nav_order: 11
 has_children: true
 permalink: /02_strings/
+
 ---
 
 <div align="center">
@@ -98,6 +99,7 @@ Plus 1 for empty string = n(n+1)/2 + 1 ∎
 ```
 
 **Proof:**
+
 ```math
 S \sim T \iff \vec{f}(S) = \vec{f}(T) \iff \text{sorted}(S) = \text{sorted}(T) \; \blacksquare
 ```
@@ -165,6 +167,7 @@ dp[i-1][j-1] & \text{(replace)}
 Let $E(i,j)$ = edit distance between $S[0..i-1]$ and $T[0..j-1]$
 
 **Case 1:** If $S[i-1] = T[j-1]$, no operation needed:
+
 ```math
 E(i,j) = E(i-1, j-1)
 ```
@@ -208,11 +211,13 @@ dp[i-1][j-1] + 1 & \text{if } S[i-1] = T[j-1] \\
 **Optimal Substructure:** 
 
 If $S[i-1] = T[j-1]$, they must appear in LCS (greedy is optimal):
+
 ```math
 \text{LCS}(S[0..i-1], T[0..j-1]) = \text{LCS}(S[0..i-2], T[0..j-2]) + 1
 ```
 
 If $S[i-1] \neq T[j-1]$, one must be excluded:
+
 ```math
 \text{LCS} = \max(\text{LCS}(S[0..i-2], T[0..j-1]), \text{LCS}(S[0..i-1], T[0..j-2]))
 ```

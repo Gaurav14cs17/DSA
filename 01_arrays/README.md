@@ -4,6 +4,7 @@ title: "Arrays"
 nav_order: 10
 has_children: true
 permalink: /01_arrays/
+
 ---
 
 <div align="center">

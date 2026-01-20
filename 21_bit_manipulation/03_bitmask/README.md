@@ -4,6 +4,7 @@ title: "Bitmask"
 parent: "Bit Manipulation"
 nav_order: 3
 permalink: /21_bit_manipulation/03_bitmask/
+
 ---
 
 <div align="center">
@@ -52,7 +53,7 @@ permalink: /21_bit_manipulation/03_bitmask/
 ## 🎯 What You'll Master
 
 - Representing subsets as integers
-- Enumerating all \(2^n\) subsets
+- Enumerating all $2^n$ subsets
 - Enumerating all subsets of a specific mask
 - Bitmask Dynamic Programming
 - Traveling Salesman and Partition problems
@@ -64,9 +65,9 @@ permalink: /21_bit_manipulation/03_bitmask/
 ### 1️⃣ Subset Representation
 
 {: .highlight }
-> Every subset of \(n\) elements can be represented as an \(n\)-bit integer!
+> Every subset of $n$ elements can be represented as an $n$-bit integer!
 
-For a set \(\{a_0, a_1, ..., a_{n-1}\}\), a subset \(S\) is represented by bitmask \(m\):
+For a set $\{a_0, a_1, ..., a_{n-1}\}$, a subset $S$ is represented by bitmask $m$:
 
 ```math
 i \in S \Leftrightarrow (m >> i) \land 1 = 1
@@ -95,7 +96,7 @@ Check: (10 >> 1) & 1 = 5 & 1 = 1 → banana ∈ S ✓
 
 ### 2️⃣ All Subsets Enumeration
 
-For \(n\) elements, there are exactly \(2^n\) subsets (including empty set):
+For $n$ elements, there are exactly $2^n$ subsets (including empty set):
 
 ```math
 \text{Subsets} = \{0, 1, 2, ..., 2^n - 1\}
@@ -105,9 +106,11 @@ For \(n\) elements, there are exactly \(2^n\) subsets (including empty set):
 
 ```python
 for mask in range(1 << n):  # 0 to 2^n - 1
+
     # mask represents one subset
     for i in range(n):
         if mask & (1 << i):
+
             # Element i is in this subset
 ```
 
@@ -131,15 +134,17 @@ mask | binary | subset
 ### 3️⃣ Submask Enumeration
 
 {: .important }
-> Given a bitmask \(m\), enumerate all its submasks (subsets of set bits).
+> Given a bitmask $m$, enumerate all its submasks (subsets of set bits).
 
 #### The Magic Formula
 
 ```python
 sub = m
 while sub > 0:
+
     # Process submask 'sub'
     sub = (sub - 1) & m
+
 # Don't forget to process empty set (0) if needed
 ```
 
@@ -148,7 +153,7 @@ while sub > 0:
 **Why does `(sub - 1) & m` give the next smaller submask?**
 
 1. `sub - 1` turns off the lowest set bit and sets all lower bits to 1
-2. `& m` masks out bits not in original mask \(m\)
+2. `& m` masks out bits not in original mask $m$
 3. This gives the largest submask smaller than `sub`
 
 #### 📊 Example: Submasks of m = 1011 (11)
@@ -189,11 +194,12 @@ Submasks: {1011, 1010, 1001, 1000, 0011, 0010, 0001, 0000}
 #### ⏱️ Time Complexity
 
 For all masks and their submasks:
+
 ```math
 \sum_{m=0}^{2^n-1} 2^{\text{popcount}(m)} = 3^n
 ```
 
-This is because each element has 3 choices: not in \(m\), in \(m\) but not in \(sub\), or in both.
+This is because each element has 3 choices: not in $m$, in $m$ but not in $sub$, or in both.
 
 ---
 
@@ -244,6 +250,7 @@ Checking "abc" and "def" have no common letters:
 #### General Pattern
 
 ```python
+
 # State: dp[mask] = optimal value for chosen elements in mask
 dp = [infinity] * (1 << n)
 dp[0] = base_case
@@ -295,7 +302,7 @@ for mask in range(1 << n):
 
 ### 7️⃣ Subset Sum Partition
 
-Partition array into \(k\) subsets of equal sum.
+Partition array into $k$ subsets of equal sum.
 
 #### State Definition
 
@@ -418,6 +425,7 @@ def subsetXORSum_optimized(nums: list[int]) -> int:
     
     Time: O(n), Space: O(1)
     """
+
     # OR all numbers to get bits that contribute
     or_all = 0
     for num in nums:
@@ -494,6 +502,7 @@ def canPartitionKSubsets(nums: list[int], k: int) -> bool:
         curr_sum = dp[mask]
         
         for i in range(n):
+
             # Skip if already used
             if mask & (1 << i):
                 continue
@@ -630,6 +639,7 @@ def minStickers(stickers: list[str], target: str) -> int:
         new_mask = mask
         for c in sticker:
             if c in target_count and target_count[c] > 0:
+
                 # Find first uncovered position with this char
                 for i in range(n):
                     if not (new_mask & (1 << i)) and target[i] == c:
@@ -646,6 +656,7 @@ def minStickers(stickers: list[str], target: str) -> int:
         
         result = float('inf')
         for sticker in stickers:
+
             # Only try stickers that can contribute
             new_mask = get_contribution(sticker, mask)
             if new_mask != mask:
@@ -720,6 +731,7 @@ def maxStudents(seats: list[list[str]]) -> int:
     
     def no_diagonal_cheat(prev_mask, curr_mask):
         """Check no diagonal cheating between rows."""
+
         # Left diagonal: curr's j can see prev's j-1
         # Right diagonal: curr's j can see prev's j+1
         return ((curr_mask & (prev_mask >> 1)) == 0 and 

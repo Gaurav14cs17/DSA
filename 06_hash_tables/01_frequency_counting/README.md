@@ -4,6 +4,7 @@ title: "Frequency Counting"
 parent: "Hash Tables"
 nav_order: 1
 permalink: /06_hash_tables/01_frequency_counting/
+
 ---
 
 <div align="center">

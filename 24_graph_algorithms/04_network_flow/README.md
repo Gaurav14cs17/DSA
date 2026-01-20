@@ -4,6 +4,7 @@ title: "Network Flow"
 parent: "Graph Algorithms"
 nav_order: 4
 permalink: /24_graph_algorithms/04_network_flow/
+
 ---
 
 <div align="center">
@@ -235,6 +236,7 @@ class MaxFlow:
         
         # While augmenting path exists
         while self.bfs(source, sink, parent):
+
             # Find bottleneck capacity
             path_flow = float('inf')
             v = sink
@@ -262,6 +264,7 @@ class MaxFlow:
         
         Returns: (cut_value, cut_edges)
         """
+
         # Compute max flow first
         flow_value = self.max_flow(source, sink)
         
@@ -367,6 +370,7 @@ def bipartite_matching(n1: int, n2: int, edges: List[Tuple[int, int]]) -> int:
     
     Time: O(VE²), Space: O(V+E)
     """
+
     # Vertices: 0=source, 1..n1=left, n1+1..n1+n2=right, n1+n2+1=sink
     source = 0
     sink = n1 + n2 + 1
@@ -419,6 +423,7 @@ def findMaximizedCapital(k: int, w: int, profits: List[int],
     idx = 0
     
     for _ in range(k):
+
         # Add all affordable projects
         while idx < len(projects) and projects[idx][0] <= w:
             heapq.heappush(available, -projects[idx][1])  # Max heap
@@ -521,6 +526,7 @@ def minCostMaxFlow(n: int, edges: List[List[int]], source: int,
     flow_sent = 0
     
     while flow_sent < max_flow:
+
         # Find shortest path (minimum cost) using Bellman-Ford
         dist = defaultdict(lambda: float('inf'))
         dist[source] = 0

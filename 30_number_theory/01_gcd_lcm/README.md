@@ -4,6 +4,7 @@ title: "GCD & LCM"
 parent: "Number Theory"
 nav_order: 1
 permalink: /30_number_theory/01_gcd_lcm/
+
 ---
 
 <div align="center">
@@ -135,6 +136,7 @@ The LCM must be $d \cdot x \cdot y$ (smallest number divisible by both):
 ```math
 \text{lcm}(a, b) = d \cdot x \cdot y = \frac{(d \cdot x) \cdot (d \cdot y)}{d} = \frac{a \cdot b}{\gcd(a, b)}
 ```
+
 ∎
 
 ---
@@ -147,24 +149,26 @@ The LCM must be $d \cdot x \cdot y$ (smallest number divisible by both):
 \gcd(a, b) &= p_1^{\min(a_1, b_1)} \cdot p_2^{\min(a_2, b_2)} \cdots p_k^{\min(a_k, b_k)} \\
 \text{lcm}(a, b) &= p_1^{\max(a_1, b_1)} \cdot p_2^{\max(a_2, b_2)} \cdots p_k^{\max(a_k, b_k)}
 \end{align}
+
 ```math
 **Example:**
 ```
+
 \begin{align}
 12 &= 2^2 \cdot 3^1 \\
 18 &= 2^1 \cdot 3^2 \\
 \gcd(12, 18) &= 2^{\min(2,1)} \cdot 3^{\min(1,2)} = 2^1 \cdot 3^1 = 6 \\
 \text{lcm}(12, 18) &= 2^{\max(2,1)} \cdot 3^{\max(1,2)} = 2^2 \cdot 3^2 = 36
 \end{align}
-```math
 
+```math
 ---
 
 ## 🎨 Visual Walkthroughs
 
 ### Walkthrough 1: Euclidean Algorithm
-
 ```
+
 +-----------------------------------------------------------------+
 | PROBLEM: Find gcd(48, 18)                                       |
 +-----------------------------------------------------------------+
@@ -432,6 +436,7 @@ def binary_gcd(a: int, b: int) -> int:
         a >>= 1
     
     while b != 0:
+
         # Remove factors of 2 from b
         while (b & 1) == 0:
             b >>= 1

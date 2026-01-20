@@ -5,6 +5,7 @@ parent: "Prime Numbers"
 grand_parent: "Number Theory"
 nav_order: 3
 permalink: /30_number_theory/02_primes/03_prime_factorization/
+
 ---
 
 <div align="center">
@@ -45,6 +46,7 @@ n = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k}
 where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
 
 **Example:**
+
 ```math
 360 = 2^3 \times 3^2 \times 5^1
 ```
@@ -422,6 +424,7 @@ def sum_of_divisors(n: int) -> int:
     
     while d * d <= n:
         if n % d == 0:
+
             # Calculate sum of geometric series: 1 + p + p² + ... + p^a
             p_power = 1
             term_sum = 0
@@ -519,6 +522,7 @@ def euler_totient(n: int) -> int:
     
     while d * d <= n:
         if n % d == 0:
+
             # Remove factor p: φ = φ × (1 - 1/p) = φ - φ/p
             result -= result // d
             

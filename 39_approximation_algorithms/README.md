@@ -4,6 +4,7 @@ title: "Approximation Algorithms"
 nav_order: 41
 has_children: true
 permalink: /39_approximation_algorithms/
+
 ---
 
 <div align="center">
@@ -97,6 +98,7 @@ def vertex_cover_approx(edges):
     uncovered = set(edges)
     
     while uncovered:
+
         # Pick any uncovered edge
         u, v = uncovered.pop()
         cover.add(u)
@@ -135,6 +137,7 @@ def set_cover_greedy(universe, subsets):
     cover = []
     
     while uncovered:
+
         # Find set covering most uncovered elements
         best_set = max(subsets, 
                       key=lambda s: len(s & uncovered))
@@ -260,6 +263,7 @@ def bin_packing_ffd(items, bin_capacity):
     bins = []
     
     for item in items:
+
         # Try to fit in existing bin
         placed = False
         for bin_items in bins:

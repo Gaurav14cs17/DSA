@@ -5,6 +5,7 @@ parent: "Binomial Coefficients"
 grand_parent: "Number Theory"
 nav_order: 2
 permalink: /30_number_theory/08_binomial_coefficients/02_combinations/
+
 ---
 
 <div align="center">

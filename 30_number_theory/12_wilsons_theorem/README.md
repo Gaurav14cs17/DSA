@@ -5,6 +5,7 @@ parent: "Number Theory"
 nav_order: 12
 has_children: true
 permalink: /30_number_theory/12_wilsons_theorem/
+
 ---
 
 <div align="center">

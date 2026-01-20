@@ -4,6 +4,7 @@ title: "Permutations"
 parent: "Combinatorics"
 nav_order: 1
 permalink: /31_combinatorics/01_permutations/
+
 ---
 
 <div align="center">
@@ -72,6 +73,7 @@ P = \frac{n!}{n_1! \times n_2! \times \cdots \times n_k!}
 ```
 
 **Example:** Permutations of "AABBC":
+
 ```math
 \frac{5!}{2! \times 2! \times 1!} = \frac{120}{4} = 30
 ```
@@ -210,6 +212,7 @@ def permute(nums: List[int]) -> List[List[int]]:
     result = []
     
     def backtrack(path, remaining):
+
         # Base case: no more elements to choose
         if not remaining:
             result.append(path[:])
@@ -217,6 +220,7 @@ def permute(nums: List[int]) -> List[List[int]]:
         
         # Try each remaining element
         for i in range(len(remaining)):
+
             # Choose element i
             path.append(remaining[i])
             
@@ -245,6 +249,7 @@ def permute_swap(nums: List[int]) -> List[List[int]]:
             return
         
         for i in range(start, len(nums)):
+
             # Swap current with start position
             nums[start], nums[i] = nums[i], nums[start]
             
@@ -284,6 +289,7 @@ def permuteUnique(nums: List[int]) -> List[List[int]]:
             return
         
         for i in range(len(nums)):
+
             # Skip if already used
             if used[i]:
                 continue
@@ -337,6 +343,7 @@ def nextPermutation(nums: List[int]) -> None:
     
     # If pivot found (not last permutation)
     if pivot >= 0:
+
         # Step 2: Find successor
         successor = n - 1
         while nums[successor] <= nums[pivot]:
@@ -381,6 +388,7 @@ def getPermutation(n: int, k: int) -> str:
     result = []
     
     for i in range(n, 0, -1):
+
         # How many permutations per block at this level
         factorial = math.factorial(i - 1)
         
@@ -482,10 +490,13 @@ def permutation_backtrack(elements):
             return
         
         for i in range(len(remaining)):
+
             # Choose
             path.append(remaining[i])
+
             # Explore
             backtrack(path, remaining[:i] + remaining[i+1:])
+
             # Unchoose
             path.pop()
     
@@ -496,6 +507,7 @@ def permutation_backtrack(elements):
 ### Pattern 2: Skip Duplicates
 
 ```python
+
 # When handling duplicates, sort first
 nums.sort()
 
@@ -507,6 +519,7 @@ if i > start and nums[i] == nums[i-1]:
 ### Pattern 3: Factorial Number System
 
 ```python
+
 # Kth permutation using factorial
 def kth_permutation(n, k):
     factorial = [1]

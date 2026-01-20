@@ -4,6 +4,7 @@ title: "Game Theory"
 nav_order: 33
 has_children: true
 permalink: /32_game_theory/
+
 ---
 
 <div align="center">
@@ -438,6 +439,7 @@ def minimax(state, depth: int, is_maximizing: bool,
     
     Time: O(b^d) worst case, O(b^{d/2}) with good ordering
     """
+
     # Terminal condition
     if depth == 0 or is_terminal(state):
         return evaluate(state)
@@ -531,6 +533,7 @@ def can_i_win(max_choosable: int, desired_total: int) -> bool:
     
     Time: O(2^n × n), Space: O(2^n)
     """
+
     # Quick checks
     total_sum = max_choosable * (max_choosable + 1) // 2
     if total_sum < desired_total:
@@ -573,6 +576,7 @@ def can_i_win(max_choosable: int, desired_total: int) -> bool:
 ### Pattern 1: Odd/Even Parity
 
 ```python
+
 # Many games have odd/even winning patterns
 def divisor_game(n: int) -> bool:
     """
@@ -584,6 +588,7 @@ def divisor_game(n: int) -> bool:
 ### Pattern 2: Symmetry Strategy
 
 ```python
+
 # Mirror opponent's moves
 def can_win_symmetry(n: int) -> bool:
     """
@@ -595,6 +600,7 @@ def can_win_symmetry(n: int) -> bool:
 ### Pattern 3: Backward Induction
 
 ```python
+
 # Work backwards from terminal states
 def solve_game(n: int) -> bool:
     """
@@ -603,6 +609,7 @@ def solve_game(n: int) -> bool:
     dp = [False] * (n + 1)
     
     for i in range(1, n + 1):
+
         # Try all moves
         for move in possible_moves(i):
             next_pos = i - move

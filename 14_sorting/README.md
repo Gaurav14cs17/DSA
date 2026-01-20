@@ -4,6 +4,7 @@ title: "Sorting"
 nav_order: 23
 has_children: true
 permalink: /14_sorting/
+
 ---
 
 <div align="center">

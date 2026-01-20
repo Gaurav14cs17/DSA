@@ -40,6 +40,7 @@ def aliens_trick(arr, k):
         count = [0] * n
         
         for i in range(n):
+
             # Start new group at i
             dp[i] = compute_cost(arr[0:i+1]) + lam
             count[i] = 1

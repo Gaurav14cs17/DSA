@@ -5,6 +5,7 @@ parent: "Linear Diophantine Equations"
 grand_parent: "Number Theory"
 nav_order: 2
 permalink: /30_number_theory/07_linear_diophantine/02_extended_gcd_method/
+
 ---
 
 <div align="center">

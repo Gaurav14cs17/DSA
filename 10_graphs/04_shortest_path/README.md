@@ -4,6 +4,7 @@ title: "Shortest Path"
 parent: "Graphs"
 nav_order: 4
 permalink: /10_graphs/04_shortest_path/
+
 ---
 
 <div align="center">

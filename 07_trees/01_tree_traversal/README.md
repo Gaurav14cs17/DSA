@@ -4,6 +4,7 @@ title: "Tree Traversal"
 parent: "Trees"
 nav_order: 1
 permalink: /07_trees/01_tree_traversal/
+
 ---
 
 <div align="center">
@@ -142,6 +143,7 @@ def inorderTraversal(root: TreeNode) -> list[int]:
     current = root
     
     while current or stack:
+
         # Go left
         while current:
             stack.append(current)
@@ -231,16 +233,19 @@ def morrisInorder(root: TreeNode) -> list[int]:
             result.append(current.val)
             current = current.right
         else:
+
             # Find predecessor
             predecessor = current.left
             while predecessor.right and predecessor.right != current:
                 predecessor = predecessor.right
             
             if not predecessor.right:
+
                 # Create thread
                 predecessor.right = current
                 current = current.left
             else:
+
                 # Remove thread, process node
                 predecessor.right = None
                 result.append(current.val)

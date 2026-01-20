@@ -4,6 +4,7 @@ title: "Divide and Conquer"
 nav_order: 29
 has_children: true
 permalink: /20_divide_and_conquer/
+
 ---
 
 <div align="center">

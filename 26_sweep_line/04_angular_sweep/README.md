@@ -4,6 +4,7 @@ title: "Angular Sweep"
 parent: "Sweep Line Algorithm"
 nav_order: 4
 permalink: /26_sweep_line/04_angular_sweep/
+
 ---
 
 <div align="center">
@@ -192,6 +193,7 @@ def k_closest(points: List[List[int]], k: int) -> List[List[int]]:
     
     Time: O(n log k), Space: O(k)
     """
+
     # Max heap of distances (use negative for max heap in Python)
     heap = []
     
@@ -261,6 +263,7 @@ def visible_points(points: List[List[int]],
         if [x, y] == location:
             same_location += 1
         else:
+
             # Calculate angle relative to location
             angle_rad = math.atan2(y - location[1], x - location[0])
             angle_deg = math.degrees(angle_rad)
@@ -278,6 +281,7 @@ def visible_points(points: List[List[int]],
     left = 0
     
     for right in range(len(angles)):
+
         # Move left pointer until angle difference <= allowed angle
         while angles[right] - angles[left] > angle:
             left += 1
@@ -307,6 +311,7 @@ def minimum_lines(stockPrices: List[List[int]]) -> int:
     lines = 1
     
     for i in range(2, len(stockPrices)):
+
         # Check if three consecutive points are collinear
         # Using cross product to avoid division
         x1, y1 = stockPrices[i-2]
@@ -357,6 +362,7 @@ def best_line(points: List[List[int]]) -> List[int]:
             if dx == 0:
                 vertical.append(j)
             else:
+
                 # Normalize slope
                 g = gcd(dx, dy)
                 slope = (dy // g, dx // g)
@@ -461,6 +467,7 @@ def number_of_people_aware_of_secret(n: int, delay: int, forget: int) -> int:
     dp[1] = 1
     
     for day in range(2, n + 1):
+
         # People who can share (learned between day-forget+1 and day-delay)
         can_share = 0
         for past_day in range(max(1, day - forget + 1), day - delay + 1):

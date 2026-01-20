@@ -4,6 +4,7 @@ title: "Linked Lists"
 nav_order: 12
 has_children: true
 permalink: /03_linked_lists/
+
 ---
 
 <div align="center">

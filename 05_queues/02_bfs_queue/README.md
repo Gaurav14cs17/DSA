@@ -4,6 +4,7 @@ title: "BFS Queue"
 parent: "Queues"
 nav_order: 2
 permalink: /05_queues/02_bfs_queue/
+
 ---
 
 <div align="center">

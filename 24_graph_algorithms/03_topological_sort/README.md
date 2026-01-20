@@ -4,6 +4,7 @@ title: "Topological Sort"
 parent: "Graph Algorithms"
 nav_order: 3
 permalink: /24_graph_algorithms/03_topological_sort/
+
 ---
 
 <div align="center">
@@ -321,6 +322,7 @@ def all_topological_sorts(n: int, edges: List[List[int]]) -> List[List[int]]:
         
         for u in range(n):
             if not visited[u] and in_degree[u] == 0:
+
                 # Choose u
                 visited[u] = True
                 current.append(u)
@@ -409,6 +411,7 @@ def alienOrder(words: List[str]) -> str:
     Time: O(C) where C = total characters
     Space: O(1) - at most 26 letters
     """
+
     # Build graph
     graph = defaultdict(set)
     in_degree = {c: 0 for word in words for c in word}
@@ -530,6 +533,7 @@ def sortItems(n: int, m: int, group: List[int],
     
     Time: O(V+E), Space: O(V+E)
     """
+
     # Assign unique group to items without group
     group_id = m
     for i in range(n):

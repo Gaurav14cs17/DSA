@@ -5,6 +5,7 @@ parent: "Lucas' Theorem"
 grand_parent: "Number Theory"
 nav_order: 1
 permalink: /30_number_theory/10_lucas_theorem/01_basic_lucas/
+
 ---
 
 <div align="center">

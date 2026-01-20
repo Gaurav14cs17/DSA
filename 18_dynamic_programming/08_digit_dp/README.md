@@ -4,6 +4,7 @@ title: "Digit DP"
 parent: "Dynamic Programming"
 nav_order: 8
 permalink: /18_dynamic_programming/08_digit_dp/
+
 ---
 
 <div align="center">
@@ -137,6 +138,7 @@ def atMostNGivenDigitSet(digits: list[str], n: int) -> int:
     
     # Count numbers with same number of digits
     for i, c in enumerate(s):
+
         # Count digits smaller than current
         smaller = sum(1 for digit in digits if digit < c)
         result += smaller * (d ** (k - i - 1))

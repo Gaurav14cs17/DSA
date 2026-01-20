@@ -4,6 +4,7 @@ title: "Subarray Problems"
 parent: "Arrays"
 nav_order: 2
 permalink: /01_arrays/02_subarray_problems/
+
 ---
 
 <div align="center">
@@ -88,11 +89,13 @@ Where $M[i]$ = maximum subarray sum ending at index $i$.
 Let $S\_{i}$ be the maximum sum of subarray ending at index $i$.
 
 **Case 1:** Subarray contains only $A[i]$
+
 ```math
 S_i = A[i]
 ```
 
 **Case 2:** Subarray extends from some $j < i$
+
 ```math
 S_i = S_{i-1} + A[i]
 ```
@@ -252,6 +255,7 @@ def maxSubArray(nums: list[int]) -> int:
     max_ending_here = max_so_far = nums[0]
     
     for i in range(1, len(nums)):
+
         # Core decision: extend or start fresh
         max_ending_here = max(nums[i], max_ending_here + nums[i])
         max_so_far = max(max_so_far, max_ending_here)
@@ -271,6 +275,7 @@ def maxProduct(nums: list[int]) -> int:
     
     for i in range(1, len(nums)):
         num = nums[i]
+
         # Calculate candidates
         candidates = (num, num * max_prod, num * min_prod)
         max_prod = max(candidates)
@@ -297,6 +302,7 @@ def subarraySum(nums: list[int], k: int) -> int:
     
     for num in nums:
         prefix_sum += num
+
         # How many times have we seen (prefix_sum - k)?
         count += prefix_count[prefix_sum - k]
         prefix_count[prefix_sum] += 1
@@ -544,11 +550,13 @@ Think of it as a running investment:
 - If positive, **keep holding** and add the next stock
 
 ```python
+
 # Investment analogy
 portfolio = 0
 best_ever = float('-inf')
 
 for stock_value in prices:
+
     # Should I keep my current portfolio or start fresh?
     portfolio = max(stock_value, portfolio + stock_value)
     best_ever = max(best_ever, portfolio)
@@ -591,6 +599,7 @@ Brute Force:
 for i in range(n):
     for j in range(i, n):
         sum = sum(arr[i:j+1])  # O(n) each time
+
 # Total: O(n³)
 
 Optimized Brute:
@@ -598,11 +607,13 @@ for i in range(n):
     sum = 0
     for j in range(i, n):
         sum += arr[j]  # Running sum
+
 # Total: O(n²)
 
 Kadane's:
 for i in range(n):
     max_ending = max(arr[i], max_ending + arr[i])
+
 # Total: O(n) ✨
 ```
 

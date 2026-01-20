@@ -5,6 +5,7 @@ parent: "Number Theory"
 nav_order: 10
 has_children: true
 permalink: /30_number_theory/10_lucas_theorem/
+
 ---
 
 <div align="center">

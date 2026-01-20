@@ -4,6 +4,7 @@ title: "Minimax Algorithm"
 parent: "Game Theory"
 nav_order: 2
 permalink: /32_game_theory/02_minimax/
+
 ---
 
 <div align="center">
@@ -53,6 +54,7 @@ permalink: /32_game_theory/02_minimax/
 **Idea:** Maximize the minimum payoff (worst-case optimization).
 
 **Recursive Definition:**
+
 ```math
 \text{minimax}(s) = \begin{cases}
 \text{evaluate}(s) & \text{if } s \text{ is terminal} \\
@@ -69,6 +71,7 @@ permalink: /32_game_theory/02_minimax/
 **Beta ($\beta$):** Best value MIN can guarantee so far
 
 **Pruning Condition:**
+
 ```math
 \text{If } \alpha \geq \beta \text{, prune remaining branches}
 ```
@@ -176,6 +179,7 @@ def minimax(state, depth: int, is_maximizing: bool) -> int:
     Time: O(b^d) where b=branching, d=depth
     Space: O(d) recursion stack
     """
+
     # Terminal conditions
     if depth == 0 or is_terminal(state):
         return evaluate(state)
@@ -327,6 +331,7 @@ def canIWin(max_choosable: int, desired_total: int) -> bool:
     
     Time: O(2^n × n), Space: O(2^n)
     """
+
     # Quick checks
     total = max_choosable * (max_choosable + 1) // 2
     if total < desired_total:

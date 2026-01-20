@@ -4,6 +4,7 @@ title: "Binary Search Trees"
 nav_order: 17
 has_children: true
 permalink: /08_binary_search_trees/
+
 ---
 
 <div align="center">
@@ -222,6 +223,7 @@ def deleteNode(root: TreeNode, key: int) -> TreeNode:
     elif key > root.val:
         root.right = deleteNode(root.right, key)
     else:
+
         # Node to delete found
         if not root.left:
             return root.right

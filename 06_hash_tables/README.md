@@ -4,6 +4,7 @@ title: "Hash Tables"
 nav_order: 15
 has_children: true
 permalink: /06_hash_tables/
+
 ---
 
 <div align="center">

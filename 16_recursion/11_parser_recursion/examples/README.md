@@ -92,15 +92,18 @@ class Parser:
             char = self.s[self.pos]
             
             if is_trigger_for_recursion(char):
+
                 # ★ RECURSE ★
                 nested = self.parseRule()
                 result = combine(result, nested)
             
             elif is_end_condition(char):
+
                 # RETURN to parent
                 return result
             
             else:
+
                 # Process current character
                 result = process(result, char)
                 self.pos += 1

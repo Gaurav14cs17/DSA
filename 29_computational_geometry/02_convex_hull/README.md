@@ -3,6 +3,7 @@ layout: default
 title: "Convex Hull"
 parent: "Computational Geometry"
 nav_order: 2
+
 ---
 
 # 🔺 Convex Hull Algorithms
@@ -94,6 +95,7 @@ def convex_hull_graham(points):
     hull = []
     
     for p in sorted_points:
+
         # Remove points making right turn
         while len(hull) >= 2 and cross_product(hull[-2], hull[-1], p) <= 0:
             hull.pop()
@@ -229,6 +231,7 @@ def convex_hull_quickhull(points):
 
 def quick_hull_recursive(points, p1, p2):
     """Recursive helper for QuickHull"""
+
     # Find points to the left of line p1-p2
     left_points = []
     max_dist = 0

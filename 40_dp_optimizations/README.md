@@ -4,6 +4,7 @@ title: "DP Optimizations"
 nav_order: 42
 has_children: true
 permalink: /40_dp_optimizations/
+
 ---
 
 <div align="center">
@@ -265,6 +266,7 @@ class MonotonicQueueDP:
         dq = deque([0])
         
         for i in range(1, n):
+
             # Remove indices outside window [i-k, i-1]
             while dq and dq[0] < i - k:
                 dq.popleft()
@@ -293,6 +295,7 @@ class MonotonicQueueDP:
         dq = deque([0])
         
         for i in range(1, n):
+
             # Remove out-of-range
             while dq and dq[0] < i - k:
                 dq.popleft()
@@ -391,6 +394,7 @@ class ConvexHullTrick:
         
         Intersection of (m1,b1) and (m2,b2): x = (b2-b1)/(m1-m2)
         """
+
         # (b3-b1)/(m1-m3) >= (b2-b1)/(m1-m2)
         # Cross multiply to avoid division
         return ((l3[1] - l1[1]) * (l1[0] - l2[0]) >= 
@@ -623,9 +627,11 @@ class LiChaoTree:
         curr_left_better = self._eval(curr, l) <= self._eval(line, l)
         
         if not curr_left_better:
+
             # Line better on left, recurse left
             self.add_line(line[0], line[1], 2 * node_id, l, mid)
         else:
+
             # Line better on right, recurse right
             self.add_line(line[0], line[1], 2 * node_id + 1, mid + 1, r)
     
@@ -702,6 +708,7 @@ def divide_conquer_dp(arr, K):
     cost = [[0] * n for _ in range(n)]
     for i in range(n):
         for j in range(i, n):
+
             # Example: cost = sum of elements
             cost[i][j] = sum(arr[i:j+1])
     
@@ -1172,6 +1179,7 @@ def aliens_trick(arr, k):
         count = [0] * n
         
         for i in range(n):
+
             # Option 1: Start new group at i
             cost_i = compute_cost(arr[0:i+1]) + lam
             dp[i] = cost_i
@@ -1200,11 +1208,13 @@ def aliens_trick(arr, k):
         groups, cost = dp_with_penalty(mid)
         
         if groups <= k:
+
             # Too few groups, decrease penalty
             right = mid
             if groups == k:
                 best_cost = cost + k * mid
         else:
+
             # Too many groups, increase penalty
             left = mid
     
@@ -1264,6 +1274,7 @@ def tiling_2xn(n):
     Standard: O(2^(2n))
     Optimized: O(n·2²) = O(4n)
     """
+
     # State: bitmask of current column (2 bits)
     # 00: both empty, 01: top filled, 10: bottom filled, 11: both filled
     
@@ -1326,6 +1337,7 @@ def rerooting_dp(graph, n):
     
     Example: Max distance from each node
     """
+
     # Step 1: DFS from arbitrary root (node 0)
     dp_down = [0] * n  # Max distance going down
     
@@ -1357,6 +1369,7 @@ def rerooting_dp(graph, n):
         
         for v in graph[u]:
             if v != parent:
+
                 # Compute up value for child v
                 # Best path through u to other subtree
                 if children_values[0][1] == v:

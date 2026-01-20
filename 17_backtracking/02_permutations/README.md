@@ -4,6 +4,7 @@ title: "Permutations"
 parent: "Backtracking"
 nav_order: 2
 permalink: /17_backtracking/02_permutations/
+
 ---
 
 <div align="center">
@@ -106,6 +107,7 @@ def permuteUnique(nums: list[int]) -> list[list[int]]:
         for i in range(len(nums)):
             if used[i]:
                 continue
+
             # Skip duplicates: only use first of consecutive equals
             if i > 0 and nums[i] == nums[i-1] and not used[i-1]:
                 continue
@@ -133,10 +135,12 @@ def nextPermutation(nums: list[int]) -> None:
         i -= 1
     
     if i >= 0:
+
         # Step 2: Find element just larger than nums[i]
         j = n - 1
         while nums[j] <= nums[i]:
             j -= 1
+
         # Step 3: Swap
         nums[i], nums[j] = nums[j], nums[i]
     

@@ -5,6 +5,7 @@ parent: "Divisors"
 grand_parent: "Number Theory"
 nav_order: 3
 permalink: /30_number_theory/04_divisors/03_perfect_numbers/
+
 ---
 
 <div align="center">
@@ -205,6 +206,7 @@ def generate_perfect_numbers(count: int) -> list[int]:
 
 # Generate first 5 perfect numbers
 print(generate_perfect_numbers(5))
+
 # [6, 28, 496, 8128, 33550336]
 ```
 
@@ -269,6 +271,7 @@ def find_abundant_numbers(limit: int) -> list[int]:
 
 # First 10 abundant numbers
 print(find_abundant_numbers(50))
+
 # [12, 18, 20, 24, 30, 36, 40, 42, 48]
 ```
 

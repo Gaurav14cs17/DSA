@@ -5,6 +5,7 @@ parent: "Wilson's Theorem"
 grand_parent: "Number Theory"
 nav_order: 3
 permalink: /30_number_theory/12_wilsons_theorem/03_applications/
+
 ---
 
 <div align="center">
@@ -151,9 +152,11 @@ def clausen_theorem(n: int, p: int) -> int:
     
     This is Clausen's generalization of Wilson's theorem.
     """
+
     # Left side: product of factorials at multiples of p minus 1
     left = 1
     for k in range(1, n + 1):
+
         # (kp - 1)! mod p
         # By Wilson-like argument, (kp-1)! ≡ (-1)^k (mod p)
         left = (left * pow(-1, k, p)) % p
@@ -186,6 +189,7 @@ def binomial_mod_prime_wilson(n: int, k: int, p: int) -> int:
     if k > n or k < 0:
         return 0
     if n >= p:
+
         # Use Lucas' theorem instead
         return lucas_binomial(n, k, p)
     
@@ -227,6 +231,7 @@ def wolstenholme_check(p: int) -> bool:
     
     numerator = 0
     for k in range(1, p):
+
         # Add (p-1)! / k to numerator
         term = 1
         for i in range(1, p):
@@ -252,6 +257,7 @@ def find_quadratic_nonresidue(p: int) -> int:
     Exactly half of 1, 2, ..., p-1 are QRs.
     """
     for a in range(2, p):
+
         # Euler's criterion: a^((p-1)/2) ≡ -1 means NQR
         if pow(a, (p - 1) // 2, p) == p - 1:
             return a

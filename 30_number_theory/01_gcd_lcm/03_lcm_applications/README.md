@@ -5,6 +5,7 @@ parent: "GCD & LCM"
 grand_parent: "Number Theory"
 nav_order: 3
 permalink: /30_number_theory/01_gcd_lcm/03_lcm_applications/
+
 ---
 
 <div align="center">

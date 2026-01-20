@@ -5,6 +5,7 @@ parent: "GCD & LCM"
 grand_parent: "Number Theory"
 nav_order: 2
 permalink: /30_number_theory/01_gcd_lcm/02_extended_gcd/
+
 ---
 
 <div align="center">
@@ -296,6 +297,7 @@ def extended_gcd(a: int, b: int) -> tuple[int, int, int]:
     Example:
         >>> extended_gcd(240, 46)
         (2, -9, 47)
+
         # Verify: 240×(-9) + 46×47 = 2
     """
     if b == 0:
@@ -351,6 +353,7 @@ def mod_inverse(a: int, m: int) -> int | None:
     Example:
         >>> mod_inverse(17, 43)
         38
+
         # Verify: (17 × 38) % 43 = 1
     """
     gcd_val, x, _ = extended_gcd(a, m)
@@ -386,6 +389,7 @@ def solve_diophantine(a: int, b: int, c: int) -> tuple[int, int] | None:
     Example:
         >>> solve_diophantine(12, 15, 9)
         (3, -1)
+
         # Verify: 12×3 + 15×(-1) = 36 - 15 = 21... wait let me recalculate
         # Actually: We want 12x + 15y = 9
         # gcd(12, 15) = 3, and 3 | 9, so solution exists

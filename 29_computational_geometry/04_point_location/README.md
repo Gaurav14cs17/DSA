@@ -3,6 +3,7 @@ layout: default
 title: "Point Location"
 parent: "Computational Geometry"
 nav_order: 4
+
 ---
 
 # 📍 Point Location Problems
@@ -67,6 +68,7 @@ def point_in_polygon(point, polygon):
         if point.y > min(p1.y, p2.y):
             if point.y <= max(p1.y, p2.y):
                 if point.x <= max(p1.x, p2.x):
+
                     # Calculate x-intersection
                     if p1.y != p2.y:
                         x_inters = (point.y - p1.y) * (p2.x - p1.x) / (p2.y - p1.y) + p1.x
@@ -124,6 +126,7 @@ def point_in_triangle(p, a, b, c):
     
     Uses barycentric coordinates
     """
+
     # Compute vectors
     v0 = c - a
     v1 = b - a

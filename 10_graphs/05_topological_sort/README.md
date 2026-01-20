@@ -4,6 +4,7 @@ title: "Topological Sort"
 parent: "Graphs"
 nav_order: 5
 permalink: /10_graphs/05_topological_sort/
+
 ---
 
 <div align="center">
@@ -228,6 +229,7 @@ def alienOrder(words: list[str]) -> str:
     
     Time: O(C) where C = total characters
     """
+
     # Build graph
     graph = defaultdict(set)
     in_degree = {c: 0 for word in words for c in word}

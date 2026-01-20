@@ -4,6 +4,7 @@ title: "Graphs"
 nav_order: 19
 has_children: true
 permalink: /10_graphs/
+
 ---
 
 <div align="center">

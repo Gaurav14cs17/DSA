@@ -4,6 +4,7 @@ title: "Array Greedy"
 parent: "Greedy Algorithms"
 nav_order: 3
 permalink: /19_greedy_algorithms/03_array_greedy/
+
 ---
 
 <div align="center">

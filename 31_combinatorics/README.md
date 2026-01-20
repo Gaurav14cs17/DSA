@@ -4,6 +4,7 @@ title: "Combinatorics"
 nav_order: 32
 has_children: true
 permalink: /31_combinatorics/
+
 ---
 
 <div align="center">
@@ -373,10 +374,13 @@ def permute(nums: List[int]) -> List[List[int]]:
             return
         
         for i in range(len(remaining)):
+
             # Choose
             path.append(remaining[i])
+
             # Explore
             backtrack(path, remaining[:i] + remaining[i+1:])
+
             # Unchoose
             path.pop()
     
@@ -399,12 +403,14 @@ def next_permutation(nums: List[int]) -> None:
     
     Time: O(n), Space: O(1)
     """
+
     # Step 1: Find pivot (rightmost ascending pair)
     i = len(nums) - 2
     while i >= 0 and nums[i] >= nums[i + 1]:
         i -= 1
     
     if i >= 0:  # Not last permutation
+
         # Step 2: Find rightmost element > pivot
         j = len(nums) - 1
         while nums[j] <= nums[i]:
@@ -557,6 +563,7 @@ def pattern_choose_not_choose(nums, target):
 
 ```python
 def lexicographic_pattern():
+
     # 1. Find rightmost ascending pair (pivot)
     # 2. Find rightmost element > pivot
     # 3. Swap them

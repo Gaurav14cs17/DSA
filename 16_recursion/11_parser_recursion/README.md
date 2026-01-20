@@ -4,6 +4,7 @@ title: "Parser Recursion"
 parent: "Recursion"
 nav_order: 11
 permalink: /16_recursion/11_parser_recursion/
+
 ---
 
 <div align="center">
@@ -361,11 +362,13 @@ def decodeString(s: str) -> str:
             char = s[pos]
             
             if char.isdigit():
+
                 # Accumulate number
                 num = num * 10 + int(char)
                 pos += 1
             
             elif char == '[':
+
                 # Recurse for nested content
                 pos += 1  # Skip '['
                 nested, pos = parse(pos)
@@ -373,11 +376,13 @@ def decodeString(s: str) -> str:
                 num = 0
             
             elif char == ']':
+
                 # End of current nesting level
                 pos += 1  # Skip ']'
                 return result, pos
             
             else:
+
                 # Regular letter
                 result += char
                 pos += 1
@@ -418,6 +423,7 @@ def parseLisp(expression: str) -> int:
             pos = op_end
             
             if op == 'let':
+
                 # Create new scope
                 new_scope = scope.copy()
                 
@@ -441,6 +447,7 @@ def parseLisp(expression: str) -> int:
                     # Check if this is the last expression
                     pos = skip_space(pos)
                     if expression[pos] == ')':
+
                         # var_name is actually the final expression (variable lookup)
                         pos += 1
                         return new_scope.get(var_name, 0), pos
@@ -468,6 +475,7 @@ def parseLisp(expression: str) -> int:
                 return val1 * val2, pos
         
         else:
+
             # Number or variable
             end = pos
             while end < len(expression) and expression[end] not in ' )':
@@ -540,6 +548,7 @@ def deserializeNestedList(s: str) -> 'NestedInteger':
             return result, pos
         
         else:
+
             # Parse number
             end = pos
             if s[end] == '-':
@@ -576,6 +585,7 @@ def parseAtom(s: str) -> list:
             return None, pos
         
         if s[pos] == '(':
+
             # Start of list
             pos += 1  # Skip '('
             result = []
@@ -598,6 +608,7 @@ def parseAtom(s: str) -> list:
             return None, pos
         
         else:
+
             # Atom (symbol or number)
             end = pos
             while end < len(s) and s[end] not in ' ()':
@@ -740,6 +751,7 @@ def isValidParentheses(s: str) -> bool:
             char = s[pos]
             
             if char in '([{':
+
                 # Opening bracket - recurse
                 close_map = {'(': ')', '[': ']', '{': '}'}
                 expected = close_map[char]
@@ -749,6 +761,7 @@ def isValidParentheses(s: str) -> bool:
                     return False, pos
             
             elif char in ')]}':
+
                 # Closing bracket
                 if char == expected_close:
                     return True, pos + 1
@@ -794,6 +807,7 @@ def longestValidParentheses(s: str) -> int:
         # Check for matching ')'
         if inner_pos < n and s[inner_pos] == ')':
             total = 2 + inner_len
+
             # Continue matching after this valid group
             total += parse(inner_pos + 1)
             return total

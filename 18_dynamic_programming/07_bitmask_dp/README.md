@@ -4,6 +4,7 @@ title: "Bitmask DP"
 parent: "Dynamic Programming"
 nav_order: 7
 permalink: /18_dynamic_programming/07_bitmask_dp/
+
 ---
 
 <div align="center">
@@ -186,6 +187,7 @@ def minStickers(stickers: list[str], target: str) -> int:
         result = float('inf')
         
         for sticker in sticker_counts:
+
             # Use sticker only if it helps
             remaining = dict(sticker)
             new_mask = mask

@@ -4,6 +4,7 @@ title: "Interval Problems"
 parent: "Arrays"
 nav_order: 5
 permalink: /01_arrays/05_interval_problems/
+
 ---
 
 <div align="center">
@@ -348,9 +349,11 @@ def merge(intervals: list[list[int]]) -> list[list[int]]:
         
         # Check overlap: last.end >= current.start
         if last[1] >= current[0]:
+
             # Merge: extend end to maximum
             last[1] = max(last[1], current[1])
         else:
+
             # No overlap: add new interval
             merged.append(current)
     
@@ -378,6 +381,7 @@ def insert(intervals: list[list[int]], newInterval: list[int]) -> list[list[int]
     
     # Phase 2: Merge overlapping intervals
     while i < n and intervals[i][0] <= newInterval[1]:
+
         # Merge: extend bounds
         newInterval[0] = min(newInterval[0], intervals[i][0])
         newInterval[1] = max(newInterval[1], intervals[i][1])
@@ -407,6 +411,7 @@ def canAttendMeetings(intervals: list[list[int]]) -> bool:
     intervals.sort(key=lambda x: x[0])
     
     for i in range(1, len(intervals)):
+
         # Check if previous ends after current starts
         if intervals[i-1][1] > intervals[i][0]:
             return False
@@ -466,6 +471,7 @@ def minMeetingRoomsHeap(intervals: list[list[int]]) -> int:
     heap = []
     
     for start, end in intervals:
+
         # If earliest meeting ends before this starts, reuse room
         if heap and heap[0] <= start:
             heapq.heappop(heap)
@@ -500,9 +506,11 @@ def eraseOverlapIntervals(intervals: list[list[int]]) -> int:
     
     for i in range(1, len(intervals)):
         if intervals[i][0] < prev_end:
+
             # Overlap: remove current interval
             removed += 1
         else:
+
             # No overlap: update end time
             prev_end = intervals[i][1]
     
@@ -523,6 +531,7 @@ def intervalIntersection(A: list[list[int]], B: list[list[int]]) -> list[list[in
     i = j = 0
     
     while i < len(A) and j < len(B):
+
         # Find intersection
         start = max(A[i][0], B[j][0])
         end = min(A[i][1], B[j][1])
@@ -549,6 +558,7 @@ def employeeFreeTime(schedule: list[list[list[int]]]) -> list[list[int]]:
     
     Time: O(n log n), Space: O(n)
     """
+
     # Flatten all intervals
     intervals = []
     for employee in schedule:
@@ -758,6 +768,7 @@ def maxConcurrentIntervals(intervals: list[list[int]]) -> int:
     max_concurrent = 0
     
     for start, end in intervals:
+
         # Remove ended intervals
         while active and active[0] <= start:
             heapq.heappop(active)
@@ -880,6 +891,7 @@ A: Yes! TreeMap gives O(log n) insert/query instead of O(n). Useful for online/s
 ### Pitfall 1: Off-by-One in Overlap Check
 
 ```python
+
 # ❌ WRONG: Strict inequality
 if prev_end > curr_start:  # Misses touching intervals
 
@@ -890,19 +902,23 @@ if prev_end >= curr_start:  # [1,3] and [3,5] overlap!
 ### Pitfall 2: Forgetting to Sort
 
 ```python
+
 # ❌ WRONG: Assuming input is sorted
 for i in range(1, len(intervals)):
+
     # Check overlap...
 
 # ✅ CORRECT: Always sort first
 intervals.sort(key=lambda x: x[0])
 for i in range(1, len(intervals)):
+
     # Now safe to check...
 ```
 
 ### Pitfall 3: Not Handling Edge Cases
 
 ```python
+
 # ❌ WRONG: Crashes on empty input
 merged = [intervals[0]]
 

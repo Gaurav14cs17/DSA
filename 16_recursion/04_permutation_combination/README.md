@@ -4,6 +4,7 @@ title: "Permutations & Combinations"
 parent: "Recursion"
 nav_order: 4
 permalink: /16_recursion/04_permutation_combination/
+
 ---
 
 <div align="center">
@@ -145,6 +146,7 @@ def permuteUnique(nums: list[int]) -> list[list[int]]:
         for i in range(len(nums)):
             if used[i]:
                 continue
+
             # Skip duplicates
             if i > 0 and nums[i] == nums[i-1] and not used[i-1]:
                 continue
@@ -218,6 +220,7 @@ def subsetsWithDup(nums: list[int]) -> list[list[int]]:
         result.append(path[:])
         
         for i in range(start, len(nums)):
+
             # Skip duplicates at same level
             if i > start and nums[i] == nums[i-1]:
                 continue

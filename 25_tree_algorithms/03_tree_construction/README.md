@@ -4,6 +4,7 @@ title: "Tree Construction"
 parent: "Tree Algorithms"
 nav_order: 3
 permalink: /25_tree_algorithms/03_tree_construction/
+
 ---
 
 <div align="center">
@@ -296,9 +297,11 @@ def bst_from_preorder_iterative(preorder: List[int]) -> Optional[TreeNode]:
         node = TreeNode(val)
         
         if val < stack[-1].val:
+
             # Left child
             stack[-1].left = node
         else:
+
             # Right child: find correct parent
             parent = None
             while stack and stack[-1].val < val:
@@ -553,6 +556,7 @@ def recover_from_preorder(traversal: str) -> Optional[TreeNode]:
     i = 0
     
     while i < len(traversal):
+
         # Count depth (number of dashes)
         depth = 0
         while i < len(traversal) and traversal[i] == '-':

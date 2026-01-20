@@ -5,6 +5,7 @@ parent: "Number Theory"
 nav_order: 3
 has_children: true
 permalink: /30_number_theory/03_modular_arithmetic/
+
 ---
 
 <div align="center">
@@ -272,6 +273,7 @@ def pow_mod(base, exp, mod):
     base %= mod
     
     while exp > 0:
+
         # If exp is odd, multiply base with result
         if exp & 1:
             result = (result * base) % mod
@@ -304,10 +306,12 @@ def pow_mod_recursive(base, exp, mod):
         return 1
     
     if exp % 2 == 0:
+
         # Even exponent: (base^exp) = (base^2)^(exp/2)
         half = pow_mod_recursive(base, exp // 2, mod)
         return (half * half) % mod
     else:
+
         # Odd exponent: (base^exp) = base × base^(exp-1)
         return (base * pow_mod_recursive(base, exp - 1, mod)) % mod
 ```
@@ -426,6 +430,7 @@ def matrix_pow_mod(M, exp, mod):
     Applications: Fibonacci, recurrence relations
     """
     n = len(M)
+
     # Identity matrix
     result = [[1 if i == j else 0 for j in range(n)] for i in range(n)]
     
@@ -529,6 +534,7 @@ def nCr_mod(n, r, mod):
 ### Classic Problems
 
 ```python
+
 # Problem 1: Last Digit of a^b
 def last_digit(a, b):
     """
@@ -564,6 +570,7 @@ def catalan_mod(n, mod):
     
     C(2n, n) = (2n)! / (n! × n!)
     """
+
     # Compute C(2n, n)
     num = 1
     for i in range(n + 1, 2 * n + 1):

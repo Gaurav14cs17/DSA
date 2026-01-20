@@ -4,6 +4,7 @@ title: "Linear Recurrence"
 parent: "Matrix Exponentiation"
 nav_order: 2
 permalink: /33_matrix_exponentiation/02_linear_recurrence/
+
 ---
 
 <div align="center">

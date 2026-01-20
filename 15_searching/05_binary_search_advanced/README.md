@@ -4,6 +4,7 @@ title: "Advanced Binary Search"
 parent: "Searching"
 nav_order: 5
 permalink: /15_searching/05_binary_search_advanced/
+
 ---
 
 <div align="center">
@@ -104,9 +105,11 @@ def findPeakElement(nums: list[int]) -> int:
         mid = (left + right) // 2
         
         if nums[mid] < nums[mid + 1]:
+
             # Peak is on the right
             left = mid + 1
         else:
+
             # Peak is on the left (including mid)
             right = mid
     
@@ -120,6 +123,7 @@ def findMedianSortedArrays(nums1: list[int], nums2: list[int]) -> float:
     
     Time: O(log(min(m,n))), Space: O(1)
     """
+
     # Ensure nums1 is smaller
     if len(nums1) > len(nums2):
         nums1, nums2 = nums2, nums1
@@ -138,6 +142,7 @@ def findMedianSortedArrays(nums1: list[int], nums2: list[int]) -> float:
         right2 = nums2[j] if j < n else float('inf')
         
         if left1 <= right2 and left2 <= right1:
+
             # Valid partition
             if (m + n) % 2 == 1:
                 return max(left1, left2)
@@ -160,6 +165,7 @@ def lengthOfLIS(nums: list[int]) -> int:
     tails = []
     
     for num in nums:
+
         # Find position to replace or append
         left, right = 0, len(tails)
         while left < right:

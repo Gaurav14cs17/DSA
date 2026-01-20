@@ -4,6 +4,7 @@ title: "Higher Statistical Moments"
 parent: "Loop Fusion & Online Algorithms"
 nav_order: 3
 permalink: /41_loop_fusion_online/03_higher_moments/
+
 ---
 
 <div align="center">
@@ -42,21 +43,25 @@ permalink: /41_loop_fusion_online/03_higher_moments/
 For a random variable $X$ with mean $\mu$:
 
 **First Moment (Mean):**
+
 ```math
 \mu = E[X]
 ```
 
 **Second Central Moment (Variance):**
+
 ```math
 \mu_2 = E[(X - \mu)^2] = \sigma^2
 ```
 
 **Third Central Moment (Skewness):**
+
 ```math
 \mu_3 = E[(X - \mu)^3]
 ```
 
 **Fourth Central Moment (Kurtosis):**
+
 ```math
 \mu_4 = E[(X - \mu)^4]
 ```
@@ -64,11 +69,13 @@ For a random variable $X$ with mean $\mu$:
 ### Standardized Moments
 
 **Skewness (Third Standardized Moment):**
+
 ```math
 \gamma_1 = \frac{\mu_3}{\sigma^3} = \frac{E[(X - \mu)^3]}{(E[(X - \mu)^2])^{3/2}}
 ```
 
 **Excess Kurtosis (Fourth Standardized Moment):**
+
 ```math
 \gamma_2 = \frac{\mu_4}{\sigma^4} - 3
 ```
@@ -223,6 +230,7 @@ M_3^{(n)} = \sum_{i=1}^{n} (x_i - \bar{x}_n)^3
 ```
 
 Split into old and new:
+
 ```math
 = \sum_{i=1}^{n-1} (x_i - \bar{x}_n)^3 + (x_n - \bar{x}_n)^3
 ```
@@ -230,6 +238,7 @@ Split into old and new:
 **Step 2: Adjust old deviations**
 
 For $i < n$:
+
 ```math
 x_i - \bar{x}_n = (x_i - \bar{x}_{n-1}) - \frac{\delta_n}{n}
 ```
@@ -255,6 +264,7 @@ Let $y\_i = x\_i - \bar{x}\_{n-1}$ for simplicity.
 - $\sum\_{i=1}^{n-1} y\_i = 0$ (property of mean!)
 
 So:
+
 ```math
 = M_3^{(n-1)} - \frac{3\delta_n}{n}M_2^{(n-1)} - \frac{(n-1)\delta_n^3}{n^3}
 ```
@@ -280,6 +290,7 @@ M_3^{(n)} = M_3^{(n-1)} - \frac{3\delta_n}{n}M_2^{(n-1)} - \frac{(n-1)\delta_n^3
 ```
 
 **Final result:**
+
 ```math
 M_3^{(n)} = M_3^{(n-1)} + \frac{(n-1)(n-2)}{n^2}\delta_n^3 - \frac{3}{n}M_2^{(n-1)}\delta_n \quad \blacksquare
 ```
@@ -310,22 +321,28 @@ M_3^{(n)} = M_3^{(n-1)} + \frac{(n-1)(n-2)}{n^2}\delta_n^3 - \frac{3}{n}M_2^{(n-
 Notice the pattern in the recurrences:
 
 **Second moment:**
+
 ```math
 M_2^{(n)} = M_2^{(n-1)} + \delta_n \cdot \delta_n'
 ```
+
 - Two factors of $\delta$
 
 **Third moment:**
+
 ```math
 M_3^{(n)} = M_3^{(n-1)} + \frac{(n-1)(n-2)}{n^2}\delta_n^3 - \frac{3}{n}M_2^{(n-1)}\delta_n
 ```
+
 - Three factors of $\delta$ in first term
 - Coupling with $M\_2$
 
 **Fourth moment:**
+
 ```math
 M_4^{(n)} = M_4^{(n-1)} + \frac{(n-1)(n^2-3n+3)}{n^3}\delta_n^4 + \frac{6}{n^2}M_2^{(n-1)}\delta_n^2 - \frac{4}{n}M_3^{(n-1)}\delta_n
 ```
+
 - Four factors of $\delta$ in first term
 - Coupling with both $M\_2$ and $M\_3$
 

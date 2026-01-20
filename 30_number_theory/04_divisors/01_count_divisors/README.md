@@ -5,6 +5,7 @@ parent: "Divisors"
 grand_parent: "Number Theory"
 nav_order: 1
 permalink: /30_number_theory/04_divisors/01_count_divisors/
+
 ---
 
 <div align="center">
@@ -81,17 +82,21 @@ By the multiplication principle, total divisors = $(a\_1 + 1)(a\_2 + 1) \cdots (
 ### 3️⃣ Examples with Formula
 
 **Example 1:** $n = 12 = 2^2 \cdot 3^1$
+
 ```math
 \tau(12) = (2+1)(1+1) = 3 \times 2 = 6
 ```
+
 Divisors: 1, 2, 3, 4, 6, 12 ✓
 
 **Example 2:** $n = 360 = 2^3 \cdot 3^2 \cdot 5^1$
+
 ```math
 \tau(360) = (3+1)(2+1)(1+1) = 4 \times 3 \times 2 = 24
 ```
 
 **Example 3:** $n = p^k$ (prime power)
+
 ```math
 \tau(p^k) = k + 1
 ```
@@ -246,6 +251,7 @@ def count_divisors_verbose(n: int) -> tuple[int, list[int]]:
 # Example
 count, divisors = count_divisors_verbose(60)
 print(f"60 has {count} divisors: {divisors}")
+
 # 60 has 12 divisors: [1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60]
 ```
 
@@ -333,6 +339,7 @@ def is_three(n: int) -> bool:
     τ(p²) = 2 + 1 = 3
     Divisors are: 1, p, p²
     """
+
     # Check if n is a perfect square
     root = int(n ** 0.5)
     if root * root != n:

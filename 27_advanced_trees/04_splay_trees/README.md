@@ -4,6 +4,7 @@ title: "Splay Trees"
 parent: "Advanced Trees"
 nav_order: 4
 permalink: /27_advanced_trees/04_splay_trees/
+
 ---
 
 <div align="center">
@@ -216,12 +217,14 @@ class SplayTree:
             g = p.parent
             
             if not g:
+
                 # Zig: x is child of root
                 if x == p.left:
                     self.rotate_right(p)
                 else:
                     self.rotate_left(p)
             elif (x == p.left) == (p == g.left):
+
                 # Zig-Zig: x and p are both left or both right
                 if x == p.left:
                     self.rotate_right(g)
@@ -230,6 +233,7 @@ class SplayTree:
                     self.rotate_left(g)
                     self.rotate_left(p)
             else:
+
                 # Zig-Zag: x is left and p is right, or vice versa
                 if x == p.left:
                     self.rotate_right(p)
@@ -286,6 +290,7 @@ class SplayTree:
         node = self._search_node(key)
         
         if node and node.key == key:
+
             # Key already exists, just splay
             return
         
@@ -335,6 +340,7 @@ class SplayTree:
             if self.root:
                 self.root.parent = None
         else:
+
             # Two children: find max in left subtree
             left_tree = node.left
             left_tree.parent = None
@@ -372,6 +378,7 @@ class SplayTree:
         node = self._search_node(key)
         
         if node.key < key:
+
             # All keys in tree are < key
             right_tree = SplayTree()
             right_tree.root = node.right
@@ -384,6 +391,7 @@ class SplayTree:
             
             return left_tree, right_tree
         else:
+
             # Node.key >= key
             left_tree = SplayTree()
             left_tree.root = node.left
@@ -469,6 +477,7 @@ class LRUCache:
             self.tree.search(self.time)
         else:
             if len(self.cache) >= self.capacity:
+
                 # Remove LRU item (find min timestamp in tree)
                 # In practice, maintain separate structure for this
                 pass

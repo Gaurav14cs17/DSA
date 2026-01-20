@@ -4,6 +4,7 @@ title: "Basic Stack"
 parent: "Stacks"
 nav_order: 1
 permalink: /04_stacks/01_basic_stack/
+
 ---
 
 <div align="center">
@@ -602,6 +603,7 @@ class MinStackOptimized:
             self.stack.append(0)
             self.min_val = val
         else:
+
             # Store difference from current min
             diff = val - self.min_val
             self.stack.append(diff)
@@ -935,6 +937,7 @@ A: Yes, using bit manipulation to store both value and min in one integer. But n
 ### Pitfall 1: Not Checking Empty
 
 ```python
+
 # ❌ WRONG: May crash
 def pop(self):
     return self.items.pop()
@@ -949,6 +952,7 @@ def pop(self):
 ### Pitfall 2: Forgetting Min Update
 
 ```python
+
 # ❌ WRONG: Min not updated on pop
 class MinStack:
     def __init__(self):
@@ -968,6 +972,7 @@ class MinStack:
 ### Pitfall 3: Inefficient Queue from Stacks
 
 ```python
+
 # ❌ WRONG: Transfer on every dequeue
 def dequeue(self):
     while self.s1:  # Transfer every time!

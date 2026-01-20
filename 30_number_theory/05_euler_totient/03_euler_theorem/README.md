@@ -5,6 +5,7 @@ parent: "Euler's Totient"
 grand_parent: "Number Theory"
 nav_order: 3
 permalink: /30_number_theory/05_euler_totient/03_euler_theorem/
+
 ---
 
 <div align="center">
@@ -160,6 +161,7 @@ def rsa_demo():
     """
     Demonstrate RSA encryption/decryption using Euler's theorem.
     """
+
     # 1. Choose two primes
     p, q = 61, 53
     n = p * q  # 3233

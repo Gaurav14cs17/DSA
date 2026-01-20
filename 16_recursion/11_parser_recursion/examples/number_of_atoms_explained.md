@@ -161,6 +161,7 @@ class Solution:
         while self.pos < self.n and self.formula[self.pos] != ')':
             
             if self.formula[self.pos] == '(':
+
                 # +---------------------------------+
                 # | It's a Group → parse recursively |
                 # +---------------------------------+
@@ -171,6 +172,7 @@ class Solution:
                     counts[atom] += count
             
             else:
+
                 # +-------------------------+
                 # | It's an Atom → parse it |
                 # +-------------------------+
@@ -192,6 +194,7 @@ class Solution:
           4. Read optional multiplier
           5. Multiply all counts
         """
+
         # Step 1: Skip the '('
         self.pos += 1  # Move past '('
         
@@ -223,6 +226,7 @@ class Solution:
           "Ca2" → ("Ca", 2)
           "Fe3" → ("Fe", 3)
         """
+
         # Step 1: Read uppercase letter (required)
         atom = self.formula[self.pos]
         self.pos += 1
@@ -419,6 +423,7 @@ def parseGroup(self):
     inner = self.parseFormula()  # 2. ★ RECURSE ★
     self.pos += 1              # 3. Skip ')'
     mult = self.parseNumber()  # 4. Get multiplier
+
     # 5. Multiply all inner counts
     for atom in inner:
         inner[atom] *= mult

@@ -4,6 +4,7 @@ title: "Variable Size Window"
 parent: "Sliding Window"
 nav_order: 2
 permalink: /23_sliding_window/02_variable_size/
+
 ---
 
 <div align="center">
@@ -79,8 +80,8 @@ permalink: /23_sliding_window/02_variable_size/
 
 #### Formal Proof
 
-Let \(E_i\) = event "element \(i\) enters window"  
-Let \(X_i\) = event "element \(i\) exits window"
+Let $E_i$ = event "element $i$ enters window"  
+Let $X_i$ = event "element $i$ exits window"
 
 **Claim**: \(\sum_{i=0}^{n-1} (E_i + X_i) \leq 2n\)
 
@@ -88,7 +89,7 @@ Let \(X_i\) = event "element \(i\) exits window"
 - Each element enters exactly once (when `right` pointer reaches it)
 - Each element exits at most once (when `left` pointer passes it)
 - `left` pointer only moves right, never backwards
-- Therefore: \(\sum E_i = n\) and \(\sum X_i \leq n\)
+- Therefore: $\sum E_i = n$ and $\sum X_i \leq n$
 
 Total operations: \(\leq 2n = O(n)\) ∎
 
@@ -155,7 +156,7 @@ We want the **shortest** valid window. Once valid, we keep shrinking to find sho
 
 #### 🔍 Proof
 
-Let \(S_k\) = set of subarrays with exactly \(k\) property.
+Let $S_k$ = set of subarrays with exactly $k$ property.
 
 ```math
 \text{atMost}(k) = |S_0| + |S_1| + ... + |S_k|
@@ -163,19 +164,21 @@ Let \(S_k\) = set of subarrays with exactly \(k\) property.
 ```
 
 Subtracting:
+
 ```math
 \text{atMost}(k) - \text{atMost}(k-1) = |S_k| = \text{exactly}(k)
 ```
+
 ∎
 
 #### Counting Subarrays in atMost
 
-When window \([left, right]\) is valid, count subarrays ending at `right`:
+When window $[left, right]$ is valid, count subarrays ending at `right`:
 ```
 \text{count} += right - left + 1
-```math
 
-This counts: \([right]\), \([right-1, right]\), ..., \([left, right]\)
+```math
+This counts: $[right]$, $[right-1, right]$, ..., $[left, right]$
 
 ---
 
@@ -199,8 +202,8 @@ Instead of tracking valid characters, track **violations**:
 ## 📊 Text Diagrams
 
 ### Longest Without Repeating Characters
-
 ```
+
 String: "abcabcbb"
 
 Step 1: Expand
@@ -337,6 +340,7 @@ def lengthOfLongestSubstring(s: str) -> int:
     max_length = 0
     
     for right in range(len(s)):
+
         # Shrink while duplicate exists
         while s[right] in char_set:
             char_set.remove(s[left])

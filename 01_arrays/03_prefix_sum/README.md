@@ -4,6 +4,7 @@ title: "Prefix Sum Techniques"
 parent: "Arrays"
 nav_order: 3
 permalink: /01_arrays/03_prefix_sum/
+
 ---
 
 <div align="center">
@@ -400,6 +401,7 @@ def subarraysDivByK(nums: list[int], k: int) -> int:
     
     for num in nums:
         prefix_sum += num
+
         # Handle negative modulo properly
         remainder = prefix_sum % k
         
@@ -451,6 +453,7 @@ def pivotIndex(nums: list[int]) -> int:
     left_sum = 0
     
     for i in range(len(nums)):
+
         # Check if left_sum equals right_sum
         # right_sum = total - left_sum - nums[i]
         if left_sum == total - left_sum - nums[i]:
@@ -513,6 +516,7 @@ def continuousSubarraySum(nums: list[int], k: int) -> bool:
         remainder = prefix_sum % k if k != 0 else prefix_sum
         
         if remainder in mod_seen:
+
             # Check if subarray length >= 2
             if i - mod_seen[remainder] >= 2:
                 return True
@@ -731,8 +735,10 @@ def subarraySumPattern(nums: list[int], target: int) -> int:
     
     for num in nums:
         prefix_sum += num
+
         # Check if (prefix_sum - target) exists
         count += prefix_map[prefix_sum - target]
+
         # Add current prefix to map
         prefix_map[prefix_sum] += 1
     
@@ -824,6 +830,7 @@ A: They're the same thing! Different terminology for the same concept.
 ### Pitfall 1: Off-by-One Errors
 
 ```python
+
 # ❌ WRONG: Direct indexing
 sum_range = prefix[right] - prefix[left]
 
@@ -834,6 +841,7 @@ sum_range = prefix[right + 1] - prefix[left]
 ### Pitfall 2: Forgetting Base Case
 
 ```python
+
 # ❌ WRONG: Missing empty subarray
 prefix_map = {}
 
@@ -844,11 +852,13 @@ prefix_map = {0: 1}
 ### Pitfall 3: Negative Modulo
 
 ```python
+
 # ❌ WRONG: Negative remainders in Python
 remainder = prefix_sum % k
 
 # ✅ CORRECT: Always positive
 remainder = prefix_sum % k
+
 # Python handles this correctly, but in other languages:
 # remainder = ((prefix_sum % k) + k) % k
 ```

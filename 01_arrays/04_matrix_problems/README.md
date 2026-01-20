@@ -4,6 +4,7 @@ title: "Matrix Problems"
 parent: "Arrays"
 nav_order: 4
 permalink: /01_arrays/04_matrix_problems/
+
 ---
 
 <div align="center">
@@ -396,6 +397,7 @@ def spiralOrder(matrix: list[list[int]]) -> list[int]:
     left, right = 0, len(matrix[0]) - 1
     
     while top <= bottom and left <= right:
+
         # Move right along top row
         for col in range(left, right + 1):
             result.append(matrix[top][col])
@@ -501,6 +503,7 @@ def generateMatrix(n: int) -> list[list[int]]:
     num = 1
     
     while top <= bottom and left <= right:
+
         # Right
         for col in range(left, right + 1):
             matrix[top][col] = num
@@ -758,6 +761,7 @@ R_4 &= R_1 \circ R_1 \circ R_1 \circ R_1 = R_0
 For Game of Life (cell dies/lives based on neighbors):
 
 ```python
+
 # Use bits to encode current and next state
 # Bit 0: current state
 # Bit 1: next state
@@ -784,12 +788,14 @@ For $m \times n$ matrix:
 - Diagonal $d$ contains elements where $i - j = d - (n-1)$
 
 ```python
+
 # Group by diagonal
 from collections import defaultdict
 diagonals = defaultdict(list)
 
 for i in range(m):
     for j in range(n):
+
         # Main diagonal: i - j
         diagonals[i - j].append(matrix[i][j])
         

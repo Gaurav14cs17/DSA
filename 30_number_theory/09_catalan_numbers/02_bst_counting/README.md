@@ -5,6 +5,7 @@ parent: "Catalan Numbers"
 grand_parent: "Number Theory"
 nav_order: 2
 permalink: /30_number_theory/09_catalan_numbers/02_bst_counting/
+
 ---
 
 <div align="center">
@@ -158,8 +159,10 @@ class Solution:
             
             trees = []
             for root_val in range(low, high + 1):
+
                 # Generate all left subtrees (values < root_val)
                 left_trees = generate(low, root_val - 1)
+
                 # Generate all right subtrees (values > root_val)
                 right_trees = generate(root_val + 1, high)
                 

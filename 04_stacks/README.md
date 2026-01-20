@@ -4,6 +4,7 @@ title: "Stacks"
 nav_order: 13
 has_children: true
 permalink: /04_stacks/
+
 ---
 
 <div align="center">
@@ -201,6 +202,7 @@ def next_greater_element(nums: list[int]) -> list[int]:
     stack = []  # Stores indices
     
     for i in range(n):
+
         # Pop elements smaller than current
         while stack and nums[stack[-1]] < nums[i]:
             idx = stack.pop()

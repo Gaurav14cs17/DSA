@@ -4,6 +4,7 @@ title: "Basic Heap"
 parent: "Heaps"
 nav_order: 1
 permalink: /09_heaps/01_basic_heap/
+
 ---
 
 <div align="center">
@@ -392,6 +393,7 @@ def lastStoneWeight(stones: list[int]) -> int:
     
     Time: O(n log n), Space: O(n)
     """
+
     # Convert to max-heap using negation
     heap = [-s for s in stones]
     heapq.heapify(heap)

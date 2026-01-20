@@ -4,6 +4,7 @@ title: "Prefix-Suffix Matching"
 parent: "KMP Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 4
+
 ---
 
 # 🔗 Prefix-Suffix Matching with KMP
@@ -355,6 +356,7 @@ def max_prefix_suffix_overlap(s1, s2):
     
     Returns: Length of maximum overlap
     """
+
     # Use KMP to find longest prefix of s2 that matches suffix of s1
     
     # Build π for s2
@@ -484,8 +486,10 @@ def merge_strings(strings):
     result = strings[0]
     
     for s in strings[1:]:
+
         # Find overlap
         overlap = max_prefix_suffix_overlap(result, s)
+
         # Merge
         result = result + s[overlap:]
     

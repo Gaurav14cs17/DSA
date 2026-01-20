@@ -5,6 +5,7 @@ parent: "Modular Arithmetic"
 grand_parent: "Number Theory"
 nav_order: 5
 permalink: /30_number_theory/03_modular_arithmetic/05_eulers_theorem/
+
 ---
 
 <div align="center">

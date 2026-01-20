@@ -5,6 +5,7 @@ parent: "Advanced Trees"
 nav_order: 3
 has_children: true
 permalink: /27_advanced_trees/03_fenwick_tree/
+
 ---
 
 <div align="center">

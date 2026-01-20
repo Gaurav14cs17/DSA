@@ -5,6 +5,7 @@ parent: "Divisors"
 grand_parent: "Number Theory"
 nav_order: 4
 permalink: /30_number_theory/04_divisors/04_divisor_properties/
+
 ---
 
 <div align="center">
@@ -61,16 +62,19 @@ A function f is **multiplicative** if:
 ### 2️⃣ Key Identities
 
 **Sum over Divisors:**
+
 ```math
 \sum_{d|n} \phi(d) = n
 ```
 
 **Möbius Inversion:**
+
 ```math
 g(n) = \sum_{d|n} f(d) \implies f(n) = \sum_{d|n} \mu(d) g(n/d)
 ```
 
 **Dirichlet Convolution:**
+
 ```math
 \tau = 1 * 1
 \sigma = \text{id} * 1
@@ -118,6 +122,7 @@ def get_divisors(n: int) -> list[int]:
 
 # Example
 print(get_divisors(60))
+
 # [1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60]
 ```
 

@@ -4,6 +4,7 @@ title: "Basic Trie"
 parent: "Tries"
 nav_order: 1
 permalink: /11_tries/01_basic_trie/
+
 ---
 
 <div align="center">

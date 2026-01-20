@@ -35,6 +35,7 @@ def sos_dp(arr):
     for i in range(n):
         for mask in range(MAX_MASK):
             if mask & (1 << i):
+
                 # If bit i is set, add contribution without bit i
                 dp[mask] += dp[mask ^ (1 << i)]
     

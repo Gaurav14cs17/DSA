@@ -3,6 +3,7 @@ layout: default
 title: "Closest Pair of Points"
 parent: "Computational Geometry"
 nav_order: 6
+
 ---
 
 # 🎯 Closest Pair of Points
@@ -63,8 +64,10 @@ def closest_pair(points):
     
     Returns: (min_distance, point1, point2)
     """
+
     # Sort by x-coordinate
     points_x = sorted(points, key=lambda p: p.x)
+
     # Sort by y-coordinate  
     points_y = sorted(points, key=lambda p: p.y)
     
@@ -133,6 +136,7 @@ def _closest_split_pair(px, py, mid_point, delta):
     Key optimization: Only check points within delta of dividing line
     and only check 7 points ahead in strip
     """
+
     # Build strip of points within delta of dividing line
     strip = [p for p in py if abs(p.x - mid_point.x) < delta]
     
@@ -164,6 +168,7 @@ def k_closest_to_origin(points, k):
     
     Returns: k closest points to origin
     """
+
     # Max heap of size k (negate distances for max heap)
     heap = []
     
@@ -210,6 +215,7 @@ def farthest_pair(points):
     
     Note: Farthest pair must be on convex hull
     """
+
     # Get convex hull
     hull = convex_hull_graham(points)
     
@@ -267,6 +273,7 @@ Therefore, need to check at most 7 points ahead in strip
 ### Optimization: Use Squared Distances
 
 ```python
+
 # ❌ Slower: Calculate actual distance
 if point1.distance(point2) < min_dist:
 

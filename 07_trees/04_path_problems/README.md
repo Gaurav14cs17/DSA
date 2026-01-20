@@ -4,6 +4,7 @@ title: "Path Problems"
 parent: "Trees"
 nav_order: 4
 permalink: /07_trees/04_path_problems/
+
 ---
 
 <div align="center">

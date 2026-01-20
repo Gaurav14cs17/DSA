@@ -111,6 +111,7 @@ def decodeString(s: str) -> str:
             char = s[pos]
             
             if char.isdigit():
+
                 # +-----------------------------+
                 # | Accumulate the repeat count |
                 # +-----------------------------+
@@ -119,6 +120,7 @@ def decodeString(s: str) -> str:
                 pos += 1
             
             elif char == '[':
+
                 # +--------------------------------+
                 # | Start of group → RECURSE       |
                 # | Parse content inside brackets  |
@@ -129,6 +131,7 @@ def decodeString(s: str) -> str:
                 num = 0                           # Reset for next group
             
             elif char == ']':
+
                 # +----------------------------------+
                 # | End of current group → RETURN    |
                 # | Go back to parent recursion call |
@@ -137,6 +140,7 @@ def decodeString(s: str) -> str:
                 return result, pos
             
             else:
+
                 # +-------------------------+
                 # | Regular letter → append |
                 # +-------------------------+

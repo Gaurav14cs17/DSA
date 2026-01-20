@@ -4,6 +4,7 @@ title: "BST Operations"
 parent: "Binary Search Trees"
 nav_order: 1
 permalink: /08_binary_search_trees/01_bst_operations/
+
 ---
 
 <div align="center">
@@ -321,6 +322,7 @@ def deleteNode(root: TreeNode, key: int) -> TreeNode:
     elif key > root.val:
         root.right = deleteNode(root.right, key)
     else:
+
         # Found node to delete
         if not root.left:
             return root.right

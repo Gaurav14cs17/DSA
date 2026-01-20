@@ -4,6 +4,7 @@ title: "Substring Problems"
 parent: "Rabin-Karp Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 5
+
 ---
 
 # 🔍 Substring Problems with Rabin-Karp
@@ -64,6 +65,7 @@ def longest_duplicate_substring(s):
             h = (h * BASE + ord(s[i+length-1])) % MOD
             
             if h in seen:
+
                 # Found duplicate
                 return seen[h], s[seen[h]:seen[h]+length]
             
@@ -377,6 +379,7 @@ def binary_search_hash_template(s):
     """
     def check(length):
         """Check if property holds for given length"""
+
         # Use rolling hash to check all substrings of this length
         # Return True/False or specific substring
         pass

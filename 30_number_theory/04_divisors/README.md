@@ -5,6 +5,7 @@ parent: "Number Theory"
 nav_order: 4
 has_children: true
 permalink: /30_number_theory/04_divisors/
+
 ---
 
 <div align="center">

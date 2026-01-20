@@ -3,6 +3,7 @@ layout: default
 title: "Manacher's Algorithm"
 parent: "String Algorithms"
 nav_order: 5
+
 ---
 
 # 🎭 Manacher's Algorithm
@@ -57,6 +58,7 @@ Original:  "abba"
 Transform: "^#a#b#b#a#$"
 
 ^ and $ are sentinels (boundary markers)
+
 # are separators
 
 Now all palindromes have odd length in transformed string
@@ -120,6 +122,7 @@ def manacher(s):
     Returns: Array P where P[i] = radius of palindrome at position i
              in the transformed string
     """
+
     # Transform string
     t = '^#' + '#'.join(s) + '#$'
     n = len(t)
@@ -131,6 +134,7 @@ def manacher(s):
     right = 0   # Right boundary of rightmost palindrome
     
     for i in range(1, n - 1):
+
         # Mirror of i with respect to center
         mirror = 2 * center - i
         
@@ -187,6 +191,7 @@ def manacher_detailed(s):
     Time: O(n)
     Space: O(n)
     """
+
     # Step 1: Transform string
     # Add sentinels (^, $) and separators (#)
     t = '^'
@@ -201,14 +206,17 @@ def manacher_detailed(s):
     right = 0   # Right boundary of current rightmost palindrome
     
     for i in range(1, n - 1):
+
         # Step 2: Calculate mirror position
         mirror = 2 * center - i
         
         # Step 3: Initialize P[i]
         if i < right:
+
             # Use symmetry to initialize
             # But cap at right boundary
             P[i] = min(right - i, P[mirror])
+
         # else: P[i] = 0 (already initialized)
         
         # Step 4: Expand palindrome
@@ -217,6 +225,7 @@ def manacher_detailed(s):
             while t[i + P[i] + 1] == t[i - P[i] - 1]:
                 P[i] += 1
         except IndexError:
+
             # Reached boundary
             pass
         
@@ -263,8 +272,10 @@ def all_palindromes(s):
     palindromes = set()
     
     for i in range(len(P)):
+
         # For each center, extract all palindromes
         for radius in range(1, P[i] + 1):
+
             # Map back to original string
             start = (i - radius) // 2
             end = (i + radius) // 2
@@ -278,6 +289,7 @@ def all_palindromes(s):
 
 # Example
 print(all_palindromes("aabaa"))
+
 # ['a', 'aa', 'aabaa', 'aba', 'b', 'baa']
 ```
 
@@ -298,6 +310,7 @@ def count_palindromes(s):
     
     count = 0
     for radius in P:
+
         # Each radius contributes (radius + 1) // 2 palindromes
         # But we need to be careful with the transformation
         count += (radius + 1) // 2
@@ -311,6 +324,7 @@ def count_palindromes_v2(s):
     count = 0
     
     for i in range(len(P)):
+
         # P[i] tells us how many palindromes are centered at i
         # In transformed string, each unit radius = one palindrome
         count += (P[i] + 1) // 2
@@ -389,8 +403,10 @@ def shortestPalindrome(s):
     max_prefix = 0
     
     for i in range(len(P)):
+
         # Check if palindrome includes start of string
         if i - P[i] == 1:  # Reaches ^ sentinel
+
             # Length in original string
             length = P[i]
             max_prefix = max(max_prefix, length)
@@ -453,6 +469,7 @@ def longest_pal_remove_one(s):
     max_len = 0
     
     for skip in range(n):
+
         # Create string without character at 'skip'
         temp = s[:skip] + s[skip+1:]
         
@@ -501,6 +518,7 @@ def maxProduct(s):
     Time: O(3^n) - complex problem
     Space: O(n)
     """
+
     # Manacher's helps identify palindrome regions
     P = manacher(s)
     
@@ -508,6 +526,7 @@ def maxProduct(s):
     # Manacher's provides O(1) palindrome checking for substrings
     
     def check_palindrome(left, right):
+
         # Use precomputed P array
         # Calculate if s[left:right+1] is palindrome
         mid = left + right + 1  # In transformed string
@@ -589,6 +608,7 @@ T = Σ(1 + expansions at position i)
 
 1. **Forgetting sentinels:**
 ```python
+
 # ❌ Wrong - may have index out of bounds
 t = '#'.join(s)
 
@@ -598,6 +618,7 @@ t = '^#' + '#'.join(s) + '#$'
 
 2. **Incorrect mapping back to original:**
 ```python
+
 # Transform index i maps to original index:
 original_start = (i - P[i]) // 2
 original_end = (i + P[i]) // 2
@@ -625,6 +646,7 @@ class PalindromeTree:
     - Substring queries
     - Count distinct palindromes
     """
+
     # Implementation is complex, used in competitive programming
     pass
 ```

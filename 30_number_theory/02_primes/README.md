@@ -5,6 +5,7 @@ parent: "Number Theory"
 nav_order: 2
 has_children: true
 permalink: /30_number_theory/02_primes/
+
 ---
 
 <div align="center">
@@ -134,6 +135,7 @@ n = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k}
 where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
 
 **Example:**
+
 ```math
 \begin{align}
 360 &= 2^3 \times 3^2 \times 5^1 \\
@@ -380,6 +382,7 @@ def sieve_of_eratosthenes(n: int) -> list[int]:
     
     for i in range(2, int(n**0.5) + 1):
         if is_prime[i]:
+
             # Mark multiples starting from i²
             for j in range(i * i, n + 1, i):
                 is_prime[j] = False
@@ -534,6 +537,7 @@ def segmented_sieve(L: int, R: int) -> list[int]:
     
     Efficient for large ranges where R >> L.
     """
+
     # Generate small primes up to √R
     limit = int(R**0.5) + 1
     is_prime_small = [True] * (limit + 1)
@@ -557,6 +561,7 @@ def segmented_sieve(L: int, R: int) -> list[int]:
                 is_prime[i] = False
     
     for p in small_primes:
+
         # First multiple of p >= L
         start = max(p * p, ((L + p - 1) // p) * p)
         for j in range(start, R + 1, p):

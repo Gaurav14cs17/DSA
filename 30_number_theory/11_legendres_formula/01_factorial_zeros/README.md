@@ -5,6 +5,7 @@ parent: "Legendre's Formula"
 grand_parent: "Number Theory"
 nav_order: 1
 permalink: /30_number_theory/11_legendres_formula/01_factorial_zeros/
+
 ---
 
 <div align="center">
@@ -212,6 +213,7 @@ def find_skipped(limit: int) -> list[int]:
     
     while current_zeros <= limit:
         if n % 5 == 0:
+
             # Count how many 5s divide n
             temp = n
             while temp % 5 == 0 and temp > 0:
@@ -224,6 +226,7 @@ def find_skipped(limit: int) -> list[int]:
 
 # Skipped values up to 50
 print(find_skipped(50))
+
 # [5, 11, 17, 23, 29, 30, 36, 42, 48]
 ```
 

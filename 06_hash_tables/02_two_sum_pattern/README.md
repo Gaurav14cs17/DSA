@@ -4,6 +4,7 @@ title: "Two Sum Pattern"
 parent: "Hash Tables"
 nav_order: 2
 permalink: /06_hash_tables/02_two_sum_pattern/
+
 ---
 
 <div align="center">
@@ -147,6 +148,7 @@ def threeSum(nums: list[int]) -> list[list[int]]:
     n = len(nums)
     
     for i in range(n - 2):
+
         # Skip duplicates
         if i > 0 and nums[i] == nums[i - 1]:
             continue

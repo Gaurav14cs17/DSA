@@ -4,6 +4,7 @@ title: "Tree Recursion"
 parent: "Recursion"
 nav_order: 2
 permalink: /16_recursion/02_tree_recursion/
+
 ---
 
 <div align="center">
@@ -200,6 +201,7 @@ def numTrees(n: int) -> int:
     
     Time: O(n²), Space: O(n)
     """
+
     # dp[i] = number of unique BSTs with i nodes
     dp = [0] * (n + 1)
     dp[0] = dp[1] = 1

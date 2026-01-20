@@ -4,6 +4,7 @@ title: "Merge & Sort"
 parent: "Linked Lists"
 nav_order: 3
 permalink: /03_linked_lists/03_merge_sort/
+
 ---
 
 <div align="center">

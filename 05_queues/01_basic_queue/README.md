@@ -4,6 +4,7 @@ title: "Basic Queue"
 parent: "Queues"
 nav_order: 1
 permalink: /05_queues/01_basic_queue/
+
 ---
 
 <div align="center">
@@ -186,6 +187,7 @@ class MyStack:
     
     def push(self, x: int) -> None:
         self.queue.append(x)
+
         # Rotate to make new element at front
         for _ in range(len(self.queue) - 1):
             self.queue.append(self.queue.popleft())

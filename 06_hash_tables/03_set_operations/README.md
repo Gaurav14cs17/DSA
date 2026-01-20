@@ -4,6 +4,7 @@ title: "Set Operations"
 parent: "Hash Tables"
 nav_order: 3
 permalink: /06_hash_tables/03_set_operations/
+
 ---
 
 <div align="center">
@@ -162,6 +163,7 @@ def longestConsecutive(nums: list[int]) -> int:
     max_length = 0
     
     for num in num_set:
+
         # Only start from sequence beginning
         if num - 1 not in num_set:
             current = num

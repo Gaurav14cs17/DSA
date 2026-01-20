@@ -4,6 +4,7 @@ title: "Welford's Algorithm"
 parent: "Loop Fusion & Online Algorithms"
 nav_order: 1
 permalink: /41_loop_fusion_online/01_welford_algorithm/
+
 ---
 
 <div align="center">
@@ -42,11 +43,13 @@ permalink: /41_loop_fusion_online/01_welford_algorithm/
 Given a sequence of values $x\_1, x\_2, \ldots, x\_n$, compute:
 
 **Sample Mean:**
+
 ```math
 \mu_n = \frac{1}{n} \sum_{i=1}^{n} x_i
 ```
 
 **Sample Variance:**
+
 ```math
 \sigma_n^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \mu_n)^2
 ```
@@ -58,6 +61,7 @@ The challenge: Compute these in **one pass** with **O(1) space** while maintaini
 ### Recurrence Relations
 
 **Mean Update:**
+
 ```math
 \mu_n = \mu_{n-1} + \frac{x_n - \mu_{n-1}}{n}
 ```
@@ -215,11 +219,13 @@ M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n)
 **Step 1: Write out what we want**
 
 By definition:
+
 ```math
 M_2(n) = \sum_{i=1}^{n} (x_i - \mu_n)^2
 ```
 
 Split this into old elements and the new element:
+
 ```math
 M_2(n) = \sum_{i=1}^{n-1} (x_i - \mu_n)^2 + (x_n - \mu_n)^2
 ```
@@ -227,6 +233,7 @@ M_2(n) = \sum_{i=1}^{n-1} (x_i - \mu_n)^2 + (x_n - \mu_n)^2
 **Step 2: Connect old mean to new mean**
 
 The mean changed! We know:
+
 ```math
 \mu_n = \mu_{n-1} + \frac{x_n - \mu_{n-1}}{n}
 ```
@@ -238,6 +245,7 @@ Then: $\mu\_n = \mu\_{n-1} + \frac{\delta}{n}$
 **Step 3: Adjust old deviations for new mean**
 
 For each old element $x\_i$ (where $i < n$):
+
 ```math
 x_i - \mu_n = (x_i - \mu_{n-1}) - (\mu_n - \mu_{n-1})
 = (x_i - \mu_{n-1}) - \frac{\delta}{n}
@@ -258,6 +266,7 @@ Expand using $(a - b)^2 = a^2 - 2ab + b^2$:
 **Key observation:** $\sum\_{i=1}^{n-1}(x\_i - \mu\_{n-1}) = 0$ (property of mean!)
 
 So:
+
 ```math
 = M_2(n-1) + (n-1)\frac{\delta^2}{n^2}
 ```
@@ -288,11 +297,13 @@ Factor out $(n-1)\delta^2/n^2$:
 Note that $x\_n - \mu\_n = \delta - \frac{\delta}{n} = \frac{(n-1)\delta}{n}$
 
 Therefore:
+
 ```math
 \frac{(n-1)\delta^2}{n} = \delta \cdot \frac{(n-1)\delta}{n} = (x_n - \mu_{n-1})(x_n - \mu_n)
 ```
 
 **Final result:**
+
 ```math
 M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n) \quad \blacksquare
 ```

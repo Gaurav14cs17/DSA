@@ -4,6 +4,7 @@ title: "Task Scheduling"
 parent: "Greedy Algorithms"
 nav_order: 2
 permalink: /19_greedy_algorithms/02_task_scheduling/
+
 ---
 
 <div align="center">

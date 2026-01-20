@@ -4,6 +4,7 @@ title: "Searching"
 nav_order: 24
 has_children: true
 permalink: /15_searching/
+
 ---
 
 <div align="center">

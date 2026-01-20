@@ -4,6 +4,7 @@ title: "Tries"
 nav_order: 20
 has_children: true
 permalink: /11_tries/
+
 ---
 
 <div align="center">

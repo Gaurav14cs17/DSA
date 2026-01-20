@@ -4,6 +4,7 @@ title: "Rotated Array Search"
 parent: "Searching"
 nav_order: 4
 permalink: /15_searching/04_binary_search_rotated_array/
+
 ---
 
 <div align="center">
@@ -100,6 +101,7 @@ def search(nums: list[int], target: int) -> int:
                 right = mid - 1
             else:
                 left = mid + 1
+
         # Right half is sorted
         else:
             if nums[mid] < target <= nums[right]:
@@ -156,9 +158,11 @@ def findMin(nums: list[int]) -> int:
         mid = (left + right) // 2
         
         if nums[mid] > nums[right]:
+
             # Minimum is in right half
             left = mid + 1
         else:
+
             # Minimum is in left half (including mid)
             right = mid
     
@@ -182,6 +186,7 @@ def findMinWithDuplicates(nums: list[int]) -> int:
         elif nums[mid] < nums[right]:
             right = mid
         else:
+
             # nums[mid] == nums[right], can't decide
             right -= 1
     

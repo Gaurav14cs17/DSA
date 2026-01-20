@@ -5,6 +5,7 @@ parent: "Number Theory"
 nav_order: 8
 has_children: true
 permalink: /30_number_theory/08_binomial_coefficients/
+
 ---
 
 <div align="center">

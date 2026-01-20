@@ -4,6 +4,7 @@ title: "BFS Problems"
 parent: "Graphs"
 nav_order: 2
 permalink: /10_graphs/02_bfs_problems/
+
 ---
 
 <div align="center">

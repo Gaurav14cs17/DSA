@@ -4,6 +4,7 @@ title: "2D Array Search"
 parent: "Searching"
 nav_order: 3
 permalink: /15_searching/03_binary_search_2d_array/
+
 ---
 
 <div align="center">

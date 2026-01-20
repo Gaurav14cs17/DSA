@@ -4,6 +4,7 @@ title: "Tree Dynamic Programming"
 parent: "Tree Algorithms"
 nav_order: 2
 permalink: /25_tree_algorithms/02_tree_dp/
+
 ---
 
 <div align="center">
@@ -303,6 +304,7 @@ class TreeDPRerooting:
         
         Time: O(n), Space: O(n)
         """
+
         # First DFS: compute subtree sizes and sums
         def dfs1(u: int, parent: int):
             self.subtree_size[u] = 1
@@ -318,6 +320,7 @@ class TreeDPRerooting:
         def dfs2(u: int, parent: int):
             for v in self.graph[u]:
                 if v != parent:
+
                     # Move root from u to v
                     # Nodes in v's subtree get 1 closer
                     # Nodes outside v's subtree get 1 farther

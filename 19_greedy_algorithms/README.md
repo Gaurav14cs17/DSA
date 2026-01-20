@@ -4,6 +4,7 @@ title: "Greedy Algorithms"
 nav_order: 28
 has_children: true
 permalink: /19_greedy_algorithms/
+
 ---
 
 <div align="center">

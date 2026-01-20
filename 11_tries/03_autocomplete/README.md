@@ -4,6 +4,7 @@ title: "Autocomplete"
 parent: "Tries"
 nav_order: 3
 permalink: /11_tries/03_autocomplete/
+
 ---
 
 <div align="center">
@@ -146,6 +147,7 @@ def suggestedProducts(products: list[str], searchWord: str) -> list[list[str]]:
     
     Time: O(n×L + m×L), Space: O(n×L)
     """
+
     # Build trie
     trie = AutocompleteTrie()
     for product in products:

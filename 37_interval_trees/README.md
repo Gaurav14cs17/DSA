@@ -4,6 +4,7 @@ title: "Interval Trees"
 nav_order: 39
 has_children: true
 permalink: /37_interval_trees/
+
 ---
 
 <div align="center">

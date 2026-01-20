@@ -5,6 +5,7 @@ parent: "Number Theory"
 nav_order: 7
 has_children: true
 permalink: /30_number_theory/07_linear_diophantine/
+
 ---
 
 <div align="center">
@@ -138,6 +139,7 @@ def positive_solutions(a: int, b: int, c: int) -> list[tuple[int, int]]:
     step_y = -a // g
     
     solutions = []
+
     # Find range of k where both x, y >= 0
     k = 0
     while True:

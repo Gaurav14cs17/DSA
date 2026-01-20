@@ -4,6 +4,7 @@ title: "Basic String"
 parent: "Strings"
 nav_order: 1
 permalink: /02_strings/01_basic_string/
+
 ---
 
 <div align="center">

@@ -4,6 +4,7 @@ title: "Word Search"
 parent: "Tries"
 nav_order: 2
 permalink: /11_tries/02_word_search/
+
 ---
 
 <div align="center">
@@ -107,6 +108,7 @@ class WordDictionary:
             
             char = word[i]
             if char == '.':
+
                 # Try all children
                 for child in node.children.values():
                     if dfs(child, i + 1):
@@ -127,6 +129,7 @@ def findWords(board: list[list[str]], words: list[str]) -> list[str]:
     
     Time: O(m×n×4^L), Space: O(dict)
     """
+
     # Build trie
     root = TrieNode()
     for word in words:
@@ -182,6 +185,7 @@ def wordBreak(s: str, wordDict: list[str]) -> bool:
     
     Time: O(n²), Space: O(dict + n)
     """
+
     # Build trie
     root = TrieNode()
     for word in wordDict:

@@ -5,6 +5,7 @@ parent: "Number Theory"
 nav_order: 11
 has_children: true
 permalink: /30_number_theory/11_legendres_formula/
+
 ---
 
 <div align="center">

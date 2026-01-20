@@ -4,6 +4,7 @@ title: "Grid Backtracking"
 parent: "Backtracking"
 nav_order: 4
 permalink: /17_backtracking/04_grid_backtracking/
+
 ---
 
 <div align="center">
@@ -61,6 +62,7 @@ Mark cells to avoid cycles:
 
 ```python
 board[r][c] = '#'  # Mark
+
 # ... explore ...
 board[r][c] = original  # Restore
 ```

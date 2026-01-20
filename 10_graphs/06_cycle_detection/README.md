@@ -4,6 +4,7 @@ title: "Cycle Detection"
 parent: "Graphs"
 nav_order: 6
 permalink: /10_graphs/06_cycle_detection/
+
 ---
 
 <div align="center">
@@ -219,6 +220,7 @@ def eventualSafeNodes(graph: list[list[int]]) -> list[int]:
     Time: O(V+E), Space: O(V)
     """
     n = len(graph)
+
     # 0=unvisited, 1=visiting, 2=safe
     state = [0] * n
     

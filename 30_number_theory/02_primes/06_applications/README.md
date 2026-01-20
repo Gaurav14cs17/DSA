@@ -5,6 +5,7 @@ parent: "Prime Numbers"
 grand_parent: "Number Theory"
 nav_order: 6
 permalink: /30_number_theory/02_primes/06_applications/
+
 ---
 
 <div align="center">
@@ -37,6 +38,7 @@ permalink: /30_number_theory/02_primes/06_applications/
 ### 1️⃣ Multiplicative Functions
 
 A function $f: \mathbb{Z}^+ \to \mathbb{C}$ is **multiplicative** if:
+
 ```math
 f(mn) = f(m) \cdot f(n) \quad \text{when } \gcd(m, n) = 1
 ```
@@ -55,6 +57,7 @@ f(mn) = f(m) \cdot f(n) \quad \text{when } \gcd(m, n) = 1
 ### 2️⃣ Möbius Function
 
 **Definition:**
+
 ```math
 \mu(n) = \begin{cases}
 1 & \text{if } n = 1 \\
@@ -223,6 +226,7 @@ def mobius_sieve(n: int) -> list[int]:
     
     for i in range(2, n + 1):
         if is_prime[i]:
+
             # i is prime
             for j in range(i, n + 1, i):
                 is_prime[j] = (j == i)
@@ -272,6 +276,7 @@ class Solution:
         uf = UnionFind(max_val + 1)
         
         for num in nums:
+
             # Factorize and union with each prime factor
             d = 2
             temp = num
@@ -385,6 +390,7 @@ def count_k_almost_primes(n: int, k: int) -> int:
         >>> count_k_almost_primes(100, 2)  # semiprimes
         34
     """
+
     # Compute SPF
     spf = list(range(n + 1))
     for i in range(2, int(n**0.5) + 1):
@@ -457,6 +463,7 @@ def count_with_k_distinct_primes(n: int, k: int) -> int:
     Time: O(n log log n)
     Space: O(n)
     """
+
     # omega[i] = number of distinct prime factors of i
     omega = [0] * (n + 1)
     

@@ -3,6 +3,7 @@ layout: default
 title: "Aho-Corasick Algorithm"
 parent: "String Algorithms"
 nav_order: 6
+
 ---
 
 # 🔀 Aho-Corasick Algorithm
@@ -177,6 +178,7 @@ class AhoCorasick:
         node = self.root
         
         for i, char in enumerate(text):
+
             # Follow failure links until match found or reach root
             while node != self.root and char not in node.children:
                 node = node.fail
@@ -204,6 +206,7 @@ ac.build_automaton()
 text = "ushers"
 matches = ac.search(text)
 print(f"Matches: {matches}")
+
 # Output: [(2, 'she'), (2, 'he'), (2, 'hers')]
 ```
 
@@ -270,6 +273,7 @@ class AhoCorasickOptimized:
         state = 0
         
         for i, char in enumerate(text):
+
             # Follow failure links
             while state != 0 and char not in self.goto[state]:
                 state = self.fail[state]
@@ -374,6 +378,7 @@ class StreamChecker:
     """
     
     def __init__(self, words):
+
         # Build Aho-Corasick on reversed words
         self.ac = AhoCorasick()
         for word in words:
@@ -563,6 +568,7 @@ def replace_with_priority(text, rules):
     i = 0
     while i < len(text):
         if i in positions:
+
             # Choose highest priority match
             priority, replacement, length = min(positions[i])
             result.append(replacement)
@@ -589,6 +595,7 @@ def find_restriction_sites(dna, enzymes):
     
     for enzyme, sequence in enzymes.items():
         ac.add_pattern(sequence, enzyme)
+
         # Also add reverse complement
         rev_comp = reverse_complement(sequence)
         ac.add_pattern(rev_comp, f"{enzyme}_rev")

@@ -5,6 +5,7 @@ parent: "Chinese Remainder Theorem"
 grand_parent: "Number Theory"
 nav_order: 1
 permalink: /30_number_theory/06_chinese_remainder/01_basic_crt/
+
 ---
 
 <div align="center">
@@ -140,6 +141,7 @@ def chinese_remainder(remainders: list[int], moduli: list[int]) -> int:
     Time: O(n log M) where M = product of moduli
     Space: O(1)
     """
+
     # Compute M = product of all moduli
     M = 1
     for m in moduli:
@@ -257,6 +259,7 @@ def factorial_mod(n: int, p: int) -> int:
 # Compute 50! using CRT with multiple primes
 primes = [101, 103, 107, 109]
 remainders = [factorial_mod(50, p) for p in primes]
+
 # Reconstruct full value (within the product of primes)
 ```
 

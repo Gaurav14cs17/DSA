@@ -5,6 +5,7 @@ parent: "Linear Diophantine Equations"
 grand_parent: "Number Theory"
 nav_order: 3
 permalink: /30_number_theory/07_linear_diophantine/03_frobenius_number/
+
 ---
 
 <div align="center">

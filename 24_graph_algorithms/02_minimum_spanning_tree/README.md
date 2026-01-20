@@ -4,6 +4,7 @@ title: "Minimum Spanning Tree"
 parent: "Graph Algorithms"
 nav_order: 2
 permalink: /24_graph_algorithms/02_minimum_spanning_tree/
+
 ---
 
 <div align="center">
@@ -189,6 +190,7 @@ def kruskal(n: int, edges: List[Tuple[int, int, int]]) -> Tuple[int, List[Tuple[
     
     Time: O(E log E), Space: O(V)
     """
+
     # Sort edges by weight
     edges = sorted(edges, key=lambda x: x[2])
     
@@ -221,6 +223,7 @@ def prim(n: int, edges: List[Tuple[int, int, int]], start: int = 0) -> Tuple[int
     
     Time: O(E log V), Space: O(V + E)
     """
+
     # Build adjacency list
     from collections import defaultdict
     graph = defaultdict(list)
@@ -277,6 +280,7 @@ def prim_dense(n: int, adj_matrix: List[List[int]]) -> Tuple[int, List[Tuple[int
     total_weight = 0
     
     for _ in range(n):
+
         # Find minimum edge to unvisited vertex
         u = -1
         for v in range(n):
@@ -376,6 +380,7 @@ def findCriticalAndPseudoCriticalEdges(n: int, edges: List[List[int]]) -> List[L
     
     Time: O(E² · α(V)), Space: O(E)
     """
+
     # Add index to edges
     indexed_edges = [(u, v, w, i) for i, (u, v, w) in enumerate(edges)]
     indexed_edges.sort(key=lambda x: x[2])
@@ -412,9 +417,11 @@ def findCriticalAndPseudoCriticalEdges(n: int, edges: List[List[int]]) -> List[L
     pseudo_critical = []
     
     for i in range(len(edges)):
+
         # Check if critical: MST weight increases without it
         if find_mst_weight(exclude_idx=i) > normal_mst:
             critical.append(i)
+
         # Check if pseudo-critical: can be included without increasing weight
         elif find_mst_weight(include_idx=i) == normal_mst:
             pseudo_critical.append(i)

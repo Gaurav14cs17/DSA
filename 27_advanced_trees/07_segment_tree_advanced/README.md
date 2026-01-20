@@ -5,6 +5,7 @@ parent: "Advanced Trees"
 nav_order: 7
 has_children: true
 permalink: /27_advanced_trees/07_segment_tree_advanced/
+
 ---
 
 <div align="center">

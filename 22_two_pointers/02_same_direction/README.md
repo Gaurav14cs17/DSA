@@ -4,6 +4,7 @@ title: "Same Direction"
 parent: "Two Pointers"
 nav_order: 2
 permalink: /22_two_pointers/02_same_direction/
+
 ---
 
 <div align="center">
@@ -107,17 +108,17 @@ for fast in range(1, n):
 
 **Proof by induction**:
 
-**Base case** (\(slow = 1\)): \([0, 1)\) contains \(arr[0]\), which is trivially unique.
+**Base case** ($slow = 1$): \([0, 1)\) contains $arr[0]$, which is trivially unique.
 
-**Inductive step**: Assume \([0, slow)\) contains \(k\) unique elements.
+**Inductive step**: Assume \([0, slow)\) contains $k$ unique elements.
 
-When \(fast\) points to element \(x\):
-- If \(x = arr[slow-1]\): duplicate, skip (invariant preserved)
-- If \(x \neq arr[slow-1]\): 
-  - Since array is sorted and \(x > arr[slow-1]\)
-  - \(x\) is different from all elements in \([0, slow)\)
-  - Write \(x\) at position \(slow\), increment \(slow\)
-  - Now \([0, slow)\) has \(k+1\) unique elements ∎
+When $fast$ points to element $x$:
+- If $x = arr[slow-1]$: duplicate, skip (invariant preserved)
+- If $x \neq arr[slow-1]$: 
+  - Since array is sorted and $x > arr[slow-1]$
+  - $x$ is different from all elements in \([0, slow)\)
+  - Write $x$ at position $slow$, increment $slow$
+  - Now \([0, slow)\) has $k+1$ unique elements ∎
 
 #### 📊 Visual Example
 
@@ -162,11 +163,11 @@ Result:  [1, 2, 3, 4, _, _, _, _]
 ### 3️⃣ Allow K Duplicates — Generalization
 
 {: .note }
-> Generalize to allow at most \(k\) copies of each element.
+> Generalize to allow at most $k$ copies of each element.
 
 #### The Formula
 
-Compare with element \(k\) positions back:
+Compare with element $k$ positions back:
 
 ```math
 \text{if } arr[fast] \neq arr[slow - k]: \text{ keep element}
@@ -174,10 +175,10 @@ Compare with element \(k\) positions back:
 
 #### Proof
 
-If we're keeping at most \(k\) copies:
-- \(arr[slow-k]\) through \(arr[slow-1]\) are the last \(k\) written elements
-- If \(arr[fast] = arr[slow-k]\), then we already have \(k\) copies of this value
-- If \(arr[fast] \neq arr[slow-k]\), we have fewer than \(k\) copies, safe to add
+If we're keeping at most $k$ copies:
+- $arr[slow-k]$ through $arr[slow-1]$ are the last $k$ written elements
+- If $arr[fast] = arr[slow-k]$, then we already have $k$ copies of this value
+- If $arr[fast] \neq arr[slow-k]$, we have fewer than $k$ copies, safe to add
 
 ---
 
@@ -189,9 +190,9 @@ If we're keeping at most \(k\) copies:
 #### State Definition
 
 We maintain three pointers:
-- \(low\): boundary of 0s region
-- \(mid\): current element being examined
-- \(high\): boundary of 2s region
+- $low$: boundary of 0s region
+- $mid$: current element being examined
+- $high$: boundary of 2s region
 
 #### Invariant
 
@@ -214,6 +215,7 @@ while mid <= high:
     else:  # arr[mid] == 2
         swap(arr[mid], arr[high])
         high--
+
         # Don't increment mid (swapped element is unknown)
 ```
 
@@ -222,20 +224,20 @@ while mid <= high:
 **Claim**: The invariant is maintained after each operation.
 
 **Case arr[mid] = 0**:
-- \(arr[low]\) is in the 1s region (or \(low = mid\))
+- $arr[low]$ is in the 1s region (or $low = mid$)
 - Swap puts 0 at correct position
 - Both boundaries advance, maintaining invariant
 
 **Case arr[mid] = 1**:
 - Element already in correct region
-- Just advance \(mid\)
+- Just advance $mid$
 
 **Case arr[mid] = 2**:
-- Swap with \(high\), putting 2 at end
-- Decrement \(high\) (2s region expands)
-- Don't increment \(mid\) (new element at \(mid\) is unknown)
+- Swap with $high$, putting 2 at end
+- Decrement $high$ (2s region expands)
+- Don't increment $mid$ (new element at $mid$ is unknown)
 
-**Termination**: When \(mid > high\), unknown region is empty. ∎
+**Termination**: When $mid > high$, unknown region is empty. ∎
 
 #### 📊 Visual Example
 
@@ -320,21 +322,21 @@ while p2 >= 0:
 
 At any point:
 - We've filled positions \((p, m+n)\) with largest elements
-- Remaining positions \([0, p]\) need \(p1+1\) elements from nums1 and \(p2+1\) from nums2
-- \(p = p1 + p2 + 1\) (exactly enough space!)
+- Remaining positions $[0, p]$ need $p1+1$ elements from nums1 and $p2+1$ from nums2
+- $p = p1 + p2 + 1$ (exactly enough space!)
 
-Since \(p \geq p1\) always, we never overwrite unprocessed nums1 elements. ∎
+Since $p \geq p1$ always, we never overwrite unprocessed nums1 elements. ∎
 
 ---
 
 ### 6️⃣ Subsequence Check
 
 {: .note }
-> Check if string \(s\) is a subsequence of string \(t\).
+> Check if string $s$ is a subsequence of string $t$.
 
 #### Algorithm
 
-Use pointer \(i\) for \(s\), iterate through \(t\):
+Use pointer $i$ for $s$, iterate through $t$:
 
 ```python
 i = 0
@@ -346,7 +348,7 @@ return i == len(s)
 
 #### Time Complexity
 
-\(O(|t|)\) — single pass through \(t\).
+\(O(|t|)\) — single pass through $t$.
 
 ---
 
@@ -549,6 +551,7 @@ def moveZeroes(nums: list[int]) -> None:
     
     for fast in range(len(nums)):
         if nums[fast] != 0:
+
             # Swap to maintain elements (not just overwrite)
             nums[slow], nums[fast] = nums[fast], nums[slow]
             slow += 1
@@ -580,6 +583,7 @@ def sortColors(nums: list[int]) -> None:
         else:  # nums[mid] == 2
             nums[mid], nums[high] = nums[high], nums[mid]
             high -= 1
+
             # Don't increment mid - need to check swapped element
 
 def merge(nums1: list[int], m: int, nums2: list[int], n: int) -> None:

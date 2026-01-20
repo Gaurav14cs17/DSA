@@ -4,6 +4,7 @@ title: "1D DP"
 parent: "Dynamic Programming"
 nav_order: 1
 permalink: /18_dynamic_programming/01_1d_dp/
+
 ---
 
 <div align="center">

@@ -5,6 +5,7 @@ parent: "Chinese Remainder Theorem"
 grand_parent: "Number Theory"
 nav_order: 3
 permalink: /30_number_theory/06_chinese_remainder/03_applications/
+
 ---
 
 <div align="center">

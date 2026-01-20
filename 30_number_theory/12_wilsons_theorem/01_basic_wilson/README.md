@@ -5,6 +5,7 @@ parent: "Wilson's Theorem"
 grand_parent: "Number Theory"
 nav_order: 1
 permalink: /30_number_theory/12_wilsons_theorem/01_basic_wilson/
+
 ---
 
 <div align="center">
@@ -218,6 +219,7 @@ For prime p, the multiplicative group (ℤ/pℤ)* has order p-1.
 4. All other elements pair up: a × a⁻¹ ≡ 1
 
 Therefore:
+
 ```math
 (p-1)! = 1 \times \underbrace{(2 \times 2^{-1}) \times (3 \times 3^{-1}) \times \cdots}_{\text{all pairs = 1}} \times (p-1) \equiv 1 \times 1 \times (p-1) \equiv -1
 ```

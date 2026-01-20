@@ -4,6 +4,7 @@ title: "Palindrome Problems with KMP"
 parent: "KMP Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 5
+
 ---
 
 # 🎭 Palindrome Problems with KMP
@@ -275,6 +276,7 @@ def valid_palindrome_one_delete(s):
     
     while left < right:
         if s[left] != s[right]:
+
             # Try deleting left or right
             option1 = s[:left] + s[left+1:]
             option2 = s[:right] + s[right+1:]
@@ -359,6 +361,7 @@ def min_insertions_palindrome(s):
     
     Approach: Find longest common subsequence with reverse
     """
+
     # This problem needs DP for optimal solution
     # KMP helps find palindrome regions to guide DP
     
@@ -461,6 +464,7 @@ class Solution:
         
         while left < right:
             if s[left] != s[right]:
+
                 # Try deleting either left or right
                 return (is_palindrome(s, left + 1, right) or 
                         is_palindrome(s, left, right - 1))

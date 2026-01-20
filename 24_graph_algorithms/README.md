@@ -4,6 +4,7 @@ title: "Graph Algorithms"
 nav_order: 24
 has_children: true
 permalink: /24_graph_algorithms/
+
 ---
 
 <div align="center">
@@ -487,6 +488,7 @@ def tarjan_scc(graph: Dict[int, List[int]], n: int) -> List[List[int]]:
 ### Pattern 1: Graph Transformation
 
 ```python
+
 # Transform problem into graph problem
 # Example: Course prerequisites → Directed graph
 def build_graph(n: int, prerequisites: List[List[int]]):
@@ -499,6 +501,7 @@ def build_graph(n: int, prerequisites: List[List[int]]):
 ### Pattern 2: State Space Search
 
 ```python
+
 # Model states as nodes, transitions as edges
 # Example: Word ladder → BFS on transformation graph
 ```
@@ -506,6 +509,7 @@ def build_graph(n: int, prerequisites: List[List[int]]):
 ### Pattern 3: Binary Search + Graph
 
 ```python
+
 # Binary search on answer + graph validation
 # Example: Minimum effort path → Binary search + BFS
 ```

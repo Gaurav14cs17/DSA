@@ -4,6 +4,7 @@ title: "Modular Inverse"
 parent: "Modular Arithmetic"
 grand_parent: "Number Theory"
 nav_order: 2
+
 ---
 
 # 🔄 Modular Inverse

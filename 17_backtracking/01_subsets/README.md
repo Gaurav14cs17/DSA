@@ -4,6 +4,7 @@ title: "Subsets"
 parent: "Backtracking"
 nav_order: 1
 permalink: /17_backtracking/01_subsets/
+
 ---
 
 <div align="center">
@@ -98,6 +99,7 @@ def subsetsWithDup(nums: list[int]) -> list[list[int]]:
         result.append(current[:])
         
         for i in range(start, len(nums)):
+
             # Skip duplicates at same level
             if i > start and nums[i] == nums[i - 1]:
                 continue

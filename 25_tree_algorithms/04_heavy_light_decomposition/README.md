@@ -4,6 +4,7 @@ title: "Heavy-Light Decomposition"
 parent: "Tree Algorithms"
 nav_order: 4
 permalink: /25_tree_algorithms/04_heavy_light_decomposition/
+
 ---
 
 <div align="center">
@@ -324,6 +325,7 @@ class HeavyLightDecomposition:
         
         Time: O(log n)
         """
+
         # Subtree occupies contiguous range in DFS order
         return self.seg_tree.query(self.pos[node], 
                                    self.pos[node] + self.subtree_size[node] - 1)

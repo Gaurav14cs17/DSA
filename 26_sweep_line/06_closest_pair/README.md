@@ -4,6 +4,7 @@ title: "Closest Pair of Points"
 parent: "Sweep Line Algorithm"
 nav_order: 6
 permalink: /26_sweep_line/06_closest_pair/
+
 ---
 
 <div align="center">
@@ -428,6 +429,7 @@ def find_closest_to_k(arr: List[int], k: int, x: int) -> List[int]:
     
     Time: O(log n + k), Space: O(1)
     """
+
     # Binary search for starting position
     left, right = 0, len(arr) - k
     

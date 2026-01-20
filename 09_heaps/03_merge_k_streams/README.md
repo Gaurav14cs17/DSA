@@ -4,6 +4,7 @@ title: "Merge K Streams"
 parent: "Heaps"
 nav_order: 3
 permalink: /09_heaps/03_merge_k_streams/
+
 ---
 
 <div align="center">
@@ -86,6 +87,7 @@ def mergeKLists(lists: list) -> 'ListNode':
     
     Time: O(n log k), Space: O(k)
     """
+
     # Handle empty input
     heap = []
     for i, head in enumerate(lists):
@@ -164,6 +166,7 @@ def smallestRange(nums: list[list[int]]) -> list[int]:
     
     Time: O(n log k), Space: O(k)
     """
+
     # Initialize heap with first element from each list
     heap = []
     current_max = float('-inf')

@@ -4,6 +4,7 @@ title: "Heaps"
 nav_order: 18
 has_children: true
 permalink: /09_heaps/
+
 ---
 
 <div align="center">
@@ -165,6 +166,7 @@ peek = heap[0]  # 5 (next minimum)
 ### Max-Heap (Negate Values)
 
 ```python
+
 # Max-heap using negation
 max_heap = []
 heapq.heappush(max_heap, -5)
@@ -177,6 +179,7 @@ max_val = -heapq.heappop(max_heap)  # 7
 ### Heap with Custom Key
 
 ```python
+
 # Heap of tuples (priority, value)
 heap = []
 heapq.heappush(heap, (2, "task B"))

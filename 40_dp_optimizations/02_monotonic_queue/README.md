@@ -34,6 +34,7 @@ for i in range(n):
 **With Monotonic Deque:**
 ```python
 for i in range(n):
+
     # Remove out-of-range: O(1) amortized
     # Query min/max: O(1)
     # Update deque: O(1) amortized
@@ -79,6 +80,7 @@ def monotonic_deque_dp(nums, k, minimize=True):
     dq = deque([0])
     
     for i in range(1, n):
+
         # Step 1: Remove indices outside window [i-k, i-1]
         while dq and dq[0] < i - k:
             dq.popleft()
@@ -94,10 +96,12 @@ def monotonic_deque_dp(nums, k, minimize=True):
         
         # Step 3: Maintain monotonic property
         if minimize:
+
             # Keep increasing order (front = minimum)
             while dq and dp[dq[-1]] >= dp[i]:
                 dq.pop()
         else:
+
             # Keep decreasing order (front = maximum)
             while dq and dp[dq[-1]] <= dp[i]:
                 dq.pop()
@@ -134,6 +138,7 @@ def constrained_subset_sum(nums, k):
     dq = deque([0])
     
     for i in range(1, n):
+
         # Remove out-of-range indices
         while dq and dq[0] < i - k:
             dq.popleft()
@@ -209,6 +214,7 @@ def max_result(nums, k):
     dq = deque([0])
     
     for i in range(1, n):
+
         # Remove indices outside window
         while dq and dq[0] < i - k:
             dq.popleft()
@@ -247,11 +253,13 @@ def find_max_value_of_equation(points, k):
     Time: O(n)
     Space: O(n)
     """
+
     # Deque stores (y - x, x) pairs
     dq = deque()
     max_val = float('-inf')
     
     for x, y in points:
+
         # Remove points where x[i] - x[j] > k
         while dq and x - dq[0][1] > k:
             dq.popleft()
@@ -301,6 +309,7 @@ def shortest_subarray(nums, k):
     min_len = float('inf')
     
     for i in range(n + 1):
+
         # Check if current prefix can form valid subarray
         while dq and prefix[i] - prefix[dq[0]] >= k:
             min_len = min(min_len, i - dq.popleft())
@@ -335,6 +344,7 @@ def max_sliding_window(nums, k):
     dq = deque()  # Store indices
     
     for i in range(len(nums)):
+
         # Remove indices outside window
         while dq and dq[0] < i - k + 1:
             dq.popleft()
@@ -427,6 +437,7 @@ Invariant: Deque always decreasing, front = maximum
 ### Transformation Tricks
 
 ```python
+
 # Original: max(y[i] + y[j] + x[i] - x[j])
 # Transform: max((y[i] + x[i]) + (y[j] - x[j]))
 #            fixed for i     maximize this

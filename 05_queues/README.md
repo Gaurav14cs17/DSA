@@ -4,6 +4,7 @@ title: "Queues"
 nav_order: 14
 has_children: true
 permalink: /05_queues/
+
 ---
 
 <div align="center">

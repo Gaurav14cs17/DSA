@@ -4,6 +4,7 @@ title: "Tree Hashing & Isomorphism"
 parent: "Tree Algorithms"
 nav_order: 9
 permalink: /25_tree_algorithms/09_tree_hashing/
+
 ---
 
 <div align="center">
@@ -277,9 +278,11 @@ class UnrootedTreeHashing:
         memo = {}
         
         if len(centers) == 1:
+
             # Single center
             return self.hash_subtree(centers[0], -1, memo)
         else:
+
             # Two centers: hash both directions and combine
             h1 = self.hash_subtree(centers[0], centers[1], memo)
             h2 = self.hash_subtree(centers[1], centers[0], memo)
@@ -378,12 +381,14 @@ class AHU_TreeIsomorphism:
         
         Time: O(n log n), Space: O(n)
         """
+
         # Find centers
         centers = self._find_centers()
         
         if len(centers) == 1:
             return self._encode_tree(centers[0], -1)
         else:
+
             # Two centers: pick canonical one
             s1 = self._encode_tree(centers[0], centers[1])
             s2 = self._encode_tree(centers[1], centers[0])
@@ -448,6 +453,7 @@ def check_isomorphic_ahu(n1: int, edges1: List[List[int]],
 
 def example_binary_tree_hashing():
     """Example: Hash binary trees"""
+
     # Tree 1:    1
     #           / \
     #          2   3
@@ -478,6 +484,7 @@ def example_binary_tree_hashing():
 
 def example_general_tree_isomorphism():
     """Example: Check isomorphism of general trees"""
+
     # Tree 1
     n1 = 5
     edges1 = [[0, 1], [0, 2], [1, 3], [1, 4]]

@@ -4,6 +4,7 @@ title: "Binary Search on Answer"
 parent: "Searching"
 nav_order: 2
 permalink: /15_searching/02_binary_search_on_answer/
+
 ---
 
 <div align="center">

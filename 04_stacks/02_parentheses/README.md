@@ -4,6 +4,7 @@ title: "Parentheses"
 parent: "Stacks"
 nav_order: 2
 permalink: /04_stacks/02_parentheses/
+
 ---
 
 <div align="center">
@@ -494,9 +495,11 @@ def isValid(s: str) -> bool:
     
     for char in s:
         if char in pairs:
+
             # Opening bracket
             stack.append(char)
         else:
+
             # Closing bracket
             if not stack or pairs[stack.pop()] != char:
                 return False
@@ -511,6 +514,7 @@ def isValidOptimized(s: str) -> bool:
     - Odd length → impossible to balance
     - Closing bracket when stack empty → immediate false
     """
+
     # Optimization 1: Odd length impossible
     if len(s) % 2 != 0:
         return False
@@ -522,6 +526,7 @@ def isValidOptimized(s: str) -> bool:
         if char in pairs:
             stack.append(char)
         else:
+
             # Optimization 2: Early return
             if not stack or pairs[stack.pop()] != char:
                 return False
@@ -546,9 +551,11 @@ def minAddToMakeValid(s: str) -> int:
         if char == '(':
             unmatched_open += 1
         elif unmatched_open > 0:
+
             # Match with previous '('
             unmatched_open -= 1
         else:
+
             # No '(' to match, this ')' is orphaned
             unmatched_close += 1
     
@@ -564,6 +571,7 @@ def minRemoveToMakeValid(s: str) -> str:
     
     Time: O(n), Space: O(n)
     """
+
     # Pass 1: Identify brackets to remove
     to_remove = set()
     stack = []
@@ -603,9 +611,11 @@ def longestValidParentheses(s: str) -> int:
         else:
             stack.pop()
             if stack:
+
                 # Calculate length using base
                 max_length = max(max_length, i - stack[-1])
             else:
+
                 # Stack empty, this ')' is unmatched
                 stack.append(i)  # New base
     
@@ -629,9 +639,11 @@ def longestValidParenthesesDP(s: str) -> int:
     for i in range(1, n):
         if s[i] == ')':
             if s[i-1] == '(':
+
                 # Case: ...()
                 dp[i] = (dp[i-2] if i >= 2 else 0) + 2
             elif i - dp[i-1] - 1 >= 0 and s[i - dp[i-1] - 1] == '(':
+
                 # Case: ...))
                 dp[i] = dp[i-1] + 2 + (dp[i - dp[i-1] - 2] if i - dp[i-1] - 2 >= 0 else 0)
             
@@ -653,6 +665,7 @@ def generateParenthesis(n: int) -> list[str]:
     result = []
     
     def backtrack(current: str, open_count: int, close_count: int):
+
         # Base case: complete string
         if len(current) == 2 * n:
             result.append(current)
@@ -737,6 +750,7 @@ def reverseParentheses(s: str) -> str:
         if char == '(':
             stack.append('')  # New level
         elif char == ')':
+
             # Reverse current level and append to previous
             current = stack.pop()
             stack[-1] += current[::-1]
@@ -762,6 +776,7 @@ def scoreOfParentheses(s: str) -> int:
             stack.append(0)  # New depth
         else:
             score = stack.pop()
+
             # () → 1, (A) → 2*A
             stack[-1] += max(2 * score, 1)
     
@@ -932,6 +947,7 @@ A: Stack for multiple types or when order matters. Counter for single type with 
 ### Pitfall 1: Not Checking Stack Empty
 
 ```python
+
 # ❌ WRONG: May crash
 if pairs[stack.pop()] != char:
     return False
@@ -944,6 +960,7 @@ if not stack or pairs[stack.pop()] != char:
 ### Pitfall 2: Forgetting Base Case
 
 ```python
+
 # ❌ WRONG: No base in stack
 stack = []  # Crash on first valid ')'
 
@@ -954,6 +971,7 @@ stack = [-1]  # Enables length calculation
 ### Pitfall 3: Wrong Backtracking Constraint
 
 ```python
+
 # ❌ WRONG: Allows invalid intermediate
 if close_count <= n:  # Too permissive!
     backtrack(current + ')')

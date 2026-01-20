@@ -4,6 +4,7 @@ title: "Eulerian Path & Circuit"
 parent: "Graph Algorithms"
 nav_order: 7
 permalink: /24_graph_algorithms/07_eulerian_path/
+
 ---
 
 <div align="center">
@@ -160,10 +161,12 @@ class EulerianPath:
                 odd_degree_vertices.append(v)
         
         if len(odd_degree_vertices) == 0:
+
             # Eulerian circuit
             start = next((v for v in range(self.n) if len(self.graph[v]) > 0), 0)
             return (True, start, True)
         elif len(odd_degree_vertices) == 2:
+
             # Eulerian path
             return (True, odd_degree_vertices[0], False)
         else:
@@ -183,10 +186,12 @@ class EulerianPath:
                 return (False, -1, False)
         
         if len(start_vertices) == 0 and len(end_vertices) == 0:
+
             # Eulerian circuit
             start = next((v for v in range(self.n) if self.out_degree[v] > 0), 0)
             return (True, start, True)
         elif len(start_vertices) == 1 and len(end_vertices) == 1:
+
             # Eulerian path
             return (True, start_vertices[0], False)
         else:
@@ -217,6 +222,7 @@ class EulerianPath:
             v = stack[-1]
             
             if graph[v]:
+
                 # Take next edge
                 u = graph[v].pop()
                 
@@ -226,6 +232,7 @@ class EulerianPath:
                 
                 stack.append(u)
             else:
+
                 # No more edges, add to path
                 path.append(stack.pop())
         
@@ -256,6 +263,7 @@ def findItinerary(tickets: List[List[str]]) -> List[str]:
     
     while stack:
         while graph[stack[-1]]:
+
             # Take lexicographically smallest available
             next_dest = graph[stack[-1]].pop()
             stack.append(next_dest)
@@ -343,6 +351,7 @@ def find_shortest_superstring_eulerian(words: List[str]) -> str:
     for i in range(n):
         for j in range(n):
             if i != j:
+
                 # Find maximum overlap between words[i] suffix and words[j] prefix
                 max_overlap = 0
                 for k in range(1, min(len(words[i]), len(words[j])) + 1):
@@ -391,6 +400,7 @@ def seven_bridges():
     
     Proves no Eulerian path exists (4 vertices with odd degree).
     """
+
     # Königsberg bridges graph
     n = 4  # 4 land masses
     edges = [
@@ -404,6 +414,7 @@ def seven_bridges():
     exists, _, _ = ep.has_eulerian_path()
     
     print(f"Seven Bridges of Königsberg: {'Solvable' if exists else 'No solution'}")
+
     # Output: No solution (Euler proved this in 1736)
 ```
 

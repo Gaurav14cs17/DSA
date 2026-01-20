@@ -5,6 +5,7 @@ parent: "Euler's Totient"
 grand_parent: "Number Theory"
 nav_order: 1
 permalink: /30_number_theory/05_euler_totient/01_basic_totient/
+
 ---
 
 <div align="center">
@@ -64,6 +65,7 @@ For $n = p\_1^{a\_1} \cdot p\_2^{a\_2} \cdots p\_k^{a\_k}$:
 ```
 
 **Equivalently:**
+
 ```math
 \phi(n) = \prod_{i=1}^{k} p_i^{a_i - 1}(p_i - 1)
 ```
@@ -132,6 +134,7 @@ def euler_phi(n: int) -> int:
     
     while p * p <= n:
         if n % p == 0:
+
             # Apply factor (1 - 1/p)
             result -= result // p
             
@@ -220,6 +223,7 @@ def first_totients(n: int) -> list[int]:
 
 # First 20 values
 print(first_totients(20))
+
 # [1, 1, 2, 2, 4, 2, 6, 4, 6, 4, 10, 4, 12, 6, 8, 8, 16, 6, 18, 8]
 ```
 
@@ -254,6 +258,7 @@ The only numbers not coprime to a prime p are multiples of p, and only p itself 
 - If n is even: φ(2n) = 2·φ(n)
 
 ### 3. Average Value
+
 ```math
 \frac{1}{n}\sum_{i=1}^{n} \phi(i) \approx \frac{3n}{\pi^2}
 ```

@@ -4,6 +4,7 @@ title: "Euler Tour Techniques"
 parent: "Tree Algorithms"
 nav_order: 7
 permalink: /25_tree_algorithms/07_euler_tour/
+
 ---
 
 <div align="center">

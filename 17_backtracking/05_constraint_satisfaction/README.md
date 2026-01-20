@@ -4,6 +4,7 @@ title: "Constraint Satisfaction"
 parent: "Backtracking"
 nav_order: 5
 permalink: /17_backtracking/05_constraint_satisfaction/
+
 ---
 
 <div align="center">
@@ -119,6 +120,7 @@ def solveSudoku(board: list[list[str]]) -> None:
     Time: O(9^81), Space: O(1)
     """
     def is_valid(row, col, num):
+
         # Check row
         if num in board[row]:
             return False
@@ -237,6 +239,7 @@ def canPartitionKSubsets(nums: list[int], k: int) -> bool:
         for i in range(start, len(nums)):
             if used[i] or current_sum + nums[i] > target:
                 continue
+
             # Skip duplicates
             if i > 0 and nums[i] == nums[i-1] and not used[i-1]:
                 continue

@@ -4,6 +4,7 @@ title: "Basic Array Operations"
 parent: "Arrays"
 nav_order: 1
 permalink: /01_arrays/01_basic_operations/
+
 ---
 
 <div align="center">
@@ -325,6 +326,7 @@ def findDuplicate(nums: list[int]) -> int:
     
     Time: O(n), Space: O(1)
     """
+
     # Phase 1: Find meeting point
     slow = fast = nums[0]
     while True:

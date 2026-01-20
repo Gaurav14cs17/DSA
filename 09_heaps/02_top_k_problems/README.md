@@ -4,6 +4,7 @@ title: "Top K Problems"
 parent: "Heaps"
 nav_order: 2
 permalink: /09_heaps/02_top_k_problems/
+
 ---
 
 <div align="center">
@@ -197,6 +198,7 @@ def kClosest(points: list[list[int]], k: int) -> list[list[int]]:
     
     Time: O(n log k), Space: O(k)
     """
+
     # Max-heap: negate distance for max behavior
     heap = []
     

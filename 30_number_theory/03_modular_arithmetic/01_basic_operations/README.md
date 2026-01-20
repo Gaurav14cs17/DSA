@@ -4,6 +4,7 @@ title: "Basic Modular Operations"
 parent: "Modular Arithmetic"
 grand_parent: "Number Theory"
 nav_order: 1
+
 ---
 
 # 🔢 Basic Modular Operations
@@ -162,6 +163,7 @@ print(are_congruent(7, 3, 5))     # False
 ### 5. Common Moduli
 
 ```python
+
 # Common moduli in competitive programming
 MOD_1 = 10**9 + 7   # 1000000007 (prime)
 MOD_2 = 10**9 + 9   # 1000000009 (prime)

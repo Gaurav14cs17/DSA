@@ -4,6 +4,7 @@ title: "Memoization"
 parent: "Recursion"
 nav_order: 3
 permalink: /16_recursion/03_memoization/
+
 ---
 
 <div align="center">
@@ -247,6 +248,7 @@ from functools import lru_cache
 
 @lru_cache(maxsize=None)
 def solve(state):
+
     # Base case
     if is_base_case(state):
         return base_value

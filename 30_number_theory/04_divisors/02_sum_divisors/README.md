@@ -5,6 +5,7 @@ parent: "Divisors"
 grand_parent: "Number Theory"
 nav_order: 2
 permalink: /30_number_theory/04_divisors/02_sum_divisors/
+
 ---
 
 <div align="center">
@@ -71,6 +72,7 @@ permalink: /30_number_theory/04_divisors/02_sum_divisors/
 
 **Proof:**
 For a single prime power $p^a$:
+
 ```math
 \sigma(p^a) = 1 + p + p^2 + \cdots + p^a = \frac{p^{a+1} - 1}{p - 1}
 ```
@@ -152,6 +154,7 @@ def sum_divisors(n: int) -> int:
     
     while d * d <= n:
         if n % d == 0:
+
             # Calculate 1 + d + d² + ... + d^exp
             power_sum = 1
             current_power = 1

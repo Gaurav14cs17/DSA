@@ -4,6 +4,7 @@ title: "LCA & Ancestor"
 parent: "Trees"
 nav_order: 5
 permalink: /07_trees/05_lca_ancestor/
+
 ---
 
 <div align="center">

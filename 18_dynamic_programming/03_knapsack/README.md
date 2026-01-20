@@ -4,6 +4,7 @@ title: "Knapsack"
 parent: "Dynamic Programming"
 nav_order: 3
 permalink: /18_dynamic_programming/03_knapsack/
+
 ---
 
 <div align="center">

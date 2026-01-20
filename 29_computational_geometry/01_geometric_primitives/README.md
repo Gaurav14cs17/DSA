@@ -3,6 +3,7 @@ layout: default
 title: "Geometric Primitives"
 parent: "Computational Geometry"
 nav_order: 1
+
 ---
 
 # 🔷 Geometric Primitives
@@ -194,10 +195,13 @@ class Point:
     
     def rotate_around(self, center, angle):
         """Rotate point around another point"""
+
         # Translate to origin
         translated = self - center
+
         # Rotate
         rotated = translated.rotate(angle)
+
         # Translate back
         return rotated + center
 ```
@@ -294,6 +298,7 @@ def point_to_line_distance(point, line_p1, line_p2):
     
     Time: O(1)
     """
+
     # Vector from line_p1 to line_p2
     line_vec = line_p2 - line_p1
     
@@ -319,6 +324,7 @@ def point_to_segment_distance(point, seg_p1, seg_p2):
     
     Time: O(1)
     """
+
     # Vector along segment
     seg_vec = seg_p2 - seg_p1
     
@@ -420,6 +426,7 @@ def project_point_onto_line(point, line_p1, line_p2):
     
     Time: O(1)
     """
+
     # Line direction vector
     line_vec = line_p2 - line_p1
     
@@ -498,6 +505,7 @@ def compare(a, b):
 ### Avoiding Square Roots
 
 ```python
+
 # ❌ Slower: Compare distances
 if point1.distance(ref) < point2.distance(ref):
 

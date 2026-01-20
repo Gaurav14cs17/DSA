@@ -4,6 +4,7 @@ title: "Centroid Decomposition"
 parent: "Tree Algorithms"
 nav_order: 5
 permalink: /25_tree_algorithms/05_centroid_decomposition/
+
 ---
 
 <div align="center">
@@ -161,6 +162,7 @@ class CentroidDecomposition:
     
     def _decompose(self, u: int, parent: int):
         """Recursively decompose tree."""
+
         # Get tree size and find centroid
         tree_size = self._get_subtree_size(u, -1)
         centroid = self._find_centroid(u, -1, tree_size)
@@ -223,6 +225,7 @@ def count_paths_with_sum_k(n: int, edges: List[List[int]],
         
         for child in graph[centroid]:
             if not removed[child]:
+
                 # Get paths in this subtree
                 child_paths = []
                 get_paths(child, centroid, values[centroid] + values[child], child_paths)

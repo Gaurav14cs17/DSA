@@ -4,6 +4,7 @@ title: "Range Queries"
 parent: "Sqrt Decomposition"
 nav_order: 1
 permalink: /34_sqrt_decomposition/01_range_queries/
+
 ---
 
 <div align="center">
@@ -112,6 +113,7 @@ class RangeSumQuery:
             for i in range(left, right + 1):
                 result += self.arr[i]
         else:
+
             # Left partial block
             for i in range(left, (left_block + 1) * self.block_size):
                 if i < self.n:
@@ -178,6 +180,7 @@ class RangeMinQuery:
             for i in range(left, right + 1):
                 result = min(result, self.arr[i])
         else:
+
             # Left partial
             for i in range(left, (left_block + 1) * self.block_size):
                 if i < self.n:
@@ -230,6 +233,7 @@ class RangeUpdateQuery:
                 self.arr[i] += val
                 self.blocks[left_block] += val
         else:
+
             # Left partial
             for i in range(left, (left_block + 1) * self.block_size):
                 if i < self.n:

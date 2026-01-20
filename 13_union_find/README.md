@@ -4,6 +4,7 @@ title: "Union-Find (Disjoint Set)"
 nav_order: 22
 has_children: false
 permalink: /13_union_find/
+
 ---
 
 <div align="center">

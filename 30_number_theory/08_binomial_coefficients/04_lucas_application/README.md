@@ -5,6 +5,7 @@ parent: "Binomial Coefficients"
 grand_parent: "Number Theory"
 nav_order: 4
 permalink: /30_number_theory/08_binomial_coefficients/04_lucas_application/
+
 ---
 
 <div align="center">
@@ -183,6 +184,7 @@ def lucas_prime_power(m: int, n: int, p: int, k: int) -> int:
     More complex - uses Andrew Granville's theorem.
     For basic problems, just use CRT with multiple primes.
     """
+
     # This is an advanced topic
     # For p^k, combine:
     # 1. Lucas' theorem for p

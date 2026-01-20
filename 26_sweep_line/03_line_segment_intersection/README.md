@@ -4,6 +4,7 @@ title: "Line Segment Intersection"
 parent: "Sweep Line Algorithm"
 nav_order: 3
 permalink: /26_sweep_line/03_line_segment_intersection/
+
 ---
 
 <div align="center">
@@ -375,6 +376,7 @@ def check_straight_line(coordinates: List[List[int]]) -> bool:
     
     for i in range(2, len(coordinates)):
         x, y = coordinates[i]
+
         # Check if (x1-x0, y1-y0) and (x-x0, y-y0) are parallel
         if (x1 - x0) * (y - y0) != (y1 - y0) * (x - x0):
             return False
