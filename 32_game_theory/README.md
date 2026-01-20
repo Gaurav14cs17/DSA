@@ -68,12 +68,12 @@ permalink: /32_game_theory/
 - A position is **losing** if all moves lead to **winning** positions
 - A position is **winning** if there exists at least one move to a **losing** position
 
-```math
+$$
 \begin{align}
 \text{Position is L} &\iff \text{All successors are W} \\
 \text{Position is W} &\iff \exists \text{ successor that is L}
 \end{align}
-```
+$$
 
 ---
 
@@ -83,18 +83,18 @@ permalink: /32_game_theory/
 
 **Nim-Sum (XOR):** For piles with sizes $a\_1, a\_2, \ldots, a\_n$:
 
-```math
+$$
 \text{Nim-Sum} = a_1 \oplus a_2 \oplus \cdots \oplus a_n
-```
+$$
 
 **Bouton's Theorem (1901):**
 
-```math
+$$
 \begin{cases}
 \text{Nim-Sum} = 0 &\implies \text{Losing position (L)} \\
 \text{Nim-Sum} \neq 0 &\implies \text{Winning position (W)}
 \end{cases}
-```
+$$
 
 **Proof:**
 1. Terminal position (all piles empty): Nim-Sum = 0 → Previous player wins
@@ -109,9 +109,9 @@ permalink: /32_game_theory/
 
 **Grundy Number (Nimber):** For position $P$:
 
-```math
+$$
 g(P) = \text{mex}\{g(P') : P' \text{ is a successor of } P\}
-```
+$$
 
 where $\text{mex}(S) = \min\{n \geq 0 : n \notin S\}$ (minimum excludant)
 
@@ -187,12 +187,12 @@ For many game problems, use **memoization** or **DP**:
 **Transition:** Possible moves
 **Base Case:** Terminal positions
 
-```math
+$$
 \text{dp}[\text{state}] = \begin{cases}
 \text{win} &\text{if } \exists \text{ move to losing state} \\
 \text{lose} &\text{if all moves lead to winning states}
 \end{cases}
-```
+$$
 
 ---
 

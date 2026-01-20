@@ -48,17 +48,17 @@ permalink: /30_number_theory/11_legendres_formula/03_applications/
 
 ### Legendre's Formula
 
-```math
+$$
 \nu_p(n!) = \sum_{i=1}^{\infty} \left\lfloor \frac{n}{p^i} \right\rfloor = \frac{n - S_p(n)}{p - 1}
-```
+$$
 
 where S_p(n) is the sum of digits of n in base p.
 
 ### For Binomials (Kummer's Theorem)
 
-```math
+$$
 \nu_p\binom{m+n}{m} = \text{carries when adding m + n in base } p
-```
+$$
 
 ---
 

@@ -43,10 +43,10 @@ Rotated by 2: $[4, 5, 1, 2, 3]$
 
 ### 2️⃣ Finding Sorted Half
 
-```math
+$$
 \text{If } arr[left] \leq arr[mid]: \text{left half sorted}
 \text{Otherwise: right half sorted}
-```
+$$
 
 ---
 
@@ -62,9 +62,9 @@ Rotated by 2: $[4, 5, 1, 2, 3]$
 
 Worst case: all elements same except one.
 
-```math
+$$
 T = O(n) \text{ worst case}
-```
+$$
 
 **Handle:** When $arr[left] = arr[mid] = arr[right]$, shrink both ends.
 

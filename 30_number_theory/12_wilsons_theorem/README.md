@@ -39,9 +39,9 @@ permalink: /30_number_theory/12_wilsons_theorem/
 
 **Statement:** A natural number $p > 1$ is prime **if and only if**:
 
-```math
+$$
 (p-1)! \equiv -1 \pmod{p}
-```
+$$
 
 **Equivalently:** $(p-1)! \equiv p - 1 \pmod{p}$
 
@@ -64,9 +64,9 @@ permalink: /30_number_theory/12_wilsons_theorem/
 
 **For prime p and 0 ≤ k < p:**
 
-```math
+$$
 (p - k)! \cdot (k-1)! \equiv (-1)^k \pmod{p}
-```
+$$
 
 ---
 

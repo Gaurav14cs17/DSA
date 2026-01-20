@@ -46,9 +46,9 @@ permalink: /24_graph_algorithms/05_strongly_connected_components/
 
 **In directed graph $G = (V, E)$:**
 
-```math
+$$
 \text{SCC } C \subseteq V: \forall u, v \in C, \exists \text{ path } u \rightsquigarrow v \text{ and } v \rightsquigarrow u
-```
+$$
 
 **Key property:** SCCs partition the graph.
 
@@ -98,9 +98,9 @@ permalink: /24_graph_algorithms/05_strongly_connected_components/
 - Topological order exists
 - Useful for many problems
 
-```math
+$$
 G^{SCC} = (V_{SCC}, E_{SCC})
-```
+$$
 
 ---
 

@@ -43,9 +43,9 @@ permalink: /08_binary_search_trees/
 
 For every node $x$:
 
-```math
+$$
 \boxed{\forall y \in T_L(x): y.val < x.val < z.val \; \forall z \in T_R(x)}
-```
+$$
 
 **Left subtree:** All values less than node
 **Right subtree:** All values greater than node
@@ -69,21 +69,21 @@ For every node $x$:
 
 **Best case (balanced):**
 
-```math
+$$
 h_{min} = \lfloor \log_2 n \rfloor
-```
+$$
 
 **Worst case (skewed):**
 
-```math
+$$
 h_{max} = n - 1
-```
+$$
 
 **Average case (random insertions):**
 
-```math
+$$
 E[h] = O(\log n)
-```
+$$
 
 ---
 
@@ -102,21 +102,21 @@ E[h] = O(\log n)
 
 **Successor of x (next larger):**
 
-```math
+$$
 \text{succ}(x) = \begin{cases}
 \min(T_R(x)) & \text{if right subtree exists} \\
 \text{first ancestor where } x \text{ is in left subtree} & \text{otherwise}
 \end{cases}
-```
+$$
 
 **Predecessor of x (next smaller):**
 
-```math
+$$
 \text{pred}(x) = \begin{cases}
 \max(T_L(x)) & \text{if left subtree exists} \\
 \text{first ancestor where } x \text{ is in right subtree} & \text{otherwise}
 \end{cases}
-```
+$$
 
 ---
 
@@ -124,9 +124,9 @@ E[h] = O(\log n)
 
 **Condition:** Each node must be within valid range.
 
-```math
+$$
 \text{isValidBST}(node, min, max) = min < node.val < max
-```
+$$
 
 ---
 
@@ -136,9 +136,9 @@ E[h] = O(\log n)
 
 Store subtree size at each node.
 
-```math
+$$
 \text{rank}(x) = \text{size}(T_L(x)) + 1
-```
+$$
 
 **Search:** O(h) with size augmentation.
 
@@ -148,9 +148,9 @@ Store subtree size at each node.
 
 **Balanced BST:** Use middle element as root recursively.
 
-```math
+$$
 \text{root} = arr[mid], \quad mid = \lfloor (left + right) / 2 \rfloor
-```
+$$
 
 **Time:** O(n), **Height:** O(log n)
 

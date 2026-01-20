@@ -124,34 +124,34 @@ After $d$ more steps, gap becomes 0 — they meet! ∎
 
 Let slow have traveled $s$ steps:
 
-```math
+$$
 s = \mu + x + a\lambda
-```
+$$
 
 where $a$ is the number of complete cycles slow made.
 
 Fast traveled $2s$ steps:
 
-```math
+$$
 2s = \mu + x + b\lambda
-```
+$$
 
 where $b$ is the number of complete cycles fast made.
 
 Subtracting:
 
-```math
+$$
 s = (b - a)\lambda = k\lambda
-```
+$$
 
 for some positive integer $k$.
 
 So:
 
-```math
+$$
 \mu + x + a\lambda = k\lambda
 \mu + x = (k - a)\lambda = m\lambda
-```
+$$
 
 for some non-negative integer $m$.
 
@@ -166,15 +166,15 @@ When we reset slow to head and move both one step at a time:
 
 From meeting point (distance $x$ from cycle start):
 
-```math
+$$
 \text{Position after } \mu \text{ steps} = x + \mu \pmod{\lambda}
-```
+$$
 
 Since $\mu + x = m\lambda$:
 
-```math
+$$
 x + \mu \equiv 0 \pmod{\lambda}
-```
+$$
 
 This is exactly the cycle start position! ∎
 

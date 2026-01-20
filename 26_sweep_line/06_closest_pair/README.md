@@ -62,9 +62,9 @@ permalink: /26_sweep_line/06_closest_pair/
 
 **Recurrence:**
 
-```math
+$$
 T(n) = 2T(n/2) + O(n) = O(n \log n)
-```
+$$
 
 ---
 
@@ -112,21 +112,21 @@ T(n) = 2T(n/2) + O(n) = O(n \log n)
 
 **Euclidean:**
 
-```math
+$$
 d(p, q) = \sqrt{(p_x - q_x)^2 + (p_y - q_y)^2}
-```
+$$
 
 **Manhattan:**
 
-```math
+$$
 d(p, q) = |p_x - q_x| + |p_y - q_y|
-```
+$$
 
 **Chebyshev:**
 
-```math
+$$
 d(p, q) = \max(|p_x - q_x|, |p_y - q_y|)
-```
+$$
 
 **Note:** For finding closest, can compare squared distances (avoid sqrt).
 

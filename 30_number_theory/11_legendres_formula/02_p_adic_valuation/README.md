@@ -50,9 +50,9 @@ permalink: /30_number_theory/11_legendres_formula/02_p_adic_valuation/
 
 The **p-adic valuation** (or **p-adic order**) of n, denoted ν_p(n), is the largest exponent e such that p^e divides n:
 
-```math
+$$
 \nu_p(n) = \max\{e \geq 0 : p^e \mid n\}
-```
+$$
 
 ### Examples
 
@@ -66,11 +66,11 @@ The **p-adic valuation** (or **p-adic order**) of n, denoted ν_p(n), is the lar
 
 ### Key Properties
 
-```math
+$$
 \nu_p(a \times b) = \nu_p(a) + \nu_p(b)
 \nu_p(a / b) = \nu_p(a) - \nu_p(b)
 \nu_p(a + b) \geq \min(\nu_p(a), \nu_p(b))
-```
+$$
 
 ---
 

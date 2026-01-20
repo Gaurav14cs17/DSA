@@ -47,9 +47,9 @@ permalink: /03_linked_lists/02_reversal/
 
 After iteration $i$:
 
-```math
+$$
 \boxed{\text{null} \leftarrow node_0 \leftarrow node_1 \leftarrow \cdots \leftarrow node_i \quad | \quad node_{i+1} \to \cdots \to node_{n-1}}
-```
+$$
 
 Where:
 - Left of `|`: Already reversed (prev points to $node\_i$)
@@ -67,7 +67,7 @@ Where:
 
 **Recursive Definition:**
 
-```math
+$$
 \text{reverse}(head) = \begin{cases}
 head & \text{if } head = \text{null or } head.next = \text{null} \\
 \text{let } rest = \text{reverse}(head.next) & \\
@@ -75,14 +75,14 @@ head & \text{if } head = \text{null or } head.next = \text{null} \\
 \quad head.next = \text{null} & \\
 \quad \text{return } rest
 \end{cases}
-```
+$$
 
 **Recurrence Relation:**
 
-```math
+$$
 T(n) = T(n-1) + O(1)
 \boxed{T(n) = O(n) \text{ time}, \; O(n) \text{ stack space}}
-```
+$$
 
 ---
 
@@ -100,15 +100,15 @@ T(n) = T(n-1) + O(1)
 
 Iterative uses fixed variables:
 
-```math
+$$
 S_{\text{iter}}(n) = 3 \text{ pointers} = O(1)
-```
+$$
 
 Recursive stacks n frames:
 
-```math
+$$
 S_{\text{rec}}(n) = \sum_{i=1}^{n} O(1) = O(n)
-```
+$$
 
 ---
 
@@ -122,9 +122,9 @@ Result: $n\_1 \to n\_2 \to \cdots \to n\_{left-1} \to n\_{right} \to \cdots \to 
 
 **Number of link reversals needed:**
 
-```math
+$$
 \boxed{\text{reversals} = right - left}
-```
+$$
 
 ---
 
@@ -134,21 +134,21 @@ Result: $n\_1 \to n\_2 \to \cdots \to n\_{left-1} \to n\_{right} \to \cdots \to 
 
 **Number of complete groups:**
 
-```math
+$$
 \text{complete\_groups} = \left\lfloor \frac{n}{k} \right\rfloor
-```
+$$
 
 **Remaining nodes:**
 
-```math
+$$
 \text{remaining} = n \mod k
-```
+$$
 
 **Total reversals:**
 
-```math
+$$
 \text{total\_reversals} = \left\lfloor \frac{n}{k} \right\rfloor \times (k-1)
-```
+$$
 
 **Time Complexity:** $O(n)$ - each node visited once
 

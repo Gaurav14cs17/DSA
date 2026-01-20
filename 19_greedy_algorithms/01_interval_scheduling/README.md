@@ -38,9 +38,9 @@ permalink: /19_greedy_algorithms/01_interval_scheduling/
 
 **Greedy Strategy:** Always pick interval with earliest end time.
 
-```math
+$$
 \text{Sort by } end_i, \text{ select if } start_i \geq \text{last\_end}
-```
+$$
 
 ---
 
@@ -48,9 +48,9 @@ permalink: /19_greedy_algorithms/01_interval_scheduling/
 
 **Goal:** Minimum rooms/resources to schedule all.
 
-```math
+$$
 \text{rooms} = \max(\text{concurrent intervals at any time})
-```
+$$
 
 ---
 

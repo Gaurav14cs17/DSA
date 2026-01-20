@@ -64,9 +64,9 @@ permalink: /25_tree_algorithms/04_heavy_light_decomposition/
 
 **Query on path $(u, v)$:**
 
-```math
+$$
 \text{Time} = O(\log^2 n)
-```
+$$
 
 - $O(\log n)$ chains to traverse
 - $O(\log n)$ per chain query (using segment tree)

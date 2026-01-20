@@ -66,9 +66,9 @@ dp[node] = combine(dp[child₁], dp[child₂], ..., dp[childₖ])
 
 **Recurrence:**
 
-```math
+$$
 \text{dp}[v] = f(\text{dp}[\text{child}_1], \text{dp}[\text{child}_2], \ldots)
-```
+$$
 
 **Post-order traversal:** Process children before parent.
 
@@ -98,9 +98,9 @@ dp[node] = combine(dp[child₁], dp[child₂], ..., dp[childₖ])
 
 **Combination:**
 
-```math
+$$
 \text{ans}[v] = \text{combine}(\text{in}[v], \text{out}[v])
-```
+$$
 
 ---
 
@@ -114,10 +114,10 @@ dp[node] = combine(dp[child₁], dp[child₂], ..., dp[childₖ])
 
 **Recurrence:**
 
-```math
+$$
 \text{rob}[v] = v.\text{val} + \sum \text{not\_rob}[\text{child}]
 \text{not\_rob}[v] = \sum \max(\text{rob}[\text{child}], \text{not\_rob}[\text{child}])
-```
+$$
 
 ---
 

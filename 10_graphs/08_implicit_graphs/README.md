@@ -44,9 +44,9 @@ permalink: /10_graphs/08_implicit_graphs/
 
 **Formal Construction:**
 
-```math
+$$
 G_{implicit} = (V, E) \text{ where } V = f(\text{input}), E = g(\text{rules})
-```
+$$
 
 **Example (Jump Game):**
 - Input: Array $A = [2, 3, 1, 1, 4]$
@@ -68,9 +68,9 @@ G_{implicit} = (V, E) \text{ where } V = f(\text{input}), E = g(\text{rules})
 
 **Reachability Set:**
 
-```math
+$$
 \text{Reach}(s) = \{v \in V : \exists \text{ path } s \rightsquigarrow v\}
-```
+$$
 
 ---
 
@@ -86,9 +86,9 @@ G_{implicit} = (V, E) \text{ where } V = f(\text{input}), E = g(\text{rules})
 
 **Distance Formula:**
 
-```math
+$$
 d(u, v) = \min\{k : \exists \text{ path of length } k \text{ from } u \text{ to } v\}
-```
+$$
 
 ---
 
@@ -105,10 +105,10 @@ d(u, v) = \min\{k : \exists \text{ path of length } k \text{ from } u \text{ to 
 
 **Component Definition:**
 
-```math
+$$
 C_i = \{v \in V : v \text{ is reachable from seed } s_i\}
 V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j
-```
+$$
 
 ---
 
@@ -130,9 +130,9 @@ V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j
 
 **Topological Order:**
 
-```math
+$$
 \forall (u, v) \in E : \text{pos}(u) < \text{pos}(v)
-```
+$$
 
 ---
 
@@ -140,9 +140,9 @@ V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j
 
 **Theorem:** For state space $(x\_1, x\_2, \ldots, x\_k)$ with domains $D\_1, D\_2, \ldots, D\_k$:
 
-```math
+$$
 |\text{States}| = \prod_{i=1}^{k} |D_i|
-```
+$$
 
 **Example (Sliding Puzzle 2×3):**
 - States = permutations of 6 positions
@@ -151,9 +151,9 @@ V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j
 
 **State Transition Graph:**
 
-```math
+$$
 E = \{(s, s') : s' \text{ reachable from } s \text{ by one move}\}
-```
+$$
 
 ---
 
@@ -169,9 +169,9 @@ E = \{(s, s') : s' \text{ reachable from } s \text{ by one move}\}
 
 **Multi-source Distance:**
 
-```math
+$$
 d_{multi}(v) = \min_{s \in S} d(s, v)
-```
+$$
 
 ---
 

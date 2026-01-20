@@ -49,17 +49,17 @@ permalink: /30_number_theory/05_euler_totient/03_euler_theorem/
 
 **Euler's Theorem:** If $\gcd(a, n) = 1$, then:
 
-```math
+$$
 a^{\phi(n)} \equiv 1 \pmod{n}
-```
+$$
 
 ### Special Case: Fermat's Little Theorem
 
 For prime p and $\gcd(a, p) = 1$:
 
-```math
+$$
 a^{p-1} \equiv 1 \pmod{p}
-```
+$$
 
 (Since φ(p) = p - 1)
 

@@ -31,9 +31,9 @@ permalink: /10_graphs/
 
 ### 1️⃣ Graph Definition
 
-```math
+$$
 G = (V, E)
-```
+$$
 
 - $V$: Set of vertices (nodes)
 - $E$: Set of edges $\subseteq V \times V$
@@ -56,21 +56,21 @@ G = (V, E)
 
 **Undirected graph:**
 
-```math
+$$
 \deg(v) = |\{e \in E : v \in e\}|
-```
+$$
 
 **Handshaking Lemma:**
 
-```math
+$$
 \sum_{v \in V} \deg(v) = 2|E|
-```
+$$
 
 **Directed graph:**
 
-```math
+$$
 \text{in-deg}(v) + \text{out-deg}(v) = \text{total degree}
-```
+$$
 
 ---
 
@@ -86,9 +86,9 @@ G = (V, E)
 
 ### 5️⃣ BFS Complexity
 
-```math
+$$
 \boxed{T = O(V + E), \quad S = O(V)}
-```
+$$
 
 **Proof:** Each vertex enqueued once, each edge examined once.
 
@@ -96,9 +96,9 @@ G = (V, E)
 
 ### 6️⃣ DFS Complexity
 
-```math
+$$
 \boxed{T = O(V + E), \quad S = O(V)}
-```
+$$
 
 **Space:** O(V) for recursion stack in worst case.
 
@@ -119,9 +119,9 @@ G = (V, E)
 
 **Relaxation:**
 
-```math
+$$
 \text{dist}[v] = \min(\text{dist}[v], \text{dist}[u] + w(u,v))
-```
+$$
 
 **Invariant:** When vertex $u$ is extracted from priority queue, $\text{dist}[u]$ is optimal.
 
@@ -131,9 +131,9 @@ G = (V, E)
 
 **Detects negative cycles:**
 
-```math
+$$
 \text{If any relaxation after } V-1 \text{ iterations} \Rightarrow \text{negative cycle}
-```
+$$
 
 ---
 
@@ -143,9 +143,9 @@ G = (V, E)
 
 **Kahn's Algorithm:** Process vertices with in-degree 0.
 
-```math
+$$
 \text{Order: } v_1, v_2, \ldots, v_n \text{ where } (v_i, v_j) \in E \Rightarrow i < j
-```
+$$
 
 ---
 

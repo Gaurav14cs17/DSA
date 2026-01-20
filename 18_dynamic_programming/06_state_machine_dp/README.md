@@ -42,9 +42,9 @@ permalink: /18_dynamic_programming/06_state_machine_dp/
 
 Track multiple states at each position:
 
-```math
+$$
 dp[i][\text{state}] = \text{optimal value at position } i \text{ in state}
-```
+$$
 
 ---
 
@@ -62,11 +62,11 @@ dp[i][\text{state}] = \text{optimal value at position } i \text{ in state}
 
 ### 3️⃣ General Stock Formula
 
-```math
+$$
 \text{hold}[i] = \max(\text{hold}[i-1], \text{rest}[i-1] - \text{price}[i])
 \text{sold}[i] = \text{hold}[i-1] + \text{price}[i]
 \text{rest}[i] = \max(\text{rest}[i-1], \text{sold}[i-1])
-```
+$$
 
 ---
 

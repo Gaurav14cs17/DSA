@@ -36,21 +36,21 @@ permalink: /07_trees/01_tree_traversal/
 
 **Preorder (NLR):** Visit Node → Left subtree → Right subtree
 
-```math
+$$
 \text{preorder}(T) = [root] + \text{preorder}(T_L) + \text{preorder}(T_R)
-```
+$$
 
 **Inorder (LNR):** Left subtree → Visit Node → Right subtree
 
-```math
+$$
 \text{inorder}(T) = \text{inorder}(T_L) + [root] + \text{inorder}(T_R)
-```
+$$
 
 **Postorder (LRN):** Left subtree → Right subtree → Visit Node
 
-```math
+$$
 \text{postorder}(T) = \text{postorder}(T_L) + \text{postorder}(T_R) + [root]
-```
+$$
 
 **Level Order (BFS):** Level by level, left to right
 
@@ -89,9 +89,9 @@ Where $h$ = height, $w$ = max width.
 
 For node $x$, predecessor = rightmost node in left subtree.
 
-```math
+$$
 \text{pred}(x) = \max\{y \in T_L(x)\}
-```
+$$
 
 ---
 

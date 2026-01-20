@@ -81,21 +81,21 @@ return count
 
 Let $n$ have binary representation with lowest set bit at position $p$:
 
-```math
+$$
 n = b_{31}b_{30}...b_{p+1}1\underbrace{00...0}_{p \text{ zeros}}
-```
+$$
 
 Then:
 
-```math
+$$
 n - 1 = b_{31}b_{30}...b_{p+1}0\underbrace{11...1}_{p \text{ ones}}
-```
+$$
 
 Therefore:
 
-```math
+$$
 n \land (n-1) = b_{31}b_{30}...b_{p+1}0\underbrace{00...0}_{p+1 \text{ zeros}}
-```
+$$
 
 The lowest set bit is cleared! ✓
 
@@ -123,9 +123,9 @@ Result: 3 set bits ✓
 
 #### The Formula
 
-```math
+$$
 n \text{ is power of 2} \Leftrightarrow n > 0 \land n \land (n-1) = 0
-```
+$$
 
 #### 🔍 Proof
 
@@ -176,9 +176,9 @@ Powers of 4:
 
 #### Alternative Method: Modulo Check
 
-```math
+$$
 n \text{ is power of 4} \Leftrightarrow n > 0 \land n \land (n-1) = 0 \land (n - 1) \mod 3 = 0
-```
+$$
 
 This works because $4^k - 1 = (4-1)(4^{k-1} + 4^{k-2} + ... + 1)$ is always divisible by 3.
 
@@ -190,15 +190,15 @@ Build an array where `dp[i]` = number of 1 bits in $i$.
 
 #### Recurrence Relation
 
-```math
+$$
 \text{dp}[i] = \text{dp}[i \land (i-1)] + 1
-```
+$$
 
 Or equivalently:
 
-```math
+$$
 \text{dp}[i] = \text{dp}[i >> 1] + (i \land 1)
-```
+$$
 
 #### 🔍 Proof of the Second Formula
 

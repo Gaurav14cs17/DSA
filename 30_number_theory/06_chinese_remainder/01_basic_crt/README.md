@@ -50,14 +50,14 @@ permalink: /30_number_theory/06_chinese_remainder/01_basic_crt/
 
 **Statement:** Given pairwise coprime positive integers $m\_1, m\_2, \ldots, m\_k$ and any integers $a\_1, a\_2, \ldots, a\_k$, the system:
 
-```math
+$$
 \begin{cases}
 x \equiv a_1 \pmod{m_1} \\
 x \equiv a_2 \pmod{m_2} \\
 \vdots \\
 x \equiv a_k \pmod{m_k}
 \end{cases}
-```
+$$
 
 has a **unique solution** modulo $M = m\_1 \cdot m\_2 \cdots m\_k$.
 
@@ -67,9 +67,9 @@ has a **unique solution** modulo $M = m\_1 \cdot m\_2 \cdots m\_k$.
 
 Let $M\_i = M / m\_i$ and $y\_i = M\_i^{-1} \pmod{m\_i}$
 
-```math
+$$
 x = \sum_{i=1}^{k} a_i \cdot M_i \cdot y_i \pmod{M}
-```
+$$
 
 **Why this works:** Each term $a\_i M\_i y\_i$ is:
 - ≡ $a\_i$ (mod $m\_i$) because $M\_i y\_i \equiv 1$ (mod $m\_i$)

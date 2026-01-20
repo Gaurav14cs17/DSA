@@ -54,19 +54,19 @@ permalink: /24_graph_algorithms/06_bridges_articulation_points/
 
 **Uses DFS with low-link values:**
 
-```math
+$$
 \text{low}[v] = \min \begin{cases}
 \text{disc}[v] \\
 \text{disc}[u] & \text{for back edges } (v, u) \\
 \text{low}[w] & \text{for tree edges } (v, w)
 \end{cases}
-```
+$$
 
 **Bridge condition:** Edge $(u, v)$ is bridge iff:
 
-```math
+$$
 \text{low}[v] > \text{disc}[u]
-```
+$$
 
 **Time:** $O(V + E)$  
 **Space:** $O(V)$

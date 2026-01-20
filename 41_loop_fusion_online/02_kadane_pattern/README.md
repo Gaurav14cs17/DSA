@@ -44,9 +44,9 @@ permalink: /41_loop_fusion_online/02_kadane_pattern/
 
 Given an array $A[1..n]$ of real numbers, find indices $i$ and $j$ such that:
 
-```math
+$$
 \sum_{k=i}^{j} A[k] \text{ is maximized}
-```
+$$
 
 **Constraints:**
 - Subarray must be contiguous
@@ -63,10 +63,10 @@ Define:
 
 **Kadane's Recurrence:**
 
-```math
+$$
 S[i] = \max(A[i], S[i-1] + A[i])
 M[i] = \max(M[i-1], S[i])
-```
+$$
 
 **Key Insight:** At each position, either:
 1. Start a new subarray (if previous sum is negative)
@@ -285,10 +285,10 @@ print(max_subarray_one_deletion(arr))  # Output: 4 (delete -2)
 
 **Recurrence:**
 
-```math
+$$
 S[i] = \max(A[i], S[i-1] + A[i])
 M[i] = \max(M[i-1], S[i])
-```
+$$
 
 ---
 

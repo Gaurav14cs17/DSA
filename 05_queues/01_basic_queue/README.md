@@ -49,9 +49,9 @@ permalink: /05_queues/01_basic_queue/
 
 ### 1️⃣ FIFO Property
 
-```math
+$$
 \text{dequeue order} = \text{enqueue order}
-```
+$$
 
 **Proof:** Elements are added to rear and removed from front. First added → first removed. ∎
 
@@ -61,19 +61,19 @@ permalink: /05_queues/01_basic_queue/
 
 For queue with capacity $n$:
 
-```math
+$$
 \text{next}(i) = (i + 1) \mod n
 \text{prev}(i) = (i - 1 + n) \mod n
-```
+$$
 
 **Size Calculation:**
 
-```math
+$$
 \text{size} = \begin{cases}
 \text{rear} - \text{front} & \text{if } \text{rear} \geq \text{front} \\
 n - \text{front} + \text{rear} & \text{otherwise}
 \end{cases}
-```
+$$
 
 Or unified: $\text{size} = (\text{rear} - \text{front} + n) \mod n$
 
@@ -88,23 +88,23 @@ Each element:
 2. Transferred to $S\_2$ once: O(1)
 3. Popped from $S\_2$ once: O(1)
 
-```math
+$$
 \text{Amortized cost per operation} = \frac{3n}{n} = O(1)
-```
+$$
 
 ---
 
 ### 4️⃣ Moving Average Formula
 
-```math
+$$
 \text{avg}[i] = \frac{1}{k} \sum_{j=i-k+1}^{i} x[j]
-```
+$$
 
 **Sliding Window Update:**
 
-```math
+$$
 \text{avg}[i] = \text{avg}[i-1] + \frac{x[i] - x[i-k]}{k}
-```
+$$
 
 ---
 

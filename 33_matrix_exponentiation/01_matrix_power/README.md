@@ -68,13 +68,13 @@ permalink: /33_matrix_exponentiation/01_matrix_power/
 
 **Formula:**
 
-```math
+$$
 M^n = \begin{cases}
 I & \text{if } n = 0 \\
 (M^{n/2})^2 & \text{if } n \text{ is even} \\
 M \cdot (M^{(n-1)/2})^2 & \text{if } n \text{ is odd}
 \end{cases}
-```
+$$
 
 **Time Complexity:**
 - Naive: $O(n)$ matrix multiplications

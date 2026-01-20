@@ -169,9 +169,9 @@ Result:  [1, 2, 3, 4, _, _, _, _]
 
 Compare with element $k$ positions back:
 
-```math
+$$
 \text{if } arr[fast] \neq arr[slow - k]: \text{ keep element}
-```
+$$
 
 #### Proof
 
@@ -196,12 +196,12 @@ We maintain three pointers:
 
 #### Invariant
 
-```math
+$$
 [0, low) = \text{all 0s}
 [low, mid) = \text{all 1s}
 [mid, high] = \text{unknown}
 (high, n) = \text{all 2s}
-```
+$$
 
 #### Algorithm
 

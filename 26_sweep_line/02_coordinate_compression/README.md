@@ -46,9 +46,9 @@ permalink: /26_sweep_line/02_coordinate_compression/
 
 **Mapping Function:**
 
-```math
+$$
 f: \mathbb{R} \to \{0, 1, \ldots, k-1\}
-```
+$$
 
 where $k$ = number of distinct coordinates.
 
@@ -120,17 +120,17 @@ Height function: $H(x) = \max\_{i: l\_i \leq x < r\_i} h\_i$
 
 **Formula:**
 
-```math
+$$
 A = \int_{-\infty}^{\infty} H(x) \, dx
-```
+$$
 
 where $H(x)$ = total height covered at position $x$.
 
 **Discrete Version:**
 
-```math
+$$
 A = \sum_{i=1}^{k-1} (x_{i+1} - x_i) \cdot H(x_i)
-```
+$$
 
 where $x\_1, \ldots, x\_k$ are sorted distinct x-coordinates.
 

@@ -50,9 +50,9 @@ permalink: /30_number_theory/09_catalan_numbers/02_bst_counting/
 
 For n distinct values, the number of structurally unique BSTs equals C_n:
 
-```math
+$$
 \text{Unique BSTs with n nodes} = C_n = \frac{1}{n+1}\binom{2n}{n}
-```
+$$
 
 ### Intuition
 

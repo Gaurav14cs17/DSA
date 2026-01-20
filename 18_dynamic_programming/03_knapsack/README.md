@@ -42,9 +42,9 @@ permalink: /18_dynamic_programming/03_knapsack/
 
 Each item used at most once:
 
-```math
+$$
 dp[i][w] = \max(dp[i-1][w], dp[i-1][w-w_i] + v_i)
-```
+$$
 
 **Time:** O(nW), **Space:** O(W)
 
@@ -54,9 +54,9 @@ dp[i][w] = \max(dp[i-1][w], dp[i-1][w-w_i] + v_i)
 
 Each item can be used unlimited times:
 
-```math
+$$
 dp[w] = \max(dp[w], dp[w-w_i] + v_i)
-```
+$$
 
 ---
 
@@ -64,9 +64,9 @@ dp[w] = \max(dp[w], dp[w-w_i] + v_i)
 
 Each item has limited quantity $q\_i$:
 
-```math
+$$
 dp[i][w] = \max_{k=0}^{q_i}(dp[i-1][w-k \cdot w_i] + k \cdot v_i)
-```
+$$
 
 ---
 

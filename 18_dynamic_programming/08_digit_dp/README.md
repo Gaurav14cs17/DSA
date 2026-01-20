@@ -42,9 +42,9 @@ permalink: /18_dynamic_programming/08_digit_dp/
 
 Count numbers in range $[0, N]$ satisfying property:
 
-```math
+$$
 dp[\text{pos}][\text{state}][\text{tight}]
-```
+$$
 
 - **pos:** Current digit position
 - **state:** Problem-specific state
@@ -54,9 +54,9 @@ dp[\text{pos}][\text{state}][\text{tight}]
 
 ### 2️⃣ Range Query
 
-```math
+$$
 \text{count}[L, R] = f(R) - f(L-1)
-```
+$$
 
 ---
 

@@ -34,9 +34,9 @@ permalink: /02_strings/02_anagram_problems/
 
 **Definition:** Two strings $S$ and $T$ are anagrams if:
 
-```math
+$$
 \boxed{\forall c \in \Sigma: \text{count}_S(c) = \text{count}_T(c)}
-```
+$$
 
 **Equivalent conditions:**
 1. $\text{sorted}(S) = \text{sorted}(T)$
@@ -49,15 +49,15 @@ permalink: /02_strings/02_anagram_problems/
 
 For lowercase alphabet ($|\Sigma| = 26$):
 
-```math
+$$
 \vec{f}(S) = [f_a, f_b, \ldots, f_z] \in \mathbb{Z}^{26}
-```
+$$
 
 **Anagram Hash (Canonical Form):**
 
-```math
+$$
 H(S) = \text{tuple}(\text{sorted}(S)) \quad \text{or} \quad H(S) = \text{tuple}(\vec{f}(S))
-```
+$$
 
 ---
 
@@ -71,10 +71,10 @@ H(S) = \text{tuple}(\text{sorted}(S)) \quad \text{or} \quad H(S) = \text{tuple}(
 
 **Update Formula:**
 
-```math
+$$
 \vec{f}_{\text{window}}[S[i]] += 1 \quad \text{(add right)}
 \vec{f}_{\text{window}}[S[i-|P|]] -= 1 \quad \text{(remove left)}
-```
+$$
 
 ---
 
@@ -84,9 +84,9 @@ H(S) = \text{tuple}(\text{sorted}(S)) \quad \text{or} \quad H(S) = \text{tuple}(
 
 **Condition:**
 
-```math
+$$
 \forall c \in T: \text{count}_{\text{window}}(c) \geq \text{count}_T(c)
-```
+$$
 
 **Two Pointers:**
 - Expand right until condition satisfied

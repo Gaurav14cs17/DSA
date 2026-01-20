@@ -39,9 +39,9 @@ permalink: /30_number_theory/11_legendres_formula/
 
 **Statement:** The exponent of prime p in n! is:
 
-```math
+$$
 \nu_p(n!) = \sum_{i=1}^{\infty} \left\lfloor \frac{n}{p^i} \right\rfloor = \frac{n - s_p(n)}{p - 1}
-```
+$$
 
 where $s\_p(n)$ is the sum of digits of n in base p.
 
@@ -51,9 +51,9 @@ where $s\_p(n)$ is the sum of digits of n in base p.
 
 **Trailing zeros in n!** = $\nu\_5(n!)$ (since $10 = 2 \times 5$ and there are more 2s than 5s)
 
-```math
+$$
 \text{trailing\_zeros}(n!) = \left\lfloor \frac{n}{5} \right\rfloor + \left\lfloor \frac{n}{25} \right\rfloor + \left\lfloor \frac{n}{125} \right\rfloor + \cdots
-```
+$$
 
 ---
 

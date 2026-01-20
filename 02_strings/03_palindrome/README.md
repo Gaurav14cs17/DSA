@@ -34,15 +34,15 @@ permalink: /02_strings/03_palindrome/
 
 **Definition:** String $S[0..n-1]$ is a palindrome if:
 
-```math
+$$
 \boxed{S = \text{reverse}(S)}
-```
+$$
 
 **Equivalently:**
 
-```math
+$$
 S[i] = S[n-1-i] \quad \forall i \in [0, \lfloor n/2 \rfloor]
-```
+$$
 
 ---
 
@@ -60,10 +60,10 @@ S[i] = S[n-1-i] \quad \forall i \in [0, \lfloor n/2 \rfloor]
 
 For center at position $c$ (using $2n-1$ mapping):
 
-```math
+$$
 \text{left} = c // 2
 \text{right} = c // 2 + c \% 2
-```
+$$
 
 ---
 
@@ -73,13 +73,13 @@ For center at position $c$ (using $2n-1$ mapping):
 
 **Recurrence:**
 
-```math
+$$
 dp[i][j] = \begin{cases}
 1 & \text{if } i = j \\
 S[i] = S[j] & \text{if } j = i + 1 \\
 S[i] = S[j] \land dp[i+1][j-1] & \text{if } j > i + 1
 \end{cases}
-```
+$$
 
 ---
 
@@ -87,9 +87,9 @@ S[i] = S[j] \land dp[i+1][j-1] & \text{if } j > i + 1
 
 **Formula using expand around center:**
 
-```math
+$$
 \text{count} = \sum_{c=0}^{2n-2} \text{palindromes\_from\_center}(c)
-```
+$$
 
 **Time:** $O(n^2)$ total
 
@@ -101,9 +101,9 @@ S[i] = S[j] \land dp[i+1][j-1] & \text{if } j > i + 1
 
 **Augmented string:** Insert `#` between characters.
 
-```math
+$$
 S' = \#s_0\#s_1\#\ldots\#s_{n-1}\#
-```
+$$
 
 **Property:** All palindromes become odd-length in $S'$.
 

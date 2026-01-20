@@ -40,23 +40,23 @@ permalink: /18_dynamic_programming/04_string_dp/
 
 ### 1️⃣ Edit Distance
 
-```math
+$$
 dp[i][j] = \begin{cases}
 dp[i-1][j-1] & \text{if } s[i] = t[j] \\
 1 + \min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) & \text{otherwise}
 \end{cases}
-```
+$$
 
 ---
 
 ### 2️⃣ Palindrome DP
 
-```math
+$$
 dp[i][j] = \begin{cases}
 \text{true} & \text{if } i \geq j \\
 s[i] = s[j] \land dp[i+1][j-1] & \text{otherwise}
 \end{cases}
-```
+$$
 
 ---
 

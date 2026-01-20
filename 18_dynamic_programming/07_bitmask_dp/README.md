@@ -42,9 +42,9 @@ permalink: /18_dynamic_programming/07_bitmask_dp/
 
 Subset of $n$ elements as $n$-bit integer:
 
-```math
+$$
 \text{bit } i = 1 \Leftrightarrow \text{element } i \in \text{subset}
-```
+$$
 
 **States:** $2^n$
 
@@ -64,9 +64,9 @@ Subset of $n$ elements as $n$-bit integer:
 
 ### 3️⃣ TSP Recurrence
 
-```math
+$$
 dp[\text{mask}][i] = \min_{j \in \text{mask}} (dp[\text{mask} \setminus \{i\}][j] + dist[j][i])
-```
+$$
 
 ---
 

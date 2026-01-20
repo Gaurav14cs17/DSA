@@ -49,10 +49,10 @@ permalink: /03_linked_lists/03_merge_sort/
 
 ### Merge Sort Recurrence
 
-```math
+$$
 T(n) = 2T(n/2) + O(n)
 \boxed{T(n) = O(n \log n)}
-```
+$$
 
 **Space for Linked List:** $O(\log n)$ stack space (no auxiliary array needed)
 
@@ -64,14 +64,14 @@ T(n) = 2T(n/2) + O(n)
 
 **Merge Formula:**
 
-```math
+$$
 \text{merge}(L_1, L_2) = \begin{cases}
 L_2 & \text{if } L_1 = \text{null} \\
 L_1 & \text{if } L_2 = \text{null} \\
 L_1 \to \text{merge}(L_1.\text{next}, L_2) & \text{if } L_1.\text{val} < L_2.\text{val} \\
 L_2 \to \text{merge}(L_1, L_2.\text{next}) & \text{otherwise}
 \end{cases}
-```
+$$
 
 ---
 
@@ -79,9 +79,9 @@ L_2 \to \text{merge}(L_1, L_2.\text{next}) & \text{otherwise}
 
 **Time Complexity:**
 
-```math
+$$
 O(n \log k)
-```
+$$
 
 Where $n$ = total elements, $k$ = number of lists.
 
@@ -293,21 +293,21 @@ Time: O(n log k) where n=total nodes, k=lists
 
 **Recurrence:**
 
-```math
+$$
 T(n) = 2T(n/2) + O(n)
-```
+$$
 
 **Master Theorem:** $a=2, b=2, f(n)=O(n)$
 
-```math
+$$
 n^{\log_b a} = n^{\log_2 2} = n^1 = n
-```
+$$
 
 Case 2: $f(n) = \Theta(n^{\log\_b a})$
 
-```math
+$$
 \boxed{T(n) = \Theta(n \log n)}
-```
+$$
 
 ### Why O(log n) Space for Linked List?
 

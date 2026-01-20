@@ -54,30 +54,30 @@ permalink: /01_arrays/03_prefix_sum/
 
 **Definition:** Prefix sum array $P$ where:
 
-```math
+$$
 P[i] = \sum_{j=0}^{i} A[j]
-```
+$$
 
 **Explicit Formula:**
 
-```math
+$$
 \boxed{P[0] = A[0], \quad P[i] = P[i-1] + A[i] \text{ for } i > 0}
-```
+$$
 
 **Key Identity - Range Sum:**
 
-```math
+$$
 \text{sum}(L, R) = P[R] - P[L-1]
-```
+$$
 
 **Proof:**
 
-```math
+$$
 \begin{aligned}
 P[R] - P[L-1] &= \sum_{i=0}^{R} A[i] - \sum_{i=0}^{L-1} A[i] \\
 &= \sum_{i=L}^{R} A[i] \quad \text{∎}
 \end{aligned}
-```
+$$
 
 ---
 
@@ -85,15 +85,15 @@ P[R] - P[L-1] &= \sum_{i=0}^{R} A[i] - \sum_{i=0}^{L-1} A[i] \\
 
 **Including P[0] = 0 simplifies boundary cases:**
 
-```math
+$$
 \text{sum}(0, R) = P[R] - P[-1] = P[R] - 0 = P[R]
-```
+$$
 
 **With this convention:**
 
-```math
+$$
 P[i] = \sum_{j=0}^{i-1} A[j] \quad \text{(exclusive right bound)}
-```
+$$
 
 **Comparison:**
 
@@ -190,21 +190,21 @@ P[4] - P[1] = elements 1,2,3 ✓
 
 **Definition for 2D array:**
 
-```math
+$$
 P[i][j] = \sum_{r=0}^{i} \sum_{c=0}^{j} A[r][c]
-```
+$$
 
 **Recurrence Relation:**
 
-```math
+$$
 \boxed{P[i][j] = P[i-1][j] + P[i][j-1] - P[i-1][j-1] + A[i][j]}
-```
+$$
 
 **Range Sum Query (r1,c1) to (r2,c2):**
 
-```math
+$$
 \boxed{\text{sum} = P[r2][c2] - P[r1-1][c2] - P[r2][c1-1] + P[r1-1][c1-1]}
-```
+$$
 
 **Visual Explanation:**
 
@@ -235,39 +235,39 @@ Inclusion-Exclusion Principle!
 
 **Property 1: Linearity**
 
-```math
+$$
 P[A + B] = P[A] + P[B]
-```
+$$
 
 **Property 2: Difference**
 
-```math
+$$
 A[i] = P[i] - P[i-1]
-```
+$$
 
 **Property 3: Telescoping**
 
-```math
+$$
 \sum_{i=L}^{R} (P[i] - P[i-1]) = P[R] - P[L-1]
-```
+$$
 
 **Property 4: Modulo Arithmetic**
 
 If $P[i] \equiv P[j] \pmod{k}$, then:
 
-```math
+$$
 \sum_{x=i+1}^{j} A[x] \equiv 0 \pmod{k}
-```
+$$
 
 **Proof:**
 
-```math
+$$
 \begin{aligned}
 P[j] - P[i] &\equiv 0 \pmod{k} \\
 \sum_{x=0}^{j} A[x] - \sum_{x=0}^{i} A[x] &\equiv 0 \pmod{k} \\
 \sum_{x=i+1}^{j} A[x] &\equiv 0 \pmod{k} \quad \text{∎}
 \end{aligned}
-```
+$$
 
 ---
 
@@ -654,7 +654,7 @@ Speedup: 500,000× faster!
 
 For range [L, R]:
 
-```math
+$$
 \begin{aligned}
 \text{sum}(L, R) &= A[L] + A[L+1] + \cdots + A[R] \\
 P[R+1] &= A[0] + A[1] + \cdots + A[R] \\
@@ -662,7 +662,7 @@ P[L] &= A[0] + A[1] + \cdots + A[L-1] \\
 P[R+1] - P[L] &= (A[0] + \cdots + A[R]) - (A[0] + \cdots + A[L-1]) \\
 &= A[L] + A[L+1] + \cdots + A[R] \quad \text{∎}
 \end{aligned}
-```
+$$
 
 ### Modulo Arithmetic in Depth
 

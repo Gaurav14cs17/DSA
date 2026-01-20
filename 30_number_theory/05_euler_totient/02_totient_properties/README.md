@@ -47,9 +47,9 @@ permalink: /30_number_theory/05_euler_totient/02_totient_properties/
 
 ### 1️⃣ Multiplicativity
 
-```math
+$$
 \phi(mn) = \phi(m) \cdot \phi(n) \text{ when } \gcd(m, n) = 1
-```
+$$
 
 **Example:** φ(12) = φ(4) × φ(3) = 2 × 2 = 4 ✓
 
@@ -57,9 +57,9 @@ permalink: /30_number_theory/05_euler_totient/02_totient_properties/
 
 ### 2️⃣ Sum Over Divisors
 
-```math
+$$
 \sum_{d|n} \phi(d) = n
-```
+$$
 
 **Example for n = 12:**
 - Divisors: 1, 2, 3, 4, 6, 12
@@ -70,9 +70,9 @@ permalink: /30_number_theory/05_euler_totient/02_totient_properties/
 
 ### 3️⃣ Möbius Inversion
 
-```math
+$$
 \phi(n) = \sum_{d|n} \mu(d) \cdot \frac{n}{d} = n \sum_{d|n} \frac{\mu(d)}{d}
-```
+$$
 
 ---
 
@@ -80,9 +80,9 @@ permalink: /30_number_theory/05_euler_totient/02_totient_properties/
 
 For any m, n:
 
-```math
+$$
 \phi(mn) = \phi(m) \cdot \phi(n) \cdot \frac{d}{\phi(d)}
-```
+$$
 
 where d = gcd(m, n).
 

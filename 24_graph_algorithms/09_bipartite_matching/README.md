@@ -77,9 +77,9 @@ nav_order: 4
 
 **Augmentation:** If augmenting path $P$ exists, create larger matching by XORing $M$ with edges in $P$:
 
-```math
+$$
 M' = M \oplus P = (M \setminus P) \cup (P \setminus M)
-```
+$$
 
 This increases matching size by 1.
 
@@ -125,9 +125,9 @@ This increases matching size by 1.
 
 **König's Theorem:** In bipartite graph:
 
-```math
+$$
 \text{Maximum Matching} = \text{Minimum Vertex Cover}
-```
+$$
 
 **Application:** After finding max matching, can find min vertex cover efficiently.
 

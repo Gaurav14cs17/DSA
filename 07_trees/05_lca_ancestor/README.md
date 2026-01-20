@@ -36,9 +36,9 @@ permalink: /07_trees/05_lca_ancestor/
 
 **Lowest Common Ancestor of nodes p and q:**
 
-```math
+$$
 \text{LCA}(p, q) = \text{deepest node that is ancestor of both } p \text{ and } q
-```
+$$
 
 **Properties:**
 - $\text{LCA}(p, p) = p$
@@ -49,14 +49,14 @@ permalink: /07_trees/05_lca_ancestor/
 
 ### 2️⃣ LCA Recursive Formula
 
-```math
+$$
 \text{LCA}(root, p, q) = \begin{cases}
 root & \text{if } root = p \text{ or } root = q \\
 root & \text{if } p \in T_L \text{ and } q \in T_R \\
 \text{LCA}(root.left, p, q) & \text{if } p, q \in T_L \\
 \text{LCA}(root.right, p, q) & \text{if } p, q \in T_R
 \end{cases}
-```
+$$
 
 ---
 
@@ -64,13 +64,13 @@ root & \text{if } p \in T_L \text{ and } q \in T_R \\
 
 **Using BST property:**
 
-```math
+$$
 \text{LCA}_{BST}(root, p, q) = \begin{cases}
 root & \text{if } p.val \leq root.val \leq q.val \\
 \text{LCA}(root.left, p, q) & \text{if } p.val, q.val < root.val \\
 \text{LCA}(root.right, p, q) & \text{if } p.val, q.val > root.val
 \end{cases}
-```
+$$
 
 **Time:** O(h) instead of O(n).
 
@@ -78,9 +78,9 @@ root & \text{if } p.val \leq root.val \leq q.val \\
 
 ### 4️⃣ Distance Between Nodes
 
-```math
+$$
 \text{dist}(p, q) = \text{dist}(root, p) + \text{dist}(root, q) - 2 \times \text{dist}(root, \text{LCA}(p, q))
-```
+$$
 
 ---
 
@@ -88,9 +88,9 @@ root & \text{if } p.val \leq root.val \leq q.val \\
 
 **Precompute ancestors at powers of 2:**
 
-```math
+$$
 \text{ancestor}[i][j] = \text{ancestor}[\text{ancestor}[i][j-1]][j-1]
-```
+$$
 
 Where $\text{ancestor}[i][j]$ = $2^j$-th ancestor of node $i$.
 
@@ -102,9 +102,9 @@ Where $\text{ancestor}[i][j]$ = $2^j$-th ancestor of node $i$.
 
 **Using binary representation of k:**
 
-```math
+$$
 k = \sum_{i} b_i \cdot 2^i
-```
+$$
 
 Jump using precomputed $2^i$-th ancestors.
 

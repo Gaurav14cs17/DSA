@@ -42,16 +42,16 @@ permalink: /31_combinatorics/
 **Addition Principle:**
 If task A can be done in $m$ ways and task B in $n$ ways, and they're mutually exclusive:
 
-```math
+$$
 \text{Total ways} = m + n
-```
+$$
 
 **Multiplication Principle:**
 If task A can be done in $m$ ways and task B in $n$ ways independently:
 
-```math
+$$
 \text{Total ways} = m \times n
-```
+$$
 
 **Example:** Choose 1 fruit from 3 apples OR 2 oranges → $3 + 2 = 5$ ways  
 Choose 1 shirt from 3 AND 1 pant from 4 → $3 \times 4 = 12$ ways
@@ -64,15 +64,15 @@ Choose 1 shirt from 3 AND 1 pant from 4 → $3 \times 4 = 12$ ways
 
 **Formula (n distinct objects):**
 
-```math
+$$
 P(n) = n!
-```
+$$
 
 **Formula (r objects from n):**
 
-```math
+$$
 P(n, r) = \frac{n!}{(n-r)!} = n \times (n-1) \times \cdots \times (n-r+1)
-```
+$$
 
 **Proof:**
 - First position: $n$ choices
@@ -83,15 +83,15 @@ P(n, r) = \frac{n!}{(n-r)!} = n \times (n-1) \times \cdots \times (n-r+1)
 
 **With Repetition:**
 
-```math
+$$
 P_{repetition}(n, r) = n^r
-```
+$$
 
 **Circular Permutations:**
 
-```math
+$$
 P_{circular}(n) = (n-1)!
-```
+$$
 
 ---
 
@@ -101,9 +101,9 @@ P_{circular}(n) = (n-1)!
 
 **Formula:**
 
-```math
+$$
 C(n, r) = \binom{n}{r} = \frac{n!}{r!(n-r)!}
-```
+$$
 
 **Proof:**
 - Permutations of r from n: $P(n,r) = \frac{n!}{(n-r)!}$
@@ -112,9 +112,9 @@ C(n, r) = \binom{n}{r} = \frac{n!}{r!(n-r)!}
 
 **Pascal's Identity:**
 
-```math
+$$
 \binom{n}{r} = \binom{n-1}{r-1} + \binom{n-1}{r}
-```
+$$
 
 **Proof:** Choose from $n$ objects. Either:
 - Include first object: choose $r-1$ from remaining $n-1$ → $\binom{n-1}{r-1}$
@@ -126,16 +126,16 @@ C(n, r) = \binom{n}{r} = \frac{n!}{r!(n-r)!}
 
 **Theorem:**
 
-```math
+$$
 (x + y)^n = \sum_{k=0}^{n} \binom{n}{k} x^{n-k} y^k
-```
+$$
 
 **Special Cases:**
 
-```math
+$$
 \sum_{k=0}^{n} \binom{n}{k} = 2^n \quad \text{(set } x=y=1\text{)}
 \sum_{k=0}^{n} (-1)^k \binom{n}{k} = 0 \quad \text{(set } x=1, y=-1\text{)}
-```
+$$
 
 ---
 
@@ -143,15 +143,15 @@ C(n, r) = \binom{n}{r} = \frac{n!}{r!(n-r)!}
 
 **Definition:** 
 
-```math
+$$
 C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}
-```
+$$
 
 **Recurrence:**
 
-```math
+$$
 C_0 = 1, \quad C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
-```
+$$
 
 **First few terms:** $1, 1, 2, 5, 14, 42, 132, \ldots$
 
@@ -172,21 +172,21 @@ C_0 = 1, \quad C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
 
 **For 2 sets:**
 
-```math
+$$
 |A \cup B| = |A| + |B| - |A \cap B|
-```
+$$
 
 **For 3 sets:**
 
-```math
+$$
 |A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|
-```
+$$
 
 **General Formula:**
 
-```math
+$$
 \left|\bigcup_{i=1}^{n} A_i\right| = \sum_{i} |A_i| - \sum_{i<j} |A_i \cap A_j| + \sum_{i<j<k} |A_i \cap A_j \cap A_k| - \cdots
-```
+$$
 
 ---
 

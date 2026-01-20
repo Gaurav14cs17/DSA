@@ -33,10 +33,10 @@ permalink: /05_queues/
 
 A queue $Q$ is a collection supporting:
 
-```math
+$$
 \text{enqueue}(x): Q \to Q \cup \{x\} \text{ (add to rear)}
 \text{dequeue}(): Q \to Q \setminus \{\text{front}\} \text{ (remove from front)}
-```
+$$
 
 **FIFO Property:** First element enqueued is first element dequeued.
 
@@ -59,22 +59,22 @@ A queue $Q$ is a collection supporting:
 
 **Index Mapping:**
 
-```math
+$$
 \text{rear} = (\text{rear} + 1) \mod \text{capacity}
 \text{front} = (\text{front} + 1) \mod \text{capacity}
-```
+$$
 
 **Size Calculation:**
 
-```math
+$$
 \text{size} = (\text{rear} - \text{front} + \text{capacity}) \mod \text{capacity}
-```
+$$
 
 **Full Condition:**
 
-```math
+$$
 (\text{rear} + 1) \mod \text{capacity} = \text{front}
-```
+$$
 
 ---
 
@@ -82,9 +82,9 @@ A queue $Q$ is a collection supporting:
 
 For graph with $V$ vertices and $E$ edges:
 
-```math
+$$
 \boxed{T(V, E) = O(V + E)}
-```
+$$
 
 **Proof:**
 - Each vertex enqueued at most once: $O(V)$

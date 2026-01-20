@@ -47,9 +47,9 @@ permalink: /30_number_theory/05_euler_totient/04_totient_sum/
 
 ### Totient Summatory Function
 
-```math
+$$
 \Phi(n) = \sum_{i=1}^{n} \phi(i)
-```
+$$
 
 **Asymptotic:** $\Phi(n) \approx \frac{3n^2}{\pi^2}$
 

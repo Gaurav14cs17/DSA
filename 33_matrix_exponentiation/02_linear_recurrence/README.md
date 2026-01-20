@@ -66,9 +66,9 @@ permalink: /33_matrix_exponentiation/02_linear_recurrence/
 
 ### Linear Recurrence Definition
 
-```math
+$$
 a_n = c_1 a_{n-1} + c_2 a_{n-2} + \cdots + c_k a_{n-k}
-```
+$$
 
 **Examples:**
 

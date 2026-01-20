@@ -45,10 +45,10 @@ permalink: /17_backtracking/05_constraint_satisfaction/
 
 For queens at positions $(r\_1, c\_1)$ and $(r\_2, c\_2)$:
 
-```math
+$$
 c_1 \neq c_2 \quad \text{(same column)}
 |r_1 - r_2| \neq |c_1 - c_2| \quad \text{(same diagonal)}
-```
+$$
 
 ---
 
@@ -62,9 +62,9 @@ Each row, column, and 3×3 box contains digits 1-9 exactly once.
 
 Good constraint checking eliminates branches early:
 
-```math
+$$
 \text{Pruned complexity} \ll \text{Naive complexity}
-```
+$$
 
 ---
 

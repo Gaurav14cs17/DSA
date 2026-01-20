@@ -39,14 +39,14 @@ permalink: /30_number_theory/06_chinese_remainder/
 
 **Statement:** Given pairwise coprime moduli $m\_1, m\_2, \ldots, m\_k$ and any integers $a\_1, a\_2, \ldots, a\_k$, the system:
 
-```math
+$$
 \begin{cases}
 x \equiv a_1 \pmod{m_1} \\
 x \equiv a_2 \pmod{m_2} \\
 \vdots \\
 x \equiv a_k \pmod{m_k}
 \end{cases}
-```
+$$
 
 has a unique solution modulo $M = m\_1 \cdot m\_2 \cdots m\_k$.
 
@@ -56,9 +56,9 @@ has a unique solution modulo $M = m\_1 \cdot m\_2 \cdots m\_k$.
 
 Let $M\_i = M / m\_i$ and $y\_i = M\_i^{-1} \pmod{m\_i}$
 
-```math
+$$
 x = \sum_{i=1}^{k} a_i \cdot M_i \cdot y_i \pmod{M}
-```
+$$
 
 ---
 
@@ -66,9 +66,9 @@ x = \sum_{i=1}^{k} a_i \cdot M_i \cdot y_i \pmod{M}
 
 For $x \equiv a\_1 \pmod{m\_1}$ and $x \equiv a\_2 \pmod{m\_2}$:
 
-```math
+$$
 x = a_1 + m_1 \cdot \frac{(a_2 - a_1) \cdot m_1^{-1} \pmod{m_2}}{1} \pmod{m_1 \cdot m_2}
-```
+$$
 
 ---
 

@@ -40,9 +40,9 @@ permalink: /18_dynamic_programming/02_2d_dp/
 
 ### 1️⃣ General Form
 
-```math
+$$
 dp[i][j] = f(dp[i-1][j], dp[i][j-1], dp[i-1][j-1], \ldots)
-```
+$$
 
 ---
 
@@ -50,20 +50,20 @@ dp[i][j] = f(dp[i-1][j], dp[i][j-1], dp[i-1][j-1], \ldots)
 
 Path counting / min cost paths:
 
-```math
+$$
 dp[i][j] = dp[i-1][j] + dp[i][j-1]
-```
+$$
 
 ---
 
 ### 3️⃣ LCS Recurrence
 
-```math
+$$
 dp[i][j] = \begin{cases}
 dp[i-1][j-1] + 1 & \text{if } s[i] = t[j] \\
 \max(dp[i-1][j], dp[i][j-1]) & \text{otherwise}
 \end{cases}
-```
+$$
 
 ---
 

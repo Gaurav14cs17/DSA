@@ -37,9 +37,9 @@ permalink: /10_graphs/06_cycle_detection/
 - Gray (1): In current DFS path
 - Black (2): Finished
 
-```math
+$$
 \text{Cycle exists} \Leftrightarrow \text{Back edge to gray vertex}
-```
+$$
 
 ---
 
@@ -58,9 +58,9 @@ Graph with $n$ vertices is a tree iff:
 2. Has exactly $n - 1$ edges
 3. No cycles
 
-```math
+$$
 \text{Tree} \Leftrightarrow |E| = |V| - 1 \land \text{connected}
-```
+$$
 
 ---
 
@@ -68,9 +68,9 @@ Graph with $n$ vertices is a tree iff:
 
 Use BFS/DFS with distance tracking:
 
-```math
+$$
 \text{cycle length} = \text{dist}[u] + \text{dist}[v] + 1
-```
+$$
 
 when back edge $(u, v)$ discovered.
 

@@ -36,19 +36,19 @@ permalink: /14_sorting/03_custom_sorting/
 
 **Define ordering relation** $\prec$ such that:
 
-```math
+$$
 a \prec b \Leftrightarrow \text{key}(a) < \text{key}(b)
-```
+$$
 
 Or use comparator function:
 
-```math
+$$
 \text{cmp}(a, b) = \begin{cases}
 -1 & a \prec b \\
 0 & a = b \\
 1 & a \succ b
 \end{cases}
-```
+$$
 
 ---
 
@@ -56,9 +56,9 @@ Or use comparator function:
 
 Comparator must be transitive:
 
-```math
+$$
 a \prec b \land b \prec c \Rightarrow a \prec c
-```
+$$
 
 Violation causes undefined behavior!
 
@@ -68,9 +68,9 @@ Violation causes undefined behavior!
 
 **Key insight:** Compare $a + b$ vs $b + a$ as strings.
 
-```math
+$$
 a \prec b \Leftrightarrow ab > ba \text{ (string comparison)}
-```
+$$
 
 **Example:** "3" vs "30" → "330" > "303" → 3 comes first.
 
@@ -80,9 +80,9 @@ a \prec b \Leftrightarrow ab > ba \text{ (string comparison)}
 
 **Sort by multiple criteria:**
 
-```math
+$$
 \text{key}(x) = (\text{key}_1(x), \text{key}_2(x), \ldots)
-```
+$$
 
 Python: Use tuple as sort key.
 

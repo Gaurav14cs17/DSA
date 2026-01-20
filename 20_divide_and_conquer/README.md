@@ -71,9 +71,9 @@ For recurrence $T(n) = aT(n/b) + f(n)$:
 
 ### 4️⃣ Merge Sort Analysis
 
-```math
+$$
 T(n) = 2T(n/2) + cn
-```
+$$
 
 **Recursion tree:**
 - Level 0: $cn$
@@ -81,9 +81,9 @@ T(n) = 2T(n/2) + cn
 - Level k: $cn$
 - Height: $\log n$
 
-```math
+$$
 T(n) = cn \times \log n = O(n \log n)
-```
+$$
 
 ---
 

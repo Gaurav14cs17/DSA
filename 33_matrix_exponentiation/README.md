@@ -53,29 +53,29 @@ permalink: /33_matrix_exponentiation/
 
 **Definition:** A sequence where each term is a linear combination of previous terms:
 
-```math
+$$
 a_n = c_1 a_{n-1} + c_2 a_{n-2} + \cdots + c_k a_{n-k}
-```
+$$
 
 **Examples:**
 
 **Fibonacci:**
 
-```math
+$$
 F_n = F_{n-1} + F_{n-2}, \quad F_0 = 0, F_1 = 1
-```
+$$
 
 **Tribonacci:**
 
-```math
+$$
 T_n = T_{n-1} + T_{n-2} + T_{n-3}, \quad T_0 = 0, T_1 = 1, T_2 = 1
-```
+$$
 
 **Lucas Numbers:**
 
-```math
+$$
 L_n = L_{n-1} + L_{n-2}, \quad L_0 = 2, L_1 = 1
-```
+$$
 
 ---
 
@@ -85,29 +85,29 @@ L_n = L_{n-1} + L_{n-2}, \quad L_0 = 2, L_1 = 1
 
 **Fibonacci Example:**
 
-```math
+$$
 \begin{bmatrix} F_{n+1} \\ F_n \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} F_n \\ F_{n-1} \end{bmatrix}
-```
+$$
 
 **Proof by Induction:**
 
 Base case: 
 
-```math
+$$
 \begin{bmatrix} F_2 \\ F_1 \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} 1 \\ 0 \end{bmatrix}
 $$ ✓
 
 Inductive step: If true for $n$, then:
-```
+$$
 
 \begin{bmatrix} F_{n+2} \\ F_{n+1} \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} F_{n+1} \\ F_n \end{bmatrix} = \begin{bmatrix} F_{n+1} + F_n \\ F_{n+1} \end{bmatrix} = \begin{bmatrix} F_{n+2} \\ F_{n+1} \end{bmatrix}
 $$ ✓
 
 Therefore:
 
-```math
+$$
 \begin{bmatrix} F_{n+1} \\ F_n \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix}^n \begin{bmatrix} F_1 \\ F_0 \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix}^n \begin{bmatrix} 1 \\ 0 \end{bmatrix}
-```
+$$
 
 ---
 
@@ -120,13 +120,13 @@ Therefore:
 
 **Algorithm (Binary Exponentiation):**
 
-```math
+$$
 M^n = \begin{cases}
 I & \text{if } n = 0 \\
 (M^{n/2})^2 & \text{if } n \text{ is even} \\
 M \cdot (M^{(n-1)/2})^2 & \text{if } n \text{ is odd}
 \end{cases}
-```
+$$
 
 **Time Complexity:**
 - Matrix multiplication: $O(k^3)$ for $k \times k$ matrix
@@ -139,7 +139,7 @@ M \cdot (M^{(n-1)/2})^2 & \text{if } n \text{ is odd}
 
 For recurrence $a\_n = c\_1 a\_{n-1} + c\_2 a\_{n-2} + \cdots + c\_k a\_{n-k}$:
 
-```math
+$$
 \begin{bmatrix} 
 a_n \\ 
 a_{n-1} \\ 
@@ -161,7 +161,7 @@ a_{n-3} \\
 \vdots \\ 
 a_{n-k} 
 \end{bmatrix}
-```
+$$
 
 This is called the **companion matrix**.
 

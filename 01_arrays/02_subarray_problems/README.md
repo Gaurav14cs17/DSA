@@ -60,15 +60,15 @@ A subarray is defined by choosing:
 - Start index $i$ where $0 \leq i < n$
 - End index $j$ where $i \leq j < n$
 
-```math
+$$
 \text{Count} = \sum_{i=0}^{n-1} (n-i) = n + (n-1) + \cdots + 1 = \frac{n(n+1)}{2}
-```
+$$
 
 **Alternative Proof (Choose 2 endpoints):**
 
-```math
+$$
 \binom{n+1}{2} = \frac{(n+1)!}{2!(n-1)!} = \frac{(n+1) \cdot n}{2} = \frac{n(n+1)}{2}
-```
+$$
 
 ---
 
@@ -78,9 +78,9 @@ A subarray is defined by choosing:
 
 **Recurrence Relation:**
 
-```math
+$$
 \boxed{M[i] = \max(A[i], \; M[i-1] + A[i])}
-```
+$$
 
 Where $M[i]$ = maximum subarray sum ending at index $i$.
 
@@ -90,23 +90,23 @@ Let $S\_{i}$ be the maximum sum of subarray ending at index $i$.
 
 **Case 1:** Subarray contains only $A[i]$
 
-```math
+$$
 S_i = A[i]
-```
+$$
 
 **Case 2:** Subarray extends from some $j < i$
 
-```math
+$$
 S_i = S_{i-1} + A[i]
-```
+$$
 
 **Decision:** $S\_i = \max(\text{Case 1}, \text{Case 2}) = \max(A[i], S\_{i-1} + A[i])$
 
 **When to start fresh?**
 
-```math
+$$
 A[i] > S_{i-1} + A[i] \iff S_{i-1} < 0
-```
+$$
 
 **Insight:** Start new subarray when previous sum is negative.
 
@@ -161,19 +161,19 @@ Answer: max_so_far = 6  (subarray [4, -1, 2, 1])
 
 **State Definition:**
 
-```math
+$$
 \begin{aligned}
 \text{max\_prod}[i] &= \text{Maximum product ending at } i \\
 \text{min\_prod}[i] &= \text{Minimum product ending at } i
 \end{aligned}
-```
+$$
 
 **Recurrence:**
 
-```math
+$$
 \boxed{\text{max\_prod}[i] = \max(A[i], \; A[i] \times \text{max\_prod}[i-1], \; A[i] \times \text{min\_prod}[i-1])}
 \boxed{\text{min\_prod}[i] = \min(A[i], \; A[i] \times \text{max\_prod}[i-1], \; A[i] \times \text{min\_prod}[i-1])}
-```
+$$
 
 **Why track minimum?**
 
@@ -215,17 +215,17 @@ Answer: 6 (subarray [2, 3])
 
 **Key Identity:**
 
-```math
+$$
 \text{sum}(i, j) = k \iff P[j] - P[i-1] = k \iff P[i-1] = P[j] - k
-```
+$$
 
 **Algorithm:** At each index $j$, count how many previous prefix sums equal $P[j] - k$.
 
 **Counting Formula:**
 
-```math
+$$
 \text{count} = \sum_{j=0}^{n-1} \text{freq}[P[j] - k]
-```
+$$
 
 ```
 Prefix Sum Array: P = [0, 1, 2, 3, 1, 2, 4]

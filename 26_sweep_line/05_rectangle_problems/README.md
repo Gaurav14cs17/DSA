@@ -53,15 +53,15 @@ permalink: /26_sweep_line/05_rectangle_problems/
 
 **Rectangles $R\_1 = [x\_1, x\_2] \times [y\_1, y\_2]$ and $R\_2 = [x\_3, x\_4] \times [y\_3, y\_4]$ overlap iff:**
 
-```math
+$$
 x_1 < x_4 \land x_3 < x_2 \land y_1 < y_4 \land y_3 < y_2
-```
+$$
 
 **Overlap area:**
 
-```math
+$$
 A = \max(0, \min(x_2, x_4) - \max(x_1, x_3)) \times \max(0, \min(y_2, y_4) - \max(y_1, y_3))
-```
+$$
 
 ---
 
@@ -93,9 +93,9 @@ A = \max(0, \min(x_2, x_4) - \max(x_1, x_3)) \times \max(0, \min(y_2, y_4) - \ma
 
 **Area with bar $i$ as minimum:**
 
-```math
+$$
 \text{area}_i = \text{height}[i] \times (\text{right}_i - \text{left}_i - 1)
-```
+$$
 
 ---
 

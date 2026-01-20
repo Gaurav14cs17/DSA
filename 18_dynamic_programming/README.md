@@ -61,10 +61,10 @@ permalink: /18_dynamic_programming/
 
 ### 4️⃣ State Space Complexity
 
-```math
+$$
 \text{Time} = O(\text{states} \times \text{transition cost})
 \text{Space} = O(\text{states})
-```
+$$
 
 ---
 
@@ -72,9 +72,9 @@ permalink: /18_dynamic_programming/
 
 Many 2D DP can be reduced to 1D:
 
-```math
+$$
 \text{If } dp[i] \text{ only depends on } dp[i-1] \Rightarrow O(n) \text{ space}
-```
+$$
 
 ---
 

@@ -69,9 +69,9 @@ permalink: /21_bit_manipulation/03_bitmask/
 
 For a set $\{a_0, a_1, ..., a_{n-1}\}$, a subset $S$ is represented by bitmask $m$:
 
-```math
+$$
 i \in S \Leftrightarrow (m >> i) \land 1 = 1
-```
+$$
 
 #### 📊 Visual Example
 
@@ -98,9 +98,9 @@ Check: (10 >> 1) & 1 = 5 & 1 = 1 → banana ∈ S ✓
 
 For $n$ elements, there are exactly $2^n$ subsets (including empty set):
 
-```math
+$$
 \text{Subsets} = \{0, 1, 2, ..., 2^n - 1\}
-```
+$$
 
 #### The Algorithm
 
@@ -195,9 +195,9 @@ Submasks: {1011, 1010, 1001, 1000, 0011, 0010, 0001, 0000}
 
 For all masks and their submasks:
 
-```math
+$$
 \sum_{m=0}^{2^n-1} 2^{\text{popcount}(m)} = 3^n
-```
+$$
 
 This is because each element has 3 choices: not in $m$, in $m$ but not in $sub$, or in both.
 
@@ -207,9 +207,9 @@ This is because each element has 3 choices: not in $m$, in $m$ but not in $sub$,
 
 Represent a set of lowercase letters using 26 bits:
 
-```math
+$$
 \text{mask} = \sum_{c \in \text{word}} 2^{c - \text{'a'}}
-```
+$$
 
 #### Use Cases
 
@@ -276,27 +276,27 @@ for mask in range(1 << n):
 
 #### State Definition
 
-```math
+$$
 \text{dp}[\text{mask}][i] = \text{minimum cost to visit cities in mask, ending at } i
-```
+$$
 
 #### Recurrence
 
-```math
+$$
 \text{dp}[\text{mask}][i] = \min_{j \in \text{mask}, j \neq i} \left( \text{dp}[\text{mask} \setminus \{i\}][j] + \text{dist}[j][i] \right)
-```
+$$
 
 #### Base Case
 
-```math
+$$
 \text{dp}[1 << \text{start}][\text{start}] = 0
-```
+$$
 
 #### Answer
 
-```math
+$$
 \text{answer} = \min_{i} \left( \text{dp}[(1 << n) - 1][i] + \text{dist}[i][\text{start}] \right)
-```
+$$
 
 ---
 
@@ -306,9 +306,9 @@ Partition array into $k$ subsets of equal sum.
 
 #### State Definition
 
-```math
+$$
 \text{dp}[\text{mask}] = \text{current bucket sum} \mod \text{target}
-```
+$$
 
 If we can partition elements in mask into complete buckets:
 - `dp[mask] = 0` means we have exactly filled some buckets

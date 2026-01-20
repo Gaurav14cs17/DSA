@@ -75,15 +75,15 @@ inorder  = inorder(left) + [root] + inorder(right)
 
 Number of structurally unique BSTs with $n$ nodes:
 
-```math
+$$
 \boxed{C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}}
-```
+$$
 
 **Recurrence:**
 
-```math
+$$
 C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
-```
+$$
 
 **Interpretation:** Choose root $i$, left subtree has $i$ nodes, right has $n-1-i$.
 
@@ -97,9 +97,9 @@ C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
 
 **Preorder with Null Markers:**
 
-```math
+$$
 \text{serialize}(T) = \text{val} + \text{serialize}(T_L) + \text{serialize}(T_R)
-```
+$$
 
 Use "#" for null nodes.
 

@@ -54,33 +54,33 @@ permalink: /01_arrays/05_interval_problems/
 
 **Interval Notation:**
 
-```math
+$$
 [a, b] = \{x \in \mathbb{R} : a \leq x \leq b\}
-```
+$$
 
 **Interval Relations:**
 
-```math
+$$
 \begin{aligned}
 \text{Disjoint:} \quad & [a, b] \cap [c, d] = \emptyset \iff b < c \text{ or } d < a \\
 \text{Overlap:} \quad & [a, b] \cap [c, d] \neq \emptyset \iff b \geq c \text{ and } d \geq a \\
 \text{Contains:} \quad & [a, b] \subseteq [c, d] \iff c \leq a \text{ and } b \leq d
 \end{aligned}
-```
+$$
 
 **Merge Condition:**
 
 Two intervals $[a, b]$ and $[c, d]$ can merge if:
 
-```math
+$$
 \boxed{b \geq c \quad \text{(assuming } a \leq c \text{)}}
-```
+$$
 
 Merged interval:
 
-```math
+$$
 [a, b] \cup [c, d] = [\min(a, c), \max(b, d)]
-```
+$$
 
 ---
 
@@ -245,9 +245,9 @@ Input: intervals = [[1,3], [6,9]], newInterval = [2,5]
 
 Given intervals $I\_1, I\_2, \ldots, I\_n$ where $I\_i = [s\_i, e\_i]$:
 
-```math
+$$
 \text{rooms needed} = \max_{t} \left|\{i : s_i \leq t < e_i\}\right|
-```
+$$
 
 **Sweep Line Algorithm:**
 
@@ -733,9 +733,9 @@ Let $OPT$ be an optimal solution, $G$ be greedy solution.
 
 For intervals $[a, b]$ and $[c, d]$ where $a \leq c$:
 
-```math
+$$
 \text{Overlap length} = \max(0, \min(b, d) - c)
-```
+$$
 
 **Proof:**
 - Overlap exists iff $b \geq c$

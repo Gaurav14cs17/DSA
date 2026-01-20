@@ -50,9 +50,9 @@ permalink: /30_number_theory/05_euler_totient/01_basic_totient/
 
 **Euler's Totient Function:** $\phi(n)$ counts integers from 1 to n that are coprime to n.
 
-```math
+$$
 \phi(n) = |\{k : 1 \leq k \leq n, \gcd(k, n) = 1\}|
-```
+$$
 
 ---
 
@@ -60,15 +60,15 @@ permalink: /30_number_theory/05_euler_totient/01_basic_totient/
 
 For $n = p\_1^{a\_1} \cdot p\_2^{a\_2} \cdots p\_k^{a\_k}$:
 
-```math
+$$
 \phi(n) = n \prod_{p|n}\left(1 - \frac{1}{p}\right) = n \cdot \frac{p_1-1}{p_1} \cdot \frac{p_2-1}{p_2} \cdots
-```
+$$
 
 **Equivalently:**
 
-```math
+$$
 \phi(n) = \prod_{i=1}^{k} p_i^{a_i - 1}(p_i - 1)
-```
+$$
 
 ---
 
@@ -259,9 +259,9 @@ The only numbers not coprime to a prime p are multiples of p, and only p itself 
 
 ### 3. Average Value
 
-```math
+$$
 \frac{1}{n}\sum_{i=1}^{n} \phi(i) \approx \frac{3n}{\pi^2}
-```
+$$
 
 ---
 

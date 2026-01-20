@@ -38,9 +38,9 @@ permalink: /15_searching/05_binary_search_advanced/
 
 **Key insight:** If $arr[mid] < arr[mid+1]$, peak exists on right.
 
-```math
+$$
 T = O(\log n)
-```
+$$
 
 ---
 
@@ -48,10 +48,10 @@ T = O(\log n)
 
 **Partition approach:** Find partition where left elements ≤ right elements.
 
-```math
+$$
 \text{left partition:} \quad \max(A[i-1], B[j-1]) \leq \min(A[i], B[j])
 T = O(\log(\min(m, n)))
-```
+$$
 
 ---
 
@@ -59,10 +59,10 @@ T = O(\log(\min(m, n)))
 
 **Patience sorting:** Maintain smallest tail for each length.
 
-```math
+$$
 \text{tails}[i] = \text{smallest tail of LIS of length } i+1
 T = O(n \log n)
-```
+$$
 
 ---
 
@@ -70,9 +70,9 @@ T = O(n \log n)
 
 Binary search on distance, count pairs with distance ≤ mid.
 
-```math
+$$
 T = O(n \log n + n \log D)
-```
+$$
 
 ---
 

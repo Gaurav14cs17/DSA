@@ -34,9 +34,9 @@ permalink: /31_combinatorics/02_combinations/
 
 ### Combination Formula
 
-```math
+$$
 \binom{n}{r} = C(n,r) = \frac{n!}{r!(n-r)!}
-```
+$$
 
 **Key Properties:**
 - $\binom{n}{r} = \binom{n}{n-r}$ (Symmetry)

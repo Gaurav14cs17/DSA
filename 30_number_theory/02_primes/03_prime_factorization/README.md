@@ -39,17 +39,17 @@ permalink: /30_number_theory/02_primes/03_prime_factorization/
 
 **Theorem:** Every integer $n > 1$ can be expressed **uniquely** as a product of prime powers:
 
-```math
+$$
 n = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k}
-```
+$$
 
 where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
 
 **Example:**
 
-```math
+$$
 360 = 2^3 \times 3^2 \times 5^1
-```
+$$
 
 ---
 
@@ -57,21 +57,21 @@ where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
 
 **Divisor Count (τ function):**
 
-```math
+$$
 \tau(n) = (a_1 + 1)(a_2 + 1) \cdots (a_k + 1)
-```
+$$
 
 **Divisor Sum (σ function):**
 
-```math
+$$
 \sigma(n) = \prod_{i=1}^{k} \frac{p_i^{a_i+1} - 1}{p_i - 1}
-```
+$$
 
 **Euler's Totient (φ function):**
 
-```math
+$$
 \phi(n) = n \prod_{i=1}^{k} \left(1 - \frac{1}{p_i}\right)
-```
+$$
 
 ---
 

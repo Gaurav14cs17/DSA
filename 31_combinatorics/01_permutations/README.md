@@ -48,9 +48,9 @@ For set $S = \{a, b, c\}$:
 
 **Full Permutation (n distinct objects):**
 
-```math
+$$
 P(n) = n!
-```
+$$
 
 **Proof:** 
 - First position: n choices
@@ -60,23 +60,23 @@ P(n) = n!
 
 **r-Permutation (r from n):**
 
-```math
+$$
 P(n, r) = \frac{n!}{(n-r)!}
-```
+$$
 
 **Permutations with Repetition:**
 
 If object $i$ appears $n\_i$ times:
 
-```math
+$$
 P = \frac{n!}{n_1! \times n_2! \times \cdots \times n_k!}
-```
+$$
 
 **Example:** Permutations of "AABBC":
 
-```math
+$$
 \frac{5!}{2! \times 2! \times 1!} = \frac{120}{4} = 30
-```
+$$
 
 ---
 
@@ -97,15 +97,15 @@ P = \frac{n!}{n_1! \times n_2! \times \cdots \times n_k!}
 
 **Formula:**
 
-```math
+$$
 D_n = n! \sum_{i=0}^{n} \frac{(-1)^i}{i!} \approx \frac{n!}{e}
-```
+$$
 
 **Recurrence:**
 
-```math
+$$
 D_n = (n-1)(D_{n-1} + D_{n-2})
-```
+$$
 
 **First few:** $D\_0=1, D\_1=0, D\_2=1, D\_3=2, D\_4=9, D\_5=44$
 

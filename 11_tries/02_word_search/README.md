@@ -38,9 +38,9 @@ permalink: /11_tries/02_word_search/
 
 **Approach:** DFS through trie, branch at '.' to all children.
 
-```math
+$$
 T = O(26^{\text{dots}} \times L)
-```
+$$
 
 ---
 
@@ -48,9 +48,9 @@ T = O(26^{\text{dots}} \times L)
 
 **Grid search with Trie:**
 
-```math
+$$
 T = O(m \times n \times 4^L)
-```
+$$
 
 Where:
 - $m \times n$ = grid size
@@ -65,9 +65,9 @@ Where:
 
 **Key insight:** Trie enables early termination.
 
-```math
+$$
 \text{If prefix not in trie} \Rightarrow \text{stop exploring}
-```
+$$
 
 ---
 

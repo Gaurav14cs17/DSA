@@ -41,9 +41,9 @@ permalink: /16_recursion/
 
 A function that calls itself with a smaller input:
 
-```math
+$$
 f(n) = g(f(n-1), n)
-```
+$$
 
 **Requirements:**
 1. **Base case:** Termination condition
@@ -79,9 +79,9 @@ For recurrence $T(n) = aT(n/b) + f(n)$:
 
 **Recursive depth:** Maximum number of active frames.
 
-```math
+$$
 \text{Space} = O(\text{depth} \times \text{frame size})
-```
+$$
 
 **Tail recursion:** Can be optimized to O(1) space (in some languages).
 
@@ -91,9 +91,9 @@ For recurrence $T(n) = aT(n/b) + f(n)$:
 
 When function calls itself multiple times:
 
-```math
+$$
 T(n) = T(n-1) + T(n-2) + \ldots
-```
+$$
 
 **Example:** Fibonacci without memoization → O(2ⁿ)
 

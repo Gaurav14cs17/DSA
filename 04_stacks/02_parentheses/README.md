@@ -66,9 +66,9 @@ For string $S$ with brackets:
 
 **Condition 1 (Balance):**
 
-```math
+$$
 \boxed{\sum_{i=0}^{n-1} \text{score}(S[i]) = 0}
-```
+$$
 
 Where:
 - $\text{score}('(') = +1, \; \text{score}(')') = -1$
@@ -77,9 +77,9 @@ Where:
 
 **Condition 2 (Prefix Non-negative):**
 
-```math
+$$
 \boxed{\forall k \in [0, n-1]: \sum_{i=0}^{k} \text{score}(S[i]) \geq 0}
-```
+$$
 
 **Proof:** If prefix sum becomes negative, we have more closing than opening brackets up to that point → invalid.
 
@@ -113,9 +113,9 @@ Where:
 
 **Problem:** Minimum insertions to make string valid.
 
-```math
+$$
 \boxed{\text{additions} = \text{unmatched\_open} + \text{unmatched\_close}}
-```
+$$
 
 **Proof:**
 - Each unmatched `(` needs a matching `)`
@@ -137,13 +137,13 @@ Answer: 1 (need one more ')')
 
 **Recurrence Relation:**
 
-```math
+$$
 \boxed{dp[i] = \begin{cases}
 0 & \text{if } S[i] = '(' \\
 dp[i-2] + 2 & \text{if } S[i-1] = '(' \text{ and } i \geq 1 \\
 dp[i-1] + 2 + dp[j] & \text{if } j = i - dp[i-1] - 2 \geq 0 \text{ and } S[j+1] = '('
 \end{cases}}
-```
+$$
 
 Where:
 - $dp[i]$ = length of longest valid substring ending at index $i$
@@ -157,15 +157,15 @@ Where:
 
 **Number of valid strings with $n$ pairs:**
 
-```math
+$$
 \boxed{C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)! \cdot n!}}
-```
+$$
 
 **Recurrence Relation:**
 
-```math
+$$
 C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
-```
+$$
 
 **First few Catalan numbers:**
 
@@ -186,9 +186,9 @@ C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
 
 **Catalan Number Growth:**
 
-```math
+$$
 C_n \sim \frac{4^n}{n^{3/2}\sqrt{\pi}}
-```
+$$
 
 This means generating all valid parentheses has exponential time complexity!
 

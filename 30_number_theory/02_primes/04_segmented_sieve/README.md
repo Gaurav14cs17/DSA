@@ -69,9 +69,9 @@ For prime $p$ and range starting at $L$:
 
 **First multiple of p that is ≥ L:**
 
-```math
+$$
 \text{start} = \left\lceil \frac{L}{p} \right\rceil \times p = \left(\frac{L + p - 1}{p}\right) \times p
-```
+$$
 
 **But skip p itself if it's in range:**
 

@@ -46,15 +46,15 @@ permalink: /06_hash_tables/01_frequency_counting/
 
 ### 1️⃣ Frequency Definition
 
-```math
+$$
 \text{freq}(x, A) = |\{i : A[i] = x\}|
-```
+$$
 
 **Total elements:**
 
-```math
+$$
 \sum_{x \in \text{unique}(A)} \text{freq}(x) = n
-```
+$$
 
 ---
 
@@ -68,9 +68,9 @@ Maintain candidate and count. If element matches, increment; otherwise decrement
 
 **Proof:** If majority exists, it survives all cancellations.
 
-```math
+$$
 \text{count}_{majority} > \frac{n}{2} > \text{count}_{all\_others}
-```
+$$
 
 ---
 
@@ -78,9 +78,9 @@ Maintain candidate and count. If element matches, increment; otherwise decrement
 
 Two strings are anagrams if:
 
-```math
+$$
 \forall c \in \Sigma: \text{freq}_s(c) = \text{freq}_t(c)
-```
+$$
 
 ---
 

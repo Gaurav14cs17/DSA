@@ -48,9 +48,9 @@ Each subfolder contains **complete mini-courses** with:
 
 For array `A` starting at base address `B` with element size `S` bytes:
 
-```math
+$$
 \boxed{\text{Address}(A[i]) = B + i \times S}
-```
+$$
 
 **Derivation:**
 ```
@@ -72,23 +72,23 @@ Element i: B + i×S
 
 **Total number of subarrays in array of size n:**
 
-```math
+$$
 \boxed{\sum_{i=1}^{n} i = \frac{n(n+1)}{2}}
-```
+$$
 
 **Proof by Gauss's Method:**
 
-```math
+$$
 S = 1 + 2 + 3 + \cdots + n
 S = n + (n-1) + (n-2) + \cdots + 1
-```
+$$
 
 Adding both equations:
 
-```math
+$$
 2S = (n+1) + (n+1) + \cdots + (n+1) = n(n+1)
 \therefore S = \frac{n(n+1)}{2}
-```
+$$
 
 **Example:** n = 5 → 5×6/2 = 15 subarrays
 
@@ -98,16 +98,16 @@ Adding both equations:
 
 **Total subsequences (including empty):**
 
-```math
+$$
 \boxed{2^n}
-```
+$$
 
 **Proof by Combinatorics:**
 Each element has 2 choices: include or exclude.
 
-```math
+$$
 \text{Total} = \underbrace{2 \times 2 \times \cdots \times 2}_{n \text{ times}} = 2^n
-```
+$$
 
 **Non-empty subsequences:** $2^n - 1$
 
@@ -117,9 +117,9 @@ Each element has 2 choices: include or exclude.
 
 **Recurrence Relation:**
 
-```math
+$$
 \boxed{dp[i] = \max(A[i], \; dp[i-1] + A[i])}
-```
+$$
 
 **Optimal Substructure Proof:**
 - Let $S\_i$ = max subarray sum ending at index $i$
@@ -134,23 +134,23 @@ Each element has 2 choices: include or exclude.
 
 **Definition:**
 
-```math
+$$
 P[i] = \sum_{j=0}^{i} A[j]
-```
+$$
 
 **Range Sum Formula:**
 
-```math
+$$
 \boxed{\text{sum}(l, r) = P[r] - P[l-1]}
-```
+$$
 
 **Proof:**
 
-```math
+$$
 P[r] = A[0] + A[1] + \cdots + A[l-1] + A[l] + \cdots + A[r]
 P[l-1] = A[0] + A[1] + \cdots + A[l-1]
 P[r] - P[l-1] = A[l] + A[l+1] + \cdots + A[r] = \text{sum}(l, r) \; \blacksquare
-```
+$$
 
 ---
 
@@ -160,9 +160,9 @@ For opposite-direction pointers on sorted array:
 
 **Iterations Formula:**
 
-```math
+$$
 \boxed{\text{Iterations} \leq n}
-```
+$$
 
 **Proof:**
 - Each iteration: either $left++$ or $right--$ (or both)
@@ -176,25 +176,25 @@ For opposite-direction pointers on sorted array:
 
 **Position Mapping (right rotation by k):**
 
-```math
+$$
 \boxed{\text{new\_index}(i) = (i + k) \mod n}
-```
+$$
 
 **Inverse Mapping:**
 
-```math
+$$
 \text{old\_index}(i) = (i - k + n) \mod n
-```
+$$
 
 **Reversal Algorithm Proof:**
 
 Let array = $[A\_1, \ldots, A\_{n-k}, A\_{n-k+1}, \ldots, A\_n]$
 
-```math
+$$
 \text{Rev}([A_1, \ldots, A_n]) = [A_n, \ldots, A_1]
 \text{Rev}([A_n, \ldots, A_{n-k+1}]) \cdot \text{Rev}([A_{n-k}, \ldots, A_1])
 = [A_{n-k+1}, \ldots, A_n, A_1, \ldots, A_{n-k}] \; \blacksquare
-```
+$$
 
 ---
 
@@ -202,15 +202,15 @@ Let array = $[A\_1, \ldots, A\_{n-k}, A\_{n-k+1}, \ldots, A\_n]$
 
 **Cost of n insertions:**
 
-```math
+$$
 \boxed{T(n) = n + \sum_{i=0}^{\lfloor \log_2 n \rfloor} 2^i = n + (2^{\lfloor \log_2 n \rfloor + 1} - 1) \approx 3n}
-```
+$$
 
 **Amortized cost per insertion:**
 
-```math
+$$
 \frac{T(n)}{n} = \frac{3n}{n} = 3 = O(1)
-```
+$$
 
 ---
 

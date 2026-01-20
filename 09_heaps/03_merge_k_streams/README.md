@@ -34,9 +34,9 @@ permalink: /09_heaps/03_merge_k_streams/
 
 **Problem:** Merge k sorted lists with total n elements.
 
-```math
+$$
 \boxed{T(n, k) = O(n \log k)}
-```
+$$
 
 **Why?** Each element inserted and extracted once from heap of size k.
 
@@ -58,9 +58,9 @@ permalink: /09_heaps/03_merge_k_streams/
 
 **Key Insight:** Start with (0,0), explore neighbors (i+1,j) and (i,j+1).
 
-```math
+$$
 \text{pairs to consider} \leq 2k
-```
+$$
 
 ---
 

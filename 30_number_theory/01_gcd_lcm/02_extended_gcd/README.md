@@ -39,9 +39,9 @@ permalink: /30_number_theory/01_gcd_lcm/02_extended_gcd/
 
 **Theorem:** For any integers $a, b$ (not both zero), there exist integers $x, y$ such that:
 
-```math
+$$
 a \cdot x + b \cdot y = \gcd(a, b)
-```
+$$
 
 Furthermore, the set of all linear combinations $\{ax + by : x, y \in \mathbb{Z}\}$ equals all multiples of $\gcd(a, b)$.
 
@@ -58,13 +58,13 @@ Let $d$ be the smallest element in $S$, so $d = ax\_0 + by\_0$ for some $x\_0, y
 
 By division algorithm: $a = qd + r$ where $0 \leq r < d$.
 
-```math
+$$
 \begin{align}
 r &= a - qd \\
 &= a - q(ax_0 + by_0) \\
 &= a(1 - qx_0) + b(-qy_0)
 \end{align}
-```
+$$
 
 If $r > 0$, then $r \in S$ and $r < d$, contradicting minimality of $d$.  
 Therefore $r = 0$, so $d \mid a$.  
@@ -102,14 +102,14 @@ By induction, assume we have: $b \cdot x\_1 + (a \bmod b) \cdot y\_1 = d$
 
 Substitute $a \bmod b = a - \lfloor a/b \rfloor \cdot b$:
 
-```math
+$$
 \begin{align}
 d &= b \cdot x_1 + (a - \lfloor a/b \rfloor \cdot b) \cdot y_1 \\
 &= b \cdot x_1 + a \cdot y_1 - \lfloor a/b \rfloor \cdot b \cdot y_1 \\
 &= a \cdot y_1 + b \cdot (x_1 - \lfloor a/b \rfloor \cdot y_1) \\
 &= a \cdot x + b \cdot y
 \end{align}
-```
+$$
 
 where $x = y\_1$ and $y = x\_1 - \lfloor a/b \rfloor \cdot y\_1$. $\blacksquare$
 
@@ -119,9 +119,9 @@ where $x = y\_1$ and $y = x\_1 - \lfloor a/b \rfloor \cdot y\_1$. $\blacksquare$
 
 **Definition:** The modular inverse of $a$ modulo $m$ is an integer $x$ such that:
 
-```math
+$$
 a \cdot x \equiv 1 \pmod{m}
-```
+$$
 
 **Existence Condition:** $a^{-1} \bmod m$ exists **if and only if** $\gcd(a, m) = 1$.
 
@@ -131,15 +131,15 @@ From Bézout: $a \cdot x + m \cdot y = \gcd(a, m)$
 
 If $\gcd(a, m) = 1$:
 
-```math
+$$
 a \cdot x + m \cdot y = 1
-```
+$$
 
 Taking modulo $m$:
 
-```math
+$$
 a \cdot x \equiv 1 \pmod{m}
-```
+$$
 
 So $x \bmod m$ is the modular inverse!
 
@@ -158,12 +158,12 @@ So $x \bmod m$ is the modular inverse!
 3. Otherwise, scale: $(x, y) = (x\_0 \cdot c/d, y\_0 \cdot c/d)$ is one solution
 4. General solution:
 
-```math
+$$
 \begin{cases}
 x = x_0 \cdot c/d + k \cdot (b/d) \\
 y = y_0 \cdot c/d - k \cdot (a/d)
 \end{cases}
-```
+$$
 
 for any integer $k$.
 

@@ -43,15 +43,15 @@ permalink: /34_sqrt_decomposition/
 
 **Block Size:**
 
-```math
+$$
 \text{block\_size} = \lceil \sqrt{n} \rceil
-```
+$$
 
 **Number of Blocks:**
 
-```math
+$$
 \text{num\_blocks} = \lceil \frac{n}{\text{block\_size}} \rceil \approx \sqrt{n}
-```
+$$
 
 **Why √n?**
 - Too small blocks: Many blocks → slow queries
@@ -64,9 +64,9 @@ permalink: /34_sqrt_decomposition/
 
 **Preprocessing:** Build block summaries
 
-```math
+$$
 T_{\text{build}} = O(n)
-```
+$$
 
 **Query (Range):** 
 - Partial blocks at ends: $O(\sqrt{n})$
@@ -88,9 +88,9 @@ T_{\text{build}} = O(n)
 
 ### 3️⃣ Space Complexity
 
-```math
+$$
 S = O(n + \sqrt{n}) = O(n)
-```
+$$
 
 - Original array: $O(n)$
 - Block data: $O(\sqrt{n})$ blocks
@@ -126,11 +126,11 @@ S = O(n + \sqrt{n}) = O(n)
 
 To minimize, take derivative:
 
-```math
+$$
 \frac{dT}{db} = -\frac{n}{b^2} + 1 = 0
 b^2 = n
 b = \sqrt{n}
-```
+$$
 
 At $b = \sqrt{n}$: $T = O(\frac{n}{\sqrt{n}} + \sqrt{n}) = O(\sqrt{n} + \sqrt{n}) = O(\sqrt{n})$ $\blacksquare$
 
