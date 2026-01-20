@@ -103,10 +103,10 @@ C_n = \frac{2(2n-1)}{n+1} \cdot C_{n-1}
 |  •   •   ·    •   •    •   •  ·   ·   ·   ·   ·               |
 |                                                                 |
 | 3. PATHS from (0,0) to (n,n) not crossing diagonal:           |
-|        ╭-╮             ╭-╮          etc.                       |
-|    ╭---╯ ╰-╮       ╭---╯ ╰--╮                                 |
+|        .-.             .-.          etc.                       |
+|    .---' '-.       .---' '--.                                 |
 |    |       |       |        |                                  |
-|    ╰-------╯       ╰--------╯                                  |
+|    '-------'       '--------'                                  |
 |                                                                 |
 | 4. TRIANGULATIONS of a polygon with n+2 sides:                 |
 |    Pentagon (n=2): 5 ways to triangulate                       |
