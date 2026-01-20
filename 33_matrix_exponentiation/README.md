@@ -193,6 +193,7 @@ This is called the **companion matrix**.
 
 ```
 +-----------------------------------------------------------------+
+
 | PROBLEM: Compute F₁₀ using matrix exponentiation               |
 +-----------------------------------------------------------------+
 | STEP 1: Define transformation matrix                            |
@@ -202,6 +203,7 @@ This is called the **companion matrix**.
 |                                                                  |
 |   Goal: Compute M¹⁰                                             |
 +-----------------------------------------------------------------+
+
 | STEP 2: Binary exponentiation                                   |
 |                                                                  |
 |   10 = 1010₂  (binary)                                          |
@@ -223,6 +225,7 @@ This is called the **companion matrix**.
 |   M¹⁰ = [34 21] × [2 1] = [89 55]                              |
 |         [21 13]   [1 1]   [55 34]                              |
 +-----------------------------------------------------------------+
+
 | STEP 3: Extract result                                          |
 |                                                                  |
 |   [F₁₁] = M¹⁰ × [1] = [89 55] × [1] = [89]                    |
@@ -243,12 +246,14 @@ This is called the **companion matrix**.
 
 ```
 +-----------------------------------------------------------------+
+
 | PROBLEM: Count paths of length 3 from vertex 0 to vertex 2     |
 |                                                                  |
 | Graph:  0 → 1 → 2                                               |
 |         ↓   ↑                                                    |
 |         3 ← +                                                    |
 +-----------------------------------------------------------------+
+
 | STEP 1: Adjacency matrix                                        |
 |                                                                  |
 |      0  1  2  3                                                  |
@@ -258,6 +263,7 @@ This is called the **companion matrix**.
 |   3 [0  1  0  0]   3→1                                          |
 |                                                                  |
 +-----------------------------------------------------------------+
+
 | STEP 2: Compute A³                                              |
 |                                                                  |
 | A² = A × A:                                                      |

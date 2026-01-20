@@ -477,6 +477,7 @@ Use this flowchart to quickly identify which technique to apply:
 
 ```
 +-------------------------------------------------------------+
+
 |                    Array Problem Given                      |
 +-------------------------------+-----------------------------+
                                 |

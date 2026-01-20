@@ -82,6 +82,7 @@ Each path = one solution candidate.
 Number of subsets of set with $n$ elements:
 
 ```math
+
 |P(S)| = 2^n
 
 ```

@@ -72,6 +72,7 @@ h(node) = \begin{cases}
 **Definition:** Height difference of subtrees ≤ 1 for all nodes.
 
 ```math
+
 |h(left) - h(right)| \leq 1 \quad \forall \text{nodes}
 
 ```

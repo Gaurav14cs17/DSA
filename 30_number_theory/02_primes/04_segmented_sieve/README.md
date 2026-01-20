@@ -95,6 +95,7 @@ If start = p, then start = 2p (we want composite multiples only).
 
 ```
 +-----------------------------------------------------------------+
+
 | PROBLEM: Find primes in range [100, 150]                       |
 +-----------------------------------------------------------------+
 | STEP 1: Generate small primes up to √150 ≈ 12                  |
@@ -141,6 +142,7 @@ If start = p, then start = 2p (we want composite multiples only).
 
 ```
 +-----------------------------------------------------------------+
+
 | HOW TO FIND: First multiple of p ≥ L                           |
 +-----------------------------------------------------------------+
 |                                                                 |
@@ -180,6 +182,7 @@ If start = p, then start = 2p (we want composite multiples only).
 
 ```
 +-----------------------------------------------------------------+
+
 | GENERATING ALL PRIMES UP TO 10^9 WITH LIMITED MEMORY           |
 +-----------------------------------------------------------------+
 |                                                                 |

@@ -100,6 +100,7 @@ If $g(n) = \sum\_{d|n} f(d)$, then $f(n) = \sum\_{d|n} \mu(d) \cdot g(n/d)$
 
 ```
 +-----------------------------------------------------------------+
+
 | COMPUTE φ(n) FOR ALL n UP TO 12                                |
 +-----------------------------------------------------------------+
 | INITIAL: φ[i] = i for all i                                    |
@@ -145,6 +146,7 @@ If $g(n) = \sum\_{d|n} f(d)$, then $f(n) = \sum\_{d|n} \mu(d) \cdot g(n/d)$
 
 ```
 +-----------------------------------------------------------------+
+
 | LEETCODE 952: Largest Component Size by Common Factor          |
 +-----------------------------------------------------------------+
 | PROBLEM: Connect numbers sharing a prime factor                |

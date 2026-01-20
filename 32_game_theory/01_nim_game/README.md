@@ -137,6 +137,7 @@ a \oplus b &= b \oplus a \quad \text{(commutative)} \\
 
 ```
 +-----------------------------------------------------------------+
+
 | GAME: Piles [3, 4, 5]                                           |
 +-----------------------------------------------------------------+
 | STEP 1: Calculate Nim-Sum                                       |
@@ -149,6 +150,7 @@ a \oplus b &= b \oplus a \quad \text{(commutative)} \\
 |                                                                  |
 | Nim-Sum ≠ 0 → WINNING POSITION for first player!               |
 +-----------------------------------------------------------------+
+
 | STEP 2: Find Winning Move                                       |
 |                                                                  |
 | Goal: Make Nim-Sum = 0                                          |
@@ -166,6 +168,7 @@ a \oplus b &= b \oplus a \quad \text{(commutative)} \\
 | New configuration: [1, 4, 5]                                    |
 | Verify: 1 ⊕ 4 ⊕ 5 = 001₂ ⊕ 100₂ ⊕ 101₂ = 000₂ = 0 ✓            |
 +-----------------------------------------------------------------+
+
 | STEP 3: Opponent's Turn (Losing Position)                       |
 |                                                                  |
 | Current: [1, 4, 5], Nim-Sum = 0                                 |
@@ -183,6 +186,7 @@ a \oplus b &= b \oplus a \quad \text{(commutative)} \\
 
 ```
 +-----------------------------------------------------------------+
+
 | PATTERN: Single Pile Nim                                        |
 +-----------------------------------------------------------------+
 | Pile Size | Nim-Sum | Position | Strategy                       |
@@ -197,6 +201,7 @@ a \oplus b &= b \oplus a \quad \text{(commutative)} \\
 +-----------------------------------------------------------------+
 
 +-----------------------------------------------------------------+
+
 | PATTERN: Two Equal Piles                                        |
 +-----------------------------------------------------------------+
 |   Piles   | Nim-Sum | Position | Strategy                       |

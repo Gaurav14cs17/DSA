@@ -86,6 +86,7 @@ C(n, r) = C(n-1, r-1) + C(n-1, r)
 **Definition:** All possible subsets of a set.
 
 ```math
+
 |\text{Power Set}| = 2^n
 
 ```

@@ -194,6 +194,7 @@ def count_distinct_in_ranges(arr: list[int],
 
 ```
 +-----------------------------------------------------------------+
+
 | EXAMPLE: Mo's Algorithm Query Processing                        |
 +-----------------------------------------------------------------+
 | Array: [1, 2, 1, 3, 4, 2, 5, 1, 3, 4]  (n=10, block_size=3)   |
@@ -204,6 +205,7 @@ def count_distinct_in_ranges(arr: list[int],
 |   Q3: [2, 6]   Block 0                                          |
 |   Q4: [1, 5]   Block 0                                          |
 +-----------------------------------------------------------------+
+
 | STEP 1: Sort queries by (block of L, R)                        |
 |                                                                  |
 |   Block 0: [0,4], [2,6], [1,5]  → sort by R → [0,4], [1,5], [2,6]|
@@ -211,6 +213,7 @@ def count_distinct_in_ranges(arr: list[int],
 |                                                                  |
 |   Sorted order: [0,4], [1,5], [2,6], [5,9]                     |
 +-----------------------------------------------------------------+
+
 | STEP 2: Process queries with pointer movements                  |
 |                                                                  |
 |   Initial: L=0, R=-1                                            |

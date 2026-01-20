@@ -36,6 +36,7 @@ permalink: /17_backtracking/01_subsets/
 Set of all subsets of $S$:
 
 ```math
+
 |P(S)| = 2^n
 
 ```

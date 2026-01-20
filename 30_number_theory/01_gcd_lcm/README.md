@@ -182,6 +182,7 @@ The LCM must be $d \cdot x \cdot y$ (smallest number divisible by both):
 ```
 
 +-----------------------------------------------------------------+
+
 | PROBLEM: Find gcd(48, 18)                                       |
 +-----------------------------------------------------------------+
 | STEP-BY-STEP EXECUTION:                                         |
@@ -231,6 +232,7 @@ The LCM must be $d \cdot x \cdot y$ (smallest number divisible by both):
 
 ```
 +-----------------------------------------------------------------+
+
 | PROBLEM: Find integers x, y such that 35x + 15y = gcd(35, 15)  |
 +-----------------------------------------------------------------+
 | FORWARD PHASE (Standard Euclidean):                             |
@@ -240,6 +242,7 @@ The LCM must be $d \cdot x \cdot y$ (smallest number divisible by both):
 |                                                                  |
 | So gcd(35, 15) = 5                                              |
 +-----------------------------------------------------------------+
+
 | BACKWARD PHASE (Finding coefficients):                          |
 |                                                                  |
 | Base: 5 = 1 × 5 + 0 × 0   (x₀ = 1, y₀ = 0)                     |

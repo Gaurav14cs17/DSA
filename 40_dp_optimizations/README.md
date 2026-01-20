@@ -770,6 +770,7 @@ Array: [1, 2, 3, 4, 5], K = 2
 
 Standard DP: For each (k, i), try all j < i
 +---------------------------------+
+
 | dp[2][4] = ?                     |
 |                                  |
 | Try j=0: dp[1][0] + cost[1][4]  |
@@ -780,6 +781,7 @@ Standard DP: For each (k, i), try all j < i
 
 D&C Optimization: Binary search on optimal j
 +----------------------------------+
+
 | opt[2][0] ≤ opt[2][2] ≤ opt[2][4] |
 |                                   |
 | Compute mid=2 first, find opt    |
@@ -1482,6 +1484,7 @@ def rerooting_dp(graph, n):
 
 ```
 +---------------------------------------------+
+
 | Identify DP bottleneck                     |
 +--------------+------------------------------+
                |
@@ -1493,6 +1496,7 @@ def rerooting_dp(graph, n):
    |           |           |
    ▼           ▼           ▼
 +---------+ +---------+ +----------+
+
 | States  | | Trans-  | | Linear   |
 | too big?| | itions? | | recur?   |
 +----+----+ +----+----+ +----+-----+

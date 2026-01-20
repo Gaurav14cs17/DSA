@@ -142,6 +142,7 @@ Stores $|V| \times |V|$ matrix regardless of $|E|$
 Every pair of vertices connected.
 
 ```math
+
 |E| = \binom{n}{2} = \frac{n(n-1)}{2}
 
 ```
@@ -248,10 +249,12 @@ Same Graph:
 
 Adjacency List (Undirected):
 +---+
+
 | 0 | → [1] → [2] → [3] → null
 +---+
 | 1 | → [0] → [3] → null
 +---+
+
 | 2 | → [0] → [3] → null
 +---+
 | 3 | → [0] → [1] → [2] → null
@@ -380,6 +383,7 @@ Node 3: neighbors = [2, 4]
 Node 4: neighbors = [1, 3]
 
 +--------------------------------------------------------------------+
+
 |  Deep Clone Process (DFS Approach)                                 |
 +--------------------------------------------------------------------+
 |  Step 1: Start at node 1                                           |
@@ -391,6 +395,7 @@ Node 4: neighbors = [1, 3]
 |                                                                    |
 |  Explore neighbors of 1: [2, 4]                                    |
 +--------------------------------------------------------------------+
+
 |  Step 2: Visit neighbor 2                                          |
 |  Create clone of 2                                                 |
 |  original_map[2] = clone_2                                         |
@@ -403,6 +408,7 @@ Node 4: neighbors = [1, 3]
 |  - 1 already cloned, add connection                                |
 |  - 3 not cloned yet, recurse                                       |
 +--------------------------------------------------------------------+
+
 |  Step 3: Visit neighbor 3                                          |
 |  Create clone of 3                                                 |
 |  Connect: clone_2.neighbors += [clone_3]                           |
@@ -416,6 +422,7 @@ Node 4: neighbors = [1, 3]
 |  - 2 already cloned, add connection                                |
 |  - 4 not cloned yet, recurse                                       |
 +--------------------------------------------------------------------+
+
 |  Step 4: Visit neighbor 4                                          |
 |  Create clone of 4                                                 |
 |  Connect: clone_3.neighbors += [clone_4]                           |
@@ -428,6 +435,7 @@ Node 4: neighbors = [1, 3]
 |  Explore neighbors of 4: [1, 3]                                    |
 |  - Both already cloned, add connections                            |
 +--------------------------------------------------------------------+
+
 |  Final: Complete clone with all connections preserved              |
 |                                                                    |
 |  Clone Graph:                                                      |

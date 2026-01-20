@@ -98,8 +98,10 @@ Each node visited exactly once.
 ```
 fib(5)
 +-- fib(4)
+
 |   +-- fib(3)
 |   |   +-- fib(2)
+
 |   |   +-- fib(1)
 |   +-- fib(2)  ← Computed again!
 +-- fib(3)      ← Computed again!

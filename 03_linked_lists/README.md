@@ -32,6 +32,7 @@ permalink: /03_linked_lists/
 
 ```
 +---------+---------+
+
 |  data   |  next   |------►  next node
 +---------+---------+
 

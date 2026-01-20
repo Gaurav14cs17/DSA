@@ -84,6 +84,7 @@ When we see '(' we must RECURSE to handle what's inside.
 
 ```
 parse("K4(ON(SO3)2)2")
+
 |
 +-- parse atom "K4" → {K: 4}
 |
@@ -107,6 +108,7 @@ parse("K4(ON(SO3)2)2")
         +-- see ')' → RETURN {N: 1, O: 7, S: 2}
     |
     multiply by 2 → {N: 2, O: 14, S: 4}
+
 |
 combine with K4 → {K: 4, N: 2, O: 14, S: 4}
 
@@ -282,50 +284,71 @@ n = 7
 
 ```
 parseFormula() starts at pos=0
+
 |
 +-► pos=0: char='M' is UPPERCASE → call parseAtom()
 |   |
 |   +-- Read 'M', pos becomes 1
+
 |   +-- pos=1: char='g' is lowercase → add to atom
 |   +-- atom = "Mg", pos becomes 2
 |   +-- pos=2: char='(' is NOT digit → count = 1
+
 |   +-- Returns ("Mg", 1)
 |
 |   counts = {"Mg": 1}
+
 |
 +-► pos=2: char='(' → call parseGroup()
 |   |
 |   +-- Step 1: Skip '(', pos becomes 3
+
 |   |
 |   +-- Step 2: ★ RECURSE ★ parseFormula() at pos=3
+
 |   |   |
 |   |   +-► pos=3: char='O' is UPPERCASE → parseAtom()
+
 |   |   |   +-- atom = "O", count = 1
+
 |   |   |   +-- pos becomes 4
+
 |   |   |   inner_counts = {"O": 1}
+
 |   |   |
 |   |   +-► pos=4: char='H' is UPPERCASE → parseAtom()
+
 |   |   |   +-- atom = "H", count = 1
+
 |   |   |   +-- pos becomes 5
+
 |   |   |   inner_counts = {"O": 1, "H": 1}
+
 |   |   |
 |   |   +-► pos=5: char=')' → STOP LOOP
+
 |   |   +-- Returns {"O": 1, "H": 1}
 |   |
 |   +-- Step 3: Skip ')', pos becomes 6
+
 |   |
 |   +-- Step 4: parseNumber() at pos=6
+
 |   |   +-- char='2' is digit
 |   |   +-- num = 2, pos becomes 7
+
 |   |   +-- Returns 2
 |   |
 |   +-- Step 5: Multiply {"O": 1, "H": 1} × 2
+
 |   |   = {"O": 2, "H": 2}
 |   |
 |   +-- Returns {"O": 2, "H": 2}
+
 |
 |   Merge: {"Mg": 1} + {"O": 2, "H": 2}
 |   counts = {"Mg": 1, "O": 2, "H": 2}
+
 |
 +-► pos=7: pos >= n → STOP LOOP
 |

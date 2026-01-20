@@ -150,6 +150,7 @@ At $b = \sqrt{n}$: $T = O(\frac{n}{\sqrt{n}} + \sqrt{n}) = O(\sqrt{n} + \sqrt{n}
 
 ```
 +-----------------------------------------------------------------+
+
 | EXAMPLE: Range Sum Query with Sqrt Decomposition               |
 +-----------------------------------------------------------------+
 | Array: [2, 1, 4, 3, 5, 7, 6, 8, 9]  (n = 9, block_size = 3)   |
@@ -162,6 +163,7 @@ At $b = \sqrt{n}$: $T = O(\frac{n}{\sqrt{n}} + \sqrt{n}) = O(\sqrt{n} + \sqrt{n}
 |                                                                  |
 |   Block Sums: [7, 15, 23]                                       |
 +-----------------------------------------------------------------+
+
 | STEP 2: Query sum(1, 7)  (indices 1 to 7 inclusive)           |
 |                                                                  |
 |   Visualization:                                                 |
@@ -183,6 +185,7 @@ At $b = \sqrt{n}$: $T = O(\frac{n}{\sqrt{n}} + \sqrt{n}) = O(\sqrt{n} + \sqrt{n}
 |                                                                  |
 |   Operations: O(√n) = O(3) = 3 block checks                    |
 +-----------------------------------------------------------------+
+
 | STEP 3: Update array[4] = 10  (was 5)                          |
 |                                                                  |
 |   Old: [2, 1, 4]|[3, 5, 7]|[6, 8, 9]                          |

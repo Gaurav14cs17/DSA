@@ -38,6 +38,7 @@ permalink: /09_heaps/04_two_heaps/
 **Invariants:**
 
 ```math
+
 |left| = |right| \text{ or } |left| = |right| + 1
 \max(left) \leq \min(right)
 

@@ -36,10 +36,14 @@ permalink: /11_tries/01_basic_trie/
 ```
 Root (empty)
 +-- 'a'
+
 |   +-- 'p'
 |   |   +-- 'p' [end: "app"]
+
 |   |   |   +-- 'l'
+
 |   |   |       +-- 'e' [end: "apple"]
+
 |   +-- 'n'
 |       +-- 'd' [end: "and"]
 +-- 'b'

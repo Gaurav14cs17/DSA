@@ -54,6 +54,7 @@ permalink: /30_number_theory/02_primes/05_prime_applications/
 - Largest gap ≤ n: grows slowly (about $(\ln n)^2$ conjectured)
 
 **Prime Gap Records:**
+
 | Gap | First Occurrence |
 |-----|------------------|
 | 2 | 3, 5 (twin primes) |
@@ -112,6 +113,7 @@ permalink: /30_number_theory/02_primes/05_prime_applications/
 
 ```
 +-----------------------------------------------------------------+
+
 | PROBLEM: Generate first 10 ugly numbers                        |
 +-----------------------------------------------------------------+
 | ALGORITHM: Three-pointer dynamic programming                   |
@@ -152,6 +154,7 @@ permalink: /30_number_theory/02_primes/05_prime_applications/
 
 ```
 +-----------------------------------------------------------------+
+
 | FINDING TWIN PRIMES UP TO 100                                  |
 +-----------------------------------------------------------------+
 | STEP 1: Generate primes via sieve                              |
@@ -193,6 +196,7 @@ permalink: /30_number_theory/02_primes/05_prime_applications/
 
 ```
 +-----------------------------------------------------------------+
+
 | FINDING GOLDBACH PARTITION FOR 100                             |
 +-----------------------------------------------------------------+
 | GOAL: Find primes p, q such that p + q = 100                  |

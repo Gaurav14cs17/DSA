@@ -105,6 +105,7 @@ where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
 
 ```
 +-----------------------------------------------------------------+
+
 | PROBLEM: Factorize 360                                         |
 +-----------------------------------------------------------------+
 | ALGORITHM: Divide by smallest prime repeatedly                 |
@@ -146,6 +147,7 @@ where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
 
 ```
 +-----------------------------------------------------------------+
+
 | PROBLEM: Count divisors of 360                                 |
 +-----------------------------------------------------------------+
 | STEP 1: Factorize                                              |
@@ -182,6 +184,7 @@ where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
 
 ```
 +-----------------------------------------------------------------+
+
 | FAST FACTORIZATION using Smallest Prime Factor (SPF)           |
 +-----------------------------------------------------------------+
 | PRECOMPUTATION: SPF array (computed via linear sieve)          |

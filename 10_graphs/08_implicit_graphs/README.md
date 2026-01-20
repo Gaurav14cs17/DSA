@@ -145,6 +145,7 @@ V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j
 **Theorem:** For state space $(x\_1, x\_2, \ldots, x\_k)$ with domains $D\_1, D\_2, \ldots, D\_k$:
 
 ```math
+
 |\text{States}| = \prod_{i=1}^{k} |D_i|
 
 ```
@@ -200,10 +201,12 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 
 ```
 +----------------------------------------------------------------+
+
 | PROBLEM: Jump Game                                             |
 | Input: nums = [2, 3, 1, 1, 4]                                  |
 | Question: Can you reach the last index?                        |
 +----------------------------------------------------------------+
+
 | STEP 1: IDENTIFY THE GRAPH                                     |
 |                                                                 |
 | Array Indices (Physical):                                      |
@@ -224,6 +227,7 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 |                                                                 |
 | E = {(0,1), (0,2), (1,2), (1,3), (1,4), (2,3), (3,4)}          |
 +----------------------------------------------------------------+
+
 | STEP 2: DRAW THE GRAPH                                         |
 |                                                                 |
 |         +---+                                                   |
@@ -247,6 +251,7 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 |     | 4 | ← GOAL                                               |
 |     +---+                                                       |
 +----------------------------------------------------------------+
+
 | STEP 3: RECOGNIZE THE PROBLEM TYPE                             |
 |                                                                 |
 | Question: "Can you reach last index?"                          |
@@ -254,6 +259,7 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 | Problem Type: REACHABILITY                                      |
 | Algorithm: DFS or BFS                                           |
 +----------------------------------------------------------------+
+
 | STEP 4: SOLUTION (BFS)                                         |
 |                                                                 |
 | Initialize: queue = [0], visited = {0}                         |
@@ -279,10 +285,12 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 
 ```
 +----------------------------------------------------------------+
+
 | PROBLEM: Course Schedule                                        |
 | Input: numCourses = 4, prerequisites = [[1,0],[2,0],[3,1],[3,2]]|
 | Question: Can you finish all courses?                          |
 +----------------------------------------------------------------+
+
 | STEP 1: IDENTIFY THE GRAPH                                     |
 |                                                                 |
 | Vertices: V = {0, 1, 2, 3} (courses)                           |
@@ -299,6 +307,7 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 |                                                                 |
 | E = {(0,1), (0,2), (1,3), (2,3)}                               |
 +----------------------------------------------------------------+
+
 | STEP 2: DRAW THE DIRECTED GRAPH                                |
 |                                                                 |
 |         +---+                                                   |
@@ -319,6 +328,7 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 |                                                                 |
 | This is a DIRECTED ACYCLIC GRAPH (DAG)                         |
 +----------------------------------------------------------------+
+
 | STEP 3: RECOGNIZE THE PROBLEM TYPE                             |
 |                                                                 |
 | Question: "Can finish all courses?"                            |
@@ -328,6 +338,7 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 |                                                                 |
 | Key Insight: Can finish all ⟺ No cycles exist                 |
 +----------------------------------------------------------------+
+
 | STEP 4: SOLUTION (DFS Cycle Detection)                         |
 |                                                                 |
 | Color States:                                                   |
@@ -362,6 +373,7 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 
 ```
 +----------------------------------------------------------------+
+
 | PROBLEM: Number of Islands                                     |
 | Input: grid = [['1','1','0','0','0'],                          |
 |                ['1','1','0','0','0'],                          |
@@ -369,6 +381,7 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 |                ['0','0','0','1','1']]                          |
 | Question: How many islands?                                    |
 +----------------------------------------------------------------+
+
 | STEP 1: IDENTIFY THE GRAPH                                     |
 |                                                                 |
 | Vertices: V = {(i,j) : grid[i][j] = '1'}                      |
@@ -382,6 +395,7 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 | Land Cells:                                                     |
 | V = {(0,0),(0,1),(1,0),(1,1),(2,2),(3,3),(3,4)}                |
 +----------------------------------------------------------------+
+
 | STEP 2: VISUALIZE CONNECTIVITY                                 |
 |                                                                 |
 | Physical Grid:                                                  |
@@ -404,6 +418,7 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 | Island 3:                                                       |
 | (3,3)--(3,4)                                                    |
 +----------------------------------------------------------------+
+
 | STEP 3: RECOGNIZE THE PROBLEM TYPE                             |
 |                                                                 |
 | Question: "How many islands?"                                  |
@@ -411,6 +426,7 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 | Problem Type: CONNECTED COMPONENTS                             |
 | Algorithm: DFS or BFS (or Union-Find)                          |
 +----------------------------------------------------------------+
+
 | STEP 4: SOLUTION (DFS)                                         |
 |                                                                 |
 | count = 0                                                       |
@@ -442,11 +458,13 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 
 ```
 +----------------------------------------------------------------+
+
 | PROBLEM: Word Ladder                                            |
 | Input: beginWord = "hit", endWord = "cog"                      |
 |        wordList = ["hot","dot","dog","lot","log","cog"]        |
 | Question: Length of shortest transformation sequence?          |
 +----------------------------------------------------------------+
+
 | STEP 1: IDENTIFY THE GRAPH                                     |
 |                                                                 |
 | Vertices: V = {beginWord} ∪ wordList                           |
@@ -463,6 +481,7 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 | "dog" - "cog": d≠c=true, o=o, g=g → 1 diff ✓                  |
 | ... (continue for all pairs)                                    |
 +----------------------------------------------------------------+
+
 | STEP 2: DRAW THE GRAPH                                         |
 |                                                                 |
 |            hit (start)                                          |
@@ -482,6 +501,7 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 | This is an UNWEIGHTED UNDIRECTED GRAPH                         |
 | Each edge = 1 transformation                                    |
 +----------------------------------------------------------------+
+
 | STEP 3: RECOGNIZE THE PROBLEM TYPE                             |
 |                                                                 |
 | Question: "Shortest transformation sequence?"                  |
@@ -491,6 +511,7 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 |                                                                 |
 | Key: BFS guarantees shortest path in unweighted graph!         |
 +----------------------------------------------------------------+
+
 | STEP 4: SOLUTION (BFS)                                         |
 |                                                                 |
 | queue = [("hit", 1)]  # (word, length)                         |

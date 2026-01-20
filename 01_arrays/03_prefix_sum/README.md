@@ -124,6 +124,7 @@ Prefix: [0, 3, 4,  2, 7,  6]
 Original Array: [2, 4, -1, 5, 3]
 
 +---------------------------------------------------------------------+
+
 |  Building Prefix Sum Array                                          |
 +---------------------------------------------------------------------+
 |                                                                     |
@@ -164,11 +165,13 @@ Index:   0  1   2   3   4   5
 Query: What is sum(1, 3)?  (sum from index 1 to 3)
 
 +---------------------------------------------------------------------+
+
 |  Method 1: Direct Sum (Naive) - O(n)                                |
 |  sum = A[1] + A[2] + A[3]                                           |
 |      = 1 + (-2) + 5                                                 |
 |      = 4                                                            |
 +---------------------------------------------------------------------+
+
 |  Method 2: Prefix Sum - O(1) ✨                                     |
 |                                                                     |
 |  sum(1, 3) = P[4] - P[1]                                            |
@@ -297,17 +300,20 @@ Input: nums = [4, 5, 0, -2, -3, 1], k = 5
 Find: Count of subarrays with sum divisible by 5
 
 +---------------------------------------------------------------------+
+
 |  Step 1: Build Prefix Sum Array                                     |
 |  Index:     0   1   2   3   4   5   6                               |
 |  Array:     -   4   5   0  -2  -3   1                               |
 |  Prefix:    0   4   9   9   7   4   5                               |
 +---------------------------------------------------------------------+
+
 |  Step 2: Calculate Modulo K                                         |
 |  Mod 5:     0   4   4   4   2   4   0                               |
 |             ↑       ↑   ↑       ↑   ↑                               |
 |             |       +---+-------+   |                               |
 |             +-------------------------+                             |
 +---------------------------------------------------------------------+
+
 |  Step 3: Count Frequency of Each Remainder                          |
 |  Remainder 0: appears 2 times → C(2,2) = 1 subarray                 |
 |  Remainder 4: appears 4 times → C(4,2) = 6 subarrays                |
@@ -315,6 +321,7 @@ Find: Count of subarrays with sum divisible by 5
 |                                                                     |
 |  Total: 1 + 6 = 7 subarrays                                         |
 +---------------------------------------------------------------------+
+
 |  Mathematical Insight:                                              |
 |  If P[i] ≡ P[j] (mod k), then sum(i+1, j) ≡ 0 (mod k)               |
 |                                                                     |
@@ -334,6 +341,7 @@ Input: [1, 2, 3, 4]
 Output: [24, 12, 8, 6]  (product of all elements except self)
 
 +---------------------------------------------------------------------+
+
 |  Idea: result[i] = (product of left) × (product of right)           |
 +---------------------------------------------------------------------+
 |  Step 1: Build Left Product Array                                   |
@@ -346,6 +354,7 @@ Output: [24, 12, 8, 6]  (product of all elements except self)
 |              |    +----------- 1                                    |
 |              +----------------  1 (no elements to left)             |
 +---------------------------------------------------------------------+
+
 |  Step 2: Build Right Product (on-the-fly, save space)               |
 |  Right:     24   12    4    1                                       |
 |              ↑    ↑    ↑    ↑                                       |
@@ -354,6 +363,7 @@ Output: [24, 12, 8, 6]  (product of all elements except self)
 |              |    +----------- 3×4 = 12                             |
 |              +----------------  2×3×4 = 24                          |
 +---------------------------------------------------------------------+
+
 |  Step 3: Multiply Left × Right                                      |
 |  Index:      0     1     2     3                                    |
 |  Left:       1     1     2     6                                    |
@@ -889,6 +899,7 @@ remainder = prefix_sum % k
 
 ```
 +-------------------------------------------------------------+
+
 |              PREFIX SUM CHEAT SHEET                         |
 +-------------------------------------------------------------+
 |                                                             |

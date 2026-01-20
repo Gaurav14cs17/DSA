@@ -184,6 +184,7 @@ C_0 = 1, \quad C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
 **For 2 sets:**
 
 ```math
+
 |A \cup B| = |A| + |B| - |A \cap B|
 
 ```
@@ -191,6 +192,7 @@ C_0 = 1, \quad C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
 **For 3 sets:**
 
 ```math
+
 |A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|
 
 ```

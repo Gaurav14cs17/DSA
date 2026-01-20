@@ -56,31 +56,39 @@ When we see '(', we RECURSE to evaluate the inner expression.
 
 ```
 evaluate("(1+(4+5+2)-3)+(6+8)")
+
 |
 +-► See '(' → RECURSE to evaluate inside
 |   |
 |   +-► evaluate("1+(4+5+2)-3")
+
 |       |
 |       +-► 1
+
 |       +-► + 
 |       +-► See '(' → RECURSE DEEPER
 |       |   |
 |       |   +-► evaluate("4+5+2")
+
 |       |       = 4 + 5 + 2 = 11
 |       |
 |       +-► - 3
+
 |       +-► Returns: 1 + 11 - 3 = 9
 |   
 |   First part = 9
+
 |
 +-► +
 |
 +-► See '(' → RECURSE
 |   |
 |   +-► evaluate("6+8")
+
 |       = 6 + 8 = 14
 |   
 |   Second part = 14
+
 |
 +-► FINAL: 9 + 14 = 23
 
@@ -241,6 +249,7 @@ pos = 0
 
 ```
 expression() starts
+
 |
 +-► term() → factor()
     |

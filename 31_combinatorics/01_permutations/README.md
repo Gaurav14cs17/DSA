@@ -122,6 +122,7 @@ D_n = (n-1)(D_{n-1} + D_{n-2})
 
 ```
 +----------------------------------------------------------------+
+
 | PROBLEM: Generate all permutations of [1,2,3]                  |
 +----------------------------------------------------------------+
 | STEP-BY-STEP BACKTRACKING TREE:                                |
@@ -161,9 +162,11 @@ D_n = (n-1)(D_{n-1} + D_{n-2})
 
 ```
 +----------------------------------------------------------------+
+
 | PROBLEM: Find next lexicographically greater permutation       |
 | INPUT: [1, 5, 8, 4, 7, 6, 5, 3, 1]                            |
 +----------------------------------------------------------------+
+
 | STEP 1: Find Pivot (rightmost i where arr[i] < arr[i+1])      |
 |                                                                 |
 |  [1, 5, 8, 4, 7, 6, 5, 3, 1]                                   |
@@ -173,6 +176,7 @@ D_n = (n-1)(D_{n-1} + D_{n-2})
 |  Why? Everything after pivot is descending                      |
 |  [7, 6, 5, 3, 1] is in reverse order                           |
 +----------------------------------------------------------------+
+
 | STEP 2: Find Successor (rightmost j where arr[j] > pivot)     |
 |                                                                 |
 |  [1, 5, 8, 4, 7, 6, 5, 3, 1]                                   |
@@ -181,12 +185,14 @@ D_n = (n-1)(D_{n-1} + D_{n-2})
 |                                                                 |
 |  Scan from right: 1<4, 3<4, 5>4 ✓ (found!)                     |
 +----------------------------------------------------------------+
+
 | STEP 3: Swap pivot and successor                               |
 |                                                                 |
 |  [1, 5, 8, 5, 7, 6, 4, 3, 1]                                   |
 |           ↑       ↑                                             |
 |        swapped these                                            |
 +----------------------------------------------------------------+
+
 | STEP 4: Reverse suffix (after pivot position)                  |
 |                                                                 |
 |  Suffix: [7, 6, 4, 3, 1]                                       |

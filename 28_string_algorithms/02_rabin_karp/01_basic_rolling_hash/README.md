@@ -578,6 +578,7 @@ For uniform random strings over alphabet Σ:
 P(h(s₁) = h(s₂) | s₁ ≠ s₂) ≈ |Σ|·m / M
 
 Example:
+
 |Σ| = 26 (lowercase)
 m = 100 (string length)
 M = 10^9+7

@@ -58,7 +58,9 @@ permalink: /03_linked_lists/01_basic_operations/
 
 ```
 +----------+----------+
+
 |   data   |   next   |------► next node
+
 |  (4-8B)  |  (4-8B)  |
 +----------+----------+
 
@@ -229,6 +231,7 @@ Both reach c1 (intersection) after same total distance!
 
 ```
 +--------------------------------------------------------------------+
+
 |  Example Linked List with Cycle                                    |
 |                                                                    |
 |  1 → 2 → 3 → 4 → 5 → 6 ↴                                          |
@@ -237,6 +240,7 @@ Both reach c1 (intersection) after same total distance!
 |  μ (distance to cycle) = 2 (nodes 1, 2)                           |
 |  λ (cycle length) = 4 (nodes 3, 4, 5, 6)                          |
 +--------------------------------------------------------------------+
+
 |  PHASE 1: Detect Cycle                                             |
 |  ---------------------------------------------------------------   |
 |                                                                    |
@@ -273,6 +277,7 @@ Both reach c1 (intersection) after same total distance!
 |  Meeting at k = 2 (position in cycle)                             |
 |  Verification: μ + k = 2 + 2 = 4 = 1×λ ✓                           |
 +--------------------------------------------------------------------+
+
 |  PHASE 2: Find Cycle Start                                         |
 |  ---------------------------------------------------------------   |
 |                                                                    |
@@ -368,6 +373,7 @@ Answer: 4 (second middle) ✓
 
 ```
 +--------------------------------------------------------------------+
+
 |  List A: 1 → 2 ↘                                                   |
 |                  → 6 → 7 → 8 → null                                |
 |  List B: 3 → 4 → 5 ↗                                               |
@@ -375,6 +381,7 @@ Answer: 4 (second middle) ✓
 |  Length A = 5 (2 unique + 3 common)                                |
 |  Length B = 6 (3 unique + 3 common)                                |
 +--------------------------------------------------------------------+
+
 |  Pointer A Journey:                                                |
 |  +--------------------------------------------------------------+  |
 |  | 1 → 2 → 6 → 7 → 8 → null → 3 → 4 → 5 → 6 ✓                  |  |
@@ -409,6 +416,7 @@ Problem: Find 3rd node from end
 List: 1 → 2 → 3 → 4 → 5 → 6 → 7 → null
 
 +--------------------------------------------------------------------+
+
 |  Step 1: Create gap of n nodes                                     |
 |  ---------------------------------------------------------------   |
 |                                                                    |
@@ -436,6 +444,7 @@ List: 1 → 2 → 3 → 4 → 5 → 6 → 7 → null
 |                                                                    |
 |  Gap created: 3 nodes between s and f                             |
 +--------------------------------------------------------------------+
+
 |  Step 2: Move both until first reaches end                        |
 |  ---------------------------------------------------------------   |
 |                                                                    |

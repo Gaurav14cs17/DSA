@@ -209,6 +209,7 @@ This means generating all valid parentheses has exponential time complexity!
 Input: "({[]})"
 
 +--------------------------------------------------------------------+
+
 |  Algorithm: Push opens, pop and match closes                       |
 +--------------------------------------------------------------------+
 |  Index 0: char = '('                                               |
@@ -216,16 +217,19 @@ Input: "({[]})"
 |  Stack: ['(']                                                      |
 |  Valid so far: ✓                                                   |
 +--------------------------------------------------------------------+
+
 |  Index 1: char = '{'                                               |
 |  Action: Opening bracket → Push                                    |
 |  Stack: ['(', '{']                                                 |
 |  Valid so far: ✓                                                   |
 +--------------------------------------------------------------------+
+
 |  Index 2: char = '['                                               |
 |  Action: Opening bracket → Push                                    |
 |  Stack: ['(', '{', '[']                                            |
 |  Valid so far: ✓                                                   |
 +--------------------------------------------------------------------+
+
 |  Index 3: char = ']'                                               |
 |  Action: Closing bracket → Check top                               |
 |  Top: '[', Matches? YES ✓                                          |
@@ -233,6 +237,7 @@ Input: "({[]})"
 |  Stack: ['(', '{']                                                 |
 |  Valid so far: ✓                                                   |
 +--------------------------------------------------------------------+
+
 |  Index 4: char = '}'                                               |
 |  Action: Closing bracket → Check top                               |
 |  Top: '{', Matches? YES ✓                                          |
@@ -240,6 +245,7 @@ Input: "({[]})"
 |  Stack: ['(']                                                      |
 |  Valid so far: ✓                                                   |
 +--------------------------------------------------------------------+
+
 |  Index 5: char = ')'                                               |
 |  Action: Closing bracket → Check top                               |
 |  Top: '(', Matches? YES ✓                                          |
@@ -247,6 +253,7 @@ Input: "({[]})"
 |  Stack: []                                                         |
 |  Valid so far: ✓                                                   |
 +--------------------------------------------------------------------+
+
 |  End of string                                                      |
 |  Stack empty? YES ✓                                                |
 |  Result: VALID ✓                                                   |
@@ -255,6 +262,7 @@ Input: "({[]})"
 Counterexample - Invalid: "([)]"
 
 +--------------------------------------------------------------------+
+
 |  Index 0: '(' → Stack: ['(']                                       |
 |  Index 1: '[' → Stack: ['(', '[']                                  |
 |  Index 2: ')' → Top is '[', doesn't match! ✗                       |
@@ -271,25 +279,30 @@ Counterexample - Invalid: "([)]"
 Input: "())"
 
 +--------------------------------------------------------------------+
+
 |  Algorithm: Track unmatched opens and closes                       |
 +--------------------------------------------------------------------+
 |  Variables: unmatched_open = 0, unmatched_close = 0                |
 +--------------------------------------------------------------------+
+
 |  Index 0: char = '('                                               |
 |  Action: Opening bracket                                           |
 |  unmatched_open = 1                                                |
 +--------------------------------------------------------------------+
+
 |  Index 1: char = ')'                                               |
 |  Action: Closing bracket, have opens?                              |
 |  unmatched_open > 0? YES                                           |
 |  Match it: unmatched_open = 0                                      |
 +--------------------------------------------------------------------+
+
 |  Index 2: char = ')'                                               |
 |  Action: Closing bracket, have opens?                              |
 |  unmatched_open > 0? NO                                            |
 |  This close has no match!                                          |
 |  unmatched_close = 1                                               |
 +--------------------------------------------------------------------+
+
 |  End of string                                                      |
 |  unmatched_open = 0 (need 0 more ')')                              |
 |  unmatched_close = 1 (need 1 more '(')                             |
@@ -302,6 +315,7 @@ Input: "())"
 Another Example: "((("
 
 +--------------------------------------------------------------------+
+
 |  Process: ( → open=1, ( → open=2, ( → open=3                      |
 |  End: unmatched_open = 3, unmatched_close = 0                      |
 |  Total additions = 3                                               |
@@ -319,12 +333,15 @@ Another Example: "((("
 Input: ")()())"
 
 +--------------------------------------------------------------------+
+
 |  Algorithm: Stack stores indices of unmatched positions            |
 |  Key Insight: Valid substring = gap between unmatched positions    |
 +--------------------------------------------------------------------+
+
 |  Initialize: stack = [-1]  (base for length calculation)           |
 |              max_length = 0                                        |
 +--------------------------------------------------------------------+
+
 |  Index 0: char = ')'                                               |
 |  Stack: [-1]                                                       |
 |  Pop → stack empty!                                                |
@@ -333,28 +350,33 @@ Input: ")()())"
 |  Stack: [0]                                                        |
 |  max_length = 0                                                    |
 +--------------------------------------------------------------------+
+
 |  Index 1: char = '('                                               |
 |  Push index                                                        |
 |  Stack: [0, 1]                                                     |
 |  max_length = 0                                                    |
 +--------------------------------------------------------------------+
+
 |  Index 2: char = ')'                                               |
 |  Pop (matched with '(' at index 1)                                 |
 |  Stack: [0]                                                        |
 |  Length = 2 - 0 = 2                                                |
 |  max_length = 2                                                    |
 +--------------------------------------------------------------------+
+
 |  Index 3: char = '('                                               |
 |  Push index                                                        |
 |  Stack: [0, 3]                                                     |
 |  max_length = 2                                                    |
 +--------------------------------------------------------------------+
+
 |  Index 4: char = ')'                                               |
 |  Pop (matched with '(' at index 3)                                 |
 |  Stack: [0]                                                        |
 |  Length = 4 - 0 = 4                                                |
 |  max_length = 4  ← Updated!                                        |
 +--------------------------------------------------------------------+
+
 |  Index 5: char = ')'                                               |
 |  Pop → stack becomes empty                                         |
 |  This ')' is unmatched, becomes new base                           |
@@ -362,6 +384,7 @@ Input: ")()())"
 |  Stack: [5]                                                        |
 |  max_length = 4                                                    |
 +--------------------------------------------------------------------+
+
 |  End of string                                                      |
 |  Answer: 4 (substring "()()" from index 1 to 4)                   |
 |                                                                    |
@@ -382,9 +405,11 @@ Input: ")()())"
 n = 3 (generate all valid combinations with 3 pairs)
 
 +--------------------------------------------------------------------+
+
 |  Decision Tree: At each node, decide to add '(' or ')'             |
 |  Constraints: open < n, close < open                               |
 +--------------------------------------------------------------------+
+
 |                                                                    |
 |                          ""                                        |
 |                        (0, 0)                                      |
@@ -421,6 +446,7 @@ n = 3 (generate all valid combinations with 3 pairs)
 |      |                                                             |
 |  "()()()" (3,3) ✓ DONE!                                           |
 +--------------------------------------------------------------------+
+
 |  All 5 valid combinations (C₃ = 5):                               |
 |  1. ((()))                                                        |
 |  2. (()())                                                        |
@@ -446,6 +472,7 @@ Algorithm Logic:
 Input: "lee(t(c)o)de)"
 
 +--------------------------------------------------------------------+
+
 |  Strategy: Mark invalid brackets, then build result                |
 +--------------------------------------------------------------------+
 |  Pass 1: Mark unmatched closing brackets                          |
@@ -464,6 +491,7 @@ Input: "lee(t(c)o)de)"
 |                                                                    |
 |  to_remove = {12}                                                 |
 +--------------------------------------------------------------------+
+
 |  Pass 2: Mark unmatched opening brackets                          |
 |  --------------------------------------------------------------    |
 |  Process right to left:                                           |
@@ -475,6 +503,7 @@ Input: "lee(t(c)o)de)"
 |  All opening brackets matched! No more to remove.                 |
 |  to_remove = {12}                                                 |
 +--------------------------------------------------------------------+
+
 |  Pass 3: Build result, skipping marked indices                    |
 |  --------------------------------------------------------------    |
 |  l  e  e  (  t  (  c  )  o  )  d  e  [)]  ← Skip                  |

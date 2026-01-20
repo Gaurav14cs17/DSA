@@ -325,6 +325,7 @@ String: "babad"
 
 Center enumeration (2n-1 = 9 centers):
 +----------------------------------------------------------+
+
 | Center 0: b → "b" (length 1)                            |
 | Center 1: b|a → no palindrome (even)                    |
 | Center 2: a → "a" (length 1)                            |

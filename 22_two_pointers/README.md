@@ -48,6 +48,7 @@ permalink: /22_two_pointers/
 
 ```
 +-----------------------------------------------------------------+
+
 |                    TWO POINTER PATTERNS                         |
 +-----------------------------------------------------------------+
 |                                                                 |
@@ -236,6 +237,7 @@ Instead of precomputing maxLeft and maxRight arrays (O(n) space), use two pointe
     |   YES   |              |   YES   |              |   YES   |
     ▼         ▼              ▼         ▼              ▼         ▼
 +--------+ +--------+   +--------+ +--------+   +--------+ +--------+
+
 |Two Sum | |3Sum,   |   |Remove  | |Partition|   | Cycle  | | Middle |
 |Opposite| |4Sum    |   |In-place| |Dutch   |   | Floyd's| | Nth End|
 +--------+ +--------+   +--------+ +--------+   +--------+ +--------+
@@ -527,6 +529,7 @@ Two pointers maintain an **invariant** that eliminates possibilities:
 
 ```
 +--------------------------------------------------------------+
+
 |                 TWO POINTERS CHEAT SHEET                     |
 +--------------------------------------------------------------+
 |                                                              |
@@ -556,6 +559,7 @@ Two pointers maintain an **invariant** that eliminates possibilities:
 |      if slow == fast: # CYCLE!                              |
 |                                                              |
 +--------------------------------------------------------------+
+
 |  PATTERNS:                                                   |
 |  • Sorted array + target sum → Opposite                     |
 |  • In-place removal → Same direction                        |

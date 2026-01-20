@@ -53,26 +53,34 @@ When we see '[', we RECURSE to decode what's inside.
 
 ```
 decode("3[a2[c]]")
+
 |
 +-► Read '3'  →  k = 3
 +-► See '['   →  RECURSE!
 |   |
 |   +-► decode("a2[c]")
+
 |       |
 |       +-► Read 'a'  →  result = "a"
+
 |       +-► Read '2'  →  k = 2
 |       +-► See '['   →  RECURSE DEEPER!
 |       |   |
 |       |   +-► decode("c")
+
 |       |       +-► Read 'c'  →  result = "c"
 |       |       +-► See ']'   →  RETURN "c"
+
 |       |   |
 |       |   result = "c" × 2 = "cc"
+
 |       |
 |       +-► Add to result: "a" + "cc" = "acc"
+
 |       +-► See ']'   →  RETURN "acc"
 |   |
 |   result = "acc" × 3 = "accaccacc"
+
 |
 +-► FINAL: "accaccacc"
 
@@ -169,66 +177,93 @@ pos = 0
 
 ```
 parse(pos=0)
+
 |
 +-► pos=0: char='3' is DIGIT
 |   num = 0*10 + 3 = 3
 |   pos = 1
+
 |
 +-► pos=1: char='[' 
 |   +--------------------------+
 |   | RECURSE into nested call |
 |   +--------------------------+
+
 |   pos = 2  (skip '[')
 |   |
 |   +-► parse(pos=2)  [LEVEL 2]
+
 |       |
 |       +-► pos=2: char='a' is LETTER
+
 |       |   result = "" + "a" = "a"
 |       |   pos = 3
+
 |       |
 |       +-► pos=3: char='2' is DIGIT
+
 |       |   num = 0*10 + 2 = 2
 |       |   pos = 4
+
 |       |
 |       +-► pos=4: char='['
+
 |       |   +--------------------------+
 |       |   | RECURSE into nested call |
 |       |   +--------------------------+
+
 |       |   pos = 5  (skip '[')
 |       |   |
 |       |   +-► parse(pos=5)  [LEVEL 3]
+
 |       |       |
 |       |       +-► pos=5: char='c' is LETTER
+
 |       |       |   result = "" + "c" = "c"
+
 |       |       |   pos = 6
+
 |       |       |
 |       |       +-► pos=6: char=']'
+
 |       |       |   +---------------------+
+
 |       |       |   | End of group, RETURN |
 |       |       |   +---------------------+
+
 |       |       |   pos = 7
+
 |       |       |
 |       |       +-► Returns ("c", 7)
+
 |       |   
 |       |   Back in LEVEL 2:
+
 |       |   nested_content = "c"
 |       |   result = "a" + 2 * "c" = "a" + "cc" = "acc"
+
 |       |   num = 0
 |       |   pos = 7
+
 |       |
 |       +-► pos=7: char=']'
+
 |       |   +---------------------+
 |       |   | End of group, RETURN |
 |       |   +---------------------+
+
 |       |   pos = 8
 |       |
 |       +-► Returns ("acc", 8)
+
 |   
 |   Back in LEVEL 1:
 |   nested_content = "acc"
+
 |   result = "" + 3 * "acc" = "accaccacc"
 |   num = 0
 |   pos = 8
+
 |
 +-► pos=8: end of string
 |
@@ -330,6 +365,7 @@ FINAL: "accaccacc" ✓
 
 ```
 +-------------------------------------------------------------+
+
 |                     CALL STACK GROWTH                        |
 +-------------------------------------------------------------+
 |                                                              |

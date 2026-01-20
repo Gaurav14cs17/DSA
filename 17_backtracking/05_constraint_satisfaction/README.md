@@ -46,6 +46,7 @@ For queens at positions $(r\_1, c\_1)$ and $(r\_2, c\_2)$:
 
 ```math
 c_1 \neq c_2 \quad \text{(same column)}
+
 |r_1 - r_2| \neq |c_1 - c_2| \quad \text{(same diagonal)}
 
 ```
