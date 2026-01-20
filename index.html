@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔢 Data Structures & Algorithms</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0f;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      overflow-x: hidden;
+    }
+    
+    .bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+      background: 
+        radial-gradient(ellipse at 20% 20%, #00d4aa20 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, #00b4d820 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, #00d4aa10 0%, transparent 70%);
+      animation: pulse 8s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.05); }
+    }
+    
+    .container {
+      max-width: 600px;
+      text-align: center;
+    }
+    
+    .emoji {
+      font-size: 5rem;
+      margin-bottom: 1.5rem;
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #00d4aa, #00b4d8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+    
+    .desc {
+      font-size: 1.2rem;
+      color: #a0a0b0;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+    
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .btn {
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #00d4aa, #00b4d8);
+      color: white;
+      box-shadow: 0 4px 20px #00d4aa40;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px #00d4aa60;
+    }
+    
+    .btn-secondary {
+      background: rgba(255,255,255,0.1);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.2);
+      transform: translateY(-3px);
+    }
+    
+    .note {
+      margin-top: 3rem;
+      padding: 1.5rem;
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .note p {
+      color: #8b949e;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    
+    .note a {
+      color: #00d4aa;
+      text-decoration: none;
+    }
+    
+    .note a:hover {
+      text-decoration: underline;
+    }
+    
+    .author {
+      margin-top: 3rem;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+    
+    .author a {
+      color: #00d4aa;
+      text-decoration: none;
+    }
+    
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+      .emoji { font-size: 4rem; }
+      .buttons { flex-direction: column; }
+      .btn { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  
+  <div class="container">
+    <div class="emoji">🔢</div>
+    <h1>🔢 Data Structures & Algorithms</h1>
+    <p class="desc">Master DSA for Coding Interviews<br>By Gaurav Goswami</p>
+    
+    <div class="buttons">
+      <a href="https://github.com/Gaurav14cs17/DSA" class="btn btn-primary">
+        📖 View Documentation
+      </a>
+      <a href="https://github.com/Gaurav14cs17/DSA/stargazers" class="btn btn-secondary">
+        ⭐ Star on GitHub
+      </a>
+    </div>
+    
+    <div class="note">
+      <p>
+        📝 <strong>Note:</strong> For the best viewing experience with math equations, 
+        diagrams, and formatted tables, please view the documentation directly on 
+        <a href="https://github.com/Gaurav14cs17/DSA">GitHub</a>.
+      </p>
+    </div>
+    
+    <p class="author">
+      Made with ❤️ by <a href="https://github.com/Gaurav14cs17">Gaurav Goswami</a>
+    </p>
+  </div>
+</body>
+</html>
