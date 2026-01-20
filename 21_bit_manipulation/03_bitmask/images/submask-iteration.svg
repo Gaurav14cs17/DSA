@@ -1,0 +1,113 @@
+<svg viewBox="0 0 950 650" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Submask Iteration</text>
+  <text x="475" y="68" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Enumerate all subsets of a given bitmask</text>
+  
+  <!-- Algorithm Box -->
+  <rect x="50" y="95" width="400" height="130" rx="8" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="250" y="120" text-anchor="middle" fill="#f97316" font-size="14" font-weight="bold" font-family="Courier New, monospace">THE MAGIC FORMULA</text>
+  <text x="70" y="155" fill="#ffffff" font-size="12" font-family="Courier New, monospace">sub = m</text>
+  <text x="70" y="180" fill="#ffffff" font-size="12" font-family="Courier New, monospace">while sub &gt; 0:</text>
+  <text x="70" y="205" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">    sub = (sub - 1) &amp; m</text>
+  
+  <!-- Why it works -->
+  <rect x="480" y="95" width="420" height="130" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="690" y="120" text-anchor="middle" fill="#a78bfa" font-size="14" font-weight="bold" font-family="Courier New, monospace">WHY IT WORKS</text>
+  <text x="500" y="150" fill="#ffffff" font-size="11" font-family="Courier New, monospace">1. (sub - 1) flips lowest 1 → 0</text>
+  <text x="500" y="172" fill="#ffffff" font-size="11" font-family="Courier New, monospace">   and sets all lower bits to 1</text>
+  <text x="500" y="197" fill="#ffffff" font-size="11" font-family="Courier New, monospace">2. &amp; m keeps only bits in original mask</text>
+  <text x="500" y="217" fill="#888888" font-size="10" font-family="Courier New, monospace">Result: next smaller submask</text>
+  
+  <!-- Example -->
+  <text x="475" y="260" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">EXAMPLE: Submasks of m = 1011 (11)</text>
+  
+  <!-- Step-by-step iteration -->
+  <rect x="50" y="285" width="850" height="280" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Header -->
+  <text x="100" y="315" fill="#3b82f6" font-size="12" font-weight="bold" font-family="Courier New, monospace">Step</text>
+  <text x="180" y="315" fill="#3b82f6" font-size="12" font-weight="bold" font-family="Courier New, monospace">sub</text>
+  <text x="280" y="315" fill="#3b82f6" font-size="12" font-weight="bold" font-family="Courier New, monospace">sub-1</text>
+  <text x="400" y="315" fill="#3b82f6" font-size="12" font-weight="bold" font-family="Courier New, monospace">(sub-1) &amp; m</text>
+  <text x="600" y="315" fill="#3b82f6" font-size="12" font-weight="bold" font-family="Courier New, monospace">Result binary</text>
+  <text x="780" y="315" fill="#3b82f6" font-size="12" font-weight="bold" font-family="Courier New, monospace">Decimal</text>
+  
+  <line x1="70" y1="325" x2="880" y2="325" stroke="#3b82f6" stroke-width="1"/>
+  
+  <!-- Initial -->
+  <text x="100" y="350" fill="#f97316" font-size="12" font-family="Courier New, monospace">Init</text>
+  <text x="180" y="350" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">1011</text>
+  <text x="280" y="350" fill="#888888" font-size="12" font-family="Courier New, monospace">-</text>
+  <text x="400" y="350" fill="#888888" font-size="12" font-family="Courier New, monospace">-</text>
+  <text x="600" y="350" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">1011</text>
+  <text x="780" y="350" fill="#ffffff" font-size="12" font-family="Courier New, monospace">11</text>
+  
+  <!-- Step 1 -->
+  <text x="100" y="380" fill="#ffffff" font-size="12" font-family="Courier New, monospace">1</text>
+  <text x="180" y="380" fill="#ffffff" font-size="12" font-family="Courier New, monospace">1011</text>
+  <text x="280" y="380" fill="#ffffff" font-size="12" font-family="Courier New, monospace">1010</text>
+  <text x="400" y="380" fill="#ffffff" font-size="12" font-family="Courier New, monospace">1010 &amp; 1011</text>
+  <text x="600" y="380" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">1010</text>
+  <text x="780" y="380" fill="#ffffff" font-size="12" font-family="Courier New, monospace">10</text>
+  
+  <!-- Step 2 -->
+  <text x="100" y="410" fill="#ffffff" font-size="12" font-family="Courier New, monospace">2</text>
+  <text x="180" y="410" fill="#ffffff" font-size="12" font-family="Courier New, monospace">1010</text>
+  <text x="280" y="410" fill="#ffffff" font-size="12" font-family="Courier New, monospace">1001</text>
+  <text x="400" y="410" fill="#ffffff" font-size="12" font-family="Courier New, monospace">1001 &amp; 1011</text>
+  <text x="600" y="410" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">1001</text>
+  <text x="780" y="410" fill="#ffffff" font-size="12" font-family="Courier New, monospace">9</text>
+  
+  <!-- Step 3 -->
+  <text x="100" y="440" fill="#ffffff" font-size="12" font-family="Courier New, monospace">3</text>
+  <text x="180" y="440" fill="#ffffff" font-size="12" font-family="Courier New, monospace">1001</text>
+  <text x="280" y="440" fill="#ffffff" font-size="12" font-family="Courier New, monospace">1000</text>
+  <text x="400" y="440" fill="#ffffff" font-size="12" font-family="Courier New, monospace">1000 &amp; 1011</text>
+  <text x="600" y="440" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">1000</text>
+  <text x="780" y="440" fill="#ffffff" font-size="12" font-family="Courier New, monospace">8</text>
+  
+  <!-- Step 4 -->
+  <text x="100" y="470" fill="#ffffff" font-size="12" font-family="Courier New, monospace">4</text>
+  <text x="180" y="470" fill="#ffffff" font-size="12" font-family="Courier New, monospace">1000</text>
+  <text x="280" y="470" fill="#ffffff" font-size="12" font-family="Courier New, monospace">0111</text>
+  <text x="400" y="470" fill="#ffffff" font-size="12" font-family="Courier New, monospace">0111 &amp; 1011</text>
+  <text x="600" y="470" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">0011</text>
+  <text x="780" y="470" fill="#ffffff" font-size="12" font-family="Courier New, monospace">3</text>
+  
+  <!-- Step 5 -->
+  <text x="100" y="500" fill="#ffffff" font-size="12" font-family="Courier New, monospace">5</text>
+  <text x="180" y="500" fill="#ffffff" font-size="12" font-family="Courier New, monospace">0011</text>
+  <text x="280" y="500" fill="#ffffff" font-size="12" font-family="Courier New, monospace">0010</text>
+  <text x="400" y="500" fill="#ffffff" font-size="12" font-family="Courier New, monospace">0010 &amp; 1011</text>
+  <text x="600" y="500" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">0010</text>
+  <text x="780" y="500" fill="#ffffff" font-size="12" font-family="Courier New, monospace">2</text>
+  
+  <!-- Step 6 -->
+  <text x="100" y="530" fill="#ffffff" font-size="12" font-family="Courier New, monospace">6</text>
+  <text x="180" y="530" fill="#ffffff" font-size="12" font-family="Courier New, monospace">0010</text>
+  <text x="280" y="530" fill="#ffffff" font-size="12" font-family="Courier New, monospace">0001</text>
+  <text x="400" y="530" fill="#ffffff" font-size="12" font-family="Courier New, monospace">0001 &amp; 1011</text>
+  <text x="600" y="530" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">0001</text>
+  <text x="780" y="530" fill="#ffffff" font-size="12" font-family="Courier New, monospace">1</text>
+  
+  <!-- Step 7 -->
+  <text x="100" y="560" fill="#ef4444" font-size="12" font-family="Courier New, monospace">7</text>
+  <text x="180" y="560" fill="#ef4444" font-size="12" font-family="Courier New, monospace">0001</text>
+  <text x="280" y="560" fill="#ef4444" font-size="12" font-family="Courier New, monospace">0000</text>
+  <text x="400" y="560" fill="#ef4444" font-size="12" font-family="Courier New, monospace">STOP</text>
+  <text x="600" y="560" fill="#888888" font-size="12" font-family="Courier New, monospace">(0000)</text>
+  <text x="780" y="560" fill="#888888" font-size="12" font-family="Courier New, monospace">0</text>
+  
+  <!-- Summary -->
+  <rect x="50" y="580" width="420" height="55" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="260" y="605" text-anchor="middle" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">SUBMASKS FOUND</text>
+  <text x="260" y="625" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">{11, 10, 9, 8, 3, 2, 1, 0} = 8 submasks</text>
+  
+  <!-- Complexity -->
+  <rect x="500" y="580" width="400" height="55" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="700" y="605" text-anchor="middle" fill="#a78bfa" font-size="12" font-weight="bold" font-family="Courier New, monospace">TIME COMPLEXITY</text>
+  <text x="700" y="625" text-anchor="middle" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">O(2^k) where k = popcount(m) = bits in mask</text>
+</svg>
+

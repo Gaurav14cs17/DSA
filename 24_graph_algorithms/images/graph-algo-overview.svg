@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450">
+  <rect width="900" height="450" fill="#0f0f23"/>
+  
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Advanced Graph Algorithms</text>
+  <text x="450" y="58" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">Specialized algorithms for complex graph problems</text>
+  
+  <!-- Union-Find -->
+  <text x="50" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">UNION-FIND (DISJOINT SET)</text>
+  <g transform="translate(50, 115)">
+    <circle cx="30" cy="20" r="15" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="30" y="25" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">1</text>
+    <circle cx="30" cy="60" r="15" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="30" y="65" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">2</text>
+    <line x1="30" y1="35" x2="30" y2="45" stroke="#3b82f6" stroke-width="2"/>
+    
+    <circle cx="100" cy="20" r="15" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">3</text>
+    <circle cx="80" cy="60" r="15" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="80" y="65" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">4</text>
+    <circle cx="120" cy="60" r="15" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="120" y="65" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">5</text>
+    <line x1="92" y1="33" x2="83" y2="45" stroke="#4ade80" stroke-width="2"/>
+    <line x1="108" y1="33" x2="117" y2="45" stroke="#4ade80" stroke-width="2"/>
+    
+    <text x="160" y="30" fill="#888888" font-size="10" font-family="Courier New, monospace">find(x): O(α(n))</text>
+    <text x="160" y="50" fill="#888888" font-size="10" font-family="Courier New, monospace">union(x,y): O(α(n))</text>
+    <text x="160" y="70" fill="#4ade80" font-size="10" font-family="Courier New, monospace">α(n) ≈ constant</text>
+  </g>
+  
+  <!-- Tarjan's SCC -->
+  <text x="400" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">STRONGLY CONNECTED COMPONENTS</text>
+  <g transform="translate(400, 115)">
+    <circle cx="30" cy="30" r="15" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="30" y="35" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">A</text>
+    <circle cx="80" cy="30" r="15" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="80" y="35" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">B</text>
+    <line x1="45" y1="30" x2="65" y2="30" stroke="#f97316" stroke-width="2"/>
+    <line x1="65" y1="40" x2="45" y2="40" stroke="#f97316" stroke-width="2"/>
+    
+    <circle cx="140" cy="30" r="15" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="140" y="35" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">C</text>
+    <line x1="95" y1="30" x2="125" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    
+    <text x="170" y="35" fill="#888888" font-size="10" font-family="Courier New, monospace">Tarjan: O(V+E)</text>
+  </g>
+  
+  <!-- Floyd-Warshall -->
+  <text x="650" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">ALL-PAIRS SHORTEST</text>
+  <g transform="translate(650, 115)">
+    <rect x="0" y="0" width="180" height="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="90" y="20" text-anchor="middle" fill="#f97316" font-size="10" font-weight="bold" font-family="Courier New, monospace">Floyd-Warshall</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">d[i][j] = min(d[i][j],</text>
+    <text x="15" y="55" fill="#ffffff" font-size="10" font-family="Courier New, monospace">  d[i][k] + d[k][j])</text>
+    <text x="0" y="85" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Time: O(V³)</text>
+  </g>
+  
+  <!-- Algorithms Summary -->
+  <text x="50" y="230" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">ALGORITHM SUMMARY</text>
+  <g transform="translate(50, 250)">
+    <rect x="0" y="0" width="700" height="100" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#f97316" font-size="10" font-family="Courier New, monospace">Bipartite Check:</text>
+    <text x="150" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">2-color using BFS/DFS</text>
+    <text x="350" y="20" fill="#4ade80" font-size="10" font-family="Courier New, monospace">O(V+E)</text>
+    
+    <text x="15" y="40" fill="#f97316" font-size="10" font-family="Courier New, monospace">Bridges/Articulation:</text>
+    <text x="150" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Tarjan's algorithm</text>
+    <text x="350" y="40" fill="#4ade80" font-size="10" font-family="Courier New, monospace">O(V+E)</text>
+    
+    <text x="15" y="60" fill="#f97316" font-size="10" font-family="Courier New, monospace">Euler Path:</text>
+    <text x="150" y="60" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Hierholzer's algorithm</text>
+    <text x="350" y="60" fill="#4ade80" font-size="10" font-family="Courier New, monospace">O(E)</text>
+    
+    <text x="15" y="80" fill="#f97316" font-size="10" font-family="Courier New, monospace">Bellman-Ford:</text>
+    <text x="150" y="80" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Single-source with negative edges</text>
+    <text x="350" y="80" fill="#f97316" font-size="10" font-family="Courier New, monospace">O(VE)</text>
+    
+    <text x="450" y="20" fill="#f97316" font-size="10" font-family="Courier New, monospace">Prim's MST:</text>
+    <text x="550" y="20" fill="#4ade80" font-size="10" font-family="Courier New, monospace">O(E log V)</text>
+    <text x="450" y="40" fill="#f97316" font-size="10" font-family="Courier New, monospace">Kruskal's MST:</text>
+    <text x="550" y="40" fill="#4ade80" font-size="10" font-family="Courier New, monospace">O(E log E)</text>
+  </g>
+  
+  <!-- Applications -->
+  <text x="50" y="390" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">APPLICATIONS</text>
+  <g transform="translate(50, 405)">
+    <text x="0" y="15" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Network Flow • Social Networks • Circuit Design • Routing • Dependencies</text>
+  </g>
+</svg>
+

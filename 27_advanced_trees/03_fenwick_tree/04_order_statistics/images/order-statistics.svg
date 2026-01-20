@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450">
+  <rect width="900" height="450" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Courier New, monospace" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">Order Statistics with BIT</text>
+  <text x="450" y="58" font-family="Courier New, monospace" font-size="14" fill="#888888" text-anchor="middle">Find kth smallest dynamically • Binary search on BIT</text>
+
+  <!-- K Empty Slots Example -->
+  <text x="250" y="95" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">K EMPTY SLOTS PROBLEM (LC 683)</text>
+  
+  <rect x="50" y="115" width="400" height="150" fill="#0f0f23" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Bulbs visualization -->
+  <text x="70" y="140" font-family="Courier New, monospace" font-size="11" fill="#888888">Bulbs turn on one by one. Find day when k empty slots exist.</text>
+  
+  <!-- Day 1 -->
+  <text x="70" y="170" font-family="Courier New, monospace" font-size="10" fill="#f97316">Day 1:</text>
+  <circle cx="130" cy="165" r="8" fill="#1e3a5f" stroke="#3b82f6"/>
+  <circle cx="160" cy="165" r="8" fill="#1e3a5f" stroke="#3b82f6"/>
+  <circle cx="190" cy="165" r="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <circle cx="220" cy="165" r="8" fill="#1e3a5f" stroke="#3b82f6"/>
+  <circle cx="250" cy="165" r="8" fill="#1e3a5f" stroke="#3b82f6"/>
+  <text x="300" y="170" font-family="Courier New, monospace" font-size="10" fill="#888888">Bulb 3 ON</text>
+  
+  <!-- Day 2 -->
+  <text x="70" y="200" font-family="Courier New, monospace" font-size="10" fill="#f97316">Day 2:</text>
+  <circle cx="130" cy="195" r="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <circle cx="160" cy="195" r="8" fill="#1e3a5f" stroke="#3b82f6"/>
+  <circle cx="190" cy="195" r="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <circle cx="220" cy="195" r="8" fill="#1e3a5f" stroke="#3b82f6"/>
+  <circle cx="250" cy="195" r="8" fill="#1e3a5f" stroke="#3b82f6"/>
+  <text x="300" y="200" font-family="Courier New, monospace" font-size="10" fill="#4ade80">k=1 empty slot! ✓</text>
+  
+  <!-- Algorithm explanation -->
+  <text x="70" y="240" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Use BIT to track count of ON bulbs in ranges</text>
+  <text x="70" y="255" font-family="Courier New, monospace" font-size="10" fill="#60a5fa">Check if range has exactly 1 bulb on each end</text>
+
+  <!-- Kth Smallest Section -->
+  <text x="680" y="95" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">KTH SMALLEST ELEMENT</text>
+  
+  <rect x="480" y="115" width="380" height="150" fill="#0f0f23" stroke="#4ade80" stroke-width="2"/>
+  
+  <text x="500" y="145" font-family="Courier New, monospace" font-size="11" fill="#888888">Binary search on BIT to find kth element:</text>
+  
+  <text x="500" y="175" font-family="Courier New, monospace" font-size="10" fill="#60a5fa">def findKth(k):</text>
+  <text x="520" y="195" font-family="Courier New, monospace" font-size="10" fill="#ffffff">pos = 0</text>
+  <text x="520" y="215" font-family="Courier New, monospace" font-size="10" fill="#ffffff">for i in range(LOG, -1, -1):</text>
+  <text x="540" y="235" font-family="Courier New, monospace" font-size="10" fill="#ffffff">if pos + (1 &lt;&lt; i) ≤ n and</text>
+  <text x="560" y="255" font-family="Courier New, monospace" font-size="10" fill="#f97316">BIT[pos + (1 &lt;&lt; i)] &lt; k:</text>
+  <text x="580" y="255" font-family="Courier New, monospace" font-size="10" fill="#4ade80">pos += (1 &lt;&lt; i); k -= BIT[pos]</text>
+
+  <!-- Applications -->
+  <rect x="50" y="290" width="400" height="140" fill="#0f0f23" stroke="#a78bfa" stroke-width="2"/>
+  <text x="250" y="315" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560" text-anchor="middle">APPLICATIONS</text>
+  
+  <text x="70" y="345" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Dynamic median (two BITs)</text>
+  <text x="70" y="370" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• K empty slots (LC 683)</text>
+  <text x="70" y="395" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Queries on permutation (LC 1409)</text>
+  <text x="70" y="420" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Count elements in range dynamically</text>
+
+  <!-- Complexity -->
+  <rect x="480" y="290" width="380" height="140" fill="#0f0f23" stroke="#f97316" stroke-width="2"/>
+  <text x="670" y="315" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560" text-anchor="middle">COMPLEXITY</text>
+  
+  <text x="500" y="350" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">Find kth: O(log n)</text>
+  <text x="500" y="375" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">Insert/Delete: O(log n)</text>
+  <text x="500" y="400" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">Range count: O(log n)</text>
+  <text x="500" y="425" font-family="Courier New, monospace" font-size="10" fill="#888888">Space: O(max_value) or use coord compression</text>
+</svg>

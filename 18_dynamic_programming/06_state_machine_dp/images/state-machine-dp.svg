@@ -1,0 +1,120 @@
+<svg viewBox="0 0 950 650" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">State Machine DP</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Stock Trading Problem States</text>
+  
+  <!-- Section: State Machine Diagram -->
+  <text x="50" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Stock Trading State Machine</text>
+  
+  <!-- State circles -->
+  <g transform="translate(100, 150)">
+    <!-- REST state -->
+    <circle cx="100" cy="100" r="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="3"/>
+    <text x="100" y="95" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">REST</text>
+    <text x="100" y="115" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">No stock</text>
+    
+    <!-- HOLD state -->
+    <circle cx="350" cy="100" r="50" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="350" y="95" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">HOLD</text>
+    <text x="350" y="115" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">Own stock</text>
+    
+    <!-- SOLD state -->
+    <circle cx="600" cy="100" r="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="600" y="95" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">SOLD</text>
+    <text x="600" y="115" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">Cooldown</text>
+    
+    <!-- Transitions -->
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#ffffff"/>
+      </marker>
+      <marker id="arrowO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#f97316"/>
+      </marker>
+      <marker id="arrowG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#4ade80"/>
+      </marker>
+    </defs>
+    
+    <!-- REST -> HOLD (buy) -->
+    <path d="M 150 85 L 290 85" stroke="#f97316" stroke-width="2" fill="none" marker-end="url(#arrowO)"/>
+    <text x="220" y="75" font-family="Courier New, monospace" font-size="11" fill="#f97316" text-anchor="middle">BUY</text>
+    <text x="220" y="60" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">-price[i]</text>
+    
+    <!-- HOLD -> SOLD (sell) -->
+    <path d="M 400 85 L 540 85" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowG)"/>
+    <text x="470" y="75" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">SELL</text>
+    <text x="470" y="60" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">+price[i]</text>
+    
+    <!-- SOLD -> REST (cooldown) -->
+    <path d="M 560 140 Q 350 220 140 140" stroke="#3b82f6" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+    <text x="350" y="200" font-family="Courier New, monospace" font-size="11" fill="#3b82f6" text-anchor="middle">COOLDOWN</text>
+    
+    <!-- Self loops -->
+    <path d="M 80 55 Q 50 20 120 55" stroke="#888888" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+    <text x="100" y="25" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">wait</text>
+    
+    <path d="M 330 55 Q 300 20 370 55" stroke="#888888" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+    <text x="350" y="25" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">hold</text>
+  </g>
+  
+  <!-- Recurrence formulas -->
+  <g transform="translate(50, 400)">
+    <rect x="0" y="0" width="280" height="100" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="140" y="25" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">With Cooldown (LC 309)</text>
+    <text x="20" y="50" font-family="Courier New, monospace" font-size="10" fill="#60a5fa">hold = max(hold, rest - price)</text>
+    <text x="20" y="70" font-family="Courier New, monospace" font-size="10" fill="#60a5fa">sold = hold + price</text>
+    <text x="20" y="90" font-family="Courier New, monospace" font-size="10" fill="#60a5fa">rest = max(rest, sold)</text>
+  </g>
+  
+  <g transform="translate(350, 400)">
+    <rect x="0" y="0" width="280" height="100" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="140" y="25" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Unlimited (LC 122)</text>
+    <text x="20" y="50" font-family="Courier New, monospace" font-size="10" fill="#4ade80">hold = max(hold, cash - price)</text>
+    <text x="20" y="70" font-family="Courier New, monospace" font-size="10" fill="#4ade80">cash = max(cash, hold + price)</text>
+    <text x="20" y="90" font-family="Courier New, monospace" font-size="10" fill="#888888">Two states only</text>
+  </g>
+  
+  <g transform="translate(650, 400)">
+    <rect x="0" y="0" width="250" height="100" rx="5" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="125" y="25" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">K Transactions (LC 188)</text>
+    <text x="20" y="50" font-family="Courier New, monospace" font-size="10" fill="#f97316">buy[k] = max(buy[k],</text>
+    <text x="20" y="65" font-family="Courier New, monospace" font-size="10" fill="#f97316">         sell[k-1]-price)</text>
+    <text x="20" y="85" font-family="Courier New, monospace" font-size="10" fill="#f97316">sell[k] = max(sell[k],</text>
+    <text x="20" y="100" font-family="Courier New, monospace" font-size="10" fill="#f97316">         buy[k]+price)</text>
+  </g>
+  
+  <!-- Example walkthrough -->
+  <text x="50" y="530" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Example: prices = [1, 2, 3, 0, 2]</text>
+  
+  <g transform="translate(50, 545)">
+    <!-- Price boxes -->
+    <rect x="0" y="0" width="60" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="30" y="25" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">$1</text>
+    <text x="30" y="55" font-family="Courier New, monospace" font-size="9" fill="#f97316" text-anchor="middle">BUY</text>
+    
+    <rect x="80" y="0" width="60" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="110" y="25" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">$2</text>
+    <text x="110" y="55" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">hold</text>
+    
+    <rect x="160" y="0" width="60" height="40" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="190" y="25" font-family="Courier New, monospace" font-size="14" fill="#4ade80" text-anchor="middle">$3</text>
+    <text x="190" y="55" font-family="Courier New, monospace" font-size="9" fill="#4ade80" text-anchor="middle">SELL</text>
+    
+    <rect x="240" y="0" width="60" height="40" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="270" y="25" font-family="Courier New, monospace" font-size="14" fill="#a78bfa" text-anchor="middle">$0</text>
+    <text x="270" y="55" font-family="Courier New, monospace" font-size="9" fill="#a78bfa" text-anchor="middle">cool+BUY</text>
+    
+    <rect x="320" y="0" width="60" height="40" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="350" y="25" font-family="Courier New, monospace" font-size="14" fill="#4ade80" text-anchor="middle">$2</text>
+    <text x="350" y="55" font-family="Courier New, monospace" font-size="9" fill="#4ade80" text-anchor="middle">SELL</text>
+  </g>
+  
+  <rect x="500" y="555" width="200" height="40" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="600" y="580" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">Profit: 2 + 2 = 4</text>
+  
+  <rect x="720" y="555" width="180" height="40" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="810" y="575" font-family="Courier New, monospace" font-size="11" fill="#60a5fa" text-anchor="middle">O(n) time, O(1) space</text>
+</svg>

@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 650">
+  <rect width="950" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Longest Valid Parentheses</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Stack stores indices of unmatched brackets</text>
+  
+  <!-- Input String -->
+  <g transform="translate(50, 95)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Input: ")()())"</text>
+    
+    <!-- Character boxes with indices -->
+    <g transform="translate(0, 15)">
+      <rect x="0" y="0" width="50" height="50" rx="4" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+      <text x="25" y="32" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#ef4444" text-anchor="middle">)</text>
+      <text x="25" y="60" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">0</text>
+      
+      <rect x="60" y="0" width="50" height="50" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="85" y="32" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#4ade80" text-anchor="middle">(</text>
+      <text x="85" y="60" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">1</text>
+      
+      <rect x="120" y="0" width="50" height="50" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="145" y="32" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#4ade80" text-anchor="middle">)</text>
+      <text x="145" y="60" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">2</text>
+      
+      <rect x="180" y="0" width="50" height="50" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="205" y="32" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#4ade80" text-anchor="middle">(</text>
+      <text x="205" y="60" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">3</text>
+      
+      <rect x="240" y="0" width="50" height="50" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="265" y="32" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#4ade80" text-anchor="middle">)</text>
+      <text x="265" y="60" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">4</text>
+      
+      <rect x="300" y="0" width="50" height="50" rx="4" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+      <text x="325" y="32" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#ef4444" text-anchor="middle">)</text>
+      <text x="325" y="60" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">5</text>
+    </g>
+    
+    <!-- Valid substring bracket -->
+    <path d="M 60 85 L 60 95 L 290 95 L 290 85" stroke="#4ade80" stroke-width="2" fill="none"/>
+    <text x="175" y="110" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">Valid: "()()" length=4</text>
+  </g>
+  
+  <!-- Key Insight -->
+  <g transform="translate(480, 95)">
+    <rect x="0" y="0" width="420" height="80" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="210" y="22" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa" text-anchor="middle">Key Insight</text>
+    <text x="210" y="45" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">Stack stores indices of UNMATCHED positions</text>
+    <text x="210" y="65" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">Valid length = current_index - stack_top</text>
+  </g>
+  
+  <!-- Step by Step Trace -->
+  <text x="475" y="210" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">Step-by-Step Trace</text>
+  
+  <!-- Table Header -->
+  <g transform="translate(50, 225)">
+    <rect x="0" y="0" width="850" height="35" rx="4" fill="#1e3a5f"/>
+    <text x="50" y="23" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#3b82f6" text-anchor="middle">i</text>
+    <text x="130" y="23" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#3b82f6" text-anchor="middle">char</text>
+    <text x="300" y="23" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#3b82f6" text-anchor="middle">Action</text>
+    <text x="550" y="23" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#3b82f6" text-anchor="middle">Stack</text>
+    <text x="720" y="23" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#3b82f6" text-anchor="middle">max_len</text>
+  </g>
+  
+  <!-- Init -->
+  <g transform="translate(50, 265)">
+    <text x="50" y="15" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">init</text>
+    <text x="130" y="15" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">-</text>
+    <text x="300" y="15" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">Initialize with base index -1</text>
+    <text x="550" y="15" font-family="Courier New, monospace" font-size="11" fill="#a78bfa" text-anchor="middle">[-1]</text>
+    <text x="720" y="15" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">0</text>
+  </g>
+  
+  <!-- Row i=0 -->
+  <g transform="translate(50, 290)">
+    <rect x="-5" y="-5" width="860" height="25" rx="3" fill="#1f0f0f"/>
+    <text x="50" y="15" font-family="Courier New, monospace" font-size="11" fill="#ef4444" text-anchor="middle">0</text>
+    <text x="130" y="15" font-family="Courier New, monospace" font-size="11" fill="#ef4444" text-anchor="middle">')'</text>
+    <text x="300" y="15" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">Pop -1, stack empty! Push 0 as new base</text>
+    <text x="550" y="15" font-family="Courier New, monospace" font-size="11" fill="#ef4444" text-anchor="middle">[0]</text>
+    <text x="720" y="15" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">0</text>
+  </g>
+  
+  <!-- Row i=1 -->
+  <g transform="translate(50, 320)">
+    <text x="50" y="15" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="130" y="15" font-family="Courier New, monospace" font-size="11" fill="#a78bfa" text-anchor="middle">'('</text>
+    <text x="300" y="15" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">Push index 1</text>
+    <text x="550" y="15" font-family="Courier New, monospace" font-size="11" fill="#a78bfa" text-anchor="middle">[0, 1]</text>
+    <text x="720" y="15" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">0</text>
+  </g>
+  
+  <!-- Row i=2 -->
+  <g transform="translate(50, 350)">
+    <rect x="-5" y="-5" width="860" height="25" rx="3" fill="#0f2f1f"/>
+    <text x="50" y="15" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">2</text>
+    <text x="130" y="15" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">')'</text>
+    <text x="300" y="15" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">Pop 1, matched! Length = 2 - 0 = 2</text>
+    <text x="550" y="15" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">[0]</text>
+    <text x="720" y="15" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">2</text>
+  </g>
+  
+  <!-- Row i=3 -->
+  <g transform="translate(50, 380)">
+    <text x="50" y="15" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="130" y="15" font-family="Courier New, monospace" font-size="11" fill="#a78bfa" text-anchor="middle">'('</text>
+    <text x="300" y="15" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">Push index 3</text>
+    <text x="550" y="15" font-family="Courier New, monospace" font-size="11" fill="#a78bfa" text-anchor="middle">[0, 3]</text>
+    <text x="720" y="15" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">2</text>
+  </g>
+  
+  <!-- Row i=4 -->
+  <g transform="translate(50, 410)">
+    <rect x="-5" y="-5" width="860" height="25" rx="3" fill="#0f2f1f"/>
+    <text x="50" y="15" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">4</text>
+    <text x="130" y="15" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">')'</text>
+    <text x="300" y="15" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">Pop 3, matched! Length = 4 - 0 = 4 ✓</text>
+    <text x="550" y="15" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">[0]</text>
+    <text x="720" y="15" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">4</text>
+  </g>
+  
+  <!-- Row i=5 -->
+  <g transform="translate(50, 440)">
+    <rect x="-5" y="-5" width="860" height="25" rx="3" fill="#1f0f0f"/>
+    <text x="50" y="15" font-family="Courier New, monospace" font-size="11" fill="#ef4444" text-anchor="middle">5</text>
+    <text x="130" y="15" font-family="Courier New, monospace" font-size="11" fill="#ef4444" text-anchor="middle">')'</text>
+    <text x="300" y="15" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">Pop 0, stack empty! Push 5 as new base</text>
+    <text x="550" y="15" font-family="Courier New, monospace" font-size="11" fill="#ef4444" text-anchor="middle">[5]</text>
+    <text x="720" y="15" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">4</text>
+  </g>
+  
+  <!-- Visual representation of valid substring -->
+  <g transform="translate(50, 490)">
+    <rect x="0" y="0" width="430" height="130" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="215" y="25" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#3b82f6" text-anchor="middle">Visual: Valid Substring</text>
+    
+    <text x="30" y="55" font-family="Courier New, monospace" font-size="14" fill="#ffffff">Index:  0   1   2   3   4   5</text>
+    <text x="30" y="80" font-family="Courier New, monospace" font-size="14" fill="#ffffff">Char:   )   (   )   (   )   )</text>
+    <text x="30" y="105" font-family="Courier New, monospace" font-size="14" fill="#ef4444">        ✗</text>
+    <text x="85" y="105" font-family="Courier New, monospace" font-size="14" fill="#4ade80">        [─────────]</text>
+    <text x="337" y="105" font-family="Courier New, monospace" font-size="14" fill="#ef4444">✗</text>
+    <text x="215" y="125" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">Longest valid: indices 1-4, length = 4</text>
+  </g>
+  
+  <!-- Result and Complexity -->
+  <g transform="translate(510, 490)">
+    <rect x="0" y="0" width="200" height="60" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="100" y="25" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">Result: 4</text>
+    <text x="100" y="48" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">"()()" is longest</text>
+  </g>
+  
+  <g transform="translate(740, 490)">
+    <rect x="0" y="0" width="160" height="130" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="80" y="25" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316" text-anchor="middle">Complexity</text>
+    <text x="80" y="55" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">Time: O(n)</text>
+    <text x="80" y="80" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">Space: O(n)</text>
+    <text x="80" y="115" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">LeetCode #32</text>
+  </g>
+</svg>

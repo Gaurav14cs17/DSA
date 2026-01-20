@@ -1,0 +1,124 @@
+<svg viewBox="0 0 950 650" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Variable Size Sliding Window</text>
+  <text x="475" y="68" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Expand to explore, shrink to optimize</text>
+  
+  <!-- Longest Pattern -->
+  <rect x="30" y="95" width="430" height="250" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="245" y="125" text-anchor="middle" fill="#e94560" font-size="16" font-weight="bold" font-family="Courier New, monospace">FIND LONGEST</text>
+  <text x="245" y="145" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">Longest substring without repeating chars</text>
+  
+  <!-- String: abcabcbb -->
+  <text x="50" y="175" fill="#f97316" font-size="11" font-family="Courier New, monospace">String: "abcabcbb"</text>
+  
+  <!-- Step 1 -->
+  <text x="50" y="200" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Step 1: Expand "abc" (valid, len=3)</text>
+  <rect x="50" y="208" width="28" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="64" y="225" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">a</text>
+  <rect x="82" y="208" width="28" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="96" y="225" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">b</text>
+  <rect x="114" y="208" width="28" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="128" y="225" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">c</text>
+  <rect x="146" y="208" width="28" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="160" y="225" text-anchor="middle" fill="#888888" font-size="12" font-family="Courier New, monospace">a</text>
+  <text x="200" y="225" fill="#4ade80" font-size="10" font-family="Courier New, monospace">max=3</text>
+  
+  <!-- Step 2 -->
+  <text x="50" y="252" fill="#ef4444" font-size="10" font-family="Courier New, monospace">Step 2: 'a' duplicate! INVALID, shrink</text>
+  <rect x="50" y="260" width="28" height="25" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="3,2"/>
+  <text x="64" y="277" text-anchor="middle" fill="#888888" font-size="12" font-family="Courier New, monospace">a</text>
+  <rect x="82" y="260" width="28" height="25" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="96" y="277" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">b</text>
+  <rect x="114" y="260" width="28" height="25" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="128" y="277" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">c</text>
+  <rect x="146" y="260" width="28" height="25" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="160" y="277" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">a</text>
+  <text x="50" y="300" fill="#888888" font-size="9" font-family="Courier New, monospace">L moves right until valid</text>
+  
+  <!-- Algorithm -->
+  <text x="270" y="175" fill="#a78bfa" font-size="10" font-family="Courier New, monospace">for R in range(n):</text>
+  <text x="280" y="193" fill="#888888" font-size="9" font-family="Courier New, monospace">add(s[R])</text>
+  <text x="280" y="211" fill="#ef4444" font-size="9" font-family="Courier New, monospace">while INVALID:</text>
+  <text x="290" y="229" fill="#888888" font-size="9" font-family="Courier New, monospace">remove(s[L])</text>
+  <text x="290" y="247" fill="#888888" font-size="9" font-family="Courier New, monospace">L += 1</text>
+  <text x="280" y="265" fill="#4ade80" font-size="9" font-family="Courier New, monospace">max = max(max, R-L+1)</text>
+  
+  <text x="245" y="320" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">Shrink when INVALID</text>
+  <text x="245" y="338" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Time: O(n) | Space: O(k)</text>
+  
+  <!-- Shortest Pattern -->
+  <rect x="490" y="95" width="430" height="250" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="705" y="125" text-anchor="middle" fill="#e94560" font-size="16" font-weight="bold" font-family="Courier New, monospace">FIND SHORTEST</text>
+  <text x="705" y="145" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">Min subarray with sum ≥ 7</text>
+  
+  <!-- Array: [2, 3, 1, 2, 4, 3] -->
+  <text x="510" y="175" fill="#f97316" font-size="11" font-family="Courier New, monospace">Array: [2, 3, 1, 2, 4, 3]</text>
+  
+  <!-- Step 1 -->
+  <text x="510" y="200" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Step 1: sum=8 ≥ 7 VALID, record len=4</text>
+  <rect x="510" y="208" width="28" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="524" y="225" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">2</text>
+  <rect x="542" y="208" width="28" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="556" y="225" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">3</text>
+  <rect x="574" y="208" width="28" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="588" y="225" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">1</text>
+  <rect x="606" y="208" width="28" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="620" y="225" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">2</text>
+  <text x="660" y="225" fill="#4ade80" font-size="10" font-family="Courier New, monospace">min=4</text>
+  
+  <!-- Step 2 -->
+  <text x="510" y="252" fill="#a78bfa" font-size="10" font-family="Courier New, monospace">Step 2: Shrink while VALID (find shorter)</text>
+  <rect x="510" y="260" width="28" height="25" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="3,2"/>
+  <text x="524" y="277" text-anchor="middle" fill="#888888" font-size="12" font-family="Courier New, monospace">2</text>
+  <rect x="542" y="260" width="28" height="25" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="556" y="277" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">3</text>
+  <rect x="574" y="260" width="28" height="25" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="588" y="277" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">1</text>
+  <rect x="606" y="260" width="28" height="25" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="620" y="277" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">2</text>
+  <text x="510" y="300" fill="#888888" font-size="9" font-family="Courier New, monospace">sum=6 &lt; 7 INVALID, stop</text>
+  
+  <!-- Algorithm -->
+  <text x="730" y="175" fill="#a78bfa" font-size="10" font-family="Courier New, monospace">for R in range(n):</text>
+  <text x="740" y="193" fill="#888888" font-size="9" font-family="Courier New, monospace">sum += arr[R]</text>
+  <text x="740" y="211" fill="#4ade80" font-size="9" font-family="Courier New, monospace">while VALID:</text>
+  <text x="750" y="229" fill="#888888" font-size="9" font-family="Courier New, monospace">min = min(...)</text>
+  <text x="750" y="247" fill="#888888" font-size="9" font-family="Courier New, monospace">sum -= arr[L]</text>
+  <text x="750" y="265" fill="#888888" font-size="9" font-family="Courier New, monospace">L += 1</text>
+  
+  <text x="705" y="320" text-anchor="middle" fill="#a78bfa" font-size="14" font-weight="bold" font-family="Courier New, monospace">Shrink while VALID</text>
+  <text x="705" y="338" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Time: O(n) | Space: O(1)</text>
+  
+  <!-- Key Insight -->
+  <rect x="30" y="365" width="890" height="100" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="475" y="395" text-anchor="middle" fill="#4ade80" font-size="16" font-weight="bold" font-family="Courier New, monospace">WHY O(n)? — AMORTIZED ANALYSIS</text>
+  
+  <text x="60" y="425" fill="#ffffff" font-size="12" font-family="Courier New, monospace">• Each element enters the window EXACTLY ONCE (when R reaches it)</text>
+  <text x="60" y="448" fill="#ffffff" font-size="12" font-family="Courier New, monospace">• Each element exits the window AT MOST ONCE (when L passes it)</text>
+  <text x="550" y="425" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Total pointer moves: n + n = 2n</text>
+  <text x="550" y="448" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">Amortized: O(1) per element</text>
+  
+  <!-- Comparison Table -->
+  <rect x="30" y="485" width="890" height="145" rx="8" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="475" y="515" text-anchor="middle" fill="#f97316" font-size="16" font-weight="bold" font-family="Courier New, monospace">PATTERN COMPARISON</text>
+  
+  <text x="60" y="545" fill="#888888" font-size="12" font-family="Courier New, monospace">Goal</text>
+  <text x="200" y="545" fill="#888888" font-size="12" font-family="Courier New, monospace">Shrink When</text>
+  <text x="400" y="545" fill="#888888" font-size="12" font-family="Courier New, monospace">Update Time</text>
+  <text x="600" y="545" fill="#888888" font-size="12" font-family="Courier New, monospace">Example</text>
+  
+  <line x1="50" y1="555" x2="900" y2="555" stroke="#888888" stroke-width="1"/>
+  
+  <text x="60" y="580" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">LONGEST</text>
+  <text x="200" y="580" fill="#ffffff" font-size="12" font-family="Courier New, monospace">Window INVALID</text>
+  <text x="400" y="580" fill="#ffffff" font-size="12" font-family="Courier New, monospace">After shrink</text>
+  <text x="600" y="580" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Longest no repeat chars</text>
+  
+  <text x="60" y="610" fill="#a78bfa" font-size="12" font-weight="bold" font-family="Courier New, monospace">SHORTEST</text>
+  <text x="200" y="610" fill="#ffffff" font-size="12" font-family="Courier New, monospace">Window VALID</text>
+  <text x="400" y="610" fill="#ffffff" font-size="12" font-family="Courier New, monospace">Before shrink</text>
+  <text x="600" y="610" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Min subarray sum ≥ k</text>
+</svg>
+

@@ -1,0 +1,96 @@
+<svg viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: bold 26px 'Courier New', monospace; fill: #ffffff; }
+      .subtitle { font: 16px 'Courier New', monospace; fill: #888888; }
+      .section-label { font: bold 14px 'Courier New', monospace; fill: #e94560; }
+      .box-text { font: bold 18px 'Courier New', monospace; fill: #ffffff; }
+      .small-label { font: 11px 'Courier New', monospace; fill: #888888; }
+      .result-text { font: bold 14px 'Courier New', monospace; fill: #4ade80; }
+      .info-text { font: 13px 'Courier New', monospace; fill: #ffffff; }
+      .complexity { font: 12px 'Courier New', monospace; fill: #60a5fa; }
+      .arrow-label { font: bold 12px 'Courier New', monospace; }
+    </style>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4ade80"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto">
+      <path d="M9,0 L9,6 L0,3 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="550" fill="#0f0f23"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" class="title">📬 Queue Operations (FIFO)</text>
+  <text x="450" y="70" text-anchor="middle" class="subtitle">First In, First Out - Elements processed in arrival order</text>
+
+  <!-- Queue Container -->
+  <rect x="180" y="140" width="540" height="80" rx="8" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="8,4"/>
+
+  <!-- Queue Elements -->
+  <g transform="translate(200, 155)">
+    <!-- Element A (Front) -->
+    <rect x="0" y="0" width="70" height="50" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="35" y="32" text-anchor="middle" class="box-text">A</text>
+    <text x="35" y="70" text-anchor="middle" class="small-label">FRONT</text>
+
+    <!-- Element B -->
+    <rect x="90" y="0" width="70" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="125" y="32" text-anchor="middle" class="box-text">B</text>
+
+    <!-- Element C -->
+    <rect x="180" y="0" width="70" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="215" y="32" text-anchor="middle" class="box-text">C</text>
+
+    <!-- Element D (Rear) -->
+    <rect x="270" y="0" width="70" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="305" y="32" text-anchor="middle" class="box-text">D</text>
+    <text x="305" y="70" text-anchor="middle" class="small-label">REAR</text>
+
+    <!-- New Element E (being enqueued) -->
+    <rect x="380" y="0" width="70" height="50" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="415" y="32" text-anchor="middle" class="box-text" fill="#f97316">E</text>
+    <text x="415" y="70" text-anchor="middle" class="small-label">NEW</text>
+  </g>
+
+  <!-- Dequeue Arrow (Left) -->
+  <path d="M 170 180 L 100 180" stroke="#ef4444" stroke-width="3" fill="none" marker-end="url(#arrowRed)"/>
+  <text x="135" y="155" text-anchor="middle" class="arrow-label" fill="#ef4444">DEQUEUE</text>
+  <text x="135" y="210" text-anchor="middle" class="small-label">(remove from front)</text>
+
+  <!-- Enqueue Arrow (Right) -->
+  <path d="M="730" y="180" L="640" y="180"" stroke="#4ade80" stroke-width="3" fill="none"/>
+  <line x1="730" y1="180" x2="640" y2="180" stroke="#4ade80" stroke-width="3"/>
+  <text x="765" y="155" text-anchor="middle" class="arrow-label" fill="#4ade80">ENQUEUE</text>
+  <text x="765" y="210" text-anchor="middle" class="small-label">(add to rear)</text>
+
+  <!-- FIFO Explanation Box -->
+  <rect x="180" y="280" width="540" height="70" rx="8" fill="#1a1a2e" stroke="#3b82f6" stroke-width="2"/>
+  <text x="450" y="310" text-anchor="middle" class="section-label">First In, First Out (FIFO) Property</text>
+  <text x="450" y="335" text-anchor="middle" class="info-text">Element A was added first → A will be removed first</text>
+
+  <!-- Operations Box -->
+  <rect x="180" y="370" width="260" height="140" rx="8" fill="#1a1a2e" stroke="#4ade80" stroke-width="2"/>
+  <text x="310" y="400" text-anchor="middle" class="section-label" fill="#4ade80">Operations</text>
+  <text x="200" y="430" class="info-text">enqueue(x)</text>
+  <text x="400" y="430" text-anchor="end" class="result-text">O(1)</text>
+  <text x="200" y="455" class="info-text">dequeue()</text>
+  <text x="400" y="455" text-anchor="end" class="result-text">O(1)</text>
+  <text x="200" y="480" class="info-text">peek()</text>
+  <text x="400" y="480" text-anchor="end" class="result-text">O(1)</text>
+  <text x="200" y="505" class="info-text">isEmpty()</text>
+  <text x="400" y="505" text-anchor="end" class="result-text">O(1)</text>
+
+  <!-- Use Cases Box -->
+  <rect x="460" y="370" width="260" height="140" rx="8" fill="#1a1a2e" stroke="#a78bfa" stroke-width="2"/>
+  <text x="590" y="400" text-anchor="middle" class="section-label" fill="#a78bfa">Use Cases</text>
+  <text x="480" y="430" class="info-text">• BFS Traversal</text>
+  <text x="480" y="455" class="info-text">• Task Scheduling</text>
+  <text x="480" y="480" class="info-text">• Print Queue</text>
+  <text x="480" y="505" class="info-text">• Request Buffering</text>
+
+  <!-- Footer -->
+  <text x="450" y="535" text-anchor="middle" class="complexity">Space Complexity: O(n) | All core operations: O(1) time</text>
+</svg>

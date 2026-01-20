@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 550">
+  <rect width="850" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="425" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Online Algorithms</text>
+  <text x="425" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Decisions Without Future Knowledge</text>
+  
+  <!-- Competitive Analysis -->
+  <text x="50" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Competitive Ratio</text>
+  
+  <g transform="translate(50, 130)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">How well online performs vs optimal offline</text>
+    
+    <rect x="0" y="15" width="250" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="125" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">c = max(ALG(σ) / OPT(σ))</text>
+    
+    <text x="0" y="75" font-family="Courier New, monospace" font-size="10" fill="#888888">c = 1: optimal | c = 2: worst is 2× OPT</text>
+  </g>
+  
+  <!-- LRU Cache -->
+  <text x="400" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">LRU Cache (c = k)</text>
+  
+  <g transform="translate(400, 130)">
+    <!-- Cache visualization -->
+    <g transform="translate(0, 15)">
+      <rect x="0" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="20" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">MRU</text>
+      
+      <rect x="45" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="65" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">A</text>
+      
+      <rect x="90" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="110" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">B</text>
+      
+      <rect x="135" y="0" width="40" height="35" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+      <text x="155" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">LRU</text>
+    </g>
+    
+    <text x="0" y="75" font-family="Courier New, monospace" font-size="10" fill="#888888">Evict least recently used on miss</text>
+    <text x="0" y="93" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(1) with HashMap + DLL</text>
+  </g>
+  
+  <!-- Median from Stream -->
+  <text x="50" y="260" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Median from Data Stream</text>
+  
+  <g transform="translate(50, 280)">
+    <!-- Two heaps -->
+    <g transform="translate(0, 10)">
+      <rect x="0" y="0" width="100" height="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+      <text x="50" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#3b82f6">Max-Heap</text>
+      <text x="50" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">smaller half</text>
+      
+      <text x="112" y="30" font-family="Courier New, monospace" font-size="16" fill="#888888">|</text>
+      
+      <rect x="125" y="0" width="100" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+      <text x="175" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">Min-Heap</text>
+      <text x="175" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">larger half</text>
+    </g>
+    
+    <text x="0" y="85" font-family="Courier New, monospace" font-size="10" fill="#888888">Median = avg of two roots (or one)</text>
+    <text x="0" y="103" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Insert: O(log n) | Query: O(1)</text>
+  </g>
+  
+  <!-- LFU Cache -->
+  <text x="400" y="260" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">LFU Cache</text>
+  
+  <g transform="translate(400, 280)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Evict least frequently used</text>
+    
+    <g transform="translate(0, 20)">
+      <rect x="0" y="0" width="50" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="25" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">freq=1</text>
+      
+      <rect x="55" y="0" width="50" height="25" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+      <text x="80" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">freq=2</text>
+      
+      <rect x="110" y="0" width="50" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+      <text x="135" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">freq=5</text>
+    </g>
+    
+    <text x="0" y="65" font-family="Courier New, monospace" font-size="10" fill="#888888">HashMap + freq buckets (DLL each)</text>
+    <text x="0" y="83" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(1) all operations</text>
+  </g>
+  
+  <!-- Sliding Window Maximum -->
+  <text x="50" y="420" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Sliding Window Maximum</text>
+  
+  <g transform="translate(50, 440)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Monotonic deque: decreasing from front</text>
+    
+    <g transform="translate(0, 20)">
+      <rect x="0" y="0" width="30" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="15" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">9</text>
+      
+      <rect x="35" y="0" width="30" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="50" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">7</text>
+      
+      <rect x="70" y="0" width="30" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="85" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">5</text>
+      
+      <text x="110" y="17" font-family="Courier New, monospace" font-size="10" fill="#888888">← front = max</text>
+    </g>
+    
+    <text x="0" y="65" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(n) total | O(1) amortized per</text>
+  </g>
+  
+  <!-- Summary -->
+  <text x="425" y="510" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Key Insight</text>
+  <text x="425" y="535" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Process elements one at a time, maintain efficient state</text>
+</svg>
+
+

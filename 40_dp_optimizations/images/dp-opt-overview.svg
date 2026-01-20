@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380">
+  <rect width="900" height="380" fill="#0f0f23"/>
+  
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">DP Optimizations</text>
+  <text x="450" y="58" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">Techniques to speed up dynamic programming</text>
+  
+  <!-- Divide and Conquer -->
+  <text x="50" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">DIVIDE &amp; CONQUER OPTIMIZATION</text>
+  <g transform="translate(50, 115)">
+    <rect x="0" y="0" width="380" height="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">When: opt[i][j] ≤ opt[i][j+1]</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Monotonic optimal split points</text>
+    <text x="15" y="60" fill="#4ade80" font-size="10" font-family="Courier New, monospace">O(n²) → O(n log n)</text>
+  </g>
+  
+  <!-- Knuth's -->
+  <text x="480" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">KNUTH'S OPTIMIZATION</text>
+  <g transform="translate(480, 115)">
+    <rect x="0" y="0" width="350" height="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">When: opt[i][j-1] ≤ opt[i][j] ≤ opt[i+1][j]</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Interval DP with quadrangle inequality</text>
+    <text x="15" y="60" fill="#4ade80" font-size="10" font-family="Courier New, monospace">O(n³) → O(n²)</text>
+  </g>
+  
+  <!-- Convex Hull Trick -->
+  <text x="50" y="215" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">CONVEX HULL TRICK</text>
+  <g transform="translate(50, 235)">
+    <rect x="0" y="0" width="380" height="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">dp[i] = min/max(m[j]*x[i] + c[j])</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Maintain convex hull of lines</text>
+    <text x="15" y="60" fill="#4ade80" font-size="10" font-family="Courier New, monospace">O(n²) → O(n) or O(n log n)</text>
+  </g>
+  
+  <!-- Li Chao Tree -->
+  <text x="480" y="215" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">LI CHAO TREE</text>
+  <g transform="translate(480, 235)">
+    <rect x="0" y="0" width="350" height="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Dynamic convex hull trick</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Supports any order of queries</text>
+    <text x="15" y="60" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Insert/Query: O(log n)</text>
+  </g>
+  
+  <!-- Summary -->
+  <text x="50" y="335" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">WHEN TO USE</text>
+  <g transform="translate(50, 350)">
+    <text x="0" y="15" fill="#888888" font-size="10" font-family="Courier New, monospace">Look for: Monotonic opt • Quadrangle inequality • Linear expressions in recurrence</text>
+  </g>
+</svg>
+

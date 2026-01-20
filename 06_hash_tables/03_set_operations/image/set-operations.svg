@@ -1,0 +1,132 @@
+<svg viewBox="0 0 950 650" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Set Operations - HashSet Applications</text>
+  <text x="475" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">O(1) lookup for existence checks and uniqueness</text>
+  
+  <!-- Set A -->
+  <text x="80" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">SET A</text>
+  <g transform="translate(50, 125)">
+    <ellipse cx="120" cy="80" rx="110" ry="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="60" y="60" font-family="Courier New, monospace" font-size="16" fill="#3b82f6">1</text>
+    <text x="100" y="80" font-family="Courier New, monospace" font-size="16" fill="#3b82f6">2</text>
+    <text x="140" y="60" font-family="Courier New, monospace" font-size="16" fill="#a78bfa">3</text>
+    <text x="120" y="105" font-family="Courier New, monospace" font-size="16" fill="#3b82f6">4</text>
+  </g>
+  
+  <!-- Set B -->
+  <text x="350" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">SET B</text>
+  <g transform="translate(320, 125)">
+    <ellipse cx="120" cy="80" rx="110" ry="70" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="60" y="60" font-family="Courier New, monospace" font-size="16" fill="#a78bfa">3</text>
+    <text x="100" y="80" font-family="Courier New, monospace" font-size="16" fill="#a78bfa">4</text>
+    <text x="140" y="60" font-family="Courier New, monospace" font-size="16" fill="#a78bfa">5</text>
+    <text x="120" y="105" font-family="Courier New, monospace" font-size="16" fill="#a78bfa">6</text>
+  </g>
+  
+  <!-- Operations Section -->
+  <text x="620" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">SET OPERATIONS</text>
+  
+  <g transform="translate(600, 125)">
+    <!-- Union -->
+    <rect x="0" y="0" width="300" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="6"/>
+    <text x="15" y="27" font-family="Courier New, monospace" font-size="13" fill="#4ade80">A ∪ B</text>
+    <text x="80" y="27" font-family="Courier New, monospace" font-size="13" fill="#888888">=</text>
+    <text x="100" y="27" font-family="Courier New, monospace" font-size="13" fill="#ffffff">{1,2,3,4,5,6}</text>
+    <text x="230" y="27" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">O(n+m)</text>
+    
+    <!-- Intersection -->
+    <rect x="0" y="50" width="300" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="6"/>
+    <text x="15" y="77" font-family="Courier New, monospace" font-size="13" fill="#f97316">A ∩ B</text>
+    <text x="80" y="77" font-family="Courier New, monospace" font-size="13" fill="#888888">=</text>
+    <text x="100" y="77" font-family="Courier New, monospace" font-size="13" fill="#ffffff">{3, 4}</text>
+    <text x="230" y="77" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">O(min)</text>
+    
+    <!-- Difference A-B -->
+    <rect x="0" y="100" width="300" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="6"/>
+    <text x="15" y="127" font-family="Courier New, monospace" font-size="13" fill="#3b82f6">A \ B</text>
+    <text x="80" y="127" font-family="Courier New, monospace" font-size="13" fill="#888888">=</text>
+    <text x="100" y="127" font-family="Courier New, monospace" font-size="13" fill="#ffffff">{1, 2}</text>
+    <text x="230" y="127" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">O(n)</text>
+  </g>
+  
+  <!-- Contains Duplicate Section -->
+  <text x="50" y="310" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">CONTAINS DUPLICATE (#217)</text>
+  
+  <g transform="translate(50, 330)">
+    <rect x="0" y="0" width="400" height="90" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="8"/>
+    
+    <text x="20" y="30" font-family="Courier New, monospace" font-size="13" fill="#888888">nums = [1, 2, 3, 1]</text>
+    <text x="20" y="55" font-family="Courier New, monospace" font-size="13" fill="#ffffff">len(set(nums)) &lt; len(nums)</text>
+    <text x="20" y="80" font-family="Courier New, monospace" font-size="13" fill="#4ade80">→ 3 &lt; 4 → True (has duplicates)</text>
+  </g>
+  
+  <!-- Intersection of Arrays Section -->
+  <text x="500" y="310" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">INTERSECTION (#349)</text>
+  
+  <g transform="translate(500, 330)">
+    <rect x="0" y="0" width="400" height="90" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="8"/>
+    
+    <text x="20" y="30" font-family="Courier New, monospace" font-size="13" fill="#888888">nums1=[1,2,2,1] nums2=[2,2]</text>
+    <text x="20" y="55" font-family="Courier New, monospace" font-size="13" fill="#ffffff">set(nums1) &amp; set(nums2)</text>
+    <text x="20" y="80" font-family="Courier New, monospace" font-size="13" fill="#4ade80">→ {1,2} ∩ {2} = {2}</text>
+  </g>
+  
+  <!-- Happy Number Section -->
+  <text x="50" y="460" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">HAPPY NUMBER - CYCLE DETECTION (#202)</text>
+  
+  <g transform="translate(50, 480)">
+    <rect x="0" y="0" width="850" height="130" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="8"/>
+    
+    <text x="20" y="30" font-family="Courier New, monospace" font-size="13" fill="#888888">n = 19: Sum of squared digits until 1 or cycle</text>
+    
+    <!-- Chain of numbers -->
+    <rect x="20" y="45" width="50" height="35" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="4"/>
+    <text x="45" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#f97316">19</text>
+    
+    <text x="80" y="70" font-family="Courier New, monospace" font-size="14" fill="#888888">→</text>
+    
+    <rect x="100" y="45" width="50" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="4"/>
+    <text x="125" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">82</text>
+    
+    <text x="160" y="70" font-family="Courier New, monospace" font-size="14" fill="#888888">→</text>
+    
+    <rect x="180" y="45" width="50" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="4"/>
+    <text x="205" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">68</text>
+    
+    <text x="240" y="70" font-family="Courier New, monospace" font-size="14" fill="#888888">→</text>
+    
+    <rect x="260" y="45" width="50" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="4"/>
+    <text x="285" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">100</text>
+    
+    <text x="320" y="70" font-family="Courier New, monospace" font-size="14" fill="#888888">→</text>
+    
+    <rect x="340" y="45" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="3" rx="4"/>
+    <text x="365" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">1</text>
+    
+    <text x="400" y="70" font-family="Courier New, monospace" font-size="14" fill="#4ade80">✓ Happy!</text>
+    
+    <!-- Calculations -->
+    <text x="20" y="105" font-family="Courier New, monospace" font-size="11" fill="#888888">1²+9²=82</text>
+    <text x="100" y="105" font-family="Courier New, monospace" font-size="11" fill="#888888">8²+2²=68</text>
+    <text x="180" y="105" font-family="Courier New, monospace" font-size="11" fill="#888888">6²+8²=100</text>
+    <text x="260" y="105" font-family="Courier New, monospace" font-size="11" fill="#888888">1²+0²+0²=1</text>
+    
+    <!-- Set tracking -->
+    <text x="500" y="55" font-family="Courier New, monospace" font-size="13" fill="#a78bfa">seen = set()</text>
+    <text x="500" y="80" font-family="Courier New, monospace" font-size="13" fill="#ffffff">Track visited numbers</text>
+    <text x="500" y="105" font-family="Courier New, monospace" font-size="13" fill="#888888">If n in seen → cycle (unhappy)</text>
+    <text x="500" y="120" font-family="Courier New, monospace" font-size="13" fill="#4ade80">If n == 1 → happy!</text>
+  </g>
+  
+  <!-- Complexity Summary -->
+  <rect x="50" y="620" width="280" height="25" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1" rx="4"/>
+  <text x="70" y="638" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">HashSet: O(1) add, O(1) lookup</text>
+  
+  <rect x="350" y="620" width="280" height="25" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1" rx="4"/>
+  <text x="370" y="638" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Space: O(n) for n elements</text>
+  
+  <rect x="650" y="620" width="250" height="25" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1" rx="4"/>
+  <text x="670" y="638" font-family="Courier New, monospace" font-size="12" fill="#888888">#217 #349 #202 #219</text>
+</svg>

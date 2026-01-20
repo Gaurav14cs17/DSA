@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cellGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90a4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2c5f72;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="leftPtr" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ff88;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00cc6a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="rightPtr" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ee5a5a;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#bgGrad1)"/>
+  
+  <!-- Title -->
+  <text x="400" y="45" font-family="Segoe UI, Arial" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">Two Pointers Technique</text>
+  <text x="400" y="75" font-family="Segoe UI, Arial" font-size="16" fill="#88ccff" text-anchor="middle">Opposite Direction Pointers - O(n) Time Complexity</text>
+  
+  <!-- Array Container -->
+  <rect x="100" y="120" width="600" height="80" rx="10" fill="none" stroke="#4a90a4" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Array Cells -->
+  <g id="arrayCells">
+    <!-- Cell 1 -->
+    <rect x="120" y="135" width="70" height="50" rx="8" fill="url(#cellGrad)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="155" y="168" font-family="Consolas, monospace" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">1</text>
+    
+    <!-- Cell 2 -->
+    <rect x="200" y="135" width="70" height="50" rx="8" fill="url(#cellGrad)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="235" y="168" font-family="Consolas, monospace" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">3</text>
+    
+    <!-- Cell 3 -->
+    <rect x="280" y="135" width="70" height="50" rx="8" fill="url(#cellGrad)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="315" y="168" font-family="Consolas, monospace" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">5</text>
+    
+    <!-- Cell 4 -->
+    <rect x="360" y="135" width="70" height="50" rx="8" fill="url(#cellGrad)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="395" y="168" font-family="Consolas, monospace" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">7</text>
+    
+    <!-- Cell 5 -->
+    <rect x="440" y="135" width="70" height="50" rx="8" fill="url(#cellGrad)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="475" y="168" font-family="Consolas, monospace" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">9</text>
+    
+    <!-- Cell 6 -->
+    <rect x="520" y="135" width="70" height="50" rx="8" fill="url(#cellGrad)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="555" y="168" font-family="Consolas, monospace" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">11</text>
+    
+    <!-- Cell 7 -->
+    <rect x="600" y="135" width="70" height="50" rx="8" fill="url(#cellGrad)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="635" y="168" font-family="Consolas, monospace" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">15</text>
+  </g>
+  
+  <!-- Left Pointer -->
+  <g filter="url(#glow)">
+    <polygon points="155,215 140,245 170,245" fill="url(#leftPtr)"/>
+    <rect x="145" y="245" width="20" height="25" fill="url(#leftPtr)"/>
+    <text x="155" y="295" font-family="Segoe UI, Arial" font-size="14" font-weight="bold" fill="#00ff88" text-anchor="middle">LEFT</text>
+    <text x="155" y="312" font-family="Consolas, monospace" font-size="12" fill="#aaffaa" text-anchor="middle">i = 0</text>
+  </g>
+  
+  <!-- Right Pointer -->
+  <g filter="url(#glow)">
+    <polygon points="635,215 620,245 650,245" fill="url(#rightPtr)"/>
+    <rect x="625" y="245" width="20" height="25" fill="url(#rightPtr)"/>
+    <text x="635" y="295" font-family="Segoe UI, Arial" font-size="14" font-weight="bold" fill="#ff6b6b" text-anchor="middle">RIGHT</text>
+    <text x="635" y="312" font-family="Consolas, monospace" font-size="12" fill="#ffaaaa" text-anchor="middle">j = 6</text>
+  </g>
+  
+  <!-- Movement Arrows -->
+  <g>
+    <path d="M 180 230 L 280 230" stroke="#00ff88" stroke-width="3" fill="none" marker-end="url(#arrowGreen)"/>
+    <path d="M 610 230 L 510 230" stroke="#ff6b6b" stroke-width="3" fill="none" marker-end="url(#arrowRed)"/>
+  </g>
+  
+  <!-- Arrow Markers -->
+  <defs>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#00ff88"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ff6b6b"/>
+    </marker>
+  </defs>
+  
+  <!-- Info Box -->
+  <rect x="150" y="330" width="500" height="55" rx="10" fill="#0d1b2a" stroke="#4a90a4" stroke-width="2"/>
+  <text x="400" y="355" font-family="Segoe UI, Arial" font-size="14" fill="#ffffff" text-anchor="middle">
+    <tspan font-weight="bold" fill="#00ff88">Left</tspan> moves right (i++)  |  
+    <tspan font-weight="bold" fill="#ff6b6b">Right</tspan> moves left (j--)
+  </text>
+  <text x="400" y="375" font-family="Segoe UI, Arial" font-size="13" fill="#88ccff" text-anchor="middle">Converge until left ≥ right | Each element visited once = O(n)</text>
+</svg>

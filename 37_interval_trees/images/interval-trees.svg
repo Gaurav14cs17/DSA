@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580">
+  <rect width="900" height="580" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Interval Trees</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Efficient Interval Operations in O(log n)</text>
+  
+  <!-- Interval Tree Structure -->
+  <text x="50" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Augmented BST Structure</text>
+  
+  <g transform="translate(50, 130)">
+    <!-- Tree node -->
+    <rect x="50" y="0" width="120" height="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="60" y="18" font-family="Courier New, monospace" font-size="9" fill="#888888">interval: [5, 15]</text>
+    <text x="60" y="33" font-family="Courier New, monospace" font-size="9" fill="#4ade80">max: 20</text>
+    <text x="60" y="46" font-family="Courier New, monospace" font-size="8" fill="#888888">left  |  right</text>
+    
+    <!-- Left child -->
+    <line x1="80" y1="50" x2="40" y2="80" stroke="#3b82f6" stroke-width="1.5"/>
+    <rect x="0" y="85" width="80" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="10" y="102" font-family="Courier New, monospace" font-size="8" fill="#888888">[2, 8]</text>
+    <text x="10" y="118" font-family="Courier New, monospace" font-size="8" fill="#4ade80">max: 10</text>
+    
+    <!-- Right child -->
+    <line x1="140" y1="50" x2="180" y2="80" stroke="#3b82f6" stroke-width="1.5"/>
+    <rect x="140" y="85" width="80" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="150" y="102" font-family="Courier New, monospace" font-size="8" fill="#888888">[10, 20]</text>
+    <text x="150" y="118" font-family="Courier New, monospace" font-size="8" fill="#4ade80">max: 20</text>
+  </g>
+  
+  <text x="50" y="280" font-family="Courier New, monospace" font-size="10" fill="#888888">Key augmentation: store max endpoint in subtree</text>
+  <text x="50" y="298" font-family="Courier New, monospace" font-size="10" fill="#4ade80">Prune: if node.left.max &lt; query.low → skip left</text>
+  
+  <!-- Overlap Query -->
+  <text x="350" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Overlap Detection</text>
+  
+  <g transform="translate(350, 130)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Two intervals [a,b] and [c,d] overlap iff:</text>
+    
+    <!-- Interval visualization -->
+    <g transform="translate(0, 25)">
+      <!-- Number line -->
+      <line x1="0" y1="40" x2="250" y2="40" stroke="#888888" stroke-width="1"/>
+      
+      <!-- Interval A -->
+      <line x1="30" y1="25" x2="120" y2="25" stroke="#3b82f6" stroke-width="4"/>
+      <circle cx="30" cy="25" r="4" fill="#3b82f6"/>
+      <circle cx="120" cy="25" r="4" fill="#3b82f6"/>
+      <text x="75" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#3b82f6">[a, b]</text>
+      
+      <!-- Interval B (overlapping) -->
+      <line x1="80" y1="55" x2="180" y2="55" stroke="#4ade80" stroke-width="4"/>
+      <circle cx="80" cy="55" r="4" fill="#4ade80"/>
+      <circle cx="180" cy="55" r="4" fill="#4ade80"/>
+      <text x="130" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#4ade80">[c, d]</text>
+      
+      <!-- Overlap region -->
+      <rect x="80" y="32" width="40" height="16" fill="#f97316" fill-opacity="0.3" stroke="#f97316" stroke-width="1"/>
+    </g>
+    
+    <text x="0" y="105" font-family="Courier New, monospace" font-size="11" fill="#ffffff">a ≤ d AND c ≤ b</text>
+    <text x="0" y="125" font-family="Courier New, monospace" font-size="10" fill="#888888">(NOT (b &lt; c OR d &lt; a))</text>
+  </g>
+  
+  <!-- Merge Intervals Pattern -->
+  <text x="650" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Merge Intervals</text>
+  
+  <g transform="translate(650, 130)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Sort by start, merge greedily</text>
+    
+    <!-- Before merge -->
+    <g transform="translate(0, 20)">
+      <line x1="0" y1="25" x2="60" y2="25" stroke="#ef4444" stroke-width="3"/>
+      <line x1="40" y1="35" x2="100" y2="35" stroke="#ef4444" stroke-width="3"/>
+      <line x1="120" y1="25" x2="180" y2="25" stroke="#ef4444" stroke-width="3"/>
+    </g>
+    
+    <text x="190" y="50" font-family="Courier New, monospace" font-size="10" fill="#888888">→</text>
+    
+    <!-- After merge -->
+    <g transform="translate(0, 70)">
+      <line x1="0" y1="25" x2="100" y2="25" stroke="#4ade80" stroke-width="3"/>
+      <line x1="120" y1="25" x2="180" y2="25" stroke="#4ade80" stroke-width="3"/>
+    </g>
+    
+    <text x="0" y="130" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(n log n)</text>
+  </g>
+  
+  <!-- Sweep Line -->
+  <text x="50" y="340" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Sweep Line: Max Overlap</text>
+  
+  <g transform="translate(50, 360)">
+    <!-- Events timeline -->
+    <line x1="0" y1="60" x2="300" y2="60" stroke="#888888" stroke-width="1"/>
+    
+    <!-- Interval 1 -->
+    <line x1="20" y1="30" x2="120" y2="30" stroke="#3b82f6" stroke-width="3"/>
+    <text x="15" y="50" font-family="Courier New, monospace" font-size="9" fill="#4ade80">+1</text>
+    <text x="115" y="50" font-family="Courier New, monospace" font-size="9" fill="#ef4444">-1</text>
+    
+    <!-- Interval 2 -->
+    <line x1="80" y1="40" x2="200" y2="40" stroke="#f97316" stroke-width="3"/>
+    <text x="75" y="50" font-family="Courier New, monospace" font-size="9" fill="#4ade80">+1</text>
+    <text x="195" y="50" font-family="Courier New, monospace" font-size="9" fill="#ef4444">-1</text>
+    
+    <!-- Interval 3 -->
+    <line x1="60" y1="50" x2="150" y2="50" stroke="#4ade80" stroke-width="3"/>
+    <text x="55" y="50" font-family="Courier New, monospace" font-size="9" fill="#4ade80">+1</text>
+    <text x="145" y="50" font-family="Courier New, monospace" font-size="9" fill="#ef4444">-1</text>
+    
+    <!-- Counter -->
+    <text x="0" y="90" font-family="Courier New, monospace" font-size="10" fill="#888888">Sweep: track active count</text>
+    <text x="0" y="108" font-family="Courier New, monospace" font-size="10" fill="#4ade80">Max overlap = max counter value</text>
+  </g>
+  
+  <!-- Segment Tree with Lazy -->
+  <text x="400" y="340" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Segment Tree + Lazy Propagation</text>
+  
+  <g transform="translate(400, 360)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Range update + Range query in O(log n)</text>
+    
+    <!-- Tree structure -->
+    <g transform="translate(50, 20)">
+      <rect x="40" y="0" width="60" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+      <text x="55" y="13" font-family="Courier New, monospace" font-size="8" fill="#ffffff">sum=15</text>
+      <text x="55" y="25" font-family="Courier New, monospace" font-size="8" fill="#f97316">lazy=+2</text>
+      
+      <line x1="55" y1="30" x2="30" y2="50" stroke="#3b82f6" stroke-width="1"/>
+      <line x1="85" y1="30" x2="110" y2="50" stroke="#3b82f6" stroke-width="1"/>
+      
+      <rect x="10" y="55" width="45" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="20" y="72" font-family="Courier New, monospace" font-size="8" fill="#ffffff">sum=7</text>
+      
+      <rect x="85" y="55" width="45" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="95" y="72" font-family="Courier New, monospace" font-size="8" fill="#ffffff">sum=8</text>
+    </g>
+    
+    <text x="0" y="120" font-family="Courier New, monospace" font-size="10" fill="#888888">Lazy: defer updates until query</text>
+    <text x="0" y="138" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(log n) per operation</text>
+  </g>
+  
+  <!-- Complexity Table -->
+  <text x="450" y="490" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Complexity Comparison</text>
+  
+  <g transform="translate(100, 510)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Interval Tree:</text>
+    <text x="120" y="0" font-family="Courier New, monospace" font-size="10" fill="#4ade80">O(k + log n)</text>
+    <text x="220" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">overlap query</text>
+    
+    <text x="380" y="0" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Merge:</text>
+    <text x="470" y="0" font-family="Courier New, monospace" font-size="10" fill="#4ade80">O(n log n)</text>
+    <text x="570" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">sort + scan</text>
+  </g>
+  
+  <g transform="translate(100, 535)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Segment Tree:</text>
+    <text x="120" y="0" font-family="Courier New, monospace" font-size="10" fill="#4ade80">O(log n)</text>
+    <text x="220" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">range ops</text>
+    
+    <text x="380" y="0" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Sweep Line:</text>
+    <text x="470" y="0" font-family="Courier New, monospace" font-size="10" fill="#4ade80">O(n log n)</text>
+    <text x="570" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">events</text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="450" y="570" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">k = output size | Augmentation enables efficient pruning</text>
+</svg>
+
+

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <rect width="900" height="400" fill="#0f0f23"/>
+  
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Sweep Line Algorithm</text>
+  <text x="450" y="58" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">Process events along a line that sweeps across the plane</text>
+  
+  <!-- Interval Overlap -->
+  <text x="50" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">INTERVAL PROBLEMS</text>
+  <g transform="translate(50, 115)">
+    <!-- Timeline -->
+    <line x1="0" y1="80" x2="400" y2="80" stroke="#3b82f6" stroke-width="2"/>
+    
+    <!-- Intervals -->
+    <rect x="30" y="10" width="100" height="15" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="80" y="30" width="120" height="15" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <rect x="150" y="50" width="80" height="15" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    
+    <!-- Sweep line -->
+    <line x1="160" y1="0" x2="160" y2="90" stroke="#ef4444" stroke-width="2" stroke-dasharray="5"/>
+    <text x="165" y="15" fill="#ef4444" font-size="10" font-family="Courier New, monospace">sweep</text>
+    
+    <!-- Events -->
+    <circle cx="30" cy="85" r="4" fill="#4ade80"/>
+    <circle cx="80" cy="85" r="4" fill="#4ade80"/>
+    <circle cx="130" cy="85" r="4" fill="#ef4444"/>
+    <circle cx="150" cy="85" r="4" fill="#4ade80"/>
+    <circle cx="200" cy="85" r="4" fill="#ef4444"/>
+    <circle cx="230" cy="85" r="4" fill="#ef4444"/>
+    
+    <text x="0" y="110" fill="#4ade80" font-size="10" font-family="Courier New, monospace">+start</text>
+    <text x="60" y="110" fill="#ef4444" font-size="10" font-family="Courier New, monospace">-end</text>
+  </g>
+  
+  <!-- Template -->
+  <text x="500" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">SWEEP LINE TEMPLATE</text>
+  <g transform="translate(500, 115)">
+    <rect x="0" y="0" width="320" height="100" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">1. Convert to events (start/end)</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">2. Sort events by position</text>
+    <text x="15" y="60" fill="#ffffff" font-size="10" font-family="Courier New, monospace">3. Process left to right</text>
+    <text x="15" y="80" fill="#ffffff" font-size="10" font-family="Courier New, monospace">4. Maintain active set/count</text>
+  </g>
+  
+  <!-- Applications -->
+  <text x="50" y="260" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">CLASSIC PROBLEMS</text>
+  <g transform="translate(50, 280)">
+    <text x="0" y="15" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Meeting Rooms (max overlap)</text>
+    <text x="0" y="35" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Merge Intervals</text>
+    <text x="0" y="55" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Rectangle Area Union</text>
+    <text x="250" y="15" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Skyline Problem</text>
+    <text x="250" y="35" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Line Segment Intersection</text>
+    <text x="250" y="55" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Closest Pair of Points</text>
+  </g>
+  
+  <!-- Complexity -->
+  <text x="550" y="260" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">TIME COMPLEXITY</text>
+  <g transform="translate(550, 280)">
+    <text x="0" y="15" fill="#4ade80" font-size="12" font-family="Courier New, monospace">O(n log n)</text>
+    <text x="100" y="15" fill="#888888" font-size="11" font-family="Courier New, monospace">- sorting dominates</text>
+  </g>
+</svg>
+

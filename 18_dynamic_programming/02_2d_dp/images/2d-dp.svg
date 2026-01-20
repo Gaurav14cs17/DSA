@@ -1,0 +1,198 @@
+<svg viewBox="0 0 950 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">2D Dynamic Programming</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Grid Paths &amp; LCS Table</text>
+  
+  <!-- Section: Grid Paths -->
+  <text x="50" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Unique Paths: dp[i][j] = dp[i-1][j] + dp[i][j-1]</text>
+  
+  <!-- Grid -->
+  <g transform="translate(50, 120)">
+    <!-- Row 0 -->
+    <rect x="0" y="0" width="60" height="50" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="30" y="32" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    
+    <rect x="65" y="0" width="60" height="50" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="95" y="32" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    
+    <rect x="130" y="0" width="60" height="50" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="160" y="32" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    
+    <rect x="195" y="0" width="60" height="50" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="225" y="32" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    
+    <!-- Row 1 -->
+    <rect x="0" y="55" width="60" height="50" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="30" y="87" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    
+    <rect x="65" y="55" width="60" height="50" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="95" y="87" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    
+    <rect x="130" y="55" width="60" height="50" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="160" y="87" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+    
+    <rect x="195" y="55" width="60" height="50" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="225" y="87" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+    
+    <!-- Row 2 -->
+    <rect x="0" y="110" width="60" height="50" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="30" y="142" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    
+    <rect x="65" y="110" width="60" height="50" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="95" y="142" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+    
+    <rect x="130" y="110" width="60" height="50" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="160" y="142" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+    
+    <rect x="195" y="110" width="60" height="50" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="225" y="142" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">10</text>
+    
+    <!-- Arrows showing computation -->
+    <defs>
+      <marker id="arr1" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#f97316"/>
+      </marker>
+    </defs>
+    <path d="M 95 105 L 140 115" stroke="#f97316" stroke-width="2" fill="none" marker-end="url(#arr1)"/>
+    <path d="M 160 50 L 160 105" stroke="#f97316" stroke-width="2" fill="none" marker-end="url(#arr1)"/>
+  </g>
+  
+  <!-- Labels -->
+  <text x="310" y="230" font-family="Courier New, monospace" font-size="11" fill="#888888">3+3=6</text>
+  <text x="310" y="280" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Result: 10 paths</text>
+  
+  <!-- Section: LCS Table -->
+  <text x="500" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">LCS: "ABCD" vs "AEBD"</text>
+  
+  <!-- LCS Grid -->
+  <g transform="translate(500, 120)">
+    <!-- Column headers -->
+    <text x="65" y="-5" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">A</text>
+    <text x="115" y="-5" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">E</text>
+    <text x="165" y="-5" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">B</text>
+    <text x="215" y="-5" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">D</text>
+    
+    <!-- Row headers -->
+    <text x="-5" y="32" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="end">A</text>
+    <text x="-5" y="82" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="end">B</text>
+    <text x="-5" y="132" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="end">C</text>
+    <text x="-5" y="182" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="end">D</text>
+    
+    <!-- Base row -->
+    <rect x="15" y="5" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="35" y="32" font-family="Courier New, monospace" font-size="14" fill="#888888" text-anchor="middle">0</text>
+    <rect x="60" y="5" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="80" y="32" font-family="Courier New, monospace" font-size="14" fill="#888888" text-anchor="middle">0</text>
+    <rect x="105" y="5" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="125" y="32" font-family="Courier New, monospace" font-size="14" fill="#888888" text-anchor="middle">0</text>
+    <rect x="150" y="5" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="170" y="32" font-family="Courier New, monospace" font-size="14" fill="#888888" text-anchor="middle">0</text>
+    <rect x="195" y="5" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="215" y="32" font-family="Courier New, monospace" font-size="14" fill="#888888" text-anchor="middle">0</text>
+    
+    <!-- Row A -->
+    <rect x="15" y="50" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="35" y="77" font-family="Courier New, monospace" font-size="14" fill="#888888" text-anchor="middle">0</text>
+    <rect x="60" y="50" width="40" height="40" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="80" y="77" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">1</text>
+    <rect x="105" y="50" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="125" y="77" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+    <rect x="150" y="50" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="170" y="77" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+    <rect x="195" y="50" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="215" y="77" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+    
+    <!-- Row B -->
+    <rect x="15" y="95" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="35" y="122" font-family="Courier New, monospace" font-size="14" fill="#888888" text-anchor="middle">0</text>
+    <rect x="60" y="95" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="80" y="122" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+    <rect x="105" y="95" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="125" y="122" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+    <rect x="150" y="95" width="40" height="40" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="170" y="122" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">2</text>
+    <rect x="195" y="95" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="215" y="122" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">2</text>
+    
+    <!-- Row C -->
+    <rect x="15" y="140" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="35" y="167" font-family="Courier New, monospace" font-size="14" fill="#888888" text-anchor="middle">0</text>
+    <rect x="60" y="140" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="80" y="167" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+    <rect x="105" y="140" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="125" y="167" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+    <rect x="150" y="140" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="170" y="167" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">2</text>
+    <rect x="195" y="140" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="215" y="167" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">2</text>
+    
+    <!-- Row D -->
+    <rect x="15" y="185" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="35" y="212" font-family="Courier New, monospace" font-size="14" fill="#888888" text-anchor="middle">0</text>
+    <rect x="60" y="185" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="80" y="212" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+    <rect x="105" y="185" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="125" y="212" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+    <rect x="150" y="185" width="40" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="170" y="212" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">2</text>
+    <rect x="195" y="185" width="40" height="40" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="215" y="212" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">3</text>
+  </g>
+  
+  <text x="740" y="370" font-family="Courier New, monospace" font-size="12" fill="#4ade80">LCS = "ABD" (len=3)</text>
+  
+  <!-- Section: Recurrence Rules -->
+  <text x="50" y="400" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">2D DP Recurrence Patterns</text>
+  
+  <!-- LCS Rule -->
+  <rect x="50" y="420" width="400" height="100" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="450" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">LCS Recurrence</text>
+  <text x="250" y="475" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">if s[i] == t[j]: dp[i][j] = dp[i-1][j-1] + 1</text>
+  <text x="250" y="500" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">else: dp[i][j] = max(dp[i-1][j], dp[i][j-1])</text>
+  
+  <!-- Grid Path Rule -->
+  <rect x="500" y="420" width="400" height="100" rx="5" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="700" y="450" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Grid Path Recurrence</text>
+  <text x="700" y="475" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">dp[i][j] = dp[i-1][j] + dp[i][j-1]</text>
+  <text x="700" y="500" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">Time: O(mn), Space: O(n) with rolling</text>
+  
+  <!-- Dependency diagram -->
+  <text x="50" y="560" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Cell Dependencies</text>
+  
+  <!-- Dependency visualization -->
+  <g transform="translate(100, 580)">
+    <rect x="0" y="0" width="50" height="40" rx="3" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="25" y="25" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="middle">i-1,j-1</text>
+    
+    <rect x="60" y="0" width="50" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="85" y="25" font-family="Courier New, monospace" font-size="10" fill="#3b82f6" text-anchor="middle">i-1,j</text>
+    
+    <rect x="0" y="50" width="50" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="25" y="75" font-family="Courier New, monospace" font-size="10" fill="#3b82f6" text-anchor="middle">i,j-1</text>
+    
+    <rect x="60" y="50" width="50" height="40" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="85" y="75" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">i,j</text>
+    
+    <!-- Arrows -->
+    <defs>
+      <marker id="arr2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#888888"/>
+      </marker>
+    </defs>
+    <path d="M 50 20 L 60 50" stroke="#888888" stroke-width="1.5" fill="none" marker-end="url(#arr2)"/>
+    <path d="M 85 40 L 85 50" stroke="#888888" stroke-width="1.5" fill="none" marker-end="url(#arr2)"/>
+    <path d="M 50 70 L 60 70" stroke="#888888" stroke-width="1.5" fill="none" marker-end="url(#arr2)"/>
+  </g>
+  
+  <!-- Complexity -->
+  <rect x="300" y="580" width="300" height="50" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="450" y="605" font-family="Courier New, monospace" font-size="12" fill="#4ade80" text-anchor="middle">Time: O(m×n)</text>
+  <text x="450" y="622" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">Space: O(n) with rolling array</text>
+  
+  <!-- Maximal Square hint -->
+  <rect x="650" y="580" width="250" height="50" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="775" y="605" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">Maximal Square</text>
+  <text x="775" y="622" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">dp[i][j]=min(↑,←,↖)+1</text>
+</svg>

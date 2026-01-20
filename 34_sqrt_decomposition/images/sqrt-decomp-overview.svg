@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380">
+  <rect width="900" height="380" fill="#0f0f23"/>
+  
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Sqrt Decomposition</text>
+  <text x="450" y="58" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">Divide array into √n blocks</text>
+  
+  <!-- Block Visualization -->
+  <text x="50" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">BLOCK STRUCTURE</text>
+  <g transform="translate(50, 115)">
+    <!-- Block 1 -->
+    <rect x="0" y="0" width="120" height="40" fill="none" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="5" y="5" width="25" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="17" y="25" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">1</text>
+    <rect x="35" y="5" width="25" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="47" y="25" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">2</text>
+    <rect x="65" y="5" width="25" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="77" y="25" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">3</text>
+    <text x="60" y="60" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">sum=6</text>
+    
+    <!-- Block 2 -->
+    <rect x="130" y="0" width="120" height="40" fill="none" stroke="#f97316" stroke-width="2"/>
+    <rect x="135" y="5" width="25" height="30" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+    <text x="147" y="25" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">4</text>
+    <rect x="165" y="5" width="25" height="30" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+    <text x="177" y="25" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">5</text>
+    <rect x="195" y="5" width="25" height="30" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+    <text x="207" y="25" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">6</text>
+    <text x="190" y="60" text-anchor="middle" fill="#f97316" font-size="10" font-family="Courier New, monospace">sum=15</text>
+    
+    <!-- Block 3 -->
+    <rect x="260" y="0" width="120" height="40" fill="none" stroke="#4ade80" stroke-width="2"/>
+    <rect x="265" y="5" width="25" height="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="277" y="25" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">7</text>
+    <rect x="295" y="5" width="25" height="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="307" y="25" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">8</text>
+    <rect x="325" y="5" width="25" height="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="337" y="25" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">9</text>
+    <text x="320" y="60" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">sum=24</text>
+    
+    <text x="0" y="85" fill="#888888" font-size="10" font-family="Courier New, monospace">Block size = √n, Number of blocks = √n</text>
+  </g>
+  
+  <!-- Operations -->
+  <text x="500" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">OPERATIONS</text>
+  <g transform="translate(500, 115)">
+    <rect x="0" y="0" width="300" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="25" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Range Query [L, R]:</text>
+    <text x="170" y="25" fill="#4ade80" font-size="10" font-family="Courier New, monospace">O(√n)</text>
+    <text x="15" y="45" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Point Update:</text>
+    <text x="170" y="45" fill="#4ade80" font-size="10" font-family="Courier New, monospace">O(1) or O(√n)</text>
+    <text x="15" y="65" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Range Update:</text>
+    <text x="170" y="65" fill="#4ade80" font-size="10" font-family="Courier New, monospace">O(√n)</text>
+  </g>
+  
+  <!-- Mo's Algorithm -->
+  <text x="50" y="230" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">MO'S ALGORITHM</text>
+  <g transform="translate(50, 250)">
+    <rect x="0" y="0" width="400" height="60" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Offline query processing</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Sort queries by (L/√n, R), process with add/remove</text>
+    <text x="0" y="75" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Total: O((n + q)√n)</text>
+  </g>
+  
+  <!-- Applications -->
+  <text x="500" y="230" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">APPLICATIONS</text>
+  <g transform="translate(500, 250)">
+    <text x="0" y="15" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Range queries without lazy prop</text>
+    <text x="0" y="35" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Distinct elements in range</text>
+    <text x="0" y="55" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Heavy-light alternative</text>
+  </g>
+</svg>
+

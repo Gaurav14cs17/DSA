@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+  <rect width="600" height="420" fill="#0a0a1a"/>
+  
+  <!-- Title -->
+  <text x="300" y="28" fill="#fff" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle">LCS DP Table</text>
+  <text x="300" y="48" fill="#aaa" font-family="Arial" font-size="13" text-anchor="middle">"ABCDE" vs "ACE"</text>
+  
+  <!-- DP Table -->
+  <g transform="translate(100, 70)">
+    <!-- Column headers -->
+    <text x="50" y="15" fill="#888" font-family="monospace" font-size="13" text-anchor="middle">""</text>
+    <text x="100" y="15" fill="#00b4db" font-family="monospace" font-size="13" text-anchor="middle">A</text>
+    <text x="150" y="15" fill="#00b4db" font-family="monospace" font-size="13" text-anchor="middle">C</text>
+    <text x="200" y="15" fill="#00b4db" font-family="monospace" font-size="13" text-anchor="middle">E</text>
+    
+    <!-- Row headers -->
+    <text x="10" y="55" fill="#888" font-family="monospace" font-size="13" text-anchor="middle">""</text>
+    <text x="10" y="95" fill="#56ab2f" font-family="monospace" font-size="13" text-anchor="middle">A</text>
+    <text x="10" y="135" fill="#56ab2f" font-family="monospace" font-size="13" text-anchor="middle">B</text>
+    <text x="10" y="175" fill="#56ab2f" font-family="monospace" font-size="13" text-anchor="middle">C</text>
+    <text x="10" y="215" fill="#56ab2f" font-family="monospace" font-size="13" text-anchor="middle">D</text>
+    <text x="10" y="255" fill="#56ab2f" font-family="monospace" font-size="13" text-anchor="middle">E</text>
+    
+    <!-- Row 0 -->
+    <rect x="30" y="30" width="40" height="35" rx="4" fill="#333"/>
+    <text x="50" y="53" fill="#666" font-family="Arial" font-size="14" text-anchor="middle">0</text>
+    <rect x="80" y="30" width="40" height="35" rx="4" fill="#333"/>
+    <text x="100" y="53" fill="#666" font-family="Arial" font-size="14" text-anchor="middle">0</text>
+    <rect x="130" y="30" width="40" height="35" rx="4" fill="#333"/>
+    <text x="150" y="53" fill="#666" font-family="Arial" font-size="14" text-anchor="middle">0</text>
+    <rect x="180" y="30" width="40" height="35" rx="4" fill="#333"/>
+    <text x="200" y="53" fill="#666" font-family="Arial" font-size="14" text-anchor="middle">0</text>
+    
+    <!-- Row 1: A -->
+    <rect x="30" y="70" width="40" height="35" rx="4" fill="#333"/>
+    <text x="50" y="93" fill="#666" font-family="Arial" font-size="14" text-anchor="middle">0</text>
+    <rect x="80" y="70" width="40" height="35" rx="4" fill="#56ab2f"/>
+    <text x="100" y="93" fill="#fff" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">1</text>
+    <rect x="130" y="70" width="40" height="35" rx="4" fill="#333"/>
+    <text x="150" y="93" fill="#888" font-family="Arial" font-size="14" text-anchor="middle">1</text>
+    <rect x="180" y="70" width="40" height="35" rx="4" fill="#333"/>
+    <text x="200" y="93" fill="#888" font-family="Arial" font-size="14" text-anchor="middle">1</text>
+    
+    <!-- Row 2: B -->
+    <rect x="30" y="110" width="40" height="35" rx="4" fill="#333"/>
+    <text x="50" y="133" fill="#666" font-family="Arial" font-size="14" text-anchor="middle">0</text>
+    <rect x="80" y="110" width="40" height="35" rx="4" fill="#333"/>
+    <text x="100" y="133" fill="#888" font-family="Arial" font-size="14" text-anchor="middle">1</text>
+    <rect x="130" y="110" width="40" height="35" rx="4" fill="#333"/>
+    <text x="150" y="133" fill="#888" font-family="Arial" font-size="14" text-anchor="middle">1</text>
+    <rect x="180" y="110" width="40" height="35" rx="4" fill="#333"/>
+    <text x="200" y="133" fill="#888" font-family="Arial" font-size="14" text-anchor="middle">1</text>
+    
+    <!-- Row 3: C -->
+    <rect x="30" y="150" width="40" height="35" rx="4" fill="#333"/>
+    <text x="50" y="173" fill="#666" font-family="Arial" font-size="14" text-anchor="middle">0</text>
+    <rect x="80" y="150" width="40" height="35" rx="4" fill="#333"/>
+    <text x="100" y="173" fill="#888" font-family="Arial" font-size="14" text-anchor="middle">1</text>
+    <rect x="130" y="150" width="40" height="35" rx="4" fill="#56ab2f"/>
+    <text x="150" y="173" fill="#fff" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">2</text>
+    <rect x="180" y="150" width="40" height="35" rx="4" fill="#333"/>
+    <text x="200" y="173" fill="#888" font-family="Arial" font-size="14" text-anchor="middle">2</text>
+    
+    <!-- Row 4: D -->
+    <rect x="30" y="190" width="40" height="35" rx="4" fill="#333"/>
+    <text x="50" y="213" fill="#666" font-family="Arial" font-size="14" text-anchor="middle">0</text>
+    <rect x="80" y="190" width="40" height="35" rx="4" fill="#333"/>
+    <text x="100" y="213" fill="#888" font-family="Arial" font-size="14" text-anchor="middle">1</text>
+    <rect x="130" y="190" width="40" height="35" rx="4" fill="#333"/>
+    <text x="150" y="213" fill="#888" font-family="Arial" font-size="14" text-anchor="middle">2</text>
+    <rect x="180" y="190" width="40" height="35" rx="4" fill="#333"/>
+    <text x="200" y="213" fill="#888" font-family="Arial" font-size="14" text-anchor="middle">2</text>
+    
+    <!-- Row 5: E -->
+    <rect x="30" y="230" width="40" height="35" rx="4" fill="#333"/>
+    <text x="50" y="253" fill="#666" font-family="Arial" font-size="14" text-anchor="middle">0</text>
+    <rect x="80" y="230" width="40" height="35" rx="4" fill="#333"/>
+    <text x="100" y="253" fill="#888" font-family="Arial" font-size="14" text-anchor="middle">1</text>
+    <rect x="130" y="230" width="40" height="35" rx="4" fill="#333"/>
+    <text x="150" y="253" fill="#888" font-family="Arial" font-size="14" text-anchor="middle">2</text>
+    <rect x="180" y="230" width="40" height="35" rx="4" fill="#ee0979" stroke="#fff" stroke-width="2"/>
+    <text x="200" y="253" fill="#fff" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">3</text>
+  </g>
+  
+  <!-- Recurrence -->
+  <rect x="350" y="80" width="220" height="100" rx="8" fill="rgba(255,255,255,0.05)" stroke="#555"/>
+  <text x="460" y="105" fill="#ffd700" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Recurrence</text>
+  <text x="370" y="130" fill="#56ab2f" font-family="Arial" font-size="11">If match:</text>
+  <text x="370" y="148" fill="#fff" font-family="monospace" font-size="10">dp[i][j] = dp[i-1][j-1]+1</text>
+  <text x="370" y="168" fill="#888" font-family="Arial" font-size="11">Else: max of left/top</text>
+  
+  <!-- Result -->
+  <rect x="350" y="200" width="220" height="70" rx="8" fill="rgba(238,9,121,0.15)" stroke="#ee0979"/>
+  <text x="460" y="228" fill="#ee0979" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Result</text>
+  <text x="460" y="250" fill="#fff" font-family="Arial" font-size="13" text-anchor="middle">LCS = "ACE" (len=3)</text>
+  
+  <!-- Legend -->
+  <g transform="translate(100, 340)">
+    <rect x="0" y="0" width="20" height="20" rx="3" fill="#56ab2f"/>
+    <text x="30" y="15" fill="#aaa" font-family="Arial" font-size="11">Match (diagonal +1)</text>
+    
+    <rect x="200" y="0" width="20" height="20" rx="3" fill="#ee0979"/>
+    <text x="230" y="15" fill="#aaa" font-family="Arial" font-size="11">Final answer</text>
+  </g>
+  
+  <!-- Complexity -->
+  <text x="300" y="395" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">Time: O(m×n) | Space: O(m×n)</text>
+</svg>

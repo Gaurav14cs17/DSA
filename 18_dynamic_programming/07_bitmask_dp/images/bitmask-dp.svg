@@ -1,0 +1,127 @@
+<svg viewBox="0 0 950 650" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Bitmask Dynamic Programming</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Subset Representation with Bits</text>
+  
+  <!-- Section: Bitmask Basics -->
+  <text x="50" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Bitmask: Subset as Integer</text>
+  
+  <!-- Elements and mask -->
+  <g transform="translate(50, 125)">
+    <text x="0" y="20" font-family="Courier New, monospace" font-size="12" fill="#888888">Elements: {A, B, C, D}</text>
+    <text x="0" y="45" font-family="Courier New, monospace" font-size="12" fill="#888888">Index:     3  2  1  0</text>
+    
+    <!-- Mask representation -->
+    <rect x="0" y="60" width="50" height="45" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="25" y="85" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">1</text>
+    <text x="25" y="115" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">D ✓</text>
+    
+    <rect x="60" y="60" width="50" height="45" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="3,3"/>
+    <text x="85" y="85" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ef4444" text-anchor="middle">0</text>
+    <text x="85" y="115" font-family="Courier New, monospace" font-size="10" fill="#ef4444" text-anchor="middle">C ✗</text>
+    
+    <rect x="120" y="60" width="50" height="45" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="145" y="85" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">1</text>
+    <text x="145" y="115" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">B ✓</text>
+    
+    <rect x="180" y="60" width="50" height="45" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="205" y="85" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">1</text>
+    <text x="205" y="115" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">A ✓</text>
+    
+    <text x="260" y="90" font-family="Courier New, monospace" font-size="14" fill="#ffffff">= 1011₂ = 11</text>
+    <text x="260" y="115" font-family="Courier New, monospace" font-size="12" fill="#888888">Subset: {A, B, D}</text>
+  </g>
+  
+  <!-- Bit Operations -->
+  <g transform="translate(500, 125)">
+    <rect x="0" y="0" width="400" height="130" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="200" y="25" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Common Bit Operations</text>
+    
+    <text x="20" y="50" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">Check bit i:  mask &amp; (1 &lt;&lt; i)</text>
+    <text x="20" y="70" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">Set bit i:    mask | (1 &lt;&lt; i)</text>
+    <text x="20" y="90" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">Clear bit i:  mask &amp; ~(1 &lt;&lt; i)</text>
+    <text x="20" y="110" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">Toggle bit i: mask ^ (1 &lt;&lt; i)</text>
+  </g>
+  
+  <!-- TSP Example -->
+  <text x="50" y="290" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">TSP: Shortest Path Visiting All Nodes</text>
+  
+  <!-- Graph -->
+  <g transform="translate(50, 310)">
+    <!-- Nodes -->
+    <circle cx="60" cy="60" r="25" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="60" y="65" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">0</text>
+    
+    <circle cx="180" cy="30" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="180" y="35" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    
+    <circle cx="180" cy="110" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="180" y="115" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    
+    <circle cx="300" cy="70" r="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="300" y="75" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+    
+    <!-- Edges with weights -->
+    <line x1="85" y1="50" x2="155" y2="35" stroke="#888888" stroke-width="2"/>
+    <text x="120" y="35" font-family="Courier New, monospace" font-size="10" fill="#888888">2</text>
+    
+    <line x1="85" y1="75" x2="155" y2="100" stroke="#888888" stroke-width="2"/>
+    <text x="115" y="100" font-family="Courier New, monospace" font-size="10" fill="#888888">3</text>
+    
+    <line x1="180" y1="55" x2="180" y2="85" stroke="#888888" stroke-width="2"/>
+    <text x="190" y="75" font-family="Courier New, monospace" font-size="10" fill="#888888">1</text>
+    
+    <line x1="205" y1="35" x2="275" y2="60" stroke="#888888" stroke-width="2"/>
+    <text x="240" y="40" font-family="Courier New, monospace" font-size="10" fill="#888888">4</text>
+    
+    <line x1="205" y1="105" x2="275" y2="80" stroke="#888888" stroke-width="2"/>
+    <text x="240" y="105" font-family="Courier New, monospace" font-size="10" fill="#888888">2</text>
+    
+    <!-- Path highlight -->
+    <path d="M 60 60 L 180 30 L 180 110 L 300 70" stroke="#f97316" stroke-width="3" fill="none" stroke-dasharray="5,3"/>
+  </g>
+  
+  <!-- DP State -->
+  <g transform="translate(400, 310)">
+    <rect x="0" y="0" width="500" height="150" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="250" y="25" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">TSP DP State</text>
+    
+    <text x="20" y="55" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">dp[mask][i] = min cost to visit nodes in mask,</text>
+    <text x="20" y="75" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">              ending at node i</text>
+    
+    <text x="20" y="100" font-family="Courier New, monospace" font-size="11" fill="#888888">Recurrence:</text>
+    <text x="20" y="120" font-family="Courier New, monospace" font-size="11" fill="#f97316">dp[mask][i] = min(dp[mask\{i}][j] + dist[j][i])</text>
+    <text x="20" y="140" font-family="Courier New, monospace" font-size="10" fill="#888888">for all j ∈ mask, j ≠ i</text>
+  </g>
+  
+  <!-- Subset iteration -->
+  <text x="50" y="510" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Iterating Over Subsets of mask</text>
+  
+  <g transform="translate(50, 530)">
+    <rect x="0" y="0" width="400" height="90" rx="5" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="200" y="25" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">All Subsets of a Mask</text>
+    <text x="20" y="50" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">sub = mask</text>
+    <text x="20" y="70" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">while sub &gt; 0:</text>
+    <text x="40" y="85" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">sub = (sub - 1) &amp; mask</text>
+  </g>
+  
+  <!-- Complexity -->
+  <g transform="translate(500, 530)">
+    <rect x="0" y="0" width="200" height="90" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="100" y="25" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Complexity</text>
+    <text x="100" y="50" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">States: 2ⁿ × n</text>
+    <text x="100" y="70" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">Time: O(2ⁿ × n²)</text>
+    <text x="100" y="85" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">Works for n ≤ 20</text>
+  </g>
+  
+  <!-- Problems -->
+  <g transform="translate(720, 530)">
+    <rect x="0" y="0" width="180" height="90" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="90" y="25" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Common Problems</text>
+    <text x="90" y="50" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">TSP, Hamilton Path</text>
+    <text x="90" y="70" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">Partition to K Sets</text>
+    <text x="90" y="85" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">Subset Cover</text>
+  </g>
+</svg>

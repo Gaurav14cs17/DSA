@@ -1,0 +1,117 @@
+<svg viewBox="0 0 950 750" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="950" height="750" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Lazy Propagation</text>
+  <text x="475" y="65" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Range Update: add +3 to range [1, 4]</text>
+  
+  <!-- Concept Explanation Box -->
+  <rect x="30" y="90" width="380" height="100" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="220" y="115" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">LAZY PROPAGATION CONCEPT</text>
+  <text x="45" y="140" fill="#ffffff" font-size="12" font-family="Courier New, monospace">• Store pending updates at nodes</text>
+  <text x="45" y="160" fill="#ffffff" font-size="12" font-family="Courier New, monospace">• Push down to children only when needed</text>
+  <text x="45" y="180" fill="#ffffff" font-size="12" font-family="Courier New, monospace">• Avoid updating all leaves in range</text>
+  
+  <!-- Phase Labels -->
+  <text x="475" y="215" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">STEP 1: RANGE UPDATE [1,4] +3</text>
+  
+  <!-- Tree Edges for Phase 1 -->
+  <line x1="475" y1="260" x2="300" y2="320" stroke="#f97316" stroke-width="3"/>
+  <line x1="475" y1="260" x2="650" y2="320" stroke="#f97316" stroke-width="3"/>
+  <line x1="300" y1="360" x2="195" y2="420" stroke="#f97316" stroke-width="3"/>
+  <line x1="300" y1="360" x2="365" y2="420" stroke="#4ade80" stroke-width="3"/>
+  <line x1="650" y1="360" x2="545" y2="420" stroke="#4ade80" stroke-width="3"/>
+  <line x1="650" y1="360" x2="715" y2="420" stroke="#3b82f6" stroke-width="2" opacity="0.4"/>
+  <line x1="195" y1="465" x2="145" y2="525" stroke="#3b82f6" stroke-width="2" opacity="0.4"/>
+  <line x1="195" y1="465" x2="245" y2="525" stroke="#4ade80" stroke-width="3"/>
+  
+  <!-- Root Node -->
+  <g>
+    <rect x="420" y="230" width="110" height="50" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="475" y="252" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">36</text>
+    <text x="475" y="272" text-anchor="middle" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">[0-5] lazy:0</text>
+  </g>
+  
+  <!-- Level 1 Nodes -->
+  <g>
+    <rect x="245" y="320" width="110" height="50" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="300" y="342" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">9→15</text>
+    <text x="300" y="362" text-anchor="middle" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">[0-2] partial</text>
+  </g>
+  <g>
+    <rect x="595" y="320" width="110" height="50" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="650" y="342" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">27→33</text>
+    <text x="650" y="362" text-anchor="middle" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">[3-5] partial</text>
+  </g>
+  
+  <!-- Level 2 Nodes -->
+  <g>
+    <rect x="140" y="420" width="105" height="50" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="192" y="442" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">4</text>
+    <text x="192" y="462" text-anchor="middle" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">[0-1] partial</text>
+  </g>
+  <g>
+    <rect x="315" y="420" width="105" height="50" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="367" y="442" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">5→8</text>
+    <text x="367" y="462" text-anchor="middle" fill="#4ade80" font-size="11" font-family="Courier New, monospace">[2] FULL +3</text>
+  </g>
+  <g>
+    <rect x="490" y="420" width="105" height="50" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="542" y="442" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">16→22</text>
+    <text x="542" y="458" text-anchor="middle" fill="#f97316" font-size="9" font-family="Courier New, monospace">[3-4] FULL</text>
+    <text x="542" y="468" text-anchor="middle" fill="#f97316" font-size="10" font-weight="bold" font-family="Courier New, monospace">lazy: +3</text>
+  </g>
+  <g>
+    <rect x="665" y="420" width="105" height="50" rx="4" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="717" y="442" text-anchor="middle" fill="#888888" font-size="14" font-weight="bold" font-family="Courier New, monospace">11</text>
+    <text x="717" y="462" text-anchor="middle" fill="#ef4444" font-size="11" font-family="Courier New, monospace">[5] OUT</text>
+  </g>
+  
+  <!-- Level 3 (Leaf) Nodes - partial shown -->
+  <g>
+    <rect x="100" y="525" width="85" height="45" rx="4" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="142" y="547" text-anchor="middle" fill="#888888" font-size="14" font-weight="bold" font-family="Courier New, monospace">1</text>
+    <text x="142" y="563" text-anchor="middle" fill="#ef4444" font-size="10" font-family="Courier New, monospace">[0] OUT</text>
+  </g>
+  <g>
+    <rect x="200" y="525" width="85" height="45" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="242" y="547" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">3→6</text>
+    <text x="242" y="563" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">[1] +3</text>
+  </g>
+  
+  <!-- Lazy Value Explanation -->
+  <rect x="30" y="600" width="420" height="130" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="240" y="625" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">LAZY VALUE AT NODE [3-4]</text>
+  <text x="45" y="655" fill="#ffffff" font-size="12" font-family="Courier New, monospace">• Node [3-4] fully covered by query [1-4]</text>
+  <text x="45" y="680" fill="#ffffff" font-size="12" font-family="Courier New, monospace">• Instead of updating children [3] and [4]:</text>
+  <text x="55" y="700" fill="#f97316" font-size="12" font-family="Courier New, monospace">→ Store lazy[node] = +3</text>
+  <text x="55" y="720" fill="#f97316" font-size="12" font-family="Courier New, monospace">→ tree[node] += 3 × (4-3+1) = +6</text>
+  
+  <!-- Push Down Explanation -->
+  <rect x="480" y="600" width="440" height="130" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="700" y="625" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">PUSH DOWN (When Needed)</text>
+  <text x="495" y="655" fill="#ffffff" font-size="12" font-family="Courier New, monospace">When querying/updating children of [3-4]:</text>
+  <text x="505" y="680" fill="#a78bfa" font-size="12" font-family="Courier New, monospace">1. lazy[left]  += lazy[node]  → [3] gets +3</text>
+  <text x="505" y="700" fill="#a78bfa" font-size="12" font-family="Courier New, monospace">2. lazy[right] += lazy[node]  → [4] gets +3</text>
+  <text x="505" y="720" fill="#a78bfa" font-size="12" font-family="Courier New, monospace">3. lazy[node] = 0  → clear parent lazy</text>
+  
+  <!-- Legend -->
+  <rect x="750" y="90" width="180" height="150" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="840" y="115" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">LEGEND</text>
+  <rect x="765" y="130" width="20" height="15" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="795" y="142" fill="#888888" font-size="11" font-family="Courier New, monospace">Has Lazy</text>
+  <rect x="765" y="155" width="20" height="15" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="795" y="167" fill="#888888" font-size="11" font-family="Courier New, monospace">Updated</text>
+  <rect x="765" y="180" width="20" height="15" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="795" y="192" fill="#888888" font-size="11" font-family="Courier New, monospace">Partial</text>
+  <rect x="765" y="205" width="20" height="15" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="3,2"/>
+  <text x="795" y="217" fill="#888888" font-size="11" font-family="Courier New, monospace">Out of Range</text>
+  
+  <!-- Complexity Box -->
+  <rect x="750" y="260" width="180" height="80" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="840" y="285" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">COMPLEXITY</text>
+  <text x="765" y="310" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Range Update:</text>
+  <text x="780" y="328" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">O(log n)</text>
+</svg>
+

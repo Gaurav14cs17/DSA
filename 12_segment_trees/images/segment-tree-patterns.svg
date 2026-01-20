@@ -1,0 +1,98 @@
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1000" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Segment Tree Pattern Decision</text>
+  <text x="500" y="65" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Choose the right data structure for range queries</text>
+  
+  <!-- Root Decision Node -->
+  <rect x="350" y="90" width="300" height="50" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+  <text x="500" y="120" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">Range Query Problem?</text>
+  
+  <!-- First Branch: Static vs Dynamic -->
+  <line x1="425" y1="140" x2="200" y2="180" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="575" y1="140" x2="800" y2="180" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Left: Static Array -->
+  <rect x="80" y="180" width="240" height="45" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="200" y="208" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">Static Array (no updates)</text>
+  <text x="200" y="160" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">YES</text>
+  
+  <!-- Right: Dynamic Updates -->
+  <rect x="680" y="180" width="240" height="45" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="800" y="208" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">Need Updates?</text>
+  <text x="800" y="160" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">DYNAMIC</text>
+  
+  <!-- Static Solutions -->
+  <line x1="140" y1="225" x2="100" y2="280" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="260" y1="225" x2="300" y2="280" stroke="#3b82f6" stroke-width="2"/>
+  
+  <rect x="30" y="280" width="150" height="60" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="105" y="305" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="Courier New, monospace">Prefix Sum</text>
+  <text x="105" y="325" text-anchor="middle" fill="#4ade80" font-size="11" font-family="Courier New, monospace">Sum queries</text>
+  
+  <rect x="220" y="280" width="150" height="60" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="295" y="305" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="Courier New, monospace">Sparse Table</text>
+  <text x="295" y="325" text-anchor="middle" fill="#4ade80" font-size="11" font-family="Courier New, monospace">Min/Max/GCD</text>
+  
+  <!-- Dynamic Solutions Branch -->
+  <line x1="740" y1="225" x2="600" y2="280" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="860" y1="225" x2="920" y2="280" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Point Update -->
+  <rect x="500" y="280" width="200" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="600" y="308" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="Courier New, monospace">Point Update Only?</text>
+  <text x="520" y="268" fill="#3b82f6" font-size="11" font-family="Courier New, monospace">POINT</text>
+  
+  <!-- Range Update -->
+  <rect x="830" y="280" width="150" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="905" y="308" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="Courier New, monospace">Range Update?</text>
+  <text x="915" y="268" fill="#3b82f6" font-size="11" font-family="Courier New, monospace">RANGE</text>
+  
+  <!-- Point Update Solutions -->
+  <line x1="550" y1="325" x2="480" y2="380" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="650" y1="325" x2="680" y2="380" stroke="#3b82f6" stroke-width="2"/>
+  
+  <rect x="400" y="380" width="160" height="70" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="480" y="405" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">Segment Tree</text>
+  <text x="480" y="425" text-anchor="middle" fill="#4ade80" font-size="11" font-family="Courier New, monospace">Point Update +</text>
+  <text x="480" y="440" text-anchor="middle" fill="#4ade80" font-size="11" font-family="Courier New, monospace">Range Query</text>
+  
+  <rect x="600" y="380" width="160" height="70" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="680" y="405" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">BIT/Fenwick</text>
+  <text x="680" y="425" text-anchor="middle" fill="#4ade80" font-size="11" font-family="Courier New, monospace">Prefix sums</text>
+  <text x="680" y="440" text-anchor="middle" fill="#4ade80" font-size="11" font-family="Courier New, monospace">Simpler code</text>
+  
+  <!-- Range Update Solution -->
+  <line x1="905" y1="325" x2="905" y2="380" stroke="#3b82f6" stroke-width="2"/>
+  
+  <rect x="810" y="380" width="190" height="70" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+  <text x="905" y="405" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">Lazy Segment Tree</text>
+  <text x="905" y="425" text-anchor="middle" fill="#f97316" font-size="11" font-family="Courier New, monospace">Range Update +</text>
+  <text x="905" y="440" text-anchor="middle" fill="#f97316" font-size="11" font-family="Courier New, monospace">Range Query</text>
+  
+  <!-- Advanced Patterns -->
+  <text x="500" y="490" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">ADVANCED PATTERNS</text>
+  
+  <rect x="50" y="510" width="200" height="70" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="150" y="535" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="Courier New, monospace">2D Segment Tree</text>
+  <text x="150" y="555" text-anchor="middle" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">Matrix queries</text>
+  <text x="150" y="570" text-anchor="middle" fill="#60a5fa" font-size="10" font-family="Courier New, monospace">O(log²n) per query</text>
+  
+  <rect x="280" y="510" width="200" height="70" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="380" y="535" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="Courier New, monospace">Persistent SegTree</text>
+  <text x="380" y="555" text-anchor="middle" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">Version history</text>
+  <text x="380" y="570" text-anchor="middle" fill="#60a5fa" font-size="10" font-family="Courier New, monospace">Query past states</text>
+  
+  <rect x="510" y="510" width="200" height="70" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="610" y="535" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="Courier New, monospace">Merge Sort Tree</text>
+  <text x="610" y="555" text-anchor="middle" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">Count in range</text>
+  <text x="610" y="570" text-anchor="middle" fill="#60a5fa" font-size="10" font-family="Courier New, monospace">O(log²n) per query</text>
+  
+  <rect x="740" y="510" width="210" height="70" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="845" y="535" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold" font-family="Courier New, monospace">Segment Tree Beats</text>
+  <text x="845" y="555" text-anchor="middle" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">Complex updates</text>
+  <text x="845" y="570" text-anchor="middle" fill="#60a5fa" font-size="10" font-family="Courier New, monospace">min/max with lazy</text>
+</svg>
+

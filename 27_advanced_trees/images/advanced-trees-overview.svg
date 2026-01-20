@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <rect width="900" height="400" fill="#0f0f23"/>
+  
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Advanced Tree Structures</text>
+  <text x="450" y="58" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">Segment Trees, Fenwick Trees, and more</text>
+  
+  <!-- Segment Tree -->
+  <text x="50" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">SEGMENT TREE</text>
+  <g transform="translate(50, 115)">
+    <circle cx="100" cy="20" r="15" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#ffffff" font-size="9" font-family="Courier New, monospace">36</text>
+    <line x1="88" y1="32" x2="55" y2="48" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="112" y1="32" x2="145" y2="48" stroke="#3b82f6" stroke-width="2"/>
+    <circle cx="55" cy="60" r="15" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="55" y="65" text-anchor="middle" fill="#ffffff" font-size="9" font-family="Courier New, monospace">15</text>
+    <circle cx="145" cy="60" r="15" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="145" y="65" text-anchor="middle" fill="#ffffff" font-size="9" font-family="Courier New, monospace">21</text>
+    
+    <text x="200" y="25" fill="#888888" font-size="10" font-family="Courier New, monospace">Range query: O(log n)</text>
+    <text x="200" y="45" fill="#888888" font-size="10" font-family="Courier New, monospace">Point update: O(log n)</text>
+    <text x="200" y="65" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Space: O(4n)</text>
+  </g>
+  
+  <!-- Fenwick Tree -->
+  <text x="450" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">FENWICK TREE (BIT)</text>
+  <g transform="translate(450, 115)">
+    <rect x="0" y="0" width="350" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Prefix sums efficiently</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">query(i): sum of [0..i]</text>
+    <text x="15" y="60" fill="#ffffff" font-size="10" font-family="Courier New, monospace">update(i, delta): add to position i</text>
+    <text x="200" y="40" fill="#4ade80" font-size="10" font-family="Courier New, monospace">O(log n)</text>
+    <text x="200" y="60" fill="#4ade80" font-size="10" font-family="Courier New, monospace">O(log n)</text>
+  </g>
+  
+  <!-- AVL / Red-Black -->
+  <text x="50" y="220" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">BALANCED BST</text>
+  <g transform="translate(50, 240)">
+    <text x="0" y="15" fill="#f97316" font-size="11" font-family="Courier New, monospace">AVL Tree:</text>
+    <text x="100" y="15" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Height balanced (|h_L - h_R| ≤ 1)</text>
+    <text x="0" y="35" fill="#f97316" font-size="11" font-family="Courier New, monospace">Red-Black:</text>
+    <text x="100" y="35" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Color-based balancing</text>
+    <text x="0" y="55" fill="#4ade80" font-size="10" font-family="Courier New, monospace">All ops: O(log n) guaranteed</text>
+  </g>
+  
+  <!-- Lazy Propagation -->
+  <text x="400" y="220" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">LAZY PROPAGATION</text>
+  <g transform="translate(400, 240)">
+    <rect x="0" y="0" width="380" height="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Delay updates until needed</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Range update: O(log n)</text>
+    <text x="15" y="60" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Use: Range add/set with range query</text>
+  </g>
+  
+  <!-- Uses -->
+  <text x="50" y="340" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">COMMON USES</text>
+  <g transform="translate(50, 355)">
+    <text x="0" y="15" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Range Sum/Min/Max • Count Inversions • Range Updates • 2D Queries</text>
+  </g>
+</svg>
+

@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 600">
+  <rect width="950" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Fast-Slow Pointer Pattern</text>
+  <text x="475" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Remove Duplicates from Sorted Array</text>
+  
+  <!-- Initial State -->
+  <text x="50" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Initial: [1, 1, 2, 2, 2, 3, 4, 4]</text>
+  
+  <g transform="translate(50, 130)">
+    <rect x="0" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="25" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    <text x="25" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">S</text>
+    <text x="25" y="75" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">F</text>
+    
+    <rect x="60" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="85" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    
+    <rect x="120" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="145" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    
+    <rect x="180" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="205" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    
+    <rect x="240" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="265" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    
+    <rect x="300" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="325" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">3</text>
+    
+    <rect x="360" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="385" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">4</text>
+    
+    <rect x="420" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="445" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">4</text>
+  </g>
+  
+  <!-- Step 2: F finds 2 -->
+  <text x="50" y="230" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Step: F=2, arr[F]=2 ≠ arr[S-1]=1 → Write 2 at S, S++</text>
+  
+  <g transform="translate(50, 250)">
+    <rect x="0" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="25" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    
+    <rect x="60" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="85" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    <text x="85" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">S</text>
+    
+    <rect x="120" y="0" width="50" height="40" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="145" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    <text x="145" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">F</text>
+    
+    <rect x="180" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="205" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    
+    <rect x="240" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="265" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    
+    <rect x="300" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="325" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">3</text>
+    
+    <rect x="360" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="385" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">4</text>
+    
+    <rect x="420" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="445" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">4</text>
+  </g>
+  
+  <!-- Step: F finds 3 -->
+  <text x="50" y="350" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Step: F=5, arr[F]=3 ≠ arr[S-1]=2 → Write 3 at S, S++</text>
+  
+  <g transform="translate(50, 370)">
+    <rect x="0" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="25" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    
+    <rect x="60" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="85" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    
+    <rect x="120" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="145" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">3</text>
+    <text x="145" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">S</text>
+    
+    <rect x="180" y="0" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+    <text x="205" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#888888">2</text>
+    
+    <rect x="240" y="0" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+    <text x="265" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#888888">2</text>
+    
+    <rect x="300" y="0" width="50" height="40" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="325" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">3</text>
+    <text x="325" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">F</text>
+    
+    <rect x="360" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="385" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">4</text>
+    
+    <rect x="420" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="445" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">4</text>
+  </g>
+  
+  <!-- Final Result -->
+  <text x="50" y="470" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">Final: [1, 2, 3, 4, _, _, _, _] → Return S = 4</text>
+  
+  <g transform="translate(50, 490)">
+    <rect x="0" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="25" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    
+    <rect x="60" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="85" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    
+    <rect x="120" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="145" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">3</text>
+    
+    <rect x="180" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="205" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">4</text>
+    <text x="205" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">S=4</text>
+    
+    <rect x="240" y="0" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+    <text x="265" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#888888">_</text>
+    
+    <rect x="300" y="0" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+    <text x="325" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#888888">_</text>
+    
+    <rect x="360" y="0" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+    <text x="385" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#888888">_</text>
+    
+    <rect x="420" y="0" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+    <text x="445" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#888888">_</text>
+  </g>
+  
+  <!-- Algorithm explanation -->
+  <rect x="530" y="110" width="390" height="190" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="8"/>
+  <text x="725" y="140" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">READER-WRITER MODEL</text>
+  
+  <text x="550" y="170" font-family="Courier New, monospace" font-size="12" fill="#f97316">S (Slow)</text>
+  <text x="620" y="170" font-family="Courier New, monospace" font-size="12" fill="#ffffff">= Write position</text>
+  <text x="550" y="195" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">F (Fast)</text>
+  <text x="620" y="195" font-family="Courier New, monospace" font-size="12" fill="#ffffff">= Read position</text>
+  
+  <text x="550" y="230" font-family="Courier New, monospace" font-size="11" fill="#888888">INVARIANT:</text>
+  <text x="550" y="250" font-family="Courier New, monospace" font-size="11" fill="#ffffff">[0, S) contains valid result</text>
+  <text x="550" y="270" font-family="Courier New, monospace" font-size="11" fill="#ffffff">[S, F) already processed</text>
+  <text x="550" y="290" font-family="Courier New, monospace" font-size="11" fill="#ffffff">[F, n) still to explore</text>
+  
+  <!-- Code template -->
+  <rect x="530" y="320" width="390" height="160" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="8"/>
+  <text x="725" y="350" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#3b82f6">CODE TEMPLATE</text>
+  
+  <text x="550" y="380" font-family="Courier New, monospace" font-size="11" fill="#ffffff">slow = 1</text>
+  <text x="550" y="400" font-family="Courier New, monospace" font-size="11" fill="#ffffff">for fast in range(1, n):</text>
+  <text x="550" y="420" font-family="Courier New, monospace" font-size="11" fill="#ffffff">  if arr[fast] != arr[slow-1]:</text>
+  <text x="550" y="440" font-family="Courier New, monospace" font-size="11" fill="#ffffff">    arr[slow] = arr[fast]</text>
+  <text x="550" y="460" font-family="Courier New, monospace" font-size="11" fill="#ffffff">    slow += 1</text>
+  <text x="550" y="475" font-family="Courier New, monospace" font-size="11" fill="#ffffff">return slow</text>
+  
+  <!-- Complexity -->
+  <rect x="530" y="500" width="390" height="60" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="8"/>
+  <text x="725" y="530" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(n) | Space: O(1)</text>
+  <text x="725" y="550" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">In-place modification, single pass</text>
+</svg>

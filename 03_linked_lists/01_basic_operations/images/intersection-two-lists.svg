@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 350">
+  <defs>
+    <linearGradient id="listAGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#be185d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="listBGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14b8a6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d9488;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="commonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arrMark" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#475569"/>
+    </marker>
+    <filter id="glowEffect">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="700" height="350" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <text x="350" y="30" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="18" text-anchor="middle" font-weight="bold">Intersection of Two Linked Lists</text>
+  
+  <!-- List A label -->
+  <text x="60" y="75" fill="#ec4899" font-family="JetBrains Mono, monospace" font-size="13" font-weight="bold">List A:</text>
+  
+  <!-- List A unique nodes -->
+  <circle cx="120" cy="100" r="20" fill="url(#listAGrad)" filter="url(#glowEffect)"/>
+  <text x="120" y="105" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">a1</text>
+  
+  <path d="M 140 100 L 168 100" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrMark)"/>
+  
+  <circle cx="190" cy="100" r="20" fill="url(#listAGrad)" filter="url(#glowEffect)"/>
+  <text x="190" y="105" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">a2</text>
+  
+  <!-- Arrow from A to intersection -->
+  <path d="M 210 100 Q 280 100 310 135" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrMark)"/>
+  
+  <!-- List B label -->
+  <text x="60" y="175" fill="#14b8a6" font-family="JetBrains Mono, monospace" font-size="13" font-weight="bold">List B:</text>
+  
+  <!-- List B unique nodes -->
+  <circle cx="120" cy="200" r="20" fill="url(#listBGrad)" filter="url(#glowEffect)"/>
+  <text x="120" y="205" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">b1</text>
+  
+  <path d="M 140 200 L 168 200" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrMark)"/>
+  
+  <circle cx="190" cy="200" r="20" fill="url(#listBGrad)" filter="url(#glowEffect)"/>
+  <text x="190" y="205" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">b2</text>
+  
+  <path d="M 210 200 L 238 200" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrMark)"/>
+  
+  <circle cx="260" cy="200" r="20" fill="url(#listBGrad)" filter="url(#glowEffect)"/>
+  <text x="260" y="205" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">b3</text>
+  
+  <!-- Arrow from B to intersection -->
+  <path d="M 280 200 Q 310 180 310 165" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrMark)"/>
+  
+  <!-- Common/Intersection nodes -->
+  <circle cx="330" cy="150" r="22" fill="url(#commonGrad)" filter="url(#glowEffect)"/>
+  <text x="330" y="155" fill="#000" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle" font-weight="bold">c1</text>
+  
+  <path d="M 352 150 L 378 150" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrMark)"/>
+  
+  <circle cx="400" cy="150" r="22" fill="url(#commonGrad)" filter="url(#glowEffect)"/>
+  <text x="400" y="155" fill="#000" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle" font-weight="bold">c2</text>
+  
+  <path d="M 422 150 L 448 150" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrMark)"/>
+  
+  <circle cx="470" cy="150" r="22" fill="url(#commonGrad)" filter="url(#glowEffect)"/>
+  <text x="470" y="155" fill="#000" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle" font-weight="bold">c3</text>
+  
+  <text x="505" y="155" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="12">→ NULL</text>
+  
+  <!-- Intersection indicator -->
+  <path d="M 330 115 L 330 100" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="330" y="90" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle" font-weight="bold">INTERSECTION</text>
+  
+  <!-- Length labels -->
+  <text x="155" y="65" fill="#ec4899" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle">|A| = 5</text>
+  <text x="190" y="235" fill="#14b8a6" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle">|B| = 6</text>
+  <text x="400" y="195" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle">common = 3</text>
+  
+  <!-- Algorithm explanation box -->
+  <rect x="520" y="60" width="165" height="180" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="602" y="85" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle" font-weight="bold">Two-Pointer Trick</text>
+  
+  <text x="530" y="110" fill="#ec4899" font-family="JetBrains Mono, monospace" font-size="10">pA path:</text>
+  <text x="530" y="125" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="9">A → B (5+4=9 steps)</text>
+  
+  <text x="530" y="150" fill="#14b8a6" font-family="JetBrains Mono, monospace" font-size="10">pB path:</text>
+  <text x="530" y="165" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="9">B → A (6+3=9 steps)</text>
+  
+  <text x="530" y="195" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="10" font-weight="bold">Meet at c1! ✓</text>
+  
+  <text x="530" y="220" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="9">Time: O(m+n)</text>
+  <text x="530" y="235" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="9">Space: O(1)</text>
+  
+  <!-- Formula -->
+  <rect x="60" y="265" width="580" height="70" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="350" y="290" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="13" text-anchor="middle" font-weight="bold">Mathematical Proof</text>
+  <text x="350" y="315" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">pA travels: |A| + (|B| - common) = pB travels: |B| + (|A| - common)</text>
+  <text x="350" y="330" fill="#a855f7" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle">Both pointers travel |A| + |B| - common steps → Meet at intersection!</text>
+</svg>
+

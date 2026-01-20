@@ -1,0 +1,112 @@
+<svg viewBox="0 0 900 650" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Line Segment Intersection</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Detecting where line segments cross</text>
+  
+  <!-- Main visualization area -->
+  <rect x="50" y="90" width="400" height="300" rx="4" fill="#0f0f23" stroke="#3b82f6" stroke-width="1"/>
+  
+  <!-- Coordinate grid (subtle) -->
+  <g stroke="#1e3a5f" stroke-width="1" opacity="0.5">
+    <line x1="50" y1="140" x2="450" y2="140"/>
+    <line x1="50" y1="190" x2="450" y2="190"/>
+    <line x1="50" y1="240" x2="450" y2="240"/>
+    <line x1="50" y1="290" x2="450" y2="290"/>
+    <line x1="50" y1="340" x2="450" y2="340"/>
+    <line x1="100" y1="90" x2="100" y2="390"/>
+    <line x1="150" y1="90" x2="150" y2="390"/>
+    <line x1="200" y1="90" x2="200" y2="390"/>
+    <line x1="250" y1="90" x2="250" y2="390"/>
+    <line x1="300" y1="90" x2="300" y2="390"/>
+    <line x1="350" y1="90" x2="350" y2="390"/>
+    <line x1="400" y1="90" x2="400" y2="390"/>
+  </g>
+  
+  <!-- Segment 1 (s1) - Blue -->
+  <line x1="80" y1="300" x2="300" y2="120" stroke="#3b82f6" stroke-width="3"/>
+  <circle cx="80" cy="300" r="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="300" cy="120" r="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="70" y="320" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">p₁</text>
+  <text x="310" y="115" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">q₁</text>
+  <text x="180" y="180" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#3b82f6">s₁</text>
+  
+  <!-- Segment 2 (s2) - Orange -->
+  <line x1="100" y1="150" x2="350" y2="280" stroke="#f97316" stroke-width="3"/>
+  <circle cx="100" cy="150" r="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <circle cx="350" cy="280" r="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="85" y="145" font-family="Courier New, monospace" font-size="12" fill="#f97316">p₂</text>
+  <text x="360" y="290" font-family="Courier New, monospace" font-size="12" fill="#f97316">q₂</text>
+  <text x="260" y="250" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316">s₂</text>
+  
+  <!-- Intersection point -->
+  <circle cx="190" cy="210" r="10" fill="#4ade80" stroke="#ffffff" stroke-width="2"/>
+  <text x="205" y="205" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">×</text>
+  
+  <!-- Segment 3 (non-intersecting) - Purple -->
+  <line x1="380" y1="130" x2="430" y2="200" stroke="#a78bfa" stroke-width="3"/>
+  <circle cx="380" cy="130" r="5" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <circle cx="430" cy="200" r="5" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="415" y="170" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">s₃</text>
+  
+  <!-- Sweep Line -->
+  <line x1="200" y1="90" x2="200" y2="390" stroke="#ef4444" stroke-width="2" stroke-dasharray="8,4"/>
+  <polygon points="200,85 195,95 205,95" fill="#ef4444"/>
+  <text x="200" y="405" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">sweep line</text>
+  
+  <!-- Orientation Test Box -->
+  <rect x="480" y="90" width="380" height="160" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="670" y="115" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Orientation Test (Cross Product)</text>
+  
+  <g font-family="Courier New, monospace" font-size="12" fill="#ffffff">
+    <text x="500" y="145">orient(p, q, r) = (q-p) × (r-p)</text>
+    <text x="500" y="175" fill="#4ade80">&gt; 0 → Counter-Clockwise</text>
+    <text x="500" y="200" fill="#ef4444">&lt; 0 → Clockwise</text>
+    <text x="500" y="225" fill="#a78bfa">= 0 → Collinear</text>
+  </g>
+  
+  <!-- Intersection Condition Box -->
+  <rect x="480" y="270" width="380" height="120" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="670" y="295" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Intersection Condition</text>
+  
+  <g font-family="Courier New, monospace" font-size="11" fill="#ffffff">
+    <text x="500" y="325">s₁ and s₂ intersect if:</text>
+    <text x="510" y="350" fill="#4ade80">orient(p₁,q₁,p₂) × orient(p₁,q₁,q₂) &lt; 0</text>
+    <text x="620" y="370" fill="#888888">AND</text>
+    <text x="510" y="390" fill="#4ade80">orient(p₂,q₂,p₁) × orient(p₂,q₂,q₁) &lt; 0</text>
+  </g>
+  
+  <!-- Algorithm Steps -->
+  <rect x="50" y="420" width="400" height="180" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="250" y="445" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Bentley-Ottmann Algorithm</text>
+  
+  <g font-family="Courier New, monospace" font-size="11" fill="#ffffff">
+    <text x="70" y="475">1. Create events: left/right endpoints</text>
+    <text x="70" y="500">2. Sort events by x-coordinate</text>
+    <text x="70" y="525">3. Sweep left → right:</text>
+    <text x="90" y="545" fill="#4ade80">• Left endpoint: add to active set</text>
+    <text x="90" y="565" fill="#ef4444">• Right endpoint: remove from set</text>
+    <text x="90" y="585" fill="#f97316">• Intersection: swap in active set</text>
+  </g>
+  
+  <!-- Status Structure -->
+  <rect x="480" y="420" width="380" height="180" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="670" y="445" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Active Segments (Status)</text>
+  
+  <g font-family="Courier New, monospace" font-size="12">
+    <!-- Active segments sorted by y at sweep line -->
+    <rect x="550" y="465" width="200" height="35" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="650" y="488" text-anchor="middle" fill="#ffffff" font-weight="bold">s₁ (y=210)</text>
+    
+    <rect x="550" y="510" width="200" height="35" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="650" y="533" text-anchor="middle" fill="#ffffff" font-weight="bold">s₂ (y=205)</text>
+    
+    <text x="670" y="570" text-anchor="middle" font-size="11" fill="#888888">Sorted by y-intersection</text>
+    <text x="670" y="588" text-anchor="middle" font-size="11" fill="#888888">with sweep line</text>
+  </g>
+  
+  <!-- Complexity -->
+  <text x="250" y="630" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Brute Force: O(n²)</text>
+  <text x="670" y="630" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Bentley-Ottmann: O((n+k) log n)</text>
+</svg>

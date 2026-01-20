@@ -1,0 +1,140 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Single Number - XOR Trick</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Find the element that appears once (others appear twice)</text>
+  
+  <!-- Input -->
+  <text x="50" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">INPUT</text>
+  <text x="50" y="130" font-family="Courier New, monospace" font-size="13" fill="#888888">nums = [4, 1, 2, 1, 2]</text>
+  
+  <!-- Array visualization -->
+  <g transform="translate(50, 145)">
+    <rect x="0" y="0" width="55" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="3" rx="4"/>
+    <text x="27" y="32" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80">4</text>
+    <text x="27" y="68" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">single!</text>
+    
+    <rect x="70" y="0" width="55" height="50" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="4"/>
+    <text x="97" y="32" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    <text x="97" y="68" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">pair</text>
+    
+    <rect x="140" y="0" width="55" height="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="167" y="32" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    <text x="167" y="68" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">pair</text>
+    
+    <rect x="210" y="0" width="55" height="50" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="4"/>
+    <text x="237" y="32" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    <text x="237" y="68" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">pair</text>
+    
+    <rect x="280" y="0" width="55" height="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="307" y="32" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    <text x="307" y="68" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">pair</text>
+  </g>
+  
+  <!-- XOR Properties Box -->
+  <rect x="450" y="100" width="400" height="115" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="8"/>
+  <text x="470" y="130" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">XOR PROPERTIES (⊕)</text>
+  
+  <text x="470" y="160" font-family="Courier New, monospace" font-size="14" fill="#4ade80">a ⊕ a = 0</text>
+  <text x="620" y="160" font-family="Courier New, monospace" font-size="12" fill="#888888">Self-inverse</text>
+  
+  <text x="470" y="185" font-family="Courier New, monospace" font-size="14" fill="#f97316">a ⊕ 0 = a</text>
+  <text x="620" y="185" font-family="Courier New, monospace" font-size="12" fill="#888888">Identity</text>
+  
+  <text x="470" y="207" font-family="Courier New, monospace" font-size="14" fill="#3b82f6">a ⊕ b = b ⊕ a</text>
+  <text x="620" y="207" font-family="Courier New, monospace" font-size="12" fill="#888888">Commutative</text>
+  
+  <!-- Step by Step XOR -->
+  <text x="50" y="250" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP-BY-STEP XOR EXECUTION</text>
+  
+  <g transform="translate(50, 270)">
+    <!-- Header -->
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Step</text>
+    <text x="60" y="0" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">num</text>
+    <text x="120" y="0" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">result = result ⊕ num</text>
+    <text x="380" y="0" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Binary</text>
+    
+    <!-- Init -->
+    <rect x="-5" y="10" width="600" height="30" fill="#1e3a5f" rx="3"/>
+    <text x="0" y="32" font-family="Courier New, monospace" font-size="14" fill="#888888">init</text>
+    <text x="120" y="32" font-family="Courier New, monospace" font-size="14" fill="#ffffff">result = 0</text>
+    <text x="380" y="32" font-family="Courier New, monospace" font-size="14" fill="#888888">000</text>
+    
+    <!-- Step 0: XOR 4 -->
+    <rect x="-5" y="45" width="600" height="30" fill="#3d1f0f" rx="3"/>
+    <text x="0" y="67" font-family="Courier New, monospace" font-size="14" fill="#ffffff">0</text>
+    <text x="60" y="67" font-family="Courier New, monospace" font-size="14" fill="#f97316">4</text>
+    <text x="120" y="67" font-family="Courier New, monospace" font-size="14" fill="#ffffff">0 ⊕ 4 = 4</text>
+    <text x="380" y="67" font-family="Courier New, monospace" font-size="14" fill="#f97316">000 ⊕ 100 = 100</text>
+    
+    <!-- Step 1: XOR 1 -->
+    <rect x="-5" y="80" width="600" height="30" fill="#2d1f3d" rx="3"/>
+    <text x="0" y="102" font-family="Courier New, monospace" font-size="14" fill="#ffffff">1</text>
+    <text x="60" y="102" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">1</text>
+    <text x="120" y="102" font-family="Courier New, monospace" font-size="14" fill="#ffffff">4 ⊕ 1 = 5</text>
+    <text x="380" y="102" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">100 ⊕ 001 = 101</text>
+    
+    <!-- Step 2: XOR 2 -->
+    <rect x="-5" y="115" width="600" height="30" fill="#1e3a5f" rx="3"/>
+    <text x="0" y="137" font-family="Courier New, monospace" font-size="14" fill="#ffffff">2</text>
+    <text x="60" y="137" font-family="Courier New, monospace" font-size="14" fill="#3b82f6">2</text>
+    <text x="120" y="137" font-family="Courier New, monospace" font-size="14" fill="#ffffff">5 ⊕ 2 = 7</text>
+    <text x="380" y="137" font-family="Courier New, monospace" font-size="14" fill="#3b82f6">101 ⊕ 010 = 111</text>
+    
+    <!-- Step 3: XOR 1 (cancels!) -->
+    <rect x="-5" y="150" width="600" height="30" fill="#2d1f3d" rx="3"/>
+    <text x="0" y="172" font-family="Courier New, monospace" font-size="14" fill="#ffffff">3</text>
+    <text x="60" y="172" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">1</text>
+    <text x="120" y="172" font-family="Courier New, monospace" font-size="14" fill="#ffffff">7 ⊕ 1 = 6</text>
+    <text x="380" y="172" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">111 ⊕ 001 = 110</text>
+    <text x="530" y="172" font-family="Courier New, monospace" font-size="11" fill="#888888">← 1 cancels</text>
+    
+    <!-- Step 4: XOR 2 (cancels!) -->
+    <rect x="-5" y="185" width="600" height="30" fill="#0f2f1f" rx="3"/>
+    <text x="0" y="207" font-family="Courier New, monospace" font-size="14" fill="#ffffff">4</text>
+    <text x="60" y="207" font-family="Courier New, monospace" font-size="14" fill="#3b82f6">2</text>
+    <text x="120" y="207" font-family="Courier New, monospace" font-size="14" fill="#4ade80">6 ⊕ 2 = 4</text>
+    <text x="380" y="207" font-family="Courier New, monospace" font-size="14" fill="#4ade80">110 ⊕ 010 = 100</text>
+    <text x="530" y="207" font-family="Courier New, monospace" font-size="11" fill="#4ade80">← 2 cancels!</text>
+  </g>
+  
+  <!-- Visual Cancellation -->
+  <text x="700" y="270" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">CANCELLATION</text>
+  
+  <g transform="translate(700, 290)">
+    <rect x="0" y="0" width="160" height="150" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="8"/>
+    
+    <text x="80" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="#888888">Pairs cancel:</text>
+    
+    <text x="20" y="60" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">1 ⊕ 1</text>
+    <text x="80" y="60" font-family="Courier New, monospace" font-size="14" fill="#888888">=</text>
+    <text x="100" y="60" font-family="Courier New, monospace" font-size="14" fill="#ef4444">0</text>
+    
+    <text x="20" y="85" font-family="Courier New, monospace" font-size="14" fill="#3b82f6">2 ⊕ 2</text>
+    <text x="80" y="85" font-family="Courier New, monospace" font-size="14" fill="#888888">=</text>
+    <text x="100" y="85" font-family="Courier New, monospace" font-size="14" fill="#ef4444">0</text>
+    
+    <text x="80" y="115" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="#888888">Single remains:</text>
+    
+    <text x="20" y="140" font-family="Courier New, monospace" font-size="14" fill="#4ade80">4 ⊕ 0</text>
+    <text x="80" y="140" font-family="Courier New, monospace" font-size="14" fill="#888888">=</text>
+    <text x="100" y="140" font-family="Courier New, monospace" font-size="14" fill="#4ade80">4 ✓</text>
+  </g>
+  
+  <!-- Result -->
+  <rect x="50" y="510" width="350" height="70" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="8"/>
+  <text x="70" y="540" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">RESULT</text>
+  <text x="70" y="565" font-family="Courier New, monospace" font-size="18" fill="#ffffff">Single Number = 4</text>
+  
+  <!-- Why it works -->
+  <rect x="430" y="510" width="420" height="70" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="8"/>
+  <text x="450" y="535" font-family="Courier New, monospace" font-size="13" fill="#ffffff">4 ⊕ 1 ⊕ 2 ⊕ 1 ⊕ 2</text>
+  <text x="450" y="555" font-family="Courier New, monospace" font-size="13" fill="#ffffff">= 4 ⊕ (1⊕1) ⊕ (2⊕2)</text>
+  <text x="450" y="575" font-family="Courier New, monospace" font-size="13" fill="#4ade80">= 4 ⊕ 0 ⊕ 0 = 4</text>
+  
+  <!-- Complexity -->
+  <text x="750" y="540" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(n)</text>
+  <text x="750" y="560" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Space: O(1)</text>
+  <text x="750" y="580" font-family="Courier New, monospace" font-size="11" fill="#888888">LeetCode #136</text>
+</svg>

@@ -1,0 +1,152 @@
+<svg viewBox="0 0 900 650" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">⚡ Quick Select Algorithm</text>
+  <text x="450" y="58" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Find Kth Smallest Element in O(n) Average</text>
+  
+  <!-- Initial Array -->
+  <text x="50" y="100" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 1: INITIAL ARRAY (Find k=3)</text>
+  
+  <g transform="translate(200, 110)">
+    <rect x="0" y="0" width="55" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="27" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+    <text x="27" y="65" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">0</text>
+    
+    <rect x="55" y="0" width="55" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="82" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="82" y="65" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">1</text>
+    
+    <rect x="110" y="0" width="55" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="137" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="137" y="65" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">2</text>
+    
+    <rect x="165" y="0" width="55" height="45" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="192" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#f97316" text-anchor="middle">6</text>
+    <text x="192" y="65" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">pivot</text>
+    
+    <rect x="220" y="0" width="55" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="247" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">8</text>
+    <text x="247" y="65" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">4</text>
+    
+    <rect x="275" y="0" width="55" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="302" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="302" y="65" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">5</text>
+    
+    <rect x="330" y="0" width="55" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="357" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+    <text x="357" y="65" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">6</text>
+  </g>
+  
+  <!-- Arrow down -->
+  <path d="M450 180 L450 210" stroke="#3b82f6" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+  <text x="520" y="200" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">Partition</text>
+  
+  <!-- After Partition -->
+  <text x="50" y="240" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 2: AFTER PARTITION</text>
+  
+  <g transform="translate(200, 250)">
+    <!-- Less than pivot -->
+    <rect x="0" y="0" width="55" height="45" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="27" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">2</text>
+    
+    <rect x="55" y="0" width="55" height="45" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="82" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">1</text>
+    
+    <rect x="110" y="0" width="55" height="45" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="137" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">3</text>
+    
+    <rect x="165" y="0" width="55" height="45" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="192" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">5</text>
+    
+    <!-- Pivot -->
+    <rect x="220" y="0" width="55" height="45" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="247" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#f97316" text-anchor="middle">6</text>
+    
+    <!-- Greater than pivot -->
+    <rect x="275" y="0" width="55" height="45" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="302" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ef4444" text-anchor="middle">7</text>
+    
+    <rect x="330" y="0" width="55" height="45" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="357" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ef4444" text-anchor="middle">8</text>
+  </g>
+  
+  <!-- Labels -->
+  <text x="282" y="320" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">&lt; pivot</text>
+  <text x="447" y="320" font-family="Courier New, monospace" font-size="11" fill="#f97316" text-anchor="middle">pivot_idx=4</text>
+  <text x="557" y="320" font-family="Courier New, monospace" font-size="11" fill="#ef4444" text-anchor="middle">&gt; pivot</text>
+  
+  <!-- Decision box -->
+  <rect x="620" y="250" width="230" height="70" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="735" y="275" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa" text-anchor="middle">k=3, pivot_idx=4</text>
+  <text x="735" y="300" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">k &lt; pivot_idx</text>
+  <text x="735" y="315" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">→ Search LEFT half</text>
+  
+  <!-- Arrow down -->
+  <path d="M280 340 L280 370" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  
+  <!-- Recursive on left -->
+  <text x="50" y="395" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 3: RECURSE LEFT (k=3)</text>
+  
+  <g transform="translate(200, 405)">
+    <rect x="0" y="0" width="55" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="27" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    
+    <rect x="55" y="0" width="55" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="82" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    
+    <rect x="110" y="0" width="55" height="45" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="137" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#f97316" text-anchor="middle">3</text>
+    <text x="137" y="65" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">pivot</text>
+    
+    <rect x="165" y="0" width="55" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="192" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+  </g>
+  
+  <!-- After partition -->
+  <path d="M450 430 L500 430" stroke="#3b82f6" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+  
+  <g transform="translate(520, 405)">
+    <rect x="0" y="0" width="55" height="45" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="27" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">2</text>
+    
+    <rect x="55" y="0" width="55" height="45" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="82" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">1</text>
+    
+    <rect x="110" y="0" width="55" height="45" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="137" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#f97316" text-anchor="middle">3</text>
+    
+    <rect x="165" y="0" width="55" height="45" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="192" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ef4444" text-anchor="middle">5</text>
+  </g>
+  
+  <text x="657" y="470" font-family="Courier New, monospace" font-size="11" fill="#f97316" text-anchor="middle">pivot_idx=2</text>
+  
+  <!-- Final result -->
+  <rect x="620" y="490" width="230" height="60" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="735" y="515" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">k=3, pivot_idx=2</text>
+  <text x="735" y="538" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">k &gt; pivot_idx → Search RIGHT</text>
+  
+  <!-- Final Answer -->
+  <rect x="250" y="510" width="300" height="60" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="400" y="538" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">FOUND: k=3 → Value = 5</text>
+  <text x="400" y="558" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">3rd smallest element (0-indexed)</text>
+  
+  <!-- Complexity info -->
+  <rect x="50" y="590" width="380" height="45" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="240" y="618" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">Average: O(n) | Worst: O(n²) | Space: O(1)</text>
+  
+  <rect x="470" y="590" width="380" height="45" rx="5" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="660" y="618" font-family="Courier New, monospace" font-size="12" fill="#a78bfa" text-anchor="middle">Use random pivot to avoid worst case!</text>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4ade80"/>
+    </marker>
+  </defs>
+</svg>
+

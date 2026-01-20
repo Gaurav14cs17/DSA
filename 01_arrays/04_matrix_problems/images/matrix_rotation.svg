@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 450">
+  <defs>
+    <linearGradient id="bgGrad9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="matCell1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="matCell2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e67e22;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d35400;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="matCell3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e8449;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="850" height="450" fill="url(#bgGrad9)"/>
+  
+  <!-- Title -->
+  <text x="425" y="40" font-family="Segoe UI, Arial" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Matrix Rotation 90° Clockwise</text>
+  <text x="425" y="65" font-family="Segoe UI, Arial" font-size="14" fill="#88ccff" text-anchor="middle">Transpose + Reverse Each Row | O(n²) Time, O(1) Space</text>
+  
+  <!-- Original Matrix -->
+  <text x="80" y="105" font-family="Segoe UI, Arial" font-size="14" font-weight="bold" fill="#ffffff">Original:</text>
+  <g transform="translate(40, 115)">
+    <!-- Row 1 -->
+    <rect x="0" y="0" width="45" height="45" rx="4" fill="url(#matCell1)" stroke="#5dade2" stroke-width="2"/>
+    <text x="22" y="28" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">1</text>
+    
+    <rect x="50" y="0" width="45" height="45" rx="4" fill="url(#matCell1)" stroke="#5dade2" stroke-width="2"/>
+    <text x="72" y="28" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">2</text>
+    
+    <rect x="100" y="0" width="45" height="45" rx="4" fill="url(#matCell1)" stroke="#5dade2" stroke-width="2"/>
+    <text x="122" y="28" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">3</text>
+    
+    <!-- Row 2 -->
+    <rect x="0" y="50" width="45" height="45" rx="4" fill="url(#matCell2)" stroke="#f39c12" stroke-width="2"/>
+    <text x="22" y="78" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">4</text>
+    
+    <rect x="50" y="50" width="45" height="45" rx="4" fill="url(#matCell2)" stroke="#f39c12" stroke-width="2"/>
+    <text x="72" y="78" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">5</text>
+    
+    <rect x="100" y="50" width="45" height="45" rx="4" fill="url(#matCell2)" stroke="#f39c12" stroke-width="2"/>
+    <text x="122" y="78" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">6</text>
+    
+    <!-- Row 3 -->
+    <rect x="0" y="100" width="45" height="45" rx="4" fill="url(#matCell3)" stroke="#2ecc71" stroke-width="2"/>
+    <text x="22" y="128" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">7</text>
+    
+    <rect x="50" y="100" width="45" height="45" rx="4" fill="url(#matCell3)" stroke="#2ecc71" stroke-width="2"/>
+    <text x="72" y="128" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">8</text>
+    
+    <rect x="100" y="100" width="45" height="45" rx="4" fill="url(#matCell3)" stroke="#2ecc71" stroke-width="2"/>
+    <text x="122" y="128" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">9</text>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <path d="M 200 180 L 250 180" stroke="#9b59b6" stroke-width="3" fill="none" marker-end="url(#arrowPurple)"/>
+  <text x="225" y="200" font-family="Segoe UI, Arial" font-size="11" fill="#bb8fce" text-anchor="middle">Transpose</text>
+  <defs>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#9b59b6"/>
+    </marker>
+  </defs>
+  
+  <!-- Transposed Matrix -->
+  <text x="310" y="105" font-family="Segoe UI, Arial" font-size="14" font-weight="bold" fill="#9b59b6">After Transpose:</text>
+  <g transform="translate(270, 115)">
+    <!-- Row 1 (was column 1) -->
+    <rect x="0" y="0" width="45" height="45" rx="4" fill="url(#matCell1)" stroke="#5dade2" stroke-width="2"/>
+    <text x="22" y="28" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">1</text>
+    
+    <rect x="50" y="0" width="45" height="45" rx="4" fill="url(#matCell2)" stroke="#f39c12" stroke-width="2"/>
+    <text x="72" y="28" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">4</text>
+    
+    <rect x="100" y="0" width="45" height="45" rx="4" fill="url(#matCell3)" stroke="#2ecc71" stroke-width="2"/>
+    <text x="122" y="28" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">7</text>
+    
+    <!-- Row 2 -->
+    <rect x="0" y="50" width="45" height="45" rx="4" fill="url(#matCell1)" stroke="#5dade2" stroke-width="2"/>
+    <text x="22" y="78" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">2</text>
+    
+    <rect x="50" y="50" width="45" height="45" rx="4" fill="url(#matCell2)" stroke="#f39c12" stroke-width="2"/>
+    <text x="72" y="78" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">5</text>
+    
+    <rect x="100" y="50" width="45" height="45" rx="4" fill="url(#matCell3)" stroke="#2ecc71" stroke-width="2"/>
+    <text x="122" y="78" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">8</text>
+    
+    <!-- Row 3 -->
+    <rect x="0" y="100" width="45" height="45" rx="4" fill="url(#matCell1)" stroke="#5dade2" stroke-width="2"/>
+    <text x="22" y="128" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">3</text>
+    
+    <rect x="50" y="100" width="45" height="45" rx="4" fill="url(#matCell2)" stroke="#f39c12" stroke-width="2"/>
+    <text x="72" y="128" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">6</text>
+    
+    <rect x="100" y="100" width="45" height="45" rx="4" fill="url(#matCell3)" stroke="#2ecc71" stroke-width="2"/>
+    <text x="122" y="128" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">9</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <path d="M 430 180 L 480 180" stroke="#27ae60" stroke-width="3" fill="none" marker-end="url(#arrowGreen2)"/>
+  <text x="455" y="200" font-family="Segoe UI, Arial" font-size="11" fill="#2ecc71" text-anchor="middle">Reverse</text>
+  <text x="455" y="215" font-family="Segoe UI, Arial" font-size="11" fill="#2ecc71" text-anchor="middle">Rows</text>
+  <defs>
+    <marker id="arrowGreen2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#27ae60"/>
+    </marker>
+  </defs>
+  
+  <!-- Final Rotated Matrix -->
+  <text x="555" y="105" font-family="Segoe UI, Arial" font-size="14" font-weight="bold" fill="#27ae60">90° Clockwise:</text>
+  <g transform="translate(500, 115)">
+    <!-- Row 1 -->
+    <rect x="0" y="0" width="45" height="45" rx="4" fill="url(#matCell3)" stroke="#2ecc71" stroke-width="3"/>
+    <text x="22" y="28" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">7</text>
+    
+    <rect x="50" y="0" width="45" height="45" rx="4" fill="url(#matCell2)" stroke="#f39c12" stroke-width="3"/>
+    <text x="72" y="28" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">4</text>
+    
+    <rect x="100" y="0" width="45" height="45" rx="4" fill="url(#matCell1)" stroke="#5dade2" stroke-width="3"/>
+    <text x="122" y="28" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">1</text>
+    
+    <!-- Row 2 -->
+    <rect x="0" y="50" width="45" height="45" rx="4" fill="url(#matCell3)" stroke="#2ecc71" stroke-width="3"/>
+    <text x="22" y="78" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">8</text>
+    
+    <rect x="50" y="50" width="45" height="45" rx="4" fill="url(#matCell2)" stroke="#f39c12" stroke-width="3"/>
+    <text x="72" y="78" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">5</text>
+    
+    <rect x="100" y="50" width="45" height="45" rx="4" fill="url(#matCell1)" stroke="#5dade2" stroke-width="3"/>
+    <text x="122" y="78" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">2</text>
+    
+    <!-- Row 3 -->
+    <rect x="0" y="100" width="45" height="45" rx="4" fill="url(#matCell3)" stroke="#2ecc71" stroke-width="3"/>
+    <text x="22" y="128" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">9</text>
+    
+    <rect x="50" y="100" width="45" height="45" rx="4" fill="url(#matCell2)" stroke="#f39c12" stroke-width="3"/>
+    <text x="72" y="128" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">6</text>
+    
+    <rect x="100" y="100" width="45" height="45" rx="4" fill="url(#matCell1)" stroke="#5dade2" stroke-width="3"/>
+    <text x="122" y="128" font-family="Consolas" font-size="16" fill="#fff" text-anchor="middle">3</text>
+  </g>
+  
+  <!-- Success indicator -->
+  <circle cx="660" y="145" r="20" fill="#27ae60"/>
+  <path d="M 650 145 L 657 152 L 672 137" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Formula boxes at bottom -->
+  <rect x="40" y="290" width="370" height="70" rx="10" fill="#0d1b2a" stroke="#9b59b6" stroke-width="2"/>
+  <text x="225" y="320" font-family="Segoe UI, Arial" font-size="14" font-weight="bold" fill="#bb8fce" text-anchor="middle">Step 1: Transpose</text>
+  <text x="225" y="345" font-family="Consolas" font-size="13" fill="#ffffff" text-anchor="middle">swap(M[i][j], M[j][i]) for i &lt; j</text>
+  
+  <rect x="430" y="290" width="380" height="70" rx="10" fill="#0d1b2a" stroke="#27ae60" stroke-width="2"/>
+  <text x="620" y="320" font-family="Segoe UI, Arial" font-size="14" font-weight="bold" fill="#2ecc71" text-anchor="middle">Step 2: Reverse Each Row</text>
+  <text x="620" y="345" font-family="Consolas" font-size="13" fill="#ffffff" text-anchor="middle">swap(M[i][j], M[i][n-1-j]) for j &lt; n/2</text>
+  
+  <!-- Mathematical formula -->
+  <rect x="40" y="375" width="770" height="60" rx="10" fill="#0d1b2a" stroke="#4a90a4" stroke-width="2"/>
+  <text x="425" y="400" font-family="Segoe UI, Arial" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Rotation Formula:</text>
+  <text x="425" y="422" font-family="Consolas" font-size="14" fill="#88ccff" text-anchor="middle">(i, j) → (j, n-1-i)  |  90° CW = Transpose ∘ Reverse Rows</text>
+</svg>

@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">🔄 Binary Search in Rotated Array</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">One Half is Always Sorted</text>
+  
+  <!-- Original vs Rotated -->
+  <text x="50" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">ROTATION CONCEPT</text>
+  
+  <!-- Original Array -->
+  <text x="50" y="130" font-family="Courier New, monospace" font-size="11" fill="#888888">Original sorted array:</text>
+  <g transform="translate(50, 140)">
+    <rect x="0" y="0" width="50" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="25" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">0</text>
+    <rect x="55" y="0" width="50" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="80" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">1</text>
+    <rect x="110" y="0" width="50" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="135" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">2</text>
+    <rect x="165" y="0" width="50" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="190" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">4</text>
+    <rect x="220" y="0" width="50" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="245" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">5</text>
+    <rect x="275" y="0" width="50" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="300" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">6</text>
+    <rect x="330" y="0" width="50" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="355" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">7</text>
+  </g>
+  
+  <!-- Rotated Array -->
+  <text x="50" y="210" font-family="Courier New, monospace" font-size="11" fill="#888888">Rotated by 3:</text>
+  <g transform="translate(50, 220)">
+    <rect x="0" y="0" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="3"/>
+    <text x="25" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#4ade80">4</text>
+    <rect x="55" y="0" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="3"/>
+    <text x="80" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#4ade80">5</text>
+    <rect x="110" y="0" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="3"/>
+    <text x="135" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#4ade80">6</text>
+    <rect x="165" y="0" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="3"/>
+    <text x="190" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#4ade80">7</text>
+    <rect x="220" y="0" width="50" height="35" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="3"/>
+    <text x="245" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#f97316">0</text>
+    <rect x="275" y="0" width="50" height="35" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="3"/>
+    <text x="300" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#a78bfa">1</text>
+    <rect x="330" y="0" width="50" height="35" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="3"/>
+    <text x="355" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#a78bfa">2</text>
+    
+    <path d="M 82 40 L 82 55 L 240 55 L 240 45" fill="none" stroke="#4ade80" stroke-width="2"/>
+    <text x="161" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">sorted part 1</text>
+    
+    <path d="M 300 40 L 300 55 L 355 55 L 355 45" fill="none" stroke="#a78bfa" stroke-width="2"/>
+    <text x="327" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">sorted part 2</text>
+    
+    <text x="245" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#f97316">pivot</text>
+  </g>
+  
+  <!-- Key Insight -->
+  <rect x="450" y="130" width="400" height="130" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="6"/>
+  <text x="650" y="155" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">KEY INSIGHT</text>
+  <text x="465" y="180" font-family="Courier New, monospace" font-size="12" fill="#ffffff">At any mid point:</text>
+  <text x="475" y="200" font-family="Courier New, monospace" font-size="11" fill="#4ade80">• If arr[left] ≤ arr[mid]: LEFT half sorted</text>
+  <text x="475" y="220" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">• Else: RIGHT half sorted</text>
+  <text x="465" y="250" font-family="Courier New, monospace" font-size="11" fill="#888888">Use sorted half to determine search direction</text>
+  
+  <!-- Search Example -->
+  <text x="50" y="320" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">SEARCH EXAMPLE: target = 0</text>
+  
+  <!-- Step 1 -->
+  <text x="50" y="345" font-family="Courier New, monospace" font-size="11" fill="#888888">Step 1: L=0, R=6, mid=3</text>
+  <g transform="translate(50, 355)">
+    <rect x="0" y="0" width="45" height="32" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="3"/>
+    <text x="22" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#4ade80">4</text>
+    <rect x="50" y="0" width="45" height="32" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="3"/>
+    <text x="72" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#4ade80">5</text>
+    <rect x="100" y="0" width="45" height="32" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="3"/>
+    <text x="122" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#4ade80">6</text>
+    <rect x="150" y="0" width="45" height="32" fill="#3d1f0f" stroke="#f97316" stroke-width="3" rx="3"/>
+    <text x="172" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#f97316">7</text>
+    <rect x="200" y="0" width="45" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="222" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">0</text>
+    <rect x="250" y="0" width="45" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="272" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">1</text>
+    <rect x="300" y="0" width="45" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="322" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">2</text>
+    
+    <text x="22" y="50" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">L</text>
+    <text x="172" y="50" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#f97316">M</text>
+    <text x="322" y="50" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">R</text>
+  </g>
+  <text x="400" y="380" font-family="Courier New, monospace" font-size="11" fill="#888888">Left sorted [4,5,6,7]. 0 not in [4,7] → search right</text>
+  
+  <!-- Step 2 -->
+  <text x="50" y="430" font-family="Courier New, monospace" font-size="11" fill="#888888">Step 2: L=4, R=6, mid=5</text>
+  <g transform="translate(50, 440)">
+    <rect x="0" y="0" width="45" height="32" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4" rx="3"/>
+    <text x="22" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#666666">4</text>
+    <rect x="50" y="0" width="45" height="32" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4" rx="3"/>
+    <text x="72" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#666666">5</text>
+    <rect x="100" y="0" width="45" height="32" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4" rx="3"/>
+    <text x="122" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#666666">6</text>
+    <rect x="150" y="0" width="45" height="32" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4" rx="3"/>
+    <text x="172" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#666666">7</text>
+    <rect x="200" y="0" width="45" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="222" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">0</text>
+    <rect x="250" y="0" width="45" height="32" fill="#3d1f0f" stroke="#f97316" stroke-width="3" rx="3"/>
+    <text x="272" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#f97316">1</text>
+    <rect x="300" y="0" width="45" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="322" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">2</text>
+    
+    <text x="222" y="50" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">L</text>
+    <text x="272" y="50" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#f97316">M</text>
+    <text x="322" y="50" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">R</text>
+  </g>
+  <text x="400" y="465" font-family="Courier New, monospace" font-size="11" fill="#888888">Right sorted [1,2]. 0 &lt; 1 → search left</text>
+  
+  <!-- Step 3: Found -->
+  <text x="50" y="510" font-family="Courier New, monospace" font-size="11" fill="#888888">Step 3: L=4, R=4, mid=4</text>
+  <g transform="translate(50, 520)">
+    <rect x="200" y="0" width="45" height="32" fill="#0f2f1f" stroke="#4ade80" stroke-width="3" rx="3"/>
+    <text x="222" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">0</text>
+    <text x="222" y="50" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">✓ FOUND</text>
+  </g>
+  
+  <!-- Complexity Box -->
+  <rect x="500" y="340" width="350" height="130" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="6"/>
+  <text x="675" y="365" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">ALGORITHM SUMMARY</text>
+  <text x="515" y="390" font-family="Courier New, monospace" font-size="11" fill="#ffffff">1. Find which half is sorted</text>
+  <text x="515" y="410" font-family="Courier New, monospace" font-size="11" fill="#ffffff">2. Check if target in sorted half</text>
+  <text x="515" y="430" font-family="Courier New, monospace" font-size="11" fill="#ffffff">3. Narrow search accordingly</text>
+  <text x="515" y="460" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(log n) | Space: O(1)</text>
+  
+  <!-- Note about duplicates -->
+  <rect x="500" y="490" width="350" height="60" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="6"/>
+  <text x="675" y="515" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">⚠️ WITH DUPLICATES</text>
+  <text x="515" y="540" font-family="Courier New, monospace" font-size="11" fill="#ffffff">When arr[L] = arr[M] = arr[R]: L++, R--</text>
+</svg>

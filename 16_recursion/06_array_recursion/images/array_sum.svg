@@ -1,0 +1,116 @@
+<svg viewBox="0 0 950 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="35" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Array Sum: Head vs Tail Recursion</text>
+  <text x="475" y="58" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">sumArray([3, 5, 2, 7]) = 17</text>
+  
+  <!-- Array visualization -->
+  <text x="475" y="95" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">Input Array</text>
+  
+  <rect x="340" y="105" width="50" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="365" y="132" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="365" y="155" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">i=0</text>
+  
+  <rect x="400" y="105" width="50" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="425" y="132" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+  <text x="425" y="155" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">i=1</text>
+  
+  <rect x="460" y="105" width="50" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="485" y="132" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="485" y="155" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">i=2</text>
+  
+  <rect x="520" y="105" width="50" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="545" y="132" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+  <text x="545" y="155" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">i=3</text>
+  
+  <!-- Left Panel: Head Recursion -->
+  <rect x="30" y="175" width="420" height="400" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="240" y="205" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#e94560" text-anchor="middle">Head Recursion</text>
+  <text x="240" y="225" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">return arr[i] + sum(arr, i+1)</text>
+  
+  <!-- Winding phase -->
+  <text x="60" y="255" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">Winding Phase (Recurse First):</text>
+  
+  <rect x="60" y="270" width="180" height="28" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="150" y="289" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">sum(arr, 0)</text>
+  <text x="260" y="289" font-family="Courier New, monospace" font-size="11" fill="#888888">→ 3 + sum(arr,1)</text>
+  
+  <line x1="150" y1="298" x2="150" y2="308" stroke="#f97316" stroke-width="2"/>
+  <polygon points="150,315 145,305 155,305" fill="#f97316"/>
+  
+  <rect x="80" y="320" width="160" height="28" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="160" y="339" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">sum(arr, 1)</text>
+  <text x="260" y="339" font-family="Courier New, monospace" font-size="11" fill="#888888">→ 5 + sum(arr,2)</text>
+  
+  <line x1="160" y1="348" x2="160" y2="358" stroke="#f97316" stroke-width="2"/>
+  <polygon points="160,365 155,355 165,355" fill="#f97316"/>
+  
+  <rect x="100" y="370" width="140" height="28" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="170" y="389" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">sum(arr, 2)</text>
+  <text x="260" y="389" font-family="Courier New, monospace" font-size="11" fill="#888888">→ 2 + sum(arr,3)</text>
+  
+  <line x1="170" y1="398" x2="170" y2="408" stroke="#f97316" stroke-width="2"/>
+  <polygon points="170,415 165,405 175,405" fill="#f97316"/>
+  
+  <rect x="120" y="420" width="120" height="28" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="180" y="439" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">sum(arr, 3)</text>
+  <text x="260" y="439" font-family="Courier New, monospace" font-size="11" fill="#888888">→ 7 + sum(arr,4)</text>
+  
+  <line x1="180" y1="448" x2="180" y2="458" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="180,465 175,455 185,455" fill="#4ade80"/>
+  
+  <rect x="140" y="470" width="100" height="28" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="190" y="489" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">sum(arr, 4)</text>
+  <text x="260" y="489" font-family="Courier New, monospace" font-size="11" fill="#4ade80">→ return 0</text>
+  
+  <!-- Unwinding -->
+  <text x="320" y="510" font-family="Courier New, monospace" font-size="10" fill="#4ade80">Unwind:</text>
+  <text x="320" y="525" font-family="Courier New, monospace" font-size="10" fill="#ffffff">7+0=7</text>
+  <text x="320" y="540" font-family="Courier New, monospace" font-size="10" fill="#ffffff">2+7=9</text>
+  <text x="320" y="555" font-family="Courier New, monospace" font-size="10" fill="#ffffff">5+9=14</text>
+  <text x="390" y="555" font-family="Courier New, monospace" font-size="10" fill="#4ade80">3+14=17</text>
+  
+  <!-- Right Panel: Tail Recursion -->
+  <rect x="500" y="175" width="420" height="400" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="710" y="205" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#e94560" text-anchor="middle">Tail Recursion</text>
+  <text x="710" y="225" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">return sum(arr, i+1, acc + arr[i])</text>
+  
+  <!-- Accumulator phase -->
+  <text x="530" y="255" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Accumulator (Process First):</text>
+  
+  <rect x="530" y="270" width="220" height="32" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="640" y="291" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">sum(arr, 0, acc=0)</text>
+  <text x="780" y="291" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">0+3=3</text>
+  
+  <line x1="640" y1="302" x2="640" y2="315" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="640,325 635,315 645,315" fill="#4ade80"/>
+  
+  <rect x="530" y="330" width="220" height="32" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="640" y="351" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">sum(arr, 1, acc=3)</text>
+  <text x="780" y="351" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">3+5=8</text>
+  
+  <line x1="640" y1="362" x2="640" y2="375" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="640,385 635,375 645,375" fill="#4ade80"/>
+  
+  <rect x="530" y="390" width="220" height="32" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="640" y="411" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">sum(arr, 2, acc=8)</text>
+  <text x="780" y="411" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">8+2=10</text>
+  
+  <line x1="640" y1="422" x2="640" y2="435" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="640,445 635,435 645,435" fill="#4ade80"/>
+  
+  <rect x="530" y="450" width="220" height="32" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="640" y="471" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">sum(arr, 3, acc=10)</text>
+  <text x="780" y="471" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">10+7=17</text>
+  
+  <line x1="640" y1="482" x2="640" y2="495" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="640,505 635,495 645,495" fill="#4ade80"/>
+  
+  <rect x="570" y="510" width="180" height="35" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="660" y="533" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">sum(arr, 4, acc=17)</text>
+  <text x="780" y="533" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">→ 17</text>
+  
+  <text x="710" y="565" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">No unwinding needed!</text>
+</svg>
+

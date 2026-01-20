@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450">
+  <rect width="900" height="450" fill="#0f0f23"/>
+  
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Sliding Window</text>
+  <text x="450" y="58" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">Maintain a window that slides through the array</text>
+  
+  <!-- Fixed Window -->
+  <text x="50" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">FIXED WINDOW: Max Sum of K Elements</text>
+  <g transform="translate(50, 115)">
+    <rect x="0" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="20" y="23" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">1</text>
+    <rect x="45" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="65" y="23" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">4</text>
+    <rect x="90" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="110" y="23" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">2</text>
+    <rect x="135" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="155" y="23" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">5</text>
+    <rect x="180" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="200" y="23" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">3</text>
+    
+    <!-- Window indicator -->
+    <rect x="45" y="-10" width="130" height="55" fill="none" stroke="#f97316" stroke-width="3" stroke-dasharray="5"/>
+    <text x="110" y="60" text-anchor="middle" fill="#f97316" font-size="10" font-family="Courier New, monospace">window k=3, sum=11</text>
+    
+    <text x="250" y="20" fill="#888888" font-size="10" font-family="Courier New, monospace">Slide: add right, remove left</text>
+    <text x="250" y="40" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Time: O(n)</text>
+  </g>
+  
+  <!-- Variable Window -->
+  <text x="500" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">VARIABLE WINDOW: Longest Substring</text>
+  <g transform="translate(500, 115)">
+    <rect x="0" y="0" width="30" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="15" y="23" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">a</text>
+    <rect x="35" y="0" width="30" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="50" y="23" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">b</text>
+    <rect x="70" y="0" width="30" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="85" y="23" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">c</text>
+    <rect x="105" y="0" width="30" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="120" y="23" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">a</text>
+    <rect x="140" y="0" width="30" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="155" y="23" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">b</text>
+    <rect x="175" y="0" width="30" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="190" y="23" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">c</text>
+    
+    <rect x="35" y="-10" width="100" height="55" fill="none" stroke="#f97316" stroke-width="3" stroke-dasharray="5"/>
+    <text x="85" y="60" text-anchor="middle" fill="#f97316" font-size="10" font-family="Courier New, monospace">max len=3</text>
+  </g>
+  
+  <!-- Template -->
+  <text x="50" y="220" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">SLIDING WINDOW TEMPLATE</text>
+  <g transform="translate(50, 240)">
+    <rect x="0" y="0" width="350" height="100" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">left = 0</text>
+    <text x="15" y="38" fill="#ffffff" font-size="10" font-family="Courier New, monospace">for right in range(n):</text>
+    <text x="25" y="54" fill="#ffffff" font-size="10" font-family="Courier New, monospace">add arr[right] to window</text>
+    <text x="25" y="70" fill="#f97316" font-size="10" font-family="Courier New, monospace">while window invalid:</text>
+    <text x="35" y="86" fill="#ffffff" font-size="10" font-family="Courier New, monospace">remove arr[left]; left++</text>
+  </g>
+  
+  <!-- Problems -->
+  <text x="450" y="220" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">CLASSIC PROBLEMS</text>
+  <g transform="translate(450, 240)">
+    <text x="0" y="15" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Maximum Sum Subarray of Size K</text>
+    <text x="0" y="35" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Longest Substring Without Repeat</text>
+    <text x="0" y="55" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Minimum Window Substring</text>
+    <text x="0" y="75" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Sliding Window Maximum</text>
+    <text x="0" y="95" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Find All Anagrams</text>
+  </g>
+  
+  <!-- Complexity -->
+  <text x="50" y="380" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">TIME COMPLEXITY</text>
+  <g transform="translate(50, 395)">
+    <text x="0" y="15" fill="#4ade80" font-size="12" font-family="Courier New, monospace">O(n)</text>
+    <text x="60" y="15" fill="#888888" font-size="11" font-family="Courier New, monospace">- each element added/removed at most once</text>
+  </g>
+</svg>
+

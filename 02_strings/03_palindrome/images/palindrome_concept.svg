@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 400">
+  <!-- Background -->
+  <rect width="750" height="400" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="375" y="35" fill="#fff" font-family="Arial" font-size="22" font-weight="bold" text-anchor="middle">Palindrome - Mirror Property</text>
+  <text x="375" y="58" fill="#888" font-family="Arial" font-size="14" text-anchor="middle">A palindrome reads the same forwards and backwards</text>
+  
+  <!-- Palindrome Example: "RACECAR" -->
+  <g transform="translate(100, 85)">
+    <!-- Left side (positions 0,1,2) -->
+    <rect x="0" y="0" width="60" height="60" rx="8" fill="#ff6b6b"/>
+    <text x="30" y="40" fill="#fff" font-family="monospace" font-size="28" font-weight="bold" text-anchor="middle">R</text>
+    <text x="30" y="75" fill="#ff6b6b" font-family="Arial" font-size="11" text-anchor="middle">i=0</text>
+    
+    <rect x="70" y="0" width="60" height="60" rx="8" fill="#ff6b6b"/>
+    <text x="100" y="40" fill="#fff" font-family="monospace" font-size="28" font-weight="bold" text-anchor="middle">A</text>
+    <text x="100" y="75" fill="#ff6b6b" font-family="Arial" font-size="11" text-anchor="middle">i=1</text>
+    
+    <rect x="140" y="0" width="60" height="60" rx="8" fill="#ff6b6b"/>
+    <text x="170" y="40" fill="#fff" font-family="monospace" font-size="28" font-weight="bold" text-anchor="middle">C</text>
+    <text x="170" y="75" fill="#ff6b6b" font-family="Arial" font-size="11" text-anchor="middle">i=2</text>
+    
+    <!-- Center (position 3) -->
+    <rect x="210" y="0" width="60" height="60" rx="8" fill="#ffd700" stroke="#ffd700" stroke-width="2"/>
+    <text x="240" y="40" fill="#1a1a2e" font-family="monospace" font-size="28" font-weight="bold" text-anchor="middle">E</text>
+    <text x="240" y="75" fill="#ffd700" font-family="Arial" font-size="11" text-anchor="middle">center</text>
+    
+    <!-- Right side (positions 4,5,6) -->
+    <rect x="280" y="0" width="60" height="60" rx="8" fill="#4ecdc4"/>
+    <text x="310" y="40" fill="#fff" font-family="monospace" font-size="28" font-weight="bold" text-anchor="middle">C</text>
+    <text x="310" y="75" fill="#4ecdc4" font-family="Arial" font-size="11" text-anchor="middle">i=4</text>
+    
+    <rect x="350" y="0" width="60" height="60" rx="8" fill="#4ecdc4"/>
+    <text x="380" y="40" fill="#fff" font-family="monospace" font-size="28" font-weight="bold" text-anchor="middle">A</text>
+    <text x="380" y="75" fill="#4ecdc4" font-family="Arial" font-size="11" text-anchor="middle">i=5</text>
+    
+    <rect x="420" y="0" width="60" height="60" rx="8" fill="#4ecdc4"/>
+    <text x="450" y="40" fill="#fff" font-family="monospace" font-size="28" font-weight="bold" text-anchor="middle">R</text>
+    <text x="450" y="75" fill="#4ecdc4" font-family="Arial" font-size="11" text-anchor="middle">i=6</text>
+  </g>
+  
+  <!-- Mirror Line -->
+  <line x1="340" y1="75" x2="340" y2="165" stroke="#ffd700" stroke-width="3" stroke-dasharray="8,4"/>
+  <text x="340" y="178" fill="#ffd700" font-family="Arial" font-size="11" text-anchor="middle">MIRROR</text>
+  
+  <!-- Matching Arrows Section -->
+  <text x="375" y="210" fill="#fff" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Character Matching</text>
+  
+  <g transform="translate(120, 225)">
+    <!-- R = R -->
+    <rect x="0" y="0" width="140" height="35" rx="6" fill="rgba(255,215,0,0.15)" stroke="#ffd700"/>
+    <text x="70" y="23" fill="#ffd700" font-family="monospace" font-size="14" text-anchor="middle">S[0]='R' = S[6]='R' ✓</text>
+    
+    <!-- A = A -->
+    <rect x="160" y="0" width="140" height="35" rx="6" fill="rgba(116,185,255,0.15)" stroke="#74b9ff"/>
+    <text x="230" y="23" fill="#74b9ff" font-family="monospace" font-size="14" text-anchor="middle">S[1]='A' = S[5]='A' ✓</text>
+    
+    <!-- C = C -->
+    <rect x="320" y="0" width="140" height="35" rx="6" fill="rgba(162,155,254,0.15)" stroke="#a29bfe"/>
+    <text x="390" y="23" fill="#a29bfe" font-family="monospace" font-size="14" text-anchor="middle">S[2]='C' = S[4]='C' ✓</text>
+  </g>
+  
+  <!-- Formula Box -->
+  <rect x="50" y="290" width="280" height="90" rx="10" fill="rgba(255,255,255,0.05)" stroke="#ffd700"/>
+  <text x="190" y="318" fill="#ffd700" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Definition</text>
+  <text x="190" y="345" fill="#fff" font-family="monospace" font-size="13" text-anchor="middle">S[i] = S[n-1-i]</text>
+  <text x="190" y="368" fill="#888" font-family="Arial" font-size="11" text-anchor="middle">for all i in [0, n/2]</text>
+  
+  <!-- Two Pointers Box -->
+  <rect x="420" y="290" width="280" height="90" rx="10" fill="rgba(255,255,255,0.05)" stroke="#4facfe"/>
+  <text x="560" y="318" fill="#4facfe" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Two Pointers Check</text>
+  <text x="560" y="345" fill="#38ef7d" font-family="monospace" font-size="11" text-anchor="middle">while left &lt; right:</text>
+  <text x="560" y="365" fill="#fff" font-family="monospace" font-size="10" text-anchor="middle">if s[left] != s[right]: return False</text>
+  
+  <!-- Complexity -->
+  <text x="375" y="395" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">Time: O(n) | Space: O(1)</text>
+</svg>

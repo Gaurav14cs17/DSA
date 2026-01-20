@@ -1,0 +1,269 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6c63ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4834df;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ee5a6f;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#51cf66;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#37b24d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd93d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f9ca24;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1000" height="750" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="500" y="40" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    Streaming Algorithms
+  </text>
+  <text x="500" y="70" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#7f8c8d">
+    Probabilistic Data Structures for Massive Data Streams
+  </text>
+  
+  <!-- Data Stream Visualization -->
+  <g transform="translate(50, 100)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">
+      Data Stream:
+    </text>
+    
+    <!-- Flowing data -->
+    <rect x="120" y="-20" width="40" height="30" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" rx="3"/>
+    <text x="140" y="0" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">x₁</text>
+    
+    <rect x="170" y="-20" width="40" height="30" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" rx="3"/>
+    <text x="190" y="0" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">x₂</text>
+    
+    <rect x="220" y="-20" width="40" height="30" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" rx="3"/>
+    <text x="240" y="0" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">x₃</text>
+    
+    <text x="270" y="0" font-family="monospace" font-size="16" text-anchor="middle" fill="#7f8c8d">→</text>
+    
+    <rect x="290" y="-20" width="40" height="30" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" rx="3"/>
+    <text x="310" y="0" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">x₄</text>
+    
+    <text x="340" y="0" font-family="monospace" font-size="16" text-anchor="middle" fill="#7f8c8d">→</text>
+    
+    <text x="370" y="0" font-family="monospace" font-size="16" text-anchor="middle" fill="#7f8c8d">...</text>
+    
+    <text x="400" y="0" font-family="monospace" font-size="16" text-anchor="middle" fill="#7f8c8d">→</text>
+    
+    <rect x="420" y="-20" width="40" height="30" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" rx="3"/>
+    <text x="440" y="0" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">xₙ</text>
+    
+    <text x="500" y="0" font-family="Arial, sans-serif" font-size="13" text-anchor="start" fill="#e74c3c">
+      (Cannot store all!)
+    </text>
+  </g>
+  
+  <!-- Four Main Algorithms -->
+  <g transform="translate(50, 160)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">
+      Four Key Streaming Algorithms:
+    </text>
+    
+    <!-- Reservoir Sampling -->
+    <g transform="translate(0, 30)">
+      <rect x="0" y="0" width="450" height="120" fill="url(#grad1)" stroke="#6c63ff" stroke-width="2" rx="5"/>
+      <text x="225" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">
+        1. Reservoir Sampling
+      </text>
+      <text x="225" y="50" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fff">
+        Problem: Uniform random sample of k elements
+      </text>
+      <text x="225" y="75" font-family="monospace" font-size="13" text-anchor="middle" fill="#fff">
+        Space: O(k) | Guarantee: Each element has prob k/n
+      </text>
+      <text x="225" y="100" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff">
+        💡 Replace with probability k/i when element i arrives
+      </text>
+    </g>
+    
+    <!-- Count-Min Sketch -->
+    <g transform="translate(480, 30)">
+      <rect x="0" y="0" width="450" height="120" fill="url(#grad2)" stroke="#ff6b6b" stroke-width="2" rx="5"/>
+      <text x="225" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">
+        2. Count-Min Sketch
+      </text>
+      <text x="225" y="50" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fff">
+        Problem: Frequency estimation
+      </text>
+      <text x="225" y="75" font-family="monospace" font-size="13" text-anchor="middle" fill="#fff">
+        Space: O(1/ε log 1/δ) | Error: ε·N with prob 1-δ
+      </text>
+      <text x="225" y="100" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff">
+        💡 Multiple hash functions, take minimum
+      </text>
+    </g>
+    
+    <!-- HyperLogLog -->
+    <g transform="translate(0, 170)">
+      <rect x="0" y="0" width="450" height="120" fill="url(#grad3)" stroke="#51cf66" stroke-width="2" rx="5"/>
+      <text x="225" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">
+        3. HyperLogLog
+      </text>
+      <text x="225" y="50" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fff">
+        Problem: Cardinality estimation (count distinct)
+      </text>
+      <text x="225" y="75" font-family="monospace" font-size="13" text-anchor="middle" fill="#fff">
+        Space: O(m log log n) | Error: ~2% with m=2¹⁴
+      </text>
+      <text x="225" y="100" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff">
+        💡 Count leading zeros in hash values
+      </text>
+    </g>
+    
+    <!-- Bloom Filter -->
+    <g transform="translate(480, 170)">
+      <rect x="0" y="0" width="450" height="120" fill="url(#grad4)" stroke="#ffd93d" stroke-width="2" rx="5"/>
+      <text x="225" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">
+        4. Bloom Filter
+      </text>
+      <text x="225" y="50" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fff">
+        Problem: Set membership test
+      </text>
+      <text x="225" y="75" font-family="monospace" font-size="13" text-anchor="middle" fill="#fff">
+        Space: O(m) bits | False positive rate: p
+      </text>
+      <text x="225" y="100" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff">
+        💡 No false negatives, possible false positives
+      </text>
+    </g>
+  </g>
+  
+  <!-- Count-Min Sketch Visualization -->
+  <g transform="translate(50, 480)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">
+      Count-Min Sketch Example:
+    </text>
+    
+    <g transform="translate(0, 20)">
+      <rect x="0" y="0" width="900" height="180" fill="#fff" stroke="#7f8c8d" stroke-width="2" rx="5"/>
+      
+      <!-- Hash function labels -->
+      <text x="20" y="35" font-family="monospace" font-size="13" fill="#2c3e50">h₁:</text>
+      <text x="20" y="75" font-family="monospace" font-size="13" fill="#2c3e50">h₂:</text>
+      <text x="20" y="115" font-family="monospace" font-size="13" fill="#2c3e50">h₃:</text>
+      <text x="20" y="155" font-family="monospace" font-size="13" fill="#2c3e50">h₄:</text>
+      
+      <!-- Table cells -->
+      <g transform="translate(60, 15)">
+        <!-- Row 1 -->
+        <rect x="0" y="0" width="60" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+        <text x="30" y="20" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">0</text>
+        
+        <rect x="60" y="0" width="60" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+        <text x="90" y="20" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">3</text>
+        
+        <rect x="120" y="0" width="60" height="30" fill="#ffebee" stroke="#e74c3c" stroke-width="2"/>
+        <text x="150" y="20" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#e74c3c">7</text>
+        
+        <rect x="180" y="0" width="60" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+        <text x="210" y="20" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">2</text>
+        
+        <rect x="240" y="0" width="60" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+        <text x="270" y="20" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">1</text>
+        
+        <text x="320" y="20" font-family="monospace" font-size="12" text-anchor="middle" fill="#7f8c8d">...</text>
+        
+        <!-- Row 2 -->
+        <rect x="0" y="40" width="60" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+        <text x="30" y="60" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">1</text>
+        
+        <rect x="60" y="40" width="60" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+        <text x="90" y="60" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">0</text>
+        
+        <rect x="120" y="40" width="60" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+        <text x="150" y="60" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">4</text>
+        
+        <rect x="180" y="40" width="60" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+        <text x="210" y="60" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">2</text>
+        
+        <rect x="240" y="40" width="60" height="30" fill="#e8f5e9" stroke="#27ae60" stroke-width="2"/>
+        <text x="270" y="60" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#27ae60">5</text>
+        
+        <text x="320" y="60" font-family="monospace" font-size="12" text-anchor="middle" fill="#7f8c8d">...</text>
+        
+        <!-- Row 3 -->
+        <rect x="0" y="80" width="60" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+        <text x="30" y="100" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">2</text>
+        
+        <rect x="60" y="80" width="60" height="30" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+        <text x="90" y="100" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#856404">6</text>
+        
+        <rect x="120" y="80" width="60" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+        <text x="150" y="100" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">3</text>
+        
+        <rect x="180" y="80" width="60" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+        <text x="210" y="100" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">1</text>
+        
+        <rect x="240" y="80" width="60" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+        <text x="270" y="100" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">0</text>
+        
+        <text x="320" y="100" font-family="monospace" font-size="12" text-anchor="middle" fill="#7f8c8d">...</text>
+        
+        <!-- Row 4 -->
+        <rect x="0" y="120" width="60" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+        <text x="30" y="140" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">0</text>
+        
+        <rect x="60" y="120" width="60" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+        <text x="90" y="140" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">1</text>
+        
+        <rect x="120" y="120" width="60" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+        <text x="150" y="140" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">2</text>
+        
+        <rect x="180" y="120" width="60" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+        <text x="210" y="140" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">8</text>
+        
+        <rect x="240" y="120" width="60" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+        <text x="270" y="140" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">3</text>
+        
+        <text x="320" y="140" font-family="monospace" font-size="12" text-anchor="middle" fill="#7f8c8d">...</text>
+      </g>
+      
+      <!-- Explanation -->
+      <g transform="translate(450, 30)">
+        <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">
+          Query: "apple"
+        </text>
+        <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">
+          h₁("apple") → cell[2] = 7
+        </text>
+        <text x="0" y="45" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">
+          h₂("apple") → cell[4] = 5
+        </text>
+        <text x="0" y="65" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">
+          h₃("apple") → cell[1] = 6
+        </text>
+        <text x="0" y="85" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">
+          h₄("apple") → cell[3] = 8
+        </text>
+        
+        <rect x="0" y="100" width="380" height="40" fill="#e8f5e9" stroke="#27ae60" stroke-width="2" rx="3"/>
+        <text x="190" y="125" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#27ae60">
+          Estimate = min(7, 5, 6, 8) = 5
+        </text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Key Properties -->
+  <g transform="translate(50, 690)">
+    <rect x="0" y="0" width="900" height="50" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" rx="5"/>
+    <text x="450" y="22" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1565c0">
+      ⚡ Streaming Model Properties
+    </text>
+    <text x="450" y="40" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1565c0">
+      Single Pass | Sublinear Space | Probabilistic Guarantees | Real-time Processing
+    </text>
+  </g>
+</svg>
+

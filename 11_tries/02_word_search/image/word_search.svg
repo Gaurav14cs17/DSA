@@ -1,0 +1,239 @@
+<svg viewBox="0 0 1000 750" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="750" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Word Search with Trie</text>
+  <text x="500" y="65" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Wildcard Search • Grid Search • Backtracking</text>
+  
+  <!-- SECTION 1: Wildcard Search -->
+  <text x="50" y="110" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">WILDCARD SEARCH (.)</text>
+  
+  <!-- Trie for wildcard -->
+  <rect x="40" y="125" width="280" height="200" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Root -->
+  <circle cx="180" cy="160" r="18" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="180" y="166" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">∅</text>
+  
+  <!-- Level 1 -->
+  <line x1="162" y1="175" x2="100" y2="210" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="180" y1="178" x2="180" y2="210" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="198" y1="175" x2="260" y2="210" stroke="#3b82f6" stroke-width="2"/>
+  
+  <text x="115" y="195" fill="#60a5fa" font-size="10" font-family="Courier New, monospace">'b'</text>
+  <text x="185" y="195" fill="#60a5fa" font-size="10" font-family="Courier New, monospace">'c'</text>
+  <text x="240" y="195" fill="#60a5fa" font-size="10" font-family="Courier New, monospace">'d'</text>
+  
+  <circle cx="100" cy="225" r="16" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="100" y="230" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">b</text>
+  
+  <circle cx="180" cy="225" r="16" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="180" y="230" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">c</text>
+  
+  <circle cx="260" cy="225" r="16" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="260" y="230" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">d</text>
+  
+  <!-- Level 2 -->
+  <line x1="100" y1="241" x2="100" y2="265" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="180" y1="241" x2="180" y2="265" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="260" y1="241" x2="260" y2="265" stroke="#3b82f6" stroke-width="2"/>
+  
+  <circle cx="100" cy="280" r="16" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="100" y="285" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">a</text>
+  
+  <circle cx="180" cy="280" r="16" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="180" y="285" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">a</text>
+  
+  <circle cx="260" cy="280" r="16" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="260" y="285" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">a</text>
+  
+  <text x="75" y="310" fill="#888888" font-size="10" font-family="Courier New, monospace">"ba"</text>
+  <text x="158" y="310" fill="#888888" font-size="10" font-family="Courier New, monospace">"ca"</text>
+  <text x="238" y="310" fill="#888888" font-size="10" font-family="Courier New, monospace">"da"</text>
+  
+  <!-- Wildcard Query Box -->
+  <rect x="40" y="340" width="280" height="90" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="55" y="365" fill="#f97316" font-size="14" font-weight="bold" font-family="Courier New, monospace">search(".a")</text>
+  <text x="55" y="390" fill="#ffffff" font-size="12" font-family="Courier New, monospace">'.' → try b,c,d → 'a'</text>
+  <text x="55" y="415" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">Result: TRUE (all match)</text>
+  
+  <!-- SECTION 2: Grid Word Search -->
+  <text x="360" y="110" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">WORD SEARCH II (Grid + Trie)</text>
+  
+  <!-- Grid -->
+  <rect x="350" y="125" width="300" height="200" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Grid cells -->
+  <g transform="translate(380, 150)">
+    <!-- Row labels -->
+    <text x="-25" y="25" fill="#888888" font-size="10" font-family="Courier New, monospace">0</text>
+    <text x="-25" y="70" fill="#888888" font-size="10" font-family="Courier New, monospace">1</text>
+    <text x="-25" y="115" fill="#888888" font-size="10" font-family="Courier New, monospace">2</text>
+    
+    <!-- Col labels -->
+    <text x="20" y="-8" fill="#888888" font-size="10" font-family="Courier New, monospace">0</text>
+    <text x="65" y="-8" fill="#888888" font-size="10" font-family="Courier New, monospace">1</text>
+    <text x="110" y="-8" fill="#888888" font-size="10" font-family="Courier New, monospace">2</text>
+    <text x="155" y="-8" fill="#888888" font-size="10" font-family="Courier New, monospace">3</text>
+    
+    <!-- Row 0 -->
+    <rect x="0" y="0" width="45" height="45" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="22" y="30" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">o</text>
+    
+    <rect x="45" y="0" width="45" height="45" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="67" y="30" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">a</text>
+    
+    <rect x="90" y="0" width="45" height="45" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="112" y="30" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">t</text>
+    
+    <rect x="135" y="0" width="45" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="157" y="30" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">h</text>
+    
+    <!-- Row 1 -->
+    <rect x="0" y="45" width="45" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="22" y="75" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">e</text>
+    
+    <rect x="45" y="45" width="45" height="45" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="67" y="75" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">a</text>
+    
+    <rect x="90" y="45" width="45" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="112" y="75" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">i</text>
+    
+    <rect x="135" y="45" width="45" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="157" y="75" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">n</text>
+    
+    <!-- Row 2 -->
+    <rect x="0" y="90" width="45" height="45" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="22" y="120" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">e</text>
+    
+    <rect x="45" y="90" width="45" height="45" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="67" y="120" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">a</text>
+    
+    <rect x="90" y="90" width="45" height="45" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="112" y="120" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">t</text>
+    
+    <rect x="135" y="90" width="45" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="157" y="120" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">s</text>
+    
+    <!-- Path arrows for "oat" -->
+    <path d="M22,35 L22,40 L67,40 L67,35" stroke="#f97316" stroke-width="2" fill="none" marker-end="none"/>
+    <line x1="68" y1="30" x2="90" y2="30" stroke="#f97316" stroke-width="2"/>
+    
+    <!-- Path arrows for "eat" -->
+    <path d="M22,125 Q 45,145 67,125" stroke="#4ade80" stroke-width="2" fill="none"/>
+    <line x1="68" y1="120" x2="90" y2="120" stroke="#4ade80" stroke-width="2"/>
+  </g>
+  
+  <!-- Words to find -->
+  <rect x="350" y="340" width="300" height="90" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="365" y="365" fill="#a78bfa" font-size="14" font-weight="bold" font-family="Courier New, monospace">WORDS TO FIND</text>
+  <text x="365" y="390" fill="#f97316" font-size="12" font-family="Courier New, monospace">"oat"  → </text>
+  <text x="450" y="390" fill="#4ade80" font-size="12" font-family="Courier New, monospace">FOUND ✓</text>
+  <text x="365" y="415" fill="#4ade80" font-size="12" font-family="Courier New, monospace">"eat"  → </text>
+  <text x="450" y="415" fill="#4ade80" font-size="12" font-family="Courier New, monospace">FOUND ✓</text>
+  
+  <!-- SECTION 3: Trie for Word Search -->
+  <text x="700" y="110" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">TRIE FOR PRUNING</text>
+  
+  <rect x="690" y="125" width="280" height="200" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Trie visualization -->
+  <circle cx="830" cy="155" r="16" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="830" y="160" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">∅</text>
+  
+  <line x1="815" y1="168" x2="760" y2="200" stroke="#f97316" stroke-width="2"/>
+  <line x1="845" y1="168" x2="900" y2="200" stroke="#4ade80" stroke-width="2"/>
+  
+  <text x="770" y="185" fill="#f97316" font-size="10" font-family="Courier New, monospace">'o'</text>
+  <text x="880" y="185" fill="#4ade80" font-size="10" font-family="Courier New, monospace">'e'</text>
+  
+  <circle cx="760" cy="215" r="16" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="760" y="220" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">o</text>
+  
+  <circle cx="900" cy="215" r="16" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="900" y="220" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">e</text>
+  
+  <line x1="760" y1="231" x2="760" y2="260" stroke="#f97316" stroke-width="2"/>
+  <line x1="900" y1="231" x2="900" y2="260" stroke="#4ade80" stroke-width="2"/>
+  
+  <circle cx="760" cy="275" r="16" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="760" y="280" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">a</text>
+  
+  <circle cx="900" cy="275" r="16" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="900" y="280" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">a</text>
+  
+  <line x1="760" y1="291" x2="760" y2="320" stroke="#f97316" stroke-width="2"/>
+  <line x1="900" y1="291" x2="900" y2="320" stroke="#4ade80" stroke-width="2"/>
+  
+  <circle cx="760" cy="335" r="16" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="760" y="340" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">t</text>
+  <text x="785" y="340" fill="#888888" font-size="10" font-family="Courier New, monospace">"oat"</text>
+  
+  <circle cx="900" cy="335" r="16" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="900" y="340" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">t</text>
+  <text x="925" y="340" fill="#888888" font-size="10" font-family="Courier New, monospace">"eat"</text>
+  
+  <!-- Pruning benefit -->
+  <rect x="690" y="340" width="280" height="90" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="705" y="365" fill="#f97316" font-size="14" font-weight="bold" font-family="Courier New, monospace">EARLY TERMINATION</text>
+  <text x="705" y="390" fill="#ffffff" font-size="11" font-family="Courier New, monospace">If prefix not in trie →</text>
+  <text x="705" y="410" fill="#4ade80" font-size="11" font-family="Courier New, monospace">STOP exploring that path!</text>
+  
+  <!-- SECTION 4: Algorithm Flow -->
+  <text x="50" y="470" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">ALGORITHM: TRIE + BACKTRACKING</text>
+  
+  <rect x="40" y="485" width="920" height="120" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Step 1 -->
+  <rect x="60" y="505" width="150" height="80" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="135" y="530" text-anchor="middle" fill="#a78bfa" font-size="12" font-weight="bold" font-family="Courier New, monospace">STEP 1</text>
+  <text x="135" y="555" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Build Trie from</text>
+  <text x="135" y="575" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">word dictionary</text>
+  
+  <!-- Arrow -->
+  <line x1="220" y1="545" x2="260" y2="545" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="260,540 270,545 260,550" fill="#4ade80"/>
+  
+  <!-- Step 2 -->
+  <rect x="280" y="505" width="150" height="80" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="355" y="530" text-anchor="middle" fill="#f97316" font-size="12" font-weight="bold" font-family="Courier New, monospace">STEP 2</text>
+  <text x="355" y="555" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">For each cell,</text>
+  <text x="355" y="575" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">start DFS search</text>
+  
+  <!-- Arrow -->
+  <line x1="440" y1="545" x2="480" y2="545" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="480,540 490,545 480,550" fill="#4ade80"/>
+  
+  <!-- Step 3 -->
+  <rect x="500" y="505" width="150" height="80" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="575" y="530" text-anchor="middle" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">STEP 3</text>
+  <text x="575" y="555" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Use Trie to prune</text>
+  <text x="575" y="575" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">invalid paths early</text>
+  
+  <!-- Arrow -->
+  <line x1="660" y1="545" x2="700" y2="545" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="700,540 710,545 700,550" fill="#4ade80"/>
+  
+  <!-- Step 4 -->
+  <rect x="720" y="505" width="220" height="80" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="830" y="530" text-anchor="middle" fill="#3b82f6" font-size="12" font-weight="bold" font-family="Courier New, monospace">STEP 4</text>
+  <text x="830" y="555" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Collect found words,</text>
+  <text x="830" y="575" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">prune trie branches</text>
+  
+  <!-- Complexity Section -->
+  <text x="50" y="640" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">COMPLEXITY</text>
+  
+  <rect x="40" y="655" width="300" height="70" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="55" y="680" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Grid Search:  O(m × n × 4^L)</text>
+  <text x="55" y="705" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Wildcard:     O(26^dots × L)</text>
+  
+  <rect x="360" y="655" width="300" height="70" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="375" y="680" fill="#a78bfa" font-size="12" font-family="Courier New, monospace">Word Break:   O(n²)</text>
+  <text x="375" y="705" fill="#a78bfa" font-size="12" font-family="Courier New, monospace">Space:        O(dictionary)</text>
+  
+  <!-- Directions Legend -->
+  <rect x="680" y="655" width="280" height="70" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="695" y="680" fill="#f97316" font-size="12" font-weight="bold" font-family="Courier New, monospace">4 DIRECTIONS</text>
+  <text x="695" y="705" fill="#ffffff" font-size="12" font-family="Courier New, monospace">↑ ↓ ← → (no diagonals)</text>
+</svg>
+

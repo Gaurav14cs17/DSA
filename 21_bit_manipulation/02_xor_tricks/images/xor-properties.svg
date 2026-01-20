@@ -1,0 +1,98 @@
+<svg viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">XOR Properties - The Five Pillars</text>
+  <text x="450" y="68" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Master these properties to solve XOR problems</text>
+  
+  <!-- Property 1: Self-Inverse -->
+  <rect x="50" y="95" width="250" height="110" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="175" y="120" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">1. SELF-INVERSE</text>
+  <text x="175" y="150" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold" font-family="Courier New, monospace">a ⊕ a = 0</text>
+  <text x="175" y="180" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">Same bits cancel out</text>
+  <text x="175" y="198" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">Use: Cancel duplicate elements</text>
+  
+  <!-- Property 2: Identity -->
+  <rect x="320" y="95" width="250" height="110" rx="8" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="445" y="120" text-anchor="middle" fill="#f97316" font-size="14" font-weight="bold" font-family="Courier New, monospace">2. IDENTITY</text>
+  <text x="445" y="150" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold" font-family="Courier New, monospace">a ⊕ 0 = a</text>
+  <text x="445" y="180" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">XOR with 0 preserves value</text>
+  <text x="445" y="198" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">Use: Initialize result variable</text>
+  
+  <!-- Property 3: Commutative -->
+  <rect x="590" y="95" width="260" height="110" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="720" y="120" text-anchor="middle" fill="#a78bfa" font-size="14" font-weight="bold" font-family="Courier New, monospace">3. COMMUTATIVE</text>
+  <text x="720" y="150" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold" font-family="Courier New, monospace">a ⊕ b = b ⊕ a</text>
+  <text x="720" y="180" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">Order doesn't matter</text>
+  <text x="720" y="198" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">Use: Reorder operations freely</text>
+  
+  <!-- Property 4: Associative -->
+  <rect x="130" y="225" width="300" height="110" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="280" y="250" text-anchor="middle" fill="#3b82f6" font-size="14" font-weight="bold" font-family="Courier New, monospace">4. ASSOCIATIVE</text>
+  <text x="280" y="280" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">(a ⊕ b) ⊕ c = a ⊕ (b ⊕ c)</text>
+  <text x="280" y="310" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">Grouping doesn't matter</text>
+  <text x="280" y="328" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">Use: Group operations for efficiency</text>
+  
+  <!-- Property 5: Cancellation -->
+  <rect x="460" y="225" width="300" height="110" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="610" y="250" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">5. CANCELLATION</text>
+  <text x="610" y="280" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">a ⊕ b ⊕ b = a</text>
+  <text x="610" y="310" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">XOR twice = original</text>
+  <text x="610" y="328" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">Use: Swap, encryption, recovery</text>
+  
+  <!-- XOR Truth Table -->
+  <rect x="50" y="360" width="200" height="170" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="150" y="388" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">XOR TRUTH TABLE</text>
+  
+  <text x="80" y="420" fill="#888888" font-size="12" font-family="Courier New, monospace">A</text>
+  <text x="120" y="420" fill="#888888" font-size="12" font-family="Courier New, monospace">B</text>
+  <text x="170" y="420" fill="#888888" font-size="12" font-family="Courier New, monospace">A⊕B</text>
+  <line x1="65" y1="428" x2="230" y2="428" stroke="#3b82f6" stroke-width="1"/>
+  
+  <text x="80" y="450" fill="#ffffff" font-size="12" font-family="Courier New, monospace">0</text>
+  <text x="120" y="450" fill="#ffffff" font-size="12" font-family="Courier New, monospace">0</text>
+  <text x="175" y="450" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">0</text>
+  
+  <text x="80" y="475" fill="#ffffff" font-size="12" font-family="Courier New, monospace">0</text>
+  <text x="120" y="475" fill="#ffffff" font-size="12" font-family="Courier New, monospace">1</text>
+  <text x="175" y="475" fill="#f97316" font-size="12" font-weight="bold" font-family="Courier New, monospace">1</text>
+  
+  <text x="80" y="500" fill="#ffffff" font-size="12" font-family="Courier New, monospace">1</text>
+  <text x="120" y="500" fill="#ffffff" font-size="12" font-family="Courier New, monospace">0</text>
+  <text x="175" y="500" fill="#f97316" font-size="12" font-weight="bold" font-family="Courier New, monospace">1</text>
+  
+  <text x="80" y="525" fill="#ffffff" font-size="12" font-family="Courier New, monospace">1</text>
+  <text x="120" y="525" fill="#ffffff" font-size="12" font-family="Courier New, monospace">1</text>
+  <text x="175" y="525" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">0</text>
+  
+  <!-- Common Applications -->
+  <rect x="280" y="360" width="350" height="170" rx="8" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="455" y="388" text-anchor="middle" fill="#f97316" font-size="14" font-weight="bold" font-family="Courier New, monospace">COMMON APPLICATIONS</text>
+  
+  <text x="300" y="420" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">• Single Number</text>
+  <text x="440" y="420" fill="#888888" font-size="10" font-family="Courier New, monospace">XOR all elements</text>
+  
+  <text x="300" y="445" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">• Missing Number</text>
+  <text x="440" y="445" fill="#888888" font-size="10" font-family="Courier New, monospace">XOR indices with values</text>
+  
+  <text x="300" y="470" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">• Swap without temp</text>
+  <text x="440" y="470" fill="#888888" font-size="10" font-family="Courier New, monospace">a^=b; b^=a; a^=b;</text>
+  
+  <text x="300" y="495" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">• Hamming Distance</text>
+  <text x="440" y="495" fill="#888888" font-size="10" font-family="Courier New, monospace">XOR then count bits</text>
+  
+  <text x="300" y="520" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">• Prefix XOR queries</text>
+  <text x="440" y="520" fill="#888888" font-size="10" font-family="Courier New, monospace">Like prefix sum but XOR</text>
+  
+  <!-- Key Insight -->
+  <rect x="660" y="360" width="190" height="170" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="755" y="388" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">KEY INSIGHT</text>
+  
+  <text x="680" y="425" fill="#ffffff" font-size="11" font-family="Courier New, monospace">XOR returns 1</text>
+  <text x="680" y="445" fill="#ffffff" font-size="11" font-family="Courier New, monospace">only when bits</text>
+  <text x="680" y="465" fill="#f97316" font-size="12" font-weight="bold" font-family="Courier New, monospace">DIFFER</text>
+  
+  <text x="680" y="500" fill="#888888" font-size="10" font-family="Courier New, monospace">Same → 0</text>
+  <text x="680" y="520" fill="#888888" font-size="10" font-family="Courier New, monospace">Different → 1</text>
+</svg>
+

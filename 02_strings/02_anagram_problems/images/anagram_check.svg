@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320">
+  <rect width="600" height="320" fill="#1e1e2f"/>
+  
+  <!-- Title -->
+  <text x="300" y="30" fill="#fff" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle">Anagram Check</text>
+  
+  <!-- String 1 -->
+  <text x="80" y="65" fill="#f6d365" font-family="Arial" font-size="14" font-weight="bold">S = "listen"</text>
+  
+  <g transform="translate(30, 80)">
+    <rect x="0" y="0" width="35" height="35" rx="4" fill="#f6d365"/>
+    <text x="17" y="25" fill="#333" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">l</text>
+    
+    <rect x="40" y="0" width="35" height="35" rx="4" fill="#f6d365"/>
+    <text x="57" y="25" fill="#333" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">i</text>
+    
+    <rect x="80" y="0" width="35" height="35" rx="4" fill="#f6d365"/>
+    <text x="97" y="25" fill="#333" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">s</text>
+    
+    <rect x="120" y="0" width="35" height="35" rx="4" fill="#f6d365"/>
+    <text x="137" y="25" fill="#333" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">t</text>
+    
+    <rect x="160" y="0" width="35" height="35" rx="4" fill="#f6d365"/>
+    <text x="177" y="25" fill="#333" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">e</text>
+    
+    <rect x="200" y="0" width="35" height="35" rx="4" fill="#f6d365"/>
+    <text x="217" y="25" fill="#333" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">n</text>
+  </g>
+  
+  <!-- String 2 -->
+  <text x="425" y="65" fill="#a8edea" font-family="Arial" font-size="14" font-weight="bold">T = "silent"</text>
+  
+  <g transform="translate(340, 80)">
+    <rect x="0" y="0" width="35" height="35" rx="4" fill="#a8edea"/>
+    <text x="17" y="25" fill="#333" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">s</text>
+    
+    <rect x="40" y="0" width="35" height="35" rx="4" fill="#a8edea"/>
+    <text x="57" y="25" fill="#333" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">i</text>
+    
+    <rect x="80" y="0" width="35" height="35" rx="4" fill="#a8edea"/>
+    <text x="97" y="25" fill="#333" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">l</text>
+    
+    <rect x="120" y="0" width="35" height="35" rx="4" fill="#a8edea"/>
+    <text x="137" y="25" fill="#333" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">e</text>
+    
+    <rect x="160" y="0" width="35" height="35" rx="4" fill="#a8edea"/>
+    <text x="177" y="25" fill="#333" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">n</text>
+    
+    <rect x="200" y="0" width="35" height="35" rx="4" fill="#a8edea"/>
+    <text x="217" y="25" fill="#333" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">t</text>
+  </g>
+  
+  <!-- Frequency Vectors -->
+  <text x="145" y="160" fill="#fff" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle">f(S)</text>
+  <rect x="30" y="170" width="230" height="35" rx="5" fill="rgba(246,211,101,0.2)" stroke="#f6d365"/>
+  <text x="145" y="193" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">e:1 i:1 l:1 n:1 s:1 t:1</text>
+  
+  <text x="455" y="160" fill="#fff" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle">f(T)</text>
+  <rect x="340" y="170" width="230" height="35" rx="5" fill="rgba(168,237,234,0.2)" stroke="#a8edea"/>
+  <text x="455" y="193" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">e:1 i:1 l:1 n:1 s:1 t:1</text>
+  
+  <!-- Equals -->
+  <text x="300" y="192" fill="#38ef7d" font-family="Arial" font-size="28" font-weight="bold" text-anchor="middle">=</text>
+  
+  <!-- Result -->
+  <rect x="175" y="230" width="250" height="50" rx="10" fill="rgba(56,239,125,0.2)" stroke="#38ef7d" stroke-width="2"/>
+  <text x="300" y="260" fill="#38ef7d" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">✓ ANAGRAM</text>
+  
+  <!-- Complexity -->
+  <text x="300" y="305" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">Time: O(n) | Space: O(1)</text>
+</svg>

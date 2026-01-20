@@ -1,0 +1,126 @@
+<svg viewBox="0 0 950 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: bold 26px 'Courier New', monospace; fill: #ffffff; }
+      .subtitle { font: 16px 'Courier New', monospace; fill: #888888; }
+      .section-label { font: bold 14px 'Courier New', monospace; fill: #e94560; }
+      .node-text { font: bold 20px 'Courier New', monospace; fill: #ffffff; }
+      .small-label { font: 11px 'Courier New', monospace; fill: #888888; }
+      .result-text { font: bold 14px 'Courier New', monospace; fill: #4ade80; }
+      .info-text { font: 13px 'Courier New', monospace; fill: #ffffff; }
+      .complexity { font: 12px 'Courier New', monospace; fill: #60a5fa; }
+      .dist-label { font: bold 12px 'Courier New', monospace; }
+    </style>
+    <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#888888"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="950" height="600" fill="#0f0f23"/>
+
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" class="title">🌊 BFS Graph Traversal</text>
+  <text x="475" y="70" text-anchor="middle" class="subtitle">Level-by-Level Exploration - Shortest Path in Unweighted Graphs</text>
+
+  <!-- Graph Edges -->
+  <g stroke="#888888" stroke-width="2">
+    <line x1="150" y1="200" x2="280" y2="150"/>
+    <line x1="150" y1="200" x2="280" y2="250"/>
+    <line x1="280" y1="150" x2="410" y2="150"/>
+    <line x1="280" y1="150" x2="410" y2="250"/>
+    <line x1="280" y1="250" x2="410" y2="250"/>
+    <line x1="410" y1="150" x2="540" y2="200"/>
+    <line x1="410" y1="250" x2="540" y2="200"/>
+  </g>
+
+  <!-- Graph Nodes -->
+  <!-- Level 0 - Source (Visited) -->
+  <circle cx="150" cy="200" r="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="150" y="207" text-anchor="middle" class="node-text">A</text>
+  <text x="150" y="250" text-anchor="middle" class="dist-label" fill="#4ade80">d=0</text>
+  <text x="150" y="270" text-anchor="middle" class="small-label">SOURCE</text>
+
+  <!-- Level 1 - Visited -->
+  <circle cx="280" cy="150" r="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="280" y="157" text-anchor="middle" class="node-text">B</text>
+  <text x="280" y="105" text-anchor="middle" class="dist-label" fill="#4ade80">d=1</text>
+
+  <circle cx="280" cy="250" r="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="280" y="257" text-anchor="middle" class="node-text">C</text>
+  <text x="280" y="300" text-anchor="middle" class="dist-label" fill="#4ade80">d=1</text>
+
+  <!-- Level 2 - Current (Processing) -->
+  <circle cx="410" cy="150" r="35" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+  <text x="410" y="157" text-anchor="middle" class="node-text" fill="#f97316">D</text>
+  <text x="410" y="105" text-anchor="middle" class="dist-label" fill="#f97316">d=2</text>
+
+  <circle cx="410" cy="250" r="35" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+  <text x="410" y="257" text-anchor="middle" class="node-text" fill="#f97316">E</text>
+  <text x="410" y="300" text-anchor="middle" class="dist-label" fill="#f97316">d=2</text>
+
+  <!-- Level 3 - Next (Unvisited) -->
+  <circle cx="540" cy="200" r="35" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="540" y="207" text-anchor="middle" class="node-text" fill="#a78bfa">F</text>
+  <text x="540" y="250" text-anchor="middle" class="dist-label" fill="#a78bfa">d=3</text>
+
+  <!-- Level Labels -->
+  <text x="150" y="320" text-anchor="middle" class="small-label">Level 0</text>
+  <text x="280" y="340" text-anchor="middle" class="small-label">Level 1</text>
+  <text x="410" y="340" text-anchor="middle" class="small-label">Level 2</text>
+  <text x="540" y="320" text-anchor="middle" class="small-label">Level 3</text>
+
+  <!-- Queue Visualization -->
+  <rect x="620" y="110" width="300" height="180" rx="8" fill="#1a1a2e" stroke="#3b82f6" stroke-width="2"/>
+  <text x="770" y="140" text-anchor="middle" class="section-label">Queue State</text>
+
+  <!-- Queue Items -->
+  <rect x="640" y="160" width="50" height="40" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="665" y="187" text-anchor="middle" class="node-text" fill="#f97316">D</text>
+
+  <rect x="700" y="160" width="50" height="40" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="725" y="187" text-anchor="middle" class="node-text" fill="#f97316">E</text>
+
+  <rect x="760" y="160" width="50" height="40" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="785" y="187" text-anchor="middle" class="node-text" fill="#a78bfa">F</text>
+
+  <text x="640" y="225" class="result-text">← Front</text>
+  <text x="810" y="225" text-anchor="end" class="section-label" fill="#f97316">Rear →</text>
+
+  <text x="770" y="275" text-anchor="middle" class="small-label">Visited: {A, B, C, D, E, F}</text>
+
+  <!-- Legend -->
+  <rect x="620" y="310" width="300" height="100" rx="8" fill="#1a1a2e" stroke="#888888" stroke-width="1"/>
+  <text x="770" y="340" text-anchor="middle" class="section-label">Legend</text>
+
+  <circle cx="660" cy="370" r="12" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="690" y="375" class="small-label">Visited</text>
+
+  <circle cx="760" cy="370" r="12" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="790" y="375" class="small-label">Current</text>
+
+  <circle cx="860" cy="370" r="12" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="890" y="375" class="small-label">Next</text>
+
+  <!-- BFS Guarantee Box -->
+  <rect x="60" y="380" width="540" height="90" rx="8" fill="#1a1a2e" stroke="#4ade80" stroke-width="2"/>
+  <text x="330" y="410" text-anchor="middle" class="section-label" fill="#4ade80">✓ BFS Shortest Path Guarantee</text>
+  <text x="330" y="440" text-anchor="middle" class="info-text">First time a vertex is visited = shortest path from source</text>
+  <text x="330" y="465" text-anchor="middle" class="small-label">Works for unweighted graphs only</text>
+
+  <!-- Algorithm Key Point -->
+  <rect x="620" y="430" width="300" height="80" rx="8" fill="#1a1a2e" stroke="#60a5fa" stroke-width="2"/>
+  <text x="770" y="460" text-anchor="middle" class="section-label" fill="#60a5fa">Key Insight</text>
+  <text x="640" y="490" class="info-text">Mark visited when</text>
+  <text x="640" y="510" class="result-text">ENQUEUING, not dequeuing!</text>
+
+  <!-- Complexity Footer -->
+  <rect x="60" y="490" width="250" height="45" rx="6" fill="#1a1a2e" stroke="#60a5fa" stroke-width="2"/>
+  <text x="185" y="520" text-anchor="middle" class="complexity">Time: O(V + E)</text>
+
+  <rect x="330" y="490" width="250" height="45" rx="6" fill="#1a1a2e" stroke="#60a5fa" stroke-width="2"/>
+  <text x="455" y="520" text-anchor="middle" class="complexity">Space: O(V)</text>
+
+  <!-- Footer -->
+  <text x="475" y="580" text-anchor="middle" class="complexity">d = distance from source | BFS explores level by level</text>
+</svg>

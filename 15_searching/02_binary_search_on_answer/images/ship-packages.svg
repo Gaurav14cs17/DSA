@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <!-- Background -->
+  <rect width="900" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">📦 Capacity To Ship Packages</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">LeetCode 1011: Find Minimum Ship Capacity</text>
+  
+  <!-- Problem Setup -->
+  <text x="50" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">PROBLEM</text>
+  <text x="50" y="125" font-family="Courier New, monospace" font-size="11" fill="#888888">weights = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], days = 5. Find minimum capacity.</text>
+  
+  <!-- Package visualization -->
+  <g transform="translate(50, 145)">
+    <rect x="0" y="0" width="30" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="15" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">1</text>
+    
+    <rect x="35" y="0" width="35" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="52" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">2</text>
+    
+    <rect x="75" y="0" width="40" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="95" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">3</text>
+    
+    <rect x="120" y="0" width="45" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="142" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">4</text>
+    
+    <rect x="170" y="0" width="50" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="195" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">5</text>
+    
+    <rect x="225" y="0" width="55" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="252" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">6</text>
+    
+    <rect x="285" y="0" width="60" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="315" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">7</text>
+    
+    <rect x="350" y="0" width="65" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="382" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">8</text>
+    
+    <rect x="420" y="0" width="70" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="455" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">9</text>
+    
+    <rect x="495" y="0" width="80" height="30" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="3"/>
+    <text x="535" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#f97316">10</text>
+    
+    <text x="535" y="50" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#f97316">max weight</text>
+  </g>
+  
+  <!-- Search Range -->
+  <text x="50" y="230" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">SEARCH RANGE</text>
+  <g transform="translate(50, 245)">
+    <rect x="0" y="0" width="80" height="35" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="4"/>
+    <text x="40" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#f97316">min capacity</text>
+    <text x="40" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">10</text>
+    
+    <text x="120" y="22" font-family="Courier New, monospace" font-size="20" fill="#888888">→</text>
+    
+    <rect x="160" y="0" width="80" height="35" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="4"/>
+    <text x="200" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">max capacity</text>
+    <text x="200" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">55</text>
+    
+    <text x="280" y="25" font-family="Courier New, monospace" font-size="11" fill="#888888">(sum of all weights)</text>
+  </g>
+  
+  <!-- Testing Capacity -->
+  <text x="50" y="320" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">TESTING CAPACITY = 15</text>
+  
+  <g transform="translate(50, 340)">
+    <!-- Day 1 -->
+    <rect x="0" y="0" width="120" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+    <text x="60" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Day 1</text>
+    <text x="60" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">[1,2,3,4,5]</text>
+    <text x="60" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">sum = 15 ✓</text>
+    
+    <!-- Day 2 -->
+    <rect x="130" y="0" width="100" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+    <text x="180" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Day 2</text>
+    <text x="180" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">[6,7]</text>
+    <text x="180" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">sum = 13 ✓</text>
+    
+    <!-- Day 3 -->
+    <rect x="240" y="0" width="80" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+    <text x="280" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Day 3</text>
+    <text x="280" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">[8]</text>
+    <text x="280" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">sum = 8 ✓</text>
+    
+    <!-- Day 4 -->
+    <rect x="330" y="0" width="80" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+    <text x="370" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Day 4</text>
+    <text x="370" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">[9]</text>
+    <text x="370" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">sum = 9 ✓</text>
+    
+    <!-- Day 5 -->
+    <rect x="420" y="0" width="80" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+    <text x="460" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Day 5</text>
+    <text x="460" y="38" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">[10]</text>
+    <text x="460" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">sum = 10 ✓</text>
+    
+    <text x="560" y="35" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">5 days ≤ 5 ✓</text>
+  </g>
+  
+  <!-- Algorithm -->
+  <rect x="550" y="225" width="310" height="160" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="6"/>
+  <text x="705" y="250" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">FEASIBILITY CHECK</text>
+  <text x="565" y="275" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">def</text>
+  <text x="595" y="275" font-family="Courier New, monospace" font-size="11" fill="#ffffff">canShip(capacity):</text>
+  <text x="575" y="295" font-family="Courier New, monospace" font-size="11" fill="#ffffff">days = 1, load = 0</text>
+  <text x="575" y="315" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">for</text>
+  <text x="605" y="315" font-family="Courier New, monospace" font-size="11" fill="#ffffff">w in weights:</text>
+  <text x="590" y="335" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">if</text>
+  <text x="610" y="335" font-family="Courier New, monospace" font-size="11" fill="#ffffff">load + w > capacity:</text>
+  <text x="605" y="350" font-family="Courier New, monospace" font-size="11" fill="#ffffff">days += 1; load = w</text>
+  <text x="590" y="365" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">else:</text>
+  <text x="625" y="365" font-family="Courier New, monospace" font-size="11" fill="#ffffff">load += w</text>
+  <text x="575" y="380" font-family="Courier New, monospace" font-size="11" fill="#4ade80">return days &lt;= D</text>
+  
+  <!-- Result -->
+  <rect x="50" y="440" width="800" height="60" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="6"/>
+  <text x="450" y="465" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">💡 RESULT</text>
+  <text x="450" y="488" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Minimum Capacity = 15 | Binary search on [max(weights), sum(weights)]</text>
+  
+  <!-- Complexity -->
+  <text x="450" y="530" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(n × log(sum)) | Space: O(1)</text>
+</svg>

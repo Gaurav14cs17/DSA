@@ -1,0 +1,169 @@
+<svg viewBox="0 0 950 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">BST Operations</text>
+  <text x="475" y="65" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Search • Insert • Delete — O(h) Time Complexity</text>
+  
+  <!-- ========== SEARCH SECTION ========== -->
+  <text x="160" y="100" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">🔍 SEARCH(25)</text>
+  
+  <!-- Search Tree -->
+  <line x1="160" y1="145" x2="100" y2="195" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="160" y1="145" x2="220" y2="195" stroke="#888888" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="100" y1="225" x2="60" y2="275" stroke="#888888" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="100" y1="225" x2="140" y2="275" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Search path arrow -->
+  <path d="M175 130 L175 120 L185 125 Z" fill="#f97316"/>
+  
+  <!-- Root: 50 -->
+  <circle cx="160" cy="135" r="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="160" y="141" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">50</text>
+  
+  <!-- Left child: 30 (on path) -->
+  <circle cx="100" cy="210" r="20" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="100" y="216" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">30</text>
+  
+  <!-- Right child: 70 (not visited) -->
+  <circle cx="220" cy="210" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3"/>
+  <text x="220" y="216" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">70</text>
+  
+  <!-- 30's left: 20 -->
+  <circle cx="60" cy="285" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3"/>
+  <text x="60" y="291" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">20</text>
+  
+  <!-- 30's right: 25 (found!) -->
+  <circle cx="140" cy="285" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="140" y="291" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">25</text>
+  
+  <!-- Search result -->
+  <text x="160" y="330" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">FOUND!</text>
+  <text x="160" y="350" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">O(h) = O(log n)</text>
+  
+  <!-- ========== INSERT SECTION ========== -->
+  <text x="475" y="100" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">➕ INSERT(35)</text>
+  
+  <!-- Insert Tree -->
+  <line x1="475" y1="145" x2="415" y2="195" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="475" y1="145" x2="535" y2="195" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="415" y1="225" x2="375" y2="275" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="415" y1="225" x2="455" y2="275" stroke="#f97316" stroke-width="2"/>
+  
+  <!-- Root: 50 -->
+  <circle cx="475" cy="135" r="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="475" y="141" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">50</text>
+  
+  <!-- Left child: 30 -->
+  <circle cx="415" cy="210" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="415" y="216" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">30</text>
+  
+  <!-- Right child: 70 -->
+  <circle cx="535" cy="210" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="535" y="216" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">70</text>
+  
+  <!-- 30's left: 20 -->
+  <circle cx="375" cy="285" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="375" y="291" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Courier New, monospace">20</text>
+  
+  <!-- 30's right: 35 (NEW!) -->
+  <circle cx="455" cy="285" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="455" y="291" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">35</text>
+  
+  <!-- Insert indicator -->
+  <text x="455" y="320" text-anchor="middle" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">NEW</text>
+  
+  <!-- Insert result -->
+  <text x="475" y="350" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">35 > 30 → right</text>
+  
+  <!-- ========== DELETE SECTION (3 CASES) ========== -->
+  <text x="790" y="100" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">🗑️ DELETE CASES</text>
+  
+  <!-- Case 1: Leaf -->
+  <rect x="700" y="115" width="180" height="70" rx="6" fill="none" stroke="#3b82f6" stroke-width="1"/>
+  <text x="790" y="135" text-anchor="middle" fill="#a78bfa" font-size="12" font-weight="bold" font-family="Courier New, monospace">Case 1: Leaf</text>
+  
+  <!-- Mini tree for case 1 -->
+  <line x1="750" y1="155" x2="730" y2="175" stroke="#3b82f6" stroke-width="1"/>
+  <circle cx="750" cy="152" r="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="750" y="156" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">30</text>
+  <circle cx="730" cy="175" r="8" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="3"/>
+  <text x="730" y="178" text-anchor="middle" fill="#ef4444" font-size="8" font-family="Courier New, monospace">×</text>
+  
+  <text x="830" y="165" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">Remove</text>
+  <text x="830" y="178" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">directly</text>
+  
+  <!-- Case 2: One child -->
+  <rect x="700" y="195" width="180" height="70" rx="6" fill="none" stroke="#3b82f6" stroke-width="1"/>
+  <text x="790" y="215" text-anchor="middle" fill="#a78bfa" font-size="12" font-weight="bold" font-family="Courier New, monospace">Case 2: One Child</text>
+  
+  <!-- Mini tree for case 2 -->
+  <line x1="730" y1="235" x2="730" y2="255" stroke="#3b82f6" stroke-width="1"/>
+  <circle cx="730" cy="232" r="8" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="3"/>
+  <text x="730" y="235" text-anchor="middle" fill="#ef4444" font-size="8" font-family="Courier New, monospace">×</text>
+  <circle cx="730" cy="255" r="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="730" y="258" text-anchor="middle" fill="#4ade80" font-size="8" font-family="Courier New, monospace">↑</text>
+  
+  <text x="830" y="245" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">Replace with</text>
+  <text x="830" y="258" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">child</text>
+  
+  <!-- Case 3: Two children -->
+  <rect x="700" y="275" width="180" height="80" rx="6" fill="none" stroke="#f97316" stroke-width="2"/>
+  <text x="790" y="295" text-anchor="middle" fill="#f97316" font-size="12" font-weight="bold" font-family="Courier New, monospace">Case 3: Two Children</text>
+  
+  <!-- Mini tree for case 3 -->
+  <line x1="735" y1="318" x2="720" y2="338" stroke="#3b82f6" stroke-width="1"/>
+  <line x1="735" y1="318" x2="755" y2="338" stroke="#3b82f6" stroke-width="1"/>
+  <circle cx="735" cy="315" r="8" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="3"/>
+  <text x="735" y="318" text-anchor="middle" fill="#ef4444" font-size="8" font-family="Courier New, monospace">×</text>
+  <circle cx="720" cy="340" r="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <circle cx="755" cy="340" r="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  
+  <text x="830" y="325" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">Replace with</text>
+  <text x="830" y="340" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="bold" font-family="Courier New, monospace">successor</text>
+  <text x="830" y="352" text-anchor="middle" fill="#888888" font-size="9" font-family="Courier New, monospace">(min of right)</text>
+  
+  <!-- ========== OPERATIONS CODE SECTION ========== -->
+  <rect x="30" y="380" width="280" height="180" rx="8" fill="#1e1e2e" stroke="#3b82f6" stroke-width="1"/>
+  <text x="170" y="405" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">Search Algorithm</text>
+  
+  <text x="45" y="430" fill="#888888" font-size="11" font-family="Courier New, monospace">while node and node.val ≠ val:</text>
+  <text x="55" y="450" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">if val &lt; node.val:</text>
+  <text x="65" y="470" fill="#ffffff" font-size="11" font-family="Courier New, monospace">node = node.left</text>
+  <text x="55" y="490" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">else:</text>
+  <text x="65" y="510" fill="#ffffff" font-size="11" font-family="Courier New, monospace">node = node.right</text>
+  <text x="45" y="540" fill="#4ade80" font-size="11" font-family="Courier New, monospace">return node</text>
+  
+  <!-- Insert Code -->
+  <rect x="335" y="380" width="280" height="180" rx="8" fill="#1e1e2e" stroke="#3b82f6" stroke-width="1"/>
+  <text x="475" y="405" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">Insert Algorithm</text>
+  
+  <text x="350" y="430" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">if not node:</text>
+  <text x="360" y="450" fill="#4ade80" font-size="11" font-family="Courier New, monospace">return TreeNode(val)</text>
+  <text x="350" y="475" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">if val &lt; node.val:</text>
+  <text x="360" y="495" fill="#ffffff" font-size="11" font-family="Courier New, monospace">node.left = insert(...)</text>
+  <text x="350" y="520" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">else:</text>
+  <text x="360" y="540" fill="#ffffff" font-size="11" font-family="Courier New, monospace">node.right = insert(...)</text>
+  
+  <!-- Delete Code -->
+  <rect x="640" y="380" width="280" height="180" rx="8" fill="#1e1e2e" stroke="#f97316" stroke-width="1"/>
+  <text x="780" y="405" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">Delete Algorithm</text>
+  
+  <text x="655" y="430" fill="#888888" font-size="10" font-family="Courier New, monospace">1. Find node to delete</text>
+  <text x="655" y="450" fill="#888888" font-size="10" font-family="Courier New, monospace">2. If leaf → remove</text>
+  <text x="655" y="470" fill="#888888" font-size="10" font-family="Courier New, monospace">3. If one child → replace</text>
+  <text x="655" y="490" fill="#f97316" font-size="10" font-family="Courier New, monospace">4. If two children:</text>
+  <text x="665" y="510" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Find successor</text>
+  <text x="665" y="530" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Copy value</text>
+  <text x="665" y="550" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Delete successor</text>
+  
+  <!-- Complexity Footer -->
+  <rect x="200" y="580" width="550" height="50" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="475" y="600" text-anchor="middle" fill="#a78bfa" font-size="14" font-weight="bold" font-family="Courier New, monospace">TIME COMPLEXITY</text>
+  <text x="475" y="620" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">Average: O(log n) | Worst (skewed): O(n) | Balanced: O(log n)</text>
+  
+  <!-- Trim Operation Hint -->
+  <text x="475" y="660" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">Successor = min(right subtree) = leftmost node in right subtree</text>
+  <text x="475" y="680" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Min: go left | Max: go right | Both O(h)</text>
+</svg>
+

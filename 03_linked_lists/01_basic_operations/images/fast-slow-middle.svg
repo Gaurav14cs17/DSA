@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320">
+  <defs>
+    <linearGradient id="nodeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="slowPtr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="fastPtr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f43f5e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e11d48;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="midGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#475569"/>
+    </marker>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="700" height="320" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <text x="350" y="35" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="18" text-anchor="middle" font-weight="bold">Finding Middle Node with Fast-Slow Pointers</text>
+  
+  <!-- Odd length example (n=5) -->
+  <text x="100" y="70" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="13">Odd Length (n=5):</text>
+  
+  <!-- Nodes for odd -->
+  <circle cx="100" cy="110" r="22" fill="url(#nodeGrad2)" filter="url(#softGlow)"/>
+  <text x="100" y="115" fill="#fff" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle">1</text>
+  
+  <path d="M 122 110 L 148 110" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  
+  <circle cx="170" cy="110" r="22" fill="url(#nodeGrad2)" filter="url(#softGlow)"/>
+  <text x="170" y="115" fill="#fff" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle">2</text>
+  
+  <path d="M 192 110 L 218 110" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  
+  <!-- Middle node (highlighted) -->
+  <circle cx="240" cy="110" r="22" fill="url(#midGrad)" filter="url(#softGlow)"/>
+  <text x="240" y="115" fill="#000" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle" font-weight="bold">3</text>
+  
+  <path d="M 262 110 L 288 110" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  
+  <circle cx="310" cy="110" r="22" fill="url(#nodeGrad2)" filter="url(#softGlow)"/>
+  <text x="310" y="115" fill="#fff" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle">4</text>
+  
+  <path d="M 332 110 L 358 110" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  
+  <circle cx="380" cy="110" r="22" fill="url(#nodeGrad2)" filter="url(#softGlow)"/>
+  <text x="380" y="115" fill="#fff" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle">5</text>
+  
+  <text x="405" y="115" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="12">→ NULL</text>
+  
+  <!-- Slow pointer indicator -->
+  <circle cx="240" cy="155" r="8" fill="url(#slowPtr)"/>
+  <text x="240" y="175" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle">slow</text>
+  <path d="M 240 147 L 240 135" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  
+  <!-- Fast pointer (at end) -->
+  <circle cx="380" cy="155" r="8" fill="url(#fastPtr)"/>
+  <text x="380" y="175" fill="#f43f5e" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle">fast</text>
+  <path d="M 380 147 L 380 135" stroke="#f43f5e" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  
+  <text x="240" y="195" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">Middle = 3 ✓</text>
+  
+  <!-- Even length example (n=6) -->
+  <text x="100" y="230" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="13">Even Length (n=6):</text>
+  
+  <!-- Nodes for even -->
+  <circle cx="100" cy="270" r="22" fill="url(#nodeGrad2)" filter="url(#softGlow)"/>
+  <text x="100" y="275" fill="#fff" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle">1</text>
+  
+  <path d="M 122 270 L 148 270" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  
+  <circle cx="170" cy="270" r="22" fill="url(#nodeGrad2)" filter="url(#softGlow)"/>
+  <text x="170" y="275" fill="#fff" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle">2</text>
+  
+  <path d="M 192 270 L 218 270" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  
+  <circle cx="240" cy="270" r="22" fill="url(#nodeGrad2)" filter="url(#softGlow)"/>
+  <text x="240" y="275" fill="#fff" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle">3</text>
+  
+  <path d="M 262 270 L 288 270" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  
+  <!-- Second middle (highlighted) -->
+  <circle cx="310" cy="270" r="22" fill="url(#midGrad)" filter="url(#softGlow)"/>
+  <text x="310" y="275" fill="#000" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle" font-weight="bold">4</text>
+  
+  <path d="M 332 270 L 358 270" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  
+  <circle cx="380" cy="270" r="22" fill="url(#nodeGrad2)" filter="url(#softGlow)"/>
+  <text x="380" y="275" fill="#fff" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle">5</text>
+  
+  <path d="M 402 270 L 428 270" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  
+  <circle cx="450" cy="270" r="22" fill="url(#nodeGrad2)" filter="url(#softGlow)"/>
+  <text x="450" y="275" fill="#fff" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle">6</text>
+  
+  <text x="475" y="275" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="12">→ NULL</text>
+  
+  <!-- Slow at second middle -->
+  <circle cx="310" cy="315" r="6" fill="url(#slowPtr)"/>
+  <text x="310" y="310" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle">slow</text>
+  
+  <!-- Fast at null -->
+  <text x="510" y="275" fill="#f43f5e" font-family="JetBrains Mono, monospace" font-size="10">(fast=NULL)</text>
+  
+  <text x="310" y="310" fill="#fbbf24" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle">Second Middle = 4 ✓</text>
+  
+  <!-- Formula box -->
+  <rect x="520" y="70" width="160" height="120" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="600" y="95" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle" font-weight="bold">Formula</text>
+  <text x="600" y="120" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle">When fast at n:</text>
+  <text x="600" y="140" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">slow = ⌊n/2⌋</text>
+  <text x="600" y="165" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle">Time: O(n)</text>
+  <text x="600" y="180" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle">Space: O(1)</text>
+</svg>
+

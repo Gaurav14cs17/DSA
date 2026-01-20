@@ -1,0 +1,148 @@
+<svg viewBox="0 0 900 650" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Segment Tree Structure</text>
+  <text x="450" y="65" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Array [1, 3, 5, 7, 9, 11] → Sum Segment Tree</text>
+  
+  <!-- Original Array Section -->
+  <text x="50" y="105" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">INPUT ARRAY</text>
+  
+  <!-- Array boxes -->
+  <g>
+    <rect x="50" y="115" width="55" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="77" y="145" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">1</text>
+    <text x="77" y="172" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">[0]</text>
+  </g>
+  <g>
+    <rect x="110" y="115" width="55" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="137" y="145" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">3</text>
+    <text x="137" y="172" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">[1]</text>
+  </g>
+  <g>
+    <rect x="170" y="115" width="55" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="197" y="145" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">5</text>
+    <text x="197" y="172" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">[2]</text>
+  </g>
+  <g>
+    <rect x="230" y="115" width="55" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="257" y="145" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">7</text>
+    <text x="257" y="172" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">[3]</text>
+  </g>
+  <g>
+    <rect x="290" y="115" width="55" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="317" y="145" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">9</text>
+    <text x="317" y="172" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">[4]</text>
+  </g>
+  <g>
+    <rect x="350" y="115" width="55" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="377" y="145" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">11</text>
+    <text x="377" y="172" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">[5]</text>
+  </g>
+  
+  <!-- Tree Section Label -->
+  <text x="450" y="215" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">SEGMENT TREE (SUM)</text>
+  
+  <!-- Tree Edges -->
+  <line x1="450" y1="270" x2="280" y2="330" stroke="#3b82f6" stroke-width="2" opacity="0.6"/>
+  <line x1="450" y1="270" x2="620" y2="330" stroke="#3b82f6" stroke-width="2" opacity="0.6"/>
+  <line x1="280" y1="370" x2="170" y2="430" stroke="#3b82f6" stroke-width="2" opacity="0.6"/>
+  <line x1="280" y1="370" x2="340" y2="430" stroke="#3b82f6" stroke-width="2" opacity="0.6"/>
+  <line x1="620" y1="370" x2="510" y2="430" stroke="#3b82f6" stroke-width="2" opacity="0.6"/>
+  <line x1="620" y1="370" x2="680" y2="430" stroke="#3b82f6" stroke-width="2" opacity="0.6"/>
+  <line x1="170" y1="475" x2="120" y2="535" stroke="#3b82f6" stroke-width="2" opacity="0.6"/>
+  <line x1="170" y1="475" x2="220" y2="535" stroke="#3b82f6" stroke-width="2" opacity="0.6"/>
+  <line x1="510" y1="475" x2="460" y2="535" stroke="#3b82f6" stroke-width="2" opacity="0.6"/>
+  <line x1="510" y1="475" x2="560" y2="535" stroke="#3b82f6" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Root Node - Level 0 -->
+  <g>
+    <rect x="395" y="230" width="110" height="50" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="450" y="255" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">36</text>
+    <text x="450" y="273" text-anchor="middle" fill="#f97316" font-size="11" font-family="Courier New, monospace">[0-5] i=1</text>
+  </g>
+  
+  <!-- Level 1 Nodes -->
+  <g>
+    <rect x="220" y="330" width="110" height="50" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="275" y="355" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">9</text>
+    <text x="275" y="373" text-anchor="middle" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">[0-2] i=2</text>
+  </g>
+  <g>
+    <rect x="560" y="330" width="110" height="50" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="615" y="355" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">27</text>
+    <text x="615" y="373" text-anchor="middle" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">[3-5] i=3</text>
+  </g>
+  
+  <!-- Level 2 Nodes -->
+  <g>
+    <rect x="115" y="430" width="100" height="50" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="165" y="455" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">4</text>
+    <text x="165" y="473" text-anchor="middle" fill="#3b82f6" font-size="11" font-family="Courier New, monospace">[0-1] i=4</text>
+  </g>
+  <g>
+    <rect x="290" y="430" width="100" height="50" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="340" y="455" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">5</text>
+    <text x="340" y="473" text-anchor="middle" fill="#4ade80" font-size="11" font-family="Courier New, monospace">[2] i=5</text>
+  </g>
+  <g>
+    <rect x="455" y="430" width="100" height="50" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="505" y="455" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">16</text>
+    <text x="505" y="473" text-anchor="middle" fill="#3b82f6" font-size="11" font-family="Courier New, monospace">[3-4] i=6</text>
+  </g>
+  <g>
+    <rect x="630" y="430" width="100" height="50" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="680" y="455" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">11</text>
+    <text x="680" y="473" text-anchor="middle" fill="#4ade80" font-size="11" font-family="Courier New, monospace">[5] i=7</text>
+  </g>
+  
+  <!-- Level 3 (Leaf) Nodes -->
+  <g>
+    <rect x="75" y="535" width="85" height="45" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="117" y="557" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">1</text>
+    <text x="117" y="573" text-anchor="middle" fill="#4ade80" font-size="11" font-family="Courier New, monospace">[0] i=8</text>
+  </g>
+  <g>
+    <rect x="175" y="535" width="85" height="45" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="217" y="557" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">3</text>
+    <text x="217" y="573" text-anchor="middle" fill="#4ade80" font-size="11" font-family="Courier New, monospace">[1] i=9</text>
+  </g>
+  <g>
+    <rect x="415" y="535" width="85" height="45" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="457" y="557" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">7</text>
+    <text x="457" y="573" text-anchor="middle" fill="#4ade80" font-size="11" font-family="Courier New, monospace">[3] i=12</text>
+  </g>
+  <g>
+    <rect x="515" y="535" width="85" height="45" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="557" y="557" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">9</text>
+    <text x="557" y="573" text-anchor="middle" fill="#4ade80" font-size="11" font-family="Courier New, monospace">[4] i=13</text>
+  </g>
+  
+  <!-- Index Formula Box -->
+  <rect x="680" y="105" width="200" height="100" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="780" y="130" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">INDEX FORMULA</text>
+  <text x="695" y="155" fill="#ffffff" font-size="12" font-family="Courier New, monospace">left  = 2i</text>
+  <text x="695" y="175" fill="#ffffff" font-size="12" font-family="Courier New, monospace">right = 2i + 1</text>
+  <text x="695" y="195" fill="#ffffff" font-size="12" font-family="Courier New, monospace">parent = ⌊i/2⌋</text>
+  
+  <!-- Complexity Box -->
+  <rect x="680" y="220" width="200" height="90" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="780" y="245" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">COMPLEXITY</text>
+  <text x="695" y="270" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Build:  O(n)</text>
+  <text x="695" y="290" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Query:  O(log n)</text>
+  <text x="695" y="310" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Space:  O(4n)</text>
+  
+  <!-- Legend -->
+  <text x="680" y="345" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">LEGEND</text>
+  <rect x="680" y="355" width="20" height="15" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="710" y="367" fill="#888888" font-size="11" font-family="Courier New, monospace">Root</text>
+  <rect x="680" y="380" width="20" height="15" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="710" y="392" fill="#888888" font-size="11" font-family="Courier New, monospace">Internal</text>
+  <rect x="680" y="405" width="20" height="15" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="710" y="417" fill="#888888" font-size="11" font-family="Courier New, monospace">Leaf</text>
+  
+  <!-- Footer -->
+  <text x="450" y="620" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">node.value = left_child.value + right_child.value</text>
+</svg>
+

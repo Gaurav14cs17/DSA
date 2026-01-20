@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 650">
+  <rect width="950" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Competitive Analysis</text>
+  <text x="475" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Measuring Online Algorithm Performance</text>
+  
+  <!-- Online vs Offline -->
+  <text x="50" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">ONLINE VS OFFLINE</text>
+  
+  <g transform="translate(50, 130)">
+    <!-- Online Algorithm -->
+    <rect x="0" y="0" width="380" height="100" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="4"/>
+    <text x="190" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316">ONLINE ALGORITHM</text>
+    <line x1="15" y1="35" x2="365" y2="35" stroke="#f97316" stroke-width="1" opacity="0.5"/>
+    <text x="20" y="55" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Processes input one element at a time</text>
+    <text x="20" y="72" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Makes decisions without future knowledge</text>
+    <text x="20" y="89" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Cannot revise past decisions</text>
+    
+    <!-- Offline Algorithm -->
+    <rect x="420" y="0" width="380" height="100" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+    <text x="610" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">OFFLINE ALGORITHM (OPT)</text>
+    <line x1="435" y1="35" x2="785" y2="35" stroke="#4ade80" stroke-width="1" opacity="0.5"/>
+    <text x="440" y="55" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Sees entire input in advance</text>
+    <text x="440" y="72" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Makes globally optimal decisions</text>
+    <text x="440" y="89" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Theoretical benchmark (not realistic)</text>
+  </g>
+  
+  <!-- Competitive Ratio -->
+  <text x="50" y="270" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COMPETITIVE RATIO</text>
+  
+  <g transform="translate(50, 290)">
+    <rect x="0" y="0" width="500" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="250" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">c = max  ALG(σ) / OPT(σ)</text>
+    <text x="150" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">σ∈Σ</text>
+    <text x="250" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">For all possible input sequences σ</text>
+    <text x="250" y="72" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">Lower c = Better performance (c=1 is optimal)</text>
+    
+    <!-- Interpretation -->
+    <rect x="530" y="0" width="270" height="80" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="4"/>
+    <text x="665" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa">INTERPRETATION</text>
+    <text x="545" y="48" font-family="Courier New, monospace" font-size="10" fill="#ffffff">c = 2: At worst 2× OPT cost</text>
+    <text x="545" y="65" font-family="Courier New, monospace" font-size="10" fill="#ffffff">c = k: At worst k× OPT cost</text>
+  </g>
+  
+  <!-- Cache Example -->
+  <text x="50" y="410" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">CACHE POLICIES COMPARISON</text>
+  
+  <g transform="translate(50, 430)">
+    <!-- LRU -->
+    <rect x="0" y="0" width="200" height="90" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="100" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#3b82f6">LRU Cache</text>
+    <text x="100" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="#ffffff">c = k</text>
+    <text x="100" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">k = cache size</text>
+    <text x="100" y="82" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#4ade80">Optimal deterministic!</text>
+    
+    <!-- LFU -->
+    <rect x="220" y="0" width="200" height="90" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="320" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#3b82f6">LFU Cache</text>
+    <text x="320" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="#ffffff">c = k</text>
+    <text x="320" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">k = cache size</text>
+    <text x="320" y="82" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">Same worst-case as LRU</text>
+    
+    <!-- FIFO -->
+    <rect x="440" y="0" width="200" height="90" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="540" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#3b82f6">FIFO Cache</text>
+    <text x="540" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="#ffffff">c = k</text>
+    <text x="540" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">k = cache size</text>
+    <text x="540" y="82" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">Simple, same guarantee</text>
+    
+    <!-- Random -->
+    <rect x="660" y="0" width="200" height="90" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" rx="4"/>
+    <text x="760" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ef4444">Random Eviction</text>
+    <text x="760" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="#ffffff">c = 2k</text>
+    <text x="760" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">Expected</text>
+    <text x="760" y="82" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">Simpler, 2× worse</text>
+  </g>
+  
+  <!-- Key Theorem -->
+  <text x="50" y="565" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">KEY THEOREM</text>
+  
+  <g transform="translate(50, 580)">
+    <rect x="0" y="0" width="500" height="50" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="4"/>
+    <text x="250" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">No deterministic online paging algorithm</text>
+    <text x="250" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">can achieve competitive ratio better than k</text>
+    
+    <rect x="530" y="0" width="330" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+    <text x="695" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">LRU achieves the optimal k-competitive</text>
+    <text x="695" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">ratio for deterministic algorithms</text>
+  </g>
+</svg>
+

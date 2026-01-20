@@ -1,0 +1,72 @@
+<svg viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Modular Arithmetic Applications</text>
+  
+  <!-- Application 1: Large Factorials -->
+  <rect x="30" y="70" width="270" height="140" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="165" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">LARGE FACTORIALS</text>
+  <text x="50" y="130" font-family="Courier New, monospace" font-size="11" fill="#ffffff">n! mod p (p prime)</text>
+  <text x="50" y="155" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Precompute factorials mod p</text>
+  <text x="50" y="180" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">fact[i] = fact[i-1] × i mod p</text>
+  <text x="50" y="200" font-family="Courier New, monospace" font-size="10" fill="#888888">O(n) precompute, O(1) query</text>
+  
+  <!-- Application 2: Combinations -->
+  <rect x="315" y="70" width="270" height="140" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="450" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">BINOMIAL MOD P</text>
+  <text x="335" y="130" font-family="Courier New, monospace" font-size="11" fill="#ffffff">C(n,r) mod p</text>
+  <text x="335" y="155" font-family="Courier New, monospace" font-size="11" fill="#ffffff">= n! / (r! × (n-r)!)</text>
+  <text x="335" y="180" font-family="Courier New, monospace" font-size="11" fill="#f97316">= fact[n] × inv_fact[r]</text>
+  <text x="335" y="200" font-family="Courier New, monospace" font-size="11" fill="#f97316">  × inv_fact[n-r] mod p</text>
+  
+  <!-- Application 3: Power Tower -->
+  <rect x="600" y="70" width="270" height="140" rx="10" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="735" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">POWER TOWERS</text>
+  <text x="620" y="130" font-family="Courier New, monospace" font-size="11" fill="#ffffff">a^(b^c) mod m</text>
+  <text x="620" y="155" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Use Euler's theorem:</text>
+  <text x="620" y="180" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">a^x mod m = a^(x mod φ(m)) mod m</text>
+  <text x="620" y="200" font-family="Courier New, monospace" font-size="10" fill="#888888">(when gcd(a,m) = 1)</text>
+  
+  <!-- Application 4: Counting -->
+  <rect x="30" y="230" width="270" height="140" rx="10" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="165" y="260" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COUNTING PROBLEMS</text>
+  <text x="50" y="290" font-family="Courier New, monospace" font-size="11" fill="#ffffff">"Answer mod 10⁹+7"</text>
+  <text x="50" y="315" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Prevent overflow</text>
+  <text x="50" y="340" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Apply mod at each step</text>
+  <text x="50" y="360" font-family="Courier New, monospace" font-size="10" fill="#888888">DP transitions, combinatorics</text>
+  
+  <!-- Application 5: Matrix Exp -->
+  <rect x="315" y="230" width="270" height="140" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="450" y="260" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">MATRIX EXPONENTIATION</text>
+  <text x="335" y="290" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Fibonacci(10¹⁸) mod p</text>
+  <text x="335" y="315" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Linear recurrence in O(log n)</text>
+  <text x="335" y="340" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">[F(n+1)]   [1 1]^n  [1]</text>
+  <text x="335" y="360" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">[F(n)  ] = [1 0]  × [0]</text>
+  
+  <!-- Application 6: Cyclic -->
+  <rect x="600" y="230" width="270" height="140" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="735" y="260" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">CYCLIC PATTERNS</text>
+  <text x="620" y="290" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Last digit of aⁿ</text>
+  <text x="620" y="315" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Period: divides φ(10) = 4</text>
+  <text x="620" y="340" font-family="Courier New, monospace" font-size="11" fill="#f97316">7¹=7, 7²=9, 7³=3, 7⁴=1</text>
+  <text x="620" y="360" font-family="Courier New, monospace" font-size="11" fill="#f97316">7¹⁰⁰ last digit: 7^(100 mod 4)=1</text>
+  
+  <!-- LeetCode Problems -->
+  <rect x="100" y="390" width="700" height="130" rx="10" fill="#0f0f23" stroke="#888888" stroke-width="1"/>
+  <text x="450" y="420" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">LEETCODE PROBLEMS</text>
+  
+  <text x="180" y="455" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">50. Pow(x,n)</text>
+  <text x="180" y="475" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">Fast exp</text>
+  
+  <text x="350" y="455" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">372. Super Pow</text>
+  <text x="350" y="475" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">Large exp mod</text>
+  
+  <text x="520" y="455" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">509. Fibonacci</text>
+  <text x="520" y="475" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">Matrix exp</text>
+  
+  <text x="690" y="455" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1922. Count Good</text>
+  <text x="690" y="475" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">Mod counting</text>
+  
+  <text x="450" y="510" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Key: Apply mod after EVERY operation to prevent overflow</text>
+</svg>

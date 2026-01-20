@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <rect width="900" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">📉 Range Min Query</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Query O(√n) • Update O(√n)</text>
+  
+  <!-- Array Setup -->
+  <text x="50" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Block Structure with Minimums</text>
+  
+  <g transform="translate(50, 130)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Array: [7, 2, 5, 1, 9, 4, 3, 8, 6]  n=9, block_size=3</text>
+    
+    <!-- Array elements with min highlights -->
+    <g transform="translate(0, 25)">
+      <!-- Block 0 -->
+      <rect x="0" y="0" width="40" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+      <text x="20" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff">7</text>
+      <rect x="45" y="0" width="40" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2.5"/>
+      <text x="65" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80">2</text>
+      <text x="65" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#4ade80">min</text>
+      <rect x="90" y="0" width="40" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+      <text x="110" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff">5</text>
+      
+      <!-- Separator -->
+      <line x1="135" y1="-10" x2="135" y2="65" stroke="#f97316" stroke-width="2" stroke-dasharray="4,3"/>
+      
+      <!-- Block 1 -->
+      <rect x="145" y="0" width="40" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2.5"/>
+      <text x="165" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80">1</text>
+      <text x="165" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#4ade80">min</text>
+      <rect x="190" y="0" width="40" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+      <text x="210" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff">9</text>
+      <rect x="235" y="0" width="40" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+      <text x="255" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff">4</text>
+      
+      <!-- Separator -->
+      <line x1="280" y1="-10" x2="280" y2="65" stroke="#a78bfa" stroke-width="2" stroke-dasharray="4,3"/>
+      
+      <!-- Block 2 -->
+      <rect x="290" y="0" width="40" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2.5"/>
+      <text x="310" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80">3</text>
+      <text x="310" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#4ade80">min</text>
+      <rect x="335" y="0" width="40" height="40" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="355" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff">8</text>
+      <rect x="380" y="0" width="40" height="40" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="400" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff">6</text>
+      
+      <!-- Block labels -->
+      <text x="65" y="75" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#3b82f6">Block 0</text>
+      <text x="210" y="75" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#f97316">Block 1</text>
+      <text x="355" y="75" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">Block 2</text>
+    </g>
+    
+    <!-- Block mins -->
+    <text x="0" y="120" font-family="Courier New, monospace" font-size="11" fill="#888888">Block Minimums:</text>
+    <rect x="120" y="105" width="50" height="28" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="145" y="124" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">2</text>
+    <rect x="180" y="105" width="50" height="28" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="205" y="124" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">1</text>
+    <rect x="240" y="105" width="50" height="28" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="265" y="124" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">3</text>
+  </g>
+  
+  <!-- Query Example -->
+  <text x="500" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Query: min(1, 7)</text>
+  
+  <g transform="translate(500, 130)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Find minimum in range [1, 7]</text>
+    
+    <!-- Query breakdown -->
+    <g transform="translate(0, 25)">
+      <rect x="0" y="0" width="28" height="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">7</text>
+      
+      <!-- Partial left -->
+      <rect x="32" y="0" width="28" height="28" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+      <text x="46" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">2</text>
+      <rect x="64" y="0" width="28" height="28" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+      <text x="78" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">5</text>
+      
+      <!-- Complete block -->
+      <rect x="100" y="0" width="28" height="28" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="114" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#f97316">1</text>
+      <rect x="132" y="0" width="28" height="28" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="146" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#f97316">9</text>
+      <rect x="164" y="0" width="28" height="28" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="178" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#f97316">4</text>
+      
+      <!-- Partial right -->
+      <rect x="200" y="0" width="28" height="28" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+      <text x="214" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">3</text>
+      <rect x="232" y="0" width="28" height="28" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+      <text x="246" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">8</text>
+      
+      <rect x="264" y="0" width="28" height="28" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+      <text x="278" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">6</text>
+    </g>
+    
+    <text x="0" y="75" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">▶ Left partial: min(2,5) = 2</text>
+    <text x="0" y="95" font-family="Courier New, monospace" font-size="11" fill="#f97316">▶ Complete Block 1: block_min[1] = 1</text>
+    <text x="0" y="115" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">▶ Right partial: min(3,8) = 3</text>
+    
+    <rect x="0" y="130" width="200" height="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="100" y="150" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">Result: min(2,1,3) = 1</text>
+  </g>
+  
+  <!-- Update difference from sum -->
+  <text x="50" y="320" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Update Difference: Min vs Sum</text>
+  
+  <g transform="translate(50, 345)">
+    <rect x="0" y="0" width="380" height="90" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+    
+    <text x="15" y="25" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ef4444">⚠ Min/Max Update = O(√n)</text>
+    <text x="15" y="50" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Must recompute entire block minimum</text>
+    <text x="15" y="70" font-family="Courier New, monospace" font-size="11" fill="#888888">block_min[b] = min(arr[start:end])</text>
+  </g>
+  
+  <g transform="translate(470, 345)">
+    <rect x="0" y="0" width="380" height="90" fill="none" stroke="#4ade80" stroke-width="1.5"/>
+    
+    <text x="15" y="25" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">✓ Sum Update = O(1)</text>
+    <text x="15" y="50" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Just add the difference</text>
+    <text x="15" y="70" font-family="Courier New, monospace" font-size="11" fill="#888888">blocks[b] += new_val - old_val</text>
+  </g>
+  
+  <!-- Complexity -->
+  <rect x="50" y="460" width="800" height="70" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="450" y="490" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">Range Min Query Complexity</text>
+  <text x="450" y="515" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Build: O(n) | Query: O(√n) | Update: O(√n) | Space: O(n)</text>
+</svg>
+

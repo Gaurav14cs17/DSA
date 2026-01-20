@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <rect width="900" height="500" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Courier New, monospace" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">2D Segment Tree</text>
+  <text x="450" y="58" font-family="Courier New, monospace" font-size="14" fill="#888888" text-anchor="middle">Tree of Trees • O(log m · log n) per operation</text>
+
+  <!-- Structure Visualization -->
+  <text x="250" y="95" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">STRUCTURE: TREE OF TREES</text>
+  
+  <rect x="50" y="115" width="400" height="200" fill="#0f0f23" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Outer tree (rows) -->
+  <text x="70" y="145" font-family="Courier New, monospace" font-size="10" fill="#888888">Outer: Segment tree on ROWS</text>
+  
+  <rect x="190" y="155" width="70" height="30" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="225" y="175" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">rows[0,m)</text>
+  
+  <line x1="200" y1="185" x2="140" y2="210" stroke="#a78bfa" stroke-width="2"/>
+  <line x1="250" y1="185" x2="310" y2="210" stroke="#a78bfa" stroke-width="2"/>
+  
+  <!-- Row segments -->
+  <rect x="100" y="215" width="70" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="135" y="232" font-family="Courier New, monospace" font-size="9" fill="#ffffff" text-anchor="middle">[0,m/2)</text>
+  
+  <rect x="280" y="215" width="70" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="315" y="232" font-family="Courier New, monospace" font-size="9" fill="#ffffff" text-anchor="middle">[m/2,m)</text>
+  
+  <!-- Inner trees (columns) - shown for one node -->
+  <text x="135" y="260" font-family="Courier New, monospace" font-size="8" fill="#f97316" text-anchor="middle">↓ each has inner tree</text>
+  
+  <rect x="90" y="270" width="90" height="35" fill="#0f0f23" stroke="#f97316" stroke-width="1"/>
+  <rect x="105" y="278" width="30" height="15" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+  <text x="120" y="289" font-family="Courier New, monospace" font-size="6" fill="#ffffff" text-anchor="middle">cols</text>
+  <rect x="140" y="278" width="30" height="15" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+
+  <!-- Query explanation -->
+  <text x="680" y="95" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">QUERY RECTANGLE</text>
+  
+  <rect x="480" y="115" width="380" height="200" fill="#0f0f23" stroke="#4ade80" stroke-width="2"/>
+  
+  <!-- Matrix grid -->
+  <rect x="520" y="140" width="160" height="120" fill="none" stroke="#3b82f6" stroke-width="1"/>
+  
+  <!-- Grid lines -->
+  <line x1="560" y1="140" x2="560" y2="260" stroke="#3b82f6" stroke-width="1"/>
+  <line x1="600" y1="140" x2="600" y2="260" stroke="#3b82f6" stroke-width="1"/>
+  <line x1="640" y1="140" x2="640" y2="260" stroke="#3b82f6" stroke-width="1"/>
+  <line x1="520" y1="170" x2="680" y2="170" stroke="#3b82f6" stroke-width="1"/>
+  <line x1="520" y1="200" x2="680" y2="200" stroke="#3b82f6" stroke-width="1"/>
+  <line x1="520" y1="230" x2="680" y2="230" stroke="#3b82f6" stroke-width="1"/>
+  
+  <!-- Query region -->
+  <rect x="560" y="170" width="80" height="60" fill="#0f2f1f" fill-opacity="0.5" stroke="#4ade80" stroke-width="2"/>
+  
+  <text x="600" y="295" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">query(r1,c1,r2,c2)</text>
+  
+  <!-- Steps -->
+  <text x="720" y="160" font-family="Courier New, monospace" font-size="10" fill="#ffffff">1. Query outer tree</text>
+  <text x="730" y="175" font-family="Courier New, monospace" font-size="9" fill="#888888">for row range</text>
+  
+  <text x="720" y="200" font-family="Courier New, monospace" font-size="10" fill="#ffffff">2. At each node,</text>
+  <text x="730" y="215" font-family="Courier New, monospace" font-size="9" fill="#888888">query inner tree</text>
+  <text x="730" y="230" font-family="Courier New, monospace" font-size="9" fill="#888888">for col range</text>
+  
+  <text x="720" y="260" font-family="Courier New, monospace" font-size="10" fill="#60a5fa">O(log m · log n)</text>
+
+  <!-- Complexity -->
+  <rect x="50" y="335" width="400" height="145" fill="#0f0f23" stroke="#f97316" stroke-width="2"/>
+  <text x="250" y="360" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560" text-anchor="middle">COMPLEXITY</text>
+  
+  <text x="70" y="390" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">Build: O(m·n·log m·log n)</text>
+  <text x="70" y="415" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">Query: O(log m · log n)</text>
+  <text x="70" y="440" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">Update: O(log m · log n)</text>
+  <text x="70" y="470" font-family="Courier New, monospace" font-size="11" fill="#ef4444">Space: O(m·n·log m·log n) - Very high!</text>
+
+  <!-- Problems -->
+  <rect x="480" y="335" width="380" height="145" fill="#0f0f23" stroke="#a78bfa" stroke-width="2"/>
+  <text x="670" y="360" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560" text-anchor="middle">PROBLEMS</text>
+  
+  <text x="500" y="390" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• LC 308: Range Sum Query 2D - Mutable</text>
+  <text x="500" y="415" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• LC 850: Rectangle Area II</text>
+  <text x="500" y="440" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• 2D Range Min/Max queries</text>
+  <text x="500" y="470" font-family="Courier New, monospace" font-size="10" fill="#888888">Alternative: 2D BIT (simpler, less space for sums)</text>
+</svg>

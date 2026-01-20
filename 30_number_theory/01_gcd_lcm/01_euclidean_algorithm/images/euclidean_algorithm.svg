@@ -1,0 +1,51 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Euclidean Algorithm: gcd(252, 105)</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">gcd(a, b) = gcd(b, a mod b)</text>
+  
+  <!-- Step boxes -->
+  <!-- Step 1 -->
+  <rect x="50" y="100" width="800" height="70" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="70" y="125" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 1</text>
+  <text x="70" y="150" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">gcd(252, 105) → 252 = 2 × 105 + 42</text>
+  <text x="550" y="150" font-family="Courier New, monospace" font-size="14" fill="#4ade80">→ gcd(105, 42)</text>
+  
+  <!-- Arrow 1 -->
+  <path d="M450 170 L450 190" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 2 -->
+  <rect x="50" y="200" width="800" height="70" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="70" y="225" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 2</text>
+  <text x="70" y="250" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">gcd(105, 42) → 105 = 2 × 42 + 21</text>
+  <text x="550" y="250" font-family="Courier New, monospace" font-size="14" fill="#4ade80">→ gcd(42, 21)</text>
+  
+  <!-- Arrow 2 -->
+  <path d="M450 270 L450 290" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 3 - Final -->
+  <rect x="50" y="300" width="800" height="70" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="70" y="325" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 3</text>
+  <text x="70" y="350" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">gcd(42, 21) → 42 = 2 × 21 + 0</text>
+  <text x="550" y="350" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">→ gcd(21, 0) = 21 ✓</text>
+  
+  <!-- Result Box -->
+  <rect x="250" y="400" width="400" height="80" rx="10" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="450" y="440" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#888888">RESULT</text>
+  <text x="450" y="465" text-anchor="middle" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#4ade80">gcd(252, 105) = 21</text>
+  
+  <!-- Complexity -->
+  <text x="450" y="520" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time Complexity: O(log min(a, b))</text>
+  <text x="450" y="540" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Space Complexity: O(1) iterative | O(log n) recursive</text>
+  
+  <!-- Verification -->
+  <text x="450" y="575" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Verify: 252 = 21 × 12, 105 = 21 × 5, gcd(12, 5) = 1</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+</svg>

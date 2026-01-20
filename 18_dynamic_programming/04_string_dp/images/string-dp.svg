@@ -1,0 +1,193 @@
+<svg viewBox="0 0 950 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">String Dynamic Programming</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Edit Distance &amp; Palindrome Patterns</text>
+  
+  <!-- Section: Edit Distance -->
+  <text x="50" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Edit Distance: "horse" → "ros"</text>
+  
+  <!-- Edit Distance Table -->
+  <g transform="translate(50, 125)">
+    <!-- Column headers -->
+    <text x="55" y="-5" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">""</text>
+    <text x="100" y="-5" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">r</text>
+    <text x="145" y="-5" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">o</text>
+    <text x="190" y="-5" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">s</text>
+    
+    <!-- Row "" -->
+    <text x="15" y="25" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="end">""</text>
+    <rect x="35" y="5" width="40" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="55" y="28" font-family="Courier New, monospace" font-size="14" fill="#4ade80" text-anchor="middle">0</text>
+    <rect x="80" y="5" width="40" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="100" y="28" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+    <rect x="125" y="5" width="40" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="145" y="28" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">2</text>
+    <rect x="170" y="5" width="40" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="190" y="28" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">3</text>
+    
+    <!-- Row h -->
+    <text x="15" y="65" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="end">h</text>
+    <rect x="35" y="45" width="40" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="55" y="68" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+    <rect x="80" y="45" width="40" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="100" y="68" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+    <rect x="125" y="45" width="40" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="145" y="68" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">2</text>
+    <rect x="170" y="45" width="40" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="190" y="68" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">3</text>
+    
+    <!-- Row o -->
+    <text x="15" y="105" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="end">o</text>
+    <rect x="35" y="85" width="40" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="55" y="108" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">2</text>
+    <rect x="80" y="85" width="40" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="100" y="108" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">2</text>
+    <rect x="125" y="85" width="40" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="145" y="108" font-family="Courier New, monospace" font-size="14" fill="#4ade80" text-anchor="middle">1</text>
+    <rect x="170" y="85" width="40" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="190" y="108" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">2</text>
+    
+    <!-- Row r -->
+    <text x="15" y="145" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="end">r</text>
+    <rect x="35" y="125" width="40" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="55" y="148" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">3</text>
+    <rect x="80" y="125" width="40" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="100" y="148" font-family="Courier New, monospace" font-size="14" fill="#4ade80" text-anchor="middle">2</text>
+    <rect x="125" y="125" width="40" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="145" y="148" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">2</text>
+    <rect x="170" y="125" width="40" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="190" y="148" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">2</text>
+    
+    <!-- Row s -->
+    <text x="15" y="185" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="end">s</text>
+    <rect x="35" y="165" width="40" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="55" y="188" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">4</text>
+    <rect x="80" y="165" width="40" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="100" y="188" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">3</text>
+    <rect x="125" y="165" width="40" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="145" y="188" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">2</text>
+    <rect x="170" y="165" width="40" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="190" y="188" font-family="Courier New, monospace" font-size="14" fill="#4ade80" text-anchor="middle">2</text>
+    
+    <!-- Row e -->
+    <text x="15" y="225" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="end">e</text>
+    <rect x="35" y="205" width="40" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="55" y="228" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">5</text>
+    <rect x="80" y="205" width="40" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="100" y="228" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">4</text>
+    <rect x="125" y="205" width="40" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="145" y="228" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">3</text>
+    <rect x="170" y="205" width="40" height="35" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="190" y="228" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316" text-anchor="middle">3</text>
+  </g>
+  
+  <text x="265" y="370" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Result: 3 operations</text>
+  
+  <!-- Operations legend -->
+  <g transform="translate(50, 390)">
+    <rect x="0" y="0" width="200" height="80" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="100" y="25" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Operations</text>
+    <text x="100" y="45" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">Insert: dp[i][j-1] + 1</text>
+    <text x="100" y="60" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">Delete: dp[i-1][j] + 1</text>
+    <text x="100" y="75" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">Replace: dp[i-1][j-1] + 1</text>
+  </g>
+  
+  <!-- Recurrence -->
+  <rect x="270" y="390" width="200" height="80" rx="5" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="370" y="415" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">If s[i] == t[j]</text>
+  <text x="370" y="440" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="middle">dp[i][j] = dp[i-1][j-1]</text>
+  <text x="370" y="460" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">No operation needed</text>
+  
+  <!-- Section: Palindrome -->
+  <text x="500" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Longest Palindromic Substring</text>
+  <text x="500" y="125" font-family="Courier New, monospace" font-size="12" fill="#888888">String: "babad"</text>
+  
+  <!-- Expand around center visualization -->
+  <g transform="translate(500, 150)">
+    <!-- String characters -->
+    <rect x="0" y="0" width="50" height="50" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="25" y="35" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">b</text>
+    
+    <rect x="60" y="0" width="50" height="50" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="85" y="35" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#4ade80" text-anchor="middle">a</text>
+    
+    <rect x="120" y="0" width="50" height="50" rx="5" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="145" y="35" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#f97316" text-anchor="middle">b</text>
+    
+    <rect x="180" y="0" width="50" height="50" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="205" y="35" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#4ade80" text-anchor="middle">a</text>
+    
+    <rect x="240" y="0" width="50" height="50" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="265" y="35" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">d</text>
+    
+    <!-- Center indicator -->
+    <text x="145" y="-10" font-family="Courier New, monospace" font-size="11" fill="#f97316" text-anchor="middle">center</text>
+    
+    <!-- Expand arrows -->
+    <defs>
+      <marker id="arrowL" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto">
+        <polygon points="8 0, 0 3, 8 6" fill="#4ade80"/>
+      </marker>
+      <marker id="arrowR" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#4ade80"/>
+      </marker>
+    </defs>
+    <path d="M 85 60 L 85 75 L 60 75" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowL)"/>
+    <path d="M 205 60 L 205 75 L 230 75" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowR)"/>
+    <text x="145" y="95" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">expand while s[l]==s[r]</text>
+  </g>
+  
+  <text x="645" y="280" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Result: "bab" or "aba"</text>
+  
+  <!-- Palindrome DP table concept -->
+  <text x="500" y="310" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Palindrome DP: dp[i][j] = is s[i..j] palindrome?</text>
+  
+  <g transform="translate(500, 330)">
+    <!-- Small DP visualization -->
+    <rect x="0" y="0" width="40" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="20" y="22" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">T</text>
+    
+    <rect x="45" y="0" width="40" height="35" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="65" y="22" font-family="Courier New, monospace" font-size="11" fill="#ef4444" text-anchor="middle">F</text>
+    
+    <rect x="90" y="0" width="40" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="110" y="22" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">T</text>
+    
+    <rect x="135" y="0" width="40" height="35" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="155" y="22" font-family="Courier New, monospace" font-size="11" fill="#ef4444" text-anchor="middle">F</text>
+    
+    <rect x="180" y="0" width="40" height="35" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="200" y="22" font-family="Courier New, monospace" font-size="11" fill="#ef4444" text-anchor="middle">F</text>
+    
+    <text x="110" y="55" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">dp[i][j] = s[i]==s[j] &amp;&amp; dp[i+1][j-1]</text>
+  </g>
+  
+  <!-- Pattern boxes -->
+  <text x="50" y="510" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">String DP Patterns</text>
+  
+  <rect x="50" y="530" width="200" height="80" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="150" y="555" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Edit Distance</text>
+  <text x="150" y="575" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">min(ins, del, rep)</text>
+  <text x="150" y="595" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">O(mn) time, O(n) space</text>
+  
+  <rect x="270" y="530" width="200" height="80" rx="5" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="370" y="555" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">LCS</text>
+  <text x="370" y="575" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="middle">Match: dp[i-1][j-1]+1</text>
+  <text x="370" y="595" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">O(mn) time, O(mn) space</text>
+  
+  <rect x="490" y="530" width="200" height="80" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="590" y="555" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Palindrome</text>
+  <text x="590" y="575" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">Expand or Interval DP</text>
+  <text x="590" y="595" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">O(n²) time, O(1) expand</text>
+  
+  <rect x="710" y="530" width="200" height="80" rx="5" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="810" y="555" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Regex Matching</text>
+  <text x="810" y="575" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">Handle . and *</text>
+  <text x="810" y="595" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">O(mn) time, O(mn) space</text>
+  
+  <!-- Result summary -->
+  <rect x="275" y="640" width="400" height="40" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="475" y="665" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">Key: Compare chars at positions (i,j)</text>
+</svg>

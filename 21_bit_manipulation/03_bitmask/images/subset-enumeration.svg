@@ -1,0 +1,108 @@
+<svg viewBox="0 0 950 650" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Subset Enumeration with Bitmask</text>
+  <text x="475" y="68" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Represent subsets as integers: 2^n total subsets</text>
+  
+  <!-- Key Concept -->
+  <rect x="200" y="90" width="550" height="70" rx="8" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="475" y="118" text-anchor="middle" fill="#f97316" font-size="14" font-weight="bold" font-family="Courier New, monospace">KEY CONCEPT</text>
+  <text x="475" y="145" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Courier New, monospace">Each bit position represents an element: bit i = 1 means element i is included</text>
+  
+  <!-- Example Set -->
+  <text x="475" y="195" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">EXAMPLE: Set = {A, B, C} (n = 3 elements)</text>
+  
+  <!-- All 8 subsets visualization -->
+  <rect x="50" y="220" width="850" height="310" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="475" y="250" text-anchor="middle" fill="#3b82f6" font-size="14" font-weight="bold" font-family="Courier New, monospace">ALL 2³ = 8 SUBSETS</text>
+  
+  <!-- Header -->
+  <text x="100" y="285" fill="#888888" font-size="12" font-weight="bold" font-family="Courier New, monospace">mask</text>
+  <text x="180" y="285" fill="#888888" font-size="12" font-weight="bold" font-family="Courier New, monospace">binary</text>
+  <text x="300" y="285" fill="#888888" font-size="12" font-weight="bold" font-family="Courier New, monospace">C B A</text>
+  <text x="430" y="285" fill="#888888" font-size="12" font-weight="bold" font-family="Courier New, monospace">subset</text>
+  
+  <text x="550" y="285" fill="#888888" font-size="12" font-weight="bold" font-family="Courier New, monospace">mask</text>
+  <text x="630" y="285" fill="#888888" font-size="12" font-weight="bold" font-family="Courier New, monospace">binary</text>
+  <text x="750" y="285" fill="#888888" font-size="12" font-weight="bold" font-family="Courier New, monospace">C B A</text>
+  <text x="850" y="285" fill="#888888" font-size="12" font-weight="bold" font-family="Courier New, monospace">subset</text>
+  
+  <line x1="70" y1="295" x2="480" y2="295" stroke="#3b82f6" stroke-width="1"/>
+  <line x1="520" y1="295" x2="920" y2="295" stroke="#3b82f6" stroke-width="1"/>
+  
+  <!-- Row 0 -->
+  <text x="105" y="320" fill="#ffffff" font-size="13" font-family="Courier New, monospace">0</text>
+  <text x="180" y="320" fill="#ffffff" font-size="13" font-family="Courier New, monospace">000</text>
+  <text x="300" y="320" fill="#ef4444" font-size="13" font-family="Courier New, monospace">○ ○ ○</text>
+  <text x="430" y="320" fill="#4ade80" font-size="13" font-weight="bold" font-family="Courier New, monospace">{}</text>
+  
+  <!-- Row 1 -->
+  <text x="105" y="350" fill="#ffffff" font-size="13" font-family="Courier New, monospace">1</text>
+  <text x="180" y="350" fill="#ffffff" font-size="13" font-family="Courier New, monospace">001</text>
+  <text x="300" y="350" fill="#ffffff" font-size="13" font-family="Courier New, monospace">○ ○ </text>
+  <text x="335" y="350" fill="#4ade80" font-size="13" font-family="Courier New, monospace">●</text>
+  <text x="430" y="350" fill="#4ade80" font-size="13" font-weight="bold" font-family="Courier New, monospace">{A}</text>
+  
+  <!-- Row 2 -->
+  <text x="105" y="380" fill="#ffffff" font-size="13" font-family="Courier New, monospace">2</text>
+  <text x="180" y="380" fill="#ffffff" font-size="13" font-family="Courier New, monospace">010</text>
+  <text x="300" y="380" fill="#ffffff" font-size="13" font-family="Courier New, monospace">○ </text>
+  <text x="317" y="380" fill="#4ade80" font-size="13" font-family="Courier New, monospace">●</text>
+  <text x="335" y="380" fill="#ffffff" font-size="13" font-family="Courier New, monospace"> ○</text>
+  <text x="430" y="380" fill="#4ade80" font-size="13" font-weight="bold" font-family="Courier New, monospace">{B}</text>
+  
+  <!-- Row 3 -->
+  <text x="105" y="410" fill="#ffffff" font-size="13" font-family="Courier New, monospace">3</text>
+  <text x="180" y="410" fill="#ffffff" font-size="13" font-family="Courier New, monospace">011</text>
+  <text x="300" y="410" fill="#ffffff" font-size="13" font-family="Courier New, monospace">○ </text>
+  <text x="317" y="410" fill="#4ade80" font-size="13" font-family="Courier New, monospace">● ●</text>
+  <text x="430" y="410" fill="#4ade80" font-size="13" font-weight="bold" font-family="Courier New, monospace">{A,B}</text>
+  
+  <!-- Row 4 -->
+  <text x="555" y="320" fill="#ffffff" font-size="13" font-family="Courier New, monospace">4</text>
+  <text x="630" y="320" fill="#ffffff" font-size="13" font-family="Courier New, monospace">100</text>
+  <text x="750" y="320" fill="#4ade80" font-size="13" font-family="Courier New, monospace">●</text>
+  <text x="767" y="320" fill="#ffffff" font-size="13" font-family="Courier New, monospace"> ○ ○</text>
+  <text x="850" y="320" fill="#4ade80" font-size="13" font-weight="bold" font-family="Courier New, monospace">{C}</text>
+  
+  <!-- Row 5 -->
+  <text x="555" y="350" fill="#ffffff" font-size="13" font-family="Courier New, monospace">5</text>
+  <text x="630" y="350" fill="#ffffff" font-size="13" font-family="Courier New, monospace">101</text>
+  <text x="750" y="350" fill="#4ade80" font-size="13" font-family="Courier New, monospace">●</text>
+  <text x="767" y="350" fill="#ffffff" font-size="13" font-family="Courier New, monospace"> ○ </text>
+  <text x="785" y="350" fill="#4ade80" font-size="13" font-family="Courier New, monospace">●</text>
+  <text x="850" y="350" fill="#4ade80" font-size="13" font-weight="bold" font-family="Courier New, monospace">{A,C}</text>
+  
+  <!-- Row 6 -->
+  <text x="555" y="380" fill="#ffffff" font-size="13" font-family="Courier New, monospace">6</text>
+  <text x="630" y="380" fill="#ffffff" font-size="13" font-family="Courier New, monospace">110</text>
+  <text x="750" y="380" fill="#4ade80" font-size="13" font-family="Courier New, monospace">● ●</text>
+  <text x="785" y="380" fill="#ffffff" font-size="13" font-family="Courier New, monospace"> ○</text>
+  <text x="850" y="380" fill="#4ade80" font-size="13" font-weight="bold" font-family="Courier New, monospace">{B,C}</text>
+  
+  <!-- Row 7 -->
+  <text x="555" y="410" fill="#ffffff" font-size="13" font-family="Courier New, monospace">7</text>
+  <text x="630" y="410" fill="#ffffff" font-size="13" font-family="Courier New, monospace">111</text>
+  <text x="750" y="410" fill="#4ade80" font-size="13" font-family="Courier New, monospace">● ● ●</text>
+  <text x="850" y="410" fill="#4ade80" font-size="13" font-weight="bold" font-family="Courier New, monospace">{A,B,C}</text>
+  
+  <!-- Algorithm -->
+  <rect x="70" y="440" width="360" height="80" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="250" y="465" text-anchor="middle" fill="#a78bfa" font-size="12" font-weight="bold" font-family="Courier New, monospace">ENUMERATION ALGORITHM</text>
+  <text x="90" y="490" fill="#ffffff" font-size="11" font-family="Courier New, monospace">for mask in range(1 &lt;&lt; n):</text>
+  <text x="90" y="510" fill="#4ade80" font-size="11" font-family="Courier New, monospace">    # mask represents one subset</text>
+  
+  <!-- Check element -->
+  <rect x="470" y="440" width="410" height="80" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="675" y="465" text-anchor="middle" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">CHECK IF ELEMENT i IS IN SUBSET</text>
+  <text x="490" y="490" fill="#ffffff" font-size="11" font-family="Courier New, monospace">if mask &amp; (1 &lt;&lt; i):</text>
+  <text x="490" y="510" fill="#888888" font-size="11" font-family="Courier New, monospace">    # element i is included</text>
+  
+  <!-- Complexity -->
+  <rect x="200" y="545" width="550" height="90" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="475" y="575" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">COMPLEXITY</text>
+  <text x="475" y="605" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Time: O(n × 2ⁿ) — iterate n bits for each of 2ⁿ masks</text>
+  <text x="475" y="625" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">Safe for n ≤ 20 (2²⁰ ≈ 1 million)</text>
+</svg>
+

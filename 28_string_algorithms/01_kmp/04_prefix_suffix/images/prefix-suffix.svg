@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 500">
+  <rect width="850" height="500" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="425" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Prefix-Suffix Matching</text>
+  <text x="425" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Longest Happy Prefix • Border Analysis</text>
+  
+  <!-- Problem Definition -->
+  <rect x="40" y="80" width="350" height="70" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5" rx="5"/>
+  <text x="60" y="105" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa">Longest Happy Prefix</text>
+  <text x="60" y="125" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Find longest prefix that is also suffix</text>
+  <text x="60" y="143" font-family="Courier New, monospace" font-size="10" fill="#888888">(but not the entire string)</text>
+  
+  <!-- Example 1 -->
+  <text x="40" y="180" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Example: "level"</text>
+  
+  <g transform="translate(40, 205)">
+    <rect x="0" y="0" width="35" height="28" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="17" y="19" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#4ade80">l</text>
+    <rect x="37" y="0" width="35" height="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="54" y="19" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">e</text>
+    <rect x="74" y="0" width="35" height="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="91" y="19" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">v</text>
+    <rect x="111" y="0" width="35" height="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="128" y="19" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">e</text>
+    <rect x="148" y="0" width="35" height="28" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="165" y="19" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#4ade80">l</text>
+    
+    <text x="200" y="19" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Answer: "l"</text>
+  </g>
+  
+  <g transform="translate(40, 250)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Prefix "l" = Suffix "l" → π[4] = 1</text>
+  </g>
+  
+  <!-- Example 2 -->
+  <text x="40" y="290" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Example: "ababab"</text>
+  
+  <g transform="translate(40, 315)">
+    <rect x="0" y="0" width="30" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="15" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#4ade80">a</text>
+    <rect x="32" y="0" width="30" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="47" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#4ade80">b</text>
+    <rect x="64" y="0" width="30" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="79" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#4ade80">a</text>
+    <rect x="96" y="0" width="30" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="111" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#4ade80">b</text>
+    <rect x="128" y="0" width="30" height="25" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="143" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#f97316">a</text>
+    <rect x="160" y="0" width="30" height="25" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="175" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#f97316">b</text>
+    
+    <text x="210" y="17" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Answer: "abab"</text>
+  </g>
+  
+  <g transform="translate(40, 355)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Prefix "abab" = Suffix "abab" → π[5] = 4</text>
+  </g>
+  
+  <!-- KMP Solution -->
+  <rect x="450" y="80" width="360" height="150" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+  <text x="470" y="105" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff">KMP Solution</text>
+  <text x="470" y="130" font-family="Courier New, monospace" font-size="11" fill="#4ade80">1. Compute failure function π</text>
+  <text x="470" y="150" font-family="Courier New, monospace" font-size="11" fill="#4ade80">2. Answer = s[0..π[n-1]-1]</text>
+  <text x="470" y="175" font-family="Courier New, monospace" font-size="11" fill="#888888">π[n-1] gives length of longest</text>
+  <text x="470" y="193" font-family="Courier New, monospace" font-size="11" fill="#888888">proper prefix = suffix</text>
+  <text x="470" y="218" font-family="Courier New, monospace" font-size="12" fill="#f97316">Time: O(n) | Space: O(n)</text>
+  
+  <!-- Border Chain Visualization -->
+  <text x="450" y="260" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">All Borders of "ababab"</text>
+  
+  <g transform="translate(450, 285)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Following π chain:</text>
+    <text x="0" y="22" font-family="Courier New, monospace" font-size="11" fill="#4ade80">π[5] = 4 → "abab"</text>
+    <text x="0" y="40" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">π[3] = 2 → "ab"</text>
+    <text x="0" y="58" font-family="Courier New, monospace" font-size="11" fill="#888888">π[1] = 0 → (stop)</text>
+    <text x="0" y="82" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Borders: ["abab", "ab"]</text>
+  </g>
+  
+  <!-- Applications -->
+  <text x="40" y="410" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Applications</text>
+  
+  <g transform="translate(40, 430)">
+    <rect x="0" y="0" width="180" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="3"/>
+    <text x="15" y="20" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Longest Happy Prefix</text>
+    <text x="15" y="35" font-family="Courier New, monospace" font-size="10" fill="#4ade80">LeetCode 1392</text>
+    
+    <rect x="200" y="0" width="180" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="3"/>
+    <text x="215" y="20" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Shortest Palindrome</text>
+    <text x="215" y="35" font-family="Courier New, monospace" font-size="10" fill="#4ade80">LeetCode 214</text>
+    
+    <rect x="400" y="0" width="180" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="3"/>
+    <text x="415" y="20" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Repeated Pattern Check</text>
+    <text x="415" y="35" font-family="Courier New, monospace" font-size="10" fill="#4ade80">LeetCode 459</text>
+  </g>
+</svg>
+

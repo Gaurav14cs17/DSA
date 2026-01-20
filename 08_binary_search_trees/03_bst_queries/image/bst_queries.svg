@@ -1,0 +1,242 @@
+<svg viewBox="0 0 1000 800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="800" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">BST Queries</text>
+  <text x="500" y="65" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Kth Smallest • LCA • Successor • Range Sum • Iterator</text>
+  
+  <!-- ========== KTH SMALLEST SECTION ========== -->
+  <text x="165" y="100" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">🔢 Kth SMALLEST (k=3)</text>
+  
+  <!-- Kth Smallest Tree -->
+  <line x1="165" y1="140" x2="105" y2="195" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="165" y1="140" x2="225" y2="195" stroke="#888888" stroke-width="1" stroke-dasharray="3"/>
+  <line x1="105" y1="225" x2="65" y2="280" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="105" y1="225" x2="145" y2="280" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Root: 20 -->
+  <circle cx="165" cy="130" r="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="165" y="136" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">20</text>
+  
+  <!-- Left: 10 -->
+  <circle cx="105" cy="210" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="105" y="216" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">10</text>
+  
+  <!-- Right: 30 (not visited) -->
+  <circle cx="225" cy="210" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3"/>
+  <text x="225" y="216" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">30</text>
+  
+  <!-- 10's left: 5 -->
+  <circle cx="65" cy="290" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="65" y="296" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Courier New, monospace">5</text>
+  <text x="65" y="320" text-anchor="middle" fill="#f97316" font-size="10" font-family="Courier New, monospace">k=1</text>
+  
+  <!-- 10's right: 15 -->
+  <circle cx="145" cy="290" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="145" y="296" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">15</text>
+  <text x="145" y="320" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="bold" font-family="Courier New, monospace">k=3 ✓</text>
+  
+  <!-- 10 count -->
+  <text x="105" y="240" text-anchor="middle" fill="#f97316" font-size="10" font-family="Courier New, monospace">k=2</text>
+  
+  <!-- Inorder sequence -->
+  <text x="165" y="355" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">Inorder: 5, 10, 15, 20, 30</text>
+  <text x="165" y="375" text-anchor="middle" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">Stop at k=3 → O(h+k)</text>
+  
+  <!-- ========== LCA SECTION ========== -->
+  <text x="500" y="100" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">🎯 LCA(5, 15)</text>
+  
+  <!-- LCA Tree -->
+  <line x1="500" y1="140" x2="430" y2="195" stroke="#f97316" stroke-width="2"/>
+  <line x1="500" y1="140" x2="570" y2="195" stroke="#888888" stroke-width="1" stroke-dasharray="3"/>
+  <line x1="430" y1="225" x2="390" y2="280" stroke="#f97316" stroke-width="2"/>
+  <line x1="430" y1="225" x2="470" y2="280" stroke="#f97316" stroke-width="2"/>
+  
+  <!-- Root: 20 -->
+  <circle cx="500" cy="130" r="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="500" y="136" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">20</text>
+  <text x="520" y="120" fill="#888888" font-size="9" font-family="Courier New, monospace">5,15 &lt; 20</text>
+  
+  <!-- Left: 10 (LCA!) -->
+  <circle cx="430" cy="210" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="430" y="216" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">10</text>
+  <text x="430" y="240" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="bold" font-family="Courier New, monospace">SPLIT!</text>
+  
+  <!-- Right: 30 (not visited) -->
+  <circle cx="570" cy="210" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3"/>
+  <text x="570" y="216" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">30</text>
+  
+  <!-- 10's children -->
+  <circle cx="390" cy="290" r="18" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="390" y="296" text-anchor="middle" fill="#a78bfa" font-size="14" font-family="Courier New, monospace">5</text>
+  <text x="390" y="320" text-anchor="middle" fill="#a78bfa" font-size="10" font-family="Courier New, monospace">p</text>
+  
+  <circle cx="470" cy="290" r="18" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="470" y="296" text-anchor="middle" fill="#a78bfa" font-size="14" font-family="Courier New, monospace">15</text>
+  <text x="470" y="320" text-anchor="middle" fill="#a78bfa" font-size="10" font-family="Courier New, monospace">q</text>
+  
+  <!-- LCA explanation -->
+  <text x="500" y="355" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">5 &lt; 10 AND 15 &gt; 10</text>
+  <text x="500" y="375" text-anchor="middle" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">LCA = 10 → O(h)</text>
+  
+  <!-- ========== SUCCESSOR SECTION ========== -->
+  <text x="835" y="100" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">➡️ SUCCESSOR(10)</text>
+  
+  <!-- Successor Tree -->
+  <line x1="835" y1="140" x2="775" y2="195" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="835" y1="140" x2="895" y2="195" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="775" y1="225" x2="745" y2="280" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="775" y1="225" x2="805" y2="280" stroke="#f97316" stroke-width="3"/>
+  
+  <!-- Root: 20 -->
+  <circle cx="835" cy="130" r="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="835" y="136" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">20</text>
+  
+  <!-- Left: 10 (target) -->
+  <circle cx="775" cy="210" r="20" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="775" y="216" text-anchor="middle" fill="#f97316" font-size="14" font-weight="bold" font-family="Courier New, monospace">10</text>
+  
+  <!-- Right: 30 -->
+  <circle cx="895" cy="210" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="895" y="216" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Courier New, monospace">30</text>
+  
+  <!-- 10's left: 5 -->
+  <circle cx="745" cy="290" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="745" y="296" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Courier New, monospace">5</text>
+  
+  <!-- 10's right: 15 (successor!) -->
+  <circle cx="805" cy="290" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="805" y="296" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">15</text>
+  
+  <!-- Arrow from 10 to 15 -->
+  <path d="M790 220 Q810 250 805 275" fill="none" stroke="#4ade80" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <text x="835" y="340" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">Has right → min(right)</text>
+  <text x="835" y="360" text-anchor="middle" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">Successor = 15</text>
+  
+  <!-- ========== RANGE SUM SECTION ========== -->
+  <rect x="30" y="400" width="300" height="180" rx="8" fill="#1e1e2e" stroke="#a78bfa" stroke-width="2"/>
+  <text x="180" y="425" text-anchor="middle" fill="#a78bfa" font-size="14" font-weight="bold" font-family="Courier New, monospace">📊 RANGE SUM [10, 25]</text>
+  
+  <!-- Range Sum Tree -->
+  <line x1="180" y1="465" x2="120" y2="510" stroke="#4ade80" stroke-width="2"/>
+  <line x1="180" y1="465" x2="240" y2="510" stroke="#888888" stroke-width="1" stroke-dasharray="3"/>
+  <line x1="120" y1="535" x2="90" y2="560" stroke="#888888" stroke-width="1" stroke-dasharray="3"/>
+  <line x1="120" y1="535" x2="150" y2="560" stroke="#4ade80" stroke-width="2"/>
+  
+  <!-- Root: 20 (in range) -->
+  <circle cx="180" cy="455" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="180" y="460" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">20</text>
+  
+  <!-- Left: 10 (in range) -->
+  <circle cx="120" cy="520" r="16" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="120" y="525" text-anchor="middle" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">10</text>
+  
+  <!-- Right: 30 (pruned) -->
+  <circle cx="240" cy="520" r="16" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3"/>
+  <text x="240" y="525" text-anchor="middle" fill="#888888" font-size="12" font-family="Courier New, monospace">30</text>
+  <text x="240" y="545" text-anchor="middle" fill="#ef4444" font-size="9" font-family="Courier New, monospace">&gt;25 prune</text>
+  
+  <!-- 10's left: 5 (pruned) -->
+  <circle cx="90" cy="565" r="12" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3"/>
+  <text x="90" y="569" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">5</text>
+  
+  <!-- 10's right: 15 (in range) -->
+  <circle cx="150" cy="565" r="12" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="150" y="569" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="bold" font-family="Courier New, monospace">15</text>
+  
+  <text x="180" y="560" text-anchor="end" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">Sum = 10+15+20 = 45</text>
+  
+  <!-- ========== GREATER SUM TREE ========== -->
+  <rect x="350" y="400" width="300" height="180" rx="8" fill="#1e1e2e" stroke="#f97316" stroke-width="2"/>
+  <text x="500" y="425" text-anchor="middle" fill="#f97316" font-size="14" font-weight="bold" font-family="Courier New, monospace">💰 GREATER SUM TREE</text>
+  
+  <text x="365" y="450" fill="#888888" font-size="11" font-family="Courier New, monospace">Reverse Inorder: Right→Node→Left</text>
+  
+  <!-- Before -->
+  <text x="400" y="480" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">Before:</text>
+  <circle cx="400" cy="510" r="14" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="400" y="514" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">4</text>
+  <circle cx="370" cy="540" r="12" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="370" y="544" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">1</text>
+  <circle cx="430" cy="540" r="12" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="430" y="544" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">6</text>
+  <line x1="400" y1="522" x2="370" y2="530" stroke="#3b82f6" stroke-width="1"/>
+  <line x1="400" y1="522" x2="430" y2="530" stroke="#3b82f6" stroke-width="1"/>
+  
+  <!-- Arrow -->
+  <text x="500" y="525" text-anchor="middle" fill="#f97316" font-size="20" font-family="Courier New, monospace">→</text>
+  
+  <!-- After -->
+  <text x="580" y="480" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">After:</text>
+  <circle cx="580" cy="510" r="14" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="580" y="514" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="bold" font-family="Courier New, monospace">10</text>
+  <circle cx="550" cy="540" r="12" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="550" y="544" text-anchor="middle" fill="#4ade80" font-size="9" font-weight="bold" font-family="Courier New, monospace">11</text>
+  <circle cx="610" cy="540" r="12" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="610" y="544" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="bold" font-family="Courier New, monospace">6</text>
+  <line x1="580" y1="522" x2="550" y2="530" stroke="#4ade80" stroke-width="1"/>
+  <line x1="580" y1="522" x2="610" y2="530" stroke="#4ade80" stroke-width="1"/>
+  
+  <text x="500" y="570" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">node.val += sum of greater nodes</text>
+  
+  <!-- ========== BST ITERATOR ========== -->
+  <rect x="670" y="400" width="300" height="180" rx="8" fill="#1e1e2e" stroke="#4ade80" stroke-width="2"/>
+  <text x="820" y="425" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">📡 BST ITERATOR</text>
+  
+  <text x="685" y="455" fill="#888888" font-size="11" font-family="Courier New, monospace">Controlled Inorder with Stack</text>
+  
+  <!-- Stack visualization -->
+  <rect x="700" y="470" width="60" height="90" rx="4" fill="#0f0f23" stroke="#a78bfa" stroke-width="1"/>
+  <text x="730" y="485" text-anchor="middle" fill="#a78bfa" font-size="10" font-family="Courier New, monospace">Stack</text>
+  <text x="730" y="505" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">20</text>
+  <text x="730" y="525" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">10</text>
+  <text x="730" y="545" text-anchor="middle" fill="#f97316" font-size="11" font-weight="bold" font-family="Courier New, monospace">5</text>
+  
+  <!-- Operations -->
+  <text x="790" y="485" fill="#4ade80" font-size="11" font-family="Courier New, monospace">next():</text>
+  <text x="800" y="505" fill="#ffffff" font-size="10" font-family="Courier New, monospace">pop → return 5</text>
+  <text x="800" y="525" fill="#ffffff" font-size="10" font-family="Courier New, monospace">push left path</text>
+  
+  <text x="790" y="550" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">hasNext(): O(1)</text>
+  <text x="790" y="570" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">next(): O(1) amortized</text>
+  
+  <!-- ========== ALGORITHMS SECTION ========== -->
+  <rect x="30" y="600" width="450" height="170" rx="8" fill="#1e1e2e" stroke="#3b82f6" stroke-width="1"/>
+  <text x="255" y="625" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">Query Algorithms</text>
+  
+  <text x="45" y="655" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">def kthSmallest(root, k):</text>
+  <text x="55" y="675" fill="#888888" font-size="10" font-family="Courier New, monospace"># Inorder with count, stop at k</text>
+  
+  <text x="45" y="700" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">def lowestCommonAncestor(root, p, q):</text>
+  <text x="55" y="720" fill="#888888" font-size="10" font-family="Courier New, monospace"># If p,q both &lt; node → left</text>
+  <text x="55" y="740" fill="#888888" font-size="10" font-family="Courier New, monospace"># If p,q both &gt; node → right</text>
+  <text x="55" y="760" fill="#4ade80" font-size="10" font-family="Courier New, monospace"># Else → return node (split!)</text>
+  
+  <!-- Complexity Box -->
+  <rect x="500" y="600" width="470" height="170" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="735" y="625" text-anchor="middle" fill="#a78bfa" font-size="14" font-weight="bold" font-family="Courier New, monospace">⏱️ Time Complexity Summary</text>
+  
+  <text x="520" y="655" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Kth Smallest:</text>
+  <text x="700" y="655" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">O(h + k)</text>
+  
+  <text x="520" y="680" fill="#ffffff" font-size="11" font-family="Courier New, monospace">LCA in BST:</text>
+  <text x="700" y="680" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">O(h) — not O(n)!</text>
+  
+  <text x="520" y="705" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Inorder Successor:</text>
+  <text x="700" y="705" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">O(h)</text>
+  
+  <text x="520" y="730" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Range Sum (pruned):</text>
+  <text x="700" y="730" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">O(n) worst, faster with prune</text>
+  
+  <text x="520" y="755" fill="#ffffff" font-size="11" font-family="Courier New, monospace">BST Iterator next():</text>
+  <text x="700" y="755" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">O(1) amortized, O(h) space</text>
+  
+  <!-- Arrowhead marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ade80"/>
+    </marker>
+  </defs>
+</svg>
+

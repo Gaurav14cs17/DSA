@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400">
+  <defs>
+    <linearGradient id="nodeGradBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="slowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="fastGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="700" height="400" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <text x="350" y="35" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="20" text-anchor="middle" font-weight="bold">Floyd's Cycle Detection Algorithm</text>
+  
+  <!-- Linear part (μ = distance to cycle) -->
+  <!-- Node 1 -->
+  <circle cx="80" cy="150" r="25" fill="url(#nodeGradBlue)" filter="url(#glow)"/>
+  <text x="80" y="155" fill="#fff" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle">1</text>
+  
+  <!-- Arrow to Node 2 -->
+  <path d="M 105 150 L 135 150" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Node 2 -->
+  <circle cx="160" cy="150" r="25" fill="url(#nodeGradBlue)" filter="url(#glow)"/>
+  <text x="160" y="155" fill="#fff" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle">2</text>
+  
+  <!-- Arrow to Node 3 (cycle start) -->
+  <path d="M 185 150 L 215 150" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Cycle nodes -->
+  <!-- Node 3 (cycle start) -->
+  <circle cx="260" cy="150" r="25" fill="#f59e0b" filter="url(#glow)"/>
+  <text x="260" y="155" fill="#000" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle" font-weight="bold">3</text>
+  
+  <!-- Node 4 -->
+  <circle cx="360" cy="100" r="25" fill="url(#nodeGradBlue)" filter="url(#glow)"/>
+  <text x="360" y="105" fill="#fff" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle">4</text>
+  
+  <!-- Node 5 -->
+  <circle cx="460" cy="150" r="25" fill="url(#nodeGradBlue)" filter="url(#glow)"/>
+  <text x="460" y="155" fill="#fff" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle">5</text>
+  
+  <!-- Node 6 -->
+  <circle cx="360" cy="200" r="25" fill="url(#nodeGradBlue)" filter="url(#glow)"/>
+  <text x="360" y="205" fill="#fff" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle">6</text>
+  
+  <!-- Cycle arrows -->
+  <path d="M 280 135 Q 320 80 335 100" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 385 100 Q 430 80 445 130" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 445 170 Q 430 220 385 200" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 335 200 Q 290 220 270 170" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Labels -->
+  <text x="120" y="90" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="12">μ = 2</text>
+  <text x="120" y="105" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10">(to cycle start)</text>
+  
+  <text x="360" y="60" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="12">λ = 4 (cycle length)</text>
+  
+  <!-- Cycle start indicator -->
+  <text x="260" y="195" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">Cycle Start</text>
+  
+  <!-- Head pointer -->
+  <text x="80" y="200" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">HEAD</text>
+  <path d="M 80 185 L 80 175" stroke="#22d3ee" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Slow and Fast pointers legend -->
+  <rect x="520" y="80" width="160" height="100" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="600" y="105" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="13" text-anchor="middle" font-weight="bold">Pointers</text>
+  
+  <circle cx="545" cy="130" r="10" fill="url(#slowGrad)"/>
+  <text x="610" y="135" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">Slow (+1)</text>
+  
+  <circle cx="545" cy="160" r="10" fill="url(#fastGrad)"/>
+  <text x="610" y="165" fill="#ef4444" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">Fast (+2)</text>
+  
+  <!-- Formula box -->
+  <rect x="50" y="250" width="600" height="130" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  
+  <text x="350" y="280" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle" font-weight="bold">Mathematical Proof</text>
+  
+  <text x="70" y="310" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="12">When they meet:</text>
+  <text x="70" y="330" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="12">Slow: μ + k steps</text>
+  <text x="70" y="350" fill="#ef4444" font-family="JetBrains Mono, monospace" font-size="12">Fast: μ + k + m·λ steps (m ≥ 1)</text>
+  
+  <text x="350" y="310" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="12">Since fast = 2 × slow:</text>
+  <text x="350" y="330" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="12">2(μ + k) = μ + k + m·λ</text>
+  <text x="350" y="350" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="12">μ + k = m·λ</text>
+  <text x="350" y="370" fill="#a855f7" font-family="JetBrains Mono, monospace" font-size="12" font-weight="bold">∴ μ = m·λ - k</text>
+</svg>
+

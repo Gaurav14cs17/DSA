@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Sorting Algorithms</text>
+  <text x="450" y="65" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Arranging elements in a specific order</text>
+  
+  <!-- Quick Sort -->
+  <text x="50" y="100" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">QUICK SORT (Divide &amp; Conquer)</text>
+  
+  <g transform="translate(50, 120)">
+    <!-- Original -->
+    <text x="0" y="15" fill="#888888" font-size="10" font-family="Courier New, monospace">arr:</text>
+    <rect x="30" y="0" width="30" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="45" y="17" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">5</text>
+    <rect x="60" y="0" width="30" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="75" y="17" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">2</text>
+    <rect x="90" y="0" width="30" height="25" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="105" y="17" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">8</text>
+    <rect x="120" y="0" width="30" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="135" y="17" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">1</text>
+    <rect x="150" y="0" width="30" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="165" y="17" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">9</text>
+    
+    <text x="200" y="17" fill="#f97316" font-size="10" font-family="Courier New, monospace">pivot=8</text>
+    
+    <!-- Partitioned -->
+    <text x="0" y="55" fill="#888888" font-size="10" font-family="Courier New, monospace">partition:</text>
+    <rect x="70" y="40" width="30" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="85" y="57" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">5</text>
+    <rect x="100" y="40" width="30" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="115" y="57" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">2</text>
+    <rect x="130" y="40" width="30" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="145" y="57" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">1</text>
+    
+    <rect x="170" y="40" width="30" height="25" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="185" y="57" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">8</text>
+    
+    <rect x="210" y="40" width="30" height="25" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+    <text x="225" y="57" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">9</text>
+    
+    <text x="0" y="85" fill="#60a5fa" font-size="10" font-family="Courier New, monospace">Time: O(n log n) avg, O(n²) worst</text>
+  </g>
+  
+  <!-- Merge Sort -->
+  <text x="350" y="100" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">MERGE SORT</text>
+  
+  <g transform="translate(350, 120)">
+    <!-- Divide -->
+    <rect x="60" y="0" width="120" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="120" y="14" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">[5,2,8,1]</text>
+    
+    <line x1="90" y1="20" x2="60" y2="35" stroke="#3b82f6" stroke-width="1"/>
+    <line x1="150" y1="20" x2="180" y2="35" stroke="#3b82f6" stroke-width="1"/>
+    
+    <rect x="30" y="35" width="60" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="60" y="49" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">[5,2]</text>
+    
+    <rect x="150" y="35" width="60" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="180" y="49" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">[8,1]</text>
+    
+    <!-- Merge -->
+    <rect x="30" y="65" width="60" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="60" y="79" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">[2,5]</text>
+    
+    <rect x="150" y="65" width="60" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="180" y="79" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">[1,8]</text>
+    
+    <rect x="60" y="95" width="120" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="120" y="109" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">[1,2,5,8]</text>
+    
+    <text x="0" y="135" fill="#60a5fa" font-size="10" font-family="Courier New, monospace">Time: O(n log n) always</text>
+  </g>
+  
+  <!-- Heap Sort -->
+  <text x="620" y="100" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">HEAP SORT</text>
+  
+  <g transform="translate(620, 120)">
+    <text x="0" y="15" fill="#888888" font-size="10" font-family="Courier New, monospace">1. Build max-heap</text>
+    <text x="0" y="35" fill="#888888" font-size="10" font-family="Courier New, monospace">2. Extract max repeatedly</text>
+    
+    <circle cx="60" cy="70" r="15" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="60" y="75" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">9</text>
+    
+    <line x1="50" y1="82" x2="35" y2="95" stroke="#3b82f6" stroke-width="1"/>
+    <line x1="70" y1="82" x2="85" y2="95" stroke="#3b82f6" stroke-width="1"/>
+    
+    <circle cx="35" cy="110" r="15" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="35" y="115" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">5</text>
+    
+    <circle cx="85" cy="110" r="15" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="85" y="115" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">8</text>
+    
+    <text x="0" y="145" fill="#60a5fa" font-size="10" font-family="Courier New, monospace">Time: O(n log n)</text>
+  </g>
+  
+  <!-- Counting Sort -->
+  <text x="50" y="280" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">COUNTING SORT (Non-Comparison)</text>
+  
+  <g transform="translate(50, 300)">
+    <text x="0" y="15" fill="#888888" font-size="10" font-family="Courier New, monospace">arr = [1, 4, 1, 2, 7, 5, 2]</text>
+    
+    <text x="0" y="40" fill="#888888" font-size="10" font-family="Courier New, monospace">count:</text>
+    <text x="50" y="40" fill="#888888" font-size="9" font-family="Courier New, monospace">idx: 1  2  3  4  5  6  7</text>
+    <rect x="50" y="45" width="20" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="60" y="59" text-anchor="middle" fill="#ffffff" font-size="9" font-family="Courier New, monospace">2</text>
+    <rect x="70" y="45" width="20" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="80" y="59" text-anchor="middle" fill="#ffffff" font-size="9" font-family="Courier New, monospace">2</text>
+    <rect x="90" y="45" width="20" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="100" y="59" text-anchor="middle" fill="#ffffff" font-size="9" font-family="Courier New, monospace">0</text>
+    <rect x="110" y="45" width="20" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="120" y="59" text-anchor="middle" fill="#ffffff" font-size="9" font-family="Courier New, monospace">1</text>
+    <rect x="130" y="45" width="20" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="140" y="59" text-anchor="middle" fill="#ffffff" font-size="9" font-family="Courier New, monospace">1</text>
+    <rect x="150" y="45" width="20" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="160" y="59" text-anchor="middle" fill="#ffffff" font-size="9" font-family="Courier New, monospace">0</text>
+    <rect x="170" y="45" width="20" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="180" y="59" text-anchor="middle" fill="#ffffff" font-size="9" font-family="Courier New, monospace">1</text>
+    
+    <text x="0" y="90" fill="#4ade80" font-size="10" font-family="Courier New, monospace">sorted: [1,1,2,2,4,5,7]</text>
+    <text x="0" y="110" fill="#60a5fa" font-size="10" font-family="Courier New, monospace">Time: O(n + k), k = range</text>
+  </g>
+  
+  <!-- Comparison Table -->
+  <text x="350" y="280" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">COMPARISON TABLE</text>
+  
+  <g transform="translate(350, 300)">
+    <rect x="0" y="0" width="480" height="140" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    
+    <!-- Header -->
+    <text x="60" y="20" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="Courier New, monospace">Algorithm</text>
+    <text x="160" y="20" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="Courier New, monospace">Best</text>
+    <text x="240" y="20" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="Courier New, monospace">Avg</text>
+    <text x="320" y="20" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="Courier New, monospace">Worst</text>
+    <text x="420" y="20" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="Courier New, monospace">Space</text>
+    
+    <line x1="0" y1="28" x2="480" y2="28" stroke="#3b82f6" stroke-width="1"/>
+    
+    <!-- Quick Sort -->
+    <text x="60" y="45" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">Quick</text>
+    <text x="160" y="45" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">n log n</text>
+    <text x="240" y="45" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">n log n</text>
+    <text x="320" y="45" text-anchor="middle" fill="#ef4444" font-size="10" font-family="Courier New, monospace">n²</text>
+    <text x="420" y="45" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">log n</text>
+    
+    <!-- Merge Sort -->
+    <text x="60" y="65" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">Merge</text>
+    <text x="160" y="65" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">n log n</text>
+    <text x="240" y="65" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">n log n</text>
+    <text x="320" y="65" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">n log n</text>
+    <text x="420" y="65" text-anchor="middle" fill="#f97316" font-size="10" font-family="Courier New, monospace">n</text>
+    
+    <!-- Heap Sort -->
+    <text x="60" y="85" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">Heap</text>
+    <text x="160" y="85" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">n log n</text>
+    <text x="240" y="85" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">n log n</text>
+    <text x="320" y="85" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">n log n</text>
+    <text x="420" y="85" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">1</text>
+    
+    <!-- Bubble Sort -->
+    <text x="60" y="105" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">Bubble</text>
+    <text x="160" y="105" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">n</text>
+    <text x="240" y="105" text-anchor="middle" fill="#ef4444" font-size="10" font-family="Courier New, monospace">n²</text>
+    <text x="320" y="105" text-anchor="middle" fill="#ef4444" font-size="10" font-family="Courier New, monospace">n²</text>
+    <text x="420" y="105" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">1</text>
+    
+    <!-- Counting Sort -->
+    <text x="60" y="125" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">Counting</text>
+    <text x="160" y="125" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">n+k</text>
+    <text x="240" y="125" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">n+k</text>
+    <text x="320" y="125" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">n+k</text>
+    <text x="420" y="125" text-anchor="middle" fill="#f97316" font-size="10" font-family="Courier New, monospace">k</text>
+  </g>
+  
+  <!-- Stability -->
+  <text x="50" y="470" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">STABLE vs UNSTABLE</text>
+  
+  <g transform="translate(50, 490)">
+    <text x="0" y="15" fill="#4ade80" font-size="11" font-family="Courier New, monospace">Stable: Merge, Counting, Insertion</text>
+    <text x="0" y="35" fill="#f97316" font-size="11" font-family="Courier New, monospace">Unstable: Quick, Heap, Selection</text>
+  </g>
+  
+  <!-- Subtopics -->
+  <text x="50" y="570" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">SUBTOPICS</text>
+  <g transform="translate(150, 555)">
+    <text x="0" y="15" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">01. Comparison Sorts</text>
+    <text x="200" y="15" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">02. Non-Comparison</text>
+    <text x="400" y="15" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">03. Custom Sorting</text>
+  </g>
+</svg>
+

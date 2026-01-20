@@ -1,0 +1,68 @@
+<svg viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Power of Two Detection</text>
+  <text x="450" y="68" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">n &amp; (n-1) == 0 means exactly one bit is set</text>
+  
+  <!-- Key Insight Box -->
+  <rect x="250" y="90" width="400" height="80" rx="8" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+  <text x="450" y="118" text-anchor="middle" fill="#f97316" font-size="14" font-weight="bold" font-family="Courier New, monospace">KEY INSIGHT</text>
+  <text x="450" y="145" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Courier New, monospace">Power of 2 = exactly ONE bit set</text>
+  <text x="450" y="162" text-anchor="middle" fill="#4ade80" font-size="12" font-family="Courier New, monospace">n &amp; (n-1) clears that bit → result is 0</text>
+  
+  <!-- Power of 2 examples -->
+  <text x="200" y="205" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">POWERS OF 2 (True Cases)</text>
+  
+  <!-- n = 8 -->
+  <rect x="50" y="225" width="200" height="130" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="150" y="250" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">n = 8 (2³)</text>
+  <text x="70" y="280" fill="#ffffff" font-size="12" font-family="Courier New, monospace">n   = 1000</text>
+  <text x="70" y="300" fill="#ffffff" font-size="12" font-family="Courier New, monospace">n-1 = 0111</text>
+  <line x1="70" y1="308" x2="200" y2="308" stroke="#4ade80" stroke-width="1"/>
+  <text x="70" y="328" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">&amp;   = 0000 = 0 ✓</text>
+  
+  <!-- n = 16 -->
+  <rect x="270" y="225" width="200" height="130" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="370" y="250" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">n = 16 (2⁴)</text>
+  <text x="290" y="280" fill="#ffffff" font-size="12" font-family="Courier New, monospace">n   = 10000</text>
+  <text x="290" y="300" fill="#ffffff" font-size="12" font-family="Courier New, monospace">n-1 = 01111</text>
+  <line x1="290" y1="308" x2="430" y2="308" stroke="#4ade80" stroke-width="1"/>
+  <text x="290" y="328" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">&amp;   = 00000 = 0 ✓</text>
+  
+  <!-- Visual representation -->
+  <rect x="500" y="225" width="350" height="130" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="675" y="250" text-anchor="middle" fill="#3b82f6" font-size="14" font-weight="bold" font-family="Courier New, monospace">WHY IT WORKS</text>
+  <text x="520" y="280" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Power of 2:  1 0 0 0 ... 0</text>
+  <text x="520" y="300" fill="#ffffff" font-size="11" font-family="Courier New, monospace">                 ↑ single 1</text>
+  <text x="520" y="325" fill="#888888" font-size="11" font-family="Courier New, monospace">Subtracting 1 flips that bit</text>
+  <text x="520" y="345" fill="#888888" font-size="11" font-family="Courier New, monospace">and sets all lower bits → NO overlap!</text>
+  
+  <!-- Not power of 2 examples -->
+  <text x="200" y="390" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">NOT POWERS OF 2 (False Cases)</text>
+  
+  <!-- n = 12 -->
+  <rect x="50" y="410" width="200" height="130" rx="6" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="150" y="435" text-anchor="middle" fill="#ef4444" font-size="14" font-weight="bold" font-family="Courier New, monospace">n = 12</text>
+  <text x="70" y="465" fill="#ffffff" font-size="12" font-family="Courier New, monospace">n   = 1100</text>
+  <text x="70" y="485" fill="#ffffff" font-size="12" font-family="Courier New, monospace">n-1 = 1011</text>
+  <line x1="70" y1="493" x2="200" y2="493" stroke="#ef4444" stroke-width="1"/>
+  <text x="70" y="513" fill="#ef4444" font-size="12" font-weight="bold" font-family="Courier New, monospace">&amp;   = 1000 = 8 ✗</text>
+  
+  <!-- n = 7 -->
+  <rect x="270" y="410" width="200" height="130" rx="6" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="370" y="435" text-anchor="middle" fill="#ef4444" font-size="14" font-weight="bold" font-family="Courier New, monospace">n = 7</text>
+  <text x="290" y="465" fill="#ffffff" font-size="12" font-family="Courier New, monospace">n   = 0111</text>
+  <text x="290" y="485" fill="#ffffff" font-size="12" font-family="Courier New, monospace">n-1 = 0110</text>
+  <line x1="290" y1="493" x2="430" y2="493" stroke="#ef4444" stroke-width="1"/>
+  <text x="290" y="513" fill="#ef4444" font-size="12" font-weight="bold" font-family="Courier New, monospace">&amp;   = 0110 = 6 ✗</text>
+  
+  <!-- Why it fails -->
+  <rect x="500" y="410" width="350" height="130" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="675" y="435" text-anchor="middle" fill="#a78bfa" font-size="14" font-weight="bold" font-family="Courier New, monospace">WHY IT FAILS</text>
+  <text x="520" y="465" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Multiple bits set: 1 1 0 0</text>
+  <text x="520" y="485" fill="#ffffff" font-size="11" font-family="Courier New, monospace">                   ↑ ↑</text>
+  <text x="520" y="510" fill="#888888" font-size="11" font-family="Courier New, monospace">n &amp; (n-1) only clears lowest bit</text>
+  <text x="520" y="530" fill="#888888" font-size="11" font-family="Courier New, monospace">Higher bits remain → result ≠ 0</text>
+</svg>
+

@@ -1,0 +1,56 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Catalan Number Applications</text>
+  
+  <!-- App 1 -->
+  <rect x="30" y="70" width="270" height="130" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="165" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560">MONOTONIC PATHS</text>
+  <text x="50" y="130" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Paths (0,0)→(n,n) staying</text>
+  <text x="50" y="150" font-family="Courier New, monospace" font-size="10" fill="#ffffff">below diagonal</text>
+  <text x="50" y="175" font-family="Courier New, monospace" font-size="10" fill="#3b82f6">= Cₙ paths</text>
+  
+  <!-- App 2 -->
+  <rect x="315" y="70" width="270" height="130" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="450" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560">TRIANGULATIONS</text>
+  <text x="335" y="130" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Ways to divide (n+2)-gon</text>
+  <text x="335" y="150" font-family="Courier New, monospace" font-size="10" fill="#ffffff">into triangles</text>
+  <text x="335" y="175" font-family="Courier New, monospace" font-size="10" fill="#f97316">= Cₙ ways</text>
+  
+  <!-- App 3 -->
+  <rect x="600" y="70" width="270" height="130" rx="10" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="735" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560">FULL BINARY TREES</text>
+  <text x="620" y="130" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Trees with n+1 leaves</text>
+  <text x="620" y="150" font-family="Courier New, monospace" font-size="10" fill="#ffffff">(every node has 0 or 2 children)</text>
+  <text x="620" y="175" font-family="Courier New, monospace" font-size="10" fill="#4ade80">= Cₙ trees</text>
+  
+  <!-- App 4 -->
+  <rect x="30" y="220" width="270" height="130" rx="10" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="165" y="250" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560">STACK SORTABLE</text>
+  <text x="50" y="280" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Permutations sortable</text>
+  <text x="50" y="300" font-family="Courier New, monospace" font-size="10" fill="#ffffff">with a single stack</text>
+  <text x="50" y="325" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">= Cₙ permutations</text>
+  
+  <!-- App 5 -->
+  <rect x="315" y="220" width="270" height="130" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="450" y="250" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560">DYCK WORDS</text>
+  <text x="335" y="280" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Strings of X's and Y's</text>
+  <text x="335" y="300" font-family="Courier New, monospace" font-size="10" fill="#ffffff">with #X ≥ #Y at any prefix</text>
+  <text x="335" y="325" font-family="Courier New, monospace" font-size="10" fill="#3b82f6">= Cₙ words of length 2n</text>
+  
+  <!-- App 6 -->
+  <rect x="600" y="220" width="270" height="130" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="735" y="250" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560">MATRIX CHAIN</text>
+  <text x="620" y="280" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Ways to parenthesize</text>
+  <text x="620" y="300" font-family="Courier New, monospace" font-size="10" fill="#ffffff">n+1 matrices multiplication</text>
+  <text x="620" y="325" font-family="Courier New, monospace" font-size="10" fill="#f97316">= Cₙ ways</text>
+  
+  <!-- LeetCode problems -->
+  <rect x="150" y="370" width="600" height="100" rx="10" fill="#0f0f23" stroke="#888888" stroke-width="1"/>
+  <text x="450" y="400" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">LEETCODE PROBLEMS</text>
+  <text x="250" y="435" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">22. Generate Parentheses</text>
+  <text x="450" y="435" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">96. Unique BSTs</text>
+  <text x="650" y="435" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">95. Unique BSTs II</text>
+  <text x="450" y="460" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">Many more involve Catalan indirectly!</text>
+</svg>

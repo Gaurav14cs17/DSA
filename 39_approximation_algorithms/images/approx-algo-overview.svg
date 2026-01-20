@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350">
+  <rect width="900" height="350" fill="#0f0f23"/>
+  
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Approximation Algorithms</text>
+  <text x="450" y="58" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">Find near-optimal solutions for NP-hard problems</text>
+  
+  <!-- Why -->
+  <text x="50" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">WHY APPROXIMATION?</text>
+  <g transform="translate(50, 115)">
+    <rect x="0" y="0" width="350" height="60" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">NP-hard problems: no polynomial exact algorithm</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Trade-off: polynomial time for approximate answer</text>
+  </g>
+  
+  <!-- Ratio -->
+  <text x="450" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">APPROXIMATION RATIO</text>
+  <g transform="translate(450, 115)">
+    <rect x="0" y="0" width="350" height="60" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">α-approximation: solution ≤ α × OPT</text>
+    <text x="15" y="40" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Example: 2-approx for Vertex Cover</text>
+  </g>
+  
+  <!-- Examples -->
+  <text x="50" y="210" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">CLASSIC PROBLEMS</text>
+  <g transform="translate(50, 230)">
+    <text x="0" y="15" fill="#f97316" font-size="10" font-family="Courier New, monospace">Vertex Cover:</text>
+    <text x="100" y="15" fill="#ffffff" font-size="10" font-family="Courier New, monospace">2-approximation (greedy edges)</text>
+    <text x="0" y="35" fill="#f97316" font-size="10" font-family="Courier New, monospace">Set Cover:</text>
+    <text x="100" y="35" fill="#ffffff" font-size="10" font-family="Courier New, monospace">O(log n)-approximation (greedy)</text>
+    <text x="0" y="55" fill="#f97316" font-size="10" font-family="Courier New, monospace">TSP (metric):</text>
+    <text x="100" y="55" fill="#ffffff" font-size="10" font-family="Courier New, monospace">1.5-approximation (Christofides)</text>
+    <text x="0" y="75" fill="#f97316" font-size="10" font-family="Courier New, monospace">Knapsack:</text>
+    <text x="100" y="75" fill="#ffffff" font-size="10" font-family="Courier New, monospace">FPTAS exists (1+ε)-approximation</text>
+  </g>
+  
+  <!-- Techniques -->
+  <text x="500" y="210" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">TECHNIQUES</text>
+  <g transform="translate(500, 230)">
+    <text x="0" y="15" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Greedy algorithms</text>
+    <text x="0" y="35" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• LP relaxation + rounding</text>
+    <text x="0" y="55" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Primal-dual methods</text>
+    <text x="0" y="75" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Local search</text>
+  </g>
+</svg>
+

@@ -1,0 +1,119 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Mo's Algorithm on Trees</text>
+  <text x="450" y="58" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Offline Path Queries in O((n+q)√n)</text>
+  
+  <!-- Left: Tree to Euler Tour -->
+  <text x="50" y="95" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">TREE → EULER TOUR</text>
+  
+  <!-- Tree -->
+  <circle cx="150" cy="145" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="150" y="150" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">1</text>
+  
+  <circle cx="100" cy="210" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="100" y="215" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">2</text>
+  
+  <circle cx="200" cy="210" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="200" y="215" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">3</text>
+  
+  <circle cx="70" cy="270" r="16" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="70" y="275" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">4</text>
+  
+  <circle cx="130" cy="270" r="16" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="130" y="275" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">5</text>
+  
+  <line x1="150" y1="165" x2="100" y2="192" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="150" y1="165" x2="200" y2="192" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="100" y1="228" x2="70" y2="254" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="100" y1="228" x2="130" y2="254" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Euler Tour Array -->
+  <text x="50" y="320" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Euler Tour (entry+exit):</text>
+  
+  <rect x="40" y="335" width="30" height="28" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="55" y="354" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">1</text>
+  
+  <rect x="70" y="335" width="30" height="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="85" y="354" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">2</text>
+  
+  <rect x="100" y="335" width="30" height="28" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="115" y="354" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">4</text>
+  
+  <rect x="130" y="335" width="30" height="28" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="145" y="354" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">5</text>
+  
+  <rect x="160" y="335" width="30" height="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="175" y="354" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">3</text>
+  
+  <!-- Right: Mo's Algorithm Concept -->
+  <text x="320" y="95" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">MO'S ALGORITHM CONCEPT</text>
+  
+  <rect x="300" y="110" width="280" height="120" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="5"/>
+  <text x="310" y="135" font-family="Courier New, monospace" font-size="11" fill="#4ade80">1. Convert path queries to ranges</text>
+  <text x="310" y="155" font-family="Courier New, monospace" font-size="11" fill="#f97316">2. Sort queries by blocks (√n)</text>
+  <text x="310" y="175" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">3. Process in order, move pointers</text>
+  <text x="310" y="195" font-family="Courier New, monospace" font-size="11" fill="#ffffff">4. Add/remove elements incrementally</text>
+  <text x="310" y="215" font-family="Courier New, monospace" font-size="11" fill="#888888">Total: O((n+q)√n) transitions</text>
+  
+  <!-- Query sorting illustration -->
+  <text x="320" y="255" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560">QUERY SORTING</text>
+  
+  <rect x="300" y="270" width="280" height="95" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="5"/>
+  <text x="440" y="295" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">Sort by: (L/√n, R)</text>
+  <text x="310" y="320" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Block 0: Q1[0,3], Q4[1,2]</text>
+  <text x="310" y="340" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Block 1: Q2[3,7], Q3[4,6]</text>
+  <text x="310" y="355" font-family="Courier New, monospace" font-size="10" fill="#888888">Minimizes pointer movement</text>
+  
+  <!-- Path to Range conversion -->
+  <text x="620" y="95" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">PATH → RANGE</text>
+  
+  <rect x="600" y="110" width="280" height="100" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="5"/>
+  <text x="610" y="135" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">Path(u,v) with LCA = l:</text>
+  <text x="610" y="160" font-family="Courier New, monospace" font-size="10" fill="#ffffff">If l == u: [first[u], first[v]]</text>
+  <text x="610" y="180" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Else: [last[u], first[v]] + l</text>
+  <text x="610" y="200" font-family="Courier New, monospace" font-size="10" fill="#888888">Toggle nodes in range</text>
+  
+  <!-- Complexity Analysis -->
+  <text x="620" y="235" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COMPLEXITY</text>
+  
+  <rect x="600" y="250" width="280" height="115" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="5"/>
+  <text x="740" y="275" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">Time: O((n+q)√n)</text>
+  <text x="610" y="300" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• n transitions per block</text>
+  <text x="610" y="318" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• √n blocks total</text>
+  <text x="610" y="336" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• q queries to answer</text>
+  <text x="740" y="358" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#60a5fa" text-anchor="middle">Space: O(n)</text>
+  
+  <!-- Applications -->
+  <text x="50" y="400" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">APPLICATIONS</text>
+  
+  <rect x="30" y="415" width="200" height="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="5"/>
+  <text x="130" y="440" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#3b82f6" text-anchor="middle">Distinct on Path</text>
+  <text x="130" y="460" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">Count unique values</text>
+  <text x="130" y="478" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">on path queries</text>
+  
+  <rect x="250" y="415" width="200" height="70" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="5"/>
+  <text x="350" y="440" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#f97316" text-anchor="middle">Frequency Queries</text>
+  <text x="350" y="460" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">Mode, k-th most</text>
+  <text x="350" y="478" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">frequent on path</text>
+  
+  <rect x="470" y="415" width="200" height="70" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="5"/>
+  <text x="570" y="440" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#a78bfa" text-anchor="middle">Sum of Squares</text>
+  <text x="570" y="460" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">Statistical queries</text>
+  <text x="570" y="478" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">on tree paths</text>
+  
+  <!-- When to use -->
+  <rect x="30" y="500" width="640" height="75" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="5"/>
+  <text x="350" y="525" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">WHEN TO USE MO'S ON TREES</text>
+  <text x="40" y="548" font-family="Courier New, monospace" font-size="10" fill="#ffffff">✓ Offline queries (all known in advance)</text>
+  <text x="40" y="565" font-family="Courier New, monospace" font-size="10" fill="#ffffff">✓ Path/subtree queries that can be answered incrementally</text>
+  <text x="400" y="548" font-family="Courier New, monospace" font-size="10" fill="#ffffff">✗ Online queries → use HLD</text>
+  <text x="400" y="565" font-family="Courier New, monospace" font-size="10" fill="#ffffff">✗ Few queries → simple DFS</text>
+  
+  <!-- Block size -->
+  <rect x="690" y="415" width="180" height="70" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="5"/>
+  <text x="780" y="440" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">BLOCK SIZE</text>
+  <text x="780" y="465" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">√n (optimal)</text>
+  <text x="780" y="480" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">Balances #blocks vs size</text>
+</svg>

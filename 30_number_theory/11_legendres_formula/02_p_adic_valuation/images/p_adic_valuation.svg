@@ -1,0 +1,47 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">p-adic Valuation</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">ν_p(n) = largest power of p dividing n</text>
+  
+  <!-- Definition -->
+  <rect x="50" y="90" width="400" height="140" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="120" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">DEFINITION</text>
+  
+  <text x="70" y="155" font-family="Courier New, monospace" font-size="12" fill="#ffffff">ν_p(n) = max{k : p^k | n}</text>
+  <text x="70" y="185" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">Example: ν₂(24) = 3  (24 = 2³×3)</text>
+  <text x="70" y="210" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">Example: ν₃(24) = 1  (24 = 2³×3¹)</text>
+  
+  <!-- Properties -->
+  <rect x="480" y="90" width="370" height="140" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="665" y="120" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">PROPERTIES</text>
+  
+  <text x="500" y="155" font-family="Courier New, monospace" font-size="11" fill="#ffffff">ν_p(a × b) = ν_p(a) + ν_p(b)</text>
+  <text x="500" y="180" font-family="Courier New, monospace" font-size="11" fill="#ffffff">ν_p(a / b) = ν_p(a) - ν_p(b)</text>
+  <text x="500" y="205" font-family="Courier New, monospace" font-size="11" fill="#f97316">ν_p(a + b) ≥ min(ν_p(a), ν_p(b))</text>
+  <text x="500" y="225" font-family="Courier New, monospace" font-size="10" fill="#888888">equality if ν_p(a) ≠ ν_p(b)</text>
+  
+  <!-- Legendre's formula -->
+  <rect x="100" y="250" width="700" height="100" rx="10" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="450" y="280" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">LEGENDRE'S FORMULA FOR n!</text>
+  
+  <text x="450" y="320" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">ν_p(n!) = Σ ⌊n/p^i⌋ for i = 1, 2, 3, ... = (n - s_p(n)) / (p - 1)</text>
+  <text x="450" y="340" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">where s_p(n) = sum of digits of n in base p</text>
+  
+  <!-- Applications -->
+  <rect x="50" y="370" width="400" height="110" rx="10" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="250" y="400" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">APPLICATIONS</text>
+  
+  <text x="70" y="430" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Trailing zeros: ν₅(n!) or ν₂(n!)</text>
+  <text x="70" y="455" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• ν_p(C(n,k)) = ν_p(n!) - ν_p(k!) - ν_p((n-k)!)</text>
+  <text x="70" y="475" font-family="Courier New, monospace" font-size="11" fill="#4ade80">• Determine divisibility of binomials</text>
+  
+  <!-- Kummer's theorem -->
+  <rect x="480" y="370" width="370" height="110" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="665" y="400" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">KUMMER'S THEOREM</text>
+  
+  <text x="500" y="435" font-family="Courier New, monospace" font-size="11" fill="#ffffff">ν_p(C(n,k)) = number of carries</text>
+  <text x="500" y="455" font-family="Courier New, monospace" font-size="11" fill="#ffffff">when adding k + (n-k) in base p</text>
+  <text x="500" y="475" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">Elegant connection to digit sums!</text>
+</svg>

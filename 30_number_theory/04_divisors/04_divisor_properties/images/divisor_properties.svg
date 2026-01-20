@@ -1,0 +1,53 @@
+<svg viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Divisor Function Properties</text>
+  
+  <!-- Multiplicative functions -->
+  <rect x="50" y="70" width="400" height="200" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">MULTIPLICATIVE FUNCTIONS</text>
+  
+  <text x="70" y="135" font-family="Courier New, monospace" font-size="12" fill="#ffffff">f is multiplicative if:</text>
+  <text x="70" y="160" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">f(mn) = f(m)×f(n) when gcd(m,n)=1</text>
+  
+  <text x="70" y="195" font-family="Courier New, monospace" font-size="12" fill="#888888">Examples:</text>
+  <text x="70" y="220" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• τ(n) - divisor count</text>
+  <text x="70" y="240" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• σ(n) - divisor sum</text>
+  <text x="70" y="260" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• φ(n) - Euler's totient</text>
+  
+  <!-- Key formulas -->
+  <rect x="480" y="70" width="370" height="200" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="665" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">KEY FORMULAS</text>
+  
+  <text x="500" y="135" font-family="Courier New, monospace" font-size="11" fill="#f97316">For n = p₁^a₁ × p₂^a₂ × ... × pₖ^aₖ:</text>
+  
+  <text x="500" y="165" font-family="Courier New, monospace" font-size="11" fill="#ffffff">τ(n) = ∏(aᵢ + 1)</text>
+  <text x="500" y="190" font-family="Courier New, monospace" font-size="11" fill="#ffffff">σ(n) = ∏(pᵢ^(aᵢ+1) - 1)/(pᵢ - 1)</text>
+  <text x="500" y="215" font-family="Courier New, monospace" font-size="11" fill="#ffffff">φ(n) = n × ∏(1 - 1/pᵢ)</text>
+  
+  <text x="500" y="250" font-family="Courier New, monospace" font-size="10" fill="#888888">All computed via prime factorization</text>
+  
+  <!-- Divisor pairs -->
+  <rect x="50" y="290" width="400" height="120" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="250" y="320" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">DIVISOR PAIRING</text>
+  
+  <text x="70" y="355" font-family="Courier New, monospace" font-size="12" fill="#ffffff">If d divides n, so does n/d</text>
+  <text x="70" y="380" font-family="Courier New, monospace" font-size="12" fill="#4ade80">→ Divisors come in pairs (d, n/d)</text>
+  <text x="70" y="400" font-family="Courier New, monospace" font-size="11" fill="#888888">Only check up to √n to find all divisors!</text>
+  
+  <!-- Average order -->
+  <rect x="480" y="290" width="370" height="120" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="665" y="320" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">AVERAGE VALUES</text>
+  
+  <text x="500" y="355" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Average τ(n) ≈ ln(n)</text>
+  <text x="500" y="380" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Average σ(n)/n ≈ π²/6 ≈ 1.645</text>
+  <text x="500" y="400" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">Most numbers have few divisors</text>
+  
+  <!-- Divisor sieve -->
+  <rect x="150" y="430" width="600" height="90" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="450" y="460" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">SIEVE FOR ALL DIVISOR COUNTS</text>
+  
+  <text x="170" y="490" font-family="Courier New, monospace" font-size="11" fill="#ffffff">For each d from 1 to N: add 1 to count[d], count[2d], count[3d], ...</text>
+  <text x="170" y="510" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">Time: O(N log N) | Result: τ(i) for all i ≤ N</text>
+</svg>

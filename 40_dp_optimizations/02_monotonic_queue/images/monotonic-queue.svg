@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 700">
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" fill="#ffffff" font-family="Courier New, monospace" font-size="26" font-weight="bold" text-anchor="middle">📊 MONOTONIC QUEUE OPTIMIZATION</text>
+  <text x="475" y="65" fill="#888888" font-family="Courier New, monospace" font-size="16" text-anchor="middle">Sliding Window DP: O(nk) → O(n)</text>
+  
+  <!-- Deque Structure -->
+  <text x="475" y="105" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">MONOTONIC DEQUE STRUCTURE</text>
+  
+  <!-- Deque visualization -->
+  <g transform="translate(200, 120)">
+    <!-- Front label -->
+    <text x="-20" y="35" fill="#4ade80" font-family="Courier New, monospace" font-size="12" text-anchor="end">front</text>
+    <text x="-20" y="50" fill="#4ade80" font-family="Courier New, monospace" font-size="10" text-anchor="end">(best)</text>
+    
+    <!-- Deque boxes -->
+    <rect x="0" y="15" width="60" height="50" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="30" y="45" fill="#4ade80" font-family="Courier New, monospace" font-size="18" font-weight="bold" text-anchor="middle">10</text>
+    
+    <rect x="70" y="15" width="60" height="50" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="100" y="45" fill="#ffffff" font-family="Courier New, monospace" font-size="18" font-weight="bold" text-anchor="middle">8</text>
+    
+    <rect x="140" y="15" width="60" height="50" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="170" y="45" fill="#ffffff" font-family="Courier New, monospace" font-size="18" font-weight="bold" text-anchor="middle">5</text>
+    
+    <rect x="210" y="15" width="60" height="50" rx="5" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="240" y="45" fill="#f97316" font-family="Courier New, monospace" font-size="18" font-weight="bold" text-anchor="middle">3</text>
+    
+    <!-- Back label -->
+    <text x="290" y="35" fill="#f97316" font-family="Courier New, monospace" font-size="12">back</text>
+    <text x="290" y="50" fill="#f97316" font-family="Courier New, monospace" font-size="10">(newest)</text>
+    
+    <!-- Invariant -->
+    <text x="135" y="90" fill="#a78bfa" font-family="Courier New, monospace" font-size="12" text-anchor="middle">DECREASING ORDER (for max)</text>
+    <text x="135" y="105" fill="#888888" font-family="Courier New, monospace" font-size="10" text-anchor="middle">10 ≥ 8 ≥ 5 ≥ 3</text>
+  </g>
+  
+  <!-- Operations -->
+  <g transform="translate(550, 120)">
+    <rect x="0" y="0" width="300" height="115" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="150" y="25" fill="#ffffff" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">OPERATIONS (all O(1) amortized)</text>
+    
+    <text x="20" y="50" fill="#4ade80" font-family="Courier New, monospace" font-size="11">1. popleft() - remove out-of-range</text>
+    <text x="20" y="70" fill="#60a5fa" font-family="Courier New, monospace" font-size="11">2. dq[0] - query best (front)</text>
+    <text x="20" y="90" fill="#f97316" font-family="Courier New, monospace" font-size="11">3. pop() - remove suboptimal</text>
+    <text x="20" y="108" fill="#a78bfa" font-family="Courier New, monospace" font-size="11">4. append(i) - add new index</text>
+  </g>
+  
+  <!-- Walkthrough Section -->
+  <text x="475" y="260" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">WALKTHROUGH: nums = [10, -2, -10, -5, 20], k = 2</text>
+  
+  <!-- Input array -->
+  <g transform="translate(250, 275)">
+    <text x="-30" y="25" fill="#888888" font-family="Courier New, monospace" font-size="11">nums:</text>
+    <rect x="0" y="5" width="50" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="25" y="27" fill="#ffffff" font-family="Courier New, monospace" font-size="14" text-anchor="middle">10</text>
+    <rect x="55" y="5" width="50" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="80" y="27" fill="#ffffff" font-family="Courier New, monospace" font-size="14" text-anchor="middle">-2</text>
+    <rect x="110" y="5" width="50" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="135" y="27" fill="#ffffff" font-family="Courier New, monospace" font-size="14" text-anchor="middle">-10</text>
+    <rect x="165" y="5" width="50" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="190" y="27" fill="#ffffff" font-family="Courier New, monospace" font-size="14" text-anchor="middle">-5</text>
+    <rect x="220" y="5" width="50" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="245" y="27" fill="#ffffff" font-family="Courier New, monospace" font-size="14" text-anchor="middle">20</text>
+    
+    <text x="25" y="55" fill="#888888" font-family="Courier New, monospace" font-size="10" text-anchor="middle">i=0</text>
+    <text x="80" y="55" fill="#888888" font-family="Courier New, monospace" font-size="10" text-anchor="middle">i=1</text>
+    <text x="135" y="55" fill="#888888" font-family="Courier New, monospace" font-size="10" text-anchor="middle">i=2</text>
+    <text x="190" y="55" fill="#888888" font-family="Courier New, monospace" font-size="10" text-anchor="middle">i=3</text>
+    <text x="245" y="55" fill="#888888" font-family="Courier New, monospace" font-size="10" text-anchor="middle">i=4</text>
+  </g>
+  
+  <!-- Step-by-step states -->
+  <g transform="translate(50, 355)">
+    <!-- Step 0 -->
+    <rect x="0" y="0" width="170" height="60" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="85" y="18" fill="#4ade80" font-family="Courier New, monospace" font-size="11" font-weight="bold" text-anchor="middle">i=0: dp[0]=10</text>
+    <text x="85" y="35" fill="#ffffff" font-family="Courier New, monospace" font-size="10" text-anchor="middle">dq = [0]</text>
+    <text x="85" y="50" fill="#888888" font-family="Courier New, monospace" font-size="9" text-anchor="middle">Base case</text>
+    
+    <!-- Step 1 -->
+    <rect x="180" y="0" width="170" height="60" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="265" y="18" fill="#60a5fa" font-family="Courier New, monospace" font-size="11" font-weight="bold" text-anchor="middle">i=1: dp[1]=8</text>
+    <text x="265" y="35" fill="#ffffff" font-family="Courier New, monospace" font-size="10" text-anchor="middle">dq = [0, 1]</text>
+    <text x="265" y="50" fill="#888888" font-family="Courier New, monospace" font-size="9" text-anchor="middle">-2 + max(0,10) = 8</text>
+    
+    <!-- Step 2 -->
+    <rect x="360" y="0" width="170" height="60" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="445" y="18" fill="#60a5fa" font-family="Courier New, monospace" font-size="11" font-weight="bold" text-anchor="middle">i=2: dp[2]=0</text>
+    <text x="445" y="35" fill="#ffffff" font-family="Courier New, monospace" font-size="10" text-anchor="middle">dq = [0, 1, 2]</text>
+    <text x="445" y="50" fill="#888888" font-family="Courier New, monospace" font-size="9" text-anchor="middle">-10 + max(0,10) = 0</text>
+    
+    <!-- Step 3 -->
+    <rect x="540" y="0" width="170" height="60" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="625" y="18" fill="#f97316" font-family="Courier New, monospace" font-size="11" font-weight="bold" text-anchor="middle">i=3: dp[3]=3</text>
+    <text x="625" y="35" fill="#ffffff" font-family="Courier New, monospace" font-size="10" text-anchor="middle">dq = [1, 3]</text>
+    <text x="625" y="50" fill="#888888" font-family="Courier New, monospace" font-size="9" text-anchor="middle">Remove 0! -5 + 8 = 3</text>
+    
+    <!-- Step 4 -->
+    <rect x="720" y="0" width="170" height="60" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="805" y="18" fill="#4ade80" font-family="Courier New, monospace" font-size="11" font-weight="bold" text-anchor="middle">i=4: dp[4]=23</text>
+    <text x="805" y="35" fill="#ffffff" font-family="Courier New, monospace" font-size="10" text-anchor="middle">dq = [4]</text>
+    <text x="805" y="50" fill="#888888" font-family="Courier New, monospace" font-size="9" text-anchor="middle">20 + 3 = 23 ★</text>
+  </g>
+  
+  <!-- DP Array Result -->
+  <g transform="translate(280, 430)">
+    <text x="-30" y="25" fill="#888888" font-family="Courier New, monospace" font-size="11">dp:</text>
+    <rect x="0" y="5" width="50" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="25" y="27" fill="#4ade80" font-family="Courier New, monospace" font-size="14" text-anchor="middle">10</text>
+    <rect x="55" y="5" width="50" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="80" y="27" fill="#ffffff" font-family="Courier New, monospace" font-size="14" text-anchor="middle">8</text>
+    <rect x="110" y="5" width="50" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="135" y="27" fill="#ffffff" font-family="Courier New, monospace" font-size="14" text-anchor="middle">0</text>
+    <rect x="165" y="5" width="50" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="190" y="27" fill="#ffffff" font-family="Courier New, monospace" font-size="14" text-anchor="middle">3</text>
+    <rect x="220" y="5" width="50" height="35" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="245" y="27" fill="#4ade80" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">23</text>
+  </g>
+  
+  <!-- Answer -->
+  <text x="650" y="455" fill="#4ade80" font-family="Courier New, monospace" font-size="14" font-weight="bold">Answer: max(dp) = 23</text>
+  
+  <!-- Algorithm Template -->
+  <text x="475" y="505" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">ALGORITHM TEMPLATE</text>
+  
+  <g transform="translate(100, 520)">
+    <rect x="0" y="0" width="350" height="150" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="175" y="25" fill="#ffffff" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">for i in range(1, n):</text>
+    
+    <text x="20" y="50" fill="#4ade80" font-family="Courier New, monospace" font-size="10"># Step 1: Remove out-of-range</text>
+    <text x="20" y="65" fill="#ffffff" font-family="Courier New, monospace" font-size="10">while dq and dq[0] &lt; i - k:</text>
+    <text x="20" y="78" fill="#888888" font-family="Courier New, monospace" font-size="10">    dq.popleft()</text>
+    
+    <text x="20" y="98" fill="#60a5fa" font-family="Courier New, monospace" font-size="10"># Step 2: Query best</text>
+    <text x="20" y="111" fill="#ffffff" font-family="Courier New, monospace" font-size="10">dp[i] = nums[i] + dp[dq[0]]</text>
+    
+    <text x="20" y="131" fill="#f97316" font-family="Courier New, monospace" font-size="10"># Step 3: Maintain monotonicity</text>
+    <text x="20" y="144" fill="#ffffff" font-family="Courier New, monospace" font-size="10">while dq and dp[dq[-1]] ≤ dp[i]: pop()</text>
+  </g>
+  
+  <!-- Complexity -->
+  <g transform="translate(500, 520)">
+    <rect x="0" y="0" width="350" height="150" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="175" y="25" fill="#4ade80" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">WHY O(n)?</text>
+    
+    <text x="20" y="55" fill="#ffffff" font-family="Courier New, monospace" font-size="11">Each element is:</text>
+    <text x="30" y="75" fill="#60a5fa" font-family="Courier New, monospace" font-size="11">• Added to deque: once</text>
+    <text x="30" y="95" fill="#60a5fa" font-family="Courier New, monospace" font-size="11">• Removed from deque: once</text>
+    
+    <text x="20" y="120" fill="#ffffff" font-family="Courier New, monospace" font-size="11">Total operations:</text>
+    <text x="30" y="140" fill="#4ade80" font-family="Courier New, monospace" font-size="11">n adds + n removes = 2n = O(n)</text>
+  </g>
+</svg>

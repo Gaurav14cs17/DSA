@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="26" font-weight="bold">Cycle Detection</text>
+  <text x="450" y="65" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="16">DFS 3-Color Approach for Directed Graphs</text>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+  </defs>
+  
+  <!-- Graph with Cycle -->
+  <text x="200" y="100" text-anchor="middle" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold">GRAPH WITH CYCLE</text>
+  
+  <!-- Node A -->
+  <circle cx="100" cy="180" r="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="100" y="186" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="18" font-weight="bold">A</text>
+  
+  <!-- Node B -->
+  <circle cx="220" cy="180" r="28" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+  <text x="220" y="186" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="18" font-weight="bold">B</text>
+  <text x="220" y="145" text-anchor="middle" fill="#f97316" font-family="Courier New, monospace" font-size="10">GRAY</text>
+  
+  <!-- Node C -->
+  <circle cx="280" cy="280" r="28" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+  <text x="280" y="286" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="18" font-weight="bold">C</text>
+  <text x="280" y="320" text-anchor="middle" fill="#f97316" font-family="Courier New, monospace" font-size="10">GRAY</text>
+  
+  <!-- Node D -->
+  <circle cx="160" cy="280" r="28" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+  <text x="160" y="286" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="18" font-weight="bold">D</text>
+  <text x="160" y="320" text-anchor="middle" fill="#f97316" font-family="Courier New, monospace" font-size="10">GRAY</text>
+  
+  <!-- Edges -->
+  <line x1="128" y1="180" x2="190" y2="180" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="235" y1="205" x2="265" y2="255" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="252" y1="280" x2="190" y2="280" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  
+  <!-- Back edge (cycle) -->
+  <path d="M 150 255 Q 100 230 205 195" stroke="#ef4444" stroke-width="3" fill="none" marker-end="url(#arrowRed)" stroke-dasharray="5,3"/>
+  <text x="120" y="220" fill="#ef4444" font-family="Courier New, monospace" font-size="10" font-weight="bold">BACK EDGE!</text>
+  <text x="120" y="235" fill="#ef4444" font-family="Courier New, monospace" font-size="9">(to GRAY node)</text>
+  
+  <!-- Cycle indicator -->
+  <rect x="80" y="340" width="240" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" rx="5"/>
+  <text x="200" y="365" text-anchor="middle" fill="#ef4444" font-family="Courier New, monospace" font-size="12" font-weight="bold">CYCLE: B → C → D → B</text>
+  
+  <!-- Color States Legend -->
+  <text x="650" y="100" text-anchor="middle" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold">3-COLOR DFS STATES</text>
+  
+  <rect x="480" y="115" width="380" height="150" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="5"/>
+  
+  <!-- White -->
+  <circle cx="520" cy="150" r="18" fill="#1e3a5f" stroke="#888888" stroke-width="2"/>
+  <text x="550" y="155" fill="#888888" font-family="Courier New, monospace" font-size="12" font-weight="bold">WHITE (0)</text>
+  <text x="700" y="155" fill="#888888" font-family="Courier New, monospace" font-size="10">Not visited yet</text>
+  
+  <!-- Gray -->
+  <circle cx="520" cy="195" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="550" y="200" fill="#f97316" font-family="Courier New, monospace" font-size="12" font-weight="bold">GRAY (1)</text>
+  <text x="700" y="200" fill="#f97316" font-family="Courier New, monospace" font-size="10">In current DFS path</text>
+  
+  <!-- Black -->
+  <circle cx="520" cy="240" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="550" y="245" fill="#4ade80" font-family="Courier New, monospace" font-size="12" font-weight="bold">BLACK (2)</text>
+  <text x="700" y="245" fill="#4ade80" font-family="Courier New, monospace" font-size="10">Fully processed</text>
+  
+  <!-- Cycle Detection Rule -->
+  <rect x="480" y="280" width="380" height="100" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" rx="5"/>
+  <text x="670" y="305" text-anchor="middle" fill="#ef4444" font-family="Courier New, monospace" font-size="12" font-weight="bold">CYCLE DETECTION RULE</text>
+  <text x="500" y="335" fill="#ffffff" font-family="Courier New, monospace" font-size="11">If we visit a GRAY node during DFS:</text>
+  <text x="500" y="360" fill="#ef4444" font-family="Courier New, monospace" font-size="11" font-weight="bold">→ CYCLE EXISTS! (back edge found)</text>
+  
+  <!-- Algorithm -->
+  <rect x="50" y="400" width="400" height="180" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="5"/>
+  <text x="250" y="425" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="12" font-weight="bold">DFS CYCLE DETECTION</text>
+  
+  <text x="70" y="455" fill="#888888" font-family="Courier New, monospace" font-size="10">def has_cycle(node):</text>
+  <text x="70" y="475" fill="#f97316" font-family="Courier New, monospace" font-size="10">    if state[node] == GRAY: return True  # Cycle!</text>
+  <text x="70" y="495" fill="#4ade80" font-family="Courier New, monospace" font-size="10">    if state[node] == BLACK: return False</text>
+  <text x="70" y="515" fill="#888888" font-family="Courier New, monospace" font-size="10">    state[node] = GRAY  # Start processing</text>
+  <text x="70" y="535" fill="#888888" font-family="Courier New, monospace" font-size="10">    for neighbor in graph[node]:</text>
+  <text x="70" y="555" fill="#888888" font-family="Courier New, monospace" font-size="10">        if has_cycle(neighbor): return True</text>
+  <text x="70" y="575" fill="#888888" font-family="Courier New, monospace" font-size="10">    state[node] = BLACK  # Done</text>
+  
+  <!-- Union-Find Alternative -->
+  <rect x="480" y="400" width="380" height="180" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="5"/>
+  <text x="670" y="425" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="12" font-weight="bold">UNDIRECTED: UNION-FIND</text>
+  
+  <text x="500" y="455" fill="#888888" font-family="Courier New, monospace" font-size="10">For each edge (u, v):</text>
+  <text x="500" y="475" fill="#888888" font-family="Courier New, monospace" font-size="10">  parent_u = find(u)</text>
+  <text x="500" y="495" fill="#888888" font-family="Courier New, monospace" font-size="10">  parent_v = find(v)</text>
+  <text x="500" y="515" fill="#ef4444" font-family="Courier New, monospace" font-size="10">  if parent_u == parent_v:</text>
+  <text x="500" y="535" fill="#ef4444" font-family="Courier New, monospace" font-size="10">      return True  # CYCLE!</text>
+  <text x="500" y="555" fill="#4ade80" font-family="Courier New, monospace" font-size="10">  union(u, v)</text>
+  
+  <text x="670" y="580" text-anchor="middle" fill="#60a5fa" font-family="Courier New, monospace" font-size="10">Time: O(E·α(V)) | Space: O(V)</text>
+</svg>

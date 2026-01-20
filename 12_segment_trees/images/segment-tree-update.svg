@@ -1,0 +1,164 @@
+<svg viewBox="0 0 900 650" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Point Update: arr[2] = 10</text>
+  <text x="450" y="65" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Update index 2 from 5 → 10 (+5 difference)</text>
+  
+  <!-- Before/After Array -->
+  <text x="50" y="105" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">BEFORE</text>
+  
+  <g>
+    <rect x="50" y="115" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="75" y="142" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">1</text>
+  </g>
+  <g>
+    <rect x="105" y="115" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="130" y="142" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">3</text>
+  </g>
+  <g>
+    <rect x="160" y="115" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="3"/>
+    <text x="185" y="142" text-anchor="middle" fill="#ef4444" font-size="16" font-weight="bold" font-family="Courier New, monospace">5</text>
+    <text x="185" y="168" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">[2]</text>
+  </g>
+  <g>
+    <rect x="215" y="115" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="240" y="142" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">7</text>
+  </g>
+  <g>
+    <rect x="270" y="115" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="295" y="142" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">9</text>
+  </g>
+  <g>
+    <rect x="325" y="115" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="350" y="142" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">11</text>
+  </g>
+  
+  <!-- Arrow -->
+  <text x="405" y="138" fill="#f97316" font-size="24" font-weight="bold" font-family="Courier New, monospace">→</text>
+  
+  <!-- After Array -->
+  <text x="440" y="105" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">AFTER</text>
+  
+  <g>
+    <rect x="440" y="115" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="465" y="142" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">1</text>
+  </g>
+  <g>
+    <rect x="495" y="115" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="520" y="142" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">3</text>
+  </g>
+  <g>
+    <rect x="550" y="115" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="575" y="142" text-anchor="middle" fill="#4ade80" font-size="16" font-weight="bold" font-family="Courier New, monospace">10</text>
+    <text x="575" y="168" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">[2]</text>
+  </g>
+  <g>
+    <rect x="605" y="115" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="630" y="142" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">7</text>
+  </g>
+  <g>
+    <rect x="660" y="115" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="685" y="142" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">9</text>
+  </g>
+  <g>
+    <rect x="715" y="115" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="740" y="142" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">11</text>
+  </g>
+  
+  <!-- Tree Section Label -->
+  <text x="450" y="200" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">UPDATE PATH (Root → Leaf)</text>
+  
+  <!-- Tree Edges -->
+  <line x1="450" y1="255" x2="280" y2="315" stroke="#f97316" stroke-width="3"/>
+  <line x1="450" y1="255" x2="620" y2="315" stroke="#3b82f6" stroke-width="2" opacity="0.4"/>
+  <line x1="280" y1="355" x2="175" y2="415" stroke="#3b82f6" stroke-width="2" opacity="0.4"/>
+  <line x1="280" y1="355" x2="340" y2="415" stroke="#f97316" stroke-width="3"/>
+  <line x1="620" y1="355" x2="520" y2="415" stroke="#3b82f6" stroke-width="2" opacity="0.4"/>
+  <line x1="620" y1="355" x2="680" y2="415" stroke="#3b82f6" stroke-width="2" opacity="0.4"/>
+  <line x1="175" y1="460" x2="125" y2="520" stroke="#3b82f6" stroke-width="2" opacity="0.4"/>
+  <line x1="175" y1="460" x2="225" y2="520" stroke="#3b82f6" stroke-width="2" opacity="0.4"/>
+  <line x1="520" y1="460" x2="470" y2="520" stroke="#3b82f6" stroke-width="2" opacity="0.4"/>
+  <line x1="520" y1="460" x2="570" y2="520" stroke="#3b82f6" stroke-width="2" opacity="0.4"/>
+  
+  <!-- Root Node - Updated -->
+  <g>
+    <rect x="395" y="220" width="110" height="45" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="450" y="243" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">36→41</text>
+    <text x="450" y="259" text-anchor="middle" fill="#f97316" font-size="11" font-family="Courier New, monospace">[0-5] +5</text>
+  </g>
+  
+  <!-- Level 1 Nodes -->
+  <g>
+    <rect x="225" y="315" width="110" height="45" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="280" y="338" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">9→14</text>
+    <text x="280" y="354" text-anchor="middle" fill="#f97316" font-size="11" font-family="Courier New, monospace">[0-2] +5</text>
+  </g>
+  <g>
+    <rect x="565" y="315" width="110" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="620" y="338" text-anchor="middle" fill="#888888" font-size="16" font-weight="bold" font-family="Courier New, monospace">27</text>
+    <text x="620" y="354" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">[3-5]</text>
+  </g>
+  
+  <!-- Level 2 Nodes -->
+  <g>
+    <rect x="125" y="415" width="100" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="175" y="438" text-anchor="middle" fill="#888888" font-size="16" font-weight="bold" font-family="Courier New, monospace">4</text>
+    <text x="175" y="454" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">[0-1]</text>
+  </g>
+  <g>
+    <rect x="295" y="415" width="100" height="45" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="345" y="438" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">5→10</text>
+    <text x="345" y="454" text-anchor="middle" fill="#4ade80" font-size="11" font-family="Courier New, monospace">[2] LEAF</text>
+  </g>
+  <g>
+    <rect x="470" y="415" width="100" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="520" y="438" text-anchor="middle" fill="#888888" font-size="16" font-weight="bold" font-family="Courier New, monospace">16</text>
+    <text x="520" y="454" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">[3-4]</text>
+  </g>
+  <g>
+    <rect x="630" y="415" width="100" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="680" y="438" text-anchor="middle" fill="#888888" font-size="16" font-weight="bold" font-family="Courier New, monospace">11</text>
+    <text x="680" y="454" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">[5]</text>
+  </g>
+  
+  <!-- Level 3 Leaf Nodes (partial) -->
+  <g>
+    <rect x="85" y="520" width="80" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="125" y="545" text-anchor="middle" fill="#888888" font-size="14" font-weight="bold" font-family="Courier New, monospace">1</text>
+  </g>
+  <g>
+    <rect x="185" y="520" width="80" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="225" y="545" text-anchor="middle" fill="#888888" font-size="14" font-weight="bold" font-family="Courier New, monospace">3</text>
+  </g>
+  <g>
+    <rect x="430" y="520" width="80" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="470" y="545" text-anchor="middle" fill="#888888" font-size="14" font-weight="bold" font-family="Courier New, monospace">7</text>
+  </g>
+  <g>
+    <rect x="530" y="520" width="80" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="570" y="545" text-anchor="middle" fill="#888888" font-size="14" font-weight="bold" font-family="Courier New, monospace">9</text>
+  </g>
+  
+  <!-- Update Steps Box -->
+  <rect x="730" y="220" width="155" height="180" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="807" y="245" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">UPDATE STEPS</text>
+  <text x="745" y="275" fill="#f97316" font-size="12" font-family="Courier New, monospace">1. Find leaf [2]</text>
+  <text x="745" y="300" fill="#4ade80" font-size="12" font-family="Courier New, monospace">2. Set: 5 → 10</text>
+  <text x="745" y="325" fill="#a78bfa" font-size="12" font-family="Courier New, monospace">3. Walk up tree</text>
+  <text x="745" y="350" fill="#a78bfa" font-size="12" font-family="Courier New, monospace">4. Recalculate</text>
+  <text x="755" y="375" fill="#ffffff" font-size="11" font-family="Courier New, monospace">parent.val =</text>
+  <text x="755" y="390" fill="#ffffff" font-size="11" font-family="Courier New, monospace">left + right</text>
+  
+  <!-- Complexity Box -->
+  <rect x="730" y="420" width="155" height="70" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="807" y="445" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">COMPLEXITY</text>
+  <text x="745" y="470" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Time:  O(log n)</text>
+  <text x="745" y="488" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Nodes: height = 3</text>
+  
+  <!-- Footer Result -->
+  <rect x="200" y="590" width="500" height="45" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="450" y="618" text-anchor="middle" fill="#4ade80" font-size="16" font-weight="bold" font-family="Courier New, monospace">Only 3 nodes updated on path: root → [0-2] → [2]</text>
+</svg>
+

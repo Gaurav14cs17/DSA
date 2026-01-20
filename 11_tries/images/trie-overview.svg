@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Tries (Prefix Trees)</text>
+  <text x="450" y="65" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Tree structure for efficient string operations</text>
+  
+  <!-- Trie Structure -->
+  <text x="80" y="100" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">TRIE FOR ["car", "cat", "card", "care"]</text>
+  
+  <g transform="translate(150, 120)">
+    <!-- Root -->
+    <circle cx="120" cy="20" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="120" y="25" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">*</text>
+    <text x="145" y="25" fill="#f97316" font-size="10" font-family="Courier New, monospace">root</text>
+    
+    <!-- Level 1: c -->
+    <line x1="120" y1="38" x2="120" y2="62" stroke="#3b82f6" stroke-width="2"/>
+    <circle cx="120" cy="80" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="120" y="85" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">c</text>
+    
+    <!-- Level 2: a -->
+    <line x1="120" y1="98" x2="120" y2="122" stroke="#3b82f6" stroke-width="2"/>
+    <circle cx="120" cy="140" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="120" y="145" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">a</text>
+    
+    <!-- Level 3: r and t -->
+    <line x1="105" y1="155" x2="60" y2="190" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="135" y1="155" x2="180" y2="190" stroke="#3b82f6" stroke-width="2"/>
+    
+    <circle cx="60" cy="210" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="60" y="215" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">r</text>
+    
+    <circle cx="180" cy="210" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="180" y="215" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">t</text>
+    <text x="180" y="240" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">cat✓</text>
+    
+    <!-- Level 4: from r - none, d, e -->
+    <line x1="45" y1="225" x2="0" y2="260" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="60" y1="228" x2="60" y2="262" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="75" y1="225" x2="120" y2="260" stroke="#3b82f6" stroke-width="2"/>
+    
+    <circle cx="0" cy="280" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="0" y="275" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">car✓</text>
+    <text x="0" y="285" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">(end)</text>
+    
+    <circle cx="60" cy="280" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="60" y="285" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">d</text>
+    <text x="60" y="310" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">card✓</text>
+    
+    <circle cx="120" cy="280" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="120" y="285" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">e</text>
+    <text x="120" y="310" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">care✓</text>
+  </g>
+  
+  <!-- Node Structure -->
+  <text x="500" y="100" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">TRIE NODE</text>
+  
+  <g transform="translate(500, 120)">
+    <rect x="0" y="0" width="280" height="100" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    
+    <text x="15" y="25" fill="#f97316" font-size="12" font-family="Courier New, monospace">class TrieNode:</text>
+    <text x="25" y="45" fill="#ffffff" font-size="11" font-family="Courier New, monospace">children: Map&lt;char, Node&gt;</text>
+    <text x="25" y="65" fill="#ffffff" font-size="11" font-family="Courier New, monospace">isEndOfWord: boolean</text>
+    <text x="25" y="85" fill="#888888" font-size="11" font-family="Courier New, monospace">// 26 children for a-z</text>
+  </g>
+  
+  <!-- Operations -->
+  <text x="500" y="250" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">OPERATIONS</text>
+  
+  <g transform="translate(500, 270)">
+    <rect x="0" y="0" width="280" height="120" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    
+    <text x="15" y="25" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">insert(word)</text>
+    <text x="150" y="25" fill="#888888" font-size="11" font-family="Courier New, monospace">O(m)</text>
+    
+    <text x="15" y="50" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">search(word)</text>
+    <text x="150" y="50" fill="#888888" font-size="11" font-family="Courier New, monospace">O(m)</text>
+    
+    <text x="15" y="75" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">startsWith(prefix)</text>
+    <text x="150" y="75" fill="#888888" font-size="11" font-family="Courier New, monospace">O(m)</text>
+    
+    <text x="15" y="100" fill="#888888" font-size="10" font-family="Courier New, monospace">m = length of word/prefix</text>
+  </g>
+  
+  <!-- Autocomplete -->
+  <text x="80" y="460" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">AUTOCOMPLETE EXAMPLE</text>
+  
+  <g transform="translate(80, 480)">
+    <text x="0" y="15" fill="#888888" font-size="11" font-family="Courier New, monospace">Prefix: "car"</text>
+    
+    <rect x="0" y="25" width="200" height="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="100" y="45" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">Suggestions:</text>
+    <text x="100" y="65" text-anchor="middle" fill="#4ade80" font-size="12" font-family="Courier New, monospace">car, card, care</text>
+    <text x="100" y="85" text-anchor="middle" fill="#60a5fa" font-size="10" font-family="Courier New, monospace">DFS from prefix end</text>
+  </g>
+  
+  <!-- Word Search -->
+  <text x="350" y="460" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">WORD SEARCH</text>
+  
+  <g transform="translate(350, 480)">
+    <rect x="0" y="0" width="200" height="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Trie + DFS on grid</text>
+    <text x="15" y="40" fill="#888888" font-size="10" font-family="Courier New, monospace">Match words from</text>
+    <text x="15" y="55" fill="#888888" font-size="10" font-family="Courier New, monospace">2D character grid</text>
+  </g>
+  
+  <!-- Space Complexity -->
+  <text x="620" y="460" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">SPACE COMPLEXITY</text>
+  
+  <g transform="translate(620, 480)">
+    <rect x="0" y="0" width="200" height="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="25" fill="#f97316" font-size="11" font-weight="bold" font-family="Courier New, monospace">O(ALPHABET * m * n)</text>
+    <text x="15" y="45" fill="#888888" font-size="10" font-family="Courier New, monospace">n = number of words</text>
+    <text x="15" y="60" fill="#888888" font-size="10" font-family="Courier New, monospace">m = avg word length</text>
+  </g>
+  
+  <!-- Subtopics -->
+  <text x="80" y="580" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">SUBTOPICS</text>
+  <g transform="translate(180, 565)">
+    <text x="0" y="15" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">01. Basic Trie</text>
+    <text x="150" y="15" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">02. Word Search</text>
+    <text x="310" y="15" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">03. Autocomplete</text>
+  </g>
+</svg>
+

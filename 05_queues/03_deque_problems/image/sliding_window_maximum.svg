@@ -1,0 +1,275 @@
+<svg viewBox="0 0 950 750" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: bold 26px 'Courier New', monospace; fill: #ffffff; }
+      .subtitle { font: 16px 'Courier New', monospace; fill: #888888; }
+      .section-label { font: bold 14px 'Courier New', monospace; fill: #e94560; }
+      .box-text { font: bold 18px 'Courier New', monospace; fill: #ffffff; }
+      .small-label { font: 11px 'Courier New', monospace; fill: #888888; }
+      .index-label { font: 10px 'Courier New', monospace; fill: #60a5fa; }
+      .result-text { font: bold 14px 'Courier New', monospace; fill: #4ade80; }
+      .info-text { font: 13px 'Courier New', monospace; fill: #ffffff; }
+      .step-text { font: 12px 'Courier New', monospace; fill: #fbbf24; }
+      .complexity { font: 12px 'Courier New', monospace; fill: #60a5fa; }
+      .deque-label { font: bold 11px 'Courier New', monospace; fill: #a78bfa; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="950" height="750" fill="#0f0f23"/>
+
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" class="title">📊 Sliding Window Maximum</text>
+  <text x="475" y="65" text-anchor="middle" class="subtitle">Monotonic Deque: O(n) Solution for LC #239</text>
+
+  <!-- Input Array -->
+  <text x="40" y="105" class="section-label">Input: nums = [1, 3, -1, -3, 5, 3, 6, 7], k = 3</text>
+
+  <!-- Array visualization with indices -->
+  <g transform="translate(40, 115)">
+    <!-- Index labels -->
+    <text x="22" y="15" text-anchor="middle" class="index-label">0</text>
+    <text x="67" y="15" text-anchor="middle" class="index-label">1</text>
+    <text x="112" y="15" text-anchor="middle" class="index-label">2</text>
+    <text x="157" y="15" text-anchor="middle" class="index-label">3</text>
+    <text x="202" y="15" text-anchor="middle" class="index-label">4</text>
+    <text x="247" y="15" text-anchor="middle" class="index-label">5</text>
+    <text x="292" y="15" text-anchor="middle" class="index-label">6</text>
+    <text x="337" y="15" text-anchor="middle" class="index-label">7</text>
+    
+    <!-- Array boxes -->
+    <rect x="0" y="20" width="44" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="22" y="47" text-anchor="middle" class="box-text">1</text>
+    
+    <rect x="45" y="20" width="44" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="67" y="47" text-anchor="middle" class="box-text">3</text>
+    
+    <rect x="90" y="20" width="44" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="112" y="47" text-anchor="middle" class="box-text">-1</text>
+    
+    <rect x="135" y="20" width="44" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="157" y="47" text-anchor="middle" class="box-text">-3</text>
+    
+    <rect x="180" y="20" width="44" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="202" y="47" text-anchor="middle" class="box-text">5</text>
+    
+    <rect x="225" y="20" width="44" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="247" y="47" text-anchor="middle" class="box-text">3</text>
+    
+    <rect x="270" y="20" width="44" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="292" y="47" text-anchor="middle" class="box-text">6</text>
+    
+    <rect x="315" y="20" width="44" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="337" y="47" text-anchor="middle" class="box-text">7</text>
+  </g>
+
+  <!-- Step by Step -->
+  <!-- Step i=2: First complete window [1, 3, -1] -->
+  <g transform="translate(40, 190)">
+    <text x="0" y="0" class="section-label">i=2: Window [1, 3, -1]</text>
+    
+    <!-- Window highlight -->
+    <rect x="0" y="10" width="134" height="40" rx="4" fill="none" stroke="#f97316" stroke-width="3"/>
+    
+    <rect x="0" y="10" width="44" height="40" rx="4" fill="#2d2d44" stroke="#3b82f6" stroke-width="1"/>
+    <text x="22" y="37" text-anchor="middle" class="box-text">1</text>
+    
+    <rect x="45" y="10" width="44" height="40" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="67" y="37" text-anchor="middle" class="box-text" fill="#f97316">3</text>
+    
+    <rect x="90" y="10" width="44" height="40" rx="4" fill="#2d2d44" stroke="#3b82f6" stroke-width="1"/>
+    <text x="112" y="37" text-anchor="middle" class="box-text">-1</text>
+    
+    <rect x="135" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    <rect x="180" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    <rect x="225" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    <rect x="270" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    <rect x="315" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    
+    <!-- Deque state -->
+    <text x="400" y="5" class="deque-label">Deque (indices):</text>
+    <rect x="400" y="15" width="35" height="30" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="417" y="37" text-anchor="middle" class="box-text" fill="#a78bfa">1</text>
+    <rect x="440" y="15" width="35" height="30" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="457" y="37" text-anchor="middle" class="box-text" fill="#a78bfa">2</text>
+    
+    <text x="500" y="35" class="step-text">→ deque[0]=1, nums[1]=3</text>
+    <text x="700" y="35" class="result-text">Max: 3</text>
+  </g>
+
+  <!-- Step i=3: Window [3, -1, -3] -->
+  <g transform="translate(40, 265)">
+    <text x="0" y="0" class="section-label">i=3: Window [3, -1, -3]</text>
+    
+    <rect x="0" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    
+    <rect x="45" y="10" width="134" height="40" rx="4" fill="none" stroke="#f97316" stroke-width="3"/>
+    
+    <rect x="45" y="10" width="44" height="40" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="67" y="37" text-anchor="middle" class="box-text" fill="#f97316">3</text>
+    
+    <rect x="90" y="10" width="44" height="40" rx="4" fill="#2d2d44" stroke="#3b82f6" stroke-width="1"/>
+    <text x="112" y="37" text-anchor="middle" class="box-text">-1</text>
+    
+    <rect x="135" y="10" width="44" height="40" rx="4" fill="#2d2d44" stroke="#3b82f6" stroke-width="1"/>
+    <text x="157" y="37" text-anchor="middle" class="box-text">-3</text>
+    
+    <rect x="180" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    <rect x="225" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    <rect x="270" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    <rect x="315" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    
+    <!-- Deque state -->
+    <text x="400" y="5" class="deque-label">Deque:</text>
+    <rect x="400" y="15" width="35" height="30" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="417" y="37" text-anchor="middle" class="box-text" fill="#a78bfa">1</text>
+    <rect x="440" y="15" width="35" height="30" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="457" y="37" text-anchor="middle" class="box-text" fill="#a78bfa">2</text>
+    <rect x="480" y="15" width="35" height="30" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="497" y="37" text-anchor="middle" class="box-text" fill="#a78bfa">3</text>
+    
+    <text x="540" y="35" class="step-text">→ nums[1]=3</text>
+    <text x="700" y="35" class="result-text">Max: 3</text>
+  </g>
+
+  <!-- Step i=4: Window [-1, -3, 5] -->
+  <g transform="translate(40, 340)">
+    <text x="0" y="0" class="section-label">i=4: Window [-1, -3, 5]</text>
+    
+    <rect x="0" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    <rect x="45" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    
+    <rect x="90" y="10" width="134" height="40" rx="4" fill="none" stroke="#f97316" stroke-width="3"/>
+    
+    <rect x="90" y="10" width="44" height="40" rx="4" fill="#2d2d44" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="112" y="37" text-anchor="middle" class="box-text" fill="#666">-1</text>
+    
+    <rect x="135" y="10" width="44" height="40" rx="4" fill="#2d2d44" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="157" y="37" text-anchor="middle" class="box-text" fill="#666">-3</text>
+    
+    <rect x="180" y="10" width="44" height="40" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="202" y="37" text-anchor="middle" class="box-text" fill="#f97316">5</text>
+    
+    <rect x="225" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    <rect x="270" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    <rect x="315" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    
+    <!-- Deque state -->
+    <text x="400" y="5" class="deque-label">Deque: (pop smaller, idx 1 out)</text>
+    <rect x="400" y="15" width="35" height="30" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="417" y="37" text-anchor="middle" class="box-text" fill="#a78bfa">4</text>
+    
+    <text x="460" y="35" class="step-text">→ 5 > all, clear deque</text>
+    <text x="700" y="35" class="result-text">Max: 5</text>
+  </g>
+
+  <!-- Step i=5: Window [-3, 5, 3] -->
+  <g transform="translate(40, 415)">
+    <text x="0" y="0" class="section-label">i=5: Window [-3, 5, 3]</text>
+    
+    <rect x="0" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    <rect x="45" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    <rect x="90" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    
+    <rect x="135" y="10" width="134" height="40" rx="4" fill="none" stroke="#f97316" stroke-width="3"/>
+    
+    <rect x="135" y="10" width="44" height="40" rx="4" fill="#2d2d44" stroke="#3b82f6" stroke-width="1"/>
+    <text x="157" y="37" text-anchor="middle" class="box-text">-3</text>
+    
+    <rect x="180" y="10" width="44" height="40" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="202" y="37" text-anchor="middle" class="box-text" fill="#f97316">5</text>
+    
+    <rect x="225" y="10" width="44" height="40" rx="4" fill="#2d2d44" stroke="#3b82f6" stroke-width="1"/>
+    <text x="247" y="37" text-anchor="middle" class="box-text">3</text>
+    
+    <rect x="270" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    <rect x="315" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    
+    <!-- Deque state -->
+    <text x="400" y="5" class="deque-label">Deque:</text>
+    <rect x="400" y="15" width="35" height="30" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="417" y="37" text-anchor="middle" class="box-text" fill="#a78bfa">4</text>
+    <rect x="440" y="15" width="35" height="30" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="457" y="37" text-anchor="middle" class="box-text" fill="#a78bfa">5</text>
+    
+    <text x="500" y="35" class="step-text">→ 3 < 5, keep both</text>
+    <text x="700" y="35" class="result-text">Max: 5</text>
+  </g>
+
+  <!-- Step i=6: Window [5, 3, 6] -->
+  <g transform="translate(40, 490)">
+    <text x="0" y="0" class="section-label">i=6: Window [5, 3, 6]</text>
+    
+    <rect x="0" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    <rect x="45" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    <rect x="90" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    <rect x="135" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    
+    <rect x="180" y="10" width="134" height="40" rx="4" fill="none" stroke="#f97316" stroke-width="3"/>
+    
+    <rect x="180" y="10" width="44" height="40" rx="4" fill="#2d2d44" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="202" y="37" text-anchor="middle" class="box-text" fill="#666">5</text>
+    
+    <rect x="225" y="10" width="44" height="40" rx="4" fill="#2d2d44" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="247" y="37" text-anchor="middle" class="box-text" fill="#666">3</text>
+    
+    <rect x="270" y="10" width="44" height="40" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="292" y="37" text-anchor="middle" class="box-text" fill="#f97316">6</text>
+    
+    <rect x="315" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    
+    <!-- Deque state -->
+    <text x="400" y="5" class="deque-label">Deque: (pop all smaller)</text>
+    <rect x="400" y="15" width="35" height="30" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="417" y="37" text-anchor="middle" class="box-text" fill="#a78bfa">6</text>
+    
+    <text x="460" y="35" class="step-text">→ 6 > 5,3</text>
+    <text x="700" y="35" class="result-text">Max: 6</text>
+  </g>
+
+  <!-- Step i=7: Window [3, 6, 7] -->
+  <g transform="translate(40, 565)">
+    <text x="0" y="0" class="section-label">i=7: Window [3, 6, 7]</text>
+    
+    <rect x="0" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    <rect x="45" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    <rect x="90" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    <rect x="135" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    <rect x="180" y="10" width="44" height="40" rx="4" fill="#1a1a2e"/>
+    
+    <rect x="225" y="10" width="134" height="40" rx="4" fill="none" stroke="#f97316" stroke-width="3"/>
+    
+    <rect x="225" y="10" width="44" height="40" rx="4" fill="#2d2d44" stroke="#3b82f6" stroke-width="1"/>
+    <text x="247" y="37" text-anchor="middle" class="box-text">3</text>
+    
+    <rect x="270" y="10" width="44" height="40" rx="4" fill="#2d2d44" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="292" y="37" text-anchor="middle" class="box-text" fill="#666">6</text>
+    
+    <rect x="315" y="10" width="44" height="40" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="337" y="37" text-anchor="middle" class="box-text" fill="#f97316">7</text>
+    
+    <!-- Deque state -->
+    <text x="400" y="5" class="deque-label">Deque:</text>
+    <rect x="400" y="15" width="35" height="30" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="417" y="37" text-anchor="middle" class="box-text" fill="#a78bfa">7</text>
+    
+    <text x="460" y="35" class="step-text">→ 7 > 6</text>
+    <text x="700" y="35" class="result-text">Max: 7</text>
+  </g>
+
+  <!-- Result -->
+  <rect x="40" y="640" width="460" height="45" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="60" y="668" class="result-text">Result: [3, 3, 5, 5, 6, 7]</text>
+
+  <!-- Algorithm Box -->
+  <rect x="520" y="640" width="400" height="90" rx="8" fill="#1a1a2e" stroke="#60a5fa" stroke-width="2"/>
+  <text x="720" y="665" text-anchor="middle" class="section-label" fill="#60a5fa">Algorithm</text>
+  <text x="540" y="690" class="info-text">1. Remove out-of-window indices from front</text>
+  <text x="540" y="710" class="info-text">2. Pop smaller elements from back</text>
+  <text x="540" y="730" class="info-text">3. Front of deque = window maximum</text>
+
+  <!-- Complexity Footer -->
+  <text x="475" y="745" text-anchor="middle" class="complexity">Time: O(n) — each element pushed/popped once | Space: O(k)</text>
+</svg>
+
+

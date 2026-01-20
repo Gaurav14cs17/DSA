@@ -1,0 +1,133 @@
+<svg viewBox="0 0 950 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="35" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Subsets Generation (Power Set)</text>
+  <text x="475" y="58" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Generate all 2ⁿ subsets of [1, 2, 3]</text>
+  
+  <!-- Formula -->
+  <rect x="350" y="70" width="250" height="35" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="475" y="94" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa" text-anchor="middle">|Power Set| = 2³ = 8 subsets</text>
+  
+  <!-- Binary Decision Tree -->
+  <text x="475" y="130" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">Include/Exclude Decision Tree</text>
+  
+  <!-- Root -->
+  <rect x="410" y="145" width="130" height="35" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+  <text x="475" y="168" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Consider: 1</text>
+  
+  <!-- Level 1: Include/Exclude 1 -->
+  <line x1="440" y1="180" x2="280" y2="225" stroke="#4ade80" stroke-width="2"/>
+  <line x1="510" y1="180" x2="670" y2="225" stroke="#ef4444" stroke-width="2"/>
+  
+  <text x="340" y="200" font-family="Courier New, monospace" font-size="10" fill="#4ade80">include 1</text>
+  <text x="610" y="200" font-family="Courier New, monospace" font-size="10" fill="#ef4444">exclude 1</text>
+  
+  <!-- Level 1 nodes -->
+  <rect x="200" y="230" width="140" height="35" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="270" y="248" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">[1] Consider: 2</text>
+  
+  <rect x="600" y="230" width="140" height="35" rx="4" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+  <text x="670" y="248" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">[] Consider: 2</text>
+  
+  <!-- Level 2: Include/Exclude 2 -->
+  <line x1="235" y1="265" x2="150" y2="305" stroke="#4ade80" stroke-width="2"/>
+  <line x1="305" y1="265" x2="390" y2="305" stroke="#ef4444" stroke-width="2"/>
+  <line x1="635" y1="265" x2="550" y2="305" stroke="#4ade80" stroke-width="2"/>
+  <line x1="705" y1="265" x2="790" y2="305" stroke="#ef4444" stroke-width="2"/>
+  
+  <text x="175" y="290" font-family="Courier New, monospace" font-size="9" fill="#4ade80">+2</text>
+  <text x="360" y="290" font-family="Courier New, monospace" font-size="9" fill="#ef4444">skip</text>
+  <text x="575" y="290" font-family="Courier New, monospace" font-size="9" fill="#4ade80">+2</text>
+  <text x="760" y="290" font-family="Courier New, monospace" font-size="9" fill="#ef4444">skip</text>
+  
+  <!-- Level 2 nodes -->
+  <rect x="80" y="310" width="130" height="30" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="145" y="330" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">[1,2] → 3?</text>
+  
+  <rect x="330" y="310" width="110" height="30" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="385" y="330" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">[1] → 3?</text>
+  
+  <rect x="490" y="310" width="110" height="30" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="545" y="330" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">[2] → 3?</text>
+  
+  <rect x="730" y="310" width="110" height="30" rx="4" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+  <text x="785" y="330" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">[] → 3?</text>
+  
+  <!-- Level 3: Include/Exclude 3 -->
+  <line x1="115" y1="340" x2="70" y2="380" stroke="#4ade80" stroke-width="2"/>
+  <line x1="175" y1="340" x2="220" y2="380" stroke="#ef4444" stroke-width="2"/>
+  
+  <line x1="355" y1="340" x2="310" y2="380" stroke="#4ade80" stroke-width="2"/>
+  <line x1="415" y1="340" x2="460" y2="380" stroke="#ef4444" stroke-width="2"/>
+  
+  <line x1="515" y1="340" x2="470" y2="380" stroke="#4ade80" stroke-width="2"/>
+  <line x1="575" y1="340" x2="620" y2="380" stroke="#ef4444" stroke-width="2"/>
+  
+  <line x1="755" y1="340" x2="710" y2="380" stroke="#4ade80" stroke-width="2"/>
+  <line x1="815" y1="340" x2="860" y2="380" stroke="#ef4444" stroke-width="2"/>
+  
+  <!-- Final subsets (leaf nodes) -->
+  <rect x="35" y="390" width="70" height="30" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="70" y="410" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">{1,2,3}</text>
+  
+  <rect x="185" y="390" width="70" height="30" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="220" y="410" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">{1,2}</text>
+  
+  <rect x="275" y="390" width="70" height="30" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="310" y="410" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">{1,3}</text>
+  
+  <rect x="425" y="390" width="70" height="30" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="460" y="410" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">{1}</text>
+  
+  <rect x="435" y="390" width="70" height="30" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="470" y="410" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">{2,3}</text>
+  
+  <rect x="585" y="390" width="70" height="30" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="620" y="410" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">{2}</text>
+  
+  <rect x="675" y="390" width="70" height="30" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="710" y="410" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">{3}</text>
+  
+  <rect x="825" y="390" width="70" height="30" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="860" y="410" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">{}</text>
+  
+  <!-- Binary representation -->
+  <rect x="50" y="450" width="400" height="230" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="478" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">Binary Representation</text>
+  
+  <text x="80" y="505" font-family="Courier New, monospace" font-size="11" fill="#888888">Index:     [0]  [1]  [2]</text>
+  <text x="80" y="525" font-family="Courier New, monospace" font-size="11" fill="#888888">Element:    1    2    3</text>
+  
+  <line x1="80" y1="535" x2="420" y2="535" stroke="#888888" stroke-width="1" stroke-dasharray="4,2"/>
+  
+  <text x="80" y="560" font-family="Courier New, monospace" font-size="11" fill="#ffffff">000 → {}        </text>
+  <text x="200" y="560" font-family="Courier New, monospace" font-size="11" fill="#ffffff">100 → {1}</text>
+  <text x="80" y="580" font-family="Courier New, monospace" font-size="11" fill="#ffffff">001 → {3}       </text>
+  <text x="200" y="580" font-family="Courier New, monospace" font-size="11" fill="#ffffff">101 → {1,3}</text>
+  <text x="80" y="600" font-family="Courier New, monospace" font-size="11" fill="#ffffff">010 → {2}       </text>
+  <text x="200" y="600" font-family="Courier New, monospace" font-size="11" fill="#ffffff">110 → {1,2}</text>
+  <text x="80" y="620" font-family="Courier New, monospace" font-size="11" fill="#ffffff">011 → {2,3}     </text>
+  <text x="200" y="620" font-family="Courier New, monospace" font-size="11" fill="#ffffff">111 → {1,2,3}</text>
+  
+  <text x="80" y="660" font-family="Courier New, monospace" font-size="10" fill="#60a5fa">Each bit = include(1) or exclude(0)</text>
+  
+  <!-- Code section -->
+  <rect x="500" y="450" width="400" height="230" rx="8" fill="#0f0f23" stroke="#4ade80" stroke-width="2"/>
+  <text x="700" y="478" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">Two Approaches</text>
+  
+  <text x="520" y="510" font-family="Courier New, monospace" font-size="12" fill="#f97316">1. Recursive (Backtracking)</text>
+  <text x="540" y="535" font-family="Courier New, monospace" font-size="10" fill="#ffffff">def backtrack(start, path):</text>
+  <text x="560" y="552" font-family="Courier New, monospace" font-size="10" fill="#ffffff">result.append(path[:])</text>
+  <text x="560" y="569" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">for</text>
+  <text x="590" y="569" font-family="Courier New, monospace" font-size="10" fill="#ffffff"> i in range(start, n):</text>
+  <text x="575" y="586" font-family="Courier New, monospace" font-size="10" fill="#ffffff">backtrack(i+1, path+[nums[i]])</text>
+  
+  <line x1="520" y1="600" x2="880" y2="600" stroke="#888888" stroke-width="1" stroke-dasharray="4,2"/>
+  
+  <text x="520" y="625" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">2. Iterative (Bit Masking)</text>
+  <text x="540" y="650" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">for</text>
+  <text x="565" y="650" font-family="Courier New, monospace" font-size="10" fill="#ffffff"> mask in range(1 &lt;&lt; n):</text>
+  <text x="555" y="667" font-family="Courier New, monospace" font-size="10" fill="#ffffff">if mask &amp; (1&lt;&lt;i): include i</text>
+</svg>
+

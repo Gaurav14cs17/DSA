@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450">
+  <rect width="900" height="450" fill="#0f0f23"/>
+  
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Two Pointers Technique</text>
+  <text x="450" y="58" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">Use two indices to traverse and compare elements</text>
+  
+  <!-- Opposite Direction -->
+  <text x="50" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">OPPOSITE DIRECTION: Two Sum (Sorted)</text>
+  <g transform="translate(50, 115)">
+    <rect x="0" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="20" y="23" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Courier New, monospace">1</text>
+    <rect x="45" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="65" y="23" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Courier New, monospace">3</text>
+    <rect x="90" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="110" y="23" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Courier New, monospace">5</text>
+    <rect x="135" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="155" y="23" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Courier New, monospace">7</text>
+    <rect x="180" y="0" width="40" height="35" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="200" y="23" text-anchor="middle" fill="#ffffff" font-size="14" font-family="Courier New, monospace">9</text>
+    
+    <text x="20" y="55" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">L→</text>
+    <text x="200" y="55" text-anchor="middle" fill="#f97316" font-size="10" font-family="Courier New, monospace">←R</text>
+    
+    <text x="250" y="20" fill="#888888" font-size="10" font-family="Courier New, monospace">target=10, sum=1+9=10</text>
+    <text x="250" y="40" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Time: O(n)</text>
+  </g>
+  
+  <!-- Same Direction -->
+  <text x="500" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">SAME DIRECTION: Remove Duplicates</text>
+  <g transform="translate(500, 115)">
+    <rect x="0" y="0" width="35" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="17" y="23" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">1</text>
+    <rect x="40" y="0" width="35" height="35" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="4"/>
+    <text x="57" y="23" text-anchor="middle" fill="#888888" font-size="12" font-family="Courier New, monospace">1</text>
+    <rect x="80" y="0" width="35" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="97" y="23" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">2</text>
+    <rect x="120" y="0" width="35" height="35" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="4"/>
+    <text x="137" y="23" text-anchor="middle" fill="#888888" font-size="12" font-family="Courier New, monospace">2</text>
+    <rect x="160" y="0" width="35" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="177" y="23" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">3</text>
+    
+    <text x="17" y="55" text-anchor="middle" fill="#4ade80" font-size="9" font-family="Courier New, monospace">slow</text>
+    <text x="177" y="55" text-anchor="middle" fill="#f97316" font-size="9" font-family="Courier New, monospace">fast</text>
+    
+    <text x="220" y="25" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Result: [1,2,3]</text>
+  </g>
+  
+  <!-- Fast Slow -->
+  <text x="50" y="220" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">FAST-SLOW: Cycle Detection</text>
+  <g transform="translate(50, 240)">
+    <circle cx="30" cy="20" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="30" y="25" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">1</text>
+    <line x1="48" y1="20" x2="72" y2="20" stroke="#3b82f6" stroke-width="2"/>
+    
+    <circle cx="90" cy="20" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="90" y="25" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">2</text>
+    <line x1="108" y1="20" x2="132" y2="20" stroke="#3b82f6" stroke-width="2"/>
+    
+    <circle cx="150" cy="20" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="150" y="25" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">3</text>
+    <text x="150" y="0" fill="#4ade80" font-size="9" font-family="Courier New, monospace">slow</text>
+    <line x1="168" y1="20" x2="192" y2="20" stroke="#3b82f6" stroke-width="2"/>
+    
+    <circle cx="210" cy="20" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="210" y="25" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">4</text>
+    <text x="210" y="0" fill="#f97316" font-size="9" font-family="Courier New, monospace">fast</text>
+    
+    <!-- Cycle back -->
+    <path d="M 228 20 Q 260 20 260 70 Q 260 90 150 90 Q 132 90 132 38" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+    <text x="200" y="75" fill="#ef4444" font-size="10" font-family="Courier New, monospace">cycle</text>
+  </g>
+  
+  <!-- Three Pointers -->
+  <text x="400" y="220" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">THREE POINTERS: 3Sum</text>
+  <g transform="translate(400, 240)">
+    <text x="0" y="15" fill="#888888" font-size="10" font-family="Courier New, monospace">For each a: use two pointers for b+c=-a</text>
+    <rect x="0" y="25" width="350" height="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="45" fill="#ffffff" font-size="10" font-family="Courier New, monospace">1. Sort array O(n log n)</text>
+    <text x="15" y="65" fill="#ffffff" font-size="10" font-family="Courier New, monospace">2. Fix one, two-pointer on rest O(n²)</text>
+  </g>
+  
+  <!-- Time Complexity -->
+  <text x="50" y="360" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">TIME COMPLEXITY</text>
+  <g transform="translate(50, 375)">
+    <text x="0" y="15" fill="#4ade80" font-size="12" font-family="Courier New, monospace">O(n)</text>
+    <text x="60" y="15" fill="#888888" font-size="11" font-family="Courier New, monospace">- each pointer moves at most n times</text>
+  </g>
+  
+  <!-- Problems -->
+  <text x="400" y="360" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">CLASSIC PROBLEMS</text>
+  <g transform="translate(400, 375)">
+    <text x="0" y="15" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Two Sum • Container Water • Trapping Rain • 3Sum • Palindrome</text>
+  </g>
+</svg>
+

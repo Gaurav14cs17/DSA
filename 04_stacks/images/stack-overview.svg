@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Stacks Overview</text>
+  <text x="450" y="65" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">LIFO - Last In, First Out</text>
+  
+  <!-- Stack Visualization -->
+  <text x="80" y="110" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">STACK STRUCTURE</text>
+  
+  <g transform="translate(80, 130)">
+    <!-- Stack container -->
+    <rect x="0" y="0" width="120" height="200" fill="none" stroke="#3b82f6" stroke-width="3"/>
+    
+    <!-- Stack elements -->
+    <rect x="10" y="150" width="100" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="60" y="175" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">10</text>
+    
+    <rect x="10" y="105" width="100" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="60" y="130" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">20</text>
+    
+    <rect x="10" y="60" width="100" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="60" y="85" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">30</text>
+    
+    <!-- Top pointer -->
+    <text x="140" y="85" fill="#f97316" font-size="12" font-family="Courier New, monospace">← TOP</text>
+    
+    <!-- Push/Pop arrows -->
+    <line x1="60" y1="-20" x2="60" y2="50" stroke="#4ade80" stroke-width="2"/>
+    <polygon points="55,50 65,50 60,60" fill="#4ade80"/>
+    <text x="80" y="-10" fill="#4ade80" font-size="11" font-family="Courier New, monospace">PUSH</text>
+    
+    <line x1="-30" y1="60" x2="-30" y2="-10" stroke="#ef4444" stroke-width="2"/>
+    <polygon points="-35,-10 -25,-10 -30,-20" fill="#ef4444"/>
+    <text x="-50" y="40" fill="#ef4444" font-size="11" font-family="Courier New, monospace">POP</text>
+  </g>
+  
+  <!-- Monotonic Stack -->
+  <text x="300" y="110" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">MONOTONIC STACK (Next Greater)</text>
+  
+  <g transform="translate(300, 130)">
+    <!-- Input array -->
+    <text x="0" y="15" fill="#888888" font-size="11" font-family="Courier New, monospace">arr[]:</text>
+    <rect x="50" y="0" width="40" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="70" y="20" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">4</text>
+    <rect x="90" y="0" width="40" height="30" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="110" y="20" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">5</text>
+    <rect x="130" y="0" width="40" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="150" y="20" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">2</text>
+    <rect x="170" y="0" width="40" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="190" y="20" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">10</text>
+    <rect x="210" y="0" width="40" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="230" y="20" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">8</text>
+    
+    <!-- Result -->
+    <text x="0" y="60" fill="#888888" font-size="11" font-family="Courier New, monospace">NGE[]:</text>
+    <rect x="50" y="45" width="40" height="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="70" y="65" text-anchor="middle" fill="#4ade80" font-size="12" font-family="Courier New, monospace">5</text>
+    <rect x="90" y="45" width="40" height="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="110" y="65" text-anchor="middle" fill="#4ade80" font-size="12" font-family="Courier New, monospace">10</text>
+    <rect x="130" y="45" width="40" height="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="150" y="65" text-anchor="middle" fill="#4ade80" font-size="12" font-family="Courier New, monospace">10</text>
+    <rect x="170" y="45" width="40" height="30" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+    <text x="190" y="65" text-anchor="middle" fill="#ef4444" font-size="12" font-family="Courier New, monospace">-1</text>
+    <rect x="210" y="45" width="40" height="30" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+    <text x="230" y="65" text-anchor="middle" fill="#ef4444" font-size="12" font-family="Courier New, monospace">-1</text>
+  </g>
+  
+  <!-- Valid Parentheses -->
+  <text x="300" y="240" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">VALID PARENTHESES</text>
+  
+  <g transform="translate(300, 260)">
+    <!-- Expression -->
+    <text x="0" y="15" fill="#888888" font-size="11" font-family="Courier New, monospace">expr:</text>
+    <text x="50" y="15" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">( [ { } ] )</text>
+    
+    <!-- Stack states -->
+    <text x="0" y="50" fill="#888888" font-size="11" font-family="Courier New, monospace">stack:</text>
+    <rect x="50" y="35" width="30" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="65" y="52" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">(</text>
+    <rect x="80" y="35" width="30" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="95" y="52" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">[</text>
+    <rect x="110" y="35" width="30" height="25" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+    <text x="125" y="52" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">{</text>
+    
+    <text x="160" y="52" fill="#4ade80" font-size="14" font-family="Courier New, monospace">→ match } → pop</text>
+    
+    <!-- Result -->
+    <text x="50" y="85" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">✓ VALID (stack empty)</text>
+  </g>
+  
+  <!-- Expression Evaluation -->
+  <text x="580" y="110" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">POSTFIX EVALUATION</text>
+  
+  <g transform="translate(580, 130)">
+    <text x="0" y="15" fill="#888888" font-size="11" font-family="Courier New, monospace">expr: 3 4 + 5 *</text>
+    
+    <!-- Steps -->
+    <text x="0" y="45" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">Step 1: push 3</text>
+    <text x="0" y="65" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">Step 2: push 4</text>
+    <text x="0" y="85" fill="#f97316" font-size="11" font-family="Courier New, monospace">Step 3: + → 3+4=7</text>
+    <text x="0" y="105" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">Step 4: push 5</text>
+    <text x="0" y="125" fill="#f97316" font-size="11" font-family="Courier New, monospace">Step 5: * → 7*5=35</text>
+    
+    <text x="0" y="155" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">Result: 35</text>
+  </g>
+  
+  <!-- Time Complexity -->
+  <text x="80" y="380" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">TIME COMPLEXITY</text>
+  <g transform="translate(80, 400)">
+    <rect x="0" y="0" width="200" height="100" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="25" fill="#888888" font-size="12" font-family="Courier New, monospace">Push</text>
+    <text x="150" y="25" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">O(1)</text>
+    <text x="15" y="50" fill="#888888" font-size="12" font-family="Courier New, monospace">Pop</text>
+    <text x="150" y="50" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">O(1)</text>
+    <text x="15" y="75" fill="#888888" font-size="12" font-family="Courier New, monospace">Peek/Top</text>
+    <text x="150" y="75" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">O(1)</text>
+  </g>
+  
+  <!-- Key Patterns -->
+  <text x="350" y="380" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">KEY PATTERNS</text>
+  <g transform="translate(350, 400)">
+    <rect x="0" y="0" width="140" height="35" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="70" y="23" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="Courier New, monospace">Parentheses</text>
+    
+    <rect x="150" y="0" width="140" height="35" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="220" y="23" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="Courier New, monospace">Monotonic Stack</text>
+    
+    <rect x="300" y="0" width="140" height="35" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="370" y="23" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="Courier New, monospace">Expression Eval</text>
+    
+    <rect x="0" y="45" width="140" height="35" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="70" y="68" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="Courier New, monospace">Next Greater</text>
+    
+    <rect x="150" y="45" width="140" height="35" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="220" y="68" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="Courier New, monospace">Histogram</text>
+  </g>
+  
+  <!-- Subtopics -->
+  <text x="80" y="540" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">SUBTOPICS</text>
+  <g transform="translate(80, 555)">
+    <text x="0" y="15" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">01. Basic Stack</text>
+    <text x="170" y="15" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">02. Parentheses</text>
+    <text x="340" y="15" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">03. Monotonic Stack</text>
+    <text x="540" y="15" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">04. Expression Eval</text>
+  </g>
+</svg>
+

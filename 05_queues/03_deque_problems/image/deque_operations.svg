@@ -1,0 +1,221 @@
+<svg viewBox="0 0 900 650" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: bold 28px 'Courier New', monospace; fill: #ffffff; }
+      .subtitle { font: 16px 'Courier New', monospace; fill: #888888; }
+      .section-label { font: bold 16px 'Courier New', monospace; fill: #e94560; }
+      .box-text { font: bold 20px 'Courier New', monospace; fill: #ffffff; }
+      .small-label { font: 12px 'Courier New', monospace; fill: #888888; }
+      .result-text { font: bold 14px 'Courier New', monospace; fill: #4ade80; }
+      .info-text { font: 14px 'Courier New', monospace; fill: #ffffff; }
+      .arrow-label { font: bold 12px 'Courier New', monospace; fill: #fbbf24; }
+      .complexity { font: 12px 'Courier New', monospace; fill: #60a5fa; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="650" fill="#0f0f23"/>
+
+  <!-- Title -->
+  <text x="450" y="45" text-anchor="middle" class="title">🔄 Deque Operations</text>
+  <text x="450" y="75" text-anchor="middle" class="subtitle">Double-Ended Queue: Insert/Delete from Both Ends</text>
+
+  <!-- Section 1: Initial Deque -->
+  <text x="50" y="130" class="section-label">Initial State:</text>
+  
+  <!-- Deque boxes -->
+  <g transform="translate(200, 100)">
+    <rect x="0" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="27" y="48" text-anchor="middle" class="box-text">3</text>
+    
+    <rect x="65" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="92" y="48" text-anchor="middle" class="box-text">7</text>
+    
+    <rect x="130" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="157" y="48" text-anchor="middle" class="box-text">1</text>
+    
+    <rect x="195" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="222" y="48" text-anchor="middle" class="box-text">9</text>
+    
+    <rect x="260" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="287" y="48" text-anchor="middle" class="box-text">4</text>
+    
+    <!-- Labels -->
+    <text x="27" y="85" text-anchor="middle" class="small-label">FRONT</text>
+    <text x="287" y="85" text-anchor="middle" class="small-label">BACK</text>
+  </g>
+
+  <!-- Section 2: push_front(5) -->
+  <text x="50" y="210" class="section-label">push_front(5):</text>
+  
+  <g transform="translate(200, 180)">
+    <!-- New element highlighted -->
+    <rect x="0" y="15" width="55" height="50" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="27" y="48" text-anchor="middle" class="box-text" fill="#f97316">5</text>
+    
+    <rect x="65" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="92" y="48" text-anchor="middle" class="box-text">3</text>
+    
+    <rect x="130" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="157" y="48" text-anchor="middle" class="box-text">7</text>
+    
+    <rect x="195" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="222" y="48" text-anchor="middle" class="box-text">1</text>
+    
+    <rect x="260" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="287" y="48" text-anchor="middle" class="box-text">9</text>
+    
+    <rect x="325" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="352" y="48" text-anchor="middle" class="box-text">4</text>
+    
+    <!-- Arrow -->
+    <path d="M -30 40 L -5 40" stroke="#f97316" stroke-width="2" fill="none" marker-end="url(#arrowOrange)"/>
+    <text x="-70" y="45" class="arrow-label">INSERT</text>
+    
+    <text x="27" y="85" text-anchor="middle" class="small-label">NEW FRONT</text>
+  </g>
+
+  <!-- Section 3: push_back(8) -->
+  <text x="50" y="295" class="section-label">push_back(8):</text>
+  
+  <g transform="translate(200, 265)">
+    <rect x="0" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="27" y="48" text-anchor="middle" class="box-text">5</text>
+    
+    <rect x="65" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="92" y="48" text-anchor="middle" class="box-text">3</text>
+    
+    <rect x="130" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="157" y="48" text-anchor="middle" class="box-text">7</text>
+    
+    <rect x="195" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="222" y="48" text-anchor="middle" class="box-text">1</text>
+    
+    <rect x="260" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="287" y="48" text-anchor="middle" class="box-text">9</text>
+    
+    <rect x="325" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="352" y="48" text-anchor="middle" class="box-text">4</text>
+    
+    <!-- New element highlighted -->
+    <rect x="390" y="15" width="55" height="50" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="417" y="48" text-anchor="middle" class="box-text" fill="#f97316">8</text>
+    
+    <!-- Arrow -->
+    <path d="M 475 40 L 450 40" stroke="#f97316" stroke-width="2" fill="none" marker-end="url(#arrowOrange2)"/>
+    <text x="490" y="45" class="arrow-label">INSERT</text>
+    
+    <text x="417" y="85" text-anchor="middle" class="small-label">NEW BACK</text>
+  </g>
+
+  <!-- Section 4: pop_front() -->
+  <text x="50" y="385" class="section-label">pop_front():</text>
+  
+  <g transform="translate(200, 355)">
+    <!-- Removed element -->
+    <rect x="0" y="15" width="55" height="50" rx="6" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="27" y="48" text-anchor="middle" class="box-text" fill="#ef4444">5</text>
+    
+    <rect x="65" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="92" y="48" text-anchor="middle" class="box-text">3</text>
+    
+    <rect x="130" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="157" y="48" text-anchor="middle" class="box-text">7</text>
+    
+    <rect x="195" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="222" y="48" text-anchor="middle" class="box-text">1</text>
+    
+    <rect x="260" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="287" y="48" text-anchor="middle" class="box-text">9</text>
+    
+    <rect x="325" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="352" y="48" text-anchor="middle" class="box-text">4</text>
+    
+    <rect x="390" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="417" y="48" text-anchor="middle" class="box-text">8</text>
+    
+    <!-- Arrow -->
+    <path d="M 5 40 L -25 40" stroke="#ef4444" stroke-width="2" fill="none" marker-end="url(#arrowRed)"/>
+    <text x="-70" y="45" class="arrow-label" fill="#ef4444">REMOVE</text>
+    
+    <text x="27" y="85" text-anchor="middle" class="small-label">RETURNED: 5</text>
+  </g>
+
+  <!-- Section 5: pop_back() -->
+  <text x="50" y="475" class="section-label">pop_back():</text>
+  
+  <g transform="translate(200, 445)">
+    <rect x="65" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="92" y="48" text-anchor="middle" class="box-text">3</text>
+    
+    <rect x="130" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="157" y="48" text-anchor="middle" class="box-text">7</text>
+    
+    <rect x="195" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="222" y="48" text-anchor="middle" class="box-text">1</text>
+    
+    <rect x="260" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="287" y="48" text-anchor="middle" class="box-text">9</text>
+    
+    <rect x="325" y="15" width="55" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="352" y="48" text-anchor="middle" class="box-text">4</text>
+    
+    <!-- Removed element -->
+    <rect x="390" y="15" width="55" height="50" rx="6" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="417" y="48" text-anchor="middle" class="box-text" fill="#ef4444">8</text>
+    
+    <!-- Arrow -->
+    <path d="M 440 40 L 470 40" stroke="#ef4444" stroke-width="2" fill="none" marker-end="url(#arrowRed2)"/>
+    <text x="485" y="45" class="arrow-label" fill="#ef4444">REMOVE</text>
+    
+    <text x="417" y="85" text-anchor="middle" class="small-label">RETURNED: 8</text>
+    <text x="92" y="85" text-anchor="middle" class="small-label">FRONT</text>
+    <text x="352" y="85" text-anchor="middle" class="small-label">BACK</text>
+  </g>
+
+  <!-- Info Box -->
+  <rect x="620" y="110" width="250" height="200" rx="8" fill="#1a1a2e" stroke="#3b82f6" stroke-width="2"/>
+  <text x="745" y="140" text-anchor="middle" class="section-label">Operations O(1)</text>
+  
+  <text x="640" y="170" class="info-text">push_front(x)</text>
+  <text x="640" y="195" class="info-text">push_back(x)</text>
+  <text x="640" y="220" class="info-text">pop_front()</text>
+  <text x="640" y="245" class="info-text">pop_back()</text>
+  <text x="640" y="270" class="info-text">front() / back()</text>
+  
+  <text x="830" y="170" class="result-text" text-anchor="end">O(1)</text>
+  <text x="830" y="195" class="result-text" text-anchor="end">O(1)</text>
+  <text x="830" y="220" class="result-text" text-anchor="end">O(1)</text>
+  <text x="830" y="245" class="result-text" text-anchor="end">O(1)</text>
+  <text x="830" y="270" class="result-text" text-anchor="end">O(1)</text>
+
+  <!-- Use Cases Box -->
+  <rect x="620" y="330" width="250" height="120" rx="8" fill="#1a1a2e" stroke="#4ade80" stroke-width="2"/>
+  <text x="745" y="360" text-anchor="middle" class="section-label" fill="#4ade80">Use Cases</text>
+  <text x="640" y="390" class="info-text">• Sliding Window Max/Min</text>
+  <text x="640" y="415" class="info-text">• 0-1 BFS Algorithm</text>
+  <text x="640" y="440" class="info-text">• Palindrome Checking</text>
+
+  <!-- Footer -->
+  <rect x="50" y="560" width="800" height="60" rx="8" fill="#1a1a2e" stroke="#888888" stroke-width="1"/>
+  <text x="450" y="585" text-anchor="middle" class="info-text">Python: from collections import deque</text>
+  <text x="450" y="605" text-anchor="middle" class="complexity">Space Complexity: O(n) | All Operations: O(1) Amortized</text>
+
+  <!-- Arrow Markers -->
+  <defs>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f97316"/>
+    </marker>
+    <marker id="arrowOrange2" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto">
+      <path d="M9,0 L9,6 L0,3 z" fill="#f97316"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto">
+      <path d="M9,0 L9,6 L0,3 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arrowRed2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+</svg>
+
+

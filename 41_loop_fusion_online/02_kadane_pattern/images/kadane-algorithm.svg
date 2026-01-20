@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6c63ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4834df;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ee5a6f;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#51cf66;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#37b24d;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1000" height="650" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="500" y="40" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    Kadane's Algorithm: Maximum Subarray
+  </text>
+  <text x="500" y="70" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#7f8c8d">
+    Greedy Dynamic Programming in O(n) Time, O(1) Space
+  </text>
+  
+  <!-- Array Visualization -->
+  <g transform="translate(100, 110)">
+    <text x="0" y="-10" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">
+      Array:
+    </text>
+    
+    <!-- Array elements -->
+    <rect x="0" y="0" width="70" height="50" fill="#ffebee" stroke="#e74c3c" stroke-width="2" rx="3"/>
+    <text x="35" y="30" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle" fill="#e74c3c">-2</text>
+    <text x="35" y="65" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7f8c8d">i=0</text>
+    
+    <rect x="80" y="0" width="70" height="50" fill="#e8f5e9" stroke="#27ae60" stroke-width="2" rx="3"/>
+    <text x="115" y="30" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle" fill="#27ae60">1</text>
+    <text x="115" y="65" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7f8c8d">i=1</text>
+    
+    <rect x="160" y="0" width="70" height="50" fill="#ffebee" stroke="#e74c3c" stroke-width="2" rx="3"/>
+    <text x="195" y="30" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle" fill="#e74c3c">-3</text>
+    <text x="195" y="65" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7f8c8d">i=2</text>
+    
+    <rect x="240" y="0" width="70" height="50" fill="#e8f5e9" stroke="#27ae60" stroke-width="3" rx="3"/>
+    <text x="275" y="30" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle" fill="#27ae60">4</text>
+    <text x="275" y="65" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7f8c8d">i=3</text>
+    
+    <rect x="320" y="0" width="70" height="50" fill="#e8f5e9" stroke="#27ae60" stroke-width="3" rx="3"/>
+    <text x="355" y="30" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle" fill="#27ae60">-1</text>
+    <text x="355" y="65" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7f8c8d">i=4</text>
+    
+    <rect x="400" y="0" width="70" height="50" fill="#e8f5e9" stroke="#27ae60" stroke-width="3" rx="3"/>
+    <text x="435" y="30" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle" fill="#27ae60">2</text>
+    <text x="435" y="65" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7f8c8d">i=5</text>
+    
+    <rect x="480" y="0" width="70" height="50" fill="#e8f5e9" stroke="#27ae60" stroke-width="3" rx="3"/>
+    <text x="515" y="30" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle" fill="#27ae60">1</text>
+    <text x="515" y="65" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7f8c8d">i=6</text>
+    
+    <rect x="560" y="0" width="70" height="50" fill="#ffebee" stroke="#e74c3c" stroke-width="2" rx="3"/>
+    <text x="595" y="30" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle" fill="#e74c3c">-5</text>
+    <text x="595" y="65" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7f8c8d">i=7</text>
+    
+    <rect x="640" y="0" width="70" height="50" fill="#e8f5e9" stroke="#27ae60" stroke-width="2" rx="3"/>
+    <text x="675" y="30" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle" fill="#27ae60">4</text>
+    <text x="675" y="65" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7f8c8d">i=8</text>
+    
+    <!-- Maximum subarray bracket -->
+    <line x1="245" y1="-15" x2="545" y2="-15" stroke="#ffc107" stroke-width="3"/>
+    <line x1="245" y1="-15" x2="245" y2="-5" stroke="#ffc107" stroke-width="3"/>
+    <line x1="545" y1="-15" x2="545" y2="-5" stroke="#ffc107" stroke-width="3"/>
+    <text x="395" y="-20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffc107">
+      Max Sum = 6
+    </text>
+  </g>
+  
+  <!-- Algorithm Core -->
+  <g transform="translate(50, 250)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">
+      Recurrence Relations:
+    </text>
+    
+    <!-- Recurrence Box -->
+    <g transform="translate(0, 20)">
+      <rect x="0" y="0" width="450" height="120" fill="url(#grad1)" stroke="#6c63ff" stroke-width="2" rx="5"/>
+      <text x="225" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">
+        Maximum Ending Here
+      </text>
+      <text x="225" y="55" font-family="monospace" font-size="14" text-anchor="middle" fill="#fff">
+        S[i] = max(A[i], S[i-1] + A[i])
+      </text>
+      <text x="225" y="80" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#fff">
+        Either start new subarray or extend previous
+      </text>
+      <text x="225" y="105" font-family="monospace" font-size="14" text-anchor="middle" fill="#fff">
+        M[i] = max(M[i-1], S[i])
+      </text>
+    </g>
+  </g>
+  
+  <!-- Step-by-Step Trace -->
+  <g transform="translate(520, 250)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">
+      Trace:
+    </text>
+    
+    <g transform="translate(0, 20)">
+      <rect x="0" y="0" width="430" height="280" fill="#fff" stroke="#7f8c8d" stroke-width="2" rx="5"/>
+      
+      <!-- Table Header -->
+      <text x="40" y="25" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#2c3e50">i</text>
+      <text x="100" y="25" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#2c3e50">A[i]</text>
+      <text x="180" y="25" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#2c3e50">S[i]</text>
+      <text x="260" y="25" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#2c3e50">M[i]</text>
+      <text x="350" y="25" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle" fill="#2c3e50">Decision</text>
+      
+      <line x1="10" y1="30" x2="420" y2="30" stroke="#dee2e6" stroke-width="1"/>
+      
+      <!-- Rows -->
+      <text x="40" y="50" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">0</text>
+      <text x="100" y="50" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">-2</text>
+      <text x="180" y="50" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">-2</text>
+      <text x="260" y="50" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">-2</text>
+      <text x="350" y="50" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#7f8c8d">start</text>
+      
+      <text x="40" y="70" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">1</text>
+      <text x="100" y="70" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">1</text>
+      <text x="180" y="70" font-family="monospace" font-size="11" text-anchor="middle" fill="#27ae60">1</text>
+      <text x="260" y="70" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">1</text>
+      <text x="350" y="70" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#27ae60">start</text>
+      
+      <text x="40" y="90" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">2</text>
+      <text x="100" y="90" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">-3</text>
+      <text x="180" y="90" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">-2</text>
+      <text x="260" y="90" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">1</text>
+      <text x="350" y="90" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#7f8c8d">extend</text>
+      
+      <text x="40" y="110" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">3</text>
+      <text x="100" y="110" font-family="monospace" font-size="11" text-anchor="middle" fill="#27ae60">4</text>
+      <text x="180" y="110" font-family="monospace" font-size="11" text-anchor="middle" fill="#27ae60">4</text>
+      <text x="260" y="110" font-family="monospace" font-size="11" text-anchor="middle" fill="#27ae60">4</text>
+      <text x="350" y="110" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#27ae60">start</text>
+      
+      <text x="40" y="130" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">4</text>
+      <text x="100" y="130" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">-1</text>
+      <text x="180" y="130" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">3</text>
+      <text x="260" y="130" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">4</text>
+      <text x="350" y="130" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#7f8c8d">extend</text>
+      
+      <text x="40" y="150" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">5</text>
+      <text x="100" y="150" font-family="monospace" font-size="11" text-anchor="middle" fill="#27ae60">2</text>
+      <text x="180" y="150" font-family="monospace" font-size="11" text-anchor="middle" fill="#27ae60">5</text>
+      <text x="260" y="150" font-family="monospace" font-size="11" text-anchor="middle" fill="#27ae60">5</text>
+      <text x="350" y="150" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#7f8c8d">extend</text>
+      
+      <text x="40" y="170" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">6</text>
+      <text x="100" y="170" font-family="monospace" font-size="11" text-anchor="middle" fill="#27ae60">1</text>
+      <text x="180" y="170" font-family="monospace" font-size="11" text-anchor="middle" fill="#27ae60">6</text>
+      <text x="260" y="170" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle" fill="#ffc107">6</text>
+      <text x="350" y="170" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#7f8c8d">extend</text>
+      
+      <text x="40" y="190" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">7</text>
+      <text x="100" y="190" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">-5</text>
+      <text x="180" y="190" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">1</text>
+      <text x="260" y="190" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">6</text>
+      <text x="350" y="190" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#7f8c8d">extend</text>
+      
+      <text x="40" y="210" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">8</text>
+      <text x="100" y="210" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">4</text>
+      <text x="180" y="210" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">5</text>
+      <text x="260" y="210" font-family="monospace" font-size="11" text-anchor="middle" fill="#2c3e50">6</text>
+      <text x="350" y="210" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#7f8c8d">extend</text>
+      
+      <!-- Result Box -->
+      <rect x="10" y="225" width="410" height="45" fill="#fff3cd" stroke="#ffc107" stroke-width="2" rx="3"/>
+      <text x="215" y="245" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#856404">
+        Maximum Subarray Sum = 6
+      </text>
+      <text x="215" y="262" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#856404">
+        Subarray: [4, -1, 2, 1]
+      </text>
+    </g>
+  </g>
+  
+  <!-- Key Insight -->
+  <g transform="translate(50, 560)">
+    <rect x="0" y="0" width="900" height="70" fill="url(#grad3)" stroke="#27ae60" stroke-width="2" rx="5"/>
+    <text x="450" y="25" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#fff">
+      💡 Greedy Choice Property
+    </text>
+    <text x="450" y="45" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#fff">
+      At each position: If previous sum is negative, start fresh. Otherwise, extend.
+    </text>
+    <text x="450" y="62" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#fff">
+      Local optimal choice → Global optimal solution
+    </text>
+  </g>
+</svg>
+

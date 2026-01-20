@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Backtracking</text>
+  <text x="450" y="65" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Explore all possibilities, undo invalid choices</text>
+  
+  <!-- Template -->
+  <text x="50" y="100" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">BACKTRACKING TEMPLATE</text>
+  
+  <g transform="translate(50, 120)">
+    <rect x="0" y="0" width="320" height="150" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    
+    <text x="15" y="25" fill="#f97316" font-size="11" font-family="Courier New, monospace">def backtrack(state, choices):</text>
+    <text x="25" y="45" fill="#4ade80" font-size="11" font-family="Courier New, monospace"># Base case: found solution</text>
+    <text x="25" y="65" fill="#ffffff" font-size="11" font-family="Courier New, monospace">if is_solution(state):</text>
+    <text x="35" y="80" fill="#ffffff" font-size="11" font-family="Courier New, monospace">result.add(state)</text>
+    <text x="35" y="95" fill="#ffffff" font-size="11" font-family="Courier New, monospace">return</text>
+    <text x="25" y="115" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">for choice in choices:</text>
+    <text x="35" y="130" fill="#ffffff" font-size="11" font-family="Courier New, monospace">make_choice(choice)</text>
+    <text x="35" y="145" fill="#ffffff" font-size="11" font-family="Courier New, monospace">backtrack(...); undo()</text>
+  </g>
+  
+  <!-- Decision Tree: Subsets -->
+  <text x="430" y="100" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">SUBSETS OF [1,2]</text>
+  
+  <g transform="translate(480, 120)">
+    <!-- Root -->
+    <circle cx="100" cy="20" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="100" y="25" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold" font-family="Courier New, monospace">{ }</text>
+    
+    <!-- Level 1 -->
+    <line x1="85" y1="35" x2="40" y2="60" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="115" y1="35" x2="160" y2="60" stroke="#3b82f6" stroke-width="2"/>
+    <text x="55" y="50" fill="#888888" font-size="9" font-family="Courier New, monospace">+1</text>
+    <text x="140" y="50" fill="#888888" font-size="9" font-family="Courier New, monospace">skip</text>
+    
+    <circle cx="40" cy="80" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="40" y="85" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold" font-family="Courier New, monospace">{1}</text>
+    
+    <circle cx="160" cy="80" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="160" y="85" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold" font-family="Courier New, monospace">{ }</text>
+    
+    <!-- Level 2 from {1} -->
+    <line x1="25" y1="95" x2="0" y2="120" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="55" y1="95" x2="80" y2="120" stroke="#3b82f6" stroke-width="2"/>
+    
+    <circle cx="0" cy="140" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="0" y="145" text-anchor="middle" fill="#ffffff" font-size="9" font-weight="bold" font-family="Courier New, monospace">{1,2}</text>
+    
+    <circle cx="80" cy="140" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="80" y="145" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold" font-family="Courier New, monospace">{1}</text>
+    
+    <!-- Level 2 from {} -->
+    <line x1="145" y1="95" x2="120" y2="120" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="175" y1="95" x2="200" y2="120" stroke="#3b82f6" stroke-width="2"/>
+    
+    <circle cx="120" cy="140" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="120" y="145" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold" font-family="Courier New, monospace">{2}</text>
+    
+    <circle cx="200" cy="140" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="200" y="145" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold" font-family="Courier New, monospace">{ }</text>
+    
+    <text x="100" y="180" text-anchor="middle" fill="#4ade80" font-size="11" font-family="Courier New, monospace">Result: {}, {1}, {2}, {1,2}</text>
+  </g>
+  
+  <!-- Permutations -->
+  <text x="50" y="310" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">PERMUTATIONS OF [1,2,3]</text>
+  
+  <g transform="translate(50, 330)">
+    <text x="0" y="15" fill="#888888" font-size="11" font-family="Courier New, monospace">At each step, choose any unused element</text>
+    
+    <rect x="0" y="30" width="300" height="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="50" fill="#ffffff" font-size="10" font-family="Courier New, monospace">[1,2,3] [1,3,2] [2,1,3]</text>
+    <text x="15" y="70" fill="#ffffff" font-size="10" font-family="Courier New, monospace">[2,3,1] [3,1,2] [3,2,1]</text>
+    <text x="15" y="90" fill="#60a5fa" font-size="10" font-family="Courier New, monospace">Total: n! = 6 permutations</text>
+    
+    <text x="0" y="120" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Time: O(n! × n)</text>
+  </g>
+  
+  <!-- Combinations -->
+  <text x="400" y="310" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">COMBINATIONS C(4,2)</text>
+  
+  <g transform="translate(400, 330)">
+    <text x="0" y="15" fill="#888888" font-size="11" font-family="Courier New, monospace">Choose 2 from [1,2,3,4], order doesn't matter</text>
+    
+    <rect x="0" y="30" width="200" height="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="50" fill="#ffffff" font-size="10" font-family="Courier New, monospace">[1,2] [1,3] [1,4]</text>
+    <text x="15" y="70" fill="#ffffff" font-size="10" font-family="Courier New, monospace">[2,3] [2,4] [3,4]</text>
+    <text x="15" y="90" fill="#60a5fa" font-size="10" font-family="Courier New, monospace">Total: C(4,2) = 6</text>
+    
+    <text x="0" y="120" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Time: O(C(n,k) × k)</text>
+  </g>
+  
+  <!-- N-Queens -->
+  <text x="650" y="310" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">N-QUEENS</text>
+  
+  <g transform="translate(650, 330)">
+    <!-- Mini chess board -->
+    <rect x="0" y="0" width="25" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <rect x="25" y="0" width="25" height="25" fill="#0f0f23" stroke="#3b82f6" stroke-width="1"/>
+    <rect x="50" y="0" width="25" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <rect x="75" y="0" width="25" height="25" fill="#0f0f23" stroke="#3b82f6" stroke-width="1"/>
+    
+    <rect x="0" y="25" width="25" height="25" fill="#0f0f23" stroke="#3b82f6" stroke-width="1"/>
+    <rect x="25" y="25" width="25" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <rect x="50" y="25" width="25" height="25" fill="#0f0f23" stroke="#3b82f6" stroke-width="1"/>
+    <rect x="75" y="25" width="25" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    
+    <rect x="0" y="50" width="25" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <rect x="25" y="50" width="25" height="25" fill="#0f0f23" stroke="#3b82f6" stroke-width="1"/>
+    <rect x="50" y="50" width="25" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <rect x="75" y="50" width="25" height="25" fill="#0f0f23" stroke="#3b82f6" stroke-width="1"/>
+    
+    <rect x="0" y="75" width="25" height="25" fill="#0f0f23" stroke="#3b82f6" stroke-width="1"/>
+    <rect x="25" y="75" width="25" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <rect x="50" y="75" width="25" height="25" fill="#0f0f23" stroke="#3b82f6" stroke-width="1"/>
+    <rect x="75" y="75" width="25" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    
+    <!-- Queens -->
+    <text x="12" y="20" text-anchor="middle" fill="#f97316" font-size="16" font-weight="bold" font-family="Courier New, monospace">Q</text>
+    <text x="62" y="45" text-anchor="middle" fill="#f97316" font-size="16" font-weight="bold" font-family="Courier New, monospace">Q</text>
+    <text x="37" y="70" text-anchor="middle" fill="#f97316" font-size="16" font-weight="bold" font-family="Courier New, monospace">Q</text>
+    <text x="87" y="95" text-anchor="middle" fill="#f97316" font-size="16" font-weight="bold" font-family="Courier New, monospace">Q</text>
+    
+    <text x="0" y="115" fill="#888888" font-size="10" font-family="Courier New, monospace">No two queens</text>
+    <text x="0" y="130" fill="#888888" font-size="10" font-family="Courier New, monospace">attack each other</text>
+  </g>
+  
+  <!-- Grid Backtracking -->
+  <text x="50" y="480" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">GRID PROBLEMS</text>
+  
+  <g transform="translate(50, 500)">
+    <text x="0" y="15" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Word Search in 2D grid</text>
+    <text x="0" y="35" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Rat in a Maze</text>
+    <text x="0" y="55" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Sudoku Solver</text>
+  </g>
+  
+  <!-- Pruning -->
+  <text x="350" y="480" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">PRUNING (OPTIMIZATION)</text>
+  
+  <g transform="translate(350, 500)">
+    <text x="0" y="15" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Skip invalid branches early</text>
+    <text x="0" y="35" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Check constraints before recursing</text>
+    <text x="0" y="55" fill="#4ade80" font-size="11" font-family="Courier New, monospace">• Drastically reduces search space</text>
+  </g>
+  
+  <!-- Subtopics -->
+  <text x="50" y="580" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">SUBTOPICS</text>
+  <g transform="translate(150, 565)">
+    <text x="0" y="15" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">01. Subsets</text>
+    <text x="100" y="15" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">02. Permutations</text>
+    <text x="230" y="15" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">03. Combinations</text>
+    <text x="370" y="15" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">04. Grid</text>
+    <text x="440" y="15" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">05. Constraints</text>
+  </g>
+</svg>
+

@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <rect width="900" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Courier New, monospace" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">Basic BIT Operations</text>
+  <text x="450" y="58" font-family="Courier New, monospace" font-size="14" fill="#888888" text-anchor="middle">Point Update + Range Query • O(log n) per operation</text>
+
+  <!-- Point Update Section -->
+  <text x="225" y="95" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">POINT UPDATE: update(3, +5)</text>
+  
+  <rect x="50" y="110" width="350" height="180" fill="#0f0f23" stroke="#f97316" stroke-width="2"/>
+  
+  <!-- Array visualization -->
+  <text x="70" y="135" font-family="Courier New, monospace" font-size="11" fill="#888888">Indices affected by update at index 3:</text>
+  
+  <!-- Show update path -->
+  <rect x="70" y="150" width="40" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="90" y="170" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">1</text>
+  
+  <rect x="115" y="150" width="40" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="135" y="170" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">2</text>
+  
+  <rect x="160" y="150" width="40" height="30" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="180" y="170" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316" text-anchor="middle">3</text>
+  
+  <rect x="205" y="150" width="40" height="30" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="225" y="170" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316" text-anchor="middle">4</text>
+  
+  <rect x="250" y="150" width="40" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="270" y="170" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">5</text>
+  
+  <rect x="295" y="150" width="40" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="315" y="170" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">6</text>
+  
+  <rect x="340" y="150" width="40" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="360" y="170" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">7</text>
+  
+  <rect x="295" y="150" width="40" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="315" y="170" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">6</text>
+  
+  <!-- Update steps -->
+  <text x="70" y="210" font-family="Courier New, monospace" font-size="11" fill="#ffffff">i = 3 → BIT[3] += 5</text>
+  <text x="250" y="210" font-family="Courier New, monospace" font-size="10" fill="#f97316">3 = 011₂</text>
+  
+  <text x="70" y="230" font-family="Courier New, monospace" font-size="11" fill="#ffffff">i = 3 + LSB(3) = 4 → BIT[4] += 5</text>
+  <text x="310" y="230" font-family="Courier New, monospace" font-size="10" fill="#f97316">4 = 100₂</text>
+  
+  <text x="70" y="250" font-family="Courier New, monospace" font-size="11" fill="#ffffff">i = 4 + LSB(4) = 8 → BIT[8] += 5</text>
+  <text x="310" y="250" font-family="Courier New, monospace" font-size="10" fill="#f97316">8 = 1000₂</text>
+  
+  <text x="70" y="275" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Pattern: i += i &amp; (-i)</text>
+
+  <!-- Range Query Section -->
+  <text x="675" y="95" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">RANGE QUERY: query(6)</text>
+  
+  <rect x="500" y="110" width="350" height="180" fill="#0f0f23" stroke="#4ade80" stroke-width="2"/>
+  
+  <!-- Query visualization -->
+  <text x="520" y="135" font-family="Courier New, monospace" font-size="11" fill="#888888">Indices summed for prefix sum [1,6]:</text>
+  
+  <rect x="520" y="150" width="40" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="540" y="170" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">1</text>
+  
+  <rect x="565" y="150" width="40" height="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="585" y="170" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">2</text>
+  
+  <rect x="610" y="150" width="40" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="630" y="170" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">3</text>
+  
+  <rect x="655" y="150" width="40" height="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="675" y="170" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">4</text>
+  
+  <rect x="700" y="150" width="40" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="720" y="170" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">5</text>
+  
+  <rect x="745" y="150" width="40" height="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="765" y="170" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">6</text>
+  
+  <rect x="790" y="150" width="40" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="810" y="170" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">7</text>
+  
+  <!-- Query steps -->
+  <text x="520" y="210" font-family="Courier New, monospace" font-size="11" fill="#ffffff">i = 6 → sum += BIT[6]</text>
+  <text x="700" y="210" font-family="Courier New, monospace" font-size="10" fill="#4ade80">6 = 110₂</text>
+  
+  <text x="520" y="230" font-family="Courier New, monospace" font-size="11" fill="#ffffff">i = 6 - LSB(6) = 4 → sum += BIT[4]</text>
+  <text x="760" y="230" font-family="Courier New, monospace" font-size="10" fill="#4ade80">4 = 100₂</text>
+  
+  <text x="520" y="250" font-family="Courier New, monospace" font-size="11" fill="#ffffff">i = 4 - LSB(4) = 0 → done</text>
+  
+  <text x="520" y="275" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Pattern: i -= i &amp; (-i)</text>
+
+  <!-- Range Query Formula -->
+  <rect x="50" y="310" width="800" height="80" fill="#0f0f23" stroke="#a78bfa" stroke-width="2"/>
+  <text x="450" y="340" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">RANGE SUM [L, R]</text>
+  <text x="450" y="370" font-family="Courier New, monospace" font-size="16" fill="#a78bfa" text-anchor="middle">rangeSum(L, R) = query(R) - query(L - 1)</text>
+
+  <!-- Code Box -->
+  <rect x="50" y="410" width="400" height="120" fill="#0f0f23" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="435" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560" text-anchor="middle">UPDATE CODE</text>
+  <text x="70" y="460" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">def update(i, delta):</text>
+  <text x="90" y="480" font-family="Courier New, monospace" font-size="11" fill="#ffffff">while i &lt;= n:</text>
+  <text x="110" y="500" font-family="Courier New, monospace" font-size="11" fill="#ffffff">BIT[i] += delta</text>
+  <text x="110" y="520" font-family="Courier New, monospace" font-size="11" fill="#f97316">i += i &amp; (-i)</text>
+
+  <rect x="470" y="410" width="380" height="120" fill="#0f0f23" stroke="#4ade80" stroke-width="2"/>
+  <text x="660" y="435" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560" text-anchor="middle">QUERY CODE</text>
+  <text x="490" y="460" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">def query(i):</text>
+  <text x="510" y="480" font-family="Courier New, monospace" font-size="11" fill="#ffffff">s = 0</text>
+  <text x="510" y="500" font-family="Courier New, monospace" font-size="11" fill="#ffffff">while i &gt; 0:</text>
+  <text x="530" y="520" font-family="Courier New, monospace" font-size="11" fill="#ffffff">s += BIT[i]; </text>
+  <text x="640" y="520" font-family="Courier New, monospace" font-size="11" fill="#4ade80">i -= i &amp; (-i)</text>
+</svg>

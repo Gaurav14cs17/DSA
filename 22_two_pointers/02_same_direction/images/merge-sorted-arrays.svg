@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 650">
+  <rect width="950" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Merge Sorted Arrays</text>
+  <text x="475" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Merge from End to Avoid Overwriting (LeetCode 88)</text>
+  
+  <!-- Initial State -->
+  <text x="50" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Initial State</text>
+  
+  <!-- nums1 -->
+  <text x="50" y="140" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">nums1 (m=3):</text>
+  <g transform="translate(50, 150)">
+    <rect x="0" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="25" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    
+    <rect x="60" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="85" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">3</text>
+    
+    <rect x="120" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="145" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">5</text>
+    <text x="145" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">p1</text>
+    
+    <rect x="180" y="0" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+    <text x="205" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#888888">0</text>
+    
+    <rect x="240" y="0" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+    <text x="265" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#888888">0</text>
+    
+    <rect x="300" y="0" width="50" height="40" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="325" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#888888">0</text>
+    <text x="325" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">p</text>
+  </g>
+  
+  <!-- nums2 -->
+  <text x="50" y="240" font-family="Courier New, monospace" font-size="12" fill="#4ade80">nums2 (n=3):</text>
+  <g transform="translate(50, 250)">
+    <rect x="0" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="25" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    
+    <rect x="60" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="85" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">4</text>
+    
+    <rect x="120" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="145" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">6</text>
+    <text x="145" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">p2</text>
+  </g>
+  
+  <!-- Step 1 -->
+  <text x="50" y="340" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Step 1: Compare 5 vs 6 → 6 wins, write at p</text>
+  
+  <g transform="translate(50, 360)">
+    <rect x="0" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="25" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    
+    <rect x="60" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="85" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">3</text>
+    
+    <rect x="120" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="145" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">5</text>
+    <text x="145" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">p1</text>
+    
+    <rect x="180" y="0" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+    <text x="205" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#888888">0</text>
+    
+    <rect x="240" y="0" width="50" height="40" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="265" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#888888">0</text>
+    <text x="265" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">p</text>
+    
+    <rect x="300" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="325" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">6</text>
+    <text x="325" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">✓</text>
+  </g>
+  
+  <!-- Final Result -->
+  <text x="50" y="450" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">Final: [1, 2, 3, 4, 5, 6] ✓ Merged!</text>
+  
+  <g transform="translate(50, 470)">
+    <rect x="0" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="25" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    
+    <rect x="60" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="85" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    
+    <rect x="120" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="145" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">3</text>
+    
+    <rect x="180" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="205" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">4</text>
+    
+    <rect x="240" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="265" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">5</text>
+    
+    <rect x="300" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="325" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">6</text>
+  </g>
+  
+  <!-- Key Insight box -->
+  <rect x="480" y="110" width="440" height="140" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="8"/>
+  <text x="700" y="140" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316">KEY INSIGHT</text>
+  <text x="500" y="170" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Merge from END, not beginning!</text>
+  <text x="500" y="195" font-family="Courier New, monospace" font-size="11" fill="#888888">Why? Avoids overwriting unread data.</text>
+  <text x="500" y="225" font-family="Courier New, monospace" font-size="11" fill="#ffffff">At any point: p = p1 + p2 + 1</text>
+  <text x="500" y="245" font-family="Courier New, monospace" font-size="11" fill="#888888">→ Exactly enough space!</text>
+  
+  <!-- Algorithm box -->
+  <rect x="480" y="270" width="440" height="180" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="8"/>
+  <text x="700" y="300" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">ALGORITHM</text>
+  
+  <text x="500" y="330" font-family="Courier New, monospace" font-size="11" fill="#ffffff">p1 = m - 1      # Last of nums1 data</text>
+  <text x="500" y="350" font-family="Courier New, monospace" font-size="11" fill="#ffffff">p2 = n - 1      # Last of nums2</text>
+  <text x="500" y="370" font-family="Courier New, monospace" font-size="11" fill="#ffffff">p = m + n - 1   # Last position</text>
+  <text x="500" y="400" font-family="Courier New, monospace" font-size="11" fill="#ffffff">while p2 &gt;= 0:</text>
+  <text x="520" y="420" font-family="Courier New, monospace" font-size="11" fill="#ffffff">if p1 &gt;= 0 and nums1[p1] &gt; nums2[p2]:</text>
+  <text x="540" y="440" font-family="Courier New, monospace" font-size="11" fill="#888888">nums1[p] = nums1[p1]; p1--</text>
+  
+  <!-- Pointer labels -->
+  <rect x="480" y="470" width="440" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="8"/>
+  <text x="700" y="500" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#3b82f6">POINTERS</text>
+  <text x="500" y="530" font-family="Courier New, monospace" font-size="11" fill="#f97316">p1</text>
+  <text x="540" y="530" font-family="Courier New, monospace" font-size="11" fill="#ffffff">= current element in nums1</text>
+  <text x="500" y="545" font-family="Courier New, monospace" font-size="11" fill="#f97316">p2</text>
+  <text x="540" y="545" font-family="Courier New, monospace" font-size="11" fill="#ffffff">= current element in nums2</text>
+  
+  <!-- Complexity -->
+  <rect x="480" y="570" width="440" height="60" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="8"/>
+  <text x="700" y="600" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(m + n) | Space: O(1)</text>
+  <text x="700" y="620" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">In-place merge using reverse traversal</text>
+</svg>

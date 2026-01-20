@@ -1,0 +1,63 @@
+<svg viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">GCD of Arrays</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">gcd(a, b, c) = gcd(gcd(a, b), c)</text>
+  
+  <!-- Array -->
+  <text x="450" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#e94560">Array: [12, 18, 24, 30]</text>
+  
+  <!-- Array boxes -->
+  <rect x="200" y="120" width="100" height="50" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="152" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">12</text>
+  
+  <rect x="320" y="120" width="100" height="50" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="370" y="152" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">18</text>
+  
+  <rect x="440" y="120" width="100" height="50" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="490" y="152" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">24</text>
+  
+  <rect x="560" y="120" width="100" height="50" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="610" y="152" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">30</text>
+  
+  <!-- Step 1 -->
+  <path d="M250 175 L250 200 L310 220" stroke="#f97316" stroke-width="2"/>
+  <path d="M370 175 L370 200 L310 220" stroke="#f97316" stroke-width="2"/>
+  
+  <rect x="260" y="220" width="100" height="40" rx="5" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="310" y="245" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">gcd = 6</text>
+  <text x="310" y="275" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">gcd(12, 18)</text>
+  
+  <!-- Step 2 -->
+  <path d="M310 260 L310 290 L370 310" stroke="#f97316" stroke-width="2"/>
+  <path d="M490 175 L490 290 L430 310" stroke="#f97316" stroke-width="2"/>
+  
+  <rect x="350" y="310" width="100" height="40" rx="5" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="400" y="335" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">gcd = 6</text>
+  <text x="400" y="365" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">gcd(6, 24)</text>
+  
+  <!-- Step 3 -->
+  <path d="M400 350 L400 380 L460 400" stroke="#f97316" stroke-width="2"/>
+  <path d="M610 175 L610 380 L520 400" stroke="#f97316" stroke-width="2"/>
+  
+  <rect x="440" y="400" width="100" height="40" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="490" y="425" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">gcd = 6</text>
+  <text x="490" y="455" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">gcd(6, 30)</text>
+  
+  <!-- Result -->
+  <rect x="300" y="475" width="300" height="45" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="450" y="505" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80">gcd([12,18,24,30]) = 6</text>
+  
+  <!-- Side panel: Optimization -->
+  <rect x="700" y="120" width="180" height="180" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="790" y="145" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560">OPTIMIZATION</text>
+  <text x="720" y="175" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Early termination:</text>
+  <text x="720" y="200" font-family="Courier New, monospace" font-size="11" fill="#ffffff">If gcd becomes 1,</text>
+  <text x="720" y="225" font-family="Courier New, monospace" font-size="11" fill="#ffffff">stop immediately!</text>
+  <text x="720" y="260" font-family="Courier New, monospace" font-size="11" fill="#4ade80">gcd(1, x) = 1</text>
+  <text x="720" y="285" font-family="Courier New, monospace" font-size="11" fill="#4ade80">for any x</text>
+  
+  <!-- Complexity -->
+  <text x="450" y="540" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(n × log(max)) | Uses associativity: gcd(a,b,c) = gcd(gcd(a,b),c)</text>
+</svg>

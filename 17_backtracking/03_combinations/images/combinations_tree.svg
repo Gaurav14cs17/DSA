@@ -1,0 +1,126 @@
+<svg viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Combinations Generation</text>
+  <text x="450" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">C(4,2) = Choose 2 from [1,2,3,4] = 6 combinations</text>
+  
+  <!-- Section Label -->
+  <text x="50" y="100" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COMBINATION TREE (n=4, k=2)</text>
+  
+  <!-- Root Level -->
+  <rect x="380" y="115" width="140" height="40" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="450" y="141" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">[ ] need: 2</text>
+  
+  <!-- Level 1 - Start choices -->
+  <line x1="400" y1="155" x2="150" y2="200" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="430" y1="155" x2="350" y2="200" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="470" y1="155" x2="550" y2="200" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="500" y1="155" x2="750" y2="200" stroke="#3b82f6" stroke-width="2"/>
+  
+  <text x="260" y="175" font-family="Courier New, monospace" font-size="11" fill="#4ade80">+1</text>
+  <text x="380" y="175" font-family="Courier New, monospace" font-size="11" fill="#4ade80">+2</text>
+  <text x="515" y="175" font-family="Courier New, monospace" font-size="11" fill="#4ade80">+3</text>
+  <text x="640" y="175" font-family="Courier New, monospace" font-size="11" fill="#4ade80">+4</text>
+  
+  <rect x="80" y="200" width="140" height="40" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="150" y="226" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">[1] need: 1</text>
+  
+  <rect x="280" y="200" width="140" height="40" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="350" y="226" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">[2] need: 1</text>
+  
+  <rect x="480" y="200" width="140" height="40" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="550" y="226" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">[3] need: 1</text>
+  
+  <rect x="680" y="200" width="140" height="40" rx="6" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="750" y="226" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle">[4] pruned</text>
+  
+  <!-- Level 2 - Complete combinations -->
+  <line x1="110" y1="240" x2="60" y2="300" stroke="#4ade80" stroke-width="2"/>
+  <line x1="150" y1="240" x2="150" y2="300" stroke="#4ade80" stroke-width="2"/>
+  <line x1="190" y1="240" x2="240" y2="300" stroke="#4ade80" stroke-width="2"/>
+  
+  <line x1="310" y1="240" x2="310" y2="300" stroke="#4ade80" stroke-width="2"/>
+  <line x1="390" y1="240" x2="390" y2="300" stroke="#4ade80" stroke-width="2"/>
+  
+  <line x1="550" y1="240" x2="550" y2="300" stroke="#4ade80" stroke-width="2"/>
+  
+  <!-- Final combinations -->
+  <rect x="20" y="300" width="80" height="40" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="60" y="326" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">[1,2]</text>
+  
+  <rect x="110" y="300" width="80" height="40" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="150" y="326" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">[1,3]</text>
+  
+  <rect x="200" y="300" width="80" height="40" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="240" y="326" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">[1,4]</text>
+  
+  <rect x="270" y="300" width="80" height="40" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="310" y="326" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">[2,3]</text>
+  
+  <rect x="350" y="300" width="80" height="40" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="390" y="326" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">[2,4]</text>
+  
+  <rect x="510" y="300" width="80" height="40" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="550" y="326" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">[3,4]</text>
+  
+  <!-- Pruning explanation -->
+  <rect x="650" y="280" width="200" height="70" rx="6" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+  <text x="750" y="305" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ef4444" text-anchor="middle">PRUNING</text>
+  <text x="750" y="325" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">Can't get k=2 items</text>
+  <text x="750" y="340" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">starting from 4</text>
+  
+  <!-- Combination Sum Section -->
+  <text x="50" y="400" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COMBINATION SUM VARIANTS</text>
+  
+  <!-- Variant 1 -->
+  <rect x="50" y="420" width="260" height="100" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="180" y="445" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#3b82f6" text-anchor="middle">Combination Sum (LC 39)</text>
+  <text x="180" y="470" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">Unlimited use of each number</text>
+  <text x="180" y="490" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">[2,3,6,7], target=7</text>
+  <text x="180" y="510" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">→ [[2,2,3], [7]]</text>
+  
+  <!-- Variant 2 -->
+  <rect x="320" y="420" width="260" height="100" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="450" y="445" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316" text-anchor="middle">Combination Sum II (LC 40)</text>
+  <text x="450" y="470" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">Each number used once</text>
+  <text x="450" y="490" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">[1,1,2,5,6,7], target=8</text>
+  <text x="450" y="510" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">→ [[1,1,6], [1,2,5], [2,6]]</text>
+  
+  <!-- Variant 3 -->
+  <rect x="590" y="420" width="260" height="100" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="720" y="445" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa" text-anchor="middle">Combination Sum III (LC 216)</text>
+  <text x="720" y="470" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">k numbers from 1-9</text>
+  <text x="720" y="490" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">k=3, n=9</text>
+  <text x="720" y="510" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">→ [[1,2,6], [1,3,5], [2,3,4]]</text>
+  
+  <!-- Pascal's Triangle Section -->
+  <text x="50" y="560" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">PASCAL'S TRIANGLE: C(n,k) = C(n-1,k-1) + C(n-1,k)</text>
+  
+  <text x="450" y="590" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="430" y="610" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="470" y="610" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="410" y="630" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="450" y="630" font-family="Courier New, monospace" font-size="14" fill="#4ade80" text-anchor="middle">2</text>
+  <text x="490" y="630" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="390" y="650" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="430" y="650" font-family="Courier New, monospace" font-size="14" fill="#4ade80" text-anchor="middle">3</text>
+  <text x="470" y="650" font-family="Courier New, monospace" font-size="14" fill="#4ade80" text-anchor="middle">3</text>
+  <text x="510" y="650" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="370" y="670" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="410" y="670" font-family="Courier New, monospace" font-size="14" fill="#4ade80" text-anchor="middle">4</text>
+  <text x="450" y="670" font-family="Courier New, monospace" font-size="14" fill="#f97316" text-anchor="middle">6</text>
+  <text x="490" y="670" font-family="Courier New, monospace" font-size="14" fill="#4ade80" text-anchor="middle">4</text>
+  <text x="530" y="670" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+  
+  <!-- Complexity -->
+  <rect x="700" y="580" width="160" height="80" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="780" y="605" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa" text-anchor="middle">Complexity</text>
+  <text x="780" y="630" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">Time: O(k×C(n,k))</text>
+  <text x="780" y="650" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">Space: O(k)</text>
+  
+  <!-- Formula highlight -->
+  <rect x="50" y="580" width="250" height="70" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="175" y="610" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">C(n,k) = n! / (k!(n-k)!)</text>
+  <text x="175" y="635" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">C(4,2) = 24 / (2×2) = 6</text>
+</svg>

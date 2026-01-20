@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450">
+  <rect width="900" height="450" fill="#0f0f23"/>
+  
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Advanced Tree Algorithms</text>
+  <text x="450" y="58" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">Specialized techniques for tree problems</text>
+  
+  <!-- Binary Lifting -->
+  <text x="50" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">BINARY LIFTING (LCA)</text>
+  <g transform="translate(50, 115)">
+    <text x="0" y="15" fill="#888888" font-size="10" font-family="Courier New, monospace">up[v][k] = 2^k ancestor of v</text>
+    <rect x="0" y="25" width="250" height="60" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="45" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Preprocess: O(n log n)</text>
+    <text x="15" y="65" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Query LCA: O(log n)</text>
+    <text x="15" y="80" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Kth ancestor: O(log n)</text>
+  </g>
+  
+  <!-- Tree DP -->
+  <text x="350" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">TREE DP (REROOTING)</text>
+  <g transform="translate(350, 115)">
+    <circle cx="60" cy="20" r="15" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="60" y="25" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">1</text>
+    <line x1="50" y1="32" x2="30" y2="48" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="70" y1="32" x2="90" y2="48" stroke="#3b82f6" stroke-width="2"/>
+    <circle cx="30" cy="60" r="15" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="30" y="65" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">2</text>
+    <circle cx="90" cy="60" r="15" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="90" y="65" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">3</text>
+    
+    <text x="130" y="30" fill="#888888" font-size="10" font-family="Courier New, monospace">DFS 1: compute subtree</text>
+    <text x="130" y="50" fill="#888888" font-size="10" font-family="Courier New, monospace">DFS 2: reroot and update</text>
+    <text x="130" y="70" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Time: O(n)</text>
+  </g>
+  
+  <!-- Heavy Light Decomposition -->
+  <text x="620" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">HEAVY-LIGHT DECOMP</text>
+  <g transform="translate(620, 115)">
+    <rect x="0" y="0" width="220" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Decompose into chains</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Each path: O(log n) chains</text>
+    <text x="15" y="60" fill="#ffffff" font-size="10" font-family="Courier New, monospace">+ Segment tree on chains</text>
+    <text x="0" y="95" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Path query: O(log²n)</text>
+  </g>
+  
+  <!-- Euler Tour -->
+  <text x="50" y="240" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">EULER TOUR TECHNIQUE</text>
+  <g transform="translate(50, 260)">
+    <text x="0" y="15" fill="#888888" font-size="10" font-family="Courier New, monospace">Flatten tree to array</text>
+    <text x="0" y="35" fill="#ffffff" font-size="10" font-family="Courier New, monospace">in[v] = entry time, out[v] = exit time</text>
+    <text x="0" y="55" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Subtree of v: range [in[v], out[v]]</text>
+    <text x="0" y="75" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Use: Subtree queries with segment tree</text>
+  </g>
+  
+  <!-- Centroid Decomposition -->
+  <text x="350" y="240" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">CENTROID DECOMPOSITION</text>
+  <g transform="translate(350, 260)">
+    <text x="0" y="15" fill="#888888" font-size="10" font-family="Courier New, monospace">Recursively find centroids</text>
+    <text x="0" y="35" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Centroid: node with balanced subtrees</text>
+    <text x="0" y="55" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Height of decomp tree: O(log n)</text>
+    <text x="0" y="75" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Use: Path counting, distance queries</text>
+  </g>
+  
+  <!-- Applications -->
+  <text x="50" y="380" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">APPLICATIONS</text>
+  <g transform="translate(50, 395)">
+    <text x="0" y="15" fill="#ffffff" font-size="11" font-family="Courier New, monospace">LCA • Path Queries • Subtree Updates • Tree Distances • Tree Coloring</text>
+  </g>
+</svg>
+

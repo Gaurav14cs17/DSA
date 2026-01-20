@@ -1,0 +1,201 @@
+<svg viewBox="0 0 950 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="35" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">🔀 Merge Sort Visualization</text>
+  <text x="475" y="58" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">T(n) = 2T(n/2) + O(n) = O(n log n)</text>
+  
+  <!-- Original Array -->
+  <text x="50" y="100" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">DIVIDE PHASE</text>
+  
+  <!-- Level 0: Original -->
+  <g transform="translate(275, 110)">
+    <rect x="0" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="25" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">38</text>
+    <rect x="50" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="75" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">27</text>
+    <rect x="100" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="125" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">43</text>
+    <rect x="150" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="175" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+    <rect x="200" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="225" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">9</text>
+    <rect x="250" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="275" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">82</text>
+    <rect x="300" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="325" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">10</text>
+  </g>
+  <text x="680" y="135" font-family="Courier New, monospace" font-size="11" fill="#888888">n=7</text>
+  
+  <!-- Arrows down -->
+  <path d="M400 155 L280 185" stroke="#3b82f6" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+  <path d="M550 155 L670 185" stroke="#3b82f6" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+  
+  <!-- Level 1: First split -->
+  <g transform="translate(130, 190)">
+    <rect x="0" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="25" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">38</text>
+    <rect x="50" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="75" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">27</text>
+    <rect x="100" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="125" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">43</text>
+    <rect x="150" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="175" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  </g>
+  <g transform="translate(570, 190)">
+    <rect x="0" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="25" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">9</text>
+    <rect x="50" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="75" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">82</text>
+    <rect x="100" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="125" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">10</text>
+  </g>
+  
+  <!-- Arrows -->
+  <path d="M210 235 L160 265" stroke="#f97316" stroke-width="2" fill="none" marker-end="url(#arrowOrange)"/>
+  <path d="M310 235 L360 265" stroke="#f97316" stroke-width="2" fill="none" marker-end="url(#arrowOrange)"/>
+  <path d="M620 235 L580 265" stroke="#f97316" stroke-width="2" fill="none" marker-end="url(#arrowOrange)"/>
+  <path d="M695 235 L730 265" stroke="#f97316" stroke-width="2" fill="none" marker-end="url(#arrowOrange)"/>
+  
+  <!-- Level 2 -->
+  <g transform="translate(80, 270)">
+    <rect x="0" y="0" width="50" height="40" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="25" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">38</text>
+    <rect x="50" y="0" width="50" height="40" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="75" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">27</text>
+  </g>
+  <g transform="translate(280, 270)">
+    <rect x="0" y="0" width="50" height="40" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="25" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">43</text>
+    <rect x="50" y="0" width="50" height="40" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="75" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  </g>
+  <g transform="translate(520, 270)">
+    <rect x="0" y="0" width="50" height="40" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="25" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">9</text>
+    <rect x="50" y="0" width="50" height="40" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="75" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">82</text>
+  </g>
+  <rect x="720" y="270" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="745" y="296" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">10</text>
+  
+  <!-- Level 3: Base cases -->
+  <path d="M105 315 L95 345" stroke="#a78bfa" stroke-width="2" fill="none" marker-end="url(#arrowPurple)"/>
+  <path d="M155 315 L165 345" stroke="#a78bfa" stroke-width="2" fill="none" marker-end="url(#arrowPurple)"/>
+  <path d="M305 315 L295 345" stroke="#a78bfa" stroke-width="2" fill="none" marker-end="url(#arrowPurple)"/>
+  <path d="M355 315 L365 345" stroke="#a78bfa" stroke-width="2" fill="none" marker-end="url(#arrowPurple)"/>
+  <path d="M545 315 L535 345" stroke="#a78bfa" stroke-width="2" fill="none" marker-end="url(#arrowPurple)"/>
+  <path d="M595 315 L605 345" stroke="#a78bfa" stroke-width="2" fill="none" marker-end="url(#arrowPurple)"/>
+  
+  <rect x="70" y="350" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="95" y="373" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">38</text>
+  <rect x="140" y="350" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="165" y="373" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">27</text>
+  <rect x="270" y="350" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="295" y="373" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">43</text>
+  <rect x="340" y="350" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="365" y="373" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  <rect x="510" y="350" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="535" y="373" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">9</text>
+  <rect x="580" y="350" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="605" y="373" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">82</text>
+  
+  <!-- MERGE PHASE -->
+  <text x="50" y="420" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">MERGE PHASE</text>
+  
+  <!-- Merge arrows up -->
+  <path d="M95 390 L105 420" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  <path d="M165 390 L155 420" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  <path d="M295 390 L305 420" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  <path d="M365 390 L355 420" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  <path d="M535 390 L545 420" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  <path d="M605 390 L595 420" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  
+  <!-- Merged Level 1 -->
+  <g transform="translate(80, 430)">
+    <rect x="0" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="25" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">27</text>
+    <rect x="50" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="75" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">38</text>
+  </g>
+  <g transform="translate(280, 430)">
+    <rect x="0" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="25" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">3</text>
+    <rect x="50" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="75" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">43</text>
+  </g>
+  <g transform="translate(520, 430)">
+    <rect x="0" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="25" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">9</text>
+    <rect x="50" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="75" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">82</text>
+  </g>
+  <rect x="720" y="430" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="745" y="456" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">10</text>
+  
+  <!-- Merge to level 2 -->
+  <path d="M155 475 L200 505" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  <path d="M355 475 L310 505" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  <path d="M595 475 L650 505" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  <path d="M745 475 L700 505" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  
+  <g transform="translate(130, 510)">
+    <rect x="0" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="25" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">3</text>
+    <rect x="50" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="75" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">27</text>
+    <rect x="100" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="125" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">38</text>
+    <rect x="150" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="175" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">43</text>
+  </g>
+  <g transform="translate(570, 510)">
+    <rect x="0" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="25" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">9</text>
+    <rect x="50" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="75" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">10</text>
+    <rect x="100" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="125" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">82</text>
+  </g>
+  
+  <!-- Final merge -->
+  <path d="M330 555 L400 595" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  <path d="M620 555 L550 595" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  
+  <!-- Final sorted array -->
+  <g transform="translate(275, 600)">
+    <rect x="0" y="0" width="50" height="45" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="25" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">3</text>
+    <rect x="50" y="0" width="50" height="45" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="75" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">9</text>
+    <rect x="100" y="0" width="50" height="45" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="125" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">10</text>
+    <rect x="150" y="0" width="50" height="45" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="175" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">27</text>
+    <rect x="200" y="0" width="50" height="45" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="225" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">38</text>
+    <rect x="250" y="0" width="50" height="45" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="275" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">43</text>
+    <rect x="300" y="0" width="50" height="45" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="325" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">82</text>
+  </g>
+  
+  <text x="475" y="680" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">✓ SORTED ARRAY</text>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f97316"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4ade80"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#a78bfa"/>
+    </marker>
+  </defs>
+</svg>
+

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <!-- Background -->
+  <rect width="900" height="500" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">📉 Find Minimum in Rotated Array</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">LeetCode 153 &amp; 154: Locate the Pivot Point</text>
+  
+  <!-- Visual representation -->
+  <text x="50" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">ARRAY STRUCTURE</text>
+  
+  <!-- Graph visualization -->
+  <g transform="translate(50, 130)">
+    <!-- Axes -->
+    <line x1="0" y1="150" x2="400" y2="150" stroke="#888888" stroke-width="2"/>
+    <line x1="0" y1="0" x2="0" y2="150" stroke="#888888" stroke-width="2"/>
+    
+    <!-- First sorted part (higher) -->
+    <line x1="20" y1="100" x2="200" y2="30" stroke="#4ade80" stroke-width="3"/>
+    
+    <!-- Drop at pivot -->
+    <line x1="200" y1="30" x2="220" y2="130" stroke="#f97316" stroke-width="3" stroke-dasharray="5"/>
+    
+    <!-- Second sorted part (lower) -->
+    <line x1="220" y1="130" x2="380" y2="60" stroke="#a78bfa" stroke-width="3"/>
+    
+    <!-- Labels -->
+    <text x="110" y="50" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">larger values</text>
+    <text x="300" y="110" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">smaller values</text>
+    
+    <!-- Minimum point -->
+    <circle cx="220" cy="130" r="8" fill="#f97316" stroke="#ffffff" stroke-width="2"/>
+    <text x="220" y="165" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">MINIMUM</text>
+    
+    <!-- Index labels -->
+    <text x="20" y="180" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">0</text>
+    <text x="380" y="180" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">n-1</text>
+  </g>
+  
+  <!-- Key Insight Box -->
+  <rect x="500" y="120" width="350" height="120" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="6"/>
+  <text x="675" y="145" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">KEY INSIGHT</text>
+  <text x="515" y="175" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Compare mid with right element:</text>
+  <text x="525" y="200" font-family="Courier New, monospace" font-size="11" fill="#4ade80">• arr[mid] &gt; arr[right]: min is RIGHT</text>
+  <text x="525" y="220" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">• arr[mid] &lt; arr[right]: min is LEFT</text>
+  
+  <!-- Search Example -->
+  <text x="50" y="325" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">SEARCH EXAMPLE: [4, 5, 6, 7, 0, 1, 2]</text>
+  
+  <!-- Step 1 -->
+  <g transform="translate(50, 345)">
+    <rect x="0" y="0" width="45" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="22" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">4</text>
+    <rect x="50" y="0" width="45" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="72" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">5</text>
+    <rect x="100" y="0" width="45" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="122" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">6</text>
+    <rect x="150" y="0" width="45" height="32" fill="#3d1f0f" stroke="#f97316" stroke-width="3" rx="3"/>
+    <text x="172" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#f97316">7</text>
+    <rect x="200" y="0" width="45" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="222" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">0</text>
+    <rect x="250" y="0" width="45" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="272" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">1</text>
+    <rect x="300" y="0" width="45" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="322" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">2</text>
+    
+    <text x="22" y="50" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">L</text>
+    <text x="172" y="50" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#f97316">M</text>
+    <text x="322" y="50" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">R</text>
+    
+    <text x="400" y="20" font-family="Courier New, monospace" font-size="11" fill="#888888">7 &gt; 2 → min is right</text>
+  </g>
+  
+  <!-- Step 2 -->
+  <g transform="translate(50, 410)">
+    <rect x="200" y="0" width="45" height="32" fill="#0f2f1f" stroke="#4ade80" stroke-width="3" rx="3"/>
+    <text x="222" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">0</text>
+    <rect x="250" y="0" width="45" height="32" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="3"/>
+    <text x="272" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#f97316">1</text>
+    <rect x="300" y="0" width="45" height="32" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="322" y="21" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">2</text>
+    
+    <text x="222" y="50" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">L</text>
+    <text x="272" y="50" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#f97316">M</text>
+    <text x="322" y="50" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">R</text>
+    
+    <text x="400" y="20" font-family="Courier New, monospace" font-size="11" fill="#888888">1 &lt; 2 → min is left (incl. mid)</text>
+  </g>
+  
+  <!-- Result -->
+  <rect x="50" y="460" width="200" height="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+  <text x="150" y="480" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">Minimum = 0</text>
+  
+  <!-- Algorithm -->
+  <rect x="500" y="280" width="350" height="150" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="6"/>
+  <text x="675" y="305" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">ALGORITHM</text>
+  <text x="515" y="330" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">while</text>
+  <text x="565" y="330" font-family="Courier New, monospace" font-size="11" fill="#ffffff">left &lt; right:</text>
+  <text x="530" y="350" font-family="Courier New, monospace" font-size="11" fill="#ffffff">mid = (left + right) // 2</text>
+  <text x="530" y="370" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">if</text>
+  <text x="555" y="370" font-family="Courier New, monospace" font-size="11" fill="#ffffff">nums[mid] &gt; nums[right]:</text>
+  <text x="545" y="390" font-family="Courier New, monospace" font-size="11" fill="#ffffff">left = mid + 1</text>
+  <text x="530" y="410" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">else:</text>
+  <text x="575" y="410" font-family="Courier New, monospace" font-size="11" fill="#ffffff">right = mid</text>
+  <text x="515" y="425" font-family="Courier New, monospace" font-size="11" fill="#4ade80">return nums[left]</text>
+  
+  <!-- Complexity -->
+  <text x="675" y="470" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(log n) | Space: O(1)</text>
+</svg>

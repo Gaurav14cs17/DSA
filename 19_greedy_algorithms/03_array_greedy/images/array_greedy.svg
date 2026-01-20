@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 750">
+  <rect width="950" height="750" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Array Greedy Problems</text>
+  <text x="475" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Track running max/min for optimal solutions</text>
+  
+  <!-- Jump Game Section -->
+  <text x="50" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">JUMP GAME (LeetCode 55)</text>
+  <text x="50" y="125" font-family="Courier New, monospace" font-size="12" fill="#888888">nums = [2, 3, 1, 1, 4] --&gt; Can reach end?</text>
+  
+  <!-- Array visualization -->
+  <g transform="translate(50, 145)">
+    <!-- Index labels -->
+    <text x="35" y="-5" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">i=0</text>
+    <text x="105" y="-5" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">i=1</text>
+    <text x="175" y="-5" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">i=2</text>
+    <text x="245" y="-5" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">i=3</text>
+    <text x="315" y="-5" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">i=4</text>
+    
+    <!-- Array boxes -->
+    <rect x="0" y="0" width="70" height="55" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="35" y="28" text-anchor="middle" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#ffffff">2</text>
+    <text x="35" y="48" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#f97316">start</text>
+    
+    <rect x="70" y="0" width="70" height="55" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="105" y="28" text-anchor="middle" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#ffffff">3</text>
+    <text x="105" y="48" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#3b82f6">reach=4</text>
+    
+    <rect x="140" y="0" width="70" height="55" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="175" y="28" text-anchor="middle" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#ffffff">1</text>
+    <text x="175" y="48" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">reach=3</text>
+    
+    <rect x="210" y="0" width="70" height="55" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="245" y="28" text-anchor="middle" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#ffffff">1</text>
+    <text x="245" y="48" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">reach=4</text>
+    
+    <rect x="280" y="0" width="70" height="55" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="315" y="28" text-anchor="middle" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#4ade80">4</text>
+    <text x="315" y="48" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">goal!</text>
+    
+    <!-- Jump arrows -->
+    <path d="M35,60 Q70,85 105,60" fill="none" stroke="#f97316" stroke-width="2" marker-end="url(#arrowOrange)"/>
+    <path d="M105,60 Q175,100 315,60" fill="none" stroke="#4ade80" stroke-width="2" marker-end="url(#arrowGreen)"/>
+    
+    <!-- Max reach line -->
+    <line x1="0" y1="100" x2="350" y2="100" stroke="#888888" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="360" y="105" font-family="Courier New, monospace" font-size="10" fill="#888888">max_reach tracking</text>
+  </g>
+  
+  <!-- Formula -->
+  <g transform="translate(450, 145)">
+    <rect x="0" y="0" width="300" height="80" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="150" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff">Formula</text>
+    <text x="150" y="48" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">max_reach = max(max_reach, i + nums[i])</text>
+    <text x="150" y="68" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Return False if i &gt; max_reach</text>
+  </g>
+  
+  <g transform="translate(770, 145)">
+    <rect x="0" y="0" width="130" height="55" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="65" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">TRUE</text>
+    <text x="65" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">O(n), O(1)</text>
+  </g>
+  
+  <!-- Jump Game II Section -->
+  <text x="50" y="285" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">JUMP GAME II (LeetCode 45) - Minimum Jumps</text>
+  
+  <g transform="translate(50, 305)">
+    <!-- Array with jump ranges -->
+    <rect x="0" y="0" width="60" height="50" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="30" y="28" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    <text x="30" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#f97316">jump 1</text>
+    
+    <rect x="70" y="0" width="60" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="100" y="28" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">3</text>
+    
+    <rect x="140" y="0" width="60" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="170" y="28" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    
+    <!-- End of first jump range -->
+    <line x1="200" y1="-10" x2="200" y2="70" stroke="#f97316" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="200" y="80" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#f97316">current_end</text>
+    
+    <rect x="210" y="0" width="60" height="50" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="240" y="28" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    <text x="240" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#f97316">jump 2</text>
+    
+    <rect x="280" y="0" width="60" height="50" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="310" y="28" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80">4</text>
+    <text x="310" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#4ade80">goal</text>
+    
+    <!-- Farthest line -->
+    <line x1="340" y1="-10" x2="340" y2="70" stroke="#4ade80" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="340" y="80" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#4ade80">farthest</text>
+    
+    <!-- Result -->
+    <rect x="400" y="5" width="120" height="45" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="460" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Min Jumps</text>
+    <text x="460" y="42" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80">2</text>
+  </g>
+  
+  <!-- Gas Station Section -->
+  <text x="50" y="430" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">GAS STATION (LeetCode 134)</text>
+  <text x="50" y="450" font-family="Courier New, monospace" font-size="12" fill="#888888">gas = [1,2,3,4,5], cost = [3,4,5,1,2] --&gt; Start index?</text>
+  
+  <!-- Circular representation -->
+  <g transform="translate(150, 560)">
+    <!-- Station circles -->
+    <circle cx="0" cy="-80" r="30" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+    <text x="0" y="-85" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">g=1</text>
+    <text x="0" y="-72" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">c=3</text>
+    <text x="0" y="-105" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">0</text>
+    
+    <circle cx="76" cy="-25" r="30" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+    <text x="76" y="-30" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">g=2</text>
+    <text x="76" y="-17" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">c=4</text>
+    <text x="100" y="-35" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">1</text>
+    
+    <circle cx="47" cy="62" r="30" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+    <text x="47" y="57" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">g=3</text>
+    <text x="47" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">c=5</text>
+    <text x="70" y="80" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">2</text>
+    
+    <circle cx="-47" cy="62" r="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="-47" y="57" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">g=4</text>
+    <text x="-47" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">c=1</text>
+    <text x="-70" y="80" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">3 [OK]</text>
+    
+    <circle cx="-76" cy="-25" r="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="-76" y="-30" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">g=5</text>
+    <text x="-76" y="-17" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">c=2</text>
+    <text x="-100" y="-35" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">4</text>
+    
+    <!-- Arrows between stations -->
+    <path d="M25,-65 A85,85 0 0,1 60,-45" fill="none" stroke="#3b82f6" stroke-width="1" marker-end="url(#arrowBlue)"/>
+    <path d="M80,8 A85,85 0 0,1 70,40" fill="none" stroke="#3b82f6" stroke-width="1"/>
+    <path d="M20,80 A85,85 0 0,1 -20,80" fill="none" stroke="#3b82f6" stroke-width="1"/>
+    <path d="M-70,40 A85,85 0 0,1 -80,8" fill="none" stroke="#4ade80" stroke-width="2"/>
+    <path d="M-60,-45 A85,85 0 0,1 -25,-65" fill="none" stroke="#4ade80" stroke-width="2"/>
+  </g>
+  
+  <!-- Gas Station Algorithm -->
+  <g transform="translate(400, 460)">
+    <rect x="0" y="0" width="300" height="130" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="150" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff">Algorithm</text>
+    
+    <text x="20" y="50" font-family="Courier New, monospace" font-size="10" fill="#888888">1. Track total = sum(gas[i] - cost[i])</text>
+    <text x="20" y="68" font-family="Courier New, monospace" font-size="10" fill="#888888">2. Track tank (running sum)</text>
+    <text x="20" y="86" font-family="Courier New, monospace" font-size="10" fill="#f97316">3. If tank &lt; 0: start = i+1</text>
+    <text x="20" y="104" font-family="Courier New, monospace" font-size="10" fill="#4ade80">4. Return start if total &gt;= 0</text>
+    <text x="20" y="122" font-family="Courier New, monospace" font-size="10" fill="#ef4444">   else return -1</text>
+  </g>
+  
+  <g transform="translate(720, 460)">
+    <rect x="0" y="0" width="180" height="60" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="90" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff">Result</text>
+    <text x="90" y="48" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80">Start = 3</text>
+  </g>
+  
+  <!-- Candy Distribution Section -->
+  <text x="500" y="545" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">CANDY (LeetCode 135)</text>
+  <text x="500" y="565" font-family="Courier New, monospace" font-size="11" fill="#888888">ratings = [1,0,2] --&gt; Two-pass greedy</text>
+  
+  <g transform="translate(500, 580)">
+    <!-- Ratings -->
+    <text x="0" y="15" font-family="Courier New, monospace" font-size="10" fill="#888888">Ratings:</text>
+    <rect x="70" y="0" width="40" height="30" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="90" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">1</text>
+    <rect x="115" y="0" width="40" height="30" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="135" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">0</text>
+    <rect x="160" y="0" width="40" height="30" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="180" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">2</text>
+    
+    <!-- Pass 1: Left to Right -->
+    <text x="0" y="55" font-family="Courier New, monospace" font-size="10" fill="#f97316">L-&gt;R:</text>
+    <rect x="70" y="40" width="40" height="25" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+    <text x="90" y="57" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">1</text>
+    <rect x="115" y="40" width="40" height="25" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+    <text x="135" y="57" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">1</text>
+    <rect x="160" y="40" width="40" height="25" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+    <text x="180" y="57" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">2</text>
+    
+    <!-- Pass 2: Right to Left -->
+    <text x="0" y="90" font-family="Courier New, monospace" font-size="10" fill="#4ade80">R-&gt;L:</text>
+    <rect x="70" y="75" width="40" height="25" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="90" y="92" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">2</text>
+    <rect x="115" y="75" width="40" height="25" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="135" y="92" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">1</text>
+    <rect x="160" y="75" width="40" height="25" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="180" y="92" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">2</text>
+    
+    <!-- Sum -->
+    <text x="220" y="92" font-family="Courier New, monospace" font-size="11" fill="#888888">= 5</text>
+  </g>
+  
+  <!-- Complexity Summary -->
+  <g transform="translate(750, 620)">
+    <rect x="0" y="0" width="150" height="80" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="75" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Complexity</text>
+    <text x="75" y="42" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Time: O(n)</text>
+    <text x="75" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa">Space: O(1)*</text>
+    <text x="75" y="75" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">*Candy uses O(n)</text>
+  </g>
+  
+  <!-- Key Insight -->
+  <rect x="50" y="710" width="850" height="30" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+  <text x="475" y="730" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">Key Pattern: Track running max_reach, reset start on failure, two-pass for bidirectional constraints</text>
+  
+  <!-- Arrow Markers -->
+  <defs>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4ade80"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f97316"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#3b82f6"/>
+    </marker>
+  </defs>
+</svg>

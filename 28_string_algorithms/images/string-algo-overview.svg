@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <rect width="900" height="400" fill="#0f0f23"/>
+  
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">String Algorithms</text>
+  <text x="450" y="58" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">Pattern matching, hashing, and suffix structures</text>
+  
+  <!-- KMP -->
+  <text x="50" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">KMP ALGORITHM</text>
+  <g transform="translate(50, 115)">
+    <text x="0" y="15" fill="#888888" font-size="10" font-family="Courier New, monospace">Pattern matching with failure function</text>
+    <rect x="0" y="25" width="280" height="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="45" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Preprocess pattern: O(m)</text>
+    <text x="15" y="65" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Search in text: O(n)</text>
+    <text x="0" y="95" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Total: O(n + m)</text>
+  </g>
+  
+  <!-- Rabin-Karp -->
+  <text x="400" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">RABIN-KARP (Rolling Hash)</text>
+  <g transform="translate(400, 115)">
+    <text x="0" y="15" fill="#888888" font-size="10" font-family="Courier New, monospace">Hash-based pattern matching</text>
+    <rect x="0" y="25" width="280" height="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="45" fill="#ffffff" font-size="10" font-family="Courier New, monospace">hash(s) = Σ s[i] * p^i mod m</text>
+    <text x="15" y="65" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Rolling: O(1) per position</text>
+    <text x="0" y="95" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Average: O(n + m)</text>
+  </g>
+  
+  <!-- Z-Algorithm -->
+  <text x="50" y="230" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">Z-ALGORITHM</text>
+  <g transform="translate(50, 250)">
+    <text x="0" y="15" fill="#888888" font-size="10" font-family="Courier New, monospace">Z[i] = longest prefix match at i</text>
+    <text x="0" y="35" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Time: O(n)</text>
+    <text x="0" y="55" fill="#888888" font-size="10" font-family="Courier New, monospace">Use: Pattern matching, repetitions</text>
+  </g>
+  
+  <!-- Suffix Array -->
+  <text x="300" y="230" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">SUFFIX ARRAY</text>
+  <g transform="translate(300, 250)">
+    <text x="0" y="15" fill="#888888" font-size="10" font-family="Courier New, monospace">Sorted array of all suffixes</text>
+    <text x="0" y="35" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Build: O(n log n)</text>
+    <text x="0" y="55" fill="#4ade80" font-size="10" font-family="Courier New, monospace">+ LCP array for many queries</text>
+  </g>
+  
+  <!-- Trie -->
+  <text x="550" y="230" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">AHO-CORASICK</text>
+  <g transform="translate(550, 250)">
+    <text x="0" y="15" fill="#888888" font-size="10" font-family="Courier New, monospace">Multi-pattern matching</text>
+    <text x="0" y="35" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Trie + failure links</text>
+    <text x="0" y="55" fill="#4ade80" font-size="10" font-family="Courier New, monospace">O(n + m + z) for z matches</text>
+  </g>
+  
+  <!-- Applications -->
+  <text x="50" y="340" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">APPLICATIONS</text>
+  <g transform="translate(50, 355)">
+    <text x="0" y="15" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Text Search • DNA Matching • Plagiarism Detection • Autocomplete</text>
+  </g>
+</svg>
+

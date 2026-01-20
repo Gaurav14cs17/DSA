@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380">
+  <rect width="900" height="380" fill="#0f0f23"/>
+  
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Combinatorics</text>
+  <text x="450" y="58" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">Counting and arrangement problems</text>
+  
+  <!-- Permutations -->
+  <text x="50" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">PERMUTATIONS</text>
+  <g transform="translate(50, 115)">
+    <rect x="0" y="0" width="250" height="60" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">P(n,r) = n! / (n-r)!</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">n distinct, r positions</text>
+    <text x="15" y="55" fill="#888888" font-size="10" font-family="Courier New, monospace">Order matters</text>
+  </g>
+  
+  <!-- Combinations -->
+  <text x="350" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">COMBINATIONS</text>
+  <g transform="translate(350, 115)">
+    <rect x="0" y="0" width="250" height="60" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">C(n,r) = n! / (r! * (n-r)!)</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">n choose r</text>
+    <text x="15" y="55" fill="#888888" font-size="10" font-family="Courier New, monospace">Order doesn't matter</text>
+  </g>
+  
+  <!-- Pascal's Triangle -->
+  <text x="650" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">PASCAL'S TRIANGLE</text>
+  <g transform="translate(650, 115)">
+    <text x="50" y="15" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">1</text>
+    <text x="40" y="30" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">1</text>
+    <text x="60" y="30" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">1</text>
+    <text x="30" y="45" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">1</text>
+    <text x="50" y="45" text-anchor="middle" fill="#4ade80" font-size="10" font-family="Courier New, monospace">2</text>
+    <text x="70" y="45" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">1</text>
+    <text x="20" y="60" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">1</text>
+    <text x="40" y="60" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">3</text>
+    <text x="60" y="60" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">3</text>
+    <text x="80" y="60" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">1</text>
+    <text x="120" y="40" fill="#888888" font-size="9" font-family="Courier New, monospace">C(n,r) =</text>
+    <text x="120" y="55" fill="#888888" font-size="9" font-family="Courier New, monospace">C(n-1,r-1)+C(n-1,r)</text>
+  </g>
+  
+  <!-- Stars and Bars -->
+  <text x="50" y="210" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">STARS AND BARS</text>
+  <g transform="translate(50, 230)">
+    <text x="0" y="15" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Distribute n items into k groups</text>
+    <text x="0" y="35" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Answer: C(n+k-1, k-1)</text>
+  </g>
+  
+  <!-- Catalan Numbers -->
+  <text x="350" y="210" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">CATALAN NUMBERS</text>
+  <g transform="translate(350, 230)">
+    <text x="0" y="15" fill="#ffffff" font-size="10" font-family="Courier New, monospace">C_n = C(2n,n) / (n+1)</text>
+    <text x="0" y="35" fill="#888888" font-size="10" font-family="Courier New, monospace">Valid parentheses, BST count</text>
+  </g>
+  
+  <!-- Inclusion-Exclusion -->
+  <text x="600" y="210" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">INCLUSION-EXCLUSION</text>
+  <g transform="translate(600, 230)">
+    <text x="0" y="15" fill="#ffffff" font-size="10" font-family="Courier New, monospace">|A∪B| = |A| + |B| - |A∩B|</text>
+    <text x="0" y="35" fill="#888888" font-size="10" font-family="Courier New, monospace">Count unions/derangements</text>
+  </g>
+  
+  <!-- Applications -->
+  <text x="50" y="310" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">APPLICATIONS</text>
+  <g transform="translate(50, 325)">
+    <text x="0" y="15" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Probability • Counting Problems • DP States • Graph Enumeration</text>
+  </g>
+</svg>
+

@@ -1,0 +1,97 @@
+<svg viewBox="0 0 950 550" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: bold 26px 'Courier New', monospace; fill: #ffffff; }
+      .subtitle { font: 16px 'Courier New', monospace; fill: #888888; }
+      .section-label { font: bold 14px 'Courier New', monospace; fill: #e94560; }
+      .box-text { font: bold 18px 'Courier New', monospace; fill: #ffffff; }
+      .small-label { font: 11px 'Courier New', monospace; fill: #888888; }
+      .result-text { font: bold 14px 'Courier New', monospace; fill: #4ade80; }
+      .info-text { font: 13px 'Courier New', monospace; fill: #ffffff; }
+      .complexity { font: 12px 'Courier New', monospace; fill: #60a5fa; }
+      .step-text { font: 12px 'Courier New', monospace; fill: #fbbf24; }
+    </style>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#a78bfa"/>
+    </marker>
+    <marker id="arrowDown" markerWidth="10" markerHeight="10" refX="3" refY="9" orient="auto">
+      <path d="M0,0 L6,0 L3,9 z" fill="#4ade80"/>
+    </marker>
+    <marker id="arrowUp" markerWidth="10" markerHeight="10" refX="3" refY="0" orient="auto">
+      <path d="M0,9 L6,9 L3,0 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="950" height="550" fill="#0f0f23"/>
+
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" class="title">📚 Queue Using Two Stacks</text>
+  <text x="475" y="70" text-anchor="middle" class="subtitle">Amortized O(1) operations - LeetCode #232</text>
+
+  <!-- Stack 1 (Input) Container -->
+  <rect x="120" y="120" width="150" height="280" rx="8" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <text x="195" y="105" text-anchor="middle" class="section-label" fill="#3b82f6">Stack 1 (Input)</text>
+
+  <!-- Stack 1 Elements -->
+  <rect x="135" y="330" width="120" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="195" y="362" text-anchor="middle" class="box-text">3</text>
+  
+  <rect x="135" y="270" width="120" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="195" y="302" text-anchor="middle" class="box-text">2</text>
+  
+  <rect x="135" y="210" width="120" height="50" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="195" y="242" text-anchor="middle" class="box-text" fill="#f97316">1</text>
+  <text x="195" y="195" text-anchor="middle" class="small-label">TOP</text>
+
+  <!-- Push Arrow -->
+  <line x1="195" y1="140" x2="195" y2="175" stroke="#4ade80" stroke-width="3" marker-end="url(#arrowDown)"/>
+  <text x="245" y="158" class="result-text">PUSH</text>
+
+  <!-- Transfer Arrow -->
+  <path d="M 300 280 C 360 280, 420 220, 480 220 C 540 220, 600 280, 660 280" 
+        stroke="#a78bfa" stroke-width="3" fill="none" stroke-dasharray="8,4" marker-end="url(#arrowPurple)"/>
+  <text x="480" y="180" text-anchor="middle" class="section-label" fill="#a78bfa">Transfer when S2 empty</text>
+  <text x="480" y="200" text-anchor="middle" class="small-label">(reverses order!)</text>
+
+  <!-- Stack 2 (Output) Container -->
+  <rect x="680" y="120" width="150" height="280" rx="8" fill="none" stroke="#f97316" stroke-width="2"/>
+  <text x="755" y="105" text-anchor="middle" class="section-label" fill="#f97316">Stack 2 (Output)</text>
+
+  <!-- Stack 2 Elements (after transfer - shown as future state) -->
+  <rect x="695" y="330" width="120" height="50" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="755" y="362" text-anchor="middle" class="box-text" fill="#4ade80">1</text>
+  <text x="755" y="390" text-anchor="middle" class="small-label">FIRST OUT</text>
+  
+  <rect x="695" y="270" width="120" height="50" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="755" y="302" text-anchor="middle" class="box-text" fill="#a78bfa">2</text>
+  
+  <rect x="695" y="210" width="120" height="50" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="755" y="242" text-anchor="middle" class="box-text" fill="#a78bfa">3</text>
+  <text x="755" y="195" text-anchor="middle" class="small-label">TOP</text>
+
+  <!-- Pop Arrow -->
+  <line x1="755" y1="175" x2="755" y2="140" stroke="#ef4444" stroke-width="3" marker-end="url(#arrowUp)"/>
+  <text x="805" y="158" class="section-label" fill="#ef4444">POP</text>
+
+  <!-- Operation Labels -->
+  <rect x="50" y="280" width="55" height="30" rx="5" fill="#4ade80"/>
+  <text x="77" y="300" text-anchor="middle" class="box-text" fill="#0f0f23">Enq</text>
+
+  <rect x="845" y="280" width="55" height="30" rx="5" fill="#ef4444"/>
+  <text x="872" y="300" text-anchor="middle" class="box-text" fill="#0f0f23">Deq</text>
+
+  <!-- Amortized Analysis Box -->
+  <rect x="120" y="420" width="710" height="110" rx="8" fill="#1a1a2e" stroke="#60a5fa" stroke-width="2"/>
+  <text x="475" y="450" text-anchor="middle" class="section-label" fill="#60a5fa">Amortized Analysis</text>
+  
+  <text x="140" y="480" class="info-text">Each element:</text>
+  <text x="140" y="505" class="step-text">1. Pushed to S1 once: O(1)</text>
+  <text x="400" y="505" class="step-text">2. Transferred to S2 once: O(1)</text>
+  <text x="660" y="505" class="step-text">3. Popped from S2 once: O(1)</text>
+  
+  <text x="475" y="525" text-anchor="middle" class="complexity">Total for n elements: 3n operations → Amortized O(1) per operation</text>
+
+  <!-- Footer -->
+  <text x="475" y="545" text-anchor="middle" class="complexity">Enqueue: O(1) | Dequeue: O(1) amortized | Space: O(n)</text>
+</svg>

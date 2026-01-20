@@ -1,0 +1,115 @@
+<svg viewBox="0 0 950 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Digit Dynamic Programming</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Count Numbers with Properties in Range [0, N]</text>
+  
+  <!-- Section: Digit DP Concept -->
+  <text x="50" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Digit DP State: dp[pos][state][tight]</text>
+  
+  <!-- Number representation -->
+  <g transform="translate(50, 130)">
+    <text x="0" y="20" font-family="Courier New, monospace" font-size="12" fill="#888888">N = 3245, count numbers ≤ N with property</text>
+    
+    <!-- Digit boxes -->
+    <rect x="0" y="35" width="60" height="55" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="30" y="65" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#4ade80" text-anchor="middle">3</text>
+    <text x="30" y="80" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">pos=0</text>
+    
+    <rect x="70" y="35" width="60" height="55" rx="5" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="100" y="65" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#f97316" text-anchor="middle">2</text>
+    <text x="100" y="80" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">pos=1</text>
+    
+    <rect x="140" y="35" width="60" height="55" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="170" y="65" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="170" y="80" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">pos=2</text>
+    
+    <rect x="210" y="35" width="60" height="55" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="240" y="65" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+    <text x="240" y="80" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">pos=3</text>
+    
+    <!-- Tight bound indicator -->
+    <text x="300" y="55" font-family="Courier New, monospace" font-size="11" fill="#f97316">tight = True</text>
+    <text x="300" y="75" font-family="Courier New, monospace" font-size="10" fill="#888888">Current: 32__</text>
+    <text x="300" y="90" font-family="Courier New, monospace" font-size="10" fill="#888888">Next digit: 0-4</text>
+  </g>
+  
+  <!-- Tight vs Not Tight -->
+  <g transform="translate(500, 125)">
+    <rect x="0" y="0" width="400" height="130" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="200" y="25" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Tight Bound Concept</text>
+    
+    <rect x="20" y="40" width="170" height="40" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="105" y="55" font-family="Courier New, monospace" font-size="11" fill="#f97316" text-anchor="middle">tight = True</text>
+    <text x="105" y="72" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">digit ≤ N[pos]</text>
+    
+    <rect x="210" y="40" width="170" height="40" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="295" y="55" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">tight = False</text>
+    <text x="295" y="72" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">digit: 0-9 (free)</text>
+    
+    <text x="20" y="105" font-family="Courier New, monospace" font-size="10" fill="#60a5fa">If we place digit &lt; N[pos], future digits are free</text>
+    <text x="20" y="120" font-family="Courier New, monospace" font-size="10" fill="#60a5fa">If we place digit = N[pos], stay tight</text>
+  </g>
+  
+  <!-- Example: Count digit 1s -->
+  <text x="50" y="290" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Example: Count 1s in [1, 13]</text>
+  
+  <g transform="translate(50, 310)">
+    <!-- Number breakdown -->
+    <text x="0" y="20" font-family="Courier New, monospace" font-size="11" fill="#888888">1:1  2:0  3:0  4:0  5:0  6:0  7:0  8:0  9:0  10:1  11:2  12:1  13:1</text>
+    
+    <!-- Visual count -->
+    <rect x="0" y="35" width="350" height="50" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="175" y="55" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">Numbers: 1, 10, 11, 12, 13 contain "1"</text>
+    <text x="175" y="75" font-family="Courier New, monospace" font-size="12" fill="#4ade80" text-anchor="middle">Total 1s = 1+1+2+1+1 = 6</text>
+  </g>
+  
+  <!-- DP Template -->
+  <g transform="translate(500, 280)">
+    <rect x="0" y="0" width="400" height="160" rx="5" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="200" y="25" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Digit DP Template</text>
+    
+    <text x="20" y="50" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">def dp(pos, state, tight, started):</text>
+    <text x="20" y="70" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">  if pos == len(s): return count</text>
+    <text x="20" y="90" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">  limit = int(s[pos]) if tight else 9</text>
+    <text x="20" y="110" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">  for d in range(0, limit+1):</text>
+    <text x="20" y="130" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">    new_tight = tight and d == limit</text>
+    <text x="20" y="150" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">    res += dp(pos+1, update, new_tight)</text>
+  </g>
+  
+  <!-- State parameters -->
+  <text x="50" y="430" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">DP State Parameters</text>
+  
+  <g transform="translate(50, 450)">
+    <rect x="0" y="0" width="200" height="70" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="100" y="22" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">pos</text>
+    <text x="100" y="42" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">Current digit index</text>
+    <text x="100" y="58" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">0 to len(N)-1</text>
+  </g>
+  
+  <g transform="translate(270, 450)">
+    <rect x="0" y="0" width="200" height="70" rx="5" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="100" y="22" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">state</text>
+    <text x="100" y="42" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">Problem-specific</text>
+    <text x="100" y="58" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">count, sum, flags...</text>
+  </g>
+  
+  <g transform="translate(490, 450)">
+    <rect x="0" y="0" width="200" height="70" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="100" y="22" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">tight</text>
+    <text x="100" y="42" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">Prefix == N prefix?</text>
+    <text x="100" y="58" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">True/False</text>
+  </g>
+  
+  <g transform="translate(710, 450)">
+    <rect x="0" y="0" width="200" height="70" rx="5" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="100" y="22" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">started</text>
+    <text x="100" y="42" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="middle">Leading zeros?</text>
+    <text x="100" y="58" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">Handle 0-padding</text>
+  </g>
+  
+  <!-- Range query formula -->
+  <rect x="250" y="545" width="450" height="40" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="475" y="570" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">Range [L, R]: f(R) - f(L-1) | O(log N) time</text>
+</svg>

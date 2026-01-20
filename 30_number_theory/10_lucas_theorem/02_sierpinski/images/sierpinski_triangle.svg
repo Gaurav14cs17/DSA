@@ -1,0 +1,78 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Lucas' Theorem &amp; Sierpiński</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Pascal's Triangle mod 2 forms Sierpiński pattern</text>
+  
+  <!-- Pascal mod 2 visualization -->
+  <rect x="50" y="90" width="400" height="360" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="120" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">PASCAL'S TRIANGLE MOD 2</text>
+  
+  <!-- Row 0 -->
+  <text x="250" y="155" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <!-- Row 1 -->
+  <text x="235" y="175" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <text x="265" y="175" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <!-- Row 2 -->
+  <text x="220" y="195" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <text x="250" y="195" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">0</text>
+  <text x="280" y="195" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <!-- Row 3 -->
+  <text x="205" y="215" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <text x="235" y="215" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <text x="265" y="215" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <text x="295" y="215" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <!-- Row 4 -->
+  <text x="190" y="235" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <text x="220" y="235" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">0</text>
+  <text x="250" y="235" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">0</text>
+  <text x="280" y="235" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">0</text>
+  <text x="310" y="235" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <!-- Row 5 -->
+  <text x="175" y="255" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <text x="205" y="255" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <text x="235" y="255" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">0</text>
+  <text x="265" y="255" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">0</text>
+  <text x="295" y="255" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <text x="325" y="255" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <!-- Row 6 -->
+  <text x="160" y="275" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <text x="190" y="275" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">0</text>
+  <text x="220" y="275" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <text x="250" y="275" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">0</text>
+  <text x="280" y="275" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <text x="310" y="275" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">0</text>
+  <text x="340" y="275" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <!-- Row 7 -->
+  <text x="145" y="295" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <text x="175" y="295" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <text x="205" y="295" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <text x="235" y="295" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <text x="265" y="295" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <text x="295" y="295" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <text x="325" y="295" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  <text x="355" y="295" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">1</text>
+  
+  <text x="250" y="340" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">C(n,k) mod 2 = 1 iff</text>
+  <text x="250" y="360" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">k &amp; n == k (bitwise)</text>
+  <text x="250" y="390" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Green = odd, Gray = even</text>
+  <text x="250" y="420" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">Pattern continues as fractal!</text>
+  
+  <!-- Connection to Lucas -->
+  <rect x="480" y="90" width="370" height="360" rx="10" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="665" y="120" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">LUCAS CONNECTION</text>
+  
+  <text x="500" y="160" font-family="Courier New, monospace" font-size="11" fill="#ffffff">For p = 2, Lucas' theorem says:</text>
+  <text x="500" y="185" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">C(n,k) ≡ Π C(nᵢ,kᵢ) mod 2</text>
+  <text x="500" y="220" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Where nᵢ, kᵢ are binary digits</text>
+  
+  <text x="500" y="260" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Each C(nᵢ,kᵢ) is 0 or 1:</text>
+  <text x="500" y="285" font-family="Courier New, monospace" font-size="11" fill="#888888">• C(0,0) = 1</text>
+  <text x="500" y="305" font-family="Courier New, monospace" font-size="11" fill="#888888">• C(1,0) = 1</text>
+  <text x="500" y="325" font-family="Courier New, monospace" font-size="11" fill="#888888">• C(1,1) = 1</text>
+  <text x="500" y="345" font-family="Courier New, monospace" font-size="11" fill="#888888">• C(0,1) = 0  ← makes product 0!</text>
+  
+  <text x="500" y="390" font-family="Courier New, monospace" font-size="12" fill="#4ade80">C(n,k) odd ⟺ every bit of k is</text>
+  <text x="500" y="415" font-family="Courier New, monospace" font-size="12" fill="#4ade80">also set in n  ⟺  (k &amp; n) == k</text>
+</svg>

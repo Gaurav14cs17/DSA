@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340">
+  <rect width="600" height="340" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="300" y="28" fill="#fff" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle">Palindrome Check: Two Pointers</text>
+  <text x="300" y="48" fill="#aaa" font-family="Arial" font-size="13" text-anchor="middle">Input: "racecar"</text>
+  
+  <!-- Step 1 -->
+  <text x="30" y="80" fill="#ffd700" font-family="Arial" font-size="13" font-weight="bold">Step 1: L=0, R=6</text>
+  
+  <g transform="translate(30, 95)">
+    <rect x="0" y="0" width="45" height="45" rx="5" fill="#f5af19"/>
+    <text x="22" y="30" fill="#333" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle">r</text>
+    
+    <rect x="55" y="0" width="45" height="45" rx="5" fill="#333"/>
+    <text x="77" y="30" fill="#888" font-family="monospace" font-size="20" text-anchor="middle">a</text>
+    
+    <rect x="110" y="0" width="45" height="45" rx="5" fill="#333"/>
+    <text x="132" y="30" fill="#888" font-family="monospace" font-size="20" text-anchor="middle">c</text>
+    
+    <rect x="165" y="0" width="45" height="45" rx="5" fill="#333"/>
+    <text x="187" y="30" fill="#888" font-family="monospace" font-size="20" text-anchor="middle">e</text>
+    
+    <rect x="220" y="0" width="45" height="45" rx="5" fill="#333"/>
+    <text x="242" y="30" fill="#888" font-family="monospace" font-size="20" text-anchor="middle">c</text>
+    
+    <rect x="275" y="0" width="45" height="45" rx="5" fill="#333"/>
+    <text x="297" y="30" fill="#888" font-family="monospace" font-size="20" text-anchor="middle">a</text>
+    
+    <rect x="330" y="0" width="45" height="45" rx="5" fill="#f5af19"/>
+    <text x="352" y="30" fill="#333" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle">r</text>
+  </g>
+  
+  <text x="52" y="155" fill="#f5af19" font-family="Arial" font-size="11" text-anchor="middle">L</text>
+  <text x="382" y="155" fill="#f5af19" font-family="Arial" font-size="11" text-anchor="middle">R</text>
+  <text x="500" y="125" fill="#38ef7d" font-family="Arial" font-size="13">r == r ✓</text>
+  
+  <!-- Step 2 -->
+  <text x="30" y="185" fill="#ffd700" font-family="Arial" font-size="13" font-weight="bold">Step 2: L=1, R=5</text>
+  
+  <g transform="translate(30, 200)">
+    <rect x="0" y="0" width="45" height="45" rx="5" fill="#38ef7d"/>
+    <text x="22" y="30" fill="#fff" font-family="monospace" font-size="20" text-anchor="middle">r</text>
+    
+    <rect x="55" y="0" width="45" height="45" rx="5" fill="#f5af19"/>
+    <text x="77" y="30" fill="#333" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle">a</text>
+    
+    <rect x="110" y="0" width="45" height="45" rx="5" fill="#333"/>
+    <text x="132" y="30" fill="#888" font-family="monospace" font-size="20" text-anchor="middle">c</text>
+    
+    <rect x="165" y="0" width="45" height="45" rx="5" fill="#333"/>
+    <text x="187" y="30" fill="#888" font-family="monospace" font-size="20" text-anchor="middle">e</text>
+    
+    <rect x="220" y="0" width="45" height="45" rx="5" fill="#333"/>
+    <text x="242" y="30" fill="#888" font-family="monospace" font-size="20" text-anchor="middle">c</text>
+    
+    <rect x="275" y="0" width="45" height="45" rx="5" fill="#f5af19"/>
+    <text x="297" y="30" fill="#333" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle">a</text>
+    
+    <rect x="330" y="0" width="45" height="45" rx="5" fill="#38ef7d"/>
+    <text x="352" y="30" fill="#fff" font-family="monospace" font-size="20" text-anchor="middle">r</text>
+  </g>
+  
+  <text x="107" y="260" fill="#f5af19" font-family="Arial" font-size="11" text-anchor="middle">L</text>
+  <text x="327" y="260" fill="#f5af19" font-family="Arial" font-size="11" text-anchor="middle">R</text>
+  <text x="500" y="230" fill="#38ef7d" font-family="Arial" font-size="13">a == a ✓</text>
+  
+  <!-- Result -->
+  <text x="30" y="290" fill="#38ef7d" font-family="Arial" font-size="13" font-weight="bold">All matched → PALINDROME ✓</text>
+  
+  <!-- Info -->
+  <rect x="450" y="65" width="120" height="55" rx="6" fill="rgba(255,255,255,0.1)"/>
+  <text x="510" y="88" fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle">Complexity</text>
+  <text x="510" y="108" fill="#4facfe" font-family="Arial" font-size="10" text-anchor="middle">Time: O(n)</text>
+  
+  <!-- Formula -->
+  <text x="300" y="325" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">Check: S[i] == S[n-1-i] for all i</text>
+</svg>

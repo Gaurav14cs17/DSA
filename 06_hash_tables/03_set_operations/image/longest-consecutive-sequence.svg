@@ -1,0 +1,139 @@
+<svg viewBox="0 0 950 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Longest Consecutive Sequence</text>
+  <text x="475" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">O(n) using HashSet - only start from sequence beginnings</text>
+  
+  <!-- Input -->
+  <text x="50" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">INPUT</text>
+  <text x="50" y="130" font-family="Courier New, monospace" font-size="13" fill="#888888">nums = [100, 4, 200, 1, 3, 2]</text>
+  
+  <!-- Array visualization (unsorted) -->
+  <g transform="translate(50, 145)">
+    <rect x="0" y="0" width="60" height="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="30" y="32" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff">100</text>
+    
+    <rect x="75" y="0" width="60" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+    <text x="105" y="32" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80">4</text>
+    
+    <rect x="150" y="0" width="60" height="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="180" y="32" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff">200</text>
+    
+    <rect x="225" y="0" width="60" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+    <text x="255" y="32" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80">1</text>
+    
+    <rect x="300" y="0" width="60" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+    <text x="330" y="32" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80">3</text>
+    
+    <rect x="375" y="0" width="60" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+    <text x="405" y="32" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80">2</text>
+  </g>
+  
+  <!-- Key Insight Box -->
+  <rect x="500" y="100" width="400" height="100" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="8"/>
+  <text x="520" y="130" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">KEY INSIGHT</text>
+  <text x="520" y="160" font-family="Courier New, monospace" font-size="13" fill="#ffffff">Only start counting from numbers</text>
+  <text x="520" y="180" font-family="Courier New, monospace" font-size="13" fill="#ffffff">that have NO predecessor (num-1)</text>
+  <text x="520" y="195" font-family="Courier New, monospace" font-size="11" fill="#4ade80">→ Each element visited at most twice!</text>
+  
+  <!-- Step 1: Build Set -->
+  <text x="50" y="240" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 1: BUILD HASHSET</text>
+  
+  <g transform="translate(50, 260)">
+    <rect x="0" y="0" width="400" height="60" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="8"/>
+    <text x="200" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">HashSet (O(1) lookup)</text>
+    <text x="200" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">{100, 4, 200, 1, 3, 2}</text>
+  </g>
+  
+  <!-- Step 2: Find Sequence Starts -->
+  <text x="50" y="360" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 2: FIND SEQUENCE STARTS (no predecessor)</text>
+  
+  <g transform="translate(50, 380)">
+    <!-- Number 100 -->
+    <rect x="0" y="0" width="200" height="50" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="6"/>
+    <text x="20" y="22" font-family="Courier New, monospace" font-size="13" fill="#f97316">100:</text>
+    <text x="60" y="22" font-family="Courier New, monospace" font-size="12" fill="#ffffff">99 not in set</text>
+    <text x="20" y="42" font-family="Courier New, monospace" font-size="12" fill="#4ade80">→ START! Extend...</text>
+    
+    <!-- Number 4 -->
+    <rect x="220" y="0" width="200" height="50" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="4" rx="6"/>
+    <text x="240" y="22" font-family="Courier New, monospace" font-size="13" fill="#ef4444">4:</text>
+    <text x="265" y="22" font-family="Courier New, monospace" font-size="12" fill="#888888">3 IS in set</text>
+    <text x="240" y="42" font-family="Courier New, monospace" font-size="12" fill="#888888">→ Skip (not a start)</text>
+    
+    <!-- Number 200 -->
+    <rect x="440" y="0" width="200" height="50" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="6"/>
+    <text x="460" y="22" font-family="Courier New, monospace" font-size="13" fill="#f97316">200:</text>
+    <text x="505" y="22" font-family="Courier New, monospace" font-size="12" fill="#ffffff">199 not in set</text>
+    <text x="460" y="42" font-family="Courier New, monospace" font-size="12" fill="#4ade80">→ START! Extend...</text>
+    
+    <!-- Number 1 -->
+    <rect x="660" y="0" width="200" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="3" rx="6"/>
+    <text x="680" y="22" font-family="Courier New, monospace" font-size="13" fill="#4ade80">1:</text>
+    <text x="700" y="22" font-family="Courier New, monospace" font-size="12" fill="#ffffff">0 not in set</text>
+    <text x="680" y="42" font-family="Courier New, monospace" font-size="12" fill="#4ade80">→ START! ★ Longest</text>
+  </g>
+  
+  <!-- Step 3: Extend Sequences -->
+  <text x="50" y="470" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 3: EXTEND FROM STARTS</text>
+  
+  <g transform="translate(50, 490)">
+    <!-- Sequence from 100 -->
+    <rect x="0" y="0" width="200" height="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="6"/>
+    <text x="20" y="25" font-family="Courier New, monospace" font-size="12" fill="#888888">Start: 100</text>
+    <rect x="20" y="35" width="40" height="28" fill="#3b82f6" rx="3"/>
+    <text x="40" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">100</text>
+    <text x="75" y="55" font-family="Courier New, monospace" font-size="12" fill="#888888">→ 101? No</text>
+    <text x="140" y="55" font-family="Courier New, monospace" font-size="14" fill="#ffffff">len=1</text>
+    
+    <!-- Sequence from 200 -->
+    <rect x="220" y="0" width="200" height="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="6"/>
+    <text x="240" y="25" font-family="Courier New, monospace" font-size="12" fill="#888888">Start: 200</text>
+    <rect x="240" y="35" width="40" height="28" fill="#3b82f6" rx="3"/>
+    <text x="260" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">200</text>
+    <text x="295" y="55" font-family="Courier New, monospace" font-size="12" fill="#888888">→ 201? No</text>
+    <text x="360" y="55" font-family="Courier New, monospace" font-size="14" fill="#ffffff">len=1</text>
+    
+    <!-- Sequence from 1 (longest!) -->
+    <rect x="440" y="0" width="450" height="70" fill="#0f2f1f" stroke="#4ade80" stroke-width="3" rx="6"/>
+    <text x="460" y="25" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Start: 1 ★ LONGEST</text>
+    
+    <rect x="460" y="35" width="35" height="28" fill="#4ade80" rx="3"/>
+    <text x="477" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#0f0f23">1</text>
+    
+    <text x="502" y="55" font-family="Courier New, monospace" font-size="14" fill="#888888">→</text>
+    
+    <rect x="520" y="35" width="35" height="28" fill="#4ade80" rx="3"/>
+    <text x="537" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#0f0f23">2</text>
+    
+    <text x="562" y="55" font-family="Courier New, monospace" font-size="14" fill="#888888">→</text>
+    
+    <rect x="580" y="35" width="35" height="28" fill="#4ade80" rx="3"/>
+    <text x="597" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#0f0f23">3</text>
+    
+    <text x="622" y="55" font-family="Courier New, monospace" font-size="14" fill="#888888">→</text>
+    
+    <rect x="640" y="35" width="35" height="28" fill="#4ade80" rx="3"/>
+    <text x="657" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#0f0f23">4</text>
+    
+    <text x="682" y="55" font-family="Courier New, monospace" font-size="12" fill="#888888">→ 5? No</text>
+    
+    <text x="755" y="55" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">len=4</text>
+  </g>
+  
+  <!-- Result -->
+  <rect x="50" y="590" width="400" height="80" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="8"/>
+  <text x="70" y="620" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">RESULT</text>
+  <text x="70" y="650" font-family="Courier New, monospace" font-size="18" fill="#ffffff">Longest Consecutive = 4</text>
+  <text x="70" y="665" font-family="Courier New, monospace" font-size="11" fill="#888888">Sequence: [1, 2, 3, 4]</text>
+  
+  <!-- Complexity -->
+  <rect x="500" y="590" width="400" height="80" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="8"/>
+  <text x="520" y="620" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(n)</text>
+  <text x="520" y="645" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Space: O(n)</text>
+  <text x="700" y="620" font-family="Courier New, monospace" font-size="11" fill="#888888">Each element checked ≤ 2 times</text>
+  <text x="700" y="645" font-family="Courier New, monospace" font-size="11" fill="#888888">• As potential start</text>
+  <text x="700" y="660" font-family="Courier New, monospace" font-size="11" fill="#888888">• As part of sequence</text>
+  <text x="800" y="665" font-family="Courier New, monospace" font-size="11" fill="#888888">LeetCode #128</text>
+</svg>

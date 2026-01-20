@@ -1,0 +1,542 @@
+---
+layout: default
+title: "Loop Fusion & Online Algorithms"
+nav_order: 41
+has_children: true
+permalink: /41_loop_fusion_online/
+---
+
+<div align="center">
+
+# 🔄 Loop Fusion & Online Algorithms
+
+![Loop Fusion Overview](./images/loop-fusion-overview.svg)
+
+<p>
+  <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
+  <img src="https://img.shields.io/badge/Subtopics-4-blue?style=for-the-badge" alt="Subtopics">
+  <img src="https://img.shields.io/badge/Problems-30+-green?style=for-the-badge" alt="Problems">
+</p>
+
+**Single-Pass Algorithms Using Recurrence Relations**
+
+*When multiple passes become one*
+
+[⬅️ Previous: DP Optimizations](../40_dp_optimizations/README.md) | [🏠 Home](../README.md)
+
+</div>
+
+---
+
+## 📋 Overview
+
+**Loop Fusion with Online Algorithms** combines three powerful optimization techniques:
+
+1. **Loop Fusion**: Merging multiple loops into a single pass
+2. **Online Algorithms**: Processing data as it arrives without looking ahead
+3. **Recurrence Relations**: Using mathematical relations to maintain state efficiently
+
+**What You'll Learn:**
+- Welford's numerically stable variance algorithm
+- Kadane's maximum subarray pattern
+- Computing higher statistical moments (skewness, kurtosis)
+- Streaming algorithms (Reservoir Sampling, Count-Min Sketch, HyperLogLog)
+
+---
+
+## 📂 Topics
+
+<table>
+<tr>
+<td width="50%">
+
+### [01. Welford's Algorithm](./01_welford_algorithm/)
+- Online mean and variance
+- Numerical stability
+- Parallel computation
+- Bessel's correction
+- **Problems:** 5+
+
+</td>
+<td width="50%">
+
+### [02. Kadane's Pattern](./02_kadane_pattern/)
+- Maximum subarray sum
+- Product variants
+- Circular arrays
+- With deletions
+- **Problems:** 10+
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### [03. Higher Moments](./03_higher_moments/)
+- Skewness computation
+- Kurtosis computation
+- Terriberry's algorithm
+- Distribution analysis
+- **Problems:** 5+
+
+</td>
+<td width="50%">
+
+### [04. Streaming Algorithms](./04_streaming_algorithms/)
+- Reservoir sampling
+- Count-Min Sketch
+- HyperLogLog
+- Bloom Filter
+- **Problems:** 10+
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📐 Mathematical Foundation
+
+### Recurrence Relations
+
+A **recurrence relation** defines a sequence where each term is a function of previous terms:
+
+$$S(n) = f(S(n-1), S(n-2), \ldots, S(0))$$
+
+**Key Examples:**
+
+| Algorithm | Recurrence | Complexity |
+|-----------|-----------|------------|
+| **Sum** | $S(n) = S(n-1) + x_n$ | $O(1)$ |
+| **Mean** | $\mu_n = \mu_{n-1} + \frac{x_n - \mu_{n-1}}{n}$ | $O(1)$ |
+| **Variance** | $M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n)$ | $O(1)$ |
+| **Kadane** | $\text{max\_here}(i) = \max(a[i], \text{max\_here}(i-1) + a[i])$ | $O(1)$ |
+
+### Loop Fusion Example
+
+**Traditional (Multiple Passes):**
+```python
+# Pass 1: Calculate sum
+total = sum(data)
+
+# Pass 2: Calculate mean
+mean = total / len(data)
+
+# Pass 3: Calculate variance
+variance = sum((x - mean)**2 for x in data) / len(data)
+
+# Pass 4: Find min/max
+min_val = min(data)
+max_val = max(data)
+```
+
+**Optimized (Single Pass):**
+```python
+n = 0
+mean = 0.0
+M2 = 0.0
+min_val = float('inf')
+max_val = float('-inf')
+
+for x in data:
+    n += 1
+    min_val = min(min_val, x)
+    max_val = max(max_val, x)
+    
+    # Welford's algorithm
+    delta = x - mean
+    mean += delta / n
+    M2 += delta * (x - mean)
+
+variance = M2 / n
+```
+
+**Result:** 4× fewer passes, better cache locality, O(1) space!
+
+---
+
+## 💻 Core Implementations
+
+### 1. Welford's Online Statistics
+
+```python
+class OnlineStats:
+    """
+    Compute mean and variance in single pass.
+    
+    Time: O(1) per update
+    Space: O(1)
+    """
+    def __init__(self):
+        self.n = 0
+        self.mean = 0.0
+        self.M2 = 0.0
+    
+    def update(self, x: float) -> None:
+        """Add value using Welford's algorithm."""
+        self.n += 1
+        delta = x - self.mean
+        self.mean += delta / self.n
+        self.M2 += delta * (x - self.mean)
+    
+    def get_variance(self, ddof: int = 0) -> float:
+        """Return variance (ddof=0: population, ddof=1: sample)."""
+        if self.n < 2:
+            return 0.0
+        return self.M2 / (self.n - ddof)
+    
+    def get_std(self, ddof: int = 0) -> float:
+        """Return standard deviation."""
+        return self.get_variance(ddof) ** 0.5
+```
+
+### 2. Kadane's Algorithm
+
+```python
+def max_subarray(arr: list[int]) -> int:
+    """
+    Maximum subarray sum (Kadane's algorithm).
+    
+    Time: O(n), Space: O(1)
+    """
+    max_ending_here = max_so_far = arr[0]
+    
+    for num in arr[1:]:
+        max_ending_here = max(num, max_ending_here + num)
+        max_so_far = max(max_so_far, max_ending_here)
+    
+    return max_so_far
+```
+
+### 3. Reservoir Sampling
+
+```python
+import random
+
+def reservoir_sample(stream, k: int) -> list:
+    """
+    Uniform random sample of k elements from stream.
+    
+    Time: O(1) per element, Space: O(k)
+    """
+    reservoir = []
+    
+    for i, item in enumerate(stream):
+        if i < k:
+            reservoir.append(item)
+        else:
+            j = random.randint(0, i)
+            if j < k:
+                reservoir[j] = item
+    
+    return reservoir
+```
+
+---
+
+## 🎯 LeetCode Problems
+
+**📚 [Complete Problem List (57 problems)](./LEETCODE_PROBLEMS.md)** - Comprehensive guide organized by pattern with loop fusion techniques explained
+
+**🔄 [Loop Fusion Examples](./LOOP_FUSION_EXAMPLES.md)** - Detailed examples showing 3-pass to 1-pass transformations with derivations
+
+### Welford's Algorithm Pattern
+
+| # | Problem | Difficulty | Key Concept |
+|:-:|---------|-----------|-------------|
+| 1588 | [Sum of All Odd Length Subarrays](https://leetcode.com/problems/sum-of-all-odd-length-subarrays/) | 🟢 Easy | Online computation |
+| 303 | [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) | 🟢 Easy | Prefix sum (related) |
+
+### Kadane's Pattern
+
+| # | Problem | Difficulty | Key Concept |
+|:-:|---------|-----------|-------------|
+| 53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | 🟡 Medium | Classic Kadane |
+| 152 | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | 🟡 Medium | Track min/max |
+| 918 | [Maximum Sum Circular Subarray](https://leetcode.com/problems/maximum-sum-circular-subarray/) | 🟡 Medium | Circular variant |
+| 1186 | [Maximum Subarray Sum with One Deletion](https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/) | 🟡 Medium | State tracking |
+
+### Streaming Algorithms
+
+| # | Problem | Difficulty | Key Concept |
+|:-:|---------|-----------|-------------|
+| 295 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | 🔴 Hard | Two heaps |
+| 382 | [Linked List Random Node](https://leetcode.com/problems/linked-list-random-node/) | 🟡 Medium | Reservoir sampling |
+| 398 | [Random Pick Index](https://leetcode.com/problems/random-pick-index/) | 🟡 Medium | Reservoir sampling |
+| 703 | [Kth Largest Element in Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) | 🟢 Easy | Min heap |
+| 933 | [Number of Recent Calls](https://leetcode.com/problems/number-of-recent-calls/) | 🟢 Easy | Sliding window |
+| 1656 | [Design an Ordered Stream](https://leetcode.com/problems/design-an-ordered-stream/) | 🟢 Easy | Stream processing |
+
+---
+
+## 📊 Performance Comparison
+
+| Approach | Passes | Time | Space | Cache |
+|----------|--------|------|-------|-------|
+| **Traditional** | 4 | $O(4n)$ | $O(n)$ | Poor |
+| **Loop Fusion** | 1 | $O(n)$ | $O(1)$ | Excellent |
+| **Speedup** | 4× | 4× | ∞ | 2-5× |
+
+---
+
+## 🔬 Loop Fusion: From 3-Pass to 1-Pass
+
+### The Challenge
+
+Computing statistics traditionally requires multiple passes:
+
+**Algorithm 3-Pass Statistics**
+
+**Notations:**
+- $\{x_i\}_{i=1}^{N}$: input data stream
+- $\mu_N$: final mean
+- $\sigma^2_N$: final variance
+- $m_N$: final maximum
+
+**Body:**
+
+**Pass 1:** Compute sum
+```
+sum ← 0
+for i ← 1, N do
+    sum ← sum + x_i
+end
+μ_N ← sum / N
+```
+
+**Pass 2:** Compute variance
+```
+M2 ← 0
+for i ← 1, N do
+    M2 ← M2 + (x_i - μ_N)²
+end
+σ²_N ← M2 / N
+```
+
+**Pass 3:** Find maximum
+```
+m_N ← -∞
+for i ← 1, N do
+    m_N ← max(m_N, x_i)
+end
+```
+
+**Problem:** This requires 3 passes over data. If data doesn't fit in memory, we must re-read it 3 times!
+
+---
+
+### The Solution: Online Algorithms with Recurrence Relations
+
+**Key Insight:** We can maintain "surrogate" sequences that track intermediate states, allowing us to fuse all computations into a single pass.
+
+### Derivation: Fusing Mean and Variance
+
+**Step 1: Mean Recurrence**
+
+The mean after $n$ elements is:
+
+$$\mu_n = \frac{1}{n}\sum_{i=1}^{n} x_i$$
+
+We can relate $\mu_n$ to $\mu_{n-1}$:
+
+$$\mu_n = \frac{1}{n}\sum_{i=1}^{n} x_i = \frac{1}{n}\left(\sum_{i=1}^{n-1} x_i + x_n\right)$$
+
+$$= \frac{1}{n}((n-1)\mu_{n-1} + x_n)$$
+
+$$= \frac{n-1}{n}\mu_{n-1} + \frac{x_n}{n}$$
+
+$$= \mu_{n-1} + \frac{x_n - \mu_{n-1}}{n}$$
+
+**Recurrence:** $\mu_n = \mu_{n-1} + \frac{x_n - \mu_{n-1}}{n}$
+
+---
+
+**Step 2: Variance Recurrence (Welford's Algorithm)**
+
+Define $M_2(n) = \sum_{i=1}^{n}(x_i - \mu_n)^2$ (the sum of squared deviations).
+
+**Naive approach fails:**
+$$\sigma^2 = E[X^2] - E[X]^2$$
+
+This suffers from **catastrophic cancellation** when $\sigma^2 \ll E[X]^2$.
+
+**Welford's approach:** Maintain $M_2(n)$ using a recurrence.
+
+$$M_2(n) = \sum_{i=1}^{n}(x_i - \mu_n)^2$$
+
+Split into old and new elements:
+
+$$= \sum_{i=1}^{n-1}(x_i - \mu_n)^2 + (x_n - \mu_n)^2$$
+
+**Key observation:** When we add $x_n$, the mean changes from $\mu_{n-1}$ to $\mu_n$!
+
+For old elements ($i < n$):
+$$x_i - \mu_n = (x_i - \mu_{n-1}) - (\mu_n - \mu_{n-1})$$
+
+Let $\delta = x_n - \mu_{n-1}$. From Step 1: $\mu_n - \mu_{n-1} = \frac{\delta}{n}$
+
+So: $x_i - \mu_n = (x_i - \mu_{n-1}) - \frac{\delta}{n}$
+
+Squaring:
+$$(x_i - \mu_n)^2 = (x_i - \mu_{n-1})^2 - 2(x_i - \mu_{n-1})\frac{\delta}{n} + \frac{\delta^2}{n^2}$$
+
+Summing over old elements:
+$$\sum_{i=1}^{n-1}(x_i - \mu_n)^2 = \sum_{i=1}^{n-1}(x_i - \mu_{n-1})^2 - \frac{2\delta}{n}\sum_{i=1}^{n-1}(x_i - \mu_{n-1}) + (n-1)\frac{\delta^2}{n^2}$$
+
+**Crucial property:** $\sum_{i=1}^{n-1}(x_i - \mu_{n-1}) = 0$ (definition of mean!)
+
+$$= M_2(n-1) + (n-1)\frac{\delta^2}{n^2}$$
+
+For the new element:
+$$(x_n - \mu_n)^2 = \left(\delta - \frac{\delta}{n}\right)^2 = \frac{(n-1)^2\delta^2}{n^2}$$
+
+Combining:
+$$M_2(n) = M_2(n-1) + (n-1)\frac{\delta^2}{n^2} + \frac{(n-1)^2\delta^2}{n^2}$$
+
+$$= M_2(n-1) + \frac{(n-1)\delta^2}{n^2}(1 + n - 1)$$
+
+$$= M_2(n-1) + \frac{(n-1)\delta^2}{n}$$
+
+Note: $x_n - \mu_n = \frac{(n-1)\delta}{n}$
+
+Therefore:
+$$\frac{(n-1)\delta^2}{n} = \delta \cdot \frac{(n-1)\delta}{n} = (x_n - \mu_{n-1})(x_n - \mu_n)$$
+
+**Final recurrence:**
+$$M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n)$$
+
+$$\sigma^2_n = \frac{M_2(n)}{n}$$
+
+---
+
+### Algorithm: Fused 1-Pass Statistics
+
+Now we can fuse all three passes into one!
+
+**Algorithm 1-Pass Statistics (Fused)**
+
+**Initialization:**
+- $n \leftarrow 0$
+- $\mu \leftarrow 0$
+- $M_2 \leftarrow 0$
+- $m \leftarrow -\infty$
+
+**Body:**
+```
+for i ← 1, N do
+    n ← n + 1
+    
+    // Update maximum (no dependency)
+    m ← max(m, x_i)
+    
+    // Update mean and variance (Welford's algorithm)
+    δ ← x_i - μ
+    μ ← μ + δ / n
+    M_2 ← M_2 + δ × (x_i - μ)
+end
+
+σ² ← M_2 / n
+```
+
+**Result:**
+- Mean: $\mu$
+- Variance: $\sigma^2$
+- Maximum: $m$
+
+**Complexity:**
+- **Time:** $O(N)$ (single pass!)
+- **Space:** $O(1)$ (only 4 variables!)
+- **I/O:** Read data once
+
+---
+
+### Why This Works: The Associativity Trick
+
+The key insight is that we create **surrogate sequences** that:
+1. Have the same final value as the original computation
+2. Can be computed incrementally using recurrence relations
+3. Don't depend on future values
+
+For variance:
+- Original: $M_2(n) = \sum_{i=1}^{n}(x_i - \mu_n)^2$ (depends on final $\mu_n$!)
+- Surrogate: Use recurrence that only depends on $M_2(n-1)$, $\mu_{n-1}$, and $x_n$
+
+This is exactly the same trick used in **FlashAttention** for online softmax!
+
+---
+
+## 🔬 Mathematical Proofs
+
+### Theorem 1: Welford's Variance Recurrence
+
+**Theorem:** The variance can be computed online using:
+
+$$M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n)$$
+
+where $M_2(n) = \sum_{i=1}^{n} (x_i - \mu_n)^2$ and $\sigma^2 = M_2(n) / n$.
+
+**Proof:** See complete derivation above. $\blacksquare$
+
+### Theorem 2: Kadane's Correctness
+
+**Theorem:** Kadane's algorithm correctly finds the maximum subarray sum.
+
+**Proof:** By induction on array length. See [Kadane's Pattern](./02_kadane_pattern/) for details. $\blacksquare$
+
+---
+
+## 🎓 Key Insights
+
+> **Single Pass**: All statistics computed in one pass through data using recurrence relations.
+
+> **Numerical Stability**: Welford's algorithm avoids catastrophic cancellation that plagues naive formulas.
+
+> **Space Efficiency**: O(1) space instead of O(n) by maintaining only state variables.
+
+> **Streaming Capable**: Can process data that doesn't fit in memory.
+
+---
+
+## 📚 Resources
+
+| Resource | Link |
+|----------|------|
+| **Welford's Paper (1962)** | [Technometrics](https://www.jstor.org/stable/1266577) |
+| **Kadane's Algorithm** | [Programming Pearls](https://en.wikipedia.org/wiki/Maximum_subarray_problem) |
+| **Streaming Algorithms** | [Stanford Lecture Notes](http://theory.stanford.edu/~tim/s15/l/l1.pdf) |
+| **Online Algorithms Book** | [Borodin & El-Yaniv](https://www.cs.toronto.edu/~bor/Papers/book.pdf) |
+
+---
+
+## 🏆 Practice Roadmap
+
+### Week 1: Foundations
+- [ ] Implement Welford's algorithm from scratch
+- [ ] Solve 5 Kadane problems
+- [ ] Understand numerical stability
+
+### Week 2: Variants
+- [ ] Maximum product subarray
+- [ ] Circular array problems
+- [ ] Higher moments computation
+
+### Week 3: Streaming
+- [ ] Reservoir sampling
+- [ ] Count-Min Sketch
+- [ ] HyperLogLog
+
+---
+
+<div align="center">
+
+**Made with ❤️ by [Gaurav Goswami](https://github.com/Gaurav14cs17)**
+
+</div>
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← DP Optimizations](../40_dp_optimizations/README.md) | **Loop Fusion & Online** | End |

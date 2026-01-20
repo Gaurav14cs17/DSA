@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#0c0c1d"/>
+  
+  <!-- Title -->
+  <text x="300" y="28" fill="#fff" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle">Edit Distance</text>
+  <text x="300" y="48" fill="#aaa" font-family="Arial" font-size="13" text-anchor="middle">"horse" → "ros"</text>
+  
+  <!-- DP Table -->
+  <g transform="translate(80, 70)">
+    <!-- Column headers -->
+    <text x="50" y="15" fill="#888" font-family="monospace" font-size="12" text-anchor="middle">""</text>
+    <text x="95" y="15" fill="#38ef7d" font-family="monospace" font-size="12" text-anchor="middle">r</text>
+    <text x="140" y="15" fill="#38ef7d" font-family="monospace" font-size="12" text-anchor="middle">o</text>
+    <text x="185" y="15" fill="#38ef7d" font-family="monospace" font-size="12" text-anchor="middle">s</text>
+    
+    <!-- Row headers -->
+    <text x="10" y="50" fill="#888" font-family="monospace" font-size="12" text-anchor="middle">""</text>
+    <text x="10" y="85" fill="#00b4db" font-family="monospace" font-size="12" text-anchor="middle">h</text>
+    <text x="10" y="120" fill="#00b4db" font-family="monospace" font-size="12" text-anchor="middle">o</text>
+    <text x="10" y="155" fill="#00b4db" font-family="monospace" font-size="12" text-anchor="middle">r</text>
+    <text x="10" y="190" fill="#00b4db" font-family="monospace" font-size="12" text-anchor="middle">s</text>
+    <text x="10" y="225" fill="#00b4db" font-family="monospace" font-size="12" text-anchor="middle">e</text>
+    
+    <!-- Row 0 -->
+    <rect x="30" y="28" width="38" height="30" rx="3" fill="#333"/>
+    <text x="49" y="48" fill="#666" font-family="Arial" font-size="12" text-anchor="middle">0</text>
+    <rect x="75" y="28" width="38" height="30" rx="3" fill="#333"/>
+    <text x="94" y="48" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">1</text>
+    <rect x="120" y="28" width="38" height="30" rx="3" fill="#333"/>
+    <text x="139" y="48" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">2</text>
+    <rect x="165" y="28" width="38" height="30" rx="3" fill="#333"/>
+    <text x="184" y="48" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">3</text>
+    
+    <!-- Row 1: h -->
+    <rect x="30" y="63" width="38" height="30" rx="3" fill="#333"/>
+    <text x="49" y="83" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">1</text>
+    <rect x="75" y="63" width="38" height="30" rx="3" fill="#f7971e"/>
+    <text x="94" y="83" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">1</text>
+    <rect x="120" y="63" width="38" height="30" rx="3" fill="#333"/>
+    <text x="139" y="83" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">2</text>
+    <rect x="165" y="63" width="38" height="30" rx="3" fill="#333"/>
+    <text x="184" y="83" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">3</text>
+    
+    <!-- Row 2: o -->
+    <rect x="30" y="98" width="38" height="30" rx="3" fill="#333"/>
+    <text x="49" y="118" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">2</text>
+    <rect x="75" y="98" width="38" height="30" rx="3" fill="#333"/>
+    <text x="94" y="118" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">2</text>
+    <rect x="120" y="98" width="38" height="30" rx="3" fill="#38ef7d"/>
+    <text x="139" y="118" fill="#fff" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">1</text>
+    <rect x="165" y="98" width="38" height="30" rx="3" fill="#333"/>
+    <text x="184" y="118" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">2</text>
+    
+    <!-- Row 3: r -->
+    <rect x="30" y="133" width="38" height="30" rx="3" fill="#333"/>
+    <text x="49" y="153" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">3</text>
+    <rect x="75" y="133" width="38" height="30" rx="3" fill="#38ef7d"/>
+    <text x="94" y="153" fill="#fff" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">2</text>
+    <rect x="120" y="133" width="38" height="30" rx="3" fill="#333"/>
+    <text x="139" y="153" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">2</text>
+    <rect x="165" y="133" width="38" height="30" rx="3" fill="#333"/>
+    <text x="184" y="153" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">2</text>
+    
+    <!-- Row 4: s -->
+    <rect x="30" y="168" width="38" height="30" rx="3" fill="#333"/>
+    <text x="49" y="188" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">4</text>
+    <rect x="75" y="168" width="38" height="30" rx="3" fill="#333"/>
+    <text x="94" y="188" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">3</text>
+    <rect x="120" y="168" width="38" height="30" rx="3" fill="#333"/>
+    <text x="139" y="188" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">3</text>
+    <rect x="165" y="168" width="38" height="30" rx="3" fill="#38ef7d"/>
+    <text x="184" y="188" fill="#fff" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">2</text>
+    
+    <!-- Row 5: e -->
+    <rect x="30" y="203" width="38" height="30" rx="3" fill="#333"/>
+    <text x="49" y="223" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">5</text>
+    <rect x="75" y="203" width="38" height="30" rx="3" fill="#333"/>
+    <text x="94" y="223" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">4</text>
+    <rect x="120" y="203" width="38" height="30" rx="3" fill="#333"/>
+    <text x="139" y="223" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">4</text>
+    <rect x="165" y="203" width="38" height="30" rx="3" fill="#11998e" stroke="#fff" stroke-width="2"/>
+    <text x="184" y="223" fill="#fff" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">3</text>
+  </g>
+  
+  <!-- Operations -->
+  <rect x="320" y="80" width="250" height="130" rx="8" fill="rgba(255,255,255,0.05)" stroke="#555"/>
+  <text x="445" y="105" fill="#ffd700" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle">Operations</text>
+  
+  <rect x="335" y="115" width="20" height="15" rx="3" fill="#00b4db"/>
+  <text x="365" y="127" fill="#00b4db" font-family="Arial" font-size="11">Insert: dp[i][j-1]+1</text>
+  
+  <rect x="335" y="140" width="20" height="15" rx="3" fill="#ff416c"/>
+  <text x="365" y="152" fill="#ff416c" font-family="Arial" font-size="11">Delete: dp[i-1][j]+1</text>
+  
+  <rect x="335" y="165" width="20" height="15" rx="3" fill="#f7971e"/>
+  <text x="365" y="177" fill="#f7971e" font-family="Arial" font-size="11">Replace: dp[i-1][j-1]+1</text>
+  
+  <text x="445" y="200" fill="#38ef7d" font-family="Arial" font-size="11" text-anchor="middle">Match: dp[i-1][j-1]</text>
+  
+  <!-- Path -->
+  <rect x="320" y="225" width="250" height="55" rx="8" fill="rgba(17,153,142,0.15)" stroke="#11998e"/>
+  <text x="445" y="248" fill="#11998e" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Transformation</text>
+  <text x="445" y="268" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">horse → rorse → rose → ros</text>
+  
+  <!-- Result -->
+  <rect x="150" y="310" width="300" height="40" rx="8" fill="rgba(17,153,142,0.2)" stroke="#11998e"/>
+  <text x="300" y="335" fill="#11998e" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Answer: 3 operations</text>
+  
+  <!-- Complexity -->
+  <text x="300" y="380" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">Time: O(m×n) | Space: O(m×n)</text>
+</svg>

@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <rect width="900" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Courier New, monospace" font-size="26" fill="#ffffff" font-weight="bold" text-anchor="middle">Geometric Primitives</text>
+  <text x="450" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Points, Vectors, Cross &amp; Dot Products</text>
+  
+  <!-- Section 1: Vectors -->
+  <text x="150" y="110" font-family="Courier New, monospace" font-size="14" fill="#e94560" font-weight="bold">VECTORS</text>
+  
+  <!-- Vector visualization -->
+  <g transform="translate(50, 130)">
+    <!-- Coordinate axes -->
+    <line x1="20" y1="150" x2="200" y2="150" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4,4"/>
+    <line x1="20" y1="150" x2="20" y2="10" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4,4"/>
+    
+    <!-- Point A -->
+    <circle cx="20" cy="150" r="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="8" y="170" font-family="Courier New, monospace" font-size="11" fill="#888888">A(0,0)</text>
+    
+    <!-- Point B -->
+    <circle cx="140" cy="70" r="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="145" y="65" font-family="Courier New, monospace" font-size="11" fill="#888888">B(4,3)</text>
+    
+    <!-- Vector arrow -->
+    <line x1="20" y1="150" x2="130" y2="77" stroke="#f97316" stroke-width="3"/>
+    <polygon points="140,70 125,78 128,86" fill="#f97316"/>
+    
+    <!-- Vector label -->
+    <text x="55" y="95" font-family="Courier New, monospace" font-size="14" fill="#ffffff" font-weight="bold">v⃗</text>
+    
+    <!-- Magnitude formula -->
+    <text x="20" y="200" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">|v⃗| = √(4² + 3²) = 5</text>
+  </g>
+  
+  <!-- Section 2: Cross Product -->
+  <text x="450" y="110" font-family="Courier New, monospace" font-size="14" fill="#e94560" font-weight="bold">CROSS PRODUCT</text>
+  
+  <g transform="translate(340, 130)">
+    <!-- Origin -->
+    <circle cx="60" cy="140" r="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="45" y="160" font-family="Courier New, monospace" font-size="11" fill="#888888">O</text>
+    
+    <!-- Vector u -->
+    <line x1="60" y1="140" x2="160" y2="110" stroke="#4ade80" stroke-width="3"/>
+    <polygon points="165,108 150,105 152,118" fill="#4ade80"/>
+    <text x="115" y="100" font-family="Courier New, monospace" font-size="14" fill="#4ade80" font-weight="bold">u⃗</text>
+    
+    <!-- Vector v (CCW from u) -->
+    <line x1="60" y1="140" x2="100" y2="50" stroke="#a78bfa" stroke-width="3"/>
+    <polygon points="102,45 92,58 105,60" fill="#a78bfa"/>
+    <text x="75" y="45" font-family="Courier New, monospace" font-size="14" fill="#a78bfa" font-weight="bold">v⃗</text>
+    
+    <!-- Parallelogram area -->
+    <polygon points="60,140 160,110 200,20 100,50" fill="#2d1f3d" fill-opacity="0.5" stroke="#a78bfa" stroke-width="1" stroke-dasharray="3,3"/>
+    
+    <!-- CCW indicator -->
+    <path d="M 90 115 A 30 30 0 0 0 75 95" stroke="#f97316" stroke-width="2" fill="none"/>
+    <polygon points="73,90 70,98 80,96" fill="#f97316"/>
+    
+    <!-- Formula -->
+    <text x="0" y="190" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">u⃗ × v⃗ = uₓvᵧ - uᵧvₓ</text>
+    <text x="0" y="210" font-family="Courier New, monospace" font-size="11" fill="#4ade80" font-weight="bold">&gt;0: CCW (left turn)</text>
+  </g>
+  
+  <!-- Section 3: Dot Product -->
+  <text x="730" y="110" font-family="Courier New, monospace" font-size="14" fill="#e94560" font-weight="bold">DOT PRODUCT</text>
+  
+  <g transform="translate(620, 130)">
+    <!-- Origin -->
+    <circle cx="60" cy="130" r="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    
+    <!-- Vector a -->
+    <line x1="60" y1="130" x2="180" y2="130" stroke="#4ade80" stroke-width="3"/>
+    <polygon points="185,130 170,123 170,137" fill="#4ade80"/>
+    <text x="130" y="150" font-family="Courier New, monospace" font-size="14" fill="#4ade80" font-weight="bold">a⃗</text>
+    
+    <!-- Vector b -->
+    <line x1="60" y1="130" x2="150" y2="60" stroke="#a78bfa" stroke-width="3"/>
+    <polygon points="155,55 140,62 145,75" fill="#a78bfa"/>
+    <text x="95" y="65" font-family="Courier New, monospace" font-size="14" fill="#a78bfa" font-weight="bold">b⃗</text>
+    
+    <!-- Angle arc -->
+    <path d="M 100 130 A 40 40 0 0 0 92 102" stroke="#f97316" stroke-width="2" fill="none"/>
+    <text x="105" y="115" font-family="Courier New, monospace" font-size="12" fill="#f97316">θ</text>
+    
+    <!-- Projection -->
+    <line x1="150" y1="60" x2="138" y2="130" stroke="#888888" stroke-width="1" stroke-dasharray="4,4"/>
+    <circle cx="138" cy="130" r="3" fill="#f97316"/>
+    
+    <!-- Formula -->
+    <text x="-10" y="175" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">a⃗ · b⃗ = |a⃗||b⃗|cos(θ)</text>
+    <text x="-10" y="195" font-family="Courier New, monospace" font-size="11" fill="#4ade80" font-weight="bold">=0: perpendicular</text>
+  </g>
+  
+  <!-- Section 4: Orientation Test -->
+  <text x="150" y="380" font-family="Courier New, monospace" font-size="14" fill="#e94560" font-weight="bold">ORIENTATION TEST</text>
+  
+  <!-- Three cases -->
+  <g transform="translate(30, 400)">
+    <!-- CCW case -->
+    <rect x="10" y="0" width="120" height="120" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="5"/>
+    <circle cx="30" cy="90" r="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="22" y="108" font-family="Courier New, monospace" font-size="10" fill="#888888">P</text>
+    <circle cx="80" cy="60" r="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="72" y="53" font-family="Courier New, monospace" font-size="10" fill="#888888">Q</text>
+    <circle cx="50" cy="25" r="5" fill="#4ade80" stroke="#4ade80" stroke-width="2"/>
+    <text x="55" y="22" font-family="Courier New, monospace" font-size="10" fill="#888888">R</text>
+    <line x1="30" y1="90" x2="80" y2="60" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="80" y1="60" x2="50" y2="25" stroke="#4ade80" stroke-width="2"/>
+    <text x="35" y="140" font-family="Courier New, monospace" font-size="12" fill="#4ade80" font-weight="bold">CCW &gt;0</text>
+  </g>
+  
+  <g transform="translate(180, 400)">
+    <!-- Collinear case -->
+    <rect x="10" y="0" width="120" height="120" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="5"/>
+    <circle cx="30" cy="90" r="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="22" y="108" font-family="Courier New, monospace" font-size="10" fill="#888888">P</text>
+    <circle cx="70" cy="55" r="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="62" y="48" font-family="Courier New, monospace" font-size="10" fill="#888888">Q</text>
+    <circle cx="110" cy="20" r="5" fill="#a78bfa" stroke="#a78bfa" stroke-width="2"/>
+    <text x="115" y="17" font-family="Courier New, monospace" font-size="10" fill="#888888">R</text>
+    <line x1="30" y1="90" x2="110" y2="20" stroke="#a78bfa" stroke-width="2"/>
+    <text x="20" y="140" font-family="Courier New, monospace" font-size="12" fill="#a78bfa" font-weight="bold">COLLINEAR =0</text>
+  </g>
+  
+  <g transform="translate(330, 400)">
+    <!-- CW case -->
+    <rect x="10" y="0" width="120" height="120" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" rx="5"/>
+    <circle cx="30" cy="90" r="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="22" y="108" font-family="Courier New, monospace" font-size="10" fill="#888888">P</text>
+    <circle cx="80" cy="60" r="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="72" y="53" font-family="Courier New, monospace" font-size="10" fill="#888888">Q</text>
+    <circle cx="110" cy="30" r="5" fill="#ef4444" stroke="#ef4444" stroke-width="2"/>
+    <text x="115" y="27" font-family="Courier New, monospace" font-size="10" fill="#888888">R</text>
+    <line x1="30" y1="90" x2="80" y2="60" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="80" y1="60" x2="110" y2="30" stroke="#ef4444" stroke-width="2"/>
+    <text x="40" y="140" font-family="Courier New, monospace" font-size="12" fill="#ef4444" font-weight="bold">CW &lt;0</text>
+  </g>
+  
+  <!-- Section 5: Distance to Line -->
+  <text x="600" y="380" font-family="Courier New, monospace" font-size="14" fill="#e94560" font-weight="bold">DISTANCE TO LINE</text>
+  
+  <g transform="translate(520, 400)">
+    <!-- Line segment -->
+    <line x1="20" y1="100" x2="220" y2="100" stroke="#3b82f6" stroke-width="3"/>
+    <circle cx="20" cy="100" r="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <circle cx="220" cy="100" r="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="8" y="120" font-family="Courier New, monospace" font-size="11" fill="#888888">A</text>
+    <text x="218" y="120" font-family="Courier New, monospace" font-size="11" fill="#888888">B</text>
+    
+    <!-- Point P -->
+    <circle cx="120" cy="30" r="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="125" y="25" font-family="Courier New, monospace" font-size="11" fill="#888888">P</text>
+    
+    <!-- Distance line (perpendicular) -->
+    <line x1="120" y1="30" x2="120" y2="100" stroke="#4ade80" stroke-width="2" stroke-dasharray="5,3"/>
+    
+    <!-- Distance label -->
+    <text x="130" y="65" font-family="Courier New, monospace" font-size="14" fill="#4ade80" font-weight="bold">d</text>
+    
+    <!-- Right angle marker -->
+    <rect x="120" y="90" width="10" height="10" fill="none" stroke="#4ade80" stroke-width="1"/>
+    
+    <!-- Formula -->
+    <text x="20" y="150" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">d = |AB⃗ × AP⃗| / |AB⃗|</text>
+  </g>
+  
+  <!-- Complexity note -->
+  <rect x="30" y="590" width="840" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="8"/>
+  <text x="450" y="620" font-family="Courier New, monospace" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">Time Complexity: O(1) for all operations</text>
+  <text x="450" y="650" font-family="Courier New, monospace" font-size="12" fill="#4ade80" text-anchor="middle">✓ Cross Product: Orientation &amp; Area | ✓ Dot Product: Angles &amp; Projection | ✓ Distance: Point to Line/Segment</text>
+</svg>

@@ -1,0 +1,93 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Binary Search: Divide and Conquer</text>
+  <text x="450" y="58" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">T(n) = T(n/2) + O(1) = O(log n)</text>
+  
+  <!-- Array -->
+  <text x="450" y="95" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">Find target = 23</text>
+  
+  <!-- Full array with indices -->
+  <text x="115" y="115" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">0</text>
+  <text x="175" y="115" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">1</text>
+  <text x="235" y="115" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">2</text>
+  <text x="295" y="115" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">3</text>
+  <text x="355" y="115" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">4</text>
+  <text x="415" y="115" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">5</text>
+  <text x="475" y="115" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">6</text>
+  <text x="535" y="115" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">7</text>
+  <text x="595" y="115" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">8</text>
+  <text x="655" y="115" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">9</text>
+  <text x="715" y="115" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">10</text>
+  <text x="775" y="115" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">11</text>
+  
+  <rect x="90" y="125" width="50" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="115" y="150" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+  <rect x="150" y="125" width="50" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="175" y="150" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+  <rect x="210" y="125" width="50" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="235" y="150" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">8</text>
+  <rect x="270" y="125" width="50" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="295" y="150" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">12</text>
+  <rect x="330" y="125" width="50" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="355" y="150" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">16</text>
+  <rect x="390" y="125" width="50" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="415" y="150" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">23</text>
+  <rect x="450" y="125" width="50" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="475" y="150" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">38</text>
+  <rect x="510" y="125" width="50" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="535" y="150" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">56</text>
+  <rect x="570" y="125" width="50" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="595" y="150" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">72</text>
+  <rect x="630" y="125" width="50" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="655" y="150" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">91</text>
+  <rect x="690" y="125" width="50" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="715" y="150" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">95</text>
+  <rect x="750" y="125" width="50" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="775" y="150" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">99</text>
+  
+  <!-- Step 1 -->
+  <text x="60" y="210" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">Step 1:</text>
+  <text x="130" y="210" font-family="Courier New, monospace" font-size="12" fill="#ffffff">lo=0, hi=11, mid=5</text>
+  
+  <rect x="90" y="220" width="300" height="35" rx="4" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="240" y="243" font-family="Courier New, monospace" font-size="11" fill="#ef4444" text-anchor="middle">arr[5]=23 == target ✓</text>
+  
+  <rect x="390" y="220" width="50" height="35" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="415" y="243" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">23</text>
+  
+  <rect x="450" y="220" width="360" height="35" rx="4" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="4,2"/>
+  
+  <text x="480" y="275" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">FOUND at index 5!</text>
+  
+  <!-- Alternative: Not found on first try -->
+  <text x="450" y="320" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">Alternative: Find target = 72</text>
+  
+  <!-- Step 1 alt -->
+  <rect x="50" y="340" width="260" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="180" y="360" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#f97316" text-anchor="middle">Step 1: mid=5, arr[5]=23</text>
+  <text x="180" y="378" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">72 > 23 → search RIGHT</text>
+  
+  <!-- Step 2 alt -->
+  <rect x="340" y="340" width="260" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="470" y="360" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#f97316" text-anchor="middle">Step 2: mid=8, arr[8]=72</text>
+  <text x="470" y="378" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">72 == 72 → FOUND!</text>
+  
+  <!-- Arrow -->
+  <line x1="310" y1="362" x2="330" y2="362" stroke="#f97316" stroke-width="2"/>
+  <polygon points="340,362 330,357 330,367" fill="#f97316"/>
+  
+  <!-- Complexity visualization -->
+  <rect x="630" y="340" width="250" height="80" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="755" y="365" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa" text-anchor="middle">Why O(log n)?</text>
+  <text x="650" y="388" font-family="Courier New, monospace" font-size="10" fill="#ffffff">n=12 → 12→6→3→1 = 4 steps</text>
+  <text x="650" y="405" font-family="Courier New, monospace" font-size="10" fill="#ffffff">n=1024 → only 10 steps!</text>
+  <text x="650" y="420" font-family="Courier New, monospace" font-size="10" fill="#60a5fa">log₂(n) comparisons max</text>
+  
+  <!-- Key insight box -->
+  <rect x="150" y="440" width="600" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="450" y="460" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#e94560" text-anchor="middle">Key Insight</text>
+  <text x="450" y="480" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">Each comparison eliminates HALF the remaining elements!</text>
+</svg>
+

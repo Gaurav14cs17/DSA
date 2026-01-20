@@ -1,0 +1,125 @@
+<svg viewBox="0 0 900 650" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Closest Pair of Points</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Finding minimum distance between any two points</text>
+  
+  <!-- Main visualization area -->
+  <rect x="50" y="90" width="400" height="320" rx="4" fill="#0f0f23" stroke="#3b82f6" stroke-width="1"/>
+  
+  <!-- Grid (subtle) -->
+  <g stroke="#1e3a5f" stroke-width="1" opacity="0.3">
+    <line x1="50" y1="150" x2="450" y2="150"/>
+    <line x1="50" y1="210" x2="450" y2="210"/>
+    <line x1="50" y1="270" x2="450" y2="270"/>
+    <line x1="50" y1="330" x2="450" y2="330"/>
+    <line x1="110" y1="90" x2="110" y2="410"/>
+    <line x1="170" y1="90" x2="170" y2="410"/>
+    <line x1="230" y1="90" x2="230" y2="410"/>
+    <line x1="290" y1="90" x2="290" y2="410"/>
+    <line x1="350" y1="90" x2="350" y2="410"/>
+    <line x1="410" y1="90" x2="410" y2="410"/>
+  </g>
+  
+  <!-- Scattered points -->
+  <g>
+    <circle cx="100" cy="150" r="7" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <circle cx="180" cy="200" r="7" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <circle cx="130" cy="320" r="7" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <circle cx="220" cy="280" r="7" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <circle cx="300" cy="160" r="7" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <circle cx="380" cy="350" r="7" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <circle cx="400" cy="200" r="7" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    
+    <!-- Closest pair (highlighted) -->
+    <circle cx="260" cy="340" r="8" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <circle cx="290" cy="320" r="8" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    
+    <!-- Line between closest pair -->
+    <line x1="260" y1="340" x2="290" y2="320" stroke="#4ade80" stroke-width="3"/>
+  </g>
+  
+  <!-- Distance indicator -->
+  <text x="275" y="360" text-anchor="middle" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80">δ = min</text>
+  
+  <!-- Divide line -->
+  <line x1="250" y1="90" x2="250" y2="410" stroke="#ef4444" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="250" y="425" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">divide</text>
+  
+  <!-- Strip region (δ width on each side) -->
+  <rect x="200" y="90" width="100" height="320" fill="#2d1f3d" opacity="0.3"/>
+  <text x="250" y="115" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">strip (2δ)</text>
+  
+  <!-- Divide & Conquer Box -->
+  <rect x="480" y="90" width="380" height="180" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="670" y="115" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Divide &amp; Conquer Algorithm</text>
+  
+  <g font-family="Courier New, monospace" font-size="11" fill="#ffffff">
+    <text x="500" y="145">1. Sort points by x-coordinate</text>
+    <text x="500" y="170">2. Divide into left/right halves</text>
+    <text x="500" y="195">3. Recursively find δₗ and δᵣ</text>
+    <text x="500" y="220">4. Let δ = min(δₗ, δᵣ)</text>
+    <text x="500" y="245">5. Check strip: points within δ of line</text>
+    <text x="500" y="265" fill="#4ade80">Key: Only 6 points to check per point!</text>
+  </g>
+  
+  <!-- Sweep Line Box -->
+  <rect x="480" y="290" width="380" height="130" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="670" y="315" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Sweep Line Approach</text>
+  
+  <g font-family="Courier New, monospace" font-size="11" fill="#ffffff">
+    <text x="500" y="345">1. Sort points by x</text>
+    <text x="500" y="370">2. Maintain active set (sorted by y)</text>
+    <text x="500" y="395">3. Remove points outside [x-δ, x]</text>
+    <text x="500" y="420" fill="#4ade80">Update δ when closer pair found</text>
+  </g>
+  
+  <!-- Distance Metrics Box -->
+  <rect x="50" y="440" width="400" height="120" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="250" y="465" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Distance Metrics</text>
+  
+  <g font-family="Courier New, monospace" font-size="11" fill="#ffffff">
+    <text x="70" y="495" fill="#3b82f6">Euclidean:</text>
+    <text x="160" y="495">√((x₂-x₁)² + (y₂-y₁)²)</text>
+    
+    <text x="70" y="520" fill="#f97316">Manhattan:</text>
+    <text x="160" y="520">|x₂-x₁| + |y₂-y₁|</text>
+    
+    <text x="70" y="545" fill="#a78bfa">Chebyshev:</text>
+    <text x="160" y="545">max(|x₂-x₁|, |y₂-y₁|)</text>
+  </g>
+  
+  <!-- Optimization Tips -->
+  <rect x="480" y="440" width="380" height="120" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="670" y="465" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Optimization Tips</text>
+  
+  <g font-family="Courier New, monospace" font-size="11" fill="#ffffff">
+    <text x="500" y="495" fill="#4ade80">✓ Compare squared distances (no sqrt)</text>
+    <text x="500" y="520" fill="#4ade80">✓ Only 6 points in strip per point</text>
+    <text x="500" y="545" fill="#4ade80">✓ Use balanced BST for active set</text>
+  </g>
+  
+  <!-- Geometric Insight -->
+  <rect x="50" y="575" width="250" height="60" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <g font-family="Courier New, monospace" font-size="10" fill="#ffffff">
+    <text x="70" y="600" fill="#4ade80">Geometric Insight:</text>
+    <text x="70" y="620">At most 6 points in δ×2δ region</text>
+  </g>
+  
+  <!-- K-D Tree mention -->
+  <rect x="320" y="575" width="250" height="60" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1"/>
+  <g font-family="Courier New, monospace" font-size="10" fill="#ffffff">
+    <text x="340" y="600" fill="#a78bfa">K-D Tree (for queries):</text>
+    <text x="340" y="620">O(n log n) build, O(log n) query</text>
+  </g>
+  
+  <!-- Complexity -->
+  <rect x="590" y="575" width="260" height="60" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <g font-family="Courier New, monospace" font-size="10">
+    <text x="610" y="598" fill="#888888">Brute:</text>
+    <text x="660" y="598" fill="#ef4444">O(n²)</text>
+    <text x="610" y="618" fill="#888888">Optimal:</text>
+    <text x="670" y="618" fill="#4ade80">O(n log n)</text>
+  </g>
+</svg>

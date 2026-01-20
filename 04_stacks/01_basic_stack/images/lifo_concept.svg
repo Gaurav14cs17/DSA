@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <rect width="900" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">LIFO - Last In, First Out</text>
+  <text x="450" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Stack Data Structure Fundamental Property</text>
+  
+  <!-- Left Side: Push Operations -->
+  <text x="180" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">PUSH Operations</text>
+  
+  <!-- Stack Container Left -->
+  <g transform="translate(100, 130)">
+    <!-- Stack outline -->
+    <rect x="30" y="0" width="100" height="280" rx="4" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="80" y="300" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">Stack</text>
+    
+    <!-- Push 10 -->
+    <g transform="translate(0, 220)">
+      <rect x="35" y="0" width="90" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="80" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">10</text>
+    </g>
+    
+    <!-- Arrow and label -->
+    <path d="M -20 242 L 30 242" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+    <text x="-40" y="247" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="end">push(10)</text>
+  </g>
+  
+  <!-- Stack State 2 -->
+  <g transform="translate(280, 130)">
+    <rect x="30" y="0" width="100" height="280" rx="4" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="5,5"/>
+    
+    <!-- Element 10 -->
+    <g transform="translate(0, 220)">
+      <rect x="35" y="0" width="90" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="80" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">10</text>
+    </g>
+    
+    <!-- Element 20 (active) -->
+    <g transform="translate(0, 170)">
+      <rect x="35" y="0" width="90" height="45" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="80" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">20</text>
+    </g>
+    
+    <path d="M -20 192 L 30 192" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+    <text x="-40" y="197" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="end">push(20)</text>
+  </g>
+  
+  <!-- Stack State 3 -->
+  <g transform="translate(460, 130)">
+    <rect x="30" y="0" width="100" height="280" rx="4" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="5,5"/>
+    
+    <!-- Element 10 -->
+    <g transform="translate(0, 220)">
+      <rect x="35" y="0" width="90" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="80" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">10</text>
+    </g>
+    
+    <!-- Element 20 -->
+    <g transform="translate(0, 170)">
+      <rect x="35" y="0" width="90" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="80" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">20</text>
+    </g>
+    
+    <!-- Element 30 (active - top) -->
+    <g transform="translate(0, 120)">
+      <rect x="35" y="0" width="90" height="45" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="80" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">30</text>
+      <text x="150" y="28" font-family="Courier New, monospace" font-size="11" fill="#f97316">← TOP</text>
+    </g>
+    
+    <path d="M -20 142 L 30 142" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+    <text x="-40" y="147" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="end">push(30)</text>
+  </g>
+  
+  <!-- Right Side: Pop Operations -->
+  <text x="720" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">POP Operations</text>
+  
+  <!-- Stack State 4 (Pop) -->
+  <g transform="translate(640, 130)">
+    <rect x="30" y="0" width="100" height="280" rx="4" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="5,5"/>
+    
+    <!-- Element 10 -->
+    <g transform="translate(0, 220)">
+      <rect x="35" y="0" width="90" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="80" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">10</text>
+    </g>
+    
+    <!-- Element 20 (now top) -->
+    <g transform="translate(0, 170)">
+      <rect x="35" y="0" width="90" height="45" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="80" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">20</text>
+      <text x="150" y="28" font-family="Courier New, monospace" font-size="11" fill="#f97316">← TOP</text>
+    </g>
+    
+    <!-- Popped element 30 -->
+    <g transform="translate(0, 80)">
+      <rect x="35" y="0" width="90" height="45" rx="4" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4"/>
+      <text x="80" y="28" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ef4444" text-anchor="middle">30</text>
+    </g>
+    
+    <path d="M 130 102 L 170 102" stroke="#ef4444" stroke-width="2" fill="none" marker-end="url(#arrowRed)"/>
+    <text x="220" y="107" font-family="Courier New, monospace" font-size="11" fill="#ef4444">pop() → 30</text>
+  </g>
+  
+  <!-- LIFO Explanation Box -->
+  <g transform="translate(180, 440)">
+    <rect x="0" y="0" width="540" height="80" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="270" y="25" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa" text-anchor="middle">LIFO Principle</text>
+    <text x="270" y="48" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">Push order: 10 → 20 → 30 (first to last)</text>
+    <text x="270" y="68" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">Pop order:  30 → 20 → 10 (last to first)</text>
+  </g>
+  
+  <!-- Complexity -->
+  <g transform="translate(750, 450)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(1)</text>
+    <text x="0" y="20" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Space: O(n)</text>
+  </g>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4ade80"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+</svg>

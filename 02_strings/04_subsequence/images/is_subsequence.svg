@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <rect width="600" height="300" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="300" y="28" fill="#fff" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle">Is Subsequence: Two Pointers</text>
+  <text x="300" y="48" fill="#aaa" font-family="Arial" font-size="13" text-anchor="middle">Is "ace" subsequence of "abcde"?</text>
+  
+  <!-- Target string -->
+  <text x="30" y="85" fill="#fdcb6e" font-family="Arial" font-size="13" font-weight="bold">Target S = "ace"</text>
+  
+  <g transform="translate(180, 70)">
+    <rect x="0" y="0" width="40" height="40" rx="5" fill="#fdcb6e"/>
+    <text x="20" y="27" fill="#333" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">a</text>
+    
+    <rect x="50" y="0" width="40" height="40" rx="5" fill="#fdcb6e"/>
+    <text x="70" y="27" fill="#333" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">c</text>
+    
+    <rect x="100" y="0" width="40" height="40" rx="5" fill="#fdcb6e"/>
+    <text x="120" y="27" fill="#333" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">e</text>
+  </g>
+  
+  <!-- Main string T -->
+  <text x="30" y="155" fill="#00cec9" font-family="Arial" font-size="13" font-weight="bold">String T = "abcde"</text>
+  
+  <g transform="translate(180, 140)">
+    <rect x="0" y="0" width="40" height="40" rx="5" fill="#00b894" stroke="#fff" stroke-width="2"/>
+    <text x="20" y="27" fill="#fff" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">a</text>
+    
+    <rect x="50" y="0" width="40" height="40" rx="5" fill="#333"/>
+    <text x="70" y="27" fill="#888" font-family="monospace" font-size="18" text-anchor="middle">b</text>
+    
+    <rect x="100" y="0" width="40" height="40" rx="5" fill="#00b894" stroke="#fff" stroke-width="2"/>
+    <text x="120" y="27" fill="#fff" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">c</text>
+    
+    <rect x="150" y="0" width="40" height="40" rx="5" fill="#333"/>
+    <text x="170" y="27" fill="#888" font-family="monospace" font-size="18" text-anchor="middle">d</text>
+    
+    <rect x="200" y="0" width="40" height="40" rx="5" fill="#00b894" stroke="#fff" stroke-width="2"/>
+    <text x="220" y="27" fill="#fff" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">e</text>
+  </g>
+  
+  <!-- Matching lines -->
+  <line x1="200" y1="110" x2="200" y2="135" stroke="#fdcb6e" stroke-width="2"/>
+  <line x1="300" y1="110" x2="300" y2="135" stroke="#fdcb6e" stroke-width="2"/>
+  <line x1="420" y1="110" x2="420" y2="135" stroke="#fdcb6e" stroke-width="2"/>
+  
+  <!-- Algorithm -->
+  <rect x="30" y="200" width="540" height="60" rx="8" fill="rgba(255,255,255,0.05)" stroke="#555"/>
+  <text x="300" y="225" fill="#ffd700" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Algorithm: Greedy Scan</text>
+  <text x="300" y="245" fill="#aaa" font-family="Arial" font-size="11" text-anchor="middle">Scan T left to right. When T[j] == S[i], increment i. If i reaches len(S), return True.</text>
+  
+  <!-- Result -->
+  <text x="300" y="285" fill="#00b894" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">✓ TRUE | Time: O(n) | Space: O(1)</text>
+</svg>

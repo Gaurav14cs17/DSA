@@ -1,0 +1,77 @@
+<svg viewBox="0 0 950 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Finding Two Unique Numbers</text>
+  <text x="475" y="68" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Single Number III: Partition by differing bit</text>
+  
+  <!-- Problem Statement -->
+  <rect x="200" y="90" width="550" height="45" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="475" y="120" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Courier New, monospace">Array: [1, 2, 1, 3, 2, 5] — Find 3 and 5 (appear once)</text>
+  
+  <!-- Step 1 -->
+  <rect x="50" y="155" width="400" height="140" rx="8" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="250" y="180" text-anchor="middle" fill="#f97316" font-size="14" font-weight="bold" font-family="Courier New, monospace">STEP 1: XOR All Elements</text>
+  <text x="70" y="210" fill="#ffffff" font-size="11" font-family="Courier New, monospace">1 ⊕ 2 ⊕ 1 ⊕ 3 ⊕ 2 ⊕ 5</text>
+  <text x="70" y="232" fill="#888888" font-size="11" font-family="Courier New, monospace">= (1⊕1) ⊕ (2⊕2) ⊕ (3⊕5)</text>
+  <text x="70" y="254" fill="#888888" font-size="11" font-family="Courier New, monospace">= 0 ⊕ 0 ⊕ (3⊕5)</text>
+  <text x="70" y="280" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">xor_all = 3 ⊕ 5 = 011 ⊕ 101 = 110 = 6</text>
+  
+  <!-- Binary representation -->
+  <rect x="480" y="155" width="420" height="140" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="690" y="180" text-anchor="middle" fill="#a78bfa" font-size="14" font-weight="bold" font-family="Courier New, monospace">UNDERSTANDING XOR RESULT</text>
+  <text x="500" y="210" fill="#ffffff" font-size="12" font-family="Courier New, monospace">3 = 0 1 1</text>
+  <text x="500" y="232" fill="#ffffff" font-size="12" font-family="Courier New, monospace">5 = 1 0 1</text>
+  <line x1="500" y1="242" x2="620" y2="242" stroke="#a78bfa" stroke-width="1"/>
+  <text x="500" y="262" fill="#a78bfa" font-size="12" font-weight="bold" font-family="Courier New, monospace">6 = 1 1 0  (bits where 3 &amp; 5 DIFFER)</text>
+  <text x="500" y="288" fill="#888888" font-size="11" font-family="Courier New, monospace">Bit 1 and Bit 2 are different!</text>
+  
+  <!-- Step 2 -->
+  <rect x="50" y="315" width="400" height="120" rx="8" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="250" y="340" text-anchor="middle" fill="#f97316" font-size="14" font-weight="bold" font-family="Courier New, monospace">STEP 2: Find Rightmost Differing Bit</text>
+  <text x="70" y="370" fill="#ffffff" font-size="11" font-family="Courier New, monospace">diff_bit = xor_all &amp; (-xor_all)</text>
+  <text x="70" y="395" fill="#888888" font-size="11" font-family="Courier New, monospace">6 &amp; (-6) = 110 &amp; ...11010 = 010 = 2</text>
+  <text x="70" y="420" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">diff_bit = 2 (isolate rightmost 1)</text>
+  
+  <!-- Explanation of diff bit -->
+  <rect x="480" y="315" width="420" height="120" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="690" y="340" text-anchor="middle" fill="#3b82f6" font-size="14" font-weight="bold" font-family="Courier New, monospace">WHY THIS WORKS</text>
+  <text x="500" y="370" fill="#ffffff" font-size="11" font-family="Courier New, monospace">At bit position 1:</text>
+  <text x="500" y="392" fill="#4ade80" font-size="11" font-family="Courier New, monospace">  3 has 1 (011)</text>
+  <text x="500" y="414" fill="#ef4444" font-size="11" font-family="Courier New, monospace">  5 has 0 (101)</text>
+  <text x="500" y="432" fill="#888888" font-size="10" font-family="Courier New, monospace">This bit separates 3 from 5!</text>
+  
+  <!-- Step 3 -->
+  <text x="475" y="470" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">STEP 3: Partition Array by diff_bit</text>
+  
+  <!-- Group 1: bit = 1 -->
+  <rect x="50" y="490" width="420" height="180" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="260" y="518" text-anchor="middle" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">GROUP A: (num &amp; diff_bit) ≠ 0</text>
+  <text x="260" y="538" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">(Bit 1 is SET)</text>
+  
+  <text x="70" y="570" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• 2 (010) - bit 1 = 1 ✓</text>
+  <text x="70" y="592" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• 2 (010) - bit 1 = 1 ✓</text>
+  <text x="70" y="614" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">• 3 (011) - bit 1 = 1 ✓ ← UNIQUE</text>
+  
+  <text x="70" y="645" fill="#ffffff" font-size="11" font-family="Courier New, monospace">XOR: 2 ⊕ 2 ⊕ 3 = 0 ⊕ 3 =</text>
+  <text x="270" y="645" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">3</text>
+  
+  <!-- Group 2: bit = 0 -->
+  <rect x="490" y="490" width="420" height="180" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="700" y="518" text-anchor="middle" fill="#a78bfa" font-size="14" font-weight="bold" font-family="Courier New, monospace">GROUP B: (num &amp; diff_bit) == 0</text>
+  <text x="700" y="538" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">(Bit 1 is NOT set)</text>
+  
+  <text x="510" y="570" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• 1 (001) - bit 1 = 0 ✓</text>
+  <text x="510" y="592" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• 1 (001) - bit 1 = 0 ✓</text>
+  <text x="510" y="614" fill="#a78bfa" font-size="11" font-weight="bold" font-family="Courier New, monospace">• 5 (101) - bit 1 = 0 ✓ ← UNIQUE</text>
+  
+  <text x="510" y="645" fill="#ffffff" font-size="11" font-family="Courier New, monospace">XOR: 1 ⊕ 1 ⊕ 5 = 0 ⊕ 5 =</text>
+  <text x="710" y="645" fill="#a78bfa" font-size="14" font-weight="bold" font-family="Courier New, monospace">5</text>
+  
+  <!-- Result -->
+  <rect x="300" y="685" width="350" height="10" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  
+  <!-- Complexity -->
+  <text x="475" y="693" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Time: O(n) | Space: O(1)</text>
+</svg>
+

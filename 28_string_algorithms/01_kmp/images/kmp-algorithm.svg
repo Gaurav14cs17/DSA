@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <rect width="900" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">KMP Algorithm</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Knuth-Morris-Pratt Pattern Matching</text>
+  
+  <!-- Failure Function Section -->
+  <text x="40" y="100" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Failure Function (π-array)</text>
+  
+  <text x="40" y="125" font-family="Courier New, monospace" font-size="11" fill="#888888">Pattern: A B A B C A B A A</text>
+  
+  <!-- Index row -->
+  <g transform="translate(40, 145)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Index:</text>
+    <rect x="60" y="-14" width="32" height="24" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="76" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">0</text>
+    <rect x="96" y="-14" width="32" height="24" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="112" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">1</text>
+    <rect x="132" y="-14" width="32" height="24" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="148" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">2</text>
+    <rect x="168" y="-14" width="32" height="24" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="184" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">3</text>
+    <rect x="204" y="-14" width="32" height="24" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="220" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">4</text>
+    <rect x="240" y="-14" width="32" height="24" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="256" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">5</text>
+    <rect x="276" y="-14" width="32" height="24" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="292" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">6</text>
+    <rect x="312" y="-14" width="32" height="24" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="328" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">7</text>
+    <rect x="348" y="-14" width="32" height="24" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="364" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">8</text>
+  </g>
+  
+  <!-- Pattern row -->
+  <g transform="translate(40, 180)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">P[i]:</text>
+    <rect x="60" y="-14" width="32" height="24" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="76" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">A</text>
+    <rect x="96" y="-14" width="32" height="24" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="112" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">B</text>
+    <rect x="132" y="-14" width="32" height="24" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="148" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">A</text>
+    <rect x="168" y="-14" width="32" height="24" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="184" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">B</text>
+    <rect x="204" y="-14" width="32" height="24" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="220" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">C</text>
+    <rect x="240" y="-14" width="32" height="24" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="256" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">A</text>
+    <rect x="276" y="-14" width="32" height="24" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="292" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">B</text>
+    <rect x="312" y="-14" width="32" height="24" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="328" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">A</text>
+    <rect x="348" y="-14" width="32" height="24" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="364" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">A</text>
+  </g>
+  
+  <!-- Pi array row -->
+  <g transform="translate(40, 215)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">π[i]:</text>
+    <rect x="60" y="-14" width="32" height="24" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="76" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">0</text>
+    <rect x="96" y="-14" width="32" height="24" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="112" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">0</text>
+    <rect x="132" y="-14" width="32" height="24" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="148" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">1</text>
+    <rect x="168" y="-14" width="32" height="24" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="184" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">2</text>
+    <rect x="204" y="-14" width="32" height="24" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="220" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">0</text>
+    <rect x="240" y="-14" width="32" height="24" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="256" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">1</text>
+    <rect x="276" y="-14" width="32" height="24" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="292" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">2</text>
+    <rect x="312" y="-14" width="32" height="24" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="328" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">3</text>
+    <rect x="348" y="-14" width="32" height="24" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="364" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">1</text>
+  </g>
+  
+  <text x="40" y="250" font-family="Courier New, monospace" font-size="11" fill="#888888">π[i] = length of longest proper prefix of P[0..i] that is also a suffix</text>
+  
+  <!-- Border visualization -->
+  <text x="480" y="100" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Border Concept</text>
+  
+  <g transform="translate(480, 120)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">At i=7: "ABABCABA"</text>
+    
+    <!-- Show prefix-suffix match -->
+    <rect x="0" y="15" width="120" height="22" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="60" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">ABABCABA</text>
+    
+    <text x="0" y="55" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Prefix: ABA</text>
+    <text x="0" y="70" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Suffix: ABA</text>
+    <text x="0" y="90" font-family="Courier New, monospace" font-size="11" fill="#888888">→ π[7] = 3</text>
+    
+    <!-- Arrow showing the match -->
+    <path d="M 0 110 C 30 130 90 130 120 110" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <text x="60" y="145" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">border length = 3</text>
+  </g>
+  
+  <!-- Pattern Matching Section -->
+  <text x="40" y="290" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Pattern Matching Process</text>
+  
+  <text x="40" y="315" font-family="Courier New, monospace" font-size="11" fill="#888888">Text: ABABDABACDABABCABAB</text>
+  <text x="40" y="330" font-family="Courier New, monospace" font-size="11" fill="#888888">Pattern: ABABCABAB</text>
+  
+  <!-- Text array -->
+  <g transform="translate(40, 350)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">Text:</text>
+    <rect x="40" y="-12" width="22" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="51" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">A</text>
+    <rect x="64" y="-12" width="22" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="75" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">B</text>
+    <rect x="88" y="-12" width="22" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="99" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">A</text>
+    <rect x="112" y="-12" width="22" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="123" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">B</text>
+    <rect x="136" y="-12" width="22" height="20" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="147" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">D</text>
+    <rect x="160" y="-12" width="22" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="171" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">A</text>
+    <rect x="184" y="-12" width="22" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="195" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">B</text>
+    <rect x="208" y="-12" width="22" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="219" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">A</text>
+    <rect x="232" y="-12" width="22" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="243" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">C</text>
+    <rect x="256" y="-12" width="22" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="267" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">D</text>
+  </g>
+  
+  <!-- Pattern attempting match -->
+  <g transform="translate(40, 390)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">Step 1:</text>
+    <rect x="40" y="-12" width="22" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="51" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">A</text>
+    <rect x="64" y="-12" width="22" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="75" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">B</text>
+    <rect x="88" y="-12" width="22" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="99" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">A</text>
+    <rect x="112" y="-12" width="22" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="123" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">B</text>
+    <rect x="136" y="-12" width="22" height="20" fill="#1f0f0f" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="147" y="3" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">C</text>
+    <text x="180" y="3" font-family="Courier New, monospace" font-size="10" fill="#ef4444">← Mismatch!</text>
+  </g>
+  
+  <g transform="translate(40, 420)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">Step 2:</text>
+    <text x="40" y="0" font-family="Courier New, monospace" font-size="10" fill="#4ade80">Use π[3]=2 → Skip to position 2</text>
+  </g>
+  
+  <!-- Key insight box -->
+  <rect x="480" y="290" width="380" height="130" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+  <text x="500" y="315" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff">Key Insight</text>
+  <text x="500" y="340" font-family="Courier New, monospace" font-size="11" fill="#888888">When mismatch at position j:</text>
+  <text x="500" y="358" font-family="Courier New, monospace" font-size="11" fill="#4ade80">• Don't restart from position 0</text>
+  <text x="500" y="376" font-family="Courier New, monospace" font-size="11" fill="#4ade80">• Use π[j-1] to find next position</text>
+  <text x="500" y="394" font-family="Courier New, monospace" font-size="11" fill="#4ade80">• Text pointer never moves back</text>
+  <text x="500" y="412" font-family="Courier New, monospace" font-size="11" fill="#f97316">• Each character examined at most once</text>
+  
+  <!-- Algorithm pseudocode -->
+  <text x="40" y="470" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Algorithm</text>
+  
+  <g transform="translate(40, 490)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">1. Build π array in O(m)</text>
+    <text x="0" y="18" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">2. For each text[i]:</text>
+    <text x="20" y="36" font-family="Courier New, monospace" font-size="11" fill="#888888">• If match: advance both pointers</text>
+    <text x="20" y="54" font-family="Courier New, monospace" font-size="11" fill="#888888">• If mismatch: j = π[j-1]</text>
+    <text x="20" y="72" font-family="Courier New, monospace" font-size="11" fill="#888888">• If j == m: found match at i-m+1</text>
+  </g>
+  
+  <!-- Complexity -->
+  <rect x="400" y="460" width="460" height="100" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5" rx="5"/>
+  <text x="420" y="485" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">Complexity Analysis</text>
+  <text x="420" y="510" font-family="Courier New, monospace" font-size="11" fill="#888888">Preprocessing: O(m) - Build failure function</text>
+  <text x="420" y="528" font-family="Courier New, monospace" font-size="11" fill="#888888">Matching:     O(n) - Single pass through text</text>
+  <text x="420" y="546" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">Total: O(n + m)  |  Space: O(m)</text>
+  
+  <!-- Applications -->
+  <text x="40" y="600" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Applications</text>
+  <text x="40" y="625" font-family="Courier New, monospace" font-size="11" fill="#888888">• Pattern matching  • Period detection  • Longest prefix-suffix  • String compression</text>
+</svg>
+

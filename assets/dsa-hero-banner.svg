@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400">
+  <defs>
+    <!-- Main Gradient Background -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    
+    <!-- Accent Gradient -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+    
+    <!-- Gold Gradient -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5af19"/>
+      <stop offset="100%" style="stop-color:#f12711"/>
+    </linearGradient>
+    
+    <!-- Glow Effect -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Soft Shadow -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    
+    <!-- Node Glow -->
+    <filter id="nodeGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Animated Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bgGradient)"/>
+  <rect width="1200" height="400" fill="url(#grid)"/>
+  
+  <!-- Decorative Circles Background -->
+  <circle cx="100" cy="350" r="200" fill="rgba(102,126,234,0.1)"/>
+  <circle cx="1100" cy="50" r="150" fill="rgba(118,75,162,0.1)"/>
+  <circle cx="600" cy="400" r="300" fill="rgba(102,126,234,0.05)"/>
+  
+  <!-- Left Side: Binary Tree Visualization -->
+  <g transform="translate(80, 120)" opacity="0.9">
+    <!-- Tree Edges -->
+    <line x1="100" y1="30" x2="50" y2="90" stroke="url(#accentGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="100" y1="30" x2="150" y2="90" stroke="url(#accentGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="50" y1="90" x2="25" y2="150" stroke="url(#accentGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="50" y1="90" x2="75" y2="150" stroke="url(#accentGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="150" y1="90" x2="125" y2="150" stroke="url(#accentGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="150" y1="90" x2="175" y2="150" stroke="url(#accentGradient)" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Tree Nodes -->
+    <circle cx="100" cy="30" r="18" fill="url(#accentGradient)" filter="url(#nodeGlow)"/>
+    <circle cx="50" cy="90" r="15" fill="url(#accentGradient)" opacity="0.8"/>
+    <circle cx="150" cy="90" r="15" fill="url(#accentGradient)" opacity="0.8"/>
+    <circle cx="25" cy="150" r="12" fill="url(#accentGradient)" opacity="0.6"/>
+    <circle cx="75" cy="150" r="12" fill="url(#accentGradient)" opacity="0.6"/>
+    <circle cx="125" cy="150" r="12" fill="url(#accentGradient)" opacity="0.6"/>
+    <circle cx="175" cy="150" r="12" fill="url(#accentGradient)" opacity="0.6"/>
+    
+    <!-- Node Values -->
+    <text x="100" y="35" text-anchor="middle" fill="white" font-size="12" font-weight="bold">8</text>
+    <text x="50" y="94" text-anchor="middle" fill="white" font-size="10">4</text>
+    <text x="150" y="94" text-anchor="middle" fill="white" font-size="10">12</text>
+  </g>
+  
+  <!-- Right Side: Graph Visualization -->
+  <g transform="translate(950, 100)" opacity="0.9">
+    <!-- Graph Edges -->
+    <line x1="50" y1="30" x2="120" y2="60" stroke="url(#goldGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="50" y1="30" x2="30" y2="100" stroke="url(#goldGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="120" y1="60" x2="140" y2="130" stroke="url(#goldGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="30" y1="100" x2="90" y2="150" stroke="url(#goldGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="140" y1="130" x2="90" y2="150" stroke="url(#goldGradient)" stroke-width="2" opacity="0.6"/>
+    <line x1="120" y1="60" x2="30" y2="100" stroke="url(#goldGradient)" stroke-width="2" opacity="0.4"/>
+    
+    <!-- Graph Nodes -->
+    <circle cx="50" cy="30" r="14" fill="url(#goldGradient)" filter="url(#nodeGlow)"/>
+    <circle cx="120" cy="60" r="12" fill="url(#goldGradient)" opacity="0.9"/>
+    <circle cx="30" cy="100" r="12" fill="url(#goldGradient)" opacity="0.8"/>
+    <circle cx="140" cy="130" r="12" fill="url(#goldGradient)" opacity="0.8"/>
+    <circle cx="90" cy="150" r="14" fill="url(#goldGradient)" opacity="0.9"/>
+    
+    <!-- Node Labels -->
+    <text x="50" y="34" text-anchor="middle" fill="white" font-size="10" font-weight="bold">A</text>
+    <text x="120" y="64" text-anchor="middle" fill="white" font-size="9">B</text>
+    <text x="30" y="104" text-anchor="middle" fill="white" font-size="9">C</text>
+    <text x="140" y="134" text-anchor="middle" fill="white" font-size="9">D</text>
+    <text x="90" y="154" text-anchor="middle" fill="white" font-size="10" font-weight="bold">E</text>
+  </g>
+  
+  <!-- Array Visualization at Bottom Left -->
+  <g transform="translate(60, 300)" opacity="0.7">
+    <rect x="0" y="0" width="35" height="35" rx="4" fill="rgba(102,126,234,0.3)" stroke="rgba(102,126,234,0.6)" stroke-width="1"/>
+    <rect x="40" y="0" width="35" height="35" rx="4" fill="rgba(102,126,234,0.4)" stroke="rgba(102,126,234,0.6)" stroke-width="1"/>
+    <rect x="80" y="0" width="35" height="35" rx="4" fill="rgba(102,126,234,0.5)" stroke="rgba(102,126,234,0.6)" stroke-width="1"/>
+    <rect x="120" y="0" width="35" height="35" rx="4" fill="rgba(102,126,234,0.6)" stroke="rgba(102,126,234,0.6)" stroke-width="1"/>
+    <rect x="160" y="0" width="35" height="35" rx="4" fill="rgba(102,126,234,0.5)" stroke="rgba(102,126,234,0.6)" stroke-width="1"/>
+    <text x="17" y="22" text-anchor="middle" fill="white" font-size="12">1</text>
+    <text x="57" y="22" text-anchor="middle" fill="white" font-size="12">3</text>
+    <text x="97" y="22" text-anchor="middle" fill="white" font-size="12">5</text>
+    <text x="137" y="22" text-anchor="middle" fill="white" font-size="12">7</text>
+    <text x="177" y="22" text-anchor="middle" fill="white" font-size="12">9</text>
+  </g>
+  
+  <!-- Stack Visualization at Bottom Right -->
+  <g transform="translate(1020, 260)" opacity="0.7">
+    <rect x="0" y="60" width="60" height="25" rx="3" fill="rgba(245,175,25,0.3)" stroke="rgba(245,175,25,0.6)" stroke-width="1"/>
+    <rect x="0" y="32" width="60" height="25" rx="3" fill="rgba(245,175,25,0.4)" stroke="rgba(245,175,25,0.6)" stroke-width="1"/>
+    <rect x="0" y="4" width="60" height="25" rx="3" fill="rgba(245,175,25,0.5)" stroke="rgba(245,175,25,0.6)" stroke-width="1"/>
+    <text x="30" y="77" text-anchor="middle" fill="white" font-size="11">push</text>
+    <text x="30" y="49" text-anchor="middle" fill="white" font-size="11">pop</text>
+    <text x="30" y="21" text-anchor="middle" fill="white" font-size="11">top</text>
+    <!-- Arrow -->
+    <path d="M 75 15 L 85 15 L 80 5 Z" fill="rgba(245,175,25,0.8)"/>
+  </g>
+  
+  <!-- Center Content -->
+  <g transform="translate(600, 200)">
+    <!-- Main Title Background Glow -->
+    <ellipse cx="0" cy="-20" rx="280" ry="80" fill="rgba(102,126,234,0.1)" filter="url(#glow)"/>
+    
+    <!-- Code Brackets -->
+    <text x="-280" y="0" fill="url(#accentGradient)" font-size="72" font-family="monospace" opacity="0.4">{</text>
+    <text x="240" y="0" fill="url(#accentGradient)" font-size="72" font-family="monospace" opacity="0.4">}</text>
+    
+    <!-- Main Title -->
+    <text x="0" y="-40" text-anchor="middle" fill="white" font-size="56" font-weight="800" font-family="system-ui, -apple-system, sans-serif" filter="url(#shadow)">
+      DSA MASTERY
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="10" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-size="20" font-weight="300" font-family="system-ui, sans-serif" letter-spacing="4">
+      DATA STRUCTURES &amp; ALGORITHMS
+    </text>
+    
+    <!-- Divider Line -->
+    <rect x="-150" y="30" width="300" height="2" rx="1" fill="url(#accentGradient)" opacity="0.6"/>
+    
+    <!-- Stats Row -->
+    <g transform="translate(0, 70)">
+      <!-- Problems -->
+      <g transform="translate(-180, 0)">
+        <text x="0" y="0" text-anchor="middle" fill="url(#goldGradient)" font-size="28" font-weight="bold">800+</text>
+        <text x="0" y="22" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="12" letter-spacing="1">PROBLEMS</text>
+      </g>
+      
+      <!-- Divider -->
+      <rect x="-90" y="-15" width="1" height="45" fill="rgba(255,255,255,0.2)"/>
+      
+      <!-- Topics -->
+      <g transform="translate(0, 0)">
+        <text x="0" y="0" text-anchor="middle" fill="url(#goldGradient)" font-size="28" font-weight="bold">40</text>
+        <text x="0" y="22" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="12" letter-spacing="1">TOPICS</text>
+      </g>
+      
+      <!-- Divider -->
+      <rect x="90" y="-15" width="1" height="45" fill="rgba(255,255,255,0.2)"/>
+      
+      <!-- Solutions -->
+      <g transform="translate(180, 0)">
+        <text x="0" y="0" text-anchor="middle" fill="url(#goldGradient)" font-size="28" font-weight="bold">500+</text>
+        <text x="0" y="22" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="12" letter-spacing="1">SOLUTIONS</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Floating Elements -->
+  <g opacity="0.5">
+    <!-- Binary digits -->
+    <text x="300" y="80" fill="rgba(102,126,234,0.4)" font-size="14" font-family="monospace">01101</text>
+    <text x="850" y="350" fill="rgba(102,126,234,0.4)" font-size="14" font-family="monospace">10010</text>
+    <text x="150" y="220" fill="rgba(245,175,25,0.3)" font-size="12" font-family="monospace">O(log n)</text>
+    <text x="980" y="80" fill="rgba(245,175,25,0.3)" font-size="12" font-family="monospace">O(n²)</text>
+    
+    <!-- Small decorative nodes -->
+    <circle cx="350" cy="320" r="5" fill="rgba(102,126,234,0.5)"/>
+    <circle cx="380" cy="340" r="3" fill="rgba(102,126,234,0.4)"/>
+    <circle cx="820" cy="90" r="4" fill="rgba(245,175,25,0.5)"/>
+    <circle cx="800" cy="110" r="3" fill="rgba(245,175,25,0.4)"/>
+  </g>
+  
+  <!-- Bottom Tag Line -->
+  <text x="600" y="370" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="13" font-family="system-ui, sans-serif" letter-spacing="2">
+    YOUR COMPLETE GUIDE TO CRACKING CODING INTERVIEWS
+  </text>
+  
+  <!-- Author Credit -->
+  <text x="600" y="390" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="11" font-family="system-ui, sans-serif">
+    by Gaurav Goswami
+  </text>
+</svg>
+

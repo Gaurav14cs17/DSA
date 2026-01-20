@@ -1,0 +1,162 @@
+<svg viewBox="0 0 950 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Top K Frequent Elements - Bucket Sort</text>
+  <text x="475" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">O(n) time using frequency buckets</text>
+  
+  <!-- Input Array -->
+  <text x="50" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 1: INPUT</text>
+  <text x="50" y="135" font-family="Courier New, monospace" font-size="13" fill="#888888">nums = [1,1,1,2,2,3], k = 2</text>
+  
+  <!-- Array visualization -->
+  <g transform="translate(50, 150)">
+    <rect x="0" y="0" width="45" height="45" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="4"/>
+    <text x="22" y="28" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    
+    <rect x="55" y="0" width="45" height="45" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="4"/>
+    <text x="77" y="28" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    
+    <rect x="110" y="0" width="45" height="45" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="4"/>
+    <text x="132" y="28" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    
+    <rect x="165" y="0" width="45" height="45" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="4"/>
+    <text x="187" y="28" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    
+    <rect x="220" y="0" width="45" height="45" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="4"/>
+    <text x="242" y="28" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    
+    <rect x="275" y="0" width="45" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="297" y="28" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">3</text>
+  </g>
+  
+  <!-- Arrow -->
+  <line x1="370" y1="175" x2="420" y2="175" stroke="#888888" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#888888"/>
+    </marker>
+  </defs>
+  
+  <!-- Frequency Map -->
+  <text x="450" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 2: COUNT FREQUENCIES</text>
+  
+  <g transform="translate(450, 130)">
+    <rect x="0" y="0" width="150" height="100" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="6"/>
+    <text x="75" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">HashMap</text>
+    
+    <text x="20" y="50" font-family="Courier New, monospace" font-size="14" fill="#f97316">1</text>
+    <text x="40" y="50" font-family="Courier New, monospace" font-size="14" fill="#888888">→</text>
+    <text x="60" y="50" font-family="Courier New, monospace" font-size="14" fill="#4ade80">3</text>
+    
+    <text x="20" y="70" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">2</text>
+    <text x="40" y="70" font-family="Courier New, monospace" font-size="14" fill="#888888">→</text>
+    <text x="60" y="70" font-family="Courier New, monospace" font-size="14" fill="#4ade80">2</text>
+    
+    <text x="20" y="90" font-family="Courier New, monospace" font-size="14" fill="#3b82f6">3</text>
+    <text x="40" y="90" font-family="Courier New, monospace" font-size="14" fill="#888888">→</text>
+    <text x="60" y="90" font-family="Courier New, monospace" font-size="14" fill="#4ade80">1</text>
+    
+    <text x="90" y="50" font-family="Courier New, monospace" font-size="11" fill="#888888">(×3)</text>
+    <text x="90" y="70" font-family="Courier New, monospace" font-size="11" fill="#888888">(×2)</text>
+    <text x="90" y="90" font-family="Courier New, monospace" font-size="11" fill="#888888">(×1)</text>
+  </g>
+  
+  <!-- Arrow -->
+  <line x1="620" y1="175" x2="670" y2="175" stroke="#888888" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Bucket Sort Section -->
+  <text x="700" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 3: BUCKET SORT</text>
+  <text x="700" y="135" font-family="Courier New, monospace" font-size="11" fill="#888888">bucket[freq] = elements</text>
+  
+  <!-- Buckets -->
+  <g transform="translate(50, 280)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">FREQUENCY BUCKETS</text>
+    
+    <!-- Bucket array -->
+    <g transform="translate(0, 20)">
+      <!-- Bucket 0 -->
+      <rect x="0" y="0" width="120" height="60" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="4" rx="4"/>
+      <text x="60" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">bucket[0]</text>
+      <text x="60" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ef4444">[]</text>
+      <text x="60" y="75" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">freq=0</text>
+      
+      <!-- Bucket 1 -->
+      <rect x="140" y="0" width="120" height="60" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+      <text x="200" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">bucket[1]</text>
+      <text x="200" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#3b82f6">[3]</text>
+      <text x="200" y="75" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">freq=1</text>
+      
+      <!-- Bucket 2 -->
+      <rect x="280" y="0" width="120" height="60" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="4"/>
+      <text x="340" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">bucket[2]</text>
+      <text x="340" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">[2]</text>
+      <text x="340" y="75" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">freq=2</text>
+      
+      <!-- Bucket 3 - highlighted -->
+      <rect x="420" y="0" width="120" height="60" fill="#0f2f1f" stroke="#4ade80" stroke-width="3" rx="4"/>
+      <text x="480" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">bucket[3]</text>
+      <text x="480" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">[1]</text>
+      <text x="480" y="75" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">freq=3 ★</text>
+      
+      <!-- Bucket 4 -->
+      <rect x="560" y="0" width="120" height="60" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="4" rx="4"/>
+      <text x="620" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">bucket[4]</text>
+      <text x="620" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ef4444">[]</text>
+      <text x="620" y="75" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">freq=4</text>
+      
+      <!-- Bucket 5 -->
+      <rect x="700" y="0" width="120" height="60" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="4" rx="4"/>
+      <text x="760" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">bucket[5]</text>
+      <text x="760" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ef4444">[]</text>
+      <text x="760" y="75" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">freq=5</text>
+    </g>
+    
+    <!-- Collection arrow -->
+    <path d="M 540 110 L 540 130 L 200 130 L 200 145" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#greenarrow)"/>
+    <path d="M 400 110 L 400 130" stroke="#4ade80" stroke-width="2" fill="none"/>
+    <text x="370" y="125" font-family="Courier New, monospace" font-size="11" fill="#4ade80">collect from highest</text>
+  </g>
+  
+  <defs>
+    <marker id="greenarrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ade80"/>
+    </marker>
+  </defs>
+  
+  <!-- Step 4: Collection -->
+  <text x="50" y="470" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 4: COLLECT TOP K (k=2)</text>
+  
+  <g transform="translate(50, 490)">
+    <rect x="0" y="0" width="450" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="6"/>
+    
+    <text x="20" y="30" font-family="Courier New, monospace" font-size="13" fill="#888888">From bucket[3]:</text>
+    <rect x="150" y="10" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+    <text x="170" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80">1</text>
+    <text x="205" y="35" font-family="Courier New, monospace" font-size="13" fill="#4ade80">← most frequent</text>
+    
+    <text x="20" y="65" font-family="Courier New, monospace" font-size="13" fill="#888888">From bucket[2]:</text>
+    <rect x="150" y="45" width="40" height="35" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="4"/>
+    <text x="170" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#a78bfa">2</text>
+    <text x="205" y="70" font-family="Courier New, monospace" font-size="13" fill="#a78bfa">← k=2 reached!</text>
+  </g>
+  
+  <!-- Result -->
+  <rect x="530" y="490" width="380" height="80" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="8"/>
+  <text x="550" y="520" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">RESULT</text>
+  <text x="550" y="545" font-family="Courier New, monospace" font-size="16" fill="#ffffff">Top 2 Frequent: [1, 2]</text>
+  <text x="550" y="565" font-family="Courier New, monospace" font-size="11" fill="#888888">1 appears 3×, 2 appears 2×</text>
+  
+  <!-- Complexity Box -->
+  <rect x="50" y="600" width="860" height="70" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="8"/>
+  <text x="70" y="625" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(n)</text>
+  <text x="70" y="650" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Space: O(n)</text>
+  
+  <text x="250" y="625" font-family="Courier New, monospace" font-size="12" fill="#888888">• Count frequencies: O(n)</text>
+  <text x="250" y="650" font-family="Courier New, monospace" font-size="12" fill="#888888">• Fill buckets: O(n)</text>
+  
+  <text x="500" y="625" font-family="Courier New, monospace" font-size="12" fill="#888888">• Collect from buckets: O(n)</text>
+  <text x="500" y="650" font-family="Courier New, monospace" font-size="12" fill="#888888">• Max bucket size: n</text>
+  
+  <text x="780" y="640" font-family="Courier New, monospace" font-size="11" fill="#888888">LeetCode #347</text>
+</svg>

@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500">
+  <defs>
+    <linearGradient id="nodeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6d28d9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="prevGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="currGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="nextGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    <marker id="fwdArrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#475569"/>
+    </marker>
+    <marker id="revArrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/>
+    </marker>
+    <filter id="shadowFilter">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="750" height="500" fill="#0f172a"/>
+  
+  <!-- Title -->
+  <text x="375" y="30" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="18" text-anchor="middle" font-weight="bold">Iterative Linked List Reversal</text>
+  
+  <!-- Legend -->
+  <rect x="560" y="50" width="180" height="80" rx="6" fill="#1e293b" stroke="#334155"/>
+  <circle cx="580" cy="75" r="8" fill="url(#prevGrad)"/>
+  <text x="595" y="80" fill="#ef4444" font-family="JetBrains Mono, monospace" font-size="10">prev</text>
+  <circle cx="650" cy="75" r="8" fill="url(#currGrad)"/>
+  <text x="665" y="80" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="10">curr</text>
+  <circle cx="580" cy="105" r="8" fill="url(#nextGrad)"/>
+  <text x="595" y="110" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="10">next</text>
+  <path d="M 640 100 L 670 100" stroke="#22d3ee" stroke-width="2" marker-end="url(#revArrow)"/>
+  <text x="678" y="105" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="9">reversed</text>
+  
+  <!-- Step 0: Initial -->
+  <text x="30" y="70" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="11" font-weight="bold">Initial: prev=NULL, curr=1</text>
+  
+  <text x="30" y="100" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">NULL</text>
+  <circle cx="30" cy="115" r="6" fill="url(#prevGrad)"/>
+  
+  <circle cx="100" cy="100" r="18" fill="url(#nodeGradient)" filter="url(#shadowFilter)"/>
+  <text x="100" y="105" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">1</text>
+  <circle cx="100" cy="130" r="5" fill="url(#currGrad)"/>
+  
+  <path d="M 118 100 L 142 100" stroke="#475569" stroke-width="2" marker-end="url(#fwdArrow)"/>
+  
+  <circle cx="160" cy="100" r="18" fill="url(#nodeGradient)" filter="url(#shadowFilter)"/>
+  <text x="160" y="105" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">2</text>
+  
+  <path d="M 178 100 L 202 100" stroke="#475569" stroke-width="2" marker-end="url(#fwdArrow)"/>
+  
+  <circle cx="220" cy="100" r="18" fill="url(#nodeGradient)" filter="url(#shadowFilter)"/>
+  <text x="220" y="105" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">3</text>
+  
+  <path d="M 238 100 L 262 100" stroke="#475569" stroke-width="2" marker-end="url(#fwdArrow)"/>
+  
+  <circle cx="280" cy="100" r="18" fill="url(#nodeGradient)" filter="url(#shadowFilter)"/>
+  <text x="280" y="105" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">4</text>
+  
+  <text x="305" y="105" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">→ NULL</text>
+  
+  <!-- Step 1 -->
+  <text x="30" y="165" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="11" font-weight="bold">Step 1: next=2, 1→NULL, prev=1, curr=2</text>
+  
+  <circle cx="100" cy="200" r="18" fill="url(#nodeGradient)" filter="url(#shadowFilter)"/>
+  <text x="100" y="205" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">1</text>
+  <circle cx="100" cy="230" r="5" fill="url(#prevGrad)"/>
+  
+  <path d="M 82 200 L 55 200" stroke="#22d3ee" stroke-width="2" marker-end="url(#revArrow)"/>
+  <text x="40" y="205" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">NULL</text>
+  
+  <circle cx="160" cy="200" r="18" fill="url(#nodeGradient)" filter="url(#shadowFilter)"/>
+  <text x="160" y="205" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">2</text>
+  <circle cx="160" cy="230" r="5" fill="url(#currGrad)"/>
+  
+  <path d="M 178 200 L 202 200" stroke="#475569" stroke-width="2" marker-end="url(#fwdArrow)"/>
+  
+  <circle cx="220" cy="200" r="18" fill="url(#nodeGradient)" filter="url(#shadowFilter)"/>
+  <text x="220" y="205" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">3</text>
+  
+  <path d="M 238 200 L 262 200" stroke="#475569" stroke-width="2" marker-end="url(#fwdArrow)"/>
+  
+  <circle cx="280" cy="200" r="18" fill="url(#nodeGradient)" filter="url(#shadowFilter)"/>
+  <text x="280" y="205" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">4</text>
+  
+  <text x="305" y="205" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">→ NULL</text>
+  
+  <!-- Step 2 -->
+  <text x="30" y="270" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="11" font-weight="bold">Step 2: next=3, 2→1, prev=2, curr=3</text>
+  
+  <circle cx="100" cy="305" r="18" fill="url(#nodeGradient)" filter="url(#shadowFilter)"/>
+  <text x="100" y="310" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">1</text>
+  
+  <path d="M 82 305 L 55 305" stroke="#22d3ee" stroke-width="2" marker-end="url(#revArrow)"/>
+  <text x="40" y="310" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">NULL</text>
+  
+  <circle cx="160" cy="305" r="18" fill="url(#nodeGradient)" filter="url(#shadowFilter)"/>
+  <text x="160" y="310" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">2</text>
+  <circle cx="160" cy="335" r="5" fill="url(#prevGrad)"/>
+  
+  <path d="M 142 305 L 118 305" stroke="#22d3ee" stroke-width="2" marker-end="url(#revArrow)"/>
+  
+  <circle cx="220" cy="305" r="18" fill="url(#nodeGradient)" filter="url(#shadowFilter)"/>
+  <text x="220" y="310" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">3</text>
+  <circle cx="220" cy="335" r="5" fill="url(#currGrad)"/>
+  
+  <path d="M 238 305 L 262 305" stroke="#475569" stroke-width="2" marker-end="url(#fwdArrow)"/>
+  
+  <circle cx="280" cy="305" r="18" fill="url(#nodeGradient)" filter="url(#shadowFilter)"/>
+  <text x="280" y="310" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">4</text>
+  
+  <text x="305" y="310" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">→ NULL</text>
+  
+  <!-- Step 3 -->
+  <text x="30" y="375" fill="#22d3ee" font-family="JetBrains Mono, monospace" font-size="11" font-weight="bold">Step 3: next=4, 3→2, prev=3, curr=4</text>
+  
+  <circle cx="100" cy="410" r="18" fill="url(#nodeGradient)" filter="url(#shadowFilter)"/>
+  <text x="100" y="415" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">1</text>
+  
+  <path d="M 82 410 L 55 410" stroke="#22d3ee" stroke-width="2" marker-end="url(#revArrow)"/>
+  <text x="40" y="415" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">NULL</text>
+  
+  <circle cx="160" cy="410" r="18" fill="url(#nodeGradient)" filter="url(#shadowFilter)"/>
+  <text x="160" y="415" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">2</text>
+  
+  <path d="M 142 410 L 118 410" stroke="#22d3ee" stroke-width="2" marker-end="url(#revArrow)"/>
+  
+  <circle cx="220" cy="410" r="18" fill="url(#nodeGradient)" filter="url(#shadowFilter)"/>
+  <text x="220" y="415" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">3</text>
+  <circle cx="220" cy="440" r="5" fill="url(#prevGrad)"/>
+  
+  <path d="M 202 410 L 178 410" stroke="#22d3ee" stroke-width="2" marker-end="url(#revArrow)"/>
+  
+  <circle cx="280" cy="410" r="18" fill="url(#nodeGradient)" filter="url(#shadowFilter)"/>
+  <text x="280" y="415" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">4</text>
+  <circle cx="280" cy="440" r="5" fill="url(#currGrad)"/>
+  
+  <text x="305" y="415" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">→ NULL</text>
+  
+  <!-- Final Result -->
+  <text x="30" y="475" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="11" font-weight="bold">Final: curr=NULL, return prev (4)</text>
+  
+  <text x="380" y="415" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">NULL ←</text>
+  
+  <circle cx="430" cy="410" r="18" fill="#f59e0b" filter="url(#shadowFilter)"/>
+  <text x="430" y="415" fill="#000" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle" font-weight="bold">4</text>
+  
+  <path d="M 448 410 L 472 410" stroke="#22d3ee" stroke-width="2" marker-end="url(#revArrow)"/>
+  
+  <circle cx="490" cy="410" r="18" fill="url(#nodeGradient)" filter="url(#shadowFilter)"/>
+  <text x="490" y="415" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">3</text>
+  
+  <path d="M 508 410 L 532 410" stroke="#22d3ee" stroke-width="2" marker-end="url(#revArrow)"/>
+  
+  <circle cx="550" cy="410" r="18" fill="url(#nodeGradient)" filter="url(#shadowFilter)"/>
+  <text x="550" y="415" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">2</text>
+  
+  <path d="M 568 410 L 592 410" stroke="#22d3ee" stroke-width="2" marker-end="url(#revArrow)"/>
+  
+  <circle cx="610" cy="410" r="18" fill="url(#nodeGradient)" filter="url(#shadowFilter)"/>
+  <text x="610" y="415" fill="#fff" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">1</text>
+  
+  <path d="M 628 410 L 652 410" stroke="#22d3ee" stroke-width="2" marker-end="url(#revArrow)"/>
+  <text x="660" y="415" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10">NULL</text>
+  
+  <text x="430" y="445" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle">new head</text>
+  
+  <!-- Complexity box -->
+  <rect x="560" y="150" width="180" height="60" rx="6" fill="#1e293b" stroke="#334155"/>
+  <text x="650" y="175" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle" font-weight="bold">Complexity</text>
+  <text x="650" y="195" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle">Time: O(n) | Space: O(1)</text>
+</svg>
+

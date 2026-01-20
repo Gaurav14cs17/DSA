@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bgGrad10" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="spiralCell" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90a4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2c5f72;stop-opacity:1" />
+    </linearGradient>
+    <marker id="spiralArrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#f39c12"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad10)"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Segoe UI, Arial" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Spiral Matrix Traversal</text>
+  <text x="400" y="65" font-family="Segoe UI, Arial" font-size="14" fill="#88ccff" text-anchor="middle">Four Boundaries: top, bottom, left, right | O(m×n) Time</text>
+  
+  <!-- Matrix Grid -->
+  <g transform="translate(80, 100)">
+    <!-- 4x4 Matrix -->
+    <!-- Row 1 -->
+    <rect x="0" y="0" width="55" height="55" rx="4" fill="url(#spiralCell)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="27" y="35" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">1</text>
+    
+    <rect x="60" y="0" width="55" height="55" rx="4" fill="url(#spiralCell)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="87" y="35" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">2</text>
+    
+    <rect x="120" y="0" width="55" height="55" rx="4" fill="url(#spiralCell)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="147" y="35" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">3</text>
+    
+    <rect x="180" y="0" width="55" height="55" rx="4" fill="url(#spiralCell)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="207" y="35" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">4</text>
+    
+    <!-- Row 2 -->
+    <rect x="0" y="60" width="55" height="55" rx="4" fill="url(#spiralCell)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="27" y="95" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">12</text>
+    
+    <rect x="60" y="60" width="55" height="55" rx="4" fill="url(#spiralCell)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="87" y="95" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">13</text>
+    
+    <rect x="120" y="60" width="55" height="55" rx="4" fill="url(#spiralCell)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="147" y="95" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">14</text>
+    
+    <rect x="180" y="60" width="55" height="55" rx="4" fill="url(#spiralCell)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="207" y="95" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">5</text>
+    
+    <!-- Row 3 -->
+    <rect x="0" y="120" width="55" height="55" rx="4" fill="url(#spiralCell)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="27" y="155" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">11</text>
+    
+    <rect x="60" y="120" width="55" height="55" rx="4" fill="url(#spiralCell)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="87" y="155" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">16</text>
+    
+    <rect x="120" y="120" width="55" height="55" rx="4" fill="url(#spiralCell)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="147" y="155" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">15</text>
+    
+    <rect x="180" y="120" width="55" height="55" rx="4" fill="url(#spiralCell)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="207" y="155" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">6</text>
+    
+    <!-- Row 4 -->
+    <rect x="0" y="180" width="55" height="55" rx="4" fill="url(#spiralCell)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="27" y="215" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">10</text>
+    
+    <rect x="60" y="180" width="55" height="55" rx="4" fill="url(#spiralCell)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="87" y="215" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">9</text>
+    
+    <rect x="120" y="180" width="55" height="55" rx="4" fill="url(#spiralCell)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="147" y="215" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">8</text>
+    
+    <rect x="180" y="180" width="55" height="55" rx="4" fill="url(#spiralCell)" stroke="#6ab7d1" stroke-width="2"/>
+    <text x="207" y="215" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">7</text>
+    
+    <!-- Spiral Path -->
+    <path d="M 27 27 L 207 27 L 207 207 L 27 207 L 27 87 L 147 87 L 147 147 L 87 147" 
+          stroke="#f39c12" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" 
+          stroke-dasharray="8,4" marker-end="url(#spiralArrow)"/>
+  </g>
+  
+  <!-- Boundary Labels -->
+  <g transform="translate(80, 100)">
+    <!-- Top boundary -->
+    <line x1="-10" y1="-10" x2="245" y2="-10" stroke="#e74c3c" stroke-width="3"/>
+    <text x="117" y="-20" font-family="Segoe UI, Arial" font-size="12" font-weight="bold" fill="#e74c3c" text-anchor="middle">top = 0</text>
+    
+    <!-- Bottom boundary -->
+    <line x1="-10" y1="245" x2="245" y2="245" stroke="#3498db" stroke-width="3"/>
+    <text x="117" y="262" font-family="Segoe UI, Arial" font-size="12" font-weight="bold" fill="#3498db" text-anchor="middle">bottom = 3</text>
+    
+    <!-- Left boundary -->
+    <line x1="-10" y1="-10" x2="-10" y2="245" stroke="#27ae60" stroke-width="3"/>
+    <text x="-25" y="117" font-family="Segoe UI, Arial" font-size="12" font-weight="bold" fill="#27ae60" text-anchor="middle" transform="rotate(-90, -25, 117)">left = 0</text>
+    
+    <!-- Right boundary -->
+    <line x1="245" y1="-10" x2="245" y2="245" stroke="#9b59b6" stroke-width="3"/>
+    <text x="268" y="117" font-family="Segoe UI, Arial" font-size="12" font-weight="bold" fill="#9b59b6" text-anchor="middle" transform="rotate(90, 268, 117)">right = 3</text>
+  </g>
+  
+  <!-- Direction Steps -->
+  <rect x="400" y="100" width="370" height="250" rx="10" fill="#0d1b2a" stroke="#4a90a4" stroke-width="2"/>
+  <text x="585" y="130" font-family="Segoe UI, Arial" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Direction Sequence:</text>
+  
+  <!-- Step 1: Right -->
+  <rect x="420" y="145" width="330" height="40" rx="6" fill="#16213e" stroke="#e74c3c" stroke-width="2"/>
+  <text x="440" y="172" font-family="Segoe UI, Arial" font-size="14" fill="#e74c3c">1. →</text>
+  <text x="470" y="172" font-family="Segoe UI, Arial" font-size="13" fill="#ffffff">Right along top row, then top++</text>
+  
+  <!-- Step 2: Down -->
+  <rect x="420" y="195" width="330" height="40" rx="6" fill="#16213e" stroke="#9b59b6" stroke-width="2"/>
+  <text x="440" y="222" font-family="Segoe UI, Arial" font-size="14" fill="#9b59b6">2. ↓</text>
+  <text x="470" y="222" font-family="Segoe UI, Arial" font-size="13" fill="#ffffff">Down along right col, then right--</text>
+  
+  <!-- Step 3: Left -->
+  <rect x="420" y="245" width="330" height="40" rx="6" fill="#16213e" stroke="#3498db" stroke-width="2"/>
+  <text x="440" y="272" font-family="Segoe UI, Arial" font-size="14" fill="#3498db">3. ←</text>
+  <text x="470" y="272" font-family="Segoe UI, Arial" font-size="13" fill="#ffffff">Left along bottom row, then bottom--</text>
+  
+  <!-- Step 4: Up -->
+  <rect x="420" y="295" width="330" height="40" rx="6" fill="#16213e" stroke="#27ae60" stroke-width="2"/>
+  <text x="440" y="322" font-family="Segoe UI, Arial" font-size="14" fill="#27ae60">4. ↑</text>
+  <text x="470" y="322" font-family="Segoe UI, Arial" font-size="13" fill="#ffffff">Up along left col, then left++</text>
+  
+  <!-- Result -->
+  <rect x="80" y="380" width="690" height="50" rx="10" fill="#0d1b2a" stroke="#f39c12" stroke-width="2"/>
+  <text x="425" y="405" font-family="Segoe UI, Arial" font-size="14" font-weight="bold" fill="#f39c12" text-anchor="middle">Spiral Order Result:</text>
+  <text x="425" y="423" font-family="Consolas" font-size="13" fill="#ffffff" text-anchor="middle">[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]</text>
+  
+  <!-- Termination condition -->
+  <rect x="80" y="440" width="690" height="45" rx="10" fill="#0d1b2a" stroke="#27ae60" stroke-width="2"/>
+  <text x="425" y="468" font-family="Segoe UI, Arial" font-size="14" fill="#ffffff" text-anchor="middle">
+    <tspan font-weight="bold" fill="#2ecc71">Termination:</tspan>
+    <tspan fill="#ffffff"> while (top ≤ bottom AND left ≤ right)</tspan>
+  </text>
+</svg>
+

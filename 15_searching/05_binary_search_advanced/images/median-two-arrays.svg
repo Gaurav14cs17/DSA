@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 600">
+  <!-- Background -->
+  <rect width="950" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">📊 Median of Two Sorted Arrays</text>
+  <text x="475" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">LeetCode 4: Binary Search on Partition</text>
+  
+  <!-- Concept -->
+  <text x="50" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">PARTITION CONCEPT</text>
+  <text x="50" y="125" font-family="Courier New, monospace" font-size="11" fill="#888888">Find partition where all left elements ≤ all right elements</text>
+  
+  <!-- Array 1 -->
+  <g transform="translate(50, 150)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="12" fill="#4ade80">nums1:</text>
+    <rect x="60" y="-15" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="3"/>
+    <text x="85" y="8" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#4ade80">1</text>
+    <rect x="115" y="-15" width="50" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="3"/>
+    <text x="140" y="8" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#4ade80">3</text>
+    
+    <!-- Partition line -->
+    <line x1="170" y1="-20" x2="170" y2="25" stroke="#f97316" stroke-width="3"/>
+    
+    <rect x="175" y="-15" width="50" height="35" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="3"/>
+    <text x="200" y="8" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#f97316">8</text>
+    <rect x="230" y="-15" width="50" height="35" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="3"/>
+    <text x="255" y="8" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#f97316">9</text>
+    
+    <text x="115" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">left₁</text>
+    <text x="230" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#f97316">right₁</text>
+  </g>
+  
+  <!-- Array 2 -->
+  <g transform="translate(50, 230)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">nums2:</text>
+    <rect x="60" y="-15" width="50" height="35" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="3"/>
+    <text x="85" y="8" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#a78bfa">2</text>
+    <rect x="115" y="-15" width="50" height="35" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="3"/>
+    <text x="140" y="8" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#a78bfa">4</text>
+    <rect x="170" y="-15" width="50" height="35" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="3"/>
+    <text x="195" y="8" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#a78bfa">5</text>
+    
+    <!-- Partition line -->
+    <line x1="225" y1="-20" x2="225" y2="25" stroke="#f97316" stroke-width="3"/>
+    
+    <rect x="230" y="-15" width="50" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="255" y="8" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#3b82f6">6</text>
+    <rect x="285" y="-15" width="50" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="310" y="8" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#3b82f6">7</text>
+    
+    <text x="140" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">left₂</text>
+    <text x="285" y="45" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#3b82f6">right₂</text>
+  </g>
+  
+  <!-- Partition result -->
+  <g transform="translate(400, 150)">
+    <rect x="0" y="0" width="220" height="100" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="6"/>
+    <text x="110" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="13" font-weight="bold" fill="#e94560">VALID PARTITION</text>
+    <text x="15" y="50" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Left:  [1, 3, 2, 4, 5]</text>
+    <text x="15" y="70" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Right: [8, 9, 6, 7]</text>
+    <text x="15" y="90" font-family="Courier New, monospace" font-size="11" fill="#4ade80">max(left) ≤ min(right)</text>
+  </g>
+  
+  <!-- Condition Box -->
+  <rect x="650" y="120" width="250" height="140" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="6"/>
+  <text x="775" y="145" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">PARTITION RULE</text>
+  <text x="665" y="175" font-family="Courier New, monospace" font-size="11" fill="#ffffff">For valid partition:</text>
+  <text x="675" y="200" font-family="Courier New, monospace" font-size="11" fill="#4ade80">left1 ≤ right2</text>
+  <text x="675" y="220" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">left2 ≤ right1</text>
+  <text x="665" y="250" font-family="Courier New, monospace" font-size="10" fill="#888888">i + j = (m+n+1) / 2</text>
+  
+  <!-- Median Calculation -->
+  <text x="50" y="310" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">MEDIAN CALCULATION</text>
+  
+  <g transform="translate(50, 330)">
+    <rect x="0" y="0" width="380" height="80" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="6"/>
+    <text x="190" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">ODD TOTAL LENGTH</text>
+    <text x="15" y="50" font-family="Courier New, monospace" font-size="11" fill="#ffffff">median = max(left1, left2)</text>
+    <text x="15" y="70" font-family="Courier New, monospace" font-size="11" fill="#888888">Example: max(3, 5) = 5</text>
+    
+    <rect x="400" y="0" width="380" height="80" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="6"/>
+    <text x="590" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">EVEN TOTAL LENGTH</text>
+    <text x="415" y="50" font-family="Courier New, monospace" font-size="11" fill="#ffffff">median = (max(L) + min(R)) / 2</text>
+    <text x="415" y="70" font-family="Courier New, monospace" font-size="11" fill="#888888">Example: (5 + 6) / 2 = 5.5</text>
+  </g>
+  
+  <!-- Algorithm -->
+  <rect x="50" y="430" width="420" height="150" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="6"/>
+  <text x="260" y="455" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">ALGORITHM</text>
+  <text x="65" y="480" font-family="Courier New, monospace" font-size="10" fill="#888888"># Binary search on smaller array</text>
+  <text x="65" y="495" font-family="Courier New, monospace" font-size="10" fill="#ffffff">i = partition in nums1</text>
+  <text x="65" y="510" font-family="Courier New, monospace" font-size="10" fill="#ffffff">j = half - i  (partition in nums2)</text>
+  <text x="65" y="530" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">if</text>
+  <text x="85" y="530" font-family="Courier New, monospace" font-size="10" fill="#ffffff">left1 &gt; right2: search left in nums1</text>
+  <text x="65" y="545" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">elif</text>
+  <text x="100" y="545" font-family="Courier New, monospace" font-size="10" fill="#ffffff">left2 &gt; right1: search right in nums1</text>
+  <text x="65" y="560" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">else:</text>
+  <text x="105" y="560" font-family="Courier New, monospace" font-size="10" fill="#4ade80">valid partition found!</text>
+  <text x="65" y="575" font-family="Courier New, monospace" font-size="10" fill="#60a5fa">Time: O(log(min(m,n)))</text>
+  
+  <!-- Visual of search -->
+  <rect x="500" y="430" width="400" height="150" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="6"/>
+  <text x="700" y="455" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">💡 KEY INSIGHT</text>
+  <text x="515" y="485" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Binary search on partition position</text>
+  <text x="515" y="510" font-family="Courier New, monospace" font-size="11" fill="#ffffff">in the smaller array only!</text>
+  <text x="515" y="545" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Once i is fixed, j is determined</text>
+  <text x="515" y="565" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">j = (m + n + 1) / 2 - i</text>
+</svg>

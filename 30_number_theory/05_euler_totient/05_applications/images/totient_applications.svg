@@ -1,0 +1,57 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Totient Function Applications</text>
+  
+  <!-- App 1 -->
+  <rect x="30" y="70" width="270" height="140" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="165" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">REDUCED RESIDUE</text>
+  <text x="50" y="130" font-family="Courier New, monospace" font-size="10" fill="#ffffff">φ(n) = size of (Z/nZ)*</text>
+  <text x="50" y="155" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Units mod n form a group</text>
+  <text x="50" y="180" font-family="Courier New, monospace" font-size="10" fill="#3b82f6">Order = φ(n)</text>
+  <text x="50" y="200" font-family="Courier New, monospace" font-size="9" fill="#888888">Cyclic iff primitive root exists</text>
+  
+  <!-- App 2 -->
+  <rect x="315" y="70" width="270" height="140" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="450" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">CYCLE DETECTION</text>
+  <text x="335" y="130" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Decimal period of 1/n</text>
+  <text x="335" y="155" font-family="Courier New, monospace" font-size="10" fill="#ffffff">divides φ(n)</text>
+  <text x="335" y="180" font-family="Courier New, monospace" font-size="10" fill="#f97316">1/7 = 0.142857...</text>
+  <text x="335" y="200" font-family="Courier New, monospace" font-size="10" fill="#888888">Period 6 = φ(7)</text>
+  
+  <!-- App 3 -->
+  <rect x="600" y="70" width="270" height="140" rx="10" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="735" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COPRIME COUNTING</text>
+  <text x="620" y="130" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Count k ≤ n coprime to n</text>
+  <text x="620" y="155" font-family="Courier New, monospace" font-size="10" fill="#ffffff">in range [1, m]:</text>
+  <text x="620" y="180" font-family="Courier New, monospace" font-size="10" fill="#4ade80">⌊m/n⌋ × φ(n) + extra</text>
+  <text x="620" y="200" font-family="Courier New, monospace" font-size="9" fill="#888888">Full cycles + remainder</text>
+  
+  <!-- App 4 -->
+  <rect x="30" y="230" width="270" height="140" rx="10" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="165" y="260" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">NECKLACE COUNTING</text>
+  <text x="50" y="290" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Distinct necklaces with</text>
+  <text x="50" y="310" font-family="Courier New, monospace" font-size="10" fill="#ffffff">n beads, k colors:</text>
+  <text x="50" y="335" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">(1/n) Σ φ(d) × k^(n/d)</text>
+  <text x="50" y="360" font-family="Courier New, monospace" font-size="9" fill="#888888">Burnside's lemma</text>
+  
+  <!-- App 5 -->
+  <rect x="315" y="230" width="270" height="140" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="450" y="260" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">GCD SUM</text>
+  <text x="335" y="295" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Σ gcd(i, n) for i=1 to n</text>
+  <text x="335" y="325" font-family="Courier New, monospace" font-size="10" fill="#3b82f6">= Σ d × φ(n/d)</text>
+  <text x="335" y="350" font-family="Courier New, monospace" font-size="9" fill="#888888">d | n</text>
+  
+  <!-- App 6 -->
+  <rect x="600" y="230" width="270" height="140" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="735" y="260" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">LATTICE VISIBILITY</text>
+  <text x="620" y="290" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Points (x,y) visible from</text>
+  <text x="620" y="310" font-family="Courier New, monospace" font-size="10" fill="#ffffff">origin: gcd(x,y) = 1</text>
+  <text x="620" y="340" font-family="Courier New, monospace" font-size="10" fill="#f97316">Farey sequence related</text>
+  
+  <!-- LeetCode -->
+  <rect x="200" y="390" width="500" height="80" rx="10" fill="#0f0f23" stroke="#888888" stroke-width="1"/>
+  <text x="450" y="420" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">RELATED PROBLEMS</text>
+  <text x="450" y="455" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Count coprime pairs | GCD queries | Euler path problems</text>
+</svg>

@@ -1,0 +1,106 @@
+<svg viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">📊 Counting Inversions with Merge Sort</text>
+  <text x="450" y="58" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Inversion: i &lt; j but arr[i] &gt; arr[j]</text>
+  
+  <!-- Example Array -->
+  <text x="50" y="100" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">EXAMPLE ARRAY</text>
+  
+  <g transform="translate(250, 110)">
+    <rect x="0" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="25" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="25" y="58" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">i=0</text>
+    
+    <rect x="60" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="85" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="85" y="58" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">i=1</text>
+    
+    <rect x="120" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="145" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="145" y="58" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">i=2</text>
+    
+    <rect x="180" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="205" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="205" y="58" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">i=3</text>
+    
+    <rect x="240" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="265" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+    <text x="265" y="58" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">i=4</text>
+  </g>
+  
+  <!-- Inversions visualization -->
+  <text x="50" y="200" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">INVERSIONS FOUND</text>
+  
+  <!-- Inversion pairs -->
+  <g transform="translate(80, 220)">
+    <rect x="0" y="0" width="160" height="50" rx="5" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="80" y="22" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle">(2, 1)</text>
+    <text x="80" y="40" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">i=0, j=2: 2 &gt; 1</text>
+  </g>
+  
+  <g transform="translate(260, 220)">
+    <rect x="0" y="0" width="160" height="50" rx="5" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="80" y="22" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle">(4, 1)</text>
+    <text x="80" y="40" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">i=1, j=2: 4 &gt; 1</text>
+  </g>
+  
+  <g transform="translate(440, 220)">
+    <rect x="0" y="0" width="160" height="50" rx="5" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="80" y="22" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle">(4, 3)</text>
+    <text x="80" y="40" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">i=1, j=3: 4 &gt; 3</text>
+  </g>
+  
+  <!-- Total count -->
+  <rect x="650" y="220" width="180" height="50" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="740" y="250" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">Total: 3 inversions</text>
+  
+  <!-- Merge Process -->
+  <text x="50" y="320" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COUNTING DURING MERGE</text>
+  
+  <!-- Left half -->
+  <text x="150" y="350" font-family="Courier New, monospace" font-size="12" fill="#3b82f6" text-anchor="middle">Left (sorted)</text>
+  <g transform="translate(100, 360)">
+    <rect x="0" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="25" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    <rect x="50" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="75" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+  </g>
+  <text x="150" y="420" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">i pointer</text>
+  
+  <!-- Right half -->
+  <text x="350" y="350" font-family="Courier New, monospace" font-size="12" fill="#f97316" text-anchor="middle">Right (sorted)</text>
+  <g transform="translate(275, 360)">
+    <rect x="0" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="25" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    <rect x="50" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="75" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+    <rect x="100" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="125" y="26" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+  </g>
+  <text x="350" y="420" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">j pointer</text>
+  
+  <!-- Arrow showing comparison -->
+  <path d="M175 380 L275 380" stroke="#a78bfa" stroke-width="2" fill="none" marker-end="url(#arrowPurple)"/>
+  <text x="225" y="372" font-family="Courier New, monospace" font-size="11" fill="#a78bfa" text-anchor="middle">compare</text>
+  
+  <!-- Key insight box -->
+  <rect x="500" y="340" width="350" height="120" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="675" y="370" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa" text-anchor="middle">KEY INSIGHT</text>
+  <text x="675" y="395" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">When right[j] &lt; left[i]:</text>
+  <text x="675" y="415" font-family="Courier New, monospace" font-size="12" fill="#4ade80" text-anchor="middle">inversions += (mid - i + 1)</text>
+  <text x="675" y="440" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">All remaining left elements &gt; right[j]</text>
+  
+  <!-- Complexity -->
+  <rect x="250" y="480" width="400" height="50" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="450" y="510" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#60a5fa" text-anchor="middle">Time: O(n log n)  |  Space: O(n)</text>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#a78bfa"/>
+    </marker>
+  </defs>
+</svg>
+

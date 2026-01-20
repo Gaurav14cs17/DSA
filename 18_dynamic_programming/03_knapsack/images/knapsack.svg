@@ -1,0 +1,206 @@
+<svg viewBox="0 0 950 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Knapsack Problems</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">0/1 vs Unbounded Knapsack Patterns</text>
+  
+  <!-- Section: Items -->
+  <text x="50" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Items (weight, value)</text>
+  
+  <!-- Item boxes -->
+  <rect x="50" y="120" width="80" height="60" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="90" y="145" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Item 1</text>
+  <text x="90" y="165" font-family="Courier New, monospace" font-size="11" fill="#60a5fa" text-anchor="middle">w=2, v=3</text>
+  
+  <rect x="145" y="120" width="80" height="60" rx="5" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="185" y="145" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Item 2</text>
+  <text x="185" y="165" font-family="Courier New, monospace" font-size="11" fill="#a78bfa" text-anchor="middle">w=3, v=4</text>
+  
+  <rect x="240" y="120" width="80" height="60" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="280" y="145" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Item 3</text>
+  <text x="280" y="165" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">w=4, v=5</text>
+  
+  <!-- Knapsack -->
+  <rect x="370" y="115" width="100" height="70" rx="8" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+  <text x="420" y="145" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Knapsack</text>
+  <text x="420" y="165" font-family="Courier New, monospace" font-size="12" fill="#f97316" text-anchor="middle">W = 7</text>
+  
+  <!-- Section: 0/1 Knapsack -->
+  <text x="50" y="220" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">0/1 Knapsack (Each item once)</text>
+  
+  <!-- DP Table for 0/1 -->
+  <g transform="translate(50, 240)">
+    <!-- Headers -->
+    <text x="40" y="-5" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">w=0</text>
+    <text x="80" y="-5" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">1</text>
+    <text x="120" y="-5" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">2</text>
+    <text x="160" y="-5" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">3</text>
+    <text x="200" y="-5" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">4</text>
+    <text x="240" y="-5" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">5</text>
+    <text x="280" y="-5" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">6</text>
+    <text x="320" y="-5" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">7</text>
+    
+    <!-- Row 0 (base) -->
+    <text x="-5" y="22" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="end">i=0</text>
+    <rect x="20" y="5" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="37" y="25" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">0</text>
+    <rect x="60" y="5" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="77" y="25" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">0</text>
+    <rect x="100" y="5" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="117" y="25" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">0</text>
+    <rect x="140" y="5" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="157" y="25" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">0</text>
+    <rect x="180" y="5" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="197" y="25" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">0</text>
+    <rect x="220" y="5" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="237" y="25" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">0</text>
+    <rect x="260" y="5" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="277" y="25" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">0</text>
+    <rect x="300" y="5" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="317" y="25" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">0</text>
+    
+    <!-- Row 1 (item 1: w=2, v=3) -->
+    <text x="-5" y="57" font-family="Courier New, monospace" font-size="10" fill="#3b82f6" text-anchor="end">i=1</text>
+    <rect x="20" y="40" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="37" y="60" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">0</text>
+    <rect x="60" y="40" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="77" y="60" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">0</text>
+    <rect x="100" y="40" width="35" height="30" rx="2" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="117" y="60" font-family="Courier New, monospace" font-size="12" fill="#4ade80" text-anchor="middle">3</text>
+    <rect x="140" y="40" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="157" y="60" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">3</text>
+    <rect x="180" y="40" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="197" y="60" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">3</text>
+    <rect x="220" y="40" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="237" y="60" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">3</text>
+    <rect x="260" y="40" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="277" y="60" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">3</text>
+    <rect x="300" y="40" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="317" y="60" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">3</text>
+    
+    <!-- Row 2 (item 2: w=3, v=4) -->
+    <text x="-5" y="92" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="end">i=2</text>
+    <rect x="20" y="75" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="37" y="95" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">0</text>
+    <rect x="60" y="75" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="77" y="95" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">0</text>
+    <rect x="100" y="75" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="117" y="95" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">3</text>
+    <rect x="140" y="75" width="35" height="30" rx="2" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="157" y="95" font-family="Courier New, monospace" font-size="12" fill="#4ade80" text-anchor="middle">4</text>
+    <rect x="180" y="75" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="197" y="95" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">4</text>
+    <rect x="220" y="75" width="35" height="30" rx="2" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="237" y="95" font-family="Courier New, monospace" font-size="12" fill="#4ade80" text-anchor="middle">7</text>
+    <rect x="260" y="75" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="277" y="95" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">7</text>
+    <rect x="300" y="75" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="317" y="95" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">7</text>
+    
+    <!-- Row 3 (item 3: w=4, v=5) -->
+    <text x="-5" y="127" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="end">i=3</text>
+    <rect x="20" y="110" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="37" y="130" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">0</text>
+    <rect x="60" y="110" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="77" y="130" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">0</text>
+    <rect x="100" y="110" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="117" y="130" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">3</text>
+    <rect x="140" y="110" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="157" y="130" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">4</text>
+    <rect x="180" y="110" width="35" height="30" rx="2" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="197" y="130" font-family="Courier New, monospace" font-size="12" fill="#4ade80" text-anchor="middle">5</text>
+    <rect x="220" y="110" width="35" height="30" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="237" y="130" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">7</text>
+    <rect x="260" y="110" width="35" height="30" rx="2" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="277" y="130" font-family="Courier New, monospace" font-size="12" fill="#4ade80" text-anchor="middle">8</text>
+    <rect x="300" y="110" width="35" height="30" rx="2" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="317" y="130" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316" text-anchor="middle">9</text>
+  </g>
+  
+  <text x="400" y="400" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">0/1 Result: 9 (items 2+3)</text>
+  
+  <!-- Key difference box -->
+  <rect x="500" y="220" width="400" height="180" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="700" y="250" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Key Difference</text>
+  
+  <!-- 0/1 Pattern -->
+  <rect x="520" y="270" width="170" height="60" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+  <text x="605" y="295" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ef4444" text-anchor="middle">0/1 Knapsack</text>
+  <text x="605" y="315" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">for j in range(W, w-1, -1)</text>
+  
+  <!-- Unbounded Pattern -->
+  <rect x="710" y="270" width="170" height="60" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="795" y="295" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">Unbounded</text>
+  <text x="795" y="315" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">for j in range(w, W+1)</text>
+  
+  <!-- Direction arrows -->
+  <text x="605" y="360" font-family="Courier New, monospace" font-size="14" fill="#ef4444" text-anchor="middle">← REVERSE</text>
+  <text x="795" y="360" font-family="Courier New, monospace" font-size="14" fill="#4ade80" text-anchor="middle">FORWARD →</text>
+  
+  <text x="700" y="390" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">Reverse prevents using same item twice!</text>
+  
+  <!-- Section: Unbounded Example -->
+  <text x="50" y="440" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Unbounded Knapsack (Coin Change)</text>
+  <text x="50" y="460" font-family="Courier New, monospace" font-size="11" fill="#888888">Coins: [1, 2, 5], Amount: 7</text>
+  
+  <!-- Unbounded DP array -->
+  <g transform="translate(50, 475)">
+    <text x="30" y="-5" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">0</text>
+    <text x="80" y="-5" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">1</text>
+    <text x="130" y="-5" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">2</text>
+    <text x="180" y="-5" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">3</text>
+    <text x="230" y="-5" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">4</text>
+    <text x="280" y="-5" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">5</text>
+    <text x="330" y="-5" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">6</text>
+    <text x="380" y="-5" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">7</text>
+    
+    <rect x="5" y="5" width="45" height="40" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="27" y="32" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">0</text>
+    
+    <rect x="55" y="5" width="45" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="77" y="32" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    
+    <rect x="105" y="5" width="45" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="127" y="32" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    
+    <rect x="155" y="5" width="45" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="177" y="32" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    
+    <rect x="205" y="5" width="45" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="227" y="32" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    
+    <rect x="255" y="5" width="45" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="277" y="32" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    
+    <rect x="305" y="5" width="45" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="327" y="32" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    
+    <rect x="355" y="5" width="45" height="40" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="377" y="32" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#f97316" text-anchor="middle">2</text>
+  </g>
+  
+  <text x="50" y="540" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Min coins for 7: 2 (5+2)</text>
+  
+  <!-- Partition Problem -->
+  <text x="500" y="440" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Common Knapsack Variants</text>
+  
+  <rect x="500" y="460" width="200" height="70" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="600" y="485" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Partition Equal Sum</text>
+  <text x="600" y="505" font-family="Courier New, monospace" font-size="10" fill="#60a5fa" text-anchor="middle">Target = sum/2</text>
+  <text x="600" y="520" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">0/1 boolean DP</text>
+  
+  <rect x="720" y="460" width="200" height="70" rx="5" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="820" y="485" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Target Sum</text>
+  <text x="820" y="505" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="middle">s = (total+target)/2</text>
+  <text x="820" y="520" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">Count subsets</text>
+  
+  <!-- Complexity -->
+  <rect x="300" y="580" width="350" height="50" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="475" y="605" font-family="Courier New, monospace" font-size="12" fill="#4ade80" text-anchor="middle">Time: O(n × W) | Space: O(W)</text>
+  <text x="475" y="622" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">1D array with rolling optimization</text>
+  
+  <!-- Recurrence -->
+  <rect x="50" y="650" width="850" height="35" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="475" y="673" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">dp[i][w] = max(dp[i-1][w], dp[i-1][w-wi] + vi) | Take or Skip Item</text>
+</svg>

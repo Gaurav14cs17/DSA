@@ -1,0 +1,95 @@
+<svg viewBox="0 0 900 650" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Factorial Recursion: Stack Frames</text>
+  <text x="450" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">factorial(4) = 4 × 3 × 2 × 1 = 24</text>
+  
+  <!-- Left side: Call Stack Building -->
+  <text x="200" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">WINDING (Push)</text>
+  
+  <!-- Stack Frame 1: factorial(4) -->
+  <rect x="80" y="130" width="240" height="50" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="200" y="160" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">factorial(4)</text>
+  <text x="200" y="175" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">return 4 × factorial(3)</text>
+  
+  <!-- Arrow down -->
+  <line x1="200" y1="180" x2="200" y2="195" stroke="#f97316" stroke-width="2"/>
+  <polygon points="200,205 195,195 205,195" fill="#f97316"/>
+  
+  <!-- Stack Frame 2: factorial(3) -->
+  <rect x="80" y="210" width="240" height="50" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="200" y="240" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">factorial(3)</text>
+  <text x="200" y="255" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">return 3 × factorial(2)</text>
+  
+  <!-- Arrow down -->
+  <line x1="200" y1="260" x2="200" y2="275" stroke="#f97316" stroke-width="2"/>
+  <polygon points="200,285 195,275 205,275" fill="#f97316"/>
+  
+  <!-- Stack Frame 3: factorial(2) -->
+  <rect x="80" y="290" width="240" height="50" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="200" y="320" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">factorial(2)</text>
+  <text x="200" y="335" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">return 2 × factorial(1)</text>
+  
+  <!-- Arrow down -->
+  <line x1="200" y1="340" x2="200" y2="355" stroke="#f97316" stroke-width="2"/>
+  <polygon points="200,365 195,355 205,355" fill="#f97316"/>
+  
+  <!-- Stack Frame 4: factorial(1) - Base case -->
+  <rect x="80" y="370" width="240" height="50" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="200" y="400" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">factorial(1)</text>
+  <text x="200" y="415" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">BASE CASE → return 1</text>
+  
+  <!-- Right side: Unwinding -->
+  <text x="700" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">UNWINDING (Pop)</text>
+  
+  <!-- Return Frame 4 -->
+  <rect x="580" y="370" width="240" height="50" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="700" y="395" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">factorial(1) = 1</text>
+  <text x="700" y="415" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">returns 1</text>
+  
+  <!-- Arrow up -->
+  <line x1="700" y1="365" x2="700" y2="350" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="700,340 695,350 705,350" fill="#4ade80"/>
+  
+  <!-- Return Frame 3 -->
+  <rect x="580" y="290" width="240" height="50" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="700" y="315" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2 × 1 = 2</text>
+  <text x="700" y="335" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">returns 2</text>
+  
+  <!-- Arrow up -->
+  <line x1="700" y1="285" x2="700" y2="270" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="700,260 695,270 705,270" fill="#4ade80"/>
+  
+  <!-- Return Frame 2 -->
+  <rect x="580" y="210" width="240" height="50" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="700" y="235" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3 × 2 = 6</text>
+  <text x="700" y="255" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">returns 6</text>
+  
+  <!-- Arrow up -->
+  <line x1="700" y1="205" x2="700" y2="190" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="700,180 695,190 705,190" fill="#4ade80"/>
+  
+  <!-- Return Frame 1 -->
+  <rect x="580" y="130" width="240" height="50" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="700" y="155" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">4 × 6 = 24</text>
+  <text x="700" y="175" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">returns 24</text>
+  
+  <!-- Center divider -->
+  <line x1="450" y1="120" x2="450" y2="430" stroke="#3b82f6" stroke-width="1" stroke-dasharray="5,5"/>
+  
+  <!-- Formula section -->
+  <rect x="100" y="460" width="700" height="80" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="450" y="490" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">Recurrence Relation</text>
+  <text x="450" y="520" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">f(n) = n × f(n-1),  f(1) = 1</text>
+  
+  <!-- Complexity -->
+  <text x="200" y="580" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">Time: O(n)</text>
+  <text x="450" y="580" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">Space: O(n) stack frames</text>
+  <text x="700" y="580" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">Depth: n</text>
+  
+  <!-- Final result -->
+  <rect x="350" y="600" width="200" height="40" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="450" y="627" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">Result: 24</text>
+</svg>
+

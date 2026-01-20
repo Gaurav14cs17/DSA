@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 650">
+  <!-- Background -->
+  <rect width="950" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">🎯 Binary Search on Answer</text>
+  <text x="475" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Find Optimal Value in Monotonic Feasibility Space</text>
+  
+  <!-- Concept Visualization -->
+  <text x="50" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">CONCEPT: MONOTONIC FEASIBILITY</text>
+  
+  <!-- Feasibility Bar -->
+  <g transform="translate(50, 125)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Answer Space:</text>
+    
+    <!-- Range bar -->
+    <rect x="0" y="15" width="400" height="30" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" rx="4"/>
+    <text x="200" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ef4444">NOT FEASIBLE</text>
+    
+    <rect x="400" y="15" width="450" height="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+    <text x="625" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">FEASIBLE</text>
+    
+    <!-- Optimal point -->
+    <circle cx="400" cy="30" r="8" fill="#f97316" stroke="#ffffff" stroke-width="2"/>
+    <text x="400" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">OPTIMAL ANSWER</text>
+    
+    <!-- Labels -->
+    <text x="0" y="85" font-family="Courier New, monospace" font-size="11" fill="#888888">min_possible</text>
+    <text x="850" y="85" text-anchor="end" font-family="Courier New, monospace" font-size="11" fill="#888888">max_possible</text>
+  </g>
+  
+  <!-- Koko Eating Bananas Example -->
+  <text x="50" y="245" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">EXAMPLE: KOKO EATING BANANAS (LC 875)</text>
+  <text x="50" y="265" font-family="Courier New, monospace" font-size="11" fill="#888888">piles = [3, 6, 7, 11], hours = 8. Find minimum eating speed k.</text>
+  
+  <!-- Speed testing visualization -->
+  <g transform="translate(50, 285)">
+    <!-- Speed scale -->
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Speed k:</text>
+    
+    <!-- Test k=1 -->
+    <rect x="0" y="15" width="60" height="30" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" rx="4"/>
+    <text x="30" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ef4444">k=1</text>
+    <text x="30" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">27 hrs</text>
+    <text x="30" y="72" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">✗</text>
+    
+    <!-- Test k=4 -->
+    <rect x="70" y="15" width="60" height="30" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" rx="4"/>
+    <text x="100" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ef4444">k=4</text>
+    <text x="100" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">10 hrs</text>
+    <text x="100" y="72" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">✗</text>
+    
+    <!-- Test k=5 -->
+    <rect x="140" y="15" width="60" height="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="3" rx="4"/>
+    <text x="170" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">k=5</text>
+    <text x="170" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">8 hrs</text>
+    <text x="170" y="72" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">✓ MIN</text>
+    
+    <!-- Test k=6 -->
+    <rect x="210" y="15" width="60" height="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+    <text x="240" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#4ade80">k=6</text>
+    <text x="240" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">7 hrs</text>
+    <text x="240" y="72" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">✓</text>
+    
+    <!-- Test k=11 -->
+    <rect x="280" y="15" width="60" height="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+    <text x="310" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#4ade80">k=11</text>
+    <text x="310" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">4 hrs</text>
+    <text x="310" y="72" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">✓</text>
+  </g>
+  
+  <!-- Search Process -->
+  <text x="500" y="265" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">BINARY SEARCH PROCESS</text>
+  
+  <g transform="translate(500, 280)">
+    <!-- Step 1 -->
+    <text x="0" y="15" font-family="Courier New, monospace" font-size="11" fill="#888888">left=1, right=11, mid=6</text>
+    <rect x="0" y="25" width="200" height="20" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" rx="2"/>
+    <rect x="200" y="25" width="200" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1" rx="2"/>
+    <circle cx="300" cy="35" r="5" fill="#f97316"/>
+    <text x="410" y="40" font-family="Courier New, monospace" font-size="10" fill="#4ade80">feasible → right=6</text>
+    
+    <!-- Step 2 -->
+    <text x="0" y="65" font-family="Courier New, monospace" font-size="11" fill="#888888">left=1, right=6, mid=3</text>
+    <rect x="0" y="75" width="150" height="20" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" rx="2"/>
+    <rect x="150" y="75" width="100" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1" rx="2"/>
+    <circle cx="100" cy="85" r="5" fill="#f97316"/>
+    <text x="260" y="90" font-family="Courier New, monospace" font-size="10" fill="#ef4444">not feasible → left=4</text>
+    
+    <!-- Step 3 -->
+    <text x="0" y="115" font-family="Courier New, monospace" font-size="11" fill="#888888">left=4, right=6, mid=5</text>
+    <rect x="0" y="125" width="60" height="20" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" rx="2"/>
+    <rect x="60" y="125" width="60" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1" rx="2"/>
+    <circle cx="90" cy="135" r="5" fill="#f97316"/>
+    <text x="130" y="140" font-family="Courier New, monospace" font-size="10" fill="#4ade80">feasible → right=5</text>
+    
+    <!-- Result -->
+    <rect x="0" y="160" width="120" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+    <text x="60" y="178" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">Answer: 5</text>
+  </g>
+  
+  <!-- Template Section -->
+  <text x="50" y="430" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">MINIMIZE TEMPLATE</text>
+  <rect x="50" y="445" width="400" height="140" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="6"/>
+  <text x="65" y="470" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">def</text>
+  <text x="95" y="470" font-family="Courier New, monospace" font-size="11" fill="#ffffff">findMinimum(constraint):</text>
+  <text x="75" y="490" font-family="Courier New, monospace" font-size="11" fill="#ffffff">left, right = min_possible, max_possible</text>
+  <text x="75" y="510" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">while</text>
+  <text x="120" y="510" font-family="Courier New, monospace" font-size="11" fill="#ffffff">left &lt; right:</text>
+  <text x="95" y="530" font-family="Courier New, monospace" font-size="11" fill="#ffffff">mid = (left + right) // 2</text>
+  <text x="95" y="550" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">if</text>
+  <text x="115" y="550" font-family="Courier New, monospace" font-size="11" fill="#ffffff">canAchieve(mid):</text>
+  <text x="115" y="570" font-family="Courier New, monospace" font-size="11" fill="#4ade80">right = mid</text>
+  <text x="268" y="570" font-family="Courier New, monospace" font-size="11" fill="#888888"># Try smaller</text>
+  <text x="95" y="580" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">else:</text>
+  <text x="135" y="580" font-family="Courier New, monospace" font-size="11" fill="#ffffff">left = mid + 1</text>
+  
+  <!-- Maximize Template -->
+  <text x="500" y="430" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">MAXIMIZE TEMPLATE</text>
+  <rect x="500" y="445" width="400" height="140" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="6"/>
+  <text x="515" y="470" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">def</text>
+  <text x="545" y="470" font-family="Courier New, monospace" font-size="11" fill="#ffffff">findMaximum(constraint):</text>
+  <text x="525" y="490" font-family="Courier New, monospace" font-size="11" fill="#ffffff">left, right = min_possible, max_possible</text>
+  <text x="525" y="510" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">while</text>
+  <text x="570" y="510" font-family="Courier New, monospace" font-size="11" fill="#ffffff">left &lt; right:</text>
+  <text x="545" y="530" font-family="Courier New, monospace" font-size="11" fill="#ffffff">mid = (left + right + 1) // 2</text>
+  <text x="545" y="550" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">if</text>
+  <text x="565" y="550" font-family="Courier New, monospace" font-size="11" fill="#ffffff">canAchieve(mid):</text>
+  <text x="565" y="570" font-family="Courier New, monospace" font-size="11" fill="#4ade80">left = mid</text>
+  <text x="708" y="570" font-family="Courier New, monospace" font-size="11" fill="#888888"># Try larger</text>
+  <text x="545" y="580" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">else:</text>
+  <text x="585" y="580" font-family="Courier New, monospace" font-size="11" fill="#ffffff">right = mid - 1</text>
+  
+  <!-- Complexity -->
+  <text x="475" y="620" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(log(range) × check(n)) | Space: O(1)</text>
+</svg>

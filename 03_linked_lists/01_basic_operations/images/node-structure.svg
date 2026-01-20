@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <!-- Background -->
+  <rect width="1200" height="600" fill="#FFFFFF"/>
+  
+  <!-- Title -->
+  <text x="600" y="60" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#000000" text-anchor="middle">Linked List Node Structure</text>
+  
+  <!-- Single Node Box -->
+  <rect x="100" y="120" width="400" height="180" rx="15" fill="#E8F4FD" stroke="#2196F3" stroke-width="4"/>
+  <text x="300" y="170" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#000000" text-anchor="middle">Single Node</text>
+  
+  <!-- Node representation -->
+  <rect x="140" y="200" width="140" height="70" rx="8" fill="#BBDEFB" stroke="#1976D2" stroke-width="3"/>
+  <text x="210" y="245" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000" text-anchor="middle">data</text>
+  
+  <rect x="280" y="200" width="140" height="70" rx="8" fill="#C8E6C9" stroke="#388E3C" stroke-width="3"/>
+  <text x="350" y="245" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000" text-anchor="middle">next</text>
+  
+  <!-- Arrow from next -->
+  <line x1="420" y1="235" x2="480" y2="235" stroke="#388E3C" stroke-width="4" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#388E3C"/>
+    </marker>
+    <marker id="arrowhead-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1976D2"/>
+    </marker>
+  </defs>
+  
+  <!-- Memory Layout Box -->
+  <rect x="550" y="120" width="550" height="180" rx="15" fill="#FFF3E0" stroke="#FF9800" stroke-width="4"/>
+  <text x="825" y="170" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#000000" text-anchor="middle">Memory Layout</text>
+  
+  <text x="590" y="220" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#000000">┌──────────┬──────────┐</text>
+  <text x="590" y="250" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#000000">│   data   │   next   │──────▶ next node</text>
+  <text x="590" y="280" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#000000">│  (4-8B)  │  (4-8B)  │</text>
+  
+  <!-- Linked List Example -->
+  <rect x="100" y="340" width="1000" height="200" rx="15" fill="#F3E5F5" stroke="#9C27B0" stroke-width="4"/>
+  <text x="600" y="390" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#000000" text-anchor="middle">Linked List: 3 Nodes Connected</text>
+  
+  <!-- Node 1 -->
+  <rect x="150" y="420" width="70" height="50" rx="5" fill="#BBDEFB" stroke="#1976D2" stroke-width="3"/>
+  <text x="185" y="452" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000" text-anchor="middle">10</text>
+  <rect x="220" y="420" width="70" height="50" rx="5" fill="#C8E6C9" stroke="#388E3C" stroke-width="3"/>
+  <text x="255" y="452" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#000000" text-anchor="middle">●</text>
+  <line x1="290" y1="445" x2="360" y2="445" stroke="#388E3C" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="220" y="500" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#000000" text-anchor="middle">Head</text>
+  
+  <!-- Node 2 -->
+  <rect x="370" y="420" width="70" height="50" rx="5" fill="#BBDEFB" stroke="#1976D2" stroke-width="3"/>
+  <text x="405" y="452" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000" text-anchor="middle">20</text>
+  <rect x="440" y="420" width="70" height="50" rx="5" fill="#C8E6C9" stroke="#388E3C" stroke-width="3"/>
+  <text x="475" y="452" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#000000" text-anchor="middle">●</text>
+  <line x1="510" y1="445" x2="580" y2="445" stroke="#388E3C" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- Node 3 -->
+  <rect x="590" y="420" width="70" height="50" rx="5" fill="#BBDEFB" stroke="#1976D2" stroke-width="3"/>
+  <text x="625" y="452" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000" text-anchor="middle">30</text>
+  <rect x="660" y="420" width="70" height="50" rx="5" fill="#FFCDD2" stroke="#C62828" stroke-width="3"/>
+  <text x="695" y="452" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#000000" text-anchor="middle">null</text>
+  <text x="660" y="500" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#000000" text-anchor="middle">Tail</text>
+  
+  <!-- Space Complexity -->
+  <rect x="790" y="410" width="280" height="100" rx="10" fill="#E8F5E9" stroke="#4CAF50" stroke-width="3"/>
+  <text x="930" y="450" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#000000" text-anchor="middle">Space per node:</text>
+  <text x="930" y="485" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="#000000" text-anchor="middle">O(data) + O(pointer)</text>
+</svg>
+
+

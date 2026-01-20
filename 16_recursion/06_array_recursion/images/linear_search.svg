@@ -1,0 +1,81 @@
+<svg viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Recursive Linear Search</text>
+  <text x="450" y="58" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">search([4, 8, 2, 9, 5], target=9)</text>
+  
+  <!-- Array -->
+  <rect x="250" y="80" width="50" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="275" y="110" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+  <text x="275" y="135" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">i=0</text>
+  
+  <rect x="310" y="80" width="50" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="335" y="110" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">8</text>
+  <text x="335" y="135" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">i=1</text>
+  
+  <rect x="370" y="80" width="50" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="395" y="110" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="395" y="135" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">i=2</text>
+  
+  <rect x="430" y="80" width="50" height="45" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="455" y="110" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">9</text>
+  <text x="455" y="135" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">i=3</text>
+  
+  <rect x="490" y="80" width="50" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="515" y="110" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+  <text x="515" y="135" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">i=4</text>
+  
+  <text x="600" y="110" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">target = 9</text>
+  
+  <!-- Recursive calls -->
+  <text x="450" y="180" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">Recursive Execution</text>
+  
+  <!-- Call 0 -->
+  <rect x="100" y="200" width="700" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="130" y="220" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">Call 0:</text>
+  <text x="200" y="220" font-family="Courier New, monospace" font-size="12" fill="#ffffff">search(arr, 9, i=0)</text>
+  <text x="400" y="220" font-family="Courier New, monospace" font-size="12" fill="#888888">→ arr[0]=4 ≠ 9</text>
+  <text x="550" y="220" font-family="Courier New, monospace" font-size="12" fill="#ef4444">✗ Not found</text>
+  <text x="700" y="220" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">→ recurse(i=1)</text>
+  
+  <rect x="250" y="230" width="50" height="15" rx="2" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  
+  <!-- Call 1 -->
+  <rect x="120" y="260" width="660" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="150" y="280" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">Call 1:</text>
+  <text x="220" y="280" font-family="Courier New, monospace" font-size="12" fill="#ffffff">search(arr, 9, i=1)</text>
+  <text x="420" y="280" font-family="Courier New, monospace" font-size="12" fill="#888888">→ arr[1]=8 ≠ 9</text>
+  <text x="570" y="280" font-family="Courier New, monospace" font-size="12" fill="#ef4444">✗ Not found</text>
+  <text x="700" y="280" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">→ recurse(i=2)</text>
+  
+  <rect x="310" y="290" width="50" height="15" rx="2" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  
+  <!-- Call 2 -->
+  <rect x="140" y="320" width="620" height="50" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="170" y="340" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">Call 2:</text>
+  <text x="240" y="340" font-family="Courier New, monospace" font-size="12" fill="#ffffff">search(arr, 9, i=2)</text>
+  <text x="440" y="340" font-family="Courier New, monospace" font-size="12" fill="#888888">→ arr[2]=2 ≠ 9</text>
+  <text x="590" y="340" font-family="Courier New, monospace" font-size="12" fill="#ef4444">✗ Not found</text>
+  <text x="700" y="340" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">→ recurse(i=3)</text>
+  
+  <rect x="370" y="350" width="50" height="15" rx="2" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  
+  <!-- Call 3 - FOUND -->
+  <rect x="160" y="380" width="580" height="50" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="190" y="400" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Call 3:</text>
+  <text x="260" y="400" font-family="Courier New, monospace" font-size="12" fill="#ffffff">search(arr, 9, i=3)</text>
+  <text x="460" y="400" font-family="Courier New, monospace" font-size="12" fill="#888888">→ arr[3]=9 == 9</text>
+  <text x="610" y="400" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80">✓ FOUND!</text>
+  <text x="700" y="400" font-family="Courier New, monospace" font-size="12" fill="#4ade80">return 3</text>
+  
+  <rect x="430" y="410" width="50" height="15" rx="2" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  
+  <!-- Result propagation -->
+  <text x="450" y="465" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">Result Propagates Back</text>
+  
+  <rect x="200" y="480" width="500" height="55" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="220" y="505" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Call 3 returns 3 → Call 2 returns 3 → Call 1 returns 3 → Call 0 returns 3</text>
+  <text x="450" y="525" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">Final Result: index = 3</text>
+</svg>
+

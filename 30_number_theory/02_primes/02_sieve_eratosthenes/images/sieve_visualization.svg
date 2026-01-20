@@ -1,0 +1,169 @@
+<svg viewBox="0 0 950 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Sieve of Eratosthenes</text>
+  <text x="475" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Find all primes up to n = 30</text>
+  
+  <!-- Initial State -->
+  <text x="50" y="90" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">INITIAL: All marked as potential primes</text>
+  
+  <!-- Number grid - Initial -->
+  <g transform="translate(50, 100)">
+    <!-- Row 1: 2-10 -->
+    <rect x="0" y="0" width="40" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="20" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">2</text>
+    <rect x="45" y="0" width="40" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="65" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">3</text>
+    <rect x="90" y="0" width="40" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="110" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">4</text>
+    <rect x="135" y="0" width="40" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="155" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">5</text>
+    <rect x="180" y="0" width="40" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="200" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">6</text>
+    <rect x="225" y="0" width="40" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="245" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">7</text>
+    <rect x="270" y="0" width="40" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="290" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">8</text>
+    <rect x="315" y="0" width="40" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="335" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">9</text>
+    <rect x="360" y="0" width="40" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="380" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">10</text>
+  </g>
+  
+  <!-- After marking 2's multiples -->
+  <text x="50" y="170" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 1: Mark multiples of 2 (from 2² = 4)</text>
+  
+  <g transform="translate(50, 180)">
+    <rect x="0" y="0" width="40" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="20" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">2</text>
+    <rect x="45" y="0" width="40" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="65" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">3</text>
+    <rect x="90" y="0" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="110" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ef4444">4</text>
+    <rect x="135" y="0" width="40" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="155" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">5</text>
+    <rect x="180" y="0" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="200" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ef4444">6</text>
+    <rect x="225" y="0" width="40" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="245" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">7</text>
+    <rect x="270" y="0" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="290" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ef4444">8</text>
+    <rect x="315" y="0" width="40" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="335" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">9</text>
+    <rect x="360" y="0" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="380" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ef4444">10</text>
+  </g>
+  
+  <!-- After marking 3's multiples -->
+  <text x="50" y="250" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 2: Mark multiples of 3 (from 3² = 9)</text>
+  
+  <g transform="translate(50, 260)">
+    <rect x="0" y="0" width="40" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="20" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">2</text>
+    <rect x="45" y="0" width="40" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="65" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">3</text>
+    <rect x="90" y="0" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="110" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ef4444">4</text>
+    <rect x="135" y="0" width="40" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="155" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">5</text>
+    <rect x="180" y="0" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="200" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ef4444">6</text>
+    <rect x="225" y="0" width="40" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="245" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">7</text>
+    <rect x="270" y="0" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="290" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ef4444">8</text>
+    <rect x="315" y="0" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="335" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ef4444">9</text>
+    <rect x="360" y="0" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="380" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ef4444">10</text>
+  </g>
+  
+  <!-- After marking 5's multiples -->
+  <text x="50" y="330" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 3: p=5, 5² = 25 &gt; √30, STOP at p=5</text>
+  
+  <!-- Final grid - Full 2-30 -->
+  <text x="50" y="380" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">FINAL: Primes up to 30</text>
+  
+  <g transform="translate(50, 395)">
+    <!-- Row 1: 2-10 -->
+    <rect x="0" y="0" width="40" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="20" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">2</text>
+    <rect x="45" y="0" width="40" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="65" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">3</text>
+    <rect x="90" y="0" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="110" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">4</text>
+    <rect x="135" y="0" width="40" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="155" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">5</text>
+    <rect x="180" y="0" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="200" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">6</text>
+    <rect x="225" y="0" width="40" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="245" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">7</text>
+    <rect x="270" y="0" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="290" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">8</text>
+    <rect x="315" y="0" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="335" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">9</text>
+    <rect x="360" y="0" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="380" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">10</text>
+    
+    <!-- Row 2: 11-20 -->
+    <rect x="0" y="40" width="40" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="20" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">11</text>
+    <rect x="45" y="40" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="65" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">12</text>
+    <rect x="90" y="40" width="40" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="110" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">13</text>
+    <rect x="135" y="40" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="155" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">14</text>
+    <rect x="180" y="40" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="200" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">15</text>
+    <rect x="225" y="40" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="245" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">16</text>
+    <rect x="270" y="40" width="40" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="290" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">17</text>
+    <rect x="315" y="40" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="335" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">18</text>
+    <rect x="360" y="40" width="40" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="380" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">19</text>
+    <rect x="405" y="40" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="425" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">20</text>
+    
+    <!-- Row 3: 21-30 -->
+    <rect x="0" y="80" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="20" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">21</text>
+    <rect x="45" y="80" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="65" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">22</text>
+    <rect x="90" y="80" width="40" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="110" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">23</text>
+    <rect x="135" y="80" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="155" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">24</text>
+    <rect x="180" y="80" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="200" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">25</text>
+    <rect x="225" y="80" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="245" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">26</text>
+    <rect x="270" y="80" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="290" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">27</text>
+    <rect x="315" y="80" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="335" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">28</text>
+    <rect x="360" y="80" width="40" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="380" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">29</text>
+    <rect x="405" y="80" width="40" height="30" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="425" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">30</text>
+  </g>
+  
+  <!-- Key insight box -->
+  <rect x="520" y="100" width="400" height="130" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="720" y="130" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">WHY START FROM p²?</text>
+  <text x="540" y="160" font-family="Courier New, monospace" font-size="11" fill="#ffffff">When p = 5:</text>
+  <text x="540" y="180" font-family="Courier New, monospace" font-size="11" fill="#888888">2×5=10 already marked by 2</text>
+  <text x="540" y="200" font-family="Courier New, monospace" font-size="11" fill="#888888">3×5=15 already marked by 3</text>
+  <text x="540" y="220" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">5×5=25 is first NEW marking</text>
+  
+  <!-- Result -->
+  <rect x="200" y="545" width="550" height="50" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="475" y="578" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80">Primes ≤ 30: {2, 3, 5, 7, 11, 13, 17, 19, 23, 29}</text>
+  
+  <!-- Complexity -->
+  <text x="475" y="630" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(n log log n) | Space: O(n)</text>
+  <text x="475" y="655" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">n = 10⁶ has 78,498 primes | n = 10⁹ has 50,847,534 primes</text>
+</svg>

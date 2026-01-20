@@ -1,0 +1,58 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="500" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">CRT Applications</text>
+  
+  <!-- App 1 -->
+  <rect x="30" y="70" width="270" height="150" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="165" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">LARGE NUMBER ARITHMETIC</text>
+  <text x="50" y="130" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Represent large N as:</text>
+  <text x="50" y="150" font-family="Courier New, monospace" font-size="10" fill="#ffffff">(N mod m₁, N mod m₂, ...)</text>
+  <text x="50" y="175" font-family="Courier New, monospace" font-size="10" fill="#3b82f6">Arithmetic on residues</text>
+  <text x="50" y="200" font-family="Courier New, monospace" font-size="10" fill="#888888">Reconstruct via CRT</text>
+  
+  <!-- App 2 -->
+  <rect x="315" y="70" width="270" height="150" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="450" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">RSA DECRYPTION</text>
+  <text x="335" y="130" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Speed up decryption:</text>
+  <text x="335" y="150" font-family="Courier New, monospace" font-size="10" fill="#ffffff">m^d mod pq computed via</text>
+  <text x="335" y="175" font-family="Courier New, monospace" font-size="10" fill="#f97316">m^d mod p and m^d mod q</text>
+  <text x="335" y="200" font-family="Courier New, monospace" font-size="10" fill="#888888">~4x speedup</text>
+  
+  <!-- App 3 -->
+  <rect x="600" y="70" width="270" height="150" rx="10" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="735" y="100" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">POLYNOMIAL INTERPOLATION</text>
+  <text x="620" y="130" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Evaluate polynomial</text>
+  <text x="620" y="150" font-family="Courier New, monospace" font-size="10" fill="#ffffff">at multiple primes</text>
+  <text x="620" y="175" font-family="Courier New, monospace" font-size="10" fill="#4ade80">Reconstruct coefficients</text>
+  <text x="620" y="200" font-family="Courier New, monospace" font-size="10" fill="#888888">Rational reconstruction</text>
+  
+  <!-- App 4 -->
+  <rect x="30" y="240" width="270" height="150" rx="10" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="165" y="270" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">CALENDAR PROBLEMS</text>
+  <text x="50" y="300" font-family="Courier New, monospace" font-size="10" fill="#ffffff">When do cycles align?</text>
+  <text x="50" y="325" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Event A: every 3 days</text>
+  <text x="50" y="345" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Event B: every 5 days</text>
+  <text x="50" y="370" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">Both on day x: CRT!</text>
+  
+  <!-- App 5 -->
+  <rect x="315" y="240" width="270" height="150" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="450" y="270" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COMPETITIVE PROGRAMMING</text>
+  <text x="335" y="300" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Compute large values</text>
+  <text x="335" y="325" font-family="Courier New, monospace" font-size="10" fill="#ffffff">mod multiple primes</text>
+  <text x="335" y="350" font-family="Courier New, monospace" font-size="10" fill="#3b82f6">Check equality via</text>
+  <text x="335" y="370" font-family="Courier New, monospace" font-size="10" fill="#3b82f6">multiple mod values</text>
+  
+  <!-- App 6 -->
+  <rect x="600" y="240" width="270" height="150" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="735" y="270" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">HASH COLLISION</text>
+  <text x="620" y="300" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Multi-hash technique:</text>
+  <text x="620" y="325" font-family="Courier New, monospace" font-size="10" fill="#ffffff">h₁(x) mod p₁</text>
+  <text x="620" y="345" font-family="Courier New, monospace" font-size="10" fill="#ffffff">h₂(x) mod p₂</text>
+  <text x="620" y="370" font-family="Courier New, monospace" font-size="10" fill="#f97316">Collision prob ~1/p₁p₂</text>
+  
+  <!-- Note -->
+  <rect x="200" y="410" width="500" height="60" rx="8" fill="#0f0f23" stroke="#888888" stroke-width="1"/>
+  <text x="450" y="445" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">CRT converts between residue representation and integer</text>
+</svg>

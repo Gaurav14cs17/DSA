@@ -1,0 +1,211 @@
+<svg viewBox="0 0 950 650" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: bold 26px 'Courier New', monospace; fill: #ffffff; }
+      .subtitle { font: 16px 'Courier New', monospace; fill: #888888; }
+      .section-label { font: bold 14px 'Courier New', monospace; fill: #e94560; }
+      .cell-text { font: bold 16px 'Courier New', monospace; fill: #ffffff; }
+      .small-label { font: 11px 'Courier New', monospace; fill: #888888; }
+      .result-text { font: bold 14px 'Courier New', monospace; fill: #4ade80; }
+      .info-text { font: 13px 'Courier New', monospace; fill: #ffffff; }
+      .complexity { font: 12px 'Courier New', monospace; fill: #60a5fa; }
+      .step-text { font: 12px 'Courier New', monospace; fill: #fbbf24; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="950" height="650" fill="#0f0f23"/>
+
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" class="title">🍊 Multi-Source BFS</text>
+  <text x="475" y="70" text-anchor="middle" class="subtitle">Rotting Oranges (#994) - Simultaneous BFS from multiple sources</text>
+
+  <!-- Problem Statement -->
+  <text x="50" y="110" class="section-label">Problem: Find minimum time for all oranges to rot</text>
+  <text x="50" y="135" class="small-label">2 = rotten (source), 1 = fresh, 0 = empty</text>
+
+  <!-- Initial Grid -->
+  <text x="120" y="175" text-anchor="middle" class="section-label">Initial Grid</text>
+  
+  <g transform="translate(50, 190)">
+    <!-- Row 0 -->
+    <rect x="0" y="0" width="45" height="45" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="22" y="30" text-anchor="middle" class="cell-text" fill="#f97316">2</text>
+    
+    <rect x="50" y="0" width="45" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="72" y="30" text-anchor="middle" class="cell-text">1</text>
+    
+    <rect x="100" y="0" width="45" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="122" y="30" text-anchor="middle" class="cell-text">1</text>
+
+    <!-- Row 1 -->
+    <rect x="0" y="50" width="45" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="22" y="80" text-anchor="middle" class="cell-text">1</text>
+    
+    <rect x="50" y="50" width="45" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="72" y="80" text-anchor="middle" class="cell-text">1</text>
+    
+    <rect x="100" y="50" width="45" height="45" rx="4" fill="#1a1a2e" stroke="#888888" stroke-width="1"/>
+    <text x="122" y="80" text-anchor="middle" class="cell-text" fill="#888888">0</text>
+
+    <!-- Row 2 -->
+    <rect x="0" y="100" width="45" height="45" rx="4" fill="#1a1a2e" stroke="#888888" stroke-width="1"/>
+    <text x="22" y="130" text-anchor="middle" class="cell-text" fill="#888888">0</text>
+    
+    <rect x="50" y="100" width="45" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="72" y="130" text-anchor="middle" class="cell-text">1</text>
+    
+    <rect x="100" y="100" width="45" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="122" y="130" text-anchor="middle" class="cell-text">1</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M 210 280 L 270 280" stroke="#888888" stroke-width="2" fill="none"/>
+  <polygon points="270,275 285,280 270,285" fill="#888888"/>
+
+  <!-- Step by Step Processing -->
+  <!-- Time 0 -->
+  <text x="360" y="175" text-anchor="middle" class="step-text">t=0: Sources</text>
+  <g transform="translate(290, 190)">
+    <rect x="0" y="0" width="45" height="45" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="22" y="30" text-anchor="middle" class="cell-text" fill="#f97316">2</text>
+    
+    <rect x="50" y="0" width="45" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="72" y="30" text-anchor="middle" class="cell-text">1</text>
+    
+    <rect x="100" y="0" width="45" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="122" y="30" text-anchor="middle" class="cell-text">1</text>
+
+    <rect x="0" y="50" width="45" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="22" y="80" text-anchor="middle" class="cell-text">1</text>
+    
+    <rect x="50" y="50" width="45" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="72" y="80" text-anchor="middle" class="cell-text">1</text>
+    
+    <rect x="100" y="50" width="45" height="45" rx="4" fill="#1a1a2e" stroke="#888888" stroke-width="1"/>
+    <text x="122" y="80" text-anchor="middle" class="cell-text" fill="#888888">0</text>
+
+    <rect x="0" y="100" width="45" height="45" rx="4" fill="#1a1a2e" stroke="#888888" stroke-width="1"/>
+    <text x="22" y="130" text-anchor="middle" class="cell-text" fill="#888888">0</text>
+    
+    <rect x="50" y="100" width="45" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="72" y="130" text-anchor="middle" class="cell-text">1</text>
+    
+    <rect x="100" y="100" width="45" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="122" y="130" text-anchor="middle" class="cell-text">1</text>
+  </g>
+  <text x="360" y="345" text-anchor="middle" class="small-label">Queue: [(0,0)]</text>
+  <text x="360" y="360" text-anchor="middle" class="small-label">Fresh: 6</text>
+
+  <!-- Arrow -->
+  <path d="M 450 280 L 510 280" stroke="#888888" stroke-width="2" fill="none"/>
+  <polygon points="510,275 525,280 510,285" fill="#888888"/>
+
+  <!-- Time 1 -->
+  <text x="600" y="175" text-anchor="middle" class="step-text">t=1: Spread</text>
+  <g transform="translate(530, 190)">
+    <rect x="0" y="0" width="45" height="45" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="22" y="30" text-anchor="middle" class="cell-text" fill="#4ade80">2</text>
+    
+    <rect x="50" y="0" width="45" height="45" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="72" y="30" text-anchor="middle" class="cell-text" fill="#f97316">2</text>
+    
+    <rect x="100" y="0" width="45" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="122" y="30" text-anchor="middle" class="cell-text">1</text>
+
+    <rect x="0" y="50" width="45" height="45" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="22" y="80" text-anchor="middle" class="cell-text" fill="#f97316">2</text>
+    
+    <rect x="50" y="50" width="45" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="72" y="80" text-anchor="middle" class="cell-text">1</text>
+    
+    <rect x="100" y="50" width="45" height="45" rx="4" fill="#1a1a2e" stroke="#888888" stroke-width="1"/>
+    <text x="122" y="80" text-anchor="middle" class="cell-text" fill="#888888">0</text>
+
+    <rect x="0" y="100" width="45" height="45" rx="4" fill="#1a1a2e" stroke="#888888" stroke-width="1"/>
+    <text x="22" y="130" text-anchor="middle" class="cell-text" fill="#888888">0</text>
+    
+    <rect x="50" y="100" width="45" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="72" y="130" text-anchor="middle" class="cell-text">1</text>
+    
+    <rect x="100" y="100" width="45" height="45" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="122" y="130" text-anchor="middle" class="cell-text">1</text>
+  </g>
+  <text x="600" y="345" text-anchor="middle" class="small-label">Queue: [(0,1),(1,0)]</text>
+  <text x="600" y="360" text-anchor="middle" class="small-label">Fresh: 4</text>
+
+  <!-- Arrow -->
+  <path d="M 690 280 L 750 280" stroke="#888888" stroke-width="2" fill="none"/>
+  <polygon points="750,275 765,280 750,285" fill="#888888"/>
+
+  <!-- Final State -->
+  <text x="840" y="175" text-anchor="middle" class="step-text">t=4: Done!</text>
+  <g transform="translate(770, 190)">
+    <rect x="0" y="0" width="45" height="45" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="22" y="30" text-anchor="middle" class="cell-text" fill="#4ade80">2</text>
+    
+    <rect x="50" y="0" width="45" height="45" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="72" y="30" text-anchor="middle" class="cell-text" fill="#4ade80">2</text>
+    
+    <rect x="100" y="0" width="45" height="45" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="122" y="30" text-anchor="middle" class="cell-text" fill="#4ade80">2</text>
+
+    <rect x="0" y="50" width="45" height="45" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="22" y="80" text-anchor="middle" class="cell-text" fill="#4ade80">2</text>
+    
+    <rect x="50" y="50" width="45" height="45" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="72" y="80" text-anchor="middle" class="cell-text" fill="#4ade80">2</text>
+    
+    <rect x="100" y="50" width="45" height="45" rx="4" fill="#1a1a2e" stroke="#888888" stroke-width="1"/>
+    <text x="122" y="80" text-anchor="middle" class="cell-text" fill="#888888">0</text>
+
+    <rect x="0" y="100" width="45" height="45" rx="4" fill="#1a1a2e" stroke="#888888" stroke-width="1"/>
+    <text x="22" y="130" text-anchor="middle" class="cell-text" fill="#888888">0</text>
+    
+    <rect x="50" y="100" width="45" height="45" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="72" y="130" text-anchor="middle" class="cell-text" fill="#4ade80">2</text>
+    
+    <rect x="100" y="100" width="45" height="45" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="122" y="130" text-anchor="middle" class="cell-text" fill="#4ade80">2</text>
+  </g>
+  <text x="840" y="345" text-anchor="middle" class="small-label">Queue: []</text>
+  <text x="840" y="360" text-anchor="middle" class="result-text">Fresh: 0</text>
+
+  <!-- Result Box -->
+  <rect x="50" y="390" width="300" height="50" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="200" y="420" text-anchor="middle" class="result-text">Result: 4 minutes</text>
+
+  <!-- Algorithm Box -->
+  <rect x="370" y="390" width="530" height="110" rx="8" fill="#1a1a2e" stroke="#60a5fa" stroke-width="2"/>
+  <text x="635" y="420" text-anchor="middle" class="section-label" fill="#60a5fa">Multi-Source BFS Algorithm</text>
+  <text x="390" y="450" class="info-text">1. Initialize queue with ALL sources (rotten oranges)</text>
+  <text x="390" y="475" class="info-text">2. BFS: process level by level (each level = 1 minute)</text>
+  <text x="390" y="500" class="info-text">3. Track fresh count → return -1 if fresh > 0 at end</text>
+
+  <!-- Key Insight Box -->
+  <rect x="50" y="460" width="300" height="100" rx="8" fill="#1a1a2e" stroke="#f97316" stroke-width="2"/>
+  <text x="200" y="490" text-anchor="middle" class="section-label" fill="#f97316">Key Insight</text>
+  <text x="70" y="520" class="info-text">Start BFS from ALL</text>
+  <text x="70" y="545" class="info-text">sources simultaneously!</text>
+
+  <!-- Legend -->
+  <rect x="50" y="580" width="850" height="50" rx="8" fill="#1a1a2e" stroke="#888888" stroke-width="1"/>
+  
+  <rect x="80" y="595" width="25" height="20" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="115" y="610" class="small-label">Currently rotting</text>
+  
+  <rect x="240" y="595" width="25" height="20" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="275" y="610" class="small-label">Already rotten</text>
+  
+  <rect x="400" y="595" width="25" height="20" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="435" y="610" class="small-label">Fresh</text>
+  
+  <rect x="510" y="595" width="25" height="20" rx="3" fill="#1a1a2e" stroke="#888888" stroke-width="1"/>
+  <text x="545" y="610" class="small-label">Empty</text>
+
+  <text x="680" y="610" class="complexity">Time: O(m×n) | Space: O(m×n)</text>
+
+  <!-- Footer -->
+  <text x="475" y="640" text-anchor="middle" class="complexity">Also used for: 01 Matrix (#542), Walls and Gates (#286), Distance from All Buildings (#317)</text>
+</svg>
+

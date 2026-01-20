@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 700">
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Path Problems</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Path Sum • Max Path Sum • Prefix Sum Technique</text>
+  
+  <!-- PATH SUM Section -->
+  <g transform="translate(50, 100)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">PATH SUM (Root-to-Leaf)</text>
+    <text x="0" y="20" font-family="Courier New, monospace" font-size="11" fill="#888888">Target = 22</text>
+    
+    <g transform="translate(50, 40)">
+      <line x1="60" y1="20" x2="30" y2="70" stroke="#4ade80" stroke-width="3"/>
+      <line x1="60" y1="20" x2="90" y2="70" stroke="#888888" stroke-width="2"/>
+      <line x1="30" y1="90" x2="10" y2="140" stroke="#4ade80" stroke-width="3"/>
+      <line x1="10" y1="160" x2="-5" y2="200" stroke="#888888" stroke-width="2"/>
+      <line x1="10" y1="160" x2="25" y2="200" stroke="#4ade80" stroke-width="3"/>
+      
+      <circle cx="60" cy="20" r="20" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="60" y="26" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+      
+      <circle cx="30" cy="85" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="30" y="90" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+      
+      <circle cx="90" cy="85" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="90" y="90" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">8</text>
+      
+      <circle cx="10" cy="155" r="16" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="10" y="160" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">11</text>
+      
+      <circle cx="-5" cy="210" r="14" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="-5" y="215" font-family="Courier New, monospace" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+      
+      <circle cx="25" cy="210" r="14" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="25" y="215" font-family="Courier New, monospace" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    </g>
+    
+    <text x="0" y="290" font-family="Courier New, monospace" font-size="11" fill="#4ade80">✓ Path: 5→4→11→2 = 22</text>
+  </g>
+  
+  <!-- MAX PATH SUM Section -->
+  <g transform="translate(320, 100)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">MAX PATH SUM</text>
+    <text x="0" y="20" font-family="Courier New, monospace" font-size="11" fill="#888888">Any node to any node</text>
+    
+    <g transform="translate(50, 40)">
+      <line x1="60" y1="20" x2="30" y2="70" stroke="#888888" stroke-width="2"/>
+      <line x1="60" y1="20" x2="90" y2="70" stroke="#4ade80" stroke-width="3"/>
+      <line x1="90" y1="90" x2="70" y2="135" stroke="#4ade80" stroke-width="3"/>
+      <line x1="90" y1="90" x2="110" y2="135" stroke="#4ade80" stroke-width="3"/>
+      
+      <circle cx="60" cy="20" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="60" y="26" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">-10</text>
+      
+      <circle cx="30" cy="85" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="30" y="90" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">9</text>
+      
+      <circle cx="90" cy="85" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="90" y="90" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">20</text>
+      
+      <circle cx="70" cy="150" r="16" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="70" y="155" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">15</text>
+      
+      <circle cx="110" cy="150" r="16" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="110" y="155" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+    </g>
+    
+    <text x="0" y="210" font-family="Courier New, monospace" font-size="11" fill="#888888">gain(node) = val + max(left, right, 0)</text>
+    <text x="0" y="230" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Max = 15 + 20 + 7 = 42</text>
+  </g>
+  
+  <!-- PREFIX SUM Section -->
+  <g transform="translate(600, 100)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">PATH SUM III (Prefix Sum)</text>
+    <text x="0" y="20" font-family="Courier New, monospace" font-size="11" fill="#888888">Count paths with sum = k</text>
+    
+    <g transform="translate(50, 40)">
+      <line x1="50" y1="20" x2="25" y2="65" stroke="#3b82f6" stroke-width="2"/>
+      <line x1="50" y1="20" x2="75" y2="65" stroke="#3b82f6" stroke-width="2"/>
+      <line x1="25" y1="85" x2="10" y2="125" stroke="#3b82f6" stroke-width="2"/>
+      <line x1="25" y1="85" x2="40" y2="125" stroke="#3b82f6" stroke-width="2"/>
+      
+      <circle cx="50" cy="20" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="50" y="26" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">10</text>
+      <text x="75" y="20" font-family="Courier New, monospace" font-size="9" fill="#a78bfa">p=10</text>
+      
+      <circle cx="25" cy="80" r="16" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="25" y="85" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+      <text x="48" y="80" font-family="Courier New, monospace" font-size="9" fill="#a78bfa">p=15</text>
+      
+      <circle cx="75" cy="80" r="16" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="75" y="85" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">-3</text>
+      
+      <circle cx="10" cy="135" r="14" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="10" y="140" font-family="Courier New, monospace" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+      <text x="30" y="140" font-family="Courier New, monospace" font-size="9" fill="#a78bfa">p=18</text>
+      
+      <circle cx="40" cy="135" r="14" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="40" y="140" font-family="Courier New, monospace" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    </g>
+    
+    <text x="0" y="200" font-family="Courier New, monospace" font-size="10" fill="#888888">prefix[j] - prefix[i] = k</text>
+    <text x="0" y="220" font-family="Courier New, monospace" font-size="10" fill="#888888">Count prefix[j] - k in map</text>
+  </g>
+  
+  <!-- Algorithm Flow -->
+  <g transform="translate(50, 420)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">PATH SUM PATTERNS</text>
+    
+    <!-- Pattern boxes -->
+    <g transform="translate(0, 30)">
+      <rect x="0" y="0" width="200" height="80" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="100" y="25" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">Root-to-Leaf</text>
+      <text x="100" y="45" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">DFS + subtract target</text>
+      <text x="100" y="65" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">O(n) time, O(h) space</text>
+    </g>
+    
+    <g transform="translate(230, 30)">
+      <rect x="0" y="0" width="200" height="80" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="100" y="25" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316" text-anchor="middle">Any-to-Any</text>
+      <text x="100" y="45" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">Prefix sum + hash map</text>
+      <text x="100" y="65" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">O(n) time, O(h) space</text>
+    </g>
+    
+    <g transform="translate(460, 30)">
+      <rect x="0" y="0" width="200" height="80" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="100" y="25" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa" text-anchor="middle">Max Path Sum</text>
+      <text x="100" y="45" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">Gain + global max track</text>
+      <text x="100" y="65" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">O(n) time, O(h) space</text>
+    </g>
+    
+    <g transform="translate(690, 30)">
+      <rect x="0" y="0" width="200" height="80" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="100" y="25" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ef4444" text-anchor="middle">All Paths</text>
+      <text x="100" y="45" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">Backtracking + copy</text>
+      <text x="100" y="65" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">O(n²) time, O(n) space</text>
+    </g>
+  </g>
+  
+  <!-- Key Formulas -->
+  <g transform="translate(50, 570)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">KEY FORMULAS</text>
+    
+    <text x="0" y="30" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Max Path:</text>
+    <text x="100" y="30" font-family="Courier New, monospace" font-size="12" fill="#ffffff">gain = val + max(0, left_gain, right_gain)</text>
+    
+    <text x="0" y="55" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Path Through:</text>
+    <text x="100" y="55" font-family="Courier New, monospace" font-size="12" fill="#ffffff">val + max(0, left) + max(0, right)</text>
+    
+    <text x="450" y="30" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Build Number:</text>
+    <text x="560" y="30" font-family="Courier New, monospace" font-size="12" fill="#ffffff">num = num * 10 + node.val</text>
+    
+    <text x="450" y="55" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Prefix Count:</text>
+    <text x="560" y="55" font-family="Courier New, monospace" font-size="12" fill="#ffffff">count[prefix - target]</text>
+  </g>
+  
+  <!-- Key Insight Box -->
+  <g transform="translate(50, 640)">
+    <rect x="0" y="0" width="850" height="45" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="20" y="28" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316">💡 KEY:</text>
+    <text x="80" y="28" font-family="Courier New, monospace" font-size="11" fill="#ffffff">For max path: return gain (one direction) but track global max of path_through (both directions)!</text>
+  </g>
+</svg>
+

@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <rect width="900" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Remove Nth Node From End</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Gap/Offset Technique (LeetCode 19)</text>
+  
+  <!-- Problem statement -->
+  <text x="50" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Remove 2nd node from end: [1 → 2 → 3 → 4 → 5] → [1 → 2 → 3 → 5]</text>
+  
+  <!-- Step 1: Create gap -->
+  <text x="50" y="150" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">Step 1: Move fast n+1 steps ahead (n=2, so 3 steps)</text>
+  
+  <g transform="translate(50, 170)">
+    <!-- Dummy node -->
+    <circle cx="30" cy="30" r="20" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" stroke-dasharray="4"/>
+    <text x="30" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">D</text>
+    <text x="30" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">slow</text>
+    <line x1="50" y1="30" x2="80" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="80,25 90,30 80,35" fill="#3b82f6"/>
+    
+    <!-- Node 1 -->
+    <circle cx="110" cy="30" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="110" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">1</text>
+    <line x1="130" y1="30" x2="160" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="160,25 170,30 160,35" fill="#3b82f6"/>
+    
+    <!-- Node 2 -->
+    <circle cx="190" cy="30" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="190" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">2</text>
+    <line x1="210" y1="30" x2="240" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="240,25 250,30 240,35" fill="#3b82f6"/>
+    
+    <!-- Node 3 -->
+    <circle cx="270" cy="30" r="20" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="270" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">3</text>
+    <text x="270" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">fast</text>
+    <line x1="290" y1="30" x2="320" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="320,25 330,30 320,35" fill="#3b82f6"/>
+    
+    <!-- Node 4 (to be removed) -->
+    <circle cx="350" cy="30" r="20" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+    <text x="350" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ef4444">4</text>
+    <text x="350" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">2nd end</text>
+    <line x1="370" y1="30" x2="400" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="400,25 410,30 400,35" fill="#3b82f6"/>
+    
+    <!-- Node 5 -->
+    <circle cx="430" cy="30" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="430" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">5</text>
+    <text x="465" y="35" font-family="Courier New, monospace" font-size="12" fill="#888888">→ null</text>
+    
+    <!-- Gap indicator -->
+    <line x1="30" y1="90" x2="270" y2="90" stroke="#4ade80" stroke-width="2"/>
+    <text x="150" y="105" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">gap = n+1 = 3 nodes</text>
+  </g>
+  
+  <!-- Step 2: Move together -->
+  <text x="50" y="300" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">Step 2: Move both until fast reaches null</text>
+  
+  <g transform="translate(50, 320)">
+    <!-- Dummy node -->
+    <circle cx="30" cy="30" r="20" fill="#1f0f0f" stroke="#888888" stroke-width="2" stroke-dasharray="4"/>
+    <text x="30" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#888888">D</text>
+    <line x1="50" y1="30" x2="80" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="80,25 90,30 80,35" fill="#3b82f6"/>
+    
+    <!-- Node 1 -->
+    <circle cx="110" cy="30" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="110" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">1</text>
+    <line x1="130" y1="30" x2="160" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="160,25 170,30 160,35" fill="#3b82f6"/>
+    
+    <!-- Node 2 -->
+    <circle cx="190" cy="30" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="190" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">2</text>
+    <line x1="210" y1="30" x2="240" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="240,25 250,30 240,35" fill="#3b82f6"/>
+    
+    <!-- Node 3 -->
+    <circle cx="270" cy="30" r="20" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="270" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">3</text>
+    <text x="270" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">slow</text>
+    <line x1="290" y1="30" x2="320" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="320,25 330,30 320,35" fill="#3b82f6"/>
+    
+    <!-- Node 4 (to be removed) -->
+    <circle cx="350" cy="30" r="20" fill="#1f0f0f" stroke="#ef4444" stroke-width="3"/>
+    <text x="350" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ef4444">4</text>
+    <text x="350" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">REMOVE</text>
+    <line x1="370" y1="30" x2="400" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="400,25 410,30 400,35" fill="#3b82f6"/>
+    
+    <!-- Node 5 -->
+    <circle cx="430" cy="30" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="430" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">5</text>
+    <line x1="450" y1="30" x2="480" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    
+    <!-- null indicator with fast -->
+    <text x="510" y="35" font-family="Courier New, monospace" font-size="12" fill="#f97316">null ← fast</text>
+  </g>
+  
+  <!-- Result -->
+  <text x="50" y="420" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">Result: slow.next = slow.next.next (skip node 4)</text>
+  
+  <g transform="translate(50, 440)">
+    <circle cx="30" cy="30" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="30" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">1</text>
+    <line x1="50" y1="30" x2="80" y2="30" stroke="#4ade80" stroke-width="2"/>
+    <polygon points="80,25 90,30 80,35" fill="#4ade80"/>
+    
+    <circle cx="110" cy="30" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="110" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">2</text>
+    <line x1="130" y1="30" x2="160" y2="30" stroke="#4ade80" stroke-width="2"/>
+    <polygon points="160,25 170,30 160,35" fill="#4ade80"/>
+    
+    <circle cx="190" cy="30" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="190" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">3</text>
+    <line x1="210" y1="30" x2="240" y2="30" stroke="#4ade80" stroke-width="2"/>
+    <polygon points="240,25 250,30 240,35" fill="#4ade80"/>
+    
+    <circle cx="270" cy="30" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="270" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">5</text>
+    <text x="305" y="35" font-family="Courier New, monospace" font-size="12" fill="#888888">→ null</text>
+  </g>
+  
+  <!-- Algorithm explanation -->
+  <rect x="550" y="130" width="320" height="200" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="8"/>
+  <text x="710" y="160" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">WHY IT WORKS</text>
+  
+  <text x="570" y="190" font-family="Courier New, monospace" font-size="11" fill="#ffffff">1. Gap of n+1 between slow and fast</text>
+  <text x="570" y="215" font-family="Courier New, monospace" font-size="11" fill="#ffffff">2. When fast reaches null:</text>
+  <text x="590" y="235" font-family="Courier New, monospace" font-size="11" fill="#ffffff">fast traveled L steps</text>
+  <text x="590" y="255" font-family="Courier New, monospace" font-size="11" fill="#ffffff">slow traveled L - (n+1) steps</text>
+  <text x="570" y="280" font-family="Courier New, monospace" font-size="11" fill="#ffffff">3. slow.next is nth from end!</text>
+  <text x="570" y="310" font-family="Courier New, monospace" font-size="11" fill="#888888">Dummy node handles edge case</text>
+  <text x="570" y="325" font-family="Courier New, monospace" font-size="11" fill="#888888">of removing head node.</text>
+  
+  <!-- Complexity -->
+  <rect x="550" y="350" width="320" height="60" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="8"/>
+  <text x="710" y="380" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(n) single pass | Space: O(1)</text>
+  <text x="710" y="400" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">vs Two-pass: O(n) + O(n)</text>
+</svg>

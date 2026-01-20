@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <defs>
+    <linearGradient id="arrayGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="foundGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="300" fill="#1a1a2e" rx="10"/>
+  
+  <!-- Title -->
+  <text x="300" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">Binary Search Algorithm</text>
+  
+  <!-- Array boxes -->
+  <g transform="translate(50, 60)">
+    <!-- Array elements -->
+    <rect x="0" y="0" width="50" height="50" fill="url(#arrayGrad)" rx="5"/>
+    <text x="25" y="32" font-family="monospace" font-size="18" fill="#fff" text-anchor="middle">1</text>
+    
+    <rect x="60" y="0" width="50" height="50" fill="url(#arrayGrad)" rx="5"/>
+    <text x="85" y="32" font-family="monospace" font-size="18" fill="#fff" text-anchor="middle">3</text>
+    
+    <rect x="120" y="0" width="50" height="50" fill="url(#arrayGrad)" rx="5"/>
+    <text x="145" y="32" font-family="monospace" font-size="18" fill="#fff" text-anchor="middle">5</text>
+    
+    <rect x="180" y="0" width="50" height="50" fill="url(#arrayGrad)" rx="5"/>
+    <text x="205" y="32" font-family="monospace" font-size="18" fill="#fff" text-anchor="middle">7</text>
+    
+    <rect x="240" y="0" width="50" height="50" fill="#ff6b6b" rx="5"/>
+    <text x="265" y="32" font-family="monospace" font-size="18" fill="#fff" text-anchor="middle">9</text>
+    <text x="265" y="75" font-family="Arial" font-size="12" fill="#ff6b6b" text-anchor="middle">mid</text>
+    
+    <rect x="300" y="0" width="50" height="50" fill="url(#arrayGrad)" rx="5"/>
+    <text x="325" y="32" font-family="monospace" font-size="18" fill="#fff" text-anchor="middle">11</text>
+    
+    <rect x="360" y="0" width="50" height="50" fill="url(#foundGrad)" rx="5"/>
+    <text x="385" y="32" font-family="monospace" font-size="18" fill="#fff" text-anchor="middle">13</text>
+    <text x="385" y="75" font-family="Arial" font-size="12" fill="#43e97b" text-anchor="middle">target</text>
+    
+    <rect x="420" y="0" width="50" height="50" fill="url(#arrayGrad)" rx="5"/>
+    <text x="445" y="32" font-family="monospace" font-size="18" fill="#fff" text-anchor="middle">15</text>
+    
+    <!-- Left pointer -->
+    <polygon points="25,100 15,115 35,115" fill="#ffd93d"/>
+    <text x="25" y="135" font-family="Arial" font-size="12" fill="#ffd93d" text-anchor="middle">left</text>
+    
+    <!-- Right pointer -->
+    <polygon points="445,100 435,115 455,115" fill="#ffd93d"/>
+    <text x="445" y="135" font-family="Arial" font-size="12" fill="#ffd93d" text-anchor="middle">right</text>
+  </g>
+  
+  <!-- Steps explanation -->
+  <g transform="translate(50, 180)">
+    <text x="0" y="0" font-family="Arial" font-size="14" fill="#888">Step-by-step:</text>
+    <text x="0" y="25" font-family="Arial" font-size="13" fill="#4facfe">1. mid = 9, target = 13</text>
+    <text x="0" y="45" font-family="Arial" font-size="13" fill="#4facfe">2. 9 &lt; 13, search right half</text>
+    <text x="0" y="65" font-family="Arial" font-size="13" fill="#4facfe">3. Continue until found</text>
+    
+    <text x="300" y="0" font-family="Arial" font-size="14" fill="#888">Complexity:</text>
+    <text x="300" y="25" font-family="monospace" font-size="13" fill="#43e97b">Time: O(log n)</text>
+    <text x="300" y="45" font-family="monospace" font-size="13" fill="#43e97b">Space: O(1)</text>
+  </g>
+</svg>
+

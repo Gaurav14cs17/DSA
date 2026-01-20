@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <rect width="900" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="26" font-weight="bold">Shortest Path Algorithm Selection</text>
+  <text x="450" y="65" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="16">Choose the right algorithm for your problem</text>
+  
+  <!-- Comparison Table -->
+  <rect x="50" y="90" width="800" height="250" fill="none" stroke="#3b82f6" stroke-width="1"/>
+  
+  <!-- Header -->
+  <rect x="50" y="90" width="800" height="35" fill="#1e3a5f"/>
+  <line x1="200" y1="90" x2="200" y2="340" stroke="#3b82f6" stroke-width="1"/>
+  <line x1="350" y1="90" x2="350" y2="340" stroke="#3b82f6" stroke-width="1"/>
+  <line x1="510" y1="90" x2="510" y2="340" stroke="#3b82f6" stroke-width="1"/>
+  <line x1="650" y1="90" x2="650" y2="340" stroke="#3b82f6" stroke-width="1"/>
+  
+  <text x="125" y="113" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="12" font-weight="bold">Algorithm</text>
+  <text x="275" y="113" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="12" font-weight="bold">Graph Type</text>
+  <text x="430" y="113" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="12" font-weight="bold">Time</text>
+  <text x="580" y="113" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="12" font-weight="bold">Space</text>
+  <text x="775" y="113" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="12" font-weight="bold">Use Case</text>
+  
+  <!-- Row lines -->
+  <line x1="50" y1="125" x2="850" y2="125" stroke="#3b82f6" stroke-width="1"/>
+  <line x1="50" y1="165" x2="850" y2="165" stroke="#3b82f6" stroke-width="0.5"/>
+  <line x1="50" y1="210" x2="850" y2="210" stroke="#3b82f6" stroke-width="0.5"/>
+  <line x1="50" y1="255" x2="850" y2="255" stroke="#3b82f6" stroke-width="0.5"/>
+  <line x1="50" y1="300" x2="850" y2="300" stroke="#3b82f6" stroke-width="0.5"/>
+  
+  <!-- BFS Row -->
+  <text x="125" y="150" text-anchor="middle" fill="#4ade80" font-family="Courier New, monospace" font-size="12" font-weight="bold">BFS</text>
+  <text x="275" y="150" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="11">Unweighted</text>
+  <text x="430" y="150" text-anchor="middle" fill="#60a5fa" font-family="Courier New, monospace" font-size="11">O(V+E)</text>
+  <text x="580" y="150" text-anchor="middle" fill="#60a5fa" font-family="Courier New, monospace" font-size="11">O(V)</text>
+  <text x="775" y="150" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="10">Min hops/steps</text>
+  
+  <!-- Dijkstra Row -->
+  <text x="125" y="190" text-anchor="middle" fill="#f97316" font-family="Courier New, monospace" font-size="12" font-weight="bold">Dijkstra</text>
+  <text x="275" y="190" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="11">Non-negative</text>
+  <text x="430" y="190" text-anchor="middle" fill="#60a5fa" font-family="Courier New, monospace" font-size="11">O((V+E)logV)</text>
+  <text x="580" y="190" text-anchor="middle" fill="#60a5fa" font-family="Courier New, monospace" font-size="11">O(V)</text>
+  <text x="775" y="190" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="10">Network routing</text>
+  
+  <!-- Bellman-Ford Row -->
+  <text x="125" y="235" text-anchor="middle" fill="#a78bfa" font-family="Courier New, monospace" font-size="12" font-weight="bold">Bellman-Ford</text>
+  <text x="275" y="235" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="11">Any weights</text>
+  <text x="430" y="235" text-anchor="middle" fill="#60a5fa" font-family="Courier New, monospace" font-size="11">O(VE)</text>
+  <text x="580" y="235" text-anchor="middle" fill="#60a5fa" font-family="Courier New, monospace" font-size="11">O(V)</text>
+  <text x="775" y="235" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="10">Negative weights</text>
+  
+  <!-- Floyd-Warshall Row -->
+  <text x="125" y="280" text-anchor="middle" fill="#22d3d1" font-family="Courier New, monospace" font-size="12" font-weight="bold">Floyd-Warshall</text>
+  <text x="275" y="280" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="11">All pairs</text>
+  <text x="430" y="280" text-anchor="middle" fill="#60a5fa" font-family="Courier New, monospace" font-size="11">O(V³)</text>
+  <text x="580" y="280" text-anchor="middle" fill="#60a5fa" font-family="Courier New, monospace" font-size="11">O(V²)</text>
+  <text x="775" y="280" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="10">Dense, all pairs</text>
+  
+  <!-- 0-1 BFS Row -->
+  <text x="125" y="325" text-anchor="middle" fill="#ef4444" font-family="Courier New, monospace" font-size="12" font-weight="bold">0-1 BFS</text>
+  <text x="275" y="325" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="11">Weights 0 or 1</text>
+  <text x="430" y="325" text-anchor="middle" fill="#60a5fa" font-family="Courier New, monospace" font-size="11">O(V+E)</text>
+  <text x="580" y="325" text-anchor="middle" fill="#60a5fa" font-family="Courier New, monospace" font-size="11">O(V)</text>
+  <text x="775" y="325" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="10">Binary costs</text>
+  
+  <!-- Decision Tree -->
+  <text x="450" y="385" text-anchor="middle" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold">DECISION FLOWCHART</text>
+  
+  <!-- Flowchart -->
+  <rect x="350" y="405" width="200" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="5"/>
+  <text x="450" y="428" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="11">Shortest Path?</text>
+  
+  <!-- Branch: Unweighted -->
+  <line x1="350" y1="422" x2="200" y2="422" stroke="#3b82f6" stroke-width="1"/>
+  <line x1="200" y1="422" x2="200" y2="460" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="120" y="460" width="160" height="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="5"/>
+  <text x="200" y="480" text-anchor="middle" fill="#4ade80" font-family="Courier New, monospace" font-size="11" font-weight="bold">Unweighted → BFS</text>
+  <text x="200" y="455" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="9">no weights</text>
+  
+  <!-- Branch: Weighted -->
+  <line x1="550" y1="422" x2="700" y2="422" stroke="#3b82f6" stroke-width="1"/>
+  <line x1="700" y1="422" x2="700" y2="460" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="600" y="460" width="200" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="5"/>
+  <text x="700" y="480" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="11">Weighted: Negative?</text>
+  <text x="700" y="455" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="9">has weights</text>
+  
+  <!-- Branch: Non-negative -->
+  <line x1="600" y1="490" x2="500" y2="490" stroke="#3b82f6" stroke-width="1"/>
+  <line x1="500" y1="490" x2="500" y2="520" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="420" y="520" width="160" height="25" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="5"/>
+  <text x="500" y="537" text-anchor="middle" fill="#f97316" font-family="Courier New, monospace" font-size="10" font-weight="bold">No → Dijkstra</text>
+  
+  <!-- Branch: Negative -->
+  <line x1="800" y1="490" x2="850" y2="490" stroke="#3b82f6" stroke-width="1"/>
+  <line x1="850" y1="490" x2="850" y2="520" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="750" y="520" width="180" height="25" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="5"/>
+  <text x="840" y="537" text-anchor="middle" fill="#a78bfa" font-family="Courier New, monospace" font-size="10" font-weight="bold">Yes → Bellman-Ford</text>
+  
+  <!-- Note -->
+  <text x="450" y="535" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="10">All pairs? Use Floyd-Warshall O(V³)</text>
+</svg>

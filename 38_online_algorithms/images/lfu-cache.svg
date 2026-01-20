@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 720">
+  <rect width="950" height="720" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">LFU Cache</text>
+  <text x="475" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Least Frequently Used Eviction | O(1) Operations</text>
+  
+  <!-- Data Structure Overview -->
+  <text x="50" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">DATA STRUCTURES</text>
+  
+  <!-- key_to_val -->
+  <g transform="translate(50, 130)">
+    <rect x="0" y="0" width="200" height="100" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="100" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#3b82f6">key_to_val</text>
+    <line x1="15" y1="32" x2="185" y2="32" stroke="#3b82f6" stroke-width="1" opacity="0.5"/>
+    
+    <text x="20" y="52" font-family="Courier New, monospace" font-size="10" fill="#ffffff">A → 100</text>
+    <text x="20" y="68" font-family="Courier New, monospace" font-size="10" fill="#ffffff">B → 200</text>
+    <text x="20" y="84" font-family="Courier New, monospace" font-size="10" fill="#ffffff">C → 300</text>
+    
+    <text x="100" y="95" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">HashMap: key → value</text>
+  </g>
+  
+  <!-- key_to_freq -->
+  <g transform="translate(280, 130)">
+    <rect x="0" y="0" width="200" height="100" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="4"/>
+    <text x="100" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">key_to_freq</text>
+    <line x1="15" y1="32" x2="185" y2="32" stroke="#f97316" stroke-width="1" opacity="0.5"/>
+    
+    <text x="20" y="52" font-family="Courier New, monospace" font-size="10" fill="#ffffff">A → 3</text>
+    <text x="20" y="68" font-family="Courier New, monospace" font-size="10" fill="#ffffff">B → 1</text>
+    <text x="20" y="84" font-family="Courier New, monospace" font-size="10" fill="#ffffff">C → 2</text>
+    
+    <text x="100" y="95" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">HashMap: key → frequency</text>
+  </g>
+  
+  <!-- min_freq tracker -->
+  <g transform="translate(510, 130)">
+    <rect x="0" y="0" width="140" height="100" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" rx="4"/>
+    <text x="70" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ef4444">min_freq</text>
+    <line x1="15" y1="32" x2="125" y2="32" stroke="#ef4444" stroke-width="1" opacity="0.5"/>
+    
+    <text x="70" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="28" font-weight="bold" fill="#ef4444">1</text>
+    
+    <text x="70" y="92" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">Track for O(1) eviction</text>
+  </g>
+  
+  <!-- freq_to_keys -->
+  <text x="50" y="265" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">FREQUENCY BUCKETS (freq_to_keys)</text>
+  
+  <g transform="translate(50, 285)">
+    <!-- Freq 1 bucket -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="200" height="90" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" rx="4"/>
+      <text x="100" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ef4444">freq = 1 (min_freq)</text>
+      <line x1="15" y1="28" x2="185" y2="28" stroke="#ef4444" stroke-width="1" opacity="0.5"/>
+      
+      <!-- OrderedDict/LinkedHashSet -->
+      <rect x="15" y="38" width="40" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="35" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">B</text>
+      
+      <line x1="55" y1="50" x2="75" y2="50" stroke="#888888" stroke-width="1"/>
+      <polygon points="75,50 68,46 68,54" fill="#888888"/>
+      
+      <rect x="75" y="38" width="40" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="95" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">D</text>
+      
+      <text x="100" y="80" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">insertion order →</text>
+    </g>
+    
+    <!-- Freq 2 bucket -->
+    <g transform="translate(230, 0)">
+      <rect x="0" y="0" width="200" height="90" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="4"/>
+      <text x="100" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#3b82f6">freq = 2</text>
+      <line x1="15" y1="28" x2="185" y2="28" stroke="#3b82f6" stroke-width="1" opacity="0.5"/>
+      
+      <rect x="15" y="38" width="40" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="35" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">C</text>
+      
+      <text x="100" y="80" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">only C at freq 2</text>
+    </g>
+    
+    <!-- Freq 3 bucket -->
+    <g transform="translate(460, 0)">
+      <rect x="0" y="0" width="200" height="90" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5" rx="4"/>
+      <text x="100" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#4ade80">freq = 3</text>
+      <line x1="15" y1="28" x2="185" y2="28" stroke="#4ade80" stroke-width="1" opacity="0.5"/>
+      
+      <rect x="15" y="38" width="40" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+      <text x="35" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">A</text>
+      
+      <text x="100" y="80" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">most frequent</text>
+    </g>
+  </g>
+  
+  <!-- GET Operation -->
+  <text x="50" y="420" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">GET OPERATION</text>
+  
+  <g transform="translate(50, 440)">
+    <!-- Step 1 -->
+    <rect x="0" y="0" width="160" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="4"/>
+    <text x="80" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#3b82f6">1. Check key_to_val</text>
+    <text x="80" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">Key exists? Get value</text>
+    
+    <line x1="160" y1="22" x2="185" y2="22" stroke="#888888" stroke-width="1.5"/>
+    <polygon points="185,22 177,17 177,27" fill="#888888"/>
+    
+    <!-- Step 2 -->
+    <rect x="185" y="0" width="160" height="45" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5" rx="4"/>
+    <text x="265" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#f97316">2. Update frequency</text>
+    <text x="265" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">freq++ in key_to_freq</text>
+    
+    <line x1="345" y1="22" x2="370" y2="22" stroke="#888888" stroke-width="1.5"/>
+    <polygon points="370,22 362,17 362,27" fill="#888888"/>
+    
+    <!-- Step 3 -->
+    <rect x="370" y="0" width="180" height="45" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5" rx="4"/>
+    <text x="460" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#a78bfa">3. Move in buckets</text>
+    <text x="460" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">Remove from old, add to new</text>
+    
+    <line x1="550" y1="22" x2="575" y2="22" stroke="#888888" stroke-width="1.5"/>
+    <polygon points="575,22 567,17 567,27" fill="#888888"/>
+    
+    <!-- Step 4 -->
+    <rect x="575" y="0" width="170" height="45" fill="#1f0f0f" stroke="#ef4444" stroke-width="1.5" rx="4"/>
+    <text x="660" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ef4444">4. Update min_freq</text>
+    <text x="660" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">If old bucket empty</text>
+    
+    <text x="0" y="65" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time Complexity: O(1)</text>
+  </g>
+  
+  <!-- PUT Operation -->
+  <text x="50" y="545" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">PUT OPERATION</text>
+  
+  <g transform="translate(50, 565)">
+    <!-- Key exists branch -->
+    <rect x="0" y="0" width="130" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5" rx="4"/>
+    <text x="65" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#f97316">Key Exists?</text>
+    <text x="65" y="33" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">check HashMap</text>
+    
+    <!-- Yes -->
+    <line x1="130" y1="15" x2="155" y2="15" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="142" y="10" font-family="Courier New, monospace" font-size="8" fill="#4ade80">Y</text>
+    
+    <rect x="155" y="0" width="140" height="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5" rx="4"/>
+    <text x="225" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#ffffff">Update val, get(key)</text>
+    
+    <!-- No -->
+    <line x1="130" y1="30" x2="155" y2="55" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="138" y="48" font-family="Courier New, monospace" font-size="8" fill="#ef4444">N</text>
+    
+    <!-- Check capacity -->
+    <rect x="155" y="40" width="140" height="35" fill="#1f0f0f" stroke="#ef4444" stroke-width="1.5" rx="4"/>
+    <text x="225" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="9" font-weight="bold" fill="#ef4444">At capacity?</text>
+    <text x="225" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#888888">evict if yes</text>
+    
+    <line x1="295" y1="57" x2="320" y2="57" stroke="#888888" stroke-width="1.5"/>
+    <polygon points="320,57 312,52 312,62" fill="#888888"/>
+    
+    <!-- Eviction process -->
+    <rect x="320" y="40" width="180" height="35" fill="#1f0f0f" stroke="#ef4444" stroke-width="1.5" rx="4"/>
+    <text x="410" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="9" font-weight="bold" fill="#ef4444">Evict LFU</text>
+    <text x="410" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#888888">first key in min_freq bucket</text>
+    
+    <line x1="500" y1="57" x2="525" y2="57" stroke="#888888" stroke-width="1.5"/>
+    <polygon points="525,57 517,52 517,62" fill="#888888"/>
+    
+    <!-- Insert new -->
+    <rect x="525" y="40" width="180" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="4"/>
+    <text x="615" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="9" font-weight="bold" fill="#3b82f6">Insert new key</text>
+    <text x="615" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#888888">freq=1, min_freq=1</text>
+    
+    <text x="0" y="105" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time Complexity: O(1)</text>
+  </g>
+  
+  <!-- Key Insight Box -->
+  <rect x="680" y="130" width="240" height="100" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="4"/>
+  <text x="800" y="155" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa">KEY INSIGHT</text>
+  <line x1="695" y1="165" x2="905" y2="165" stroke="#a78bfa" stroke-width="1" opacity="0.5"/>
+  <text x="710" y="185" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• min_freq tracks LFU bucket</text>
+  <text x="710" y="202" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• OrderedDict for tie-break</text>
+  <text x="710" y="219" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• First key = least recent</text>
+  
+  <!-- Complexity Box -->
+  <rect x="730" y="565" width="190" height="100" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+  <text x="825" y="590" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#3b82f6">COMPLEXITY</text>
+  <line x1="745" y1="600" x2="905" y2="600" stroke="#3b82f6" stroke-width="1" opacity="0.5"/>
+  <text x="750" y="622" font-family="Courier New, monospace" font-size="11" fill="#ffffff">get(key)     O(1)</text>
+  <text x="750" y="642" font-family="Courier New, monospace" font-size="11" fill="#ffffff">put(key,val) O(1)</text>
+  <text x="750" y="658" font-family="Courier New, monospace" font-size="10" fill="#888888">Space: O(n)</text>
+</svg>
+

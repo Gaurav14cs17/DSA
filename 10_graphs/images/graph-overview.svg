@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Graphs Overview</text>
+  <text x="450" y="65" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Vertices (Nodes) connected by Edges</text>
+  
+  <!-- Undirected Graph -->
+  <text x="80" y="100" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">UNDIRECTED GRAPH</text>
+  
+  <g transform="translate(100, 130)">
+    <circle cx="40" cy="30" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="40" y="35" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">A</text>
+    
+    <circle cx="120" cy="30" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="120" y="35" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">B</text>
+    
+    <circle cx="40" cy="110" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="40" y="115" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">C</text>
+    
+    <circle cx="120" cy="110" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="120" y="115" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">D</text>
+    
+    <!-- Edges -->
+    <line x1="60" y1="30" x2="100" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="40" y1="50" x2="40" y2="90" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="60" y1="110" x2="100" y2="110" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="55" y1="45" x2="105" y2="95" stroke="#3b82f6" stroke-width="2"/>
+  </g>
+  
+  <!-- Directed Graph -->
+  <text x="300" y="100" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">DIRECTED GRAPH</text>
+  
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ade80"/>
+    </marker>
+  </defs>
+  
+  <g transform="translate(320, 130)">
+    <circle cx="40" cy="30" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="40" y="35" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">1</text>
+    
+    <circle cx="120" cy="30" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="120" y="35" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">2</text>
+    
+    <circle cx="80" cy="100" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="80" y="105" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">3</text>
+    
+    <!-- Directed edges -->
+    <line x1="60" y1="30" x2="95" y2="30" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="55" y1="45" x2="70" y2="78" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="110" y1="48" x2="92" y2="80" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow)"/>
+  </g>
+  
+  <!-- Representations -->
+  <text x="520" y="100" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">REPRESENTATIONS</text>
+  
+  <g transform="translate(520, 120)">
+    <!-- Adjacency List -->
+    <text x="0" y="15" fill="#f97316" font-size="11" font-weight="bold" font-family="Courier New, monospace">Adjacency List:</text>
+    <text x="0" y="35" fill="#ffffff" font-size="11" font-family="Courier New, monospace">A → [B, C]</text>
+    <text x="0" y="50" fill="#ffffff" font-size="11" font-family="Courier New, monospace">B → [A, D]</text>
+    <text x="0" y="65" fill="#ffffff" font-size="11" font-family="Courier New, monospace">C → [A, D]</text>
+    <text x="0" y="80" fill="#ffffff" font-size="11" font-family="Courier New, monospace">D → [B, C]</text>
+    
+    <!-- Adjacency Matrix -->
+    <text x="150" y="15" fill="#f97316" font-size="11" font-weight="bold" font-family="Courier New, monospace">Adjacency Matrix:</text>
+    <text x="150" y="35" fill="#888888" font-size="10" font-family="Courier New, monospace">  A B C D</text>
+    <text x="150" y="50" fill="#ffffff" font-size="10" font-family="Courier New, monospace">A 0 1 1 0</text>
+    <text x="150" y="65" fill="#ffffff" font-size="10" font-family="Courier New, monospace">B 1 0 0 1</text>
+    <text x="150" y="80" fill="#ffffff" font-size="10" font-family="Courier New, monospace">C 1 0 0 1</text>
+    <text x="150" y="95" fill="#ffffff" font-size="10" font-family="Courier New, monospace">D 0 1 1 0</text>
+  </g>
+  
+  <!-- BFS -->
+  <text x="80" y="290" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">BFS (LEVEL ORDER)</text>
+  
+  <g transform="translate(80, 310)">
+    <circle cx="30" cy="25" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="30" y="30" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">1</text>
+    <text x="55" y="15" fill="#f97316" font-size="10" font-family="Courier New, monospace">start</text>
+    
+    <line x1="48" y1="25" x2="72" y2="25" stroke="#3b82f6" stroke-width="2"/>
+    
+    <circle cx="90" cy="25" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="90" y="30" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">2</text>
+    
+    <line x1="108" y1="25" x2="132" y2="25" stroke="#3b82f6" stroke-width="2"/>
+    
+    <circle cx="150" cy="25" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="150" y="30" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">3</text>
+    
+    <text x="0" y="65" fill="#888888" font-size="10" font-family="Courier New, monospace">Queue: [1] → [2,3] → [3]</text>
+    <text x="0" y="85" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Uses: Shortest path (unweighted)</text>
+  </g>
+  
+  <!-- DFS -->
+  <text x="300" y="290" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">DFS (DEPTH FIRST)</text>
+  
+  <g transform="translate(300, 310)">
+    <circle cx="30" cy="25" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="30" y="30" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">1</text>
+    
+    <line x1="30" y1="43" x2="30" y2="57" stroke="#4ade80" stroke-width="2"/>
+    
+    <circle cx="30" cy="75" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="30" y="80" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">2</text>
+    
+    <line x1="30" y1="93" x2="30" y2="107" stroke="#4ade80" stroke-width="2"/>
+    
+    <circle cx="30" cy="125" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="30" y="130" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">3</text>
+    
+    <text x="70" y="45" fill="#888888" font-size="10" font-family="Courier New, monospace">Stack/Recursion</text>
+    <text x="70" y="65" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Uses: Path finding,</text>
+    <text x="70" y="80" fill="#4ade80" font-size="10" font-family="Courier New, monospace">cycle detection</text>
+  </g>
+  
+  <!-- Shortest Path -->
+  <text x="520" y="290" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">DIJKSTRA (SHORTEST PATH)</text>
+  
+  <g transform="translate(520, 310)">
+    <circle cx="30" cy="40" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="30" y="45" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">S</text>
+    <text x="30" y="15" fill="#f97316" font-size="10" font-family="Courier New, monospace">d=0</text>
+    
+    <line x1="48" y1="40" x2="72" y2="40" stroke="#3b82f6" stroke-width="2"/>
+    <text x="60" y="35" fill="#3b82f6" font-size="10" font-family="Courier New, monospace">2</text>
+    
+    <circle cx="90" cy="40" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="90" y="45" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">A</text>
+    <text x="90" y="15" fill="#4ade80" font-size="10" font-family="Courier New, monospace">d=2</text>
+    
+    <line x1="108" y1="40" x2="132" y2="40" stroke="#3b82f6" stroke-width="2"/>
+    <text x="120" y="35" fill="#3b82f6" font-size="10" font-family="Courier New, monospace">3</text>
+    
+    <circle cx="150" cy="40" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="150" y="45" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">B</text>
+    <text x="150" y="15" fill="#4ade80" font-size="10" font-family="Courier New, monospace">d=5</text>
+    
+    <text x="0" y="85" fill="#60a5fa" font-size="10" font-family="Courier New, monospace">Time: O((V+E) log V)</text>
+  </g>
+  
+  <!-- Topological Sort -->
+  <text x="750" y="290" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">TOPOLOGICAL SORT</text>
+  
+  <g transform="translate(750, 310)">
+    <text x="0" y="20" fill="#888888" font-size="10" font-family="Courier New, monospace">For DAGs only</text>
+    <text x="0" y="40" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Order: A→B→C→D</text>
+    <text x="0" y="60" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Uses: Dependencies,</text>
+    <text x="0" y="75" fill="#4ade80" font-size="10" font-family="Courier New, monospace">build order</text>
+  </g>
+  
+  <!-- Time Complexity -->
+  <text x="80" y="460" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">TIME COMPLEXITY (V vertices, E edges)</text>
+  <g transform="translate(80, 480)">
+    <rect x="0" y="0" width="350" height="60" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#888888" font-size="11" font-family="Courier New, monospace">BFS/DFS</text>
+    <text x="200" y="20" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">O(V + E)</text>
+    <text x="15" y="40" fill="#888888" font-size="11" font-family="Courier New, monospace">Dijkstra (min-heap)</text>
+    <text x="200" y="40" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">O((V+E) log V)</text>
+    <text x="15" y="55" fill="#888888" font-size="11" font-family="Courier New, monospace">Floyd-Warshall</text>
+    <text x="200" y="55" fill="#f97316" font-size="11" font-weight="bold" font-family="Courier New, monospace">O(V³)</text>
+  </g>
+  
+  <!-- Subtopics -->
+  <text x="80" y="570" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">SUBTOPICS</text>
+  <g transform="translate(180, 555)">
+    <text x="0" y="15" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">01. Representation</text>
+    <text x="130" y="15" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">02. BFS</text>
+    <text x="200" y="15" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">03. DFS</text>
+    <text x="270" y="15" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">04. Shortest Path</text>
+    <text x="400" y="15" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">05. Topo Sort</text>
+    <text x="510" y="15" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">06. Cycle</text>
+    <text x="580" y="15" fill="#60a5fa" font-size="11" font-family="Courier New, monospace">07. MST</text>
+  </g>
+</svg>
+

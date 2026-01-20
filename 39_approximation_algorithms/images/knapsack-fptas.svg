@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 700">
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Knapsack FPTAS</text>
+  <text x="475" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Fully Polynomial Time Approximation Scheme</text>
+  
+  <!-- Problem Setup -->
+  <text x="60" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Problem: 0/1 Knapsack</text>
+  
+  <g transform="translate(60, 130)">
+    <rect x="0" y="0" width="300" height="100" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="15" y="25" font-family="Courier New, monospace" font-size="12" fill="#888888">Items: (weight, value)</text>
+    <text x="15" y="50" font-family="Courier New, monospace" font-size="14" fill="#ffffff">Item 1: (2, 100)</text>
+    <text x="15" y="70" font-family="Courier New, monospace" font-size="14" fill="#ffffff">Item 2: (3, 150)</text>
+    <text x="15" y="90" font-family="Courier New, monospace" font-size="14" fill="#ffffff">Item 3: (4, 200)</text>
+    
+    <text x="180" y="50" font-family="Courier New, monospace" font-size="12" fill="#f97316">Capacity: 5</text>
+    <text x="180" y="70" font-family="Courier New, monospace" font-size="12" fill="#f97316">ε = 0.5</text>
+  </g>
+  
+  <!-- Why FPTAS -->
+  <g transform="translate(400, 130)">
+    <rect x="0" y="0" width="350" height="100" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="4"/>
+    <text x="15" y="25" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa">Why FPTAS?</text>
+    <text x="15" y="50" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Exact DP: O(nW) - pseudo-polynomial</text>
+    <text x="15" y="70" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Large W makes it slow</text>
+    <text x="15" y="90" font-family="Courier New, monospace" font-size="11" fill="#4ade80">• FPTAS: O(n³/ε) - truly polynomial!</text>
+  </g>
+  
+  <!-- Step 1: Compute Scaling Factor -->
+  <text x="60" y="270" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Step 1: Compute Scaling Factor K</text>
+  
+  <g transform="translate(60, 290)">
+    <rect x="0" y="0" width="400" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="20" y="30" font-family="Courier New, monospace" font-size="14" fill="#ffffff">V_max = max(100, 150, 200) = 200</text>
+    <text x="20" y="55" font-family="Courier New, monospace" font-size="14" fill="#ffffff">K = ε × V_max / n = 0.5 × 200 / 3</text>
+    <text x="20" y="75" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">K ≈ 33.33</text>
+  </g>
+  
+  <!-- Step 2: Scale Values -->
+  <text x="60" y="405" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Step 2: Scale Down Values</text>
+  
+  <g transform="translate(60, 425)">
+    <!-- Original values -->
+    <rect x="0" y="0" width="150" height="100" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="15" y="25" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">Original</text>
+    <text x="15" y="50" font-family="Courier New, monospace" font-size="14" fill="#ffffff">v₁ = 100</text>
+    <text x="15" y="70" font-family="Courier New, monospace" font-size="14" fill="#ffffff">v₂ = 150</text>
+    <text x="15" y="90" font-family="Courier New, monospace" font-size="14" fill="#ffffff">v₃ = 200</text>
+    
+    <!-- Arrow -->
+    <text x="175" y="55" font-family="Courier New, monospace" font-size="20" fill="#f97316">→</text>
+    <text x="165" y="75" font-family="Courier New, monospace" font-size="10" fill="#888888">÷ K</text>
+    
+    <!-- Scaled values -->
+    <rect x="210" y="0" width="180" height="100" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="4"/>
+    <text x="225" y="25" font-family="Courier New, monospace" font-size="11" fill="#f97316">Scaled (floor)</text>
+    <text x="225" y="50" font-family="Courier New, monospace" font-size="14" fill="#ffffff">v'₁ = ⌊100/33⌋ = 3</text>
+    <text x="225" y="70" font-family="Courier New, monospace" font-size="14" fill="#ffffff">v'₂ = ⌊150/33⌋ = 4</text>
+    <text x="225" y="90" font-family="Courier New, monospace" font-size="14" fill="#ffffff">v'₃ = ⌊200/33⌋ = 6</text>
+  </g>
+  
+  <!-- Step 3: DP on Scaled Values -->
+  <text x="500" y="270" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Step 3: DP on Scaled Values</text>
+  
+  <g transform="translate(500, 290)">
+    <rect x="0" y="0" width="400" height="230" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    
+    <text x="20" y="25" font-family="Courier New, monospace" font-size="11" fill="#888888">dp[v] = min weight to achieve value v</text>
+    
+    <!-- DP Table visualization -->
+    <text x="20" y="55" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">Value:</text>
+    <text x="80" y="55" font-family="Courier New, monospace" font-size="11" fill="#ffffff">0  1  2  3  4  5  6  7</text>
+    
+    <text x="20" y="80" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">Init:</text>
+    <text x="80" y="80" font-family="Courier New, monospace" font-size="11" fill="#888888">0  ∞  ∞  ∞  ∞  ∞  ∞  ∞</text>
+    
+    <text x="20" y="105" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">+Item1:</text>
+    <text x="80" y="105" font-family="Courier New, monospace" font-size="11" fill="#ffffff">0  ∞  ∞  2  ∞  ∞  ∞  ∞</text>
+    
+    <text x="20" y="130" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">+Item2:</text>
+    <text x="80" y="130" font-family="Courier New, monospace" font-size="11" fill="#ffffff">0  ∞  ∞  2  3  ∞  ∞  5</text>
+    
+    <text x="20" y="155" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">+Item3:</text>
+    <text x="80" y="155" font-family="Courier New, monospace" font-size="11" fill="#4ade80">0  ∞  ∞  2  3  ∞  4  5</text>
+    
+    <text x="20" y="185" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Max value with weight ≤ 5:</text>
+    <text x="20" y="205" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">Scaled value = 7 (items 1+2)</text>
+    <text x="20" y="225" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Actual ≈ 7 × 33 = 231 → 250</text>
+  </g>
+  
+  <!-- Approximation Guarantee -->
+  <text x="60" y="565" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Approximation Guarantee</text>
+  
+  <g transform="translate(60, 585)">
+    <rect x="0" y="0" width="400" height="80" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+    <text x="20" y="25" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Rounding error per item: ≤ K</text>
+    <text x="20" y="45" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Total error: ≤ n × K = ε × V_max</text>
+    <text x="20" y="70" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">ALG ≥ (1 - ε) × OPT ✓</text>
+  </g>
+  
+  <!-- Complexity Analysis -->
+  <g transform="translate(500, 560)">
+    <rect x="0" y="0" width="400" height="105" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="4"/>
+    <text x="20" y="25" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa">Complexity Analysis</text>
+    <text x="20" y="50" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Max scaled value: n × ⌊V_max/K⌋ = n²/ε</text>
+    <text x="20" y="70" font-family="Courier New, monospace" font-size="11" fill="#ffffff">DP states: O(n²/ε)</text>
+    <text x="20" y="90" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(n³/ε) | Space: O(n²/ε)</text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="475" y="685" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">FPTAS: Trade accuracy (ε) for polynomial time - smaller ε = better approximation but slower</text>
+</svg>
+

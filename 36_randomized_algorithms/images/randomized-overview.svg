@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350">
+  <rect width="900" height="350" fill="#0f0f23"/>
+  
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Randomized Algorithms</text>
+  <text x="450" y="58" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">Use randomness for efficiency or simplicity</text>
+  
+  <!-- Randomized Quick Sort -->
+  <text x="50" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">RANDOMIZED QUICKSORT</text>
+  <g transform="translate(50, 115)">
+    <rect x="0" y="0" width="280" height="60" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Pick random pivot</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Expected O(n log n) always</text>
+    <text x="0" y="75" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Avoids worst case on sorted input</text>
+  </g>
+  
+  <!-- Reservoir Sampling -->
+  <text x="400" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">RESERVOIR SAMPLING</text>
+  <g transform="translate(400, 115)">
+    <rect x="0" y="0" width="380" height="60" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Sample k items from stream of unknown size</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Each item: replace reservoir[j] with prob k/i</text>
+    <text x="0" y="75" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Time: O(n), Space: O(k)</text>
+  </g>
+  
+  <!-- Types -->
+  <text x="50" y="210" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">ALGORITHM TYPES</text>
+  <g transform="translate(50, 230)">
+    <text x="0" y="15" fill="#f97316" font-size="10" font-family="Courier New, monospace">Las Vegas:</text>
+    <text x="100" y="15" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Always correct, random running time</text>
+    <text x="0" y="35" fill="#a78bfa" font-size="10" font-family="Courier New, monospace">Monte Carlo:</text>
+    <text x="100" y="35" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Fixed time, probabilistic correctness</text>
+  </g>
+  
+  <!-- Applications -->
+  <text x="450" y="210" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">APPLICATIONS</text>
+  <g transform="translate(450, 230)">
+    <text x="0" y="15" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Hash tables (universal hashing)</text>
+    <text x="0" y="35" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Primality testing (Miller-Rabin)</text>
+    <text x="0" y="55" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Skip lists, Treaps</text>
+    <text x="0" y="75" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Randomized min-cut</text>
+  </g>
+</svg>
+

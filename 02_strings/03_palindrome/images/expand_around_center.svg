@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380">
+  <rect width="600" height="380" fill="#0c0c1d"/>
+  
+  <!-- Title -->
+  <text x="300" y="28" fill="#fff" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle">Expand Around Center</text>
+  <text x="300" y="48" fill="#aaa" font-family="Arial" font-size="13" text-anchor="middle">Find longest palindrome in "babad"</text>
+  
+  <!-- Original String -->
+  <g transform="translate(150, 70)">
+    <rect x="0" y="0" width="50" height="50" rx="6" fill="#333" stroke="#555"/>
+    <text x="25" y="33" fill="#fff" font-family="monospace" font-size="22" font-weight="bold" text-anchor="middle">b</text>
+    <text x="25" y="62" fill="#666" font-family="Arial" font-size="10" text-anchor="middle">0</text>
+    
+    <rect x="60" y="0" width="50" height="50" rx="6" fill="#333" stroke="#555"/>
+    <text x="85" y="33" fill="#fff" font-family="monospace" font-size="22" font-weight="bold" text-anchor="middle">a</text>
+    <text x="85" y="62" fill="#666" font-family="Arial" font-size="10" text-anchor="middle">1</text>
+    
+    <rect x="120" y="0" width="50" height="50" rx="6" fill="#333" stroke="#555"/>
+    <text x="145" y="33" fill="#fff" font-family="monospace" font-size="22" font-weight="bold" text-anchor="middle">b</text>
+    <text x="145" y="62" fill="#666" font-family="Arial" font-size="10" text-anchor="middle">2</text>
+    
+    <rect x="180" y="0" width="50" height="50" rx="6" fill="#333" stroke="#555"/>
+    <text x="205" y="33" fill="#fff" font-family="monospace" font-size="22" font-weight="bold" text-anchor="middle">a</text>
+    <text x="205" y="62" fill="#666" font-family="Arial" font-size="10" text-anchor="middle">3</text>
+    
+    <rect x="240" y="0" width="50" height="50" rx="6" fill="#333" stroke="#555"/>
+    <text x="265" y="33" fill="#fff" font-family="monospace" font-size="22" font-weight="bold" text-anchor="middle">d</text>
+    <text x="265" y="62" fill="#666" font-family="Arial" font-size="10" text-anchor="middle">4</text>
+  </g>
+  
+  <!-- Step 1 -->
+  <text x="30" y="165" fill="#ff416c" font-family="Arial" font-size="13" font-weight="bold">Step 1: Pick center (index 1)</text>
+  
+  <g transform="translate(30, 180)">
+    <rect x="0" y="0" width="42" height="42" rx="5" fill="#333"/>
+    <text x="21" y="28" fill="#888" font-family="monospace" font-size="18" text-anchor="middle">b</text>
+    
+    <rect x="52" y="0" width="42" height="42" rx="5" fill="#ff416c" stroke="#fff" stroke-width="2"/>
+    <text x="73" y="28" fill="#fff" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">a</text>
+    
+    <rect x="104" y="0" width="42" height="42" rx="5" fill="#333"/>
+    <text x="125" y="28" fill="#888" font-family="monospace" font-size="18" text-anchor="middle">b</text>
+    
+    <rect x="156" y="0" width="42" height="42" rx="5" fill="#333"/>
+    <text x="177" y="28" fill="#888" font-family="monospace" font-size="18" text-anchor="middle">a</text>
+    
+    <rect x="208" y="0" width="42" height="42" rx="5" fill="#333"/>
+    <text x="229" y="28" fill="#888" font-family="monospace" font-size="18" text-anchor="middle">d</text>
+  </g>
+  
+  <text x="103" y="237" fill="#ff416c" font-family="Arial" font-size="10" text-anchor="middle">center</text>
+  <text x="350" y="205" fill="#aaa" font-family="Arial" font-size="12">Palindrome: "a"</text>
+  
+  <!-- Step 2 -->
+  <text x="30" y="265" fill="#4776E6" font-family="Arial" font-size="13" font-weight="bold">Step 2: Expand left and right</text>
+  
+  <g transform="translate(30, 280)">
+    <rect x="0" y="0" width="42" height="42" rx="5" fill="#4776E6" stroke="#fff"/>
+    <text x="21" y="28" fill="#fff" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">b</text>
+    
+    <rect x="52" y="0" width="42" height="42" rx="5" fill="#ff416c" stroke="#fff"/>
+    <text x="73" y="28" fill="#fff" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">a</text>
+    
+    <rect x="104" y="0" width="42" height="42" rx="5" fill="#4776E6" stroke="#fff"/>
+    <text x="125" y="28" fill="#fff" font-family="monospace" font-size="18" font-weight="bold" text-anchor="middle">b</text>
+    
+    <rect x="156" y="0" width="42" height="42" rx="5" fill="#333"/>
+    <text x="177" y="28" fill="#888" font-family="monospace" font-size="18" text-anchor="middle">a</text>
+    
+    <rect x="208" y="0" width="42" height="42" rx="5" fill="#333"/>
+    <text x="229" y="28" fill="#888" font-family="monospace" font-size="18" text-anchor="middle">d</text>
+  </g>
+  
+  <text x="350" y="305" fill="#00b09b" font-family="Arial" font-size="13" font-weight="bold">b == b ✓ → "bab"</text>
+  
+  <!-- Result -->
+  <rect x="30" y="340" width="540" height="30" rx="6" fill="rgba(0,176,155,0.2)" stroke="#00b09b"/>
+  <text x="300" y="360" fill="#00b09b" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle">Result: Longest = "bab" (length 3) | Centers = 2n-1 | Time: O(n²)</text>
+</svg>

@@ -1,0 +1,141 @@
+<svg viewBox="0 0 950 650" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Three Sum - Sort + Two Pointers</text>
+  <text x="475" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Find triplets a + b + c = 0 in O(n²)</text>
+  
+  <!-- Input -->
+  <text x="50" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">INPUT (after sorting)</text>
+  <text x="50" y="130" font-family="Courier New, monospace" font-size="13" fill="#888888">nums = [-4, -1, -1, 0, 1, 2] (sorted)</text>
+  
+  <!-- Array visualization -->
+  <g transform="translate(50, 145)">
+    <rect x="0" y="0" width="55" height="55" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="27" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">-4</text>
+    <text x="27" y="72" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">0</text>
+    
+    <rect x="70" y="0" width="55" height="55" fill="#3d1f0f" stroke="#f97316" stroke-width="3" rx="4"/>
+    <text x="97" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#f97316">-1</text>
+    <text x="97" y="72" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">i=1</text>
+    
+    <rect x="140" y="0" width="55" height="55" fill="#0f2f1f" stroke="#4ade80" stroke-width="3" rx="4"/>
+    <text x="167" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80">-1</text>
+    <text x="167" y="72" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">L</text>
+    
+    <rect x="210" y="0" width="55" height="55" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="237" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">0</text>
+    <text x="237" y="72" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">3</text>
+    
+    <rect x="280" y="0" width="55" height="55" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="307" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    <text x="307" y="72" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">4</text>
+    
+    <rect x="350" y="0" width="55" height="55" fill="#2d1f3d" stroke="#a78bfa" stroke-width="3" rx="4"/>
+    <text x="377" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#a78bfa">2</text>
+    <text x="377" y="72" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">R</text>
+  </g>
+  
+  <!-- Formula Box -->
+  <rect x="500" y="100" width="400" height="110" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="8"/>
+  <text x="520" y="130" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">REDUCTION TO TWO SUM</text>
+  <text x="520" y="160" font-family="Courier New, monospace" font-size="14" fill="#ffffff">a + b + c = 0</text>
+  <text x="520" y="185" font-family="Courier New, monospace" font-size="14" fill="#4ade80">b + c = -a  (Two Sum with target=-a)</text>
+  <text x="520" y="202" font-family="Courier New, monospace" font-size="11" fill="#888888">Fix 'a', find pairs that sum to -a</text>
+  
+  <!-- Algorithm Steps -->
+  <text x="50" y="255" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">ITERATION: i=1, nums[i]=-1, target=-(-1)=1</text>
+  
+  <g transform="translate(50, 275)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Step</text>
+    <text x="60" y="0" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">L</text>
+    <text x="100" y="0" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">R</text>
+    <text x="140" y="0" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">nums[L]</text>
+    <text x="220" y="0" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">nums[R]</text>
+    <text x="300" y="0" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">sum</text>
+    <text x="370" y="0" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Action</text>
+    
+    <!-- Step 1 -->
+    <rect x="-5" y="10" width="550" height="30" fill="#0f2f1f" rx="3"/>
+    <text x="0" y="32" font-family="Courier New, monospace" font-size="14" fill="#ffffff">1</text>
+    <text x="60" y="32" font-family="Courier New, monospace" font-size="14" fill="#4ade80">2</text>
+    <text x="100" y="32" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">5</text>
+    <text x="140" y="32" font-family="Courier New, monospace" font-size="14" fill="#4ade80">-1</text>
+    <text x="220" y="32" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">2</text>
+    <text x="300" y="32" font-family="Courier New, monospace" font-size="14" fill="#4ade80">1=1 ✓</text>
+    <text x="370" y="32" font-family="Courier New, monospace" font-size="14" fill="#4ade80">Found! [-1,-1,2]</text>
+    
+    <!-- Step 2 -->
+    <rect x="-5" y="45" width="550" height="30" fill="#1e3a5f" rx="3"/>
+    <text x="0" y="67" font-family="Courier New, monospace" font-size="14" fill="#ffffff">2</text>
+    <text x="60" y="67" font-family="Courier New, monospace" font-size="14" fill="#4ade80">3</text>
+    <text x="100" y="67" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">4</text>
+    <text x="140" y="67" font-family="Courier New, monospace" font-size="14" fill="#ffffff">0</text>
+    <text x="220" y="67" font-family="Courier New, monospace" font-size="14" fill="#ffffff">1</text>
+    <text x="300" y="67" font-family="Courier New, monospace" font-size="14" fill="#4ade80">1=1 ✓</text>
+    <text x="370" y="67" font-family="Courier New, monospace" font-size="14" fill="#4ade80">Found! [-1,0,1]</text>
+    
+    <!-- Step 3 -->
+    <rect x="-5" y="80" width="550" height="30" fill="#1f0f0f" rx="3"/>
+    <text x="0" y="102" font-family="Courier New, monospace" font-size="14" fill="#ffffff">3</text>
+    <text x="60" y="102" font-family="Courier New, monospace" font-size="14" fill="#888888">4</text>
+    <text x="100" y="102" font-family="Courier New, monospace" font-size="14" fill="#888888">3</text>
+    <text x="300" y="102" font-family="Courier New, monospace" font-size="14" fill="#ef4444">L &gt; R</text>
+    <text x="370" y="102" font-family="Courier New, monospace" font-size="14" fill="#888888">Done with i=1</text>
+  </g>
+  
+  <!-- Two Pointer Movement Visualization -->
+  <text x="650" y="275" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">TWO POINTER LOGIC</text>
+  
+  <g transform="translate(650, 295)">
+    <rect x="0" y="0" width="250" height="120" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="8"/>
+    
+    <text x="20" y="30" font-family="Courier New, monospace" font-size="13" fill="#4ade80">if sum == target:</text>
+    <text x="40" y="50" font-family="Courier New, monospace" font-size="12" fill="#888888">→ Found! L++, R--</text>
+    
+    <text x="20" y="75" font-family="Courier New, monospace" font-size="13" fill="#f97316">if sum &lt; target:</text>
+    <text x="40" y="95" font-family="Courier New, monospace" font-size="12" fill="#888888">→ Need bigger, L++</text>
+    
+    <text x="130" y="75" font-family="Courier New, monospace" font-size="13" fill="#a78bfa">if sum &gt; target:</text>
+    <text x="150" y="95" font-family="Courier New, monospace" font-size="12" fill="#888888">→ Need smaller, R--</text>
+  </g>
+  
+  <!-- Skip Duplicates -->
+  <text x="50" y="430" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">SKIP DUPLICATES (CRITICAL!)</text>
+  
+  <g transform="translate(50, 450)">
+    <rect x="0" y="0" width="400" height="80" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" rx="8"/>
+    <text x="20" y="30" font-family="Courier New, monospace" font-size="13" fill="#ef4444">For i: skip if nums[i] == nums[i-1]</text>
+    <text x="20" y="55" font-family="Courier New, monospace" font-size="13" fill="#ef4444">For L: skip if nums[L] == nums[L-1]</text>
+    <text x="20" y="75" font-family="Courier New, monospace" font-size="13" fill="#ef4444">For R: skip if nums[R] == nums[R+1]</text>
+  </g>
+  
+  <!-- Found Triplets -->
+  <text x="500" y="430" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">FOUND TRIPLETS</text>
+  
+  <g transform="translate(500, 450)">
+    <rect x="0" y="0" width="180" height="45" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="6"/>
+    <text x="90" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#4ade80">[-1, -1, 2]</text>
+    
+    <rect x="200" y="0" width="180" height="45" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="6"/>
+    <text x="290" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#4ade80">[-1, 0, 1]</text>
+  </g>
+  
+  <g transform="translate(500, 505)">
+    <text x="0" y="15" font-family="Courier New, monospace" font-size="13" fill="#888888">-1 + (-1) + 2 = 0 ✓</text>
+    <text x="200" y="15" font-family="Courier New, monospace" font-size="13" fill="#888888">-1 + 0 + 1 = 0 ✓</text>
+  </g>
+  
+  <!-- Complexity -->
+  <rect x="50" y="560" width="860" height="70" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="8"/>
+  <text x="70" y="590" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(n²)</text>
+  <text x="70" y="615" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Space: O(1) extra</text>
+  
+  <text x="250" y="590" font-family="Courier New, monospace" font-size="12" fill="#888888">• Sort: O(n log n)</text>
+  <text x="250" y="615" font-family="Courier New, monospace" font-size="12" fill="#888888">• For each i: O(n) two-pointer scan</text>
+  
+  <text x="530" y="590" font-family="Courier New, monospace" font-size="12" fill="#888888">• Total: O(n) × O(n) = O(n²)</text>
+  <text x="530" y="615" font-family="Courier New, monospace" font-size="12" fill="#888888">• Output space not counted</text>
+  
+  <text x="800" y="600" font-family="Courier New, monospace" font-size="11" fill="#888888">LeetCode #15</text>
+</svg>

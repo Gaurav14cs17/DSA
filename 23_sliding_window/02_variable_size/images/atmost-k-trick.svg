@@ -1,0 +1,52 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">The atMost(k) Trick</text>
+  <text x="450" y="68" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Count subarrays with EXACTLY k distinct elements</text>
+  
+  <!-- Formula Box -->
+  <rect x="200" y="90" width="500" height="70" rx="8" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+  <text x="450" y="120" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">exactly(k) = atMost(k) - atMost(k-1)</text>
+  <text x="450" y="145" text-anchor="middle" fill="#888888" font-size="12" font-family="Courier New, monospace">Transform exact counting into range counting</text>
+  
+  <!-- Example -->
+  <text x="50" y="195" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">EXAMPLE: Array [1, 2, 1, 2, 3], k = 2</text>
+  
+  <!-- atMost(2) calculation -->
+  <rect x="30" y="215" width="420" height="210" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="240" y="240" text-anchor="middle" fill="#3b82f6" font-size="14" font-weight="bold" font-family="Courier New, monospace">atMost(2) — At most 2 distinct</text>
+  
+  <text x="50" y="268" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Window [1]:         1 distinct → +1</text>
+  <text x="50" y="288" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Window [1,2]:       2 distinct → +2</text>
+  <text x="50" y="308" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Window [1,2,1]:     2 distinct → +3</text>
+  <text x="50" y="328" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Window [1,2,1,2]:   2 distinct → +4</text>
+  <text x="50" y="348" fill="#f97316" font-size="11" font-family="Courier New, monospace">Window [2,1,2,3]:   3 &gt; 2, shrink!</text>
+  <text x="50" y="368" fill="#ffffff" font-size="11" font-family="Courier New, monospace">  → [2,3]:          2 distinct → +2</text>
+  
+  <text x="350" y="400" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">Total: 12</text>
+  
+  <!-- atMost(1) calculation -->
+  <rect x="470" y="215" width="400" height="210" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="670" y="240" text-anchor="middle" fill="#a78bfa" font-size="14" font-weight="bold" font-family="Courier New, monospace">atMost(1) — At most 1 distinct</text>
+  
+  <text x="490" y="268" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Window [1]:     1 distinct → +1</text>
+  <text x="490" y="288" fill="#f97316" font-size="11" font-family="Courier New, monospace">Window [1,2]:   2 &gt; 1, shrink!</text>
+  <text x="490" y="308" fill="#ffffff" font-size="11" font-family="Courier New, monospace">  → [2]:        1 distinct → +1</text>
+  <text x="490" y="328" fill="#f97316" font-size="11" font-family="Courier New, monospace">Window [2,1]:   2 &gt; 1, shrink!</text>
+  <text x="490" y="348" fill="#ffffff" font-size="11" font-family="Courier New, monospace">  → [1]:        1 distinct → +1</text>
+  <text x="490" y="368" fill="#ffffff" font-size="11" font-family="Courier New, monospace">  → [2] → [3]:  ... → +1, +1</text>
+  
+  <text x="770" y="400" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">Total: 5</text>
+  
+  <!-- Result -->
+  <rect x="200" y="445" width="500" height="60" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="450" y="480" text-anchor="middle" fill="#4ade80" font-size="18" font-weight="bold" font-family="Courier New, monospace">exactly(2) = 12 - 5 = 7</text>
+  
+  <!-- Why it works -->
+  <rect x="30" y="520" width="840" height="65" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="450" y="545" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">WHY IT WORKS (Mathematical Proof)</text>
+  <text x="50" y="570" fill="#ffffff" font-size="11" font-family="Courier New, monospace">atMost(k) counts subarrays with 0,1,2,...,k distinct | atMost(k-1) counts 0,1,...,k-1 distinct</text>
+  <text x="500" y="570" fill="#4ade80" font-size="11" font-family="Courier New, monospace">Difference = subarrays with exactly k distinct</text>
+</svg>
+

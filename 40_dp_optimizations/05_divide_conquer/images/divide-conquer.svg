@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <rect width="900" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" fill="#ffffff" font-family="Courier New, monospace" font-size="26" font-weight="bold" text-anchor="middle">✂️ DIVIDE &amp; CONQUER OPTIMIZATION</text>
+  <text x="450" y="65" fill="#888888" font-family="Courier New, monospace" font-size="16" text-anchor="middle">Monge Property: O(n²k) → O(nk log n)</text>
+  
+  <!-- Monge Property -->
+  <text x="450" y="105" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">MONGE PROPERTY (QUADRANGLE INEQUALITY)</text>
+  
+  <g transform="translate(150, 120)">
+    <rect x="0" y="0" width="600" height="80" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="300" y="30" fill="#ffffff" font-family="Courier New, monospace" font-size="14" text-anchor="middle">cost[a][c] + cost[b][d] ≤ cost[a][d] + cost[b][c]</text>
+    <text x="300" y="55" fill="#888888" font-family="Courier New, monospace" font-size="12" text-anchor="middle">for all a ≤ b ≤ c ≤ d</text>
+    <text x="300" y="73" fill="#4ade80" font-family="Courier New, monospace" font-size="11" text-anchor="middle">Intuition: "Crossing is bad" - closer splits are better</text>
+  </g>
+  
+  <!-- Visual explanation of Monge -->
+  <text x="450" y="230" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">MONGE PROPERTY VISUALIZATION</text>
+  
+  <g transform="translate(150, 250)">
+    <!-- Good (non-crossing) -->
+    <rect x="0" y="0" width="280" height="120" rx="5" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="140" y="25" fill="#4ade80" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">✓ NON-CROSSING (cheaper)</text>
+    
+    <!-- Points a, b, c, d -->
+    <circle cx="40" cy="90" r="8" fill="#3b82f6"/>
+    <text x="40" y="75" fill="#3b82f6" font-family="Courier New, monospace" font-size="11" text-anchor="middle">a</text>
+    
+    <circle cx="100" cy="90" r="8" fill="#60a5fa"/>
+    <text x="100" y="75" fill="#60a5fa" font-family="Courier New, monospace" font-size="11" text-anchor="middle">b</text>
+    
+    <circle cx="180" cy="90" r="8" fill="#a78bfa"/>
+    <text x="180" y="75" fill="#a78bfa" font-family="Courier New, monospace" font-size="11" text-anchor="middle">c</text>
+    
+    <circle cx="240" cy="90" r="8" fill="#f97316"/>
+    <text x="240" y="75" fill="#f97316" font-family="Courier New, monospace" font-size="11" text-anchor="middle">d</text>
+    
+    <!-- Non-crossing arcs -->
+    <path d="M40,82 Q70,50 100,82" stroke="#4ade80" stroke-width="2" fill="none"/>
+    <path d="M180,82 Q210,50 240,82" stroke="#4ade80" stroke-width="2" fill="none"/>
+    <text x="140" y="115" fill="#4ade80" font-family="Courier New, monospace" font-size="10" text-anchor="middle">cost[a][b] + cost[c][d]</text>
+    
+    <!-- Bad (crossing) -->
+    <rect x="320" y="0" width="280" height="120" rx="5" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="460" y="25" fill="#ef4444" font-family="Courier New, monospace" font-size="12" font-weight="bold" text-anchor="middle">✗ CROSSING (more expensive)</text>
+    
+    <!-- Points a, b, c, d -->
+    <circle cx="360" cy="90" r="8" fill="#3b82f6"/>
+    <text x="360" y="75" fill="#3b82f6" font-family="Courier New, monospace" font-size="11" text-anchor="middle">a</text>
+    
+    <circle cx="420" cy="90" r="8" fill="#60a5fa"/>
+    <text x="420" y="75" fill="#60a5fa" font-family="Courier New, monospace" font-size="11" text-anchor="middle">b</text>
+    
+    <circle cx="500" cy="90" r="8" fill="#a78bfa"/>
+    <text x="500" y="75" fill="#a78bfa" font-family="Courier New, monospace" font-size="11" text-anchor="middle">c</text>
+    
+    <circle cx="560" cy="90" r="8" fill="#f97316"/>
+    <text x="560" y="75" fill="#f97316" font-family="Courier New, monospace" font-size="11" text-anchor="middle">d</text>
+    
+    <!-- Crossing arcs -->
+    <path d="M360,82 Q460,30 560,82" stroke="#ef4444" stroke-width="2" fill="none"/>
+    <path d="M420,98 Q460,140 500,98" stroke="#ef4444" stroke-width="2" fill="none"/>
+    <text x="460" y="115" fill="#ef4444" font-family="Courier New, monospace" font-size="10" text-anchor="middle">cost[a][d] + cost[b][c]</text>
+  </g>
+  
+  <!-- Optimal Split Point Monotonicity -->
+  <text x="450" y="400" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">OPTIMAL SPLIT POINT IS MONOTONIC</text>
+  
+  <g transform="translate(100, 420)">
+    <rect x="0" y="0" width="700" height="90" rx="5" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    
+    <text x="350" y="25" fill="#ffffff" font-family="Courier New, monospace" font-size="12" text-anchor="middle">opt[k][j] = optimal split point for dp[k][j]</text>
+    <text x="350" y="50" fill="#4ade80" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">opt[k][i] ≤ opt[k][j] when i &lt; j</text>
+    <text x="350" y="75" fill="#888888" font-family="Courier New, monospace" font-size="11" text-anchor="middle">D&amp;C: Solve middle first, use opt to bound left/right halves</text>
+  </g>
+  
+  <!-- D&C Process Visualization -->
+  <text x="450" y="540" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold" text-anchor="middle">D&amp;C PROCESS</text>
+  
+  <g transform="translate(100, 555)">
+    <!-- Step 1 -->
+    <rect x="0" y="0" width="200" height="70" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="100" y="20" fill="#f97316" font-family="Courier New, monospace" font-size="11" font-weight="bold" text-anchor="middle">1. SOLVE MIDDLE</text>
+    <text x="100" y="40" fill="#ffffff" font-family="Courier New, monospace" font-size="10" text-anchor="middle">mid = (left + right) / 2</text>
+    <text x="100" y="55" fill="#888888" font-family="Courier New, monospace" font-size="9" text-anchor="middle">Find opt[mid] by scanning</text>
+    
+    <!-- Arrow -->
+    <text x="220" y="35" fill="#ffffff" font-family="Courier New, monospace" font-size="16">→</text>
+    
+    <!-- Step 2 -->
+    <rect x="250" y="0" width="200" height="70" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="350" y="20" fill="#60a5fa" font-family="Courier New, monospace" font-size="11" font-weight="bold" text-anchor="middle">2. RECURSE LEFT</text>
+    <text x="350" y="40" fill="#ffffff" font-family="Courier New, monospace" font-size="10" text-anchor="middle">solve(left, mid-1)</text>
+    <text x="350" y="55" fill="#888888" font-family="Courier New, monospace" font-size="9" text-anchor="middle">opt ∈ [opt_left, opt[mid]]</text>
+    
+    <!-- Arrow -->
+    <text x="470" y="35" fill="#ffffff" font-family="Courier New, monospace" font-size="16">→</text>
+    
+    <!-- Step 3 -->
+    <rect x="500" y="0" width="200" height="70" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="600" y="20" fill="#4ade80" font-family="Courier New, monospace" font-size="11" font-weight="bold" text-anchor="middle">3. RECURSE RIGHT</text>
+    <text x="600" y="40" fill="#ffffff" font-family="Courier New, monospace" font-size="10" text-anchor="middle">solve(mid+1, right)</text>
+    <text x="600" y="55" fill="#888888" font-family="Courier New, monospace" font-size="9" text-anchor="middle">opt ∈ [opt[mid], opt_right]</text>
+  </g>
+</svg>

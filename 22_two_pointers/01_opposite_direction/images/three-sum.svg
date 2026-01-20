@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 700">
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">3Sum Algorithm</text>
+  <text x="475" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Find all triplets that sum to zero | Input: [-1, 0, 1, 2, -1, -4]</text>
+  
+  <!-- Step 1: Sort -->
+  <text x="50" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Step 1: Sort the array</text>
+  
+  <g transform="translate(50, 130)">
+    <rect x="0" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="25" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">-4</text>
+    
+    <rect x="60" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="85" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">-1</text>
+    
+    <rect x="120" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="145" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">-1</text>
+    
+    <rect x="180" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="205" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">0</text>
+    
+    <rect x="240" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="265" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    
+    <rect x="300" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="325" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+  </g>
+  
+  <!-- Step 2: Fix first element -->
+  <text x="50" y="210" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Step 2: Fix i=-1, find L+R = 1 using two pointers</text>
+  
+  <g transform="translate(50, 230)">
+    <rect x="0" y="0" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+    <text x="25" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#888888">-4</text>
+    
+    <rect x="60" y="0" width="50" height="40" fill="#2d1f3d" stroke="#a78bfa" stroke-width="3"/>
+    <text x="85" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">-1</text>
+    <text x="85" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">i (fixed)</text>
+    
+    <rect x="120" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="145" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">-1</text>
+    <text x="145" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">L</text>
+    
+    <rect x="180" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="205" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">0</text>
+    
+    <rect x="240" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="265" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    
+    <rect x="300" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="325" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    <text x="325" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">R</text>
+  </g>
+  
+  <!-- Finding first triplet -->
+  <text x="50" y="320" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">Found: -1 + (-1) + 2 = 0 ✓</text>
+  
+  <g transform="translate(50, 340)">
+    <rect x="0" y="0" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+    <text x="25" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#888888">-4</text>
+    
+    <rect x="60" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="85" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">-1</text>
+    <text x="85" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">✓</text>
+    
+    <rect x="120" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="145" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">-1</text>
+    <text x="145" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">✓</text>
+    
+    <rect x="180" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="205" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">0</text>
+    
+    <rect x="240" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="265" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    
+    <rect x="300" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="325" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    <text x="325" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">✓</text>
+  </g>
+  
+  <!-- Continue to find second triplet -->
+  <text x="50" y="430" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">Found: -1 + 0 + 1 = 0 ✓</text>
+  
+  <g transform="translate(50, 450)">
+    <rect x="0" y="0" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+    <text x="25" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#888888">-4</text>
+    
+    <rect x="60" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="85" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">-1</text>
+    <text x="85" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">✓</text>
+    
+    <rect x="120" y="0" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+    <text x="145" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#888888">-1</text>
+    
+    <rect x="180" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="205" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">0</text>
+    <text x="205" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">✓</text>
+    
+    <rect x="240" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="265" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    <text x="265" y="60" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">✓</text>
+    
+    <rect x="300" y="0" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+    <text x="325" y="27" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#888888">2</text>
+  </g>
+  
+  <!-- Algorithm explanation box -->
+  <rect x="450" y="110" width="470" height="200" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="8"/>
+  <text x="685" y="140" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">3SUM ALGORITHM</text>
+  
+  <text x="470" y="170" font-family="Courier New, monospace" font-size="12" fill="#ffffff">1. Sort array: O(n log n)</text>
+  <text x="470" y="195" font-family="Courier New, monospace" font-size="12" fill="#ffffff">2. For each i from 0 to n-3:</text>
+  <text x="490" y="220" font-family="Courier New, monospace" font-size="12" fill="#ffffff">• Skip duplicates for i</text>
+  <text x="490" y="245" font-family="Courier New, monospace" font-size="12" fill="#ffffff">• Set L = i+1, R = n-1</text>
+  <text x="490" y="270" font-family="Courier New, monospace" font-size="12" fill="#ffffff">• Use two-pointer to find -nums[i]</text>
+  <text x="470" y="295" font-family="Courier New, monospace" font-size="12" fill="#888888">Total: O(n²)</text>
+  
+  <!-- Result box -->
+  <rect x="450" y="330" width="470" height="120" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="8"/>
+  <text x="685" y="360" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">RESULT</text>
+  <text x="470" y="395" font-family="Courier New, monospace" font-size="14" fill="#ffffff">Triplets found:</text>
+  <text x="470" y="420" font-family="Courier New, monospace" font-size="14" fill="#4ade80">  [[-1, -1, 2], [-1, 0, 1]]</text>
+  <text x="470" y="445" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(n²) | Space: O(1) excl. output</text>
+  
+  <!-- Duplicate handling box -->
+  <rect x="450" y="470" width="470" height="110" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="8"/>
+  <text x="685" y="500" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#3b82f6">HANDLING DUPLICATES</text>
+  <text x="470" y="530" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Skip i if nums[i] == nums[i-1]</text>
+  <text x="470" y="555" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• After finding triplet, skip duplicate L and R</text>
+  <text x="470" y="575" font-family="Courier New, monospace" font-size="11" fill="#888888">This ensures unique triplets in output</text>
+  
+  <!-- Key insight -->
+  <rect x="50" y="530" width="380" height="120" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="8"/>
+  <text x="240" y="560" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316">KEY INSIGHT</text>
+  <text x="70" y="590" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Fix one element, reduce to 2Sum!</text>
+  <text x="70" y="615" font-family="Courier New, monospace" font-size="12" fill="#ffffff">a + b + c = 0  →  b + c = -a</text>
+  <text x="70" y="640" font-family="Courier New, monospace" font-size="11" fill="#888888">Same pattern extends to 4Sum, kSum</text>
+</svg>

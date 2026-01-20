@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350">
+  <rect width="900" height="350" fill="#0f0f23"/>
+  
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Persistent Data Structures</text>
+  <text x="450" y="58" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">Preserve all previous versions after modifications</text>
+  
+  <!-- Concept -->
+  <text x="50" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">KEY IDEA</text>
+  <g transform="translate(50, 115)">
+    <rect x="0" y="0" width="350" height="60" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="25" fill="#ffffff" font-size="10" font-family="Courier New, monospace">On update, don't modify - create new nodes</text>
+    <text x="15" y="45" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Share unchanged subtrees between versions</text>
+  </g>
+  
+  <!-- Persistent Segment Tree -->
+  <text x="450" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">PERSISTENT SEGMENT TREE</text>
+  <g transform="translate(450, 115)">
+    <rect x="0" y="0" width="380" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">roots[t] = root of version t</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Update creates O(log n) new nodes</text>
+    <text x="15" y="60" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Query any version: O(log n)</text>
+    <text x="0" y="95" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Space: O(n + q log n) for q updates</text>
+  </g>
+  
+  <!-- Applications -->
+  <text x="50" y="210" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">APPLICATIONS</text>
+  <g transform="translate(50, 230)">
+    <text x="0" y="15" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Kth element in range (persistent + merge sort tree)</text>
+    <text x="0" y="35" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Version control / undo operations</text>
+    <text x="0" y="55" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Functional programming DS</text>
+    <text x="0" y="75" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Online algorithms with history</text>
+  </g>
+  
+  <!-- Complexity -->
+  <text x="500" y="210" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">COMPLEXITY</text>
+  <g transform="translate(500, 230)">
+    <text x="0" y="15" fill="#888888" font-size="10" font-family="Courier New, monospace">Time per operation:</text>
+    <text x="150" y="15" fill="#4ade80" font-size="10" font-family="Courier New, monospace">O(log n)</text>
+    <text x="0" y="35" fill="#888888" font-size="10" font-family="Courier New, monospace">Space per update:</text>
+    <text x="150" y="35" fill="#4ade80" font-size="10" font-family="Courier New, monospace">O(log n)</text>
+  </g>
+</svg>
+

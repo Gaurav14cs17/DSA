@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 700">
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Implement Queue Using Two Stacks</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Amortized O(1) enqueue and dequeue</text>
+  
+  <!-- Operation Sequence -->
+  <text x="475" y="100" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">Operations: enqueue(1), enqueue(2), enqueue(3), dequeue()</text>
+  
+  <!-- Initial State -->
+  <g transform="translate(60, 130)">
+    <text x="85" y="0" font-family="Courier New, monospace" font-size="13" font-weight="bold" fill="#a78bfa" text-anchor="middle">Initial</text>
+    
+    <!-- S1 (Input) -->
+    <rect x="10" y="25" width="70" height="120" rx="4" fill="none" stroke="#3b82f6" stroke-width="2"/>
+    <text x="45" y="160" font-family="Courier New, monospace" font-size="11" fill="#3b82f6" text-anchor="middle">S1 (in)</text>
+    <text x="45" y="90" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">empty</text>
+    
+    <!-- S2 (Output) -->
+    <rect x="100" y="25" width="70" height="120" rx="4" fill="none" stroke="#4ade80" stroke-width="2"/>
+    <text x="135" y="160" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">S2 (out)</text>
+    <text x="135" y="90" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">empty</text>
+  </g>
+  
+  <!-- After enqueue(1) -->
+  <g transform="translate(250, 130)">
+    <text x="85" y="0" font-family="Courier New, monospace" font-size="13" font-weight="bold" fill="#4ade80" text-anchor="middle">enqueue(1)</text>
+    
+    <!-- S1 with 1 -->
+    <rect x="10" y="25" width="70" height="120" rx="4" fill="none" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="15" y="105" width="60" height="35" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="45" y="128" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="45" y="160" font-family="Courier New, monospace" font-size="11" fill="#3b82f6" text-anchor="middle">S1</text>
+    
+    <!-- S2 empty -->
+    <rect x="100" y="25" width="70" height="120" rx="4" fill="none" stroke="#4ade80" stroke-width="2"/>
+    <text x="135" y="90" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">empty</text>
+    <text x="135" y="160" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">S2</text>
+  </g>
+  
+  <!-- After enqueue(2) -->
+  <g transform="translate(440, 130)">
+    <text x="85" y="0" font-family="Courier New, monospace" font-size="13" font-weight="bold" fill="#4ade80" text-anchor="middle">enqueue(2)</text>
+    
+    <!-- S1 with 1, 2 -->
+    <rect x="10" y="25" width="70" height="120" rx="4" fill="none" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="15" y="105" width="60" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="45" y="128" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    <rect x="15" y="65" width="60" height="35" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="45" y="88" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="45" y="160" font-family="Courier New, monospace" font-size="11" fill="#3b82f6" text-anchor="middle">S1</text>
+    
+    <!-- S2 empty -->
+    <rect x="100" y="25" width="70" height="120" rx="4" fill="none" stroke="#4ade80" stroke-width="2"/>
+    <text x="135" y="90" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">empty</text>
+    <text x="135" y="160" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">S2</text>
+  </g>
+  
+  <!-- After enqueue(3) -->
+  <g transform="translate(630, 130)">
+    <text x="85" y="0" font-family="Courier New, monospace" font-size="13" font-weight="bold" fill="#4ade80" text-anchor="middle">enqueue(3)</text>
+    
+    <!-- S1 with 1, 2, 3 -->
+    <rect x="10" y="25" width="70" height="120" rx="4" fill="none" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="15" y="105" width="60" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="45" y="128" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    <rect x="15" y="65" width="60" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="45" y="88" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    <rect x="15" y="25" width="60" height="35" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="45" y="48" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="45" y="160" font-family="Courier New, monospace" font-size="11" fill="#3b82f6" text-anchor="middle">S1</text>
+    <text x="85" y="48" font-family="Courier New, monospace" font-size="10" fill="#f97316">← top</text>
+    
+    <!-- S2 empty -->
+    <rect x="100" y="25" width="70" height="120" rx="4" fill="none" stroke="#4ade80" stroke-width="2"/>
+    <text x="135" y="90" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">empty</text>
+    <text x="135" y="160" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">S2</text>
+  </g>
+  
+  <!-- Dequeue Process Section -->
+  <text x="475" y="320" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">dequeue() - S2 empty, TRANSFER from S1!</text>
+  
+  <!-- Transfer Step 1 -->
+  <g transform="translate(60, 350)">
+    <text x="95" y="0" font-family="Courier New, monospace" font-size="12" fill="#a78bfa" text-anchor="middle">Step 1: Transfer</text>
+    
+    <!-- S1 being emptied -->
+    <rect x="10" y="25" width="80" height="140" rx="4" fill="none" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="15" y="125" width="70" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="50" y="148" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    <rect x="15" y="85" width="70" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="50" y="108" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    
+    <!-- Moving 3 -->
+    <rect x="15" y="25" width="70" height="35" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4"/>
+    <text x="50" y="48" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ef4444" text-anchor="middle">3</text>
+    
+    <text x="50" y="180" font-family="Courier New, monospace" font-size="11" fill="#3b82f6" text-anchor="middle">S1</text>
+    
+    <!-- Arrow -->
+    <path d="M 100 60 C 130 40 160 40 180 80" stroke="#f97316" stroke-width="2" fill="none" marker-end="url(#arrowOrange)"/>
+    
+    <!-- S2 receiving -->
+    <rect x="110" y="25" width="80" height="140" rx="4" fill="none" stroke="#4ade80" stroke-width="2"/>
+    <rect x="115" y="125" width="70" height="35" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="150" y="148" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="150" y="180" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">S2</text>
+  </g>
+  
+  <!-- Transfer Step 2 -->
+  <g transform="translate(270, 350)">
+    <text x="95" y="0" font-family="Courier New, monospace" font-size="12" fill="#a78bfa" text-anchor="middle">Step 2: Transfer</text>
+    
+    <rect x="10" y="25" width="80" height="140" rx="4" fill="none" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="15" y="125" width="70" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="50" y="148" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    
+    <!-- Moving 2 -->
+    <rect x="15" y="85" width="70" height="35" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4"/>
+    <text x="50" y="108" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ef4444" text-anchor="middle">2</text>
+    
+    <text x="50" y="180" font-family="Courier New, monospace" font-size="11" fill="#3b82f6" text-anchor="middle">S1</text>
+    
+    <path d="M 100 100 C 130 80 160 80 180 100" stroke="#f97316" stroke-width="2" fill="none" marker-end="url(#arrowOrange)"/>
+    
+    <rect x="110" y="25" width="80" height="140" rx="4" fill="none" stroke="#4ade80" stroke-width="2"/>
+    <rect x="115" y="125" width="70" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="150" y="148" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+    <rect x="115" y="85" width="70" height="35" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="150" y="108" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="150" y="180" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">S2</text>
+  </g>
+  
+  <!-- Transfer Step 3 -->
+  <g transform="translate(480, 350)">
+    <text x="95" y="0" font-family="Courier New, monospace" font-size="12" fill="#a78bfa" text-anchor="middle">Step 3: Transfer</text>
+    
+    <rect x="10" y="25" width="80" height="140" rx="4" fill="none" stroke="#3b82f6" stroke-width="2"/>
+    
+    <!-- Moving 1 -->
+    <rect x="15" y="125" width="70" height="35" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4"/>
+    <text x="50" y="148" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ef4444" text-anchor="middle">1</text>
+    
+    <text x="50" y="90" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">empty</text>
+    <text x="50" y="180" font-family="Courier New, monospace" font-size="11" fill="#3b82f6" text-anchor="middle">S1</text>
+    
+    <path d="M 100 140 C 130 120 160 120 180 120" stroke="#f97316" stroke-width="2" fill="none" marker-end="url(#arrowOrange)"/>
+    
+    <rect x="110" y="25" width="80" height="140" rx="4" fill="none" stroke="#4ade80" stroke-width="2"/>
+    <rect x="115" y="125" width="70" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="150" y="148" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+    <rect x="115" y="85" width="70" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="150" y="108" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    <rect x="115" y="45" width="70" height="35" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="150" y="68" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="195" y="68" font-family="Courier New, monospace" font-size="10" fill="#f97316">← top</text>
+    <text x="150" y="180" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">S2</text>
+  </g>
+  
+  <!-- Final Pop -->
+  <g transform="translate(700, 350)">
+    <text x="95" y="0" font-family="Courier New, monospace" font-size="12" fill="#0f2f1f" text-anchor="middle">Step 4: Pop S2</text>
+    
+    <rect x="10" y="25" width="80" height="140" rx="4" fill="none" stroke="#3b82f6" stroke-width="2"/>
+    <text x="50" y="100" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">empty</text>
+    <text x="50" y="180" font-family="Courier New, monospace" font-size="11" fill="#3b82f6" text-anchor="middle">S1</text>
+    
+    <rect x="110" y="25" width="80" height="140" rx="4" fill="none" stroke="#4ade80" stroke-width="2"/>
+    <rect x="115" y="125" width="70" height="35" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="150" y="148" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+    <rect x="115" y="85" width="70" height="35" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="150" y="108" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    
+    <!-- Removed 1 -->
+    <rect x="115" y="45" width="70" height="35" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4"/>
+    <text x="150" y="68" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ef4444" text-anchor="middle">1</text>
+    
+    <text x="150" y="180" font-family="Courier New, monospace" font-size="11" fill="#4ade80" text-anchor="middle">S2</text>
+    
+    <!-- Return value -->
+    <rect x="80" y="195" width="120" height="30" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="140" y="215" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">return 1 ✓</text>
+  </g>
+  
+  <!-- Amortized Analysis Box -->
+  <g transform="translate(60, 560)">
+    <rect x="0" y="0" width="400" height="110" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="200" y="25" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa" text-anchor="middle">Amortized Analysis</text>
+    <text x="200" y="50" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">Each element is:</text>
+    <text x="200" y="70" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">• Pushed to S1 once (1 op)</text>
+    <text x="200" y="87" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">• Moved to S2 once (1 op)</text>
+    <text x="200" y="104" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">• Popped from S2 once (1 op)</text>
+  </g>
+  
+  <!-- Complexity Box -->
+  <g transform="translate(490, 560)">
+    <rect x="0" y="0" width="400" height="110" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="200" y="25" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">Complexity</text>
+    <text x="200" y="55" font-family="Courier New, monospace" font-size="14" fill="#ffffff" text-anchor="middle">Total: 3n operations for n elements</text>
+    <text x="200" y="80" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">Amortized: O(1) per operation</text>
+    <text x="200" y="100" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">LeetCode #232</text>
+  </g>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f97316"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,138 @@
+<svg viewBox="0 0 1000 750" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="750" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="500" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">HEAP OPERATIONS</text>
+  <text x="500" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Min-Heap: parent ≤ children | Complete Binary Tree</text>
+  
+  <!-- Section 1: Heap Structure -->
+  <text x="250" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">MIN-HEAP STRUCTURE</text>
+  
+  <!-- Tree nodes -->
+  <!-- Level 0 -->
+  <circle cx="250" cy="170" r="28" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="250" y="177" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="250" y="145" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">i=0</text>
+  
+  <!-- Level 1 -->
+  <line x1="225" y1="192" x2="165" y2="238" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="275" y1="192" x2="335" y2="238" stroke="#3b82f6" stroke-width="2"/>
+  
+  <circle cx="150" cy="260" r="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="150" y="267" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+  <text x="150" y="235" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">i=1</text>
+  
+  <circle cx="350" cy="260" r="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="350" y="267" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="350" y="235" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">i=2</text>
+  
+  <!-- Level 2 -->
+  <line x1="130" y1="285" x2="90" y2="328" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="170" y1="285" x2="210" y2="328" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="330" y1="285" x2="290" y2="328" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="370" y1="285" x2="410" y2="328" stroke="#3b82f6" stroke-width="2"/>
+  
+  <circle cx="75" cy="350" r="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="75" y="357" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">10</text>
+  <text x="75" y="325" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">i=3</text>
+  
+  <circle cx="225" cy="350" r="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="225" y="357" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+  <text x="225" y="325" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">i=4</text>
+  
+  <circle cx="275" cy="350" r="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="275" y="357" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">9</text>
+  <text x="275" y="325" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">i=5</text>
+  
+  <circle cx="425" cy="350" r="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="425" y="357" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">8</text>
+  <text x="425" y="325" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">i=6</text>
+  
+  <!-- Array representation -->
+  <text x="250" y="420" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">Array: [2, 5, 3, 10, 7, 9, 8]</text>
+  
+  <!-- Index formulas box -->
+  <rect x="40" y="440" width="420" height="85" fill="none" stroke="#a78bfa" stroke-width="1" rx="5"/>
+  <text x="250" y="465" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa" text-anchor="middle">INDEX FORMULAS (0-indexed)</text>
+  <text x="250" y="490" font-family="Courier New, monospace" font-size="13" fill="#ffffff" text-anchor="middle">parent(i) = ⌊(i-1)/2⌋</text>
+  <text x="250" y="510" font-family="Courier New, monospace" font-size="13" fill="#ffffff" text-anchor="middle">left(i) = 2i+1    right(i) = 2i+2</text>
+  
+  <!-- Section 2: Insert (Sift Up) -->
+  <text x="700" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">INSERT: SIFT UP</text>
+  
+  <!-- Step 1: Add at end -->
+  <text x="700" y="140" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">Step 1: Add "1" at end</text>
+  
+  <!-- Small tree showing insert -->
+  <circle cx="700" cy="180" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="700" y="186" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+  
+  <line x1="685" y1="197" x2="655" y2="223" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="715" y1="197" x2="745" y2="223" stroke="#3b82f6" stroke-width="2"/>
+  
+  <circle cx="640" cy="240" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="640" y="246" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+  
+  <circle cx="760" cy="240" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="760" y="246" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  
+  <line x1="625" y1="257" x2="605" y2="283" stroke="#3b82f6" stroke-width="2"/>
+  
+  <circle cx="590" cy="300" r="20" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+  <text x="590" y="306" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="590" y="276" font-family="Courier New, monospace" font-size="10" fill="#f97316">NEW</text>
+  
+  <!-- Arrow showing bubble up -->
+  <path d="M590 275 L590 250 L640 220 L700 165" fill="none" stroke="#4ade80" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="545" y="260" font-family="Courier New, monospace" font-size="10" fill="#4ade80">BUBBLE</text>
+  <text x="555" y="272" font-family="Courier New, monospace" font-size="10" fill="#4ade80">UP</text>
+  
+  <!-- Result -->
+  <text x="700" y="345" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">Result: 1 becomes new root</text>
+  <text x="700" y="365" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">Time: O(log n)</text>
+  
+  <!-- Section 3: Extract (Sift Down) -->
+  <text x="700" y="410" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">EXTRACT MIN: SIFT DOWN</text>
+  
+  <text x="700" y="440" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">Step 1: Replace root with last</text>
+  
+  <!-- Small tree showing extract -->
+  <circle cx="700" cy="480" r="20" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+  <text x="700" y="486" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">8</text>
+  <text x="700" y="460" font-family="Courier New, monospace" font-size="10" fill="#f97316">MOVED</text>
+  
+  <line x1="685" y1="497" x2="655" y2="523" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="715" y1="497" x2="745" y2="523" stroke="#3b82f6" stroke-width="2"/>
+  
+  <circle cx="640" cy="540" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="640" y="546" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+  
+  <circle cx="760" cy="540" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="760" y="546" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="760" y="565" font-family="Courier New, monospace" font-size="10" fill="#4ade80">MIN</text>
+  
+  <!-- Arrow showing sink down -->
+  <path d="M700 505 L760 525" fill="none" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="758,520 768,528 758,528" fill="#4ade80"/>
+  <text x="850" y="540" font-family="Courier New, monospace" font-size="10" fill="#4ade80">SWAP</text>
+  <text x="850" y="552" font-family="Courier New, monospace" font-size="10" fill="#4ade80">WITH</text>
+  <text x="850" y="564" font-family="Courier New, monospace" font-size="10" fill="#4ade80">MIN</text>
+  
+  <text x="700" y="600" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">8 > min(5,3)=3 → swap with 3</text>
+  <text x="700" y="620" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">Time: O(log n)</text>
+  
+  <!-- Build Heap section -->
+  <rect x="40" y="545" width="420" height="90" fill="none" stroke="#4ade80" stroke-width="1" rx="5"/>
+  <text x="250" y="570" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">BUILD HEAP: O(n) NOT O(n log n)!</text>
+  <text x="250" y="595" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">Start from last non-leaf: ⌊n/2⌋ - 1</text>
+  <text x="250" y="615" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">Sift down each node → O(n) total</text>
+  
+  <!-- Bottom summary -->
+  <rect x="40" y="660" width="920" height="70" fill="none" stroke="#3b82f6" stroke-width="1" rx="5"/>
+  <text x="500" y="685" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#3b82f6" text-anchor="middle">COMPLEXITY SUMMARY</text>
+  <text x="180" y="710" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">peek: O(1)</text>
+  <text x="380" y="710" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">insert: O(log n)</text>
+  <text x="580" y="710" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">extract: O(log n)</text>
+  <text x="800" y="710" font-family="Courier New, monospace" font-size="12" fill="#4ade80" text-anchor="middle">heapify: O(n)</text>
+</svg>
+

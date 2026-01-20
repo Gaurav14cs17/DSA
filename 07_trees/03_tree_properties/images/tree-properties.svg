@@ -1,0 +1,283 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 800">
+  <rect width="950" height="800" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Tree Properties</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Height • Depth • Diameter • Balanced • Symmetric</text>
+  
+  <!-- HEIGHT Section -->
+  <g transform="translate(50, 100)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">HEIGHT (Bottom-Up)</text>
+    <text x="0" y="20" font-family="Courier New, monospace" font-size="11" fill="#888888">h(node) = 1 + max(h(left), h(right))</text>
+    
+    <!-- Tree with height labels -->
+    <g transform="translate(50, 50)">
+      <line x1="60" y1="20" x2="30" y2="70" stroke="#3b82f6" stroke-width="2"/>
+      <line x1="60" y1="20" x2="90" y2="70" stroke="#3b82f6" stroke-width="2"/>
+      <line x1="30" y1="90" x2="10" y2="140" stroke="#3b82f6" stroke-width="2"/>
+      <line x1="30" y1="90" x2="50" y2="140" stroke="#3b82f6" stroke-width="2"/>
+      
+      <circle cx="60" cy="20" r="20" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="60" y="26" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+      <text x="95" y="26" font-family="Courier New, monospace" font-size="10" fill="#4ade80">h=2</text>
+      
+      <circle cx="30" cy="85" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="30" y="90" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+      <text x="55" y="90" font-family="Courier New, monospace" font-size="10" fill="#4ade80">h=1</text>
+      
+      <circle cx="90" cy="85" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="90" y="90" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+      <text x="115" y="90" font-family="Courier New, monospace" font-size="10" fill="#4ade80">h=0</text>
+      
+      <circle cx="10" cy="155" r="16" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="10" y="160" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+      <text x="30" y="160" font-family="Courier New, monospace" font-size="10" fill="#4ade80">h=0</text>
+      
+      <circle cx="50" cy="155" r="16" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="50" y="160" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+      <text x="70" y="160" font-family="Courier New, monospace" font-size="10" fill="#4ade80">h=0</text>
+    </g>
+    
+    <text x="0" y="240" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Max Depth = 2</text>
+  </g>
+  
+  <!-- DIAMETER Section -->
+  <g transform="translate(300, 100)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">DIAMETER</text>
+    <text x="0" y="20" font-family="Courier New, monospace" font-size="11" fill="#888888">Longest path between any two nodes</text>
+    
+    <!-- Tree with diameter path highlighted -->
+    <g transform="translate(50, 50)">
+      <line x1="60" y1="20" x2="30" y2="70" stroke="#f97316" stroke-width="3"/>
+      <line x1="60" y1="20" x2="90" y2="70" stroke="#888888" stroke-width="2"/>
+      <line x1="30" y1="90" x2="10" y2="140" stroke="#f97316" stroke-width="3"/>
+      <line x1="30" y1="90" x2="50" y2="140" stroke="#f97316" stroke-width="3"/>
+      
+      <circle cx="60" cy="20" r="20" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="60" y="26" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+      
+      <circle cx="30" cy="85" r="18" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="30" y="90" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+      
+      <circle cx="90" cy="85" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="90" y="90" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+      
+      <circle cx="10" cy="155" r="16" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="10" y="160" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+      
+      <circle cx="50" cy="155" r="16" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="50" y="160" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+    </g>
+    
+    <text x="0" y="225" font-family="Courier New, monospace" font-size="11" fill="#888888">Path: 4→2→1 or 5→2→1</text>
+    <text x="0" y="240" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Diameter = 2 edges</text>
+  </g>
+  
+  <!-- BALANCED Section -->
+  <g transform="translate(550, 100)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">BALANCED TREE</text>
+    <text x="0" y="20" font-family="Courier New, monospace" font-size="11" fill="#888888">|h(left) - h(right)| ≤ 1 for all nodes</text>
+    
+    <!-- Balanced Tree -->
+    <g transform="translate(30, 50)">
+      <line x1="40" y1="20" x2="15" y2="60" stroke="#4ade80" stroke-width="2"/>
+      <line x1="40" y1="20" x2="65" y2="60" stroke="#4ade80" stroke-width="2"/>
+      <line x1="65" y1="80" x2="50" y2="120" stroke="#4ade80" stroke-width="2"/>
+      <line x1="65" y1="80" x2="80" y2="120" stroke="#4ade80" stroke-width="2"/>
+      
+      <circle cx="40" cy="20" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="40" y="25" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+      
+      <circle cx="15" cy="75" r="16" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="15" y="80" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">9</text>
+      
+      <circle cx="65" cy="75" r="16" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="65" y="80" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">20</text>
+      
+      <circle cx="50" cy="130" r="14" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="50" y="134" font-family="Courier New, monospace" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">15</text>
+      
+      <circle cx="80" cy="130" r="14" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="80" y="134" font-family="Courier New, monospace" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+      
+      <text x="100" y="80" font-family="Courier New, monospace" font-size="10" fill="#4ade80">✓</text>
+    </g>
+    
+    <!-- Unbalanced Tree -->
+    <g transform="translate(180, 50)">
+      <line x1="20" y1="20" x2="20" y2="55" stroke="#ef4444" stroke-width="2"/>
+      <line x1="20" y1="75" x2="20" y2="110" stroke="#ef4444" stroke-width="2"/>
+      <line x1="20" y1="130" x2="20" y2="165" stroke="#ef4444" stroke-width="2"/>
+      
+      <circle cx="20" cy="20" r="16" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+      <text x="20" y="25" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+      
+      <circle cx="20" cy="70" r="14" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+      <text x="20" y="74" font-family="Courier New, monospace" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+      
+      <circle cx="20" cy="125" r="14" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+      <text x="20" y="129" font-family="Courier New, monospace" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+      
+      <circle cx="20" cy="175" r="14" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+      <text x="20" y="179" font-family="Courier New, monospace" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+      
+      <text x="45" y="100" font-family="Courier New, monospace" font-size="10" fill="#ef4444">✗</text>
+    </g>
+    
+    <text x="30" y="225" font-family="Courier New, monospace" font-size="10" fill="#4ade80">Balanced</text>
+    <text x="165" y="225" font-family="Courier New, monospace" font-size="10" fill="#ef4444">Unbalanced</text>
+  </g>
+  
+  <!-- SYMMETRIC Section -->
+  <g transform="translate(50, 360)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">SYMMETRIC TREE</text>
+    <text x="0" y="20" font-family="Courier New, monospace" font-size="11" fill="#888888">Mirror image of itself</text>
+    
+    <!-- Symmetric Tree -->
+    <g transform="translate(50, 50)">
+      <line x1="60" y1="20" x2="25" y2="65" stroke="#a78bfa" stroke-width="2"/>
+      <line x1="60" y1="20" x2="95" y2="65" stroke="#a78bfa" stroke-width="2"/>
+      <line x1="25" y1="85" x2="5" y2="125" stroke="#a78bfa" stroke-width="2"/>
+      <line x1="25" y1="85" x2="45" y2="125" stroke="#a78bfa" stroke-width="2"/>
+      <line x1="95" y1="85" x2="75" y2="125" stroke="#a78bfa" stroke-width="2"/>
+      <line x1="95" y1="85" x2="115" y2="125" stroke="#a78bfa" stroke-width="2"/>
+      
+      <circle cx="60" cy="20" r="18" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+      <text x="60" y="26" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+      
+      <circle cx="25" cy="80" r="16" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+      <text x="25" y="85" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+      
+      <circle cx="95" cy="80" r="16" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+      <text x="95" y="85" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+      
+      <circle cx="5" cy="135" r="14" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+      <text x="5" y="140" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+      
+      <circle cx="45" cy="135" r="14" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+      <text x="45" y="140" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+      
+      <circle cx="75" cy="135" r="14" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+      <text x="75" y="140" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+      
+      <circle cx="115" cy="135" r="14" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+      <text x="115" y="140" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+      
+      <!-- Mirror line -->
+      <line x1="60" y1="5" x2="60" y2="165" stroke="#a78bfa" stroke-width="1" stroke-dasharray="4"/>
+    </g>
+    
+    <text x="80" y="230" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">Mirror line</text>
+  </g>
+  
+  <!-- COMPLETE BINARY TREE Section -->
+  <g transform="translate(300, 360)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COMPLETE BINARY TREE</text>
+    <text x="0" y="20" font-family="Courier New, monospace" font-size="11" fill="#888888">All levels filled except last (left-aligned)</text>
+    
+    <!-- Complete Tree -->
+    <g transform="translate(50, 50)">
+      <line x1="60" y1="20" x2="30" y2="60" stroke="#3b82f6" stroke-width="2"/>
+      <line x1="60" y1="20" x2="90" y2="60" stroke="#3b82f6" stroke-width="2"/>
+      <line x1="30" y1="80" x2="15" y2="115" stroke="#3b82f6" stroke-width="2"/>
+      <line x1="30" y1="80" x2="45" y2="115" stroke="#3b82f6" stroke-width="2"/>
+      <line x1="90" y1="80" x2="75" y2="115" stroke="#3b82f6" stroke-width="2"/>
+      
+      <circle cx="60" cy="20" r="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="60" y="26" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+      
+      <circle cx="30" cy="75" r="16" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="30" y="80" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+      
+      <circle cx="90" cy="75" r="16" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="90" y="80" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+      
+      <circle cx="15" cy="125" r="14" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="15" y="130" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+      
+      <circle cx="45" cy="125" r="14" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="45" y="130" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+      
+      <circle cx="75" cy="125" r="14" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="75" y="130" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+      
+      <!-- Missing position shown as dashed -->
+      <circle cx="105" cy="125" r="14" fill="none" stroke="#888888" stroke-width="1" stroke-dasharray="4"/>
+    </g>
+    
+    <text x="0" y="210" font-family="Courier New, monospace" font-size="11" fill="#888888">Count nodes: O(log²n)</text>
+    <text x="0" y="230" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">2^h ≤ n ≤ 2^(h+1)-1</text>
+  </g>
+  
+  <!-- INVERT TREE Section -->
+  <g transform="translate(600, 360)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">INVERT BINARY TREE</text>
+    <text x="0" y="20" font-family="Courier New, monospace" font-size="11" fill="#888888">Swap left and right children</text>
+    
+    <!-- Before -->
+    <g transform="translate(20, 50)">
+      <text x="30" y="-10" font-family="Courier New, monospace" font-size="10" fill="#888888">Before</text>
+      <line x1="30" y1="20" x2="10" y2="55" stroke="#3b82f6" stroke-width="2"/>
+      <line x1="30" y1="20" x2="50" y2="55" stroke="#3b82f6" stroke-width="2"/>
+      
+      <circle cx="30" cy="20" r="16" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="30" y="25" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+      
+      <circle cx="10" cy="65" r="14" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="10" y="70" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+      
+      <circle cx="50" cy="65" r="14" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="50" y="70" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+    </g>
+    
+    <!-- Arrow -->
+    <text x="105" y="120" font-family="Courier New, monospace" font-size="24" fill="#4ade80">→</text>
+    
+    <!-- After -->
+    <g transform="translate(145, 50)">
+      <text x="30" y="-10" font-family="Courier New, monospace" font-size="10" fill="#888888">After</text>
+      <line x1="30" y1="20" x2="10" y2="55" stroke="#4ade80" stroke-width="2"/>
+      <line x1="30" y1="20" x2="50" y2="55" stroke="#4ade80" stroke-width="2"/>
+      
+      <circle cx="30" cy="20" r="16" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="30" y="25" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+      
+      <circle cx="10" cy="65" r="14" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="10" y="70" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">7</text>
+      
+      <circle cx="50" cy="65" r="14" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="50" y="70" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    </g>
+  </g>
+  
+  <!-- Formulas Section -->
+  <g transform="translate(50, 620)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">KEY FORMULAS</text>
+    
+    <text x="0" y="35" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Height:</text>
+    <text x="80" y="35" font-family="Courier New, monospace" font-size="12" fill="#ffffff">h(node) = 1 + max(h(left), h(right))</text>
+    
+    <text x="0" y="60" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Diameter:</text>
+    <text x="80" y="60" font-family="Courier New, monospace" font-size="12" fill="#ffffff">max(h(left) + h(right)) for all nodes</text>
+    
+    <text x="0" y="85" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Balanced:</text>
+    <text x="80" y="85" font-family="Courier New, monospace" font-size="12" fill="#ffffff">|h(left) - h(right)| ≤ 1 for all nodes</text>
+    
+    <text x="450" y="35" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Symmetric:</text>
+    <text x="530" y="35" font-family="Courier New, monospace" font-size="12" fill="#ffffff">left.left = right.right AND left.right = right.left</text>
+    
+    <text x="450" y="60" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Complete:</text>
+    <text x="530" y="60" font-family="Courier New, monospace" font-size="12" fill="#ffffff">All levels full except last (left-aligned)</text>
+    
+    <text x="450" y="85" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Max Nodes:</text>
+    <text x="530" y="85" font-family="Courier New, monospace" font-size="12" fill="#ffffff">2^(h+1) - 1 for height h</text>
+  </g>
+  
+  <!-- Key Insight Box -->
+  <g transform="translate(50, 720)">
+    <rect x="0" y="0" width="850" height="50" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="20" y="20" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316">💡 PRO TIP:</text>
+    <text x="20" y="38" font-family="Courier New, monospace" font-size="11" fill="#ffffff">For diameter: track global max of (left_height + right_height) at each node. Return height but update diameter!</text>
+  </g>
+</svg>
+

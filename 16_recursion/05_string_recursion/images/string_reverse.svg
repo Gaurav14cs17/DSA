@@ -1,0 +1,130 @@
+<svg viewBox="0 0 950 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="35" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">String Reverse: Two Approaches</text>
+  <text x="475" y="58" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Reversing "HELLO" using recursion</text>
+  
+  <!-- Left Panel: Substring Method -->
+  <rect x="30" y="80" width="420" height="490" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="240" y="110" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#e94560" text-anchor="middle">Method 1: Substring</text>
+  <text x="240" y="130" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">reverse(s) = s[-1] + reverse(s[:-1])</text>
+  
+  <!-- Step 1 -->
+  <text x="50" y="165" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">Call 1:</text>
+  <rect x="120" y="150" width="100" height="28" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="170" y="169" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">HELLO</text>
+  <text x="240" y="169" font-family="Courier New, monospace" font-size="12" fill="#888888">→ O + reverse(HELL)</text>
+  
+  <!-- Step 2 -->
+  <text x="50" y="205" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">Call 2:</text>
+  <rect x="135" y="190" width="80" height="28" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="175" y="209" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">HELL</text>
+  <text x="240" y="209" font-family="Courier New, monospace" font-size="12" fill="#888888">→ L + reverse(HEL)</text>
+  
+  <!-- Step 3 -->
+  <text x="50" y="245" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">Call 3:</text>
+  <rect x="150" y="230" width="60" height="28" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="180" y="249" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">HEL</text>
+  <text x="240" y="249" font-family="Courier New, monospace" font-size="12" fill="#888888">→ L + reverse(HE)</text>
+  
+  <!-- Step 4 -->
+  <text x="50" y="285" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">Call 4:</text>
+  <rect x="165" y="270" width="40" height="28" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="185" y="289" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">HE</text>
+  <text x="240" y="289" font-family="Courier New, monospace" font-size="12" fill="#888888">→ E + reverse(H)</text>
+  
+  <!-- Step 5 - Base case -->
+  <text x="50" y="325" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Base:</text>
+  <rect x="175" y="310" width="30" height="28" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="190" y="329" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">H</text>
+  <text x="240" y="329" font-family="Courier New, monospace" font-size="12" fill="#4ade80">→ return "H"</text>
+  
+  <!-- Unwinding -->
+  <line x1="240" y1="350" x2="240" y2="370" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="240,380 235,370 245,370" fill="#4ade80"/>
+  
+  <text x="50" y="405" font-family="Courier New, monospace" font-size="12" fill="#888888">Unwinding:</text>
+  <text x="120" y="430" font-family="Courier New, monospace" font-size="12" fill="#ffffff">E + H = EH</text>
+  <text x="120" y="455" font-family="Courier New, monospace" font-size="12" fill="#ffffff">L + EH = LEH</text>
+  <text x="120" y="480" font-family="Courier New, monospace" font-size="12" fill="#ffffff">L + LEH = LLEH</text>
+  <text x="120" y="505" font-family="Courier New, monospace" font-size="12" fill="#ffffff">O + LLEH = OLLEH</text>
+  
+  <rect x="120" y="520" width="100" height="35" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="170" y="544" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">OLLEH</text>
+  
+  <!-- Right Panel: Two Pointer Method -->
+  <rect x="500" y="80" width="420" height="490" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="710" y="110" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#e94560" text-anchor="middle">Method 2: Two Pointers</text>
+  <text x="710" y="130" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">swap(s, left, right), recurse inward</text>
+  
+  <!-- Initial state -->
+  <text x="520" y="165" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">Initial:</text>
+  <rect x="595" y="148" width="30" height="30" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="610" y="168" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">H</text>
+  <rect x="630" y="148" width="30" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="645" y="168" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">E</text>
+  <rect x="665" y="148" width="30" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="680" y="168" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">L</text>
+  <rect x="700" y="148" width="30" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="715" y="168" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">L</text>
+  <rect x="735" y="148" width="30" height="30" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="750" y="168" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">O</text>
+  <text x="610" y="195" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">L</text>
+  <text x="750" y="195" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">R</text>
+  
+  <!-- Swap 1 -->
+  <text x="520" y="235" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Swap 1:</text>
+  <path d="M 610 205 Q 680 220 750 205" stroke="#4ade80" stroke-width="2" fill="none" stroke-dasharray="4,2"/>
+  <rect x="595" y="218" width="30" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="610" y="238" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">O</text>
+  <rect x="630" y="218" width="30" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="645" y="238" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">E</text>
+  <rect x="665" y="218" width="30" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="680" y="238" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">L</text>
+  <rect x="700" y="218" width="30" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="715" y="238" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">L</text>
+  <rect x="735" y="218" width="30" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="750" y="238" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">H</text>
+  
+  <!-- Move pointers -->
+  <text x="520" y="295" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">Move ptrs:</text>
+  <rect x="595" y="278" width="30" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="610" y="298" font-family="Courier New, monospace" font-size="14" fill="#4ade80" text-anchor="middle">O</text>
+  <rect x="630" y="278" width="30" height="30" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="645" y="298" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">E</text>
+  <rect x="665" y="278" width="30" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="680" y="298" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">L</text>
+  <rect x="700" y="278" width="30" height="30" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="715" y="298" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">L</text>
+  <rect x="735" y="278" width="30" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="750" y="298" font-family="Courier New, monospace" font-size="14" fill="#4ade80" text-anchor="middle">H</text>
+  <text x="645" y="325" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">L</text>
+  <text x="715" y="325" font-family="Courier New, monospace" font-size="10" fill="#f97316" text-anchor="middle">R</text>
+  
+  <!-- Swap 2 -->
+  <text x="520" y="365" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Swap 2:</text>
+  <path d="M 645 335 Q 680 350 715 335" stroke="#4ade80" stroke-width="2" fill="none" stroke-dasharray="4,2"/>
+  <rect x="595" y="348" width="30" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="610" y="368" font-family="Courier New, monospace" font-size="14" fill="#4ade80" text-anchor="middle">O</text>
+  <rect x="630" y="348" width="30" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="645" y="368" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">L</text>
+  <rect x="665" y="348" width="30" height="30" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="680" y="368" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">L</text>
+  <rect x="700" y="348" width="30" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="715" y="368" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">E</text>
+  <rect x="735" y="348" width="30" height="30" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="750" y="368" font-family="Courier New, monospace" font-size="14" fill="#4ade80" text-anchor="middle">H</text>
+  
+  <!-- Final - pointers crossed -->
+  <text x="520" y="420" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">L >= R: Done!</text>
+  <rect x="595" y="430" width="170" height="40" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="680" y="457" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80" text-anchor="middle">O L L E H</text>
+  
+  <!-- Comparison -->
+  <rect x="520" y="490" width="390" height="65" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="715" y="515" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa" text-anchor="middle">Comparison</text>
+  <text x="540" y="540" font-family="Courier New, monospace" font-size="11" fill="#ef4444">Substring: O(n²) time, O(n²) space</text>
+  <text x="540" y="555" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Two-Ptr:   O(n) time, O(n) space</text>
+</svg>
+

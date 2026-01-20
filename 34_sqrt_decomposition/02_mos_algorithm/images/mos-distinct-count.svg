@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">🔢 Distinct Element Count</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Classic Mo's Algorithm Application</text>
+  
+  <!-- Problem Statement -->
+  <text x="50" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Problem: Count Distinct Elements in Range</text>
+  
+  <g transform="translate(50, 130)">
+    <rect x="0" y="0" width="800" height="60" fill="none" stroke="#3b82f6" stroke-width="1"/>
+    <text x="15" y="25" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Given: Array of n elements, q queries of form (L, R)</text>
+    <text x="15" y="45" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Task: For each query, count distinct elements in arr[L..R]</text>
+  </g>
+  
+  <!-- Data Structure -->
+  <text x="50" y="230" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">State Maintenance</text>
+  
+  <g transform="translate(50, 250)">
+    <!-- Frequency Map -->
+    <rect x="0" y="0" width="250" height="130" fill="none" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="15" y="25" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Frequency Map (freq)</text>
+    
+    <text x="25" y="50" font-family="Courier New, monospace" font-size="11" fill="#ffffff">freq[value] = count in range</text>
+    
+    <text x="25" y="75" font-family="Courier New, monospace" font-size="10" fill="#888888">Example for range [1,5]:</text>
+    <text x="25" y="95" font-family="Courier New, monospace" font-size="10" fill="#ffffff">freq = {1:1, 2:2, 3:1, 4:1}</text>
+    <text x="25" y="115" font-family="Courier New, monospace" font-size="10" fill="#888888">4 distinct values</text>
+    
+    <!-- Distinct Count -->
+    <rect x="280" y="0" width="250" height="130" fill="none" stroke="#f97316" stroke-width="1.5"/>
+    <text x="295" y="25" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">distinct_count</text>
+    
+    <text x="305" y="50" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Number of values with freq > 0</text>
+    
+    <text x="305" y="80" font-family="Courier New, monospace" font-size="10" fill="#888888">Increment when:</text>
+    <text x="320" y="100" font-family="Courier New, monospace" font-size="10" fill="#4ade80">freq[v] goes 0 → 1</text>
+    <text x="305" y="120" font-family="Courier New, monospace" font-size="10" fill="#888888">Decrement when:</text>
+    <text x="320" y="120" font-family="Courier New, monospace" font-size="10" fill="#ef4444">freq[v] goes 1 → 0</text>
+  </g>
+  
+  <!-- Add Operation -->
+  <text x="50" y="420" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Add/Remove Operations</text>
+  
+  <g transform="translate(50, 445)">
+    <!-- Add -->
+    <rect x="0" y="0" width="380" height="110" fill="none" stroke="#4ade80" stroke-width="2"/>
+    <text x="15" y="25" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">add(idx) - Expand Range</text>
+    
+    <text x="15" y="50" font-family="Courier New, monospace" font-size="10" fill="#ffffff">value = arr[idx]</text>
+    <text x="15" y="70" font-family="Courier New, monospace" font-size="10" fill="#ffffff">if freq[value] == 0:</text>
+    <text x="30" y="87" font-family="Courier New, monospace" font-size="10" fill="#4ade80">distinct_count += 1  # New value!</text>
+    <text x="15" y="104" font-family="Courier New, monospace" font-size="10" fill="#ffffff">freq[value] += 1</text>
+    
+    <!-- Remove -->
+    <rect x="420" y="0" width="380" height="110" fill="none" stroke="#ef4444" stroke-width="2"/>
+    <text x="435" y="25" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ef4444">remove(idx) - Contract Range</text>
+    
+    <text x="435" y="50" font-family="Courier New, monospace" font-size="10" fill="#ffffff">value = arr[idx]</text>
+    <text x="435" y="70" font-family="Courier New, monospace" font-size="10" fill="#ffffff">freq[value] -= 1</text>
+    <text x="435" y="87" font-family="Courier New, monospace" font-size="10" fill="#ffffff">if freq[value] == 0:</text>
+    <text x="450" y="104" font-family="Courier New, monospace" font-size="10" fill="#ef4444">distinct_count -= 1  # Value gone!</text>
+  </g>
+  
+  <!-- Code Example -->
+  <text x="560" y="230" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Python Implementation</text>
+  
+  <g transform="translate(560, 250)">
+    <rect x="0" y="0" width="300" height="130" fill="#1a1a2e" stroke="#3b82f6" stroke-width="1"/>
+    <text x="10" y="20" font-family="Courier New, monospace" font-size="9" fill="#a78bfa">def</text>
+    <text x="35" y="20" font-family="Courier New, monospace" font-size="9" fill="#4ade80">add</text>
+    <text x="55" y="20" font-family="Courier New, monospace" font-size="9" fill="#ffffff">(self, idx):</text>
+    <text x="15" y="35" font-family="Courier New, monospace" font-size="9" fill="#ffffff">v = self.arr[idx]</text>
+    <text x="15" y="50" font-family="Courier New, monospace" font-size="9" fill="#a78bfa">if</text>
+    <text x="30" y="50" font-family="Courier New, monospace" font-size="9" fill="#ffffff">self.freq[v] == 0:</text>
+    <text x="25" y="65" font-family="Courier New, monospace" font-size="9" fill="#ffffff">self.distinct += 1</text>
+    <text x="15" y="80" font-family="Courier New, monospace" font-size="9" fill="#ffffff">self.freq[v] += 1</text>
+    
+    <text x="10" y="100" font-family="Courier New, monospace" font-size="9" fill="#a78bfa">def</text>
+    <text x="35" y="100" font-family="Courier New, monospace" font-size="9" fill="#ef4444">remove</text>
+    <text x="75" y="100" font-family="Courier New, monospace" font-size="9" fill="#ffffff">(self, idx):</text>
+    <text x="15" y="115" font-family="Courier New, monospace" font-size="9" fill="#888888"># ... mirror of add</text>
+  </g>
+  
+  <!-- Complexity -->
+  <rect x="50" y="575" width="800" height="40" fill="none" stroke="#e94560" stroke-width="1.5"/>
+  <text x="450" y="600" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">Time: O((n+q)√n) | Space: O(n) for freq map | Each add/remove: O(1)</text>
+</svg>
+

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <rect width="900" height="400" fill="#0f0f23"/>
+  
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Number Theory</text>
+  <text x="450" y="58" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">Mathematical algorithms for integers</text>
+  
+  <!-- GCD -->
+  <text x="50" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">GCD &amp; LCM</text>
+  <g transform="translate(50, 115)">
+    <rect x="0" y="0" width="250" height="60" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">gcd(a, b) = gcd(b, a % b)</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">lcm(a, b) = a * b / gcd(a, b)</text>
+    <text x="0" y="80" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Euclidean: O(log min(a,b))</text>
+  </g>
+  
+  <!-- Primes -->
+  <text x="350" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">PRIME NUMBERS</text>
+  <g transform="translate(350, 115)">
+    <rect x="0" y="0" width="250" height="60" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Sieve of Eratosthenes: O(n log log n)</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Primality test: O(√n)</text>
+    <text x="15" y="55" fill="#888888" font-size="10" font-family="Courier New, monospace">Miller-Rabin for large numbers</text>
+  </g>
+  
+  <!-- Modular Arithmetic -->
+  <text x="650" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">MODULAR ARITHMETIC</text>
+  <g transform="translate(650, 115)">
+    <rect x="0" y="0" width="200" height="60" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">(a + b) % m</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">(a * b) % m</text>
+    <text x="15" y="55" fill="#888888" font-size="10" font-family="Courier New, monospace">Mod inverse: a^(m-2) % m</text>
+  </g>
+  
+  <!-- Fast Exponentiation -->
+  <text x="50" y="220" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">FAST POWER</text>
+  <g transform="translate(50, 240)">
+    <text x="0" y="15" fill="#ffffff" font-size="10" font-family="Courier New, monospace">a^n = (a^(n/2))² if n even</text>
+    <text x="0" y="35" fill="#ffffff" font-size="10" font-family="Courier New, monospace">a^n = a * a^(n-1) if n odd</text>
+    <text x="0" y="55" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Time: O(log n)</text>
+  </g>
+  
+  <!-- Chinese Remainder -->
+  <text x="300" y="220" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">CHINESE REMAINDER</text>
+  <g transform="translate(300, 240)">
+    <text x="0" y="15" fill="#888888" font-size="10" font-family="Courier New, monospace">x ≡ a₁ (mod m₁)</text>
+    <text x="0" y="35" fill="#888888" font-size="10" font-family="Courier New, monospace">x ≡ a₂ (mod m₂)</text>
+    <text x="0" y="55" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Find unique x mod (m₁*m₂)</text>
+  </g>
+  
+  <!-- Euler's Totient -->
+  <text x="550" y="220" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">EULER'S TOTIENT</text>
+  <g transform="translate(550, 240)">
+    <text x="0" y="15" fill="#ffffff" font-size="10" font-family="Courier New, monospace">φ(n) = count of 1≤k≤n</text>
+    <text x="0" y="35" fill="#ffffff" font-size="10" font-family="Courier New, monospace">where gcd(k, n) = 1</text>
+    <text x="0" y="55" fill="#4ade80" font-size="10" font-family="Courier New, monospace">a^φ(n) ≡ 1 (mod n)</text>
+  </g>
+  
+  <!-- Applications -->
+  <text x="50" y="340" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">APPLICATIONS</text>
+  <g transform="translate(50, 355)">
+    <text x="0" y="15" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Cryptography • Hashing • Competitive Programming • Random Number Generation</text>
+  </g>
+</svg>
+

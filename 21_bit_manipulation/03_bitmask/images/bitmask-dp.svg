@@ -1,0 +1,110 @@
+<svg viewBox="0 0 950 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Bitmask Dynamic Programming</text>
+  <text x="475" y="68" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Use bitmask as DP state to track "which elements chosen"</text>
+  
+  <!-- When to use -->
+  <rect x="50" y="95" width="400" height="120" rx="8" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="250" y="120" text-anchor="middle" fill="#f97316" font-size="14" font-weight="bold" font-family="Courier New, monospace">WHEN TO USE BITMASK DP</text>
+  <text x="70" y="150" fill="#ffffff" font-size="11" font-family="Courier New, monospace">✓ Small n (usually n ≤ 20)</text>
+  <text x="70" y="172" fill="#ffffff" font-size="11" font-family="Courier New, monospace">✓ Track "which elements chosen"</text>
+  <text x="70" y="194" fill="#ffffff" font-size="11" font-family="Courier New, monospace">✓ Subsets, permutations, assignments</text>
+  <text x="70" y="210" fill="#888888" font-size="10" font-family="Courier New, monospace">⚠ n &gt; 20 usually means TLE!</text>
+  
+  <!-- General Pattern -->
+  <rect x="480" y="95" width="420" height="120" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="690" y="120" text-anchor="middle" fill="#3b82f6" font-size="14" font-weight="bold" font-family="Courier New, monospace">GENERAL PATTERN</text>
+  <text x="500" y="148" fill="#ffffff" font-size="10" font-family="Courier New, monospace">dp[mask] = optimal value for elements in mask</text>
+  <text x="500" y="170" fill="#ffffff" font-size="10" font-family="Courier New, monospace">for mask in range(1 &lt;&lt; n):</text>
+  <text x="500" y="190" fill="#ffffff" font-size="10" font-family="Courier New, monospace">  for i not in mask:</text>
+  <text x="500" y="210" fill="#4ade80" font-size="10" font-weight="bold" font-family="Courier New, monospace">    dp[mask|(1&lt;&lt;i)] = f(dp[mask], cost[i])</text>
+  
+  <!-- TSP Example -->
+  <text x="475" y="250" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">CLASSIC EXAMPLE: Traveling Salesman Problem (TSP)</text>
+  
+  <!-- TSP State Definition -->
+  <rect x="50" y="275" width="420" height="100" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="260" y="300" text-anchor="middle" fill="#a78bfa" font-size="12" font-weight="bold" font-family="Courier New, monospace">STATE DEFINITION</text>
+  <text x="70" y="330" fill="#ffffff" font-size="11" font-family="Courier New, monospace">dp[mask][i] = min cost to visit cities in mask,</text>
+  <text x="70" y="352" fill="#ffffff" font-size="11" font-family="Courier New, monospace">              ending at city i</text>
+  <text x="70" y="370" fill="#888888" font-size="10" font-family="Courier New, monospace">States: O(n × 2ⁿ)</text>
+  
+  <!-- TSP Transition -->
+  <rect x="500" y="275" width="400" height="100" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="700" y="300" text-anchor="middle" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">TRANSITION</text>
+  <text x="520" y="330" fill="#ffffff" font-size="11" font-family="Courier New, monospace">dp[mask][i] = min over all j in mask:</text>
+  <text x="520" y="355" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">  dp[mask \ {i}][j] + dist[j][i]</text>
+  <text x="520" y="370" fill="#888888" font-size="10" font-family="Courier New, monospace">Transitions: O(n) per state</text>
+  
+  <!-- Visual TSP Example with 4 cities -->
+  <text x="475" y="410" text-anchor="middle" fill="#888888" font-size="12" font-family="Courier New, monospace">Example: 4 cities, start from city 0</text>
+  
+  <rect x="50" y="430" width="850" height="200" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Level 0 -->
+  <rect x="80" y="460" width="100" height="40" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="130" y="485" text-anchor="middle" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">dp[0001][0]</text>
+  <text x="130" y="520" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">Start: cost=0</text>
+  
+  <!-- Arrows from level 0 to level 1 -->
+  <line x1="180" y1="480" x2="250" y2="460" stroke="#4ade80" stroke-width="1"/>
+  <line x1="180" y1="480" x2="250" y2="490" stroke="#f97316" stroke-width="1"/>
+  <line x1="180" y1="480" x2="250" y2="520" stroke="#a78bfa" stroke-width="1"/>
+  
+  <!-- Level 1: visited 2 cities -->
+  <rect x="250" y="445" width="100" height="35" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="300" y="468" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">dp[0011][1]</text>
+  
+  <rect x="250" y="485" width="100" height="35" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="300" y="508" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">dp[0101][2]</text>
+  
+  <rect x="250" y="525" width="100" height="35" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="300" y="548" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">dp[1001][3]</text>
+  
+  <!-- Arrows from level 1 to level 2 -->
+  <line x1="350" y1="462" x2="420" y2="470" stroke="#4ade80" stroke-width="1"/>
+  <line x1="350" y1="502" x2="420" y2="490" stroke="#4ade80" stroke-width="1"/>
+  <line x1="350" y1="502" x2="420" y2="520" stroke="#a78bfa" stroke-width="1"/>
+  <line x1="350" y1="542" x2="420" y2="530" stroke="#f97316" stroke-width="1"/>
+  
+  <!-- Level 2: visited 3 cities -->
+  <rect x="420" y="455" width="100" height="35" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="470" y="478" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">dp[0111][2]</text>
+  
+  <rect x="420" y="495" width="100" height="35" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="470" y="518" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">dp[1011][3]</text>
+  
+  <rect x="420" y="535" width="100" height="35" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="470" y="558" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">dp[1101][3]</text>
+  
+  <!-- Arrows to final -->
+  <line x1="520" y1="472" x2="600" y2="502" stroke="#4ade80" stroke-width="2"/>
+  <line x1="520" y1="512" x2="600" y2="502" stroke="#4ade80" stroke-width="2"/>
+  <line x1="520" y1="552" x2="600" y2="502" stroke="#4ade80" stroke-width="2"/>
+  
+  <!-- Final state -->
+  <rect x="600" y="480" width="120" height="45" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="660" y="500" text-anchor="middle" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">dp[1111][*]</text>
+  <text x="660" y="518" text-anchor="middle" fill="#888888" font-size="9" font-family="Courier New, monospace">All visited!</text>
+  
+  <!-- Return to start -->
+  <line x1="720" y1="502" x2="800" y2="502" stroke="#f97316" stroke-width="2"/>
+  <text x="760" y="495" fill="#f97316" font-size="10" font-family="Courier New, monospace">+dist[i][0]</text>
+  
+  <rect x="800" y="480" width="80" height="45" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+  <text x="840" y="505" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="Courier New, monospace">ANSWER</text>
+  <text x="840" y="520" text-anchor="middle" fill="#f97316" font-size="9" font-family="Courier New, monospace">min tour</text>
+  
+  <!-- Labels -->
+  <text x="130" y="605" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">mask=0001</text>
+  <text x="300" y="605" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">2 cities</text>
+  <text x="470" y="605" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">3 cities</text>
+  <text x="660" y="605" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">mask=1111</text>
+  
+  <!-- Complexity Box -->
+  <rect x="200" y="640" width="550" height="45" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="475" y="665" text-anchor="middle" fill="#60a5fa" font-size="14" font-weight="bold" font-family="Courier New, monospace">TSP Complexity: O(n² × 2ⁿ) time, O(n × 2ⁿ) space</text>
+</svg>
+

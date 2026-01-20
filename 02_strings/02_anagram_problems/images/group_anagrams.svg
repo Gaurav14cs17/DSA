@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340">
+  <rect width="600" height="340" fill="#141e30"/>
+  
+  <!-- Title -->
+  <text x="300" y="28" fill="#fff" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle">Group Anagrams</text>
+  
+  <!-- Input -->
+  <text x="30" y="60" fill="#ffd700" font-family="Arial" font-size="12" font-weight="bold">Input: ["eat", "tea", "tan", "ate", "nat", "bat"]</text>
+  
+  <!-- Step 1 -->
+  <text x="30" y="90" fill="#aaa" font-family="Arial" font-size="12">Step 1: Sort each word to get key</text>
+  
+  <g transform="translate(30, 105)">
+    <rect x="0" y="0" width="60" height="30" rx="4" fill="#f5af19"/>
+    <text x="30" y="20" fill="#333" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">eat</text>
+    <text x="30" y="42" fill="#f5af19" font-family="monospace" font-size="10" text-anchor="middle">→aet</text>
+    
+    <rect x="75" y="0" width="60" height="30" rx="4" fill="#f5af19"/>
+    <text x="105" y="20" fill="#333" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">tea</text>
+    <text x="105" y="42" fill="#f5af19" font-family="monospace" font-size="10" text-anchor="middle">→aet</text>
+    
+    <rect x="150" y="0" width="60" height="30" rx="4" fill="#38ef7d"/>
+    <text x="180" y="20" fill="#333" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">tan</text>
+    <text x="180" y="42" fill="#38ef7d" font-family="monospace" font-size="10" text-anchor="middle">→ant</text>
+    
+    <rect x="225" y="0" width="60" height="30" rx="4" fill="#f5af19"/>
+    <text x="255" y="20" fill="#333" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">ate</text>
+    <text x="255" y="42" fill="#f5af19" font-family="monospace" font-size="10" text-anchor="middle">→aet</text>
+    
+    <rect x="300" y="0" width="60" height="30" rx="4" fill="#38ef7d"/>
+    <text x="330" y="20" fill="#333" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">nat</text>
+    <text x="330" y="42" fill="#38ef7d" font-family="monospace" font-size="10" text-anchor="middle">→ant</text>
+    
+    <rect x="375" y="0" width="60" height="30" rx="4" fill="#764ba2"/>
+    <text x="405" y="20" fill="#fff" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">bat</text>
+    <text x="405" y="42" fill="#764ba2" font-family="monospace" font-size="10" text-anchor="middle">→abt</text>
+  </g>
+  
+  <!-- Step 2 -->
+  <text x="30" y="175" fill="#aaa" font-family="Arial" font-size="12">Step 2: Group by key in HashMap</text>
+  
+  <g transform="translate(30, 190)">
+    <rect x="0" y="0" width="530" height="80" rx="8" fill="rgba(255,255,255,0.05)" stroke="#555"/>
+    
+    <!-- Group 1 -->
+    <rect x="15" y="15" width="160" height="45" rx="5" fill="rgba(245,175,25,0.2)" stroke="#f5af19"/>
+    <text x="25" y="35" fill="#f5af19" font-family="monospace" font-size="11" font-weight="bold">"aet":</text>
+    <text x="70" y="35" fill="#fff" font-family="monospace" font-size="10">[eat,tea,ate]</text>
+    
+    <!-- Group 2 -->
+    <rect x="190" y="15" width="160" height="45" rx="5" fill="rgba(56,239,125,0.2)" stroke="#38ef7d"/>
+    <text x="200" y="35" fill="#38ef7d" font-family="monospace" font-size="11" font-weight="bold">"ant":</text>
+    <text x="245" y="35" fill="#fff" font-family="monospace" font-size="10">[tan,nat]</text>
+    
+    <!-- Group 3 -->
+    <rect x="365" y="15" width="150" height="45" rx="5" fill="rgba(118,75,162,0.2)" stroke="#764ba2"/>
+    <text x="375" y="35" fill="#764ba2" font-family="monospace" font-size="11" font-weight="bold">"abt":</text>
+    <text x="420" y="35" fill="#fff" font-family="monospace" font-size="10">[bat]</text>
+  </g>
+  
+  <!-- Output -->
+  <text x="300" y="300" fill="#ffd700" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Output: [[eat,tea,ate], [tan,nat], [bat]]</text>
+  
+  <!-- Complexity -->
+  <text x="300" y="325" fill="#888" font-family="Arial" font-size="11" text-anchor="middle">Time: O(n·k log k) | Space: O(nk)</text>
+</svg>

@@ -1,0 +1,148 @@
+<svg viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Basic Trie Operations</text>
+  <text x="450" y="65" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Insert • Search • StartsWith • Delete</text>
+  
+  <!-- Words Box -->
+  <text x="50" y="110" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">STORED WORDS</text>
+  <rect x="40" y="120" width="130" height="110" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="55" y="148" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">"app"</text>
+  <text x="55" y="173" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">"apple"</text>
+  <text x="55" y="198" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">"and"</text>
+  <text x="55" y="223" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">"be"</text>
+  
+  <!-- Trie Structure -->
+  <text x="420" y="110" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">TRIE STRUCTURE</text>
+  
+  <!-- Root Node -->
+  <circle cx="420" cy="160" r="28" fill="#2d1f3d" stroke="#a78bfa" stroke-width="3"/>
+  <text x="420" y="167" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">∅</text>
+  <text x="420" y="130" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">ROOT</text>
+  
+  <!-- Level 1 Edges -->
+  <line x1="392" y1="182" x2="290" y2="238" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="448" y1="182" x2="550" y2="238" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Edge Labels Level 1 -->
+  <text x="325" y="200" fill="#60a5fa" font-size="14" font-weight="bold" font-family="Courier New, monospace">'a'</text>
+  <text x="505" y="200" fill="#60a5fa" font-size="14" font-weight="bold" font-family="Courier New, monospace">'b'</text>
+  
+  <!-- Level 1 Nodes -->
+  <circle cx="290" cy="260" r="24" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="290" y="267" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">a</text>
+  
+  <circle cx="550" cy="260" r="24" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="550" y="267" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">b</text>
+  
+  <!-- Level 2 Edges -->
+  <line x1="266" y1="278" x2="200" y2="338" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="314" y1="278" x2="380" y2="338" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="550" y1="284" x2="550" y2="336" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Edge Labels Level 2 -->
+  <text x="220" y="300" fill="#60a5fa" font-size="14" font-weight="bold" font-family="Courier New, monospace">'n'</text>
+  <text x="355" y="300" fill="#60a5fa" font-size="14" font-weight="bold" font-family="Courier New, monospace">'p'</text>
+  <text x="565" y="315" fill="#60a5fa" font-size="14" font-weight="bold" font-family="Courier New, monospace">'e'</text>
+  
+  <!-- Level 2 Nodes -->
+  <circle cx="200" cy="360" r="24" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="200" y="367" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">n</text>
+  
+  <circle cx="380" cy="360" r="24" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="380" y="367" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">p</text>
+  
+  <!-- be - end word marker -->
+  <circle cx="550" cy="360" r="24" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="550" y="367" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">e</text>
+  <circle cx="568" cy="345" r="8" fill="#4ade80"/>
+  <text x="590" y="350" fill="#888888" font-size="11" font-family="Courier New, monospace">"be"</text>
+  
+  <!-- Level 3 Edges -->
+  <line x1="200" y1="384" x2="200" y2="436" stroke="#3b82f6" stroke-width="2"/>
+  <line x1="380" y1="384" x2="380" y2="436" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Edge Labels Level 3 -->
+  <text x="215" y="415" fill="#60a5fa" font-size="14" font-weight="bold" font-family="Courier New, monospace">'d'</text>
+  <text x="395" y="415" fill="#60a5fa" font-size="14" font-weight="bold" font-family="Courier New, monospace">'p'</text>
+  
+  <!-- Level 3 Nodes -->
+  <!-- and - end word marker -->
+  <circle cx="200" cy="460" r="24" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="200" y="467" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">d</text>
+  <circle cx="218" cy="445" r="8" fill="#4ade80"/>
+  <text x="155" y="450" fill="#888888" font-size="11" font-family="Courier New, monospace">"and"</text>
+  
+  <!-- app - end word marker -->
+  <circle cx="380" cy="460" r="24" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="380" y="467" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">p</text>
+  <circle cx="398" cy="445" r="8" fill="#4ade80"/>
+  <text x="410" y="450" fill="#888888" font-size="11" font-family="Courier New, monospace">"app"</text>
+  
+  <!-- Level 4 Edge -->
+  <line x1="380" y1="484" x2="380" y2="536" stroke="#3b82f6" stroke-width="2"/>
+  <text x="395" y="515" fill="#60a5fa" font-size="14" font-weight="bold" font-family="Courier New, monospace">'l'</text>
+  
+  <!-- Level 4 Node -->
+  <circle cx="380" cy="560" r="24" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="380" y="567" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">l</text>
+  
+  <!-- Level 5 Edge -->
+  <line x1="380" y1="584" x2="380" y2="636" stroke="#3b82f6" stroke-width="2"/>
+  <text x="395" y="615" fill="#60a5fa" font-size="14" font-weight="bold" font-family="Courier New, monospace">'e'</text>
+  
+  <!-- apple - end word marker -->
+  <circle cx="380" cy="660" r="24" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="380" y="667" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">e</text>
+  <circle cx="398" cy="645" r="8" fill="#4ade80"/>
+  <text x="415" y="660" fill="#888888" font-size="11" font-family="Courier New, monospace">"apple"</text>
+  
+  <!-- Legend -->
+  <text x="50" y="270" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">LEGEND</text>
+  <rect x="40" y="280" width="130" height="90" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="60" cy="310" r="10" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <circle cx="72" cy="302" r="5" fill="#4ade80"/>
+  <text x="85" y="315" fill="#ffffff" font-size="11" font-family="Courier New, monospace">End of word</text>
+  <circle cx="60" cy="345" r="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="85" y="350" fill="#ffffff" font-size="11" font-family="Courier New, monospace">Prefix node</text>
+  
+  <!-- Operations Box -->
+  <text x="680" y="110" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">OPERATIONS</text>
+  <rect x="670" y="120" width="200" height="200" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  
+  <text x="685" y="150" fill="#f97316" font-size="14" font-weight="bold" font-family="Courier New, monospace">insert("app")</text>
+  <text x="700" y="170" fill="#888888" font-size="11" font-family="Courier New, monospace">a → p → p ✓</text>
+  
+  <text x="685" y="200" fill="#f97316" font-size="14" font-weight="bold" font-family="Courier New, monospace">search("app")</text>
+  <text x="700" y="220" fill="#4ade80" font-size="11" font-family="Courier New, monospace">a → p → p ✓ TRUE</text>
+  
+  <text x="685" y="250" fill="#f97316" font-size="14" font-weight="bold" font-family="Courier New, monospace">startsWith("ap")</text>
+  <text x="700" y="270" fill="#4ade80" font-size="11" font-family="Courier New, monospace">a → p ✓ TRUE</text>
+  
+  <text x="685" y="300" fill="#f97316" font-size="14" font-weight="bold" font-family="Courier New, monospace">search("ap")</text>
+  <text x="700" y="320" fill="#ef4444" font-size="11" font-family="Courier New, monospace">a → p (no end) FALSE</text>
+  
+  <!-- Complexity Box -->
+  <text x="680" y="360" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">COMPLEXITY</text>
+  <rect x="670" y="370" width="200" height="130" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="685" y="395" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Insert:     O(L)</text>
+  <text x="685" y="420" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Search:     O(L)</text>
+  <text x="685" y="445" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">StartsWith: O(L)</text>
+  <text x="685" y="470" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Delete:     O(L)</text>
+  <text x="685" y="495" fill="#888888" font-size="11" font-family="Courier New, monospace">L = word length</text>
+  
+  <!-- Space Complexity -->
+  <text x="680" y="530" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">SPACE</text>
+  <rect x="670" y="540" width="200" height="60" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="685" y="565" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">O(N × L × 26)</text>
+  <text x="685" y="590" fill="#888888" font-size="11" font-family="Courier New, monospace">N=words, L=avg length</text>
+  
+  <!-- Node Structure Box -->
+  <text x="50" y="400" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">TRIE NODE</text>
+  <rect x="40" y="410" width="140" height="100" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="55" y="440" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">children: {}</text>
+  <text x="55" y="465" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">is_end: bool</text>
+  <text x="55" y="490" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">count: int</text>
+</svg>
+

@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 700">
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">📍 Mo's Algorithm Pointer Movement</text>
+  <text x="475" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Step-by-Step Query Processing</text>
+  
+  <!-- Array Reference -->
+  <text x="50" y="100" font-family="Courier New, monospace" font-size="12" fill="#888888">Array: [1, 2, 1, 3, 4, 2, 5, 1, 3, 4]  (Count distinct elements)</text>
+  
+  <!-- Query 1: [0, 4] -->
+  <text x="50" y="140" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Query 1: [0, 4] - Initial State L=0, R=-1</text>
+  
+  <g transform="translate(50, 160)">
+    <!-- Array -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="20" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">1</text>
+      <rect x="45" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="65" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">2</text>
+      <rect x="90" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="110" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">1</text>
+      <rect x="135" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="155" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">3</text>
+      <rect x="180" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="200" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">4</text>
+      <rect x="225" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="245" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#888888">2</text>
+      <rect x="270" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="290" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#888888">5</text>
+      <rect x="315" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="335" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#888888">1</text>
+      <rect x="360" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="380" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#888888">3</text>
+      <rect x="405" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="425" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#888888">4</text>
+      
+      <!-- L pointer -->
+      <text x="20" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">L=0</text>
+      <!-- R pointer -->
+      <text x="200" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">R=4</text>
+    </g>
+    
+    <text x="480" y="20" font-family="Courier New, monospace" font-size="11" fill="#ffffff">R moves: -1→0→1→2→3→4 (5 adds)</text>
+    <text x="480" y="40" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Distinct: {1,2,3,4} = 4</text>
+  </g>
+  
+  <!-- Query 2: [1, 5] -->
+  <text x="50" y="260" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Query 2: [1, 5] - From [0,4]</text>
+  
+  <g transform="translate(50, 280)">
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="40" height="35" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,2"/>
+      <text x="20" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ef4444">1</text>
+      <rect x="45" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="65" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">2</text>
+      <rect x="90" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="110" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">1</text>
+      <rect x="135" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="155" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">3</text>
+      <rect x="180" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="200" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">4</text>
+      <rect x="225" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="245" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">2</text>
+      <rect x="270" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="290" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#888888">5</text>
+      <rect x="315" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="335" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#888888">1</text>
+      <rect x="360" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="380" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#888888">3</text>
+      <rect x="405" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="425" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#888888">4</text>
+      
+      <text x="65" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">L=1</text>
+      <text x="245" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">R=5</text>
+    </g>
+    
+    <text x="480" y="15" font-family="Courier New, monospace" font-size="11" fill="#ef4444">L moves: 0→1 (remove arr[0]=1)</text>
+    <text x="480" y="35" font-family="Courier New, monospace" font-size="11" fill="#4ade80">R moves: 4→5 (add arr[5]=2)</text>
+    <text x="480" y="55" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Distinct: {1,2,3,4} = 4</text>
+    <text x="480" y="75" font-family="Courier New, monospace" font-size="10" fill="#888888">(1 still exists at idx 2, 2 now has freq 2)</text>
+  </g>
+  
+  <!-- Query 3: [2, 6] -->
+  <text x="50" y="395" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Query 3: [2, 6] - From [1,5]</text>
+  
+  <g transform="translate(50, 415)">
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="20" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#888888">1</text>
+      <rect x="45" y="0" width="40" height="35" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,2"/>
+      <text x="65" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ef4444">2</text>
+      <rect x="90" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="110" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">1</text>
+      <rect x="135" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="155" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">3</text>
+      <rect x="180" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="200" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">4</text>
+      <rect x="225" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="245" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">2</text>
+      <rect x="270" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="290" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">5</text>
+      <rect x="315" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="335" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#888888">1</text>
+      <rect x="360" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="380" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#888888">3</text>
+      <rect x="405" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="425" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#888888">4</text>
+      
+      <text x="110" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">L=2</text>
+      <text x="290" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">R=6</text>
+    </g>
+    
+    <text x="480" y="15" font-family="Courier New, monospace" font-size="11" fill="#ef4444">L moves: 1→2 (remove arr[1]=2, freq 2→1)</text>
+    <text x="480" y="35" font-family="Courier New, monospace" font-size="11" fill="#4ade80">R moves: 5→6 (add arr[6]=5, NEW!)</text>
+    <text x="480" y="55" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Distinct: {1,2,3,4,5} = 5</text>
+  </g>
+  
+  <!-- Query 4: [5, 9] - Big jump -->
+  <text x="50" y="530" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Query 4: [5, 9] - From [2,6] (Different Block!)</text>
+  
+  <g transform="translate(50, 550)">
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="20" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#888888">1</text>
+      <rect x="45" y="0" width="40" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="65" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#888888">2</text>
+      <rect x="90" y="0" width="40" height="35" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,2"/>
+      <text x="110" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ef4444">1</text>
+      <rect x="135" y="0" width="40" height="35" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,2"/>
+      <text x="155" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ef4444">3</text>
+      <rect x="180" y="0" width="40" height="35" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,2"/>
+      <text x="200" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ef4444">4</text>
+      <rect x="225" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="245" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">2</text>
+      <rect x="270" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="290" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">5</text>
+      <rect x="315" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="335" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">1</text>
+      <rect x="360" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="380" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">3</text>
+      <rect x="405" y="0" width="40" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="425" y="22" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">4</text>
+      
+      <text x="245" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">L=5</text>
+      <text x="425" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">R=9</text>
+    </g>
+    
+    <text x="480" y="15" font-family="Courier New, monospace" font-size="11" fill="#ef4444">L moves: 2→3→4→5 (remove 1,3,4)</text>
+    <text x="480" y="35" font-family="Courier New, monospace" font-size="11" fill="#4ade80">R moves: 6→7→8→9 (add 1,3,4)</text>
+    <text x="480" y="55" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Distinct: {1,2,3,4,5} = 5</text>
+  </g>
+  
+  <!-- Summary -->
+  <rect x="50" y="630" width="850" height="50" fill="none" stroke="#e94560" stroke-width="1.5"/>
+  <text x="475" y="655" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">Total Movements: 5 + 2 + 2 + 7 = 16 (vs ~40 without sorting)</text>
+  <text x="475" y="673" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Sorting queries minimizes pointer travel distance!</text>
+</svg>
+

@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 650">
+  <rect width="950" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Splay Tree Operations</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Self-adjusting BST • Amortized O(log n) • Recently accessed items near root</text>
+
+  <!-- ZIG-ZIG Case -->
+  <text x="235" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">ZIG-ZIG (Both Left Children)</text>
+  
+  <!-- Before zig-zig -->
+  <text x="120" y="130" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">Before</text>
+  
+  <!-- Node g -->
+  <circle cx="120" cy="170" r="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="120" y="176" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">g</text>
+  
+  <line x1="102" y1="188" x2="72" y2="215" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Node p -->
+  <circle cx="60" cy="235" r="22" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="60" y="241" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">p</text>
+  
+  <line x1="138" y1="188" x2="165" y2="210" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="155" y="215" width="25" height="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="167" y="228" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">D</text>
+  
+  <line x1="42" y1="253" x2="20" y2="280" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Node x (to be splayed) -->
+  <circle cx="10" cy="300" r="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="10" y="306" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">x</text>
+  
+  <line x1="78" y1="253" x2="100" y2="275" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="90" y="280" width="25" height="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="102" y="293" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">C</text>
+  
+  <!-- x subtrees -->
+  <line x1="-5" y1="318" x2="-20" y2="340" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="-35" y="345" width="25" height="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="-22" y="358" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">A</text>
+  
+  <line x1="25" y1="318" x2="40" y2="340" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="28" y="345" width="25" height="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="40" y="358" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">B</text>
+
+  <!-- Arrow -->
+  <path d="M 195 260 L 265 260" stroke="#4ade80" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ade80"/>
+    </marker>
+  </defs>
+  <text x="230" y="250" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">rotate g</text>
+  <text x="230" y="280" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">rotate p</text>
+
+  <!-- After zig-zig -->
+  <text x="380" y="130" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">After</text>
+  
+  <!-- Node x (new root) -->
+  <circle cx="380" cy="170" r="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="380" y="176" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">x</text>
+  
+  <line x1="362" y1="188" x2="335" y2="210" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="320" y="215" width="25" height="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="332" y="228" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">A</text>
+  
+  <line x1="398" y1="188" x2="425" y2="210" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Node p -->
+  <circle cx="435" cy="235" r="22" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="435" y="241" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">p</text>
+  
+  <line x1="418" y1="253" x2="395" y2="275" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="382" y="280" width="25" height="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="394" y="293" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">B</text>
+  
+  <line x1="452" y1="253" x2="475" y2="275" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Node g -->
+  <circle cx="485" cy="300" r="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="485" y="306" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">g</text>
+  
+  <line x1="468" y1="318" x2="450" y2="340" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="437" y="345" width="25" height="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="449" y="358" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">C</text>
+  
+  <line x1="502" y1="318" x2="520" y2="340" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="508" y="345" width="25" height="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="520" y="358" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">D</text>
+
+  <!-- ZIG-ZAG Case -->
+  <text x="750" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">ZIG-ZAG (Different Sides)</text>
+  
+  <text x="620" y="130" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">Before</text>
+  
+  <!-- Node g -->
+  <circle cx="620" cy="170" r="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="620" y="176" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">g</text>
+  
+  <line x1="602" y1="188" x2="572" y2="215" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Node p -->
+  <circle cx="560" cy="235" r="22" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="560" y="241" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">p</text>
+  
+  <line x1="542" y1="253" x2="520" y2="275" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="507" y="280" width="25" height="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="519" y="293" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">A</text>
+  
+  <line x1="578" y1="253" x2="600" y2="280" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Node x -->
+  <circle cx="610" cy="300" r="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="610" y="306" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">x</text>
+  
+  <line x1="638" y1="188" x2="665" y2="210" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="658" y="215" width="25" height="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="670" y="228" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">D</text>
+
+  <!-- Arrow -->
+  <path d="M 700 260 L 770 260" stroke="#4ade80" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <text x="735" y="250" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">rotate p</text>
+  <text x="735" y="280" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">rotate g</text>
+
+  <!-- After zig-zag -->
+  <text x="870" y="130" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">After</text>
+  
+  <!-- Node x (new root) -->
+  <circle cx="870" cy="170" r="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="870" y="176" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">x</text>
+  
+  <line x1="852" y1="188" x2="825" y2="210" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="815" cy="235" r="22" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="815" y="241" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">p</text>
+  
+  <line x1="888" y1="188" x2="915" y2="210" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="925" cy="235" r="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="925" y="241" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">g</text>
+
+  <!-- Three Cases Box -->
+  <rect x="50" y="410" width="280" height="130" fill="#0f0f23" stroke="#3b82f6" stroke-width="2"/>
+  <text x="190" y="435" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">THREE SPLAY CASES</text>
+  
+  <text x="70" y="465" font-family="Courier New, monospace" font-size="12" fill="#f97316">ZIG:</text>
+  <text x="125" y="465" font-family="Courier New, monospace" font-size="11" fill="#ffffff">x is child of root → 1 rotation</text>
+  
+  <text x="70" y="490" font-family="Courier New, monospace" font-size="12" fill="#4ade80">ZIG-ZIG:</text>
+  <text x="145" y="490" font-family="Courier New, monospace" font-size="11" fill="#ffffff">x,p same side → 2 rotations</text>
+  
+  <text x="70" y="515" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">ZIG-ZAG:</text>
+  <text x="145" y="515" font-family="Courier New, monospace" font-size="11" fill="#ffffff">x,p diff side → 2 rotations</text>
+
+  <!-- Amortized Analysis -->
+  <rect x="360" y="410" width="280" height="130" fill="#0f0f23" stroke="#4ade80" stroke-width="2"/>
+  <text x="500" y="435" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">AMORTIZED ANALYSIS</text>
+  
+  <text x="380" y="465" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Φ(T) = Σ log(size(x))</text>
+  
+  <text x="380" y="495" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Splay operation: O(log n) amortized</text>
+  <text x="380" y="515" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Worst case single op: O(n)</text>
+  <text x="380" y="535" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• m operations: O(m log n) total</text>
+
+  <!-- Advantages -->
+  <rect x="670" y="410" width="250" height="130" fill="#0f0f23" stroke="#a78bfa" stroke-width="2"/>
+  <text x="795" y="435" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">ADVANTAGES</text>
+  
+  <text x="690" y="465" font-family="Courier New, monospace" font-size="11" fill="#ffffff">✓ No balance info stored</text>
+  <text x="690" y="485" font-family="Courier New, monospace" font-size="11" fill="#ffffff">✓ Cache-friendly (MRU at root)</text>
+  <text x="690" y="505" font-family="Courier New, monospace" font-size="11" fill="#ffffff">✓ Working set theorem</text>
+  <text x="690" y="525" font-family="Courier New, monospace" font-size="11" fill="#ffffff">✓ Simpler than AVL/RB</text>
+
+  <!-- Complexity -->
+  <text x="475" y="580" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">All Operations: O(log n) Amortized | O(n) Worst Case</text>
+  <text x="475" y="605" font-family="Courier New, monospace" font-size="12" fill="#888888" text-anchor="middle">Sleator &amp; Tarjan (1985) • Split/Join in O(log n) • Great for sequential access patterns</text>
+</svg>

@@ -1,0 +1,92 @@
+<svg viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Anagram Detection</text>
+  <text x="450" y="65" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">s = "cbaebabacd" | p = "abc"</text>
+  
+  <!-- Pattern info -->
+  <rect x="30" y="85" width="280" height="60" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="170" y="110" text-anchor="middle" fill="#a78bfa" font-size="12" font-weight="bold" font-family="Courier New, monospace">PATTERN: "abc"</text>
+  <text x="170" y="132" text-anchor="middle" fill="#ffffff" font-size="11" font-family="Courier New, monospace">freq: {a:1, b:1, c:1}</text>
+  
+  <!-- Window 1: "cba" - Match! -->
+  <text x="30" y="175" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">Window 1: "cba" at index 0</text>
+  
+  <rect x="30" y="190" width="35" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="47" y="213" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">c</text>
+  <rect x="70" y="190" width="35" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="87" y="213" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">b</text>
+  <rect x="110" y="190" width="35" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="127" y="213" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">a</text>
+  <rect x="150" y="190" width="35" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="167" y="213" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">e</text>
+  <rect x="190" y="190" width="35" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="207" y="213" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">b</text>
+  <rect x="230" y="190" width="35" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="247" y="213" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">a</text>
+  <rect x="270" y="190" width="35" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="287" y="213" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">b</text>
+  <rect x="310" y="190" width="35" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="327" y="213" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">a</text>
+  <rect x="350" y="190" width="35" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="367" y="213" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">c</text>
+  <rect x="390" y="190" width="35" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="407" y="213" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">d</text>
+  
+  <text x="450" y="213" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">✓ MATCH! Result: [0]</text>
+  
+  <!-- Window 2: "bae" - No match -->
+  <text x="30" y="265" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">Window 2: "bae" (slide: -c, +e)</text>
+  
+  <rect x="30" y="280" width="35" height="35" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="3,2"/>
+  <text x="47" y="303" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">c</text>
+  <rect x="70" y="280" width="35" height="35" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="87" y="303" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">b</text>
+  <rect x="110" y="280" width="35" height="35" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="127" y="303" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">a</text>
+  <rect x="150" y="280" width="35" height="35" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="167" y="303" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">e</text>
+  
+  <text x="450" y="303" fill="#ef4444" font-size="14" font-family="Courier New, monospace">✗ No match (has 'e', missing 'c')</text>
+  
+  <!-- Window 7: "bac" - Match! -->
+  <text x="30" y="355" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">Window 7: "bac" at index 6</text>
+  
+  <rect x="30" y="370" width="35" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="47" y="393" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">c</text>
+  <rect x="70" y="370" width="35" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="87" y="393" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">b</text>
+  <rect x="110" y="370" width="35" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="127" y="393" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">a</text>
+  <rect x="150" y="370" width="35" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="167" y="393" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">e</text>
+  <rect x="190" y="370" width="35" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="207" y="393" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">b</text>
+  <rect x="230" y="370" width="35" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="247" y="393" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">a</text>
+  <rect x="270" y="370" width="35" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="287" y="393" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">b</text>
+  <rect x="310" y="370" width="35" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="327" y="393" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">a</text>
+  <rect x="350" y="370" width="35" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="367" y="393" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">c</text>
+  <rect x="390" y="370" width="35" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="407" y="393" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">d</text>
+  
+  <text x="450" y="393" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">✓ MATCH! Result: [0, 6]</text>
+  
+  <!-- Result Box -->
+  <rect x="30" y="430" width="400" height="100" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="230" y="460" text-anchor="middle" fill="#4ade80" font-size="18" font-weight="bold" font-family="Courier New, monospace">FINAL RESULT: [0, 6]</text>
+  <text x="230" y="490" text-anchor="middle" fill="#ffffff" font-size="12" font-family="Courier New, monospace">Anagrams of "abc" found at indices 0 and 6</text>
+  <text x="230" y="515" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Time: O(n) | Space: O(1) - only 26 chars</text>
+  
+  <!-- Algorithm -->
+  <rect x="460" y="430" width="410" height="100" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="665" y="455" text-anchor="middle" fill="#e94560" font-size="12" font-weight="bold" font-family="Courier New, monospace">FIXED WINDOW COMPARISON</text>
+  <text x="480" y="478" fill="#888888" font-size="10" font-family="Courier New, monospace">1. Build pattern frequency map</text>
+  <text x="480" y="496" fill="#888888" font-size="10" font-family="Courier New, monospace">2. Slide window of size len(p)</text>
+  <text x="480" y="514" fill="#4ade80" font-size="10" font-family="Courier New, monospace">3. Compare freq maps (or use match counter)</text>
+</svg>
+

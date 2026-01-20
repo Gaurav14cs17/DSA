@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
+  <rect width="1000" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Nim Game Decision Tree</text>
+  <text x="500" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Example: Piles [3, 4, 5] - Finding the Winning Move</text>
+  
+  <!-- Root node -->
+  <g transform="translate(500, 110)">
+    <rect x="-70" y="-25" width="140" height="60" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="0" y="-5" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">[3, 4, 5]</text>
+    <text x="0" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#f97316">XOR = 2</text>
+    <text x="0" y="50" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">WINNING (W)</text>
+  </g>
+  
+  <!-- Arrows from root -->
+  <line x1="430" y1="145" x2="180" y2="220" stroke="#4ade80" stroke-width="2"/>
+  <line x1="500" y1="145" x2="500" y2="220" stroke="#888888" stroke-width="2"/>
+  <line x1="570" y1="145" x2="820" y2="220" stroke="#888888" stroke-width="2"/>
+  
+  <!-- Labels for moves -->
+  <text x="280" y="175" font-family="Courier New, monospace" font-size="10" fill="#4ade80">Take 2 from pile 1</text>
+  <text x="480" y="185" font-family="Courier New, monospace" font-size="10" fill="#888888">Other moves</text>
+  <text x="680" y="175" font-family="Courier New, monospace" font-size="10" fill="#888888">Other moves</text>
+  
+  <!-- Level 2: After first move options -->
+  <!-- Optimal move: [1, 4, 5] -->
+  <g transform="translate(150, 260)">
+    <rect x="-70" y="-25" width="140" height="60" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+    <text x="0" y="-5" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">[1, 4, 5]</text>
+    <text x="0" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ef4444">XOR = 0</text>
+    <text x="0" y="50" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ef4444">LOSING (L)</text>
+    <text x="0" y="68" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">★ OPTIMAL MOVE ★</text>
+  </g>
+  
+  <!-- Non-optimal: [2, 4, 5] -->
+  <g transform="translate(500, 260)">
+    <rect x="-70" y="-25" width="140" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="0" y="-5" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">[2, 4, 5]</text>
+    <text x="0" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">XOR = 3</text>
+    <text x="0" y="42" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">W (not optimal)</text>
+  </g>
+  
+  <!-- Non-optimal: [3, 3, 5] -->
+  <g transform="translate(820, 260)">
+    <rect x="-70" y="-25" width="140" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="0" y="-5" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">[3, 3, 5]</text>
+    <text x="0" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">XOR = 5</text>
+    <text x="0" y="42" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">W (not optimal)</text>
+  </g>
+  
+  <!-- Level 3: Opponent's responses from [1,4,5] -->
+  <line x1="80" y1="335" x2="60" y2="390" stroke="#888888" stroke-width="1.5"/>
+  <line x1="150" y1="335" x2="180" y2="390" stroke="#888888" stroke-width="1.5"/>
+  <line x1="220" y1="335" x2="300" y2="390" stroke="#888888" stroke-width="1.5"/>
+  
+  <!-- All moves from L position lead to W -->
+  <g transform="translate(60, 430)">
+    <rect x="-55" y="-25" width="110" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="0" y="-5" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">[0, 4, 5]</text>
+    <text x="0" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">XOR=1 W</text>
+  </g>
+  
+  <g transform="translate(180, 430)">
+    <rect x="-55" y="-25" width="110" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="0" y="-5" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">[1, 3, 5]</text>
+    <text x="0" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">XOR=7 W</text>
+  </g>
+  
+  <g transform="translate(300, 430)">
+    <rect x="-55" y="-25" width="110" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="0" y="-5" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">[1, 4, 4]</text>
+    <text x="0" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">XOR=1 W</text>
+  </g>
+  
+  <text x="180" y="500" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">All moves from L position lead to W positions!</text>
+  
+  <!-- Explanation box -->
+  <g transform="translate(520, 380)">
+    <rect x="0" y="0" width="400" height="200" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    
+    <text x="200" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Strategy Explanation</text>
+    
+    <line x1="20" y1="45" x2="380" y2="45" stroke="#3b82f6" stroke-width="1"/>
+    
+    <text x="20" y="70" font-family="Courier New, monospace" font-size="11" fill="#ffffff">1. Calculate Nim-Sum: 3 ⊕ 4 ⊕ 5 = 2</text>
+    <text x="20" y="90" font-family="Courier New, monospace" font-size="11" fill="#4ade80">   → XOR ≠ 0 means WINNING position</text>
+    
+    <text x="20" y="115" font-family="Courier New, monospace" font-size="11" fill="#ffffff">2. Find winning move (make XOR = 0):</text>
+    <text x="20" y="135" font-family="Courier New, monospace" font-size="11" fill="#888888">   pile[0]: 3 ⊕ 2 = 1 &lt; 3 ✓</text>
+    <text x="20" y="155" font-family="Courier New, monospace" font-size="11" fill="#888888">   Change pile 0 from 3 → 1</text>
+    
+    <text x="20" y="180" font-family="Courier New, monospace" font-size="11" fill="#ffffff">3. Result: [1, 4, 5]</text>
+    <text x="20" y="198" font-family="Courier New, monospace" font-size="11" fill="#ef4444">   1 ⊕ 4 ⊕ 5 = 0 → Opponent in L!</text>
+  </g>
+  
+  <!-- Game flow visualization -->
+  <g transform="translate(50, 550)">
+    <rect x="0" y="0" width="900" height="110" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    
+    <text x="450" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">Optimal Game Flow</text>
+    
+    <!-- Flow diagram -->
+    <g transform="translate(50, 55)">
+      <rect x="0" y="0" width="100" height="35" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="50" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">[3,4,5]</text>
+      <text x="50" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#f97316">XOR=2 W</text>
+    </g>
+    
+    <line x1="155" y1="72" x2="195" y2="72" stroke="#4ade80" stroke-width="2"/>
+    <polygon points="195,72 188,67 188,77" fill="#4ade80"/>
+    <text x="175" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#4ade80">P1</text>
+    
+    <g transform="translate(200, 55)">
+      <rect x="0" y="0" width="100" height="35" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+      <text x="50" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">[1,4,5]</text>
+      <text x="50" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#ef4444">XOR=0 L</text>
+    </g>
+    
+    <line x1="305" y1="72" x2="345" y2="72" stroke="#888888" stroke-width="2"/>
+    <polygon points="345,72 338,67 338,77" fill="#888888"/>
+    <text x="325" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#888888">P2</text>
+    
+    <g transform="translate(350, 55)">
+      <rect x="0" y="0" width="100" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+      <text x="50" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">[?,?,?]</text>
+      <text x="50" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#4ade80">XOR≠0 W</text>
+    </g>
+    
+    <line x1="455" y1="72" x2="495" y2="72" stroke="#4ade80" stroke-width="2"/>
+    <polygon points="495,72 488,67 488,77" fill="#4ade80"/>
+    <text x="475" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#4ade80">P1</text>
+    
+    <g transform="translate(500, 55)">
+      <rect x="0" y="0" width="100" height="35" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+      <text x="50" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">[?,?,?]</text>
+      <text x="50" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#ef4444">XOR=0 L</text>
+    </g>
+    
+    <text x="620" y="72" font-family="Courier New, monospace" font-size="14" fill="#888888">...</text>
+    
+    <g transform="translate(680, 55)">
+      <rect x="0" y="0" width="100" height="35" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+      <text x="50" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">[0,0,0]</text>
+      <text x="50" y="30" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#ef4444">P2 loses!</text>
+    </g>
+    
+    <text x="800" y="75" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">P1 WINS!</text>
+  </g>
+  
+  <!-- Complexity -->
+  <text x="850" y="680" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(n) | Space: O(1)</text>
+</svg>
+

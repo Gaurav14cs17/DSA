@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 1400">
+  <!-- Background -->
+  <rect width="2200" height="1400" fill="#FFFFFF"/>
+  
+  <!-- Title -->
+  <text x="1100" y="60" font-family="Arial, sans-serif" font-size="52" font-weight="bold" fill="#000000" text-anchor="middle">Floyd's Cycle Detection Algorithm</text>
+  <text x="1100" y="105" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#666666" text-anchor="middle">Tortoise and Hare Algorithm</text>
+  
+  <!-- Problem Setup Box -->
+  <rect x="50" y="140" width="700" height="280" rx="15" fill="#E3F2FD" stroke="#1976D2" stroke-width="4"/>
+  <text x="400" y="190" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#000000" text-anchor="middle">Problem Setup</text>
+  
+  <!-- Cycle visualization -->
+  <text x="90" y="240" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000">Linked List with Cycle:</text>
+  
+  <!-- Nodes before cycle -->
+  <circle cx="140" cy="320" r="30" fill="#BBDEFB" stroke="#1976D2" stroke-width="3"/>
+  <text x="140" y="328" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#000000" text-anchor="middle">1</text>
+  
+  <line x1="170" y1="320" x2="210" y2="320" stroke="#1976D2" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  
+  <circle cx="240" cy="320" r="30" fill="#BBDEFB" stroke="#1976D2" stroke-width="3"/>
+  <text x="240" y="328" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#000000" text-anchor="middle">2</text>
+  
+  <line x1="270" y1="320" x2="310" y2="320" stroke="#1976D2" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  
+  <!-- Cycle nodes -->
+  <circle cx="350" cy="320" r="30" fill="#C8E6C9" stroke="#388E3C" stroke-width="3"/>
+  <text x="350" y="328" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#000000" text-anchor="middle">3</text>
+  
+  <line x1="380" y1="320" x2="420" y2="320" stroke="#388E3C" stroke-width="3" marker-end="url(#arrow-green)"/>
+  
+  <circle cx="460" cy="320" r="30" fill="#C8E6C9" stroke="#388E3C" stroke-width="3"/>
+  <text x="460" y="328" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#000000" text-anchor="middle">4</text>
+  
+  <line x1="490" y1="320" x2="530" y2="320" stroke="#388E3C" stroke-width="3" marker-end="url(#arrow-green)"/>
+  
+  <circle cx="570" cy="320" r="30" fill="#C8E6C9" stroke="#388E3C" stroke-width="3"/>
+  <text x="570" y="328" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#000000" text-anchor="middle">5</text>
+  
+  <line x1="600" y1="320" x2="640" y2="320" stroke="#388E3C" stroke-width="3" marker-end="url(#arrow-green)"/>
+  
+  <circle cx="680" cy="320" r="30" fill="#C8E6C9" stroke="#388E3C" stroke-width="3"/>
+  <text x="680" y="328" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#000000" text-anchor="middle">6</text>
+  
+  <!-- Cycle back arrow -->
+  <path d="M 680 350 Q 680 390 400 390 Q 350 390 350 350" fill="none" stroke="#E91E63" stroke-width="3" marker-end="url(#arrow-pink)"/>
+  
+  <text x="400" y="400" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#E91E63" text-anchor="middle">Cycle!</text>
+  
+  <!-- Definitions Box -->
+  <rect x="800" y="140" width="600" height="280" rx="15" fill="#FFF8E1" stroke="#FFA000" stroke-width="4"/>
+  <text x="1100" y="190" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#000000" text-anchor="middle">Key Variables</text>
+  
+  <text x="840" y="240" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000">μ (mu) = distance to cycle start = 2</text>
+  <text x="840" y="280" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000">λ (lambda) = cycle length = 4</text>
+  <text x="840" y="320" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000">k = meeting position in cycle</text>
+  <text x="840" y="370" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1976D2">Slow pointer: moves 1 step</text>
+  <text x="840" y="400" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#E91E63">Fast pointer: moves 2 steps</text>
+  
+  <!-- Mathematical Proof Box -->
+  <rect x="1450" y="140" width="700" height="280" rx="15" fill="#F3E5F5" stroke="#9C27B0" stroke-width="4"/>
+  <text x="1800" y="190" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#000000" text-anchor="middle">Mathematical Proof</text>
+  
+  <text x="1490" y="240" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#000000">When they meet:</text>
+  <text x="1490" y="275" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#000000">• Slow traveled: μ + k steps</text>
+  <text x="1490" y="310" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#000000">• Fast traveled: μ + k + mλ (m ≥ 1)</text>
+  <text x="1490" y="355" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#000000">Since fast = 2 × slow:</text>
+  <text x="1490" y="395" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#9C27B0">2(μ + k) = μ + k + mλ → μ + k = mλ</text>
+  
+  <!-- Arrow definitions -->
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1976D2"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#388E3C"/>
+    </marker>
+    <marker id="arrow-pink" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#E91E63"/>
+    </marker>
+  </defs>
+  
+  <!-- Phase 1 Box -->
+  <rect x="50" y="460" width="1050" height="420" rx="15" fill="#E8F5E9" stroke="#4CAF50" stroke-width="4"/>
+  <text x="575" y="510" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#000000" text-anchor="middle">PHASE 1: Detect Cycle</text>
+  
+  <!-- Iteration steps -->
+  <text x="90" y="560" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#000000">Iteration 0: slow=1, fast=1</text>
+  <text x="90" y="600" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#000000">Iteration 1: slow=2, fast=3</text>
+  <text x="90" y="640" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#000000">Iteration 2: slow=3, fast=5</text>
+  <text x="90" y="680" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#000000">Iteration 3: slow=4, fast=3</text>
+  <text x="90" y="720" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#4CAF50">Iteration 4: slow=5, fast=5 ✓ COLLISION!</text>
+  
+  <!-- Visual representation of meeting -->
+  <rect x="550" y="545" width="500" height="300" rx="10" fill="#C8E6C9" stroke="#388E3C" stroke-width="3"/>
+  <text x="800" y="590" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#000000" text-anchor="middle">Meeting Point Visualization</text>
+  
+  <!-- Draw nodes at meeting -->
+  <circle cx="620" cy="700" r="35" fill="#BBDEFB" stroke="#1976D2" stroke-width="3"/>
+  <text x="620" y="708" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000" text-anchor="middle">3</text>
+  
+  <circle cx="720" cy="700" r="35" fill="#BBDEFB" stroke="#1976D2" stroke-width="3"/>
+  <text x="720" y="708" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000" text-anchor="middle">4</text>
+  
+  <circle cx="820" cy="700" r="35" fill="#FFEB3B" stroke="#F57C00" stroke-width="4"/>
+  <text x="820" y="708" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000" text-anchor="middle">5</text>
+  <text x="820" y="760" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#F57C00" text-anchor="middle">MEET!</text>
+  
+  <circle cx="920" cy="700" r="35" fill="#BBDEFB" stroke="#1976D2" stroke-width="3"/>
+  <text x="920" y="708" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000" text-anchor="middle">6</text>
+  
+  <text x="800" y="810" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#000000" text-anchor="middle">k = 2 (position in cycle)</text>
+  
+  <!-- Phase 2 Box -->
+  <rect x="1150" y="460" width="1000" height="420" rx="15" fill="#FCE4EC" stroke="#E91E63" stroke-width="4"/>
+  <text x="1650" y="510" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#000000" text-anchor="middle">PHASE 2: Find Cycle Start</text>
+  
+  <text x="1190" y="570" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000">Algorithm:</text>
+  <text x="1190" y="610" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000">1. Reset slow pointer to head</text>
+  <text x="1190" y="650" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000">2. Keep fast at meeting point</text>
+  <text x="1190" y="690" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#000000">3. Move both at SAME speed (1 step)</text>
+  <text x="1190" y="730" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#4CAF50">4. They meet at CYCLE START!</text>
+  
+  <!-- Visual for phase 2 -->
+  <rect x="1190" y="760" width="900" height="100" rx="10" fill="#FFCDD2" stroke="#C62828" stroke-width="3"/>
+  <text x="1640" y="800" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#000000" text-anchor="middle">Step 0: slow=1, fast=5</text>
+  <text x="1640" y="835" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#000000" text-anchor="middle">Step 1: slow=2, fast=6 → Step 2: slow=3, fast=3 ✓ CYCLE START = Node 3</text>
+  
+  <!-- Complexity Box -->
+  <rect x="50" y="920" width="600" height="180" rx="15" fill="#E0F7FA" stroke="#00ACC1" stroke-width="4"/>
+  <text x="350" y="975" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#000000" text-anchor="middle">Time Complexity</text>
+  <text x="90" y="1030" font-family="Courier New, monospace" font-size="28" font-weight="bold" fill="#000000">O(μ + λ) = O(n)</text>
+  <text x="90" y="1075" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#666666">Each node visited at most twice</text>
+  
+  <!-- Space Complexity Box -->
+  <rect x="700" y="920" width="600" height="180" rx="15" fill="#FFF3E0" stroke="#FF9800" stroke-width="4"/>
+  <text x="1000" y="975" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#000000" text-anchor="middle">Space Complexity</text>
+  <text x="740" y="1030" font-family="Courier New, monospace" font-size="28" font-weight="bold" fill="#000000">O(1)</text>
+  <text x="740" y="1075" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#666666">Only two pointers needed</text>
+  
+  <!-- Code Box -->
+  <rect x="1350" y="920" width="800" height="180" rx="15" fill="#F5F5F5" stroke="#616161" stroke-width="4"/>
+  <text x="1750" y="975" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#000000" text-anchor="middle">Key Code Pattern</text>
+  <text x="1390" y="1025" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="#000000">while fast and fast.next:</text>
+  <text x="1390" y="1055" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="#000000">    slow = slow.next</text>
+  <text x="1390" y="1085" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="#000000">    fast = fast.next.next</text>
+  
+  <!-- Bottom Summary -->
+  <rect x="50" y="1140" width="2100" height="100" rx="15" fill="#C5E1A5" stroke="#7CB342" stroke-width="4"/>
+  <text x="1100" y="1200" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#000000" text-anchor="middle">💡 Key Insight: At meeting point, distance from head to cycle start = distance from meeting point to cycle start (mod λ)</text>
+</svg>
+
+

@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <rect width="900" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Manacher's Algorithm</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Find All Palindromes in O(n)</text>
+  
+  <!-- Transform Step -->
+  <text x="40" y="100" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Step 1: Transform String</text>
+  
+  <g transform="translate(40, 125)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Original: "abba"</text>
+    <text x="0" y="22" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Transform: "^#a#b#b#a#$"</text>
+    <text x="0" y="44" font-family="Courier New, monospace" font-size="10" fill="#888888">^ = start sentinel, $ = end sentinel, # = separator</text>
+  </g>
+  
+  <!-- Transformed String Visualization -->
+  <g transform="translate(40, 185)">
+    <rect x="0" y="0" width="22" height="22" fill="#1f0f0f" stroke="#ef4444" stroke-width="1"/>
+    <text x="11" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">^</text>
+    <rect x="24" y="0" width="22" height="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="35" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">#</text>
+    <rect x="48" y="0" width="22" height="22" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="59" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">a</text>
+    <rect x="72" y="0" width="22" height="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="83" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">#</text>
+    <rect x="96" y="0" width="22" height="22" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="107" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">b</text>
+    <rect x="120" y="0" width="22" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="131" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">#</text>
+    <rect x="144" y="0" width="22" height="22" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="155" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">b</text>
+    <rect x="168" y="0" width="22" height="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="179" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">#</text>
+    <rect x="192" y="0" width="22" height="22" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="203" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">a</text>
+    <rect x="216" y="0" width="22" height="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="227" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ffffff">#</text>
+    <rect x="240" y="0" width="22" height="22" fill="#1f0f0f" stroke="#ef4444" stroke-width="1"/>
+    <text x="251" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">$</text>
+    
+    <text x="280" y="15" font-family="Courier New, monospace" font-size="10" fill="#4ade80">Center at green #</text>
+  </g>
+  
+  <!-- P Array -->
+  <text x="40" y="245" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Step 2: Compute P Array</text>
+  
+  <g transform="translate(40, 270)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">P[i] = radius of palindrome centered at i</text>
+  </g>
+  
+  <g transform="translate(40, 295)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">i:</text>
+    <text x="25" y="0" font-family="Courier New, monospace" font-size="9" fill="#888888">0 1 2 3 4 5 6 7 8 9 10</text>
+    
+    <text x="0" y="18" font-family="Courier New, monospace" font-size="10" fill="#888888">P:</text>
+    <rect x="22" y="6" width="20" height="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="32" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">0</text>
+    <rect x="44" y="6" width="20" height="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="54" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">0</text>
+    <rect x="66" y="6" width="20" height="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="76" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">1</text>
+    <rect x="88" y="6" width="20" height="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="98" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">0</text>
+    <rect x="110" y="6" width="20" height="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="120" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">1</text>
+    <rect x="132" y="6" width="20" height="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="142" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">4</text>
+    <rect x="154" y="6" width="20" height="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="164" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">1</text>
+    <rect x="176" y="6" width="20" height="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="186" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">0</text>
+    <rect x="198" y="6" width="20" height="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="208" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">1</text>
+    <rect x="220" y="6" width="20" height="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="230" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">0</text>
+    <rect x="242" y="6" width="20" height="18" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="252" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">0</text>
+    
+    <text x="280" y="18" font-family="Courier New, monospace" font-size="10" fill="#4ade80">max P[5]=4 → "abba"</text>
+  </g>
+  
+  <!-- Mirror Property -->
+  <text x="500" y="100" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Key Insight: Mirror Property</text>
+  
+  <rect x="500" y="115" width="360" height="130" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+  <text x="520" y="145" font-family="Courier New, monospace" font-size="11" fill="#ffffff">If palindrome centered at C extends to R:</text>
+  <text x="520" y="170" font-family="Courier New, monospace" font-size="11" fill="#4ade80">For i inside [C-R, C+R]:</text>
+  <text x="540" y="190" font-family="Courier New, monospace" font-size="11" fill="#888888">mirror = 2*C - i</text>
+  <text x="540" y="210" font-family="Courier New, monospace" font-size="11" fill="#888888">P[i] ≥ min(P[mirror], R - i)</text>
+  <text x="520" y="235" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">Use symmetry to avoid recomputation!</text>
+  
+  <!-- Algorithm Visualization -->
+  <text x="40" y="370" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Algorithm Visualization</text>
+  
+  <g transform="translate(40, 395)">
+    <!-- Center and Right boundary -->
+    <line x1="150" y1="0" x2="150" y2="60" stroke="#f97316" stroke-width="2"/>
+    <text x="150" y="75" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#f97316">C</text>
+    
+    <line x1="270" y1="0" x2="270" y2="60" stroke="#4ade80" stroke-width="2"/>
+    <text x="270" y="75" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">R</text>
+    
+    <!-- Palindrome extent -->
+    <rect x="30" y="10" width="240" height="40" fill="none" stroke="#a78bfa" stroke-width="2" rx="5"/>
+    <text x="150" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">Current rightmost palindrome</text>
+    
+    <!-- Position i and mirror -->
+    <circle cx="200" cy="90" r="8" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="200" y="110" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#f97316">i</text>
+    
+    <circle cx="100" cy="90" r="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="100" y="110" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">mirror</text>
+    
+    <!-- Dotted line showing mirror -->
+    <path d="M 100 90 Q 150 130 200 90" fill="none" stroke="#888888" stroke-width="1" stroke-dasharray="4,2"/>
+  </g>
+  
+  <!-- Result -->
+  <text x="500" y="370" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Result Extraction</text>
+  
+  <rect x="500" y="390" width="360" height="100" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5" rx="5"/>
+  <text x="520" y="415" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Longest palindrome:</text>
+  <text x="520" y="438" font-family="Courier New, monospace" font-size="11" fill="#ffffff">1. Find max P[i]</text>
+  <text x="520" y="458" font-family="Courier New, monospace" font-size="11" fill="#ffffff">2. center = (i - P[i]) / 2</text>
+  <text x="520" y="478" font-family="Courier New, monospace" font-size="11" fill="#ffffff">3. length = P[i]</text>
+  
+  <!-- Complexity -->
+  <rect x="40" y="520" width="380" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+  <text x="60" y="545" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff">Complexity Analysis</text>
+  <text x="60" y="570" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Time: O(n) - R never decreases</text>
+  <text x="60" y="588" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Space: O(n) - P array</text>
+  
+  <!-- Use Cases -->
+  <rect x="450" y="520" width="410" height="80" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5" rx="5"/>
+  <text x="470" y="545" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa">Applications</text>
+  <text x="470" y="570" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Longest palindromic substring (LeetCode 5)</text>
+  <text x="470" y="588" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Count palindromic substrings (LeetCode 647)</text>
+  
+  <!-- Key insight -->
+  <text x="40" y="630" font-family="Courier New, monospace" font-size="11" fill="#888888">Key: Transform handles both odd and even length palindromes uniformly. Each position expanded at most once.</text>
+</svg>
+

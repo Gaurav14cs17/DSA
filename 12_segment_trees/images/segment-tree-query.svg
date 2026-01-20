@@ -1,0 +1,159 @@
+<svg viewBox="0 0 950 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Range Query: sum(1, 4)</text>
+  <text x="475" y="65" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Query range [1-4] → 3 + 5 + 7 + 9 = 24</text>
+  
+  <!-- Original Array with highlighted range -->
+  <text x="50" y="105" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">INPUT ARRAY</text>
+  
+  <!-- Array boxes - index 0 not in range -->
+  <g>
+    <rect x="50" y="115" width="55" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="77" y="145" text-anchor="middle" fill="#888888" font-size="18" font-weight="bold" font-family="Courier New, monospace">1</text>
+    <text x="77" y="172" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">[0]</text>
+  </g>
+  <!-- Indices 1-4 in query range - highlighted -->
+  <g>
+    <rect x="110" y="115" width="55" height="45" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="137" y="145" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">3</text>
+    <text x="137" y="172" text-anchor="middle" fill="#f97316" font-size="11" font-family="Courier New, monospace">[1]</text>
+  </g>
+  <g>
+    <rect x="170" y="115" width="55" height="45" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="197" y="145" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">5</text>
+    <text x="197" y="172" text-anchor="middle" fill="#f97316" font-size="11" font-family="Courier New, monospace">[2]</text>
+  </g>
+  <g>
+    <rect x="230" y="115" width="55" height="45" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="257" y="145" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">7</text>
+    <text x="257" y="172" text-anchor="middle" fill="#f97316" font-size="11" font-family="Courier New, monospace">[3]</text>
+  </g>
+  <g>
+    <rect x="290" y="115" width="55" height="45" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="317" y="145" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">9</text>
+    <text x="317" y="172" text-anchor="middle" fill="#f97316" font-size="11" font-family="Courier New, monospace">[4]</text>
+  </g>
+  <!-- Index 5 not in range -->
+  <g>
+    <rect x="350" y="115" width="55" height="45" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="377" y="145" text-anchor="middle" fill="#888888" font-size="18" font-weight="bold" font-family="Courier New, monospace">11</text>
+    <text x="377" y="172" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">[5]</text>
+  </g>
+  
+  <!-- Tree Section Label -->
+  <text x="475" y="215" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">QUERY TRAVERSAL PATH</text>
+  
+  <!-- Tree Edges - some highlighted for traversal -->
+  <line x1="475" y1="270" x2="300" y2="330" stroke="#f97316" stroke-width="3"/>
+  <line x1="475" y1="270" x2="650" y2="330" stroke="#f97316" stroke-width="3"/>
+  <line x1="300" y1="370" x2="185" y2="430" stroke="#f97316" stroke-width="3"/>
+  <line x1="300" y1="370" x2="360" y2="430" stroke="#f97316" stroke-width="3"/>
+  <line x1="650" y1="370" x2="535" y2="430" stroke="#f97316" stroke-width="3"/>
+  <line x1="650" y1="370" x2="710" y2="430" stroke="#3b82f6" stroke-width="2" opacity="0.4"/>
+  <line x1="185" y1="475" x2="135" y2="535" stroke="#3b82f6" stroke-width="2" opacity="0.4"/>
+  <line x1="185" y1="475" x2="235" y2="535" stroke="#f97316" stroke-width="3"/>
+  <line x1="535" y1="475" x2="485" y2="535" stroke="#f97316" stroke-width="3"/>
+  <line x1="535" y1="475" x2="585" y2="535" stroke="#f97316" stroke-width="3"/>
+  
+  <!-- Root Node - visited -->
+  <g>
+    <rect x="420" y="230" width="110" height="50" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="3"/>
+    <text x="475" y="255" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">36</text>
+    <text x="475" y="273" text-anchor="middle" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">[0-5] partial</text>
+  </g>
+  
+  <!-- Level 1 Nodes -->
+  <g>
+    <rect x="245" y="330" width="110" height="50" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="3"/>
+    <text x="300" y="355" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">9</text>
+    <text x="300" y="373" text-anchor="middle" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">[0-2] partial</text>
+  </g>
+  <g>
+    <rect x="595" y="330" width="110" height="50" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="3"/>
+    <text x="650" y="355" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">27</text>
+    <text x="650" y="373" text-anchor="middle" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">[3-5] partial</text>
+  </g>
+  
+  <!-- Level 2 Nodes -->
+  <g>
+    <rect x="130" y="430" width="100" height="50" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="180" y="455" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">4</text>
+    <text x="180" y="473" text-anchor="middle" fill="#a78bfa" font-size="11" font-family="Courier New, monospace">[0-1] partial</text>
+  </g>
+  <g>
+    <rect x="310" y="430" width="100" height="50" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="360" y="455" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">5</text>
+    <text x="360" y="473" text-anchor="middle" fill="#4ade80" font-size="11" font-family="Courier New, monospace">[2] FULL ✓</text>
+  </g>
+  <g>
+    <rect x="485" y="430" width="100" height="50" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="535" y="455" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">16</text>
+    <text x="535" y="473" text-anchor="middle" fill="#4ade80" font-size="11" font-family="Courier New, monospace">[3-4] FULL ✓</text>
+  </g>
+  <g>
+    <rect x="660" y="430" width="100" height="50" rx="4" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="710" y="455" text-anchor="middle" fill="#888888" font-size="18" font-weight="bold" font-family="Courier New, monospace">11</text>
+    <text x="710" y="473" text-anchor="middle" fill="#ef4444" font-size="11" font-family="Courier New, monospace">[5] OUT</text>
+  </g>
+  
+  <!-- Level 3 (Leaf) Nodes -->
+  <g>
+    <rect x="90" y="535" width="85" height="45" rx="4" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="132" y="557" text-anchor="middle" fill="#888888" font-size="18" font-weight="bold" font-family="Courier New, monospace">1</text>
+    <text x="132" y="573" text-anchor="middle" fill="#ef4444" font-size="11" font-family="Courier New, monospace">[0] OUT</text>
+  </g>
+  <g>
+    <rect x="190" y="535" width="85" height="45" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="232" y="557" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">3</text>
+    <text x="232" y="573" text-anchor="middle" fill="#4ade80" font-size="11" font-family="Courier New, monospace">[1] FULL ✓</text>
+  </g>
+  <g>
+    <rect x="440" y="535" width="85" height="45" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="482" y="557" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">7</text>
+    <text x="482" y="573" text-anchor="middle" fill="#4ade80" font-size="11" font-family="Courier New, monospace">[3] ✓</text>
+  </g>
+  <g>
+    <rect x="540" y="535" width="85" height="45" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="582" y="557" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">9</text>
+    <text x="582" y="573" text-anchor="middle" fill="#4ade80" font-size="11" font-family="Courier New, monospace">[4] ✓</text>
+  </g>
+  
+  <!-- Query Logic Box -->
+  <rect x="700" y="100" width="230" height="170" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="815" y="125" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">QUERY LOGIC</text>
+  <text x="715" y="150" fill="#ffffff" font-size="12" font-family="Courier New, monospace">if out_of_range:</text>
+  <text x="725" y="170" fill="#ef4444" font-size="12" font-family="Courier New, monospace">  return 0</text>
+  <text x="715" y="195" fill="#ffffff" font-size="12" font-family="Courier New, monospace">if fully_covered:</text>
+  <text x="725" y="215" fill="#4ade80" font-size="12" font-family="Courier New, monospace">  return node.val</text>
+  <text x="715" y="240" fill="#ffffff" font-size="12" font-family="Courier New, monospace">else:</text>
+  <text x="725" y="260" fill="#a78bfa" font-size="12" font-family="Courier New, monospace">  recurse both</text>
+  
+  <!-- Result Calculation -->
+  <rect x="700" y="290" width="230" height="120" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="815" y="315" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">RESULT CALCULATION</text>
+  <text x="715" y="345" fill="#ffffff" font-size="12" font-family="Courier New, monospace">Segments used:</text>
+  <text x="725" y="365" fill="#4ade80" font-size="12" font-family="Courier New, monospace">[1]   → 3</text>
+  <text x="725" y="385" fill="#4ade80" font-size="12" font-family="Courier New, monospace">[2]   → 5</text>
+  <text x="725" y="405" fill="#4ade80" font-size="12" font-family="Courier New, monospace">[3-4] → 16</text>
+  
+  <!-- Legend -->
+  <rect x="700" y="430" width="230" height="130" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="815" y="455" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">LEGEND</text>
+  <rect x="715" y="470" width="20" height="15" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="745" y="482" fill="#888888" font-size="11" font-family="Courier New, monospace">Fully Covered</text>
+  <rect x="715" y="495" width="20" height="15" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="745" y="507" fill="#888888" font-size="11" font-family="Courier New, monospace">Partial Overlap</text>
+  <rect x="715" y="520" width="20" height="15" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="3,2"/>
+  <text x="745" y="532" fill="#888888" font-size="11" font-family="Courier New, monospace">Out of Range</text>
+  <rect x="715" y="545" width="20" height="15" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="745" y="557" fill="#888888" font-size="11" font-family="Courier New, monospace">Query Range</text>
+  
+  <!-- Final Result -->
+  <rect x="250" y="620" width="450" height="55" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="475" y="650" text-anchor="middle" fill="#4ade80" font-size="18" font-weight="bold" font-family="Courier New, monospace">sum(1, 4) = 3 + 5 + 16 = 24</text>
+  <text x="475" y="668" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Only O(log n) nodes visited!</text>
+</svg>
+

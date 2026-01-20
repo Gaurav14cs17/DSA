@@ -1,0 +1,45 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Chinese Remainder Theorem</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Solve simultaneous congruences</text>
+  
+  <!-- Theorem statement -->
+  <rect x="100" y="90" width="700" height="80" rx="10" fill="#2d1f3d" stroke="#a78bfa" stroke-width="3"/>
+  <text x="450" y="120" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="#ffffff">If m₁, m₂, ..., mₖ are pairwise coprime:</text>
+  <text x="450" y="150" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="#a78bfa">x ≡ a₁ (mod m₁), x ≡ a₂ (mod m₂), ... has unique solution mod M = m₁×m₂×...×mₖ</text>
+  
+  <!-- Example -->
+  <rect x="50" y="190" width="400" height="220" rx="10" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="220" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">EXAMPLE</text>
+  
+  <text x="70" y="255" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Find x such that:</text>
+  <text x="70" y="280" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">x ≡ 2 (mod 3)</text>
+  <text x="70" y="305" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">x ≡ 3 (mod 5)</text>
+  <text x="70" y="330" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">x ≡ 2 (mod 7)</text>
+  
+  <text x="70" y="365" font-family="Courier New, monospace" font-size="12" fill="#888888">M = 3 × 5 × 7 = 105</text>
+  <text x="70" y="390" font-family="Courier New, monospace" font-size="14" fill="#4ade80">Solution: x ≡ 23 (mod 105)</text>
+  
+  <!-- Algorithm -->
+  <rect x="480" y="190" width="370" height="220" rx="10" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="665" y="220" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">ALGORITHM</text>
+  
+  <text x="500" y="255" font-family="Courier New, monospace" font-size="11" fill="#ffffff">1. M = m₁ × m₂ × ... × mₖ</text>
+  <text x="500" y="280" font-family="Courier New, monospace" font-size="11" fill="#ffffff">2. For each i: Mᵢ = M / mᵢ</text>
+  <text x="500" y="305" font-family="Courier New, monospace" font-size="11" fill="#ffffff">3. Find yᵢ = Mᵢ⁻¹ (mod mᵢ)</text>
+  <text x="500" y="330" font-family="Courier New, monospace" font-size="11" fill="#ffffff">4. x = Σ aᵢ × Mᵢ × yᵢ (mod M)</text>
+  
+  <text x="500" y="365" font-family="Courier New, monospace" font-size="11" fill="#f97316">Uses Extended GCD for inverse</text>
+  <text x="500" y="390" font-family="Courier New, monospace" font-size="11" fill="#888888">Time: O(k log M)</text>
+  
+  <!-- Step by step for example -->
+  <rect x="50" y="430" width="800" height="140" rx="10" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="450" y="460" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">CALCULATION FOR EXAMPLE</text>
+  
+  <text x="70" y="495" font-family="Courier New, monospace" font-size="11" fill="#ffffff">M₁ = 105/3 = 35, y₁ = 35⁻¹ mod 3 = 2 (since 35×2 = 70 ≡ 1 mod 3)</text>
+  <text x="70" y="520" font-family="Courier New, monospace" font-size="11" fill="#ffffff">M₂ = 105/5 = 21, y₂ = 21⁻¹ mod 5 = 1 (since 21×1 = 21 ≡ 1 mod 5)</text>
+  <text x="70" y="545" font-family="Courier New, monospace" font-size="11" fill="#ffffff">M₃ = 105/7 = 15, y₃ = 15⁻¹ mod 7 = 1 (since 15×1 = 15 ≡ 1 mod 7)</text>
+  <text x="70" y="570" font-family="Courier New, monospace" font-size="12" fill="#4ade80">x = 2×35×2 + 3×21×1 + 2×15×1 = 140 + 63 + 30 = 233 ≡ 23 (mod 105) ✓</text>
+</svg>

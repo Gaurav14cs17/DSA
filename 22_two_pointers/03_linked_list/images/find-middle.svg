@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <rect width="900" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Find Middle of Linked List</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Slow-Fast Pointer Technique</text>
+  
+  <!-- Odd length list -->
+  <text x="50" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Case 1: Odd Length [1 → 2 → 3 → 4 → 5]</text>
+  
+  <g transform="translate(50, 130)">
+    <!-- Node 1 -->
+    <circle cx="40" cy="30" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="40" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    <line x1="65" y1="30" x2="105" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="105,25 115,30 105,35" fill="#3b82f6"/>
+    
+    <!-- Node 2 -->
+    <circle cx="140" cy="30" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="140" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    <line x1="165" y1="30" x2="205" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="205,25 215,30 205,35" fill="#3b82f6"/>
+    
+    <!-- Node 3 (Middle) -->
+    <circle cx="240" cy="30" r="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="240" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">3</text>
+    <text x="240" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">MIDDLE</text>
+    <line x1="265" y1="30" x2="305" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="305,25 315,30 305,35" fill="#3b82f6"/>
+    
+    <!-- Node 4 -->
+    <circle cx="340" cy="30" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="340" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">4</text>
+    <line x1="365" y1="30" x2="405" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="405,25 415,30 405,35" fill="#3b82f6"/>
+    
+    <!-- Node 5 -->
+    <circle cx="440" cy="30" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="440" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">5</text>
+    <text x="480" y="35" font-family="Courier New, monospace" font-size="14" fill="#888888">→ null</text>
+  </g>
+  
+  <!-- Steps for odd list -->
+  <g transform="translate(550, 120)">
+    <rect x="0" y="0" width="300" height="100" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="8"/>
+    <text x="150" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa">STEPS (n=5)</text>
+    <text x="20" y="50" font-family="Courier New, monospace" font-size="11" fill="#ffffff">🐢=1, 🐇=1</text>
+    <text x="20" y="65" font-family="Courier New, monospace" font-size="11" fill="#ffffff">🐢→2, 🐇→→3</text>
+    <text x="20" y="80" font-family="Courier New, monospace" font-size="11" fill="#ffffff">🐢→3, 🐇→→5</text>
+    <text x="150" y="50" font-family="Courier New, monospace" font-size="11" fill="#888888">fast.next=null</text>
+    <text x="150" y="65" font-family="Courier New, monospace" font-size="11" fill="#4ade80">STOP!</text>
+    <text x="150" y="85" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Return 🐢 = 3</text>
+  </g>
+  
+  <!-- Even length list -->
+  <text x="50" y="260" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Case 2: Even Length [1 → 2 → 3 → 4 → 5 → 6]</text>
+  
+  <g transform="translate(50, 280)">
+    <!-- Node 1 -->
+    <circle cx="40" cy="30" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="40" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    <line x1="65" y1="30" x2="95" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="95,25 105,30 95,35" fill="#3b82f6"/>
+    
+    <!-- Node 2 -->
+    <circle cx="120" cy="30" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="120" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    <line x1="145" y1="30" x2="175" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="175,25 185,30 175,35" fill="#3b82f6"/>
+    
+    <!-- Node 3 (First middle) -->
+    <circle cx="200" cy="30" r="25" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="200" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">3</text>
+    <text x="200" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">1st mid</text>
+    <line x1="225" y1="30" x2="255" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="255,25 265,30 255,35" fill="#3b82f6"/>
+    
+    <!-- Node 4 (Second middle - returned) -->
+    <circle cx="280" cy="30" r="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="280" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">4</text>
+    <text x="280" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">2nd mid ✓</text>
+    <line x1="305" y1="30" x2="335" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="335,25 345,30 335,35" fill="#3b82f6"/>
+    
+    <!-- Node 5 -->
+    <circle cx="360" cy="30" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="360" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">5</text>
+    <line x1="385" y1="30" x2="415" y2="30" stroke="#3b82f6" stroke-width="2"/>
+    <polygon points="415,25 425,30 415,35" fill="#3b82f6"/>
+    
+    <!-- Node 6 -->
+    <circle cx="440" cy="30" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="440" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">6</text>
+    <text x="480" y="35" font-family="Courier New, monospace" font-size="14" fill="#888888">→ null</text>
+  </g>
+  
+  <!-- Steps for even list -->
+  <g transform="translate(550, 270)">
+    <rect x="0" y="0" width="300" height="100" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="8"/>
+    <text x="150" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa">STEPS (n=6)</text>
+    <text x="20" y="50" font-family="Courier New, monospace" font-size="11" fill="#ffffff">🐢=1, 🐇=1</text>
+    <text x="20" y="65" font-family="Courier New, monospace" font-size="11" fill="#ffffff">🐢→2, 🐇→→3</text>
+    <text x="20" y="80" font-family="Courier New, monospace" font-size="11" fill="#ffffff">🐢→3, 🐇→→5</text>
+    <text x="150" y="50" font-family="Courier New, monospace" font-size="11" fill="#ffffff">🐢→4, 🐇→→null</text>
+    <text x="150" y="70" font-family="Courier New, monospace" font-size="11" fill="#4ade80">STOP!</text>
+    <text x="150" y="90" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Return 🐢 = 4</text>
+  </g>
+  
+  <!-- Algorithm box -->
+  <rect x="50" y="400" width="400" height="120" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="8"/>
+  <text x="250" y="430" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#3b82f6">ALGORITHM</text>
+  <text x="70" y="460" font-family="Courier New, monospace" font-size="11" fill="#ffffff">slow = fast = head</text>
+  <text x="70" y="480" font-family="Courier New, monospace" font-size="11" fill="#ffffff">while fast and fast.next:</text>
+  <text x="90" y="500" font-family="Courier New, monospace" font-size="11" fill="#ffffff">slow = slow.next</text>
+  <text x="90" y="515" font-family="Courier New, monospace" font-size="11" fill="#ffffff">fast = fast.next.next</text>
+  
+  <!-- Why it works box -->
+  <rect x="480" y="400" width="380" height="120" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="8"/>
+  <text x="670" y="430" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">WHY IT WORKS</text>
+  <text x="500" y="460" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Fast moves 2× speed of slow</text>
+  <text x="500" y="480" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• When fast reaches end (n steps)</text>
+  <text x="500" y="500" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Slow is at n/2 steps = middle!</text>
+  <text x="500" y="520" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(n) | Space: O(1)</text>
+</svg>

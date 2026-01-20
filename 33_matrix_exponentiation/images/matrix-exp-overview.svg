@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380">
+  <rect width="900" height="380" fill="#0f0f23"/>
+  
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Matrix Exponentiation</text>
+  <text x="450" y="58" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">Compute A^n in O(log n) time</text>
+  
+  <!-- Fibonacci Example -->
+  <text x="50" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">FIBONACCI VIA MATRIX</text>
+  <g transform="translate(50, 115)">
+    <rect x="0" y="0" width="350" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="25" fill="#ffffff" font-size="10" font-family="Courier New, monospace">| F(n+1) |   | 1 1 |^n   | F(1) |</text>
+    <text x="15" y="45" fill="#ffffff" font-size="10" font-family="Courier New, monospace">| F(n)   | = | 1 0 |   × | F(0) |</text>
+    <text x="15" y="70" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Time: O(log n) matrix multiplications</text>
+  </g>
+  
+  <!-- Binary Exponentiation -->
+  <text x="450" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">BINARY EXPONENTIATION</text>
+  <g transform="translate(450, 115)">
+    <rect x="0" y="0" width="380" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="25" fill="#ffffff" font-size="10" font-family="Courier New, monospace">A^13 = A^8 × A^4 × A^1</text>
+    <text x="15" y="45" fill="#ffffff" font-size="10" font-family="Courier New, monospace">13 = 1101 in binary</text>
+    <text x="15" y="70" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Only O(log n) multiplications needed</text>
+  </g>
+  
+  <!-- Template -->
+  <text x="50" y="230" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">TEMPLATE</text>
+  <g transform="translate(50, 250)">
+    <rect x="0" y="0" width="350" height="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">result = I (identity)</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">while n &gt; 0:</text>
+    <text x="25" y="55" fill="#ffffff" font-size="10" font-family="Courier New, monospace">if n &amp; 1: result *= A; A *= A; n &gt;&gt;= 1</text>
+  </g>
+  
+  <!-- Applications -->
+  <text x="450" y="230" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">APPLICATIONS</text>
+  <g transform="translate(450, 250)">
+    <text x="0" y="15" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Linear recurrences (Fibonacci)</text>
+    <text x="0" y="35" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Graph path counting</text>
+    <text x="0" y="55" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• DP optimization (k-th power of transition)</text>
+    <text x="0" y="75" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Polynomial arithmetic</text>
+  </g>
+  
+  <!-- Complexity -->
+  <text x="50" y="340" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">TIME COMPLEXITY</text>
+  <g transform="translate(200, 340)">
+    <text x="0" y="15" fill="#4ade80" font-size="12" font-family="Courier New, monospace">O(k³ log n)</text>
+    <text x="100" y="15" fill="#888888" font-size="11" font-family="Courier New, monospace">for k×k matrix to power n</text>
+  </g>
+</svg>
+

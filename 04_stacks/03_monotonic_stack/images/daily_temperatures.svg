@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 650">
+  <rect width="950" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Daily Temperatures</text>
+  <text x="475" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Days until warmer temperature | LeetCode #739</text>
+  
+  <!-- Input Array with temperature visual -->
+  <g transform="translate(50, 100)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Temperatures: [73, 74, 75, 71, 69, 72, 76, 73]</text>
+    
+    <!-- Temperature bars -->
+    <g transform="translate(0, 30)">
+      <!-- Day 0: 73 -->
+      <rect x="0" y="27" width="40" height="73" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="20" y="115" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">73</text>
+      <text x="20" y="130" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">d0</text>
+      
+      <!-- Day 1: 74 -->
+      <rect x="50" y="26" width="40" height="74" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="70" y="115" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">74</text>
+      <text x="70" y="130" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">d1</text>
+      
+      <!-- Day 2: 75 -->
+      <rect x="100" y="25" width="40" height="75" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="120" y="115" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">75</text>
+      <text x="120" y="130" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">d2</text>
+      
+      <!-- Day 3: 71 -->
+      <rect x="150" y="29" width="40" height="71" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="170" y="115" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">71</text>
+      <text x="170" y="130" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">d3</text>
+      
+      <!-- Day 4: 69 -->
+      <rect x="200" y="31" width="40" height="69" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="220" y="115" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">69</text>
+      <text x="220" y="130" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">d4</text>
+      
+      <!-- Day 5: 72 -->
+      <rect x="250" y="28" width="40" height="72" rx="3" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="270" y="115" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">72</text>
+      <text x="270" y="130" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">d5</text>
+      
+      <!-- Day 6: 76 (hottest) -->
+      <rect x="300" y="24" width="40" height="76" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="320" y="115" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">76</text>
+      <text x="320" y="130" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">d6</text>
+      
+      <!-- Day 7: 73 -->
+      <rect x="350" y="27" width="40" height="73" rx="3" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+      <text x="370" y="115" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">73</text>
+      <text x="370" y="130" font-family="Courier New, monospace" font-size="9" fill="#888888" text-anchor="middle">d7</text>
+    </g>
+  </g>
+  
+  <!-- Result -->
+  <g transform="translate(480, 100)">
+    <rect x="0" y="0" width="420" height="130" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="210" y="25" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">Result: [1, 1, 4, 2, 1, 1, 0, 0]</text>
+    
+    <text x="20" y="55" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Day 0 (73°): Wait 1 day for 74°</text>
+    <text x="20" y="73" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Day 1 (74°): Wait 1 day for 75°</text>
+    <text x="20" y="91" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Day 2 (75°): Wait 4 days for 76°</text>
+    <text x="20" y="109" font-family="Courier New, monospace" font-size="11" fill="#ef4444">Day 6 (76°): No warmer day → 0</text>
+    <text x="20" y="125" font-family="Courier New, monospace" font-size="11" fill="#ef4444">Day 7 (73°): No warmer day → 0</text>
+  </g>
+  
+  <!-- Trace Table -->
+  <text x="475" y="265" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">Decreasing Stack Trace</text>
+  
+  <g transform="translate(50, 280)">
+    <rect x="0" y="0" width="850" height="30" rx="4" fill="#1e3a5f"/>
+    <text x="40" y="20" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#3b82f6" text-anchor="middle">i</text>
+    <text x="100" y="20" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#3b82f6" text-anchor="middle">T[i]</text>
+    <text x="280" y="20" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#3b82f6" text-anchor="middle">Action</text>
+    <text x="550" y="20" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#3b82f6" text-anchor="middle">Stack</text>
+    <text x="750" y="20" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#3b82f6" text-anchor="middle">Result</text>
+  </g>
+  
+  <!-- Rows -->
+  <g transform="translate(50, 315)">
+    <text x="40" y="15" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">0</text>
+    <text x="100" y="15" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">73</text>
+    <text x="280" y="15" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">Push 0</text>
+    <text x="550" y="15" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="middle">[0]</text>
+    <text x="750" y="15" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">[0,0,0,0,0,0,0,0]</text>
+  </g>
+  
+  <g transform="translate(50, 337)">
+    <rect x="-5" y="-5" width="860" height="22" rx="3" fill="#0f2f1f"/>
+    <text x="40" y="12" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">1</text>
+    <text x="100" y="12" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">74</text>
+    <text x="280" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">74 &gt; 73: pop 0, result[0]=1-0=1, push 1</text>
+    <text x="550" y="12" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="middle">[1]</text>
+    <text x="750" y="12" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">[1,0,0,0,0,0,0,0]</text>
+  </g>
+  
+  <g transform="translate(50, 359)">
+    <rect x="-5" y="-5" width="860" height="22" rx="3" fill="#0f2f1f"/>
+    <text x="40" y="12" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">2</text>
+    <text x="100" y="12" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">75</text>
+    <text x="280" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">75 &gt; 74: pop 1, result[1]=2-1=1, push 2</text>
+    <text x="550" y="12" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="middle">[2]</text>
+    <text x="750" y="12" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">[1,1,0,0,0,0,0,0]</text>
+  </g>
+  
+  <g transform="translate(50, 381)">
+    <text x="40" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="100" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">71</text>
+    <text x="280" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">71 &lt; 75: push 3</text>
+    <text x="550" y="12" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="middle">[2, 3]</text>
+    <text x="750" y="12" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">[1,1,0,0,0,0,0,0]</text>
+  </g>
+  
+  <g transform="translate(50, 403)">
+    <text x="40" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="100" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">69</text>
+    <text x="280" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">69 &lt; 71: push 4</text>
+    <text x="550" y="12" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="middle">[2, 3, 4]</text>
+    <text x="750" y="12" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">[1,1,0,0,0,0,0,0]</text>
+  </g>
+  
+  <g transform="translate(50, 425)">
+    <rect x="-5" y="-5" width="860" height="22" rx="3" fill="#0f2f1f"/>
+    <text x="40" y="12" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">5</text>
+    <text x="100" y="12" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">72</text>
+    <text x="280" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">72 &gt; 69,71: pop 4,3 → result[4]=1, result[3]=2</text>
+    <text x="550" y="12" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="middle">[2, 5]</text>
+    <text x="750" y="12" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">[1,1,0,2,1,0,0,0]</text>
+  </g>
+  
+  <g transform="translate(50, 447)">
+    <rect x="-5" y="-5" width="860" height="22" rx="3" fill="#0f2f1f"/>
+    <text x="40" y="12" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">6</text>
+    <text x="100" y="12" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">76</text>
+    <text x="280" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">76 &gt; 72,75: pop 5,2 → result[5]=1, result[2]=4</text>
+    <text x="550" y="12" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="middle">[6]</text>
+    <text x="750" y="12" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">[1,1,4,2,1,1,0,0]</text>
+  </g>
+  
+  <g transform="translate(50, 469)">
+    <text x="40" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">7</text>
+    <text x="100" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">73</text>
+    <text x="280" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">73 &lt; 76: push 7</text>
+    <text x="550" y="12" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="middle">[6, 7]</text>
+    <text x="750" y="12" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">[1,1,4,2,1,1,0,0]</text>
+  </g>
+  
+  <!-- Remaining in stack -->
+  <g transform="translate(50, 495)">
+    <text x="280" y="12" font-family="Courier New, monospace" font-size="10" fill="#ef4444" text-anchor="middle">Remaining [6,7] never get warmer → stay 0</text>
+    <text x="750" y="12" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#4ade80" text-anchor="middle">[1,1,4,2,1,1,0,0]</text>
+  </g>
+  
+  <!-- Formula and Complexity -->
+  <g transform="translate(50, 540)">
+    <rect x="0" y="0" width="400" height="80" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="200" y="25" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa" text-anchor="middle">Key Formula</text>
+    <text x="200" y="50" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">result[idx] = current_i - idx</text>
+    <text x="200" y="70" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">Days to wait = distance between indices</text>
+  </g>
+  
+  <g transform="translate(500, 540)">
+    <rect x="0" y="0" width="200" height="80" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="100" y="25" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#3b82f6" text-anchor="middle">Complexity</text>
+    <text x="100" y="50" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">Time: O(n)</text>
+    <text x="100" y="70" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">Space: O(n)</text>
+  </g>
+  
+  <g transform="translate(730, 540)">
+    <rect x="0" y="0" width="170" height="80" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="85" y="25" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316" text-anchor="middle">Pattern</text>
+    <text x="85" y="50" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">Decreasing stack</text>
+    <text x="85" y="70" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">Store indices</text>
+  </g>
+</svg>

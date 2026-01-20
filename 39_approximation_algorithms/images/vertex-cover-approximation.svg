@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Vertex Cover 2-Approximation</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Greedy Matching Algorithm</text>
+  
+  <!-- Step 1: Initial Graph -->
+  <text x="80" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Step 1: Input Graph</text>
+  
+  <g transform="translate(80, 130)">
+    <!-- Nodes -->
+    <circle cx="50" cy="50" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="50" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+    
+    <circle cx="150" cy="50" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="150" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    
+    <circle cx="100" cy="130" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="100" y="135" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">3</text>
+    
+    <circle cx="200" cy="130" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="200" y="135" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">4</text>
+    
+    <!-- Edges -->
+    <line x1="70" y1="50" x2="130" y2="50" stroke="#888888" stroke-width="2"/>
+    <line x1="60" y1="68" x2="85" y2="112" stroke="#888888" stroke-width="2"/>
+    <line x1="140" y1="68" x2="115" y2="112" stroke="#888888" stroke-width="2"/>
+    <line x1="120" y1="130" x2="180" y2="130" stroke="#888888" stroke-width="2"/>
+    <line x1="165" y1="65" x2="185" y2="115" stroke="#888888" stroke-width="2"/>
+    
+    <text x="0" y="180" font-family="Courier New, monospace" font-size="11" fill="#888888">5 edges to cover</text>
+  </g>
+  
+  <!-- Step 2: Pick Edge -->
+  <text x="340" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Step 2: Pick Edge (1,2)</text>
+  
+  <g transform="translate(340, 130)">
+    <!-- Nodes - 1,2 selected -->
+    <circle cx="50" cy="50" r="20" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="50" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#f97316">1</text>
+    
+    <circle cx="150" cy="50" r="20" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="150" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#f97316">2</text>
+    
+    <circle cx="100" cy="130" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="100" y="135" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">3</text>
+    
+    <circle cx="200" cy="130" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="200" y="135" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">4</text>
+    
+    <!-- Selected edge -->
+    <line x1="70" y1="50" x2="130" y2="50" stroke="#f97316" stroke-width="3"/>
+    
+    <!-- Covered edges (dashed) -->
+    <line x1="60" y1="68" x2="85" y2="112" stroke="#4ade80" stroke-width="2" stroke-dasharray="5,3"/>
+    <line x1="140" y1="68" x2="115" y2="112" stroke="#4ade80" stroke-width="2" stroke-dasharray="5,3"/>
+    <line x1="165" y1="65" x2="185" y2="115" stroke="#4ade80" stroke-width="2" stroke-dasharray="5,3"/>
+    
+    <!-- Remaining edge -->
+    <line x1="120" y1="130" x2="180" y2="130" stroke="#888888" stroke-width="2"/>
+    
+    <text x="0" y="180" font-family="Courier New, monospace" font-size="11" fill="#4ade80">4 edges now covered</text>
+  </g>
+  
+  <!-- Step 3: Pick Another Edge -->
+  <text x="600" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Step 3: Pick Edge (3,4)</text>
+  
+  <g transform="translate(600, 130)">
+    <!-- All nodes in cover -->
+    <circle cx="50" cy="50" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="50" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80">1</text>
+    
+    <circle cx="150" cy="50" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="150" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80">2</text>
+    
+    <circle cx="100" cy="130" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="100" y="135" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80">3</text>
+    
+    <circle cx="200" cy="130" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="200" y="135" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80">4</text>
+    
+    <!-- All edges covered -->
+    <line x1="70" y1="50" x2="130" y2="50" stroke="#4ade80" stroke-width="2" stroke-dasharray="5,3"/>
+    <line x1="60" y1="68" x2="85" y2="112" stroke="#4ade80" stroke-width="2" stroke-dasharray="5,3"/>
+    <line x1="140" y1="68" x2="115" y2="112" stroke="#4ade80" stroke-width="2" stroke-dasharray="5,3"/>
+    <line x1="120" y1="130" x2="180" y2="130" stroke="#f97316" stroke-width="3"/>
+    <line x1="165" y1="65" x2="185" y2="115" stroke="#4ade80" stroke-width="2" stroke-dasharray="5,3"/>
+    
+    <text x="0" y="180" font-family="Courier New, monospace" font-size="11" fill="#4ade80">All edges covered!</text>
+  </g>
+  
+  <!-- Analysis Section -->
+  <text x="80" y="370" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Analysis</text>
+  
+  <g transform="translate(80, 390)">
+    <rect x="0" y="0" width="340" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="20" y="25" font-family="Courier New, monospace" font-size="14" fill="#ffffff">ALG Cover: {1, 2, 3, 4}</text>
+    <text x="20" y="48" font-family="Courier New, monospace" font-size="14" fill="#ffffff">OPT Cover: {2, 3} or {2, 4}</text>
+    <text x="20" y="71" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">|ALG| = 4 ≤ 2 × |OPT| = 4 ✓</text>
+  </g>
+  
+  <!-- Proof Box -->
+  <text x="480" y="370" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Proof of 2-Approximation</text>
+  
+  <g transform="translate(480, 390)">
+    <rect x="0" y="0" width="360" height="130" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="4"/>
+    <text x="20" y="25" font-family="Courier New, monospace" font-size="12" fill="#ffffff">• Matching M = edges we pick</text>
+    <text x="20" y="48" font-family="Courier New, monospace" font-size="12" fill="#ffffff">• Each edge in M is disjoint</text>
+    <text x="20" y="71" font-family="Courier New, monospace" font-size="12" fill="#ffffff">• OPT needs ≥ 1 vertex per edge in M</text>
+    <text x="20" y="94" font-family="Courier New, monospace" font-size="12" fill="#ffffff">• So |OPT| ≥ |M|</text>
+    <text x="20" y="117" font-family="Courier New, monospace" font-size="12" fill="#4ade80">• We pick 2|M| vertices ⟹ ALG ≤ 2×OPT</text>
+  </g>
+  
+  <!-- Complexity -->
+  <text x="80" y="540" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time Complexity: O(E) | Space: O(V)</text>
+  <text x="80" y="560" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Approximation Ratio: 2 (tight for this algorithm)</text>
+  
+  <!-- Footer -->
+  <text x="450" y="590" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Greedy matching gives a 2-approximation for minimum vertex cover</text>
+</svg>
+

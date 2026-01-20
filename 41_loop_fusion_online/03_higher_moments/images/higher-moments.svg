@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6c63ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4834df;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ee5a6f;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd93d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f9ca24;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a29bfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6c5ce7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1000" height="700" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="500" y="40" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    Higher Statistical Moments
+  </text>
+  <text x="500" y="70" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#7f8c8d">
+    Online Computation of Mean, Variance, Skewness, and Kurtosis
+  </text>
+  
+  <!-- The Four Moments -->
+  <g transform="translate(50, 110)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">
+      The Four Central Moments:
+    </text>
+    
+    <!-- First Moment: Mean -->
+    <g transform="translate(0, 30)">
+      <rect x="0" y="0" width="220" height="110" fill="url(#grad1)" stroke="#6c63ff" stroke-width="2" rx="5"/>
+      <text x="110" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">
+        1st Moment
+      </text>
+      <text x="110" y="45" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fff">
+        Mean (μ)
+      </text>
+      <text x="110" y="70" font-family="monospace" font-size="13" text-anchor="middle" fill="#fff">
+        μ = E[X]
+      </text>
+      <text x="110" y="95" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff">
+        Central tendency
+      </text>
+    </g>
+    
+    <!-- Second Moment: Variance -->
+    <g transform="translate(240, 30)">
+      <rect x="0" y="0" width="220" height="110" fill="url(#grad2)" stroke="#ff6b6b" stroke-width="2" rx="5"/>
+      <text x="110" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">
+        2nd Moment
+      </text>
+      <text x="110" y="45" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fff">
+        Variance (σ²)
+      </text>
+      <text x="110" y="70" font-family="monospace" font-size="13" text-anchor="middle" fill="#fff">
+        σ² = E[(X-μ)²]
+      </text>
+      <text x="110" y="95" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff">
+        Spread/dispersion
+      </text>
+    </g>
+    
+    <!-- Third Moment: Skewness -->
+    <g transform="translate(480, 30)">
+      <rect x="0" y="0" width="220" height="110" fill="url(#grad3)" stroke="#f9ca24" stroke-width="2" rx="5"/>
+      <text x="110" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">
+        3rd Moment
+      </text>
+      <text x="110" y="45" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fff">
+        Skewness (γ₁)
+      </text>
+      <text x="110" y="70" font-family="monospace" font-size="13" text-anchor="middle" fill="#fff">
+        γ₁ = E[(X-μ)³]/σ³
+      </text>
+      <text x="110" y="95" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff">
+        Asymmetry
+      </text>
+    </g>
+    
+    <!-- Fourth Moment: Kurtosis -->
+    <g transform="translate(720, 30)">
+      <rect x="0" y="0" width="220" height="110" fill="url(#grad4)" stroke="#6c5ce7" stroke-width="2" rx="5"/>
+      <text x="110" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">
+        4th Moment
+      </text>
+      <text x="110" y="45" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#fff">
+        Kurtosis (γ₂)
+      </text>
+      <text x="110" y="70" font-family="monospace" font-size="13" text-anchor="middle" fill="#fff">
+        γ₂ = E[(X-μ)⁴]/σ⁴-3
+      </text>
+      <text x="110" y="95" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff">
+        Tailedness
+      </text>
+    </g>
+  </g>
+  
+  <!-- Recurrence Relations -->
+  <g transform="translate(50, 270)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">
+      Online Update Recurrences:
+    </text>
+    
+    <g transform="translate(0, 20)">
+      <rect x="0" y="0" width="900" height="200" fill="#fff" stroke="#7f8c8d" stroke-width="2" rx="5"/>
+      
+      <!-- Mean Update -->
+      <text x="20" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6c63ff">
+        Mean:
+      </text>
+      <text x="100" y="30" font-family="monospace" font-size="13" fill="#2c3e50">
+        μₙ = μₙ₋₁ + δ/n
+      </text>
+      <text x="350" y="30" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">
+        where δ = xₙ - μₙ₋₁
+      </text>
+      
+      <!-- Variance Update -->
+      <text x="20" y="65" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ff6b6b">
+        Variance:
+      </text>
+      <text x="100" y="65" font-family="monospace" font-size="13" fill="#2c3e50">
+        M₂(n) = M₂(n-1) + δ(xₙ - μₙ)
+      </text>
+      
+      <!-- Skewness Update -->
+      <text x="20" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f9ca24">
+        Skewness:
+      </text>
+      <text x="100" y="100" font-family="monospace" font-size="12" fill="#2c3e50">
+        M₃(n) = M₃(n-1) + δ³(n-1)(n-2)/n² - 3δM₂(n-1)/n
+      </text>
+      
+      <!-- Kurtosis Update -->
+      <text x="20" y="135" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6c5ce7">
+        Kurtosis:
+      </text>
+      <text x="100" y="135" font-family="monospace" font-size="11" fill="#2c3e50">
+        M₄(n) = M₄(n-1) + δ⁴(n-1)(n²-3n+3)/n³ + 6δ²M₂(n-1)/n² - 4δM₃(n-1)/n
+      </text>
+      
+      <!-- Complexity -->
+      <rect x="20" y="155" width="860" height="35" fill="#e8f5e9" stroke="#27ae60" stroke-width="1" rx="3"/>
+      <text x="450" y="178" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#27ae60">
+        ✓ All four moments computed in O(1) time per update, O(1) space total
+      </text>
+    </g>
+  </g>
+  
+  <!-- Distribution Shapes -->
+  <g transform="translate(50, 500)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">
+      Distribution Shapes:
+    </text>
+    
+    <!-- Symmetric (Normal) -->
+    <g transform="translate(0, 30)">
+      <rect x="0" y="0" width="280" height="140" fill="#fff" stroke="#7f8c8d" stroke-width="2" rx="5"/>
+      <text x="140" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+        Symmetric (Normal)
+      </text>
+      
+      <!-- Bell curve -->
+      <path d="M 40 100 Q 140 40, 240 100" stroke="#6c63ff" stroke-width="3" fill="none"/>
+      <line x1="140" y1="40" x2="140" y2="110" stroke="#dee2e6" stroke-width="1" stroke-dasharray="3,3"/>
+      
+      <text x="140" y="125" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">
+        γ₁ ≈ 0, γ₂ ≈ 0
+      </text>
+    </g>
+    
+    <!-- Right Skewed -->
+    <g transform="translate(310, 30)">
+      <rect x="0" y="0" width="280" height="140" fill="#fff" stroke="#7f8c8d" stroke-width="2" rx="5"/>
+      <text x="140" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+        Right-Skewed
+      </text>
+      
+      <!-- Right skewed curve -->
+      <path d="M 40 100 Q 80 40, 140 80 Q 180 90, 240 100" stroke="#f9ca24" stroke-width="3" fill="none"/>
+      <line x1="80" y1="40" x2="80" y2="110" stroke="#dee2e6" stroke-width="1" stroke-dasharray="3,3"/>
+      
+      <text x="140" y="125" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">
+        γ₁ > 0 (long right tail)
+      </text>
+    </g>
+    
+    <!-- Heavy Tailed -->
+    <g transform="translate(620, 30)">
+      <rect x="0" y="0" width="280" height="140" fill="#fff" stroke="#7f8c8d" stroke-width="2" rx="5"/>
+      <text x="140" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+        Heavy-Tailed (Leptokurtic)
+      </text>
+      
+      <!-- Peaked curve with fat tails -->
+      <path d="M 40 100 Q 130 20, 140 30 Q 150 20, 240 100" stroke="#6c5ce7" stroke-width="3" fill="none"/>
+      <line x1="140" y1="30" x2="140" y2="110" stroke="#dee2e6" stroke-width="1" stroke-dasharray="3,3"/>
+      
+      <text x="140" y="125" font-family="monospace" font-size="12" text-anchor="middle" fill="#2c3e50">
+        γ₂ > 0 (more outliers)
+      </text>
+    </g>
+  </g>
+  
+  <!-- Key Insight -->
+  <g transform="translate(50, 670)">
+    <rect x="0" y="0" width="900" height="20" fill="#fff3cd" stroke="#ffc107" stroke-width="1" rx="3"/>
+    <text x="450" y="14" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#856404">
+      💡 Higher moments reveal distribution shape beyond mean and variance - crucial for anomaly detection
+    </text>
+  </g>
+</svg>
+

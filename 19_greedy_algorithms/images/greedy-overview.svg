@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <rect width="900" height="500" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Greedy Algorithms</text>
+  <text x="450" y="58" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">Make locally optimal choice at each step</text>
+  
+  <!-- Activity Selection -->
+  <text x="50" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">INTERVAL SCHEDULING</text>
+  
+  <g transform="translate(50, 115)">
+    <!-- Timeline -->
+    <line x1="0" y1="80" x2="350" y2="80" stroke="#3b82f6" stroke-width="2"/>
+    <text x="0" y="100" fill="#888888" font-size="10" font-family="Courier New, monospace">0</text>
+    <text x="340" y="100" fill="#888888" font-size="10" font-family="Courier New, monospace">t</text>
+    
+    <!-- Intervals -->
+    <rect x="0" y="10" width="100" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="50" y="25" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">A</text>
+    
+    <rect x="60" y="35" width="120" height="20" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4"/>
+    <text x="120" y="50" text-anchor="middle" fill="#888888" font-size="10" font-family="Courier New, monospace">B (skip)</text>
+    
+    <rect x="120" y="10" width="80" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="160" y="25" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">C</text>
+    
+    <rect x="220" y="10" width="100" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="270" y="25" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">D</text>
+    
+    <text x="0" y="130" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Strategy: Sort by end time, pick non-overlapping</text>
+  </g>
+  
+  <!-- Coin Change Greedy -->
+  <text x="450" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">COIN CHANGE (GREEDY WORKS)</text>
+  
+  <g transform="translate(450, 115)">
+    <text x="0" y="15" fill="#888888" font-size="10" font-family="Courier New, monospace">Coins: [25, 10, 5, 1], Amount: 41</text>
+    
+    <text x="0" y="45" fill="#ffffff" font-size="10" font-family="Courier New, monospace">1. Take 25 → 41-25 = 16</text>
+    <text x="0" y="65" fill="#ffffff" font-size="10" font-family="Courier New, monospace">2. Take 10 → 16-10 = 6</text>
+    <text x="0" y="85" fill="#ffffff" font-size="10" font-family="Courier New, monospace">3. Take 5  → 6-5 = 1</text>
+    <text x="0" y="105" fill="#ffffff" font-size="10" font-family="Courier New, monospace">4. Take 1  → 1-1 = 0</text>
+    
+    <text x="0" y="135" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Total: 4 coins (optimal!)</text>
+  </g>
+  
+  <!-- Greedy vs DP -->
+  <text x="50" y="280" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">GREEDY vs DP</text>
+  
+  <g transform="translate(50, 300)">
+    <rect x="0" y="0" width="200" height="80" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="100" y="20" text-anchor="middle" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">GREEDY</text>
+    <text x="15" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Local optimal choice</text>
+    <text x="15" y="55" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• O(n) or O(n log n)</text>
+    <text x="15" y="70" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Doesn't always work</text>
+    
+    <rect x="220" y="0" width="200" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="320" y="20" text-anchor="middle" fill="#3b82f6" font-size="11" font-weight="bold" font-family="Courier New, monospace">DP</text>
+    <text x="235" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Explore all options</text>
+    <text x="235" y="55" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• O(n²) or more</text>
+    <text x="235" y="70" fill="#ffffff" font-size="10" font-family="Courier New, monospace">• Always finds optimal</text>
+  </g>
+  
+  <!-- Common Problems -->
+  <text x="500" y="280" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">CLASSIC GREEDY PROBLEMS</text>
+  
+  <g transform="translate(500, 300)">
+    <text x="0" y="15" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Interval Scheduling</text>
+    <text x="0" y="35" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Huffman Coding</text>
+    <text x="0" y="55" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Jump Game</text>
+    <text x="0" y="75" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Gas Station</text>
+    <text x="180" y="15" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Task Scheduler</text>
+    <text x="180" y="35" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Meeting Rooms</text>
+    <text x="180" y="55" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Candy Distribution</text>
+  </g>
+  
+  <!-- Subtopics -->
+  <text x="50" y="430" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">SUBTOPICS</text>
+  <g transform="translate(150, 445)">
+    <text x="0" y="15" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">01. Interval Scheduling</text>
+    <text x="200" y="15" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">02. Task Scheduling</text>
+    <text x="400" y="15" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">03. Array Greedy</text>
+  </g>
+</svg>
+

@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 550">
+  <rect width="850" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="425" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Persistent Data Structures</text>
+  <text x="425" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Version Control for Data Structures</text>
+  
+  <!-- Path Copying Concept -->
+  <text x="50" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Path Copying (Key Idea)</text>
+  
+  <g transform="translate(50, 130)">
+    <!-- Version 0 Tree -->
+    <text x="60" y="0" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Version 0</text>
+    
+    <circle cx="60" cy="35" r="15" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="60" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">10</text>
+    
+    <line x1="48" y1="50" x2="30" y2="75" stroke="#3b82f6" stroke-width="1.5"/>
+    <line x1="72" y1="50" x2="90" y2="75" stroke="#3b82f6" stroke-width="1.5"/>
+    
+    <circle cx="30" cy="90" r="15" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="30" y="95" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">5</text>
+    
+    <circle cx="90" cy="90" r="15" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="90" y="95" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">15</text>
+    
+    <!-- Arrow to Version 1 -->
+    <text x="145" y="60" font-family="Courier New, monospace" font-size="10" fill="#888888">update(5→7)</text>
+    <line x1="130" y1="60" x2="180" y2="60" stroke="#4ade80" stroke-width="1.5"/>
+    <polygon points="180,60 173,55 173,65" fill="#4ade80"/>
+  </g>
+  
+  <g transform="translate(230, 130)">
+    <!-- Version 1 Tree -->
+    <text x="60" y="0" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Version 1</text>
+    
+    <circle cx="60" cy="35" r="15" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="60" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#f97316">10</text>
+    <text x="60" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#f97316">NEW</text>
+    
+    <line x1="48" y1="50" x2="30" y2="75" stroke="#f97316" stroke-width="1.5"/>
+    <line x1="72" y1="50" x2="120" y2="75" stroke="#888888" stroke-width="1.5" stroke-dasharray="3,2"/>
+    
+    <circle cx="30" cy="90" r="15" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="30" y="95" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">7</text>
+    <text x="30" y="115" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#4ade80">NEW</text>
+    
+    <text x="105" y="80" font-family="Courier New, monospace" font-size="9" fill="#888888">reuse</text>
+    <circle cx="120" cy="90" r="12" fill="none" stroke="#888888" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="120" y="95" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">15</text>
+  </g>
+  
+  <text x="50" y="280" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Only copy nodes on path from root to modified leaf</text>
+  <text x="50" y="298" font-family="Courier New, monospace" font-size="11" fill="#888888">Space per update: O(log n) instead of O(n)</text>
+  
+  <!-- Persistent Segment Tree -->
+  <text x="450" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Persistent Segment Tree</text>
+  
+  <g transform="translate(450, 130)">
+    <!-- Version roots -->
+    <rect x="0" y="0" width="80" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="40" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Root v0</text>
+    
+    <rect x="90" y="0" width="80" height="25" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="130" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Root v1</text>
+    
+    <rect x="180" y="0" width="80" height="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="220" y="17" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Root v2</text>
+    
+    <!-- Shared structure -->
+    <g transform="translate(40, 50)">
+      <circle cx="60" cy="30" r="12" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="60" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#a78bfa">S</text>
+      
+      <line x1="48" y1="42" x2="30" y2="65" stroke="#a78bfa" stroke-width="1"/>
+      <line x1="72" y1="42" x2="90" y2="65" stroke="#a78bfa" stroke-width="1"/>
+      
+      <circle cx="30" cy="80" r="12" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="30" y="85" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#a78bfa">S</text>
+      
+      <circle cx="90" cy="80" r="12" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="90" y="85" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#a78bfa">S</text>
+      
+      <text x="60" y="115" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">Shared nodes</text>
+    </g>
+  </g>
+  
+  <text x="450" y="290" font-family="Courier New, monospace" font-size="11" fill="#888888">Operations:</text>
+  <text x="450" y="310" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• update(version, idx, val) → new_version</text>
+  <text x="450" y="328" font-family="Courier New, monospace" font-size="10" fill="#ffffff">• query(version, left, right) → result</text>
+  
+  <!-- Use Cases -->
+  <text x="50" y="350" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Use Cases</text>
+  
+  <g transform="translate(50, 375)">
+    <rect x="0" y="0" width="180" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="10" y="17" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Version control systems</text>
+    
+    <rect x="0" y="30" width="180" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="10" y="47" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Undo/Redo functionality</text>
+    
+    <rect x="0" y="60" width="180" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="10" y="77" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Time travel queries</text>
+    
+    <rect x="0" y="90" width="180" height="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="10" y="107" font-family="Courier New, monospace" font-size="10" fill="#ffffff">Functional programming</text>
+  </g>
+  
+  <!-- Complexity -->
+  <text x="350" y="350" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Complexity</text>
+  
+  <g transform="translate(350, 375)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">Time (per operation):</text>
+    <text x="130" y="0" font-family="Courier New, monospace" font-size="10" fill="#4ade80">O(log n)</text>
+    
+    <text x="0" y="25" font-family="Courier New, monospace" font-size="10" fill="#888888">Space (per update):</text>
+    <text x="130" y="25" font-family="Courier New, monospace" font-size="10" fill="#4ade80">O(log n)</text>
+    
+    <text x="0" y="50" font-family="Courier New, monospace" font-size="10" fill="#888888">Space (total for k versions):</text>
+    <text x="180" y="50" font-family="Courier New, monospace" font-size="10" fill="#4ade80">O(n + k log n)</text>
+  </g>
+  
+  <!-- Types -->
+  <text x="600" y="350" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Types</text>
+  
+  <g transform="translate(600, 375)">
+    <rect x="0" y="0" width="180" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="10" y="13" font-family="Courier New, monospace" font-size="9" fill="#4ade80">Partially Persistent</text>
+    <text x="10" y="25" font-family="Courier New, monospace" font-size="8" fill="#888888">Query any, modify latest</text>
+    
+    <rect x="0" y="35" width="180" height="30" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+    <text x="10" y="48" font-family="Courier New, monospace" font-size="9" fill="#f97316">Fully Persistent</text>
+    <text x="10" y="60" font-family="Courier New, monospace" font-size="8" fill="#888888">Query & modify any version</text>
+    
+    <rect x="0" y="70" width="180" height="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="10" y="83" font-family="Courier New, monospace" font-size="9" fill="#4ade80">Confluently Persistent</text>
+    <text x="10" y="95" font-family="Courier New, monospace" font-size="8" fill="#888888">Merge different versions</text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="425" y="530" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Access any historical version without copying entire structure</text>
+</svg>
+
+

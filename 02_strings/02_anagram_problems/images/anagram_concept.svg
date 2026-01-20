@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 380">
+  <!-- Background -->
+  <rect width="750" height="380" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="375" y="35" fill="#fff" font-family="Arial" font-size="22" font-weight="bold" text-anchor="middle">Anagram Definition</text>
+  <text x="375" y="58" fill="#888" font-family="Arial" font-size="14" text-anchor="middle">Two strings with same character frequencies</text>
+  
+  <!-- String A: "listen" -->
+  <text x="140" y="95" fill="#ff6b6b" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">String A = "listen"</text>
+  
+  <g transform="translate(40, 110)">
+    <rect x="0" y="0" width="45" height="45" rx="6" fill="#ff6b6b"/>
+    <text x="22" y="30" fill="#fff" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle">l</text>
+    
+    <rect x="55" y="0" width="45" height="45" rx="6" fill="#ff6b6b"/>
+    <text x="77" y="30" fill="#fff" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle">i</text>
+    
+    <rect x="110" y="0" width="45" height="45" rx="6" fill="#ff6b6b"/>
+    <text x="132" y="30" fill="#fff" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle">s</text>
+    
+    <rect x="165" y="0" width="45" height="45" rx="6" fill="#ff6b6b"/>
+    <text x="187" y="30" fill="#fff" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle">t</text>
+    
+    <rect x="220" y="0" width="45" height="45" rx="6" fill="#ff6b6b"/>
+    <text x="242" y="30" fill="#fff" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle">e</text>
+    
+    <rect x="275" y="0" width="45" height="45" rx="6" fill="#ff6b6b"/>
+    <text x="297" y="30" fill="#fff" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle">n</text>
+  </g>
+  
+  <!-- Arrow -->
+  <text x="375" y="140" fill="#ffd700" font-family="Arial" font-size="24" text-anchor="middle">→ rearrange →</text>
+  
+  <!-- String B: "silent" -->
+  <text x="610" y="95" fill="#4ecdc4" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">String B = "silent"</text>
+  
+  <g transform="translate(430, 110)">
+    <rect x="0" y="0" width="45" height="45" rx="6" fill="#4ecdc4"/>
+    <text x="22" y="30" fill="#fff" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle">s</text>
+    
+    <rect x="55" y="0" width="45" height="45" rx="6" fill="#4ecdc4"/>
+    <text x="77" y="30" fill="#fff" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle">i</text>
+    
+    <rect x="110" y="0" width="45" height="45" rx="6" fill="#4ecdc4"/>
+    <text x="132" y="30" fill="#fff" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle">l</text>
+    
+    <rect x="165" y="0" width="45" height="45" rx="6" fill="#4ecdc4"/>
+    <text x="187" y="30" fill="#fff" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle">e</text>
+    
+    <rect x="220" y="0" width="45" height="45" rx="6" fill="#4ecdc4"/>
+    <text x="242" y="30" fill="#fff" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle">n</text>
+    
+    <rect x="275" y="0" width="45" height="45" rx="6" fill="#4ecdc4"/>
+    <text x="297" y="30" fill="#fff" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle">t</text>
+  </g>
+  
+  <!-- Frequency Tables -->
+  <text x="180" y="195" fill="#ffd700" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle">Frequency of A</text>
+  <rect x="40" y="205" width="280" height="50" rx="6" fill="rgba(255,107,107,0.2)" stroke="#ff6b6b"/>
+  <text x="180" y="238" fill="#fff" font-family="monospace" font-size="13" text-anchor="middle">e:1  i:1  l:1  n:1  s:1  t:1</text>
+  
+  <text x="570" y="195" fill="#ffd700" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle">Frequency of B</text>
+  <rect x="430" y="205" width="280" height="50" rx="6" fill="rgba(78,205,196,0.2)" stroke="#4ecdc4"/>
+  <text x="570" y="238" fill="#fff" font-family="monospace" font-size="13" text-anchor="middle">e:1  i:1  l:1  n:1  s:1  t:1</text>
+  
+  <!-- Equals Sign -->
+  <text x="375" y="235" fill="#38ef7d" font-family="Arial" font-size="32" font-weight="bold" text-anchor="middle">=</text>
+  
+  <!-- Result Box -->
+  <rect x="225" y="280" width="300" height="60" rx="10" fill="rgba(56,239,125,0.2)" stroke="#38ef7d" stroke-width="2"/>
+  <text x="375" y="318" fill="#38ef7d" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle">✓ ANAGRAM</text>
+  
+  <!-- Info -->
+  <text x="375" y="365" fill="#888" font-family="Arial" font-size="12" text-anchor="middle">freq(A) = freq(B)  |  sorted(A) = sorted(B) = "eilnst"</text>
+</svg>

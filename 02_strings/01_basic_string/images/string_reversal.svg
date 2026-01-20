@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400">
+  <!-- Background -->
+  <rect width="700" height="400" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="350" y="35" fill="#fff" font-family="Arial" font-size="22" font-weight="bold" text-anchor="middle">String Reversal - Two Pointers</text>
+  <text x="350" y="58" fill="#888" font-family="Arial" font-size="14" text-anchor="middle">Input: "HELLO"</text>
+  
+  <!-- Step 1 -->
+  <text x="40" y="100" fill="#ff6b6b" font-family="Arial" font-size="14" font-weight="bold">Step 1: L=0, R=4</text>
+  
+  <g transform="translate(40, 115)">
+    <rect x="0" y="0" width="50" height="50" rx="6" fill="#ff6b6b"/>
+    <text x="25" y="33" fill="#fff" font-family="monospace" font-size="22" font-weight="bold" text-anchor="middle">H</text>
+    
+    <rect x="60" y="0" width="50" height="50" rx="6" fill="#333"/>
+    <text x="85" y="33" fill="#888" font-family="monospace" font-size="22" text-anchor="middle">E</text>
+    
+    <rect x="120" y="0" width="50" height="50" rx="6" fill="#333"/>
+    <text x="145" y="33" fill="#888" font-family="monospace" font-size="22" text-anchor="middle">L</text>
+    
+    <rect x="180" y="0" width="50" height="50" rx="6" fill="#333"/>
+    <text x="205" y="33" fill="#888" font-family="monospace" font-size="22" text-anchor="middle">L</text>
+    
+    <rect x="240" y="0" width="50" height="50" rx="6" fill="#ff6b6b"/>
+    <text x="265" y="33" fill="#fff" font-family="monospace" font-size="22" font-weight="bold" text-anchor="middle">O</text>
+    
+    <text x="25" y="68" fill="#ff6b6b" font-family="Arial" font-size="12" text-anchor="middle">L</text>
+    <text x="265" y="68" fill="#ff6b6b" font-family="Arial" font-size="12" text-anchor="middle">R</text>
+  </g>
+  
+  <text x="400" y="150" fill="#ffd700" font-family="Arial" font-size="13">Swap H ↔ O</text>
+  
+  <!-- Step 2 -->
+  <text x="40" y="220" fill="#4facfe" font-family="Arial" font-size="14" font-weight="bold">Step 2: L=1, R=3</text>
+  
+  <g transform="translate(40, 235)">
+    <rect x="0" y="0" width="50" height="50" rx="6" fill="#38ef7d"/>
+    <text x="25" y="33" fill="#fff" font-family="monospace" font-size="22" text-anchor="middle">O</text>
+    
+    <rect x="60" y="0" width="50" height="50" rx="6" fill="#4facfe"/>
+    <text x="85" y="33" fill="#fff" font-family="monospace" font-size="22" font-weight="bold" text-anchor="middle">E</text>
+    
+    <rect x="120" y="0" width="50" height="50" rx="6" fill="#333"/>
+    <text x="145" y="33" fill="#888" font-family="monospace" font-size="22" text-anchor="middle">L</text>
+    
+    <rect x="180" y="0" width="50" height="50" rx="6" fill="#4facfe"/>
+    <text x="205" y="33" fill="#fff" font-family="monospace" font-size="22" font-weight="bold" text-anchor="middle">L</text>
+    
+    <rect x="240" y="0" width="50" height="50" rx="6" fill="#38ef7d"/>
+    <text x="265" y="33" fill="#fff" font-family="monospace" font-size="22" text-anchor="middle">H</text>
+    
+    <text x="85" y="68" fill="#4facfe" font-family="Arial" font-size="12" text-anchor="middle">L</text>
+    <text x="205" y="68" fill="#4facfe" font-family="Arial" font-size="12" text-anchor="middle">R</text>
+  </g>
+  
+  <text x="400" y="270" fill="#ffd700" font-family="Arial" font-size="13">Swap E ↔ L</text>
+  
+  <!-- Result -->
+  <text x="40" y="340" fill="#38ef7d" font-family="Arial" font-size="14" font-weight="bold">Result: "OLLEH" ✓</text>
+  
+  <g transform="translate(200, 320)">
+    <rect x="0" y="0" width="50" height="50" rx="6" fill="#38ef7d"/>
+    <text x="25" y="33" fill="#fff" font-family="monospace" font-size="22" font-weight="bold" text-anchor="middle">O</text>
+    
+    <rect x="60" y="0" width="50" height="50" rx="6" fill="#38ef7d"/>
+    <text x="85" y="33" fill="#fff" font-family="monospace" font-size="22" font-weight="bold" text-anchor="middle">L</text>
+    
+    <rect x="120" y="0" width="50" height="50" rx="6" fill="#38ef7d"/>
+    <text x="145" y="33" fill="#fff" font-family="monospace" font-size="22" font-weight="bold" text-anchor="middle">L</text>
+    
+    <rect x="180" y="0" width="50" height="50" rx="6" fill="#38ef7d"/>
+    <text x="205" y="33" fill="#fff" font-family="monospace" font-size="22" font-weight="bold" text-anchor="middle">E</text>
+    
+    <rect x="240" y="0" width="50" height="50" rx="6" fill="#38ef7d"/>
+    <text x="265" y="33" fill="#fff" font-family="monospace" font-size="22" font-weight="bold" text-anchor="middle">H</text>
+  </g>
+  
+  <!-- Info Box -->
+  <rect x="520" y="100" width="150" height="90" rx="8" fill="rgba(255,255,255,0.08)"/>
+  <text x="595" y="130" fill="#fff" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle">Complexity</text>
+  <text x="595" y="155" fill="#4facfe" font-family="Arial" font-size="12" text-anchor="middle">Time: O(n)</text>
+  <text x="595" y="175" fill="#4facfe" font-family="Arial" font-size="12" text-anchor="middle">Space: O(1)</text>
+  
+  <!-- Formula Box -->
+  <rect x="520" y="210" width="150" height="70" rx="8" fill="rgba(255,255,255,0.08)"/>
+  <text x="595" y="238" fill="#ffd700" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Formula</text>
+  <text x="595" y="260" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">S'[i] = S[n-1-i]</text>
+</svg>

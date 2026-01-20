@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 700">
+  <!-- Background -->
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">🔢 Binary Search in 2D Arrays</text>
+  <text x="475" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Flatten Method vs Staircase Search</text>
+  
+  <!-- Method 1: Flatten -->
+  <text x="50" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">METHOD 1: FLATTEN (Row-Major Sorted)</text>
+  <text x="50" y="125" font-family="Courier New, monospace" font-size="11" fill="#888888">LeetCode 74: Each row starts greater than previous row ends</text>
+  
+  <!-- 2D Matrix -->
+  <g transform="translate(50, 145)">
+    <!-- Matrix -->
+    <rect x="0" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="25" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">1</text>
+    
+    <rect x="55" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="80" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">3</text>
+    
+    <rect x="110" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="135" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">5</text>
+    
+    <rect x="165" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="190" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">7</text>
+    
+    <rect x="0" y="45" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="25" y="71" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">10</text>
+    
+    <rect x="55" y="45" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="3"/>
+    <text x="80" y="71" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#f97316">11</text>
+    
+    <rect x="110" y="45" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="135" y="71" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">16</text>
+    
+    <rect x="165" y="45" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="190" y="71" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">20</text>
+    
+    <rect x="0" y="90" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="25" y="116" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">23</text>
+    
+    <rect x="55" y="90" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="80" y="116" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">30</text>
+    
+    <rect x="110" y="90" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="135" y="116" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">34</text>
+    
+    <rect x="165" y="90" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="190" y="116" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">60</text>
+    
+    <text x="80" y="155" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">target = 11, mid_idx = 5</text>
+  </g>
+  
+  <!-- Arrow and flattened view -->
+  <text x="290" y="195" font-family="Courier New, monospace" font-size="24" fill="#888888">→</text>
+  
+  <g transform="translate(320, 145)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Flattened (virtual 1D array):</text>
+    
+    <rect x="0" y="15" width="35" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="2"/>
+    <text x="17" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">1</text>
+    <text x="17" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#888888">0</text>
+    
+    <rect x="38" y="15" width="35" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="2"/>
+    <text x="55" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">3</text>
+    <text x="55" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#888888">1</text>
+    
+    <text x="83" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">...</text>
+    
+    <rect x="100" y="15" width="35" height="30" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="2"/>
+    <text x="117" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#f97316">11</text>
+    <text x="117" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#f97316">5</text>
+    
+    <text x="145" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">...</text>
+    
+    <rect x="160" y="15" width="35" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="2"/>
+    <text x="177" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">60</text>
+    <text x="177" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="8" fill="#888888">11</text>
+  </g>
+  
+  <!-- Conversion formula box -->
+  <rect x="550" y="145" width="350" height="100" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="6"/>
+  <text x="725" y="170" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">INDEX CONVERSION</text>
+  <text x="565" y="195" font-family="Courier New, monospace" font-size="12" fill="#ffffff">1D index k → 2D (k/cols, k%cols)</text>
+  <text x="565" y="215" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Example: 5 → (5/4, 5%4) = (1, 1)</text>
+  <text x="565" y="235" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(log(m×n))</text>
+  
+  <!-- Method 2: Staircase -->
+  <text x="50" y="325" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">METHOD 2: STAIRCASE SEARCH (Row + Column Sorted)</text>
+  <text x="50" y="345" font-family="Courier New, monospace" font-size="11" fill="#888888">LeetCode 240: Each row and column independently sorted</text>
+  
+  <!-- 2D Matrix with staircase -->
+  <g transform="translate(50, 365)">
+    <!-- Column headers -->
+    <text x="25" y="-10" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">0</text>
+    <text x="80" y="-10" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">1</text>
+    <text x="135" y="-10" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">2</text>
+    <text x="190" y="-10" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">3</text>
+    <text x="245" y="-10" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">4</text>
+    
+    <!-- Row 0 -->
+    <rect x="0" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="25" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">1</text>
+    
+    <rect x="55" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="80" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">4</text>
+    
+    <rect x="110" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="135" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">7</text>
+    
+    <rect x="165" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="190" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">11</text>
+    
+    <rect x="220" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="3"/>
+    <text x="245" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#f97316">15</text>
+    
+    <!-- Row 1 -->
+    <rect x="0" y="45" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="25" y="71" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">2</text>
+    
+    <rect x="55" y="45" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="80" y="71" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">5</text>
+    
+    <rect x="110" y="45" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="135" y="71" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">8</text>
+    
+    <rect x="165" y="45" width="50" height="40" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="3"/>
+    <text x="190" y="71" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#a78bfa">12</text>
+    
+    <rect x="220" y="45" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4" rx="3"/>
+    <text x="245" y="71" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#666666">19</text>
+    
+    <!-- Row 2 -->
+    <rect x="0" y="90" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="25" y="116" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">3</text>
+    
+    <rect x="55" y="90" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="3"/>
+    <text x="80" y="116" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#ffffff">6</text>
+    
+    <rect x="110" y="90" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3" rx="3"/>
+    <text x="135" y="116" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#4ade80">9</text>
+    
+    <rect x="165" y="90" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4" rx="3"/>
+    <text x="190" y="116" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#666666">16</text>
+    
+    <rect x="220" y="90" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4" rx="3"/>
+    <text x="245" y="116" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#666666">22</text>
+    
+    <!-- Path arrows -->
+    <path d="M 245 45 L 245 50 L 210 50 L 210 65" fill="none" stroke="#f97316" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 190 90 L 190 95 L 155 95 L 155 110" fill="none" stroke="#a78bfa" stroke-width="2"/>
+    
+    <text x="135" y="155" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">target = 9, FOUND!</text>
+  </g>
+  
+  <!-- Staircase explanation -->
+  <rect x="350" y="365" width="320" height="130" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="6"/>
+  <text x="510" y="390" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STAIRCASE RULES</text>
+  <text x="365" y="415" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Start: top-right (or bottom-left)</text>
+  <text x="365" y="440" font-family="Courier New, monospace" font-size="12" fill="#4ade80">if target &lt; current: go LEFT</text>
+  <text x="365" y="465" font-family="Courier New, monospace" font-size="12" fill="#f97316">if target &gt; current: go DOWN</text>
+  <text x="365" y="485" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(m + n)</text>
+  
+  <!-- Search path visual -->
+  <rect x="700" y="365" width="200" height="130" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="6"/>
+  <text x="800" y="390" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">SEARCH PATH</text>
+  <text x="715" y="415" font-family="Courier New, monospace" font-size="11" fill="#f97316">15 &gt; 9 → go left</text>
+  <text x="715" y="435" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">11 &gt; 9 → go left</text>
+  <text x="715" y="455" font-family="Courier New, monospace" font-size="11" fill="#888888">7 &lt; 9 → go down</text>
+  <text x="715" y="475" font-family="Courier New, monospace" font-size="11" fill="#888888">8 &lt; 9 → go down</text>
+  <text x="715" y="490" font-family="Courier New, monospace" font-size="11" fill="#4ade80">9 = 9 → FOUND!</text>
+  
+  <!-- Comparison Box -->
+  <text x="50" y="530" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COMPARISON</text>
+  
+  <g transform="translate(50, 545)">
+    <!-- Method 1 -->
+    <rect x="0" y="0" width="400" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="6"/>
+    <text x="200" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="13" font-weight="bold" fill="#3b82f6">FLATTEN (LC 74)</text>
+    <text x="20" y="50" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Row-major sorted matrix</text>
+    <text x="20" y="70" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">• Time: O(log(m×n))</text>
+    
+    <!-- Method 2 -->
+    <rect x="420" y="0" width="400" height="80" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="6"/>
+    <text x="620" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="13" font-weight="bold" fill="#a78bfa">STAIRCASE (LC 240)</text>
+    <text x="440" y="50" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Row + Column sorted</text>
+    <text x="440" y="70" font-family="Courier New, monospace" font-size="11" fill="#60a5fa">• Time: O(m + n)</text>
+  </g>
+  
+  <!-- Complexity -->
+  <text x="475" y="670" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Choose method based on matrix sorting property</text>
+</svg>

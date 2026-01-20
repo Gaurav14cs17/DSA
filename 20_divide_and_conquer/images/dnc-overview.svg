@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <rect width="900" height="500" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Divide and Conquer</text>
+  <text x="450" y="58" text-anchor="middle" fill="#888888" font-size="14" font-family="Courier New, monospace">Divide → Conquer → Combine</text>
+  
+  <!-- D&C Steps -->
+  <text x="50" y="95" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">THE THREE STEPS</text>
+  
+  <g transform="translate(50, 115)">
+    <rect x="0" y="0" width="140" height="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="70" y="20" text-anchor="middle" fill="#3b82f6" font-size="11" font-weight="bold" font-family="Courier New, monospace">1. DIVIDE</text>
+    <text x="70" y="40" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Split into subproblems</text>
+    
+    <text x="155" y="30" fill="#888888" font-size="16" font-family="Courier New, monospace">→</text>
+    
+    <rect x="180" y="0" width="140" height="50" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="250" y="20" text-anchor="middle" fill="#f97316" font-size="11" font-weight="bold" font-family="Courier New, monospace">2. CONQUER</text>
+    <text x="250" y="40" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Solve recursively</text>
+    
+    <text x="335" y="30" fill="#888888" font-size="16" font-family="Courier New, monospace">→</text>
+    
+    <rect x="360" y="0" width="140" height="50" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="430" y="20" text-anchor="middle" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">3. COMBINE</text>
+    <text x="430" y="40" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Merge solutions</text>
+  </g>
+  
+  <!-- Merge Sort Example -->
+  <text x="50" y="200" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">MERGE SORT</text>
+  
+  <g transform="translate(50, 220)">
+    <!-- Tree showing split -->
+    <rect x="60" y="0" width="120" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="120" y="14" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">[38,27,43,3]</text>
+    
+    <line x1="90" y1="20" x2="60" y2="35" stroke="#3b82f6" stroke-width="1"/>
+    <line x1="150" y1="20" x2="180" y2="35" stroke="#3b82f6" stroke-width="1"/>
+    
+    <rect x="20" y="35" width="80" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="60" y="49" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">[38,27]</text>
+    
+    <rect x="140" y="35" width="80" height="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="180" y="49" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">[43,3]</text>
+    
+    <!-- Sorted -->
+    <rect x="20" y="65" width="80" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="60" y="79" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">[27,38]</text>
+    
+    <rect x="140" y="65" width="80" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+    <text x="180" y="79" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">[3,43]</text>
+    
+    <!-- Final merge -->
+    <rect x="60" y="95" width="120" height="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="120" y="109" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">[3,27,38,43]</text>
+    
+    <text x="0" y="135" fill="#60a5fa" font-size="10" font-family="Courier New, monospace">T(n) = 2T(n/2) + O(n) = O(n log n)</text>
+  </g>
+  
+  <!-- Quick Select -->
+  <text x="350" y="200" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">QUICK SELECT (Kth Smallest)</text>
+  
+  <g transform="translate(350, 220)">
+    <text x="0" y="15" fill="#888888" font-size="10" font-family="Courier New, monospace">Find 3rd smallest in [3,2,1,5,6,4]</text>
+    
+    <text x="0" y="40" fill="#ffffff" font-size="10" font-family="Courier New, monospace">1. Partition around pivot</text>
+    <text x="0" y="60" fill="#ffffff" font-size="10" font-family="Courier New, monospace">2. If pivot_idx == k-1: found!</text>
+    <text x="0" y="80" fill="#ffffff" font-size="10" font-family="Courier New, monospace">3. Else recurse on correct half</text>
+    
+    <text x="0" y="110" fill="#4ade80" font-size="10" font-family="Courier New, monospace">Average: O(n), Worst: O(n²)</text>
+  </g>
+  
+  <!-- Classic Problems -->
+  <text x="620" y="200" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">CLASSIC PROBLEMS</text>
+  
+  <g transform="translate(620, 220)">
+    <text x="0" y="15" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Merge Sort</text>
+    <text x="0" y="35" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Quick Sort/Select</text>
+    <text x="0" y="55" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Binary Search</text>
+    <text x="0" y="75" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Count Inversions</text>
+    <text x="0" y="95" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Closest Pair Points</text>
+    <text x="0" y="115" fill="#ffffff" font-size="11" font-family="Courier New, monospace">• Strassen's Matrix Mult</text>
+  </g>
+  
+  <!-- Master Theorem -->
+  <text x="50" y="380" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">MASTER THEOREM: T(n) = aT(n/b) + f(n)</text>
+  
+  <g transform="translate(50, 400)">
+    <rect x="0" y="0" width="700" height="50" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="15" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Case 1: f(n) = O(n^(log_b(a) - ε)) → T(n) = Θ(n^log_b(a))</text>
+    <text x="15" y="35" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Case 2: f(n) = Θ(n^log_b(a)) → T(n) = Θ(n^log_b(a) · log n)</text>
+    <text x="380" y="20" fill="#ffffff" font-size="10" font-family="Courier New, monospace">Case 3: f(n) = Ω(n^(log_b(a) + ε)) → T(n) = Θ(f(n))</text>
+  </g>
+  
+  <!-- Subtopics -->
+  <text x="50" y="470" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">SUBTOPICS</text>
+  <g transform="translate(150, 455)">
+    <text x="0" y="15" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">01. Merge Sort Pattern</text>
+    <text x="200" y="15" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">02. Quick Select</text>
+    <text x="380" y="15" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">03. Binary Search D&amp;C</text>
+  </g>
+</svg>
+

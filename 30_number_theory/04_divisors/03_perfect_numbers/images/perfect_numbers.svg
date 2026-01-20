@@ -1,0 +1,62 @@
+<svg viewBox="0 0 900 550" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="550" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Perfect Numbers</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">n equals the sum of its proper divisors</text>
+  
+  <!-- Definition box -->
+  <rect x="200" y="85" width="500" height="60" rx="10" fill="#2d1f3d" stroke="#a78bfa" stroke-width="3"/>
+  <text x="450" y="118" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#a78bfa">σ(n) - n = n  ⟺  σ(n) = 2n</text>
+  <text x="450" y="138" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">Sum of divisors = twice the number</text>
+  
+  <!-- Example: 6 -->
+  <rect x="50" y="165" width="260" height="150" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="180" y="195" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">PERFECT: 6</text>
+  
+  <text x="70" y="225" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Divisors: 1, 2, 3, 6</text>
+  <text x="70" y="250" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Proper: 1, 2, 3</text>
+  <text x="70" y="275" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Sum: 1+2+3 = 6 ✓</text>
+  <text x="70" y="300" font-family="Courier New, monospace" font-size="11" fill="#888888">σ(6) = 12 = 2×6</text>
+  
+  <!-- Example: 28 -->
+  <rect x="320" y="165" width="260" height="150" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="450" y="195" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">PERFECT: 28</text>
+  
+  <text x="340" y="225" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Divisors: 1,2,4,7,14,28</text>
+  <text x="340" y="250" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Proper: 1,2,4,7,14</text>
+  <text x="340" y="275" font-family="Courier New, monospace" font-size="12" fill="#4ade80">Sum: 1+2+4+7+14 = 28 ✓</text>
+  <text x="340" y="300" font-family="Courier New, monospace" font-size="11" fill="#888888">σ(28) = 56 = 2×28</text>
+  
+  <!-- Example: 496 -->
+  <rect x="590" y="165" width="260" height="150" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="720" y="195" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">PERFECT: 496</text>
+  
+  <text x="610" y="225" font-family="Courier New, monospace" font-size="12" fill="#ffffff">= 2⁴ × 31</text>
+  <text x="610" y="250" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Sum of proper divisors</text>
+  <text x="610" y="275" font-family="Courier New, monospace" font-size="12" fill="#4ade80">= 496 ✓</text>
+  <text x="610" y="300" font-family="Courier New, monospace" font-size="11" fill="#888888">σ(496) = 992 = 2×496</text>
+  
+  <!-- Euler's formula -->
+  <rect x="50" y="335" width="400" height="180" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="365" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">EUCLID-EULER THEOREM</text>
+  
+  <text x="70" y="400" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Even perfect numbers have the form:</text>
+  <text x="70" y="430" font-family="Courier New, monospace" font-size="14" fill="#3b82f6">n = 2^(p-1) × (2^p - 1)</text>
+  <text x="70" y="460" font-family="Courier New, monospace" font-size="12" fill="#ffffff">where 2^p - 1 is a Mersenne prime</text>
+  
+  <text x="70" y="495" font-family="Courier New, monospace" font-size="11" fill="#888888">p=2: 2¹×3 = 6</text>
+  <text x="200" y="495" font-family="Courier New, monospace" font-size="11" fill="#888888">p=3: 2²×7 = 28</text>
+  <text x="350" y="495" font-family="Courier New, monospace" font-size="11" fill="#888888">p=5: 2⁴×31 = 496</text>
+  
+  <!-- Known perfect numbers -->
+  <rect x="480" y="335" width="370" height="180" rx="8" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="665" y="365" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">KNOWN PERFECT NUMBERS</text>
+  
+  <text x="500" y="400" font-family="Courier New, monospace" font-size="12" fill="#ffffff">Only 51 known (as of 2023)</text>
+  <text x="500" y="430" font-family="Courier New, monospace" font-size="11" fill="#f97316">6, 28, 496, 8128, 33550336...</text>
+  
+  <text x="500" y="465" font-family="Courier New, monospace" font-size="11" fill="#888888">Open questions:</text>
+  <text x="500" y="490" font-family="Courier New, monospace" font-size="11" fill="#888888">• Are there infinitely many?</text>
+  <text x="500" y="510" font-family="Courier New, monospace" font-size="11" fill="#888888">• Do odd perfect numbers exist?</text>
+</svg>

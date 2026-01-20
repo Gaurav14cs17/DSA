@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 700">
+  <rect width="950" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Floyd's Cycle Detection</text>
+  <text x="475" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Tortoise and Hare Algorithm</text>
+  
+  <!-- Linked List with Cycle visualization -->
+  <text x="50" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Linked List with Cycle:</text>
+  
+  <!-- Linear part -->
+  <g transform="translate(50, 130)">
+    <!-- Node 1 -->
+    <circle cx="30" cy="30" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="30" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff">1</text>
+    <text x="30" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">HEAD</text>
+    <line x1="55" y1="30" x2="85" y2="30" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <!-- Node 2 -->
+    <circle cx="110" cy="30" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="110" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff">2</text>
+    <line x1="135" y1="30" x2="165" y2="30" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <!-- Node 3 -->
+    <circle cx="190" cy="30" r="25" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="190" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff">3</text>
+    <line x1="215" y1="30" x2="245" y2="30" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <!-- Node 4 (Cycle Start) -->
+    <circle cx="270" cy="30" r="25" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+    <text x="270" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff">4</text>
+    <text x="270" y="70" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">μ=3</text>
+    <line x1="295" y1="30" x2="325" y2="30" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <!-- Node 5 -->
+    <circle cx="350" cy="30" r="25" fill="#1e3a5f" stroke="#4ade80" stroke-width="2"/>
+    <text x="350" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff">5</text>
+    <line x1="375" y1="30" x2="405" y2="30" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <!-- Node 6 -->
+    <circle cx="430" cy="30" r="25" fill="#1e3a5f" stroke="#4ade80" stroke-width="2"/>
+    <text x="430" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff">6</text>
+    
+    <!-- Cycle arrows going down, left, and up -->
+    <path d="M 455 30 Q 480 30 480 60 Q 480 90 430 90" stroke="#4ade80" stroke-width="2" fill="none"/>
+    
+    <!-- Node 7 (bottom) -->
+    <circle cx="430" cy="110" r="25" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="430" y="115" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff">7</text>
+    <text x="430" y="150" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">MEET</text>
+    
+    <line x1="405" y1="110" x2="375" y2="110" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <!-- Node 8 -->
+    <circle cx="350" cy="110" r="25" fill="#1e3a5f" stroke="#4ade80" stroke-width="2"/>
+    <text x="350" y="115" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff">8</text>
+    <line x1="325" y1="110" x2="295" y2="110" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <!-- Node 9 -->
+    <circle cx="270" cy="110" r="25" fill="#1e3a5f" stroke="#4ade80" stroke-width="2"/>
+    <text x="270" y="115" text-anchor="middle" font-family="Courier New, monospace" font-size="16" font-weight="bold" fill="#ffffff">9</text>
+    
+    <!-- Back to node 4 -->
+    <path d="M 245 110 Q 220 110 220 70 Q 220 30 245 30" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+    
+    <!-- Cycle label -->
+    <text x="350" y="160" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">λ = 6 (cycle length)</text>
+  </g>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4ade80"/>
+    </marker>
+  </defs>
+  
+  <!-- Phase 1: Detection -->
+  <text x="50" y="330" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Phase 1: Detect Cycle (Tortoise 🐢 vs Hare 🐇)</text>
+  
+  <g transform="translate(50, 350)">
+    <rect x="0" y="0" width="420" height="100" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="8"/>
+    
+    <text x="20" y="25" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Step 1: 🐢→2    🐇→→3</text>
+    <text x="20" y="45" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Step 2: 🐢→3    🐇→→5</text>
+    <text x="20" y="65" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Step 3: 🐢→4    🐇→→7</text>
+    <text x="20" y="85" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Step 4: 🐢→5    🐇→→9</text>
+    
+    <text x="220" y="25" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Step 5: 🐢→6    🐇→→5</text>
+    <text x="220" y="45" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Step 6: 🐢→7    🐇→→7 ← MEET!</text>
+    <text x="220" y="75" font-family="Courier New, monospace" font-size="11" fill="#888888">Fast gains 1 step/iteration</text>
+    <text x="220" y="90" font-family="Courier New, monospace" font-size="11" fill="#888888">They meet inside cycle!</text>
+  </g>
+  
+  <!-- Phase 2: Find Start -->
+  <text x="50" y="480" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Phase 2: Find Cycle Start</text>
+  
+  <g transform="translate(50, 500)">
+    <rect x="0" y="0" width="420" height="80" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="8"/>
+    
+    <text x="20" y="25" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Reset: 🐢 at HEAD (1), 🐇 at MEET (7)</text>
+    <text x="20" y="45" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Step 1: 🐢→2, 🐇→8   |   Step 2: 🐢→3, 🐇→9</text>
+    <text x="20" y="65" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Step 3: 🐢→4, 🐇→4   ← Both at CYCLE START!</text>
+  </g>
+  
+  <!-- Mathematical proof box -->
+  <rect x="500" y="300" width="420" height="280" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="8"/>
+  <text x="710" y="330" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#3b82f6">MATHEMATICAL PROOF</text>
+  
+  <text x="520" y="360" font-family="Courier New, monospace" font-size="11" fill="#f97316">At meeting point:</text>
+  <text x="520" y="380" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Slow traveled: μ + x steps</text>
+  <text x="520" y="400" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• Fast traveled: μ + x + nλ steps</text>
+  
+  <text x="520" y="430" font-family="Courier New, monospace" font-size="11" fill="#f97316">Since fast = 2 × slow:</text>
+  <text x="520" y="450" font-family="Courier New, monospace" font-size="11" fill="#ffffff">2(μ + x) = μ + x + nλ</text>
+  <text x="520" y="470" font-family="Courier New, monospace" font-size="11" fill="#4ade80">μ + x = nλ (multiple of cycle!)</text>
+  
+  <text x="520" y="500" font-family="Courier New, monospace" font-size="11" fill="#f97316">After reset (walk μ steps):</text>
+  <text x="520" y="520" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• From HEAD: reaches cycle start</text>
+  <text x="520" y="540" font-family="Courier New, monospace" font-size="11" fill="#ffffff">• From MEET: x + μ = nλ steps in cycle</text>
+  <text x="520" y="560" font-family="Courier New, monospace" font-size="11" fill="#4ade80">→ Also at cycle start! ∎</text>
+  
+  <!-- Complexity box -->
+  <rect x="500" y="600" width="420" height="70" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="8"/>
+  <text x="710" y="630" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(n) | Space: O(1)</text>
+  <text x="710" y="655" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">vs Hash Set: O(n) time, O(n) space</text>
+  
+  <!-- Legend -->
+  <rect x="50" y="600" width="400" height="70" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="8"/>
+  <text x="250" y="625" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa">NOTATION</text>
+  <text x="70" y="650" font-family="Courier New, monospace" font-size="11" fill="#ffffff">μ = tail length | λ = cycle length | x = distance to meet</text>
+</svg>

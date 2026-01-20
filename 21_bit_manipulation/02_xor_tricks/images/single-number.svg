@@ -1,0 +1,83 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Single Number - XOR Magic</text>
+  <text x="450" y="68" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Find the unique element when all others appear twice</text>
+  
+  <!-- XOR Properties Box -->
+  <rect x="50" y="95" width="350" height="100" rx="8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="225" y="120" text-anchor="middle" fill="#a78bfa" font-size="14" font-weight="bold" font-family="Courier New, monospace">XOR PROPERTIES</text>
+  <text x="70" y="148" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">a ⊕ a = 0</text>
+  <text x="200" y="148" fill="#888888" font-size="11" font-family="Courier New, monospace">Self-inverse</text>
+  <text x="70" y="170" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">a ⊕ 0 = a</text>
+  <text x="200" y="170" fill="#888888" font-size="11" font-family="Courier New, monospace">Identity</text>
+  <text x="70" y="192" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">a ⊕ b = b ⊕ a</text>
+  <text x="200" y="192" fill="#888888" font-size="11" font-family="Courier New, monospace">Commutative</text>
+  
+  <!-- Key Insight -->
+  <rect x="420" y="95" width="430" height="100" rx="8" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="635" y="120" text-anchor="middle" fill="#f97316" font-size="14" font-weight="bold" font-family="Courier New, monospace">KEY INSIGHT</text>
+  <text x="440" y="150" fill="#ffffff" font-size="12" font-family="Courier New, monospace">XOR all elements together:</text>
+  <text x="440" y="175" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">• Pairs cancel: a ⊕ a = 0</text>
+  <text x="440" y="195" fill="#4ade80" font-size="12" font-weight="bold" font-family="Courier New, monospace">• Unique survives: unique ⊕ 0 = unique</text>
+  
+  <!-- Example -->
+  <text x="450" y="235" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">EXAMPLE: arr = [4, 1, 2, 1, 2]</text>
+  
+  <!-- Step-by-step XOR -->
+  <rect x="100" y="260" width="700" height="280" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Step headers -->
+  <text x="150" y="290" fill="#3b82f6" font-size="12" font-weight="bold" font-family="Courier New, monospace">STEP</text>
+  <text x="300" y="290" fill="#3b82f6" font-size="12" font-weight="bold" font-family="Courier New, monospace">OPERATION</text>
+  <text x="550" y="290" fill="#3b82f6" font-size="12" font-weight="bold" font-family="Courier New, monospace">BINARY</text>
+  <text x="720" y="290" fill="#3b82f6" font-size="12" font-weight="bold" font-family="Courier New, monospace">RESULT</text>
+  
+  <line x1="120" y1="300" x2="780" y2="300" stroke="#3b82f6" stroke-width="1"/>
+  
+  <!-- Initial -->
+  <text x="150" y="325" fill="#888888" font-size="11" font-family="Courier New, monospace">Init</text>
+  <text x="300" y="325" fill="#ffffff" font-size="11" font-family="Courier New, monospace">result = 0</text>
+  <text x="550" y="325" fill="#ffffff" font-size="11" font-family="Courier New, monospace">0000</text>
+  <text x="720" y="325" fill="#a78bfa" font-size="11" font-weight="bold" font-family="Courier New, monospace">0</text>
+  
+  <!-- Step 1: XOR 4 -->
+  <text x="150" y="355" fill="#ffffff" font-size="11" font-family="Courier New, monospace">1</text>
+  <text x="300" y="355" fill="#ffffff" font-size="11" font-family="Courier New, monospace">0 ⊕ 4</text>
+  <text x="550" y="355" fill="#ffffff" font-size="11" font-family="Courier New, monospace">0000 ⊕ 0100</text>
+  <text x="720" y="355" fill="#f97316" font-size="11" font-weight="bold" font-family="Courier New, monospace">4 (0100)</text>
+  
+  <!-- Step 2: XOR 1 -->
+  <text x="150" y="385" fill="#ffffff" font-size="11" font-family="Courier New, monospace">2</text>
+  <text x="300" y="385" fill="#ffffff" font-size="11" font-family="Courier New, monospace">4 ⊕ 1</text>
+  <text x="550" y="385" fill="#ffffff" font-size="11" font-family="Courier New, monospace">0100 ⊕ 0001</text>
+  <text x="720" y="385" fill="#f97316" font-size="11" font-weight="bold" font-family="Courier New, monospace">5 (0101)</text>
+  
+  <!-- Step 3: XOR 2 -->
+  <text x="150" y="415" fill="#ffffff" font-size="11" font-family="Courier New, monospace">3</text>
+  <text x="300" y="415" fill="#ffffff" font-size="11" font-family="Courier New, monospace">5 ⊕ 2</text>
+  <text x="550" y="415" fill="#ffffff" font-size="11" font-family="Courier New, monospace">0101 ⊕ 0010</text>
+  <text x="720" y="415" fill="#f97316" font-size="11" font-weight="bold" font-family="Courier New, monospace">7 (0111)</text>
+  
+  <!-- Step 4: XOR 1 (cancels) -->
+  <text x="150" y="445" fill="#ffffff" font-size="11" font-family="Courier New, monospace">4</text>
+  <text x="300" y="445" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">7 ⊕ 1  ← cancels step 2</text>
+  <text x="550" y="445" fill="#ffffff" font-size="11" font-family="Courier New, monospace">0111 ⊕ 0001</text>
+  <text x="720" y="445" fill="#f97316" font-size="11" font-weight="bold" font-family="Courier New, monospace">6 (0110)</text>
+  
+  <!-- Step 5: XOR 2 (cancels) -->
+  <text x="150" y="475" fill="#ffffff" font-size="11" font-family="Courier New, monospace">5</text>
+  <text x="300" y="475" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">6 ⊕ 2  ← cancels step 3</text>
+  <text x="550" y="475" fill="#ffffff" font-size="11" font-family="Courier New, monospace">0110 ⊕ 0010</text>
+  <text x="720" y="475" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">4 (0100)</text>
+  
+  <!-- Final explanation -->
+  <line x1="120" y1="495" x2="780" y2="495" stroke="#3b82f6" stroke-width="1"/>
+  <text x="450" y="520" text-anchor="middle" fill="#888888" font-size="11" font-family="Courier New, monospace">(1 ⊕ 1) = 0  and  (2 ⊕ 2) = 0  →  Only 4 remains!</text>
+  
+  <!-- Result Box -->
+  <rect x="300" y="555" width="300" height="35" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="3"/>
+  <text x="450" y="580" text-anchor="middle" fill="#4ade80" font-size="16" font-weight="bold" font-family="Courier New, monospace">Result: 4 (unique element)</text>
+</svg>
+

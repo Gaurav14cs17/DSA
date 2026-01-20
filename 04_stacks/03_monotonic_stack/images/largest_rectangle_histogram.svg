@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
+  <rect width="1000" height="700" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="500" y="40" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Largest Rectangle in Histogram</text>
+  <text x="500" y="65" font-family="Courier New, monospace" font-size="16" fill="#888888" text-anchor="middle">Monotonically increasing stack | LeetCode #84</text>
+  
+  <!-- Histogram visualization -->
+  <g transform="translate(50, 100)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">heights = [2, 1, 5, 6, 2, 3]</text>
+    
+    <!-- Base line -->
+    <line x1="0" y1="200" x2="420" y2="200" stroke="#888888" stroke-width="2"/>
+    
+    <!-- Bars -->
+    <!-- Bar 0: height 2 -->
+    <rect x="10" y="120" width="55" height="80" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="37" y="160" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="37" y="215" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">0</text>
+    
+    <!-- Bar 1: height 1 -->
+    <rect x="75" y="160" width="55" height="40" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="102" y="185" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="102" y="215" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">1</text>
+    
+    <!-- Bar 2: height 5 -->
+    <rect x="140" y="0" width="55" height="200" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="167" y="100" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+    <text x="167" y="215" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">2</text>
+    
+    <!-- Bar 3: height 6 -->
+    <rect x="205" y="-40" width="55" height="240" rx="3" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="232" y="80" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+    <text x="232" y="215" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">3</text>
+    
+    <!-- Bar 4: height 2 -->
+    <rect x="270" y="120" width="55" height="80" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="297" y="160" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="297" y="215" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">4</text>
+    
+    <!-- Bar 5: height 3 -->
+    <rect x="335" y="80" width="55" height="120" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="362" y="140" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="362" y="215" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">5</text>
+    
+    <!-- Maximum rectangle overlay -->
+    <rect x="140" y="0" width="120" height="200" rx="0" fill="#4ade80" fill-opacity="0.2" stroke="#4ade80" stroke-width="3" stroke-dasharray="5,5"/>
+    <text x="200" y="-10" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">Max Area = 10</text>
+  </g>
+  
+  <!-- Formula -->
+  <g transform="translate(520, 100)">
+    <rect x="0" y="0" width="430" height="120" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="215" y="25" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa" text-anchor="middle">Area Formula</text>
+    <text x="215" y="55" font-family="Courier New, monospace" font-size="12" fill="#ffffff" text-anchor="middle">Area[i] = height[i] × (right - left - 1)</text>
+    <text x="215" y="80" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">left = index of first smaller bar on left</text>
+    <text x="215" y="100" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">right = index of first smaller bar on right</text>
+  </g>
+  
+  <!-- Algorithm Trace -->
+  <text x="500" y="340" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">Increasing Stack Trace (with sentinel h=0 at end)</text>
+  
+  <g transform="translate(50, 360)">
+    <rect x="0" y="0" width="900" height="28" rx="4" fill="#1e3a5f"/>
+    <text x="40" y="19" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#3b82f6" text-anchor="middle">i</text>
+    <text x="100" y="19" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#3b82f6" text-anchor="middle">h[i]</text>
+    <text x="320" y="19" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#3b82f6" text-anchor="middle">Action</text>
+    <text x="600" y="19" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#3b82f6" text-anchor="middle">Stack</text>
+    <text x="800" y="19" font-family="Courier New, monospace" font-size="11" font-weight="bold" fill="#3b82f6" text-anchor="middle">Max Area</text>
+  </g>
+  
+  <!-- Rows -->
+  <g transform="translate(50, 393)">
+    <text x="40" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">0</text>
+    <text x="100" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="320" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">Push 0</text>
+    <text x="600" y="12" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="middle">[0]</text>
+    <text x="800" y="12" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">0</text>
+  </g>
+  
+  <g transform="translate(50, 413)">
+    <rect x="-5" y="-5" width="910" height="20" rx="3" fill="#0f2f1f"/>
+    <text x="40" y="10" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">1</text>
+    <text x="100" y="10" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">1</text>
+    <text x="320" y="10" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">1 &lt; 2: pop 0, area = 2×1 = 2, push 1</text>
+    <text x="600" y="10" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="middle">[1]</text>
+    <text x="800" y="10" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">2</text>
+  </g>
+  
+  <g transform="translate(50, 433)">
+    <text x="40" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="100" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">5</text>
+    <text x="320" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">5 &gt; 1: push 2</text>
+    <text x="600" y="12" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="middle">[1, 2]</text>
+    <text x="800" y="12" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">2</text>
+  </g>
+  
+  <g transform="translate(50, 453)">
+    <text x="40" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="100" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">6</text>
+    <text x="320" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">6 &gt; 5: push 3</text>
+    <text x="600" y="12" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="middle">[1, 2, 3]</text>
+    <text x="800" y="12" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">2</text>
+  </g>
+  
+  <g transform="translate(50, 473)">
+    <rect x="-5" y="-5" width="910" height="35" rx="3" fill="#0f2f1f"/>
+    <text x="40" y="10" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">4</text>
+    <text x="100" y="10" font-family="Courier New, monospace" font-size="10" fill="#4ade80" text-anchor="middle">2</text>
+    <text x="320" y="10" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">2 &lt; 6: pop 3, h=6, w=4-2-1=1, area=6</text>
+    <text x="320" y="25" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">2 &lt; 5: pop 2, h=5, w=4-1-1=2, area=10 ✓</text>
+    <text x="600" y="17" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="middle">[1, 4]</text>
+    <text x="800" y="17" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#4ade80" text-anchor="middle">10</text>
+  </g>
+  
+  <g transform="translate(50, 513)">
+    <text x="40" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">5</text>
+    <text x="100" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="320" y="12" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">3 &gt; 2: push 5</text>
+    <text x="600" y="12" font-family="Courier New, monospace" font-size="10" fill="#a78bfa" text-anchor="middle">[1, 4, 5]</text>
+    <text x="800" y="12" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">10</text>
+  </g>
+  
+  <g transform="translate(50, 533)">
+    <rect x="-5" y="-5" width="910" height="35" rx="3" fill="#0f2f1f"/>
+    <text x="40" y="10" font-family="Courier New, monospace" font-size="10" fill="#ef4444" text-anchor="middle">end</text>
+    <text x="100" y="10" font-family="Courier New, monospace" font-size="10" fill="#ef4444" text-anchor="middle">0</text>
+    <text x="320" y="10" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">pop remaining: h=3, w=1, area=3</text>
+    <text x="320" y="25" font-family="Courier New, monospace" font-size="10" fill="#ffffff" text-anchor="middle">h=2, w=4, area=8; h=1, w=6, area=6</text>
+    <text x="600" y="17" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">[]</text>
+    <text x="800" y="17" font-family="Courier New, monospace" font-size="10" font-weight="bold" fill="#4ade80" text-anchor="middle">10</text>
+  </g>
+  
+  <!-- Result -->
+  <g transform="translate(50, 590)">
+    <rect x="0" y="0" width="250" height="80" rx="6" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="125" y="25" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80" text-anchor="middle">Maximum Area: 10</text>
+    <text x="125" y="50" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">height=5, width=2</text>
+    <text x="125" y="70" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">bars at indices 2,3</text>
+  </g>
+  
+  <g transform="translate(330, 590)">
+    <rect x="0" y="0" width="300" height="80" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="150" y="25" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#3b82f6" text-anchor="middle">Width Calculation</text>
+    <text x="150" y="50" font-family="Courier New, monospace" font-size="11" fill="#ffffff" text-anchor="middle">width = i - stack[-1] - 1</text>
+    <text x="150" y="70" font-family="Courier New, monospace" font-size="11" fill="#888888" text-anchor="middle">if stack empty: width = i</text>
+  </g>
+  
+  <g transform="translate(660, 590)">
+    <rect x="0" y="0" width="280" height="80" rx="6" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="140" y="25" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316" text-anchor="middle">Complexity</text>
+    <text x="140" y="50" font-family="Courier New, monospace" font-size="12" fill="#60a5fa" text-anchor="middle">Time: O(n), Space: O(n)</text>
+    <text x="140" y="70" font-family="Courier New, monospace" font-size="10" fill="#888888" text-anchor="middle">Each bar pushed/popped once</text>
+  </g>
+</svg>

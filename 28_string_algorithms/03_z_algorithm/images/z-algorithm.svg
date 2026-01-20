@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620">
+  <rect width="900" height="620" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Z-Algorithm</text>
+  <text x="450" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Z-array for Pattern Matching</text>
+  
+  <!-- Definition -->
+  <rect x="40" y="80" width="400" height="70" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5" rx="5"/>
+  <text x="60" y="105" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa">Z[i] Definition</text>
+  <text x="60" y="125" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Z[i] = length of longest substring starting at i</text>
+  <text x="60" y="143" font-family="Courier New, monospace" font-size="11" fill="#ffffff">that matches a prefix of the string</text>
+  
+  <!-- Example -->
+  <text x="40" y="180" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Example: "aabcaab"</text>
+  
+  <g transform="translate(40, 205)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">Index:</text>
+    <text x="55" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">0</text>
+    <text x="85" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">1</text>
+    <text x="115" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">2</text>
+    <text x="145" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">3</text>
+    <text x="175" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">4</text>
+    <text x="205" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">5</text>
+    <text x="235" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">6</text>
+  </g>
+  
+  <g transform="translate(40, 230)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">String:</text>
+    <rect x="45" y="-12" width="28" height="22" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="59" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">a</text>
+    <rect x="75" y="-12" width="28" height="22" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="89" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">a</text>
+    <rect x="105" y="-12" width="28" height="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="119" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">b</text>
+    <rect x="135" y="-12" width="28" height="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="149" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#ffffff">c</text>
+    <rect x="165" y="-12" width="28" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="179" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#4ade80">a</text>
+    <rect x="195" y="-12" width="28" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="209" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#4ade80">a</text>
+    <rect x="225" y="-12" width="28" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="239" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#4ade80">b</text>
+  </g>
+  
+  <g transform="translate(40, 265)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">Z[i]:</text>
+    <rect x="45" y="-12" width="28" height="22" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="59" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">7</text>
+    <rect x="75" y="-12" width="28" height="22" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="89" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">1</text>
+    <rect x="105" y="-12" width="28" height="22" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="119" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">0</text>
+    <rect x="135" y="-12" width="28" height="22" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="149" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">0</text>
+    <rect x="165" y="-12" width="28" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="179" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#4ade80">3</text>
+    <rect x="195" y="-12" width="28" height="22" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="209" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">1</text>
+    <rect x="225" y="-12" width="28" height="22" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="239" y="4" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#a78bfa">0</text>
+  </g>
+  
+  <!-- Explanation for Z[4]=3 -->
+  <g transform="translate(300, 230)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Z[4] = 3 because:</text>
+    <text x="0" y="18" font-family="Courier New, monospace" font-size="11" fill="#888888">s[4..6] = "aab" matches</text>
+    <text x="0" y="36" font-family="Courier New, monospace" font-size="11" fill="#888888">s[0..2] = "aab" (prefix)</text>
+  </g>
+  
+  <!-- Z-Box Concept -->
+  <text x="480" y="100" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Z-Box Optimization</text>
+  
+  <rect x="480" y="115" width="380" height="100" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+  <text x="500" y="140" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Maintain Z-box [l, r]:</text>
+  <text x="500" y="160" font-family="Courier New, monospace" font-size="11" fill="#4ade80">• Rightmost interval where s[l..r] = s[0..r-l]</text>
+  <text x="500" y="180" font-family="Courier New, monospace" font-size="11" fill="#4ade80">• If i &lt; r, use mirror position k = i - l</text>
+  <text x="500" y="200" font-family="Courier New, monospace" font-size="11" fill="#888888">• Avoids recomputation, ensures O(n)</text>
+  
+  <!-- Pattern Matching with Z -->
+  <text x="40" y="320" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Pattern Matching: P + "$" + T</text>
+  
+  <g transform="translate(40, 345)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Find "ab" in "aababab":</text>
+    <text x="0" y="22" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">Combined: "ab$aababab"</text>
+  </g>
+  
+  <g transform="translate(40, 390)">
+    <rect x="0" y="0" width="24" height="22" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="12" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#f97316">a</text>
+    <rect x="26" y="0" width="24" height="22" fill="#3d1f0f" stroke="#f97316" stroke-width="1.5"/>
+    <text x="38" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#f97316">b</text>
+    <rect x="52" y="0" width="24" height="22" fill="#1f0f0f" stroke="#ef4444" stroke-width="1"/>
+    <text x="64" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ef4444">$</text>
+    <rect x="78" y="0" width="24" height="22" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="90" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#ffffff">a</text>
+    <rect x="104" y="0" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="116" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">a</text>
+    <rect x="130" y="0" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="142" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">b</text>
+    <rect x="156" y="0" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="168" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">a</text>
+    <rect x="182" y="0" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="194" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">b</text>
+    <rect x="208" y="0" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="220" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">a</text>
+    <rect x="234" y="0" width="24" height="22" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="246" y="15" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#4ade80">b</text>
+  </g>
+  
+  <g transform="translate(40, 425)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="10" fill="#888888">Z:</text>
+    <text x="12" y="0" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">10,0,0,1,</text>
+    <text x="72" y="0" font-family="Courier New, monospace" font-size="10" fill="#4ade80">2</text>
+    <text x="82" y="0" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">,0,</text>
+    <text x="100" y="0" font-family="Courier New, monospace" font-size="10" fill="#4ade80">2</text>
+    <text x="110" y="0" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">,0,</text>
+    <text x="128" y="0" font-family="Courier New, monospace" font-size="10" fill="#4ade80">2</text>
+    <text x="138" y="0" font-family="Courier New, monospace" font-size="10" fill="#a78bfa">,0</text>
+    
+    <text x="180" y="0" font-family="Courier New, monospace" font-size="10" fill="#4ade80">Z[i]=2=m → match at i-m-1</text>
+  </g>
+  
+  <g transform="translate(40, 450)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Matches found at positions: 1, 3, 5</text>
+  </g>
+  
+  <!-- Algorithm Box -->
+  <rect x="480" y="320" width="380" height="150" fill="#0f2f1f" stroke="#4ade80" stroke-width="1.5" rx="5"/>
+  <text x="500" y="345" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#4ade80">Algorithm</text>
+  <text x="500" y="370" font-family="Courier New, monospace" font-size="11" fill="#ffffff">For i from 1 to n-1:</text>
+  <text x="520" y="390" font-family="Courier New, monospace" font-size="11" fill="#888888">If i &gt; r: compute Z[i] naively</text>
+  <text x="520" y="408" font-family="Courier New, monospace" font-size="11" fill="#888888">Else:</text>
+  <text x="540" y="426" font-family="Courier New, monospace" font-size="11" fill="#888888">k = i - l (mirror position)</text>
+  <text x="540" y="444" font-family="Courier New, monospace" font-size="11" fill="#888888">Z[i] = min(Z[k], r-i+1) + extend</text>
+  <text x="500" y="462" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Update [l,r] if i+Z[i] &gt; r</text>
+  
+  <!-- Complexity -->
+  <rect x="480" y="490" width="380" height="70" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+  <text x="500" y="515" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#ffffff">Complexity</text>
+  <text x="500" y="540" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Time: O(n) | Space: O(n)</text>
+  <text x="500" y="555" font-family="Courier New, monospace" font-size="10" fill="#888888">r never decreases → O(n) total</text>
+  
+  <!-- Applications -->
+  <text x="40" y="510" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Applications</text>
+  <text x="40" y="535" font-family="Courier New, monospace" font-size="11" fill="#888888">• Pattern matching  • Period detection  • Palindrome prefix  • Distinct substrings</text>
+  <text x="40" y="555" font-family="Courier New, monospace" font-size="11" fill="#888888">• Similar to KMP but often easier to implement and understand</text>
+</svg>
+

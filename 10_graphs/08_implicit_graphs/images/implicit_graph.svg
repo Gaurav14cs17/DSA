@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <rect width="900" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="26" font-weight="bold">Implicit Graphs</text>
+  <text x="450" y="65" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="16">Hidden Graph Structures in Arrays, Grids &amp; Strings</text>
+  
+  <!-- Example 1: Array as Graph (Jump Game) -->
+  <text x="225" y="105" text-anchor="middle" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold">ARRAY AS GRAPH</text>
+  <text x="225" y="125" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="11">Jump Game: nums = [2,3,1,1,4]</text>
+  
+  <!-- Array visualization -->
+  <g transform="translate(50, 145)">
+    <rect x="0" y="0" width="60" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="30" y="27" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="16" font-weight="bold">2</text>
+    <text x="30" y="55" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="10">idx 0</text>
+    
+    <rect x="70" y="0" width="60" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="100" y="27" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="16" font-weight="bold">3</text>
+    <text x="100" y="55" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="10">idx 1</text>
+    
+    <rect x="140" y="0" width="60" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="170" y="27" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="16" font-weight="bold">1</text>
+    <text x="170" y="55" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="10">idx 2</text>
+    
+    <rect x="210" y="0" width="60" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="240" y="27" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="16" font-weight="bold">1</text>
+    <text x="240" y="55" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="10">idx 3</text>
+    
+    <rect x="280" y="0" width="60" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="310" y="27" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="16" font-weight="bold">4</text>
+    <text x="310" y="55" text-anchor="middle" fill="#4ade80" font-family="Courier New, monospace" font-size="10">GOAL</text>
+  </g>
+  
+  <!-- Implicit edges -->
+  <text x="225" y="225" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="10">Vertices = indices | Edges = (i,j) if j ≤ i + nums[i]</text>
+  
+  <!-- Graph representation -->
+  <g transform="translate(50, 240)">
+    <circle cx="30" cy="30" r="20" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="30" y="36" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="14">0</text>
+    
+    <circle cx="100" cy="30" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="100" y="36" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="14">1</text>
+    
+    <circle cx="170" cy="30" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="170" y="36" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="14">2</text>
+    
+    <circle cx="240" cy="30" r="20" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="240" y="36" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="14">3</text>
+    
+    <circle cx="310" cy="30" r="20" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="310" y="36" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="14">4</text>
+    
+    <!-- Edges -->
+    <path d="M 50 25 Q 65 5 80 25" stroke="#f97316" stroke-width="2" fill="none"/>
+    <path d="M 50 35 Q 100 60 150 35" stroke="#f97316" stroke-width="2" fill="none"/>
+    <path d="M 120 25 Q 150 5 150 25" stroke="#3b82f6" stroke-width="1.5" fill="none"/>
+    <path d="M 120 35 Q 170 60 220 35" stroke="#3b82f6" stroke-width="1.5" fill="none"/>
+    <path d="M 120 25 Q 210 -10 290 25" stroke="#4ade80" stroke-width="2" fill="none"/>
+  </g>
+  
+  <text x="225" y="340" text-anchor="middle" fill="#4ade80" font-family="Courier New, monospace" font-size="11" font-weight="bold">Reachable: 0 → 1 → 4 ✓</text>
+  
+  <!-- Example 2: Grid as Graph -->
+  <text x="675" y="105" text-anchor="middle" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold">GRID AS GRAPH</text>
+  <text x="675" y="125" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="11">Number of Islands (4-directional)</text>
+  
+  <!-- Grid -->
+  <g transform="translate(550, 145)">
+    <rect x="0" y="0" width="40" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="20" y="27" text-anchor="middle" fill="#4ade80" font-family="Courier New, monospace" font-size="14">1</text>
+    
+    <rect x="45" y="0" width="40" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="65" y="27" text-anchor="middle" fill="#4ade80" font-family="Courier New, monospace" font-size="14">1</text>
+    
+    <rect x="90" y="0" width="40" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="110" y="27" text-anchor="middle" fill="#3b82f6" font-family="Courier New, monospace" font-size="14">0</text>
+    
+    <rect x="135" y="0" width="40" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="155" y="27" text-anchor="middle" fill="#f97316" font-family="Courier New, monospace" font-size="14">1</text>
+    
+    <!-- Row 2 -->
+    <rect x="0" y="45" width="40" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="20" y="72" text-anchor="middle" fill="#4ade80" font-family="Courier New, monospace" font-size="14">1</text>
+    
+    <rect x="45" y="45" width="40" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="65" y="72" text-anchor="middle" fill="#3b82f6" font-family="Courier New, monospace" font-size="14">0</text>
+    
+    <rect x="90" y="45" width="40" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="110" y="72" text-anchor="middle" fill="#3b82f6" font-family="Courier New, monospace" font-size="14">0</text>
+    
+    <rect x="135" y="45" width="40" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="155" y="72" text-anchor="middle" fill="#3b82f6" font-family="Courier New, monospace" font-size="14">0</text>
+    
+    <!-- Row 3 -->
+    <rect x="0" y="90" width="40" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="20" y="117" text-anchor="middle" fill="#3b82f6" font-family="Courier New, monospace" font-size="14">0</text>
+    
+    <rect x="45" y="90" width="40" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="65" y="117" text-anchor="middle" fill="#3b82f6" font-family="Courier New, monospace" font-size="14">0</text>
+    
+    <rect x="90" y="90" width="40" height="40" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="110" y="117" text-anchor="middle" fill="#a78bfa" font-family="Courier New, monospace" font-size="14">1</text>
+    
+    <rect x="135" y="90" width="40" height="40" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+    <text x="155" y="117" text-anchor="middle" fill="#a78bfa" font-family="Courier New, monospace" font-size="14">1</text>
+  </g>
+  
+  <text x="675" y="310" text-anchor="middle" fill="#888888" font-family="Courier New, monospace" font-size="10">Vertices = cells | Edges = adjacent land cells</text>
+  <text x="675" y="340" text-anchor="middle" fill="#4ade80" font-family="Courier New, monospace" font-size="11" font-weight="bold">Components: 3 islands</text>
+  
+  <!-- Recognition Framework -->
+  <text x="450" y="385" text-anchor="middle" fill="#e94560" font-family="Courier New, monospace" font-size="14" font-weight="bold">IMPLICIT GRAPH RECOGNITION</text>
+  
+  <rect x="50" y="405" width="800" height="220" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="5"/>
+  
+  <!-- Three Questions -->
+  <text x="450" y="435" text-anchor="middle" fill="#ffffff" font-family="Courier New, monospace" font-size="14" font-weight="bold">Ask Three Questions:</text>
+  
+  <text x="80" y="470" fill="#f97316" font-family="Courier New, monospace" font-size="12" font-weight="bold">1. What are the VERTICES?</text>
+  <text x="100" y="490" fill="#888888" font-family="Courier New, monospace" font-size="11">• Array → indices</text>
+  <text x="100" y="510" fill="#888888" font-family="Courier New, monospace" font-size="11">• Grid → cells (i,j)</text>
+  <text x="100" y="530" fill="#888888" font-family="Courier New, monospace" font-size="11">• String → words/states</text>
+  
+  <text x="320" y="470" fill="#a78bfa" font-family="Courier New, monospace" font-size="12" font-weight="bold">2. What are the EDGES?</text>
+  <text x="340" y="490" fill="#888888" font-family="Courier New, monospace" font-size="11">• Jump rules (i→j)</text>
+  <text x="340" y="510" fill="#888888" font-family="Courier New, monospace" font-size="11">• Adjacency (4/8-dir)</text>
+  <text x="340" y="530" fill="#888888" font-family="Courier New, monospace" font-size="11">• Transform rules</text>
+  
+  <text x="570" y="470" fill="#4ade80" font-family="Courier New, monospace" font-size="12" font-weight="bold">3. What am I FINDING?</text>
+  <text x="590" y="490" fill="#888888" font-family="Courier New, monospace" font-size="11">• Reachability → DFS/BFS</text>
+  <text x="590" y="510" fill="#888888" font-family="Courier New, monospace" font-size="11">• Shortest path → BFS</text>
+  <text x="590" y="530" fill="#888888" font-family="Courier New, monospace" font-size="11">• Components → DFS/UF</text>
+  
+  <!-- Common Patterns -->
+  <line x1="80" y1="550" x2="820" y2="550" stroke="#3b82f6" stroke-width="0.5"/>
+  
+  <text x="170" y="575" text-anchor="middle" fill="#f97316" font-family="Courier New, monospace" font-size="10">Jump Game → Reachability</text>
+  <text x="380" y="575" text-anchor="middle" fill="#4ade80" font-family="Courier New, monospace" font-size="10">Islands → Components</text>
+  <text x="560" y="575" text-anchor="middle" fill="#a78bfa" font-family="Courier New, monospace" font-size="10">Word Ladder → Shortest Path</text>
+  <text x="750" y="575" text-anchor="middle" fill="#22d3d1" font-family="Courier New, monospace" font-size="10">Course Sched → Topo Sort</text>
+  
+  <text x="450" y="605" text-anchor="middle" fill="#60a5fa" font-family="Courier New, monospace" font-size="11" font-weight="bold">Key: Generate edges on-the-fly during BFS/DFS traversal!</text>
+</svg>

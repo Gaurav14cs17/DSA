@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <rect width="900" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">📊 Range Sum Query</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Point Update O(1) • Range Query O(√n)</text>
+  
+  <!-- Step 1: Build -->
+  <text x="50" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 1: Build Block Sums</text>
+  
+  <g transform="translate(50, 130)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Array: [2, 1, 4, 3, 5, 7, 6, 8, 9]  n=9, block_size=⌈√9⌉=3</text>
+    
+    <!-- Array elements -->
+    <g transform="translate(0, 25)">
+      <!-- Index labels -->
+      <text x="17" y="-5" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">0</text>
+      <text x="57" y="-5" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">1</text>
+      <text x="97" y="-5" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">2</text>
+      <text x="152" y="-5" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">3</text>
+      <text x="192" y="-5" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">4</text>
+      <text x="232" y="-5" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">5</text>
+      <text x="287" y="-5" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">6</text>
+      <text x="327" y="-5" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">7</text>
+      <text x="367" y="-5" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#888888">8</text>
+      
+      <!-- Block 0 -->
+      <rect x="0" y="0" width="35" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="17" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+      <rect x="40" y="0" width="35" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="57" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">1</text>
+      <rect x="80" y="0" width="35" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+      <text x="97" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">4</text>
+      
+      <!-- Separator -->
+      <line x1="120" y1="-10" x2="120" y2="50" stroke="#f97316" stroke-width="2" stroke-dasharray="4,3"/>
+      
+      <!-- Block 1 -->
+      <rect x="135" y="0" width="35" height="35" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="152" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">3</text>
+      <rect x="175" y="0" width="35" height="35" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="192" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">5</text>
+      <rect x="215" y="0" width="35" height="35" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="232" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">7</text>
+      
+      <!-- Separator -->
+      <line x1="255" y1="-10" x2="255" y2="50" stroke="#4ade80" stroke-width="2" stroke-dasharray="4,3"/>
+      
+      <!-- Block 2 -->
+      <rect x="270" y="0" width="35" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="287" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">6</text>
+      <rect x="310" y="0" width="35" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="327" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">8</text>
+      <rect x="350" y="0" width="35" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="367" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">9</text>
+      
+      <!-- Block labels -->
+      <text x="57" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#3b82f6">Block 0</text>
+      <text x="192" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">Block 1</text>
+      <text x="327" y="55" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">Block 2</text>
+    </g>
+    
+    <!-- Arrow pointing to block sums -->
+    <line x1="200" y1="95" x2="200" y2="115" stroke="#888888" stroke-width="1.5"/>
+    <polygon points="200,120 195,112 205,112" fill="#888888"/>
+    
+    <!-- Block sums -->
+    <text x="0" y="140" font-family="Courier New, monospace" font-size="11" fill="#888888">Block Sums:</text>
+    <rect x="100" y="125" width="50" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="125" y="145" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">7</text>
+    <rect x="160" y="125" width="50" height="30" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="185" y="145" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">15</text>
+    <rect x="220" y="125" width="50" height="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="245" y="145" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">23</text>
+    
+    <text x="290" y="145" font-family="Courier New, monospace" font-size="11" fill="#888888">← 2+1+4=7, 3+5+7=15, 6+8+9=23</text>
+  </g>
+  
+  <!-- Step 2: Query -->
+  <text x="550" y="110" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 2: Query sum(1, 7)</text>
+  
+  <g transform="translate(550, 130)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Query range: indices 1 to 7 (inclusive)</text>
+    
+    <!-- Array with query highlight -->
+    <g transform="translate(0, 20)">
+      <!-- Index 0 - not in range -->
+      <rect x="0" y="0" width="30" height="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="15" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">2</text>
+      
+      <!-- Index 1-2 - partial left -->
+      <rect x="35" y="0" width="30" height="30" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+      <text x="50" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">1</text>
+      <rect x="70" y="0" width="30" height="30" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+      <text x="85" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">4</text>
+      
+      <!-- Index 3-5 - complete block -->
+      <rect x="105" y="0" width="30" height="30" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="120" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#f97316">3</text>
+      <rect x="140" y="0" width="30" height="30" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="155" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#f97316">5</text>
+      <rect x="175" y="0" width="30" height="30" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+      <text x="190" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#f97316">7</text>
+      
+      <!-- Index 6-7 - partial right -->
+      <rect x="210" y="0" width="30" height="30" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+      <text x="225" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">6</text>
+      <rect x="245" y="0" width="30" height="30" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+      <text x="260" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">8</text>
+      
+      <!-- Index 8 - not in range -->
+      <rect x="280" y="0" width="30" height="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+      <text x="295" y="20" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#888888">9</text>
+    </g>
+    
+    <!-- Calculation breakdown -->
+    <text x="0" y="75" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">▶ Partial left (idx 1-2): 1 + 4 = 5</text>
+    <text x="0" y="95" font-family="Courier New, monospace" font-size="11" fill="#f97316">▶ Complete Block 1: blocks[1] = 15</text>
+    <text x="0" y="115" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">▶ Partial right (idx 6-7): 6 + 8 = 14</text>
+    
+    <rect x="0" y="130" width="180" height="30" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="90" y="150" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">Result: 5 + 15 + 14 = 34</text>
+  </g>
+  
+  <!-- Step 3: Point Update -->
+  <text x="50" y="350" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP 3: Point Update - arr[4] = 10</text>
+  
+  <g transform="translate(50, 375)">
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="11" fill="#888888">Before: arr[4] = 5, Block 1 sum = 15</text>
+    
+    <!-- Before state -->
+    <g transform="translate(0, 20)">
+      <rect x="0" y="0" width="28" height="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">2</text>
+      <rect x="32" y="0" width="28" height="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="46" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">1</text>
+      <rect x="64" y="0" width="28" height="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="78" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">4</text>
+      
+      <rect x="100" y="0" width="28" height="28" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+      <text x="114" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">3</text>
+      <rect x="132" y="0" width="28" height="28" fill="#1f0f0f" stroke="#ef4444" stroke-width="2"/>
+      <text x="146" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ef4444">5</text>
+      <rect x="164" y="0" width="28" height="28" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+      <text x="178" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">7</text>
+      
+      <rect x="200" y="0" width="28" height="28" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+      <text x="214" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">6</text>
+      <rect x="232" y="0" width="28" height="28" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+      <text x="246" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">8</text>
+      <rect x="264" y="0" width="28" height="28" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+      <text x="278" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">9</text>
+    </g>
+    
+    <!-- Arrow -->
+    <text x="320" y="35" font-family="Courier New, monospace" font-size="18" fill="#f97316">→</text>
+    
+    <!-- After state -->
+    <text x="0" y="70" font-family="Courier New, monospace" font-size="11" fill="#888888">After: arr[4] = 10, Block 1 sum = 15 + (10-5) = 20</text>
+    
+    <g transform="translate(0, 90)">
+      <rect x="0" y="0" width="28" height="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">2</text>
+      <rect x="32" y="0" width="28" height="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="46" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">1</text>
+      <rect x="64" y="0" width="28" height="28" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+      <text x="78" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">4</text>
+      
+      <rect x="100" y="0" width="28" height="28" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+      <text x="114" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">3</text>
+      <rect x="132" y="0" width="28" height="28" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+      <text x="146" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#4ade80">10</text>
+      <rect x="164" y="0" width="28" height="28" fill="#3d1f0f" stroke="#f97316" stroke-width="1"/>
+      <text x="178" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">7</text>
+      
+      <rect x="200" y="0" width="28" height="28" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+      <text x="214" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">6</text>
+      <rect x="232" y="0" width="28" height="28" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+      <text x="246" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">8</text>
+      <rect x="264" y="0" width="28" height="28" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+      <text x="278" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#ffffff">9</text>
+    </g>
+    
+    <text x="0" y="140" font-family="Courier New, monospace" font-size="11" fill="#4ade80">✓ Only update arr[4] and blocks[1]</text>
+  </g>
+  
+  <!-- Complexity Box -->
+  <text x="550" y="350" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">Time Complexity Analysis</text>
+  
+  <g transform="translate(550, 375)">
+    <rect x="0" y="0" width="300" height="140" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+    
+    <text x="15" y="25" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Build:</text>
+    <text x="120" y="25" font-family="Courier New, monospace" font-size="11" fill="#4ade80">O(n)</text>
+    
+    <text x="15" y="50" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Point Update:</text>
+    <text x="120" y="50" font-family="Courier New, monospace" font-size="11" fill="#4ade80">O(1)</text>
+    <text x="160" y="50" font-family="Courier New, monospace" font-size="10" fill="#888888">← only 2 values change</text>
+    
+    <text x="15" y="75" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Range Query:</text>
+    <text x="120" y="75" font-family="Courier New, monospace" font-size="11" fill="#f97316">O(√n)</text>
+    <text x="175" y="75" font-family="Courier New, monospace" font-size="10" fill="#888888">← at most √n blocks</text>
+    
+    <line x1="15" y1="90" x2="285" y2="90" stroke="#888888" stroke-width="0.5"/>
+    
+    <text x="15" y="110" font-family="Courier New, monospace" font-size="11" fill="#ffffff">Space:</text>
+    <text x="120" y="110" font-family="Courier New, monospace" font-size="11" fill="#a78bfa">O(n + √n) = O(n)</text>
+    
+    <text x="15" y="130" font-family="Courier New, monospace" font-size="10" fill="#888888">Array + Block sums array</text>
+  </g>
+  
+  <!-- Formula -->
+  <rect x="50" y="545" width="800" height="80" fill="none" stroke="#e94560" stroke-width="1.5"/>
+  <text x="450" y="575" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">Query Formula: left_partial + Σ(complete_blocks) + right_partial</text>
+  <text x="450" y="600" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(b + n/b + b) where b = √n → O(√n + √n + √n) = O(√n)</text>
+</svg>
+

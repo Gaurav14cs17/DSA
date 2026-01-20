@@ -1,0 +1,183 @@
+<svg viewBox="0 0 950 800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="800" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="bold" font-family="Courier New, monospace">Autocomplete / Search Suggestions</text>
+  <text x="475" y="65" text-anchor="middle" fill="#888888" font-size="16" font-family="Courier New, monospace">Top-K Suggestions • Weighted Results • Real-time Input</text>
+  
+  <!-- SECTION 1: Search Box UI -->
+  <text x="50" y="110" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">AUTOCOMPLETE UI</text>
+  
+  <!-- Search box -->
+  <rect x="40" y="125" width="350" height="50" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="60" y="158" fill="#888888" font-size="14" font-family="Courier New, monospace">🔍</text>
+  <text x="90" y="158" fill="#ffffff" font-size="18" font-weight="bold" font-family="Courier New, monospace">app</text>
+  <rect x="145" y="140" width="2" height="25" fill="#4ade80">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Dropdown suggestions -->
+  <rect x="40" y="175" width="350" height="150" rx="0 0 8 8" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  
+  <rect x="50" y="185" width="330" height="40" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="70" y="212" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">apple</text>
+  <text x="340" y="212" fill="#888888" font-size="11" font-family="Courier New, monospace">500</text>
+  
+  <rect x="50" y="230" width="330" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="70" y="257" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">application</text>
+  <text x="340" y="257" fill="#888888" font-size="11" font-family="Courier New, monospace">350</text>
+  
+  <rect x="50" y="275" width="330" height="40" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="70" y="302" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">apply</text>
+  <text x="340" y="302" fill="#888888" font-size="11" font-family="Courier New, monospace">200</text>
+  
+  <text x="380" y="250" fill="#888888" font-size="11" font-family="Courier New, monospace">← freq</text>
+  
+  <!-- SECTION 2: Trie with Autocomplete -->
+  <text x="450" y="110" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">TRIE WITH SUGGESTIONS</text>
+  
+  <rect x="440" y="125" width="480" height="230" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Root -->
+  <circle cx="680" cy="160" r="22" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="680" y="166" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">∅</text>
+  
+  <!-- Level 1 - 'a' -->
+  <line x1="680" y1="182" x2="680" y2="210" stroke="#f97316" stroke-width="3"/>
+  <text x="695" y="200" fill="#f97316" font-size="12" font-family="Courier New, monospace">'a'</text>
+  
+  <circle cx="680" cy="230" r="20" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+  <text x="680" y="236" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">a</text>
+  
+  <!-- Level 2 - 'p' -->
+  <line x1="680" y1="250" x2="680" y2="280" stroke="#f97316" stroke-width="3"/>
+  <text x="695" y="270" fill="#f97316" font-size="12" font-family="Courier New, monospace">'p'</text>
+  
+  <circle cx="680" cy="300" r="20" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+  <text x="680" y="306" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold" font-family="Courier New, monospace">p</text>
+  
+  <!-- Level 3 - 'p' -->
+  <line x1="660" y1="315" x2="580" y2="360" stroke="#f97316" stroke-width="3"/>
+  <text x="600" y="335" fill="#f97316" font-size="12" font-family="Courier New, monospace">'p'</text>
+  
+  <line x1="700" y1="315" x2="780" y2="360" stroke="#3b82f6" stroke-width="2"/>
+  <text x="755" y="335" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">'l'</text>
+  
+  <!-- Start DFS from here marker -->
+  <text x="720" y="300" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">← DFS starts here</text>
+  
+  <!-- app node -->
+  <circle cx="580" cy="380" r="18" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="580" y="385" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold" font-family="Courier New, monospace">p</text>
+  <text x="470" y="385" fill="#888888" font-size="10" font-family="Courier New, monospace">"app" ✓</text>
+  
+  <!-- apple branch -->
+  <line x1="580" y1="398" x2="520" y2="430" stroke="#4ade80" stroke-width="2"/>
+  <circle cx="520" cy="448" r="16" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="520" y="453" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">l</text>
+  
+  <line x1="520" y1="464" x2="520" y2="490" stroke="#4ade80" stroke-width="2"/>
+  <circle cx="520" cy="506" r="16" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="520" y="511" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">e</text>
+  <text x="460" y="511" fill="#888888" font-size="10" font-family="Courier New, monospace">"apple" ✓</text>
+  
+  <!-- apply branch -->
+  <line x1="780" y1="380" x2="780" y2="410" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="780" cy="428" r="16" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="780" y="433" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">l</text>
+  
+  <line x1="780" y1="444" x2="780" y2="470" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="780" cy="488" r="16" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="780" y="493" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="Courier New, monospace">y</text>
+  <text x="805" y="493" fill="#888888" font-size="10" font-family="Courier New, monospace">"apply" ✓</text>
+  
+  <!-- application branch continues from "l" -->
+  <line x1="580" y1="398" x2="640" y2="430" stroke="#3b82f6" stroke-width="2"/>
+  <circle cx="640" cy="448" r="14" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="640" y="453" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold" font-family="Courier New, monospace">i</text>
+  
+  <text x="655" y="480" fill="#888888" font-size="10" font-family="Courier New, monospace">...→ "application"</text>
+  
+  <!-- SECTION 3: Map Sum Pattern -->
+  <text x="50" y="380" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">MAP SUM PAIRS</text>
+  
+  <rect x="40" y="395" width="380" height="180" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Insert operations -->
+  <text x="55" y="420" fill="#f97316" font-size="12" font-weight="bold" font-family="Courier New, monospace">insert("apple", 3)</text>
+  <text x="55" y="445" fill="#f97316" font-size="12" font-weight="bold" font-family="Courier New, monospace">insert("app", 2)</text>
+  <text x="55" y="470" fill="#f97316" font-size="12" font-weight="bold" font-family="Courier New, monospace">insert("apricot", 5)</text>
+  
+  <!-- Divider -->
+  <line x1="50" y1="485" x2="410" y2="485" stroke="#3b82f6" stroke-width="1" stroke-dasharray="5,5"/>
+  
+  <!-- Sum query -->
+  <text x="55" y="510" fill="#a78bfa" font-size="12" font-weight="bold" font-family="Courier New, monospace">sum("ap") = ?</text>
+  
+  <!-- Calculation -->
+  <text x="70" y="535" fill="#888888" font-size="11" font-family="Courier New, monospace">apple(3) + app(2) + apricot(5)</text>
+  <text x="55" y="560" fill="#4ade80" font-size="14" font-weight="bold" font-family="Courier New, monospace">Result: 10</text>
+  
+  <!-- Prefix Sum visualization -->
+  <rect x="250" y="405" width="160" height="70" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="260" y="430" fill="#a78bfa" font-size="11" font-weight="bold" font-family="Courier New, monospace">STORE AT NODES</text>
+  <text x="260" y="455" fill="#ffffff" font-size="11" font-family="Courier New, monospace">node.weight += val</text>
+  <text x="260" y="470" fill="#888888" font-size="10" font-family="Courier New, monospace">cumulative sum</text>
+  
+  <!-- SECTION 4: Algorithm Steps -->
+  <text x="50" y="610" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">AUTOCOMPLETE ALGORITHM</text>
+  
+  <rect x="40" y="625" width="880" height="80" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  
+  <!-- Step 1 -->
+  <rect x="55" y="640" width="180" height="50" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+  <text x="145" y="660" text-anchor="middle" fill="#f97316" font-size="11" font-weight="bold" font-family="Courier New, monospace">1. Navigate to prefix</text>
+  <text x="145" y="680" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">O(|prefix|)</text>
+  
+  <line x1="245" y1="665" x2="275" y2="665" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="275,660 285,665 275,670" fill="#4ade80"/>
+  
+  <!-- Step 2 -->
+  <rect x="295" y="640" width="180" height="50" rx="4" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="385" y="660" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="bold" font-family="Courier New, monospace">2. DFS from node</text>
+  <text x="385" y="680" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">collect words</text>
+  
+  <line x1="485" y1="665" x2="515" y2="665" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="515,660 525,665 515,670" fill="#4ade80"/>
+  
+  <!-- Step 3 -->
+  <rect x="535" y="640" width="180" height="50" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="625" y="660" text-anchor="middle" fill="#4ade80" font-size="11" font-weight="bold" font-family="Courier New, monospace">3. Sort/Heap top-k</text>
+  <text x="625" y="680" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">by weight/lex order</text>
+  
+  <line x1="725" y1="665" x2="755" y2="665" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="755,660 765,665 755,670" fill="#4ade80"/>
+  
+  <!-- Step 4 -->
+  <rect x="775" y="640" width="130" height="50" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="840" y="660" text-anchor="middle" fill="#3b82f6" font-size="11" font-weight="bold" font-family="Courier New, monospace">4. Return top-k</text>
+  <text x="840" y="680" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Courier New, monospace">suggestions</text>
+  
+  <!-- SECTION 5: Complexity -->
+  <text x="50" y="740" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">COMPLEXITY</text>
+  
+  <rect x="40" y="755" width="280" height="35" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="55" y="778" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Time:  O(|prefix| + k)</text>
+  
+  <rect x="340" y="755" width="280" height="35" rx="6" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+  <text x="355" y="778" fill="#60a5fa" font-size="12" font-family="Courier New, monospace">Space: O(N × L)</text>
+  
+  <rect x="640" y="755" width="280" height="35" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  <text x="655" y="778" fill="#a78bfa" font-size="12" font-family="Courier New, monospace">k = suggestions, L = len</text>
+  
+  <!-- SECTION 6: Patterns Box -->
+  <text x="450" y="535" fill="#e94560" font-size="14" font-weight="bold" font-family="Courier New, monospace">AUTOCOMPLETE PATTERNS</text>
+  
+  <rect x="440" y="550" width="480" height="130" rx="6" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2"/>
+  
+  <text x="460" y="580" fill="#4ade80" font-size="12" font-family="Courier New, monospace">● Lexicographic top-k → Sorted DFS</text>
+  <text x="460" y="605" fill="#f97316" font-size="12" font-family="Courier New, monospace">● Frequency-based → Heap (priority queue)</text>
+  <text x="460" y="630" fill="#a78bfa" font-size="12" font-family="Courier New, monospace">● Prefix sum → Cumulative weights</text>
+  <text x="460" y="655" fill="#3b82f6" font-size="12" font-family="Courier New, monospace">● Real-time → Maintain current prefix</text>
+</svg>
+

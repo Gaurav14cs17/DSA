@@ -1,0 +1,128 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="600" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">Two Sum - Hash Map Solution</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Find complement = target - num in O(1)</text>
+  
+  <!-- Input -->
+  <text x="50" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">INPUT</text>
+  <text x="50" y="130" font-family="Courier New, monospace" font-size="13" fill="#888888">nums = [2, 7, 11, 15], target = 9</text>
+  
+  <!-- Array visualization -->
+  <g transform="translate(50, 145)">
+    <rect x="0" y="0" width="55" height="55" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="4"/>
+    <text x="27" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="#ffffff">2</text>
+    <text x="27" y="72" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">i=0</text>
+    
+    <rect x="70" y="0" width="55" height="55" fill="#0f2f1f" stroke="#4ade80" stroke-width="3" rx="4"/>
+    <text x="97" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="#4ade80">7</text>
+    <text x="97" y="72" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">i=1 ✓</text>
+    
+    <rect x="140" y="0" width="55" height="55" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="167" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="#ffffff">11</text>
+    <text x="167" y="72" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">i=2</text>
+    
+    <rect x="210" y="0" width="55" height="55" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="237" y="35" text-anchor="middle" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="#ffffff">15</text>
+    <text x="237" y="72" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#888888">i=3</text>
+  </g>
+  
+  <!-- Formula Box -->
+  <rect x="350" y="105" width="280" height="110" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="8"/>
+  <text x="370" y="135" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#a78bfa">CORE INSIGHT</text>
+  <text x="370" y="165" font-family="Courier New, monospace" font-size="14" fill="#ffffff">a + b = target</text>
+  <text x="370" y="190" font-family="Courier New, monospace" font-size="14" fill="#ffffff">b = target - a</text>
+  <text x="370" y="207" font-family="Courier New, monospace" font-size="11" fill="#888888">Check if complement exists!</text>
+  
+  <!-- Target Box -->
+  <rect x="660" y="105" width="200" height="110" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="8"/>
+  <text x="680" y="135" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#f97316">TARGET</text>
+  <text x="680" y="170" font-family="Courier New, monospace" font-size="24" font-weight="bold" fill="#ffffff">9</text>
+  <text x="680" y="200" font-family="Courier New, monospace" font-size="12" fill="#888888">Need: nums[i]+nums[j]=9</text>
+  
+  <!-- Step by Step Section -->
+  <text x="50" y="260" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STEP-BY-STEP EXECUTION</text>
+  
+  <!-- Steps -->
+  <g transform="translate(50, 280)">
+    <!-- Header -->
+    <text x="0" y="0" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">i</text>
+    <text x="40" y="0" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">num</text>
+    <text x="100" y="0" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">complement</text>
+    <text x="220" y="0" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">seen</text>
+    <text x="420" y="0" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Action</text>
+    
+    <!-- Step 0 -->
+    <rect x="-5" y="10" width="600" height="35" fill="#3d1f0f" rx="4"/>
+    <text x="0" y="35" font-family="Courier New, monospace" font-size="14" fill="#ffffff">0</text>
+    <text x="40" y="35" font-family="Courier New, monospace" font-size="14" fill="#f97316">2</text>
+    <text x="100" y="35" font-family="Courier New, monospace" font-size="14" fill="#ffffff">9-2=7</text>
+    <text x="220" y="35" font-family="Courier New, monospace" font-size="14" fill="#888888">{}</text>
+    <text x="420" y="35" font-family="Courier New, monospace" font-size="14" fill="#888888">7 not in seen → add 2:0</text>
+    
+    <!-- Hash Map State 0 -->
+    <rect x="620" y="10" width="140" height="35" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" rx="4"/>
+    <text x="640" y="35" font-family="Courier New, monospace" font-size="12" fill="#3b82f6">seen = {2:0}</text>
+    
+    <!-- Step 1 -->
+    <rect x="-5" y="55" width="600" height="35" fill="#0f2f1f" rx="4"/>
+    <text x="0" y="80" font-family="Courier New, monospace" font-size="14" fill="#ffffff">1</text>
+    <text x="40" y="80" font-family="Courier New, monospace" font-size="14" fill="#4ade80">7</text>
+    <text x="100" y="80" font-family="Courier New, monospace" font-size="14" fill="#4ade80">9-7=2</text>
+    <text x="220" y="80" font-family="Courier New, monospace" font-size="14" fill="#4ade80">{2:0}</text>
+    <text x="420" y="80" font-family="Courier New, monospace" font-size="14" fill="#4ade80">2 IN seen! → return [0,1]</text>
+    
+    <!-- Hash Map State 1 -->
+    <rect x="620" y="55" width="140" height="35" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="4"/>
+    <text x="640" y="80" font-family="Courier New, monospace" font-size="12" fill="#4ade80">FOUND! ✓</text>
+  </g>
+  
+  <!-- Visual Hash Map -->
+  <text x="50" y="420" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">HASH MAP LOOKUP VISUALIZATION</text>
+  
+  <g transform="translate(50, 440)">
+    <!-- Hash Map Box -->
+    <rect x="0" y="0" width="250" height="100" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="8"/>
+    <text x="125" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#888888">HashMap: seen</text>
+    
+    <text x="30" y="55" font-family="Courier New, monospace" font-size="16" fill="#f97316">key: 2</text>
+    <text x="120" y="55" font-family="Courier New, monospace" font-size="16" fill="#888888">→</text>
+    <text x="150" y="55" font-family="Courier New, monospace" font-size="16" fill="#ffffff">value: 0</text>
+    
+    <text x="30" y="85" font-family="Courier New, monospace" font-size="11" fill="#888888">(num stored)</text>
+    <text x="150" y="85" font-family="Courier New, monospace" font-size="11" fill="#888888">(index stored)</text>
+    
+    <!-- Arrow showing lookup -->
+    <path d="M 270 50 Q 320 50 320 30 Q 320 10 370 10" stroke="#4ade80" stroke-width="2" fill="none" marker-end="url(#greenarrow2)"/>
+    <text x="280" y="70" font-family="Courier New, monospace" font-size="11" fill="#4ade80">O(1) lookup</text>
+  </g>
+  
+  <defs>
+    <marker id="greenarrow2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ade80"/>
+    </marker>
+  </defs>
+  
+  <!-- Query Box -->
+  <g transform="translate(400, 440)">
+    <rect x="0" y="0" width="200" height="100" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="8"/>
+    <text x="100" y="25" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#f97316">QUERY</text>
+    <text x="20" y="55" font-family="Courier New, monospace" font-size="14" fill="#ffffff">Current: num = 7</text>
+    <text x="20" y="75" font-family="Courier New, monospace" font-size="14" fill="#ffffff">Need: 9 - 7 = 2</text>
+    <text x="20" y="95" font-family="Courier New, monospace" font-size="14" fill="#4ade80">→ Is 2 in seen? YES!</text>
+  </g>
+  
+  <!-- Result -->
+  <rect x="630" y="440" width="230" height="100" fill="#0f2f1f" stroke="#4ade80" stroke-width="2" rx="8"/>
+  <text x="650" y="470" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#4ade80">RESULT</text>
+  <text x="650" y="500" font-family="Courier New, monospace" font-size="16" fill="#ffffff">return [0, 1]</text>
+  <text x="650" y="525" font-family="Courier New, monospace" font-size="12" fill="#888888">nums[0]+nums[1] = 2+7 = 9</text>
+  
+  <!-- Complexity -->
+  <rect x="50" y="555" width="810" height="35" fill="#2d1f3d" stroke="#a78bfa" stroke-width="1" rx="6"/>
+  <text x="70" y="578" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(n)</text>
+  <text x="200" y="578" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Space: O(n)</text>
+  <text x="350" y="578" font-family="Courier New, monospace" font-size="12" fill="#888888">One pass: store in map, check complement</text>
+  <text x="750" y="578" font-family="Courier New, monospace" font-size="11" fill="#888888">LeetCode #1</text>
+</svg>

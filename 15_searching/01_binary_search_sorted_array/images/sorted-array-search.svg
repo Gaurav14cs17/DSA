@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <!-- Background -->
+  <rect width="900" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Courier New, monospace" font-size="26" font-weight="bold" fill="#ffffff">📋 Binary Search in Sorted Array</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="16" fill="#888888">Standard Search, Lower Bound, Upper Bound</text>
+  
+  <!-- Standard Binary Search Section -->
+  <text x="50" y="105" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">STANDARD BINARY SEARCH</text>
+  <text x="50" y="125" font-family="Courier New, monospace" font-size="11" fill="#888888">Find exact match: target = 15</text>
+  
+  <g transform="translate(50, 140)">
+    <!-- Array boxes with indices -->
+    <text x="25" y="-8" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">0</text>
+    <text x="80" y="-8" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">1</text>
+    <text x="135" y="-8" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">2</text>
+    <text x="190" y="-8" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">3</text>
+    <text x="245" y="-8" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">4</text>
+    <text x="300" y="-8" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">5</text>
+    <text x="355" y="-8" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#888888">6</text>
+    
+    <rect x="0" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="25" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">2</text>
+    
+    <rect x="55" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="80" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">5</text>
+    
+    <rect x="110" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="135" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">8</text>
+    
+    <rect x="165" y="0" width="50" height="40" fill="#3d1f0f" stroke="#f97316" stroke-width="2" rx="4"/>
+    <text x="190" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">12</text>
+    
+    <rect x="220" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3" rx="4"/>
+    <text x="245" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80">15</text>
+    
+    <rect x="275" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="300" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">22</text>
+    
+    <rect x="330" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="355" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">35</text>
+    
+    <!-- Labels -->
+    <text x="25" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">L</text>
+    <text x="190" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#f97316">M</text>
+    <text x="355" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#ef4444">R</text>
+  </g>
+  
+  <text x="450" y="170" font-family="Courier New, monospace" font-size="12" fill="#4ade80">→ target &gt; mid, search right → found at index 4</text>
+  
+  <!-- Lower Bound Section -->
+  <text x="50" y="235" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">LOWER BOUND (First ≥ target)</text>
+  <text x="50" y="255" font-family="Courier New, monospace" font-size="11" fill="#888888">Find first index where arr[i] ≥ 10</text>
+  
+  <g transform="translate(50, 270)">
+    <rect x="0" y="0" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4" rx="4"/>
+    <text x="25" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#666666">2</text>
+    
+    <rect x="55" y="0" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4" rx="4"/>
+    <text x="80" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#666666">5</text>
+    
+    <rect x="110" y="0" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4" rx="4"/>
+    <text x="135" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#666666">8</text>
+    
+    <rect x="165" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3" rx="4"/>
+    <text x="190" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80">12</text>
+    
+    <rect x="220" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="245" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">15</text>
+    
+    <rect x="275" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="300" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">22</text>
+    
+    <rect x="330" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="355" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">35</text>
+    
+    <text x="190" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">↑ lower_bound(10) = 3</text>
+  </g>
+  
+  <!-- Upper Bound Section -->
+  <text x="50" y="365" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">UPPER BOUND (First > target)</text>
+  <text x="50" y="385" font-family="Courier New, monospace" font-size="11" fill="#888888">Find first index where arr[i] > 12</text>
+  
+  <g transform="translate(50, 400)">
+    <rect x="0" y="0" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4" rx="4"/>
+    <text x="25" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#666666">2</text>
+    
+    <rect x="55" y="0" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4" rx="4"/>
+    <text x="80" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#666666">5</text>
+    
+    <rect x="110" y="0" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4" rx="4"/>
+    <text x="135" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#666666">8</text>
+    
+    <rect x="165" y="0" width="50" height="40" fill="#1f0f0f" stroke="#ef4444" stroke-width="2" stroke-dasharray="4" rx="4"/>
+    <text x="190" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#666666">12</text>
+    
+    <rect x="220" y="0" width="50" height="40" fill="#0f2f1f" stroke="#4ade80" stroke-width="3" rx="4"/>
+    <text x="245" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#4ade80">15</text>
+    
+    <rect x="275" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="300" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">22</text>
+    
+    <rect x="330" y="0" width="50" height="40" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+    <text x="355" y="26" text-anchor="middle" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#ffffff">35</text>
+    
+    <text x="245" y="58" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#4ade80">↑ upper_bound(12) = 4</text>
+  </g>
+  
+  <!-- Count Formula Box -->
+  <rect x="500" y="240" width="350" height="80" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="6"/>
+  <text x="675" y="265" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">COUNT FORMULA</text>
+  <text x="675" y="290" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="#ffffff">count(target) = upper_bound - lower_bound</text>
+  <text x="675" y="310" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">Time: O(log n)  |  Space: O(1)</text>
+  
+  <!-- Template Comparison -->
+  <text x="500" y="365" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#e94560">TEMPLATE COMPARISON</text>
+  
+  <!-- Template 1 -->
+  <rect x="500" y="380" width="180" height="100" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+  <text x="590" y="400" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#f97316">Exact Match</text>
+  <text x="510" y="420" font-family="Courier New, monospace" font-size="10" fill="#ffffff">while L &lt;= R:</text>
+  <text x="520" y="435" font-family="Courier New, monospace" font-size="10" fill="#888888">mid = (L+R)//2</text>
+  <text x="520" y="450" font-family="Courier New, monospace" font-size="10" fill="#4ade80">if match: return</text>
+  <text x="520" y="465" font-family="Courier New, monospace" font-size="10" fill="#888888">adjust L or R</text>
+  
+  <!-- Template 2 -->
+  <rect x="690" y="380" width="180" height="100" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" rx="4"/>
+  <text x="780" y="400" text-anchor="middle" font-family="Courier New, monospace" font-size="12" font-weight="bold" fill="#a78bfa">Boundary</text>
+  <text x="700" y="420" font-family="Courier New, monospace" font-size="10" fill="#ffffff">while L &lt; R:</text>
+  <text x="710" y="435" font-family="Courier New, monospace" font-size="10" fill="#888888">mid = (L+R)//2</text>
+  <text x="710" y="450" font-family="Courier New, monospace" font-size="10" fill="#888888">if cond: R = mid</text>
+  <text x="710" y="465" font-family="Courier New, monospace" font-size="10" fill="#888888">else: L = mid+1</text>
+  <text x="700" y="478" font-family="Courier New, monospace" font-size="10" fill="#4ade80">return L</text>
+  
+  <!-- Key insight -->
+  <rect x="50" y="510" width="800" height="70" fill="#2d1f3d" stroke="#a78bfa" stroke-width="2" rx="6"/>
+  <text x="450" y="535" text-anchor="middle" font-family="Courier New, monospace" font-size="14" font-weight="bold" fill="#ffffff">💡 KEY INSIGHT</text>
+  <text x="450" y="560" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#a78bfa">Lower/Upper bound finds insertion position even if element doesn't exist!</text>
+  
+  <!-- Complexity footer -->
+  <text x="450" y="620" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#60a5fa">All variants: Time O(log n) | Space O(1)</text>
+</svg>

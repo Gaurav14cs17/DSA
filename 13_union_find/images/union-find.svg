@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <defs>
+    <style>
+      .title { font: bold 26px 'Courier New', monospace; fill: #ffffff; }
+      .subtitle { font: 16px 'Courier New', monospace; fill: #888888; }
+      .section-label { font: bold 14px 'Courier New', monospace; fill: #e94560; }
+      .box-content { font: bold 18px 'Courier New', monospace; fill: #ffffff; }
+      .small-label { font: 11px 'Courier New', monospace; fill: #888888; }
+      .result { font: bold 14px 'Courier New', monospace; fill: #4ade80; }
+      .complexity { font: 12px 'Courier New', monospace; fill: #60a5fa; }
+      .arrow { stroke: #888888; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .default-node { fill: #1e3a5f; stroke: #3b82f6; stroke-width: 2; }
+      .active-node { fill: #3d1f0f; stroke: #f97316; stroke-width: 2; }
+      .success-node { fill: #0f2f1f; stroke: #4ade80; stroke-width: 2; }
+      .info-node { fill: #2d1f3d; stroke: #a78bfa; stroke-width: 2; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#888888"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="650" fill="#0f0f23"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" class="title">🔗 Union-Find (Disjoint Set Union)</text>
+  <text x="450" y="65" text-anchor="middle" class="subtitle">Efficient connected component management with near O(1) operations</text>
+  
+  <!-- Section 1: Initial State -->
+  <text x="50" y="110" class="section-label">INITIAL STATE</text>
+  
+  <!-- Initial nodes (separate) -->
+  <g transform="translate(50, 130)">
+    <circle cx="40" cy="30" r="25" class="default-node"/>
+    <text x="40" y="36" text-anchor="middle" class="box-content">0</text>
+    
+    <circle cx="110" cy="30" r="25" class="default-node"/>
+    <text x="110" y="36" text-anchor="middle" class="box-content">1</text>
+    
+    <circle cx="180" cy="30" r="25" class="default-node"/>
+    <text x="180" y="36" text-anchor="middle" class="box-content">2</text>
+    
+    <circle cx="250" cy="30" r="25" class="default-node"/>
+    <text x="250" y="36" text-anchor="middle" class="box-content">3</text>
+    
+    <circle cx="320" cy="30" r="25" class="default-node"/>
+    <text x="320" y="36" text-anchor="middle" class="box-content">4</text>
+    
+    <circle cx="390" cy="30" r="25" class="default-node"/>
+    <text x="390" y="36" text-anchor="middle" class="box-content">5</text>
+  </g>
+  
+  <text x="500" y="160" class="small-label">parent[i] = i (each node is its own root)</text>
+  <text x="500" y="180" class="complexity">Components: 6</text>
+  
+  <!-- Section 2: After Union Operations -->
+  <text x="50" y="230" class="section-label">AFTER UNION(0,1), UNION(2,3), UNION(4,5)</text>
+  
+  <g transform="translate(50, 250)">
+    <!-- Set 1: 0-1 -->
+    <circle cx="70" cy="20" r="25" class="active-node"/>
+    <text x="70" y="26" text-anchor="middle" class="box-content">0</text>
+    <circle cx="70" cy="85" r="25" class="default-node"/>
+    <text x="70" y="91" text-anchor="middle" class="box-content">1</text>
+    <line x1="70" y1="55" x2="70" y2="45" class="arrow"/>
+    
+    <!-- Set 2: 2-3 -->
+    <circle cx="180" cy="20" r="25" class="active-node"/>
+    <text x="180" y="26" text-anchor="middle" class="box-content">2</text>
+    <circle cx="180" cy="85" r="25" class="default-node"/>
+    <text x="180" y="91" text-anchor="middle" class="box-content">3</text>
+    <line x1="180" y1="55" x2="180" y2="45" class="arrow"/>
+    
+    <!-- Set 3: 4-5 -->
+    <circle cx="290" cy="20" r="25" class="active-node"/>
+    <text x="290" y="26" text-anchor="middle" class="box-content">4</text>
+    <circle cx="290" cy="85" r="25" class="default-node"/>
+    <text x="290" y="91" text-anchor="middle" class="box-content">5</text>
+    <line x1="290" y1="55" x2="290" y2="45" class="arrow"/>
+  </g>
+  
+  <text x="400" y="290" class="small-label">Roots: 0, 2, 4 (colored orange)</text>
+  <text x="400" y="310" class="complexity">Components: 3</text>
+  
+  <!-- Section 3: After More Unions -->
+  <text x="50" y="400" class="section-label">AFTER UNION(1,3) → CONNECTS SETS {0,1} AND {2,3}</text>
+  
+  <g transform="translate(100, 420)">
+    <!-- Merged set with path compression shown -->
+    <circle cx="100" cy="20" r="28" class="success-node"/>
+    <text x="100" y="26" text-anchor="middle" class="box-content">0</text>
+    <text x="100" y="0" text-anchor="middle" class="small-label">root</text>
+    
+    <circle cx="40" cy="95" r="25" class="default-node"/>
+    <text x="40" y="101" text-anchor="middle" class="box-content">1</text>
+    <line x1="55" y1="75" x2="85" y2="45" class="arrow"/>
+    
+    <circle cx="100" cy="95" r="25" class="default-node"/>
+    <text x="100" y="101" text-anchor="middle" class="box-content">2</text>
+    <line x1="100" y1="70" x2="100" y2="50" class="arrow"/>
+    
+    <circle cx="160" cy="95" r="25" class="default-node"/>
+    <text x="160" y="101" text-anchor="middle" class="box-content">3</text>
+    <line x1="145" y1="75" x2="115" y2="45" class="arrow"/>
+    
+    <!-- Separate set -->
+    <circle cx="320" cy="20" r="28" class="info-node"/>
+    <text x="320" y="26" text-anchor="middle" class="box-content">4</text>
+    <text x="320" y="0" text-anchor="middle" class="small-label">root</text>
+    
+    <circle cx="320" cy="95" r="25" class="default-node"/>
+    <text x="320" y="101" text-anchor="middle" class="box-content">5</text>
+    <line x1="320" y1="70" x2="320" y2="50" class="arrow"/>
+  </g>
+  
+  <text x="530" y="460" class="result">✓ Path Compression Applied</text>
+  <text x="530" y="485" class="complexity">Components: 2</text>
+  
+  <!-- Operations Box -->
+  <rect x="580" y="110" width="290" height="180" rx="8" fill="#1a1a2e" stroke="#3b82f6" stroke-width="1"/>
+  <text x="725" y="135" text-anchor="middle" class="section-label">KEY OPERATIONS</text>
+  
+  <text x="600" y="165" class="box-content">find(x)</text>
+  <text x="600" y="185" class="small-label">Find root with path compression</text>
+  <text x="600" y="205" class="complexity">Time: O(α(n)) ≈ O(1)</text>
+  
+  <text x="600" y="235" class="box-content">union(x, y)</text>
+  <text x="600" y="255" class="small-label">Merge sets by rank</text>
+  <text x="600" y="275" class="complexity">Time: O(α(n)) ≈ O(1)</text>
+  
+  <!-- Complexity Summary -->
+  <rect x="580" y="300" width="290" height="80" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="1"/>
+  <text x="725" y="325" text-anchor="middle" class="section-label">COMPLEXITY</text>
+  <text x="600" y="350" class="result">α(n) = inverse Ackermann ≤ 4</text>
+  <text x="600" y="370" class="result">Effectively O(1) per operation!</text>
+  
+  <!-- Use Cases -->
+  <rect x="50" y="560" width="800" height="70" rx="8" fill="#1a1a2e" stroke="#a78bfa" stroke-width="1"/>
+  <text x="450" y="585" text-anchor="middle" class="section-label">COMMON USE CASES</text>
+  <text x="130" y="610" class="small-label">• Connected Components</text>
+  <text x="300" y="610" class="small-label">• Cycle Detection</text>
+  <text x="450" y="610" class="small-label">• Kruskal's MST</text>
+  <text x="600" y="610" class="small-label">• Network Connectivity</text>
+  <text x="770" y="610" class="small-label">• Island Count</text>
+</svg>
+

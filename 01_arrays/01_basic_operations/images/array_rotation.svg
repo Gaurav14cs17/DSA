@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 500">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cellBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cellOrange" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e67e22;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d35400;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cellGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e8449;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="850" height="500" fill="url(#bgGrad2)"/>
+  
+  <!-- Title -->
+  <text x="425" y="40" font-family="Segoe UI, Arial" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Array Rotation: Three Reversals Method</text>
+  <text x="425" y="65" font-family="Segoe UI, Arial" font-size="14" fill="#88ccff" text-anchor="middle">Rotate right by k=3 positions | O(n) time, O(1) space</text>
+  
+  <!-- Step 1: Original Array -->
+  <text x="80" y="110" font-family="Segoe UI, Arial" font-size="16" font-weight="bold" fill="#ffffff">Original:</text>
+  <g transform="translate(150, 90)">
+    <rect x="0" y="0" width="45" height="40" rx="5" fill="url(#cellBlue)" stroke="#5dade2" stroke-width="2"/>
+    <text x="22" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">1</text>
+    
+    <rect x="50" y="0" width="45" height="40" rx="5" fill="url(#cellBlue)" stroke="#5dade2" stroke-width="2"/>
+    <text x="72" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">2</text>
+    
+    <rect x="100" y="0" width="45" height="40" rx="5" fill="url(#cellBlue)" stroke="#5dade2" stroke-width="2"/>
+    <text x="122" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">3</text>
+    
+    <rect x="150" y="0" width="45" height="40" rx="5" fill="url(#cellBlue)" stroke="#5dade2" stroke-width="2"/>
+    <text x="172" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">4</text>
+    
+    <rect x="200" y="0" width="45" height="40" rx="5" fill="url(#cellOrange)" stroke="#f39c12" stroke-width="2"/>
+    <text x="222" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">5</text>
+    
+    <rect x="250" y="0" width="45" height="40" rx="5" fill="url(#cellOrange)" stroke="#f39c12" stroke-width="2"/>
+    <text x="272" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">6</text>
+    
+    <rect x="300" y="0" width="45" height="40" rx="5" fill="url(#cellOrange)" stroke="#f39c12" stroke-width="2"/>
+    <text x="322" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">7</text>
+  </g>
+  
+  <!-- Labels for sections -->
+  <text x="275" y="150" font-family="Segoe UI, Arial" font-size="12" fill="#3498db" text-anchor="middle">First n-k</text>
+  <text x="475" y="150" font-family="Segoe UI, Arial" font-size="12" fill="#e67e22" text-anchor="middle">Last k</text>
+  
+  <!-- Arrow -->
+  <path d="M 530 110 L 580 110" stroke="#88ccff" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#88ccff"/>
+    </marker>
+  </defs>
+  
+  <!-- Step 1 Label -->
+  <rect x="590" y="90" width="220" height="50" rx="8" fill="#0d1b2a" stroke="#3498db" stroke-width="2"/>
+  <text x="700" y="112" font-family="Segoe UI, Arial" font-size="14" font-weight="bold" fill="#3498db" text-anchor="middle">Step 1</text>
+  <text x="700" y="130" font-family="Segoe UI, Arial" font-size="12" fill="#ffffff" text-anchor="middle">Reverse entire array</text>
+  
+  <!-- Step 2: Reverse All -->
+  <text x="80" y="200" font-family="Segoe UI, Arial" font-size="16" font-weight="bold" fill="#ffffff">Reverse All:</text>
+  <g transform="translate(150, 180)">
+    <rect x="0" y="0" width="45" height="40" rx="5" fill="url(#cellOrange)" stroke="#f39c12" stroke-width="2"/>
+    <text x="22" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">7</text>
+    
+    <rect x="50" y="0" width="45" height="40" rx="5" fill="url(#cellOrange)" stroke="#f39c12" stroke-width="2"/>
+    <text x="72" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">6</text>
+    
+    <rect x="100" y="0" width="45" height="40" rx="5" fill="url(#cellOrange)" stroke="#f39c12" stroke-width="2"/>
+    <text x="122" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">5</text>
+    
+    <rect x="150" y="0" width="45" height="40" rx="5" fill="url(#cellBlue)" stroke="#5dade2" stroke-width="2"/>
+    <text x="172" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">4</text>
+    
+    <rect x="200" y="0" width="45" height="40" rx="5" fill="url(#cellBlue)" stroke="#5dade2" stroke-width="2"/>
+    <text x="222" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">3</text>
+    
+    <rect x="250" y="0" width="45" height="40" rx="5" fill="url(#cellBlue)" stroke="#5dade2" stroke-width="2"/>
+    <text x="272" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">2</text>
+    
+    <rect x="300" y="0" width="45" height="40" rx="5" fill="url(#cellBlue)" stroke="#5dade2" stroke-width="2"/>
+    <text x="322" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">1</text>
+  </g>
+  
+  <!-- Step 2 Box -->
+  <rect x="590" y="180" width="220" height="50" rx="8" fill="#0d1b2a" stroke="#e67e22" stroke-width="2"/>
+  <text x="700" y="202" font-family="Segoe UI, Arial" font-size="14" font-weight="bold" fill="#e67e22" text-anchor="middle">Step 2</text>
+  <text x="700" y="220" font-family="Segoe UI, Arial" font-size="12" fill="#ffffff" text-anchor="middle">Reverse first k elements</text>
+  
+  <!-- Step 3: Reverse First K -->
+  <text x="80" y="290" font-family="Segoe UI, Arial" font-size="16" font-weight="bold" fill="#ffffff">Rev First k:</text>
+  <g transform="translate(150, 270)">
+    <rect x="0" y="0" width="45" height="40" rx="5" fill="url(#cellGreen)" stroke="#2ecc71" stroke-width="2"/>
+    <text x="22" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">5</text>
+    
+    <rect x="50" y="0" width="45" height="40" rx="5" fill="url(#cellGreen)" stroke="#2ecc71" stroke-width="2"/>
+    <text x="72" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">6</text>
+    
+    <rect x="100" y="0" width="45" height="40" rx="5" fill="url(#cellGreen)" stroke="#2ecc71" stroke-width="2"/>
+    <text x="122" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">7</text>
+    
+    <rect x="150" y="0" width="45" height="40" rx="5" fill="url(#cellBlue)" stroke="#5dade2" stroke-width="2"/>
+    <text x="172" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">4</text>
+    
+    <rect x="200" y="0" width="45" height="40" rx="5" fill="url(#cellBlue)" stroke="#5dade2" stroke-width="2"/>
+    <text x="222" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">3</text>
+    
+    <rect x="250" y="0" width="45" height="40" rx="5" fill="url(#cellBlue)" stroke="#5dade2" stroke-width="2"/>
+    <text x="272" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">2</text>
+    
+    <rect x="300" y="0" width="45" height="40" rx="5" fill="url(#cellBlue)" stroke="#5dade2" stroke-width="2"/>
+    <text x="322" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">1</text>
+  </g>
+  
+  <!-- Bracket for first k -->
+  <path d="M 150 318 L 150 328 L 295 328 L 295 318" stroke="#2ecc71" stroke-width="2" fill="none"/>
+  <text x="222" y="345" font-family="Segoe UI, Arial" font-size="11" fill="#2ecc71" text-anchor="middle">reversed</text>
+  
+  <!-- Step 3 Box -->
+  <rect x="590" y="270" width="220" height="50" rx="8" fill="#0d1b2a" stroke="#27ae60" stroke-width="2"/>
+  <text x="700" y="292" font-family="Segoe UI, Arial" font-size="14" font-weight="bold" fill="#27ae60" text-anchor="middle">Step 3</text>
+  <text x="700" y="310" font-family="Segoe UI, Arial" font-size="12" fill="#ffffff" text-anchor="middle">Reverse remaining n-k</text>
+  
+  <!-- Step 4: Final Result -->
+  <text x="80" y="390" font-family="Segoe UI, Arial" font-size="16" font-weight="bold" fill="#ffffff">Result:</text>
+  <g transform="translate(150, 370)">
+    <rect x="0" y="0" width="45" height="40" rx="5" fill="url(#cellGreen)" stroke="#2ecc71" stroke-width="2"/>
+    <text x="22" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">5</text>
+    
+    <rect x="50" y="0" width="45" height="40" rx="5" fill="url(#cellGreen)" stroke="#2ecc71" stroke-width="2"/>
+    <text x="72" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">6</text>
+    
+    <rect x="100" y="0" width="45" height="40" rx="5" fill="url(#cellGreen)" stroke="#2ecc71" stroke-width="2"/>
+    <text x="122" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">7</text>
+    
+    <rect x="150" y="0" width="45" height="40" rx="5" fill="url(#cellGreen)" stroke="#2ecc71" stroke-width="2"/>
+    <text x="172" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">1</text>
+    
+    <rect x="200" y="0" width="45" height="40" rx="5" fill="url(#cellGreen)" stroke="#2ecc71" stroke-width="2"/>
+    <text x="222" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">2</text>
+    
+    <rect x="250" y="0" width="45" height="40" rx="5" fill="url(#cellGreen)" stroke="#2ecc71" stroke-width="2"/>
+    <text x="272" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">3</text>
+    
+    <rect x="300" y="0" width="45" height="40" rx="5" fill="url(#cellGreen)" stroke="#2ecc71" stroke-width="2"/>
+    <text x="322" y="27" font-family="Consolas" font-size="18" fill="#fff" text-anchor="middle">4</text>
+  </g>
+  
+  <!-- Success Icon -->
+  <circle cx="530" cy="390" r="20" fill="#27ae60"/>
+  <path d="M 520 390 L 527 397 L 542 382" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Final Info Box -->
+  <rect x="590" y="360" width="220" height="60" rx="8" fill="#0d1b2a" stroke="#2ecc71" stroke-width="2"/>
+  <text x="700" y="385" font-family="Segoe UI, Arial" font-size="14" font-weight="bold" fill="#2ecc71" text-anchor="middle">Rotated Right by 3!</text>
+  <text x="700" y="405" font-family="Consolas" font-size="12" fill="#aaffaa" text-anchor="middle">[5,6,7,1,2,3,4]</text>
+  
+  <!-- Formula Box -->
+  <rect x="100" y="440" width="650" height="45" rx="8" fill="#0d1b2a" stroke="#4a90a4" stroke-width="2"/>
+  <text x="425" y="468" font-family="Consolas" font-size="14" fill="#88ccff" text-anchor="middle">Formula: Rev(Rev(A[0..n-k-1]) || Rev(A[n-k..n-1])) = A[n-k..n-1] || A[0..n-k-1]</text>
+</svg>

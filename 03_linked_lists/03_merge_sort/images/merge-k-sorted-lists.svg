@@ -1,0 +1,196 @@
+<svg viewBox="0 0 950 750" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="950" height="750" fill="#1a1a2e"/>
+  
+  <!-- Title -->
+  <text x="475" y="42" fill="#ffffff" font-family="Arial, sans-serif" font-size="26" font-weight="bold" text-anchor="middle">Merge K Sorted Lists</text>
+  <text x="475" y="70" fill="#8892b0" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Min Heap Strategy - O(n log k) Time</text>
+  
+  <!-- Input Lists Section -->
+  <text x="40" y="115" fill="#64ffda" font-family="Arial, sans-serif" font-size="14" font-weight="bold">INPUT LISTS:</text>
+  
+  <!-- List 0: 1 → 4 → 5 -->
+  <text x="80" y="150" fill="#f97316" font-family="Arial, sans-serif" font-size="12" font-weight="bold">List[0]:</text>
+  <rect x="150" y="133" width="40" height="32" rx="5" fill="#2d2d44" stroke="#f97316" stroke-width="2"/>
+  <text x="170" y="154" fill="#ffffff" font-family="monospace" font-size="15" text-anchor="middle">1</text>
+  <line x1="190" y1="149" x2="220" y2="149" stroke="#f97316" stroke-width="2"/>
+  <polygon points="220,149 213,145 213,153" fill="#f97316"/>
+  <rect x="230" y="133" width="40" height="32" rx="5" fill="#2d2d44" stroke="#f97316" stroke-width="2"/>
+  <text x="250" y="154" fill="#ffffff" font-family="monospace" font-size="15" text-anchor="middle">4</text>
+  <line x1="270" y1="149" x2="300" y2="149" stroke="#f97316" stroke-width="2"/>
+  <polygon points="300,149 293,145 293,153" fill="#f97316"/>
+  <rect x="310" y="133" width="40" height="32" rx="5" fill="#2d2d44" stroke="#f97316" stroke-width="2"/>
+  <text x="330" y="154" fill="#ffffff" font-family="monospace" font-size="15" text-anchor="middle">5</text>
+  
+  <!-- List 1: 1 → 3 → 4 -->
+  <text x="80" y="195" fill="#3b82f6" font-family="Arial, sans-serif" font-size="12" font-weight="bold">List[1]:</text>
+  <rect x="150" y="178" width="40" height="32" rx="5" fill="#2d2d44" stroke="#3b82f6" stroke-width="2"/>
+  <text x="170" y="199" fill="#ffffff" font-family="monospace" font-size="15" text-anchor="middle">1</text>
+  <line x1="190" y1="194" x2="220" y2="194" stroke="#3b82f6" stroke-width="2"/>
+  <polygon points="220,194 213,190 213,198" fill="#3b82f6"/>
+  <rect x="230" y="178" width="40" height="32" rx="5" fill="#2d2d44" stroke="#3b82f6" stroke-width="2"/>
+  <text x="250" y="199" fill="#ffffff" font-family="monospace" font-size="15" text-anchor="middle">3</text>
+  <line x1="270" y1="194" x2="300" y2="194" stroke="#3b82f6" stroke-width="2"/>
+  <polygon points="300,194 293,190 293,198" fill="#3b82f6"/>
+  <rect x="310" y="178" width="40" height="32" rx="5" fill="#2d2d44" stroke="#3b82f6" stroke-width="2"/>
+  <text x="330" y="199" fill="#ffffff" font-family="monospace" font-size="15" text-anchor="middle">4</text>
+  
+  <!-- List 2: 2 → 6 -->
+  <text x="80" y="240" fill="#22c55e" font-family="Arial, sans-serif" font-size="12" font-weight="bold">List[2]:</text>
+  <rect x="150" y="223" width="40" height="32" rx="5" fill="#2d2d44" stroke="#22c55e" stroke-width="2"/>
+  <text x="170" y="244" fill="#ffffff" font-family="monospace" font-size="15" text-anchor="middle">2</text>
+  <line x1="190" y1="239" x2="220" y2="239" stroke="#22c55e" stroke-width="2"/>
+  <polygon points="220,239 213,235 213,243" fill="#22c55e"/>
+  <rect x="230" y="223" width="40" height="32" rx="5" fill="#2d2d44" stroke="#22c55e" stroke-width="2"/>
+  <text x="250" y="244" fill="#ffffff" font-family="monospace" font-size="15" text-anchor="middle">6</text>
+  
+  <!-- Min Heap Section -->
+  <text x="500" y="115" fill="#64ffda" font-family="Arial, sans-serif" font-size="14" font-weight="bold">MIN HEAP (Priority Queue):</text>
+  
+  <!-- Heap visualization - Initial state -->
+  <rect x="500" y="130" width="420" height="130" rx="8" fill="#2d2d44" stroke="#64ffda" stroke-width="2"/>
+  
+  <!-- Heap structure - binary tree representation -->
+  <!-- Root: (1, List 0) -->
+  <circle cx="710" cy="165" r="22" fill="#1a1a2e" stroke="#f97316" stroke-width="2"/>
+  <text x="710" y="162" fill="#f97316" font-family="monospace" font-size="12" text-anchor="middle">1</text>
+  <text x="710" y="175" fill="#8892b0" font-family="monospace" font-size="9" text-anchor="middle">idx:0</text>
+  
+  <!-- Left child: (1, List 1) -->
+  <line x1="693" y1="183" x2="640" y2="210" stroke="#64ffda" stroke-width="1.5"/>
+  <circle cx="620" cy="225" r="22" fill="#1a1a2e" stroke="#3b82f6" stroke-width="2"/>
+  <text x="620" y="222" fill="#3b82f6" font-family="monospace" font-size="12" text-anchor="middle">1</text>
+  <text x="620" y="235" fill="#8892b0" font-family="monospace" font-size="9" text-anchor="middle">idx:1</text>
+  
+  <!-- Right child: (2, List 2) -->
+  <line x1="727" y1="183" x2="780" y2="210" stroke="#64ffda" stroke-width="1.5"/>
+  <circle cx="800" cy="225" r="22" fill="#1a1a2e" stroke="#22c55e" stroke-width="2"/>
+  <text x="800" y="222" fill="#22c55e" font-family="monospace" font-size="12" text-anchor="middle">2</text>
+  <text x="800" y="235" fill="#8892b0" font-family="monospace" font-size="9" text-anchor="middle">idx:2</text>
+  
+  <!-- Heap info -->
+  <text x="520" y="155" fill="#8892b0" font-family="Arial, sans-serif" font-size="11">Initial heap with first</text>
+  <text x="520" y="170" fill="#8892b0" font-family="Arial, sans-serif" font-size="11">node from each list</text>
+  
+  <!-- Process Steps -->
+  <text x="40" y="300" fill="#f97316" font-family="Arial, sans-serif" font-size="14" font-weight="bold">STEP 1:</text>
+  <text x="115" y="300" fill="#8892b0" font-family="Arial, sans-serif" font-size="13">Pop min (1, idx:0), add to result, push next node (4, idx:0)</text>
+  
+  <!-- Result so far -->
+  <text x="60" y="335" fill="#64ffda" font-family="Arial, sans-serif" font-size="12">Result:</text>
+  <rect x="120" y="318" width="40" height="32" rx="5" fill="#2d2d44" stroke="#22c55e" stroke-width="2"/>
+  <text x="140" y="339" fill="#22c55e" font-family="monospace" font-size="15" text-anchor="middle">1</text>
+  
+  <!-- Heap state after step 1 -->
+  <text x="280" y="335" fill="#8892b0" font-family="Arial, sans-serif" font-size="12">Heap: [(1,1), (2,2), (4,0)]</text>
+  
+  <!-- Step 2 -->
+  <text x="40" y="385" fill="#f97316" font-family="Arial, sans-serif" font-size="14" font-weight="bold">STEP 2:</text>
+  <text x="115" y="385" fill="#8892b0" font-family="Arial, sans-serif" font-size="13">Pop min (1, idx:1), add to result, push next node (3, idx:1)</text>
+  
+  <!-- Result so far -->
+  <text x="60" y="420" fill="#64ffda" font-family="Arial, sans-serif" font-size="12">Result:</text>
+  <rect x="120" y="403" width="40" height="32" rx="5" fill="#2d2d44" stroke="#64ffda" stroke-width="2"/>
+  <text x="140" y="424" fill="#ffffff" font-family="monospace" font-size="15" text-anchor="middle">1</text>
+  <line x1="160" y1="419" x2="190" y2="419" stroke="#64ffda" stroke-width="2"/>
+  <polygon points="190,419 183,415 183,423" fill="#64ffda"/>
+  <rect x="200" y="403" width="40" height="32" rx="5" fill="#2d2d44" stroke="#22c55e" stroke-width="2"/>
+  <text x="220" y="424" fill="#22c55e" font-family="monospace" font-size="15" text-anchor="middle">1</text>
+  
+  <!-- Heap state after step 2 -->
+  <text x="280" y="420" fill="#8892b0" font-family="Arial, sans-serif" font-size="12">Heap: [(2,2), (4,0), (3,1)]</text>
+  
+  <!-- Step 3 -->
+  <text x="40" y="470" fill="#f97316" font-family="Arial, sans-serif" font-size="14" font-weight="bold">STEP 3:</text>
+  <text x="115" y="470" fill="#8892b0" font-family="Arial, sans-serif" font-size="13">Pop min (2, idx:2), add to result, push next node (6, idx:2)</text>
+  
+  <!-- Result so far -->
+  <text x="60" y="505" fill="#64ffda" font-family="Arial, sans-serif" font-size="12">Result:</text>
+  <rect x="120" y="488" width="35" height="30" rx="5" fill="#2d2d44" stroke="#64ffda" stroke-width="2"/>
+  <text x="137" y="508" fill="#ffffff" font-family="monospace" font-size="14" text-anchor="middle">1</text>
+  <line x1="155" y1="503" x2="180" y2="503" stroke="#64ffda" stroke-width="2"/>
+  <polygon points="180,503 173,499 173,507" fill="#64ffda"/>
+  <rect x="188" y="488" width="35" height="30" rx="5" fill="#2d2d44" stroke="#64ffda" stroke-width="2"/>
+  <text x="205" y="508" fill="#ffffff" font-family="monospace" font-size="14" text-anchor="middle">1</text>
+  <line x1="223" y1="503" x2="248" y2="503" stroke="#64ffda" stroke-width="2"/>
+  <polygon points="248,503 241,499 241,507" fill="#64ffda"/>
+  <rect x="256" y="488" width="35" height="30" rx="5" fill="#2d2d44" stroke="#22c55e" stroke-width="2"/>
+  <text x="273" y="508" fill="#22c55e" font-family="monospace" font-size="14" text-anchor="middle">2</text>
+  
+  <!-- Continue indicator -->
+  <text x="320" y="505" fill="#8892b0" font-family="Arial, sans-serif" font-size="14">...</text>
+  
+  <!-- Final Result -->
+  <text x="40" y="565" fill="#22c55e" font-family="Arial, sans-serif" font-size="14" font-weight="bold">FINAL RESULT:</text>
+  
+  <!-- Final merged list: 1 → 1 → 2 → 3 → 4 → 4 → 5 → 6 -->
+  <rect x="60" y="580" width="38" height="32" rx="5" fill="#2d2d44" stroke="#22c55e" stroke-width="2"/>
+  <text x="79" y="601" fill="#22c55e" font-family="monospace" font-size="14" text-anchor="middle">1</text>
+  <line x1="98" y1="596" x2="122" y2="596" stroke="#22c55e" stroke-width="2"/>
+  <polygon points="122,596 115,592 115,600" fill="#22c55e"/>
+  
+  <rect x="130" y="580" width="38" height="32" rx="5" fill="#2d2d44" stroke="#22c55e" stroke-width="2"/>
+  <text x="149" y="601" fill="#22c55e" font-family="monospace" font-size="14" text-anchor="middle">1</text>
+  <line x1="168" y1="596" x2="192" y2="596" stroke="#22c55e" stroke-width="2"/>
+  <polygon points="192,596 185,592 185,600" fill="#22c55e"/>
+  
+  <rect x="200" y="580" width="38" height="32" rx="5" fill="#2d2d44" stroke="#22c55e" stroke-width="2"/>
+  <text x="219" y="601" fill="#22c55e" font-family="monospace" font-size="14" text-anchor="middle">2</text>
+  <line x1="238" y1="596" x2="262" y2="596" stroke="#22c55e" stroke-width="2"/>
+  <polygon points="262,596 255,592 255,600" fill="#22c55e"/>
+  
+  <rect x="270" y="580" width="38" height="32" rx="5" fill="#2d2d44" stroke="#22c55e" stroke-width="2"/>
+  <text x="289" y="601" fill="#22c55e" font-family="monospace" font-size="14" text-anchor="middle">3</text>
+  <line x1="308" y1="596" x2="332" y2="596" stroke="#22c55e" stroke-width="2"/>
+  <polygon points="332,596 325,592 325,600" fill="#22c55e"/>
+  
+  <rect x="340" y="580" width="38" height="32" rx="5" fill="#2d2d44" stroke="#22c55e" stroke-width="2"/>
+  <text x="359" y="601" fill="#22c55e" font-family="monospace" font-size="14" text-anchor="middle">4</text>
+  <line x1="378" y1="596" x2="402" y2="596" stroke="#22c55e" stroke-width="2"/>
+  <polygon points="402,596 395,592 395,600" fill="#22c55e"/>
+  
+  <rect x="410" y="580" width="38" height="32" rx="5" fill="#2d2d44" stroke="#22c55e" stroke-width="2"/>
+  <text x="429" y="601" fill="#22c55e" font-family="monospace" font-size="14" text-anchor="middle">4</text>
+  <line x1="448" y1="596" x2="472" y2="596" stroke="#22c55e" stroke-width="2"/>
+  <polygon points="472,596 465,592 465,600" fill="#22c55e"/>
+  
+  <rect x="480" y="580" width="38" height="32" rx="5" fill="#2d2d44" stroke="#22c55e" stroke-width="2"/>
+  <text x="499" y="601" fill="#22c55e" font-family="monospace" font-size="14" text-anchor="middle">5</text>
+  <line x1="518" y1="596" x2="542" y2="596" stroke="#22c55e" stroke-width="2"/>
+  <polygon points="542,596 535,592 535,600" fill="#22c55e"/>
+  
+  <rect x="550" y="580" width="38" height="32" rx="5" fill="#2d2d44" stroke="#22c55e" stroke-width="2"/>
+  <text x="569" y="601" fill="#22c55e" font-family="monospace" font-size="14" text-anchor="middle">6</text>
+  
+  <!-- Checkmark -->
+  <text x="615" y="601" fill="#22c55e" font-family="Arial, sans-serif" font-size="18" font-weight="bold">✓</text>
+  
+  <!-- Info Boxes -->
+  <!-- Complexity Box -->
+  <rect x="660" y="300" width="260" height="120" rx="8" fill="#2d2d44" stroke="#3b82f6" stroke-width="2"/>
+  <text x="790" y="330" fill="#3b82f6" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">COMPLEXITY ANALYSIS</text>
+  <text x="790" y="360" fill="#ffffff" font-family="monospace" font-size="12" text-anchor="middle">Time:  O(n log k)</text>
+  <text x="790" y="385" fill="#ffffff" font-family="monospace" font-size="12" text-anchor="middle">Space: O(k)</text>
+  <text x="790" y="408" fill="#8892b0" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">n = total nodes, k = lists</text>
+  
+  <!-- Algorithm Box -->
+  <rect x="660" y="440" width="260" height="130" rx="8" fill="#2d2d44" stroke="#f97316" stroke-width="2"/>
+  <text x="790" y="468" fill="#f97316" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">ALGORITHM</text>
+  <text x="680" y="495" fill="#ffffff" font-family="monospace" font-size="11">1. Init heap with heads</text>
+  <text x="680" y="515" fill="#ffffff" font-family="monospace" font-size="11">2. Pop minimum node</text>
+  <text x="680" y="535" fill="#ffffff" font-family="monospace" font-size="11">3. Add to result</text>
+  <text x="680" y="555" fill="#ffffff" font-family="monospace" font-size="11">4. Push node.next if exists</text>
+  
+  <!-- Why Heap Box -->
+  <rect x="40" y="640" width="420" height="95" rx="8" fill="#2d2d44" stroke="#64ffda" stroke-width="2"/>
+  <text x="250" y="668" fill="#64ffda" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">WHY MIN HEAP?</text>
+  <text x="250" y="695" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Brute Force: O(nk) - compare all k heads each time</text>
+  <text x="250" y="718" fill="#22c55e" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Min Heap: O(n log k) - find min in O(log k)</text>
+  
+  <!-- Comparison Box -->
+  <rect x="490" y="640" width="430" height="95" rx="8" fill="#2d2d44" stroke="#f97316" stroke-width="2"/>
+  <text x="705" y="668" fill="#f97316" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">APPROACH COMPARISON</text>
+  <text x="520" y="695" fill="#8892b0" font-family="monospace" font-size="11">Brute Force:    O(nk)      O(1)</text>
+  <text x="520" y="715" fill="#8892b0" font-family="monospace" font-size="11">Pairwise Merge: O(nk log k) O(1)</text>
+  <text x="520" y="735" fill="#22c55e" font-family="monospace" font-size="11">Min Heap:       O(n log k)  O(k) ← Optimal!</text>
+</svg>

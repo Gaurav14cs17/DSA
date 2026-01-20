@@ -1,0 +1,174 @@
+<svg viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: bold 26px 'Courier New', monospace; fill: #ffffff; }
+      .subtitle { font: 15px 'Courier New', monospace; fill: #888888; }
+      .section-label { font: bold 14px 'Courier New', monospace; fill: #e94560; }
+      .node-text { font: bold 20px 'Courier New', monospace; fill: #ffffff; }
+      .small-label { font: 11px 'Courier New', monospace; fill: #888888; }
+      .edge-label { font: bold 14px 'Courier New', monospace; }
+      .result-text { font: bold 14px 'Courier New', monospace; fill: #4ade80; }
+      .info-text { font: 13px 'Courier New', monospace; fill: #ffffff; }
+      .step-text { font: 12px 'Courier New', monospace; fill: #fbbf24; }
+      .complexity { font: 12px 'Courier New', monospace; fill: #60a5fa; }
+      .deque-label { font: bold 11px 'Courier New', monospace; fill: #a78bfa; }
+      .dist-text { font: bold 12px 'Courier New', monospace; fill: #4ade80; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#888888"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4ade80"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="700" fill="#0f0f23"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" class="title">⚡ 0-1 BFS Algorithm</text>
+  <text x="450" y="65" text-anchor="middle" class="subtitle">Shortest Path with 0/1 Edge Weights using Deque</text>
+
+  <!-- Graph Section -->
+  <text x="60" y="110" class="section-label">Graph with 0/1 Weights:</text>
+
+  <!-- Graph nodes and edges -->
+  <g transform="translate(100, 130)">
+    <!-- Node 0 (Source) -->
+    <circle cx="50" cy="50" r="30" fill="#3d1f0f" stroke="#f97316" stroke-width="3"/>
+    <text x="50" y="57" text-anchor="middle" class="node-text">0</text>
+    <text x="50" y="95" text-anchor="middle" class="small-label">SOURCE</text>
+    <text x="50" y="20" text-anchor="middle" class="dist-text">d=0</text>
+
+    <!-- Node 1 -->
+    <circle cx="180" cy="50" r="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="180" y="57" text-anchor="middle" class="node-text">1</text>
+    <text x="180" y="20" text-anchor="middle" class="dist-text">d=0</text>
+
+    <!-- Node 2 -->
+    <circle cx="50" cy="170" r="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="50" y="177" text-anchor="middle" class="node-text">2</text>
+    <text x="50" y="210" text-anchor="middle" class="dist-text">d=1</text>
+
+    <!-- Node 3 -->
+    <circle cx="180" cy="170" r="30" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2"/>
+    <text x="180" y="177" text-anchor="middle" class="node-text">3</text>
+    <text x="180" y="210" text-anchor="middle" class="dist-text">d=0</text>
+
+    <!-- Edges -->
+    <!-- 0 -> 1 (weight 0) -->
+    <line x1="80" y1="50" x2="145" y2="50" stroke="#4ade80" stroke-width="3"/>
+    <rect x="100" y="35" width="30" height="20" rx="4" fill="#0f2f1f"/>
+    <text x="115" y="50" text-anchor="middle" class="edge-label" fill="#4ade80">0</text>
+
+    <!-- 0 -> 2 (weight 1) -->
+    <line x1="50" y1="80" x2="50" y2="135" stroke="#f97316" stroke-width="3"/>
+    <rect x="25" y="95" width="30" height="20" rx="4" fill="#3d1f0f"/>
+    <text x="40" y="110" text-anchor="middle" class="edge-label" fill="#f97316">1</text>
+
+    <!-- 1 -> 3 (weight 0) -->
+    <line x1="180" y1="80" x2="180" y2="135" stroke="#4ade80" stroke-width="3"/>
+    <rect x="185" y="95" width="30" height="20" rx="4" fill="#0f2f1f"/>
+    <text x="200" y="110" text-anchor="middle" class="edge-label" fill="#4ade80">0</text>
+
+    <!-- 2 -> 3 (weight 1) -->
+    <line x1="80" y1="170" x2="145" y2="170" stroke="#f97316" stroke-width="3"/>
+    <rect x="100" y="155" width="30" height="20" rx="4" fill="#3d1f0f"/>
+    <text x="115" y="170" text-anchor="middle" class="edge-label" fill="#f97316">1</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(380, 130)">
+    <rect x="0" y="0" width="180" height="90" rx="8" fill="#1a1a2e" stroke="#888888" stroke-width="1"/>
+    <text x="90" y="25" text-anchor="middle" class="section-label">Legend</text>
+    
+    <line x1="20" y1="50" x2="60" y2="50" stroke="#4ade80" stroke-width="3"/>
+    <text x="75" y="55" class="info-text" fill="#4ade80">Weight 0 → FRONT</text>
+    
+    <line x1="20" y1="75" x2="60" y2="75" stroke="#f97316" stroke-width="3"/>
+    <text x="75" y="80" class="info-text" fill="#f97316">Weight 1 → BACK</text>
+  </g>
+
+  <!-- Step by Step Processing -->
+  <text x="60" y="370" class="section-label">Algorithm Steps:</text>
+
+  <!-- Step 1 -->
+  <g transform="translate(60, 385)">
+    <rect x="0" y="0" width="780" height="55" rx="6" fill="#1a1a2e" stroke="#3b82f6" stroke-width="1"/>
+    <text x="15" y="22" class="step-text">Step 1: Start from node 0</text>
+    
+    <text x="15" y="42" class="deque-label">Deque:</text>
+    <rect x="75" y="25" width="35" height="25" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="92" y="43" text-anchor="middle" class="info-text" fill="#f97316">0</text>
+    
+    <text x="140" y="42" class="info-text">dist = [0, ∞, ∞, ∞]</text>
+    
+    <text x="350" y="42" class="small-label">Initialize source with distance 0</text>
+  </g>
+
+  <!-- Step 2 -->
+  <g transform="translate(60, 450)">
+    <rect x="0" y="0" width="780" height="55" rx="6" fill="#1a1a2e" stroke="#3b82f6" stroke-width="1"/>
+    <text x="15" y="22" class="step-text">Step 2: Process node 0, explore edges</text>
+    
+    <text x="15" y="42" class="deque-label">Deque:</text>
+    <rect x="75" y="25" width="35" height="25" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="92" y="43" text-anchor="middle" class="info-text" fill="#4ade80">1</text>
+    <rect x="115" y="25" width="35" height="25" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="132" y="43" text-anchor="middle" class="info-text" fill="#f97316">2</text>
+    
+    <text x="180" y="42" class="info-text">dist = [0, 0, 1, ∞]</text>
+    
+    <text x="380" y="42" class="small-label">0→1 (w=0): push FRONT | 0→2 (w=1): push BACK</text>
+  </g>
+
+  <!-- Step 3 -->
+  <g transform="translate(60, 515)">
+    <rect x="0" y="0" width="780" height="55" rx="6" fill="#1a1a2e" stroke="#3b82f6" stroke-width="1"/>
+    <text x="15" y="22" class="step-text">Step 3: Process node 1 (from FRONT)</text>
+    
+    <text x="15" y="42" class="deque-label">Deque:</text>
+    <rect x="75" y="25" width="35" height="25" rx="4" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+    <text x="92" y="43" text-anchor="middle" class="info-text" fill="#4ade80">3</text>
+    <rect x="115" y="25" width="35" height="25" rx="4" fill="#3d1f0f" stroke="#f97316" stroke-width="2"/>
+    <text x="132" y="43" text-anchor="middle" class="info-text" fill="#f97316">2</text>
+    
+    <text x="180" y="42" class="info-text">dist = [0, 0, 1, 0]</text>
+    
+    <text x="380" y="42" class="small-label">1→3 (w=0): dist[3] = 0+0 = 0, push FRONT</text>
+  </g>
+
+  <!-- Step 4 -->
+  <g transform="translate(60, 580)">
+    <rect x="0" y="0" width="780" height="55" rx="6" fill="#1a1a2e" stroke="#3b82f6" stroke-width="1"/>
+    <text x="15" y="22" class="step-text">Step 4: Process node 3, then node 2</text>
+    
+    <text x="15" y="42" class="deque-label">Deque:</text>
+    <rect x="75" y="25" width="50" height="25" rx="4" fill="#1a1a2e" stroke="#888888" stroke-width="1"/>
+    <text x="100" y="43" text-anchor="middle" class="info-text" fill="#888888">empty</text>
+    
+    <text x="160" y="42" class="info-text">dist = [0, 0, 1, 0]</text>
+    
+    <text x="380" y="42" class="small-label">2→3: dist[3]=0 already optimal (0 &lt; 1+1)</text>
+  </g>
+
+  <!-- Result -->
+  <rect x="60" y="645" width="350" height="40" rx="8" fill="#0f2f1f" stroke="#4ade80" stroke-width="2"/>
+  <text x="80" y="670" class="result-text">Final Distances: [0, 0, 1, 0]</text>
+
+  <!-- Key Insight Box -->
+  <rect x="430" y="645" width="410" height="40" rx="8" fill="#1a1a2e" stroke="#60a5fa" stroke-width="2"/>
+  <text x="450" y="670" class="info-text">Key: Weight 0 → appendleft() | Weight 1 → append()</text>
+
+  <!-- Comparison Box -->
+  <rect x="580" y="110" width="280" height="120" rx="8" fill="#1a1a2e" stroke="#a78bfa" stroke-width="2"/>
+  <text x="720" y="140" text-anchor="middle" class="section-label" fill="#a78bfa">Why Deque?</text>
+  <text x="600" y="170" class="info-text">Dijkstra: O((V+E) log V)</text>
+  <text x="600" y="195" class="info-text">0-1 BFS:  O(V + E)</text>
+  <text x="600" y="220" class="small-label">No priority queue needed!</text>
+
+  <!-- Footer -->
+  <text x="450" y="695" text-anchor="middle" class="complexity">Time: O(V + E) | Space: O(V) | Works only for 0/1 edge weights</text>
+</svg>
+
+
