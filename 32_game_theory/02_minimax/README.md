@@ -4,7 +4,6 @@ title: "Minimax Algorithm"
 parent: "Game Theory"
 nav_order: 2
 permalink: /32_game_theory/02_minimax/
-
 ---
 
 <div align="center">
@@ -38,9 +37,9 @@ permalink: /32_game_theory/02_minimax/
 
 **Definition:** Game where one player's gain equals opponent's loss.
 
-$$
+```math
 \text{Player 1 score} + \text{Player 2 score} = \text{constant}
-$$
+```
 
 **Examples:**
 - Chess (win/lose/draw)
@@ -55,13 +54,13 @@ $$
 
 **Recursive Definition:**
 
-$$
+```math
 \text{minimax}(s) = \begin{cases}
 \text{evaluate}(s) & \text{if } s \text{ is terminal} \\
 \max_{a} \text{minimax}(\text{result}(s,a)) & \text{if MAX's turn} \\
 \min_{a} \text{minimax}(\text{result}(s,a)) & \text{if MIN's turn}
 \end{cases}
-$$
+```
 
 ---
 
@@ -72,9 +71,9 @@ $$
 
 **Pruning Condition:**
 
-$$
+```math
 \text{If } \alpha \geq \beta \text{, prune remaining branches}
-$$
+```
 
 **Improvement:** From $O(b^d)$ to $O(b^{d/2})$ with perfect ordering!
 
@@ -179,7 +178,6 @@ def minimax(state, depth: int, is_maximizing: bool) -> int:
     Time: O(b^d) where b=branching, d=depth
     Space: O(d) recursion stack
     """
-
     # Terminal conditions
     if depth == 0 or is_terminal(state):
         return evaluate(state)
@@ -331,7 +329,6 @@ def canIWin(max_choosable: int, desired_total: int) -> bool:
     
     Time: O(2^n × n), Space: O(2^n)
     """
-
     # Quick checks
     total = max_choosable * (max_choosable + 1) // 2
     if total < desired_total:

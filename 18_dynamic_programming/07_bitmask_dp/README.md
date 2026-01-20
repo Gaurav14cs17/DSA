@@ -4,7 +4,6 @@ title: "Bitmask DP"
 parent: "Dynamic Programming"
 nav_order: 7
 permalink: /18_dynamic_programming/07_bitmask_dp/
-
 ---
 
 <div align="center">
@@ -42,9 +41,9 @@ permalink: /18_dynamic_programming/07_bitmask_dp/
 
 Subset of $n$ elements as $n$-bit integer:
 
-$$
+```math
 \text{bit } i = 1 \Leftrightarrow \text{element } i \in \text{subset}
-$$
+```
 
 **States:** $2^n$
 
@@ -64,9 +63,9 @@ $$
 
 ### 3️⃣ TSP Recurrence
 
-$$
+```math
 dp[\text{mask}][i] = \min_{j \in \text{mask}} (dp[\text{mask} \setminus \{i\}][j] + dist[j][i])
-$$
+```
 
 ---
 
@@ -187,7 +186,6 @@ def minStickers(stickers: list[str], target: str) -> int:
         result = float('inf')
         
         for sticker in sticker_counts:
-
             # Use sticker only if it helps
             remaining = dict(sticker)
             new_mask = mask

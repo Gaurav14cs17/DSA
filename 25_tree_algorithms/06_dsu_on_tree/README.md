@@ -4,7 +4,6 @@ title: "DSU on Tree (Small to Large)"
 parent: "Tree Algorithms"
 nav_order: 6
 permalink: /25_tree_algorithms/06_dsu_on_tree/
-
 ---
 
 <div align="center">
@@ -182,7 +181,6 @@ class DsuOnTree:
         
         Time: O(n log n), Space: O(n)
         """
-
         # Global data structure for current subtree
         counter = Counter()
         answers = [None] * self.n
@@ -212,7 +210,6 @@ class DsuOnTree:
                 p: parent
                 keep: whether to keep data after processing
             """
-
             # Process light children first
             heavy_child = self.heavy[u]
             for v in self.graph[u]:
@@ -251,7 +248,6 @@ def count_distinct_in_subtrees(n: int, edges: List[List[int]],
     dsu = DsuOnTree(n, edges)
     
     def process(node: int, answers: List[int]):
-
         # Counter is available from closure
         # Count distinct values (keys in counter)
         answers[node] = len(counter)

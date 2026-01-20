@@ -4,7 +4,6 @@ title: "Matrix Problems"
 parent: "Arrays"
 nav_order: 4
 permalink: /01_arrays/04_matrix_problems/
-
 ---
 
 <div align="center">
@@ -54,15 +53,15 @@ permalink: /01_arrays/04_matrix_problems/
 
 **Row-major order (most programming languages):**
 
-$$
+```math
 \text{Address}(i, j) = \text{Base} + (i \times n + j) \times \text{sizeof(element)}
-$$
+```
 
 **Column-major order (Fortran, MATLAB):**
 
-$$
+```math
 \text{Address}(i, j) = \text{Base} + (j \times m + i) \times \text{sizeof(element)}
-$$
+```
 
 Where $m$ = rows, $n$ = columns.
 
@@ -72,15 +71,15 @@ Where $m$ = rows, $n$ = columns.
 
 **90° Clockwise Rotation:**
 
-$$
+```math
 \boxed{M'[j][m-1-i] = M[i][j]}
-$$
+```
 
 **Transpose + Reverse Rows Algorithm:**
 
-$$
+```math
 \text{Rotate 90°} = \text{Transpose} \circ \text{Reverse Each Row}
-$$
+```
 
 **Proof by Example (3×3):**
 
@@ -98,14 +97,14 @@ Original:           Transpose:          Reverse Rows:
 
 **Rotation Angles:**
 
-$$
+```math
 \begin{aligned}
 \text{90° clockwise} &: (i, j) \to (j, m-1-i) \\
 \text{180°} &: (i, j) \to (m-1-i, n-1-j) \\
 \text{270° clockwise} &: (i, j) \to (n-1-j, i) \\
 \text{90° counter-clockwise} &: (i, j) \to (n-1-j, i)
 \end{aligned}
-$$
+```
 
 ---
 
@@ -113,26 +112,26 @@ $$
 
 **Spiral traversal maintains 4 boundaries:**
 
-$$
+```math
 \begin{aligned}
 \text{top} &: \text{current top row} \\
 \text{bottom} &: \text{current bottom row} \\
 \text{left} &: \text{current left column} \\
 \text{right} &: \text{current right column}
 \end{aligned}
-$$
+```
 
 **Total elements in $m \times n$ matrix:**
 
-$$
+```math
 \text{total} = m \times n
-$$
+```
 
 **Number of complete layers:**
 
-$$
+```math
 \text{layers} = \left\lceil \min(m, n) / 2 \right\rceil
-$$
+```
 
 ---
 
@@ -140,17 +139,17 @@ $$
 
 **Linear search (brute force):**
 
-$$
+```math
 T(m, n) = O(m \times n)
-$$
+```
 
 **Staircase search (sorted rows & columns):**
 
 Start at top-right or bottom-left:
 
-$$
+```math
 \boxed{T(m, n) = O(m + n)}
-$$
+```
 
 **Proof of O(m+n) for staircase search:**
 
@@ -397,7 +396,6 @@ def spiralOrder(matrix: list[list[int]]) -> list[int]:
     left, right = 0, len(matrix[0]) - 1
     
     while top <= bottom and left <= right:
-
         # Move right along top row
         for col in range(left, right + 1):
             result.append(matrix[top][col])
@@ -503,7 +501,6 @@ def generateMatrix(n: int) -> list[list[int]]:
     num = 1
     
     while top <= bottom and left <= right:
-
         # Right
         for col in range(left, right + 1):
             matrix[top][col] = num
@@ -724,7 +721,7 @@ Problem: Set Matrix Zeroes
 
 Rotations form a cyclic group of order 4:
 
-$$
+```math
 \begin{aligned}
 R_0 &= \text{Identity (0°)} \\
 R_1 &= \text{90° rotation} \\
@@ -732,7 +729,7 @@ R_2 &= R_1 \circ R_1 = \text{180° rotation} \\
 R_3 &= R_1 \circ R_1 \circ R_1 = \text{270° rotation} \\
 R_4 &= R_1 \circ R_1 \circ R_1 \circ R_1 = R_0
 \end{aligned}
-$$
+```
 
 **Properties:**
 - $R\_1 \circ R\_3 = R\_0$ (90° + 270° = 360° = 0°)
@@ -761,7 +758,6 @@ $$
 For Game of Life (cell dies/lives based on neighbors):
 
 ```python
-
 # Use bits to encode current and next state
 # Bit 0: current state
 # Bit 1: next state
@@ -788,14 +784,12 @@ For $m \times n$ matrix:
 - Diagonal $d$ contains elements where $i - j = d - (n-1)$
 
 ```python
-
 # Group by diagonal
 from collections import defaultdict
 diagonals = defaultdict(list)
 
 for i in range(m):
     for j in range(n):
-
         # Main diagonal: i - j
         diagonals[i - j].append(matrix[i][j])
         

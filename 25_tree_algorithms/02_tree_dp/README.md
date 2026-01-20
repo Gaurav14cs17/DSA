@@ -4,7 +4,6 @@ title: "Tree Dynamic Programming"
 parent: "Tree Algorithms"
 nav_order: 2
 permalink: /25_tree_algorithms/02_tree_dp/
-
 ---
 
 <div align="center">
@@ -66,9 +65,9 @@ dp[node] = combine(dp[child₁], dp[child₂], ..., dp[childₖ])
 
 **Recurrence:**
 
-$$
+```math
 \text{dp}[v] = f(\text{dp}[\text{child}_1], \text{dp}[\text{child}_2], \ldots)
-$$
+```
 
 **Post-order traversal:** Process children before parent.
 
@@ -98,9 +97,9 @@ $$
 
 **Combination:**
 
-$$
+```math
 \text{ans}[v] = \text{combine}(\text{in}[v], \text{out}[v])
-$$
+```
 
 ---
 
@@ -114,10 +113,10 @@ $$
 
 **Recurrence:**
 
-$$
+```math
 \text{rob}[v] = v.\text{val} + \sum \text{not\_rob}[\text{child}]
 \text{not\_rob}[v] = \sum \max(\text{rob}[\text{child}], \text{not\_rob}[\text{child}])
-$$
+```
 
 ---
 
@@ -304,7 +303,6 @@ class TreeDPRerooting:
         
         Time: O(n), Space: O(n)
         """
-
         # First DFS: compute subtree sizes and sums
         def dfs1(u: int, parent: int):
             self.subtree_size[u] = 1
@@ -320,7 +318,6 @@ class TreeDPRerooting:
         def dfs2(u: int, parent: int):
             for v in self.graph[u]:
                 if v != parent:
-
                     # Move root from u to v
                     # Nodes in v's subtree get 1 closer
                     # Nodes outside v's subtree get 1 farther

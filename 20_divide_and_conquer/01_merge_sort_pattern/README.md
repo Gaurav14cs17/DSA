@@ -4,7 +4,6 @@ title: "Merge Sort Pattern"
 parent: "Divide and Conquer"
 nav_order: 1
 permalink: /20_divide_and_conquer/01_merge_sort_pattern/
-
 ---
 
 <div align="center">
@@ -49,9 +48,9 @@ permalink: /20_divide_and_conquer/01_merge_sort_pattern/
 
 ### 1️⃣ Merge Sort Recurrence
 
-$$
+```math
 T(n) = 2T(n/2) + O(n) = O(n \log n)
-$$
+```
 
 ---
 
@@ -59,9 +58,9 @@ $$
 
 Count pairs $(i, j)$ where $i < j$ but $arr[i] > arr[j]$:
 
-$$
+```math
 \text{inversions} = \text{left\_inv} + \text{right\_inv} + \text{split\_inv}
-$$
+```
 
 Split inversions counted during merge.
 

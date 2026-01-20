@@ -4,7 +4,6 @@ title: "BST Queries"
 parent: "Binary Search Trees"
 nav_order: 3
 permalink: /08_binary_search_trees/03_bst_queries/
-
 ---
 
 <div align="center">
@@ -44,9 +43,9 @@ permalink: /08_binary_search_trees/03_bst_queries/
 
 **Using Inorder:**
 
-$$
+```math
 \text{kth\_smallest} = \text{inorder}[k-1]
-$$
+```
 
 **Time:** O(H + k) where H = height.
 
@@ -54,24 +53,24 @@ $$
 
 ### 2️⃣ Inorder Successor
 
-$$
+```math
 \text{successor}(x) = \begin{cases}
 \min(T_R(x)) & \text{if } T_R(x) \neq \emptyset \\
 \text{lowest ancestor with } x \text{ in left subtree} & \text{otherwise}
 \end{cases}
-$$
+```
 
 ---
 
 ### 3️⃣ LCA in BST
 
-$$
+```math
 \text{LCA}(p, q) = \begin{cases}
 root & \text{if } p.val \leq root.val \leq q.val \\
 \text{LCA}(root.left, p, q) & \text{if } p.val, q.val < root.val \\
 \text{LCA}(root.right, p, q) & \text{if } p.val, q.val > root.val
 \end{cases}
-$$
+```
 
 **Time:** O(h) using BST property.
 
@@ -79,9 +78,9 @@ $$
 
 ### 4️⃣ Range Sum Query
 
-$$
+```math
 \text{rangeSum}(L, R) = \sum_{L \leq node.val \leq R} node.val
-$$
+```
 
 **Pruning:** Skip subtrees outside range.
 
@@ -91,9 +90,9 @@ $$
 
 **Reverse inorder** (Right → Node → Left) accumulates greater values.
 
-$$
+```math
 node.val_{new} = node.val + \sum_{x > node.val} x
-$$
+```
 
 **Correctness:** Reverse inorder visits larger values first → accumulate and update!
 
@@ -128,9 +127,9 @@ $$
 
 **Binary Search on BST:**
 
-$$
+```math
 \text{closest} = \arg\min_{node \in BST} |node.val - target|
-$$
+```
 
 **Time:** O(h) — prune half the tree at each step!
 

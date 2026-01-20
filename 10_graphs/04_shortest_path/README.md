@@ -4,7 +4,6 @@ title: "Shortest Path"
 parent: "Graphs"
 nav_order: 4
 permalink: /10_graphs/04_shortest_path/
-
 ---
 
 <div align="center">
@@ -46,9 +45,9 @@ permalink: /10_graphs/04_shortest_path/
 
 **Relaxation:**
 
-$$
+```math
 \text{dist}[v] = \min(\text{dist}[v], \text{dist}[u] + w(u,v))
-$$
+```
 
 **Correctness:** Greedy choice property - when $u$ is extracted, $\text{dist}[u]$ is optimal.
 
@@ -60,9 +59,9 @@ $$
 
 **Iterate V-1 times:** Each iteration relaxes all edges.
 
-$$
+```math
 \text{After } k \text{ iterations: shortest paths using } \leq k \text{ edges}
-$$
+```
 
 **Negative cycle detection:** If any relaxation possible after V-1 iterations.
 
@@ -72,9 +71,9 @@ $$
 
 **Recurrence:**
 
-$$
+```math
 D^{(k)}[i][j] = \min(D^{(k-1)}[i][j], D^{(k-1)}[i][k] + D^{(k-1)}[k][j])
-$$
+```
 
 **Meaning:** Shortest $i \to j$ using vertices $\{1, \ldots, k\}$ as intermediates.
 
@@ -87,9 +86,9 @@ $$
 - Weight 0: add to front of deque
 - Weight 1: add to back of deque
 
-$$
+```math
 T = O(V + E)
-$$
+```
 
 ---
 

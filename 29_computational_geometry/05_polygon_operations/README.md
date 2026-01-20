@@ -3,7 +3,6 @@ layout: default
 title: "Polygon Operations"
 parent: "Computational Geometry"
 nav_order: 5
-
 ---
 
 # 🔷 Polygon Operations
@@ -182,7 +181,6 @@ def triangulate_ear_clipping(polygon):
     while len(indices) > 3:
         for i in range(len(indices)):
             if is_ear(polygon, i, indices):
-
                 # Add triangle
                 prev = polygon[indices[(i - 1) % len(indices)]]
                 curr = polygon[indices[i]]

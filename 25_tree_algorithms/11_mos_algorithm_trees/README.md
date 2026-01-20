@@ -4,7 +4,6 @@ title: "Mo's Algorithm on Trees"
 parent: "Tree Algorithms"
 nav_order: 11
 permalink: /25_tree_algorithms/11_mos_algorithm_trees/
-
 ---
 
 <div align="center">
@@ -213,11 +212,9 @@ class MoOnTree:
         lca_node = self.lca(u, v)
         
         if lca_node == u:
-
             # u is ancestor of v
             return self.first[u], self.first[v], u
         else:
-
             # General case
             return self.last[u], self.first[v], lca_node
     
@@ -235,7 +232,6 @@ class MoOnTree:
         
         Time: O((n+q)√n), Space: O(n)
         """
-
         # Convert to range queries with LCA info
         range_queries = []
         for i, (u, v) in enumerate(queries):
@@ -255,14 +251,12 @@ class MoOnTree:
             """Add node to current answer."""
             nonlocal distinct_count
             if visited[node]:
-
                 # Remove
                 freq[values[node]] -= 1
                 if freq[values[node]] == 0:
                     distinct_count -= 1
                 visited[node] = False
             else:
-
                 # Add
                 if freq[values[node]] == 0:
                     distinct_count += 1
@@ -273,7 +267,6 @@ class MoOnTree:
         curr_r = -1
         
         for left, right, lca_node, query_idx in range_queries:
-
             # Expand/shrink range
             while curr_r < right:
                 curr_r += 1
@@ -365,7 +358,6 @@ class SimpleMoTree:
         
         Time: O((n+q)√n), Space: O(n)
         """
-
         # Convert to range queries
         range_queries = []
         for i, root in enumerate(queries):

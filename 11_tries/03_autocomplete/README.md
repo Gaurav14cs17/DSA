@@ -4,7 +4,6 @@ title: "Autocomplete"
 parent: "Tries"
 nav_order: 3
 permalink: /11_tries/03_autocomplete/
-
 ---
 
 <div align="center">
@@ -36,9 +35,9 @@ permalink: /11_tries/03_autocomplete/
 
 **Find all words with prefix $P$:**
 
-$$
+```math
 T = O(|P| + k)
-$$
+```
 
 Where $k$ = number of matching words.
 
@@ -56,9 +55,9 @@ Where $k$ = number of matching words.
 
 **Store frequency/weight at nodes:**
 
-$$
+```math
 \text{suggestion}(prefix) = \text{top-k by weight}
-$$
+```
 
 Use heap for top-k selection.
 
@@ -68,9 +67,9 @@ Use heap for top-k selection.
 
 **Sum of values for all words with prefix:**
 
-$$
+```math
 \text{mapSum}(prefix) = \sum_{\text{word starts with prefix}} \text{value}[word]
-$$
+```
 
 ---
 
@@ -147,7 +146,6 @@ def suggestedProducts(products: list[str], searchWord: str) -> list[list[str]]:
     
     Time: O(n×L + m×L), Space: O(n×L)
     """
-
     # Build trie
     trie = AutocompleteTrie()
     for product in products:

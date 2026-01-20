@@ -4,7 +4,6 @@ title: "Randomized Algorithms"
 nav_order: 38
 has_children: true
 permalink: /36_randomized_algorithms/
-
 ---
 
 <div align="center">
@@ -94,7 +93,6 @@ def reservoir_sample(stream, k):
         if i < k:
             reservoir.append(item)
         else:
-
             # With probability k/(i+1), replace random item
             j = random.randint(0, i)
             if j < k:
@@ -185,7 +183,6 @@ class WeightedRandom:
         Time: O(log n)
         """
         target = random.random() * self.total
-
         # Binary search for target
         left, right = 0, len(self.prefix) - 1
         while left < right:

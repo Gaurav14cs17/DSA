@@ -4,7 +4,6 @@ title: "Sorted Array Search"
 parent: "Searching"
 nav_order: 1
 permalink: /15_searching/01_binary_search_sorted_array/
-
 ---
 
 <div align="center">
@@ -46,9 +45,9 @@ permalink: /15_searching/01_binary_search_sorted_array/
 
 Find smallest index where $arr[i] \geq target$:
 
-$$
+```math
 \text{lower\_bound} = \min\{i : arr[i] \geq target\}
-$$
+```
 
 ---
 
@@ -56,17 +55,17 @@ $$
 
 Find smallest index where $arr[i] > target$:
 
-$$
+```math
 \text{upper\_bound} = \min\{i : arr[i] > target\}
-$$
+```
 
 ---
 
 ### 4️⃣ Count of Element
 
-$$
+```math
 \text{count}(target) = \text{upper\_bound} - \text{lower\_bound}
-$$
+```
 
 ---
 
@@ -209,11 +208,9 @@ def singleNonDuplicate(nums: list[int]) -> int:
             mid -= 1
         
         if nums[mid] == nums[mid + 1]:
-
             # Pair intact, single is on right
             left = mid + 2
         else:
-
             # Pair broken, single is on left (including mid)
             right = mid
     

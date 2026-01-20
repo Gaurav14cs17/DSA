@@ -4,7 +4,6 @@ title: "Linked List Recursion"
 parent: "Recursion"
 nav_order: 9
 permalink: /16_recursion/09_linked_list_recursion/
-
 ---
 
 <div align="center">
@@ -135,7 +134,6 @@ def reverseList(head: ListNode) -> ListNode:
     
     Time: O(n), Space: O(n)
     """
-
     # Base case: empty or single node
     if head is None or head.next is None:
         return head
@@ -185,7 +183,6 @@ def reverseKGroup(head: ListNode, k: int) -> ListNode:
     
     Time: O(n), Space: O(n/k)
     """
-
     # Check if k nodes exist
     curr = head
     count = 0

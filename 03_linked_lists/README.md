@@ -4,7 +4,6 @@ title: "Linked Lists"
 nav_order: 12
 has_children: true
 permalink: /03_linked_lists/
-
 ---
 
 <div align="center">
@@ -74,10 +73,10 @@ When they meet:
 
 Since fast = 2 × slow:
 
-$$
+```math
 2(\mu + k) = \mu + k + m\lambda
 \mu + k = m\lambda
-$$
+```
 
 **Finding cycle start:**
 - Reset one pointer to head
@@ -97,10 +96,10 @@ At each step: `prev → ... ← current`
 
 **After reversal:**
 
-$$
+```math
 \text{new\_head} = \text{last\_node}
 \text{original\_head.next} = \text{None}
-$$
+```
 
 ---
 
@@ -108,9 +107,9 @@ $$
 
 **When fast reaches end:**
 
-$$
+```math
 \text{slow position} = \lfloor n/2 \rfloor
-$$
+```
 
 **Proof:**
 - Fast moves 2 steps per iteration

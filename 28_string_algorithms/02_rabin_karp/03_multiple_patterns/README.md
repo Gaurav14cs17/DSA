@@ -4,7 +4,6 @@ title: "Multiple Pattern Matching"
 parent: "Rabin-Karp Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 3
-
 ---
 
 # 🔀 Multiple Pattern Matching with Rabin-Karp
@@ -92,7 +91,6 @@ def search_multiple_patterns(text, patterns, base=31, mod=10**9 + 7):
         # Check all positions
         for i in range(n - m + 1):
             if w_hash in pattern_hashes:
-
                 # Verify each pattern with this hash
                 for pattern in pattern_hashes[w_hash]:
                     if text[i:i+m] == pattern:
@@ -310,7 +308,6 @@ for idx, text in enumerate(texts):
 
 ### 1. Group by Length
 ```python
-
 # Instead of m different lengths:
 for pattern in patterns:  # O(k·n·m)
     search(text, pattern)
@@ -322,7 +319,6 @@ for length in unique_lengths:  # O(unique·n + k·m)
 
 ### 2. Hash Set Lookup
 ```python
-
 # O(1) average to check if hash exists
 if window_hash in pattern_hash_set:
     verify_patterns()

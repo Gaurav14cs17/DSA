@@ -4,7 +4,6 @@ title: "Tree Construction"
 parent: "Tree Algorithms"
 nav_order: 3
 permalink: /25_tree_algorithms/03_tree_construction/
-
 ---
 
 <div align="center">
@@ -121,9 +120,9 @@ Right subtree: [20, 15, 7] (preorder), [15, 20, 7] (inorder)
 
 **N nodes → Catalan number of different binary trees:**
 
-$$
+```math
 C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}
-$$
+```
 
 **First few:** 1, 1, 2, 5, 14, 42, 132, ...
 
@@ -297,11 +296,9 @@ def bst_from_preorder_iterative(preorder: List[int]) -> Optional[TreeNode]:
         node = TreeNode(val)
         
         if val < stack[-1].val:
-
             # Left child
             stack[-1].left = node
         else:
-
             # Right child: find correct parent
             parent = None
             while stack and stack[-1].val < val:
@@ -556,7 +553,6 @@ def recover_from_preorder(traversal: str) -> Optional[TreeNode]:
     i = 0
     
     while i < len(traversal):
-
         # Count depth (number of dashes)
         depth = 0
         while i < len(traversal) and traversal[i] == '-':

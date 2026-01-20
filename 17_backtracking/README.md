@@ -4,7 +4,6 @@ title: "Backtracking"
 nav_order: 26
 has_children: true
 permalink: /17_backtracking/
-
 ---
 
 <div align="center">
@@ -54,9 +53,9 @@ permalink: /17_backtracking/
 
 **Cut branches early** when constraint violated:
 
-$$
+```math
 \text{If state invalid} \Rightarrow \text{return immediately}
-$$
+```
 
 **Example:** N-Queens - don't continue if queens attack.
 
@@ -80,9 +79,9 @@ Each path = one solution candidate.
 
 Number of subsets of set with $n$ elements:
 
-$$
+```math
 |P(S)| = 2^n
-$$
+```
 
 ---
 
@@ -90,15 +89,15 @@ $$
 
 Number of permutations of $n$ elements:
 
-$$
+```math
 P(n) = n!
-$$
+```
 
 Permutations of $k$ elements from $n$:
 
-$$
+```math
 P(n, k) = \frac{n!}{(n-k)!}
-$$
+```
 
 ---
 
@@ -106,9 +105,9 @@ $$
 
 Number of ways to choose $k$ from $n$:
 
-$$
+```math
 C(n, k) = \binom{n}{k} = \frac{n!}{k!(n-k)!}
-$$
+```
 
 ---
 
@@ -136,7 +135,6 @@ def backtrack(state, choices):
     
     for choice in choices:
         if is_valid(choice, state):
-
             # Choose
             state.append(choice)
             

@@ -5,7 +5,6 @@ parent: "Chinese Remainder Theorem"
 grand_parent: "Number Theory"
 nav_order: 1
 permalink: /30_number_theory/06_chinese_remainder/01_basic_crt/
-
 ---
 
 <div align="center">
@@ -50,14 +49,14 @@ permalink: /30_number_theory/06_chinese_remainder/01_basic_crt/
 
 **Statement:** Given pairwise coprime positive integers $m\_1, m\_2, \ldots, m\_k$ and any integers $a\_1, a\_2, \ldots, a\_k$, the system:
 
-$$
+```math
 \begin{cases}
 x \equiv a_1 \pmod{m_1} \\
 x \equiv a_2 \pmod{m_2} \\
 \vdots \\
 x \equiv a_k \pmod{m_k}
 \end{cases}
-$$
+```
 
 has a **unique solution** modulo $M = m\_1 \cdot m\_2 \cdots m\_k$.
 
@@ -67,9 +66,9 @@ has a **unique solution** modulo $M = m\_1 \cdot m\_2 \cdots m\_k$.
 
 Let $M\_i = M / m\_i$ and $y\_i = M\_i^{-1} \pmod{m\_i}$
 
-$$
+```math
 x = \sum_{i=1}^{k} a_i \cdot M_i \cdot y_i \pmod{M}
-$$
+```
 
 **Why this works:** Each term $a\_i M\_i y\_i$ is:
 - ≡ $a\_i$ (mod $m\_i$) because $M\_i y\_i \equiv 1$ (mod $m\_i$)
@@ -141,7 +140,6 @@ def chinese_remainder(remainders: list[int], moduli: list[int]) -> int:
     Time: O(n log M) where M = product of moduli
     Space: O(1)
     """
-
     # Compute M = product of all moduli
     M = 1
     for m in moduli:
@@ -259,7 +257,6 @@ def factorial_mod(n: int, p: int) -> int:
 # Compute 50! using CRT with multiple primes
 primes = [101, 103, 107, 109]
 remainders = [factorial_mod(50, p) for p in primes]
-
 # Reconstruct full value (within the product of primes)
 ```
 

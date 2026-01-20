@@ -4,7 +4,6 @@ title: "Array Recursion"
 parent: "Recursion"
 nav_order: 6
 permalink: /16_recursion/06_array_recursion/
-
 ---
 
 <div align="center">
@@ -131,7 +130,6 @@ def sumArray(arr: list, i: int = 0) -> int:
     
     Time: O(n), Space: O(n)
     """
-
     # Base case: end of array
     if i == len(arr):
         return 0
@@ -167,7 +165,6 @@ def findMax(arr: list, i: int = 0) -> int:
     
     Time: O(n), Space: O(n)
     """
-
     # Base case: last element
     if i == len(arr) - 1:
         return arr[i]
@@ -194,7 +191,6 @@ def findMaxDivideConquer(arr: list, low: int, high: int) -> int:
     
     Time: O(n), Space: O(log n)
     """
-
     # Base case: single element
     if low == high:
         return arr[low]
@@ -221,7 +217,6 @@ def linearSearch(arr: list, target: int, i: int = 0) -> int:
     
     Time: O(n), Space: O(n)
     """
-
     # Base case: not found
     if i == len(arr):
         return -1
@@ -337,7 +332,6 @@ def rotateRight(arr: list, k: int) -> list:
         
         new_pos = (i + k) % len(arr)
         result = rotate_once(arr, i + 1)
-
         # This creates new array - not ideal
         return result
     
@@ -376,7 +370,6 @@ def isSorted(arr: list, i: int = 0) -> bool:
     
     Time: O(n), Space: O(n)
     """
-
     # Base case: reached second-to-last or empty
     if i >= len(arr) - 1:
         return True
@@ -443,7 +436,6 @@ def mergeArrays(arr1: list, arr2: list, i: int = 0, j: int = 0) -> list:
     
     Time: O(m+n), Space: O(m+n)
     """
-
     # Base cases
     if i == len(arr1):
         return arr2[j:]

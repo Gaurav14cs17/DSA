@@ -4,7 +4,6 @@ title: "Expression Evaluation"
 parent: "Stacks"
 nav_order: 4
 permalink: /04_stacks/04_expression_evaluation/
-
 ---
 
 <div align="center">
@@ -275,7 +274,6 @@ def infixToPostfix(expression: str) -> str:
         char = expression[i]
         
         if char.isdigit():
-
             # Read full number
             num = ''
             while i < len(expression) and expression[i].isdigit():

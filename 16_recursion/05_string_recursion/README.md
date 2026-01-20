@@ -4,7 +4,6 @@ title: "String Recursion"
 parent: "Recursion"
 nav_order: 5
 permalink: /16_recursion/05_string_recursion/
-
 ---
 
 <div align="center">
@@ -110,7 +109,6 @@ def reverseString(s: str) -> str:
     Time: O(n²) due to string concatenation
     Space: O(n) recursion depth
     """
-
     # Base case: empty or single char
     if len(s) <= 1:
         return s
@@ -144,7 +142,6 @@ def isPalindrome(s: str) -> bool:
     Time: O(n), Space: O(n)
     """
     def check(left: int, right: int) -> bool:
-
         # Base case: pointers crossed
         if left >= right:
             return True
@@ -166,7 +163,6 @@ def countOccurrences(s: str, char: str, i: int = 0) -> int:
     
     Time: O(n), Space: O(n)
     """
-
     # Base case
     if i == len(s):
         return 0
@@ -181,7 +177,6 @@ def removeChar(s: str, char: str) -> str:
     
     Time: O(n²), Space: O(n)
     """
-
     # Base case
     if not s:
         return ""
@@ -213,24 +208,20 @@ def decodeString(s: str) -> str:
             char = s[index]
             
             if char.isdigit():
-
                 # Build number
                 num = num * 10 + int(char)
             
             elif char == '[':
-
                 # Recurse for nested content
                 decoded, index = decode(index + 1)
                 result += num * decoded
                 num = 0
             
             elif char == ']':
-
                 # End of current bracket
                 return result, index
             
             else:
-
                 # Regular character
                 result += char
             
@@ -305,7 +296,6 @@ def runLengthDecode(s: str) -> str:
             return ""
         
         char = s[i]
-
         # Extract number (could be multiple digits)
         j = i + 1
         num_str = ""
@@ -333,7 +323,6 @@ def generateParenthesis(n: int) -> list:
     result = []
     
     def generate(current: str, open_count: int, close_count: int):
-
         # Base case: used all parentheses
         if len(current) == 2 * n:
             result.append(current)
@@ -361,7 +350,6 @@ def isMatch(s: str, p: str) -> bool:
     Space: O(m+n)
     """
     def match(i: int, j: int) -> bool:
-
         # Both exhausted
         if i == len(s) and j == len(p):
             return True
@@ -376,12 +364,10 @@ def isMatch(s: str, p: str) -> bool:
         
         # Current pattern char
         if p[j] == '*':
-
             # '*' matches empty or one+ chars
             return match(i, j + 1) or match(i + 1, j)
         
         elif p[j] == '?' or p[j] == s[i]:
-
             # Match single char
             return match(i + 1, j + 1)
         
@@ -409,12 +395,10 @@ def letterCasePermutation(s: str) -> list:
         char = s[index]
         
         if char.isalpha():
-
             # Two choices: lowercase and uppercase
             generate(index + 1, current + char.lower())
             generate(index + 1, current + char.upper())
         else:
-
             # Digit: only one choice
             generate(index + 1, current + char)
     
@@ -430,7 +414,6 @@ def addStrings(num1: str, num2: str) -> str:
     Time: O(max(m,n)), Space: O(max(m,n))
     """
     def add(i: int, j: int, carry: int) -> str:
-
         # Base case: both exhausted
         if i < 0 and j < 0:
             return "1" if carry else ""
@@ -460,7 +443,6 @@ def compareVersion(version1: str, version2: str) -> int:
     Time: O(n + m), Space: O(n + m)
     """
     def compare(v1: list, v2: list, i: int) -> int:
-
         # Both exhausted
         if i >= len(v1) and i >= len(v2):
             return 0

@@ -5,7 +5,6 @@ parent: "Fenwick Tree (BIT)"
 grand_parent: "Advanced Trees"
 nav_order: 2
 permalink: /27_advanced_trees/03_fenwick_tree/02_inversion_counting/
-
 ---
 
 <div align="center">
@@ -61,7 +60,6 @@ def countSmaller(nums: List[int]) -> List[int]:
     
     Time: O(n log n), Space: O(n)
     """
-
     # Coordinate compression
     sorted_nums = sorted(set(nums))
     rank = {v: i + 1 for i, v in enumerate(sorted_nums)}
@@ -107,7 +105,6 @@ def reversePairs(nums: List[int]) -> int:
     
     Time: O(n log n)
     """
-
     # Coordinate compression
     all_nums = sorted(set(nums + [2 * x for x in nums]))
     rank = {v: i + 1 for i, v in enumerate(all_nums)}
@@ -134,7 +131,6 @@ def reversePairs(nums: List[int]) -> int:
     count = 0
     
     for num in reversed(nums):
-
         # Count elements < num / 2
         threshold = rank.get(2 * num, 0)
         if threshold > 0:

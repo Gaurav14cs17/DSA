@@ -4,7 +4,6 @@ title: "Bridges & Articulation Points"
 parent: "Graph Algorithms"
 nav_order: 6
 permalink: /24_graph_algorithms/06_bridges_articulation_points/
-
 ---
 
 <div align="center">
@@ -54,19 +53,19 @@ permalink: /24_graph_algorithms/06_bridges_articulation_points/
 
 **Uses DFS with low-link values:**
 
-$$
+```math
 \text{low}[v] = \min \begin{cases}
 \text{disc}[v] \\
 \text{disc}[u] & \text{for back edges } (v, u) \\
 \text{low}[w] & \text{for tree edges } (v, w)
 \end{cases}
-$$
+```
 
 **Bridge condition:** Edge $(u, v)$ is bridge iff:
 
-$$
+```math
 \text{low}[v] > \text{disc}[u]
-$$
+```
 
 **Time:** $O(V + E)$  
 **Space:** $O(V)$
@@ -147,13 +146,11 @@ class BridgesFinder:
         self.timer += 1
         
         for v, edge_id in self.graph[u]:
-
             # Skip edge to parent (but allow multiple edges)
             if edge_id == parent_edge:
                 continue
             
             if self.disc[v] == -1:
-
                 # Tree edge
                 self._dfs(v, u, edge_id)
                 self.low[u] = min(self.low[u], self.low[v])
@@ -162,7 +159,6 @@ class BridgesFinder:
                 if self.low[v] > self.disc[u]:
                     self.bridges.append((min(u, v), max(u, v)))
             else:
-
                 # Back edge
                 self.low[u] = min(self.low[u], self.disc[v])
     
@@ -203,7 +199,6 @@ class ArticulationPointsFinder:
         
         for v in self.graph[u]:
             if self.disc[v] == -1:
-
                 # Tree edge
                 children += 1
                 self.parent[v] = u
@@ -213,17 +208,14 @@ class ArticulationPointsFinder:
                 
                 # Articulation point conditions
                 if self.parent[u] == -1 and children > 1:
-
                     # Root with multiple children
                     self.articulation_points.add(u)
                 
                 if self.parent[u] != -1 and self.low[v] >= self.disc[u]:
-
                     # Non-root condition
                     self.articulation_points.add(u)
             
             elif v != self.parent[u]:
-
                 # Back edge
                 self.low[u] = min(self.low[u], self.disc[v])
     
@@ -266,7 +258,6 @@ class BiconnectedComponents:
         
         for v, edge_id in self.graph[u]:
             if self.disc[v] == -1:
-
                 # Tree edge
                 self.parent[v] = u
                 self.edge_stack.append(edge_id)
@@ -277,7 +268,6 @@ class BiconnectedComponents:
                 
                 # If v is not connected to ancestors of u
                 if self.low[v] >= self.disc[u]:
-
                     # Found biconnected component
                     component = []
                     while True:
@@ -288,7 +278,6 @@ class BiconnectedComponents:
                     self.components.append(component)
             
             elif v != self.parent[u] and self.disc[v] < self.disc[u]:
-
                 # Back edge
                 self.edge_stack.append(edge_id)
                 self.low[u] = min(self.low[u], self.disc[v])
@@ -298,7 +287,6 @@ class BiconnectedComponents:
         for i in range(self.n):
             if self.disc[i] == -1:
                 self._dfs(i)
-
                 # Pop remaining edges for this component
                 if self.edge_stack:
                     component = []

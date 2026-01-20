@@ -4,7 +4,6 @@ title: "Online Algorithms"
 nav_order: 40
 has_children: true
 permalink: /38_online_algorithms/
-
 ---
 
 <div align="center">
@@ -142,7 +141,6 @@ class LRUCache:
             self._add_to_head(node)
             
             if len(self.cache) > self.capacity:
-
                 # Remove LRU (tail.prev)
                 lru = self.tail.prev
                 self._remove(lru)
@@ -162,10 +160,8 @@ from heapq import *
 
 class MedianFinder:
     def __init__(self):
-
         # Max heap for smaller half (negate values)
         self.small = []
-
         # Min heap for larger half
         self.large = []
     
@@ -248,7 +244,6 @@ class LFUCache:
         
         # Evict if at capacity
         if len(self.key_to_val) >= self.capacity:
-
             # Remove first (oldest) key with min_freq
             evict_key = next(iter(self.freq_to_keys[self.min_freq]))
             del self.freq_to_keys[self.min_freq][evict_key]
@@ -287,7 +282,6 @@ class SlidingWindowMax:
         result = []
         
         for i, num in enumerate(nums):
-
             # Remove elements outside window
             while self.dq and self.dq[0] < i - k + 1:
                 self.dq.popleft()

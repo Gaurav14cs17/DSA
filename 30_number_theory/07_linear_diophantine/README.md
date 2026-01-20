@@ -5,7 +5,6 @@ parent: "Number Theory"
 nav_order: 7
 has_children: true
 permalink: /30_number_theory/07_linear_diophantine/
-
 ---
 
 <div align="center">
@@ -64,9 +63,9 @@ permalink: /30_number_theory/07_linear_diophantine/
 
 If $(x\_0, y\_0)$ is one solution, all solutions are:
 
-$$
+```math
 x = x_0 + k \cdot \frac{b}{\gcd(a,b)}, \quad y = y_0 - k \cdot \frac{a}{\gcd(a,b)}
-$$
+```
 
 for any integer $k$.
 
@@ -76,9 +75,9 @@ for any integer $k$.
 
 For positive coprime $a, b$, the **Frobenius number** (largest integer NOT representable as $ax + by$ with $x, y \geq 0$):
 
-$$
+```math
 g(a, b) = ab - a - b
-$$
+```
 
 ---
 
@@ -139,7 +138,6 @@ def positive_solutions(a: int, b: int, c: int) -> list[tuple[int, int]]:
     step_y = -a // g
     
     solutions = []
-
     # Find range of k where both x, y >= 0
     k = 0
     while True:

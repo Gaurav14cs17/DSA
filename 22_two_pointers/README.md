@@ -4,7 +4,6 @@ title: "Two Pointers"
 nav_order: 31
 has_children: true
 permalink: /22_two_pointers/
-
 ---
 
 <div align="center">
@@ -87,7 +86,7 @@ permalink: /22_two_pointers/
 
 #### The Algorithm
 
-$$
+```math
 \text{Initialize: } left = 0, \quad right = n - 1
 \text{While } left < right:
 \begin{cases}
@@ -95,25 +94,25 @@ $$
 \text{sum} > \text{target} & \Rightarrow right := right - 1 \\
 \text{sum} = \text{target} & \Rightarrow \text{Found!}
 \end{cases}
-$$
+```
 
 #### 🔍 Proof of Correctness
 
-**Claim**: If a valid pair $(i, j)$ exists where $i < j$, the algorithm will find it.
+**Claim**: If a valid pair \((i, j)\) exists where \(i < j\), the algorithm will find it.
 
-**Proof by invariant**: At each step, if the solution exists in range $[left, right]$, it remains in the new range.
+**Proof by invariant**: At each step, if the solution exists in range \([left, right]\), it remains in the new range.
 
-- If $a[left] + a[right] < target$:
-  - For all $k < right$: $a[left] + a[k] \leq a[left] + a[right] < target$
-  - So $left$ cannot be part of any solution with indices $< right$
-  - Safe to increment $left$
+- If \(a[left] + a[right] < target\):
+  - For all \(k < right\): \(a[left] + a[k] \leq a[left] + a[right] < target\)
+  - So \(left\) cannot be part of any solution with indices \(< right\)
+  - Safe to increment \(left\)
 
-- If $a[left] + a[right] > target$:
-  - For all $k > left$: $a[k] + a[right] \geq a[left] + a[right] > target$
-  - So $right$ cannot be part of any solution with indices $> left$
-  - Safe to decrement $right$
+- If \(a[left] + a[right] > target\):
+  - For all \(k > left\): \(a[k] + a[right] \geq a[left] + a[right] > target\)
+  - So \(right\) cannot be part of any solution with indices \(> left\)
+  - Safe to decrement \(right\)
 
-**Termination**: Either we find the target, or $left \geq right$ (no solution). ∎
+**Termination**: Either we find the target, or \(left \geq right\) (no solution). ∎
 
 ---
 
@@ -124,27 +123,27 @@ $$
 
 #### The Formula
 
-$$
+```math
 \text{Area}(l, r) = \min(h[l], h[r]) \times (r - l)
-$$
+```
 
 #### 🔍 Proof: Why Move the Shorter Side?
 
-Suppose $h[l] < h[r]$. Consider all containers involving position $l$:
+Suppose \(h[l] < h[r]\). Consider all containers involving position \(l\):
 
-$$
+```math
 \text{Area}(l, k) = \min(h[l], h[k]) \times (k - l) \leq h[l] \times (k - l)
-$$
+```
 
-For any $k < r$:
+For any \(k < r\):
 
-$$
+```math
 \text{Area}(l, k) \leq h[l] \times (k - l) < h[l] \times (r - l) = \text{Area}(l, r)
-$$
+```
 
-So $(l, r)$ is already the **best container involving position $l$**!
+So \((l, r)\) is already the **best container involving position \(l\)**!
 
-We can safely discard $l$ and move to $l+1$. ∎
+We can safely discard \(l\) and move to \(l+1\). ∎
 
 ---
 
@@ -156,29 +155,29 @@ We can safely discard $l$ and move to $l+1$. ∎
 #### Phase 1: Meeting Point
 
 Let:
-- $\mu$ = distance from head to cycle start
-- $\lambda$ = cycle length
-- Meeting point is at distance $k$ into the cycle
+- \(\mu\) = distance from head to cycle start
+- \(\lambda\) = cycle length
+- Meeting point is at distance \(k\) into the cycle
 
 When they meet:
-- Slow traveled: $\mu + k$ steps
-- Fast traveled: $\mu + k + n\lambda$ steps (for some $n \geq 1$)
+- Slow traveled: \(\mu + k\) steps
+- Fast traveled: \(\mu + k + n\lambda\) steps (for some \(n \geq 1\))
 
 Since fast moves twice as fast:
 
-$$
+```math
 2(\mu + k) = \mu + k + n\lambda
 \mu + k = n\lambda
 \mu = n\lambda - k
-$$
+```
 
 #### Phase 2: Finding Cycle Start
 
 After meeting, reset one pointer to head. Both move 1 step at a time.
 
-- Pointer from head travels: $\mu$ steps
-- Pointer from meeting point travels: $\mu = n\lambda - k$ steps
-  - This equals $n$ complete cycles minus $k$ steps
+- Pointer from head travels: \(\mu\) steps
+- Pointer from meeting point travels: \(\mu = n\lambda - k\) steps
+  - This equals \(n\) complete cycles minus \(k\) steps
   - Which brings it exactly to the cycle start!
 
 They meet at the cycle start! ∎
@@ -188,17 +187,17 @@ They meet at the cycle start! ∎
 ### 4️⃣ Trapping Rain Water — The Insight
 
 {: .highlight }
-> Water at position $i$ = $\min(\text{maxLeft}[i], \text{maxRight}[i]) - h[i]$
+> Water at position \(i\) = \(\min(\text{maxLeft}[i], \text{maxRight}[i]) - h[i]\)
 
 #### Two-Pointer Optimization
 
 Instead of precomputing maxLeft and maxRight arrays (O(n) space), use two pointers:
 
-- Maintain $leftMax$ and $rightMax$ as we go
-- If $leftMax < rightMax$: water at left is determined by $leftMax$
-- If $rightMax \leq leftMax$: water at right is determined by $rightMax$
+- Maintain \(leftMax\) and \(rightMax\) as we go
+- If \(leftMax < rightMax\): water at left is determined by \(leftMax\)
+- If \(rightMax \leq leftMax\): water at right is determined by \(rightMax\)
 
-**Why?** If $leftMax < rightMax$, there exists some bar on the right ≥ $rightMax$ > $leftMax$, so the water level at left is exactly $leftMax$.
+**Why?** If \(leftMax < rightMax\), there exists some bar on the right ≥ \(rightMax\) > \(leftMax\), so the water level at left is exactly \(leftMax\).
 
 ---
 
@@ -382,7 +381,6 @@ def find_cycle_start(head: ListNode) -> ListNode:
         fast = fast.next.next
         
         if slow == fast:
-
             # Phase 2: Find cycle start
             slow = head
             while slow != fast:

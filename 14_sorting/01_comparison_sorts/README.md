@@ -4,7 +4,6 @@ title: "Comparison Sorts"
 parent: "Sorting"
 nav_order: 1
 permalink: /14_sorting/01_comparison_sorts/
-
 ---
 
 <div align="center">
@@ -47,10 +46,10 @@ permalink: /14_sorting/01_comparison_sorts/
 
 After `partition(arr, low, high)`:
 
-$$
+```math
 \forall i \in [low, pivot): arr[i] \leq arr[pivot]
 \forall i \in (pivot, high]: arr[i] > arr[pivot]
-$$
+```
 
 ---
 
@@ -69,9 +68,9 @@ $$
 **Build max-heap:** O(n)
 **Extract max n times:** O(n log n)
 
-$$
+```math
 T = O(n) + O(n \log n) = O(n \log n)
-$$
+```
 
 ---
 
@@ -93,7 +92,6 @@ def quickSort(arr: list[int], low: int, high: int) -> None:
 def partition(arr: list[int], low: int, high: int) -> int:
     """Lomuto partition."""
     import random
-
     # Randomize pivot to avoid worst case
     rand_idx = random.randint(low, high)
     arr[rand_idx], arr[high] = arr[high], arr[rand_idx]

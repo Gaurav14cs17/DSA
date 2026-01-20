@@ -5,7 +5,6 @@ parent: "Binomial Coefficients"
 grand_parent: "Number Theory"
 nav_order: 4
 permalink: /30_number_theory/08_binomial_coefficients/04_lucas_application/
-
 ---
 
 <div align="center">
@@ -48,9 +47,9 @@ permalink: /30_number_theory/08_binomial_coefficients/04_lucas_application/
 
 **Lucas' Theorem:** For prime p and non-negative integers m, n:
 
-$$
+```math
 \binom{m}{n} \equiv \prod_{i=0}^{k} \binom{m_i}{n_i} \pmod{p}
-$$
+```
 
 where $m = \sum m\_i p^i$ and $n = \sum n\_i p^i$ are base-p representations.
 
@@ -184,7 +183,6 @@ def lucas_prime_power(m: int, n: int, p: int, k: int) -> int:
     More complex - uses Andrew Granville's theorem.
     For basic problems, just use CRT with multiple primes.
     """
-
     # This is an advanced topic
     # For p^k, combine:
     # 1. Lucas' theorem for p

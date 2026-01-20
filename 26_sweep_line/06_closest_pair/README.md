@@ -4,7 +4,6 @@ title: "Closest Pair of Points"
 parent: "Sweep Line Algorithm"
 nav_order: 6
 permalink: /26_sweep_line/06_closest_pair/
-
 ---
 
 <div align="center">
@@ -62,9 +61,9 @@ permalink: /26_sweep_line/06_closest_pair/
 
 **Recurrence:**
 
-$$
+```math
 T(n) = 2T(n/2) + O(n) = O(n \log n)
-$$
+```
 
 ---
 
@@ -112,21 +111,21 @@ $$
 
 **Euclidean:**
 
-$$
+```math
 d(p, q) = \sqrt{(p_x - q_x)^2 + (p_y - q_y)^2}
-$$
+```
 
 **Manhattan:**
 
-$$
+```math
 d(p, q) = |p_x - q_x| + |p_y - q_y|
-$$
+```
 
 **Chebyshev:**
 
-$$
+```math
 d(p, q) = \max(|p_x - q_x|, |p_y - q_y|)
-$$
+```
 
 **Note:** For finding closest, can compare squared distances (avoid sqrt).
 
@@ -429,7 +428,6 @@ def find_closest_to_k(arr: List[int], k: int, x: int) -> List[int]:
     
     Time: O(log n + k), Space: O(1)
     """
-
     # Binary search for starting position
     left, right = 0, len(arr) - k
     

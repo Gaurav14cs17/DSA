@@ -5,7 +5,6 @@ parent: "Binomial Coefficients"
 grand_parent: "Number Theory"
 nav_order: 1
 permalink: /30_number_theory/08_binomial_coefficients/01_pascals_triangle/
-
 ---
 
 <div align="center">

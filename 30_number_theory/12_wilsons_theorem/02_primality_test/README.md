@@ -5,7 +5,6 @@ parent: "Wilson's Theorem"
 grand_parent: "Number Theory"
 nav_order: 2
 permalink: /30_number_theory/12_wilsons_theorem/02_primality_test/
-
 ---
 
 <div align="center">
@@ -97,7 +96,6 @@ def is_prime_wilson(n: int) -> bool:
 for n in range(2, 30):
     if is_prime_wilson(n):
         print(n, end=' ')
-
 # Output: 2 3 5 7 11 13 17 19 23 29
 ```
 

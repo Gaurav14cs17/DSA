@@ -4,7 +4,6 @@ title: "Number Theory"
 nav_order: 31
 has_children: true
 permalink: /30_number_theory/
-
 ---
 
 <div align="center">

@@ -4,7 +4,6 @@ title: "1D DP"
 parent: "Dynamic Programming"
 nav_order: 1
 permalink: /18_dynamic_programming/01_1d_dp/
-
 ---
 
 <div align="center">
@@ -40,9 +39,9 @@ permalink: /18_dynamic_programming/01_1d_dp/
 
 ### 1️⃣ General Form
 
-$$
+```math
 dp[i] = f(dp[i-1], dp[i-2], \ldots, dp[0])
-$$
+```
 
 **Space optimization:** If only last k values needed, use O(k) space.
 

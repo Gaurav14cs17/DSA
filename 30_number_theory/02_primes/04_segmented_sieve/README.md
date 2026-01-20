@@ -5,7 +5,6 @@ parent: "Prime Numbers"
 grand_parent: "Number Theory"
 nav_order: 4
 permalink: /30_number_theory/02_primes/04_segmented_sieve/
-
 ---
 
 <div align="center">
@@ -69,9 +68,9 @@ For prime $p$ and range starting at $L$:
 
 **First multiple of p that is ≥ L:**
 
-$$
+```math
 \text{start} = \left\lceil \frac{L}{p} \right\rceil \times p = \left(\frac{L + p - 1}{p}\right) \times p
-$$
+```
 
 **But skip p itself if it's in range:**
 
@@ -234,7 +233,6 @@ def segmented_sieve(L: int, R: int) -> list[int]:
         >>> segmented_sieve(100, 150)
         [101, 103, 107, 109, 113, 127, 131, 137, 139, 149]
         >>> len(segmented_sieve(10**9, 10**9 + 1000))
-
         # Returns primes near 10^9
     """
     from math import isqrt
@@ -262,7 +260,6 @@ def segmented_sieve(L: int, R: int) -> list[int]:
     
     # Step 3: Mark multiples of small primes
     for p in small_primes:
-
         # Find first multiple of p that is >= L
         start = ((L + p - 1) // p) * p
         
@@ -319,7 +316,6 @@ def segmented_sieve_optimized(L: int, R: int) -> list[int]:
     is_prime = [True] * size
     
     for p in small_primes:
-
         # Early termination: if p² > R, remaining primes are too large
         if p * p > R:
             break
@@ -424,7 +420,6 @@ def segmented_sieve_blocks(n: int, block_size: int = 10**6) -> list[int]:
         block = [True] * size
         
         for p in small_primes:
-
             # First multiple of p in this block
             first = ((start + p - 1) // p) * p
             

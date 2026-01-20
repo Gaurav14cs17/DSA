@@ -4,7 +4,6 @@ title: "Reversal"
 parent: "Linked Lists"
 nav_order: 2
 permalink: /03_linked_lists/02_reversal/
-
 ---
 
 <div align="center">
@@ -47,9 +46,9 @@ permalink: /03_linked_lists/02_reversal/
 
 After iteration $i$:
 
-$$
+```math
 \boxed{\text{null} \leftarrow node_0 \leftarrow node_1 \leftarrow \cdots \leftarrow node_i \quad | \quad node_{i+1} \to \cdots \to node_{n-1}}
-$$
+```
 
 Where:
 - Left of `|`: Already reversed (prev points to $node\_i$)
@@ -67,7 +66,7 @@ Where:
 
 **Recursive Definition:**
 
-$$
+```math
 \text{reverse}(head) = \begin{cases}
 head & \text{if } head = \text{null or } head.next = \text{null} \\
 \text{let } rest = \text{reverse}(head.next) & \\
@@ -75,14 +74,14 @@ head & \text{if } head = \text{null or } head.next = \text{null} \\
 \quad head.next = \text{null} & \\
 \quad \text{return } rest
 \end{cases}
-$$
+```
 
 **Recurrence Relation:**
 
-$$
+```math
 T(n) = T(n-1) + O(1)
 \boxed{T(n) = O(n) \text{ time}, \; O(n) \text{ stack space}}
-$$
+```
 
 ---
 
@@ -100,15 +99,15 @@ $$
 
 Iterative uses fixed variables:
 
-$$
+```math
 S_{\text{iter}}(n) = 3 \text{ pointers} = O(1)
-$$
+```
 
 Recursive stacks n frames:
 
-$$
+```math
 S_{\text{rec}}(n) = \sum_{i=1}^{n} O(1) = O(n)
-$$
+```
 
 ---
 
@@ -122,9 +121,9 @@ Result: $n\_1 \to n\_2 \to \cdots \to n\_{left-1} \to n\_{right} \to \cdots \to 
 
 **Number of link reversals needed:**
 
-$$
+```math
 \boxed{\text{reversals} = right - left}
-$$
+```
 
 ---
 
@@ -134,21 +133,21 @@ $$
 
 **Number of complete groups:**
 
-$$
+```math
 \text{complete\_groups} = \left\lfloor \frac{n}{k} \right\rfloor
-$$
+```
 
 **Remaining nodes:**
 
-$$
+```math
 \text{remaining} = n \mod k
-$$
+```
 
 **Total reversals:**
 
-$$
+```math
 \text{total\_reversals} = \left\lfloor \frac{n}{k} \right\rfloor \times (k-1)
-$$
+```
 
 **Time Complexity:** $O(n)$ - each node visited once
 
@@ -453,7 +452,6 @@ def reverseList(head: ListNode) -> ListNode:
     current = head
     
     while current:
-
         # Save next node
         next_node = current.next
         
@@ -477,7 +475,6 @@ def reverseListRecursive(head: ListNode) -> ListNode:
     
     Time: O(n), Space: O(n) for call stack
     """
-
     # Base case
     if not head or not head.next:
         return head
@@ -544,7 +541,6 @@ def reverseKGroup(head: ListNode, k: int) -> ListNode:
     
     Time: O(n), Space: O(n/k) for recursion
     """
-
     # Check if k nodes available
     count = 0
     current = head
@@ -583,7 +579,6 @@ def swapPairs(head: ListNode) -> ListNode:
     prev = dummy
     
     while prev.next and prev.next.next:
-
         # Identify the pair
         first = prev.next
         second = prev.next.next
@@ -628,7 +623,6 @@ def reorderList(head: ListNode) -> None:
     # Step 3: Merge two halves
     first = head
     while second:
-
         # Save next pointers
         next1 = first.next
         next2 = second.next
@@ -842,7 +836,6 @@ A: Use dummy node, iterate through pairs. For each pair: extract second, insert 
 ### Pitfall 1: Losing Reference
 
 ```python
-
 # ❌ WRONG: Lost reference to rest of list
 current.next = prev  # Oops, lost rest of list!
 
@@ -854,7 +847,6 @@ current.next = prev       # Now safe to reverse
 ### Pitfall 2: Not Handling Single Node
 
 ```python
-
 # ❌ WRONG: Crashes on single node
 def reverse(head):
     prev = None
@@ -871,13 +863,11 @@ def reverse(head):
 ### Pitfall 3: Off-by-One in Partial Reversal
 
 ```python
-
 # ❌ WRONG: Wrong number of iterations
 for _ in range(right - left + 1):  # One too many!
 
 # ✅ CORRECT: Exactly (right - left) swaps
 for _ in range(right - left):
-
     # Move nodes to front
 ```
 

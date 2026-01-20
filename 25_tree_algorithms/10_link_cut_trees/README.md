@@ -4,7 +4,6 @@ title: "Link-Cut Trees (Dynamic Trees)"
 parent: "Tree Algorithms"
 nav_order: 10
 permalink: /25_tree_algorithms/10_link_cut_trees/
-
 ---
 
 <div align="center">
@@ -160,7 +159,6 @@ class LinkCutTree:
     def _push(self, node: Node):
         """Push down lazy flags."""
         if node.reversed:
-
             # Swap children
             node.left, node.right = node.right, node.left
             
@@ -186,14 +184,12 @@ class LinkCutTree:
         grandparent = parent.parent if parent else None
         
         if parent.left == node:
-
             # Right rotation
             parent.left = node.right
             if node.right:
                 node.right.parent = parent
             node.right = parent
         else:
-
             # Left rotation
             parent.right = node.left
             if node.left:
@@ -219,25 +215,21 @@ class LinkCutTree:
             grandparent = parent.parent if parent else None
             
             if self._is_root(parent):
-
                 # Zig step
                 self._push(parent)
                 self._push(node)
                 self._rotate(node)
             else:
-
                 # Zig-zig or zig-zag
                 self._push(grandparent)
                 self._push(parent)
                 self._push(node)
                 
                 if (grandparent.left == parent) == (parent.left == node):
-
                     # Zig-zig
                     self._rotate(parent)
                     self._rotate(node)
                 else:
-
                     # Zig-zag
                     self._rotate(node)
                     self._rotate(node)

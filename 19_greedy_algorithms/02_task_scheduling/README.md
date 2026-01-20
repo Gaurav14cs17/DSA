@@ -4,7 +4,6 @@ title: "Task Scheduling"
 parent: "Greedy Algorithms"
 nav_order: 2
 permalink: /19_greedy_algorithms/02_task_scheduling/
-
 ---
 
 <div align="center">
@@ -36,9 +35,9 @@ permalink: /19_greedy_algorithms/02_task_scheduling/
 
 With cooldown $n$ between same tasks:
 
-$$
+```math
 \text{time} = \max(\text{total tasks}, (\text{max freq} - 1) \times (n + 1) + \text{count of max freq})
-$$
+```
 
 ---
 
@@ -46,9 +45,9 @@ $$
 
 **Condition for success:**
 
-$$
+```math
 \text{max frequency} \leq \lceil \frac{n}{2} \rceil
-$$
+```
 
 ---
 

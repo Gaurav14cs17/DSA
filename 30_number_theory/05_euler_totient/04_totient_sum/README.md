@@ -5,7 +5,6 @@ parent: "Euler's Totient"
 grand_parent: "Number Theory"
 nav_order: 4
 permalink: /30_number_theory/05_euler_totient/04_totient_sum/
-
 ---
 
 <div align="center">
@@ -47,9 +46,9 @@ permalink: /30_number_theory/05_euler_totient/04_totient_sum/
 
 ### Totient Summatory Function
 
-$$
+```math
 \Phi(n) = \sum_{i=1}^{n} \phi(i)
-$$
+```
 
 **Asymptotic:** $\Phi(n) \approx \frac{3n^2}{\pi^2}$
 
@@ -86,7 +85,6 @@ def phi_sieve(limit: int) -> list[int]:
 # Example
 phi = phi_sieve(20)
 print("φ values:", phi[1:21])
-
 # [1, 1, 2, 2, 4, 2, 6, 4, 6, 4, 10, 4, 12, 6, 8, 8, 16, 6, 18, 8]
 ```
 

@@ -4,7 +4,6 @@ title: "Linked List Two Pointers"
 parent: "Two Pointers"
 nav_order: 3
 permalink: /22_two_pointers/03_linked_list/
-
 ---
 
 <div align="center">
@@ -65,9 +64,9 @@ permalink: /22_two_pointers/03_linked_list/
 
 #### Why They Must Meet
 
-In a cycle of length $\lambda$:
+In a cycle of length \(\lambda\):
 - Fast gains 1 position on slow each step
-- After at most $\lambda$ steps inside the cycle, they meet
+- After at most \(\lambda\) steps inside the cycle, they meet
 
 ---
 
@@ -79,9 +78,9 @@ In a cycle of length $\lambda$:
 #### Setup and Notation
 
 Let:
-- $\mu$ = distance from head to cycle start (tail length)
-- $\lambda$ = cycle length
-- $x$ = meeting point's distance from cycle start (clockwise)
+- \(\mu\) = distance from head to cycle start (tail length)
+- \(\lambda\) = cycle length
+- \(x\) = meeting point's distance from cycle start (clockwise)
 
 ```
 Head ------○------○------○------●
@@ -99,17 +98,17 @@ Head ------○------○------○------●
 **Claim 1**: If there's a cycle, slow and fast will meet.
 
 When slow enters the cycle:
-- Slow has traveled $\mu$ steps
-- Fast has traveled $2\mu$ steps
+- Slow has traveled \(\mu\) steps
+- Fast has traveled \(2\mu\) steps
 
-Fast is already in the cycle. Let $d$ be the distance between them (measured in direction of travel).
+Fast is already in the cycle. Let \(d\) be the distance between them (measured in direction of travel).
 
 Each step:
 - Slow moves 1 forward
 - Fast moves 2 forward
 - Gap decreases by 1
 
-After $d$ more steps, gap becomes 0 — they meet! ∎
+After \(d\) more steps, gap becomes 0 — they meet! ∎
 
 ---
 
@@ -122,59 +121,59 @@ After $d$ more steps, gap becomes 0 — they meet! ∎
 
 **When they meet:**
 
-Let slow have traveled $s$ steps:
+Let slow have traveled \(s\) steps:
 
-$$
+```math
 s = \mu + x + a\lambda
-$$
+```
 
-where $a$ is the number of complete cycles slow made.
+where \(a\) is the number of complete cycles slow made.
 
-Fast traveled $2s$ steps:
+Fast traveled \(2s\) steps:
 
-$$
+```math
 2s = \mu + x + b\lambda
-$$
+```
 
-where $b$ is the number of complete cycles fast made.
+where \(b\) is the number of complete cycles fast made.
 
 Subtracting:
 
-$$
+```math
 s = (b - a)\lambda = k\lambda
-$$
+```
 
-for some positive integer $k$.
+for some positive integer \(k\).
 
 So:
 
-$$
+```math
 \mu + x + a\lambda = k\lambda
 \mu + x = (k - a)\lambda = m\lambda
-$$
+```
 
-for some non-negative integer $m$.
+for some non-negative integer \(m\).
 
-**This means:** $\mu + x$ is a multiple of $\lambda$!
+**This means:** \(\mu + x\) is a multiple of \(\lambda\)!
 
 #### The Reset Phase
 
 When we reset slow to head and move both one step at a time:
 
-- Pointer from head travels $\mu$ steps to reach cycle start
-- Pointer from meeting point travels $\mu$ steps
+- Pointer from head travels \(\mu\) steps to reach cycle start
+- Pointer from meeting point travels \(\mu\) steps
 
-From meeting point (distance $x$ from cycle start):
+From meeting point (distance \(x\) from cycle start):
 
-$$
+```math
 \text{Position after } \mu \text{ steps} = x + \mu \pmod{\lambda}
-$$
+```
 
-Since $\mu + x = m\lambda$:
+Since \(\mu + x = m\lambda\):
 
-$$
+```math
 x + \mu \equiv 0 \pmod{\lambda}
-$$
+```
 
 This is exactly the cycle start position! ∎
 
@@ -229,25 +228,25 @@ This is exactly the cycle start position! ∎
 
 - Slow moves 1 step per iteration
 - Fast moves 2 steps per iteration
-- When fast reaches position $n$, slow is at position $n/2$
+- When fast reaches position \(n\), slow is at position \(n/2\)
 
-For even length $n$: slow at $n/2$ (second middle)
-For odd length $n$: slow at $\lfloor n/2 \rfloor + 1$ (true middle)
+For even length \(n\): slow at \(n/2\) (second middle)
+For odd length \(n\): slow at \(\lfloor n/2 \rfloor + 1\) (true middle)
 
 ---
 
 ### 5️⃣ Nth From End — Gap Technique
 
 {: .important }
-> Fast starts $n$ steps ahead. When fast reaches end, slow is at $n$th from end.
+> Fast starts \(n\) steps ahead. When fast reaches end, slow is at \(n\)th from end.
 
 #### Proof
 
-Total length = $L$
-- Fast starts at position $n$
-- When fast at position $L$, fast traveled $L - n$ steps
-- Slow also traveled $L - n$ steps, so slow at position $L - n$
-- Position $L - n$ is $n$th from end (0-indexed) ∎
+Total length = \(L\)
+- Fast starts at position \(n\)
+- When fast at position \(L\), fast traveled \(L - n\) steps
+- Slow also traveled \(L - n\) steps, so slow at position \(L - n\)
+- Position \(L - n\) is \(n\)th from end (0-indexed) ∎
 
 ---
 
@@ -258,14 +257,14 @@ Total length = $L$
 
 #### The Insight
 
-If list A has length $a + c$ and list B has length $b + c$ where $c$ is common:
+If list A has length \(a + c\) and list B has length \(b + c\) where \(c\) is common:
 
-- Pointer A: traverses A then B = $a + c + b + c$ steps
-- Pointer B: traverses B then A = $b + c + a + c$ steps
+- Pointer A: traverses A then B = \(a + c + b + c\) steps
+- Pointer B: traverses B then A = \(b + c + a + c\) steps
 
-At step $a + b + c$, both are at the intersection!
+At step \(a + b + c\), both are at the intersection!
 
-If no intersection ($c = 0$), both reach null at step $a + b$.
+If no intersection (\(c = 0\)), both reach null at step \(a + b\).
 
 ---
 
@@ -414,7 +413,6 @@ def detectCycle(head: ListNode) -> ListNode:
         fast = fast.next.next
         
         if slow == fast:
-
             # Phase 2: Find cycle start
             # Reset slow to head, keep fast at meeting point
             slow = head
@@ -454,7 +452,6 @@ def removeNthFromEnd(head: ListNode, n: int) -> ListNode:
     
     Time: O(L), Space: O(1)
     """
-
     # Dummy node handles edge case of removing head
     dummy = ListNode(0)
     dummy.next = head
@@ -489,7 +486,6 @@ def findDuplicate(nums: list[int]) -> int:
     >>> findDuplicate([1, 3, 4, 2, 2])
     2
     """
-
     # Phase 1: Find meeting point in cycle
     slow = fast = nums[0]
     
@@ -527,7 +523,6 @@ def getIntersectionNode(headA: ListNode, headB: ListNode) -> ListNode:
     
     # Traverse A + B and B + A
     while ptrA != ptrB:
-
         # When reaching end, switch to other list's head
         ptrA = ptrA.next if ptrA else headB
         ptrB = ptrB.next if ptrB else headA

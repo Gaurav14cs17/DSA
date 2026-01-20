@@ -4,7 +4,6 @@ title: "Treap (Tree + Heap)"
 parent: "Advanced Trees"
 nav_order: 6
 permalink: /27_advanced_trees/06_treap/
-
 ---
 
 <div align="center">
@@ -191,13 +190,11 @@ class Treap:
         # Standard BST insert
         if key < node.key:
             node.left = self._insert(node.left, key)
-
             # Maintain heap property
             if node.left.priority > node.priority:
                 node = self.rotate_right(node)
         elif key > node.key:
             node.right = self._insert(node.right, key)
-
             # Maintain heap property
             if node.right.priority > node.priority:
                 node = self.rotate_left(node)
@@ -224,7 +221,6 @@ class Treap:
         elif key > node.key:
             node.right = self._delete(node.right, key)
         else:
-
             # Node to delete found
             # Rotate down until it becomes leaf
             if not node.left:
@@ -232,7 +228,6 @@ class Treap:
             elif not node.right:
                 return node.left
             else:
-
                 # Rotate child with higher priority up
                 if node.left.priority > node.right.priority:
                     node = self.rotate_right(node)
@@ -273,7 +268,6 @@ class Treap:
         
         Time: O(log n) expected
         """
-
         # Insert sentinel with infinite priority
         sentinel = TreapNode(key)
         sentinel.priority = float('inf')
@@ -458,7 +452,6 @@ def kth_smallest_in_bst(root: TreapNode, k: int) -> int:
             return kth(node.right, k - left_size - 1)
     
     def get_size(node: Optional[TreapNode]) -> int:
-
         # Would need to maintain size in actual implementation
         return 0
     

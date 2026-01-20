@@ -4,7 +4,6 @@ title: "Binary Search on Answer"
 parent: "Searching"
 nav_order: 2
 permalink: /15_searching/02_binary_search_on_answer/
-
 ---
 
 <div align="center">
@@ -38,17 +37,17 @@ permalink: /15_searching/02_binary_search_on_answer/
 
 **Requirement:** Feasibility function is monotonic.
 
-$$
+```math
 \text{feasible}(x) \text{ is monotonic in } x
-$$
+```
 
 ---
 
 ### 2️⃣ Minimize Maximum Pattern
 
-$$
+```math
 \text{answer} = \min\{x : \text{canAchieve}(x) = \text{true}\}
-$$
+```
 
 **Example:** Minimum capacity to ship all packages in D days.
 
@@ -56,9 +55,9 @@ $$
 
 ### 3️⃣ Maximize Minimum Pattern
 
-$$
+```math
 \text{answer} = \max\{x : \text{canAchieve}(x) = \text{true}\}
-$$
+```
 
 **Example:** Maximum minimum distance between cows.
 
@@ -66,9 +65,9 @@ $$
 
 ### 4️⃣ Time Complexity
 
-$$
+```math
 T = O(\log R \times \text{check}(n))
-$$
+```
 
 Where $R$ = search range, check() = feasibility check.
 

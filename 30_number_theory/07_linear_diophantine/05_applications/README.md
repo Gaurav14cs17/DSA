@@ -5,7 +5,6 @@ parent: "Linear Diophantine Equations"
 grand_parent: "Number Theory"
 nav_order: 5
 permalink: /30_number_theory/07_linear_diophantine/05_applications/
-
 ---
 
 <div align="center">

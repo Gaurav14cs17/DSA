@@ -5,7 +5,6 @@ parent: "Binomial Coefficients"
 grand_parent: "Number Theory"
 nav_order: 2
 permalink: /30_number_theory/08_binomial_coefficients/02_combinations/
-
 ---
 
 <div align="center">
@@ -48,17 +47,17 @@ permalink: /30_number_theory/08_binomial_coefficients/02_combinations/
 
 ### Definition
 
-$$
+```math
 C(n,k) = \binom{n}{k} = \frac{n!}{k!(n-k)!}
-$$
+```
 
 **Meaning:** Number of ways to choose k items from n items (order doesn't matter).
 
 ### Multiplicative Formula (Avoids Overflow)
 
-$$
+```math
 C(n,k) = \frac{n \times (n-1) \times \cdots \times (n-k+1)}{k \times (k-1) \times \cdots \times 1}
-$$
+```
 
 ---
 

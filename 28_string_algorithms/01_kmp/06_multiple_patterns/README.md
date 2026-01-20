@@ -4,7 +4,6 @@ title: "Multiple Pattern Matching"
 parent: "KMP Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 6
-
 ---
 
 # 🔀 Multiple Pattern Matching with KMP
@@ -488,14 +487,12 @@ for pattern, matches in results.items():
 
 1. **Group by Length:**
    ```python
-
    # Patterns of same length can be checked together
    # Reduces overhead
    ```
 
 2. **Early Termination:**
    ```python
-
    # Stop if all patterns found
    if len(found_patterns) == len(patterns):
        break
@@ -503,7 +500,6 @@ for pattern, matches in results.items():
 
 3. **Preprocessing:**
    ```python
-
    # Compute all π arrays once
    # Reuse for multiple texts
    ```
@@ -523,7 +519,6 @@ for pattern, matches in results.items():
 KMP for multiple patterns naturally leads to Aho-Corasick:
 
 ```python
-
 # KMP idea: Use failure function
 # Aho-Corasick idea: Share failure function across patterns
 

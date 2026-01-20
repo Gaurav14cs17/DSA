@@ -5,7 +5,6 @@ parent: "Linear Diophantine Equations"
 grand_parent: "Number Theory"
 nav_order: 4
 permalink: /30_number_theory/07_linear_diophantine/04_coin_problems/
-
 ---
 
 <div align="center">

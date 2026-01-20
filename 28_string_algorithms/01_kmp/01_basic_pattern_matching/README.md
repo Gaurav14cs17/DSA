@@ -4,7 +4,6 @@ title: "Basic Pattern Matching"
 parent: "KMP Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 1
-
 ---
 
 # 🎯 Basic Pattern Matching with KMP
@@ -124,7 +123,6 @@ def find_all_occurrences(text, pattern):
 text = "ABABDABACDABABCABAB"
 pattern = "AB"
 print(find_all_occurrences(text, pattern))
-
 # Output: [0, 2, 5, 10, 12, 17]
 ```
 
@@ -365,7 +363,6 @@ texts = [
 pattern = "AB"
 results = search_in_multiple_texts(texts, pattern)
 print(results)
-
 # {0: [0, 2, 5, 10, 12, 17], 1: [0], 2: [0, 2, 4, 6, 8]}
 ```
 
@@ -519,7 +516,6 @@ class Solution:
         Time: O(n + m)
         Space: O(n)
         """
-
         # Minimum repetitions needed
         min_reps = (len(b) + len(a) - 1) // len(a)
         

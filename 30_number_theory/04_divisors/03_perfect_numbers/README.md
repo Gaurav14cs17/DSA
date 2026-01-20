@@ -5,7 +5,6 @@ parent: "Divisors"
 grand_parent: "Number Theory"
 nav_order: 3
 permalink: /30_number_theory/04_divisors/03_perfect_numbers/
-
 ---
 
 <div align="center">
@@ -50,9 +49,9 @@ permalink: /30_number_theory/04_divisors/03_perfect_numbers/
 
 A positive integer n is **perfect** if it equals the sum of its proper divisors:
 
-$$
+```math
 n = \sum_{\substack{d|n \\ d < n}} d
-$$
+```
 
 Equivalently: $\sigma(n) = 2n$
 
@@ -76,9 +75,9 @@ Equivalently: $\sigma(n) = 2n$
 
 **Theorem:** An even number is perfect **if and only if** it has the form:
 
-$$
+```math
 n = 2^{p-1}(2^p - 1)
-$$
+```
 
 where $2^p - 1$ is a **Mersenne prime**.
 
@@ -206,7 +205,6 @@ def generate_perfect_numbers(count: int) -> list[int]:
 
 # Generate first 5 perfect numbers
 print(generate_perfect_numbers(5))
-
 # [6, 28, 496, 8128, 33550336]
 ```
 
@@ -271,7 +269,6 @@ def find_abundant_numbers(limit: int) -> list[int]:
 
 # First 10 abundant numbers
 print(find_abundant_numbers(50))
-
 # [12, 18, 20, 24, 30, 36, 40, 42, 48]
 ```
 

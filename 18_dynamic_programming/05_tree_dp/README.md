@@ -4,7 +4,6 @@ title: "Tree DP"
 parent: "Dynamic Programming"
 nav_order: 5
 permalink: /18_dynamic_programming/05_tree_dp/
-
 ---
 
 <div align="center">
@@ -42,19 +41,19 @@ permalink: /18_dynamic_programming/05_tree_dp/
 
 Compute DP values bottom-up (post-order):
 
-$$
+```math
 dp[node] = f(dp[left], dp[right], node.val)
-$$
+```
 
 ---
 
 ### 2️⃣ House Robber III
 
-$$
+```math
 dp[node] = (\text{rob}, \text{not\_rob})
 \text{rob} = node.val + \text{not\_rob}_{left} + \text{not\_rob}_{right}
 \text{not\_rob} = \max(dp_{left}) + \max(dp_{right})
-$$
+```
 
 ---
 

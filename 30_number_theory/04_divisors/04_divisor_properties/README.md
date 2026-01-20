@@ -5,7 +5,6 @@ parent: "Divisors"
 grand_parent: "Number Theory"
 nav_order: 4
 permalink: /30_number_theory/04_divisors/04_divisor_properties/
-
 ---
 
 <div align="center">
@@ -63,22 +62,22 @@ A function f is **multiplicative** if:
 
 **Sum over Divisors:**
 
-$$
+```math
 \sum_{d|n} \phi(d) = n
-$$
+```
 
 **Möbius Inversion:**
 
-$$
+```math
 g(n) = \sum_{d|n} f(d) \implies f(n) = \sum_{d|n} \mu(d) g(n/d)
-$$
+```
 
 **Dirichlet Convolution:**
 
-$$
+```math
 \tau = 1 * 1
 \sigma = \text{id} * 1
-$$
+```
 
 ---
 
@@ -86,9 +85,9 @@ $$
 
 For multiplicative f, if $n = p\_1^{a\_1} \cdots p\_k^{a\_k}$:
 
-$$
+```math
 f(n) = f(p_1^{a_1}) \cdot f(p_2^{a_2}) \cdots f(p_k^{a_k})
-$$
+```
 
 ---
 
@@ -122,7 +121,6 @@ def get_divisors(n: int) -> list[int]:
 
 # Example
 print(get_divisors(60))
-
 # [1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60]
 ```
 

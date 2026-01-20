@@ -4,7 +4,6 @@ title: "Network Flow"
 parent: "Graph Algorithms"
 nav_order: 4
 permalink: /24_graph_algorithms/04_network_flow/
-
 ---
 
 <div align="center">
@@ -51,15 +50,15 @@ permalink: /24_graph_algorithms/04_network_flow/
 
 **Capacity constraint:**
 
-$$
+```math
 0 \leq f(u, v) \leq c(u, v) \quad \forall (u,v) \in E
-$$
+```
 
 **Flow conservation:**
 
-$$
+```math
 \sum_{v:(u,v) \in E} f(u,v) = \sum_{v:(v,u) \in E} f(v,u) \quad \forall u \in V \setminus \{s,t\}
-$$
+```
 
 ---
 
@@ -75,13 +74,13 @@ $$
 
 **Residual capacity:**
 
-$$
+```math
 c_f(u,v) = \begin{cases}
 c(u,v) - f(u,v) & \text{if } (u,v) \in E \\
 f(v,u) & \text{if } (v,u) \in E \\
 0 & \text{otherwise}
 \end{cases}
-$$
+```
 
 **Augmenting path:** Path from $s$ to $t$ in residual graph with positive capacity.
 
@@ -93,15 +92,15 @@ $$
 
 **Capacity of cut:**
 
-$$
+```math
 c(S, T) = \sum_{u \in S, v \in T, (u,v) \in E} c(u,v)
-$$
+```
 
 **Theorem:**
 
-$$
+```math
 \max_{f \text{ flow}} |f| = \min_{(S,T) \text{ cut}} c(S,T)
-$$
+```
 
 ---
 
@@ -159,15 +158,15 @@ $$
 - Right partition connected to sink (capacity 1)
 - Original edges (capacity 1)
 
-$$
+```math
 \text{Max matching} = |f^*|
-$$
+```
 
 **König's Theorem:** In bipartite graph,
 
-$$
+```math
 \text{Max matching} = \text{Min vertex cover}
-$$
+```
 
 ---
 
@@ -236,7 +235,6 @@ class MaxFlow:
         
         # While augmenting path exists
         while self.bfs(source, sink, parent):
-
             # Find bottleneck capacity
             path_flow = float('inf')
             v = sink
@@ -264,7 +262,6 @@ class MaxFlow:
         
         Returns: (cut_value, cut_edges)
         """
-
         # Compute max flow first
         flow_value = self.max_flow(source, sink)
         
@@ -370,7 +367,6 @@ def bipartite_matching(n1: int, n2: int, edges: List[Tuple[int, int]]) -> int:
     
     Time: O(VE²), Space: O(V+E)
     """
-
     # Vertices: 0=source, 1..n1=left, n1+1..n1+n2=right, n1+n2+1=sink
     source = 0
     sink = n1 + n2 + 1
@@ -423,7 +419,6 @@ def findMaximizedCapital(k: int, w: int, profits: List[int],
     idx = 0
     
     for _ in range(k):
-
         # Add all affordable projects
         while idx < len(projects) and projects[idx][0] <= w:
             heapq.heappush(available, -projects[idx][1])  # Max heap
@@ -526,7 +521,6 @@ def minCostMaxFlow(n: int, edges: List[List[int]], source: int,
     flow_sent = 0
     
     while flow_sent < max_flow:
-
         # Find shortest path (minimum cost) using Bellman-Ford
         dist = defaultdict(lambda: float('inf'))
         dist[source] = 0

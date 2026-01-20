@@ -4,7 +4,6 @@ title: "Stacks"
 nav_order: 13
 has_children: true
 permalink: /04_stacks/
-
 ---
 
 <div align="center">
@@ -33,11 +32,11 @@ permalink: /04_stacks/
 
 A stack $S$ is a collection supporting:
 
-$$
+```math
 \text{push}(x): S \to S \cup \{x\}
 \text{pop}(): S \to S \setminus \{\text{top}\}, \text{ returns top}
 \text{peek}(): \text{returns top without removal}
-$$
+```
 
 **LIFO Property:** Last element pushed is first element popped.
 
@@ -62,10 +61,10 @@ $$
 
 For string $S$ with brackets $\{(, ), [, ], \{, \}\}$:
 
-$$
+```math
 \text{Valid} \iff \forall i: \text{count}_{open}(0..i) \geq \text{count}_{close}(0..i)
 \text{AND } \text{count}_{open}(S) = \text{count}_{close}(S)
-$$
+```
 
 **Stack Invariant:** Stack contains only unmatched opening brackets.
 
@@ -75,15 +74,15 @@ $$
 
 **Monotonically Increasing Stack:**
 
-$$
+```math
 \forall i < j: S[i] \leq S[j]
-$$
+```
 
 **Monotonically Decreasing Stack:**
 
-$$
+```math
 \forall i < j: S[i] \geq S[j]
-$$
+```
 
 **Key Insight:** When element $x$ is pushed:
 - Pop all elements violating monotonic property
@@ -97,12 +96,12 @@ $$
 
 **Monotonic Stack Approach:**
 
-$$
+```math
 \text{NGE}[i] = \begin{cases}
 A[j] & \text{first } j > i \text{ where } A[j] > A[i] \\
 -1 & \text{if no such } j \text{ exists}
 \end{cases}
-$$
+```
 
 **Time Complexity:** O(n) - each element pushed and popped at most once.
 
@@ -129,9 +128,9 @@ $$
 
 **Area Formula:**
 
-$$
+```math
 \text{Area}[i] = h[i] \times (\text{right\_bound}[i] - \text{left\_bound}[i] - 1)
-$$
+```
 
 Where:
 - $\text{left\_bound}[i]$ = index of first smaller bar on left
@@ -147,9 +146,9 @@ Where:
 
 **Solution:** Store $(value, current\_min)$ pairs.
 
-$$
+```math
 \text{min\_at}[i] = \min(value[i], \text{min\_at}[i-1])
-$$
+```
 
 **Space Trade-off:** O(n) extra space for O(1) getMin().
 
@@ -202,7 +201,6 @@ def next_greater_element(nums: list[int]) -> list[int]:
     stack = []  # Stores indices
     
     for i in range(n):
-
         # Pop elements smaller than current
         while stack and nums[stack[-1]] < nums[i]:
             idx = stack.pop()

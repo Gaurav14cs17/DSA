@@ -4,7 +4,6 @@ title: "Interval Sweep"
 parent: "Sweep Line Algorithm"
 nav_order: 1
 permalink: /26_sweep_line/01_interval_sweep/
-
 ---
 
 <div align="center">
@@ -48,9 +47,9 @@ permalink: /26_sweep_line/01_interval_sweep/
 
 **Active Count at time $t$:**
 
-$$
+```math
 \text{active}(t) = \sum_{\substack{i : s_i \leq t < e_i}} 1
-$$
+```
 
 ---
 
@@ -72,15 +71,15 @@ $$
 
 **Intervals Overlap:** Two intervals $[a, b]$ and $[c, d]$ overlap iff:
 
-$$
+```math
 \max(a, c) < \min(b, d)
-$$
+```
 
 Equivalently:
 
-$$
+```math
 a < d \land c < b
-$$
+```
 
 **Proof:**
 - Overlap means $\exists t : a \leq t < b \land c \leq t < d$
@@ -149,9 +148,9 @@ $$
 
 **Difference Array:** For range updates $[l, r] += val$:
 
-$$
+```math
 \Delta[i] = A[i] - A[i-1]
-$$
+```
 
 **Update:** $\Delta[l] += val, \Delta[r+1] -= val$
 
@@ -232,7 +231,6 @@ def meeting_rooms_heap(intervals: List[List[int]]) -> int:
     heap = []
     
     for start, end in intervals:
-
         # Remove meetings that have ended
         if heap and heap[0] <= start:
             heapq.heappop(heap)
@@ -303,7 +301,6 @@ def car_pooling(trips: List[List[int]], capacity: int) -> bool:
     
     Time: O(n log n), Space: O(n)
     """
-
     # Create events: (location, passenger_change)
     events = []
     for passengers, start, end in trips:
@@ -382,7 +379,6 @@ class MyCalendar:
     def book(self, start: int, end: int) -> bool:
         """Check if [start, end) can be booked."""
         for s, e in self.bookings:
-
             # Check overlap: start < e and end > s
             if start < e and end > s:
                 return False
@@ -402,7 +398,6 @@ class MyCalendarTwo:
         self.double = []  # Overlapping regions
     
     def book(self, start: int, end: int) -> bool:
-
         # Check if creates triple booking
         for s, e in self.double:
             if start < e and end > s:
@@ -454,7 +449,6 @@ def employee_free_time(schedule: List[List[Interval]]) -> List[Interval]:
     
     Time: O(n log n), Space: O(n)
     """
-
     # Flatten all intervals
     all_intervals = []
     for employee_schedule in schedule:

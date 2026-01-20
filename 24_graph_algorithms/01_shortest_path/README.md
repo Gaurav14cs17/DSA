@@ -4,7 +4,6 @@ title: "Shortest Path Algorithms"
 parent: "Graph Algorithms"
 nav_order: 1
 permalink: /24_graph_algorithms/01_shortest_path/
-
 ---
 
 <div align="center">
@@ -59,9 +58,9 @@ permalink: /24_graph_algorithms/01_shortest_path/
 
 **Relaxation Operation:**
 
-$$
+```math
 \text{dist}[v] = \min(\text{dist}[v], \text{dist}[u] + w(u,v))
-$$
+```
 
 **Correctness Proof:**
 - When vertex $u$ is extracted from priority queue, $\text{dist}[u]$ is optimal
@@ -69,9 +68,9 @@ $$
 
 **Priority Queue Implementation:**
 
-$$
+```math
 T = O((V + E) \log V)
-$$
+```
 
 ---
 
@@ -81,9 +80,9 @@ $$
 
 **Recurrence:**
 
-$$
+```math
 D^{(k)}[v] = \min_{(u,v) \in E}(D^{(k-1)}[u] + w(u,v))
-$$
+```
 
 **Meaning:** Shortest path to $v$ using at most $k$ edges.
 
@@ -97,21 +96,21 @@ If any edge can still be relaxed after $V-1$ iterations, negative cycle exists.
 
 **All-pairs shortest paths using DP:**
 
-$$
+```math
 D^{(k)}[i][j] = \min(D^{(k-1)}[i][j], D^{(k-1)}[i][k] + D^{(k-1)}[k][j])
-$$
+```
 
 **Meaning:** Shortest $i \to j$ using vertices $\{1, 2, \ldots, k\}$ as intermediates.
 
 **Base case:**
 
-$$
+```math
 D^{(0)}[i][j] = \begin{cases} 
 0 & \text{if } i = j \\
 w(i,j) & \text{if } (i,j) \in E \\
 \infty & \text{otherwise}
 \end{cases}
-$$
+```
 
 ---
 
@@ -119,9 +118,9 @@ $$
 
 **Heuristic-guided search:**
 
-$$
+```math
 f(n) = g(n) + h(n)
-$$
+```
 
 - $g(n)$: actual cost from start to $n$
 - $h(n)$: heuristic estimate from $n$ to goal
@@ -139,9 +138,9 @@ $$
 - Weight 0 edges: add to **front** of deque
 - Weight 1 edges: add to **back** of deque
 
-$$
+```math
 T = O(V + E), \quad S = O(V)
-$$
+```
 
 Faster than Dijkstra for this special case.
 

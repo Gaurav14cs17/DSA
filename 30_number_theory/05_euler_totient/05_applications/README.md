@@ -5,7 +5,6 @@ parent: "Euler's Totient"
 grand_parent: "Number Theory"
 nav_order: 5
 permalink: /30_number_theory/05_euler_totient/05_applications/
-
 ---
 
 <div align="center">
@@ -119,7 +118,6 @@ def count_primitive_roots(n: int) -> int:
             n //= 2
             if n % 2 == 0:
                 return False
-
         # Check if remaining is prime power
         p = 2
         while p * p <= n:

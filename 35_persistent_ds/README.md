@@ -4,7 +4,6 @@ title: "Persistent Data Structures"
 nav_order: 37
 has_children: true
 permalink: /35_persistent_ds/
-
 ---
 
 <div align="center">

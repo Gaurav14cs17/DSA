@@ -4,7 +4,6 @@ title: "Digit DP"
 parent: "Dynamic Programming"
 nav_order: 8
 permalink: /18_dynamic_programming/08_digit_dp/
-
 ---
 
 <div align="center">
@@ -42,9 +41,9 @@ permalink: /18_dynamic_programming/08_digit_dp/
 
 Count numbers in range $[0, N]$ satisfying property:
 
-$$
+```math
 dp[\text{pos}][\text{state}][\text{tight}]
-$$
+```
 
 - **pos:** Current digit position
 - **state:** Problem-specific state
@@ -54,9 +53,9 @@ $$
 
 ### 2️⃣ Range Query
 
-$$
+```math
 \text{count}[L, R] = f(R) - f(L-1)
-$$
+```
 
 ---
 
@@ -138,7 +137,6 @@ def atMostNGivenDigitSet(digits: list[str], n: int) -> int:
     
     # Count numbers with same number of digits
     for i, c in enumerate(s):
-
         # Count digits smaller than current
         smaller = sum(1 for digit in digits if digit < c)
         result += smaller * (d ** (k - i - 1))

@@ -4,7 +4,6 @@ title: "Two Sum Pattern"
 parent: "Hash Tables"
 nav_order: 2
 permalink: /06_hash_tables/02_two_sum_pattern/
-
 ---
 
 <div align="center">
@@ -53,9 +52,9 @@ permalink: /06_hash_tables/02_two_sum_pattern/
 
 **Rearrangement:**
 
-$$
+```math
 a[j] = target - a[i]
-$$
+```
 
 **Algorithm:** For each $a[i]$, check if $target - a[i]$ exists in hash map.
 
@@ -77,9 +76,9 @@ $$
 
 **Reduction:** For each $a$, find pairs where $b + c = -a$
 
-$$
+```math
 \text{Two Sum with target} = -a
-$$
+```
 
 **Time:** O(n²) with hash or two pointers after sorting.
 
@@ -91,9 +90,9 @@ $$
 
 **Split into two pairs:**
 
-$$
+```math
 A[i] + B[j] = -(C[k] + D[l])
-$$
+```
 
 Store all $A[i] + B[j]$ sums, then count matches with $-(C[k] + D[l])$.
 
@@ -105,10 +104,10 @@ Store all $A[i] + B[j]$ sums, then count matches with $-(C[k] + D[l])$.
 
 **Prefix Sum Identity:**
 
-$$
+```math
 \text{sum}(i, j) = P[j] - P[i-1] = k
 P[i-1] = P[j] - k
-$$
+```
 
 Count previous prefixes that equal $P[j] - k$.
 
@@ -148,7 +147,6 @@ def threeSum(nums: list[int]) -> list[list[int]]:
     n = len(nums)
     
     for i in range(n - 2):
-
         # Skip duplicates
         if i > 0 and nums[i] == nums[i - 1]:
             continue

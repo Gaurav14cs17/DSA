@@ -4,7 +4,6 @@ title: "Graph Representation"
 parent: "Graphs"
 nav_order: 1
 permalink: /10_graphs/01_graph_representation/
-
 ---
 
 <div align="center">
@@ -34,9 +33,9 @@ permalink: /10_graphs/01_graph_representation/
 
 **Formal Definition:**
 
-$$
+```math
 \boxed{G = (V, E)}
-$$
+```
 
 Where:
 - $V$ = set of vertices (nodes)
@@ -46,21 +45,21 @@ Where:
 
 **Undirected Graph:**
 
-$$
+```math
 E = \{(u, v) : u, v \in V\} \text{ where } (u, v) = (v, u)
-$$
+```
 
 **Directed Graph (Digraph):**
 
-$$
+```math
 E = \{(u, v) : u, v \in V\} \text{ where } (u, v) \neq (v, u)
-$$
+```
 
 **Weighted Graph:**
 
-$$
+```math
 E = \{(u, v, w) : u, v \in V, w \in \mathbb{R}\}
-$$
+```
 
 ---
 
@@ -70,9 +69,9 @@ $$
 
 For undirected graph:
 
-$$
+```math
 \boxed{\deg(v) = |\{u \in V : (v, u) \in E\}|}
-$$
+```
 
 For directed graph:
 - **In-degree:** $\deg^-(v) = |\{u : (u, v) \in E\}|$
@@ -80,9 +79,9 @@ For directed graph:
 
 **Handshaking Lemma:**
 
-$$
+```math
 \boxed{\sum_{v \in V} \deg(v) = 2|E|}
-$$
+```
 
 **Proof:** Each edge contributes 2 to the sum (once for each endpoint) ∎
 
@@ -92,17 +91,17 @@ $$
 
 **Adjacency Matrix:**
 
-$$
+```math
 \boxed{S_{matrix} = O(|V|^2)}
-$$
+```
 
 Stores $|V| \times |V|$ matrix regardless of $|E|$
 
 **Adjacency List:**
 
-$$
+```math
 \boxed{S_{list} = O(|V| + |E|)}
-$$
+```
 
 - Undirected: $|V|$ lists with total $2|E|$ entries
 - Directed: $|V|$ lists with total $|E|$ entries
@@ -134,9 +133,9 @@ $$
 
 Every pair of vertices connected.
 
-$$
+```math
 |E| = \binom{n}{2} = \frac{n(n-1)}{2}
-$$
+```
 
 **Proof:**
 - Choose 2 vertices from $n$: $\binom{n}{2}$
@@ -165,9 +164,9 @@ $$
 
 For graph $G$ with $k$ components:
 
-$$
+```math
 \boxed{\text{rank}(G) = |V| - k}
-$$
+```
 
 ---
 
@@ -542,11 +541,9 @@ class GraphMatrix:
     def __init__(self, num_vertices, directed=False):
         self.n = num_vertices
         self.directed = directed
-
         # Initialize with infinity (no edge)
         self.matrix = [[float('inf')] * num_vertices 
                       for _ in range(num_vertices)]
-
         # Distance from vertex to itself is 0
         for i in range(num_vertices):
             self.matrix[i][i] = 0
@@ -586,11 +583,9 @@ class GraphMatrix:
     def __str__(self):
         """Pretty print matrix."""
         result = []
-
         # Header
         result.append("    " + " ".join(f"{i:3}" for i in range(self.n)))
         result.append("  " + "-" * (4 * self.n))
-
         # Rows
         for i in range(self.n):
             row = f"{i} |"
@@ -621,7 +616,6 @@ def clone_graph(node: GraphNode) -> GraphNode:
     cloned = {}
     
     def dfs(original):
-
         # Already cloned
         if original in cloned:
             return cloned[original]
@@ -655,7 +649,6 @@ def clone_graph_bfs(node: GraphNode) -> GraphNode:
         
         for neighbor in original.neighbors:
             if neighbor not in cloned:
-
                 # Clone neighbor
                 cloned[neighbor] = GraphNode(neighbor.val)
                 queue.append(neighbor)
@@ -680,7 +673,6 @@ def valid_tree(n: int, edges: List[List[int]]) -> bool:
     
     Time: O(V + E), Space: O(V + E)
     """
-
     # Property 1: Tree must have exactly n-1 edges
     if len(edges) != n - 1:
         return False
@@ -721,7 +713,6 @@ def count_components(n: int, edges: List[List[int]]) -> int:
     
     Time: O(V + E), Space: O(V + E)
     """
-
     # Build adjacency list
     adj_list = defaultdict(list)
     for u, v in edges:
@@ -756,7 +747,6 @@ def find_center(edges: List[List[int]]) -> int:
     
     Time: O(1), Space: O(1)
     """
-
     # Check which endpoint of edge[0] appears in edge[1]
     a, b = edges[0]
     c, d = edges[1]
@@ -805,7 +795,6 @@ def can_finish(num_courses: int, prerequisites: List[List[int]]) -> bool:
     
     Time: O(V + E), Space: O(V + E)
     """
-
     # Build adjacency list
     adj_list = defaultdict(list)
     for course, prereq in prerequisites:
@@ -998,7 +987,6 @@ A: Undirected: add edge in both directions. Directed: add edge in one direction 
 ### Pitfall 1: Infinite Loop in Clone
 
 ```python
-
 # ❌ WRONG: Infinite loop on cycles
 def clone(node):
     clone = GraphNode(node.val)
@@ -1023,7 +1011,6 @@ def clone(node):
 ### Pitfall 2: Forgetting Reverse Edge
 
 ```python
-
 # ❌ WRONG: Only one direction for undirected
 def add_edge(u, v):
     adj_list[u].append(v)
@@ -1037,7 +1024,6 @@ def add_edge(u, v):
 ### Pitfall 3: Not Handling Disconnected Components
 
 ```python
-
 # ❌ WRONG: Only checks from node 0
 def is_connected():
     visited = set()

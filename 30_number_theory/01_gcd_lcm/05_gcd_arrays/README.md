@@ -5,7 +5,6 @@ parent: "GCD & LCM"
 grand_parent: "Number Theory"
 nav_order: 5
 permalink: /30_number_theory/01_gcd_lcm/05_gcd_arrays/
-
 ---
 
 <div align="center">
@@ -37,17 +36,17 @@ permalink: /30_number_theory/01_gcd_lcm/05_gcd_arrays/
 
 ### Associativity Property
 
-$$
+```math
 \gcd(a, \gcd(b, c)) = \gcd(\gcd(a, b), c) = \gcd(a, b, c)
-$$
+```
 
 This means we can compute GCD of multiple numbers in any order!
 
 ### GCD of Array
 
-$$
+```math
 \gcd(a_1, a_2, \ldots, a_n) = \gcd(a_1, \gcd(a_2, \ldots, a_n))
-$$
+```
 
 ---
 

@@ -4,7 +4,6 @@ title: "Basic String"
 parent: "Strings"
 nav_order: 1
 permalink: /02_strings/01_basic_string/
-
 ---
 
 <div align="center">
@@ -34,9 +33,9 @@ permalink: /02_strings/01_basic_string/
 
 **Definition:** For string $S[0..n-1]$, reverse $S'$:
 
-$$
+```math
 \boxed{S'[i] = S[n-1-i]}
-$$
+```
 
 **Two-Pointer Proof:**
 - Left pointer: $l = 0, 1, 2, \ldots$
@@ -50,9 +49,9 @@ $$
 
 For string over lowercase alphabet:
 
-$$
+```math
 f[c] = |\{i : S[i] = c\}|
-$$
+```
 
 **Space Complexity:** $O(|\Sigma|)$ where $|\Sigma| = 26$
 

@@ -4,7 +4,6 @@ title: "Failure Function"
 parent: "KMP Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 2
-
 ---
 
 # 📊 KMP Failure Function (π-array)
@@ -106,7 +105,6 @@ def compute_failure_function(pattern):
     k = 0  # Length of current border
     
     for i in range(1, m):
-
         # Fall back through border chain
         while k > 0 and pattern[k] != pattern[i]:
             k = pi[k - 1]
@@ -217,7 +215,6 @@ def compute_failure_function_optimized(pattern):
     comparisons = 0  # Track for complexity analysis
     
     for i in range(1, m):
-
         # Path compression: jump through border chain
         while k > 0 and pattern[k] != pattern[i]:
             k = pi[k - 1]
@@ -356,7 +353,6 @@ def min_chars_for_palindrome(s):
     Approach: Find longest prefix that matches suffix of reverse
     """
     n = len(s)
-
     # Create: s + '#' + reverse(s)
     rev = s[::-1]
     combined = s + '#' + rev

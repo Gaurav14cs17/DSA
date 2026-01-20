@@ -4,7 +4,6 @@ title: "Divide and Conquer"
 nav_order: 29
 has_children: true
 permalink: /20_divide_and_conquer/
-
 ---
 
 <div align="center">
@@ -71,9 +70,9 @@ For recurrence $T(n) = aT(n/b) + f(n)$:
 
 ### 4️⃣ Merge Sort Analysis
 
-$$
+```math
 T(n) = 2T(n/2) + cn
-$$
+```
 
 **Recursion tree:**
 - Level 0: $cn$
@@ -81,9 +80,9 @@ $$
 - Level k: $cn$
 - Height: $\log n$
 
-$$
+```math
 T(n) = cn \times \log n = O(n \log n)
-$$
+```
 
 ---
 

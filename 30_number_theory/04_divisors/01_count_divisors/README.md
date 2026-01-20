@@ -5,7 +5,6 @@ parent: "Divisors"
 grand_parent: "Number Theory"
 nav_order: 1
 permalink: /30_number_theory/04_divisors/01_count_divisors/
-
 ---
 
 <div align="center">
@@ -50,9 +49,9 @@ permalink: /30_number_theory/04_divisors/01_count_divisors/
 
 **Divisor Count Function:** Also denoted as $\tau(n)$, $d(n)$, or $\sigma\_0(n)$
 
-$$
+```math
 \tau(n) = \text{number of positive divisors of } n
-$$
+```
 
 **Examples:**
 - $\tau(1) = 1$ → divisors: {1}
@@ -66,9 +65,9 @@ $$
 
 **Theorem:** If $n = p\_1^{a\_1} \cdot p\_2^{a\_2} \cdots p\_k^{a\_k}$ is the prime factorization, then:
 
-$$
+```math
 \tau(n) = (a_1 + 1)(a_2 + 1) \cdots (a_k + 1) = \prod_{i=1}^{k}(a_i + 1)
-$$
+```
 
 **Proof:**
 Each divisor of n has the form $p\_1^{b\_1} \cdot p\_2^{b\_2} \cdots p\_k^{b\_k}$ where $0 \leq b\_i \leq a\_i$.
@@ -83,23 +82,23 @@ By the multiplication principle, total divisors = $(a\_1 + 1)(a\_2 + 1) \cdots (
 
 **Example 1:** $n = 12 = 2^2 \cdot 3^1$
 
-$$
+```math
 \tau(12) = (2+1)(1+1) = 3 \times 2 = 6
-$$
+```
 
 Divisors: 1, 2, 3, 4, 6, 12 ✓
 
 **Example 2:** $n = 360 = 2^3 \cdot 3^2 \cdot 5^1$
 
-$$
+```math
 \tau(360) = (3+1)(2+1)(1+1) = 4 \times 3 \times 2 = 24
-$$
+```
 
 **Example 3:** $n = p^k$ (prime power)
 
-$$
+```math
 \tau(p^k) = k + 1
-$$
+```
 
 ---
 
@@ -251,7 +250,6 @@ def count_divisors_verbose(n: int) -> tuple[int, list[int]]:
 # Example
 count, divisors = count_divisors_verbose(60)
 print(f"60 has {count} divisors: {divisors}")
-
 # 60 has 12 divisors: [1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60]
 ```
 
@@ -339,7 +337,6 @@ def is_three(n: int) -> bool:
     τ(p²) = 2 + 1 = 3
     Divisors are: 1, p, p²
     """
-
     # Check if n is a perfect square
     root = int(n ** 0.5)
     if root * root != n:
@@ -426,9 +423,9 @@ Numbers with record number of divisors:
 
 ### 3. Average Number of Divisors
 
-$$
+```math
 \sum_{i=1}^{n} \tau(i) \approx n \ln n + (2\gamma - 1)n
-$$
+```
 
 where γ ≈ 0.5772 is the Euler-Mascheroni constant.
 

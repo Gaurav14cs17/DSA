@@ -4,7 +4,6 @@ title: "Fermat's Little Theorem"
 parent: "Modular Arithmetic"
 grand_parent: "Number Theory"
 nav_order: 4
-
 ---
 
 # 🔬 Fermat's Little Theorem
@@ -187,7 +186,6 @@ def factorial_division_mod(n, k, p):
     
     Time: O(n - k + log p)
     """
-
     # n! / k! = (k+1) × (k+2) × ... × n
     result = 1
     for i in range(k + 1, n + 1):

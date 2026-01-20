@@ -5,7 +5,6 @@ parent: "Divisors"
 grand_parent: "Number Theory"
 nav_order: 5
 permalink: /30_number_theory/04_divisors/05_sieve_divisors/
-
 ---
 
 <div align="center">
@@ -75,7 +74,6 @@ def sieve_divisor_count(limit: int) -> list[int]:
 # Example
 tau = sieve_divisor_count(20)
 print("τ values:", tau[1:21])
-
 # [1, 2, 2, 3, 2, 4, 2, 4, 3, 4, 2, 6, 2, 4, 4, 5, 2, 6, 2, 6]
 ```
 
@@ -185,7 +183,6 @@ def omega_sieve(limit: int) -> list[int]:
 
 omega = omega_sieve(20)
 print("ω values:", omega[1:21])
-
 # ω(1)=0, ω(6)=2 (6=2×3), ω(12)=2 (12=2²×3)
 ```
 

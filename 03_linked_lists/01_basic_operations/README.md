@@ -4,7 +4,6 @@ title: "Basic Operations"
 parent: "Linked Lists"
 nav_order: 1
 permalink: /03_linked_lists/01_basic_operations/
-
 ---
 
 <div align="center">
@@ -66,21 +65,21 @@ permalink: /03_linked_lists/01_basic_operations/
 
 **Memory overhead per node:**
 
-$$
+```math
 \text{Space} = \text{sizeof(data)} + \text{sizeof(pointer)}
-$$
+```
 
 For 32-bit integer + 64-bit pointer:
 
-$$
+```math
 \text{Space} = 4 + 8 = 12 \text{ bytes per node}
-$$
+```
 
 **Total space for n nodes:**
 
-$$
+```math
 \boxed{S(n) = n \times (\text{data\_size} + \text{pointer\_size})}
-$$
+```
 
 ---
 
@@ -88,9 +87,9 @@ $$
 
 **Iterative counting:**
 
-$$
+```math
 \text{length} = \sum_{i=0}^{n-1} 1 = n
-$$
+```
 
 **Time Complexity:** $O(n)$ - must traverse entire list
 
@@ -104,9 +103,9 @@ $$
 
 **Theorem:** When fast reaches end, slow is at middle.
 
-$$
+```math
 \boxed{\text{slow\_position} = \left\lfloor \frac{n}{2} \right\rfloor}
-$$
+```
 
 **Proof:**
 
@@ -118,9 +117,9 @@ After $k$ iterations:
 
 Fast reaches end when:
 
-$$
+```math
 2k = n \implies k = \frac{n}{2}
-$$
+```
 
 Therefore, slow at position $\left\lfloor \frac{n}{2} \right\rfloor$ ∎
 
@@ -145,11 +144,11 @@ When they meet:
 
 Since fast = 2 × slow:
 
-$$
+```math
 \mu + k + m\lambda = 2(\mu + k)
 \mu + k + m\lambda = 2\mu + 2k
 \boxed{m\lambda = \mu + k}
-$$
+```
 
 **Phase 2: Find Cycle Start**
 
@@ -159,9 +158,9 @@ From head to cycle start: $\mu$ steps
 
 From previous equation: $\mu = m\lambda - k$
 
-$$
+```math
 \mu = (m-1)\lambda + (\lambda - k)
-$$
+```
 
 This means:
 - $\mu$ steps from head reaches cycle start
@@ -179,21 +178,21 @@ Given two lists A and B with lengths $L\_A$ and $L\_B$, intersecting at distance
 
 **Path of pointer A:**
 
-$$
+```math
 L_A + (L_B - d)
-$$
+```
 
 **Path of pointer B:**
 
-$$
+```math
 L_B + (L_A - d)
-$$
+```
 
 Both equal:
 
-$$
+```math
 L_A + L_B - d = L_B + L_A - d
-$$
+```
 
 They meet at intersection point after traveling equal distance! ∎
 
@@ -494,7 +493,6 @@ def detectCycle(head: ListNode) -> ListNode:
     
     Time: O(n), Space: O(1)
     """
-
     # Phase 1: Detect cycle
     slow = fast = head
     while fast and fast.next:
@@ -535,7 +533,6 @@ def getIntersectionNode(headA: ListNode, headB: ListNode) -> ListNode:
     pA, pB = headA, headB
     
     while pA != pB:
-
         # When pointer reaches end, switch to other list
         pA = pA.next if pA else headB
         pB = pB.next if pB else headA
@@ -603,10 +600,8 @@ def deleteNode(node: ListNode) -> None:
     
     Time: O(1), Space: O(1)
     """
-
     # Copy next node's value
     node.val = node.next.val
-
     # Delete next node
     node.next = node.next.next
 
@@ -858,7 +853,6 @@ A: Linked list: frequent insertions/deletions at head, unknown size. Array: rand
 ### Pitfall 1: Null Pointer Errors
 
 ```python
-
 # ❌ WRONG: May crash
 while fast.next:
     fast = fast.next.next
@@ -871,7 +865,6 @@ while fast and fast.next:
 ### Pitfall 2: Losing Head Reference
 
 ```python
-
 # ❌ WRONG: Lost original head
 def deleteHead(head):
     head = head.next  # Only changes local variable
@@ -887,14 +880,11 @@ def deleteHead(head):
 ### Pitfall 3: Not Using Dummy Node
 
 ```python
-
 # ❌ WRONG: Complex edge cases
 def removeElements(head, val):
-
     # Special case for head
     while head and head.val == val:
         head = head.next
-
     # Then handle rest...
 
 # ✅ CORRECT: Dummy node simplifies

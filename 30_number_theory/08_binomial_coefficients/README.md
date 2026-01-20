@@ -5,7 +5,6 @@ parent: "Number Theory"
 nav_order: 8
 has_children: true
 permalink: /30_number_theory/08_binomial_coefficients/
-
 ---
 
 <div align="center">
@@ -39,9 +38,9 @@ permalink: /30_number_theory/08_binomial_coefficients/
 
 **Binomial Coefficient:** "n choose k"
 
-$$
+```math
 \binom{n}{k} = \frac{n!}{k!(n-k)!}
-$$
+```
 
 **Meaning:** Number of ways to choose k items from n items.
 

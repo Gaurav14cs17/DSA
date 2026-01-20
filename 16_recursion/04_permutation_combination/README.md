@@ -4,7 +4,6 @@ title: "Permutations & Combinations"
 parent: "Recursion"
 nav_order: 4
 permalink: /16_recursion/04_permutation_combination/
-
 ---
 
 <div align="center">
@@ -50,15 +49,15 @@ permalink: /16_recursion/04_permutation_combination/
 
 **Definition:** All possible arrangements of n elements.
 
-$$
+```math
 P(n) = n!
-$$
+```
 
 **Permutations of r elements from n:**
 
-$$
+```math
 P(n, r) = \frac{n!}{(n-r)!}
-$$
+```
 
 ---
 
@@ -66,15 +65,15 @@ $$
 
 **Definition:** Selection of r elements from n (order doesn't matter).
 
-$$
+```math
 C(n, r) = \binom{n}{r} = \frac{n!}{r!(n-r)!}
-$$
+```
 
 **Pascal's Triangle Recurrence:**
 
-$$
+```math
 C(n, r) = C(n-1, r-1) + C(n-1, r)
-$$
+```
 
 ---
 
@@ -82,9 +81,9 @@ $$
 
 **Definition:** All possible subsets of a set.
 
-$$
+```math
 |\text{Power Set}| = 2^n
-$$
+```
 
 Each element has 2 choices: include or exclude.
 
@@ -146,7 +145,6 @@ def permuteUnique(nums: list[int]) -> list[list[int]]:
         for i in range(len(nums)):
             if used[i]:
                 continue
-
             # Skip duplicates
             if i > 0 and nums[i] == nums[i-1] and not used[i-1]:
                 continue
@@ -220,7 +218,6 @@ def subsetsWithDup(nums: list[int]) -> list[list[int]]:
         result.append(path[:])
         
         for i in range(start, len(nums)):
-
             # Skip duplicates at same level
             if i > start and nums[i] == nums[i-1]:
                 continue

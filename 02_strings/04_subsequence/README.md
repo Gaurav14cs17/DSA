@@ -4,7 +4,6 @@ title: "Subsequence"
 parent: "Strings"
 nav_order: 4
 permalink: /02_strings/04_subsequence/
-
 ---
 
 <div align="center">
@@ -38,9 +37,9 @@ permalink: /02_strings/04_subsequence/
 
 **Count of all subsequences:**
 
-$$
+```math
 \boxed{2^n}
-$$
+```
 
 (Each character: include or exclude)
 
@@ -52,12 +51,12 @@ $$
 
 **Recurrence:**
 
-$$
+```math
 \boxed{dp[i][j] = \begin{cases}
 dp[i-1][j-1] + 1 & \text{if } S[i-1] = T[j-1] \\
 \max(dp[i-1][j], dp[i][j-1]) & \text{otherwise}
 \end{cases}}
-$$
+```
 
 **Base Case:** $dp[0][j] = dp[i][0] = 0$
 
@@ -69,7 +68,7 @@ $$
 
 **Recurrence:**
 
-$$
+```math
 dp[i][j] = \begin{cases}
 j & \text{if } i = 0 \\
 i & \text{if } j = 0 \\
@@ -80,7 +79,7 @@ dp[i][j-1] & \text{(insert)} \\
 dp[i-1][j-1] & \text{(replace)}
 \end{cases} & \text{otherwise}
 \end{cases}
-$$
+```
 
 ---
 
@@ -92,12 +91,12 @@ $$
 
 **Recurrence:**
 
-$$
+```math
 dp[i][j] = \begin{cases}
 dp[i-1][j] + dp[i-1][j-1] & \text{if } S[i-1] = T[j-1] \\
 dp[i-1][j] & \text{otherwise}
 \end{cases}
-$$
+```
 
 ---
 

@@ -4,7 +4,6 @@ title: "Fast Exponentiation"
 parent: "Modular Arithmetic"
 grand_parent: "Number Theory"
 nav_order: 3
-
 ---
 
 # ⚡ Fast Modular Exponentiation

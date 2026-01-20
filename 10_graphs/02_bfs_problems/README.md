@@ -4,7 +4,6 @@ title: "BFS Problems"
 parent: "Graphs"
 nav_order: 2
 permalink: /10_graphs/02_bfs_problems/
-
 ---
 
 <div align="center">
@@ -43,9 +42,9 @@ permalink: /10_graphs/02_bfs_problems/
 
 ### 2️⃣ Time Complexity
 
-$$
+```math
 \boxed{T(V, E) = O(V + E)}
-$$
+```
 
 **Breakdown:**
 - Each vertex enqueued/dequeued once: O(V)
@@ -57,9 +56,9 @@ $$
 
 **Problem:** Shortest distance from multiple sources.
 
-$$
+```math
 \text{dist}[v] = \min_{s \in S} \text{dist}(s, v)
-$$
+```
 
 **Solution:** Start BFS with all sources in queue.
 
@@ -69,9 +68,9 @@ $$
 
 BFS naturally gives level-order for trees:
 
-$$
+```math
 \text{Level } k = \{v : \text{dist}(\text{root}, v) = k\}
-$$
+```
 
 ---
 

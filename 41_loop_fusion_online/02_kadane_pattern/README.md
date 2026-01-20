@@ -4,7 +4,6 @@ title: "Kadane's Algorithm"
 parent: "Loop Fusion & Online Algorithms"
 nav_order: 2
 permalink: /41_loop_fusion_online/02_kadane_pattern/
-
 ---
 
 <div align="center">
@@ -44,9 +43,9 @@ permalink: /41_loop_fusion_online/02_kadane_pattern/
 
 Given an array $A[1..n]$ of real numbers, find indices $i$ and $j$ such that:
 
-$$
+```math
 \sum_{k=i}^{j} A[k] \text{ is maximized}
-$$
+```
 
 **Constraints:**
 - Subarray must be contiguous
@@ -63,10 +62,10 @@ Define:
 
 **Kadane's Recurrence:**
 
-$$
+```math
 S[i] = \max(A[i], S[i-1] + A[i])
 M[i] = \max(M[i-1], S[i])
-$$
+```
 
 **Key Insight:** At each position, either:
 1. Start a new subarray (if previous sum is negative)
@@ -139,7 +138,6 @@ def max_subarray_with_indices(arr: list[int]) -> tuple[int, int, int]:
 arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
 max_sum, start, end = max_subarray_with_indices(arr)
 print(f"Max sum: {max_sum}, Subarray: {arr[start:end+1]}")
-
 # Output: Max sum: 6, Subarray: [4, -1, 2, 1]
 ```
 
@@ -164,7 +162,6 @@ def max_product_subarray(arr: list[int]) -> int:
     max_so_far = max_ending = min_ending = arr[0]
     
     for num in arr[1:]:
-
         # When multiplied by negative, max becomes min
         if num < 0:
             max_ending, min_ending = min_ending, max_ending
@@ -233,14 +230,12 @@ def max_subarray_one_deletion(arr: list[int]) -> int:
     
     Time: O(n), Space: O(1)
     """
-
     # Track two states: with deletion and without deletion
     max_ending_no_del = arr[0]
     max_ending_one_del = 0
     max_so_far = arr[0]
     
     for num in arr[1:]:
-
         # With one deletion: either delete current or extend previous deletion
         max_ending_one_del = max(max_ending_one_del + num, max_ending_no_del)
         
@@ -285,10 +280,10 @@ print(max_subarray_one_deletion(arr))  # Output: 4 (delete -2)
 
 **Recurrence:**
 
-$$
+```math
 S[i] = \max(A[i], S[i-1] + A[i])
 M[i] = \max(M[i-1], S[i])
-$$
+```
 
 ---
 

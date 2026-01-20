@@ -4,7 +4,6 @@ title: "Tree Recursion"
 parent: "Recursion"
 nav_order: 2
 permalink: /16_recursion/02_tree_recursion/
-
 ---
 
 <div align="center">
@@ -50,9 +49,9 @@ permalink: /16_recursion/02_tree_recursion/
 
 Multiple recursive calls per function:
 
-$$
+```math
 T(n) = T(n-1) + T(n-2) + \ldots
-$$
+```
 
 Creates a call tree, not a linear chain.
 
@@ -60,15 +59,15 @@ Creates a call tree, not a linear chain.
 
 ### 2️⃣ Fibonacci Analysis
 
-$$
+```math
 F(n) = F(n-1) + F(n-2)
-$$
+```
 
 **Without memoization:**
 
-$$
+```math
 T(n) = T(n-1) + T(n-2) + O(1) \approx O(\phi^n) \approx O(1.618^n)
-$$
+```
 
 Where $\phi = \frac{1 + \sqrt{5}}{2}$ (golden ratio).
 
@@ -80,9 +79,9 @@ Where $\phi = \frac{1 + \sqrt{5}}{2}$ (golden ratio).
 
 For binary trees with $n$ nodes:
 
-$$
+```math
 T(n) = T(left) + T(right) + O(1) = O(n)
-$$
+```
 
 Each node visited exactly once.
 
@@ -201,7 +200,6 @@ def numTrees(n: int) -> int:
     
     Time: O(n²), Space: O(n)
     """
-
     # dp[i] = number of unique BSTs with i nodes
     dp = [0] * (n + 1)
     dp[0] = dp[1] = 1

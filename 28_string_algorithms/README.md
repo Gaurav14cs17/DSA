@@ -4,7 +4,6 @@ title: "String Algorithms"
 nav_order: 29
 has_children: true
 permalink: /28_string_algorithms/
-
 ---
 
 <div align="center">
@@ -362,7 +361,6 @@ def compute_failure_function(pattern):
     k = 0
     
     for i in range(1, m):
-
         # Fall back using failure function
         while k > 0 and pattern[k] != pattern[i]:
             k = pi[k - 1]
@@ -389,7 +387,6 @@ def kmp_search(text, pattern):
     k = 0  # matched characters
     
     for i in range(n):
-
         # Fall back
         while k > 0 and pattern[k] != text[i]:
             k = pi[k - 1]
@@ -440,10 +437,8 @@ class RabinKarp:
         matches = []
         
         for i in range(n - m + 1):
-
             # Check hashes
             if t_hash1 == p_hash1 and t_hash2 == p_hash2:
-
                 # Double check to avoid hash collision
                 if text[i:i+m] == pattern:
                     matches.append(i)
@@ -491,7 +486,6 @@ def z_algorithm(s):
     l, r = 0, 0  # Current Z-box [l, r]
     
     for i in range(1, n):
-
         # Case 1: i > r (outside current Z-box)
         if i > r:
             l, r = i, i
@@ -500,14 +494,12 @@ def z_algorithm(s):
             z[i] = r - l
             r -= 1
         else:
-
             # Case 2: i <= r (inside current Z-box)
             k = i - l  # Mirror position
             
             # Case 2a: Z[k] < r - i + 1
             if z[k] < r - i + 1:
                 z[i] = z[k]
-
             # Case 2b: Z[k] >= r - i + 1
             else:
                 l = i
@@ -523,7 +515,6 @@ def z_search(text, pattern):
     Pattern matching using Z-algorithm
     Time: O(n + m), Space: O(n + m)
     """
-
     # Concatenate pattern and text with separator
     s = pattern + '$' + text
     z = z_algorithm(s)
@@ -547,7 +538,6 @@ def build_suffix_array(s):
     Time: O(n log² n), Space: O(n)
     """
     n = len(s)
-
     # Append sentinel
     s = s + '$'
     n += 1
@@ -565,7 +555,6 @@ def build_suffix_array(s):
     
     k = 1
     while k < n:
-
         # Sort by (rank[i], rank[i+k])
         order = sorted(range(n), key=lambda i: (rank[i], rank[(i+k) % n]))
         
@@ -629,7 +618,6 @@ def manacher(s):
     Find all palindromic substrings in O(n)
     Returns radius of palindrome centered at each position
     """
-
     # Transform string to handle even-length palindromes
     t = '#'.join('^{}$'.format(s))
     n = len(t)
@@ -640,7 +628,6 @@ def manacher(s):
     right = 0   # Right boundary of rightmost palindrome
     
     for i in range(1, n - 1):
-
         # Mirror of i with respect to center
         mirror = 2 * center - i
         
@@ -736,7 +723,6 @@ This section contains **70+ problems** across **8 categories**:
 ### Hashing Best Practices
 
 ```python
-
 # Good hash parameters
 MOD1 = 10**9 + 7
 MOD2 = 10**9 + 9
@@ -795,7 +781,6 @@ Hash + Binary Search: O(n log n) for longest
 ### Hash vs Exact Matching
 
 ```python
-
 # When to use hashing
 ✓ Substring equality checks
 ✓ Rolling window comparisons
@@ -825,7 +810,6 @@ if Counter(pattern) - Counter(text):
 
 3. **First/Last Character Heuristic:**
 ```python
-
 # Jump positions where first char doesn't match
 ```
 

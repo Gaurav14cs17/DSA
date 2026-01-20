@@ -5,7 +5,6 @@ parent: "Number Theory"
 nav_order: 5
 has_children: true
 permalink: /30_number_theory/05_euler_totient/
-
 ---
 
 <div align="center">
@@ -39,9 +38,9 @@ permalink: /30_number_theory/05_euler_totient/
 
 **Euler's Totient Function:** $\phi(n)$ = count of integers from 1 to n that are coprime to n.
 
-$$
+```math
 \phi(n) = |\{k : 1 \leq k \leq n, \gcd(k, n) = 1\}|
-$$
+```
 
 ---
 
@@ -55,9 +54,9 @@ $$
 
 **General formula:** 
 
-$$
+```math
 \phi(n) = n \prod_{p|n}\left(1 - \frac{1}{p}\right)
-$$
+```
 
 ---
 

@@ -4,7 +4,6 @@ title: "Basic Rolling Hash"
 parent: "Rabin-Karp Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 1
-
 ---
 
 # 🎲 Basic Rolling Hash
@@ -391,7 +390,6 @@ def find_hash_collisions(strings, base=31, mod=10**9 + 7):
     
     for h, string_list in hash_to_strings.items():
         if len(string_list) > 1:
-
             # Check which are actual collisions (different strings, same hash)
             for i in range(len(string_list)):
                 for j in range(i + 1, len(string_list)):
@@ -476,7 +474,6 @@ print(f"Load factor: {stats['load_factor']:.2e}")
 
 **Base (p):**
 ```python
-
 # For lowercase letters (26 chars)
 p = 31  # Prime close to 26, good distribution
 
@@ -491,7 +488,6 @@ p = 257 # Prime close to 128
 
 **Modulus (M):**
 ```python
-
 # Common choices:
 M = 10**9 + 7   # Fits in 32-bit int, prime
 M = 10**9 + 9   # Alternative prime
@@ -506,7 +502,6 @@ M = 2**61 - 1   # Mersenne prime, very large
 ### Common Mistakes
 
 ```python
-
 # ❌ Wrong: Negative hash values
 h = (h - old * power) % MOD  # Can be negative!
 
@@ -530,7 +525,6 @@ power = pow(BASE, m - 1, MOD)  # Fast modular exponentiation
 ### Rolling vs Recomputation
 
 ```python
-
 # When to recompute:
 ✓ Window size changes
 ✓ String modified

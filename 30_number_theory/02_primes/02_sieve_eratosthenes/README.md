@@ -5,7 +5,6 @@ parent: "Prime Numbers"
 grand_parent: "Number Theory"
 nav_order: 2
 permalink: /30_number_theory/02_primes/02_sieve_eratosthenes/
-
 ---
 
 <div align="center">
@@ -253,7 +252,6 @@ def sieve_of_eratosthenes(n: int) -> list[int]:
     
     for i in range(2, int(n**0.5) + 1):
         if is_prime[i]:
-
             # Mark multiples starting from i²
             for j in range(i * i, n + 1, i):
                 is_prime[j] = False
@@ -293,7 +291,6 @@ def sieve_optimized(n: int) -> list[int]:
             
             # Mark odd multiples of p
             if p * p <= n:
-
                 # First odd multiple >= p² is p²
                 # Index of p² is (p² - 3) // 2
                 start = (p * p - 3) // 2
@@ -332,7 +329,6 @@ def linear_sieve(n: int) -> tuple[list[int], list[int]]:
     
     for i in range(2, n + 1):
         if spf[i] == 0:
-
             # i is prime
             spf[i] = i
             primes.append(i)
@@ -373,7 +369,6 @@ class Solution:
         
         for i in range(2, int(n**0.5) + 1):
             if is_prime[i]:
-
                 # Mark multiples
                 for j in range(i * i, n, i):
                     is_prime[j] = False

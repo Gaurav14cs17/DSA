@@ -5,7 +5,6 @@ parent: "Catalan Numbers"
 grand_parent: "Number Theory"
 nav_order: 4
 permalink: /30_number_theory/09_catalan_numbers/04_applications/
-
 ---
 
 <div align="center">
@@ -210,7 +209,6 @@ def is_stack_sortable(perm: list[int]) -> bool:
     Stack-sortable iff avoids pattern 231.
     Count: C_n stack-sortable permutations of length n.
     """
-
     # Check for 231 pattern
     n = len(perm)
     for i in range(n - 2):

@@ -4,7 +4,6 @@ title: "Topological Sort"
 parent: "Graph Algorithms"
 nav_order: 3
 permalink: /24_graph_algorithms/03_topological_sort/
-
 ---
 
 <div align="center">
@@ -44,9 +43,9 @@ permalink: /24_graph_algorithms/03_topological_sort/
 
 **Topological ordering** of DAG $G = (V, E)$:
 
-$$
+```math
 \text{Linear ordering } v_1, v_2, \ldots, v_n \text{ where } (v_i, v_j) \in E \Rightarrow i < j
-$$
+```
 
 **Key property:** Every directed edge goes from earlier to later in the ordering.
 
@@ -94,9 +93,9 @@ Valid orderings: `[A, B, C]`, `[B, A, C]`
 
 **Topological order = Reverse of finish order**
 
-$$
+```math
 \text{topo\_order} = \text{reverse}(\text{post\_order})
-$$
+```
 
 **Proof:** If $(u, v) \in E$, then $\text{finish}[u] > \text{finish}[v]$ in DFS.
 
@@ -322,7 +321,6 @@ def all_topological_sorts(n: int, edges: List[List[int]]) -> List[List[int]]:
         
         for u in range(n):
             if not visited[u] and in_degree[u] == 0:
-
                 # Choose u
                 visited[u] = True
                 current.append(u)
@@ -411,7 +409,6 @@ def alienOrder(words: List[str]) -> str:
     Time: O(C) where C = total characters
     Space: O(1) - at most 26 letters
     """
-
     # Build graph
     graph = defaultdict(set)
     in_degree = {c: 0 for word in words for c in word}
@@ -533,7 +530,6 @@ def sortItems(n: int, m: int, group: List[int],
     
     Time: O(V+E), Space: O(V+E)
     """
-
     # Assign unique group to items without group
     group_id = m
     for i in range(n):

@@ -4,7 +4,6 @@ title: "Greedy Algorithms"
 nav_order: 28
 has_children: true
 permalink: /19_greedy_algorithms/
-
 ---
 
 <div align="center">
@@ -33,9 +32,9 @@ permalink: /19_greedy_algorithms/
 
 At each step, make the choice that looks best right now.
 
-$$
+```math
 \text{Local optimum} \Rightarrow \text{Global optimum}
-$$
+```
 
 **Warning:** This only works for specific problem types!
 

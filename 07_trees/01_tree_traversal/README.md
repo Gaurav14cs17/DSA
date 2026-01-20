@@ -4,7 +4,6 @@ title: "Tree Traversal"
 parent: "Trees"
 nav_order: 1
 permalink: /07_trees/01_tree_traversal/
-
 ---
 
 <div align="center">
@@ -36,21 +35,21 @@ permalink: /07_trees/01_tree_traversal/
 
 **Preorder (NLR):** Visit Node → Left subtree → Right subtree
 
-$$
+```math
 \text{preorder}(T) = [root] + \text{preorder}(T_L) + \text{preorder}(T_R)
-$$
+```
 
 **Inorder (LNR):** Left subtree → Visit Node → Right subtree
 
-$$
+```math
 \text{inorder}(T) = \text{inorder}(T_L) + [root] + \text{inorder}(T_R)
-$$
+```
 
 **Postorder (LRN):** Left subtree → Right subtree → Visit Node
 
-$$
+```math
 \text{postorder}(T) = \text{postorder}(T_L) + \text{postorder}(T_R) + [root]
-$$
+```
 
 **Level Order (BFS):** Level by level, left to right
 
@@ -89,9 +88,9 @@ Where $h$ = height, $w$ = max width.
 
 For node $x$, predecessor = rightmost node in left subtree.
 
-$$
+```math
 \text{pred}(x) = \max\{y \in T_L(x)\}
-$$
+```
 
 ---
 
@@ -143,7 +142,6 @@ def inorderTraversal(root: TreeNode) -> list[int]:
     current = root
     
     while current or stack:
-
         # Go left
         while current:
             stack.append(current)
@@ -233,19 +231,16 @@ def morrisInorder(root: TreeNode) -> list[int]:
             result.append(current.val)
             current = current.right
         else:
-
             # Find predecessor
             predecessor = current.left
             while predecessor.right and predecessor.right != current:
                 predecessor = predecessor.right
             
             if not predecessor.right:
-
                 # Create thread
                 predecessor.right = current
                 current = current.left
             else:
-
                 # Remove thread, process node
                 predecessor.right = None
                 result.append(current.val)

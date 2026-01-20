@@ -4,7 +4,6 @@ title: "Interval Scheduling"
 parent: "Greedy Algorithms"
 nav_order: 1
 permalink: /19_greedy_algorithms/01_interval_scheduling/
-
 ---
 
 <div align="center">
@@ -38,9 +37,9 @@ permalink: /19_greedy_algorithms/01_interval_scheduling/
 
 **Greedy Strategy:** Always pick interval with earliest end time.
 
-$$
+```math
 \text{Sort by } end_i, \text{ select if } start_i \geq \text{last\_end}
-$$
+```
 
 ---
 
@@ -48,9 +47,9 @@ $$
 
 **Goal:** Minimum rooms/resources to schedule all.
 
-$$
+```math
 \text{rooms} = \max(\text{concurrent intervals at any time})
-$$
+```
 
 ---
 
@@ -84,11 +83,9 @@ def eraseOverlapIntervals(intervals: list[list[int]]) -> int:
     
     for i in range(1, len(intervals)):
         if intervals[i][0] < end:
-
             # Overlaps - remove this one
             removals += 1
         else:
-
             # No overlap - update end
             end = intervals[i][1]
     
@@ -165,7 +162,6 @@ def partitionLabels(s: str) -> list[int]:
     
     Time: O(n), Space: O(1)
     """
-
     # Find last occurrence of each character
     last = {c: i for i, c in enumerate(s)}
     

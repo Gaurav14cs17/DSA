@@ -4,7 +4,6 @@ title: "XOR Tricks"
 parent: "Bit Manipulation"
 nav_order: 2
 permalink: /21_bit_manipulation/02_xor_tricks/
-
 ---
 
 <div align="center">
@@ -69,19 +68,19 @@ permalink: /21_bit_manipulation/02_xor_tricks/
 
 | Property | Formula | Proof | Use Case |
 |----------|---------|-------|----------|
-| **Self-Inverse** | $a \oplus a = 0$ | Same bits → 0 | Cancel duplicates |
-| **Identity** | $a \oplus 0 = a$ | 0 changes nothing | Initialize result |
-| **Commutative** | $a \oplus b = b \oplus a$ | Order doesn't matter | Reorder freely |
-| **Associative** | $(a \oplus b) \oplus c = a \oplus (b \oplus c)$ | Grouping doesn't matter | Group freely |
-| **Cancellation** | $a \oplus b \oplus b = a$ | b cancels itself | Recover original |
+| **Self-Inverse** | \(a \oplus a = 0\) | Same bits → 0 | Cancel duplicates |
+| **Identity** | \(a \oplus 0 = a\) | 0 changes nothing | Initialize result |
+| **Commutative** | \(a \oplus b = b \oplus a\) | Order doesn't matter | Reorder freely |
+| **Associative** | \((a \oplus b) \oplus c = a \oplus (b \oplus c)\) | Grouping doesn't matter | Group freely |
+| **Cancellation** | \(a \oplus b \oplus b = a\) | b cancels itself | Recover original |
 
-#### 🔍 Deep Dive: Why $a \oplus a = 0$?
+#### 🔍 Deep Dive: Why \(a \oplus a = 0\)?
 
 For each bit position:
-- If bit is 0: $0 \oplus 0 = 0$
-- If bit is 1: $1 \oplus 1 = 0$
+- If bit is 0: \(0 \oplus 0 = 0\)
+- If bit is 1: \(1 \oplus 1 = 0\)
 
-Every bit becomes 0, so $a \oplus a = 0$.
+Every bit becomes 0, so \(a \oplus a = 0\).
 
 ---
 
@@ -92,47 +91,47 @@ Every bit becomes 0, so $a \oplus a = 0$.
 
 #### Formal Statement
 
-Given array $[a_1, a_2, ..., a_n]$ where every element appears exactly twice except one element $x$:
+Given array \([a_1, a_2, ..., a_n]\) where every element appears exactly twice except one element \(x\):
 
-$$
+```math
 \bigoplus_{i=1}^{n} a_i = x
-$$
+```
 
 #### 🔍 Proof
 
-Let pairs be $\{(p_1, p_1), (p_2, p_2), ..., (p_k, p_k), x\}$:
+Let pairs be \(\{(p_1, p_1), (p_2, p_2), ..., (p_k, p_k), x\}\):
 
-$$
+```math
 \bigoplus_{i=1}^{n} a_i = (p_1 \oplus p_1) \oplus (p_2 \oplus p_2) \oplus ... \oplus (p_k \oplus p_k) \oplus x
-$$
+```
 
-By self-inverse: $p_i \oplus p_i = 0$
+By self-inverse: \(p_i \oplus p_i = 0\)
 
-$$
+```math
 = 0 \oplus 0 \oplus ... \oplus 0 \oplus x = x \quad \square
-$$
+```
 
 ---
 
 ### 3️⃣ Missing Number Using XOR
 
 {: .note }
-> For array $[0, n]$ missing one number, XOR indices with values!
+> For array \([0, n]\) missing one number, XOR indices with values!
 
 #### The Formula
 
-$$
+```math
 \text{missing} = \left(\bigoplus_{i=0}^{n} i\right) \oplus \left(\bigoplus_{j=0}^{n-1} \text{nums}[j]\right)
-$$
+```
 
 #### 🔍 Proof
 
 Every number except the missing one appears twice (once as index, once as value):
 
-$$
+```math
 = \underbrace{(0 \oplus 0) \oplus (1 \oplus 1) \oplus ... \oplus (\text{missing skipped})}_{\text{paired}} \oplus \text{missing}
 = 0 \oplus \text{missing} = \text{missing} \quad \square
-$$
+```
 
 ---
 
@@ -143,21 +142,21 @@ $$
 
 #### The Algorithm
 
-1. **XOR all elements** → Get $a \oplus b$
-2. **Find any differing bit** → $\text{diff} = \text{xor} \land (-\text{xor})$
-3. **Partition by this bit** → Separate $a$ and $b$
+1. **XOR all elements** → Get \(a \oplus b\)
+2. **Find any differing bit** → \(\text{diff} = \text{xor} \land (-\text{xor})\)
+3. **Partition by this bit** → Separate \(a\) and \(b\)
 
 #### 🔍 Mathematical Proof
 
-**Step 1**: Since $a \neq b$, there exists some bit position where they differ.
+**Step 1**: Since \(a \neq b\), there exists some bit position where they differ.
 
-**Step 2**: $\text{xor} \land (-\text{xor})$ isolates the rightmost set bit in $a \oplus b$.
+**Step 2**: \(\text{xor} \land (-\text{xor})\) isolates the rightmost set bit in \(a \oplus b\).
 
-This bit is 1 in exactly one of $a, b$ (say $a$) and 0 in the other (say $b$).
+This bit is 1 in exactly one of \(a, b\) (say \(a\)) and 0 in the other (say \(b\)).
 
 **Step 3**: Partitioning by this bit:
-- Group 1: Contains $a$ and some pairs → XOR = $a$
-- Group 2: Contains $b$ and some pairs → XOR = $b$
+- Group 1: Contains \(a\) and some pairs → XOR = \(a\)
+- Group 2: Contains \(b\) and some pairs → XOR = \(b\)
 
 Each pair goes entirely into one group (both elements have same bit value).
 
@@ -172,11 +171,11 @@ When every element appears three times except one:
 
 #### The Formula
 
-For each bit position $i$:
+For each bit position \(i\):
 
-$$
+```math
 \text{bit}_i = \left(\sum_{j} \text{bit}_i(\text{nums}[j])\right) \mod 3
-$$
+```
 
 If the count is 1, the unique number has this bit set.
 
@@ -196,35 +195,35 @@ For the unique element:
 
 Just like regular prefix sums, but with XOR:
 
-$$
+```math
 \text{prefix}[i] = \text{nums}[0] \oplus \text{nums}[1] \oplus ... \oplus \text{nums}[i]
-$$
+```
 
 #### Range XOR Query
 
-$$
+```math
 \text{XOR}[L, R] = \text{prefix}[R] \oplus \text{prefix}[L-1]
-$$
+```
 
 #### 🔍 Proof
 
-$$
+```math
 \text{prefix}[R] \oplus \text{prefix}[L-1]
 = (\text{nums}[0] \oplus ... \oplus \text{nums}[R]) \oplus (\text{nums}[0] \oplus ... \oplus \text{nums}[L-1])
-$$
+```
 
-By cancellation, elements $[0, L-1]$ cancel out:
+By cancellation, elements \([0, L-1]\) cancel out:
 
-$$
+```math
 = \text{nums}[L] \oplus ... \oplus \text{nums}[R] \quad \square
-$$
+```
 
 ---
 
 ### 7️⃣ Maximum XOR with Tries
 
 {: .highlight }
-> To maximize $a \oplus b$, for each bit of $a$, choose opposite bit in $b$ if possible.
+> To maximize \(a \oplus b\), for each bit of \(a\), choose opposite bit in \(b\) if possible.
 
 #### Greedy Strategy
 
@@ -234,9 +233,9 @@ For each number, traverse a binary trie:
 
 #### Time Complexity
 
-- Build trie: $O(n \times 32)$
-- Query each number: $O(32)$
-- Total: $O(n)$
+- Build trie: \(O(n \times 32)\)
+- Query each number: \(O(32)\)
+- Total: \(O(n)\)
 
 ---
 
@@ -465,7 +464,6 @@ def singleNumberII(nums: list[int]) -> int:
     for i in range(32):
         bit_sum = 0
         for num in nums:
-
             # Handle Python's arbitrary precision
             if num < 0:
                 num = num & 0xFFFFFFFF
@@ -494,10 +492,8 @@ def singleNumberII_elegant(nums: list[int]) -> int:
     ones = twos = 0
     
     for num in nums:
-
         # ones keeps bits seen 1 time (not seen 2 times)
         ones = (ones ^ num) & ~twos
-
         # twos keeps bits seen 2 times (not reset by ones)
         twos = (twos ^ num) & ~ones
     
@@ -520,7 +516,6 @@ def singleNumberIII(nums: list[int]) -> list[int]:
     >>> sorted(singleNumberIII([1, 2, 1, 3, 2, 5]))
     [3, 5]
     """
-
     # Step 1: XOR all numbers → a ⊕ b
     xor_all = 0
     for num in nums:
@@ -582,7 +577,6 @@ def totalHammingDistance(nums: list[int]) -> int:
     n = len(nums)
     
     for i in range(32):
-
         # Count numbers with bit i set
         count_ones = sum(1 for num in nums if (num >> i) & 1)
         count_zeros = n - count_ones
@@ -678,7 +672,6 @@ def maximumXOR(nums: list[int]) -> int:
     >>> maximumXOR([3, 10, 5, 25, 2, 8])
     28
     """
-
     # Build Trie
     root = {}
     

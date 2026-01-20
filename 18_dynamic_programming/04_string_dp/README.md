@@ -4,7 +4,6 @@ title: "String DP"
 parent: "Dynamic Programming"
 nav_order: 4
 permalink: /18_dynamic_programming/04_string_dp/
-
 ---
 
 <div align="center">
@@ -40,23 +39,23 @@ permalink: /18_dynamic_programming/04_string_dp/
 
 ### 1️⃣ Edit Distance
 
-$$
+```math
 dp[i][j] = \begin{cases}
 dp[i-1][j-1] & \text{if } s[i] = t[j] \\
 1 + \min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) & \text{otherwise}
 \end{cases}
-$$
+```
 
 ---
 
 ### 2️⃣ Palindrome DP
 
-$$
+```math
 dp[i][j] = \begin{cases}
 \text{true} & \text{if } i \geq j \\
 s[i] = s[j] \land dp[i+1][j-1] & \text{otherwise}
 \end{cases}
-$$
+```
 
 ---
 
@@ -129,7 +128,6 @@ def isMatch(s: str, p: str) -> bool:
     for i in range(1, m + 1):
         for j in range(1, n + 1):
             if p[j - 1] == '*':
-
                 # Zero match or one+ match
                 dp[i][j] = dp[i][j - 2] or (
                     dp[i - 1][j] and (p[j - 2] == '.' or p[j - 2] == s[i - 1])

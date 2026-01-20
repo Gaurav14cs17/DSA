@@ -4,7 +4,6 @@ title: "Advanced Trees"
 nav_order: 36
 has_children: true
 permalink: /27_advanced_trees/
-
 ---
 
 <div align="center">

@@ -4,7 +4,6 @@ title: "Top K Problems"
 parent: "Heaps"
 nav_order: 2
 permalink: /09_heaps/02_top_k_problems/
-
 ---
 
 <div align="center">
@@ -34,9 +33,9 @@ permalink: /09_heaps/02_top_k_problems/
 
 **Finding K largest:** Use **Min-Heap** of size k.
 
-$$
+```math
 \text{Invariant: Heap contains k largest seen so far}
-$$
+```
 
 **Why Min-Heap?** We need to quickly remove the smallest of top-k.
 
@@ -59,9 +58,9 @@ $$
 
 **Maintain heap of size k:**
 
-$$
+```math
 \text{answer} = \text{heap}[0] \text{ (root of min-heap)}
-$$
+```
 
 ---
 
@@ -86,9 +85,9 @@ $$
 - Need to remove largest of these k
 - Max-Heap root = largest → easy to remove!
 
-$$
+```math
 \boxed{\text{Keep opposite of what you want to remove!}}
-$$
+```
 
 ---
 
@@ -106,9 +105,9 @@ $$
 
 **When frequency range is small:**
 
-$$
+```math
 \text{frequencies} \in [0, n] \implies \text{use bucket sort for } O(n)
-$$
+```
 
 **Bucket i:** contains all elements with frequency i
 
@@ -198,7 +197,6 @@ def kClosest(points: list[list[int]], k: int) -> list[list[int]]:
     
     Time: O(n log k), Space: O(k)
     """
-
     # Max-heap: negate distance for max behavior
     heap = []
     

@@ -4,7 +4,6 @@ title: "Word Search"
 parent: "Tries"
 nav_order: 2
 permalink: /11_tries/02_word_search/
-
 ---
 
 <div align="center">
@@ -38,9 +37,9 @@ permalink: /11_tries/02_word_search/
 
 **Approach:** DFS through trie, branch at '.' to all children.
 
-$$
+```math
 T = O(26^{\text{dots}} \times L)
-$$
+```
 
 ---
 
@@ -48,9 +47,9 @@ $$
 
 **Grid search with Trie:**
 
-$$
+```math
 T = O(m \times n \times 4^L)
-$$
+```
 
 Where:
 - $m \times n$ = grid size
@@ -65,9 +64,9 @@ Where:
 
 **Key insight:** Trie enables early termination.
 
-$$
+```math
 \text{If prefix not in trie} \Rightarrow \text{stop exploring}
-$$
+```
 
 ---
 
@@ -108,7 +107,6 @@ class WordDictionary:
             
             char = word[i]
             if char == '.':
-
                 # Try all children
                 for child in node.children.values():
                     if dfs(child, i + 1):
@@ -129,7 +127,6 @@ def findWords(board: list[list[str]], words: list[str]) -> list[str]:
     
     Time: O(m×n×4^L), Space: O(dict)
     """
-
     # Build trie
     root = TrieNode()
     for word in words:
@@ -185,7 +182,6 @@ def wordBreak(s: str, wordDict: list[str]) -> bool:
     
     Time: O(n²), Space: O(dict + n)
     """
-
     # Build trie
     root = TrieNode()
     for word in wordDict:

@@ -4,7 +4,6 @@ title: "Two Heaps"
 parent: "Heaps"
 nav_order: 4
 permalink: /09_heaps/04_two_heaps/
-
 ---
 
 <div align="center">
@@ -38,21 +37,21 @@ permalink: /09_heaps/04_two_heaps/
 
 **Invariants:**
 
-$$
+```math
 |left| = |right| \text{ or } |left| = |right| + 1
 \max(left) \leq \min(right)
-$$
+```
 
 ---
 
 ### 2️⃣ Median Formula
 
-$$
+```math
 \text{median} = \begin{cases}
 \max(left) & \text{if } |left| > |right| \\
 \frac{\max(left) + \min(right)}{2} & \text{if } |left| = |right|
 \end{cases}
-$$
+```
 
 ---
 
@@ -108,7 +107,6 @@ class MedianFinder:
         self.right = []  # Min-heap
     
     def addNum(self, num: int) -> None:
-
         # Add to left (max-heap)
         heapq.heappush(self.left, -num)
         
@@ -150,7 +148,6 @@ def maxProfit(k: int, profits: list[int], capital: list[int], w: int) -> int:
     available = []
     
     for _ in range(k):
-
         # Move all affordable projects to available
         while unavailable and unavailable[0][0] <= w:
             cap, profit = heapq.heappop(unavailable)
@@ -184,7 +181,6 @@ def medianSlidingWindow(nums: list[int], k: int) -> list[float]:
         return (-left[0] + right[0]) / 2
     
     def rebalance():
-
         # Clean tops
         while left and to_remove[-left[0]]:
             to_remove[-left[0]] -= 1

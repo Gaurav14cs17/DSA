@@ -4,7 +4,6 @@ title: "KMP Algorithm"
 parent: "String Algorithms"
 nav_order: 1
 has_children: true
-
 ---
 
 # 🔍 KMP Algorithm (Knuth-Morris-Pratt)
@@ -175,7 +174,6 @@ def compute_failure_function(pattern):
     k = 0
     
     for i in range(1, m):
-
         # Fall back through border chain
         while k > 0 and pattern[k] != pattern[i]:
             k = pi[k - 1]
@@ -244,7 +242,6 @@ def kmp_search(text, pattern):
     k = 0  # Number of characters matched
     
     for i in range(n):
-
         # Fall back using failure function
         while k > 0 and pattern[k] != text[i]:
             k = pi[k - 1]
@@ -256,7 +253,6 @@ def kmp_search(text, pattern):
         # Complete match found
         if k == m:
             matches.append(i - m + 1)
-
             # Continue searching for overlapping matches
             k = pi[k - 1]
     
@@ -318,7 +314,6 @@ print(kmp_search_verbose(text, pattern))
 ### Common Variants
 
 ```python
-
 # 1. First occurrence only
 def find_first(text, pattern):
     pi = compute_failure_function(pattern)
@@ -599,7 +594,6 @@ def build_kmp_automaton(pattern):
         automaton[state] = {}
         
         for char in alphabet:
-
             # Simulate KMP step
             k = state
             while k > 0 and (k == m or pattern[k] != char):

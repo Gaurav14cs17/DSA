@@ -4,7 +4,6 @@ title: "Line Segment Intersection"
 parent: "Sweep Line Algorithm"
 nav_order: 3
 permalink: /26_sweep_line/03_line_segment_intersection/
-
 ---
 
 <div align="center">
@@ -52,9 +51,9 @@ permalink: /26_sweep_line/03_line_segment_intersection/
 
 **Cross Product** determines relative orientation of three points:
 
-$$
+```math
 \text{orient}(p, q, r) = (q_y - p_y)(r_x - q_x) - (q_x - p_x)(r_y - q_y)
-$$
+```
 
 **Result:**
 - $> 0$: Counter-clockwise turn
@@ -69,11 +68,11 @@ $$
 
 **Theorem:** Segments $s\_1 = \overline{p\_1p\_2}$ and $s\_2 = \overline{q\_1q\_2}$ intersect iff:
 
-$$
+```math
 \text{orient}(p_1, p_2, q_1) \cdot \text{orient}(p_1, p_2, q_2) < 0
 \land
 \text{orient}(q_1, q_2, p_1) \cdot \text{orient}(q_1, q_2, p_2) < 0
-$$
+```
 
 **Special case:** Check bounding box overlap for collinear segments.
 
@@ -118,15 +117,15 @@ $$
 
 **Intersection point:**
 
-$$
+```math
 x = \frac{b_2 - b_1}{m_1 - m_2}, \quad y = m_1x + b_1
-$$
+```
 
 **For segments in parametric form:**
 
-$$
+```math
 p(t) = p_1 + t(p_2 - p_1), \quad q(s) = q_1 + s(q_2 - q_1)
-$$
+```
 
 Solve: $p\_1 + t(p\_2 - p\_1) = q\_1 + s(q\_2 - q\_1)$
 
@@ -138,10 +137,10 @@ Solve: $p\_1 + t(p\_2 - p\_1) = q\_1 + s(q\_2 - q\_1)$
 
 **Check if point $r$ is on segment $\overline{pq}$:**
 
-$$
+```math
 \text{collinear}(p, q, r) \land \min(p_x, q_x) \leq r_x \leq \max(p_x, q_x)
 \land \min(p_y, q_y) \leq r_y \leq \max(p_y, q_y)
-$$
+```
 
 ---
 
@@ -376,7 +375,6 @@ def check_straight_line(coordinates: List[List[int]]) -> bool:
     
     for i in range(2, len(coordinates)):
         x, y = coordinates[i]
-
         # Check if (x1-x0, y1-y0) and (x-x0, y-y0) are parallel
         if (x1 - x0) * (y - y0) != (y1 - y0) * (x - x0):
             return False

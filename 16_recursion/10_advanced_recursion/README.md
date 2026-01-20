@@ -4,7 +4,6 @@ title: "Advanced Recursion"
 parent: "Recursion"
 nav_order: 10
 permalink: /16_recursion/10_advanced_recursion/
-
 ---
 
 <div align="center">
@@ -387,7 +386,6 @@ def frameStewartHanoi(n: int, pegs: int = 4) -> int:
     # Try all possible k values
     min_moves = float('inf')
     for k in range(1, n):
-
         # Move k disks to auxiliary using all pegs
         # Move n-k disks using 3 pegs
         # Move k disks to target using all pegs

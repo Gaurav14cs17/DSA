@@ -4,7 +4,6 @@ title: "Set Operations"
 parent: "Hash Tables"
 nav_order: 3
 permalink: /06_hash_tables/03_set_operations/
-
 ---
 
 <div align="center">
@@ -49,9 +48,9 @@ permalink: /06_hash_tables/03_set_operations/
 
 ### 1️⃣ Set Definition
 
-$$
+```math
 S = \{x : x \text{ is unique}\}
-$$
+```
 
 **Hash Set Property:** No duplicates, O(1) lookup.
 
@@ -73,9 +72,9 @@ $$
 
 **Problem:** Check if any element appears more than once.
 
-$$
+```math
 \exists i \neq j: a[i] = a[j]
-$$
+```
 
 **Set Solution:** If $|set(a)| < n$, duplicates exist.
 
@@ -83,15 +82,15 @@ $$
 
 ### 4️⃣ Intersection of Arrays
 
-$$
+```math
 A \cap B = \{x : x \in A \land x \in B\}
-$$
+```
 
 **Multiplicity (for multisets):**
 
-$$
+```math
 \text{count}_{A \cap B}(x) = \min(\text{count}_A(x), \text{count}_B(x))
-$$
+```
 
 ---
 
@@ -163,7 +162,6 @@ def longestConsecutive(nums: list[int]) -> int:
     max_length = 0
     
     for num in num_set:
-
         # Only start from sequence beginning
         if num - 1 not in num_set:
             current = num

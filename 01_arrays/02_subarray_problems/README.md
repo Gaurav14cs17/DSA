@@ -4,7 +4,6 @@ title: "Subarray Problems"
 parent: "Arrays"
 nav_order: 2
 permalink: /01_arrays/02_subarray_problems/
-
 ---
 
 <div align="center">
@@ -60,15 +59,15 @@ A subarray is defined by choosing:
 - Start index $i$ where $0 \leq i < n$
 - End index $j$ where $i \leq j < n$
 
-$$
+```math
 \text{Count} = \sum_{i=0}^{n-1} (n-i) = n + (n-1) + \cdots + 1 = \frac{n(n+1)}{2}
-$$
+```
 
 **Alternative Proof (Choose 2 endpoints):**
 
-$$
+```math
 \binom{n+1}{2} = \frac{(n+1)!}{2!(n-1)!} = \frac{(n+1) \cdot n}{2} = \frac{n(n+1)}{2}
-$$
+```
 
 ---
 
@@ -78,9 +77,9 @@ $$
 
 **Recurrence Relation:**
 
-$$
+```math
 \boxed{M[i] = \max(A[i], \; M[i-1] + A[i])}
-$$
+```
 
 Where $M[i]$ = maximum subarray sum ending at index $i$.
 
@@ -90,23 +89,23 @@ Let $S\_{i}$ be the maximum sum of subarray ending at index $i$.
 
 **Case 1:** Subarray contains only $A[i]$
 
-$$
+```math
 S_i = A[i]
-$$
+```
 
 **Case 2:** Subarray extends from some $j < i$
 
-$$
+```math
 S_i = S_{i-1} + A[i]
-$$
+```
 
 **Decision:** $S\_i = \max(\text{Case 1}, \text{Case 2}) = \max(A[i], S\_{i-1} + A[i])$
 
 **When to start fresh?**
 
-$$
+```math
 A[i] > S_{i-1} + A[i] \iff S_{i-1} < 0
-$$
+```
 
 **Insight:** Start new subarray when previous sum is negative.
 
@@ -161,19 +160,19 @@ Answer: max_so_far = 6  (subarray [4, -1, 2, 1])
 
 **State Definition:**
 
-$$
+```math
 \begin{aligned}
 \text{max\_prod}[i] &= \text{Maximum product ending at } i \\
 \text{min\_prod}[i] &= \text{Minimum product ending at } i
 \end{aligned}
-$$
+```
 
 **Recurrence:**
 
-$$
+```math
 \boxed{\text{max\_prod}[i] = \max(A[i], \; A[i] \times \text{max\_prod}[i-1], \; A[i] \times \text{min\_prod}[i-1])}
 \boxed{\text{min\_prod}[i] = \min(A[i], \; A[i] \times \text{max\_prod}[i-1], \; A[i] \times \text{min\_prod}[i-1])}
-$$
+```
 
 **Why track minimum?**
 
@@ -215,17 +214,17 @@ Answer: 6 (subarray [2, 3])
 
 **Key Identity:**
 
-$$
+```math
 \text{sum}(i, j) = k \iff P[j] - P[i-1] = k \iff P[i-1] = P[j] - k
-$$
+```
 
 **Algorithm:** At each index $j$, count how many previous prefix sums equal $P[j] - k$.
 
 **Counting Formula:**
 
-$$
+```math
 \text{count} = \sum_{j=0}^{n-1} \text{freq}[P[j] - k]
-$$
+```
 
 ```
 Prefix Sum Array: P = [0, 1, 2, 3, 1, 2, 4]
@@ -255,7 +254,6 @@ def maxSubArray(nums: list[int]) -> int:
     max_ending_here = max_so_far = nums[0]
     
     for i in range(1, len(nums)):
-
         # Core decision: extend or start fresh
         max_ending_here = max(nums[i], max_ending_here + nums[i])
         max_so_far = max(max_so_far, max_ending_here)
@@ -275,7 +273,6 @@ def maxProduct(nums: list[int]) -> int:
     
     for i in range(1, len(nums)):
         num = nums[i]
-
         # Calculate candidates
         candidates = (num, num * max_prod, num * min_prod)
         max_prod = max(candidates)
@@ -302,7 +299,6 @@ def subarraySum(nums: list[int], k: int) -> int:
     
     for num in nums:
         prefix_sum += num
-
         # How many times have we seen (prefix_sum - k)?
         count += prefix_count[prefix_sum - k]
         prefix_count[prefix_sum] += 1
@@ -550,13 +546,11 @@ Think of it as a running investment:
 - If positive, **keep holding** and add the next stock
 
 ```python
-
 # Investment analogy
 portfolio = 0
 best_ever = float('-inf')
 
 for stock_value in prices:
-
     # Should I keep my current portfolio or start fresh?
     portfolio = max(stock_value, portfolio + stock_value)
     best_ever = max(best_ever, portfolio)
@@ -599,7 +593,6 @@ Brute Force:
 for i in range(n):
     for j in range(i, n):
         sum = sum(arr[i:j+1])  # O(n) each time
-
 # Total: O(n³)
 
 Optimized Brute:
@@ -607,13 +600,11 @@ for i in range(n):
     sum = 0
     for j in range(i, n):
         sum += arr[j]  # Running sum
-
 # Total: O(n²)
 
 Kadane's:
 for i in range(n):
     max_ending = max(arr[i], max_ending + arr[i])
-
 # Total: O(n) ✨
 ```
 

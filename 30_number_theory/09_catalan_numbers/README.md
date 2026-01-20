@@ -5,7 +5,6 @@ parent: "Number Theory"
 nav_order: 9
 has_children: true
 permalink: /30_number_theory/09_catalan_numbers/
-
 ---
 
 <div align="center">
@@ -39,9 +38,9 @@ permalink: /30_number_theory/09_catalan_numbers/
 
 **nth Catalan Number:**
 
-$$
+```math
 C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}
-$$
+```
 
 **First values:** 1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862...
 
@@ -49,10 +48,10 @@ $$
 
 ### 2️⃣ Recurrence Relation
 
-$$
+```math
 C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
 C_n = \frac{2(2n-1)}{n+1} C_{n-1}
-$$
+```
 
 ---
 
@@ -112,7 +111,6 @@ def catalan_dp(n: int) -> int:
 
 def catalan_formula(n: int) -> int:
     """Compute nth Catalan using binomial formula."""
-
     # C_n = C(2n, n) / (n + 1)
     result = 1
     for i in range(n):
@@ -121,7 +119,6 @@ def catalan_formula(n: int) -> int:
 
 def catalan_mod(n: int, mod: int) -> int:
     """Compute nth Catalan mod prime."""
-
     # C_n = C(2n, n) * inverse(n+1) mod p
     
     # Compute C(2n, n)

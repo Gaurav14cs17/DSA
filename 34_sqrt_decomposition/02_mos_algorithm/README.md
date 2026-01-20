@@ -4,7 +4,6 @@ title: "Mo's Algorithm"
 parent: "Sqrt Decomposition"
 nav_order: 2
 permalink: /34_sqrt_decomposition/02_mos_algorithm/
-
 ---
 
 <div align="center">
@@ -47,9 +46,9 @@ permalink: /34_sqrt_decomposition/02_mos_algorithm/
 
 ### Time Complexity
 
-$$
+```math
 T = O(n\sqrt{n} + q\sqrt{n}) = O((n+q)\sqrt{n})
-$$
+```
 
 ---
 
@@ -133,7 +132,6 @@ class MoAlgorithm:
         Returns:
             List of answers in original query order
         """
-
         # Add query index
         indexed_queries = [
             (left, right, idx) 
@@ -152,7 +150,6 @@ class MoAlgorithm:
         answers = [0] * len(queries)
         
         for left, right, query_idx in indexed_queries:
-
             # Expand/contract range to [left, right]
             
             # Move right pointer

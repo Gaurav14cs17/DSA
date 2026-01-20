@@ -3,7 +3,6 @@ layout: default
 title: "Suffix Structures"
 parent: "String Algorithms"
 nav_order: 4
-
 ---
 
 # 📚 Suffix Arrays & LCP Arrays
@@ -122,7 +121,6 @@ def build_suffix_array(s):
     
     k = 1  # Current substring length
     while k < n:
-
         # Sort by (rank[i], rank[i+k])
         order.sort(key=lambda i: (rank[i], rank[(i + k) % n]))
         
@@ -149,7 +147,6 @@ def build_suffix_array(s):
 s = "banana"
 sa = build_suffix_array(s)
 print(f"Suffix Array: {sa}")
-
 # Output: [5, 3, 1, 0, 4, 2]
 ```
 
@@ -177,7 +174,6 @@ def kasai_lcp(s, sa):
     
     for i in range(n):
         if rank[i] > 0:
-
             # Previous suffix in sorted order
             j = sa[rank[i] - 1]
             
@@ -344,7 +340,6 @@ def longest_common_substring(s1, s2):
     - Build SA and LCP
     - Find max LCP where suffixes from different strings
     """
-
     # Concatenate with separator
     combined = s1 + '#' + s2
     n1, n2 = len(s1), len(s2)
@@ -393,7 +388,6 @@ def count_k_mismatch(s, k):
     # Check each pair of suffixes
     for i in range(n):
         for j in range(i + 1, n):
-
             # Use LCP to find first difference
             min_len = min(n - sa[i], n - sa[j])
             
@@ -420,7 +414,6 @@ def circular_string_match(s, pattern):
     Time: O(n log n)
     Space: O(n)
     """
-
     # Circular string = s + s
     circular = s + s
     sa = build_suffix_array(circular)
@@ -462,7 +455,6 @@ def longest_palindrome_sa(s):
         
         # Check if one from s and one from reverse
         if (pos1 < n and pos2 > n) or (pos1 > n and pos2 < n):
-
             # Check if they form palindrome
             if pos1 < n:
                 left_pos = pos1
@@ -597,7 +589,6 @@ def sa_is(s):
     Most efficient suffix array construction
     Complex implementation, often use library
     """
-
     # This is a simplified outline
     # Real implementation is quite complex
     

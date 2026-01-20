@@ -4,7 +4,6 @@ title: "Opposite Direction"
 parent: "Two Pointers"
 nav_order: 1
 permalink: /22_two_pointers/01_opposite_direction/
-
 ---
 
 <div align="center">
@@ -65,17 +64,17 @@ permalink: /22_two_pointers/01_opposite_direction/
 
 #### Initial State
 
-$$
+```math
 left = 0, \quad right = n - 1
-$$
+```
 
 #### Loop Invariant
 
-The solution, if it exists, lies within the range $[left, right]$.
+The solution, if it exists, lies within the range \([left, right]\).
 
 #### Termination
 
-The loop ends when $left \geq right$, having checked all necessary pairs.
+The loop ends when \(left \geq right\), having checked all necessary pairs.
 
 ---
 
@@ -96,53 +95,53 @@ while left < right:
 
 #### 🔍 Proof of Correctness
 
-**Theorem**: If a valid pair $(i, j)$ with $i < j$ exists, the algorithm finds it.
+**Theorem**: If a valid pair \((i, j)\) with \(i < j\) exists, the algorithm finds it.
 
 **Proof**:
 
 We prove by induction on the number of iterations.
 
-**Base case**: Initially, if solution $(i, j)$ exists, then $0 \leq i < j \leq n-1$, so it's in $[left, right]$.
+**Base case**: Initially, if solution \((i, j)\) exists, then \(0 \leq i < j \leq n-1\), so it's in \([left, right]\).
 
-**Inductive step**: Assume solution is in $[left, right]$. We show it remains after one iteration.
+**Inductive step**: Assume solution is in \([left, right]\). We show it remains after one iteration.
 
-**Case 1**: $arr[left] + arr[right] < target$
+**Case 1**: \(arr[left] + arr[right] < target\)
 
-We claim $left$ cannot be part of any valid pair in the current range.
+We claim \(left\) cannot be part of any valid pair in the current range.
 
-For any $k \in [left, right]$:
+For any \(k \in [left, right]\):
 
-$$
+```math
 arr[left] + arr[k] \leq arr[left] + arr[right] < target
-$$
+```
 
-Since the array is sorted, $arr[k] \leq arr[right]$.
+Since the array is sorted, \(arr[k] \leq arr[right]\).
 
-Therefore, $left$ is not the left index of any solution, so we safely increment it.
+Therefore, \(left\) is not the left index of any solution, so we safely increment it.
 
-**Case 2**: $arr[left] + arr[right] > target$
+**Case 2**: \(arr[left] + arr[right] > target\)
 
-By symmetric argument, $right$ cannot be the right index of any solution.
+By symmetric argument, \(right\) cannot be the right index of any solution.
 
-For any $k \in [left, right]$:
+For any \(k \in [left, right]\):
 
-$$
+```math
 arr[k] + arr[right] \geq arr[left] + arr[right] > target
-$$
+```
 
-We safely decrement $right$.
+We safely decrement \(right\).
 
-**Case 3**: $arr[left] + arr[right] = target$
+**Case 3**: \(arr[left] + arr[right] = target\)
 
 Found the solution. ∎
 
 #### ⏱️ Time Complexity
 
-Each iteration moves at least one pointer. Maximum $n$ moves before $left \geq right$.
+Each iteration moves at least one pointer. Maximum \(n\) moves before \(left \geq right\).
 
-$$
+```math
 T(n) = O(n)
-$$
+```
 
 ---
 
@@ -153,9 +152,9 @@ $$
 
 #### The Formula
 
-$$
+```math
 \text{Area}(l, r) = \min(h[l], h[r]) \times (r - l)
-$$
+```
 
 The area is limited by the **shorter** line.
 
@@ -165,33 +164,33 @@ The area is limited by the **shorter** line.
 
 **Proof by contradiction**:
 
-Suppose $h[l] < h[r]$ and the optimal solution involves $l$ with some $k$ where $l < k < r$.
+Suppose \(h[l] < h[r]\) and the optimal solution involves \(l\) with some \(k\) where \(l < k < r\).
 
 Then:
 
-$$
+```math
 \text{Area}(l, k) = \min(h[l], h[k]) \times (k - l)
-$$
+```
 
-Since $h[l]$ is the minimum (given $h[l] < h[r]$ and we're looking at containers with $l$):
+Since \(h[l]\) is the minimum (given \(h[l] < h[r]\) and we're looking at containers with \(l\)):
 
-$$
+```math
 \text{Area}(l, k) \leq h[l] \times (k - l) < h[l] \times (r - l)
-$$
+```
 
-Because $k < r$, we have $k - l < r - l$.
+Because \(k < r\), we have \(k - l < r - l\).
 
 But:
 
-$$
+```math
 h[l] \times (r - l) = \min(h[l], h[r]) \times (r - l) = \text{Area}(l, r)
-$$
+```
 
-So $\text{Area}(l, k) < \text{Area}(l, r)$.
+So \(\text{Area}(l, k) < \text{Area}(l, r)\).
 
-Therefore, no container involving $l$ with a position $< r$ can beat $(l, r)$.
+Therefore, no container involving \(l\) with a position \(< r\) can beat \((l, r)\).
 
-We've already recorded $\text{Area}(l, r)$, so we can safely discard $l$. ∎
+We've already recorded \(\text{Area}(l, r)\), so we can safely discard \(l\). ∎
 
 #### 📊 Visual Proof
 
@@ -221,39 +220,39 @@ Why moving L was correct:
 ### 4️⃣ Trapping Rain Water — The Dual-Maximum Insight
 
 {: .highlight }
-> Water at position $i$ depends on the **minimum** of the **maximum** heights on both sides.
+> Water at position \(i\) depends on the **minimum** of the **maximum** heights on both sides.
 
 #### The Key Formula
 
-$$
+```math
 \text{water}[i] = \max(0, \min(\text{maxLeft}[i], \text{maxRight}[i]) - h[i])
-$$
+```
 
 #### 🔍 Proof of Two-Pointer Optimization
 
-**Claim**: If $leftMax < rightMax$, the water at position $left$ is exactly $leftMax - h[left]$.
+**Claim**: If \(leftMax < rightMax\), the water at position \(left\) is exactly \(leftMax - h[left]\).
 
 **Proof**:
 
 We maintain:
-- $leftMax = \max(h[0], h[1], ..., h[left])$
-- $rightMax = \max(h[right], h[right+1], ..., h[n-1])$
+- \(leftMax = \max(h[0], h[1], ..., h[left])\)
+- \(rightMax = \max(h[right], h[right+1], ..., h[n-1])\)
 
-Since $leftMax < rightMax$, and $rightMax$ only considers positions $\geq right$:
+Since \(leftMax < rightMax\), and \(rightMax\) only considers positions \(\geq right\):
 
-For position $left$, the actual maximum on the right side is:
+For position \(left\), the actual maximum on the right side is:
 
-$$
+```math
 \text{actualRightMax} = \max(h[left+1], ..., h[n-1]) \geq rightMax > leftMax
-$$
+```
 
 Therefore:
 
-$$
+```math
 \min(leftMax, \text{actualRightMax}) = leftMax
-$$
+```
 
-The water level at $left$ is determined solely by $leftMax$! ∎
+The water level at \(left\) is determined solely by \(leftMax\)! ∎
 
 #### 📊 Visual Example
 
@@ -286,38 +285,38 @@ Total water = 6 units
 
 #### Mathematical Framework
 
-Find $a + b + c = 0$ where $a \leq b \leq c$.
+Find \(a + b + c = 0\) where \(a \leq b \leq c\).
 
-1. Sort the array: $O(n \log n)$
-2. For each $a = nums[i]$:
-   - Find $b + c = -a$ using two pointers: $O(n)$
-3. Total: $O(n^2)$
+1. Sort the array: \(O(n \log n)\)
+2. For each \(a = nums[i]\):
+   - Find \(b + c = -a\) using two pointers: \(O(n)\)
+3. Total: \(O(n^2)\)
 
 #### Handling Duplicates
 
-Skip duplicate values for $a$:
+Skip duplicate values for \(a\):
 ```python
 if i > 0 and nums[i] == nums[i-1]:
     continue
 ```
 
-Skip duplicate $b$ and $c$ after finding a valid triplet.
+Skip duplicate \(b\) and \(c\) after finding a valid triplet.
 
 ---
 
 ### 6️⃣ kSum Generalization
 
-For $k$-Sum problem:
+For \(k\)-Sum problem:
 
-$$
+```math
 T(k, n) = O(n^{k-1})
-$$
+```
 
-Reduction: Fix one element, solve $(k-1)$-Sum on remaining.
+Reduction: Fix one element, solve \((k-1)\)-Sum on remaining.
 
-- 2Sum: $O(n)$
-- 3Sum: $O(n^2)$
-- 4Sum: $O(n^3)$
+- 2Sum: \(O(n)\)
+- 3Sum: \(O(n^2)\)
+- 4Sum: \(O(n^3)\)
 
 ---
 
@@ -454,7 +453,6 @@ def threeSum(nums: list[int]) -> list[list[int]]:
     n = len(nums)
     
     for i in range(n - 2):
-
         # Skip duplicates for first element
         if i > 0 and nums[i] == nums[i - 1]:
             continue
@@ -476,7 +474,6 @@ def threeSum(nums: list[int]) -> list[list[int]]:
                 # Skip duplicates for second element
                 while left < right and nums[left] == nums[left + 1]:
                     left += 1
-
                 # Skip duplicates for third element
                 while left < right and nums[right] == nums[right - 1]:
                     right -= 1
@@ -538,13 +535,11 @@ def fourSum(nums: list[int], target: int) -> list[list[int]]:
     n = len(nums)
     
     for i in range(n - 3):
-
         # Skip duplicates
         if i > 0 and nums[i] == nums[i - 1]:
             continue
         
         for j in range(i + 1, n - 2):
-
             # Skip duplicates
             if j > i + 1 and nums[j] == nums[j - 1]:
                 continue
@@ -589,7 +584,6 @@ def maxArea(height: list[int]) -> int:
     max_area = 0
     
     while left < right:
-
         # Calculate current area
         width = right - left
         h = min(height[left], height[right])
@@ -629,7 +623,6 @@ def trap(height: list[int]) -> int:
     
     while left < right:
         if height[left] < height[right]:
-
             # Left side is limiting factor
             if height[left] >= left_max:
                 left_max = height[left]
@@ -637,7 +630,6 @@ def trap(height: list[int]) -> int:
                 water += left_max - height[left]
             left += 1
         else:
-
             # Right side is limiting factor
             if height[right] >= right_max:
                 right_max = height[right]
@@ -662,7 +654,6 @@ def isPalindrome(s: str) -> bool:
     left, right = 0, len(s) - 1
     
     while left < right:
-
         # Skip non-alphanumeric from left
         while left < right and not s[left].isalnum():
             left += 1
@@ -704,7 +695,6 @@ def validPalindromeII(s: str) -> bool:
     
     while left < right:
         if s[left] != s[right]:
-
             # Try skipping either left or right character
             return (is_palindrome_range(s, left + 1, right) or 
                     is_palindrome_range(s, left, right - 1))

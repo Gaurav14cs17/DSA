@@ -4,7 +4,6 @@ title: "Game Theory"
 nav_order: 33
 has_children: true
 permalink: /32_game_theory/
-
 ---
 
 <div align="center">
@@ -68,12 +67,12 @@ permalink: /32_game_theory/
 - A position is **losing** if all moves lead to **winning** positions
 - A position is **winning** if there exists at least one move to a **losing** position
 
-$$
+```math
 \begin{align}
 \text{Position is L} &\iff \text{All successors are W} \\
 \text{Position is W} &\iff \exists \text{ successor that is L}
 \end{align}
-$$
+```
 
 ---
 
@@ -83,18 +82,18 @@ $$
 
 **Nim-Sum (XOR):** For piles with sizes $a\_1, a\_2, \ldots, a\_n$:
 
-$$
+```math
 \text{Nim-Sum} = a_1 \oplus a_2 \oplus \cdots \oplus a_n
-$$
+```
 
 **Bouton's Theorem (1901):**
 
-$$
+```math
 \begin{cases}
 \text{Nim-Sum} = 0 &\implies \text{Losing position (L)} \\
 \text{Nim-Sum} \neq 0 &\implies \text{Winning position (W)}
 \end{cases}
-$$
+```
 
 **Proof:**
 1. Terminal position (all piles empty): Nim-Sum = 0 → Previous player wins
@@ -109,9 +108,9 @@ $$
 
 **Grundy Number (Nimber):** For position $P$:
 
-$$
+```math
 g(P) = \text{mex}\{g(P') : P' \text{ is a successor of } P\}
-$$
+```
 
 where $\text{mex}(S) = \min\{n \geq 0 : n \notin S\}$ (minimum excludant)
 
@@ -187,12 +186,12 @@ For many game problems, use **memoization** or **DP**:
 **Transition:** Possible moves
 **Base Case:** Terminal positions
 
-$$
+```math
 \text{dp}[\text{state}] = \begin{cases}
 \text{win} &\text{if } \exists \text{ move to losing state} \\
 \text{lose} &\text{if all moves lead to winning states}
 \end{cases}
-$$
+```
 
 ---
 
@@ -439,7 +438,6 @@ def minimax(state, depth: int, is_maximizing: bool,
     
     Time: O(b^d) worst case, O(b^{d/2}) with good ordering
     """
-
     # Terminal condition
     if depth == 0 or is_terminal(state):
         return evaluate(state)
@@ -533,7 +531,6 @@ def can_i_win(max_choosable: int, desired_total: int) -> bool:
     
     Time: O(2^n × n), Space: O(2^n)
     """
-
     # Quick checks
     total_sum = max_choosable * (max_choosable + 1) // 2
     if total_sum < desired_total:
@@ -576,7 +573,6 @@ def can_i_win(max_choosable: int, desired_total: int) -> bool:
 ### Pattern 1: Odd/Even Parity
 
 ```python
-
 # Many games have odd/even winning patterns
 def divisor_game(n: int) -> bool:
     """
@@ -588,7 +584,6 @@ def divisor_game(n: int) -> bool:
 ### Pattern 2: Symmetry Strategy
 
 ```python
-
 # Mirror opponent's moves
 def can_win_symmetry(n: int) -> bool:
     """
@@ -600,7 +595,6 @@ def can_win_symmetry(n: int) -> bool:
 ### Pattern 3: Backward Induction
 
 ```python
-
 # Work backwards from terminal states
 def solve_game(n: int) -> bool:
     """
@@ -609,7 +603,6 @@ def solve_game(n: int) -> bool:
     dp = [False] * (n + 1)
     
     for i in range(1, n + 1):
-
         # Try all moves
         for move in possible_moves(i):
             next_pos = i - move

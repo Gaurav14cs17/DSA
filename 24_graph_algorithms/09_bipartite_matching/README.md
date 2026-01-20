@@ -4,7 +4,6 @@ title: "Bipartite Matching"
 parent: "Advanced Graphs"
 grand_parent: "DSA Topics"
 nav_order: 4
-
 ---
 
 <div align="center">
@@ -77,9 +76,9 @@ nav_order: 4
 
 **Augmentation:** If augmenting path $P$ exists, create larger matching by XORing $M$ with edges in $P$:
 
-$$
+```math
 M' = M \oplus P = (M \setminus P) \cup (P \setminus M)
-$$
+```
 
 This increases matching size by 1.
 
@@ -125,9 +124,9 @@ This increases matching size by 1.
 
 **König's Theorem:** In bipartite graph:
 
-$$
+```math
 \text{Maximum Matching} = \text{Minimum Vertex Cover}
-$$
+```
 
 **Application:** After finding max matching, can find min vertex cover efficiently.
 
@@ -201,7 +200,6 @@ def max_bipartite_matching(L, R, edges):
     Returns:
         Dictionary {left_vertex: right_vertex} representing matching
     """
-
     # Build adjacency list
     graph = {u: [] for u in L}
     for u, v in edges:
@@ -323,7 +321,6 @@ def min_vertex_cover(L, R, edges):
     Find minimum vertex cover in bipartite graph.
     Uses König's theorem: min vertex cover = max matching
     """
-
     # Find maximum matching
     matching = max_bipartite_matching(L, R, edges)
     
@@ -345,13 +342,11 @@ def min_vertex_cover(L, R, edges):
             if u in visited_L:
                 return
             visited_L.add(u)
-
             # From R vertex, follow matching edge to L
             for l in L:
                 if matching.get(l) == u:
                     dfs(l, False)
         else:
-
             # From L vertex, follow non-matching edges to R
             for v in graph[u]:
                 if v not in visited_R:

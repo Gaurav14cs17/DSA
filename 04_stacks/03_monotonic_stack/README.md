@@ -4,7 +4,6 @@ title: "Monotonic Stack"
 parent: "Stacks"
 nav_order: 3
 permalink: /04_stacks/03_monotonic_stack/
-
 ---
 
 <div align="center">
@@ -72,15 +71,15 @@ permalink: /04_stacks/03_monotonic_stack/
 
 **Monotonically Decreasing Stack:**
 
-$$
+```math
 \forall i < j: S[i] \geq S[j]
-$$
+```
 
 **Monotonically Increasing Stack:**
 
-$$
+```math
 \forall i < j: S[i] \leq S[j]
-$$
+```
 
 ---
 
@@ -88,9 +87,9 @@ $$
 
 **Definition:**
 
-$$
+```math
 \text{NGE}(i) = \min\{j : j > i \land A[j] > A[i]\}
-$$
+```
 
 **Visual:**
 
@@ -122,9 +121,9 @@ Index 4: A[4]=3, no greater element
 
 **Area Formula:**
 
-$$
+```math
 \text{Area}(i) = h[i] \times (R[i] - L[i] - 1)
-$$
+```
 
 Where:
 - $L[i]$ = index of first smaller bar on left (or -1)
@@ -151,9 +150,9 @@ Width=2, Height=5, Area=10
 
 **Problem:** Days until warmer temperature.
 
-$$
+```math
 \text{answer}[i] = \text{NGE\_index}(i) - i
-$$
+```
 
 ---
 
@@ -161,9 +160,9 @@ $$
 
 **Contribution Technique:**
 
-$$
+```math
 \text{contribution}(i) = A[i] \times \text{left\_count} \times \text{right\_count}
-$$
+```
 
 Where:
 - $\text{left\_count}$ = subarrays where $A[i]$ is rightmost minimum
@@ -175,9 +174,9 @@ Where:
 
 **Water at position $i$:**
 
-$$
+```math
 \text{water}[i] = \min(\max_{j \leq i} h[j], \max_{j \geq i} h[j]) - h[i]
-$$
+```
 
 **Stack approach:** Find bounded regions.
 

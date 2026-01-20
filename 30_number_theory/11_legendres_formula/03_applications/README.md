@@ -5,7 +5,6 @@ parent: "Legendre's Formula"
 grand_parent: "Number Theory"
 nav_order: 3
 permalink: /30_number_theory/11_legendres_formula/03_applications/
-
 ---
 
 <div align="center">
@@ -48,17 +47,17 @@ permalink: /30_number_theory/11_legendres_formula/03_applications/
 
 ### Legendre's Formula
 
-$$
+```math
 \nu_p(n!) = \sum_{i=1}^{\infty} \left\lfloor \frac{n}{p^i} \right\rfloor = \frac{n - S_p(n)}{p - 1}
-$$
+```
 
 where S_p(n) is the sum of digits of n in base p.
 
 ### For Binomials (Kummer's Theorem)
 
-$$
+```math
 \nu_p\binom{m+n}{m} = \text{carries when adding m + n in base } p
-$$
+```
 
 ---
 
@@ -102,7 +101,6 @@ def factorial_divisible_by(n: int, m: int) -> bool:
     
     while d * d <= temp:
         if temp % d == 0:
-
             # Find power of d in m
             power_in_m = 0
             while temp % d == 0:
@@ -169,7 +167,6 @@ def factorize_factorial(n: int) -> dict[int, int]:
     Time: O(n + π(n) log n) where π(n) ≈ n/ln(n)
     Space: O(π(n))
     """
-
     # Sieve for primes up to n
     is_prime = [True] * (n + 1)
     is_prime[0] = is_prime[1] = False
@@ -189,7 +186,6 @@ def factorize_factorial(n: int) -> dict[int, int]:
 
 # Example: 10! = 2^8 × 3^4 × 5^2 × 7
 print(factorize_factorial(10))
-
 # {2: 8, 3: 4, 5: 2, 7: 1}
 ```
 

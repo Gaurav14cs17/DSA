@@ -4,7 +4,6 @@ title: "Subsets"
 parent: "Backtracking"
 nav_order: 1
 permalink: /17_backtracking/01_subsets/
-
 ---
 
 <div align="center">
@@ -36,9 +35,9 @@ permalink: /17_backtracking/01_subsets/
 
 Set of all subsets of $S$:
 
-$$
+```math
 |P(S)| = 2^n
-$$
+```
 
 Each element has 2 choices: include or exclude.
 
@@ -48,9 +47,9 @@ Each element has 2 choices: include or exclude.
 
 Subset can be represented as $n$-bit binary number:
 
-$$
+```math
 \text{bit } i = 1 \Leftrightarrow \text{element } i \text{ included}
-$$
+```
 
 ---
 
@@ -99,7 +98,6 @@ def subsetsWithDup(nums: list[int]) -> list[list[int]]:
         result.append(current[:])
         
         for i in range(start, len(nums)):
-
             # Skip duplicates at same level
             if i > start and nums[i] == nums[i - 1]:
                 continue

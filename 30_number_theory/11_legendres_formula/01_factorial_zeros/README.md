@@ -5,7 +5,6 @@ parent: "Legendre's Formula"
 grand_parent: "Number Theory"
 nav_order: 1
 permalink: /30_number_theory/11_legendres_formula/01_factorial_zeros/
-
 ---
 
 <div align="center">
@@ -50,9 +49,9 @@ permalink: /30_number_theory/11_legendres_formula/01_factorial_zeros/
 
 The exponent of prime p in n! is:
 
-$$
+```math
 \nu_p(n!) = \sum_{i=1}^{\infty} \left\lfloor \frac{n}{p^i} \right\rfloor = \left\lfloor \frac{n}{p} \right\rfloor + \left\lfloor \frac{n}{p^2} \right\rfloor + \left\lfloor \frac{n}{p^3} \right\rfloor + \cdots
-$$
+```
 
 ### Why Trailing Zeros?
 
@@ -213,7 +212,6 @@ def find_skipped(limit: int) -> list[int]:
     
     while current_zeros <= limit:
         if n % 5 == 0:
-
             # Count how many 5s divide n
             temp = n
             while temp % 5 == 0 and temp > 0:
@@ -226,7 +224,6 @@ def find_skipped(limit: int) -> list[int]:
 
 # Skipped values up to 50
 print(find_skipped(50))
-
 # [5, 11, 17, 23, 29, 30, 36, 42, 48]
 ```
 

@@ -5,7 +5,6 @@ parent: "Fenwick Tree (BIT)"
 grand_parent: "Advanced Trees"
 nav_order: 5
 permalink: /27_advanced_trees/03_fenwick_tree/05_dp_with_bit/
-
 ---
 
 <div align="center">
@@ -76,7 +75,6 @@ def lengthOfLIS(nums: List[int], k: int) -> int:
             return res
         
         def range_max(self, l, r):
-
             # Query max in range [l, r]
             # For BIT, need different approach or segment tree
             return self.query(r)
@@ -85,7 +83,6 @@ def lengthOfLIS(nums: List[int], k: int) -> int:
     result = 0
     
     for num in nums:
-
         # Query max LIS ending with value in [num-k, num-1]
         max_len = 0
         if num > 1:

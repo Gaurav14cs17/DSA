@@ -3,7 +3,6 @@ layout: default
 title: "Line Intersection"
 parent: "Computational Geometry"
 nav_order: 3
-
 ---
 
 # ⚡ Line Intersection Algorithms
@@ -107,7 +106,6 @@ def segment_intersection_point(p1, q1, p2, q2):
     Time: O(1)
     Returns: Point or None
     """
-
     # Direction vectors
     d1 = q1 - p1
     d2 = q2 - p2
@@ -177,7 +175,6 @@ ified version of Bentley-Ottmann
     
     # Create events for segment endpoints
     for i, (p, q) in enumerate(segments):
-
         # Ensure p is left endpoint
         if p.x > q.x or (p.x == q.x and p.y > q.y):
             p, q = q, p
@@ -192,7 +189,6 @@ ified version of Bentley-Ottmann
     
     for x, event_type, seg_id, p, q in events:
         if event_type == 0:  # Start
-
             # Check intersection with neighbors
             active.add(seg_id)
             idx = active.index(seg_id)

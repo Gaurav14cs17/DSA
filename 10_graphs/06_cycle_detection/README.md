@@ -4,7 +4,6 @@ title: "Cycle Detection"
 parent: "Graphs"
 nav_order: 6
 permalink: /10_graphs/06_cycle_detection/
-
 ---
 
 <div align="center">
@@ -37,9 +36,9 @@ permalink: /10_graphs/06_cycle_detection/
 - Gray (1): In current DFS path
 - Black (2): Finished
 
-$$
+```math
 \text{Cycle exists} \Leftrightarrow \text{Back edge to gray vertex}
-$$
+```
 
 ---
 
@@ -58,9 +57,9 @@ Graph with $n$ vertices is a tree iff:
 2. Has exactly $n - 1$ edges
 3. No cycles
 
-$$
+```math
 \text{Tree} \Leftrightarrow |E| = |V| - 1 \land \text{connected}
-$$
+```
 
 ---
 
@@ -68,9 +67,9 @@ $$
 
 Use BFS/DFS with distance tracking:
 
-$$
+```math
 \text{cycle length} = \text{dist}[u] + \text{dist}[v] + 1
-$$
+```
 
 when back edge $(u, v)$ discovered.
 
@@ -220,7 +219,6 @@ def eventualSafeNodes(graph: list[list[int]]) -> list[int]:
     Time: O(V+E), Space: O(V)
     """
     n = len(graph)
-
     # 0=unvisited, 1=visiting, 2=safe
     state = [0] * n
     

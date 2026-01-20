@@ -5,7 +5,6 @@ parent: "Divisors"
 grand_parent: "Number Theory"
 nav_order: 6
 permalink: /30_number_theory/04_divisors/06_applications/
-
 ---
 
 <div align="center">
@@ -121,7 +120,6 @@ class Solution:
 ```python
 class Solution:
     def kthFactor(self, n: int, k: int) -> int:
-
         # Method 1: O(√n)
         factors = []
         d = 1

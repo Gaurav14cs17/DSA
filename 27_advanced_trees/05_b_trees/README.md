@@ -4,7 +4,6 @@ title: "B-Trees"
 parent: "Advanced Trees"
 nav_order: 5
 permalink: /27_advanced_trees/05_b_trees/
-
 ---
 
 <div align="center">
@@ -57,9 +56,9 @@ permalink: /27_advanced_trees/05_b_trees/
 
 **Internal node with $k$ children:**
 
-$$
+```math
 [P_0, K_1, P_1, K_2, P_2, \ldots, K_{k-1}, P_{k-1}]
-$$
+```
 
 where:
 - $K\_i$ = keys (sorted)
@@ -203,7 +202,6 @@ class BTree:
     
     def _search(self, node: BTreeNode, key: int) -> Optional[BTreeNode]:
         """Helper for search."""
-
         # Binary search in current node
         i = bisect_left(node.keys, key)
         
@@ -242,7 +240,6 @@ class BTree:
         i = len(node.keys) - 1
         
         if node.leaf:
-
             # Insert into sorted position
             node.keys.append(None)
             while i >= 0 and key < node.keys[i]:
@@ -250,7 +247,6 @@ class BTree:
                 i -= 1
             node.keys[i + 1] = key
         else:
-
             # Find child to insert into
             while i >= 0 and key < node.keys[i]:
                 i -= 1
@@ -303,12 +299,10 @@ class BTree:
     def _range_query(self, node: BTreeNode, low: int, high: int, 
                      result: List[int]) -> None:
         """Helper for range query."""
-
         # Find starting position
         i = bisect_left(node.keys, low)
         
         while i < len(node.keys) and node.keys[i] <= high:
-
             # Recurse left child
             if not node.leaf and i < len(node.children):
                 self._range_query(node.children[i], low, high, result)
@@ -372,7 +366,6 @@ class BPlusTree:
         
         Time: O(log n + k)
         """
-
         # Find starting leaf
         leaf = self._find_leaf(low)
         result = []
@@ -413,13 +406,11 @@ class DatabaseIndex:
     
     def insert_record(self, key: int, record: dict) -> None:
         """Insert record with key."""
-
         # In real implementation, would insert into B+ tree
         pass
     
     def find_record(self, key: int) -> Optional[dict]:
         """Find record by key."""
-
         # Search B+ tree
         pass
     
@@ -438,12 +429,10 @@ def my_calendar_btree():
             self.intervals = []
         
         def book(self, start: int, end: int) -> bool:
-
             # Check for overlap
             overlapping = self.tree.range_query(start, end - 1)
             if overlapping:
                 for interval_start in overlapping:
-
                     # Check actual intervals
                     for s, e in self.intervals:
                         if s == interval_start and s < end and start < e:

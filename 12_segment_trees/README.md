@@ -4,7 +4,6 @@ title: "Segment Trees"
 nav_order: 21
 has_children: false
 permalink: /12_segment_trees/
-
 ---
 
 <div align="center">
@@ -52,16 +51,16 @@ A **Segment Tree** is a binary tree where:
 
 For array of size $n$:
 
-$$
+```math
 \text{Tree size} \leq 4n
-$$
+```
 
 **Node indices (1-indexed):**
 
-$$
+```math
 \text{left child} = 2i, \quad \text{right child} = 2i + 1
 \text{parent} = \lfloor i/2 \rfloor
-$$
+```
 
 ---
 
@@ -86,9 +85,9 @@ $$
 
 Query [L, R] decomposes into O(log n) disjoint segments.
 
-$$
+```math
 \text{query}(L, R) = \bigoplus_{i} \text{segment}_i
-$$
+```
 
 Where $\oplus$ is the associative operation (sum, min, max, gcd, etc.).
 
@@ -112,9 +111,9 @@ Update propagates from leaf to root, updating all ancestors.
 
 **Deferred updates:** Store pending updates at nodes, push down when needed.
 
-$$
+```math
 \text{lazy}[node] = \text{pending operation for subtree}
-$$
+```
 
 **Push down before:**
 - Querying children
@@ -126,9 +125,9 @@ $$
 
 Segment tree works when merge function is **associative**:
 
-$$
+```math
 f(f(a, b), c) = f(a, f(b, c))
-$$
+```
 
 **Examples:**
 - Sum: $f(a, b) = a + b$
@@ -222,15 +221,12 @@ class LazySegmentTree:
         """Propagate lazy value to children."""
         if self.lazy[node] != 0:
             mid = (start + end) // 2
-
             # Update children
             self.tree[2 * node] += self.lazy[node] * (mid - start + 1)
             self.tree[2 * node + 1] += self.lazy[node] * (end - mid)
-
             # Propagate lazy
             self.lazy[2 * node] += self.lazy[node]
             self.lazy[2 * node + 1] += self.lazy[node]
-
             # Clear current lazy
             self.lazy[node] = 0
     

@@ -4,7 +4,6 @@ title: "Sqrt Decomposition"
 nav_order: 35
 has_children: true
 permalink: /34_sqrt_decomposition/
-
 ---
 
 <div align="center">
@@ -43,15 +42,15 @@ permalink: /34_sqrt_decomposition/
 
 **Block Size:**
 
-$$
+```math
 \text{block\_size} = \lceil \sqrt{n} \rceil
-$$
+```
 
 **Number of Blocks:**
 
-$$
+```math
 \text{num\_blocks} = \lceil \frac{n}{\text{block\_size}} \rceil \approx \sqrt{n}
-$$
+```
 
 **Why √n?**
 - Too small blocks: Many blocks → slow queries
@@ -64,9 +63,9 @@ $$
 
 **Preprocessing:** Build block summaries
 
-$$
+```math
 T_{\text{build}} = O(n)
-$$
+```
 
 **Query (Range):** 
 - Partial blocks at ends: $O(\sqrt{n})$
@@ -88,9 +87,9 @@ $$
 
 ### 3️⃣ Space Complexity
 
-$$
+```math
 S = O(n + \sqrt{n}) = O(n)
-$$
+```
 
 - Original array: $O(n)$
 - Block data: $O(\sqrt{n})$ blocks
@@ -126,11 +125,11 @@ $$
 
 To minimize, take derivative:
 
-$$
+```math
 \frac{dT}{db} = -\frac{n}{b^2} + 1 = 0
 b^2 = n
 b = \sqrt{n}
-$$
+```
 
 At $b = \sqrt{n}$: $T = O(\frac{n}{\sqrt{n}} + \sqrt{n}) = O(\sqrt{n} + \sqrt{n}) = O(\sqrt{n})$ $\blacksquare$
 
@@ -248,12 +247,10 @@ class SqrtDecomposition:
         right_block = right // self.block_size
         
         if left_block == right_block:
-
             # Same block - sum elements directly
             for i in range(left, right + 1):
                 result += self.arr[i]
         else:
-
             # Left partial block
             left_end = (left_block + 1) * self.block_size - 1
             for i in range(left, min(left_end + 1, self.n)):
@@ -307,13 +304,11 @@ class SqrtDecompRangeUpdate:
         right_block = right // self.block_size
         
         if left_block == right_block:
-
             # Same block - update elements directly
             for i in range(left, right + 1):
                 self.arr[i] += value
                 self.blocks[left_block] += value
         else:
-
             # Left partial block
             left_end = (left_block + 1) * self.block_size - 1
             for i in range(left, min(left_end + 1, self.n)):
@@ -422,7 +417,6 @@ class SqrtDecompMinMax:
             for i in range(left, right + 1):
                 result = min(result, self.arr[i])
         else:
-
             # Left partial
             left_end = (left_block + 1) * self.block_size - 1
             for i in range(left, min(left_end + 1, self.n)):

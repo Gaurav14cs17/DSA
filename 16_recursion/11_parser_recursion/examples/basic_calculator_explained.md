@@ -355,7 +355,6 @@ FINAL: 9 ✓
 ### 2. Three Types of Recursion
 
 ```python
-
 # 1. Unary Operators (recursive factor)
 if char == '-':
     return -self.factor()  # RECURSE

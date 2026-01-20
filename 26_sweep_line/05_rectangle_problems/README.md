@@ -4,7 +4,6 @@ title: "Rectangle Problems"
 parent: "Sweep Line Algorithm"
 nav_order: 5
 permalink: /26_sweep_line/05_rectangle_problems/
-
 ---
 
 <div align="center">
@@ -53,15 +52,15 @@ permalink: /26_sweep_line/05_rectangle_problems/
 
 **Rectangles $R\_1 = [x\_1, x\_2] \times [y\_1, y\_2]$ and $R\_2 = [x\_3, x\_4] \times [y\_3, y\_4]$ overlap iff:**
 
-$$
+```math
 x_1 < x_4 \land x_3 < x_2 \land y_1 < y_4 \land y_3 < y_2
-$$
+```
 
 **Overlap area:**
 
-$$
+```math
 A = \max(0, \min(x_2, x_4) - \max(x_1, x_3)) \times \max(0, \min(y_2, y_4) - \max(y_1, y_3))
-$$
+```
 
 ---
 
@@ -93,9 +92,9 @@ $$
 
 **Area with bar $i$ as minimum:**
 
-$$
+```math
 \text{area}_i = \text{height}[i] \times (\text{right}_i - \text{left}_i - 1)
-$$
+```
 
 ---
 
@@ -139,7 +138,6 @@ def compute_area(ax1: int, ay1: int, ax2: int, ay2: int,
     
     Time: O(1), Space: O(1)
     """
-
     # Area of both rectangles
     area1 = (ax2 - ax1) * (ay2 - ay1)
     area2 = (bx2 - bx1) * (by2 - by1)
@@ -220,7 +218,6 @@ def min_area_rect_ii(points: List[List[int]]) -> float:
                 # Check if perpendicular (dot product = 0)
                 dot = (x2 - x1) * (x4 - x3) + (y2 - y1) * (y4 - y3)
                 if abs(dot) < 1e-6:  # Perpendicular
-
                     # Calculate area
                     side1 = math.sqrt((x1 - x3) ** 2 + (y1 - y3) ** 2)
                     side2 = math.sqrt((x1 - x4) ** 2 + (y1 - y4) ** 2)
@@ -264,7 +261,6 @@ def maximal_rectangle(matrix: List[List[str]]) -> int:
     max_area = 0
     
     for row in matrix:
-
         # Update heights
         for i in range(n):
             if row[i] == '1':
@@ -418,7 +414,6 @@ def count_corners_rectangles(grid: List[List[int]]) -> int:
     # For each pair of rows
     for i in range(m):
         for j in range(i + 1, m):
-
             # Count shared 1's in these two rows
             shared = 0
             for k in range(n):

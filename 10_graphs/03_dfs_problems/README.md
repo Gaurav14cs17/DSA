@@ -4,7 +4,6 @@ title: "DFS Problems"
 parent: "Graphs"
 nav_order: 3
 permalink: /10_graphs/03_dfs_problems/
-
 ---
 
 <div align="center">
@@ -32,9 +31,9 @@ permalink: /10_graphs/03_dfs_problems/
 
 ### 1️⃣ DFS Time Complexity
 
-$$
+```math
 \boxed{T(V, E) = O(V + E)}
-$$
+```
 
 **Stack space:** O(V) worst case for path length.
 
@@ -65,9 +64,9 @@ $$
 
 ### 4️⃣ Discovery and Finish Times
 
-$$
+```math
 d[u] < d[v] < f[v] < f[u] \text{ (v is descendant of u)}
-$$
+```
 
 **Parenthesis Theorem:** DFS forms valid nesting.
 

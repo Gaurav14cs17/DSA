@@ -4,7 +4,6 @@ title: "Computational Geometry"
 nav_order: 30
 has_children: true
 permalink: /29_computational_geometry/
-
 ---
 
 # 📐 Computational Geometry
@@ -356,7 +355,6 @@ def convex_hull_graham(points):
     hull = []
     
     for p in sorted_points:
-
         # Remove points that make clockwise turn
         while len(hull) >= 2 and cross_product(hull[-2], hull[-1], p) <= 0:
             hull.pop()
@@ -429,7 +427,6 @@ def point_in_polygon(point, polygon):
         if point.y > min(p1.y, p2.y):
             if point.y <= max(p1.y, p2.y):
                 if point.x <= max(p1.x, p2.x):
-
                     # Compute x-intersection of ray with edge
                     if p1.y != p2.y:
                         x_intersection = (point.y - p1.y) * (p2.x - p1.x) / (p2.y - p1.y) + p1.x

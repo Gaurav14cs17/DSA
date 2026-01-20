@@ -4,7 +4,6 @@ title: "Red-Black Trees"
 parent: "Advanced Trees"
 nav_order: 2
 permalink: /27_advanced_trees/02_red_black_trees/
-
 ---
 
 <div align="center">
@@ -157,7 +156,6 @@ class RedBlackTree:
     """
     
     def __init__(self):
-
         # NIL sentinel node
         self.NIL = RBNode(0, Color.BLACK)
         self.root = self.NIL
@@ -212,7 +210,6 @@ class RedBlackTree:
         
         Time: O(log n), Space: O(1)
         """
-
         # Create new RED node
         node = RBNode(val, Color.RED)
         node.left = self.NIL
@@ -248,7 +245,6 @@ class RedBlackTree:
                 uncle = node.parent.parent.right
                 
                 if uncle.color == Color.RED:
-
                     # Case 1: Uncle is RED
                     node.parent.color = Color.BLACK
                     uncle.color = Color.BLACK
@@ -256,7 +252,6 @@ class RedBlackTree:
                     node = node.parent.parent
                 else:
                     if node == node.parent.right:
-
                         # Case 2: Node is right child
                         node = node.parent
                         self.rotate_left(node)
@@ -266,7 +261,6 @@ class RedBlackTree:
                     node.parent.parent.color = Color.RED
                     self.rotate_right(node.parent.parent)
             else:
-
                 # Mirror cases
                 uncle = node.parent.parent.left
                 
@@ -396,7 +390,6 @@ def count_smaller(nums: List[int]) -> List[int]:
     
     # Process from right to left
     for num in reversed(nums):
-
         # Count elements smaller than num
         count = sorted_list.bisect_left(num)
         result.append(count)
@@ -417,7 +410,6 @@ def reverse_pairs(nums: List[int]) -> int:
     sorted_list = SortedList()
     
     for num in reversed(nums):
-
         # Count how many nums[j] satisfy: num > 2 * nums[j]
         # i.e., nums[j] < num / 2
         count += sorted_list.bisect_left(num / 2)
@@ -438,7 +430,6 @@ def my_calendar():
             self.calendar = SortedDict()
         
         def book(self, start: int, end: int) -> bool:
-
             # Find overlapping intervals
             idx = self.calendar.bisect_right(start)
             
@@ -470,7 +461,6 @@ def contains_nearby_almost_duplicate(nums: List[int], k: int, t: int) -> bool:
     window = SortedList()
     
     for i, num in enumerate(nums):
-
         # Remove elements outside window
         if i > k:
             window.remove(nums[i - k - 1])

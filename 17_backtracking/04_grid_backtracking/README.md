@@ -4,7 +4,6 @@ title: "Grid Backtracking"
 parent: "Backtracking"
 nav_order: 4
 permalink: /17_backtracking/04_grid_backtracking/
-
 ---
 
 <div align="center">
@@ -36,9 +35,9 @@ permalink: /17_backtracking/04_grid_backtracking/
 
 4-directional movement:
 
-$$
+```math
 \text{directions} = [(0,1), (0,-1), (1,0), (-1,0)]
-$$
+```
 
 8-directional adds diagonals.
 
@@ -48,9 +47,9 @@ $$
 
 Worst case for path of length $L$:
 
-$$
+```math
 T = O(4^L)
-$$
+```
 
 With pruning, typically much better.
 
@@ -62,7 +61,6 @@ Mark cells to avoid cycles:
 
 ```python
 board[r][c] = '#'  # Mark
-
 # ... explore ...
 board[r][c] = original  # Restore
 ```

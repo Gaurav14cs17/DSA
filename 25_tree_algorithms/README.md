@@ -4,7 +4,6 @@ title: "Tree Algorithms"
 nav_order: 34
 has_children: true
 permalink: /25_tree_algorithms/
-
 ---
 
 <div align="center">

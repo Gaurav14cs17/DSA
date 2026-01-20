@@ -4,7 +4,6 @@ title: "Topological Sort"
 parent: "Graphs"
 nav_order: 5
 permalink: /10_graphs/05_topological_sort/
-
 ---
 
 <div align="center">
@@ -34,9 +33,9 @@ permalink: /10_graphs/05_topological_sort/
 
 **Topological ordering** of DAG $G = (V, E)$:
 
-$$
+```math
 \text{Linear ordering of } V \text{ such that } (u, v) \in E \Rightarrow u \text{ appears before } v
-$$
+```
 
 **Exists iff:** Graph is a DAG (Directed Acyclic Graph).
 
@@ -49,9 +48,9 @@ $$
 3. Process queue: add to result, decrease neighbors' in-degree
 4. If any vertex becomes in-degree 0, add to queue
 
-$$
+```math
 T = O(V + E)
-$$
+```
 
 ---
 
@@ -59,9 +58,9 @@ $$
 
 **Post-order DFS gives reverse topological order.**
 
-$$
+```math
 \text{topological order} = \text{reverse}(\text{finish order})
-$$
+```
 
 ---
 
@@ -69,9 +68,9 @@ $$
 
 For DAG with $n$ vertices and $e$ edges:
 
-$$
+```math
 \text{# of orders} \geq 1 \text{ if DAG}
-$$
+```
 
 Can be exponentially many (e.g., independent vertices).
 
@@ -229,7 +228,6 @@ def alienOrder(words: list[str]) -> str:
     
     Time: O(C) where C = total characters
     """
-
     # Build graph
     graph = defaultdict(set)
     in_degree = {c: 0 for word in words for c in word}

@@ -4,7 +4,6 @@ title: "Coordinate Compression"
 parent: "Sweep Line Algorithm"
 nav_order: 2
 permalink: /26_sweep_line/02_coordinate_compression/
-
 ---
 
 <div align="center">
@@ -46,9 +45,9 @@ permalink: /26_sweep_line/02_coordinate_compression/
 
 **Mapping Function:**
 
-$$
+```math
 f: \mathbb{R} \to \{0, 1, \ldots, k-1\}
-$$
+```
 
 where $k$ = number of distinct coordinates.
 
@@ -120,17 +119,17 @@ Height function: $H(x) = \max\_{i: l\_i \leq x < r\_i} h\_i$
 
 **Formula:**
 
-$$
+```math
 A = \int_{-\infty}^{\infty} H(x) \, dx
-$$
+```
 
 where $H(x)$ = total height covered at position $x$.
 
 **Discrete Version:**
 
-$$
+```math
 A = \sum_{i=1}^{k-1} (x_{i+1} - x_i) \cdot H(x_i)
-$$
+```
 
 where $x\_1, \ldots, x\_k$ are sorted distinct x-coordinates.
 
@@ -209,7 +208,6 @@ def get_skyline(buildings: List[List[int]]) -> List[List[int]]:
     
     Time: O(n log n), Space: O(n)
     """
-
     # Create events: (x, type, height)
     # type: 0 = start (process first), 1 = end
     events = []
@@ -437,11 +435,9 @@ class RangeModule:
         
         for start, end in self.intervals:
             if end <= left or start >= right:
-
                 # No overlap
                 new_intervals.append([start, end])
             else:
-
                 # Overlap - split if needed
                 if start < left:
                     new_intervals.append([start, left])
@@ -477,11 +473,9 @@ def falling_squares(positions: List[List[int]]) -> List[int]:
         new_intervals = []
         for l, r, h in intervals:
             if r <= left or l >= right:
-
                 # No overlap
                 new_intervals.append((l, r, h))
             else:
-
                 # Split overlapping interval
                 if l < left:
                     new_intervals.append((l, left, h))
@@ -504,7 +498,6 @@ def falling_squares_compressed(positions: List[List[int]]) -> List[int]:
     
     Time: O(n² log n), Space: O(n)
     """
-
     # Coordinate compression
     coords = set()
     for left, size in positions:
@@ -575,7 +568,6 @@ def solve_2d_sweep_template(rectangles: List[List[int]]) -> int:
     3. Compress coordinates if needed
     4. Process events, maintaining active intervals
     """
-
     # Collect x-coordinates
     xs = sorted(set([x for x1, _, x2, _ in rectangles for x in (x1, x2)]))
     
@@ -592,7 +584,6 @@ def solve_2d_sweep_template(rectangles: List[List[int]]) -> int:
     active_x_intervals = []
     
     for y, x1, x2, delta in events:
-
         # Process previous y-segment
         if active_x_intervals and y > prev_y:
             width = calculate_coverage(active_x_intervals)

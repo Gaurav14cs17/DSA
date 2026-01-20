@@ -4,7 +4,6 @@ title: "Tries"
 nav_order: 20
 has_children: true
 permalink: /11_tries/
-
 ---
 
 <div align="center">
@@ -84,9 +83,9 @@ Where:
 
 **Optimization:** Merge nodes with single child.
 
-$$
+```math
 \text{Space: } O(\text{total characters in all words})
-$$
+```
 
 ---
 
@@ -96,9 +95,9 @@ $$
 
 **Maximum XOR:** Greedily pick opposite bit at each level.
 
-$$
+```math
 \text{For each bit, prefer } 1 \oplus \text{current\_bit} = 1
-$$
+```
 
 ---
 

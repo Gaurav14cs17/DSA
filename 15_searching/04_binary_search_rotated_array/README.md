@@ -4,7 +4,6 @@ title: "Rotated Array Search"
 parent: "Searching"
 nav_order: 4
 permalink: /15_searching/04_binary_search_rotated_array/
-
 ---
 
 <div align="center">
@@ -43,10 +42,10 @@ Rotated by 2: $[4, 5, 1, 2, 3]$
 
 ### 2️⃣ Finding Sorted Half
 
-$$
+```math
 \text{If } arr[left] \leq arr[mid]: \text{left half sorted}
 \text{Otherwise: right half sorted}
-$$
+```
 
 ---
 
@@ -62,9 +61,9 @@ $$
 
 Worst case: all elements same except one.
 
-$$
+```math
 T = O(n) \text{ worst case}
-$$
+```
 
 **Handle:** When $arr[left] = arr[mid] = arr[right]$, shrink both ends.
 
@@ -101,7 +100,6 @@ def search(nums: list[int], target: int) -> int:
                 right = mid - 1
             else:
                 left = mid + 1
-
         # Right half is sorted
         else:
             if nums[mid] < target <= nums[right]:
@@ -158,11 +156,9 @@ def findMin(nums: list[int]) -> int:
         mid = (left + right) // 2
         
         if nums[mid] > nums[right]:
-
             # Minimum is in right half
             left = mid + 1
         else:
-
             # Minimum is in left half (including mid)
             right = mid
     
@@ -186,7 +182,6 @@ def findMinWithDuplicates(nums: list[int]) -> int:
         elif nums[mid] < nums[right]:
             right = mid
         else:
-
             # nums[mid] == nums[right], can't decide
             right -= 1
     

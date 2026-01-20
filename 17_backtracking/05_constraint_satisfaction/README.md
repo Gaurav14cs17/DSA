@@ -4,7 +4,6 @@ title: "Constraint Satisfaction"
 parent: "Backtracking"
 nav_order: 5
 permalink: /17_backtracking/05_constraint_satisfaction/
-
 ---
 
 <div align="center">
@@ -45,10 +44,10 @@ permalink: /17_backtracking/05_constraint_satisfaction/
 
 For queens at positions $(r\_1, c\_1)$ and $(r\_2, c\_2)$:
 
-$$
+```math
 c_1 \neq c_2 \quad \text{(same column)}
 |r_1 - r_2| \neq |c_1 - c_2| \quad \text{(same diagonal)}
-$$
+```
 
 ---
 
@@ -62,9 +61,9 @@ Each row, column, and 3×3 box contains digits 1-9 exactly once.
 
 Good constraint checking eliminates branches early:
 
-$$
+```math
 \text{Pruned complexity} \ll \text{Naive complexity}
-$$
+```
 
 ---
 
@@ -120,7 +119,6 @@ def solveSudoku(board: list[list[str]]) -> None:
     Time: O(9^81), Space: O(1)
     """
     def is_valid(row, col, num):
-
         # Check row
         if num in board[row]:
             return False
@@ -239,7 +237,6 @@ def canPartitionKSubsets(nums: list[int], k: int) -> bool:
         for i in range(start, len(nums)):
             if used[i] or current_sum + nums[i] > target:
                 continue
-
             # Skip duplicates
             if i > 0 and nums[i] == nums[i-1] and not used[i-1]:
                 continue

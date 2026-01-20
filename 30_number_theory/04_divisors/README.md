@@ -5,7 +5,6 @@ parent: "Number Theory"
 nav_order: 4
 has_children: true
 permalink: /30_number_theory/04_divisors/
-
 ---
 
 <div align="center">
@@ -41,9 +40,9 @@ permalink: /30_number_theory/04_divisors/
 
 **Formula:** If $n = p\_1^{a\_1} \cdots p\_k^{a\_k}$:
 
-$$
+```math
 \tau(n) = (a_1 + 1)(a_2 + 1) \cdots (a_k + 1)
-$$
+```
 
 **Examples:**
 - $\tau(12) = \tau(2^2 \cdot 3^1) = (2+1)(1+1) = 6$
@@ -57,9 +56,9 @@ $$
 
 **Formula:** If $n = p\_1^{a\_1} \cdots p\_k^{a\_k}$:
 
-$$
+```math
 \sigma(n) = \prod_{i=1}^{k} \frac{p_i^{a_i+1} - 1}{p_i - 1}
-$$
+```
 
 **Examples:**
 - $\sigma(12) = 1+2+3+4+6+12 = 28$

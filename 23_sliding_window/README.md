@@ -4,7 +4,6 @@ title: "Sliding Window"
 nav_order: 32
 has_children: true
 permalink: /23_sliding_window/
-
 ---
 
 <div align="center">
@@ -82,19 +81,19 @@ permalink: /23_sliding_window/
 ### 1️⃣ Fixed Size Window — The Update Formula
 
 {: .highlight }
-> Slide a window of size $k$ by removing the leftmost element and adding the next element.
+> Slide a window of size \(k\) by removing the leftmost element and adding the next element.
 
 #### Window Definition
 
-$$
+```math
 \text{Window at position } i = [a_i, a_{i+1}, ..., a_{i+k-1}]
-$$
+```
 
 #### Sliding Update
 
-$$
+```math
 \text{sum}_{i+1} = \text{sum}_i - a_i + a_{i+k}
-$$
+```
 
 #### 📊 Visual Proof
 
@@ -125,13 +124,10 @@ We update in O(1)!
 ```python
 left = 0
 for right in range(n):
-
     # Add arr[right] to window
     while condition_violated():
-
         # Remove arr[left] from window
         left += 1
-
     # Process valid window
 ```
 
@@ -142,17 +138,17 @@ for right in range(n):
 **Proof**:
 
 Let's count pointer movements:
-- `right` pointer: moves from 0 to n-1 exactly once = $n$ moves
+- `right` pointer: moves from 0 to n-1 exactly once = \(n\) moves
 - `left` pointer: only moves right, never left
-  - Can move at most $n$ times total (can't exceed right)
+  - Can move at most \(n\) times total (can't exceed right)
 
-Total pointer movements: $n + n = 2n = O(n)$
+Total pointer movements: \(n + n = 2n = O(n)\)
 
 Each element:
 - Added to window: exactly once (when `right` reaches it)
 - Removed from window: at most once (when `left` passes it)
 
-**Amortized cost**: $O(1)$ per element ∎
+**Amortized cost**: \(O(1)\) per element ∎
 
 ---
 
@@ -170,11 +166,9 @@ Each element:
 #### Maximum Length Pattern
 
 ```python
-
 # Find LONGEST subarray/substring with some property
 while window_is_INVALID:
     shrink()
-
 # Window is now valid (or empty)
 max_length = max(max_length, window_size)
 ```
@@ -182,12 +176,10 @@ max_length = max(max_length, window_size)
 #### Minimum Length Pattern
 
 ```python
-
 # Find SHORTEST subarray/substring with some property
 while window_is_VALID:
     min_length = min(min_length, window_size)
     shrink()  # Try to find shorter
-
 # Window is now invalid
 ```
 
@@ -201,21 +193,21 @@ while window_is_VALID:
 #### 🔍 Proof
 
 Let:
-- $f(k)$ = count of subarrays with at most $k$ distinct elements
-- $g(k)$ = count of subarrays with exactly $k$ distinct elements
+- \(f(k)\) = count of subarrays with at most \(k\) distinct elements
+- \(g(k)\) = count of subarrays with exactly \(k\) distinct elements
 
 Then:
 
-$$
+```math
 f(k) = g(1) + g(2) + ... + g(k)
 f(k-1) = g(1) + g(2) + ... + g(k-1)
-$$
+```
 
 Subtracting:
 
-$$
+```math
 g(k) = f(k) - f(k-1)
-$$
+```
 
 So: `exactly(k) = atMost(k) - atMost(k-1)` ∎
 
@@ -224,17 +216,17 @@ So: `exactly(k) = atMost(k) - atMost(k-1)` ∎
 ### 5️⃣ Counting Valid Subarrays in a Window
 
 {: .important }
-> When the window $[left, right]$ is valid, it contributes $right - left + 1$ valid subarrays.
+> When the window \([left, right]\) is valid, it contributes \(right - left + 1\) valid subarrays.
 
 #### 🔍 Proof
 
-All subarrays ending at `right` that start anywhere in $[left, right]$ are valid:
-- Starting at `left`: $[left, right]$
-- Starting at `left+1`: $[left+1, right]$
+All subarrays ending at `right` that start anywhere in \([left, right]\) are valid:
+- Starting at `left`: \([left, right]\)
+- Starting at `left+1`: \([left+1, right]\)
 - ...
-- Starting at `right`: $[right, right]$
+- Starting at `right`: \([right, right]\)
 
-Count = $right - left + 1$ subarrays ∎
+Count = \(right - left + 1\) subarrays ∎
 
 ---
 
@@ -394,7 +386,6 @@ def fixed_window(arr: list, k: int) -> int:
     
     # Slide the window
     for i in range(k, n):
-
         # Remove leftmost, add rightmost
         window_sum += arr[i] - arr[i - k]
         result = max(result, window_sum)  # or min, or other operation
@@ -416,7 +407,6 @@ def longest_valid_window(arr: list) -> int:
     state = initialize_state()
     
     for right in range(len(arr)):
-
         # Expand: add arr[right] to window
         update_state_add(state, arr[right])
         
@@ -445,7 +435,6 @@ def shortest_valid_window(arr: list, target) -> int:
     state = 0
     
     for right in range(len(arr)):
-
         # Expand: add arr[right] to window
         state += arr[right]
         
@@ -477,7 +466,6 @@ def count_exact_k(arr: list, k: int) -> int:
         freq = {}
         
         for right in range(len(arr)):
-
             # Add arr[right]
             freq[arr[right]] = freq.get(arr[right], 0) + 1
             

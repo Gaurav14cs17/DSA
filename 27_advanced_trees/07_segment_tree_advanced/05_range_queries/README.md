@@ -5,7 +5,6 @@ parent: "Segment Tree Advanced"
 grand_parent: "Advanced Trees"
 nav_order: 5
 permalink: /27_advanced_trees/07_segment_tree_advanced/05_range_queries/
-
 ---
 
 <div align="center">

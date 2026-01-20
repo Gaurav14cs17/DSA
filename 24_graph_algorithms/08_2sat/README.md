@@ -4,7 +4,6 @@ title: "2-SAT Problem"
 parent: "Graph Algorithms"
 nav_order: 8
 permalink: /24_graph_algorithms/08_2sat/
-
 ---
 
 <div align="center">
@@ -54,9 +53,9 @@ permalink: /24_graph_algorithms/08_2sat/
 
 **Input:** Boolean formula in CNF with clauses of size ≤ 2:
 
-$$
+```math
 (x_1 \lor x_2) \land (\neg x_1 \lor x_3) \land (\neg x_2 \lor \neg x_3) \land \ldots
-$$
+```
 
 **Output:** Assignment of variables to TRUE/FALSE, or "UNSATISFIABLE"
 
@@ -80,9 +79,9 @@ Clause $(a \lor b)$ becomes:
 
 **Key theorem:** 2-SAT is satisfiable **iff** for all variables $x\_i$:
 
-$$
+```math
 x_i \text{ and } \neg x_i \text{ are in different SCCs}
-$$
+```
 
 **Why?** If in same SCC, then $x\_i \Rightarrow \neg x\_i$ and $\neg x\_i \Rightarrow x\_i$ (contradiction).
 
@@ -133,7 +132,6 @@ class TwoSAT:
             n: number of variables (1 to n)
         """
         self.n = n
-
         # Graph: 2*n vertices (x_i and ¬x_i for each variable)
         # Index: 2*i = x_i, 2*i+1 = ¬x_i
         self.graph = defaultdict(list)
@@ -155,7 +153,6 @@ class TwoSAT:
             add_clause(-1, 2)    -> (¬x₁ OR x₂)
             add_clause(1, -2)    -> (x₁ OR ¬x₂)
         """
-
         # (a OR b) = (¬a => b) AND (¬b => a)
         
         a_neg = a < 0
@@ -199,7 +196,6 @@ class TwoSAT:
         At least one: (v1 OR v2 OR ... OR vn)
         At most one: for all pairs (i,j): ¬vi OR ¬vj
         """
-
         # At least one (requires breaking into pairs for 2-SAT)
         # Simplified: use sequential encoding
         # (This is approximation - exact encoding more complex)
@@ -314,14 +310,12 @@ def graph_coloring_2colors(n: int, edges: List[List[int]]) -> Optional[List[int]
     
     Time: O(V+E), Space: O(V+E)
     """
-
     # Actually, 2-coloring is just bipartite check (simpler than 2-SAT)
     # But we can model it with 2-SAT:
     
     sat = TwoSAT(n)
     
     for u, v in edges:
-
         # If u is white, v must be black: u => ¬v
         # If v is white, u must be black: v => ¬u
         sat.add_implication(u + 1, -(v + 1))
@@ -343,7 +337,6 @@ def graph_coloring_2colors(n: int, edges: List[List[int]]) -> Optional[List[int]
 
 def example_simple_2sat():
     """Example: Simple 2-SAT problem"""
-
     # (x1 OR x2) AND (¬x1 OR x3) AND (¬x2 OR ¬x3) AND (x1 OR ¬x3)
     
     sat = TwoSAT(3)
@@ -363,7 +356,6 @@ def example_simple_2sat():
 
 def example_implications():
     """Example: Using implications"""
-
     # If it rains (1), ground is wet (2)
     # If ground is wet, cannot play outside (3)
     # It rained

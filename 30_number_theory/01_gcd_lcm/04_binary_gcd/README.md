@@ -5,7 +5,6 @@ parent: "GCD & LCM"
 grand_parent: "Number Theory"
 nav_order: 4
 permalink: /30_number_theory/01_gcd_lcm/04_binary_gcd/
-
 ---
 
 <div align="center">
@@ -97,7 +96,6 @@ def binary_gcd(a: int, b: int) -> int:
         a >>= 1
     
     while b != 0:
-
         # Remove factors of 2 from b
         while (b & 1) == 0:
             b >>= 1

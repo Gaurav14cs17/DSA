@@ -3,7 +3,6 @@ layout: default
 title: "Suffix Tree"
 parent: "String Algorithms"
 nav_order: 7
-
 ---
 
 # 🌳 Suffix Tree (Ukkonen's Algorithm)
@@ -173,7 +172,6 @@ class SuffixTree:
             
             # Check if active edge exists
             if self.text[self.active_edge] not in self.active_node.children:
-
                 # Create new leaf
                 self.active_node.children[self.text[self.active_edge]] = \
                     SuffixTreeNode(pos, self.end)
@@ -183,7 +181,6 @@ class SuffixTree:
                     last_new_node = None
             
             else:
-
                 # Walk down if necessary
                 next_node = self.active_node.children[self.text[self.active_edge]]
                 
@@ -192,7 +189,6 @@ class SuffixTree:
                 
                 # Check if current character already exists
                 if self.text[next_node.start + self.active_length] == self.text[pos]:
-
                     # Character already in tree
                     if last_new_node:
                         last_new_node.suffix_link = self.active_node
@@ -382,12 +378,10 @@ def longest_repeated_substring(text):
     st = SimpleSuffixTree(text)
     
     def dfs(node, depth, path):
-
         # Check if internal node (has multiple children)
         child_count = sum(1 for k in node.keys() if k != '$index')
         
         if child_count >= 2:
-
             # Internal node found
             max_depth = depth
             max_path = path
@@ -427,7 +421,6 @@ def longest_common_substring(s1, s2):
     st = SimpleSuffixTree(combined)
     
     def dfs(node, depth, path):
-
         # Collect leaf indices
         leaves = []
         
@@ -444,7 +437,6 @@ def longest_common_substring(s1, s2):
         has_s2 = any(idx > len(s1) for idx in leaves)
         
         if has_s1 and has_s2:
-
             # Valid LCS candidate
             max_depth = depth
             max_path = path
@@ -577,7 +569,6 @@ def longest_palindrome_suffix_tree(text):
     
     # Check each possible center
     for center in range(n):
-
         # Check odd-length palindromes
         for radius in range(min(center + 1, n - center)):
             left = center - radius
@@ -639,7 +630,6 @@ def longest_palindrome_suffix_tree(text):
 ### Common Applications Summary
 
 ```python
-
 # Fast operations with suffix tree:
 - Pattern matching: O(m)
 - Longest repeated substring: O(n)
@@ -667,7 +657,6 @@ class GeneralizedSuffixTree:
     """
     
     def __init__(self, strings):
-
         # Combine strings with unique separators
         self.strings = strings
         combined = ""
@@ -681,7 +670,6 @@ class GeneralizedSuffixTree:
     
     def longest_common_substring_all(self):
         """Find longest substring common to ALL strings"""
-
         # Find deepest node with leaves from all strings
         pass
 ```

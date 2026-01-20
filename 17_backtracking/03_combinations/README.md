@@ -4,7 +4,6 @@ title: "Combinations"
 parent: "Backtracking"
 nav_order: 3
 permalink: /17_backtracking/03_combinations/
-
 ---
 
 <div align="center">
@@ -34,26 +33,26 @@ permalink: /17_backtracking/03_combinations/
 
 ### 1️⃣ Combination Formula
 
-$$
+```math
 C(n, k) = \binom{n}{k} = \frac{n!}{k!(n-k)!}
-$$
+```
 
 ---
 
 ### 2️⃣ Pascal's Triangle
 
-$$
+```math
 C(n, k) = C(n-1, k-1) + C(n-1, k)
-$$
+```
 
 ---
 
 ### 3️⃣ Properties
 
-$$
+```math
 C(n, k) = C(n, n-k)
 \sum_{k=0}^{n} C(n, k) = 2^n
-$$
+```
 
 ---
 
@@ -129,7 +128,6 @@ def combinationSum2(candidates: list[int], target: int) -> list[list[int]]:
             return
         
         for i in range(start, len(candidates)):
-
             # Skip duplicates at same level
             if i > start and candidates[i] == candidates[i - 1]:
                 continue

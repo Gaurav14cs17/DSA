@@ -3,7 +3,6 @@ layout: default
 title: "String Hashing"
 parent: "String Algorithms"
 nav_order: 8
-
 ---
 
 # 🔐 String Hashing
@@ -187,7 +186,6 @@ class DoubleStringHash:
         self.power2 = [1] * (self.n + 1)
         
         for i in range(self.n):
-
             # Hash 1
             self.prefix1[i + 1] = (
                 self.prefix1[i] * self.base1 + ord(s[i])
@@ -253,7 +251,6 @@ class RollingHash:
         
         Time: O(1)
         """
-
         # Compute power for window size
         power = pow(self.base, window_size - 1, self.mod)
         
@@ -304,7 +301,6 @@ def longest_common_substring(s1, s2):
     """
     def check_length(length):
         """Check if common substring of given length exists"""
-
         # Hash all substrings of s1
         sh1 = StringHash(s1)
         hashes1 = set()
@@ -417,7 +413,6 @@ def count_palindrome_substrings_hash(s):
     
     for length in range(1, n + 1):
         for start in range(n - length + 1):
-
             # Check if s[start:start+length] is palindrome
             forward_hash = forward.hash_substring(start, start + length)
             
@@ -426,7 +421,6 @@ def count_palindrome_substrings_hash(s):
             backward_hash = backward.hash_substring(rev_start, rev_start + length)
             
             if forward_hash == backward_hash:
-
                 # Verify (to handle hash collisions)
                 substring = s[start:start + length]
                 if substring == substring[::-1]:
@@ -465,7 +459,6 @@ def find_repeated_dna_sequences(s):
     power = pow(4, 9, 10**9 + 7)
     
     for i in range(10, len(s)):
-
         # Roll hash
         current_hash = (
             current_hash - char_map[s[i-10]] * power
@@ -514,7 +507,6 @@ def min_window_same_hash(s, t):
             formed += 1
         
         while left <= right and formed == required:
-
             # Update result
             if right - left + 1 < min_len:
                 min_len = right - left + 1
@@ -584,12 +576,10 @@ def match_with_wildcards(text, pattern):
     Time: O(n + m)
     Space: O(n + m)
     """
-
     # Split pattern by wildcards
     parts = pattern.split('?')
     
     if len(parts) == 1:
-
         # No wildcards, exact match
         return text == pattern
     
@@ -653,7 +643,6 @@ def match_with_wildcards(text, pattern):
 
 **Base (p):**
 ```python
-
 # Guidelines:
 - Lowercase only (a-z): p = 31
 - Mixed case (a-z, A-Z): p = 53
@@ -668,7 +657,6 @@ def match_with_wildcards(text, pattern):
 
 **Modulus (M):**
 ```python
-
 # Common choices:
 MOD = 10**9 + 7   # Large prime, fits in 32-bit
 MOD = 10**9 + 9   # Alternative prime
@@ -697,7 +685,6 @@ MOD2 = 10**9 + 9
 ### Common Pitfalls
 
 ```python
-
 # ❌ Wrong: Negative hash after subtraction
 hash_val = (prefix[r] - prefix[l] * power) % MOD
 

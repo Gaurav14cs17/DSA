@@ -5,7 +5,6 @@ parent: "Legendre's Formula"
 grand_parent: "Number Theory"
 nav_order: 2
 permalink: /30_number_theory/11_legendres_formula/02_p_adic_valuation/
-
 ---
 
 <div align="center">
@@ -50,9 +49,9 @@ permalink: /30_number_theory/11_legendres_formula/02_p_adic_valuation/
 
 The **p-adic valuation** (or **p-adic order**) of n, denoted ν_p(n), is the largest exponent e such that p^e divides n:
 
-$$
+```math
 \nu_p(n) = \max\{e \geq 0 : p^e \mid n\}
-$$
+```
 
 ### Examples
 
@@ -66,11 +65,11 @@ $$
 
 ### Key Properties
 
-$$
+```math
 \nu_p(a \times b) = \nu_p(a) + \nu_p(b)
 \nu_p(a / b) = \nu_p(a) - \nu_p(b)
 \nu_p(a + b) \geq \min(\nu_p(a), \nu_p(b))
-$$
+```
 
 ---
 
@@ -148,7 +147,6 @@ def p_adic_binomial(n: int, k: int, p: int) -> int:
     Time: O(log_p n)
     Space: O(1)
     """
-
     # Method 1: Using Legendre's formula
     # ν_p(C(n,k)) = ν_p(n!) - ν_p(k!) - ν_p((n-k)!)
     return (p_adic_factorial(n, p) - 
@@ -264,7 +262,6 @@ def is_divisible_by_prime(n: int, k: int, p: int) -> bool:
 
 def is_divisible(n: int, k: int, m: int) -> bool:
     """Check if m divides C(n, k)."""
-
     # Factor m and check each prime
     temp = m
     d = 2

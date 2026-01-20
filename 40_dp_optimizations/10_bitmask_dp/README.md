@@ -75,13 +75,11 @@ def assignment(tasks, k):
     dp[0] = 0
     
     for mask in range(1 << n):
-
         # Try assigning remaining tasks to one worker
         remaining = ((1 << n) - 1) ^ mask
         
         submask = remaining
         while submask > 0:
-
             # Assign submask to one worker
             cost = sum(tasks[i] for i in range(n) if submask & (1 << i))
             dp[mask | submask] = min(

@@ -4,7 +4,6 @@ title: "BFS Queue"
 parent: "Queues"
 nav_order: 2
 permalink: /05_queues/02_bfs_queue/
-
 ---
 
 <div align="center">
@@ -63,9 +62,9 @@ permalink: /05_queues/02_bfs_queue/
 
 ### 2️⃣ BFS Complexity Analysis
 
-$$
+```math
 T(V, E) = O(V + E)
-$$
+```
 
 **Breakdown:**
 - Queue operations: Each vertex enqueued/dequeued once → $O(V)$
@@ -79,9 +78,9 @@ $$
 
 **Tree Levels:**
 
-$$
+```math
 \text{Level } k = \{v : \text{dist}(root, v) = k\}
-$$
+```
 
 **Processing:** Separate levels by tracking queue size.
 
@@ -102,9 +101,9 @@ Level 2: [grandchildren]
 
 **Formula:**
 
-$$
+```math
 d[v] = \min_{s \in \text{sources}} \text{dist}(s, v)
-$$
+```
 
 ---
 
@@ -112,15 +111,15 @@ $$
 
 **4-directional movement:**
 
-$$
+```math
 \text{neighbors}(x, y) = \{(x±1, y), (x, y±1)\}
-$$
+```
 
 **8-directional movement:**
 
-$$
+```math
 \text{neighbors}(x, y) = \{(x+dx, y+dy) : dx, dy \in \{-1, 0, 1\}, (dx, dy) \neq (0, 0)\}
-$$
+```
 
 ---
 
@@ -128,10 +127,10 @@ $$
 
 For problems with additional state (e.g., keys collected):
 
-$$
+```math
 \text{state} = (\text{position}, \text{extra\_info})
 d[(x, y, state)] = \text{shortest path to } (x, y) \text{ with given state}
-$$
+```
 
 ---
 

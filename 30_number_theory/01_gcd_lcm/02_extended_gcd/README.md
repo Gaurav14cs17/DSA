@@ -5,7 +5,6 @@ parent: "GCD & LCM"
 grand_parent: "Number Theory"
 nav_order: 2
 permalink: /30_number_theory/01_gcd_lcm/02_extended_gcd/
-
 ---
 
 <div align="center">
@@ -39,9 +38,9 @@ permalink: /30_number_theory/01_gcd_lcm/02_extended_gcd/
 
 **Theorem:** For any integers $a, b$ (not both zero), there exist integers $x, y$ such that:
 
-$$
+```math
 a \cdot x + b \cdot y = \gcd(a, b)
-$$
+```
 
 Furthermore, the set of all linear combinations $\{ax + by : x, y \in \mathbb{Z}\}$ equals all multiples of $\gcd(a, b)$.
 
@@ -58,13 +57,13 @@ Let $d$ be the smallest element in $S$, so $d = ax\_0 + by\_0$ for some $x\_0, y
 
 By division algorithm: $a = qd + r$ where $0 \leq r < d$.
 
-$$
+```math
 \begin{align}
 r &= a - qd \\
 &= a - q(ax_0 + by_0) \\
 &= a(1 - qx_0) + b(-qy_0)
 \end{align}
-$$
+```
 
 If $r > 0$, then $r \in S$ and $r < d$, contradicting minimality of $d$.  
 Therefore $r = 0$, so $d \mid a$.  
@@ -102,14 +101,14 @@ By induction, assume we have: $b \cdot x\_1 + (a \bmod b) \cdot y\_1 = d$
 
 Substitute $a \bmod b = a - \lfloor a/b \rfloor \cdot b$:
 
-$$
+```math
 \begin{align}
 d &= b \cdot x_1 + (a - \lfloor a/b \rfloor \cdot b) \cdot y_1 \\
 &= b \cdot x_1 + a \cdot y_1 - \lfloor a/b \rfloor \cdot b \cdot y_1 \\
 &= a \cdot y_1 + b \cdot (x_1 - \lfloor a/b \rfloor \cdot y_1) \\
 &= a \cdot x + b \cdot y
 \end{align}
-$$
+```
 
 where $x = y\_1$ and $y = x\_1 - \lfloor a/b \rfloor \cdot y\_1$. $\blacksquare$
 
@@ -119,9 +118,9 @@ where $x = y\_1$ and $y = x\_1 - \lfloor a/b \rfloor \cdot y\_1$. $\blacksquare$
 
 **Definition:** The modular inverse of $a$ modulo $m$ is an integer $x$ such that:
 
-$$
+```math
 a \cdot x \equiv 1 \pmod{m}
-$$
+```
 
 **Existence Condition:** $a^{-1} \bmod m$ exists **if and only if** $\gcd(a, m) = 1$.
 
@@ -131,15 +130,15 @@ From Bézout: $a \cdot x + m \cdot y = \gcd(a, m)$
 
 If $\gcd(a, m) = 1$:
 
-$$
+```math
 a \cdot x + m \cdot y = 1
-$$
+```
 
 Taking modulo $m$:
 
-$$
+```math
 a \cdot x \equiv 1 \pmod{m}
-$$
+```
 
 So $x \bmod m$ is the modular inverse!
 
@@ -158,12 +157,12 @@ So $x \bmod m$ is the modular inverse!
 3. Otherwise, scale: $(x, y) = (x\_0 \cdot c/d, y\_0 \cdot c/d)$ is one solution
 4. General solution:
 
-$$
+```math
 \begin{cases}
 x = x_0 \cdot c/d + k \cdot (b/d) \\
 y = y_0 \cdot c/d - k \cdot (a/d)
 \end{cases}
-$$
+```
 
 for any integer $k$.
 
@@ -297,7 +296,6 @@ def extended_gcd(a: int, b: int) -> tuple[int, int, int]:
     Example:
         >>> extended_gcd(240, 46)
         (2, -9, 47)
-
         # Verify: 240×(-9) + 46×47 = 2
     """
     if b == 0:
@@ -353,7 +351,6 @@ def mod_inverse(a: int, m: int) -> int | None:
     Example:
         >>> mod_inverse(17, 43)
         38
-
         # Verify: (17 × 38) % 43 = 1
     """
     gcd_val, x, _ = extended_gcd(a, m)
@@ -389,7 +386,6 @@ def solve_diophantine(a: int, b: int, c: int) -> tuple[int, int] | None:
     Example:
         >>> solve_diophantine(12, 15, 9)
         (3, -1)
-
         # Verify: 12×3 + 15×(-1) = 36 - 15 = 21... wait let me recalculate
         # Actually: We want 12x + 15y = 9
         # gcd(12, 15) = 3, and 3 | 9, so solution exists

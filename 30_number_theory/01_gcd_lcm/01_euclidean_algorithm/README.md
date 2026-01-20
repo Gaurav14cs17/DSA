@@ -5,7 +5,6 @@ parent: "GCD & LCM"
 grand_parent: "Number Theory"
 nav_order: 1
 permalink: /30_number_theory/01_gcd_lcm/01_euclidean_algorithm/
-
 ---
 
 <div align="center">
@@ -39,15 +38,15 @@ permalink: /30_number_theory/01_gcd_lcm/01_euclidean_algorithm/
 
 **Euclidean Algorithm Theorem:**
 
-$$
+```math
 \gcd(a, b) = \gcd(b, a \bmod b)
-$$
+```
 
 **Base Case:**
 
-$$
+```math
 \gcd(a, 0) = a
-$$
+```
 
 **Proof:**
 Let $d = \gcd(a, b)$. Then:
@@ -57,27 +56,27 @@ Let $d = \gcd(a, b)$. Then:
 
 Now consider $a \bmod b$:
 
-$$
+```math
 \begin{align}
 a \bmod b &= a - q \cdot b \quad \text{where } q = \lfloor a/b \rfloor \\
 &= d \cdot m - q \cdot d \cdot n \\
 &= d \cdot (m - q \cdot n)
 \end{align}
-$$
+```
 
 Since $d$ divides both $b$ and $(a \bmod b)$, $d$ is a common divisor of $b$ and $(a \bmod b)$.
 
 Conversely, any common divisor of $b$ and $(a \bmod b)$ must divide:
 
-$$
+```math
 a = q \cdot b + (a \bmod b)
-$$
+```
 
 Therefore, the set of common divisors is identical, so:
 
-$$
+```math
 \gcd(a, b) = \gcd(b, a \bmod b) \quad \blacksquare
-$$
+```
 
 ---
 
@@ -97,9 +96,9 @@ Therefore, the problem size reduces by at least half every **two** steps.
 
 **Time Complexity:**
 
-$$
+```math
 T(a, b) = O(\log \min(a, b))
-$$
+```
 
 ---
 
@@ -109,9 +108,9 @@ $$
 
 **Fibonacci Sequence:** $F\_0 = 0, F\_1 = 1, F\_n = F\_{n-1} + F\_{n-2}$
 
-$$
+```math
 \gcd(F_{n+1}, F_n) \text{ requires exactly } n \text{ steps}
-$$
+```
 
 **Example:**
 ```

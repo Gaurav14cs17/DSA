@@ -4,7 +4,6 @@ title: "Memoization"
 parent: "Recursion"
 nav_order: 3
 permalink: /16_recursion/03_memoization/
-
 ---
 
 <div align="center">
@@ -50,9 +49,9 @@ permalink: /16_recursion/03_memoization/
 
 **Cache** results of expensive function calls:
 
-$$
+```math
 \text{memo}[args] = f(args)
-$$
+```
 
 Return cached result on repeated calls.
 
@@ -248,7 +247,6 @@ from functools import lru_cache
 
 @lru_cache(maxsize=None)
 def solve(state):
-
     # Base case
     if is_base_case(state):
         return base_value

@@ -4,7 +4,6 @@ title: "Strings"
 nav_order: 11
 has_children: true
 permalink: /02_strings/
-
 ---
 
 <div align="center">
@@ -33,21 +32,21 @@ permalink: /02_strings/
 
 A string $S$ of length $n$ over alphabet $\Sigma$:
 
-$$
+```math
 S = s_0 s_1 s_2 \cdots s_{n-1} \quad \text{where } s_i \in \Sigma
-$$
+```
 
 **ASCII Encoding:**
 
-$$
+```math
 \text{char\_value} = \text{ord}(c) \in [0, 127]
-$$
+```
 
 **Memory:**
 
-$$
+```math
 \text{Address}(S[i]) = \text{Base} + i \times \text{sizeof(char)}
-$$
+```
 
 ---
 
@@ -55,15 +54,15 @@ $$
 
 **Number of substrings of length $k$ in string of length $n$:**
 
-$$
+```math
 n - k + 1
-$$
+```
 
 **Total substrings (including empty):**
 
-$$
+```math
 \boxed{\frac{n(n+1)}{2} + 1}
-$$
+```
 
 **Proof:**
 ```
@@ -82,9 +81,9 @@ Plus 1 for empty string = n(n+1)/2 + 1 ∎
 
 **Theorem:** Strings $S$ and $T$ are anagrams if and only if:
 
-$$
+```math
 \boxed{\forall c \in \Sigma: \text{count}_S(c) = \text{count}_T(c)}
-$$
+```
 
 **Equivalent Conditions:**
 
@@ -94,15 +93,15 @@ $$
 
 **Frequency Vector (for lowercase letters):**
 
-$$
+```math
 \vec{f}(S) = [\text{count}_S('a'), \text{count}_S('b'), \ldots, \text{count}_S('z')] \in \mathbb{Z}^{26}
-$$
+```
 
 **Proof:**
 
-$$
+```math
 S \sim T \iff \vec{f}(S) = \vec{f}(T) \iff \text{sorted}(S) = \text{sorted}(T) \; \blacksquare
-$$
+```
 
 ---
 
@@ -110,15 +109,15 @@ $$
 
 **Definition:** String $S[0..n-1]$ is a palindrome if:
 
-$$
+```math
 \boxed{S[i] = S[n-1-i] \quad \forall i \in [0, \lfloor n/2 \rfloor]}
-$$
+```
 
 **Palindrome Centers Formula:**
 
-$$
+```math
 \text{Total centers} = 2n - 1
-$$
+```
 
 - Odd length palindromes: $n$ centers at indices $0, 1, \ldots, n-1$
 - Even length palindromes: $n-1$ centers between indices
@@ -127,9 +126,9 @@ $$
 
 For center at position $c$ (using $2n-1$ indexing):
 
-$$
+```math
 \text{left} = \left\lfloor \frac{c}{2} \right\rfloor, \quad \text{right} = \left\lfloor \frac{c}{2} \right\rfloor + (c \bmod 2)
-$$
+```
 
 **Proof of Center Count:**
 ```
@@ -144,7 +143,7 @@ Total: n + (n-1) = 2n - 1 ∎
 
 **Recurrence Relation:**
 
-$$
+```math
 \boxed{dp[i][j] = \begin{cases}
 i & \text{if } j = 0 \\
 j & \text{if } i = 0 \\
@@ -155,7 +154,7 @@ dp[i][j-1] & \text{(insert)} \\
 dp[i-1][j-1] & \text{(replace)}
 \end{cases} & \text{otherwise}
 \end{cases}}
-$$
+```
 
 **Operations Cost:**
 - Delete from $S$: $dp[i-1][j] + 1$
@@ -168,9 +167,9 @@ Let $E(i,j)$ = edit distance between $S[0..i-1]$ and $T[0..j-1]$
 
 **Case 1:** If $S[i-1] = T[j-1]$, no operation needed:
 
-$$
+```math
 E(i,j) = E(i-1, j-1)
-$$
+```
 
 **Case 2:** If $S[i-1] \neq T[j-1]$, try all operations:
 - Delete $S[i-1]$: match $S[0..i-2]$ with $T[0..j-1]$ → $E(i-1,j) + 1$
@@ -185,26 +184,26 @@ Take minimum → optimal ∎
 
 **State Definition:**
 
-$$
+```math
 dp[i][j] = \text{LCS length of } S[0..i-1] \text{ and } T[0..j-1]
-$$
+```
 
 **Recurrence:**
 
-$$
+```math
 \boxed{dp[i][j] = \begin{cases}
 dp[i-1][j-1] + 1 & \text{if } S[i-1] = T[j-1] \\
 \max(dp[i-1][j], dp[i][j-1]) & \text{otherwise}
 \end{cases}}
-$$
+```
 
 **Base Case:** $dp[0][j] = dp[i][0] = 0$
 
 **Properties:**
 
-$$
+```math
 \text{LCS}(S, \text{reverse}(S)) = \text{Longest Palindromic Subsequence}
-$$
+```
 
 **Correctness Proof:**
 
@@ -212,15 +211,15 @@ $$
 
 If $S[i-1] = T[j-1]$, they must appear in LCS (greedy is optimal):
 
-$$
+```math
 \text{LCS}(S[0..i-1], T[0..j-1]) = \text{LCS}(S[0..i-2], T[0..j-2]) + 1
-$$
+```
 
 If $S[i-1] \neq T[j-1]$, one must be excluded:
 
-$$
+```math
 \text{LCS} = \max(\text{LCS}(S[0..i-2], T[0..j-1]), \text{LCS}(S[0..i-1], T[0..j-2]))
-$$
+```
 
 By induction on string lengths, DP computes optimal solution ∎
 
@@ -230,9 +229,9 @@ By induction on string lengths, DP computes optimal solution ∎
 
 **Hash Function:**
 
-$$
+```math
 \boxed{H(S) = \sum_{i=0}^{n-1} s_i \cdot p^i \mod m}
-$$
+```
 
 Where:
 - $p$ is a prime (typically 31 for lowercase, 53 for mixed case)
@@ -240,32 +239,32 @@ Where:
 
 **Rolling Update (add character on right):**
 
-$$
+```math
 H(S + c) = (H(S) + c \cdot p^n) \mod m
-$$
+```
 
 **Rolling Update (remove character from left):**
 
-$$
+```math
 H(S[1..n]) = \frac{H(S[0..n]) - s_0}{p} \mod m
-$$
+```
 
 **Collision Probability:**
 
 For two different strings:
 
-$$
+```math
 P(\text{collision}) \approx \frac{1}{m}
-$$
+```
 
 **Example Calculation:**
 
 For string "abc" with $p=31$, $m=10^9+7$:
 
-$$
+```math
 H(\text{"abc"}) = (97 \cdot 31^0 + 98 \cdot 31^1 + 99 \cdot 31^2) \bmod (10^9+7)
 = (97 + 3038 + 95139) \bmod (10^9+7) = 98274
-$$
+```
 
 ---
 
@@ -275,13 +274,13 @@ $$
 
 **Recurrence:**
 
-$$
+```math
 \pi[i] = \begin{cases}
 0 & \text{if } i = 0 \\
 \pi[\pi[i-1]] & \text{if } P[i] \neq P[\pi[i-1]] \text{ (backtrack)} \\
 \pi[i-1] + 1 & \text{if } P[i] = P[\pi[i-1]]
 \end{cases}
-$$
+```
 
 **Time Complexity Proof:**
 

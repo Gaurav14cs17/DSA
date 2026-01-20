@@ -4,7 +4,6 @@ title: "Deque Problems"
 parent: "Queues"
 nav_order: 3
 permalink: /05_queues/03_deque_problems/
-
 ---
 
 <div align="center">
@@ -70,9 +69,9 @@ permalink: /05_queues/03_deque_problems/
 
 **Property:**
 
-$$
+```math
 \text{front of deque} = \text{index of maximum in current window}
-$$
+```
 
 **Why O(n)?**
 - Each element added once, removed once
@@ -84,9 +83,9 @@ $$
 
 **Formal:**
 
-$$
+```math
 \text{result}[i] = \max_{j=i}^{i+k-1} nums[j]
-$$
+```
 
 **Monotonic Deque Approach:**
 
@@ -102,10 +101,10 @@ $$
 
 **Key Insight:** Use monotonic deque on prefix sums.
 
-$$
+```math
 \text{sum}(i, j) = P[j] - P[i-1] \geq k
 P[i-1] \leq P[j] - k
-$$
+```
 
 Find smallest $j - i$ where condition holds.
 
@@ -141,7 +140,6 @@ def maxSlidingWindow(nums: list[int], k: int) -> list[int]:
     dq = deque()  # Stores indices
     
     for i, num in enumerate(nums):
-
         # Remove indices outside window
         while dq and dq[0] <= i - k:
             dq.popleft()
@@ -203,7 +201,6 @@ def shortestSubarray(nums: list[int], k: int) -> int:
     dq = deque()  # Stores indices with increasing prefix values
     
     for j in range(n + 1):
-
         # Check if we can form valid subarray
         while dq and prefix[j] - prefix[dq[0]] >= k:
             result = min(result, j - dq.popleft())
@@ -232,7 +229,6 @@ def constrainedSubsetSum(nums: list[int], k: int) -> int:
     dq = deque([0])  # Stores indices with decreasing dp values
     
     for i in range(1, n):
-
         # Remove indices outside window
         while dq and dq[0] < i - k:
             dq.popleft()

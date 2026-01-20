@@ -5,7 +5,6 @@ parent: "Wilson's Theorem"
 grand_parent: "Number Theory"
 nav_order: 1
 permalink: /30_number_theory/12_wilsons_theorem/01_basic_wilson/
-
 ---
 
 <div align="center">
@@ -50,9 +49,9 @@ permalink: /30_number_theory/12_wilsons_theorem/01_basic_wilson/
 
 **Wilson's Theorem:** An integer n > 1 is prime if and only if:
 
-$$
+```math
 (n-1)! \equiv -1 \pmod{n}
-$$
+```
 
 Equivalently: $(n-1)! \equiv n-1 \pmod{n}$
 
@@ -220,9 +219,9 @@ For prime p, the multiplicative group (ℤ/pℤ)* has order p-1.
 
 Therefore:
 
-$$
+```math
 (p-1)! = 1 \times \underbrace{(2 \times 2^{-1}) \times (3 \times 3^{-1}) \times \cdots}_{\text{all pairs = 1}} \times (p-1) \equiv 1 \times 1 \times (p-1) \equiv -1
-$$
+```
 
 ### Why Composites Fail
 

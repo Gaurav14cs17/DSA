@@ -4,7 +4,6 @@ title: "Implicit Graphs - Hidden Relationships"
 parent: "Graphs"
 nav_order: 8
 permalink: /10_graphs/08_implicit_graphs/
-
 ---
 
 <div align="center">
@@ -44,9 +43,9 @@ permalink: /10_graphs/08_implicit_graphs/
 
 **Formal Construction:**
 
-$$
+```math
 G_{implicit} = (V, E) \text{ where } V = f(\text{input}), E = g(\text{rules})
-$$
+```
 
 **Example (Jump Game):**
 - Input: Array $A = [2, 3, 1, 1, 4]$
@@ -68,9 +67,9 @@ $$
 
 **Reachability Set:**
 
-$$
+```math
 \text{Reach}(s) = \{v \in V : \exists \text{ path } s \rightsquigarrow v\}
-$$
+```
 
 ---
 
@@ -86,9 +85,9 @@ $$
 
 **Distance Formula:**
 
-$$
+```math
 d(u, v) = \min\{k : \exists \text{ path of length } k \text{ from } u \text{ to } v\}
-$$
+```
 
 ---
 
@@ -105,10 +104,10 @@ $$
 
 **Component Definition:**
 
-$$
+```math
 C_i = \{v \in V : v \text{ is reachable from seed } s_i\}
 V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j
-$$
+```
 
 ---
 
@@ -130,9 +129,9 @@ $$
 
 **Topological Order:**
 
-$$
+```math
 \forall (u, v) \in E : \text{pos}(u) < \text{pos}(v)
-$$
+```
 
 ---
 
@@ -140,9 +139,9 @@ $$
 
 **Theorem:** For state space $(x\_1, x\_2, \ldots, x\_k)$ with domains $D\_1, D\_2, \ldots, D\_k$:
 
-$$
+```math
 |\text{States}| = \prod_{i=1}^{k} |D_i|
-$$
+```
 
 **Example (Sliding Puzzle 2×3):**
 - States = permutations of 6 positions
@@ -151,9 +150,9 @@ $$
 
 **State Transition Graph:**
 
-$$
+```math
 E = \{(s, s') : s' \text{ reachable from } s \text{ by one move}\}
-$$
+```
 
 ---
 
@@ -169,9 +168,9 @@ $$
 
 **Multi-source Distance:**
 
-$$
+```math
 d_{multi}(v) = \min_{s \in S} d(s, v)
-$$
+```
 
 ---
 
@@ -542,7 +541,6 @@ def can_jump(nums: List[int]) -> bool:
     max_reach = 0
     
     for i in range(n):
-
         # If current position unreachable, fail
         if i > max_reach:
             return False
@@ -631,11 +629,9 @@ def can_finish(numCourses: int, prerequisites: List[List[int]]) -> bool:
     def has_cycle(course):
         """DFS to detect cycle from this course."""
         if state[course] == 1:
-
             # Found GRAY node in path → cycle!
             return True
         if state[course] == 2:
-
             # Already processed, no cycle from here
             return False
         
@@ -693,7 +689,6 @@ def find_order(numCourses: int, prerequisites: List[List[int]]) -> List[int]:
                 return False
         
         state[course] = 2
-
         # Add to result in post-order (after all prerequisites)
         order.append(course)
         return True
@@ -737,7 +732,6 @@ def num_islands(grid: List[List[str]]) -> int:
     
     def dfs(i, j):
         """Mark all cells in current island as visited."""
-
         # Boundary check and water check
         if (i < 0 or i >= m or j < 0 or j >= n or 
             grid[i][j] != '1'):

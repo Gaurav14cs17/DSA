@@ -4,7 +4,6 @@ title: "Combinations"
 parent: "Combinatorics"
 nav_order: 2
 permalink: /31_combinatorics/02_combinations/
-
 ---
 
 <div align="center">
@@ -34,9 +33,9 @@ permalink: /31_combinatorics/02_combinations/
 
 ### Combination Formula
 
-$$
+```math
 \binom{n}{r} = C(n,r) = \frac{n!}{r!(n-r)!}
-$$
+```
 
 **Key Properties:**
 - $\binom{n}{r} = \binom{n}{n-r}$ (Symmetry)

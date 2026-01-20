@@ -4,7 +4,6 @@ title: "Basic Bit Operations"
 parent: "Bit Manipulation"
 nav_order: 1
 permalink: /21_bit_manipulation/01_basic_operations/
-
 ---
 
 <div align="center">
@@ -75,27 +74,27 @@ while n ≠ 0:
 return count
 ```
 
-**Time Complexity**: $O(k)$ where $k$ = number of set bits (not 32!)
+**Time Complexity**: \( O(k) \) where \( k \) = number of set bits (not 32!)
 
 #### 🔍 Mathematical Proof
 
-Let $n$ have binary representation with lowest set bit at position $p$:
+Let \( n \) have binary representation with lowest set bit at position \( p \):
 
-$$
+```math
 n = b_{31}b_{30}...b_{p+1}1\underbrace{00...0}_{p \text{ zeros}}
-$$
+```
 
 Then:
 
-$$
+```math
 n - 1 = b_{31}b_{30}...b_{p+1}0\underbrace{11...1}_{p \text{ ones}}
-$$
+```
 
 Therefore:
 
-$$
+```math
 n \land (n-1) = b_{31}b_{30}...b_{p+1}0\underbrace{00...0}_{p+1 \text{ zeros}}
-$$
+```
 
 The lowest set bit is cleared! ✓
 
@@ -123,16 +122,16 @@ Result: 3 set bits ✓
 
 #### The Formula
 
-$$
+```math
 n \text{ is power of 2} \Leftrightarrow n > 0 \land n \land (n-1) = 0
-$$
+```
 
 #### 🔍 Proof
 
-**If $n = 2^k$**:
-- $n$ has only one bit set (at position $k$)
-- $n - 1$ has all bits set below position $k$
-- $n \land (n-1) = 0$ (no overlap)
+**If \( n = 2^k \)**:
+- \( n \) has only one bit set (at position \( k \))
+- \( n - 1 \) has all bits set below position \( k \)
+- \( n \land (n-1) = 0 \) (no overlap)
 
 ```
 n = 16:     1 0 0 0 0
@@ -140,9 +139,9 @@ n - 1 = 15: 0 1 1 1 1
 n & (n-1):  0 0 0 0 0 = 0 ✓
 ```
 
-**If $n \neq 2^k$**:
-- $n$ has at least two bits set
-- $n \land (n-1)$ clears only the lowest bit
+**If \( n \neq 2^k \)**:
+- \( n \) has at least two bits set
+- \( n \land (n-1) \) clears only the lowest bit
 - Result is non-zero
 
 ```
@@ -155,7 +154,7 @@ n & (n-1):  1 0 0 0 = 8 ≠ 0 ✗
 
 ### 3️⃣ Power of Four Detection
 
-A number $n$ is a power of 4 if:
+A number \( n \) is a power of 4 if:
 1. It's a power of 2: `n & (n-1) == 0`
 2. The single bit is at an even position: `n & 0x55555555 == n`
 
@@ -176,34 +175,34 @@ Powers of 4:
 
 #### Alternative Method: Modulo Check
 
-$$
+```math
 n \text{ is power of 4} \Leftrightarrow n > 0 \land n \land (n-1) = 0 \land (n - 1) \mod 3 = 0
-$$
+```
 
-This works because $4^k - 1 = (4-1)(4^{k-1} + 4^{k-2} + ... + 1)$ is always divisible by 3.
+This works because \( 4^k - 1 = (4-1)(4^{k-1} + 4^{k-2} + ... + 1) \) is always divisible by 3.
 
 ---
 
 ### 4️⃣ Counting Bits DP
 
-Build an array where `dp[i]` = number of 1 bits in $i$.
+Build an array where `dp[i]` = number of 1 bits in \( i \).
 
 #### Recurrence Relation
 
-$$
+```math
 \text{dp}[i] = \text{dp}[i \land (i-1)] + 1
-$$
+```
 
 Or equivalently:
 
-$$
+```math
 \text{dp}[i] = \text{dp}[i >> 1] + (i \land 1)
-$$
+```
 
 #### 🔍 Proof of the Second Formula
 
-The number of set bits in $i$ equals:
-- The set bits in $\lfloor i/2 \rfloor$ (all bits shifted right)
+The number of set bits in \( i \) equals:
+- The set bits in \( \lfloor i/2 \rfloor \) (all bits shifted right)
 - Plus 1 if the least significant bit was set
 
 ```
@@ -258,8 +257,8 @@ n = ((n & 0xAAAAAAAA) >> 1)  | ((n & 0x55555555) << 1)   # Swap adjacent bits
 
 #### The Algorithm
 
-1. **XOR** gives sum without carry: $a \oplus b$
-2. **AND + shift** gives carry: $(a \land b) << 1$
+1. **XOR** gives sum without carry: \( a \oplus b \)
+2. **AND + shift** gives carry: \( (a \land b) << 1 \)
 3. Repeat until no carry
 
 #### 📊 Visual Example: 5 + 7 = 12
@@ -299,7 +298,7 @@ if a > MAX_INT:
 
 ### 7️⃣ Bitwise AND of Range
 
-Find $\text{left} \land (\text{left}+1) \land ... \land \text{right}$
+Find \( \text{left} \land (\text{left}+1) \land ... \land \text{right} \)
 
 #### Key Insight
 
@@ -408,10 +407,8 @@ def reverseBits(n: int) -> int:
     """
     result = 0
     for _ in range(32):
-
         # Shift result left to make room
         result = (result << 1) | (n & 1)
-
         # Move to next bit
         n >>= 1
     return result
@@ -481,7 +478,6 @@ def getSum(a: int, b: int) -> int:
     MAX_INT = 0x7FFFFFFF  # Max positive 32-bit int
     
     while b != 0:
-
         # Calculate sum and carry
         carry = ((a & b) << 1) & MASK
         a = (a ^ b) & MASK
@@ -616,9 +612,9 @@ def rangeBitwiseAndAlt(left: int, right: int) -> int:
 
 ### Q: "How would you extend power of 4 to power of k?"
 
-**A**: For power of $k$:
-- If $k$ is power of 2: Check if bit position is multiple of $\log_2(k)$
-- Otherwise: Use $\log$ or repeated division
+**A**: For power of \( k \):
+- If \( k \) is power of 2: Check if bit position is multiple of \( \log_2(k) \)
+- Otherwise: Use \( \log \) or repeated division
 
 ---
 

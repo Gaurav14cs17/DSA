@@ -5,7 +5,6 @@ parent: "Linear Diophantine Equations"
 grand_parent: "Number Theory"
 nav_order: 3
 permalink: /30_number_theory/07_linear_diophantine/03_frobenius_number/
-
 ---
 
 <div align="center">
@@ -49,9 +48,9 @@ permalink: /30_number_theory/07_linear_diophantine/03_frobenius_number/
 
 For positive coprime integers $a, b$, the **Frobenius number** $g(a, b)$ is the largest integer that **cannot** be represented as $ax + by$ with $x, y \geq 0$.
 
-$$
+```math
 g(a, b) = ab - a - b
-$$
+```
 
 ### Sylvester-Frobenius Theorem
 

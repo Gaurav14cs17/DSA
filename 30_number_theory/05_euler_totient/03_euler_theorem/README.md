@@ -5,7 +5,6 @@ parent: "Euler's Totient"
 grand_parent: "Number Theory"
 nav_order: 3
 permalink: /30_number_theory/05_euler_totient/03_euler_theorem/
-
 ---
 
 <div align="center">
@@ -49,17 +48,17 @@ permalink: /30_number_theory/05_euler_totient/03_euler_theorem/
 
 **Euler's Theorem:** If $\gcd(a, n) = 1$, then:
 
-$$
+```math
 a^{\phi(n)} \equiv 1 \pmod{n}
-$$
+```
 
 ### Special Case: Fermat's Little Theorem
 
 For prime p and $\gcd(a, p) = 1$:
 
-$$
+```math
 a^{p-1} \equiv 1 \pmod{p}
-$$
+```
 
 (Since φ(p) = p - 1)
 
@@ -161,7 +160,6 @@ def rsa_demo():
     """
     Demonstrate RSA encryption/decryption using Euler's theorem.
     """
-
     # 1. Choose two primes
     p, q = 61, 53
     n = p * q  # 3233

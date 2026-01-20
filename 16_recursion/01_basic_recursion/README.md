@@ -4,7 +4,6 @@ title: "Basic Recursion"
 parent: "Recursion"
 nav_order: 1
 permalink: /16_recursion/01_basic_recursion/
-
 ---
 
 <div align="center">
@@ -60,9 +59,9 @@ Every recursive function needs:
 
 One recursive call per function invocation:
 
-$$
+```math
 T(n) = T(n-1) + O(1) = O(n)
-$$
+```
 
 **Examples:** Factorial, sum, list traversal.
 
@@ -73,7 +72,6 @@ $$
 Recursive call is the last operation:
 
 ```python
-
 # Tail recursive
 def f(n, acc):
     if n == 0: return acc
@@ -94,9 +92,9 @@ Each call creates a stack frame storing:
 - Return address
 - Parameters
 
-$$
+```math
 \text{Space} = O(\text{max depth})
-$$
+```
 
 ---
 

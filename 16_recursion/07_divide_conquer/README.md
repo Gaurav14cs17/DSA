@@ -4,7 +4,6 @@ title: "Divide and Conquer"
 parent: "Recursion"
 nav_order: 7
 permalink: /16_recursion/07_divide_conquer/
-
 ---
 
 <div align="center">
@@ -175,7 +174,6 @@ def mergeSort(arr: list) -> list:
     
     Time: O(n log n), Space: O(n)
     """
-
     # Base case
     if len(arr) <= 1:
         return arr
@@ -240,7 +238,6 @@ def mergeRecursive(arr: list, left: int, mid: int, right: int) -> None:
     """
     Recursive merge helper (conceptual - uses O(n) temp space).
     """
-
     # Create temp arrays
     L = arr[left:mid + 1]
     R = arr[mid + 1:right + 1]
@@ -283,7 +280,6 @@ def quickSort(arr: list, low: int = 0, high: int = None) -> None:
         high = len(arr) - 1
     
     if low < high:
-
         # Partition and get pivot position
         pivot_idx = partition(arr, low, high)
         
@@ -344,7 +340,6 @@ def power(x: float, n: int) -> float:
     
     Time: O(log n), Space: O(log n)
     """
-
     # Base cases
     if n == 0:
         return 1
@@ -430,7 +425,6 @@ def maxCrossingSum(arr: list, low: int, mid: int, high: int) -> int:
     """
     Find max sum crossing the midpoint.
     """
-
     # Max sum going left from mid
     left_sum = float('-inf')
     curr_sum = 0
@@ -477,7 +471,6 @@ def countInversions(arr: list) -> int:
                 i += 1
             else:
                 result.append(right[j])
-
                 # All remaining elements in left are inversions
                 inversions += len(left) - i
                 j += 1

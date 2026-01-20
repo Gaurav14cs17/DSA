@@ -4,7 +4,6 @@ title: "Heavy-Light Decomposition"
 parent: "Tree Algorithms"
 nav_order: 4
 permalink: /25_tree_algorithms/04_heavy_light_decomposition/
-
 ---
 
 <div align="center">
@@ -64,9 +63,9 @@ permalink: /25_tree_algorithms/04_heavy_light_decomposition/
 
 **Query on path $(u, v)$:**
 
-$$
+```math
 \text{Time} = O(\log^2 n)
-$$
+```
 
 - $O(\log n)$ chains to traverse
 - $O(\log n)$ per chain query (using segment tree)
@@ -325,7 +324,6 @@ class HeavyLightDecomposition:
         
         Time: O(log n)
         """
-
         # Subtree occupies contiguous range in DFS order
         return self.seg_tree.query(self.pos[node], 
                                    self.pos[node] + self.subtree_size[node] - 1)

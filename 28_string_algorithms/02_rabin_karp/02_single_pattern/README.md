@@ -4,7 +4,6 @@ title: "Single Pattern Matching"
 parent: "Rabin-Karp Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 2
-
 ---
 
 # 🎯 Single Pattern Matching with Rabin-Karp
@@ -77,7 +76,6 @@ def rabin_karp_search(text, pattern, base=31, mod=10**9 + 7):
     
     # Check all positions
     for i in range(n - m + 1):
-
         # Hash match - verify actual string
         if window_hash == pattern_hash:
             if text[i:i+m] == pattern:
@@ -85,10 +83,8 @@ def rabin_karp_search(text, pattern, base=31, mod=10**9 + 7):
         
         # Roll hash to next position
         if i < n - m:
-
             # Remove leftmost
             window_hash = (window_hash - ord(text[i]) * power % mod + mod) % mod
-
             # Shift and add rightmost
             window_hash = (window_hash * base + ord(text[i+m])) % mod
     
@@ -257,7 +253,6 @@ def longest_matching_prefix(text, pattern, base=31, mod=10**9 + 7):
     best_pos = -1
     
     for length in range(1, m + 1):
-
         # Try to find pattern[:length] in text
         p_hash = 0
         for c in pattern[:length]:
@@ -410,7 +405,6 @@ class Solution:
         
         Find min repetitions of a to contain b as substring
         """
-
         # Minimum needed
         min_reps = (len(b) + len(a) - 1) // len(a)
         
@@ -444,7 +438,6 @@ if window_hash == pattern_hash:
 ### Performance Tips
 
 ```python
-
 # 1. Precompute power once
 power = pow(BASE, m - 1, MOD)  # Do once
 
@@ -459,7 +452,6 @@ if found_all_needed:
 ### When Hash-Only Sufficient
 
 ```python
-
 # In some problems, can skip verification:
 ✓ Finding ANY duplicate (first collision is fine)
 ✓ Approximate matching (small error acceptable)
