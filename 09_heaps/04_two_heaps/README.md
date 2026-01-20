@@ -32,6 +32,7 @@ permalink: /09_heaps/04_two_heaps/
 ### 1️⃣ Median Tracking with Two Heaps
 
 **Structure:**
+
 - **Max-Heap (left):** Smaller half of elements
 
 - **Min-Heap (right):** Larger half of elements

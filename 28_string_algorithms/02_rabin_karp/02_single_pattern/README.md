@@ -448,6 +448,7 @@ if window_hash == pattern_hash:
 ```
 
 **Why?**
+
 - Hash collisions possible (small probability)
 
 - Verification ensures correctness

@@ -78,6 +78,7 @@ permalink: /09_heaps/02_top_k_problems/
 ### 5️⃣ Why Opposite Heap? (The Key Insight!)
 
 **For K largest → Use Min-Heap:**
+
 - Want to keep k largest
 
 - Need to remove smallest of these k
@@ -85,6 +86,7 @@ permalink: /09_heaps/02_top_k_problems/
 - Min-Heap root = smallest → easy to remove!
 
 **For K smallest → Use Max-Heap:**
+
 - Want to keep k smallest
 
 - Need to remove largest of these k

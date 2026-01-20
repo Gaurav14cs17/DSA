@@ -55,6 +55,7 @@ permalink: /34_sqrt_decomposition/
 ```
 
 **Why √n?**
+
 - Too small blocks: Many blocks → slow queries
 
 - Too large blocks: Big blocks → slow updates
@@ -81,6 +82,7 @@ T_{\text{build}} = O(n)
 - **Total:** $O(\sqrt{n})$
 
 **Update (Single Element):**
+
 - Find block: $O(1)$
 
 - Update element: $O(1)$
@@ -90,6 +92,7 @@ T_{\text{build}} = O(n)
 - **Total:** $O(1)$
 
 **Update (Range):**
+
 - Partial blocks: $O(\sqrt{n})$
 
 - Complete blocks: $O(\sqrt{n})$
@@ -122,6 +125,7 @@ S = O(n + \sqrt{n}) = O(n)
 | **Fenwick Tree** | O(n) | O(log n) | O(log n) | O(n) | Point updates |
 
 **When to Use Sqrt Decomposition:**
+
 - ✅ Simpler to implement than Segment Tree
 
 - ✅ Works for problems where Segment Tree doesn't apply easily
@@ -137,6 +141,7 @@ S = O(n + \sqrt{n}) = O(n)
 **Theorem:** For an array of size $n$, block size $b = \sqrt{n}$ minimizes query time.
 
 **Proof:**
+
 - Query touches at most $\frac{n}{b}$ complete blocks: $O(\frac{n}{b})$
 
 - Query touches at most 2 partial blocks: $O(b)$
@@ -493,6 +498,7 @@ class SqrtDecompMinMax:
 ### [01. Range Queries](./01_range_queries/)
 
 **Core Concepts:**
+
 - Range sum
 
 - Range min/max
@@ -504,6 +510,7 @@ class SqrtDecompMinMax:
 - Range update
 
 **Key Operations:**
+
 - Build: O(n)
 
 - Query: O(√n)
@@ -518,6 +525,7 @@ class SqrtDecompMinMax:
 ### [02. Mo's Algorithm](./02_mos_algorithm/)
 
 **Core Concepts:**
+
 - Query reordering
 
 - Offline processing
@@ -529,6 +537,7 @@ class SqrtDecompMinMax:
 - Hilbert curve optimization
 
 **Key Ideas:**
+
 - Sort queries by blocks
 
 - Move pointers efficiently

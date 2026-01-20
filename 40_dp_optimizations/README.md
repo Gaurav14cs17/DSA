@@ -152,6 +152,7 @@ permalink: /40_dp_optimizations/
 **Standard DP Complexity:** O(number of states × transitions per state)
 
 **Problem Signs:**
+
 - ✅ TLE on large inputs (n > 10⁴)
 
 - ✅ O(n²) or O(n³) recurrence
@@ -405,6 +406,7 @@ dp[i] = min/max(m[j] × x[i] + b[j]) for all j < i
 Where m[j], b[j] are from previous DP states, x[i] is current query point.
 
 **Geometric Interpretation:**
+
 - Each DP state j defines a line: y = m[j]·x + b[j]
 
 - We want lower (or upper) envelope of these lines
@@ -605,6 +607,7 @@ CHT maintains only [L1, L2, L3] (convex hull)
 **Li Chao Tree:** Segment tree variant that stores best line for each range.
 
 **Complexity:**
+
 - Insert line: O(log C) where C is coordinate range
 
 - Query: O(log C)
@@ -1482,6 +1485,7 @@ def rerooting_dp(graph, n):
 ### Additional Problems (40+)
 
 **Monotonic Queue (10):**
+
 - 739. Daily Temperatures
 
 - 901. Online Stock Span
@@ -1493,6 +1497,7 @@ def rerooting_dp(graph, n):
 - 1673. Find Most Competitive Subsequence
 
 **Space Optimization (8):**
+
 - 198. House Robber
 
 - 213. House Robber II
@@ -1510,6 +1515,7 @@ def rerooting_dp(graph, n):
 - 1049. Last Stone Weight II
 
 **Knuth's Optimization (6):**
+
 - 96. Unique Binary Search Trees
 
 - 95. Unique Binary Search Trees II
@@ -1519,6 +1525,7 @@ def rerooting_dp(graph, n):
 - 1312. Minimum Insertion Steps for Palindrome
 
 **Matrix Exponentiation (5):**
+
 - 70. Climbing Stairs
 
 - 91. Decode Ways
@@ -1528,6 +1535,7 @@ def rerooting_dp(graph, n):
 - 790. Domino and Tromino Tiling
 
 **Bitmask DP (8):**
+
 - 464. Can I Win
 
 - 473. Matchsticks to Square
@@ -1738,6 +1746,7 @@ def rerooting_dp(graph, n):
 You've mastered the most advanced DP optimization techniques!
 
 **Your DP Arsenal:**
+
 - 🎯 11 Optimization Techniques
 
 - 💻 Production-Ready Implementations

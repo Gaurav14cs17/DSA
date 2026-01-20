@@ -53,6 +53,7 @@ permalink: /25_tree_algorithms/04_heavy_light_decomposition/
 **Heavy chain:** Maximal path of heavy edges.
 
 **Decomposition results in:**
+
 - $O(\log n)$ chains per root-to-leaf path
 
 - Each node belongs to exactly one chain
@@ -97,6 +98,7 @@ permalink: /25_tree_algorithms/04_heavy_light_decomposition/
 - Enables range queries on chains
 
 **Two arrays:**
+
 - `pos[v]`: Position of node $v$ in flattened array
 
 - `heavy[v]`: Heavy child of node $v$

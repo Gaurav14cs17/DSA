@@ -382,6 +382,7 @@ class SlidingWindowMax:
 | **Random** | O(1) | O(1) | Random | Surprisingly good! |
 
 **Theoretical Results:**
+
 - LRU is **k-competitive** (k = cache size)
 
 - No deterministic online algorithm can beat k-competitive
@@ -430,6 +431,7 @@ class SlidingWindowMax:
 5. **Insert Delete GetRandom** - Array + HashMap trick
 
 **Common Mistakes:**
+
 - ❌ Using OrderedDict for LRU without understanding internals
 
 - ❌ Not maintaining heap invariants properly

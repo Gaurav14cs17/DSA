@@ -63,6 +63,7 @@ where $s\_p(n)$ is the sum of digits of n in base p.
 **Definition:** $\nu\_p(n)$ = largest power of p dividing n.
 
 **Properties:**
+
 - $\nu\_p(ab) = \nu\_p(a) + \nu\_p(b)$
 
 - $\nu\_p(a + b) \geq \min(\nu\_p(a), \nu\_p(b))$

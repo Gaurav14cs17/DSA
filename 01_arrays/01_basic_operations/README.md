@@ -49,6 +49,7 @@ Operations: 1 multiplication + 1 addition = constant time ∎
 **Theorem:** Two opposite-direction pointers complete in O(n).
 
 **Proof:**
+
 - Let $d = right - left$ (initial distance)
 
 - Each iteration: $d$ decreases by at least 1
@@ -80,6 +81,7 @@ A[high+1..n-1] &= \{2\}
 ```
 
 **Correctness Proof:**
+
 - Invariant holds initially (all regions empty)
 
 - Each operation preserves invariant
@@ -119,6 +121,7 @@ A'[i] = A[(i - k + n) \mod n]
 **Theorem:** If duplicate exists, cycle exists.
 
 **Proof by Pigeonhole:**
+
 - n+1 values in range [1, n]
 
 - At least one value repeats

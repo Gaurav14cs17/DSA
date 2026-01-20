@@ -77,6 +77,7 @@ Comprehensive collection of **advanced graph algorithms** including:
 ### [01. Shortest Path](./01_shortest_path/)
 
 **Core Algorithms:**
+
 - Dijkstra's Algorithm
 
 - Bellman-Ford Algorithm
@@ -90,6 +91,7 @@ Comprehensive collection of **advanced graph algorithms** including:
 - 0-1 BFS
 
 **Complexity:**
+
 - Dijkstra: O((V+E) log V)
 
 - Bellman-Ford: O(VE)
@@ -97,6 +99,7 @@ Comprehensive collection of **advanced graph algorithms** including:
 - Floyd-Warshall: O(V³)
 
 **Key Problems:**
+
 - Single-source shortest path
 
 - All-pairs shortest path
@@ -111,6 +114,7 @@ Comprehensive collection of **advanced graph algorithms** including:
 ### [02. MST](./02_minimum_spanning_tree/)
 
 **Core Algorithms:**
+
 - Kruskal's Algorithm
 
 - Prim's Algorithm
@@ -118,11 +122,13 @@ Comprehensive collection of **advanced graph algorithms** including:
 - Borůvka's Algorithm
 
 **Complexity:**
+
 - Kruskal: O(E log E)
 
 - Prim: O(E log V)
 
 **Applications:**
+
 - Network design
 
 - Clustering
@@ -137,6 +143,7 @@ Comprehensive collection of **advanced graph algorithms** including:
 ### [03. Topological Sort](./03_topological_sort/)
 
 **Core Algorithms:**
+
 - Kahn's Algorithm (BFS)
 
 - DFS-based approach
@@ -146,6 +153,7 @@ Comprehensive collection of **advanced graph algorithms** including:
 **Complexity:** O(V + E)
 
 **Applications:**
+
 - Course scheduling
 
 - Build systems
@@ -162,6 +170,7 @@ Comprehensive collection of **advanced graph algorithms** including:
 ### [04. Network Flow](./04_network_flow/)
 
 **Core Algorithms:**
+
 - Ford-Fulkerson Method
 
 - Edmonds-Karp Algorithm
@@ -171,6 +180,7 @@ Comprehensive collection of **advanced graph algorithms** including:
 - Push-Relabel Algorithm
 
 **Complexity:**
+
 - Edmonds-Karp: O(VE²)
 
 - Dinic: O(V²E)
@@ -178,6 +188,7 @@ Comprehensive collection of **advanced graph algorithms** including:
 - Push-Relabel: O(V³)
 
 **Applications:**
+
 - Maximum flow
 
 - Minimum cut
@@ -192,6 +203,7 @@ Comprehensive collection of **advanced graph algorithms** including:
 ### [05. SCC](./05_strongly_connected_components/)
 
 **Core Algorithms:**
+
 - Kosaraju's Algorithm
 
 - Tarjan's Algorithm
@@ -201,6 +213,7 @@ Comprehensive collection of **advanced graph algorithms** including:
 **Complexity:** O(V + E)
 
 **Applications:**
+
 - Graph decomposition
 
 - Finding cycles
@@ -215,6 +228,7 @@ Comprehensive collection of **advanced graph algorithms** including:
 ### [06. Bridges & Articulation](./06_bridges_articulation_points/)
 
 **Core Concepts:**
+
 - Cut edges (Bridges)
 
 - Cut vertices (Articulation points)
@@ -226,6 +240,7 @@ Comprehensive collection of **advanced graph algorithms** including:
 **Complexity:** O(V + E)
 
 **Applications:**
+
 - Critical connections
 
 - Network vulnerability
@@ -240,6 +255,7 @@ Comprehensive collection of **advanced graph algorithms** including:
 ### [07. Eulerian Paths](./07_eulerian_path/)
 
 **Core Algorithms:**
+
 - Hierholzer's Algorithm
 
 - Eulerian Circuit Detection
@@ -247,11 +263,13 @@ Comprehensive collection of **advanced graph algorithms** including:
 - Hamiltonian Path (NP-Complete)
 
 **Complexity:**
+
 - Eulerian: O(E)
 
 - Hamiltonian: O(n! × n)
 
 **Applications:**
+
 - Route planning
 
 - DNA sequencing
@@ -264,6 +282,7 @@ Comprehensive collection of **advanced graph algorithms** including:
 ### [08. 2-SAT](./08_2sat/)
 
 **Core Algorithms:**
+
 - Implication Graph
 
 - SCC-based Solution
@@ -273,6 +292,7 @@ Comprehensive collection of **advanced graph algorithms** including:
 **Complexity:** O(V + E)
 
 **Applications:**
+
 - Boolean satisfiability
 
 - Logic puzzles
@@ -287,6 +307,7 @@ Comprehensive collection of **advanced graph algorithms** including:
 ### [09. Bipartite Matching](./09_bipartite_matching/)
 
 **Core Algorithms:**
+
 - Hungarian Algorithm
 
 - Hopcroft-Karp Algorithm
@@ -296,11 +317,13 @@ Comprehensive collection of **advanced graph algorithms** including:
 - Kuhn's Algorithm
 
 **Complexity:**
+
 - Hungarian: O(V³)
 
 - Hopcroft-Karp: O(E√V)
 
 **Applications:**
+
 - Job assignment
 
 - Maximum matching

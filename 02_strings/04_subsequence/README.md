@@ -111,6 +111,7 @@ dp[i-1][j] & \text{otherwise}
 For each character in $T$, find first matching character in remaining $S$.
 
 **Correctness Proof:**
+
 - Greedy choice: earliest match leaves most characters for remaining
 
 - No benefit to skipping a match

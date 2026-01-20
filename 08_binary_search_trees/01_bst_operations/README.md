@@ -106,6 +106,7 @@ node.\text{right} = \text{insert}(node.right, val) & \text{if } val > node.val
 **Theorem:** Insertion maintains BST property.
 
 **Proof by Induction:**
+
 - **Base:** Empty tree → new node is BST ✓
 
 - **Inductive:** If T is BST, inserting val creates BST
@@ -225,6 +226,7 @@ Final:
 ```
 
 **Why Successor?**
+
 - Successor is smallest in right subtree
 
 - Maintains BST property: left < successor < right ✓
@@ -257,6 +259,7 @@ Result:
 ```
 
 **Pruning Logic:**
+
 - If node < L → entire left subtree < L, check only right
 
 - If node > R → entire right subtree > R, check only left
@@ -522,24 +525,31 @@ def trimBST(root: TreeNode, low: int, high: int) -> TreeNode:
 ## ❓ Interview Deep-Dive Q&A
 
 **Q1: What's the time complexity of BST operations?**
+
 - **A:** Average O(log n), worst O(n) for skewed tree. Balanced BSTs (AVL, Red-Black) guarantee O(log n).
 
 **Q2: Why is deletion harder than insertion?**
+
 - **A:** Deletion has 3 cases. Two children case requires finding successor and recursive deletion.
 
 **Q3: What's the difference between successor and predecessor?**
+
 - **A:** Successor = min(right subtree) or lowest ancestor where node is in left. Predecessor = max(left subtree).
 
 **Q4: How to delete without returning new root?**
+
 - **A:** Swap values instead: `root.val = successor.val`, then delete successor.
 
 **Q5: Can BST have duplicate values?**
+
 - **A:** Usually no. If needed, left ≤ node or node ≤ right (consistent choice).
 
 **Q6: How to convert iterative to recursive?**
+
 - **A:** Recursive: natural with base case. Iterative: use while loop, better space O(1).
 
 **Q7: What if BST is very skewed?**
+
 - **A:** Use AVL or Red-Black tree for guaranteed O(log n), or rebuild with sorted array.
 
 ---

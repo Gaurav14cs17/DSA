@@ -95,6 +95,7 @@ E[h] = O(\log n)
 **Theorem:** Inorder traversal of BST produces sorted sequence.
 
 **Proof:**
+
 - Inorder visits: Left → Node → Right
 
 - BST property: Left < Node < Right
@@ -442,6 +443,7 @@ BST Problem
 ### Common Mistakes to Avoid
 
 ❌ **Don't:**
+
 - Validate BST by only checking immediate children
 
 - Forget to handle duplicate values (usually not allowed)
@@ -453,6 +455,7 @@ BST Problem
 - Ignore that inorder gives sorted sequence
 
 ✅ **Do:**
+
 - Validate with min/max bounds for entire subtree
 
 - Clarify if duplicates allowed (usually no)
@@ -482,6 +485,7 @@ BST Problem
 > "BST combines the elegance of binary search with the flexibility of linked structures!"
 
 **Progress Tracker:**
+
 - 🥉 **Bronze:** Solve 10 BST problems
 
 - 🥈 **Silver:** Solve 20 BST problems + master operations

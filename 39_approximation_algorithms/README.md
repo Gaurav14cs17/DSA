@@ -71,11 +71,13 @@ ALG ≤ 2 · OPT
 ### PTAS vs FPTAS
 
 **PTAS (Polynomial Time Approximation Scheme):**
+
 - For any ε > 0, finds (1+ε)-approximation
 
 - Time: O(n^f(1/ε))
 
 **FPTAS (Fully PTAS):**
+
 - PTAS where f(1/ε) is polynomial
 
 - Time: O((n/ε)^c) for some constant c
@@ -398,6 +400,7 @@ def bin_packing_ffd(items, bin_capacity):
 5. **Bin Packing FFD** - Practical heuristic
 
 **Common Mistakes:**
+
 - ❌ Confusing approximation ratio with error (ratio ≥ 1, error ≥ 0)
 
 - ❌ Using approximation for problems with exact poly algorithms

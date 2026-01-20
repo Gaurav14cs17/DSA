@@ -91,6 +91,7 @@ For graph with $V$ vertices and $E$ edges:
 ```
 
 **Proof:**
+
 - Each vertex enqueued at most once: $O(V)$
 
 - Each edge examined at most twice (undirected): $O(E)$
@@ -431,6 +432,7 @@ Tree BFS      Graph BFS       Monotonic Deque
 ### Common Mistakes to Avoid
 
 ❌ **Don't:**
+
 - Forget to mark nodes as visited WHEN ENQUEUING (not when dequeuing)
 
 - Use BFS for problems requiring all paths (use DFS)
@@ -442,6 +444,7 @@ Tree BFS      Graph BFS       Monotonic Deque
 - Forget level separation in tree level-order
 
 ✅ **Do:**
+
 - Mark visited when adding to queue (prevents duplicates)
 
 - Track level/distance explicitly if needed
@@ -471,6 +474,7 @@ Tree BFS      Graph BFS       Monotonic Deque
 > "BFS is the Swiss Army knife of graph algorithms - simple, elegant, and powerful."
 
 **Progress Tracker:**
+
 - 🥉 **Bronze:** Solve 10 BFS problems
 
 - 🥈 **Silver:** Solve 20 BFS problems + master monotonic deque

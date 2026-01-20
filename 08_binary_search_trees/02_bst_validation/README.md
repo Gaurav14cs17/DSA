@@ -118,6 +118,7 @@ return node.left.val < node.val < node.right.val  # WRONG!
 ```
 
 **✓ Correct Approach:**
+
 - Every node in left subtree < node.val
 
 - Every node in right subtree > node.val
@@ -568,24 +569,31 @@ def sortedArrayToBST(nums: list[int]) -> TreeNode:
 ## ❓ Interview Deep-Dive Q&A
 
 **Q1: Why can't we just check node.left < node < node.right?**
+
 - **A:** Because ALL nodes in left subtree must be < node, not just immediate child. Same for right.
 
 **Q2: What's the difference between range and inorder methods?**
+
 - **A:** Range: O(h) space, checks bounds. Inorder: O(h) space, checks sorted sequence. Both O(n) time.
 
 **Q3: How to validate BST in O(1) space?**
+
 - **A:** Morris traversal (threaded binary tree). Links rightmost of left to current temporarily.
 
 **Q4: In recover BST, how to detect adjacent vs non-adjacent swaps?**
+
 - **A:** Adjacent: one violation. Non-adjacent: two violations. Track first and second violations.
 
 **Q5: Why use middle element for sorted array → BST?**
+
 - **A:** Creates balanced tree. Left half becomes left subtree, right half becomes right. Height = O(log n).
 
 **Q6: What if BST has duplicate values?**
+
 - **A:** Usually not allowed. If allowed, be consistent: left ≤ node or node ≤ right. Adjust validation accordingly.
 
 **Q7: Can we validate iteratively?**
+
 - **A:** Yes! Use stack for inorder traversal, track previous value. O(n) time, O(h) space.
 
 ---

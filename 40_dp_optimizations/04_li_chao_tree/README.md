@@ -11,6 +11,7 @@
 **Li Chao Tree** is a dynamic Convex Hull Trick that allows adding lines in **any order** and supports **online queries**.
 
 **When to Use:**
+
 - Lines added in arbitrary order (no monotonicity)
 
 - Online queries (can't preprocess all queries)
@@ -18,6 +19,7 @@
 - Dynamic line insertion
 
 **Complexity:**
+
 - Add line: O(log C) where C is coordinate range
 
 - Query: O(log C)

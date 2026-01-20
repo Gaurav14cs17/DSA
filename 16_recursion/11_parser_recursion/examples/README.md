@@ -32,6 +32,7 @@ What you'll learn:
 ```
 
 **Diagrams Included:**
+
 - Call Stack Visualization
 
 - Decision Flowchart

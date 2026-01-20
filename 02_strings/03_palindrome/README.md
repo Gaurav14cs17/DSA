@@ -52,6 +52,7 @@ S[i] = S[n-1-i] \quad \forall i \in [0, \lfloor n/2 \rfloor]
 **Key Insight:** Every palindrome has a center.
 
 **Centers:**
+
 - **Odd length:** $n$ centers at indices $0, 1, \ldots, n-1$
 
 - **Even length:** $n-1$ centers between indices

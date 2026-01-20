@@ -68,6 +68,7 @@ where $size(x)$ = number of nodes in subtree rooted at $x$.
 **Three cases (accessing node $x$ with parent $p$ and grandparent $g$):**
 
 **Zig (x is root's child):**
+
 - Single rotation
 
 - Only happens at end

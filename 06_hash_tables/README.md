@@ -164,6 +164,7 @@ Store seen values, check for complement.
 ```
 
 **Applications:**
+
 - Anagram detection: $\text{freq}\_s = \text{freq}\_t$
 
 - Majority element: $\text{freq}[x] > n/2$
@@ -464,6 +465,7 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
 ### Common Mistakes to Avoid
 
 ❌ **Don't:**
+
 - Forget to check if key exists before accessing (use `.get()` or `in`)
 
 - Use hash when order matters (use OrderedDict or list)
@@ -475,6 +477,7 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
 - Use mutable objects as keys (lists, sets - use tuples instead)
 
 ✅ **Do:**
+
 - Use `defaultdict` to avoid key existence checks
 
 - Use `Counter` for frequency counting
@@ -504,6 +507,7 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
 > "Hash tables are the Swiss Army knife of data structures - versatile, efficient, and essential."
 
 **Progress Tracker:**
+
 - 🥉 **Bronze:** Solve 15 hash problems
 
 - 🥈 **Silver:** Solve 30 hash problems + master Two Sum pattern

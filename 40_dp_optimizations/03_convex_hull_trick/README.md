@@ -80,6 +80,7 @@ Keep only lines that form convex hull
 2. Need min/max over all j
 
 ✅ **For O(n) complexity:**
+
 - Slopes added in monotonic order (m[i] ≥ m[i+1])
 
 - Queries in monotonic order (x[i] ≤ x[i+1])

@@ -89,6 +89,7 @@ T(n) = 2T(n/2) + O(n) = O(n \log n)
 **Theorem:** In strip of width $2\delta$ around dividing line, each point needs to check at most 6 points.
 
 **Proof:**
+
 - Divide strip into squares of side $\delta/2$
 
 - Each square contains at most 1 point (otherwise distance < $\delta$)
@@ -104,6 +105,7 @@ T(n) = 2T(n/2) + O(n) = O(n \log n)
 **Extension:** Find $k$ nearest neighbors for each point.
 
 **Algorithm:**
+
 - Maintain k-d tree or sweep line with heap
 
 - For each point, find k nearest

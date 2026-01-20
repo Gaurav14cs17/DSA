@@ -123,6 +123,7 @@ Update propagates from leaf to root, updating all ancestors.
 ```
 
 **Push down before:**
+
 - Querying children
 
 - Updating children
@@ -139,6 +140,7 @@ f(f(a, b), c) = f(a, f(b, c))
 ```
 
 **Examples:**
+
 - Sum: $f(a, b) = a + b$
 
 - Min: $f(a, b) = \min(a, b)$

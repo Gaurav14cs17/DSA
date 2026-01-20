@@ -43,6 +43,7 @@ permalink: /25_tree_algorithms/10_link_cut_trees/
 **Dynamic tree:** Can change structure (add/remove edges)
 
 **Operations needed:**
+
 - Link(u, v): Add edge
 
 - Cut(u, v): Remove edge  
@@ -63,6 +64,7 @@ permalink: /25_tree_algorithms/10_link_cut_trees/
 **Representation:** Each path stored in a **splay tree**.
 
 **Properties:**
+
 - Each node in exactly one splay tree
 
 - Splay trees form virtual tree

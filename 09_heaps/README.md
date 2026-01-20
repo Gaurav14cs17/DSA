@@ -400,6 +400,7 @@ Heap Problem
 ### Common Mistakes to Avoid
 
 ❌ **Don't:**
+
 - Confuse top K largest (use min-heap) with top K smallest (use max-heap)
 
 - Think build heap is O(n log n) — it's O(n)!
@@ -411,6 +412,7 @@ Heap Problem
 - Ignore that heappop() doesn't preserve order for ties
 
 ✅ **Do:**
+
 - Master the "opposite heap" pattern for Top K
 
 - Know heapify() is faster than n insertions
@@ -440,6 +442,7 @@ Heap Problem
 > "Heap is the Swiss Army knife of interviews — Top K, merge, median, scheduling, all use heaps!"
 
 **Progress Tracker:**
+
 - 🥉 **Bronze:** Solve 10 heap problems + master basic operations
 
 - 🥈 **Silver:** Solve 20 heap problems + Top K patterns

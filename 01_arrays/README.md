@@ -71,6 +71,7 @@ Element i: B + i×S
 ```
 
 **Time Complexity Proof:**
+
 - Address calculation: 1 multiplication + 1 addition = O(1)
 
 - Memory access: Direct addressing = O(1)
@@ -139,6 +140,7 @@ Each element has 2 choices: include or exclude.
 ```
 
 **Optimal Substructure Proof:**
+
 - Let $S\_i$ = max subarray sum ending at index $i$
 
 - Subarray ending at $i$ either:
@@ -188,6 +190,7 @@ For opposite-direction pointers on sorted array:
 ```
 
 **Proof:**
+
 - Each iteration: either $left++$ or $right--$ (or both)
 
 - Initial gap: $right - left = n - 1$
@@ -261,6 +264,7 @@ Let array = $[A\_1, \ldots, A\_{n-k}, A\_{n-k+1}, \ldots, A\_n]$
 
 ### 📁 01_basic_operations
 **Master the foundations of in-place array manipulation**
+
 - Two Pointers technique (opposite & same direction)
 
 - Dutch National Flag algorithm (3-way partitioning)
@@ -275,6 +279,7 @@ Let array = $[A\_1, \ldots, A\_{n-k}, A\_{n-k+1}, \ldots, A\_n]$
 
 ### 📁 02_subarray_problems  
 **Learn to find maximum/minimum subarrays efficiently**
+
 - Kadane's Algorithm (maximum subarray sum)
 
 - Maximum Product Subarray (handling negatives)
@@ -289,6 +294,7 @@ Let array = $[A\_1, \ldots, A\_{n-k}, A\_{n-k+1}, \ldots, A\_n]$
 
 ### 📁 03_prefix_sum
 **Preprocess once, query in O(1) time**
+
 - 1D and 2D prefix sum construction
 
 - Range sum queries in constant time
@@ -303,6 +309,7 @@ Let array = $[A\_1, \ldots, A\_{n-k}, A\_{n-k+1}, \ldots, A\_n]$
 
 ### 📁 04_matrix_problems
 **Navigate 2D arrays like a pro**
+
 - Matrix rotation (90°, 180°, 270°)
 
 - Spiral matrix traversal (all 4 variants)
@@ -317,6 +324,7 @@ Let array = $[A\_1, \ldots, A\_{n-k}, A\_{n-k+1}, \ldots, A\_n]$
 
 ### 📁 05_interval_problems
 **Sort, merge, and schedule like an expert**
+
 - Merge overlapping intervals
 
 - Insert interval in O(n) time
@@ -712,6 +720,7 @@ Use this flowchart to quickly identify which technique to apply:
 ### Common Mistakes to Avoid
 
 ❌ **Don't:**
+
 - Jump into coding without clarifying requirements
 
 - Ignore edge cases (empty array, single element)
@@ -723,6 +732,7 @@ Use this flowchart to quickly identify which technique to apply:
 - Modify input without asking if it's allowed
 
 ✅ **Do:**
+
 - Start with brute force, then optimize
 
 - Discuss time/space complexity before coding
@@ -754,6 +764,7 @@ Use this flowchart to quickly identify which technique to apply:
 > — Unknown
 
 **Progress Tracker:**
+
 - 🥉 **Bronze:** Solve 20 array problems
 
 - 🥈 **Silver:** Solve 50 array problems

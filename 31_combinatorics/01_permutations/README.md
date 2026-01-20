@@ -94,6 +94,7 @@ P = \frac{n!}{n_1! \times n_2! \times \cdots \times n_k!}
 **Theorem:** $n$ distinct objects arranged in a circle have $(n-1)!$ permutations.
 
 **Proof:**
+
 - Linear arrangements: $n!$
 
 - Each circular arrangement corresponds to $n$ linear arrangements (rotations)

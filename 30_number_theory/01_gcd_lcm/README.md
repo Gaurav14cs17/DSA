@@ -118,6 +118,7 @@ Recursive case:
 ```
 
 **Applications:**
+
 - Modular inverse
 
 - Linear Diophantine equations

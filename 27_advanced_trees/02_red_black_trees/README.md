@@ -116,6 +116,7 @@ For root with black height $bh$:
 ### 5️⃣ Delete Cases
 
 **More complex than insert (6 cases):**
+
 - Deleting BLACK node requires rebalancing
 
 - May need up to $O(\log n)$ rotations

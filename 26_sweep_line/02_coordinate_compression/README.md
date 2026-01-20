@@ -64,6 +64,7 @@ where $k$ = number of distinct coordinates.
 3. Create mapping: $f(c\_i) = i-1$ for $i = 1, 2, \ldots, k$
 
 **Time Complexity:**
+
 - Collect: $O(n)$
 
 - Sort: $O(k \log k)$ where $k \leq 2n$
@@ -157,6 +158,7 @@ where $x\_1, \ldots, x\_k$ are sorted distinct x-coordinates.
 **For range updates and queries on compressed space:**
 
 **Node stores:**
+
 - Coverage count (how many rectangles cover this range)
 
 - Total length covered in this range

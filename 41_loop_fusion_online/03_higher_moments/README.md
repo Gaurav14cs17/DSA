@@ -332,6 +332,7 @@ M_3^{(n)} = M_3^{(n-1)} + \frac{(n-1)(n-2)}{n^2}\delta_n^3 - \frac{3}{n}M_2^{(n-
 4. **Factorization:** The cubic terms factor nicely into $(n-1)(n-2)/n^2$
 
 **The pattern:**
+
 - **First moment:** No coupling (just the mean)
 
 - **Second moment:** Couples with first moment (mean shift)

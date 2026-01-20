@@ -77,6 +77,7 @@ If $g(n) = \sum\_{d|n} f(d)$, then $f(n) = \sum\_{d|n} \mu(d) \cdot g(n/d)$
 **Formula:** $\phi(n) = n \prod\_{p|n} \left(1 - \frac{1}{p}\right)$
 
 **Properties:**
+
 - $\phi(p) = p - 1$ for prime $p$
 
 - $\phi(p^k) = p^{k-1}(p-1)$

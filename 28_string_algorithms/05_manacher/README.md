@@ -40,7 +40,9 @@ nav_order: 5
 Given string s of length n, find:
 
 - **Longest palindromic substring**
+
 - **All palindromic substrings**
+
 - **Palindrome radius at each position**
 
 ### Palindrome Radius
@@ -111,6 +113,7 @@ For position i where C-R ≤ i ≤ C+R:
 ```
 
 **Proof of Case 1:**
+
 - Palindrome at i' is fully contained within palindrome at C
 
 - By symmetry, same palindrome exists at i
@@ -609,6 +612,7 @@ T = Σ(1 + expansions at position i)
 ### When to Use Manacher's
 
 ✅ **Use Manacher's when:**
+
 - Need ALL palindromic information
 
 - Time limit is tight (must be O(n))
@@ -618,6 +622,7 @@ T = Σ(1 + expansions at position i)
 - Need to count/find all palindromes
 
 ❌ **Consider alternatives when:**
+
 - Only need existence check (two pointers)
 
 - String is very short (naive works)

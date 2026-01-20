@@ -37,6 +37,7 @@ A **Disjoint Set** data structure maintains:
 - Each set has a representative (root)
 
 **Operations:**
+
 - `find(x)`: Find representative of set containing x
 
 - `union(x, y)`: Merge sets containing x and y

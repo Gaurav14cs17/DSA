@@ -160,6 +160,7 @@ print(binary_gcd(100, 35))  # 5
 | **Extended GCD** | Division, Modulo | Finding coefficients |
 
 **When Binary GCD Wins:**
+
 - Hardware where division is slow
 
 - Very large numbers (cryptography)

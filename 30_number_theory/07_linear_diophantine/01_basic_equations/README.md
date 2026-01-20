@@ -57,6 +57,7 @@ where $a, b, c \in \mathbb{Z}$ and we seek integer solutions $(x, y)$.
 **Theorem:** $ax + by = c$ has integer solutions **if and only if** $\gcd(a, b) | c$
 
 **Proof:**
+
 - (⟹) If $ax + by = c$, then since $\gcd(a,b) | a$ and $\gcd(a,b) | b$, we have $\gcd(a,b) | c$.
 
 - (⟸) By Bézout's identity, $\exists x\_0, y\_0$ with $ax\_0 + by\_0 = \gcd(a,b)$.

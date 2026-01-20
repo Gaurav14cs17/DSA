@@ -108,6 +108,7 @@ has_children: true
 The **Knuth-Morris-Pratt (KMP)** algorithm is a linear-time string matching algorithm that uses a preprocessing step to avoid redundant comparisons.
 
 **Core Concepts:**
+
 - **Failure Function (π):** Preprocesses pattern to enable smart backtracking
 
 - **No Character Re-examination:** Each text character examined at most once
@@ -515,6 +516,7 @@ Pattern:       ABABCABAA
 ### When to Use KMP
 
 ✅ **Best for:**
+
 - Single pattern matching
 
 - Need guaranteed O(n+m) performance
@@ -526,6 +528,7 @@ Pattern:       ABABCABAA
 - Competitive programming
 
 ❌ **Consider alternatives:**
+
 - Multiple patterns → Aho-Corasick
 
 - Very short patterns → Naive search

@@ -42,6 +42,7 @@ permalink: /25_tree_algorithms/08_virtual_trees/
 **Virtual Tree (Auxiliary Tree):** Compressed tree containing only **important nodes** and their LCAs.
 
 **Given:**
+
 - Original tree $T$ with $n$ nodes
 
 - Set $K$ of $k$ important nodes ($k \ll n$)
@@ -55,6 +56,7 @@ permalink: /25_tree_algorithms/08_virtual_trees/
 ### 2️⃣ Why Virtual Trees?
 
 **Problem pattern:**
+
 - Query on subset of nodes
 
 - Need tree structure between them

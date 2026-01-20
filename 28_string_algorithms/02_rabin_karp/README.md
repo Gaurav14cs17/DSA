@@ -484,6 +484,7 @@ This section contains **50+ problems** across **6 categories**:
 ### When to Use Rabin-Karp
 
 ✅ **Best for:**
+
 - Multiple pattern matching (k patterns in same text)
 
 - Substring comparison problems
@@ -495,6 +496,7 @@ This section contains **50+ problems** across **6 categories**:
 - Average-case performance critical
 
 ❌ **Avoid when:**
+
 - Need guaranteed O(n) worst case → Use KMP
 
 - Pattern changes frequently → Overhead not worth it

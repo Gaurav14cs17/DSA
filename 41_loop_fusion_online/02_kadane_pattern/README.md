@@ -49,6 +49,7 @@ Given an array $A[1..n]$ of real numbers, find indices $i$ and $j$ such that:
 ```
 
 **Constraints:**
+
 - Subarray must be contiguous
 
 - Must contain at least one element
@@ -286,6 +287,7 @@ print(max_subarray_one_deletion(arr))  # Output: 4 (delete -2)
 **Theorem:** Kadane's algorithm correctly computes the maximum subarray sum.
 
 **Definitions:**
+
 - Let $S[i]$ = maximum sum of subarray **ending at position** $i$
 
 - Let $M[i]$ = maximum sum of **any** subarray in $A[1..i]$
@@ -307,9 +309,11 @@ M[i] = \max(M[i-1], S[i])
 **Proof by Induction:**
 
 **Base Case ($i = 1$):**
+
 - Only one element, so $S[1] = A[1]$ ✓
 
 **Inductive Hypothesis:**
+
 - Assume $S[k]$ is correct for all $k < i$
 
 **Inductive Step:**

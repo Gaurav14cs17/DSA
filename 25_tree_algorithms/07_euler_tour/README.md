@@ -52,6 +52,7 @@ permalink: /25_tree_algorithms/07_euler_tour/
 **DFS Order:** Assign each node a position based on DFS traversal.
 
 **Properties:**
+
 - Subtree occupies contiguous range
 
 - Range $[\text{in}[v], \text{out}[v]]$ = subtree of $v$
@@ -73,6 +74,7 @@ Subtree query on v → Range query on [in[v], out[v]]
 ```
 
 **Applications:**
+
 - Subtree sum → Range sum
 
 - Subtree update → Range update
@@ -84,6 +86,7 @@ Subtree query on v → Range query on [in[v], out[v]]
 ### 4️⃣ Path to Two Ranges
 
 **Path from $u$ to $v$:**
+
 - Can be split using LCA
 
 - Convert to two ranges in Euler tour
@@ -106,6 +109,7 @@ Subtree query on v → Range query on [in[v], out[v]]
 ### 6️⃣ Data Structures Used
 
 **Combined with:**
+
 - **Segment Tree:** Range queries/updates
 
 - **Fenwick Tree:** Prefix sums

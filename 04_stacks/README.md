@@ -429,6 +429,7 @@ Parentheses   Monotonic Stack   Shunting-Yard
 ### Common Mistakes to Avoid
 
 ❌ **Don't:**
+
 - Forget to check `if stack` before pop/peek
 
 - Use stack when simpler solution exists
@@ -440,6 +441,7 @@ Parentheses   Monotonic Stack   Shunting-Yard
 - Pop without using the value when needed
 
 ✅ **Do:**
+
 - Always validate stack is not empty
 
 - Draw small examples (3-5 elements)
@@ -469,6 +471,7 @@ Parentheses   Monotonic Stack   Shunting-Yard
 > "Stacks are the backbone of recursion, parsing, and backtracking - fundamental to computer science."
 
 **Progress Tracker:**
+
 - 🥉 **Bronze:** Solve 10 stack problems
 
 - 🥈 **Silver:** Solve 25 stack problems

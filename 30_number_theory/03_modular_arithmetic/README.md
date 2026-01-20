@@ -135,6 +135,7 @@ permalink: /30_number_theory/03_modular_arithmetic/
 **Modular arithmetic** is arithmetic for integers where numbers "wrap around" upon reaching a certain value (the modulus). It's fundamental to cryptography, hashing, and countless algorithmic problems.
 
 **Core Concepts:**
+
 - **Congruence:** a ≡ b (mod m) means m | (a - b)
 
 - **Clock Arithmetic:** Like hours on a clock (mod 12 or 24)
@@ -146,6 +147,7 @@ permalink: /30_number_theory/03_modular_arithmetic/
 - **Applications:** RSA, hashing, competitive programming
 
 **Why This Matters:**
+
 - **Cryptography:** RSA encryption relies on modular arithmetic
 
 - **Large Numbers:** Keep calculations manageable (mod 10⁹+7)
@@ -734,6 +736,7 @@ MOD3 = 998244353   # Prime, has primitive root
 ```
 
 **Why these?**
+
 - Prime (Fermat works)
 
 - Fits in 32-bit integer

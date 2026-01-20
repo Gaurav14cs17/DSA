@@ -135,6 +135,7 @@ Fast reaches end when:
 Therefore, slow at position $\left\lfloor \frac{n}{2} \right\rfloor$ ∎
 
 **Cases:**
+
 - Odd length ($n = 5$): slow at position $2$ (exact middle)
 
 - Even length ($n = 6$): slow at position $3$ (second middle)

@@ -49,6 +49,7 @@ permalink: /30_number_theory/02_primes/05_prime_applications/
 **Definition:** Gap between consecutive primes $p\_{n+1} - p\_n$.
 
 **Properties:**
+
 - First gap of size k: varies (gap 2 first at 3, gap 4 first at 7, etc.)
 
 - Average gap near n: approximately $\ln n$
@@ -83,6 +84,7 @@ permalink: /30_number_theory/02_primes/05_prime_applications/
 **Status:** Unproven, but verified for all even numbers up to 4×10^18.
 
 **Examples:**
+
 - 4 = 2 + 2
 - 10 = 3 + 7 = 5 + 5
 - 100 = 3 + 97 = 11 + 89 = 17 + 83 = ...

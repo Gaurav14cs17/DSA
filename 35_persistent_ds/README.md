@@ -49,14 +49,17 @@ permalink: /35_persistent_ds/
 **Persistent Data Structure:** Preserves **all previous versions** when modified.
 
 **Key Properties:**
+
 - ✅ Access any historical version
 
 - ✅ Modifications create new version without affecting old
 
 - ✅ Space-efficient through **path copying**
+
 - ✅ Time complexity same or slightly worse than mutable version
 
 **Types:**
+
 - **Partially Persistent:** Access all versions, modify only latest
 
 - **Fully Persistent:** Access and modify any version

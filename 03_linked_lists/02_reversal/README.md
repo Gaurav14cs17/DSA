@@ -93,11 +93,13 @@ T(n) = T(n-1) + O(1)
 ### 3️⃣ Reversal Complexity Analysis
 
 **Iterative Approach:**
+
 - **Time:** One pass through list = $O(n)$
 
 - **Space:** Three pointers (prev, current, next) = $O(1)$
 
 **Recursive Approach:**
+
 - **Time:** One recursive call per node = $O(n)$
 
 - **Space:** Call stack depth = $O(n)$

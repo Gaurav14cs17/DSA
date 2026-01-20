@@ -32,6 +32,7 @@ permalink: /10_graphs/06_cycle_detection/
 ### 1️⃣ Cycle in Directed Graph
 
 **DFS with 3 states:**
+
 - White (0): Unvisited
 
 - Gray (1): In current DFS path

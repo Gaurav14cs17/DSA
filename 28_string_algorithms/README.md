@@ -174,6 +174,7 @@ permalink: /28_string_algorithms/
 | **Z-Function** | Z-Algorithm | O(n) | O(n) |
 
 **Key:**
+
 - n = text length
 
 - m = total pattern length
@@ -189,11 +190,13 @@ permalink: /28_string_algorithms/
 **Problem:** Find all occurrences of pattern P in text T.
 
 **Naive Approach:**
+
 - Time: O(nm) where n = |T|, m = |P|
 
 - Compare pattern at each position
 
 **Optimal Approaches:**
+
 - **KMP:** O(n + m) using failure function
 
 - **Rabin-Karp:** O(n + m) average using hashing
@@ -223,6 +226,7 @@ then next potential match starts at position j - π[i]
 ```
 
 **Time Complexity Analysis:**
+
 - Preprocessing: O(m)
 
 - Matching: O(n)
@@ -248,6 +252,7 @@ h(s[i+1..i+m]) = (h(s[i..i+m-1]) - s[i]·p^(m-1))·p + s[i+m] mod M
 ```
 
 **Key Parameters:**
+
 - **p:** Prime base (usually 31 or 53)
 
 - **M:** Large prime modulus (10^9 + 7 or 10^9 + 9)
@@ -288,6 +293,7 @@ Z:      [0,1,0,0,3,1,0,0,2,1,0]
 ```
 
 **Key Observation:**
+
 - If Z[i] = k, then s[i..i+k-1] = s[0..k-1]
 
 - Use previously computed Z-values to optimize
@@ -325,6 +331,7 @@ LCP[i] = longest common prefix of SA[i] and SA[i-1]
 ```
 
 **Applications:**
+
 - Pattern matching in O(m log n)
 
 - Longest repeated substring
@@ -382,11 +389,13 @@ fail[node] = longest proper suffix that is in trie
 ```
 
 **Time Complexity:**
+
 - Construction: O(Σ|patterns|)
 
 - Matching: O(n + k) where k = number of matches
 
 **Applications:**
+
 - Dictionary matching
 
 - Virus scanning
@@ -400,6 +409,7 @@ fail[node] = longest proper suffix that is in trie
 **Definition:** Compressed trie of all suffixes.
 
 **Properties:**
+
 - **Edges:** Labeled with substrings
 
 - **Leaves:** Represent suffix positions
@@ -407,6 +417,7 @@ fail[node] = longest proper suffix that is in trie
 - **Internal nodes:** Branch points
 
 **Construction (Ukkonen's Algorithm):**
+
 - Online algorithm: O(n) time
 
 - Builds tree left-to-right
@@ -414,6 +425,7 @@ fail[node] = longest proper suffix that is in trie
 - Uses suffix links for efficiency
 
 **Applications:**
+
 - Find pattern in O(m)
 
 - Longest repeated substring

@@ -39,6 +39,7 @@ permalink: /31_combinatorics/02_combinations/
 ```
 
 **Key Properties:**
+
 - $\binom{n}{r} = \binom{n}{n-r}$ (Symmetry)
 
 - $\binom{n}{0} = \binom{n}{n} = 1$

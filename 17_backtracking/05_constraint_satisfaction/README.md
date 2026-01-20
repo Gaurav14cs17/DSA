@@ -34,6 +34,7 @@ permalink: /17_backtracking/05_constraint_satisfaction/
 ### 1️⃣ CSP Definition
 
 **Constraint Satisfaction Problem:**
+
 - Variables: $X\_1, X\_2, \ldots, X\_n$
 
 - Domains: $D\_1, D\_2, \ldots, D\_n$

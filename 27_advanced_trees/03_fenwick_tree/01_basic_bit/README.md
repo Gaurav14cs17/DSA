@@ -41,6 +41,7 @@ permalink: /27_advanced_trees/03_fenwick_tree/01_basic_bit/
 ### Point Update + Range Query
 
 **Most common BIT usage:**
+
 - Update single element: `O(log n)`
 - Query prefix sum: `O(log n)`
 - Query range sum: Two prefix sums
@@ -48,6 +49,7 @@ permalink: /27_advanced_trees/03_fenwick_tree/01_basic_bit/
 ### Range Update + Point Query
 
 **Using difference array:**
+
 - Update range: `O(log n)`
 - Query point: `O(log n)`
 

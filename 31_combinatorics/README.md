@@ -78,6 +78,7 @@ P(n, r) = \frac{n!}{(n-r)!} = n \times (n-1) \times \cdots \times (n-r+1)
 ```
 
 **Proof:**
+
 - First position: $n$ choices
 
 - Second position: $n-1$ choices
@@ -116,6 +117,7 @@ C(n, r) = \binom{n}{r} = \frac{n!}{r!(n-r)!}
 ```
 
 **Proof:**
+
 - Permutations of r from n: $P(n,r) = \frac{n!}{(n-r)!}$
 
 - Each combination counted $r!$ times (different orders)
@@ -175,6 +177,7 @@ C_0 = 1, \quad C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
 **First few terms:** $1, 1, 2, 5, 14, 42, 132, \ldots$
 
 **Applications:**
+
 - Valid parentheses sequences of length $2n$
 
 - Number of BSTs with $n$ nodes
@@ -184,6 +187,7 @@ C_0 = 1, \quad C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
 - Paths not crossing diagonal in grid
 
 **Proof (Parentheses):**
+
 - Total sequences: $\binom{2n}{n}$
 
 - Invalid (crossing): $\binom{2n}{n+1}$
@@ -284,6 +288,7 @@ C₃ = 5:  ()()()()
 ### [01. Permutations](./01_permutations/)
 
 **Core Concepts:**
+
 - Generate all permutations
 
 - Next permutation algorithm
@@ -295,6 +300,7 @@ C₃ = 5:  ()()()()
 - Circular permutations
 
 **Key Problems:**
+
 - Permutations (#46)
 
 - Next Permutation (#31)
@@ -309,6 +315,7 @@ C₃ = 5:  ()()()()
 ### [02. Combinations](./02_combinations/)
 
 **Core Concepts:**
+
 - nCr calculation
 
 - Generate combinations
@@ -320,6 +327,7 @@ C₃ = 5:  ()()()()
 - Binomial coefficients
 
 **Key Problems:**
+
 - Combinations (#77)
 
 - Combination Sum (#39, #40)
@@ -334,6 +342,7 @@ C₃ = 5:  ()()()()
 ### [03. Special Sequences](./03_special_sequences/)
 
 **Core Concepts:**
+
 - Catalan numbers
 
 - Fibonacci variants
@@ -345,6 +354,7 @@ C₃ = 5:  ()()()()
 - Bell numbers
 
 **Key Problems:**
+
 - Unique BSTs (#96)
 
 - Valid Parentheses (#22)

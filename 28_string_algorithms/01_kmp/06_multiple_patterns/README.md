@@ -488,6 +488,7 @@ for pattern, matches in results.items():
 ### When to Use Multiple KMP
 
 ✅ **Good for:**
+
 - Small number of patterns (k < 10)
 
 - Patterns preprocessed once, many texts
@@ -497,6 +498,7 @@ for pattern, matches in results.items():
 - Simpler implementation than Aho-Corasick
 
 ❌ **Better alternatives:**
+
 - **Many patterns (k > 100):** Use Aho-Corasick
 
 - **Approximate matching:** Use edit distance algorithms
@@ -551,6 +553,7 @@ KMP for multiple patterns naturally leads to Aho-Corasick:
 ```
 
 **When to graduate to Aho-Corasick:**
+
 - More than ~10 patterns
 
 - Patterns share common prefixes

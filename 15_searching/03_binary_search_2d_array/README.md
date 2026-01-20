@@ -48,6 +48,7 @@ T = O(\log(m \times n))
 For row-sorted and column-sorted matrix:
 
 **Start from top-right (or bottom-left):**
+
 - If target < current: go left
 
 - If target > current: go down

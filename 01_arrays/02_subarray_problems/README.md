@@ -498,6 +498,7 @@ Total = n + (n-1) + ... + 1 = n(n+1)/2
 **Theorem:** Algorithm finds maximum subarray sum.
 
 **Proof by Induction:**
+
 - Base: At i=0, max_ending[0] = A[0] ✓
 
 - Inductive: Assume correct for i-1
@@ -587,6 +588,7 @@ Total = n + (n-1) + ... + 1 = n(n+1)/2
 Think of it as a running investment:
 
 - If your portfolio (current sum) is negative, **sell everything and start fresh**
+
 - If positive, **keep holding** and add the next stock
 
 ```python
@@ -623,6 +625,7 @@ So: prefix[j] - prefix[i] = k
 ### How to Know if O(n) is Possible?
 
 ✅ **O(n) is achievable if:**
+
 - Each element is visited once
 
 - Operations per element are O(1)
@@ -630,6 +633,7 @@ So: prefix[j] - prefix[i] = k
 - Can use hash map for lookups
 
 ❌ **Requires O(n²) if:**
+
 - Need to compare all pairs
 
 - No monotonic property to exploit

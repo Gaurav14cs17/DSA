@@ -94,6 +94,7 @@ Merged interval:
 **Theorem:** Sorting intervals by start time allows linear-time merging.
 
 **Proof:**
+
 - After sorting: $s\_1 \leq s\_2 \leq \cdots \leq s\_n$
 
 - To check if $I\_i$ and $I\_{i+1}$ overlap: compare $e\_i$ with $s\_{i+1}$
@@ -755,6 +756,7 @@ For intervals $[a, b]$ and $[c, d]$ where $a \leq c$:
 ```
 
 **Proof:**
+
 - Overlap exists iff $b \geq c$
 
 - Overlap ends at $\min(b, d)$

@@ -52,6 +52,7 @@ G_{implicit} = (V, E) \text{ where } V = f(\text{input}), E = g(\text{rules})
 ```
 
 **Example (Jump Game):**
+
 - Input: Array $A = [2, 3, 1, 1, 4]$
 
 - $V = \{0, 1, 2, 3, 4\}$ (indices)
@@ -85,6 +86,7 @@ G_{implicit} = (V, E) \text{ where } V = f(\text{input}), E = g(\text{rules})
 **Theorem:** BFS finds shortest path in unweighted implicit graph.
 
 **Proof:**
+
 - Let $d(v)$ = distance from source to $v$
 
 - BFS visits vertices in order of increasing $d(v)$
@@ -107,6 +109,7 @@ d(u, v) = \min\{k : \exists \text{ path of length } k \text{ from } u \text{ to 
 **Theorem:** Grid with $m \times n$ cells has at most $\lceil \frac{mn}{2} \rceil$ components.
 
 **Proof:**
+
 - Each component needs ≥ 2 cells (or isolated)
 
 - Minimum component size = 1
@@ -131,6 +134,7 @@ V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j
 **Theorem:** Topological sort exists ⟺ Graph is a DAG (Directed Acyclic Graph).
 
 **Proof (⟸):**
+
 - If DAG, no cycles exist
 
 - Pick vertex with in-degree 0
@@ -139,6 +143,7 @@ V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j
 - Always possible (no cycle to block) ∎
 
 **Proof (⟹):**
+
 - Assume topo sort exists but cycle exists
 
 - Let cycle: $v\_1 \to v\_2 \to \cdots \to v\_k \to v\_1$
@@ -167,6 +172,7 @@ V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j
 ```
 
 **Example (Sliding Puzzle 2×3):**
+
 - States = permutations of 6 positions
 
 - $|\text{States}| = 6! = 720$
@@ -187,6 +193,7 @@ E = \{(s, s') : s' \text{ reachable from } s \text{ by one move}\}
 **Theorem:** Multi-source BFS finds minimum distance to ANY source.
 
 **Proof:**
+
 - Initialize all sources with $d = 0$
 
 - Standard BFS from virtual super-source
@@ -1153,6 +1160,7 @@ def oranges_rotting(grid: List[List[int]]) -> int:
 ### Quick Recognition Framework
 
 **Step 1: Identify Entities**
+
 - Array problem? → Indices are vertices
 
 - Grid problem? → Cells are vertices
@@ -1162,6 +1170,7 @@ def oranges_rotting(grid: List[List[int]]) -> int:
 - Scheduling? → Tasks are vertices
 
 **Step 2: Find Relationships**
+
 - Can move from i to j? → Edge (i,j)
 
 - Adjacent cells? → Edge between cells
@@ -1171,6 +1180,7 @@ def oranges_rotting(grid: List[List[int]]) -> int:
 - Dependency a→b? → Directed edge
 
 **Step 3: Match Problem Type**
+
 - "Can reach?" → Reachability (DFS/BFS)
 
 - "Minimum steps?" → Shortest path (BFS)
@@ -1320,6 +1330,7 @@ def oranges_rotting(grid: List[List[int]]) -> int:
 25. **Largest Component by Factor** (#952) - Number theory meets graphs
 
 **Practice:**
+
 - Solve in timed conditions (< 25 minutes)
 
 - Explain approach verbally
@@ -1329,6 +1340,7 @@ def oranges_rotting(grid: List[List[int]]) -> int:
 - Optimize space complexity
 
 **Mastery Checklist:**
+
 - [ ] Can identify implicit graph in < 3 minutes
 
 - [ ] Know which algorithm for which pattern
@@ -1417,6 +1429,7 @@ Problem without "graph" keywords + Relationships = Hidden Graph
 3. What am I finding? → **Algorithm**
 
 **Master These Core Patterns:**
+
 - 🎯 Array indices → Reachability/Shortest path
 
 - 🌊 Grid cells → Components/BFS

@@ -177,6 +177,7 @@ def push(node, start, end):
 **Path copying:** Only O(log n) nodes change per update.
 
 **Applications:**
+
 - Query array at different times
 
 - Kth smallest in range

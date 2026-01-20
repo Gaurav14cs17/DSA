@@ -71,6 +71,7 @@ T(V, E) = O(V + E)
 ```
 
 **Breakdown:**
+
 - Queue operations: Each vertex enqueued/dequeued once → $O(V)$
 
 - Edge examination: Each edge checked once (directed) or twice (undirected) → $O(E)$

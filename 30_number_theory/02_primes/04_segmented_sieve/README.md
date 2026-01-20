@@ -39,11 +39,13 @@ permalink: /30_number_theory/02_primes/04_segmented_sieve/
 **Challenge:** Find primes in range [L, R] where R can be 10^12 or larger.
 
 **Standard Sieve Limitation:**
+
 - Requires O(R) memory
 
 - For R = 10^12, need ~1TB of memory!
 
 **Segmented Sieve Solution:**
+
 - Only need primes up to √R (about 10^6)
 
 - Process range in blocks of size √R

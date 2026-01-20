@@ -56,6 +56,7 @@ permalink: /27_advanced_trees/06_treap/
 **Theorem:** With random priorities, treap has expected height $O(\log n)$.
 
 **Intuition:**
+
 - Random priorities create random insertion order
 
 - Random BST has expected height $O(\log n)$

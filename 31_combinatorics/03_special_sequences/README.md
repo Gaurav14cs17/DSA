@@ -50,6 +50,7 @@ C_0 = 1, \quad C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
 **Sequence:** 1, 1, 2, 5, 14, 42, 132, 429, 1430, ...
 
 **Applications:**
+
 - Valid parentheses with n pairs
 
 - Number of BSTs with n nodes

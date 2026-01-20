@@ -136,6 +136,7 @@ M \cdot (M^{(n-1)/2})^2 & \text{if } n \text{ is odd}
 ```
 
 **Time Complexity:**
+
 - Matrix multiplication: $O(k^3)$ for $k \times k$ matrix
 
 - Binary exponentiation: $O(\log n)$ multiplications
@@ -182,6 +183,7 @@ This is called the **companion matrix**.
 **Theorem:** If $A$ is the adjacency matrix of a graph, then $(A^n)\_{ij}$ equals the number of paths of length $n$ from vertex $i$ to vertex $j$.
 
 **Proof (by induction):**
+
 - Base: $n=1$, $(A^1)\_{ij} = A\_{ij}$ = number of edges from $i$ to $j$ ✓
 
 - Inductive: $(A^{n+1})\_{ij} = \sum\_k (A^n)\_{ik} \cdot A\_{kj}$ = paths of length $n$ to $k$, then edge to $j$ ✓
@@ -562,6 +564,7 @@ def count_paths_graph(adj_matrix: list[list[int]],
 ### [01. Matrix Power](./01_matrix_power/)
 
 **Core Concepts:**
+
 - Matrix multiplication
 
 - Binary exponentiation
@@ -573,6 +576,7 @@ def count_paths_graph(adj_matrix: list[list[int]],
 - Companion matrix
 
 **Key Algorithms:**
+
 - Fast matrix power
 
 - Optimized 2×2 case
@@ -587,6 +591,7 @@ def count_paths_graph(adj_matrix: list[list[int]],
 ### [02. Linear Recurrence](./02_linear_recurrence/)
 
 **Core Concepts:**
+
 - Fibonacci variants
 
 - Tribonacci
@@ -598,6 +603,7 @@ def count_paths_graph(adj_matrix: list[list[int]],
 - State transitions
 
 **Applications:**
+
 - Path counting
 
 - Tiling problems

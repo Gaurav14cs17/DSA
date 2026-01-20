@@ -31,6 +31,7 @@ permalink: /30_number_theory/
 **Number Theory** forms the mathematical backbone of competitive programming. This comprehensive guide covers essential algorithms and techniques from basic GCD computations to advanced theorems like Chinese Remainder Theorem and Lucas' Theorem.
 
 **What You'll Learn:**
+
 - **Fundamental Algorithms:** GCD/LCM, prime testing, factorization
 
 - **Modular Arithmetic:** Fast exponentiation, modular inverse, Fermat's theorem

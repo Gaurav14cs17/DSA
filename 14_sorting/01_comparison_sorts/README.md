@@ -36,6 +36,7 @@ permalink: /14_sorting/01_comparison_sorts/
 **Theorem:** Comparison sorts require $\Omega(n \log n)$ comparisons.
 
 **Proof:**
+
 - Decision tree has $n!$ leaves (permutations)
 
 - Tree height $h \geq \log\_2(n!)$
@@ -61,6 +62,7 @@ After `partition(arr, low, high)`:
 **Invariant:** Merged array is sorted at each step.
 
 **Proof by induction:**
+
 - Base: Single element is sorted
 
 - Inductive: Merging two sorted arrays produces sorted array ∎

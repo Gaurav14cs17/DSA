@@ -259,6 +259,7 @@ print("μ values:", mu[1:21])
 ## 💡 When to Use Sieves
 
 ✅ **Use sieves when:**
+
 - Multiple queries on range [1, n]
 
 - n ≤ 10^7 (memory constraint)
@@ -266,6 +267,7 @@ print("μ values:", mu[1:21])
 - Need O(1) or O(log n) per query
 
 ❌ **Don't use sieves when:**
+
 - Single query for large n
 
 - n > 10^8 (too much memory)

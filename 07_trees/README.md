@@ -342,6 +342,7 @@ First values: $C\_0=1, C\_1=1, C\_2=2, C\_3=5, C\_4=14, \ldots$
 ### Common Mistakes to Avoid
 
 ❌ **Don't:**
+
 - Forget base case (null node)
 
 - Confuse height with depth
@@ -353,6 +354,7 @@ First values: $C\_0=1, C\_1=1, C\_2=2, C\_3=5, C\_4=14, \ldots$
 - Use global variables (pass results up)
 
 ✅ **Do:**
+
 - Always handle null nodes first
 
 - Draw small tree (3-5 nodes) to visualize
@@ -382,6 +384,7 @@ First values: $C\_0=1, C\_1=1, C\_2=2, C\_3=5, C\_4=14, \ldots$
 > "Trees are the most important non-linear data structure. Master them, and you master recursion!"
 
 **Progress Tracker:**
+
 - 🥉 **Bronze:** Solve 15 tree problems
 
 - 🥈 **Silver:** Solve 30 tree problems + master traversals

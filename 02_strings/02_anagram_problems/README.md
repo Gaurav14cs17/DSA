@@ -68,6 +68,7 @@ H(S) = \text{tuple}(\text{sorted}(S)) \quad \text{or} \quad H(S) = \text{tuple}(
 **Problem:** Find all anagrams of $P$ in $S$.
 
 **Window Invariant:**
+
 - Window size = $|P|$
 
 - Window frequency vector = $\vec{f}(P)$
@@ -94,6 +95,7 @@ H(S) = \text{tuple}(\text{sorted}(S)) \quad \text{or} \quad H(S) = \text{tuple}(
 ```
 
 **Two Pointers:**
+
 - Expand right until condition satisfied
 
 - Contract left while condition holds
@@ -363,6 +365,7 @@ Result: [0, 6]
 **Theorem:** Two strings are anagrams ⟺ their sorted forms are identical.
 
 **Proof:**
+
 - (⇒) If anagrams, same char frequencies → sorted strings have chars in same order → equal
 
 - (⇐) If sorted forms equal, same chars at same positions → same frequencies → anagrams ∎
@@ -372,6 +375,7 @@ Result: [0, 6]
 **Invariant:** Window of size |p| contains anagram ⟺ window frequency = p frequency
 
 **Proof of O(n) time:**
+
 - Each character enters window exactly once: O(n)
 
 - Each character leaves window exactly once: O(n)

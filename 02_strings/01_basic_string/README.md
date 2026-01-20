@@ -39,6 +39,7 @@ permalink: /02_strings/01_basic_string/
 ```
 
 **Two-Pointer Proof:**
+
 - Left pointer: $l = 0, 1, 2, \ldots$
 
 - Right pointer: $r = n-1, n-2, \ldots$

@@ -80,6 +80,7 @@ T(n) = \sum_{h=0}^{\log n} \frac{n}{2^{h+1}} \cdot O(h) = O(n)
 **Key Insight:** Most nodes are near leaves (low height).
 
 **Detailed Proof:**
+
 - Level 0 (leaves): $n/2$ nodes, $h = 0$ → $O(0)$ work each
 
 - Level 1: $n/4$ nodes, $h = 1$ → $O(1)$ work each
@@ -566,24 +567,31 @@ def lastStoneWeight(stones: list[int]) -> int:
 ## ❓ Interview Deep-Dive Q&A
 
 **Q1: Why is build heap O(n), not O(n log n)?**
+
 - **A:** Most nodes are near leaves. Sum of heights converges: $\sum \frac{h}{2^h} = 2$. Sift down from bottom is faster!
 
 **Q2: When to use heap vs sorting?**
+
 - **A:** Heap if you need top-k from n items (O(n log k) vs O(n log n)). Sorting if you need all elements ordered.
 
 **Q3: How to implement max-heap in Python?**
+
 - **A:** heapq is min-heap only. Negate values: push(-x), then negate on pop: -heappop().
 
 **Q4: What's the difference between heap and BST?**
+
 - **A:** Heap: O(1) min/max, O(log n) insert. BST: O(log n) search, inorder gives sorted. Heap NOT for search!
 
 **Q5: Can you delete arbitrary element from heap?**
+
 - **A:** Yes, but O(n) to find it first. Replace with last, then sift up/down. Better to use indexed heap.
 
 **Q6: Is heap sort stable?**
+
 - **A:** No! Extract changes relative order of equal elements.
 
 **Q7: How to implement heap without heapq?**
+
 - **A:** Array-based: parent(i)=(i-1)//2, left(i)=2i+1, right(i)=2i+2. Implement sift_up/sift_down manually.
 
 ---

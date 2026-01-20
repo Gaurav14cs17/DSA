@@ -53,6 +53,7 @@ permalink: /25_tree_algorithms/09_tree_hashing/
 **Tree hash:** Unique identifier for tree structure.
 
 **Properties:**
+
 - **Deterministic:** Same tree → same hash
 
 - **Fast:** $O(n)$ to compute

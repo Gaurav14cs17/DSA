@@ -34,6 +34,7 @@ permalink: /10_graphs/02_bfs_problems/
 **Theorem:** BFS finds shortest path in unweighted graphs.
 
 **Proof:**
+
 - BFS explores vertices level by level
 
 - When vertex $v$ is discovered from $u$, distance$(v)$ = distance$(u)$ + 1
@@ -49,6 +50,7 @@ permalink: /10_graphs/02_bfs_problems/
 ```
 
 **Breakdown:**
+
 - Each vertex enqueued/dequeued once: O(V)
 
 - Each edge examined once: O(E)

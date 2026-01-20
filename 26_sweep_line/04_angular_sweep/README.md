@@ -43,6 +43,7 @@ permalink: /26_sweep_line/04_angular_sweep/
 **Angular sweep:** Ray rotates around a point (0° to 360°)
 
 **Applications:**
+
 - Visibility problems
 
 - Closest pair from a point
@@ -65,6 +66,7 @@ permalink: /26_sweep_line/04_angular_sweep/
 **Range:** $[-\pi, \pi]$ or $[0, 2\pi]$
 
 **Properties:**
+
 - atan2 handles all quadrants correctly
 
 - atan2(0, 0) is undefined

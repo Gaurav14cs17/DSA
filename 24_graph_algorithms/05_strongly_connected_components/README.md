@@ -79,6 +79,7 @@ permalink: /24_graph_algorithms/05_strongly_connected_components/
 ### 4️⃣ Tarjan's Algorithm
 
 **Single DFS with auxiliary information:**
+
 - `disc[v]`: Discovery time
 
 - `low[v]`: Lowest discovery time reachable from subtree of $v$
@@ -96,6 +97,7 @@ permalink: /24_graph_algorithms/05_strongly_connected_components/
 **DAG of SCCs:** Contract each SCC to single vertex.
 
 **Properties:**
+
 - Always acyclic
 
 - Topological order exists

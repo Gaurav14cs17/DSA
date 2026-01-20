@@ -62,6 +62,7 @@ permalink: /25_tree_algorithms/05_centroid_decomposition/
 ### 3️⃣ Centroid Tree Properties
 
 **Structure:**
+
 - Root = centroid of original tree
 
 - Children = centroids of subtrees after removal

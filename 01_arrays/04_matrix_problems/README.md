@@ -774,6 +774,7 @@ R_4 &= R_1 \circ R_1 \circ R_1 \circ R_1 = R_0
 ```
 
 **Properties:**
+
 - $R\_1 \circ R\_3 = R\_0$ (90° + 270° = 360° = 0°)
 
 - Rotation is reversible: $(R\_1)^{-1} = R\_3$

@@ -578,6 +578,7 @@ print(f"Original: {inverse_bwt(bwt)}")
 ### When to Use Suffix Arrays
 
 ✅ **Use suffix arrays when:**
+
 - Need memory efficiency
 
 - Simpler implementation preferred
@@ -587,6 +588,7 @@ print(f"Original: {inverse_bwt(bwt)}")
 - Building offline (preprocessing acceptable)
 
 ❌ **Consider alternatives when:**
+
 - Need O(m) pattern matching (use suffix tree)
 
 - Many online updates (use different structure)

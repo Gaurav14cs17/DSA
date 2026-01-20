@@ -482,6 +482,7 @@ print(find_period("abcd"))       # 4
 **Claim:** Z-algorithm runs in O(n) time.
 
 **Proof:**
+
 - Each position i is processed once in outer loop: O(n)
 
 - The key: r (right boundary) never decreases more than it increases
@@ -553,6 +554,7 @@ Therefore: T ≤ n + (n-1) = O(n)
 ### When to Use Z-Algorithm
 
 ✅ **Use Z-Algorithm when:**
+
 - Need all prefix matches at each position
 
 - Problem involves prefix-suffix relationships
@@ -562,6 +564,7 @@ Therefore: T ≤ n + (n-1) = O(n)
 - Need to process each position independently
 
 ❌ **Consider alternatives when:**
+
 - Only need first occurrence (simpler algorithms exist)
 
 - Pattern changes frequently (preprocessing overhead)

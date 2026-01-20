@@ -30,6 +30,7 @@ nav_order: 6
 The **Aho-Corasick** algorithm efficiently finds all occurrences of multiple patterns in a text simultaneously. It combines a **trie** with **failure links** (similar to KMP) to create a finite automaton.
 
 **Key Applications:**
+
 - Virus/malware scanning
 
 - Dictionary matching
@@ -694,6 +695,7 @@ def reverse_complement(seq):
 ### When to Use Aho-Corasick
 
 ✅ **Use when:**
+
 - Searching for multiple patterns simultaneously
 
 - Patterns don't change frequently
@@ -703,6 +705,7 @@ def reverse_complement(seq):
 - Working with large texts (virus scanning, log analysis)
 
 ❌ **Consider alternatives when:**
+
 - Only one pattern (use KMP or Rabin-Karp)
 
 - Patterns change frequently (rebuilding is expensive)

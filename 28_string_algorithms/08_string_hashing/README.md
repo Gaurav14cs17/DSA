@@ -30,6 +30,7 @@ nav_order: 8
 **String Hashing** converts strings to numerical values (hashes) for fast comparison and manipulation. It enables O(1) substring comparisons after O(n) preprocessing.
 
 **Core Applications:**
+
 - Fast string comparison
 
 - Substring equality checks
@@ -728,6 +729,7 @@ MOD2 = 10**9 + 9
 | **Memory** | O(n) | O(1) |
 
 **When to use hashing:**
+
 - Multiple substring comparisons (k >> 1)
 
 - Large strings

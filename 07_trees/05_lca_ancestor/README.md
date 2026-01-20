@@ -41,6 +41,7 @@ permalink: /07_trees/05_lca_ancestor/
 ```
 
 **Properties:**
+
 - $\text{LCA}(p, p) = p$
 
 - $\text{LCA}(p, q) = \text{LCA}(q, p)$

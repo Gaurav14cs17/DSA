@@ -49,6 +49,7 @@ permalink: /32_game_theory/
 **Definition:** A game is **impartial** if both players have the same moves available from any position.
 
 **Examples:**
+
 - Nim game
 
 - Chomp
@@ -66,6 +67,7 @@ permalink: /32_game_theory/
 **Losing Position (L):** The player whose turn it is will lose with optimal play.
 
 **Recursive Definition:**
+
 - A position is **losing** if all moves lead to **winning** positions
 
 - A position is **winning** if there exists at least one move to a **losing** position
@@ -122,6 +124,7 @@ g(P) = \text{mex}\{g(P') : P' \text{ is a successor of } P\}
 where $\text{mex}(S) = \min\{n \geq 0 : n \notin S\}$ (minimum excludant)
 
 **Properties:**
+
 - $g(P) = 0$ iff $P$ is a losing position
 
 - $g(P) > 0$ iff $P$ is a winning position
@@ -252,6 +255,7 @@ Pattern repeats every 4 positions!
 ### [01. Nim Game](./01_nim_game/)
 
 **Core Concepts:**
+
 - Classic Nim
 
 - Nim-Sum (XOR)
@@ -263,6 +267,7 @@ Pattern repeats every 4 positions!
 - Multi-pile Nim
 
 **Key Problems:**
+
 - Nim Game (#292)
 
 - Game of Nim (#1510)
@@ -277,6 +282,7 @@ Pattern repeats every 4 positions!
 ### [02. Minimax](./02_minimax/)
 
 **Core Concepts:**
+
 - Game trees
 
 - Minimax algorithm
@@ -288,6 +294,7 @@ Pattern repeats every 4 positions!
 - Two-player games
 
 **Key Problems:**
+
 - Predict Winner (#486)
 
 - Stone Game (#877)
@@ -302,6 +309,7 @@ Pattern repeats every 4 positions!
 ### [03. Stone Games](./03_stone_games/)
 
 **Core Concepts:**
+
 - Stone pile games
 
 - DP on games
@@ -313,6 +321,7 @@ Pattern repeats every 4 positions!
 - Game states
 
 **Key Problems:**
+
 - Stone Game I-V
 
 - Can I Win (#464)

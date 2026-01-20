@@ -75,6 +75,7 @@ permalink: /05_queues/03_deque_problems/
 ```
 
 **Why O(n)?**
+
 - Each element added once, removed once
 
 - Total operations: $2n = O(n)$ ∎

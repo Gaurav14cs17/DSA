@@ -179,6 +179,7 @@ Geometric interpretation:
 ```
 
 **Applications:**
+
 - Orientation test
 
 - Convex hull construction
@@ -210,6 +211,7 @@ Properties:
 ```
 
 **Applications:**
+
 - Angle calculations
 
 - Projection
@@ -583,6 +585,7 @@ Key for: Convex hull, orientation tests, polygon winding
 ### Degeneracies
 
 **Handle special cases:**
+
 - Collinear points
 
 - Duplicate points

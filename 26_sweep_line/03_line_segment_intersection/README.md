@@ -57,6 +57,7 @@ permalink: /26_sweep_line/03_line_segment_intersection/
 ```
 
 **Result:**
+
 - $> 0$: Counter-clockwise turn
 
 - $< 0$: Clockwise turn
@@ -93,6 +94,7 @@ permalink: /26_sweep_line/03_line_segment_intersection/
 2. **Status structure:** Active segments sorted by y-intersection with sweep line
 
 **Events:**
+
 - **Left endpoint:** Add segment to status
 
 - **Right endpoint:** Remove segment from status
@@ -108,6 +110,7 @@ permalink: /26_sweep_line/03_line_segment_intersection/
 **Theorem:** Bentley-Ottmann runs in $O((n + k) \log n)$ time.
 
 **Proof:**
+
 - $n$ segments → $2n$ endpoint events
 
 - $k$ intersections → $k$ intersection events

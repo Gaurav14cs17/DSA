@@ -41,6 +41,7 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/05_range_queries/
 **Range Aggregates:** Compute various functions over ranges.
 
 **Supported Operations:**
+
 - Range Min/Max
 
 - Range GCD/LCM

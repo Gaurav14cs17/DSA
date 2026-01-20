@@ -41,6 +41,7 @@ permalink: /27_advanced_trees/03_fenwick_tree/03_2d_bit/
 **2D BIT:** Extend 1D BIT to 2D matrices.
 
 **Operations:**
+
 - Update `(row, col)`: $O(\log m \cdot \log n)$
 
 - Query rectangle: $O(\log m \cdot \log n)$

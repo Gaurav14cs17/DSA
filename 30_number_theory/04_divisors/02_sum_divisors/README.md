@@ -55,6 +55,7 @@ permalink: /30_number_theory/04_divisors/02_sum_divisors/
 ```
 
 **Examples:**
+
 - $\sigma(1) = 1$
 
 - $\sigma(6) = 1 + 2 + 3 + 6 = 12$

@@ -55,6 +55,7 @@ permalink: /30_number_theory/04_divisors/01_count_divisors/
 ```
 
 **Examples:**
+
 - $\tau(1) = 1$ → divisors: {1}
 
 - $\tau(6) = 4$ → divisors: {1, 2, 3, 6}

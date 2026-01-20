@@ -84,6 +84,7 @@ n = 2^{p-1}(2^p - 1)
 where $2^p - 1$ is a **Mersenne prime**.
 
 **Proof Sketch:**
+
 - If $M\_p = 2^p - 1$ is prime, then $\sigma(M\_p) = M\_p + 1 = 2^p$
 
 - $\sigma(2^{p-1}) = 2^p - 1$

@@ -216,6 +216,7 @@ When $stored[i] < 0$: new minimum found!
 **Setup:** Two stacks $S\_1$ (input) and $S\_2$ (output)
 
 **Operations:**
+
 - enqueue: push to $S\_1$
 
 - dequeue: pop from $S\_2$ (transfer from $S\_1$ if $S\_2$ empty)

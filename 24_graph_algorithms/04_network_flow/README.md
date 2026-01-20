@@ -152,6 +152,7 @@ c(S, T) = \sum_{u \in S, v \in T, (u,v) \in E} c(u,v)
 **Preflow:** Relax flow conservation at intermediate steps.
 
 **Operations:**
+
 - **Push:** Send excess flow to neighbor
 
 - **Relabel:** Increase height of vertex

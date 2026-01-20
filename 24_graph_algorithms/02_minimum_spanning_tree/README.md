@@ -51,6 +51,7 @@ permalink: /24_graph_algorithms/02_minimum_spanning_tree/
 ```
 
 **Properties:**
+
 - Has exactly $V - 1$ edges
 
 - Unique if all edge weights distinct

@@ -94,6 +94,7 @@ Geometric interpretation:
 ```
 
 **Applications:**
+
 - Orientation test
 
 - Area calculation
@@ -124,6 +125,7 @@ where θ = angle between vectors
 ```
 
 **Applications:**
+
 - Angle calculation
 
 - Projection

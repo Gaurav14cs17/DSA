@@ -84,6 +84,7 @@ h_new = ((h_old - s[i]·p^(m-1)) · p + s[i+m]) mod M
 ### Modular Arithmetic
 
 **Why use modulo?**
+
 - Prevent integer overflow
 
 - Keep hash values bounded

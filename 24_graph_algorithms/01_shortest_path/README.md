@@ -64,6 +64,7 @@ permalink: /24_graph_algorithms/01_shortest_path/
 ```
 
 **Correctness Proof:**
+
 - When vertex $u$ is extracted from priority queue, $\text{dist}[u]$ is optimal
 
 - No shorter path can exist (would require negative edge)

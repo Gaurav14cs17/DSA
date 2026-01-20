@@ -174,6 +174,7 @@ dp[i-1][j-1] & \text{(replace)}
 ```
 
 **Operations Cost:**
+
 - Delete from $S$: $dp[i-1][j] + 1$
 
 - Insert into $S$: $dp[i][j-1] + 1$
@@ -611,6 +612,7 @@ Palindrome  Hash
 ### Common Mistakes to Avoid
 
 ❌ **Don't:**
+
 - Concatenate strings in loops without StringBuilder
 
 - Forget about empty string edge case
@@ -622,6 +624,7 @@ Palindrome  Hash
 - Forget to handle Unicode characters
 
 ✅ **Do:**
+
 - Use StringBuilder/list for multiple concatenations
 
 - Test with edge cases: empty, single char, all same
@@ -651,6 +654,7 @@ Palindrome  Hash
 > "Strings are everywhere - from DNA sequences to search engines. Master them, and you master text processing."
 
 **Progress Tracker:**
+
 - 🥉 **Bronze:** Solve 20 string problems
 
 - 🥈 **Silver:** Solve 50 string problems  

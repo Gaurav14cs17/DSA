@@ -104,6 +104,7 @@ Valid orderings: `[A, B, C]`, `[B, A, C]`
 **Proof:** If $(u, v) \in E$, then $\text{finish}[u] > \text{finish}[v]$ in DFS.
 
 **States:**
+
 - **White (0):** Unvisited
 
 - **Gray (1):** Visiting (in current DFS path)
@@ -139,6 +140,7 @@ Always pick the smallest available vertex.
 ### 7️⃣ All Topological Sorts
 
 **Backtracking approach:**
+
 - Try each vertex with in-degree 0
 - Recursively generate orderings
 

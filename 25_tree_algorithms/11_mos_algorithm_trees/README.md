@@ -68,6 +68,7 @@ Tour: [0, 1, 2, 1, 0, 3, 0]
 ```
 
 **Path from $u$ to $v$:**
+
 - Convert to ranges in Euler tour
 
 - Use LCA to split into two ranges
@@ -77,6 +78,7 @@ Tour: [0, 1, 2, 1, 0, 3, 0]
 ### 4️⃣ Path Decomposition
 
 **Path $(u, v)$ with LCA $l$:**
+
 - Range 1: $[\text{first}[u], \text{first}[l]]$
 
 - Range 2: $[\text{first}[l], \text{first}[v]]$
@@ -104,6 +106,7 @@ Tour: [0, 1, 2, 1, 0, 3, 0]
 **Optimal block size:** $\sqrt{n}$
 
 **Intuition:**
+
 - Too large: many queries per block
 
 - Too small: many blocks to process

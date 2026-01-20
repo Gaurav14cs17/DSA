@@ -350,6 +350,7 @@ class SkipList:
 5. **Rejection Sampling** - Generate constrained distributions
 
 **Common Mistakes:**
+
 - ❌ Using `random.choice()` repeatedly (biased!)
 
 - ❌ Forgetting to maintain uniform probability

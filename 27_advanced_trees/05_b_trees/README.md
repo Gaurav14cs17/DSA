@@ -76,11 +76,13 @@ where:
 ### 3️⃣ Why B-Trees?
 
 **Disk access is expensive:**
+
 - RAM access: ~100 ns
 
 - Disk access: ~10 ms (100,000× slower!)
 
 **B-Tree minimizes disk I/O:**
+
 - Large nodes (match disk block size)
 
 - Shallow tree (fewer disk accesses)
@@ -88,6 +90,7 @@ where:
 - Sequential within node (cache-friendly)
 
 **Used in:**
+
 - Filesystems (NTFS, ext4, HFS+)
 
 - Databases (MySQL, PostgreSQL, SQLite)
@@ -149,6 +152,7 @@ where:
 **B+ Tree:** All data in leaves, internal nodes only store keys.
 
 **Advantages:**
+
 - Better for range queries (scan leaves)
 
 - Higher fanout (more keys per internal node)
@@ -156,6 +160,7 @@ where:
 - Used in most databases
 
 **Structure:**
+
 - Leaves linked (sequential access)
 
 - Internal nodes are pure index

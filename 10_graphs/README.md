@@ -397,6 +397,7 @@ Graph Problem
 ### Common Mistakes to Avoid
 
 ❌ **Don't:**
+
 - Use adjacency matrix for sparse graphs (O(V²) space!)
 
 - Forget to track visited nodes (infinite loops!)
@@ -408,6 +409,7 @@ Graph Problem
 - Forget to check if graph is connected
 
 ✅ **Do:**
+
 - Choose right representation: adjacency list for sparse
 
 - Always track visited to avoid cycles
@@ -438,6 +440,7 @@ Graph Problem
 > "Graphs model the real world — social networks, maps, dependencies. Master graphs, master algorithms!"
 
 **Progress Tracker:**
+
 - 🥉 **Bronze:** Solve 15 graph problems + master BFS/DFS
 
 - 🥈 **Silver:** Solve 30 problems + shortest paths + topological sort

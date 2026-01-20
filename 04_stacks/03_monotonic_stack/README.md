@@ -115,6 +115,7 @@ Index 4: A[4]=3, no greater element
 **Theorem:** Monotonic stack processes $n$ elements in O(n).
 
 **Proof:**
+
 - Each element pushed at most once: $n$ pushes
 
 - Each element popped at most once: $\leq n$ pops

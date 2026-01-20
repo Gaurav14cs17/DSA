@@ -87,6 +87,7 @@ a < d \land c < b
 ```
 
 **Proof:**
+
 - Overlap means $\exists t : a \leq t < b \land c \leq t < d$
 
 - This requires $a < d$ (otherwise $a \geq d > t$, contradiction)
@@ -123,6 +124,7 @@ a < d \land c < b
 **Theorem:** Minimum conference rooms = maximum number of simultaneous meetings.
 
 **Proof:**
+
 - Let $k$ = max overlap
 
 - At time $t$ where $k$ intervals overlap, need $k$ rooms
@@ -152,6 +154,7 @@ a < d \land c < b
 **Invariant:** At step $i$, all intervals $[1, i]$ are minimally merged.
 
 **Proof by induction:**
+
 - Base: First interval is trivially merged
 
 - Step: If interval $i+1$ overlaps last merged, extending is minimal

@@ -153,11 +153,13 @@ Every pair of vertices connected.
 ```
 
 **Proof:**
+
 - Choose 2 vertices from $n$: $\binom{n}{2}$
 
 - Each pair forms one edge ∎
 
 **Examples:**
+
 - $K\_3$ (triangle): $\frac{3 \times 2}{2} = 3$ edges
 
 - $K\_4$: $\frac{4 \times 3}{2} = 6$ edges
@@ -934,6 +936,7 @@ def can_finish(num_courses: int, prerequisites: List[List[int]]) -> bool:
 ### When Matrix Beats List
 
 **Matrix preferred when:**
+
 - Frequent edge existence checks: O(1) vs O(degree)
 
 - Dense graph: Space difference minimal
@@ -943,6 +946,7 @@ def can_finish(num_courses: int, prerequisites: List[List[int]]) -> bool:
 - Small graphs ($V \leq 1000$)
 
 **List preferred when:**
+
 - Sparse graph: Huge space savings
 
 - Need to iterate neighbors frequently

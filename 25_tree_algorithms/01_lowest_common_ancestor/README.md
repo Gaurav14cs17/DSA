@@ -47,6 +47,7 @@ permalink: /25_tree_algorithms/01_lowest_common_ancestor/
 ```
 
 **Properties:**
+
 - $\text{LCA}(u, u) = u$
 
 - $\text{LCA}(u, v) = \text{LCA}(v, u)$ (symmetric)
@@ -88,6 +89,7 @@ permalink: /25_tree_algorithms/01_lowest_common_ancestor/
 2. Binary search for LCA by jumping up in powers of 2
 
 **Complexity:**
+
 - Preprocess: $O(n \log n)$
 
 - Query: $O(\log n)$
@@ -101,6 +103,7 @@ permalink: /25_tree_algorithms/01_lowest_common_ancestor/
 **Euler Tour:** Visit nodes in DFS, recording each entry/exit.
 
 **Properties:**
+
 - Length $= 2n - 1$
 
 - LCA$(u, v)$ = node with minimum depth in tour between first occurrences of $u$ and $v$
@@ -111,6 +114,7 @@ permalink: /25_tree_algorithms/01_lowest_common_ancestor/
 3. LCA query = RMQ (Range Minimum Query) on depths
 
 **Complexity:**
+
 - Preprocess: $O(n)$ with RMQ
 
 - Query: $O(1)$

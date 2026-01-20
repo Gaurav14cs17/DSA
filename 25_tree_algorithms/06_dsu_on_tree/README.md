@@ -80,6 +80,7 @@ For each node u:
 ### 4️⃣ Why O(n log n)?
 
 **Analysis:**
+
 - Each node visited once per ancestor in heavy path
 
 - Heavy path length = $O(\log n)$

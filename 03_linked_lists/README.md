@@ -87,6 +87,7 @@ Since fast = 2 × slow:
 ```
 
 **Finding cycle start:**
+
 - Reset one pointer to head
 
 - Move both at same speed
@@ -124,6 +125,7 @@ At each step: `prev → ... ← current`
 ```
 
 **Proof:**
+
 - Fast moves 2 steps per iteration
 
 - Slow moves 1 step per iteration
@@ -383,6 +385,7 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 ### Common Mistakes to Avoid
 
 ❌ **Don't:**
+
 - Forget to check for null pointers
 
 - Lose reference to head when modifying
@@ -394,6 +397,7 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 - Skip drawing diagrams
 
 ✅ **Do:**
+
 - Always check `if not head` or `if not head.next`
 - Use dummy node for insertions/deletions
 
@@ -422,6 +426,7 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 > "Linked lists teach you pointer manipulation - a fundamental skill for all advanced data structures."
 
 **Progress Tracker:**
+
 - 🥉 **Bronze:** Solve 15 linked list problems
 
 - 🥈 **Silver:** Solve 30 linked list problems

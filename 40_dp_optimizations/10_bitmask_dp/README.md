@@ -11,6 +11,7 @@
 **Bitmask DP** represents states as bitmasks, enabling subset enumeration and manipulation.
 
 **Common Patterns:**
+
 - TSP: O(n! ) → O(n²·2ⁿ)
 
 - Assignment: O(n!) → O(n·2ⁿ)

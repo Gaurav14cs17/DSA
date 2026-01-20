@@ -51,6 +51,7 @@ permalink: /37_interval_trees/
 **Given:** Set of intervals I = {[l₁, r₁], [l₂, r₂], ..., [lₙ, rₙ]}
 
 **Operations:**
+
 - **Insert(interval):** Add interval to set
 
 - **Delete(interval):** Remove interval from set
@@ -403,6 +404,7 @@ def max_overlap(intervals):
 5. **Sweep Line** - Event-based processing
 
 **Common Mistakes:**
+
 - ❌ Not sorting intervals first
 
 - ❌ Wrong overlap condition (use `a[0] <= b[1] and b[0] <= a[1]`)

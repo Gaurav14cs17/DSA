@@ -52,6 +52,7 @@ Given n pairs of parentheses, generate all valid (balanced) combinations.
 **Count:** C_n = (2n)! / ((n+1)! × n!)
 
 **Examples:**
+
 - n=1: `()` → 1 combination
 
 - n=2: `(())`, `()()` → 2 combinations

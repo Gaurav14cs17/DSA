@@ -29,6 +29,7 @@ for all a ≤ b ≤ c ≤ d
 **Intuition:** "Crossing is bad" - closer splits are better.
 
 **Examples:**
+
 - Warehouse placement (distance to cities)
 
 - Mailbox allocation

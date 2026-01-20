@@ -120,11 +120,13 @@ node.val_{new} = node.val + \sum_{x > node.val} x
 ### 7️⃣ BST Iterator - Amortized Analysis
 
 **Operations:**
+
 - `next()`: O(1) amortized
 
 - `hasNext()`: O(1)
 
 **Why Amortized O(1)?**
+
 - Each node pushed/popped exactly once
 
 - Total n nodes → n pushes + n pops
@@ -202,6 +204,7 @@ Case 2: Node has no right child (15 has no right child)
 ```
 
 **Rule:**
+
 - If right exists → min of right
 
 - Else → first left-turn ancestor
@@ -631,27 +634,35 @@ def closestValue(root: TreeNode, target: float) -> int:
 ## ❓ Interview Deep-Dive Q&A
 
 **Q1: What's the advantage of k-th smallest in BST vs array?**
+
 - **A:** BST can stop early at k-th element (O(h+k)). Array needs full sort O(n log n) or QuickSelect O(n).
 
 **Q2: How is LCA in BST different from regular binary tree?**
+
 - **A:** BST: O(h) iterative, no recursion! Check if p and q split. Regular tree: O(n) needs to search both sides.
 
 **Q3: Why reverse inorder for greater sum tree?**
+
 - **A:** Need to add all larger values. Reverse inorder visits larger values first → accumulate correctly!
 
 **Q4: How does BST Iterator achieve O(1) amortized?**
+
 - **A:** Each node pushed/popped exactly once. Total O(n) work for n nodes → O(1) per next() call.
 
 **Q5: What's the difference between k-th smallest and k-th largest?**
+
 - **A:** Smallest: inorder. Largest: reverse inorder. Or: kth largest = (n-k+1)th smallest.
 
 **Q6: How to find range [L, R] sum efficiently?**
+
 - **A:** Prune branches: if node < L, skip left; if node > R, skip right. Only visit relevant nodes.
 
 **Q7: Can we do k-th smallest iteratively?**
+
 - **A:** Yes! Stack-based inorder, count as we pop. Stop when count == k.
 
 **Q8: What if we need frequent k-th smallest queries?**
+
 - **A:** Augment BST with subtree sizes. Each node stores count of nodes in subtree. O(h) per query!
 
 ---

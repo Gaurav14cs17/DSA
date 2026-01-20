@@ -37,6 +37,7 @@ permalink: /41_loop_fusion_online/
 3. **Recurrence Relations**: Using mathematical relations to maintain state efficiently
 
 **What You'll Learn:**
+
 - Welford's numerically stable variance algorithm
 
 - Kadane's maximum subarray pattern
@@ -317,6 +318,7 @@ Computing statistics traditionally requires multiple passes:
 **Algorithm 3-Pass Statistics**
 
 **Notations:**
+
 - $\{x\_i\}\_{i=1}^{N}$: input data stream
 
 - $\mu\_N$: final mean
@@ -495,6 +497,7 @@ Now we can fuse all three passes into one!
 **Algorithm 1-Pass Statistics (Fused)**
 
 **Initialization:**
+
 - $n \leftarrow 0$
 
 - $\mu \leftarrow 0$
@@ -523,6 +526,7 @@ end
 ```
 
 **Result:**
+
 - Mean: $\mu$
 
 - Variance: $\sigma^2$
@@ -530,6 +534,7 @@ end
 - Maximum: $m$
 
 **Complexity:**
+
 - **Time:** $O(N)$ (single pass!)
 
 - **Space:** $O(1)$ (only 4 variables!)

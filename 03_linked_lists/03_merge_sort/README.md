@@ -321,6 +321,7 @@ Case 2: $f(n) = \Theta(n^{\log\_b a})$
 ### Why O(log n) Space for Linked List?
 
 **Proof:**
+
 - Recursion depth = $\log\_2 n$ levels
 
 - Each level: O(1) space for pointers
@@ -334,6 +335,7 @@ Linked list merge sort: O(log n) stack only! ∎
 ### Heap Merge Complexity
 
 **Operations:**
+
 - n total elements to process
 
 - Each extraction: O(log k)

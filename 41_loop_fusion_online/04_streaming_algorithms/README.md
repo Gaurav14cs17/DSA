@@ -50,6 +50,7 @@ permalink: /41_loop_fusion_online/04_streaming_algorithms/
 - Output approximate answer with probabilistic guarantees
 
 **Performance Metrics:**
+
 - **Space**: $s = O(\text{polylog}(m, n))$
 
 - **Time**: $O(\text{polylog}(m, n))$ per element
@@ -115,11 +116,13 @@ print(f"Random sample of 5: {sample}")
 **Proof by Induction:**
 
 **Base Case ($i \leq k$):**
+
 - First $k$ elements all go into reservoir
 
 - Probability = $1 = k/k$ ✓
 
 **Inductive Hypothesis:**
+
 - After $i-1$ elements, each element has probability $k/(i-1)$ of being in reservoir
 
 **Inductive Step (element $i$ arrives):**
@@ -315,6 +318,7 @@ P(\hat{f}_i \leq f_i + \epsilon \|\mathbf{f}\|_1) \geq 1 - \delta \quad \blacksq
 **💡 Intuition:**
 
 **Why does taking minimum help?**
+
 - Each hash function might overestimate (due to collisions)
 
 - But different hash functions have different collisions
@@ -324,6 +328,7 @@ P(\hat{f}_i \leq f_i + \epsilon \|\mathbf{f}\|_1) \geq 1 - \delta \quad \blacksq
 - With $d$ tries, probability all are unlucky is very small!
 
 **Space-accuracy tradeoff:**
+
 - Want smaller error $\epsilon$ → need wider table ($w \propto 1/\epsilon$)
 
 - Want higher confidence $1-\delta$ → need more hash functions ($d \propto \log(1/\delta)$)

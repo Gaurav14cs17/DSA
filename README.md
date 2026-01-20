@@ -35,6 +35,7 @@
 ### 🎯 **Comprehensive Coverage**
 
 - **41 carefully curated topics**
+
 - From basic arrays to advanced loop fusion
 
 - Interview-focused problem selection

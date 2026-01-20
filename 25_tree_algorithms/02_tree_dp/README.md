@@ -95,6 +95,7 @@ dp[node] = combine(dp[child₁], dp[child₂], ..., dp[childₖ])
 ### 5️⃣ In/Out DP
 
 **Two states per node:**
+
 - **In:** Best answer using only subtree of $v$
 
 - **Out:** Best answer using everything except subtree of $v$
@@ -113,6 +114,7 @@ dp[node] = combine(dp[child₁], dp[child₂], ..., dp[childₖ])
 **Multiple states per node** representing different scenarios.
 
 **Example (House Robber III):**
+
 - $\text{rob}[v]$ = max money if rob node $v$
 
 - $\text{not\_rob}[v]$ = max money if don't rob $v$

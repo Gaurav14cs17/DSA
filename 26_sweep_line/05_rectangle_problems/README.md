@@ -42,6 +42,7 @@ permalink: /26_sweep_line/05_rectangle_problems/
 **Axis-aligned rectangle:** $R = [x\_1, x\_2] \times [y\_1, y\_2]$
 
 **Properties:**
+
 - Area: $(x\_2 - x\_1) \times (y\_2 - y\_1)$
 
 - Perimeter: $2 \times ((x\_2 - x\_1) + (y\_2 - y\_1))$

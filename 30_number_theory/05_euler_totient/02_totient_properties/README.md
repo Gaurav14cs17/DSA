@@ -63,6 +63,7 @@ permalink: /30_number_theory/05_euler_totient/02_totient_properties/
 ```
 
 **Example for n = 12:**
+
 - Divisors: 1, 2, 3, 4, 6, 12
 - φ(1) + φ(2) + φ(3) + φ(4) + φ(6) + φ(12)
 

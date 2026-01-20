@@ -156,6 +156,7 @@ where $\text{LSB}(i)$ = least significant bit = $i \& (-i)$
 **Formula:** $\text{LSB}(i) = i \& (-i)$
 
 **Examples:**
+
 - $\text{LSB}(12) = 12 \& (-12) = 1100\_2 \& 0100\_2 = 0100\_2 = 4$
 
 - $\text{LSB}(10) = 10 \& (-10) = 1010\_2 \& 0110\_2 = 0010\_2 = 2$

@@ -52,6 +52,7 @@ A function f is **multiplicative** if:
 - f(mn) = f(m)f(n) whenever gcd(m,n) = 1
 
 **Key multiplicative functions:**
+
 - τ(n) - divisor count
 
 - σ(n) - divisor sum

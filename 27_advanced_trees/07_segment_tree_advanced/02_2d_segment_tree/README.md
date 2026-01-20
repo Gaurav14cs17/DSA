@@ -41,6 +41,7 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/02_2d_segment_tree/
 **2D Segment Tree:** Tree of trees for 2D range queries.
 
 **Structure:**
+
 - Outer tree: segments of rows
 
 - Inner trees: segments of columns

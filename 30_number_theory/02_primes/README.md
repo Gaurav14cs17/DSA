@@ -148,6 +148,7 @@ permalink: /30_number_theory/02_primes/
 ```
 
 **Key Properties:**
+
 - **Only even prime:** 2
 - **Infinite count:** Euclid's proof (~300 BC)
 
@@ -179,6 +180,7 @@ where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
 ```
 
 **Applications:**
+
 - **Count divisors:** $\tau(n) = (a\_1+1)(a\_2+1)\cdots(a\_k+1)$
 
 - **Sum of divisors:** $\sigma(n) = \prod \frac{p\_i^{a\_i+1} - 1}{p\_i - 1}$

@@ -50,6 +50,7 @@ permalink: /30_number_theory/12_wilsons_theorem/
 ### 2️⃣ Proof Sketch
 
 **If p is prime:**
+
 - Numbers 1, 2, ..., p-1 form a group under multiplication mod p
 
 - Each element except 1 and p-1 pairs with its multiplicative inverse
@@ -57,6 +58,7 @@ permalink: /30_number_theory/12_wilsons_theorem/
 - So $(p-1)! \equiv 1 \times (p-1) \times (\text{paired products}) \equiv p-1 \pmod{p}$
 
 **If p is composite:**
+
 - Let p = ab where 1 < a, b < p
 
 - Then a | (p-1)! but a ∤ (p-1), so $(p-1)! \not\equiv -1 \pmod{p}$

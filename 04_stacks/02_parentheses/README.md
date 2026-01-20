@@ -100,6 +100,7 @@ Where:
 **Base:** Empty string → empty stack → valid ✓
 
 **Inductive Step:**
+
 - If $S[i]$ is opening bracket:
   - Push to stack → invariant maintained
 
@@ -109,6 +110,7 @@ Where:
   - If stack top doesn't match → invalid (wrong type)
 
 **Termination:**
+
 - Valid string: all opens matched → empty stack
 
 - Invalid string: unmatched opens remain → non-empty stack ∎
@@ -125,6 +127,7 @@ Where:
 ```
 
 **Proof:**
+
 - Each unmatched `(` needs a matching `)`
 - Each unmatched `)` needs a matching `(`
 - These are independent → sum them ∎

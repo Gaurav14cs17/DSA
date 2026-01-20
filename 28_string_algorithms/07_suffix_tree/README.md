@@ -30,6 +30,7 @@ nav_order: 7
 A **Suffix Tree** is a compressed trie of all suffixes of a string. It's one of the most powerful data structures for string processing, enabling O(m) pattern matching and solving many string problems efficiently.
 
 **Key Properties:**
+
 - Contains all suffixes in compressed form
 
 - O(n) space (linear in string length)
@@ -80,6 +81,7 @@ Suffix Tree (compressed):
 ### Compression
 
 **Trie → Suffix Tree:**
+
 - Combine nodes with single child into one edge
 
 - Label edge with substring (store as [start, end])
@@ -646,6 +648,7 @@ def longest_palindrome_suffix_tree(text):
 ### When to Use Suffix Trees
 
 ✅ **Use suffix trees when:**
+
 - Need O(m) pattern matching (fastest possible)
 
 - Many different string operations on same text
@@ -655,6 +658,7 @@ def longest_palindrome_suffix_tree(text):
 - Text is preprocessed once, queried many times
 
 ❌ **Consider alternatives when:**
+
 - Simple pattern matching (use KMP/Rabin-Karp)
 
 - Memory is limited (use suffix array)
