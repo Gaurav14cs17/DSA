@@ -52,11 +52,11 @@ permalink: /30_number_theory/08_binomial_coefficients/04_lucas_application/
 
 ```
 
-where $m = \sum m\_i p^i$ and $n = \sum n\_i p^i$ are base-p representations.
+where $m = \sum m_i p^i$ and $n = \sum n_i p^i$ are base-p representations.
 
 ### Key Insight
 
-If any digit $n\_i > m\_i$, then $\binom{m}{n} \equiv 0 \pmod{p}$
+If any digit $n_i > m_i$, then $\binom{m}{n} \equiv 0 \pmod{p}$
 
 ---
 

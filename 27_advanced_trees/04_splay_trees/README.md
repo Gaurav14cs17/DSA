@@ -53,7 +53,7 @@ permalink: /27_advanced_trees/04_splay_trees/
 
 **Theorem:** All operations have $O(\log n)$ amortized time.
 
-**Potential function:** $\Phi(T) = \sum\_{x \in T} \log(size(x))$
+**Potential function:** $\Phi(T) = \sum_{x \in T} \log(size(x))$
 
 where $size(x)$ = number of nodes in subtree rooted at $x$.
 

@@ -53,9 +53,9 @@ permalink: /30_number_theory/08_binomial_coefficients/
 
 **Pascal's Rule:** $\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}$
 
-**Sum of Row:** $\sum\_{k=0}^{n} \binom{n}{k} = 2^n$
+**Sum of Row:** $\sum_{k=0}^{n} \binom{n}{k} = 2^n$
 
-**Hockey Stick:** $\sum\_{i=r}^{n} \binom{i}{r} = \binom{n+1}{r+1}$
+**Hockey Stick:** $\sum_{i=r}^{n} \binom{i}{r} = \binom{n+1}{r+1}$
 
 ---
 
@@ -177,7 +177,7 @@ class BinomialCoeff:
 
 > **Modular Computation:** Precompute factorials and inverse factorials for O(1) queries
 
-> **Lucas' Theorem:** For prime p: $\binom{n}{k} \equiv \prod \binom{n\_i}{k\_i} \pmod{p}$ where $n\_i, k\_i$ are base-p digits
+> **Lucas' Theorem:** For prime p: $\binom{n}{k} \equiv \prod \binom{n_i}{k_i} \pmod{p}$ where $n_i, k_i$ are base-p digits
 
 ---
 

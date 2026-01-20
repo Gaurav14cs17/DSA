@@ -53,9 +53,9 @@ After iteration $i$:
 
 Where:
 
-- Left of `|`: Already reversed (prev points to $node\_i$)
+- Left of `|`: Already reversed (prev points to $node_i$)
 
-- Right of `|`: Not yet processed (current points to $node\_{i+1}$)
+- Right of `|`: Not yet processed (current points to $node_{i+1}$)
 
 **Initialization:** $i = 0$, prev = null, current = head
 
@@ -126,9 +126,9 @@ S_{\text{rec}}(n) = \sum_{i=1}^{n} O(1) = O(n)
 
 **Reverse nodes from position left to right:**
 
-Original: $n\_1 \to n\_2 \to \cdots \to n\_{left-1} \to n\_{left} \to \cdots \to n\_{right} \to n\_{right+1} \to \cdots$
+Original: $n_1 \to n_2 \to \cdots \to n_{left-1} \to n_{left} \to \cdots \to n_{right} \to n_{right+1} \to \cdots$
 
-Result: $n\_1 \to n\_2 \to \cdots \to n\_{left-1} \to n\_{right} \to \cdots \to n\_{left} \to n\_{right+1} \to \cdots$
+Result: $n_1 \to n_2 \to \cdots \to n_{left-1} \to n_{right} \to \cdots \to n_{left} \to n_{right+1} \to \cdots$
 
 **Number of link reversals needed:**
 
@@ -146,7 +146,7 @@ Result: $n\_1 \to n\_2 \to \cdots \to n\_{left-1} \to n\_{right} \to \cdots \to 
 **Number of complete groups:**
 
 ```math
-\text{complete\_groups} = \left\lfloor \frac{n}{k} \right\rfloor
+\text{complete_groups} = \left\lfloor \frac{n}{k} \right\rfloor
 
 ```
 
@@ -160,7 +160,7 @@ Result: $n\_1 \to n\_2 \to \cdots \to n\_{left-1} \to n\_{right} \to \cdots \to 
 **Total reversals:**
 
 ```math
-\text{total\_reversals} = \left\lfloor \frac{n}{k} \right\rfloor \times (k-1)
+\text{total_reversals} = \left\lfloor \frac{n}{k} \right\rfloor \times (k-1)
 
 ```
 

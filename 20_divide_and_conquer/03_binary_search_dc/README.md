@@ -82,7 +82,7 @@ n \to \frac{n}{2} \to \frac{n}{4} \to \cdots \to 1
 
 ```
 
-Steps: $\log\_2 n$
+Steps: $\log_2 n$
 
 ---
 

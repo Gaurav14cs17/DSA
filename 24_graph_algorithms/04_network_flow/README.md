@@ -69,7 +69,7 @@ permalink: /24_graph_algorithms/04_network_flow/
 
 ### 2️⃣ Maximum Flow Problem
 
-**Goal:** Maximize $|f| = \sum\_{v:(s,v) \in E} f(s,v)$
+**Goal:** Maximize $|f| = \sum_{v:(s,v) \in E} f(s,v)$
 
 **Ford-Fulkerson Method:** Augment flow along paths until no augmenting path exists.
 

@@ -55,7 +55,7 @@ permalink: /30_number_theory/05_euler_totient/04_totient_sum/
 
 ### Relationship to Farey Sequence
 
-$\Phi(n) = 1 + |F\_n|$ where $F\_n$ is the Farey sequence of order n.
+$\Phi(n) = 1 + |F_n|$ where $F_n$ is the Farey sequence of order n.
 
 ---
 
@@ -202,7 +202,7 @@ def totient_sum_fast(n: int) -> int:
 
 > **Linear Sieve:** Computing all φ(i) for i ≤ n takes O(n log log n).
 
-> **GCD Sum Identity:** $\sum\_{i,j} \gcd(i,j) = \sum\_d \phi(d) \lfloor n/d \rfloor^2$
+> **GCD Sum Identity:** $\sum_{i,j} \gcd(i,j) = \sum_d \phi(d) \lfloor n/d \rfloor^2$
 
 > **Sublinear Algorithm:** Φ(n) can be computed in O(n^(2/3)) using Dirichlet hyperbola method.
 

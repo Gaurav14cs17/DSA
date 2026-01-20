@@ -68,13 +68,13 @@ permalink: /27_advanced_trees/05_b_trees/
 
 where:
 
-- $K\_i$ = keys (sorted)
+- $K_i$ = keys (sorted)
 
-- $P\_i$ = pointers to children
+- $P_i$ = pointers to children
 
-- All keys in subtree $P\_i$ are between $K\_i$ and $K\_{i+1}$
+- All keys in subtree $P_i$ are between $K_i$ and $K_{i+1}$
 
-**Height bound:** $h \leq \log\_{\lceil m/2 \rceil}(n)$
+**Height bound:** $h \leq \log_{\lceil m/2 \rceil}(n)$
 
 ---
 
@@ -119,7 +119,7 @@ where:
 
 ```
 
-**Time:** $O(\log\_m n)$ disk accesses, $O(m \log m)$ comparisons per node
+**Time:** $O(\log_m n)$ disk accesses, $O(m \log m)$ comparisons per node
 
 **Total:** $O(\log n)$ with $m = O(\log n)$
 
@@ -522,7 +522,7 @@ def my_calendar_btree():
 
 2. **Large nodes:** Match disk block size (typically 4KB-8KB)
 
-3. **Shallow tree:** $\log\_{100}(1000000) \approx 3$ levels for million keys!
+3. **Shallow tree:** $\log_{100}(1000000) \approx 3$ levels for million keys!
 
 4. **All leaves at same level:** Guaranteed balanced
 

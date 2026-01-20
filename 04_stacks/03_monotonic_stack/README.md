@@ -162,7 +162,7 @@ Width=2, Height=5, Area=10
 **Problem:** Days until warmer temperature.
 
 ```math
-\text{answer}[i] = \text{NGE\_index}(i) - i
+\text{answer}[i] = \text{NGE_index}(i) - i
 
 ```
 
@@ -173,15 +173,15 @@ Width=2, Height=5, Area=10
 **Contribution Technique:**
 
 ```math
-\text{contribution}(i) = A[i] \times \text{left\_count} \times \text{right\_count}
+\text{contribution}(i) = A[i] \times \text{left_count} \times \text{right_count}
 
 ```
 
 Where:
 
-- $\text{left\_count}$ = subarrays where $A[i]$ is rightmost minimum
+- $\text{left_count}$ = subarrays where $A[i]$ is rightmost minimum
 
-- $\text{right\_count}$ = subarrays where $A[i]$ is leftmost minimum
+- $\text{right_count}$ = subarrays where $A[i]$ is leftmost minimum
 
 ---
 

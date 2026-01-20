@@ -47,7 +47,7 @@ permalink: /30_number_theory/04_divisors/02_sum_divisors/
 
 ### 1️⃣ Definition
 
-**Divisor Sum Function:** $\sigma(n) = \sigma\_1(n)$
+**Divisor Sum Function:** $\sigma(n) = \sigma_1(n)$
 
 ```math
 \sigma(n) = \sum_{d|n} d = \text{sum of all positive divisors of } n
@@ -68,7 +68,7 @@ permalink: /30_number_theory/04_divisors/02_sum_divisors/
 
 ### 2️⃣ The Divisor Sum Formula
 
-**Theorem:** If $n = p\_1^{a\_1} \cdot p\_2^{a\_2} \cdots p\_k^{a\_k}$, then:
+**Theorem:** If $n = p_1^{a_1} \cdot p_2^{a_2} \cdots p_k^{a_k}$, then:
 
 ```math
 \sigma(n) = \prod_{i=1}^{k} \frac{p_i^{a_i+1} - 1}{p_i - 1}

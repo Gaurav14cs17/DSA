@@ -330,9 +330,9 @@ Consider any subarray ending at position $i$. It either:
 
 **Case 2:** Extends from some earlier position $j < i$
 
-- Sum = $\sum\_{k=j}^{i} A[k] = \sum\_{k=j}^{i-1} A[k] + A[i]$
+- Sum = $\sum_{k=j}^{i} A[k] = \sum_{k=j}^{i-1} A[k] + A[i]$
 
-- But $\sum\_{k=j}^{i-1} A[k] \leq S[i-1]$ (by inductive hypothesis)
+- But $\sum_{k=j}^{i-1} A[k] \leq S[i-1]$ (by inductive hypothesis)
 
 - So this sum $\leq S[i-1] + A[i]$
 

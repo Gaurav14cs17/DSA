@@ -64,13 +64,13 @@ permalink: /26_sweep_line/03_line_segment_intersection/
 
 - $= 0$: Collinear
 
-**Application:** Segments $\overline{p\_1p\_2}$ and $\overline{q\_1q\_2}$ intersect if orientations differ.
+**Application:** Segments $\overline{p_1p_2}$ and $\overline{q_1q_2}$ intersect if orientations differ.
 
 ---
 
 ### 3️⃣ Segment Intersection Test
 
-**Theorem:** Segments $s\_1 = \overline{p\_1p\_2}$ and $s\_2 = \overline{q\_1q\_2}$ intersect iff:
+**Theorem:** Segments $s_1 = \overline{p_1p_2}$ and $s_2 = \overline{q_1q_2}$ intersect iff:
 
 ```math
 \text{orient}(p_1, p_2, q_1) \cdot \text{orient}(p_1, p_2, q_2) < 0
@@ -127,7 +127,7 @@ permalink: /26_sweep_line/03_line_segment_intersection/
 
 ### 6️⃣ Line Intersection Formula
 
-**Given:** Lines $L\_1: y = m\_1x + b\_1$ and $L\_2: y = m\_2x + b\_2$
+**Given:** Lines $L_1: y = m_1x + b_1$ and $L_2: y = m_2x + b_2$
 
 **Intersection point:**
 
@@ -143,7 +143,7 @@ p(t) = p_1 + t(p_2 - p_1), \quad q(s) = q_1 + s(q_2 - q_1)
 
 ```
 
-Solve: $p\_1 + t(p\_2 - p\_1) = q\_1 + s(q\_2 - q\_1)$
+Solve: $p_1 + t(p_2 - p_1) = q_1 + s(q_2 - q_1)$
 
 **Time:** $O(1)$
 

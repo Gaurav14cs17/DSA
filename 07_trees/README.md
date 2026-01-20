@@ -118,7 +118,7 @@ r & \text{if } p \in T_L \text{ and } q \in T_R \\
 
 ```
 
-Where $T\_L, T\_R$ are left and right subtrees.
+Where $T_L, T_R$ are left and right subtrees.
 
 ---
 
@@ -138,7 +138,7 @@ C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
 
 ```
 
-First values: $C\_0=1, C\_1=1, C\_2=2, C\_3=5, C\_4=14, \ldots$
+First values: $C_0=1, C_1=1, C_2=2, C_3=5, C_4=14, \ldots$
 
 ---
 

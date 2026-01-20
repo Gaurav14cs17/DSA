@@ -47,7 +47,7 @@ permalink: /30_number_theory/06_chinese_remainder/01_basic_crt/
 
 ### 1️⃣ The Theorem
 
-**Statement:** Given pairwise coprime positive integers $m\_1, m\_2, \ldots, m\_k$ and any integers $a\_1, a\_2, \ldots, a\_k$, the system:
+**Statement:** Given pairwise coprime positive integers $m_1, m_2, \ldots, m_k$ and any integers $a_1, a_2, \ldots, a_k$, the system:
 
 ```math
 \begin{cases}
@@ -59,24 +59,24 @@ x \equiv a_k \pmod{m_k}
 
 ```
 
-has a **unique solution** modulo $M = m\_1 \cdot m\_2 \cdots m\_k$.
+has a **unique solution** modulo $M = m_1 \cdot m_2 \cdots m_k$.
 
 ---
 
 ### 2️⃣ Construction Formula
 
-Let $M\_i = M / m\_i$ and $y\_i = M\_i^{-1} \pmod{m\_i}$
+Let $M_i = M / m_i$ and $y_i = M_i^{-1} \pmod{m_i}$
 
 ```math
 x = \sum_{i=1}^{k} a_i \cdot M_i \cdot y_i \pmod{M}
 
 ```
 
-**Why this works:** Each term $a\_i M\_i y\_i$ is:
+**Why this works:** Each term $a_i M_i y_i$ is:
 
-- ≡ $a\_i$ (mod $m\_i$) because $M\_i y\_i \equiv 1$ (mod $m\_i$)
+- ≡ $a_i$ (mod $m_i$) because $M_i y_i \equiv 1$ (mod $m_i$)
 
-- ≡ 0 (mod $m\_j$) for $j \neq i$ because $m\_j | M\_i$
+- ≡ 0 (mod $m_j$) for $j \neq i$ because $m_j | M_i$
 
 ---
 

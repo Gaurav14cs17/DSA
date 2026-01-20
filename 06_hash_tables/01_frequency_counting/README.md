@@ -70,7 +70,7 @@ Maintain candidate and count. If element matches, increment; otherwise decrement
 **Proof:** If majority exists, it survives all cancellations.
 
 ```math
-\text{count}_{majority} > \frac{n}{2} > \text{count}_{all\_others}
+\text{count}_{majority} > \frac{n}{2} > \text{count}_{all_others}
 
 ```
 

@@ -90,7 +90,7 @@ Therefore, the set of common divisors is identical, so:
 
 ### 2️⃣ Time Complexity Analysis (Lamé's Theorem)
 
-**Theorem:** The number of divisions in the Euclidean algorithm for $\gcd(a, b)$ where $a > b$ is at most $5 \times \log\_{10} b$.
+**Theorem:** The number of divisions in the Euclidean algorithm for $\gcd(a, b)$ where $a > b$ is at most $5 \times \log_{10} b$.
 
 **Proof (Key Insight):**
 
@@ -116,7 +116,7 @@ T(a, b) = O(\log \min(a, b))
 
 **Theorem:** The worst case for Euclidean algorithm occurs with consecutive Fibonacci numbers.
 
-**Fibonacci Sequence:** $F\_0 = 0, F\_1 = 1, F\_n = F\_{n-1} + F\_{n-2}$
+**Fibonacci Sequence:** $F_0 = 0, F_1 = 1, F_n = F_{n-1} + F_{n-2}$
 
 ```math
 \gcd(F_{n+1}, F_n) \text{ requires exactly } n \text{ steps}

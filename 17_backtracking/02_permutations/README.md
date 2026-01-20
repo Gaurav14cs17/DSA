@@ -43,7 +43,7 @@ P(n, k) = \frac{n!}{(n-k)!}
 
 ### 2️⃣ With Duplicates
 
-If elements repeat with frequencies $f\_1, f\_2, \ldots, f\_k$:
+If elements repeat with frequencies $f_1, f_2, \ldots, f_k$:
 
 ```math
 \text{Permutations} = \frac{n!}{f_1! \times f_2! \times \ldots \times f_k!}

@@ -72,9 +72,9 @@ a_n = c_1 a_{n-1} + c_2 a_{n-2} + \cdots + c_k a_{n-k}
 
 **Examples:**
 
-**Fibonacci:** $F\_n = F\_{n-1} + F\_{n-2}$, $F\_0=0, F\_1=1$  
-**Tribonacci:** $T\_n = T\_{n-1} + T\_{n-2} + T\_{n-3}$, $T\_0=0, T\_1=1, T\_2=1$  
-**Lucas:** $L\_n = L\_{n-1} + L\_{n-2}$, $L\_0=2, L\_1=1$
+**Fibonacci:** $F_n = F_{n-1} + F_{n-2}$, $F_0=0, F_1=1$  
+**Tribonacci:** $T_n = T_{n-1} + T_{n-2} + T_{n-3}$, $T_0=0, T_1=1, T_2=1$  
+**Lucas:** $L_n = L_{n-1} + L_{n-2}$, $L_0=2, L_1=1$
 
 ---
 

@@ -61,13 +61,13 @@ C_n = \frac{2(2n-1)}{n+1} C_{n-1}
 
 | Problem | Count |
 |---------|-------|
-| Valid parentheses with n pairs | $C\_n$ |
-| Binary trees with n+1 leaves | $C\_n$ |
-| Full binary trees with n internal nodes | $C\_n$ |
-| Unique BSTs with n nodes | $C\_n$ |
-| Paths from (0,0) to (n,n) staying below diagonal | $C\_n$ |
-| Ways to triangulate (n+2)-gon | $C\_n$ |
-| Non-crossing partitions of n points | $C\_n$ |
+| Valid parentheses with n pairs | $C_n$ |
+| Binary trees with n+1 leaves | $C_n$ |
+| Full binary trees with n internal nodes | $C_n$ |
+| Unique BSTs with n nodes | $C_n$ |
+| Paths from (0,0) to (n,n) staying below diagonal | $C_n$ |
+| Ways to triangulate (n+2)-gon | $C_n$ |
+| Non-crossing partitions of n points | $C_n$ |
 
 ---
 
@@ -177,7 +177,7 @@ def generate_parentheses(n: int) -> list[str]:
 
 ## 💡 Key Insights
 
-> **Growth Rate:** $C\_n \approx \frac{4^n}{n^{3/2}\sqrt{\pi}}$
+> **Growth Rate:** $C_n \approx \frac{4^n}{n^{3/2}\sqrt{\pi}}$
 
 > **BST Counting:** Root can be any of n nodes; left subtree has i nodes, right has n-1-i nodes.
 

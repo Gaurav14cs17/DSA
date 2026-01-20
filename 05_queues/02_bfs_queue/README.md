@@ -139,7 +139,7 @@ d[v] = \min_{s \in \text{sources}} \text{dist}(s, v)
 For problems with additional state (e.g., keys collected):
 
 ```math
-\text{state} = (\text{position}, \text{extra\_info})
+\text{state} = (\text{position}, \text{extra_info})
 d[(x, y, state)] = \text{shortest path to } (x, y) \text{ with given state}
 
 ```

@@ -47,7 +47,7 @@ permalink: /30_number_theory/04_divisors/01_count_divisors/
 
 ### 1️⃣ Definition
 
-**Divisor Count Function:** Also denoted as $\tau(n)$, $d(n)$, or $\sigma\_0(n)$
+**Divisor Count Function:** Also denoted as $\tau(n)$, $d(n)$, or $\sigma_0(n)$
 
 ```math
 \tau(n) = \text{number of positive divisors of } n
@@ -68,7 +68,7 @@ permalink: /30_number_theory/04_divisors/01_count_divisors/
 
 ### 2️⃣ The Divisor Count Formula
 
-**Theorem:** If $n = p\_1^{a\_1} \cdot p\_2^{a\_2} \cdots p\_k^{a\_k}$ is the prime factorization, then:
+**Theorem:** If $n = p_1^{a_1} \cdot p_2^{a_2} \cdots p_k^{a_k}$ is the prime factorization, then:
 
 ```math
 \tau(n) = (a_1 + 1)(a_2 + 1) \cdots (a_k + 1) = \prod_{i=1}^{k}(a_i + 1)
@@ -76,11 +76,11 @@ permalink: /30_number_theory/04_divisors/01_count_divisors/
 ```
 
 **Proof:**
-Each divisor of n has the form $p\_1^{b\_1} \cdot p\_2^{b\_2} \cdots p\_k^{b\_k}$ where $0 \leq b\_i \leq a\_i$.
+Each divisor of n has the form $p_1^{b_1} \cdot p_2^{b_2} \cdots p_k^{b_k}$ where $0 \leq b_i \leq a_i$.
 
-For each prime $p\_i$, there are $(a\_i + 1)$ choices for the exponent $b\_i$.
+For each prime $p_i$, there are $(a_i + 1)$ choices for the exponent $b_i$.
 
-By the multiplication principle, total divisors = $(a\_1 + 1)(a\_2 + 1) \cdots (a\_k + 1)$.
+By the multiplication principle, total divisors = $(a_1 + 1)(a_2 + 1) \cdots (a_k + 1)$.
 
 ---
 

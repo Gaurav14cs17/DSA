@@ -35,9 +35,9 @@ permalink: /17_backtracking/05_constraint_satisfaction/
 
 **Constraint Satisfaction Problem:**
 
-- Variables: $X\_1, X\_2, \ldots, X\_n$
+- Variables: $X_1, X_2, \ldots, X_n$
 
-- Domains: $D\_1, D\_2, \ldots, D\_n$
+- Domains: $D_1, D_2, \ldots, D_n$
 
 - Constraints: Relations between variables
 
@@ -45,7 +45,7 @@ permalink: /17_backtracking/05_constraint_satisfaction/
 
 ### 2️⃣ N-Queens Constraints
 
-For queens at positions $(r\_1, c\_1)$ and $(r\_2, c\_2)$:
+For queens at positions $(r_1, c_1)$ and $(r_2, c_2)$:
 
 ```math
 c_1 \neq c_2 \quad \text{(same column)}

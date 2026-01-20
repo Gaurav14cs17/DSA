@@ -60,7 +60,7 @@ where $a, b, c \in \mathbb{Z}$ and we seek integer solutions $(x, y)$.
 
 - (⟹) If $ax + by = c$, then since $\gcd(a,b) | a$ and $\gcd(a,b) | b$, we have $\gcd(a,b) | c$.
 
-- (⟸) By Bézout's identity, $\exists x\_0, y\_0$ with $ax\_0 + by\_0 = \gcd(a,b)$.
+- (⟸) By Bézout's identity, $\exists x_0, y_0$ with $ax_0 + by_0 = \gcd(a,b)$.
   Multiply by $c/\gcd(a,b)$ to get solution.
 
 ---
@@ -69,11 +69,11 @@ where $a, b, c \in \mathbb{Z}$ and we seek integer solutions $(x, y)$.
 
 **Method:**
 
-1. Compute $g, x\_0, y\_0$ such that $ax\_0 + by\_0 = g = \gcd(a,b)$
+1. Compute $g, x_0, y_0$ such that $ax_0 + by_0 = g = \gcd(a,b)$
 
 2. Check if $g | c$
 
-3. Scale: $x = x\_0 \cdot (c/g)$, $y = y\_0 \cdot (c/g)$
+3. Scale: $x = x_0 \cdot (c/g)$, $y = y_0 \cdot (c/g)$
 
 ---
 

@@ -64,7 +64,7 @@ permalink: /30_number_theory/05_euler_totient/
 
 ### 3️⃣ Important Properties
 
-**Sum over divisors:** $\sum\_{d|n} \phi(d) = n$
+**Sum over divisors:** $\sum_{d|n} \phi(d) = n$
 
 **Euler's Theorem:** If $\gcd(a, n) = 1$: $a^{\phi(n)} \equiv 1 \pmod{n}$
 

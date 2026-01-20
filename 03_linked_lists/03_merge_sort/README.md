@@ -311,7 +311,7 @@ n^{\log_b a} = n^{\log_2 2} = n^1 = n
 
 ```
 
-Case 2: $f(n) = \Theta(n^{\log\_b a})$
+Case 2: $f(n) = \Theta(n^{\log_b a})$
 
 ```math
 \boxed{T(n) = \Theta(n \log n)}
@@ -322,7 +322,7 @@ Case 2: $f(n) = \Theta(n^{\log\_b a})$
 
 **Proof:**
 
-- Recursion depth = $\log\_2 n$ levels
+- Recursion depth = $\log_2 n$ levels
 
 - Each level: O(1) space for pointers
 

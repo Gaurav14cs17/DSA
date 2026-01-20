@@ -108,8 +108,8 @@ At each step: `prev → ... ← current`
 **After reversal:**
 
 ```math
-\text{new\_head} = \text{last\_node}
-\text{original\_head.next} = \text{None}
+\text{new_head} = \text{last_node}
+\text{original_head.next} = \text{None}
 
 ```
 

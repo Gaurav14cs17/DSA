@@ -89,21 +89,21 @@ For a random variable $X$ with mean $\mu$:
 
 ### Interpretation
 
-**Skewness ($\gamma\_1$)** measures **asymmetry**:
+**Skewness ($\gamma_1$)** measures **asymmetry**:
 
-- $\gamma\_1 = 0$: Symmetric (e.g., normal distribution)
+- $\gamma_1 = 0$: Symmetric (e.g., normal distribution)
 
-- $\gamma\_1 > 0$: Right-skewed (long tail on right)
+- $\gamma_1 > 0$: Right-skewed (long tail on right)
 
-- $\gamma\_1 < 0$: Left-skewed (long tail on left)
+- $\gamma_1 < 0$: Left-skewed (long tail on left)
 
-**Kurtosis ($\gamma\_2$)** measures **tailedness**:
+**Kurtosis ($\gamma_2$)** measures **tailedness**:
 
-- $\gamma\_2 = 0$: Mesokurtic (normal distribution)
+- $\gamma_2 = 0$: Mesokurtic (normal distribution)
 
-- $\gamma\_2 > 0$: Leptokurtic (heavy tails, more outliers)
+- $\gamma_2 > 0$: Leptokurtic (heavy tails, more outliers)
 
-- $\gamma\_2 < 0$: Platykurtic (light tails, fewer outliers)
+- $\gamma_2 < 0$: Platykurtic (light tails, fewer outliers)
 
 ---
 
@@ -219,11 +219,11 @@ print(f"Kurtosis: {stats.get_kurtosis():.2f}")  # Positive (heavy tail)
 
 2. Apply binomial theorem: $(a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3$
 
-3. Use the fact that $\sum(x\_i - \bar{x}) = 0$ to cancel terms
+3. Use the fact that $\sum(x_i - \bar{x}) = 0$ to cancel terms
 
 4. Carefully track which terms survive
 
-**Why is this harder?** Because we need to account for interactions with $M\_2$ (the second moment).
+**Why is this harder?** Because we need to account for interactions with $M_2$ (the second moment).
 
 ---
 
@@ -236,7 +236,7 @@ M_3^{(n)} = M_3^{(n-1)} + \frac{(n-1)(n-2)}{n^2}\delta_n^3 - \frac{3}{n}M_2^{(n-
 
 ```
 
-where $\delta\_n = x\_n - \bar{x}\_{n-1}$.
+where $\delta_n = x_n - \bar{x}_{n-1}$.
 
 **Proof:**
 
@@ -263,7 +263,7 @@ x_i - \bar{x}_n = (x_i - \bar{x}_{n-1}) - \frac{\delta_n}{n}
 
 ```
 
-Let $y\_i = x\_i - \bar{x}\_{n-1}$ for simplicity.
+Let $y_i = x_i - \bar{x}_{n-1}$ for simplicity.
 
 **Step 3: Apply binomial theorem**
 
@@ -281,11 +281,11 @@ Let $y\_i = x\_i - \bar{x}\_{n-1}$ for simplicity.
 
 **Step 5: Use properties of mean**
 
-- $\sum\_{i=1}^{n-1} y\_i^3 = M\_3^{(n-1)}$ (by definition)
+- $\sum_{i=1}^{n-1} y_i^3 = M_3^{(n-1)}$ (by definition)
 
-- $\sum\_{i=1}^{n-1} y\_i^2 = M\_2^{(n-1)}$ (by definition)
+- $\sum_{i=1}^{n-1} y_i^2 = M_2^{(n-1)}$ (by definition)
 
-- $\sum\_{i=1}^{n-1} y\_i = 0$ (property of mean!)
+- $\sum_{i=1}^{n-1} y_i = 0$ (property of mean!)
 
 So:
 
@@ -308,7 +308,7 @@ M_3^{(n)} = M_3^{(n-1)} - \frac{3\delta_n}{n}M_2^{(n-1)} - \frac{(n-1)\delta_n^3
 
 ```
 
-**Step 8: Simplify the $\delta\_n^3$ terms**
+**Step 8: Simplify the $\delta_n^3$ terms**
 
 ```math
 -\frac{(n-1)\delta_n^3}{n^3} + \frac{(n-1)^3\delta_n^3}{n^3} = \frac{(n-1)\delta_n^3}{n^3}[(n-1)^2 - 1]
@@ -332,9 +332,9 @@ M_3^{(n)} = M_3^{(n-1)} + \frac{(n-1)(n-2)}{n^2}\delta_n^3 - \frac{3}{n}M_2^{(n-
 
 1. **Binomial expansion:** $(a - b)^3$ gives us 4 terms
 
-2. **Cancellation:** The linear term $\sum y\_i = 0$ vanishes
+2. **Cancellation:** The linear term $\sum y_i = 0$ vanishes
 
-3. **Coupling:** The $y\_i^2$ term couples with $M\_2$ (second moment)
+3. **Coupling:** The $y_i^2$ term couples with $M_2$ (second moment)
 
 4. **Factorization:** The cubic terms factor nicely into $(n-1)(n-2)/n^2$
 
@@ -374,7 +374,7 @@ M_3^{(n)} = M_3^{(n-1)} + \frac{(n-1)(n-2)}{n^2}\delta_n^3 - \frac{3}{n}M_2^{(n-
 
 - Three factors of $\delta$ in first term
 
-- Coupling with $M\_2$
+- Coupling with $M_2$
 
 **Fourth moment:**
 
@@ -385,7 +385,7 @@ M_4^{(n)} = M_4^{(n-1)} + \frac{(n-1)(n^2-3n+3)}{n^3}\delta_n^4 + \frac{6}{n^2}M
 
 - Four factors of $\delta$ in first term
 
-- Coupling with both $M\_2$ and $M\_3$
+- Coupling with both $M_2$ and $M_3$
 
 **General principle:** The $k$-th moment couples with all lower moments!
 

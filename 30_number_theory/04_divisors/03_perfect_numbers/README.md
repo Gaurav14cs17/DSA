@@ -85,11 +85,11 @@ where $2^p - 1$ is a **Mersenne prime**.
 
 **Proof Sketch:**
 
-- If $M\_p = 2^p - 1$ is prime, then $\sigma(M\_p) = M\_p + 1 = 2^p$
+- If $M_p = 2^p - 1$ is prime, then $\sigma(M_p) = M_p + 1 = 2^p$
 
 - $\sigma(2^{p-1}) = 2^p - 1$
 
-- $\sigma(n) = \sigma(2^{p-1}) \cdot \sigma(M\_p) = (2^p - 1) \cdot 2^p = 2n$ ✓
+- $\sigma(n) = \sigma(2^{p-1}) \cdot \sigma(M_p) = (2^p - 1) \cdot 2^p = 2n$ ✓
 
 ---
 

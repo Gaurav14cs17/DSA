@@ -43,7 +43,7 @@ n = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k}
 
 ```
 
-where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
+where $p_1 < p_2 < \cdots < p_k$ are primes and $a_i \geq 1$.
 
 **Example:**
 

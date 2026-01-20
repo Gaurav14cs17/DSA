@@ -76,9 +76,9 @@ permalink: /30_number_theory/02_primes/02_sieve_eratosthenes/
 **Theorem:** Sieve of Eratosthenes runs in $O(n \log \log n)$.
 
 **Proof:**
-Work done = $\sum\_{p \leq n, p \text{ prime}} \frac{n}{p}$
+Work done = $\sum_{p \leq n, p \text{ prime}} \frac{n}{p}$
 
-$= n \cdot \sum\_{p \leq n} \frac{1}{p}$
+$= n \cdot \sum_{p \leq n} \frac{1}{p}$
 
 $\approx n \cdot \ln \ln n$ (by Meissel-Mertens theorem)
 

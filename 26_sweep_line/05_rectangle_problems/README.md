@@ -39,21 +39,21 @@ permalink: /26_sweep_line/05_rectangle_problems/
 
 ### 1️⃣ Rectangle Representation
 
-**Axis-aligned rectangle:** $R = [x\_1, x\_2] \times [y\_1, y\_2]$
+**Axis-aligned rectangle:** $R = [x_1, x_2] \times [y_1, y_2]$
 
 **Properties:**
 
-- Area: $(x\_2 - x\_1) \times (y\_2 - y\_1)$
+- Area: $(x_2 - x_1) \times (y_2 - y_1)$
 
-- Perimeter: $2 \times ((x\_2 - x\_1) + (y\_2 - y\_1))$
+- Perimeter: $2 \times ((x_2 - x_1) + (y_2 - y_1))$
 
-- Diagonal: $\sqrt{(x\_2 - x\_1)^2 + (y\_2 - y\_1)^2}$
+- Diagonal: $\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$
 
 ---
 
 ### 2️⃣ Rectangle Overlap Test
 
-**Rectangles $R\_1 = [x\_1, x\_2] \times [y\_1, y\_2]$ and $R\_2 = [x\_3, x\_4] \times [y\_3, y\_4]$ overlap iff:**
+**Rectangles $R_1 = [x_1, x_2] \times [y_1, y_2]$ and $R_2 = [x_3, x_4] \times [y_3, y_4]$ overlap iff:**
 
 ```math
 x_1 < x_4 \land x_3 < x_2 \land y_1 < y_4 \land y_3 < y_2
@@ -84,7 +84,7 @@ A = \max(0, \min(x_2, x_4) - \max(x_1, x_3)) \times \max(0, \min(y_2, y_4) - \ma
 
 2. Maintain active y-intervals at each x-position
 
-3. Calculate area contribution: $\text{width} \times \text{active\_height}$
+3. Calculate area contribution: $\text{width} \times \text{active_height}$
 
 ---
 

@@ -68,11 +68,11 @@ N(h) = N(h-1) + N(h-2) + 1
 
 ```
 
-Similar to Fibonacci: $N(h) \geq F\_{h+2} - 1$
+Similar to Fibonacci: $N(h) \geq F_{h+2} - 1$
 
-By Fibonacci growth: $F\_k \approx \frac{\phi^k}{\sqrt{5}}$ where $\phi = \frac{1+\sqrt{5}}{2} \approx 1.618$
+By Fibonacci growth: $F_k \approx \frac{\phi^k}{\sqrt{5}}$ where $\phi = \frac{1+\sqrt{5}}{2} \approx 1.618$
 
-Therefore: $h \leq 1.44 \log\_2(n+2)$ ∎
+Therefore: $h \leq 1.44 \log_2(n+2)$ ∎
 
 ---
 

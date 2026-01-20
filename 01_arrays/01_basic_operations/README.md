@@ -53,7 +53,7 @@ Operations: 1 multiplication + 1 addition = constant time ∎
 - Let $d = right - left$ (initial distance)
 
 - Each iteration: $d$ decreases by at least 1
-- Maximum iterations: $d\_{initial} = n - 1$
+- Maximum iterations: $d_{initial} = n - 1$
 
 - Therefore: O(n) ∎
 
@@ -108,13 +108,13 @@ A'[i] = A[(i - k + n) \mod n]
 
 **Proof:**
 
-1. $\text{Rev}(A) = [a\_n, a\_{n-1}, \ldots, a\_1]$
+1. $\text{Rev}(A) = [a_n, a_{n-1}, \ldots, a_1]$
 
-2. $\text{Rev}(A[0..k-1]) = [a\_k, \ldots, a\_1]$
+2. $\text{Rev}(A[0..k-1]) = [a_k, \ldots, a_1]$
 
-3. $\text{Rev}(A[k..n-1]) = [a\_n, \ldots, a\_{k+1}]$
+3. $\text{Rev}(A[k..n-1]) = [a_n, \ldots, a_{k+1}]$
 
-4. Combined: $[a\_{n-k+1}, \ldots, a\_n, a\_1, \ldots, a\_{n-k}]$ ∎
+4. Combined: $[a_{n-k+1}, \ldots, a_n, a_1, \ldots, a_{n-k}]$ ∎
 
 ---
 

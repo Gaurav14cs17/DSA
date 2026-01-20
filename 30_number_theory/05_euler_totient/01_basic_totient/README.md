@@ -58,7 +58,7 @@ permalink: /30_number_theory/05_euler_totient/01_basic_totient/
 
 ### 2️⃣ The Product Formula
 
-For $n = p\_1^{a\_1} \cdot p\_2^{a\_2} \cdots p\_k^{a\_k}$:
+For $n = p_1^{a_1} \cdot p_2^{a_2} \cdots p_k^{a_k}$:
 
 ```math
 \phi(n) = n \prod_{p|n}\left(1 - \frac{1}{p}\right) = n \cdot \frac{p_1-1}{p_1} \cdot \frac{p_2-1}{p_2} \cdots

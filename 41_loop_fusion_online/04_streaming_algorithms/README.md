@@ -39,7 +39,7 @@ permalink: /41_loop_fusion_online/04_streaming_algorithms/
 
 ### The Streaming Model
 
-**Definition:** Data arrives as a sequence $\sigma = (a\_1, a\_2, \ldots, a\_m)$ where:
+**Definition:** Data arrives as a sequence $\sigma = (a_1, a_2, \ldots, a_m)$ where:
 
 - Elements arrive one at a time
 
@@ -258,7 +258,7 @@ P(\hat{f}_i \leq f_i + \epsilon \|\mathbf{f}\|_1) \geq 1 - \delta
 
 **Step 1: Analyze single hash function**
 
-For hash function $h\_j$ and item $i$:
+For hash function $h_j$ and item $i$:
 
 ```
 

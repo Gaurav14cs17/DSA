@@ -60,11 +60,11 @@ where $k$ = number of distinct coordinates.
 
 **Steps:**
 
-1. Collect all unique coordinates: $C = \{c\_1, c\_2, \ldots, c\_k\}$
+1. Collect all unique coordinates: $C = \{c_1, c_2, \ldots, c_k\}$
 
-2. Sort coordinates: $c\_1 < c\_2 < \cdots < c\_k$
+2. Sort coordinates: $c_1 < c_2 < \cdots < c_k$
 
-3. Create mapping: $f(c\_i) = i-1$ for $i = 1, 2, \ldots, k$
+3. Create mapping: $f(c_i) = i-1$ for $i = 1, 2, \ldots, k$
 
 **Time Complexity:**
 
@@ -104,18 +104,18 @@ where $k$ = number of distinct coordinates.
 
 ### 4️⃣ Skyline Problem
 
-**Given:** $n$ buildings $[(l\_i, r\_i, h\_i)]$  
+**Given:** $n$ buildings $[(l_i, r_i, h_i)]$  
 **Find:** Skyline key points where height changes
 
 **Mathematical Model:**
 
-Height function: $H(x) = \max\_{i: l\_i \leq x < r\_i} h\_i$
+Height function: $H(x) = \max_{i: l_i \leq x < r_i} h_i$
 
 **Key Points:** Where $H(x^-) \neq H(x^+)$
 
 **Algorithm:**
 
-1. Create events: $(l\_i, h\_i, \text{start})$ and $(r\_i, h\_i, \text{end})$
+1. Create events: $(l_i, h_i, \text{start})$ and $(r_i, h_i, \text{end})$
 
 2. Sort events by x-coordinate
 
@@ -148,16 +148,16 @@ A = \sum_{i=1}^{k-1} (x_{i+1} - x_i) \cdot H(x_i)
 
 ```
 
-where $x\_1, \ldots, x\_k$ are sorted distinct x-coordinates.
+where $x_1, \ldots, x_k$ are sorted distinct x-coordinates.
 
 **Algorithm:**
 
 1. Compress x-coordinates
 
-2. For each x-segment $[x\_i, x\_{i+1})$:
+2. For each x-segment $[x_i, x_{i+1})$:
    - Find active y-intervals
-   - Merge y-intervals to get $H(x\_i)$
-   - Add $(x\_{i+1} - x\_i) \cdot H(x\_i)$ to total
+   - Merge y-intervals to get $H(x_i)$
+   - Add $(x_{i+1} - x_i) \cdot H(x_i)$ to total
 
 **Time:** $O(n^2 \log n)$ with naive merge  
 **Optimized:** $O(n \log n)$ with segment tree
@@ -195,7 +195,7 @@ where $x\_1, \ldots, x\_k$ are sorted distinct x-coordinates.
 
 **Merge overlapping intervals:**
 
-Given sorted intervals $[(s\_1, e\_1), (s\_2, e\_2), \ldots]$:
+Given sorted intervals $[(s_1, e_1), (s_2, e_2), \ldots]$:
 
 ```
 Merged length = sum of non-overlapping portions

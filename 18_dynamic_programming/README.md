@@ -54,7 +54,7 @@ permalink: /18_dynamic_programming/
 | Coin Change | $dp[a] = \min(dp[a], dp[a-c] + 1)$ |
 | LCS | $dp[i][j] = dp[i-1][j-1] + 1$ if match |
 | Edit Distance | $dp[i][j] = \min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) + 1$ |
-| 0/1 Knapsack | $dp[i][w] = \max(dp[i-1][w], dp[i-1][w-w\_i] + v\_i)$ |
+| 0/1 Knapsack | $dp[i][w] = \max(dp[i-1][w], dp[i-1][w-w_i] + v_i)$ |
 | LIS | $dp[i] = \max(dp[j] + 1)$ for $j < i, a[j] < a[i]$ |
 
 ---

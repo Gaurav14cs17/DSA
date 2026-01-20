@@ -65,7 +65,7 @@ where $\phi(n)$ is Euler's totient function.
 
 **Formula for prime power:** $\phi(p^k) = p^{k-1}(p-1)$
 
-**Formula for general n:** If $n = p\_1^{a\_1} \cdots p\_k^{a\_k}$:
+**Formula for general n:** If $n = p_1^{a_1} \cdots p_k^{a_k}$:
 
 ```math
 \phi(n) = n \prod_{p|n}\left(1 - \frac{1}{p}\right)

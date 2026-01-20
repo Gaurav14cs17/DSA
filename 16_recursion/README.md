@@ -72,9 +72,9 @@ For recurrence $T(n) = aT(n/b) + f(n)$:
 
 | Case | Condition | Result |
 |------|-----------|--------|
-| 1 | $f(n) = O(n^{\log\_b a - \epsilon})$ | $T(n) = \Theta(n^{\log\_b a})$ |
-| 2 | $f(n) = \Theta(n^{\log\_b a})$ | $T(n) = \Theta(n^{\log\_b a} \log n)$ |
-| 3 | $f(n) = \Omega(n^{\log\_b a + \epsilon})$ | $T(n) = \Theta(f(n))$ |
+| 1 | $f(n) = O(n^{\log_b a - \epsilon})$ | $T(n) = \Theta(n^{\log_b a})$ |
+| 2 | $f(n) = \Theta(n^{\log_b a})$ | $T(n) = \Theta(n^{\log_b a} \log n)$ |
+| 3 | $f(n) = \Omega(n^{\log_b a + \epsilon})$ | $T(n) = \Theta(f(n))$ |
 
 ---
 

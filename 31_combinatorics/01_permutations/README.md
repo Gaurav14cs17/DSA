@@ -73,7 +73,7 @@ P(n, r) = \frac{n!}{(n-r)!}
 
 **Permutations with Repetition:**
 
-If object $i$ appears $n\_i$ times:
+If object $i$ appears $n_i$ times:
 
 ```math
 P = \frac{n!}{n_1! \times n_2! \times \cdots \times n_k!}
@@ -121,7 +121,7 @@ D_n = (n-1)(D_{n-1} + D_{n-2})
 
 ```
 
-**First few:** $D\_0=1, D\_1=0, D\_2=1, D\_3=2, D\_4=9, D\_5=44$
+**First few:** $D_0=1, D_1=0, D_2=1, D_3=2, D_4=9, D_5=44$
 
 ---
 

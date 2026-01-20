@@ -47,9 +47,9 @@ f(mn) = f(m) \cdot f(n) \quad \text{when } \gcd(m, n) = 1
 
 | Function | Definition | Formula |
 |----------|------------|---------|
-| $\tau(n)$ | Divisor count | $\prod(a\_i + 1)$ |
-| $\sigma(n)$ | Divisor sum | $\prod\frac{p\_i^{a\_i+1}-1}{p\_i-1}$ |
-| $\phi(n)$ | Euler's totient | $n\prod(1-\frac{1}{p\_i})$ |
+| $\tau(n)$ | Divisor count | $\prod(a_i + 1)$ |
+| $\sigma(n)$ | Divisor sum | $\prod\frac{p_i^{a_i+1}-1}{p_i-1}$ |
+| $\phi(n)$ | Euler's totient | $n\prod(1-\frac{1}{p_i})$ |
 | $\mu(n)$ | Möbius function | $(-1)^k$ or 0 |
 
 ---
@@ -68,13 +68,13 @@ f(mn) = f(m) \cdot f(n) \quad \text{when } \gcd(m, n) = 1
 ```
 
 **Key Property (Möbius Inversion):**
-If $g(n) = \sum\_{d|n} f(d)$, then $f(n) = \sum\_{d|n} \mu(d) \cdot g(n/d)$
+If $g(n) = \sum_{d|n} f(d)$, then $f(n) = \sum_{d|n} \mu(d) \cdot g(n/d)$
 
 ---
 
 ### 3️⃣ Euler's Totient Properties
 
-**Formula:** $\phi(n) = n \prod\_{p|n} \left(1 - \frac{1}{p}\right)$
+**Formula:** $\phi(n) = n \prod_{p|n} \left(1 - \frac{1}{p}\right)$
 
 **Properties:**
 
@@ -82,7 +82,7 @@ If $g(n) = \sum\_{d|n} f(d)$, then $f(n) = \sum\_{d|n} \mu(d) \cdot g(n/d)$
 
 - $\phi(p^k) = p^{k-1}(p-1)$
 
-- $\sum\_{d|n} \phi(d) = n$
+- $\sum_{d|n} \phi(d) = n$
 
 - $a^{\phi(n)} \equiv 1 \pmod{n}$ if $\gcd(a,n) = 1$ (Euler's theorem)
 
@@ -627,7 +627,7 @@ def compute_multiplicative(n: int, prime_val, combine):
 > Essential for "divisible by at least one of" problems.
 
 > **Möbius Inversion:**  
-> If $g(n) = \sum\_{d|n} f(d)$, then $f(n) = \sum\_{d|n} \mu(d)g(n/d)$  
+> If $g(n) = \sum_{d|n} f(d)$, then $f(n) = \sum_{d|n} \mu(d)g(n/d)$  
 > Useful for inverting summation relations.
 
 ---

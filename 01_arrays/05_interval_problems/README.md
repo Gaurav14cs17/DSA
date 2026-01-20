@@ -95,13 +95,13 @@ Merged interval:
 
 **Proof:**
 
-- After sorting: $s\_1 \leq s\_2 \leq \cdots \leq s\_n$
+- After sorting: $s_1 \leq s_2 \leq \cdots \leq s_n$
 
-- To check if $I\_i$ and $I\_{i+1}$ overlap: compare $e\_i$ with $s\_{i+1}$
+- To check if $I_i$ and $I_{i+1}$ overlap: compare $e_i$ with $s_{i+1}$
 
-- If $e\_i \geq s\_{i+1}$: overlap (merge)
+- If $e_i \geq s_{i+1}$: overlap (merge)
 
-- If $e\_i < s\_{i+1}$: no overlap (start new interval)
+- If $e_i < s_{i+1}$: no overlap (start new interval)
 
 - One pass through sorted list: $O(n)$ ∎
 
@@ -262,7 +262,7 @@ Input: intervals = [[1,3], [6,9]], newInterval = [2,5]
 
 **Mathematical Formulation:**
 
-Given intervals $I\_1, I\_2, \ldots, I\_n$ where $I\_i = [s\_i, e\_i]$:
+Given intervals $I_1, I_2, \ldots, I_n$ where $I_i = [s_i, e_i]$:
 
 ```math
 \text{rooms needed} = \max_{t} \left|\{i : s_i \leq t < e_i\}\right|
@@ -271,7 +271,7 @@ Given intervals $I\_1, I\_2, \ldots, I\_n$ where $I\_i = [s\_i, e\_i]$:
 
 **Sweep Line Algorithm:**
 
-1. Create events: $(s\_i, \text{START})$ and $(e\_i, \text{END})$
+1. Create events: $(s_i, \text{START})$ and $(e_i, \text{END})$
 
 2. Sort events by time
 
@@ -740,15 +740,15 @@ Lesson: Right sort strategy simplifies problem!
 
 Let $OPT$ be an optimal solution, $G$ be greedy solution.
 
-1. Let $g\_1$ be greedy's first choice (earliest end)
+1. Let $g_1$ be greedy's first choice (earliest end)
 
-2. Let $o\_1$ be optimal's first choice
+2. Let $o_1$ be optimal's first choice
 
-3. If $g\_1 = o\_1$: continue recursively
+3. If $g_1 = o_1$: continue recursively
 
-4. If $g\_1 \neq o\_1$: Replace $o\_1$ with $g\_1$ in $OPT$
-   - $g\_1$ ends before $o\_1$ (by greedy choice)
-   - All intervals after $o\_1$ are still valid after $g\_1$
+4. If $g_1 \neq o_1$: Replace $o_1$ with $g_1$ in $OPT$
+   - $g_1$ ends before $o_1$ (by greedy choice)
+   - All intervals after $o_1$ are still valid after $g_1$
    - This replacement doesn't decrease count
 
 5. By induction, $|G| = |OPT|$ ∎

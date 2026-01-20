@@ -43,16 +43,16 @@ permalink: /30_number_theory/11_legendres_formula/
 
 ```
 
-where $s\_p(n)$ is the sum of digits of n in base p.
+where $s_p(n)$ is the sum of digits of n in base p.
 
 ---
 
 ### 2️⃣ Trailing Zeros
 
-**Trailing zeros in n!** = $\nu\_5(n!)$ (since $10 = 2 \times 5$ and there are more 2s than 5s)
+**Trailing zeros in n!** = $\nu_5(n!)$ (since $10 = 2 \times 5$ and there are more 2s than 5s)
 
 ```math
-\text{trailing\_zeros}(n!) = \left\lfloor \frac{n}{5} \right\rfloor + \left\lfloor \frac{n}{25} \right\rfloor + \left\lfloor \frac{n}{125} \right\rfloor + \cdots
+\text{trailing_zeros}(n!) = \left\lfloor \frac{n}{5} \right\rfloor + \left\lfloor \frac{n}{25} \right\rfloor + \left\lfloor \frac{n}{125} \right\rfloor + \cdots
 
 ```
 
@@ -60,15 +60,15 @@ where $s\_p(n)$ is the sum of digits of n in base p.
 
 ### 3️⃣ p-adic Valuation
 
-**Definition:** $\nu\_p(n)$ = largest power of p dividing n.
+**Definition:** $\nu_p(n)$ = largest power of p dividing n.
 
 **Properties:**
 
-- $\nu\_p(ab) = \nu\_p(a) + \nu\_p(b)$
+- $\nu_p(ab) = \nu_p(a) + \nu_p(b)$
 
-- $\nu\_p(a + b) \geq \min(\nu\_p(a), \nu\_p(b))$
+- $\nu_p(a + b) \geq \min(\nu_p(a), \nu_p(b))$
 
-- $\nu\_p(\binom{n}{k}) = \frac{s\_p(k) + s\_p(n-k) - s\_p(n)}{p-1}$
+- $\nu_p(\binom{n}{k}) = \frac{s_p(k) + s_p(n-k) - s_p(n)}{p-1}$
 
 ---
 
@@ -193,9 +193,9 @@ print(legendre(10, 2))  # 8 (10! = 2^8 × odd)
 
 > **Why 5 for trailing zeros?** 10 = 2 × 5, and there are always more factors of 2 than 5 in n!
 
-> **Binary Representation:** $\nu\_2(n!) = n - \text{popcount}(n)$
+> **Binary Representation:** $\nu_2(n!) = n - \text{popcount}(n)$
 
-> **Kummer's Theorem:** $\nu\_p(\binom{m}{n})$ = number of carries in base-p addition of n and m-n.
+> **Kummer's Theorem:** $\nu_p(\binom{m}{n})$ = number of carries in base-p addition of n and m-n.
 
 ---
 

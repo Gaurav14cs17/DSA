@@ -136,15 +136,15 @@ A[j] & \text{first } j > i \text{ where } A[j] > A[i] \\
 **Area Formula:**
 
 ```math
-\text{Area}[i] = h[i] \times (\text{right\_bound}[i] - \text{left\_bound}[i] - 1)
+\text{Area}[i] = h[i] \times (\text{right_bound}[i] - \text{left_bound}[i] - 1)
 
 ```
 
 Where:
 
-- $\text{left\_bound}[i]$ = index of first smaller bar on left
+- $\text{left_bound}[i]$ = index of first smaller bar on left
 
-- $\text{right\_bound}[i]$ = index of first smaller bar on right
+- $\text{right_bound}[i]$ = index of first smaller bar on right
 
 **Using Monotonic Stack:** Find both bounds in O(n).
 
@@ -154,10 +154,10 @@ Where:
 
 **Challenge:** Get minimum in O(1).
 
-**Solution:** Store $(value, current\_min)$ pairs.
+**Solution:** Store $(value, current_min)$ pairs.
 
 ```math
-\text{min\_at}[i] = \min(value[i], \text{min\_at}[i-1])
+\text{min_at}[i] = \min(value[i], \text{min_at}[i-1])
 
 ```
 

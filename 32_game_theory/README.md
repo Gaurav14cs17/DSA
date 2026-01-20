@@ -86,7 +86,7 @@ permalink: /32_game_theory/
 
 **Classic Nim:** Multiple piles of stones. Players alternate removing any number of stones from a single pile. Player who takes the last stone wins.
 
-**Nim-Sum (XOR):** For piles with sizes $a\_1, a\_2, \ldots, a\_n$:
+**Nim-Sum (XOR):** For piles with sizes $a_1, a_2, \ldots, a_n$:
 
 ```math
 \text{Nim-Sum} = a_1 \oplus a_2 \oplus \cdots \oplus a_n
@@ -131,7 +131,7 @@ where $\text{mex}(S) = \min\{n \geq 0 : n \notin S\}$ (minimum excludant)
 
 - $g(P) > 0$ iff $P$ is a winning position
 
-- For multiple independent games: $g(G\_1 + G\_2 + \cdots) = g(G\_1) \oplus g(G\_2) \oplus \cdots$
+- For multiple independent games: $g(G_1 + G_2 + \cdots) = g(G_1) \oplus g(G_2) \oplus \cdots$
 
 **Example:**
 

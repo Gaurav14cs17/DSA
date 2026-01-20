@@ -38,7 +38,7 @@ permalink: /30_number_theory/04_divisors/
 
 **Definition:** $\tau(n)$ = number of positive divisors of n.
 
-**Formula:** If $n = p\_1^{a\_1} \cdots p\_k^{a\_k}$:
+**Formula:** If $n = p_1^{a_1} \cdots p_k^{a_k}$:
 
 ```math
 \tau(n) = (a_1 + 1)(a_2 + 1) \cdots (a_k + 1)
@@ -57,7 +57,7 @@ permalink: /30_number_theory/04_divisors/
 
 **Definition:** $\sigma(n)$ = sum of positive divisors of n.
 
-**Formula:** If $n = p\_1^{a\_1} \cdots p\_k^{a\_k}$:
+**Formula:** If $n = p_1^{a_1} \cdots p_k^{a_k}$:
 
 ```math
 \sigma(n) = \prod_{i=1}^{k} \frac{p_i^{a_i+1} - 1}{p_i - 1}
@@ -159,7 +159,7 @@ def sieve_divisor_count(limit: int) -> list[int]:
 
 > **Highly Composite Numbers:** Numbers with many divisors: 1, 2, 4, 6, 12, 24, 36, 48, 60, 120...
 
-> **Average Number of Divisors:** $\sum\_{i=1}^{n} \tau(i) \approx n \ln n$
+> **Average Number of Divisors:** $\sum_{i=1}^{n} \tau(i) \approx n \ln n$
 
 > **Maximum Divisors for n ≤ 10^9:** About 1344 divisors (for 735134400)
 

@@ -151,11 +151,11 @@ V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j
 
 - Assume topo sort exists but cycle exists
 
-- Let cycle: $v\_1 \to v\_2 \to \cdots \to v\_k \to v\_1$
+- Let cycle: $v_1 \to v_2 \to \cdots \to v_k \to v_1$
 
-- In topo order: $v\_1$ before $v\_2$ before ... before $v\_k$ before $v\_1$
+- In topo order: $v_1$ before $v_2$ before ... before $v_k$ before $v_1$
 
-- Contradiction: $v\_1$ both before and after itself ∎
+- Contradiction: $v_1$ both before and after itself ∎
 
 **Topological Order:**
 
@@ -168,7 +168,7 @@ V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j
 
 ### 6️⃣ State Space Size
 
-**Theorem:** For state space $(x\_1, x\_2, \ldots, x\_k)$ with domains $D\_1, D\_2, \ldots, D\_k$:
+**Theorem:** For state space $(x_1, x_2, \ldots, x_k)$ with domains $D_1, D_2, \ldots, D_k$:
 
 ```math
 
@@ -203,7 +203,7 @@ E = \{(s, s') : s' \text{ reachable from } s \text{ by one move}\}
 
 - Standard BFS from virtual super-source
 
-- Each vertex $v$ gets $d(v) = \min\_{s \in S} d(s, v)$
+- Each vertex $v$ gets $d(v) = \min_{s \in S} d(s, v)$
 
 - BFS guarantees optimality for each source ∎
 

@@ -53,7 +53,7 @@ n \rightarrow n/2 \rightarrow n/4 \rightarrow \ldots \rightarrow 1
 
 ```
 
-Number of steps: $\log\_2 n$
+Number of steps: $\log_2 n$
 
 ---
 

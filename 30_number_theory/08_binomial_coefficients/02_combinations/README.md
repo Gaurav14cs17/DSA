@@ -267,9 +267,9 @@ class Solution:
 |----------|---------|
 | Symmetry | $C(n,k) = C(n, n-k)$ |
 | Pascal's Rule | $C(n,k) = C(n-1,k-1) + C(n-1,k)$ |
-| Sum of Row | $\sum\_{k=0}^{n} C(n,k) = 2^n$ |
-| Vandermonde | $\sum\_k C(m,k)C(n,r-k) = C(m+n,r)$ |
-| Hockey Stick | $\sum\_{i=r}^{n} C(i,r) = C(n+1,r+1)$ |
+| Sum of Row | $\sum_{k=0}^{n} C(n,k) = 2^n$ |
+| Vandermonde | $\sum_k C(m,k)C(n,r-k) = C(m+n,r)$ |
+| Hockey Stick | $\sum_{i=r}^{n} C(i,r) = C(n+1,r+1)$ |
 
 ---
 

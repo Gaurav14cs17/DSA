@@ -136,10 +136,10 @@ S(n) = f(S(n-1), S(n-2), \ldots, S(0))
 
 | Algorithm | Recurrence | Complexity |
 |-----------|-----------|------------|
-| **Sum** | $S(n) = S(n-1) + x\_n$ | $O(1)$ |
-| **Mean** | $\mu\_n = \mu\_{n-1} + \frac{x\_n - \mu\_{n-1}}{n}$ | $O(1)$ |
-| **Variance** | $M\_2(n) = M\_2(n-1) + (x\_n - \mu\_{n-1})(x\_n - \mu\_n)$ | $O(1)$ |
-| **Kadane** | $\text{max\_here}(i) = \max(a[i], \text{max\_here}(i-1) + a[i])$ | $O(1)$ |
+| **Sum** | $S(n) = S(n-1) + x_n$ | $O(1)$ |
+| **Mean** | $\mu_n = \mu_{n-1} + \frac{x_n - \mu_{n-1}}{n}$ | $O(1)$ |
+| **Variance** | $M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n)$ | $O(1)$ |
+| **Kadane** | $\text{max_here}(i) = \max(a[i], \text{max_here}(i-1) + a[i])$ | $O(1)$ |
 
 ### Loop Fusion Example
 
@@ -321,13 +321,13 @@ Computing statistics traditionally requires multiple passes:
 
 **Notations:**
 
-- $\{x\_i\}\_{i=1}^{N}$: input data stream
+- $\{x_i\}_{i=1}^{N}$: input data stream
 
-- $\mu\_N$: final mean
+- $\mu_N$: final mean
 
-- $\sigma^2\_N$: final variance
+- $\sigma^2_N$: final variance
 
-- $m\_N$: final maximum
+- $m_N$: final maximum
 
 **Body:**
 
@@ -382,7 +382,7 @@ The mean after $n$ elements is:
 
 ```
 
-We can relate $\mu\_n$ to $\mu\_{n-1}$:
+We can relate $\mu_n$ to $\mu_{n-1}$:
 
 ```math
 \mu_n = \frac{1}{n}\sum_{i=1}^{n} x_i = \frac{1}{n}\left(\sum_{i=1}^{n-1} x_i + x_n\right)
@@ -392,13 +392,13 @@ We can relate $\mu\_n$ to $\mu\_{n-1}$:
 
 ```
 
-**Recurrence:** $\mu\_n = \mu\_{n-1} + \frac{x\_n - \mu\_{n-1}}{n}$
+**Recurrence:** $\mu_n = \mu_{n-1} + \frac{x_n - \mu_{n-1}}{n}$
 
 ---
 
 **Step 2: Variance Recurrence (Welford's Algorithm)**
 
-Define $M\_2(n) = \sum\_{i=1}^{n}(x\_i - \mu\_n)^2$ (the sum of squared deviations).
+Define $M_2(n) = \sum_{i=1}^{n}(x_i - \mu_n)^2$ (the sum of squared deviations).
 
 **Naive approach fails:**
 
@@ -409,7 +409,7 @@ Define $M\_2(n) = \sum\_{i=1}^{n}(x\_i - \mu\_n)^2$ (the sum of squared deviatio
 
 This suffers from **catastrophic cancellation** when $\sigma^2 \ll E[X]^2$.
 
-**Welford's approach:** Maintain $M\_2(n)$ using a recurrence.
+**Welford's approach:** Maintain $M_2(n)$ using a recurrence.
 
 ```math
 M_2(n) = \sum_{i=1}^{n}(x_i - \mu_n)^2
@@ -423,7 +423,7 @@ Split into old and new elements:
 
 ```
 
-**Key observation:** When we add $x\_n$, the mean changes from $\mu\_{n-1}$ to $\mu\_n$!
+**Key observation:** When we add $x_n$, the mean changes from $\mu_{n-1}$ to $\mu_n$!
 
 For old elements ($i < n$):
 
@@ -432,9 +432,9 @@ x_i - \mu_n = (x_i - \mu_{n-1}) - (\mu_n - \mu_{n-1})
 
 ```
 
-Let $\delta = x\_n - \mu\_{n-1}$. From Step 1: $\mu\_n - \mu\_{n-1} = \frac{\delta}{n}$
+Let $\delta = x_n - \mu_{n-1}$. From Step 1: $\mu_n - \mu_{n-1} = \frac{\delta}{n}$
 
-So: $x\_i - \mu\_n = (x\_i - \mu\_{n-1}) - \frac{\delta}{n}$
+So: $x_i - \mu_n = (x_i - \mu_{n-1}) - \frac{\delta}{n}$
 
 Squaring:
 
@@ -450,7 +450,7 @@ Summing over old elements:
 
 ```
 
-**Crucial property:** $\sum\_{i=1}^{n-1}(x\_i - \mu\_{n-1}) = 0$ (definition of mean!)
+**Crucial property:** $\sum_{i=1}^{n-1}(x_i - \mu_{n-1}) = 0$ (definition of mean!)
 
 ```math
 = M_2(n-1) + (n-1)\frac{\delta^2}{n^2}
@@ -473,7 +473,7 @@ M_2(n) = M_2(n-1) + (n-1)\frac{\delta^2}{n^2} + \frac{(n-1)^2\delta^2}{n^2}
 
 ```
 
-Note: $x\_n - \mu\_n = \frac{(n-1)\delta}{n}$
+Note: $x_n - \mu_n = \frac{(n-1)\delta}{n}$
 
 Therefore:
 
@@ -504,7 +504,7 @@ Now we can fuse all three passes into one!
 
 - $\mu \leftarrow 0$
 
-- $M\_2 \leftarrow 0$
+- $M_2 \leftarrow 0$
 
 - $m \leftarrow -\infty$
 
@@ -557,9 +557,9 @@ The key insight is that we create **surrogate sequences** that:
 
 For variance:
 
-- Original: $M\_2(n) = \sum\_{i=1}^{n}(x\_i - \mu\_n)^2$ (depends on final $\mu\_n$!)
+- Original: $M_2(n) = \sum_{i=1}^{n}(x_i - \mu_n)^2$ (depends on final $\mu_n$!)
 
-- Surrogate: Use recurrence that only depends on $M\_2(n-1)$, $\mu\_{n-1}$, and $x\_n$
+- Surrogate: Use recurrence that only depends on $M_2(n-1)$, $\mu_{n-1}$, and $x_n$
 
 This is exactly the same trick used in **FlashAttention** for online softmax!
 
@@ -576,7 +576,7 @@ M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n)
 
 ```
 
-where $M\_2(n) = \sum\_{i=1}^{n} (x\_i - \mu\_n)^2$ and $\sigma^2 = M\_2(n) / n$.
+where $M_2(n) = \sum_{i=1}^{n} (x_i - \mu_n)^2$ and $\sigma^2 = M_2(n) / n$.
 
 **Proof:** See complete derivation above. $\blacksquare$
 

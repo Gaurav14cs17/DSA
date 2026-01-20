@@ -46,7 +46,7 @@ permalink: /30_number_theory/07_linear_diophantine/
 
 **Theorem:** $ax + by = c$ has integer solutions **if and only if** $\gcd(a, b) | c$
 
-**Proof:** By Bézout's identity, we can write $ax\_0 + by\_0 = \gcd(a,b)$. If $\gcd(a,b) | c$, then multiplying by $c/\gcd(a,b)$ gives a solution.
+**Proof:** By Bézout's identity, we can write $ax_0 + by_0 = \gcd(a,b)$. If $\gcd(a,b) | c$, then multiplying by $c/\gcd(a,b)$ gives a solution.
 
 ---
 
@@ -54,17 +54,17 @@ permalink: /30_number_theory/07_linear_diophantine/
 
 **Using Extended GCD:**
 
-1. Compute $g, x\_0, y\_0$ such that $ax\_0 + by\_0 = g = \gcd(a,b)$
+1. Compute $g, x_0, y_0$ such that $ax_0 + by_0 = g = \gcd(a,b)$
 
 2. Check if $g | c$
 
-3. Scale: $x = x\_0 \cdot (c/g)$, $y = y\_0 \cdot (c/g)$
+3. Scale: $x = x_0 \cdot (c/g)$, $y = y_0 \cdot (c/g)$
 
 ---
 
 ### 4️⃣ General Solution
 
-If $(x\_0, y\_0)$ is one solution, all solutions are:
+If $(x_0, y_0)$ is one solution, all solutions are:
 
 ```math
 x = x_0 + k \cdot \frac{b}{\gcd(a,b)}, \quad y = y_0 - k \cdot \frac{a}{\gcd(a,b)}

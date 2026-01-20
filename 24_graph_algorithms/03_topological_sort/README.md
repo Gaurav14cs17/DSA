@@ -100,7 +100,7 @@ Valid orderings: `[A, B, C]`, `[B, A, C]`
 **Topological order = Reverse of finish order**
 
 ```math
-\text{topo\_order} = \text{reverse}(\text{post\_order})
+\text{topo_order} = \text{reverse}(\text{post_order})
 
 ```
 

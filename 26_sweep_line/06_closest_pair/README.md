@@ -84,7 +84,7 @@ T(n) = 2T(n/2) + O(n) = O(n \log n)
 
 4. Update $\delta$ when closer pair found
 
-**Active window:** Points with $x \in [x\_{\text{current}} - \delta, x\_{\text{current}}]$
+**Active window:** Points with $x \in [x_{\text{current}} - \delta, x_{\text{current}}]$
 
 **Key insight:** At most 6 points need to be checked per point (geometry constraint).
 

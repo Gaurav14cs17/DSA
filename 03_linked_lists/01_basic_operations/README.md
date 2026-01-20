@@ -83,7 +83,7 @@ For 32-bit integer + 64-bit pointer:
 **Total space for n nodes:**
 
 ```math
-\boxed{S(n) = n \times (\text{data\_size} + \text{pointer\_size})}
+\boxed{S(n) = n \times (\text{data_size} + \text{pointer_size})}
 
 ```
 
@@ -111,7 +111,7 @@ For 32-bit integer + 64-bit pointer:
 **Theorem:** When fast reaches end, slow is at middle.
 
 ```math
-\boxed{\text{slow\_position} = \left\lfloor \frac{n}{2} \right\rfloor}
+\boxed{\text{slow_position} = \left\lfloor \frac{n}{2} \right\rfloor}
 
 ```
 
@@ -196,7 +196,7 @@ This means:
 
 **Two-pointer technique proof:**
 
-Given two lists A and B with lengths $L\_A$ and $L\_B$, intersecting at distance $d$ from their ends.
+Given two lists A and B with lengths $L_A$ and $L_B$, intersecting at distance $d$ from their ends.
 
 **Path of pointer A:**
 

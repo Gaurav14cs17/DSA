@@ -141,13 +141,13 @@ Each element has 2 choices: include or exclude.
 
 **Optimal Substructure Proof:**
 
-- Let $S\_i$ = max subarray sum ending at index $i$
+- Let $S_i$ = max subarray sum ending at index $i$
 
 - Subarray ending at $i$ either:
   - Starts at $i$: sum = $A[i]$
-  - Extends from $j < i$: sum = $S\_{i-1} + A[i]$
+  - Extends from $j < i$: sum = $S_{i-1} + A[i]$
 
-- Therefore: $S\_i = \max(A[i], S\_{i-1} + A[i])$ ∎
+- Therefore: $S_i = \max(A[i], S_{i-1} + A[i])$ ∎
 
 ---
 
@@ -206,20 +206,20 @@ For opposite-direction pointers on sorted array:
 **Position Mapping (right rotation by k):**
 
 ```math
-\boxed{\text{new\_index}(i) = (i + k) \mod n}
+\boxed{\text{new_index}(i) = (i + k) \mod n}
 
 ```
 
 **Inverse Mapping:**
 
 ```math
-\text{old\_index}(i) = (i - k + n) \mod n
+\text{old_index}(i) = (i - k + n) \mod n
 
 ```
 
 **Reversal Algorithm Proof:**
 
-Let array = $[A\_1, \ldots, A\_{n-k}, A\_{n-k+1}, \ldots, A\_n]$
+Let array = $[A_1, \ldots, A_{n-k}, A_{n-k+1}, \ldots, A_n]$
 
 ```math
 \text{Rev}([A_1, \ldots, A_n]) = [A_n, \ldots, A_1]

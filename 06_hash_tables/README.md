@@ -92,7 +92,7 @@ h(k, i) = (h'(k) + f(i)) \mod m
 | Method | $f(i)$ |
 |--------|--------|
 | Linear Probing | $i$ |
-| Quadratic Probing | $c\_1 i + c\_2 i^2$ |
+| Quadratic Probing | $c_1 i + c_2 i^2$ |
 | Double Hashing | $i \cdot h''(k)$ |
 
 ---
@@ -168,7 +168,7 @@ Store seen values, check for complement.
 
 **Applications:**
 
-- Anagram detection: $\text{freq}\_s = \text{freq}\_t$
+- Anagram detection: $\text{freq}_s = \text{freq}_t$
 
 - Majority element: $\text{freq}[x] > n/2$
 

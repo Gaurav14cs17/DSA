@@ -91,7 +91,7 @@ g(n) = \sum_{d|n} f(d) \implies f(n) = \sum_{d|n} \mu(d) g(n/d)
 
 ### 3️⃣ Product Formula
 
-For multiplicative f, if $n = p\_1^{a\_1} \cdots p\_k^{a\_k}$:
+For multiplicative f, if $n = p_1^{a_1} \cdots p_k^{a_k}$:
 
 ```math
 f(n) = f(p_1^{a_1}) \cdot f(p_2^{a_2}) \cdots f(p_k^{a_k})
@@ -261,7 +261,7 @@ Numbers with record τ(n):
 
 For most n: $\tau(n) = O(n^\epsilon)$ for any ε > 0
 
-Average: $\frac{1}{n}\sum\_{i=1}^{n} \tau(i) \approx \ln n$
+Average: $\frac{1}{n}\sum_{i=1}^{n} \tau(i) \approx \ln n$
 
 ---
 

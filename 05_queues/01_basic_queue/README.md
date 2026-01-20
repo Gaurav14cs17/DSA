@@ -87,11 +87,11 @@ Or unified: $\text{size} = (\text{rear} - \text{front} + n) \mod n$
 
 Each element:
 
-1. Pushed to $S\_1$ once: O(1)
+1. Pushed to $S_1$ once: O(1)
 
-2. Transferred to $S\_2$ once: O(1)
+2. Transferred to $S_2$ once: O(1)
 
-3. Popped from $S\_2$ once: O(1)
+3. Popped from $S_2$ once: O(1)
 
 ```math
 \text{Amortized cost per operation} = \frac{3n}{n} = O(1)

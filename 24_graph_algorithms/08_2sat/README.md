@@ -72,24 +72,24 @@ Clause $(a \lor b)$ becomes:
 
 - $\neg b \Rightarrow a$
 
-**Example:** $(x\_1 \lor x\_2)$ creates edges:
+**Example:** $(x_1 \lor x_2)$ creates edges:
 
-- $\neg x\_1 \to x\_2$
+- $\neg x_1 \to x_2$
 
-- $\neg x\_2 \to x\_1$
+- $\neg x_2 \to x_1$
 
 ---
 
 ### 4️⃣ Solution Using SCC
 
-**Key theorem:** 2-SAT is satisfiable **iff** for all variables $x\_i$:
+**Key theorem:** 2-SAT is satisfiable **iff** for all variables $x_i$:
 
 ```math
 x_i \text{ and } \neg x_i \text{ are in different SCCs}
 
 ```
 
-**Why?** If in same SCC, then $x\_i \Rightarrow \neg x\_i$ and $\neg x\_i \Rightarrow x\_i$ (contradiction).
+**Why?** If in same SCC, then $x_i \Rightarrow \neg x_i$ and $\neg x_i \Rightarrow x_i$ (contradiction).
 
 ---
 
@@ -99,9 +99,9 @@ x_i \text{ and } \neg x_i \text{ are in different SCCs}
 
 1. Find SCCs and topological order
 
-2. For each variable $x\_i$:
-   - If SCC($x\_i$) comes after SCC($\neg x\_i$) in topo order → $x\_i$ = FALSE
-   - Otherwise → $x\_i$ = TRUE
+2. For each variable $x_i$:
+   - If SCC($x_i$) comes after SCC($\neg x_i$) in topo order → $x_i$ = FALSE
+   - Otherwise → $x_i$ = TRUE
 
 **Intuition:** Assign FALSE to implications that come first.
 

@@ -36,7 +36,7 @@ permalink: /30_number_theory/06_chinese_remainder/
 
 ### 1️⃣ The Theorem
 
-**Statement:** Given pairwise coprime moduli $m\_1, m\_2, \ldots, m\_k$ and any integers $a\_1, a\_2, \ldots, a\_k$, the system:
+**Statement:** Given pairwise coprime moduli $m_1, m_2, \ldots, m_k$ and any integers $a_1, a_2, \ldots, a_k$, the system:
 
 ```math
 \begin{cases}
@@ -48,13 +48,13 @@ x \equiv a_k \pmod{m_k}
 
 ```
 
-has a unique solution modulo $M = m\_1 \cdot m\_2 \cdots m\_k$.
+has a unique solution modulo $M = m_1 \cdot m_2 \cdots m_k$.
 
 ---
 
 ### 2️⃣ Construction Formula
 
-Let $M\_i = M / m\_i$ and $y\_i = M\_i^{-1} \pmod{m\_i}$
+Let $M_i = M / m_i$ and $y_i = M_i^{-1} \pmod{m_i}$
 
 ```math
 x = \sum_{i=1}^{k} a_i \cdot M_i \cdot y_i \pmod{M}
@@ -65,7 +65,7 @@ x = \sum_{i=1}^{k} a_i \cdot M_i \cdot y_i \pmod{M}
 
 ### 3️⃣ Two Moduli Case
 
-For $x \equiv a\_1 \pmod{m\_1}$ and $x \equiv a\_2 \pmod{m\_2}$:
+For $x \equiv a_1 \pmod{m_1}$ and $x \equiv a_2 \pmod{m_2}$:
 
 ```math
 x = a_1 + m_1 \cdot \frac{(a_2 - a_1) \cdot m_1^{-1} \pmod{m_2}}{1} \pmod{m_1 \cdot m_2}
@@ -184,7 +184,7 @@ print(chinese_remainder([2, 3, 2], [3, 5, 7]))  # 23
 
 ## 💡 Key Insights
 
-> **Existence Condition:** CRT requires pairwise coprime moduli. For general moduli, solution exists iff $a\_i \equiv a\_j \pmod{\gcd(m\_i, m\_j)}$ for all pairs.
+> **Existence Condition:** CRT requires pairwise coprime moduli. For general moduli, solution exists iff $a_i \equiv a_j \pmod{\gcd(m_i, m_j)}$ for all pairs.
 
 > **Applications:** RSA speedup (computing mod p and mod q separately), hash collision avoidance, reconstructing large numbers
 

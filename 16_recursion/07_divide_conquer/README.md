@@ -68,9 +68,9 @@ For recurrence $T(n) = aT(n/b) + f(n)$:
 
 | Case | Condition | Result |
 |------|-----------|--------|
-| 1 | $f(n) = O(n^{\log\_b a - ε})$ | $T(n) = Θ(n^{\log\_b a})$ |
-| 2 | $f(n) = Θ(n^{\log\_b a})$ | $T(n) = Θ(n^{\log\_b a} \log n)$ |
-| 3 | $f(n) = Ω(n^{\log\_b a + ε})$ | $T(n) = Θ(f(n))$ |
+| 1 | $f(n) = O(n^{\log_b a - ε})$ | $T(n) = Θ(n^{\log_b a})$ |
+| 2 | $f(n) = Θ(n^{\log_b a})$ | $T(n) = Θ(n^{\log_b a} \log n)$ |
+| 3 | $f(n) = Ω(n^{\log_b a + ε})$ | $T(n) = Θ(f(n))$ |
 
 ---
 

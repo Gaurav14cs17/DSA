@@ -132,7 +132,7 @@ permalink: /26_sweep_line/04_angular_sweep/
 
 ### 6️⃣ Sector Query
 
-**Problem:** Count points in sector defined by angles $[\theta\_1, \theta\_2]$ and radii $[r\_1, r\_2]$.
+**Problem:** Count points in sector defined by angles $[\theta_1, \theta_2]$ and radii $[r_1, r_2]$.
 
 **Algorithm:**
 

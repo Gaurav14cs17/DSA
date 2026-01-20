@@ -149,7 +149,7 @@ M \cdot (M^{(n-1)/2})^2 & \text{if } n \text{ is odd}
 
 ### 4️⃣ General k-th Order Recurrence
 
-For recurrence $a\_n = c\_1 a\_{n-1} + c\_2 a\_{n-2} + \cdots + c\_k a\_{n-k}$:
+For recurrence $a_n = c_1 a_{n-1} + c_2 a_{n-2} + \cdots + c_k a_{n-k}$:
 
 ```math
 \begin{bmatrix} 
@@ -182,13 +182,13 @@ This is called the **companion matrix**.
 
 ### 5️⃣ Counting Paths with Matrix Exponentiation
 
-**Theorem:** If $A$ is the adjacency matrix of a graph, then $(A^n)\_{ij}$ equals the number of paths of length $n$ from vertex $i$ to vertex $j$.
+**Theorem:** If $A$ is the adjacency matrix of a graph, then $(A^n)_{ij}$ equals the number of paths of length $n$ from vertex $i$ to vertex $j$.
 
 **Proof (by induction):**
 
-- Base: $n=1$, $(A^1)\_{ij} = A\_{ij}$ = number of edges from $i$ to $j$ ✓
+- Base: $n=1$, $(A^1)_{ij} = A_{ij}$ = number of edges from $i$ to $j$ ✓
 
-- Inductive: $(A^{n+1})\_{ij} = \sum\_k (A^n)\_{ik} \cdot A\_{kj}$ = paths of length $n$ to $k$, then edge to $j$ ✓
+- Inductive: $(A^{n+1})_{ij} = \sum_k (A^n)_{ik} \cdot A_{kj}$ = paths of length $n$ to $k$, then edge to $j$ ✓
 
 **Application:** Count paths in $O(\log n)$ instead of $O(n)$!
 

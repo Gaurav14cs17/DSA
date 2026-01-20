@@ -50,7 +50,7 @@ Let $S = \{ax + by > 0 : x, y \in \mathbb{Z}\}$ (positive linear combinations).
 
 $S$ is non-empty (e.g., $|a| = a \cdot \text{sgn}(a) + b \cdot 0$).
 
-Let $d$ be the smallest element in $S$, so $d = ax\_0 + by\_0$ for some $x\_0, y\_0$.
+Let $d$ be the smallest element in $S$, so $d = ax_0 + by_0$ for some $x_0, y_0$.
 
 **Claim:** $d = \gcd(a, b)$
 
@@ -73,7 +73,7 @@ Similarly, $d \mid b$.
 
 *Step 2:* Show $d$ is the greatest such divisor.
 
-If $c$ divides both $a$ and $b$, then $c$ divides $ax\_0 + by\_0 = d$.  
+If $c$ divides both $a$ and $b$, then $c$ divides $ax_0 + by_0 = d$.  
 Thus $c \leq d$, so $d = \gcd(a, b)$. $\blacksquare$
 
 ---
@@ -100,7 +100,7 @@ ExtendedGCD(a, b):
 
 From Euclidean algorithm: $\gcd(a, b) = \gcd(b, a \bmod b)$
 
-By induction, assume we have: $b \cdot x\_1 + (a \bmod b) \cdot y\_1 = d$
+By induction, assume we have: $b \cdot x_1 + (a \bmod b) \cdot y_1 = d$
 
 Substitute $a \bmod b = a - \lfloor a/b \rfloor \cdot b$:
 
@@ -114,7 +114,7 @@ d &= b \cdot x_1 + (a - \lfloor a/b \rfloor \cdot b) \cdot y_1 \\
 
 ```
 
-where $x = y\_1$ and $y = x\_1 - \lfloor a/b \rfloor \cdot y\_1$. $\blacksquare$
+where $x = y_1$ and $y = x_1 - \lfloor a/b \rfloor \cdot y_1$. $\blacksquare$
 
 ---
 
@@ -159,11 +159,11 @@ So $x \bmod m$ is the modular inverse!
 
 **Finding Solutions:**
 
-1. Compute $\gcd(a, b) = d$ and find $x\_0, y\_0$ such that $ax\_0 + by\_0 = d$
+1. Compute $\gcd(a, b) = d$ and find $x_0, y_0$ such that $ax_0 + by_0 = d$
 
 2. If $d \nmid c$, no solution exists
 
-3. Otherwise, scale: $(x, y) = (x\_0 \cdot c/d, y\_0 \cdot c/d)$ is one solution
+3. Otherwise, scale: $(x, y) = (x_0 \cdot c/d, y_0 \cdot c/d)$ is one solution
 
 4. General solution:
 

@@ -44,7 +44,7 @@ permalink: /08_binary_search_trees/03_bst_queries/
 **Using Inorder:**
 
 ```math
-\text{kth\_smallest} = \text{inorder}[k-1]
+\text{kth_smallest} = \text{inorder}[k-1]
 
 ```
 

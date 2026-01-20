@@ -167,7 +167,7 @@ n = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k}
 
 ```
 
-where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
+where $p_1 < p_2 < \cdots < p_k$ are primes and $a_i \geq 1$.
 
 **Example:**
 
@@ -181,11 +181,11 @@ where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
 
 **Applications:**
 
-- **Count divisors:** $\tau(n) = (a\_1+1)(a\_2+1)\cdots(a\_k+1)$
+- **Count divisors:** $\tau(n) = (a_1+1)(a_2+1)\cdots(a_k+1)$
 
-- **Sum of divisors:** $\sigma(n) = \prod \frac{p\_i^{a\_i+1} - 1}{p\_i - 1}$
+- **Sum of divisors:** $\sigma(n) = \prod \frac{p_i^{a_i+1} - 1}{p_i - 1}$
 
-- **Euler's totient:** $\phi(n) = n \prod \left(1 - \frac{1}{p\_i}\right)$
+- **Euler's totient:** $\phi(n) = n \prod \left(1 - \frac{1}{p_i}\right)$
 
 ---
 
@@ -792,7 +792,7 @@ def goldbach_partition(n: int) -> tuple[int, int] | None:
 ## 💭 Common Interview Questions
 
 **Q: Why is Sieve O(n log log n)?**  
-A: The sum $\sum\_{p \leq n} n/p$ over primes equals $n \cdot \sum 1/p \approx n \ln \ln n$.
+A: The sum $\sum_{p \leq n} n/p$ over primes equals $n \cdot \sum 1/p \approx n \ln \ln n$.
 
 **Q: When to use segmented sieve?**  
 A: When R is very large (10⁹+) but R-L is manageable (≤10⁶). Uses only O(√R + (R-L)) space.

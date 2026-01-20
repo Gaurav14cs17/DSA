@@ -59,7 +59,7 @@ permalink: /27_advanced_trees/02_red_black_trees/
 
 ### 2️⃣ Height Bound Theorem
 
-**Theorem:** Red-Black tree with $n$ nodes has height $h \leq 2\log\_2(n+1)$.
+**Theorem:** Red-Black tree with $n$ nodes has height $h \leq 2\log_2(n+1)$.
 
 **Proof:**
 Let $bh(x)$ = black height of node $x$.
@@ -82,7 +82,7 @@ For root with black height $bh$:
 
 - Therefore: $n \geq 2^{h/2} - 1$
 
-- Solving: $h \leq 2\log\_2(n+1)$ ∎
+- Solving: $h \leq 2\log_2(n+1)$ ∎
 
 ---
 

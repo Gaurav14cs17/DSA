@@ -35,7 +35,7 @@ permalink: /32_game_theory/01_nim_game/
 
 ### 1️⃣ Classic Nim Rules
 
-**Setup:** $n$ piles of stones with sizes $a\_1, a\_2, \ldots, a\_n$
+**Setup:** $n$ piles of stones with sizes $a_1, a_2, \ldots, a_n$
 
 **Rules:**
 
@@ -51,7 +51,7 @@ permalink: /32_game_theory/01_nim_game/
 
 ### 2️⃣ Bouton's Theorem (1901)
 
-**Theorem:** A Nim position with pile sizes $a\_1, a\_2, \ldots, a\_n$ is a **losing position** (L-position) if and only if:
+**Theorem:** A Nim position with pile sizes $a_1, a_2, \ldots, a_n$ is a **losing position** (L-position) if and only if:
 
 ```math
 a_1 \oplus a_2 \oplus \cdots \oplus a_n = 0
@@ -74,15 +74,15 @@ where $\oplus$ denotes bitwise XOR.
 
 *Part 3:* From position with Nim-Sum ≠ 0:
 
-- Let $s = a\_1 \oplus a\_2 \oplus \cdots \oplus a\_n \neq 0$
+- Let $s = a_1 \oplus a_2 \oplus \cdots \oplus a_n \neq 0$
 
 - Let $k$ be position of highest bit in $s$
 
-- Find pile $a\_i$ with bit $k$ set
+- Find pile $a_i$ with bit $k$ set
 
-- New pile size: $a\_i' = a\_i \oplus s < a\_i$
+- New pile size: $a_i' = a_i \oplus s < a_i$
 
-- After this move: $a\_1 \oplus \cdots \oplus a\_i' \oplus \cdots \oplus a\_n = 0$
+- After this move: $a_1 \oplus \cdots \oplus a_i' \oplus \cdots \oplus a_n = 0$
 
 Therefore, from W-position, can always move to L-position. $\blacksquare$
 

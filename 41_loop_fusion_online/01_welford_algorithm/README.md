@@ -39,7 +39,7 @@ permalink: /41_loop_fusion_online/01_welford_algorithm/
 
 ### Problem Statement
 
-Given a sequence of values $x\_1, x\_2, \ldots, x\_n$, compute:
+Given a sequence of values $x_1, x_2, \ldots, x_n$, compute:
 
 **Sample Mean:**
 
@@ -70,7 +70,7 @@ The challenge: Compute these in **one pass** with **O(1) space** while maintaini
 
 **Variance Update:**
 
-Define $M\_2(n) = \sum\_{i=1}^{n} (x\_i - \mu\_n)^2$, then:
+Define $M_2(n) = \sum_{i=1}^{n} (x_i - \mu_n)^2$, then:
 
 ```math
 M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n)
@@ -204,7 +204,7 @@ def welford_merge(stats1: WelfordVariance, stats2: WelfordVariance) -> WelfordVa
 
 **Goal:** We want to update variance online without storing all values.
 
-**Key Insight:** When we add a new value $x\_n$, the mean changes from $\mu\_{n-1}$ to $\mu\_n$. This means all previous deviations $(x\_i - \mu\_{n-1})$ need to be adjusted to $(x\_i - \mu\_n)$.
+**Key Insight:** When we add a new value $x_n$, the mean changes from $\mu_{n-1}$ to $\mu_n$. This means all previous deviations $(x_i - \mu_{n-1})$ need to be adjusted to $(x_i - \mu_n)$.
 
 **Strategy:**
 
@@ -252,13 +252,13 @@ The mean changed! We know:
 
 ```
 
-Let $\delta = x\_n - \mu\_{n-1}$ (how far new value is from old mean).
+Let $\delta = x_n - \mu_{n-1}$ (how far new value is from old mean).
 
-Then: $\mu\_n = \mu\_{n-1} + \frac{\delta}{n}$
+Then: $\mu_n = \mu_{n-1} + \frac{\delta}{n}$
 
 **Step 3: Adjust old deviations for new mean**
 
-For each old element $x\_i$ (where $i < n$):
+For each old element $x_i$ (where $i < n$):
 
 ```math
 x_i - \mu_n = (x_i - \mu_{n-1}) - (\mu_n - \mu_{n-1})
@@ -280,7 +280,7 @@ Expand using $(a - b)^2 = a^2 - 2ab + b^2$:
 
 ```
 
-**Key observation:** $\sum\_{i=1}^{n-1}(x\_i - \mu\_{n-1}) = 0$ (property of mean!)
+**Key observation:** $\sum_{i=1}^{n-1}(x_i - \mu_{n-1}) = 0$ (property of mean!)
 
 So:
 
@@ -315,7 +315,7 @@ Factor out $(n-1)\delta^2/n^2$:
 
 **Step 7: Simplify to final form**
 
-Note that $x\_n - \mu\_n = \delta - \frac{\delta}{n} = \frac{(n-1)\delta}{n}$
+Note that $x_n - \mu_n = \delta - \frac{\delta}{n} = \frac{(n-1)\delta}{n}$
 
 Therefore:
 
@@ -341,7 +341,7 @@ M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n) \quad \blacksquare
 
 2. **Cancellation:** The sum of deviations is always zero (definition of mean)
 
-3. **Two deltas:** We use both $\delta = x\_n - \mu\_{n-1}$ (before) and $x\_n - \mu\_n$ (after)
+3. **Two deltas:** We use both $\delta = x_n - \mu_{n-1}$ (before) and $x_n - \mu_n$ (after)
 
 4. **Factorization:** The algebra simplifies beautifully to a product of these two deltas
 

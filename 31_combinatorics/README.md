@@ -690,7 +690,7 @@ def pascal_dp(n, r):
 A: Ask: "Does order matter?" Order matters → Permutations. Order doesn't → Combinations.
 
 **Q: How to handle duplicates in permutations?**  
-A: Use formula: $\frac{n!}{n\_1! \times n\_2! \times \cdots \times n\_k!}$ where $n\_i$ is frequency of element $i$.
+A: Use formula: $\frac{n!}{n_1! \times n_2! \times \cdots \times n_k!}$ where $n_i$ is frequency of element $i$.
 
 **Q: Why is Unique Paths a combination problem?**  
 A: To reach (m,n), need m-1 downs and n-1 rights. Total: m+n-2 moves. Choose positions for downs: $\binom{m+n-2}{m-1}$.
@@ -699,7 +699,7 @@ A: To reach (m,n), need m-1 downs and n-1 rights. Total: m+n-2 moves. Choose pos
 A: Use modular arithmetic with Lucas theorem for prime modulus, or DP with Pascal's triangle.
 
 **Q: What's the connection between Catalan and BSTs?**  
-A: Number of BSTs with n nodes = $C\_n$ because each root splits into left/right subtrees: $C\_n = \sum\_{i=0}^{n-1} C\_i \times C\_{n-1-i}$.
+A: Number of BSTs with n nodes = $C_n$ because each root splits into left/right subtrees: $C_n = \sum_{i=0}^{n-1} C_i \times C_{n-1-i}$.
 
 ---
 

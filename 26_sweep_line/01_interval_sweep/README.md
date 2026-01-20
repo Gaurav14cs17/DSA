@@ -41,11 +41,11 @@ permalink: /26_sweep_line/01_interval_sweep/
 
 **Sweep Line** processes events at critical points (interval boundaries) in sorted order.
 
-**Key Idea:** Convert intervals $I = [s\_i, e\_i]$ to events $(t, \delta)$ where:
+**Key Idea:** Convert intervals $I = [s_i, e_i]$ to events $(t, \delta)$ where:
 
-- $(s\_i, +1)$ = interval starts
+- $(s_i, +1)$ = interval starts
 
-- $(e\_i, -1)$ = interval ends
+- $(e_i, -1)$ = interval ends
 
 **Active Count at time $t$:**
 
@@ -182,7 +182,7 @@ a < d \land c < b
 
 **Update:** $\Delta[l] += val, \Delta[r+1] -= val$
 
-**Reconstruct:** $A[i] = \sum\_{j=0}^{i} \Delta[j]$ (prefix sum)
+**Reconstruct:** $A[i] = \sum_{j=0}^{i} \Delta[j]$ (prefix sum)
 
 **Time:** $O(1)$ per update, $O(n)$ to reconstruct  
 **Space:** $O(n)$

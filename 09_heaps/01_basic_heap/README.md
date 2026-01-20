@@ -89,9 +89,9 @@ T(n) = \sum_{h=0}^{\log n} \frac{n}{2^{h+1}} \cdot O(h) = O(n)
 
 - ...
 
-- Total: $\sum\_{h=0}^{\log n} \frac{n}{2^{h+1}} \cdot h = n \sum\_{h=0}^{\infty} \frac{h}{2^h} = O(n)$
+- Total: $\sum_{h=0}^{\log n} \frac{n}{2^{h+1}} \cdot h = n \sum_{h=0}^{\infty} \frac{h}{2^h} = O(n)$
 
-The series $\sum\_{h=0}^{\infty} \frac{h}{2^h} = 2$, so $T(n) = O(n)$. ∎
+The series $\sum_{h=0}^{\infty} \frac{h}{2^h} = 2$, so $T(n) = O(n)$. ∎
 
 ---
 

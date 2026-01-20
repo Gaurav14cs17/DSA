@@ -43,7 +43,7 @@ permalink: /14_sorting/
 
 - Each comparison gives 1 bit of information
 
-- Need $\log\_2(n!) = \Omega(n \log n)$ bits
+- Need $\log_2(n!) = \Omega(n \log n)$ bits
 
 ---
 

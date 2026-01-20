@@ -160,7 +160,7 @@ The LCM must be $d \cdot x \cdot y$ (smallest number divisible by both):
 
 ### 5️⃣ GCD and Prime Factorization
 
-**Theorem:** If $a = p\_1^{a\_1} \cdot p\_2^{a\_2} \cdots p\_k^{a\_k}$ and $b = p\_1^{b\_1} \cdot p\_2^{b\_2} \cdots p\_k^{b\_k}$, then:
+**Theorem:** If $a = p_1^{a_1} \cdot p_2^{a_2} \cdots p_k^{a_k}$ and $b = p_1^{b_1} \cdot p_2^{b_2} \cdots p_k^{b_k}$, then:
 
 ```
 \begin{align}

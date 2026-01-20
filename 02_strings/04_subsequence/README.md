@@ -33,7 +33,7 @@ permalink: /02_strings/04_subsequence/
 
 **Definition:** $T$ is a subsequence of $S$ if $T$ can be obtained by deleting zero or more characters from $S$ without changing the order.
 
-**Formal:** $T = S[i\_1]S[i\_2]\ldots S[i\_k]$ where $0 \leq i\_1 < i\_2 < \ldots < i\_k < n$
+**Formal:** $T = S[i_1]S[i_2]\ldots S[i_k]$ where $0 \leq i_1 < i_2 < \ldots < i_k < n$
 
 **Count of all subsequences:**
 

@@ -51,9 +51,9 @@ C(m, n) \equiv \prod_{i=0}^{k} C(m_i, n_i) \pmod{p}
 
 ```
 
-where $m = \sum m\_i p^i$ and $n = \sum n\_i p^i$ are base-p representations.
+where $m = \sum m_i p^i$ and $n = \sum n_i p^i$ are base-p representations.
 
-**Key:** If any $n\_i > m\_i$, then $C(m, n) \equiv 0 \pmod{p}$
+**Key:** If any $n_i > m_i$, then $C(m, n) \equiv 0 \pmod{p}$
 
 ---
 

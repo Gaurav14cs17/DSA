@@ -60,7 +60,7 @@ T(n) = 2T(n/2) + O(n) = O(n \log n)
 Count pairs $(i, j)$ where $i < j$ but $arr[i] > arr[j]$:
 
 ```math
-\text{inversions} = \text{left\_inv} + \text{right\_inv} + \text{split\_inv}
+\text{inversions} = \text{left_inv} + \text{right_inv} + \text{split_inv}
 
 ```
 

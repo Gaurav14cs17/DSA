@@ -190,7 +190,7 @@ When resizing from size $k$ to $2k$:
 **Solution 1: Store (value, min) pairs**
 
 ```math
-\boxed{min\_at[i] = \min(value[i], min\_at[i-1])}
+\boxed{min_at[i] = \min(value[i], min_at[i-1])}
 
 ```
 
@@ -198,10 +198,10 @@ When resizing from size $k$ to $2k$:
 
 **Solution 2: Store differences**
 
-Store $difference = value - current\_min$ instead of value.
+Store $difference = value - current_min$ instead of value.
 
 ```math
-\boxed{stored[i] = value[i] - min\_at[i]}
+\boxed{stored[i] = value[i] - min_at[i]}
 
 ```
 
@@ -213,23 +213,23 @@ When $stored[i] < 0$: new minimum found!
 
 ### 6️⃣ Two Stacks for Queue - Amortized Analysis
 
-**Setup:** Two stacks $S\_1$ (input) and $S\_2$ (output)
+**Setup:** Two stacks $S_1$ (input) and $S_2$ (output)
 
 **Operations:**
 
-- enqueue: push to $S\_1$
+- enqueue: push to $S_1$
 
-- dequeue: pop from $S\_2$ (transfer from $S\_1$ if $S\_2$ empty)
+- dequeue: pop from $S_2$ (transfer from $S_1$ if $S_2$ empty)
 
 **Amortized Cost Proof:**
 
 Each element:
 
-1. Pushed to $S\_1$ once: 1 operation
+1. Pushed to $S_1$ once: 1 operation
 
-2. Moved to $S\_2$ once: 1 operation  
+2. Moved to $S_2$ once: 1 operation  
 
-3. Popped from $S\_2$ once: 1 operation
+3. Popped from $S_2$ once: 1 operation
 
 Total: 3 operations per element
 

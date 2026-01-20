@@ -142,7 +142,7 @@ Stores $|V| \times |V|$ matrix regardless of $|E|$
 
 ### 5️⃣ Complete Graph Mathematics
 
-**Complete Graph $K\_n$:**
+**Complete Graph $K_n$:**
 
 Every pair of vertices connected.
 
@@ -160,21 +160,21 @@ Every pair of vertices connected.
 
 **Examples:**
 
-- $K\_3$ (triangle): $\frac{3 \times 2}{2} = 3$ edges
+- $K_3$ (triangle): $\frac{3 \times 2}{2} = 3$ edges
 
-- $K\_4$: $\frac{4 \times 3}{2} = 6$ edges
+- $K_4$: $\frac{4 \times 3}{2} = 6$ edges
 
-- $K\_5$: $\frac{5 \times 4}{2} = 10$ edges
+- $K_5$: $\frac{5 \times 4}{2} = 10$ edges
 
 ---
 
 ### 6️⃣ Path and Connectivity
 
-**Path:** Sequence of vertices $v\_1, v\_2, \ldots, v\_k$ where $(v\_i, v\_{i+1}) \in E$
+**Path:** Sequence of vertices $v_1, v_2, \ldots, v_k$ where $(v_i, v_{i+1}) \in E$
 
 **Simple Path:** No repeated vertices
 
-**Cycle:** Path where $v\_1 = v\_k$
+**Cycle:** Path where $v_1 = v_k$
 
 **Connected Graph:** Path exists between every pair of vertices
 

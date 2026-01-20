@@ -90,7 +90,7 @@ Where $M[i]$ = maximum subarray sum ending at index $i$.
 
 **Optimal Substructure Proof:**
 
-Let $S\_{i}$ be the maximum sum of subarray ending at index $i$.
+Let $S_{i}$ be the maximum sum of subarray ending at index $i$.
 
 **Case 1:** Subarray contains only $A[i]$
 
@@ -106,7 +106,7 @@ S_i = S_{i-1} + A[i]
 
 ```
 
-**Decision:** $S\_i = \max(\text{Case 1}, \text{Case 2}) = \max(A[i], S\_{i-1} + A[i])$
+**Decision:** $S_i = \max(\text{Case 1}, \text{Case 2}) = \max(A[i], S_{i-1} + A[i])$
 
 **When to start fresh?**
 
@@ -181,8 +181,8 @@ Answer: max_so_far = 6  (subarray [4, -1, 2, 1])
 
 ```math
 \begin{aligned}
-\text{max\_prod}[i] &= \text{Maximum product ending at } i \\
-\text{min\_prod}[i] &= \text{Minimum product ending at } i
+\text{max_prod}[i] &= \text{Maximum product ending at } i \\
+\text{min_prod}[i] &= \text{Minimum product ending at } i
 \end{aligned}
 
 ```
@@ -190,16 +190,16 @@ Answer: max_so_far = 6  (subarray [4, -1, 2, 1])
 **Recurrence:**
 
 ```math
-\boxed{\text{max\_prod}[i] = \max(A[i], \; A[i] \times \text{max\_prod}[i-1], \; A[i] \times \text{min\_prod}[i-1])}
-\boxed{\text{min\_prod}[i] = \min(A[i], \; A[i] \times \text{max\_prod}[i-1], \; A[i] \times \text{min\_prod}[i-1])}
+\boxed{\text{max_prod}[i] = \max(A[i], \; A[i] \times \text{max_prod}[i-1], \; A[i] \times \text{min_prod}[i-1])}
+\boxed{\text{min_prod}[i] = \min(A[i], \; A[i] \times \text{max_prod}[i-1], \; A[i] \times \text{min_prod}[i-1])}
 
 ```
 
 **Why track minimum?**
 
-- If $A[i] < 0$ and $\text{min\_prod}[i-1] < 0$
+- If $A[i] < 0$ and $\text{min_prod}[i-1] < 0$
 
-- Then $A[i] \times \text{min\_prod}[i-1] > 0$ (potentially maximum!)
+- Then $A[i] \times \text{min_prod}[i-1] > 0$ (potentially maximum!)
 
 ---
 

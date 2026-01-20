@@ -46,11 +46,11 @@ permalink: /30_number_theory/06_chinese_remainder/02_general_crt/
 
 ### When Moduli Aren't Coprime
 
-For $x \equiv a\_1 \pmod{m\_1}$ and $x \equiv a\_2 \pmod{m\_2}$:
+For $x \equiv a_1 \pmod{m_1}$ and $x \equiv a_2 \pmod{m_2}$:
 
-**Solution exists ⟺** $a\_1 \equiv a\_2 \pmod{\gcd(m\_1, m\_2)}$
+**Solution exists ⟺** $a_1 \equiv a_2 \pmod{\gcd(m_1, m_2)}$
 
-**Solution:** Unique modulo $\text{lcm}(m\_1, m\_2)$
+**Solution:** Unique modulo $\text{lcm}(m_1, m_2)$
 
 ---
 

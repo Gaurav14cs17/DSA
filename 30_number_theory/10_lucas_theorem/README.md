@@ -43,13 +43,13 @@ permalink: /30_number_theory/10_lucas_theorem/
 
 ```
 
-where $m = \sum m\_i p^i$ and $n = \sum n\_i p^i$ are base-p representations.
+where $m = \sum m_i p^i$ and $n = \sum n_i p^i$ are base-p representations.
 
 ---
 
 ### 2️⃣ Special Cases
 
-**If $n\_i > m\_i$ for any i:** $\binom{m}{n} \equiv 0 \pmod{p}$
+**If $n_i > m_i$ for any i:** $\binom{m}{n} \equiv 0 \pmod{p}$
 
 **Small p:** For $p = 2$, the binomial is odd iff n is a "submask" of m in binary.
 

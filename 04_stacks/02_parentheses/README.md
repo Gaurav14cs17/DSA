@@ -122,7 +122,7 @@ Where:
 **Problem:** Minimum insertions to make string valid.
 
 ```math
-\boxed{\text{additions} = \text{unmatched\_open} + \text{unmatched\_close}}
+\boxed{\text{additions} = \text{unmatched_open} + \text{unmatched_close}}
 
 ```
 
@@ -188,9 +188,9 @@ C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
 
 | n | 0 | 1 | 2 | 3 | 4 | 5 |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| $C\_n$ | 1 | 1 | 2 | 5 | 14 | 42 |
+| $C_n$ | 1 | 1 | 2 | 5 | 14 | 42 |
 
-**Examples for $n=3$ ($C\_3 = 5$):**
+**Examples for $n=3$ ($C_3 = 5$):**
 
 1. `((()))`
 2. `(()())`

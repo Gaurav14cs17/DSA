@@ -46,7 +46,7 @@ permalink: /30_number_theory/02_primes/05_prime_applications/
 
 ### 2️⃣ Prime Gaps
 
-**Definition:** Gap between consecutive primes $p\_{n+1} - p\_n$.
+**Definition:** Gap between consecutive primes $p_{n+1} - p_n$.
 
 **Properties:**
 
