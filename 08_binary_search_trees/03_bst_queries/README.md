@@ -489,6 +489,7 @@ def closestValue(root: TreeNode, target: float) -> int:
 ## 💡 Pro Tips & Common Mistakes
 
 ### ✅ **Do's:**
+
 - ✓ For k-th smallest: stop early at k, don't traverse all
 
 - ✓ LCA in BST: O(h) using property, not O(n) like regular tree
@@ -500,6 +501,7 @@ def closestValue(root: TreeNode, target: float) -> int:
 - ✓ Range queries: prune branches outside range
 
 ### ❌ **Don'ts:**
+
 - ✗ Don't traverse entire tree for k-th smallest
 
 - ✗ Don't use regular tree LCA algorithm (slower!)
@@ -571,6 +573,7 @@ def closestValue(root: TreeNode, target: float) -> int:
 ## 🎯 Practice Roadmap
 
 ### **Phase 1: Basic Queries (Week 1)**
+
 - [ ] Understand inorder = sorted
 
 - [ ] Implement k-th smallest
@@ -582,6 +585,7 @@ def closestValue(root: TreeNode, target: float) -> int:
 - [ ] Solve: #530 Min Absolute Difference
 
 ### **Phase 2: Navigation (Week 2)**
+
 - [ ] Understand successor/predecessor
 
 - [ ] Implement LCA in BST
@@ -595,6 +599,7 @@ def closestValue(root: TreeNode, target: float) -> int:
 - [ ] Solve: #938 Range Sum of BST
 
 ### **Phase 3: Advanced Queries (Week 3)**
+
 - [ ] Implement BST Iterator
 
 - [ ] Convert to greater sum tree
@@ -608,6 +613,7 @@ def closestValue(root: TreeNode, target: float) -> int:
 - [ ] Solve: #653 Two Sum IV
 
 ### **Phase 4: Mastery (Week 4)**
+
 - [ ] Closest value in BST
 
 - [ ] Count nodes in range

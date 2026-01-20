@@ -407,6 +407,7 @@ def trimBST(root: TreeNode, low: int, high: int) -> TreeNode:
 ## 💡 Pro Tips & Common Mistakes
 
 ### ✅ **Do's:**
+
 - ✓ Use iterative search for O(1) space
 
 - ✓ Handle null pointers before accessing
@@ -418,6 +419,7 @@ def trimBST(root: TreeNode, low: int, high: int) -> TreeNode:
 - ✓ Use BST property to optimize pruning
 
 ### ❌ **Don'ts:**
+
 - ✗ Don't use BFS/DFS when BST property available
 
 - ✗ Don't forget to return modified root in insertion/deletion
@@ -486,6 +488,7 @@ def trimBST(root: TreeNode, low: int, high: int) -> TreeNode:
 ## 🎯 Practice Roadmap
 
 ### **Phase 1: Foundations (Week 1)**
+
 - [ ] Implement search (iterative & recursive)
 
 - [ ] Implement insert (iterative & recursive)
@@ -495,6 +498,7 @@ def trimBST(root: TreeNode, low: int, high: int) -> TreeNode:
 - [ ] Solve: #700 Search in BST
 
 ### **Phase 2: Deletion (Week 2)**
+
 - [ ] Implement all 3 deletion cases
 
 - [ ] Understand successor/predecessor
@@ -504,6 +508,7 @@ def trimBST(root: TreeNode, low: int, high: int) -> TreeNode:
 - [ ] Solve: #701 Insert into BST
 
 ### **Phase 3: Advanced Operations (Week 3)**
+
 - [ ] Implement trimBST
 
 - [ ] Range-based operations

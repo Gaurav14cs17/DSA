@@ -449,6 +449,7 @@ def sortedArrayToBST(nums: list[int]) -> TreeNode:
 ## 💡 Pro Tips & Common Mistakes
 
 ### ✅ **Do's:**
+
 - ✓ Use min/max bounds, not just parent value
 
 - ✓ Inorder method: track previous value
@@ -460,6 +461,7 @@ def sortedArrayToBST(nums: list[int]) -> TreeNode:
 - ✓ Consider Morris traversal for O(1) space
 
 ### ❌ **Don'ts:**
+
 - ✗ Don't only check immediate children (must check entire subtree)
 
 - ✗ Don't forget strict inequality: node.val must be strictly between bounds
@@ -528,6 +530,7 @@ def sortedArrayToBST(nums: list[int]) -> TreeNode:
 ## 🎯 Practice Roadmap
 
 ### **Phase 1: Basic Validation (Week 1)**
+
 - [ ] Understand incorrect validation (only checking children)
 
 - [ ] Implement range-based validation
@@ -537,6 +540,7 @@ def sortedArrayToBST(nums: list[int]) -> TreeNode:
 - [ ] Solve: #98 Validate BST
 
 ### **Phase 2: Recovery (Week 2)**
+
 - [ ] Understand inorder violations
 
 - [ ] Handle adjacent swaps
@@ -548,6 +552,7 @@ def sortedArrayToBST(nums: list[int]) -> TreeNode:
 - [ ] Practice Morris traversal for O(1) space
 
 ### **Phase 3: Construction (Week 3)**
+
 - [ ] Sorted array to balanced BST
 
 - [ ] Sorted linked list to BST

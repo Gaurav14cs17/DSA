@@ -449,6 +449,7 @@ def lastStoneWeight(stones: list[int]) -> int:
 ## 💡 Pro Tips & Common Mistakes
 
 ### ✅ **Do's:**
+
 - ✓ Know build heap is O(n), not O(n log n)!
 
 - ✓ Use heapify() for bulk insertion
@@ -460,6 +461,7 @@ def lastStoneWeight(stones: list[int]) -> int:
 - ✓ Heap is O(log n) for insert/delete, BST can be O(n)
 
 ### ❌ **Don'ts:**
+
 - ✗ Don't insert n elements one by one when you can heapify
 
 - ✗ Don't confuse heap with BST (heap is NOT sorted!)
@@ -530,6 +532,7 @@ def lastStoneWeight(stones: list[int]) -> int:
 ## 🎯 Practice Roadmap
 
 ### **Phase 1: Foundations (Week 1)**
+
 - [ ] Implement min-heap from scratch
 
 - [ ] Implement max-heap with negation
@@ -539,6 +542,7 @@ def lastStoneWeight(stones: list[int]) -> int:
 - [ ] Solve: #1046 Last Stone Weight
 
 ### **Phase 2: Build & Heapify (Week 2)**
+
 - [ ] Understand O(n) build heap proof
 
 - [ ] Implement heapify from array
@@ -548,6 +552,7 @@ def lastStoneWeight(stones: list[int]) -> int:
 - [ ] Solve: #703 Kth Largest in Stream
 
 ### **Phase 3: Applications (Week 3)**
+
 - [ ] Huffman coding pattern
 
 - [ ] Priority scheduling
