@@ -1,24 +1,7 @@
 title: "🔢 Data Structures & Algorithms"
-description: "Master DSA for Coding Interviews • By Gaurav Goswami"
-author: "Gaurav Goswami"
-url: "https://gaurav14cs17.github.io"
-baseurl: "/DSA"
-
-markdown: kramdown
-highlighter: rouge
-
-kramdown:
-  input: GFM
-  hard_wrap: false
-
+description: "By Gaurav Goswami"
+remote_theme: pages-themes/hacker@v0.2.0
 plugins:
+  - jekyll-remote-theme
   - jekyll-relative-links
-  - jekyll-seo-tag
-
-relative_links:
-  enabled: true
-  collections: true
-
-include:
-  - README.md
-  - _layouts
+show_downloads: false
