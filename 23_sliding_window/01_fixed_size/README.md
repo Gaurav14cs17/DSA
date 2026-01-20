@@ -103,14 +103,14 @@ T(n) = (n - k + 1) \times k = O(nk)
 
 #### Sliding Window
 
-Initialize first window: \(O(k)\)
-Slide $n - k$ times, each update: \(O(1)\)
+Initialize first window: $O(k)$
+Slide $n - k$ times, each update: $O(1)$
 
 ```math
 T(n) = k + (n - k) \times 1 = O(n)
 ```
 
-**Speedup**: \(O(k)\) times faster!
+**Speedup**: $O(k)$ times faster!
 
 ---
 
@@ -139,7 +139,7 @@ Each element:
 - Enters deque: exactly once
 - Exits deque: at most once
 
-Total operations: \(2n = O(n)\) ∎
+Total operations: $2n = O(n)$ ∎
 
 ---
 

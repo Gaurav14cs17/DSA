@@ -263,9 +263,9 @@ for mask in range(1 << n):
 ```
 
 #### Time Complexity
-- States: \(O(2^n)\)
-- Transitions per state: \(O(n)\)
-- Total: \(O(n \cdot 2^n)\)
+- States: $O(2^n)$
+- Transitions per state: $O(n)$
+- Total: $O(n \cdot 2^n)$
 
 ---
 

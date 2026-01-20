@@ -83,7 +83,7 @@ permalink: /23_sliding_window/02_variable_size/
 Let $E_i$ = event "element $i$ enters window"  
 Let $X_i$ = event "element $i$ exits window"
 
-**Claim**: \(\sum_{i=0}^{n-1} (E_i + X_i) \leq 2n\)
+**Claim**: $\sum_{i=0}^{n-1} (E_i + X_i) \leq 2n$
 
 **Proof**:
 - Each element enters exactly once (when `right` pointer reaches it)
@@ -91,7 +91,7 @@ Let $X_i$ = event "element $i$ exits window"
 - `left` pointer only moves right, never backwards
 - Therefore: $\sum E_i = n$ and $\sum X_i \leq n$
 
-Total operations: \(\leq 2n = O(n)\) ∎
+Total operations: $\leq 2n = O(n)$ ∎
 
 ---
 

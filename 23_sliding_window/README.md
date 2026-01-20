@@ -146,13 +146,13 @@ Let's count pointer movements:
 - `left` pointer: only moves right, never left
   - Can move at most $n$ times total (can't exceed right)
 
-Total pointer movements: \(n + n = 2n = O(n)\)
+Total pointer movements: $n + n = 2n = O(n)$
 
 Each element:
 - Added to window: exactly once (when `right` reaches it)
 - Removed from window: at most once (when `left` passes it)
 
-**Amortized cost**: \(O(1)\) per element ∎
+**Amortized cost**: $O(1)$ per element ∎
 
 ---
 
@@ -201,8 +201,8 @@ while window_is_VALID:
 #### 🔍 Proof
 
 Let:
-- \(f(k)\) = count of subarrays with at most $k$ distinct elements
-- \(g(k)\) = count of subarrays with exactly $k$ distinct elements
+- $f(k)$ = count of subarrays with at most $k$ distinct elements
+- $g(k)$ = count of subarrays with exactly $k$ distinct elements
 
 Then:
 

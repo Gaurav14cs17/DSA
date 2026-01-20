@@ -96,13 +96,13 @@ while left < right:
 
 #### 🔍 Proof of Correctness
 
-**Theorem**: If a valid pair \((i, j)\) with $i < j$ exists, the algorithm finds it.
+**Theorem**: If a valid pair $(i, j)$ with $i < j$ exists, the algorithm finds it.
 
 **Proof**:
 
 We prove by induction on the number of iterations.
 
-**Base case**: Initially, if solution \((i, j)\) exists, then $0 \leq i < j \leq n-1$, so it's in $[left, right]$.
+**Base case**: Initially, if solution $(i, j)$ exists, then $0 \leq i < j \leq n-1$, so it's in $[left, right]$.
 
 **Inductive step**: Assume solution is in $[left, right]$. We show it remains after one iteration.
 
@@ -187,11 +187,11 @@ But:
 h[l] \times (r - l) = \min(h[l], h[r]) \times (r - l) = \text{Area}(l, r)
 ```
 
-So \(\text{Area}(l, k) < \text{Area}(l, r)\).
+So $\text{Area}(l, k) < \text{Area}(l, r)$.
 
-Therefore, no container involving $l$ with a position $< r$ can beat \((l, r)\).
+Therefore, no container involving $l$ with a position $< r$ can beat $(l, r)$.
 
-We've already recorded \(\text{Area}(l, r)\), so we can safely discard $l$. ∎
+We've already recorded $\text{Area}(l, r)$, so we can safely discard $l$. ∎
 
 #### 📊 Visual Proof
 
@@ -236,8 +236,8 @@ Why moving L was correct:
 **Proof**:
 
 We maintain:
-- \(leftMax = \max(h[0], h[1], ..., h[left])\)
-- \(rightMax = \max(h[right], h[right+1], ..., h[n-1])\)
+- $leftMax = \max(h[0], h[1], ..., h[left])$
+- $rightMax = \max(h[right], h[right+1], ..., h[n-1])$
 
 Since $leftMax < rightMax$, and $rightMax$ only considers positions $\geq right$:
 
@@ -288,10 +288,10 @@ Total water = 6 units
 
 Find $a + b + c = 0$ where $a \leq b \leq c$.
 
-1. Sort the array: \(O(n \log n)\)
+1. Sort the array: $O(n \log n)$
 2. For each $a = nums[i]$:
-   - Find $b + c = -a$ using two pointers: \(O(n)\)
-3. Total: \(O(n^2)\)
+   - Find $b + c = -a$ using two pointers: $O(n)$
+3. Total: $O(n^2)$
 
 #### Handling Duplicates
 
@@ -313,11 +313,11 @@ For $k$-Sum problem:
 T(k, n) = O(n^{k-1})
 ```
 
-Reduction: Fix one element, solve \((k-1)\)-Sum on remaining.
+Reduction: Fix one element, solve $(k-1)$-Sum on remaining.
 
-- 2Sum: \(O(n)\)
-- 3Sum: \(O(n^2)\)
-- 4Sum: \(O(n^3)\)
+- 2Sum: $O(n)$
+- 3Sum: $O(n^2)$
+- 4Sum: $O(n^3)$
 
 ---
 

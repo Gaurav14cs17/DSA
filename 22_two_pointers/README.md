@@ -99,7 +99,7 @@ permalink: /22_two_pointers/
 
 #### 🔍 Proof of Correctness
 
-**Claim**: If a valid pair \((i, j)\) exists where $i < j$, the algorithm will find it.
+**Claim**: If a valid pair $(i, j)$ exists where $i < j$, the algorithm will find it.
 
 **Proof by invariant**: At each step, if the solution exists in range $[left, right]$, it remains in the new range.
 
@@ -142,7 +142,7 @@ For any $k < r$:
 \text{Area}(l, k) \leq h[l] \times (k - l) < h[l] \times (r - l) = \text{Area}(l, r)
 ```
 
-So \((l, r)\) is already the **best container involving position $l$**!
+So $(l, r)$ is already the **best container involving position $l$**!
 
 We can safely discard $l$ and move to $l+1$. ∎
 
@@ -188,7 +188,7 @@ They meet at the cycle start! ∎
 ### 4️⃣ Trapping Rain Water — The Insight
 
 {: .highlight }
-> Water at position $i$ = \(\min(\text{maxLeft}[i], \text{maxRight}[i]) - h[i]\)
+> Water at position $i$ = $\min(\text{maxLeft}[i], \text{maxRight}[i]) - h[i]$
 
 #### Two-Pointer Optimization
 

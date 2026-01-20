@@ -72,7 +72,7 @@ permalink: /21_bit_manipulation/02_xor_tricks/
 | **Self-Inverse** | $a \oplus a = 0$ | Same bits → 0 | Cancel duplicates |
 | **Identity** | $a \oplus 0 = a$ | 0 changes nothing | Initialize result |
 | **Commutative** | $a \oplus b = b \oplus a$ | Order doesn't matter | Reorder freely |
-| **Associative** | \((a \oplus b) \oplus c = a \oplus (b \oplus c)\) | Grouping doesn't matter | Group freely |
+| **Associative** | $(a \oplus b) \oplus c = a \oplus (b \oplus c)$ | Grouping doesn't matter | Group freely |
 | **Cancellation** | $a \oplus b \oplus b = a$ | b cancels itself | Recover original |
 
 #### 🔍 Deep Dive: Why $a \oplus a = 0$?
@@ -100,7 +100,7 @@ Given array $[a_1, a_2, ..., a_n]$ where every element appears exactly twice exc
 
 #### 🔍 Proof
 
-Let pairs be \(\{(p_1, p_1), (p_2, p_2), ..., (p_k, p_k), x\}\):
+Let pairs be $\{(p_1, p_1), (p_2, p_2), ..., (p_k, p_k), x\}$:
 
 ```math
 \bigoplus_{i=1}^{n} a_i = (p_1 \oplus p_1) \oplus (p_2 \oplus p_2) \oplus ... \oplus (p_k \oplus p_k) \oplus x
@@ -144,14 +144,14 @@ Every number except the missing one appears twice (once as index, once as value)
 #### The Algorithm
 
 1. **XOR all elements** → Get $a \oplus b$
-2. **Find any differing bit** → \(\text{diff} = \text{xor} \land (-\text{xor})\)
+2. **Find any differing bit** → $\text{diff} = \text{xor} \land (-\text{xor})$
 3. **Partition by this bit** → Separate $a$ and $b$
 
 #### 🔍 Mathematical Proof
 
 **Step 1**: Since $a \neq b$, there exists some bit position where they differ.
 
-**Step 2**: \(\text{xor} \land (-\text{xor})\) isolates the rightmost set bit in $a \oplus b$.
+**Step 2**: $\text{xor} \land (-\text{xor})$ isolates the rightmost set bit in $a \oplus b$.
 
 This bit is 1 in exactly one of $a, b$ (say $a$) and 0 in the other (say $b$).
 
@@ -234,9 +234,9 @@ For each number, traverse a binary trie:
 
 #### Time Complexity
 
-- Build trie: \(O(n \times 32)\)
-- Query each number: \(O(32)\)
-- Total: \(O(n)\)
+- Build trie: $O(n \times 32)$
+- Query each number: $O(32)$
+- Total: $O(n)$
 
 ---
 

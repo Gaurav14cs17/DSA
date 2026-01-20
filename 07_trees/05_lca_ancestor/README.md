@@ -444,7 +444,7 @@ LCA Problem
 
 > **📊 Binary Lifting:** Precompute 2^j ancestors. Jump using binary representation of k!
 
-> **🌊 Distance Formula:** \( dist(p,q) = depth(p) + depth(q) - 2 \times depth(LCA) \)
+> **🌊 Distance Formula:** $dist(p,q) = depth(p) + depth(q) - 2 \times depth(LCA)$
 
 ---
 

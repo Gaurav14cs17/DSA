@@ -66,7 +66,7 @@ permalink: /22_two_pointers/02_same_direction/
 
 #### Invariant
 
-At any point, \([0, slow)\) contains the valid result built so far.
+At any point, $[0, slow)$ contains the valid result built so far.
 
 ```
 [Valid Result | To Process...]
@@ -104,21 +104,21 @@ for fast in range(1, n):
 
 #### 🔍 Proof of Correctness
 
-**Loop Invariant**: \([0, slow)\) contains all unique elements seen so far, in sorted order.
+**Loop Invariant**: $[0, slow)$ contains all unique elements seen so far, in sorted order.
 
 **Proof by induction**:
 
-**Base case** ($slow = 1$): \([0, 1)\) contains $arr[0]$, which is trivially unique.
+**Base case** ($slow = 1$): $[0, 1)$ contains $arr[0]$, which is trivially unique.
 
-**Inductive step**: Assume \([0, slow)\) contains $k$ unique elements.
+**Inductive step**: Assume $[0, slow)$ contains $k$ unique elements.
 
 When $fast$ points to element $x$:
 - If $x = arr[slow-1]$: duplicate, skip (invariant preserved)
 - If $x \neq arr[slow-1]$: 
   - Since array is sorted and $x > arr[slow-1]$
-  - $x$ is different from all elements in \([0, slow)\)
+  - $x$ is different from all elements in $[0, slow)$
   - Write $x$ at position $slow$, increment $slow$
-  - Now \([0, slow)\) has $k+1$ unique elements ∎
+  - Now $[0, slow)$ has $k+1$ unique elements ∎
 
 #### 📊 Visual Example
 
@@ -321,7 +321,7 @@ while p2 >= 0:
 **Claim**: No unprocessed element is overwritten.
 
 At any point:
-- We've filled positions \((p, m+n)\) with largest elements
+- We've filled positions $(p, m+n)$ with largest elements
 - Remaining positions $[0, p]$ need $p1+1$ elements from nums1 and $p2+1$ from nums2
 - $p = p1 + p2 + 1$ (exactly enough space!)
 
@@ -348,7 +348,7 @@ return i == len(s)
 
 #### Time Complexity
 
-\(O(|t|)\) — single pass through $t$.
+$O(|t|)$ — single pass through $t$.
 
 ---
 

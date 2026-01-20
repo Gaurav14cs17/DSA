@@ -75,7 +75,7 @@ while n ≠ 0:
 return count
 ```
 
-**Time Complexity**: \( O(k) \) where $k$ = number of set bits (not 32!)
+**Time Complexity**: $O(k)$ where $k$ = number of set bits (not 32!)
 
 #### 🔍 Mathematical Proof
 
@@ -132,7 +132,7 @@ n \text{ is power of 2} \Leftrightarrow n > 0 \land n \land (n-1) = 0
 **If $n = 2^k$**:
 - $n$ has only one bit set (at position $k$)
 - $n - 1$ has all bits set below position $k$
-- \( n \land (n-1) = 0 \) (no overlap)
+- $n \land (n-1) = 0$ (no overlap)
 
 ```
 n = 16:     1 0 0 0 0
@@ -142,7 +142,7 @@ n & (n-1):  0 0 0 0 0 = 0 ✓
 
 **If $n \neq 2^k$**:
 - $n$ has at least two bits set
-- \( n \land (n-1) \) clears only the lowest bit
+- $n \land (n-1)$ clears only the lowest bit
 - Result is non-zero
 
 ```
@@ -180,7 +180,7 @@ Powers of 4:
 n \text{ is power of 4} \Leftrightarrow n > 0 \land n \land (n-1) = 0 \land (n - 1) \mod 3 = 0
 ```
 
-This works because \( 4^k - 1 = (4-1)(4^{k-1} + 4^{k-2} + ... + 1) \) is always divisible by 3.
+This works because $4^k - 1 = (4-1)(4^{k-1} + 4^{k-2} + ... + 1)$ is always divisible by 3.
 
 ---
 
@@ -259,7 +259,7 @@ n = ((n & 0xAAAAAAAA) >> 1)  | ((n & 0x55555555) << 1)   # Swap adjacent bits
 #### The Algorithm
 
 1. **XOR** gives sum without carry: $a \oplus b$
-2. **AND + shift** gives carry: \( (a \land b) << 1 \)
+2. **AND + shift** gives carry: $(a \land b) << 1$
 3. Repeat until no carry
 
 #### 📊 Visual Example: 5 + 7 = 12
@@ -299,7 +299,7 @@ if a > MAX_INT:
 
 ### 7️⃣ Bitwise AND of Range
 
-Find \( \text{left} \land (\text{left}+1) \land ... \land \text{right} \)
+Find $\text{left} \land (\text{left}+1) \land ... \land \text{right}$
 
 #### Key Insight
 
@@ -617,7 +617,7 @@ def rangeBitwiseAndAlt(left: int, right: int) -> int:
 ### Q: "How would you extend power of 4 to power of k?"
 
 **A**: For power of $k$:
-- If $k$ is power of 2: Check if bit position is multiple of \( \log_2(k) \)
+- If $k$ is power of 2: Check if bit position is multiple of $\log_2(k)$
 - Otherwise: Use $\log$ or repeated division
 
 ---

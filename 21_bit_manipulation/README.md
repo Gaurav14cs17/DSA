@@ -104,12 +104,12 @@ Bit:       1   0   1   0   1   0
 
 | Operation | Code | Mathematical Formula | Example |
 |-----------|------|---------------------|---------|
-| Get bit at position i | `(n >> i) & 1` | \((n \div 2^i) \mod 2\) | `(5 >> 1) & 1 = 0` |
+| Get bit at position i | `(n >> i) & 1` | $(n \div 2^i) \mod 2$ | `(5 >> 1) & 1 = 0` |
 | Set bit at position i | `n \| (1 << i)` | $n \lor 2^i$ | `5 \| (1 << 1) = 7` |
 | Clear bit at position i | `n & ~(1 << i)` | $n \land \lnot 2^i$ | `7 & ~(1 << 1) = 5` |
 | Toggle bit at position i | `n ^ (1 << i)` | $n \oplus 2^i$ | `5 ^ (1 << 1) = 7` |
 | Clear lowest set bit | `n & (n - 1)` | Removes rightmost 1 | `12 & 11 = 8` |
-| Isolate lowest set bit | `n & (-n)` | \(n \land (\sim n + 1)\) | `12 & (-12) = 4` |
+| Isolate lowest set bit | `n & (-n)` | $n \land (\sim n + 1)$ | `12 & (-12) = 4` |
 | Check power of 2 | `n & (n - 1) == 0` | Only one bit set | `8 & 7 = 0 → True` |
 | Count set bits | Brian Kernighan | Loop: `n &= (n-1)` | See below |
 
@@ -155,7 +155,7 @@ n&(n-1) = 1 0 0 0   (8)
 | Self-Inverse | $a \oplus a = 0$ | Cancel duplicates |
 | Identity | $a \oplus 0 = a$ | Initialize result |
 | Commutative | $a \oplus b = b \oplus a$ | Reorder freely |
-| Associative | \((a \oplus b) \oplus c = a \oplus (b \oplus c)\) | Group freely |
+| Associative | $(a \oplus b) \oplus c = a \oplus (b \oplus c)$ | Group freely |
 | Swap | $a \oplus b \oplus b = a$ | Swap without temp |
 
 #### 🎯 Key Insight: Finding Unique Elements
