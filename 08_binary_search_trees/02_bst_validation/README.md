@@ -119,7 +119,9 @@ return node.left.val < node.val < node.right.val  # WRONG!
 
 **✓ Correct Approach:**
 - Every node in left subtree < node.val
+
 - Every node in right subtree > node.val
+
 - Check **entire** subtree with bounds
 
 ---
@@ -448,16 +450,24 @@ def sortedArrayToBST(nums: list[int]) -> TreeNode:
 
 ### ✅ **Do's:**
 - ✓ Use min/max bounds, not just parent value
+
 - ✓ Inorder method: track previous value
+
 - ✓ For recover BST: track first and second violations
+
 - ✓ Sorted array → BST: use middle for balance
+
 - ✓ Consider Morris traversal for O(1) space
 
 ### ❌ **Don'ts:**
 - ✗ Don't only check immediate children (must check entire subtree)
+
 - ✗ Don't forget strict inequality: node.val must be strictly between bounds
+
 - ✗ Don't use extra O(n) array for inorder if not needed
+
 - ✗ Don't confuse adjacent vs non-adjacent swaps
+
 - ✗ Don't rebuild BST when you can just swap values
 
 ### ⚡ **Optimization Tricks:**
@@ -519,22 +529,33 @@ def sortedArrayToBST(nums: list[int]) -> TreeNode:
 
 ### **Phase 1: Basic Validation (Week 1)**
 - [ ] Understand incorrect validation (only checking children)
+
 - [ ] Implement range-based validation
+
 - [ ] Implement inorder-based validation
+
 - [ ] Solve: #98 Validate BST
 
 ### **Phase 2: Recovery (Week 2)**
 - [ ] Understand inorder violations
+
 - [ ] Handle adjacent swaps
+
 - [ ] Handle non-adjacent swaps
+
 - [ ] Solve: #99 Recover BST
+
 - [ ] Practice Morris traversal for O(1) space
 
 ### **Phase 3: Construction (Week 3)**
 - [ ] Sorted array to balanced BST
+
 - [ ] Sorted linked list to BST
+
 - [ ] Solve: #108 Convert Sorted Array
+
 - [ ] Solve: #109 Convert Sorted List
+
 - [ ] Solve: #501 Find Mode
 
 ---

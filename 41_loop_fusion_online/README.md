@@ -38,8 +38,11 @@ permalink: /41_loop_fusion_online/
 
 **What You'll Learn:**
 - Welford's numerically stable variance algorithm
+
 - Kadane's maximum subarray pattern
+
 - Computing higher statistical moments (skewness, kurtosis)
+
 - Streaming algorithms (Reservoir Sampling, Count-Min Sketch, HyperLogLog)
 
 ---
@@ -51,20 +54,30 @@ permalink: /41_loop_fusion_online/
 <td width="50%">
 
 ### [01. Welford's Algorithm](./01_welford_algorithm/)
+
 - Online mean and variance
+
 - Numerical stability
+
 - Parallel computation
+
 - Bessel's correction
+
 - **Problems:** 5+
 
 </td>
 <td width="50%">
 
 ### [02. Kadane's Pattern](./02_kadane_pattern/)
+
 - Maximum subarray sum
+
 - Product variants
+
 - Circular arrays
+
 - With deletions
+
 - **Problems:** 10+
 
 </td>
@@ -73,20 +86,30 @@ permalink: /41_loop_fusion_online/
 <td width="50%">
 
 ### [03. Higher Moments](./03_higher_moments/)
+
 - Skewness computation
+
 - Kurtosis computation
+
 - Terriberry's algorithm
+
 - Distribution analysis
+
 - **Problems:** 5+
 
 </td>
 <td width="50%">
 
 ### [04. Streaming Algorithms](./04_streaming_algorithms/)
+
 - Reservoir sampling
+
 - Count-Min Sketch
+
 - HyperLogLog
+
 - Bloom Filter
+
 - **Problems:** 10+
 
 </td>
@@ -295,8 +318,11 @@ Computing statistics traditionally requires multiple passes:
 
 **Notations:**
 - $\{x\_i\}\_{i=1}^{N}$: input data stream
+
 - $\mu\_N$: final mean
+
 - $\sigma^2\_N$: final variance
+
 - $m\_N$: final maximum
 
 **Body:**
@@ -470,8 +496,11 @@ Now we can fuse all three passes into one!
 
 **Initialization:**
 - $n \leftarrow 0$
+
 - $\mu \leftarrow 0$
+
 - $M\_2 \leftarrow 0$
+
 - $m \leftarrow -\infty$
 
 **Body:**
@@ -495,12 +524,16 @@ end
 
 **Result:**
 - Mean: $\mu$
+
 - Variance: $\sigma^2$
+
 - Maximum: $m$
 
 **Complexity:**
 - **Time:** $O(N)$ (single pass!)
+
 - **Space:** $O(1)$ (only 4 variables!)
+
 - **I/O:** Read data once
 
 ---
@@ -513,7 +546,9 @@ The key insight is that we create **surrogate sequences** that:
 3. Don't depend on future values
 
 For variance:
+
 - Original: $M\_2(n) = \sum\_{i=1}^{n}(x\_i - \mu\_n)^2$ (depends on final $\mu\_n$!)
+
 - Surrogate: Use recurrence that only depends on $M\_2(n-1)$, $\mu\_{n-1}$, and $x\_n$
 
 This is exactly the same trick used in **FlashAttention** for online softmax!
@@ -569,18 +604,27 @@ where $M\_2(n) = \sum\_{i=1}^{n} (x\_i - \mu\_n)^2$ and $\sigma^2 = M\_2(n) / n$
 ## 🏆 Practice Roadmap
 
 ### Week 1: Foundations
+
 - [ ] Implement Welford's algorithm from scratch
+
 - [ ] Solve 5 Kadane problems
+
 - [ ] Understand numerical stability
 
 ### Week 2: Variants
+
 - [ ] Maximum product subarray
+
 - [ ] Circular array problems
+
 - [ ] Higher moments computation
 
 ### Week 3: Streaming
+
 - [ ] Reservoir sampling
+
 - [ ] Count-Min Sketch
+
 - [ ] HyperLogLog
 
 ---

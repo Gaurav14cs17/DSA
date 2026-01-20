@@ -37,8 +37,11 @@ permalink: /10_graphs/08_implicit_graphs/
 ### 1️⃣ Definition: Implicit Graph
 
 **Definition:** An implicit graph $G = (V, E)$ is one where:
+
 - Vertices $V$ are not explicitly enumerated
+
 - Edges $E$ are derived from problem constraints/rules
+
 - Graph structure emerges from entity relationships
 
 **Formal Construction:**
@@ -50,7 +53,9 @@ G_{implicit} = (V, E) \text{ where } V = f(\text{input}), E = g(\text{rules})
 
 **Example (Jump Game):**
 - Input: Array $A = [2, 3, 1, 1, 4]$
+
 - $V = \{0, 1, 2, 3, 4\}$ (indices)
+
 - $E = \{(i, j) : j \leq i + A[i]\}$ (jump rules)
 
 ---
@@ -81,8 +86,11 @@ G_{implicit} = (V, E) \text{ where } V = f(\text{input}), E = g(\text{rules})
 
 **Proof:**
 - Let $d(v)$ = distance from source to $v$
+
 - BFS visits vertices in order of increasing $d(v)$
+
 - When $v$ is dequeued, $d(v)$ is optimal
+
 - No shorter path can exist (contradicts BFS property) ∎
 
 **Distance Formula:**
@@ -100,9 +108,12 @@ d(u, v) = \min\{k : \exists \text{ path of length } k \text{ from } u \text{ to 
 
 **Proof:**
 - Each component needs ≥ 2 cells (or isolated)
+
 - Minimum component size = 1
 - Maximum components = $mn$ (all isolated)
+
 - Adjacent cells reduce count
+
 - Checkerboard pattern gives $\lceil \frac{mn}{2} \rceil$ ∎
 
 **Component Definition:**
@@ -121,14 +132,19 @@ V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j
 
 **Proof (⟸):**
 - If DAG, no cycles exist
+
 - Pick vertex with in-degree 0
 - Remove and repeat
+
 - Always possible (no cycle to block) ∎
 
 **Proof (⟹):**
 - Assume topo sort exists but cycle exists
+
 - Let cycle: $v\_1 \to v\_2 \to \cdots \to v\_k \to v\_1$
+
 - In topo order: $v\_1$ before $v\_2$ before ... before $v\_k$ before $v\_1$
+
 - Contradiction: $v\_1$ both before and after itself ∎
 
 **Topological Order:**
@@ -152,7 +168,9 @@ V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j
 
 **Example (Sliding Puzzle 2×3):**
 - States = permutations of 6 positions
+
 - $|\text{States}| = 6! = 720$
+
 - With constraints (e.g., parity): $\frac{6!}{2} = 360$
 
 **State Transition Graph:**
@@ -170,8 +188,11 @@ E = \{(s, s') : s' \text{ reachable from } s \text{ by one move}\}
 
 **Proof:**
 - Initialize all sources with $d = 0$
+
 - Standard BFS from virtual super-source
+
 - Each vertex $v$ gets $d(v) = \min\_{s \in S} d(s, v)$
+
 - BFS guarantees optimality for each source ∎
 
 **Multi-source Distance:**
@@ -1133,21 +1154,31 @@ def oranges_rotting(grid: List[List[int]]) -> int:
 
 **Step 1: Identify Entities**
 - Array problem? → Indices are vertices
+
 - Grid problem? → Cells are vertices
+
 - String problem? → States/words are vertices
+
 - Scheduling? → Tasks are vertices
 
 **Step 2: Find Relationships**
 - Can move from i to j? → Edge (i,j)
+
 - Adjacent cells? → Edge between cells
+
 - Transform w1 to w2? → Edge (w1,w2)
+
 - Dependency a→b? → Directed edge
 
 **Step 3: Match Problem Type**
 - "Can reach?" → Reachability (DFS/BFS)
+
 - "Minimum steps?" → Shortest path (BFS)
+
 - "Count groups?" → Components (DFS/Union-Find)
+
 - "Valid order?" → Topological sort
+
 - "Has cycle?" → Cycle detection
 
 ---
@@ -1290,15 +1321,22 @@ def oranges_rotting(grid: List[List[int]]) -> int:
 
 **Practice:**
 - Solve in timed conditions (< 25 minutes)
+
 - Explain approach verbally
+
 - Code without hints
+
 - Optimize space complexity
 
 **Mastery Checklist:**
 - [ ] Can identify implicit graph in < 3 minutes
+
 - [ ] Know which algorithm for which pattern
+
 - [ ] Can code BFS/DFS/Union-Find from memory
+
 - [ ] Explain graph transformation clearly
+
 - [ ] Recognize all 7 disguise categories
 
 ---
@@ -1310,7 +1348,9 @@ A: Ask yourself: "Are there entities with relationships?" If yes, it's likely a 
 
 **Q: When should I use BFS vs DFS?**  
 A: 
+
 - **BFS** for shortest path in unweighted graphs, level-by-level exploration, minimum steps
+
 - **DFS** for existence checks, all paths, cycle detection, easier to implement with recursion
 
 **Q: Why didn't I recognize this was a graph problem?**  
@@ -1327,8 +1367,11 @@ A: DFS doesn't guarantee shortest path! It might find a longer path first. Alway
 
 **Q: When do I need Union-Find vs DFS?**  
 A: Union-Find is optimal for:
+
 - Dynamic connectivity (edges added over time)
+
 - Counting components efficiently
+
 - Kruskal's MST
 Use DFS when you need to explore the actual structure.
 
@@ -1375,10 +1418,15 @@ Problem without "graph" keywords + Relationships = Hidden Graph
 
 **Master These Core Patterns:**
 - 🎯 Array indices → Reachability/Shortest path
+
 - 🌊 Grid cells → Components/BFS
+
 - 🔤 Strings → Transformations
+
 - 📊 Dependencies → Topological sort/Cycle detection
+
 - 👥 Grouping → Union-Find/Components
+
 - 🎮 States → State space search
 
 ---

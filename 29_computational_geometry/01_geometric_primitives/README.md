@@ -8,9 +8,13 @@ nav_order: 1
 # 🔷 Geometric Primitives
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+
 - **Time Complexity:** O(1) for most operations
+
 - **Space Complexity:** O(1)
+
 - **Topics:** Vectors, Cross Product, Dot Product, Distances
 
 ---
@@ -72,7 +76,9 @@ v̂ = v / |v| = (v_x/|v|, v_y/|v|)
 u × v = u_x · v_y - u_y · v_x
 
 Geometric interpretation:
+
 - Magnitude: Area of parallelogram formed by u and v
+
 - Sign: Orientation of v relative to u
 
 ```
@@ -89,7 +95,9 @@ Geometric interpretation:
 
 **Applications:**
 - Orientation test
+
 - Area calculation
+
 - Line intersection detection
 
 ### Dot Product
@@ -117,8 +125,11 @@ where θ = angle between vectors
 
 **Applications:**
 - Angle calculation
+
 - Projection
+
 - Perpendicularity test
+
 - Distance to line
 
 ---

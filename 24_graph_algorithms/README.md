@@ -47,14 +47,23 @@ permalink: /24_graph_algorithms/
 ## 📋 Overview
 
 Comprehensive collection of **advanced graph algorithms** including:
+
 - 🎯 Shortest Path Algorithms (Dijkstra, Bellman-Ford, Floyd-Warshall, A*)
+
 - 🌲 Minimum Spanning Trees (Kruskal, Prim, Borůvka)
+
 - 📊 Topological Sorting (Kahn's, DFS-based)
+
 - 💧 Network Flow (Ford-Fulkerson, Dinic, Push-Relabel)
+
 - 🔄 Strongly Connected Components (Kosaraju, Tarjan)
+
 - 🌉 Bridges & Articulation Points (Critical edges/vertices)
+
 - 🔗 Eulerian & Hamiltonian Paths
+
 - ⚖️ 2-SAT (Boolean Satisfiability)
+
 - 🎭 Bipartite Matching (Hungarian, Hopcroft-Karp)
 
 ---
@@ -69,21 +78,31 @@ Comprehensive collection of **advanced graph algorithms** including:
 
 **Core Algorithms:**
 - Dijkstra's Algorithm
+
 - Bellman-Ford Algorithm
+
 - Floyd-Warshall Algorithm
+
 - A* Search
+
 - SPFA (Shortest Path Faster)
+
 - 0-1 BFS
 
 **Complexity:**
 - Dijkstra: O((V+E) log V)
+
 - Bellman-Ford: O(VE)
+
 - Floyd-Warshall: O(V³)
 
 **Key Problems:**
 - Single-source shortest path
+
 - All-pairs shortest path
+
 - Negative weight edges
+
 - Path reconstruction
 
 </td>
@@ -93,17 +112,23 @@ Comprehensive collection of **advanced graph algorithms** including:
 
 **Core Algorithms:**
 - Kruskal's Algorithm
+
 - Prim's Algorithm
+
 - Borůvka's Algorithm
 
 **Complexity:**
 - Kruskal: O(E log E)
+
 - Prim: O(E log V)
 
 **Applications:**
 - Network design
+
 - Clustering
+
 - Critical connections
+
 - Pseudo-critical edges
 
 </td>
@@ -113,15 +138,20 @@ Comprehensive collection of **advanced graph algorithms** including:
 
 **Core Algorithms:**
 - Kahn's Algorithm (BFS)
+
 - DFS-based approach
+
 - Lexicographic ordering
 
 **Complexity:** O(V + E)
 
 **Applications:**
 - Course scheduling
+
 - Build systems
+
 - Task dependencies
+
 - Cycle detection in DAGs
 
 </td>
@@ -133,19 +163,27 @@ Comprehensive collection of **advanced graph algorithms** including:
 
 **Core Algorithms:**
 - Ford-Fulkerson Method
+
 - Edmonds-Karp Algorithm
+
 - Dinic's Algorithm
+
 - Push-Relabel Algorithm
 
 **Complexity:**
 - Edmonds-Karp: O(VE²)
+
 - Dinic: O(V²E)
+
 - Push-Relabel: O(V³)
 
 **Applications:**
 - Maximum flow
+
 - Minimum cut
+
 - Bipartite matching
+
 - Circulation problems
 
 </td>
@@ -155,15 +193,20 @@ Comprehensive collection of **advanced graph algorithms** including:
 
 **Core Algorithms:**
 - Kosaraju's Algorithm
+
 - Tarjan's Algorithm
+
 - Condensation Graph
 
 **Complexity:** O(V + E)
 
 **Applications:**
 - Graph decomposition
+
 - Finding cycles
+
 - Module dependencies
+
 - Web page ranking
 
 </td>
@@ -173,15 +216,20 @@ Comprehensive collection of **advanced graph algorithms** including:
 
 **Core Concepts:**
 - Cut edges (Bridges)
+
 - Cut vertices (Articulation points)
+
 - Tarjan's Bridge Detection
+
 - 2-Connected Components
 
 **Complexity:** O(V + E)
 
 **Applications:**
 - Critical connections
+
 - Network vulnerability
+
 - Redundancy analysis
 
 </td>
@@ -193,16 +241,21 @@ Comprehensive collection of **advanced graph algorithms** including:
 
 **Core Algorithms:**
 - Hierholzer's Algorithm
+
 - Eulerian Circuit Detection
+
 - Hamiltonian Path (NP-Complete)
 
 **Complexity:**
 - Eulerian: O(E)
+
 - Hamiltonian: O(n! × n)
 
 **Applications:**
 - Route planning
+
 - DNA sequencing
+
 - Chinese Postman Problem
 
 </td>
@@ -212,15 +265,20 @@ Comprehensive collection of **advanced graph algorithms** including:
 
 **Core Algorithms:**
 - Implication Graph
+
 - SCC-based Solution
+
 - Kosaraju/Tarjan
 
 **Complexity:** O(V + E)
 
 **Applications:**
 - Boolean satisfiability
+
 - Logic puzzles
+
 - Resource allocation
+
 - Constraint satisfaction
 
 </td>
@@ -230,18 +288,25 @@ Comprehensive collection of **advanced graph algorithms** including:
 
 **Core Algorithms:**
 - Hungarian Algorithm
+
 - Hopcroft-Karp Algorithm
+
 - Ford-Fulkerson for matching
+
 - Kuhn's Algorithm
 
 **Complexity:**
 - Hungarian: O(V³)
+
 - Hopcroft-Karp: O(E√V)
 
 **Applications:**
 - Job assignment
+
 - Maximum matching
+
 - Minimum vertex cover
+
 - Hall's Marriage Theorem
 
 </td>

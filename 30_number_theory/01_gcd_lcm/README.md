@@ -36,8 +36,11 @@ permalink: /30_number_theory/01_gcd_lcm/
 ### 1️⃣ GCD Definition & Properties
 
 **Definition:** The Greatest Common Divisor (GCD) of two integers a and b is the largest positive integer d such that:
+
 - $d \mid a$ (d divides a)
+
 - $d \mid b$ (d divides b)
+
 - For any other common divisor c: $c \leq d$
 
 **Notation:** $\gcd(a, b)$ or $(a, b)$
@@ -116,8 +119,11 @@ Recursive case:
 
 **Applications:**
 - Modular inverse
+
 - Linear Diophantine equations
+
 - Chinese Remainder Theorem
+
 - RSA cryptography
 
 ---
@@ -125,7 +131,9 @@ Recursive case:
 ### 4️⃣ LCM Definition & Formula
 
 **Definition:** The Least Common Multiple (LCM) of two integers a and b is the smallest positive integer m such that:
+
 - $a \mid m$ (a divides m)
+
 - $b \mid m$ (b divides m)
 
 **Fundamental Formula:**

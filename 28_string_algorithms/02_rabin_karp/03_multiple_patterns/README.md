@@ -13,9 +13,13 @@ nav_order: 3
 ![Multiple Pattern Matching](./images/multiple-patterns.svg)
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+
 - **Time Complexity:** O(n + km) where k = number of patterns
+
 - **Space Complexity:** O(k)
+
 - **Pattern:** Batch Processing, Hash Sets
 
 ---

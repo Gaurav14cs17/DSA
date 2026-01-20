@@ -89,7 +89,9 @@ For string $S$ with brackets $\{(, ), [, ], \{, \}\}$:
 ```
 
 **Key Insight:** When element $x$ is pushed:
+
 - Pop all elements violating monotonic property
+
 - Each popped element found its "next greater/smaller"
 
 ---
@@ -139,7 +141,9 @@ A[j] & \text{first } j > i \text{ where } A[j] > A[i] \\
 ```
 
 Where:
+
 - $\text{left\_bound}[i]$ = index of first smaller bar on left
+
 - $\text{right\_bound}[i]$ = index of first smaller bar on right
 
 **Using Monotonic Stack:** Find both bounds in O(n).
@@ -426,16 +430,24 @@ Parentheses   Monotonic Stack   Shunting-Yard
 
 ❌ **Don't:**
 - Forget to check `if stack` before pop/peek
+
 - Use stack when simpler solution exists
+
 - Ignore the monotonic property maintenance
+
 - Forget to handle edge cases (empty string, single char)
+
 - Pop without using the value when needed
 
 ✅ **Do:**
 - Always validate stack is not empty
+
 - Draw small examples (3-5 elements)
+
 - Understand WHEN each element gets popped
+
 - Test with nested cases for parentheses
+
 - Consider both increasing and decreasing monotonic stacks
 
 ### Optimization Checklist
@@ -458,8 +470,11 @@ Parentheses   Monotonic Stack   Shunting-Yard
 
 **Progress Tracker:**
 - 🥉 **Bronze:** Solve 10 stack problems
+
 - 🥈 **Silver:** Solve 25 stack problems
+
 - 🥇 **Gold:** Solve 40 stack problems
+
 - 💎 **Platinum:** Master monotonic stack pattern
 
 **Remember:** Once you understand monotonic stack, a whole class of problems becomes O(n)! 🚀

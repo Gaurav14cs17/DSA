@@ -112,6 +112,7 @@ For each character in $T$, find first matching character in remaining $S$.
 
 **Correctness Proof:**
 - Greedy choice: earliest match leaves most characters for remaining
+
 - No benefit to skipping a match
 
 **Time:** $O(n)$ where $n = |S|$
@@ -372,8 +373,11 @@ Let $G$ = greedy solution, $O$ = any other solution.
 Suppose $O$ uses match at position $j$ while $G$ uses earlier match at $i < j$.
 
 Can we replace $O$'s choice with $G$'s without loss?
+
 - Using position $i$ leaves positions $[i+1, j]$ available
+
 - This is ≥ what $O$ had (positions after $j$)
+
 - Therefore $G$ is optimal ∎
 
 ### LCS Optimal Substructure
@@ -385,11 +389,15 @@ Can we replace $O$'s choice with $G$'s without loss?
 Let $L(i,j)$ = LCS length of $X[0..i-1]$ and $Y[0..j-1]$
 
 **Case 1:** If $X[i-1] = Y[j-1]$
+
 - This char must be in LCS (greedy is optimal)
+
 - $L(i,j) = L(i-1,j-1) + 1$
 
 **Case 2:** If $X[i-1] \neq Y[j-1]$
+
 - One must be excluded
+
 - $L(i,j) = \max(L(i-1,j), L(i,j-1))$
 
 By induction, DP computes optimal solution ∎
@@ -399,9 +407,13 @@ By induction, DP computes optimal solution ∎
 **Property:** $d(A,C) \leq d(A,B) + d(B,C)$
 
 **Proof:** 
+
 - Transform $A→B$ (cost $d(A,B)$)
+
 - Then $B→C$ (cost $d(B,C)$)
+
 - Total: $d(A,B) + d(B,C)$
+
 - Must be ≥ direct $A→C$ ∎
 
 ---
@@ -521,8 +533,11 @@ By induction, DP computes optimal solution ∎
 9. **Shortest Common Supersequence** (#1092) - Combine strings
 
 ### Expert Challenge
+
 - Implement Hirschberg's algorithm (O(n) space LCS)
+
 - Solve with space optimization
+
 - Explain DP transitions clearly
 
 ---

@@ -161,8 +161,11 @@ print(binary_gcd(100, 35))  # 5
 
 **When Binary GCD Wins:**
 - Hardware where division is slow
+
 - Very large numbers (cryptography)
+
 - Embedded systems
+
 - Constant-time requirements
 
 ---

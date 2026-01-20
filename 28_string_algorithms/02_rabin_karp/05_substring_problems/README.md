@@ -13,9 +13,13 @@ nav_order: 5
 ![Substring Problems](./images/substring-problems.svg)
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Medium-Hard](https://img.shields.io/badge/Medium--Hard-red)
+
 - **Time Complexity:** O(n log n) typical (with binary search)
+
 - **Space Complexity:** O(n)
+
 - **Pattern:** Binary Search + Hashing, Duplicate Detection
 
 ---

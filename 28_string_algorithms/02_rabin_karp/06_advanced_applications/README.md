@@ -13,8 +13,11 @@ nav_order: 6
 ![Advanced Applications](./images/advanced-applications.svg)
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
+
 - **Topics:** 2D Hashing, Document Similarity, Plagiarism Detection
+
 - **Applications:** Real-world string processing
 
 ---

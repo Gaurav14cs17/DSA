@@ -35,9 +35,13 @@ permalink: /23_sliding_window/03_string_window/
 ## 🎯 What You'll Master
 
 - Anagram and permutation detection
+
 - Minimum window substring (the classic hard problem)
+
 - Character frequency tracking techniques
+
 - The "have vs need" pattern
+
 - Optimizations with match counters
 
 ---
@@ -73,7 +77,9 @@ permalink: /23_sliding_window/03_string_window/
 #### For Window Problems
 
 A window is an anagram of pattern \(p\) if:
+
 - Window size = \(|p|\)
+
 - Character frequencies match
 
 ---
@@ -86,7 +92,9 @@ A window is an anagram of pattern \(p\) if:
 #### State Variables
 
 - `need[c]` = frequency of character \(c\) required
+
 - `have[c]` = frequency of character \(c\) in current window
+
 - `formed` = count of characters satisfying `have[c] >= need[c]`
 - `required` = count of unique characters in pattern
 
@@ -141,6 +149,7 @@ elif window[c] == pattern[c] + 1:  # Was matched, now over
 
 - Window size = `word_count × word_length`
 - Slide by `word_length` at a time
+
 - Track word frequencies instead of char frequencies
 
 ---

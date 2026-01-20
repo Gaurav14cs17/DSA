@@ -69,6 +69,7 @@ H(S) = \text{tuple}(\text{sorted}(S)) \quad \text{or} \quad H(S) = \text{tuple}(
 
 **Window Invariant:**
 - Window size = $|P|$
+
 - Window frequency vector = $\vec{f}(P)$
 
 **Update Formula:**
@@ -94,7 +95,9 @@ H(S) = \text{tuple}(\text{sorted}(S)) \quad \text{or} \quad H(S) = \text{tuple}(
 
 **Two Pointers:**
 - Expand right until condition satisfied
+
 - Contract left while condition holds
+
 - Track minimum window
 
 ---
@@ -361,6 +364,7 @@ Result: [0, 6]
 
 **Proof:**
 - (⇒) If anagrams, same char frequencies → sorted strings have chars in same order → equal
+
 - (⇐) If sorted forms equal, same chars at same positions → same frequencies → anagrams ∎
 
 ### Sliding Window Correctness
@@ -369,8 +373,11 @@ Result: [0, 6]
 
 **Proof of O(n) time:**
 - Each character enters window exactly once: O(n)
+
 - Each character leaves window exactly once: O(n)
+
 - Frequency update: O(1) per operation
+
 - Total: O(n) ∎
 
 ---
@@ -458,8 +465,11 @@ Result: [0, 6]
 6. **Minimum Window** (#76) - Advanced window
 
 ### Pro Tips
+
 - Start with fixed window problems (#438, #567)
+
 - Then move to variable window (#76)
+
 - Practice optimizing space to O(1) for fixed alphabet
 
 ---

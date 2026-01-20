@@ -401,16 +401,24 @@ Heap Problem
 
 ❌ **Don't:**
 - Confuse top K largest (use min-heap) with top K smallest (use max-heap)
+
 - Think build heap is O(n log n) — it's O(n)!
+
 - Use heap when array/quickselect is faster
+
 - Forget to negate values for max-heap in Python
+
 - Ignore that heappop() doesn't preserve order for ties
 
 ✅ **Do:**
 - Master the "opposite heap" pattern for Top K
+
 - Know heapify() is faster than n insertions
+
 - Consider quickselect for one-time k-th element
+
 - Use (priority, value) tuples for custom ordering
+
 - Remember heap is O(1) peek, O(log n) insert/extract
 
 ### Optimization Checklist
@@ -433,8 +441,11 @@ Heap Problem
 
 **Progress Tracker:**
 - 🥉 **Bronze:** Solve 10 heap problems + master basic operations
+
 - 🥈 **Silver:** Solve 20 heap problems + Top K patterns
+
 - 🥇 **Gold:** Solve 30 heap problems + merge K + two heaps
+
 - 💎 **Platinum:** Master all patterns + advanced heaps
 
 **Remember:** Heap operations are O(log n), but build heap is O(n)! 🚀

@@ -81,7 +81,9 @@ For each node u:
 
 **Analysis:**
 - Each node visited once per ancestor in heavy path
+
 - Heavy path length = $O(\log n)$
+
 - Total: $O(n \log n)$
 
 **Amortized:** Each node added/removed $O(\log n)$ times.

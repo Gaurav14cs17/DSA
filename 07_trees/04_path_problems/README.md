@@ -531,9 +531,13 @@ A: Use `max(0, gain)` when adding to path. Negative contributions can be ignored
 ## 🔥 Key Insights
 
 - **Root-to-Leaf:** DFS with target subtraction
+
 - **All Paths:** Backtracking with path tracking
+
 - **Any-to-Any:** Prefix sum in hash map
+
 - **Max Path Sum:** Gain (one way) vs path_through (both ways)
+
 - **Build Numbers:** `num = num * 10 + val` pattern
 
 ---

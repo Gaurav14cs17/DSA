@@ -13,9 +13,13 @@ nav_order: 2
 ![Single Pattern Matching](./images/single-pattern.svg)
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Easy-Medium](https://img.shields.io/badge/Easy--Medium-yellow)
+
 - **Time Complexity:** O(n + m) average
+
 - **Space Complexity:** O(1)
+
 - **Pattern:** Pattern Matching, Hash Comparison
 
 ---
@@ -445,7 +449,9 @@ if window_hash == pattern_hash:
 
 **Why?**
 - Hash collisions possible (small probability)
+
 - Verification ensures correctness
+
 - O(m) per verification, rare in practice
 
 ### Performance Tips

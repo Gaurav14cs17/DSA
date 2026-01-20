@@ -59,6 +59,7 @@ permalink: /30_number_theory/02_primes/02_sieve_eratosthenes/
 **Reason:** For any composite $k \cdot p$ where $k < p$, the number was already marked by a prime factor of $k$.
 
 **Example:** When p = 5:
+
 - 2×5 = 10 was marked by 2
 - 3×5 = 15 was marked by 3
 - 4×5 = 20 was marked by 2

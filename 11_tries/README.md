@@ -31,9 +31,13 @@ permalink: /11_tries/
 ### 1️⃣ Trie Definition
 
 A **Trie** (prefix tree) is a tree where:
+
 - Each node represents a character
+
 - Root represents empty string
+
 - Path from root to node represents a prefix
+
 - Words are marked with end-of-word flag
 
 ---
@@ -57,8 +61,11 @@ Where $L$ = length of word, $k$ = number of results.
 **Worst case:** O(ALPHABET_SIZE × L × N)
 
 Where:
+
 - ALPHABET_SIZE = 26 for lowercase letters
+
 - L = average word length
+
 - N = number of words
 
 **Optimization:** Use hash maps instead of arrays for sparse children.

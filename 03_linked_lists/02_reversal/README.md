@@ -52,7 +52,9 @@ After iteration $i$:
 ```
 
 Where:
+
 - Left of `|`: Already reversed (prev points to $node\_i$)
+
 - Right of `|`: Not yet processed (current points to $node\_{i+1}$)
 
 **Initialization:** $i = 0$, prev = null, current = head
@@ -92,10 +94,12 @@ T(n) = T(n-1) + O(1)
 
 **Iterative Approach:**
 - **Time:** One pass through list = $O(n)$
+
 - **Space:** Three pointers (prev, current, next) = $O(1)$
 
 **Recursive Approach:**
 - **Time:** One recursive call per node = $O(n)$
+
 - **Space:** Call stack depth = $O(n)$
 
 **Mathematical Proof of Space:**
@@ -835,9 +839,13 @@ def isPalindrome(head: ListNode) -> bool:
 8. **Reverse Even Length Groups** (#2074) - Complex logic
 
 ### Mastery Challenge
+
 - Implement all variants in < 15 minutes each
+
 - Code iterative versions without bugs
+
 - Explain recursive approach with call stack
+
 - Optimize space to O(1) wherever possible
 
 ---

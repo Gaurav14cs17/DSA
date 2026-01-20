@@ -40,8 +40,11 @@ permalink: /02_strings/01_basic_string/
 
 **Two-Pointer Proof:**
 - Left pointer: $l = 0, 1, 2, \ldots$
+
 - Right pointer: $r = n-1, n-2, \ldots$
+
 - Swap $S[l] \leftrightarrow S[r]$ while $l < r$
+
 - Iterations: $\lfloor n/2 \rfloor$
 
 ---
@@ -276,8 +279,11 @@ With sorting:          O(n log n) → When order matters
 6. **Longest Common Prefix** (#14) - Vertical scanning
 
 ### Mastery Challenge
+
 - Solve each in < 10 minutes
+
 - Optimize to O(1) space where possible
+
 - Explain time/space complexity
 
 ---

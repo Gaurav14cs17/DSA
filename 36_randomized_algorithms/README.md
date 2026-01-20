@@ -315,17 +315,27 @@ class SkipList:
 ## 📊 Practice Roadmap
 
 ### Week 1: Foundation (5 problems)
+
 - [ ] 384. Shuffle an Array
+
 - [ ] 398. Random Pick Index
+
 - [ ] 382. Linked List Random Node
+
 - [ ] 528. Random Pick with Weight
+
 - [ ] 215. Kth Largest Element
 
 ### Week 2: Advanced (5 problems)
+
 - [ ] 470. Implement Rand10()
+
 - [ ] 478. Generate Random Point in Circle
+
 - [ ] 710. Random Pick with Blacklist
+
 - [ ] 497. Random Point in Rectangles
+
 - [ ] 519. Random Flip Matrix
 
 ---
@@ -341,8 +351,11 @@ class SkipList:
 
 **Common Mistakes:**
 - ❌ Using `random.choice()` repeatedly (biased!)
+
 - ❌ Forgetting to maintain uniform probability
+
 - ❌ Not handling edge cases in reservoir sampling
+
 - ❌ Using modulo for random range (biased for non-powers of 2)
 
 ---

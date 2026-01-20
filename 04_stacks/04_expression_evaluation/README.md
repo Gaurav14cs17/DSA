@@ -139,9 +139,11 @@ Stack trace:
 3      → [3]
 4      → [3, 4]
 2      → [3, 4, 2]
+
 *      → [3, 8]      (4 * 2 = 8)
 1      → [3, 8, 1]
 5      → [3, 8, 1, 5]
+
 -      → [3, 8, -4]   (1 - 5 = -4)
 /      → [3, -2]      (8 / -4 = -2)
 +      → [1]          (3 + -2 = 1)
@@ -157,6 +159,7 @@ Result: 1
 **Unary minus detection:**
 
 - At start of expression
+
 - After `(`
 - After another operator
 
@@ -383,6 +386,7 @@ Token  Action              Op Stack    Output
 A      Operand             []          [A]
 +      Push                [+]         [A]
 B      Operand             [+]         [A, B]
+
 *      Push (* > +)        [+, *]      [A, B]
 C      Operand             [+, *]      [A, B, C]
 End    Pop all             []          [A, B, C, *, +]
@@ -551,9 +555,13 @@ A: Yes! Use two stacks (operator and operand) with precedence rules. Or recursiv
 ## 🔥 Key Insights
 
 - **RPN Elegance:** Stack-based evaluation without precedence worries
+
 - **Shunting-Yard Power:** Single pass infix → postfix conversion
+
 - **Precedence Handling:** Pop higher/equal precedence before pushing
+
 - **Nested Expressions:** Stack naturally handles parentheses nesting
+
 - **Template Reusability:** Same pattern for many expression problems
 
 ---

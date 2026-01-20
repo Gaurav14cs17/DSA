@@ -47,7 +47,9 @@ dp[\text{pos}][\text{state}][\text{tight}]
 ```
 
 - **pos:** Current digit position
+
 - **state:** Problem-specific state
+
 - **tight:** Is current prefix equal to N's prefix?
 
 ---

@@ -50,8 +50,10 @@ Operations: 1 multiplication + 1 addition = constant time ∎
 
 **Proof:**
 - Let $d = right - left$ (initial distance)
+
 - Each iteration: $d$ decreases by at least 1
 - Maximum iterations: $d\_{initial} = n - 1$
+
 - Therefore: O(n) ∎
 
 **Convergence Formula:**
@@ -79,7 +81,9 @@ A[high+1..n-1] &= \{2\}
 
 **Correctness Proof:**
 - Invariant holds initially (all regions empty)
+
 - Each operation preserves invariant
+
 - When $mid > high$: no unknown elements remain ∎
 
 ---
@@ -116,7 +120,9 @@ A'[i] = A[(i - k + n) \mod n]
 
 **Proof by Pigeonhole:**
 - n+1 values in range [1, n]
+
 - At least one value repeats
+
 - Repeated value = cycle entry point ∎
 
 **Meeting Point Formula:**
@@ -504,8 +510,11 @@ Sort then scan:         O(n log n) → Often good solution
 9. **Trapping Rain Water** (#42) - Two pointers mastery
 
 ### Mastery Challenge
+
 - Solve each problem in < 15 minutes
+
 - Optimize to O(1) space
+
 - Explain your approach to someone else
 
 ---

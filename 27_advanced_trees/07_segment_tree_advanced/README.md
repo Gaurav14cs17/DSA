@@ -36,24 +36,33 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/
 <td width="33%">
 
 ### [01. Lazy Propagation](./01_lazy_propagation/)
+
 - Range updates
+
 - Deferred updates
+
 - Calendar problems
 
 </td>
 <td width="33%">
 
 ### [02. 2D Segment Tree](./02_2d_segment_tree/)
+
 - 2D range queries
+
 - Matrix updates
+
 - Rectangle queries
 
 </td>
 <td width="33%">
 
 ### [03. Persistent Segment Tree](./03_persistent_segtree/)
+
 - Version control
+
 - Kth in range
+
 - Path copying
 
 </td>
@@ -62,16 +71,22 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/
 <td width="33%">
 
 ### [04. Dynamic Segment Tree](./04_dynamic_segtree/)
+
 - Sparse ranges
+
 - On-demand creation
+
 - Memory efficient
 
 </td>
 <td width="33%">
 
 ### [05. Range Queries](./05_range_queries/)
+
 - Range Min/Max
+
 - Range GCD/XOR
+
 - Aggregate queries
 
 </td>
@@ -94,9 +109,13 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/
 ## 📋 Overview
 
 **Advanced Segment Tree** techniques extend the basic segment tree to handle:
+
 - **Lazy Propagation:** Efficient range updates in O(log n)
+
 - **2D Segment Trees:** Range queries on matrices
+
 - **Persistent Segment Trees:** Query historical versions
+
 - **Dynamic Segment Trees:** Handle sparse or infinite ranges
 
 **Key Advantage:** Handles complex range operations that simple data structures cannot.
@@ -159,7 +178,9 @@ def push(node, start, end):
 
 **Applications:**
 - Query array at different times
+
 - Kth smallest in range
+
 - Version control
 
 ### 4️⃣ Dynamic Segment Tree

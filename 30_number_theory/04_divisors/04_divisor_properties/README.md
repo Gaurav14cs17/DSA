@@ -47,13 +47,17 @@ permalink: /30_number_theory/04_divisors/04_divisor_properties/
 ### 1️⃣ Multiplicative Functions
 
 A function f is **multiplicative** if:
+
 - f(1) = 1
 - f(mn) = f(m)f(n) whenever gcd(m,n) = 1
 
 **Key multiplicative functions:**
 - τ(n) - divisor count
+
 - σ(n) - divisor sum
+
 - φ(n) - Euler's totient
+
 - μ(n) - Möbius function
 
 ---

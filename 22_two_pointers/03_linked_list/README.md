@@ -35,9 +35,13 @@ permalink: /22_two_pointers/03_linked_list/
 ## 🎯 What You'll Master
 
 - Floyd's Cycle Detection with complete mathematical proof
+
 - Finding the start of a cycle
+
 - Finding the middle of a linked list
+
 - Nth node from end in single pass
+
 - Intersection of two linked lists
 
 ---
@@ -65,7 +69,9 @@ permalink: /22_two_pointers/03_linked_list/
 #### Why They Must Meet
 
 In a cycle of length \(\lambda\):
+
 - Fast gains 1 position on slow each step
+
 - After at most \(\lambda\) steps inside the cycle, they meet
 
 ---
@@ -78,8 +84,11 @@ In a cycle of length \(\lambda\):
 #### Setup and Notation
 
 Let:
+
 - \(\mu\) = distance from head to cycle start (tail length)
+
 - \(\lambda\) = cycle length
+
 - \(x\) = meeting point's distance from cycle start (clockwise)
 
 ```
@@ -99,14 +108,19 @@ Head ------○------○------○------●
 **Claim 1**: If there's a cycle, slow and fast will meet.
 
 When slow enters the cycle:
+
 - Slow has traveled \(\mu\) steps
+
 - Fast has traveled \(2\mu\) steps
 
 Fast is already in the cycle. Let \(d\) be the distance between them (measured in direction of travel).
 
 Each step:
+
 - Slow moves 1 forward
+
 - Fast moves 2 forward
+
 - Gap decreases by 1
 
 After \(d\) more steps, gap becomes 0 — they meet! ∎
@@ -166,6 +180,7 @@ for some non-negative integer \(m\).
 When we reset slow to head and move both one step at a time:
 
 - Pointer from head travels \(\mu\) steps to reach cycle start
+
 - Pointer from meeting point travels \(\mu\) steps
 
 From meeting point (distance \(x\) from cycle start):
@@ -236,7 +251,9 @@ This is exactly the cycle start position! ∎
 #### Proof
 
 - Slow moves 1 step per iteration
+
 - Fast moves 2 steps per iteration
+
 - When fast reaches position \(n\), slow is at position \(n/2\)
 
 For even length \(n\): slow at \(n/2\) (second middle)
@@ -252,9 +269,13 @@ For odd length \(n\): slow at \(\lfloor n/2 \rfloor + 1\) (true middle)
 #### Proof
 
 Total length = \(L\)
+
 - Fast starts at position \(n\)
+
 - When fast at position \(L\), fast traveled \(L - n\) steps
+
 - Slow also traveled \(L - n\) steps, so slow at position \(L - n\)
+
 - Position \(L - n\) is \(n\)th from end (0-indexed) ∎
 
 ---
@@ -269,6 +290,7 @@ Total length = \(L\)
 If list A has length \(a + c\) and list B has length \(b + c\) where \(c\) is common:
 
 - Pointer A: traverses A then B = \(a + c + b + c\) steps
+
 - Pointer B: traverses B then A = \(b + c + a + c\) steps
 
 At step \(a + b + c\), both are at the intersection!

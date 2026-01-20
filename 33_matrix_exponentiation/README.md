@@ -137,7 +137,9 @@ M \cdot (M^{(n-1)/2})^2 & \text{if } n \text{ is odd}
 
 **Time Complexity:**
 - Matrix multiplication: $O(k^3)$ for $k \times k$ matrix
+
 - Binary exponentiation: $O(\log n)$ multiplications
+
 - **Total:** $O(k^3 \log n)$
 
 ---
@@ -181,6 +183,7 @@ This is called the **companion matrix**.
 
 **Proof (by induction):**
 - Base: $n=1$, $(A^1)\_{ij} = A\_{ij}$ = number of edges from $i$ to $j$ ✓
+
 - Inductive: $(A^{n+1})\_{ij} = \sum\_k (A^n)\_{ik} \cdot A\_{kj}$ = paths of length $n$ to $k$, then edge to $j$ ✓
 
 **Application:** Count paths in $O(\log n)$ instead of $O(n)$!
@@ -560,14 +563,20 @@ def count_paths_graph(adj_matrix: list[list[int]],
 
 **Core Concepts:**
 - Matrix multiplication
+
 - Binary exponentiation
+
 - Modular arithmetic
+
 - Identity matrix
+
 - Companion matrix
 
 **Key Algorithms:**
 - Fast matrix power
+
 - Optimized 2×2 case
+
 - Sparse matrix handling
 
 **Time:** O(k³ log n)
@@ -579,15 +588,22 @@ def count_paths_graph(adj_matrix: list[list[int]],
 
 **Core Concepts:**
 - Fibonacci variants
+
 - Tribonacci
+
 - General k-term recurrence
+
 - Counting problems
+
 - State transitions
 
 **Applications:**
 - Path counting
+
 - Tiling problems
+
 - String generation
+
 - Graph problems
 
 **Problems:** 20+

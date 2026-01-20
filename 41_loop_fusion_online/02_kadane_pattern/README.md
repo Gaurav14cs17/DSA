@@ -50,7 +50,9 @@ Given an array $A[1..n]$ of real numbers, find indices $i$ and $j$ such that:
 
 **Constraints:**
 - Subarray must be contiguous
+
 - Must contain at least one element
+
 - Time: $O(n)$, Space: $O(1)$
 
 ---
@@ -58,7 +60,9 @@ Given an array $A[1..n]$ of real numbers, find indices $i$ and $j$ such that:
 ### Recurrence Relation
 
 Define:
+
 - $S[i]$ = maximum sum of subarray **ending at position** $i$
+
 - $M[i]$ = maximum sum of **any** subarray in $A[1..i]$
 
 **Kadane's Recurrence:**
@@ -283,6 +287,7 @@ print(max_subarray_one_deletion(arr))  # Output: 4 (delete -2)
 
 **Definitions:**
 - Let $S[i]$ = maximum sum of subarray **ending at position** $i$
+
 - Let $M[i]$ = maximum sum of **any** subarray in $A[1..i]$
 
 **Recurrence:**
@@ -311,11 +316,15 @@ M[i] = \max(M[i-1], S[i])
 Consider any subarray ending at position $i$. It either:
 
 **Case 1:** Contains only $A[i]$
+
 - Sum = $A[i]$
 
 **Case 2:** Extends from some earlier position $j < i$
+
 - Sum = $\sum\_{k=j}^{i} A[k] = \sum\_{k=j}^{i-1} A[k] + A[i]$
+
 - But $\sum\_{k=j}^{i-1} A[k] \leq S[i-1]$ (by inductive hypothesis)
+
 - So this sum $\leq S[i-1] + A[i]$
 
 **Conclusion:** The maximum is $\max(A[i], S[i-1] + A[i])$ ✓
@@ -365,12 +374,15 @@ Decision: new  new  ext  new  ext  ext  ext  ext  ext
 ### 🎯 Common Proof Mistakes to Avoid
 
 ❌ **Mistake 1:** "We need to track all possible subarrays"
+
 - ✅ **Correct:** We only need maximum ending at each position
 
 ❌ **Mistake 2:** "We need to know where the maximum subarray starts"
+
 - ✅ **Correct:** We only need the sum, not the indices (for basic version)
 
 ❌ **Mistake 3:** "Induction is too complicated"
+
 - ✅ **Correct:** Induction is perfect here because each step builds on the previous
 
 ---

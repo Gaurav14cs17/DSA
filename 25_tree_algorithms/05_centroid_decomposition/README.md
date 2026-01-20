@@ -63,8 +63,11 @@ permalink: /25_tree_algorithms/05_centroid_decomposition/
 
 **Structure:**
 - Root = centroid of original tree
+
 - Children = centroids of subtrees after removal
+
 - Height = $O(\log n)$
+
 - Each node appears once
 
 **Path decomposition:** Any path passes through $O(\log n)$ centroids.
@@ -85,8 +88,11 @@ permalink: /25_tree_algorithms/05_centroid_decomposition/
 ### 5️⃣ Algorithm Complexity
 
 **Decomposition:** $O(n \log n)$
+
 - Finding centroid: $O(n)$
+
 - Depth: $O(\log n)$
+
 - Total: $O(n) \times O(\log n) = O(n \log n)$
 
 **Query:** Typically $O(\log n)$ to $O(\log^2 n)$

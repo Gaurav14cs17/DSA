@@ -13,8 +13,11 @@ nav_order: 4
 ![Collision Handling](./images/collision-handling.svg)
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Medium-Hard](https://img.shields.io/badge/Medium--Hard-red)
+
 - **Collision Probability:** ~1/M single hash, ~1/(M₁·M₂) double hash
+
 - **Topics:** Hash Collisions, Double Hashing, Probabilistic Algorithms
 
 ---

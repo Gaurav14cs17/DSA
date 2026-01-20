@@ -95,9 +95,13 @@ Merged interval:
 
 **Proof:**
 - After sorting: $s\_1 \leq s\_2 \leq \cdots \leq s\_n$
+
 - To check if $I\_i$ and $I\_{i+1}$ overlap: compare $e\_i$ with $s\_{i+1}$
+
 - If $e\_i \geq s\_{i+1}$: overlap (merge)
+
 - If $e\_i < s\_{i+1}$: no overlap (start new interval)
+
 - One pass through sorted list: $O(n)$ ∎
 
 ---
@@ -752,9 +756,13 @@ For intervals $[a, b]$ and $[c, d]$ where $a \leq c$:
 
 **Proof:**
 - Overlap exists iff $b \geq c$
+
 - Overlap ends at $\min(b, d)$
+
 - Overlap starts at $c$
+
 - Length = end - start = $\min(b, d) - c$
+
 - Use $\max(0, \cdot)$ to handle non-overlapping case ∎
 
 ---
@@ -875,8 +883,11 @@ class IntervalTreeNode:
 9. **Remove Covered Intervals** (#1288) - Sorting tricks
 
 ### Expert Level
+
 - Skyline Problem (#218) - Complex sweep line
+
 - Range Module (#715) - Interval tree
+
 - My Calendar III (#732) - Advanced counting
 
 ---

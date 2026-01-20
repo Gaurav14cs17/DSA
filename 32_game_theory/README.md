@@ -50,7 +50,9 @@ permalink: /32_game_theory/
 
 **Examples:**
 - Nim game
+
 - Chomp
+
 - Subtract a square
 
 **Key Theorem (Sprague-Grundy):** Every impartial game is equivalent to a Nim game.
@@ -65,6 +67,7 @@ permalink: /32_game_theory/
 
 **Recursive Definition:**
 - A position is **losing** if all moves lead to **winning** positions
+
 - A position is **winning** if there exists at least one move to a **losing** position
 
 ```math
@@ -120,7 +123,9 @@ where $\text{mex}(S) = \min\{n \geq 0 : n \notin S\}$ (minimum excludant)
 
 **Properties:**
 - $g(P) = 0$ iff $P$ is a losing position
+
 - $g(P) > 0$ iff $P$ is a winning position
+
 - For multiple independent games: $g(G\_1 + G\_2 + \cdots) = g(G\_1) \oplus g(G\_2) \oplus \cdots$
 
 **Example:**
@@ -248,14 +253,20 @@ Pattern repeats every 4 positions!
 
 **Core Concepts:**
 - Classic Nim
+
 - Nim-Sum (XOR)
+
 - Bouton's Theorem
+
 - Misère Nim
+
 - Multi-pile Nim
 
 **Key Problems:**
 - Nim Game (#292)
+
 - Game of Nim (#1510)
+
 - Chalkboard XOR (#810)
 
 **Time:** O(n)
@@ -267,14 +278,20 @@ Pattern repeats every 4 positions!
 
 **Core Concepts:**
 - Game trees
+
 - Minimax algorithm
+
 - Alpha-beta pruning
+
 - Evaluation functions
+
 - Two-player games
 
 **Key Problems:**
 - Predict Winner (#486)
+
 - Stone Game (#877)
+
 - Cat and Mouse (#913)
 
 **Time:** O(b^d)
@@ -286,14 +303,20 @@ Pattern repeats every 4 positions!
 
 **Core Concepts:**
 - Stone pile games
+
 - DP on games
+
 - Optimal strategy
+
 - Interval DP
+
 - Game states
 
 **Key Problems:**
 - Stone Game I-V
+
 - Can I Win (#464)
+
 - Flip Game II (#294)
 
 **Patterns:** Many!

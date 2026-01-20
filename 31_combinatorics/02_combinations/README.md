@@ -40,7 +40,9 @@ permalink: /31_combinatorics/02_combinations/
 
 **Key Properties:**
 - $\binom{n}{r} = \binom{n}{n-r}$ (Symmetry)
+
 - $\binom{n}{0} = \binom{n}{n} = 1$
+
 - $\binom{n}{r} = \binom{n-1}{r-1} + \binom{n-1}{r}$ (Pascal's Identity)
 
 ### Pascal's Triangle

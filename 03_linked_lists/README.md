@@ -65,12 +65,17 @@ permalink: /03_linked_lists/
 **Proof:**
 
 Let:
+
 - $\mu$ = distance from head to cycle start
+
 - $\lambda$ = cycle length
+
 - Meeting point: $k$ steps into cycle
 
 When they meet:
+
 - Slow traveled: $\mu + k$
+
 - Fast traveled: $\mu + k + m\lambda$ for some $m \geq 1$
 
 Since fast = 2 × slow:
@@ -83,7 +88,9 @@ Since fast = 2 × slow:
 
 **Finding cycle start:**
 - Reset one pointer to head
+
 - Move both at same speed
+
 - They meet at cycle start
 
 **Proof:** From meeting point, $\lambda - k$ steps to cycle start.
@@ -118,7 +125,9 @@ At each step: `prev → ... ← current`
 
 **Proof:**
 - Fast moves 2 steps per iteration
+
 - Slow moves 1 step per iteration
+
 - Fast reaches $n$, slow reaches $n/2$
 
 ---
@@ -375,16 +384,23 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 
 ❌ **Don't:**
 - Forget to check for null pointers
+
 - Lose reference to head when modifying
+
 - Forget dummy node for edge cases
+
 - Modify list while iterating without saving next
+
 - Skip drawing diagrams
 
 ✅ **Do:**
 - Always check `if not head` or `if not head.next`
 - Use dummy node for insertions/deletions
+
 - Draw small examples (3-5 nodes)
+
 - Test with empty list, single node, two nodes
+
 - Verify pointer updates carefully
 
 ### Optimization Checklist
@@ -407,8 +423,11 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 
 **Progress Tracker:**
 - 🥉 **Bronze:** Solve 15 linked list problems
+
 - 🥈 **Silver:** Solve 30 linked list problems
+
 - 🥇 **Gold:** Solve 50 linked list problems
+
 - 💎 **Platinum:** Master Floyd's algorithm and merge sort
 
 **Remember:** Draw diagrams! Visual understanding > memorization 📝

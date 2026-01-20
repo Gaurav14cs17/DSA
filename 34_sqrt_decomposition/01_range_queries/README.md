@@ -34,11 +34,17 @@ permalink: /34_sqrt_decomposition/01_range_queries/
 ## 📐 Query Types
 
 ### Supported Operations
+
 - ✅ Range Sum
+
 - ✅ Range Min/Max
+
 - ✅ Range GCD/LCM
+
 - ✅ Point Update
+
 - ✅ Range Update
+
 - ✅ Range Assignment
 
 All in **O(√n)** time!

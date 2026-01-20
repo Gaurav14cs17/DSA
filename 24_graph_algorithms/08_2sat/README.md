@@ -67,11 +67,15 @@ permalink: /24_graph_algorithms/08_2sat/
 **Convert to directed graph:**
 
 Clause $(a \lor b)$ becomes:
+
 - $\neg a \Rightarrow b$
+
 - $\neg b \Rightarrow a$
 
 **Example:** $(x\_1 \lor x\_2)$ creates edges:
+
 - $\neg x\_1 \to x\_2$
+
 - $\neg x\_2 \to x\_1$
 
 ---
@@ -105,8 +109,11 @@ x_i \text{ and } \neg x_i \text{ are in different SCCs}
 ### 6️⃣ Complexity
 
 **Time:** $O(V + E)$
+
 - Build implication graph: $O(n + m)$
+
 - Find SCCs: $O(V + E)$
+
 - Extract assignment: $O(n)$
 
 **Space:** $O(V + E)$

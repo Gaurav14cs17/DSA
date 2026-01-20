@@ -35,6 +35,7 @@
 ### 🎯 **Comprehensive Coverage**
 - **41 carefully curated topics**
 - From basic arrays to advanced loop fusion
+
 - Interview-focused problem selection
 
 </td>
@@ -42,7 +43,9 @@
 
 ### 📐 **Mathematical Rigor**
 - Formal proofs and derivations
+
 - Complexity analysis for every algorithm
+
 - Visual step-by-step walkthroughs
 
 </td>
@@ -52,7 +55,9 @@
 
 ### 💻 **Production-Ready Code**
 - Clean, well-documented Python implementations
+
 - Multiple approaches for each problem
+
 - Optimized solutions with explanations
 
 </td>
@@ -60,7 +65,9 @@
 
 ### 🗺️ **Structured Learning Path**
 - Progressive difficulty levels
+
 - Clear prerequisites and dependencies
+
 - Practice roadmaps for each topic
 
 </td>

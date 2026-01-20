@@ -71,8 +71,11 @@ For string $S$ with brackets:
 ```
 
 Where:
+
 - $\text{score}('(') = +1, \; \text{score}(')') = -1$
+
 - $\text{score}('[') = +1, \; \text{score}(']') = -1$
+
 - $\text{score}('\{') = +1, \; \text{score}('\}') = -1$
 
 **Condition 2 (Prefix Non-negative):**
@@ -99,6 +102,7 @@ Where:
 **Inductive Step:**
 - If $S[i]$ is opening bracket:
   - Push to stack → invariant maintained
+
 - If $S[i]$ is closing bracket:
   - If stack empty → invalid (prefix sum would be negative)
   - If stack top matches → pop → invariant maintained
@@ -106,6 +110,7 @@ Where:
 
 **Termination:**
 - Valid string: all opens matched → empty stack
+
 - Invalid string: unmatched opens remain → non-empty stack ∎
 
 ---
@@ -150,8 +155,11 @@ dp[i-1] + 2 + dp[j] & \text{if } j = i - dp[i-1] - 2 \geq 0 \text{ and } S[j+1] 
 ```
 
 Where:
+
 - $dp[i]$ = length of longest valid substring ending at index $i$
+
 - Case 1: Opening bracket can't end a valid substring
+
 - Case 2: Immediate pair `()`
 - Case 3: Nested case `(...)`
 
@@ -456,10 +464,12 @@ n = 3 (generate all valid combinations with 3 pairs)
 +--------------------------------------------------------------------+
 
 Algorithm Logic:
+
 - Start with empty string, open=0, close=0
 - At each step:
   * If open < n: can add '('
   * If close < open: can add ')'
+
 - Base case: length == 2n → add to result
 
 ```
@@ -945,8 +955,11 @@ def scoreOfParentheses(s: str) -> int:
 9. **Score of Parentheses** (#856) - Calculation with stack
 
 ### Mastery Challenge
+
 - Solve each problem in < 15 minutes
+
 - Implement both stack and O(1) space solutions where possible
+
 - Explain Catalan number connection
 
 ---

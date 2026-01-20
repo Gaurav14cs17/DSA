@@ -52,8 +52,11 @@ permalink: /39_approximation_algorithms/
 max(ALG(I)/OPT(I), OPT(I)/ALG(I)) ≤ ρ(n)
 
 Where:
+
 - ALG(I) = algorithm's solution
+
 - OPT(I) = optimal solution
+
 - ρ(n) ≥ 1
 
 ```
@@ -69,10 +72,12 @@ ALG ≤ 2 · OPT
 
 **PTAS (Polynomial Time Approximation Scheme):**
 - For any ε > 0, finds (1+ε)-approximation
+
 - Time: O(n^f(1/ε))
 
 **FPTAS (Fully PTAS):**
 - PTAS where f(1/ε) is polynomial
+
 - Time: O((n/ε)^c) for some constant c
 
 ---
@@ -358,17 +363,27 @@ def bin_packing_ffd(items, bin_capacity):
 ## 📊 Practice Roadmap
 
 ### Week 1: Greedy Approximation (5 problems)
+
 - [ ] 621. Task Scheduler
+
 - [ ] 1029. Two City Scheduling
+
 - [ ] 630. Course Schedule III
+
 - [ ] 1326. Minimum Taps
+
 - [ ] 1235. Maximum Profit in Job Scheduling
 
 ### Week 2: Knapsack & DP (5 problems)
+
 - [ ] 416. Partition Equal Subset Sum ⭐
+
 - [ ] 494. Target Sum
+
 - [ ] 1049. Last Stone Weight II
+
 - [ ] 879. Profitable Schemes
+
 - [ ] 1751. Maximum Events II
 
 ---
@@ -384,8 +399,11 @@ def bin_packing_ffd(items, bin_capacity):
 
 **Common Mistakes:**
 - ❌ Confusing approximation ratio with error (ratio ≥ 1, error ≥ 0)
+
 - ❌ Using approximation for problems with exact poly algorithms
+
 - ❌ Not checking triangle inequality for TSP
+
 - ❌ Forgetting that general TSP has no approximation
 
 ---

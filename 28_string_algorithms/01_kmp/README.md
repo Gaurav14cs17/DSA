@@ -13,10 +13,15 @@ has_children: true
 ![KMP Algorithm](./images/kmp-algorithm.svg)
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+
 - **Time Complexity:** O(n + m)
+
 - **Space Complexity:** O(m)
+
 - **Topics:** String Matching, Pattern Preprocessing, Failure Function
+
 - **Prerequisites:** String basics, Arrays, Prefix analysis
 
 ---
@@ -28,24 +33,33 @@ has_children: true
 <td width="33%">
 
 ### [01. Basic Pattern Matching](./01_basic_pattern_matching/)
+
 - Simple KMP matching
+
 - Find all occurrences
+
 - First occurrence
 
 </td>
 <td width="33%">
 
 ### [02. Failure Function](./02_failure_function/)
+
 - Computing π array
+
 - Properties and proofs
+
 - Applications of π
 
 </td>
 <td width="33%">
 
 ### [03. String Period](./03_string_period/)
+
 - Period detection
+
 - Repeating patterns
+
 - Smallest period
 
 </td>
@@ -54,24 +68,33 @@ has_children: true
 <td width="33%">
 
 ### [04. Prefix-Suffix Matching](./04_prefix_suffix/)
+
 - Longest happy prefix
+
 - Border analysis
+
 - Prefix properties
 
 </td>
 <td width="33%">
 
 ### [05. Palindrome with KMP](./05_palindrome_kmp/)
+
 - Shortest palindrome
+
 - Palindrome construction
+
 - KMP for palindromes
 
 </td>
 <td width="33%">
 
 ### [06. Multiple Patterns](./06_multiple_patterns/)
+
 - Multiple string matching
+
 - Pattern variations
+
 - Advanced applications
 
 </td>
@@ -86,8 +109,11 @@ The **Knuth-Morris-Pratt (KMP)** algorithm is a linear-time string matching algo
 
 **Core Concepts:**
 - **Failure Function (π):** Preprocesses pattern to enable smart backtracking
+
 - **No Character Re-examination:** Each text character examined at most once
+
 - **Linear Time:** O(n + m) guaranteed for any input
+
 - **Wide Applications:** Beyond simple pattern matching
 
 ---
@@ -385,7 +411,9 @@ def kmp_case_insensitive(text, pattern):
 Define potential function: Φ = k (current border length)
 
 For iteration i:
+
 - **Actual cost:** 1 + (number of fallbacks)
+
 - **Potential change:** ΔΦ ≤ 1 (k increases by at most 1)
 
 **Amortized cost:** 
@@ -406,8 +434,11 @@ Sum of actual costs = Sum of amortized costs - (Φ_final - Φ_initial)
 **Proof (Pattern Matching):**
 
 Similar analysis with k tracking matched characters:
+
 - k can increase at most n times (one per text character)
+
 - k can decrease at most n times (can't go below 0)
+
 - Total operations: O(n)
 
 **Combined:** O(m) + O(n) = O(n + m)
@@ -455,9 +486,13 @@ This section contains **45+ problems** across **6 categories**:
 ### Why KMP Works
 
 **Intuition:** When mismatch occurs after matching k characters:
+
 - We know text[i-k..i-1] = pattern[0..k-1]
+
 - We know pattern[0..π[k-1]-1] = pattern[k-π[k-1]..k-1]
+
 - Therefore text[i-π[k-1]..i-1] = pattern[0..π[k-1]-1]
+
 - Next comparison starts at pattern[π[k-1]]
 
 **Visual Example:**
@@ -481,15 +516,22 @@ Pattern:       ABABCABAA
 
 ✅ **Best for:**
 - Single pattern matching
+
 - Need guaranteed O(n+m) performance
+
 - Pattern doesn't change frequently
+
 - Theoretical correctness required
+
 - Competitive programming
 
 ❌ **Consider alternatives:**
 - Multiple patterns → Aho-Corasick
+
 - Very short patterns → Naive search
+
 - Average case performance → Boyer-Moore
+
 - Probabilistic OK → Rabin-Karp
 
 ### KMP vs Other Algorithms
@@ -653,18 +695,27 @@ def match_with_automaton(text, pattern):
 ## 📚 Additional Resources
 
 ### Papers & Theory
+
 - [Original KMP Paper (1977)](https://epubs.siam.org/doi/10.1137/0206024)
+
 - [Morris-Pratt Algorithm](https://doi.org/10.1145/360825.360855)
+
 - [Automata-Theoretic View](https://www.sciencedirect.com/science/article/pii/0020019086900304)
 
 ### Tutorials & Visualizations
+
 - [CP-Algorithms: KMP](https://cp-algorithms.com/string/prefix-function.html)
+
 - [VisuAlgo: KMP Visualization](https://visualgo.net/en/suffixarray)
+
 - [USACO Guide: KMP](https://usaco.guide/gold/string-hashing)
 
 ### Books
+
 - **CLRS**: Chapter 32 (String Matching)
+
 - **Algorithms on Strings**: Crochemore, Rytter
+
 - **Handbook of Exact String Matching**: Charras, Lecroq
 
 ---

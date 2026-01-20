@@ -474,9 +474,13 @@ A: Hash for unsorted or when need indices. Two pointers for sorted or when order
 ## 🔥 Key Insights
 
 - **Complement Trick:** `target - current` reduces O(n²) to O(n)
+
 - **K-Sum Reduction:** K-sum → (K-1)-sum → ... → 2-sum
+
 - **Prefix Sum:** Transforms subarray sum to difference of prefixes
+
 - **Two-Pair Split:** Splits O(n⁴) to O(n²) for 4-sum
+
 - **Sort for Deduplication:** Sorted array makes skipping duplicates easy
 
 ---

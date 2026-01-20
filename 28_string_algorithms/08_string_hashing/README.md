@@ -12,10 +12,15 @@ nav_order: 8
 ![String Hashing](./images/string-hashing.svg)
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+
 - **Time Complexity:** O(n) preprocessing, O(1) query
+
 - **Space Complexity:** O(n)
+
 - **Topics:** Hashing, Rolling Hash, Polynomial Hash
+
 - **Prerequisites:** Modular arithmetic, Number theory basics
 
 ---
@@ -26,9 +31,13 @@ nav_order: 8
 
 **Core Applications:**
 - Fast string comparison
+
 - Substring equality checks
+
 - Pattern matching
+
 - Duplicate detection
+
 - Dictionary operations
 
 ---
@@ -43,8 +52,11 @@ The most common string hash:
 h(s) = (s[0]·p^(n-1) + s[1]·p^(n-2) + ... + s[n-1]·p^0) mod M
 
 where:
+
 - p = prime base (typically 31 for lowercase, 53 for mixed case)
+
 - M = large prime modulus (10^9+7 or 10^9+9)
+
 - s[i] = numerical value of character (often ASCII code)
 
 ```
@@ -92,8 +104,11 @@ For random strings:
 P(collision) ≈ k²/(2M)  (Birthday paradox)
 
 For M = 10^9+7:
+
 - 1000 strings: P ≈ 0.0005%
+
 - 10000 strings: P ≈ 0.05%
+
 - 100000 strings: P ≈ 5%
 
 ```
@@ -672,14 +687,18 @@ def match_with_wildcards(text, pattern):
 
 ```python
 # Guidelines:
+
 - Lowercase only (a-z): p = 31
 - Mixed case (a-z, A-Z): p = 53
 - All printable ASCII: p = 257
 - Custom alphabet size σ: p ≈ σ (prime)
 
 # Why prime?
+
 - Better distribution
+
 - Reduces patterns in collisions
+
 - Mathematical properties for proofs
 
 ```
@@ -710,7 +729,9 @@ MOD2 = 10**9 + 9
 
 **When to use hashing:**
 - Multiple substring comparisons (k >> 1)
+
 - Large strings
+
 - Acceptable false positive rate
 
 ### Common Pitfalls
@@ -829,7 +850,9 @@ class IncrementalHash:
 ## 🔗 Related Topics
 
 - [Rabin-Karp](../02_rabin_karp/) - Pattern matching with rolling hash
+
 - [Hash Tables](../../06_hash_tables/) - General hashing concepts
+
 - [Suffix Array](../04_suffix_structures/) - Alternative for substring queries
 
 ---
@@ -837,7 +860,9 @@ class IncrementalHash:
 ## 📚 Additional Resources
 
 - [CP-Algorithms: String Hashing](https://cp-algorithms.com/string/string-hashing.html)
+
 - [Codeforces: Anti-Hash Tests](https://codeforces.com/blog/entry/4898)
+
 - [USACO Guide: Hashing](https://usaco.guide/gold/string-hashing)
 
 ---

@@ -42,7 +42,9 @@ permalink: /07_trees/05_lca_ancestor/
 
 **Properties:**
 - $\text{LCA}(p, p) = p$
+
 - $\text{LCA}(p, q) = \text{LCA}(q, p)$
+
 - If $p$ is ancestor of $q$, then $\text{LCA}(p, q) = p$
 
 ---
@@ -504,8 +506,11 @@ A: Yes! A node can be ancestor of itself. If p is ancestor of q, LCA(p,q) = p.
 ## 🔥 Key Insights
 
 - **Split Point:** LCA is where paths to p and q diverge
+
 - **BST Property:** Navigate using comparisons, O(h) time
+
 - **Parent Pointers:** Bring to same level, move together
+
 - **Binary Lifting:** Jump ancestors using powers of 2
 - **Node Can Be Its Own Ancestor:** LCA(p,q) can be p or q itself
 

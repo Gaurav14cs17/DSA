@@ -565,9 +565,13 @@ A: Binary search on last level positions (log n). Each check follows path (log n
 ## 🔥 Key Insights
 
 - **Height Formula:** \( h(node) = 1 + \max(h(left), h(right)) \)
+
 - **Diameter Pattern:** Track global max of \( h(left) + h(right) \)
+
 - **Balanced Check:** \( |h(left) - h(right)| \leq 1 \) for ALL nodes
+
 - **Symmetric = Mirror:** Compare nodes in mirror positions
+
 - **Complete Tree:** All levels full except last (left-aligned)
 
 ---

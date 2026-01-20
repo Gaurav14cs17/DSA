@@ -8,9 +8,13 @@ nav_order: 4
 # 📍 Point Location Problems
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+
 - **Time Complexity:** O(n) for point in polygon
+
 - **Space Complexity:** O(1)
+
 - **Topics:** Ray Casting, Winding Number, Point in Triangle
 
 ---
@@ -34,7 +38,9 @@ Point location determines spatial relationships: Is a point inside, outside, or 
 ### Jordan Curve Theorem
 
 **Theorem:** Any simple closed curve divides the plane into:
+
 - Interior (bounded region)
+
 - Exterior (unbounded region)
 
 **Application:** Point is inside polygon ⟺ ray from point to infinity crosses odd number of edges.

@@ -37,7 +37,9 @@ permalink: /14_sorting/01_comparison_sorts/
 
 **Proof:**
 - Decision tree has $n!$ leaves (permutations)
+
 - Tree height $h \geq \log\_2(n!)$
+
 - Stirling: $\log\_2(n!) = \Theta(n \log n)$ ∎
 
 ---
@@ -60,6 +62,7 @@ After `partition(arr, low, high)`:
 
 **Proof by induction:**
 - Base: Single element is sorted
+
 - Inductive: Merging two sorted arrays produces sorted array ∎
 
 ---

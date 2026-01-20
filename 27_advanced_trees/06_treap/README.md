@@ -57,7 +57,9 @@ permalink: /27_advanced_trees/06_treap/
 
 **Intuition:**
 - Random priorities create random insertion order
+
 - Random BST has expected height $O(\log n)$
+
 - Treap simulates random BST regardless of actual insertion order!
 
 **Proof sketch:**

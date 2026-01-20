@@ -343,16 +343,24 @@ First values: $C\_0=1, C\_1=1, C\_2=2, C\_3=5, C\_4=14, \ldots$
 
 ❌ **Don't:**
 - Forget base case (null node)
+
 - Confuse height with depth
+
 - Forget to check both children for leaf
+
 - Modify tree when not needed
+
 - Use global variables (pass results up)
 
 ✅ **Do:**
 - Always handle null nodes first
+
 - Draw small tree (3-5 nodes) to visualize
+
 - Understand difference: height (bottom-up) vs depth (top-down)
+
 - For "all paths", use backtracking
+
 - Return values up the recursion tree
 
 ### Optimization Checklist
@@ -375,8 +383,11 @@ First values: $C\_0=1, C\_1=1, C\_2=2, C\_3=5, C\_4=14, \ldots$
 
 **Progress Tracker:**
 - 🥉 **Bronze:** Solve 15 tree problems
+
 - 🥈 **Silver:** Solve 30 tree problems + master traversals
+
 - 🥇 **Gold:** Solve 50 tree problems + LCA patterns
+
 - 💎 **Platinum:** Master all patterns + hard problems
 
 **Remember:** Trees are recursive by nature. Think recursively, code becomes elegant! 🚀

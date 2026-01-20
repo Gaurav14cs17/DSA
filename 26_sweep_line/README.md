@@ -47,25 +47,35 @@ Time    |---|-----|---|---|-----|
 <td width="33%">
 
 ### [01. Interval Sweep](./01_interval_sweep/)
+
 - Meeting rooms
+
 - Overlapping intervals
+
 - Maximum overlap
+
 - Range updates
 
 </td>
 <td width="33%">
 
 ### [02. Coordinate Compression](./02_coordinate_compression/)
+
 - Rectangle area
+
 - Skyline problem
+
 - 2D sweep problems
 
 </td>
 <td width="33%">
 
 ### [03. Line Segment Intersection](./03_line_segment_intersection/)
+
 - Bentley-Ottmann
+
 - Orientation tests
+
 - Convex hull
 
 </td>
@@ -74,24 +84,33 @@ Time    |---|-----|---|---|-----|
 <td width="33%">
 
 ### [04. Angular Sweep](./04_angular_sweep/)
+
 - Radial sorting
+
 - Visibility problems
+
 - K closest points
 
 </td>
 <td width="33%">
 
 ### [05. Rectangle Problems](./05_rectangle_problems/)
+
 - Histogram rectangles
+
 - Perfect rectangle
+
 - Area calculations
 
 </td>
 <td width="33%">
 
 ### [06. Closest Pair](./06_closest_pair/)
+
 - Divide & conquer
+
 - K-D trees
+
 - Distance metrics
 
 </td>

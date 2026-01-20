@@ -90,8 +90,11 @@ def f(n):
 ### 4️⃣ Stack Frames
 
 Each call creates a stack frame storing:
+
 - Local variables
+
 - Return address
+
 - Parameters
 
 ```math

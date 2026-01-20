@@ -50,9 +50,13 @@ permalink: /21_bit_manipulation/01_basic_operations/
 ## 🎯 What You'll Learn
 
 - Count set bits using Brian Kernighan's Algorithm
+
 - Check if a number is a power of 2, 4, or any other base
+
 - Reverse bits in a 32-bit integer
+
 - Add numbers without using `+` operator
+
 - Find the bitwise AND of a range
 
 ---
@@ -135,8 +139,11 @@ n \text{ is power of 2} \Leftrightarrow n > 0 \land n \land (n-1) = 0
 #### 🔍 Proof
 
 **If \( n = 2^k \)**:
+
 - \( n \) has only one bit set (at position \( k \))
+
 - \( n - 1 \) has all bits set below position \( k \)
+
 - \( n \land (n-1) = 0 \) (no overlap)
 
 ```
@@ -147,8 +154,11 @@ n & (n-1):  0 0 0 0 0 = 0 ✓
 ```
 
 **If \( n \neq 2^k \)**:
+
 - \( n \) has at least two bits set
+
 - \( n \land (n-1) \) clears only the lowest bit
+
 - Result is non-zero
 
 ```
@@ -214,7 +224,9 @@ Or equivalently:
 #### 🔍 Proof of the Second Formula
 
 The number of set bits in \( i \) equals:
+
 - The set bits in \( \lfloor i/2 \rfloor \) (all bits shifted right)
+
 - Plus 1 if the least significant bit was set
 
 ```
@@ -325,7 +337,9 @@ The result is the **common prefix** of `left` and `right` in binary.
 #### 🔍 Proof
 
 For any bit position where `left` and `right` differ:
+
 - There must be some number in the range with 0 at that position
+
 - AND of 1 and 0 gives 0
 
 So only the common prefix (where they're identical) survives!
@@ -636,7 +650,9 @@ def rangeBitwiseAndAlt(left: int, right: int) -> int:
 ### Q: "How would you extend power of 4 to power of k?"
 
 **A**: For power of \( k \):
+
 - If \( k \) is power of 2: Check if bit position is multiple of \( \log_2(k) \)
+
 - Otherwise: Use \( \log \) or repeated division
 
 ---

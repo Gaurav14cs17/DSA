@@ -43,24 +43,33 @@ permalink: /28_string_algorithms/
 <td width="33%">
 
 ### [01. KMP Algorithm](./01_kmp/)
+
 - Failure function
+
 - Linear pattern matching
+
 - Prefix-suffix analysis
 
 </td>
 <td width="33%">
 
 ### [02. Rabin-Karp](./02_rabin_karp/)
+
 - Rolling hash technique
+
 - Multiple pattern matching
+
 - Hash collision handling
 
 </td>
 <td width="33%">
 
 ### [03. Z-Algorithm](./03_z_algorithm/)
+
 - Z-function computation
+
 - Linear string matching
+
 - Pattern preprocessing
 
 </td>
@@ -69,24 +78,33 @@ permalink: /28_string_algorithms/
 <td width="33%">
 
 ### [04. Suffix Structures](./04_suffix_structures/)
+
 - Suffix arrays
+
 - LCP arrays
+
 - Kasai's algorithm
 
 </td>
 <td width="33%">
 
 ### [05. Manacher's Algorithm](./05_manacher/)
+
 - Palindrome detection
+
 - Linear time solution
+
 - Center expansion
 
 </td>
 <td width="33%">
 
 ### [06. Aho-Corasick](./06_aho_corasick/)
+
 - Trie + failure links
+
 - Multiple pattern search
+
 - Dictionary matching
 
 </td>
@@ -95,16 +113,22 @@ permalink: /28_string_algorithms/
 <td width="33%">
 
 ### [07. Suffix Tree](./07_suffix_tree/)
+
 - Ukkonen's algorithm
+
 - Linear construction
+
 - Pattern matching
 
 </td>
 <td width="33%">
 
 ### [08. String Hashing](./08_string_hashing/)
+
 - Polynomial hashing
+
 - Double hashing
+
 - Hash comparisons
 
 </td>
@@ -121,10 +145,15 @@ permalink: /28_string_algorithms/
 **String Algorithms** are fundamental techniques for efficiently processing, searching, and analyzing text data:
 
 - **Pattern Matching:** Find occurrences of patterns in text efficiently
+
 - **Hashing Techniques:** Use rolling hashes for fast string comparisons
+
 - **Suffix Structures:** Build data structures for complex string queries
+
 - **Palindrome Detection:** Identify palindromic substrings in linear time
+
 - **Multiple Pattern Search:** Search for many patterns simultaneously
+
 - **String Preprocessing:** Build auxiliary structures for fast queries
 
 ---
@@ -146,7 +175,9 @@ permalink: /28_string_algorithms/
 
 **Key:**
 - n = text length
+
 - m = total pattern length
+
 - k = number of occurrences
 
 ---
@@ -159,11 +190,14 @@ permalink: /28_string_algorithms/
 
 **Naive Approach:**
 - Time: O(nm) where n = |T|, m = |P|
+
 - Compare pattern at each position
 
 **Optimal Approaches:**
 - **KMP:** O(n + m) using failure function
+
 - **Rabin-Karp:** O(n + m) average using hashing
+
 - **Z-Algorithm:** O(n + m) using Z-array
 
 ---
@@ -190,7 +224,9 @@ then next potential match starts at position j - π[i]
 
 **Time Complexity Analysis:**
 - Preprocessing: O(m)
+
 - Matching: O(n)
+
 - Total: O(n + m)
 
 ---
@@ -213,6 +249,7 @@ h(s[i+1..i+m]) = (h(s[i..i+m-1]) - s[i]·p^(m-1))·p + s[i+m] mod M
 
 **Key Parameters:**
 - **p:** Prime base (usually 31 or 53)
+
 - **M:** Large prime modulus (10^9 + 7 or 10^9 + 9)
 
 **Collision Probability:**
@@ -252,6 +289,7 @@ Z:      [0,1,0,0,3,1,0,0,2,1,0]
 
 **Key Observation:**
 - If Z[i] = k, then s[i..i+k-1] = s[0..k-1]
+
 - Use previously computed Z-values to optimize
 
 **Time Complexity:** O(n) using two-pointer technique
@@ -288,7 +326,9 @@ LCP[i] = longest common prefix of SA[i] and SA[i-1]
 
 **Applications:**
 - Pattern matching in O(m log n)
+
 - Longest repeated substring
+
 - Longest common substring of multiple strings
 
 ---
@@ -343,11 +383,14 @@ fail[node] = longest proper suffix that is in trie
 
 **Time Complexity:**
 - Construction: O(Σ|patterns|)
+
 - Matching: O(n + k) where k = number of matches
 
 **Applications:**
 - Dictionary matching
+
 - Virus scanning
+
 - Log analysis
 
 ---
@@ -358,18 +401,25 @@ fail[node] = longest proper suffix that is in trie
 
 **Properties:**
 - **Edges:** Labeled with substrings
+
 - **Leaves:** Represent suffix positions
+
 - **Internal nodes:** Branch points
 
 **Construction (Ukkonen's Algorithm):**
 - Online algorithm: O(n) time
+
 - Builds tree left-to-right
+
 - Uses suffix links for efficiency
 
 **Applications:**
 - Find pattern in O(m)
+
 - Longest repeated substring
+
 - Longest common substring
+
 - Suffix array construction
 
 ---
@@ -947,7 +997,9 @@ def smallest_period(s):
 
 ```
 - Position-dependent: "abc" ≠ "cba"
+
 - Prefix property: Easy to extend
+
 - Rolling updates: O(1) window slides
 
 ```

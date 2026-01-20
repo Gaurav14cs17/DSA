@@ -42,7 +42,9 @@ permalink: /26_sweep_line/01_interval_sweep/
 **Sweep Line** processes events at critical points (interval boundaries) in sorted order.
 
 **Key Idea:** Convert intervals $I = [s\_i, e\_i]$ to events $(t, \delta)$ where:
+
 - $(s\_i, +1)$ = interval starts
+
 - $(e\_i, -1)$ = interval ends
 
 **Active Count at time $t$:**
@@ -86,7 +88,9 @@ a < d \land c < b
 
 **Proof:**
 - Overlap means $\exists t : a \leq t < b \land c \leq t < d$
+
 - This requires $a < d$ (otherwise $a \geq d > t$, contradiction)
+
 - Similarly requires $c < b$ ∎
 
 ---
@@ -120,8 +124,11 @@ a < d \land c < b
 
 **Proof:**
 - Let $k$ = max overlap
+
 - At time $t$ where $k$ intervals overlap, need $k$ rooms
+
 - Can't do with $k-1$ rooms (would have conflict at time $t$)
+
 - Can always do with $k$ rooms (assign to first available) ∎
 
 **Algorithm:** Use heap or sweep line to find max overlap.
@@ -146,7 +153,9 @@ a < d \land c < b
 
 **Proof by induction:**
 - Base: First interval is trivially merged
+
 - Step: If interval $i+1$ overlaps last merged, extending is minimal
+
 - If no overlap, must be separate interval ∎
 
 ---

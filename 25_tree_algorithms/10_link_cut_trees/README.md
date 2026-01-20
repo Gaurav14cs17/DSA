@@ -44,8 +44,11 @@ permalink: /25_tree_algorithms/10_link_cut_trees/
 
 **Operations needed:**
 - Link(u, v): Add edge
+
 - Cut(u, v): Remove edge  
+
 - Path queries: Sum, max, min on path
+
 - Update: Change node/edge value
 
 **Naive:** O(n) per operation  
@@ -61,7 +64,9 @@ permalink: /25_tree_algorithms/10_link_cut_trees/
 
 **Properties:**
 - Each node in exactly one splay tree
+
 - Splay trees form virtual tree
+
 - O(log n) access to any path
 
 ---

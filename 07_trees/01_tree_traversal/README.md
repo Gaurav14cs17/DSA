@@ -63,9 +63,13 @@ permalink: /07_trees/01_tree_traversal/
 **Theorem:** Inorder traversal of BST gives sorted sequence.
 
 **Proof:** By BST property:
+
 - All nodes in left subtree < root
+
 - All nodes in right subtree > root
+
 - Inorder visits left → root → right
+
 - Therefore: sorted order ∎
 
 ---
@@ -544,9 +548,13 @@ A: Preorder for top-down (copy, serialize). Postorder for bottom-up (delete, cal
 ## 🔥 Key Insights
 
 - **Inorder BST = Sorted:** Most important property for BST problems
+
 - **BFS = Level by Level:** Perfect for level-order, shortest path
+
 - **Morris = O(1) Space:** Use null pointers as temporary threads
+
 - **Iterative = Stack:** Simulate call stack explicitly
+
 - **Three Orders, Three Uses:** Inorder (sorted), Preorder (copy), Postorder (delete)
 
 ---

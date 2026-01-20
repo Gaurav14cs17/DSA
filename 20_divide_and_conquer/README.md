@@ -77,8 +77,11 @@ T(n) = 2T(n/2) + cn
 
 **Recursion tree:**
 - Level 0: $cn$
+
 - Level 1: $2 \times c(n/2) = cn$
+
 - Level k: $cn$
+
 - Height: $\log n$
 
 ```math

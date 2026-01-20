@@ -35,9 +35,13 @@ permalink: /23_sliding_window/02_variable_size/
 ## 🎯 What You'll Master
 
 - Longest subarray/substring problems
+
 - Shortest subarray/substring problems  
+
 - The "atMost(k) - atMost(k-1)" trick for counting
+
 - Constraint-based window adjustment
+
 - Amortized O(n) analysis
 
 ---
@@ -85,9 +89,13 @@ Let \(X_i\) = event "element \(i\) exits window"
 **Claim**: \(\sum_{i=0}^{n-1} (E_i + X_i) \leq 2n\)
 
 **Proof**:
+
 - Each element enters exactly once (when `right` pointer reaches it)
+
 - Each element exits at most once (when `left` pointer passes it)
+
 - `left` pointer only moves right, never backwards
+
 - Therefore: \(\sum E_i = n\) and \(\sum X_i \leq n\)
 
 Total operations: \(\leq 2n = O(n)\) ∎
@@ -194,13 +202,17 @@ This counts: \([right]\), \([right-1, right]\), ..., \([left, right]\)
 > Allow at most k "violations" in the window.
 
 Examples:
+
 - Max consecutive 1s with at most k flips (0→1)
+
 - Longest substring with at most k replacements
 
 #### The Insight
 
 Instead of tracking valid characters, track **violations**:
+
 - Window valid when: violations ≤ k
+
 - Shrink when: violations > k
 
 ---

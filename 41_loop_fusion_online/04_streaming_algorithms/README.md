@@ -40,14 +40,20 @@ permalink: /41_loop_fusion_online/04_streaming_algorithms/
 ### The Streaming Model
 
 **Definition:** Data arrives as a sequence $\sigma = (a\_1, a\_2, \ldots, a\_m)$ where:
+
 - Elements arrive one at a time
+
 - Cannot be stored (or storage is limited to $s \ll m$)
+
 - Must be processed in one pass
+
 - Output approximate answer with probabilistic guarantees
 
 **Performance Metrics:**
 - **Space**: $s = O(\text{polylog}(m, n))$
+
 - **Time**: $O(\text{polylog}(m, n))$ per element
+
 - **Accuracy**: $(1 \pm \epsilon)$ approximation with probability $1 - \delta$
 
 ---
@@ -110,6 +116,7 @@ print(f"Random sample of 5: {sample}")
 
 **Base Case ($i \leq k$):**
 - First $k$ elements all go into reservoir
+
 - Probability = $1 = k/k$ ✓
 
 **Inductive Hypothesis:**
@@ -118,10 +125,13 @@ print(f"Random sample of 5: {sample}")
 **Inductive Step (element $i$ arrives):**
 
 For **new element** $i$:
+
 - Selected with probability $k/i$ ✓
 
 For **old element** $j$ (where $j < i$):
+
 - Was in reservoir with probability $k/(i-1)$ (by hypothesis)
+
 - Stays in reservoir if:
   - **Case 1:** Element $i$ not selected: probability $1 - k/i$
   - **Case 2:** Element $i$ selected but doesn't replace $j$: probability $(k/i) \cdot (k-1)/k$
@@ -144,7 +154,9 @@ By induction, after $n$ elements, each has probability $k/n$. $\blacksquare$
 **💡 Intuition:**
 
 Imagine a game where you're picking $k$ people from a line of $n$ people:
+
 - First $k$ people: "You're in!"
+
 - Person $i$ arrives: Flip a coin with probability $k/i$
   - If heads: Pick random person to kick out, let person $i$ in
   - If tails: Person $i$ leaves
@@ -304,12 +316,16 @@ P(\hat{f}_i \leq f_i + \epsilon \|\mathbf{f}\|_1) \geq 1 - \delta \quad \blacksq
 
 **Why does taking minimum help?**
 - Each hash function might overestimate (due to collisions)
+
 - But different hash functions have different collisions
+
 - Taking minimum gives us the "luckiest" hash function
+
 - With $d$ tries, probability all are unlucky is very small!
 
 **Space-accuracy tradeoff:**
 - Want smaller error $\epsilon$ → need wider table ($w \propto 1/\epsilon$)
+
 - Want higher confidence $1-\delta$ → need more hash functions ($d \propto \log(1/\delta)$)
 
 **Why $e$ appears:** Markov's inequality gives $1/e$ as the failure probability when $w = e/\epsilon$. This is optimal!

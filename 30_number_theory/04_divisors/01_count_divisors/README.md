@@ -56,8 +56,11 @@ permalink: /30_number_theory/04_divisors/01_count_divisors/
 
 **Examples:**
 - $\tau(1) = 1$ → divisors: {1}
+
 - $\tau(6) = 4$ → divisors: {1, 2, 3, 6}
+
 - $\tau(12) = 6$ → divisors: {1, 2, 3, 4, 6, 12}
+
 - $\tau(p) = 2$ for any prime p → divisors: {1, p}
 
 ---

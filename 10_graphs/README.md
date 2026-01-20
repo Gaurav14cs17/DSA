@@ -36,6 +36,7 @@ G = (V, E)
 ```
 
 - $V$: Set of vertices (nodes)
+
 - $E$: Set of edges $\subseteq V \times V$
 
 ---
@@ -397,16 +398,24 @@ Graph Problem
 
 ❌ **Don't:**
 - Use adjacency matrix for sparse graphs (O(V²) space!)
+
 - Forget to track visited nodes (infinite loops!)
+
 - Use Dijkstra with negative weights (wrong results!)
+
 - Confuse directed vs undirected graphs
+
 - Forget to check if graph is connected
 
 ✅ **Do:**
 - Choose right representation: adjacency list for sparse
+
 - Always track visited to avoid cycles
+
 - Know when to use each shortest path algorithm
+
 - Handle edge cases: disconnected graphs, self-loops
+
 - Master both BFS and DFS thoroughly
 
 ### Optimization Checklist
@@ -430,8 +439,11 @@ Graph Problem
 
 **Progress Tracker:**
 - 🥉 **Bronze:** Solve 15 graph problems + master BFS/DFS
+
 - 🥈 **Silver:** Solve 30 problems + shortest paths + topological sort
+
 - 🥇 **Gold:** Solve 50 problems + Union-Find + advanced algorithms
+
 - 💎 **Platinum:** Master all patterns + MST + network flow
 
 **Remember:** Most graph problems reduce to BFS, DFS, or Union-Find! 🚀

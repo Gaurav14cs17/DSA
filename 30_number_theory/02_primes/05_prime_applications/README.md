@@ -50,7 +50,9 @@ permalink: /30_number_theory/02_primes/05_prime_applications/
 
 **Properties:**
 - First gap of size k: varies (gap 2 first at 3, gap 4 first at 7, etc.)
+
 - Average gap near n: approximately $\ln n$
+
 - Largest gap ≤ n: grows slowly (about $(\ln n)^2$ conjectured)
 
 **Prime Gap Records:**

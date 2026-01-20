@@ -35,9 +35,13 @@ permalink: /23_sliding_window/01_fixed_size/
 ## 🎯 What You'll Master
 
 - Fixed-size window sliding technique
+
 - Incremental sum/product/count updates
+
 - Monotonic deque for window maximum/minimum
+
 - Anagram and permutation detection
+
 - Rolling hash for substring matching
 
 ---
@@ -141,7 +145,9 @@ a[\text{deque}[0]] \geq a[\text{deque}[1]] \geq ... \geq a[\text{deque}[n-1]]
 #### 🔍 Proof of O(n)
 
 Each element:
+
 - Enters deque: exactly once
+
 - Exits deque: at most once
 
 Total operations: \(2n = O(n)\) ∎
@@ -163,6 +169,7 @@ Total operations: \(2n = O(n)\) ∎
 #### Optimization: Match Counter
 
 Instead of comparing 26 frequencies each time, track:
+
 - `matches` = count of characters with equal frequency
 
 When `matches == 26`, we found an anagram!

@@ -32,9 +32,13 @@ permalink: /30_number_theory/
 
 **What You'll Learn:**
 - **Fundamental Algorithms:** GCD/LCM, prime testing, factorization
+
 - **Modular Arithmetic:** Fast exponentiation, modular inverse, Fermat's theorem
+
 - **Advanced Theorems:** Euler's totient, CRT, Wilson's theorem
+
 - **Combinatorial Math:** Binomial coefficients, Catalan numbers, Lucas' theorem
+
 - **Applications:** RSA cryptography, competitive programming problems
 
 ---
@@ -46,33 +50,51 @@ permalink: /30_number_theory/
 <td width="33%">
 
 ### [01. GCD & LCM](./01_gcd_lcm/)
+
 - Euclidean algorithm O(log n)
+
 - Extended GCD for inverses
+
 - LCM applications
+
 - Binary GCD optimization
+
 - GCD of arrays
+
 - **Problems:** 25+
 
 </td>
 <td width="33%">
 
 ### [02. Primes](./02_primes/)
+
 - Primality testing
+
 - Sieve of Eratosthenes
+
 - Segmented sieve
+
 - Prime factorization
+
 - Miller-Rabin test
+
 - **Problems:** 30+
 
 </td>
 <td width="33%">
 
 ### [03. Modular Arithmetic](./03_modular_arithmetic/)
+
 - Basic operations (mod)
+
 - Modular inverse
+
 - Fast exponentiation
+
 - Fermat's little theorem
+
 - Euler's theorem
+
 - **Problems:** 28+
 
 </td>
@@ -81,33 +103,51 @@ permalink: /30_number_theory/
 <td width="33%">
 
 ### [04. Divisors](./04_divisors/)
+
 - Count divisors τ(n)
+
 - Sum of divisors σ(n)
+
 - Perfect numbers
+
 - Multiplicative functions
+
 - Sieve techniques
+
 - **Problems:** 20+
 
 </td>
 <td width="33%">
 
 ### [05. Euler's Totient](./05_euler_totient/)
+
 - φ(n) function
+
 - Euler's theorem
+
 - Totient properties
+
 - Summatory function
+
 - RSA cryptography
+
 - **Problems:** 18+
 
 </td>
 <td width="33%">
 
 ### [06. Chinese Remainder](./06_chinese_remainder/)
+
 - CRT algorithm
+
 - System of congruences
+
 - Garner's algorithm
+
 - Applications
+
 - Competitive problems
+
 - **Problems:** 12+
 
 </td>
@@ -116,33 +156,51 @@ permalink: /30_number_theory/
 <td width="33%">
 
 ### [07. Linear Diophantine](./07_linear_diophantine/)
+
 - ax + by = c equations
+
 - Frobenius coin problem
+
 - Extended GCD method
+
 - General solutions
+
 - Applications
+
 - **Problems:** 15+
 
 </td>
 <td width="33%">
 
 ### [08. Binomial Coefficients](./08_binomial_coefficients/)
+
 - Pascal's triangle
+
 - Combinations nCr
+
 - Modular binomial
+
 - Lucas' theorem prep
+
 - DP optimization
+
 - **Problems:** 22+
 
 </td>
 <td width="33%">
 
 ### [09. Catalan Numbers](./09_catalan_numbers/)
+
 - Catalan formula
+
 - BST counting
+
 - Parentheses problems
+
 - Path counting
+
 - Applications
+
 - **Problems:** 16+
 
 </td>
@@ -151,33 +209,51 @@ permalink: /30_number_theory/
 <td width="33%">
 
 ### [10. Lucas' Theorem](./10_lucas_theorem/)
+
 - Binomial mod prime
+
 - Base-p representation
+
 - Sierpinski triangle
+
 - Fast computation
+
 - Applications
+
 - **Problems:** 10+
 
 </td>
 <td width="33%">
 
 ### [11. Legendre's Formula](./11_legendres_formula/)
+
 - Trailing zeros in n!
+
 - p-adic valuation
+
 - Prime power in factorial
+
 - Optimization techniques
+
 - Applications
+
 - **Problems:** 12+
 
 </td>
 <td width="33%">
 
 ### [12. Wilson's Theorem](./12_wilsons_theorem/)
+
 - (p-1)! ≡ -1 (mod p)
+
 - Primality testing
+
 - Modular inverse
+
 - Factorial properties
+
 - Applications
+
 - **Problems:** 8+
 
 </td>
@@ -354,23 +430,35 @@ a^φ(n) ≡ 1 (mod n)
 ## 💡 Problem-Solving Patterns
 
 ### Pattern 1: GCD/LCM Problems
+
 - **When:** Need common factors or multiples
+
 - **Technique:** Euclidean algorithm, prime factorization
+
 - **Examples:** Fraction simplification, synchronized events
 
 ### Pattern 2: Modular Arithmetic
+
 - **When:** Large number computations, remainder queries
+
 - **Technique:** Fast exponentiation, modular inverse
+
 - **Examples:** Power calculations, cyclic patterns
 
 ### Pattern 3: Prime-Based
+
 - **When:** Factorization, divisibility, uniqueness
+
 - **Technique:** Sieve, primality testing
+
 - **Examples:** Ugly numbers, prime counting
 
 ### Pattern 4: Counting & Combinatorics
+
 - **When:** Arrangements, selections, paths
+
 - **Technique:** Binomial coefficients, Catalan numbers
+
 - **Examples:** Parentheses matching, path counting
 
 ---
@@ -394,21 +482,31 @@ a^φ(n) ≡ 1 (mod n)
 
 ### Multiplicative Functions
 Functions where f(a×b) = f(a)×f(b) for coprime a, b
+
 - τ(n): number of divisors
+
 - σ(n): sum of divisors
+
 - φ(n): Euler's totient
+
 - μ(n): Möbius function
 
 ### Quadratic Residues
 Study of x² ≡ a (mod p)
+
 - Legendre symbol
+
 - Quadratic reciprocity
+
 - Tonelli-Shanks algorithm
 
 ### Primitive Roots
 Generators of multiplicative groups modulo n
+
 - Existence conditions
+
 - Finding primitive roots
+
 - Discrete logarithm
 
 ---
@@ -416,21 +514,33 @@ Generators of multiplicative groups modulo n
 ## 📚 Learning Resources
 
 ### Online Resources
+
 - [CP-Algorithms: Number Theory](https://cp-algorithms.com/)
+
 - [OEIS (Integer Sequences)](https://oeis.org/)
+
 - [Brilliant.org: Number Theory](https://brilliant.org/courses/number-theory/)
+
 - [Art of Problem Solving](https://artofproblemsolving.com/wiki/index.php/Number_theory)
 
 ### Books
+
 - **Elementary Number Theory** by Burton
+
 - **Introduction to Analytic Number Theory** by Apostol
+
 - **Concrete Mathematics** by Graham, Knuth, Patashnik
+
 - **Competitive Programmer's Handbook** by Laaksonen
 
 ### Practice Platforms
+
 - [Codeforces](https://codeforces.com/) - Number theory tags
+
 - [Project Euler](https://projecteuler.net/) - Mathematical problems
+
 - [AtCoder](https://atcoder.jp/) - Math-heavy contests
+
 - [SPOJ](https://www.spoj.com/) - Classical problems
 
 ---

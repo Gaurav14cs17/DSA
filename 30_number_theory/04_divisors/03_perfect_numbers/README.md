@@ -85,7 +85,9 @@ where $2^p - 1$ is a **Mersenne prime**.
 
 **Proof Sketch:**
 - If $M\_p = 2^p - 1$ is prime, then $\sigma(M\_p) = M\_p + 1 = 2^p$
+
 - $\sigma(2^{p-1}) = 2^p - 1$
+
 - $\sigma(n) = \sigma(2^{p-1}) \cdot \sigma(M\_p) = (2^p - 1) \cdot 2^p = 2n$ ✓
 
 ---
@@ -95,7 +97,9 @@ where $2^p - 1$ is a **Mersenne prime**.
 **Open Problem:** Do odd perfect numbers exist?
 
 - If one exists, it must be greater than $10^{1500}$
+
 - Must have at least 101 prime factors (counting multiplicity)
+
 - Most mathematicians believe they don't exist
 
 ---
@@ -359,7 +363,9 @@ class Solution:
 ### 1. Why Perfect Numbers Are Rare
 
 - Only 51 perfect numbers are known (as of 2024)
+
 - Each corresponds to a Mersenne prime
+
 - Finding new Mersenne primes is computationally intensive
 
 ### 2. Related Number Types

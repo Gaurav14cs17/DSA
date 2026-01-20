@@ -30,7 +30,9 @@ for all a ≤ b ≤ c ≤ d
 
 **Examples:**
 - Warehouse placement (distance to cities)
+
 - Mailbox allocation
+
 - Job scheduling by deadline
 
 ---

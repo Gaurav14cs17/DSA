@@ -96,7 +96,9 @@ def stars_and_bars(n: int, k: int) -> int:
 ## 📚 Key Identities
 
 - **Vandermonde:** $\sum\_k C(m,k)C(n,r-k) = C(m+n,r)$
+
 - **Hockey Stick:** $\sum\_{i=r}^{n} C(i,r) = C(n+1,r+1)$
+
 - **Sum of Row:** $\sum\_k C(n,k) = 2^n$
 
 ---

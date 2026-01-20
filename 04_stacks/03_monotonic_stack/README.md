@@ -116,7 +116,9 @@ Index 4: A[4]=3, no greater element
 
 **Proof:**
 - Each element pushed at most once: $n$ pushes
+
 - Each element popped at most once: $\leq n$ pops
+
 - Total operations: $\leq 2n = O(n)$ ∎
 
 ---
@@ -131,7 +133,9 @@ Index 4: A[4]=3, no greater element
 ```
 
 Where:
+
 - $L[i]$ = index of first smaller bar on left (or -1)
+
 - $R[i]$ = index of first smaller bar on right (or n)
 
 **Visual:**
@@ -173,7 +177,9 @@ Width=2, Height=5, Area=10
 ```
 
 Where:
+
 - $\text{left\_count}$ = subarrays where $A[i]$ is rightmost minimum
+
 - $\text{right\_count}$ = subarrays where $A[i]$ is leftmost minimum
 
 ---
@@ -575,9 +581,13 @@ A: Sometimes! For trapping water, two pointers is O(1) space. But stack is more 
 ## 🔥 Key Insights
 
 - **Monotonic Property:** Maintain decreasing/increasing order → O(n) guarantee
+
 - **When Popped:** Element found its answer (next greater/smaller)
+
 - **Store Indices:** More flexible than storing values directly
+
 - **Area Problems:** Find left/right boundaries efficiently
+
 - **Template Power:** Same pattern solves 20+ problems!
 
 ---

@@ -76,6 +76,7 @@ permalink: /05_queues/03_deque_problems/
 
 **Why O(n)?**
 - Each element added once, removed once
+
 - Total operations: $2n = O(n)$ ∎
 
 ---
@@ -118,7 +119,9 @@ Find smallest $j - i$ where condition holds.
 **Problem:** Shortest path with edge weights 0 or 1.
 
 **Solution:** Use deque instead of priority queue.
+
 - Weight 0: push to front
+
 - Weight 1: push to back
 
 **Time:** O(V + E) instead of O((V+E) log V)
@@ -565,9 +568,13 @@ A: No! Only for 0-1 weights. For general weights, use Dijkstra with priority que
 ## 🔥 Key Insights
 
 - **Monotonic Property:** Maintain decreasing/increasing order → O(1) max/min access
+
 - **Amortized O(n):** Each element in/out once across entire algorithm
+
 - **0-1 BFS:** Deque replaces priority queue for 0/1 weights
+
 - **DP Optimization:** Sliding window max/min in DP transitions
+
 - **Prefix Sum Combo:** Powerful for subarray sum problems with negatives
 
 ---

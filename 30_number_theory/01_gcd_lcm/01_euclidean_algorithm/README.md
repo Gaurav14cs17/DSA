@@ -52,8 +52,11 @@ permalink: /30_number_theory/01_gcd_lcm/01_euclidean_algorithm/
 
 **Proof:**
 Let $d = \gcd(a, b)$. Then:
+
 - $a = d \cdot m$ for some integer $m$
+
 - $b = d \cdot n$ for some integer $n$
+
 - $\gcd(m, n) = 1$ (coprime)
 
 Now consider $a \bmod b$:
@@ -95,6 +98,7 @@ Therefore, the set of common divisors is identical, so:
 
 *Proof of Lemma:*
 - Case 1: If $b \leq a/2$, then $a \bmod b < b \leq a/2$ ✓
+
 - Case 2: If $b > a/2$, then $a = 1 \cdot b + r$ where $r = a - b < a/2$ ✓
 
 Therefore, the problem size reduces by at least half every **two** steps.

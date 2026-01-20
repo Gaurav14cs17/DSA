@@ -79,12 +79,16 @@ permalink: /09_heaps/02_top_k_problems/
 
 **For K largest → Use Min-Heap:**
 - Want to keep k largest
+
 - Need to remove smallest of these k
+
 - Min-Heap root = smallest → easy to remove!
 
 **For K smallest → Use Max-Heap:**
 - Want to keep k smallest
+
 - Need to remove largest of these k
+
 - Max-Heap root = largest → easy to remove!
 
 ```math

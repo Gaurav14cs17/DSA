@@ -9,9 +9,13 @@ nav_order: 4
 # 🔬 Fermat's Little Theorem
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+
 - **Time Complexity:** O(log p) for inverse/exponentiation
+
 - **Space Complexity:** O(1)
+
 - **Pattern:** Number Theory, Modular Inverse, Primality Testing
 
 ---

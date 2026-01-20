@@ -61,15 +61,23 @@ where $\oplus$ denotes bitwise XOR.
 *Part 1:* Terminal position (all piles empty) has Nim-Sum = 0, and previous player won.
 
 *Part 2:* From position with Nim-Sum = 0:
+
 - Any move changes exactly one pile size
+
 - This changes the Nim-Sum to non-zero
+
 - Therefore, all moves from L-position lead to W-positions
 
 *Part 3:* From position with Nim-Sum ≠ 0:
+
 - Let $s = a\_1 \oplus a\_2 \oplus \cdots \oplus a\_n \neq 0$
+
 - Let $k$ be position of highest bit in $s$
+
 - Find pile $a\_i$ with bit $k$ set
+
 - New pile size: $a\_i' = a\_i \oplus s < a\_i$
+
 - After this move: $a\_1 \oplus \cdots \oplus a\_i' \oplus \cdots \oplus a\_n = 0$
 
 Therefore, from W-position, can always move to L-position. $\blacksquare$
@@ -107,7 +115,9 @@ a \oplus b &= b \oplus a \quad \text{(commutative)} \\
 **Variant:** Player who takes **last stone loses**.
 
 **Theorem:** Misère Nim strategy:
+
 - If all piles have size ≤ 1: Winning if odd number of piles
+
 - Otherwise: Same as normal Nim (make Nim-Sum = 0)
 
 ---

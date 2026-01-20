@@ -183,14 +183,19 @@ print(find_primitive_roots(7))  # [3, 5]
 ## 💡 Real-World Applications
 
 ### 1. RSA Cryptography
+
 - Key generation: φ(pq) = (p-1)(q-1)
+
 - Decryption exponent: d = e^(-1) mod φ(n)
 
 ### 2. Cyclic Redundancy Checks
+
 - Generator polynomial selection
+
 - Primitive root requirements
 
 ### 3. Number of Generators in Cyclic Groups
+
 - Z_n* has φ(φ(n)) generators when they exist
 
 ---

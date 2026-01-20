@@ -663,12 +663,17 @@ def continuousSubarraySum(nums: list[int], k: int) -> bool:
 Example: n = 10⁶ elements, Q = 10⁶ queries
 
 Without Prefix Sum:
+
 - Each query scans array: O(n)
+
 - Total: O(Q×n) = 10¹² operations ❌
 
 With Prefix Sum:
+
 - Preprocess: O(n) = 10⁶
+
 - All queries: O(Q) = 10⁶
+
 - Total: O(n+Q) = 2×10⁶ operations ✅
 
 Speedup: 500,000× faster!
@@ -699,7 +704,9 @@ P[R+1] - P[L] &= (A[0] + \cdots + A[R]) - (A[0] + \cdots + A[L-1]) \\
 **Pigeonhole Principle Application:**
 
 If we have $n+1$ prefix sums and $k$ possible remainders:
+
 - By pigeonhole: at least $\lceil \frac{n+1}{k} \rceil$ prefix sums share a remainder
+
 - If two share remainder $r$: their difference is divisible by $k$
 
 **Example with k=3, n=5:**
@@ -831,8 +838,11 @@ def subarraySumPattern(nums: list[int], target: int) -> int:
 9. **Number of Submatrices That Sum to Target** (#1074) - 2D + hash
 
 ### Expert Level
+
 - Solve with bitmask states
+
 - Optimize space to O(1)
+
 - Handle updates (combine with segment tree)
 
 ---

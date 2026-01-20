@@ -33,6 +33,7 @@ permalink: /09_heaps/04_two_heaps/
 
 **Structure:**
 - **Max-Heap (left):** Smaller half of elements
+
 - **Min-Heap (right):** Larger half of elements
 
 **Invariants:**

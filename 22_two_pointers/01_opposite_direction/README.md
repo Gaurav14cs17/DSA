@@ -35,9 +35,13 @@ permalink: /22_two_pointers/01_opposite_direction/
 ## 🎯 What You'll Master
 
 - Two Sum in sorted arrays with mathematical proof
+
 - 3Sum and 4Sum reduction techniques
+
 - Container With Most Water with optimality proof
+
 - Trapping Rain Water with dual-max approach
+
 - Palindrome verification patterns
 
 ---
@@ -218,9 +222,12 @@ Heights: [1, 8, 6, 2, 5, 4, 8, 3, 7]
 Area = min(8, 7) × 7 = 7 × 7 = 49  ← Better!
 
 Why moving L was correct:
+
 - Any container with old L has height ≤ 1
 - Width < 8 (current width)
+
 - Area < 8 (already recorded)
+
 - No loss in moving L
 
 ```
@@ -246,7 +253,9 @@ Why moving L was correct:
 **Proof**:
 
 We maintain:
+
 - \(leftMax = \max(h[0], h[1], ..., h[left])\)
+
 - \(rightMax = \max(h[right], h[right+1], ..., h[n-1])\)
 
 Since \(leftMax < rightMax\), and \(rightMax\) only considers positions \(\geq right\):
@@ -332,7 +341,9 @@ T(k, n) = O(n^{k-1})
 Reduction: Fix one element, solve \((k-1)\)-Sum on remaining.
 
 - 2Sum: \(O(n)\)
+
 - 3Sum: \(O(n^2)\)
+
 - 4Sum: \(O(n^3)\)
 
 ---

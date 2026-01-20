@@ -42,6 +42,7 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/02_2d_segment_tree/
 
 **Structure:**
 - Outer tree: segments of rows
+
 - Inner trees: segments of columns
 
 **Time:** $O(\log m \cdot \log n)$ per operation

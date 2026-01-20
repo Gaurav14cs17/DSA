@@ -44,8 +44,11 @@ permalink: /26_sweep_line/04_angular_sweep/
 
 **Applications:**
 - Visibility problems
+
 - Closest pair from a point
+
 - Angular sorting
+
 - Sector queries
 
 ---
@@ -63,7 +66,9 @@ permalink: /26_sweep_line/04_angular_sweep/
 
 **Properties:**
 - atan2 handles all quadrants correctly
+
 - atan2(0, 0) is undefined
+
 - Use cross product for comparison without computing actual angle
 
 ---
@@ -78,7 +83,9 @@ permalink: /26_sweep_line/04_angular_sweep/
 ```
 
 - $> 0$: $\vec{b}$ is counter-clockwise from $\vec{a}$
+
 - $< 0$: $\vec{b}$ is clockwise from $\vec{a}$
+
 - $= 0$: Collinear
 
 **Advantage:** Avoids floating point errors from trigonometric functions.

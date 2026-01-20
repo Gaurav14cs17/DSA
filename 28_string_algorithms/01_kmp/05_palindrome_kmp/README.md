@@ -13,9 +13,13 @@ nav_order: 5
 ![Palindrome with KMP](./images/palindrome-kmp.svg)
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Medium-Hard](https://img.shields.io/badge/Medium--Hard-red)
+
 - **Time Complexity:** O(n)
+
 - **Space Complexity:** O(n)
+
 - **Pattern:** Palindrome Detection, String Reversal, KMP
 
 ---

@@ -13,9 +13,13 @@ nav_order: 3
 ![String Period](./images/string-period.svg)
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+
 - **Time Complexity:** O(n)
+
 - **Space Complexity:** O(n)
+
 - **Pattern:** Period Analysis, Repetition Detection
 
 ---
@@ -63,8 +67,11 @@ If π[n-1] > 0 and n % (n - π[n-1]) == 0,
 then smallest period = n - π[n-1]
 
 Proof:
+
 - π[n-1] = length of longest proper border
+
 - If border length is k, then first k chars = last k chars
+
 - Pattern repeats every (n - k) characters
 
 ```

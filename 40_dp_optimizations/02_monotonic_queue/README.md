@@ -471,14 +471,21 @@ Invariant: Deque always decreasing, front = maximum
 ## 🚀 Practice Roadmap
 
 ### Week 1: Foundation (3 problems)
+
 - [ ] 239. Sliding Window Maximum (Master the template!)
+
 - [ ] 1696. Jump Game VI
+
 - [ ] 739. Daily Temperatures
 
 ### Week 2: Advanced (4 problems)
+
 - [ ] 1425. Constrained Subsequence Sum
+
 - [ ] 1499. Max Value of Equation
+
 - [ ] 862. Shortest Subarray Sum ≥ K
+
 - [ ] 907. Sum of Subarray Minimums
 
 ---

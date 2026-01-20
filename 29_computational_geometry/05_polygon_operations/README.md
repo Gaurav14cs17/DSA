@@ -8,9 +8,13 @@ nav_order: 5
 # 🔷 Polygon Operations
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Medium-Hard](https://img.shields.io/badge/Medium--Hard-red)
+
 - **Time Complexity:** O(n) for area, O(n²) for triangulation
+
 - **Space Complexity:** O(n)
+
 - **Topics:** Area, Perimeter, Triangulation, Boolean Operations
 
 ---

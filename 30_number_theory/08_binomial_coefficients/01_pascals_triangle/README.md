@@ -110,8 +110,11 @@ class Solution:
 ## 💡 Key Properties
 
 - Row n sums to $2^n$
+
 - Central element of row 2n is $C(2n, n)$
+
 - Entries are symmetric: $C(n,k) = C(n, n-k)$
+
 - Row n has exactly n+1 entries
 
 ---

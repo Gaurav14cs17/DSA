@@ -56,7 +56,9 @@ g(a, b) = ab - a - b
 ### Sylvester-Frobenius Theorem
 
 For coprime $a, b$:
+
 - Frobenius number: $g(a, b) = ab - a - b$
+
 - Count of non-representable: $\frac{(a-1)(b-1)}{2}$
 
 ---

@@ -53,7 +53,9 @@ Given n pairs of parentheses, generate all valid (balanced) combinations.
 
 **Examples:**
 - n=1: `()` → 1 combination
+
 - n=2: `(())`, `()()` → 2 combinations
+
 - n=3: `((()))`, `(()())`, `(())()`, `()(())`, `()()()` → 5 combinations
 
 ### Valid Parentheses Rules

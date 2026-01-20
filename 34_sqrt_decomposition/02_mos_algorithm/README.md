@@ -40,8 +40,11 @@ permalink: /34_sqrt_decomposition/02_mos_algorithm/
 4. **Expand/contract** range incrementally
 
 ### Why It Works
+
 - Queries in same block move R by O(n) total
+
 - Between blocks, L moves by O(√n)
+
 - **Total movements:** O(n√n)
 
 ### Time Complexity

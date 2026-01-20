@@ -37,8 +37,11 @@ permalink: /12_segment_trees/
 ### 1️⃣ Segment Tree Definition
 
 A **Segment Tree** is a binary tree where:
+
 - Each leaf represents a single array element
+
 - Each internal node represents a range [l, r]
+
 - Node value = aggregate of children (sum, min, max, etc.)
 
 ---
@@ -121,6 +124,7 @@ Update propagates from leaf to root, updating all ancestors.
 
 **Push down before:**
 - Querying children
+
 - Updating children
 
 ---
@@ -136,8 +140,11 @@ f(f(a, b), c) = f(a, f(b, c))
 
 **Examples:**
 - Sum: $f(a, b) = a + b$
+
 - Min: $f(a, b) = \min(a, b)$
+
 - Max: $f(a, b) = \max(a, b)$
+
 - GCD: $f(a, b) = \gcd(a, b)$
 
 ---

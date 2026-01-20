@@ -81,9 +81,13 @@ T(n) = \sum_{h=0}^{\log n} \frac{n}{2^{h+1}} \cdot O(h) = O(n)
 
 **Detailed Proof:**
 - Level 0 (leaves): $n/2$ nodes, $h = 0$ → $O(0)$ work each
+
 - Level 1: $n/4$ nodes, $h = 1$ → $O(1)$ work each
+
 - Level 2: $n/8$ nodes, $h = 2$ → $O(2)$ work each
+
 - ...
+
 - Total: $\sum\_{h=0}^{\log n} \frac{n}{2^{h+1}} \cdot h = n \sum\_{h=0}^{\infty} \frac{h}{2^h} = O(n)$
 
 The series $\sum\_{h=0}^{\infty} \frac{h}{2^h} = 2$, so $T(n) = O(n)$. ∎
@@ -446,16 +450,24 @@ def lastStoneWeight(stones: list[int]) -> int:
 
 ### ✅ **Do's:**
 - ✓ Know build heap is O(n), not O(n log n)!
+
 - ✓ Use heapify() for bulk insertion
+
 - ✓ Remember peek is O(1), extract is O(log n)
+
 - ✓ For max-heap in Python: negate values
+
 - ✓ Heap is O(log n) for insert/delete, BST can be O(n)
 
 ### ❌ **Don'ts:**
 - ✗ Don't insert n elements one by one when you can heapify
+
 - ✗ Don't confuse heap with BST (heap is NOT sorted!)
+
 - ✗ Don't forget to negate when using max-heap in Python
+
 - ✗ Don't assume heap gives sorted order (only top element)
+
 - ✗ Don't use heap when you only need min/max once (just use min()/max())
 
 ### ⚡ **Optimization Tricks:**
@@ -519,20 +531,29 @@ def lastStoneWeight(stones: list[int]) -> int:
 
 ### **Phase 1: Foundations (Week 1)**
 - [ ] Implement min-heap from scratch
+
 - [ ] Implement max-heap with negation
+
 - [ ] Understand sift up/down operations
+
 - [ ] Solve: #1046 Last Stone Weight
 
 ### **Phase 2: Build & Heapify (Week 2)**
 - [ ] Understand O(n) build heap proof
+
 - [ ] Implement heapify from array
+
 - [ ] Implement heap sort
+
 - [ ] Solve: #703 Kth Largest in Stream
 
 ### **Phase 3: Applications (Week 3)**
 - [ ] Huffman coding pattern
+
 - [ ] Priority scheduling
+
 - [ ] Solve: #1167 Minimum Cost to Connect Sticks
+
 - [ ] Practice custom comparators
 
 ---

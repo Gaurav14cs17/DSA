@@ -33,8 +33,11 @@ What you'll learn:
 
 **Diagrams Included:**
 - Call Stack Visualization
+
 - Decision Flowchart
+
 - Parse Tree
+
 - Position Pointer Animation
 
 ---
@@ -204,6 +207,7 @@ examples/
 ## 🔗 Back to Main
 
 - [← Parser Recursion README](../)
+
 - [← Recursion Main](../../)
 
 ---

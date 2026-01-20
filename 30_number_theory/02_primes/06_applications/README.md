@@ -78,8 +78,11 @@ If $g(n) = \sum\_{d|n} f(d)$, then $f(n) = \sum\_{d|n} \mu(d) \cdot g(n/d)$
 
 **Properties:**
 - $\phi(p) = p - 1$ for prime $p$
+
 - $\phi(p^k) = p^{k-1}(p-1)$
+
 - $\sum\_{d|n} \phi(d) = n$
+
 - $a^{\phi(n)} \equiv 1 \pmod{n}$ if $\gcd(a,n) = 1$ (Euler's theorem)
 
 ---
@@ -640,11 +643,17 @@ def compute_multiplicative(n: int, prime_val, combine):
 | 60 | 12 | 168 | 16 | 0 | 3 | 4 |
 
 Where:
+
 - τ = divisor count
+
 - σ = divisor sum  
+
 - φ = Euler's totient
+
 - μ = Möbius function
+
 - ω = distinct prime factors
+
 - Ω = total prime factors (with multiplicity)
 
 ---

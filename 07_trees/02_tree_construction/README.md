@@ -34,7 +34,9 @@ permalink: /07_trees/02_tree_construction/
 ### 1️⃣ Unique Binary Tree from Traversals
 
 **Theorem:** A binary tree is uniquely determined by:
+
 - Preorder + Inorder
+
 - Postorder + Inorder
 
 **Not unique:** Preorder + Postorder (without inorder)
@@ -46,6 +48,7 @@ permalink: /07_trees/02_tree_construction/
 **Key Insight:**
 
 - Preorder[0] = root
+
 - Find root in inorder → splits left and right subtrees
 
 **Recurrence:**
@@ -65,6 +68,7 @@ inorder  = inorder(left) + [root] + inorder(right)
 **Key Insight:**
 
 - Postorder[-1] = root
+
 - Find root in inorder → splits left and right subtrees
 
 **Process right subtree before left** (postorder is LRN).
@@ -544,9 +548,13 @@ A: Can't for general binary tree! BST can use preorder only (BST property helps)
 ## 🔥 Key Insights
 
 - **Unique Construction:** Need inorder + (preorder OR postorder)
+
 - **Root Identification:** First in preorder, last in postorder
+
 - **Hash Map Optimization:** O(1) root lookup instead of O(n)
+
 - **Catalan Numbers:** Count of unique BSTs follows Catalan sequence
+
 - **Serialization:** Preorder with null markers for unique encoding
 
 ---

@@ -61,6 +61,7 @@ Equivalently: $(n-1)! \equiv n-1 \pmod{n}$
 This is one of the few **if and only if** characterizations of primes!
 
 - **Forward:** If p is prime, then (p-1)! ≡ -1 (mod p)
+
 - **Converse:** If (n-1)! ≡ -1 (mod n), then n is prime
 
 ---
@@ -233,7 +234,9 @@ Therefore:
 ### Why Composites Fail
 
 For composite n = ab where 1 < a, b < n:
+
 - If a ≠ b: both a and b appear in (n-1)!, so ab = n divides (n-1)!
+
 - If a = b (n = a²): we have a and 2a in (n-1)! if n ≥ 6
 - Special case n = 4: (4-1)! = 6 ≡ 2 (mod 4) ✓
 

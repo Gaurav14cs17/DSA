@@ -13,10 +13,15 @@ has_children: true
 ![Rabin-Karp Algorithm](./images/rabin-karp.svg)
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+
 - **Time Complexity:** O(n + m) average, O(nm) worst
+
 - **Space Complexity:** O(1)
+
 - **Topics:** Rolling Hash, Polynomial Hash, Pattern Matching
+
 - **Prerequisites:** Modular arithmetic, Hashing, Number theory
 
 ---
@@ -28,24 +33,33 @@ has_children: true
 <td width="33%">
 
 ### [01. Basic Rolling Hash](./01_basic_rolling_hash/)
+
 - Hash function design
+
 - Rolling property
+
 - Modular arithmetic
 
 </td>
 <td width="33%">
 
 ### [02. Single Pattern](./02_single_pattern/)
+
 - Basic pattern matching
+
 - First/all occurrences
+
 - Hash verification
 
 </td>
 <td width="33%">
 
 ### [03. Multiple Patterns](./03_multiple_patterns/)
+
 - Multiple pattern search
+
 - Pattern grouping
+
 - Efficient batching
 
 </td>
@@ -54,24 +68,33 @@ has_children: true
 <td width="33%">
 
 ### [04. Collision Handling](./04_collision_handling/)
+
 - Double hashing
+
 - Collision probability
+
 - Hash quality analysis
 
 </td>
 <td width="33%">
 
 ### [05. Substring Problems](./05_substring_problems/)
+
 - Longest duplicate
+
 - Distinct substrings
+
 - Binary search + hash
 
 </td>
 <td width="33%">
 
 ### [06. Advanced Applications](./06_advanced_applications/)
+
 - 2D pattern matching
+
 - String similarity
+
 - Real-world use cases
 
 </td>
@@ -83,8 +106,11 @@ has_children: true
 ## 🎯 Overview
 
 **Rabin-Karp** is a string matching algorithm that uses **hashing** to find patterns in O(n + m) average time. It's particularly effective for:
+
 - Multiple pattern matching
+
 - Problems combining with binary search
+
 - Probabilistic pattern matching
 
 **Core Idea:** Convert strings to numbers using polynomial hash, compare numbers instead of strings.
@@ -101,8 +127,11 @@ For string s of length m:
 h(s) = (s[0]·p^(m-1) + s[1]·p^(m-2) + ... + s[m-1]·p^0) mod M
 
 where:
+
 - p = prime base (31 for lowercase, 53 for mixed case)
+
 - M = large prime modulus (10^9+7 or 10^9+9)
+
 - s[i] = character value (typically ASCII)
 
 ```
@@ -456,15 +485,22 @@ This section contains **50+ problems** across **6 categories**:
 
 ✅ **Best for:**
 - Multiple pattern matching (k patterns in same text)
+
 - Substring comparison problems
+
 - Combining with binary search
+
 - When collisions are acceptable (with verification)
+
 - Average-case performance critical
 
 ❌ **Avoid when:**
 - Need guaranteed O(n) worst case → Use KMP
+
 - Pattern changes frequently → Overhead not worth it
+
 - Very short patterns → Naive might be faster
+
 - Zero false positives critical → Use deterministic algorithm
 
 ### Hash Function Quality

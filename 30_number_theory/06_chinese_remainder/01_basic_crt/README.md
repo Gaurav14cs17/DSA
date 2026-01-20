@@ -73,7 +73,9 @@ x = \sum_{i=1}^{k} a_i \cdot M_i \cdot y_i \pmod{M}
 ```
 
 **Why this works:** Each term $a\_i M\_i y\_i$ is:
+
 - ≡ $a\_i$ (mod $m\_i$) because $M\_i y\_i \equiv 1$ (mod $m\_i$)
+
 - ≡ 0 (mod $m\_j$) for $j \neq i$ because $m\_j | M\_i$
 
 ---

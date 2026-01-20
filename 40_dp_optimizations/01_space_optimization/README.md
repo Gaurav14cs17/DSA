@@ -302,6 +302,7 @@ Memory: 2×4 = 8 cells instead of 4×4 = 16 cells
 
 ```
 Computing dp[i][j]:
+
 - Needs: dp[i-1][j-1], dp[i-1][j], dp[i][j-1]
 
 In 1D array:
@@ -387,21 +388,33 @@ for item in items:
 ## 🚀 Practice Roadmap
 
 ### Week 1: Foundation (4 problems)
+
 - [ ] 509. Fibonacci Number (O(n) → O(1))
+
 - [ ] 70. Climbing Stairs (O(n) → O(1))
+
 - [ ] 198. House Robber (O(n) → O(1))
+
 - [ ] 746. Min Cost Climbing Stairs (O(n) → O(1))
 
 ### Week 2: 2D → 1D (4 problems)
+
 - [ ] 1143. Longest Common Subsequence (O(mn) → O(n))
+
 - [ ] 72. Edit Distance (O(mn) → O(n))
+
 - [ ] 322. Coin Change (O(nk) → O(k))
+
 - [ ] 518. Coin Change II (O(nk) → O(k))
 
 ### Week 3: Knapsack Variants (4 problems)
+
 - [ ] 416. Partition Equal Subset Sum
+
 - [ ] 494. Target Sum
+
 - [ ] 1049. Last Stone Weight II
+
 - [ ] 213. House Robber II
 
 ---

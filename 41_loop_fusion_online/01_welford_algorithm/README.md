@@ -365,8 +365,11 @@ M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n) \quad \blacksquare
 | **Merge** | $O(1)$ | $O(1)$ | $O(n\epsilon)$ |
 
 Compare to naive approach:
+
 - Time: $O(n)$ for two passes
+
 - Space: $O(n)$ to store all values
+
 - Error: $O(n^2\epsilon)$ (catastrophic cancellation)
 
 ---

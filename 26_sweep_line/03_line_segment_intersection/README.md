@@ -58,7 +58,9 @@ permalink: /26_sweep_line/03_line_segment_intersection/
 
 **Result:**
 - $> 0$: Counter-clockwise turn
+
 - $< 0$: Clockwise turn
+
 - $= 0$: Collinear
 
 **Application:** Segments $\overline{p\_1p\_2}$ and $\overline{q\_1q\_2}$ intersect if orientations differ.
@@ -92,7 +94,9 @@ permalink: /26_sweep_line/03_line_segment_intersection/
 
 **Events:**
 - **Left endpoint:** Add segment to status
+
 - **Right endpoint:** Remove segment from status
+
 - **Intersection:** Swap segments in status, check new neighbors
 
 **Invariant:** At sweep line position $x$, status contains all segments intersecting $x$, ordered by $y$.
@@ -105,8 +109,11 @@ permalink: /26_sweep_line/03_line_segment_intersection/
 
 **Proof:**
 - $n$ segments → $2n$ endpoint events
+
 - $k$ intersections → $k$ intersection events
+
 - Each event: $O(\log n)$ operations on status structure
+
 - Total: $O((2n + k) \log n) = O((n + k) \log n)$ ∎
 
 **Space:** $O(n + k)$ for events and status structure.

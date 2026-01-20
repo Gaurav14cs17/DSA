@@ -105,7 +105,9 @@ Valid orderings: `[A, B, C]`, `[B, A, C]`
 
 **States:**
 - **White (0):** Unvisited
+
 - **Gray (1):** Visiting (in current DFS path)
+
 - **Black (2):** Visited (finished)
 
 **Cycle Detection:** If we reach a **gray** vertex, cycle exists.

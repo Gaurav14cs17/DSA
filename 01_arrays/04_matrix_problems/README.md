@@ -168,9 +168,13 @@ Start at top-right or bottom-left:
 **Proof of O(m+n) for staircase search:**
 
 - Start at position $(0, n-1)$ (top-right)
+
 - Each comparison moves either left or down
+
 - Maximum left moves: $n$
+
 - Maximum down moves: $m$
+
 - Total: $m + n$ moves ∎
 
 ---
@@ -376,8 +380,11 @@ Search for target = 14
 +--------------------------------------------------------------------+
 
 Algorithm:
+
 - If current > target: move left (eliminate column)
+
 - If current < target: move down (eliminate row)
+
 - Each step eliminates one row or column!
 
 ```
@@ -768,6 +775,7 @@ R_4 &= R_1 \circ R_1 \circ R_1 \circ R_1 = R_0
 
 **Properties:**
 - $R\_1 \circ R\_3 = R\_0$ (90° + 270° = 360° = 0°)
+
 - Rotation is reversible: $(R\_1)^{-1} = R\_3$
 
 ### Staircase Search Correctness
@@ -816,7 +824,9 @@ for i in range(m):
 **Anti-diagonal:** $i + j = \text{constant}$
 
 For $m \times n$ matrix:
+
 - Number of diagonals (main direction): $m + n - 1$
+
 - Diagonal $d$ contains elements where $i - j = d - (n-1)$
 
 ```python
@@ -881,8 +891,11 @@ for i in range(m):
 9. **Diagonal Traverse** (#498) - Direction control
 
 ### Expert Level
+
 - Solve Sudoku (#37) - Backtracking
+
 - Maximal Rectangle (#85) - Histogram technique
+
 - Longest Increasing Path (#329) - DFS + memoization
 
 ---

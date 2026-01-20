@@ -138,8 +138,11 @@ def coin_change_2(amount: int, coins: list[int]) -> int:
 ## 💡 Connection to Diophantine
 
 For two coins a, b:
+
 - Can make n ⟺ ax + by = n has non-negative solution
+
 - Minimum coins = minimize x + y subject to ax + by = n
+
 - After Frobenius number, all amounts are makeable
 
 ---

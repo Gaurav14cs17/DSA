@@ -13,9 +13,13 @@ nav_order: 4
 ![Prefix-Suffix Matching](./images/prefix-suffix.svg)
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+
 - **Time Complexity:** O(n)
+
 - **Space Complexity:** O(n)
+
 - **Pattern:** Border Analysis, Symmetric Properties
 
 ---

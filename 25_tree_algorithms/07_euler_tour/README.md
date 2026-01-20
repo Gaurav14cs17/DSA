@@ -53,7 +53,9 @@ permalink: /25_tree_algorithms/07_euler_tour/
 
 **Properties:**
 - Subtree occupies contiguous range
+
 - Range $[\text{in}[v], \text{out}[v]]$ = subtree of $v$
+
 - Enables range queries on subtrees
 
 **Time:** $O(n)$ to build  
@@ -72,7 +74,9 @@ Subtree query on v → Range query on [in[v], out[v]]
 
 **Applications:**
 - Subtree sum → Range sum
+
 - Subtree update → Range update
+
 - Subtree max/min → Range max/min
 
 ---
@@ -81,7 +85,9 @@ Subtree query on v → Range query on [in[v], out[v]]
 
 **Path from $u$ to $v$:**
 - Can be split using LCA
+
 - Convert to two ranges in Euler tour
+
 - Union of ranges covers path
 
 ---
@@ -101,7 +107,9 @@ Subtree query on v → Range query on [in[v], out[v]]
 
 **Combined with:**
 - **Segment Tree:** Range queries/updates
+
 - **Fenwick Tree:** Prefix sums
+
 - **Sparse Table:** RMQ (read-only)
 
 ---

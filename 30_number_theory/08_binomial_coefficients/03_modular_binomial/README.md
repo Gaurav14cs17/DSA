@@ -46,7 +46,9 @@ permalink: /30_number_theory/08_binomial_coefficients/03_modular_binomial/
 ## 📐 The Challenge
 
 For large n, k:
+
 - n! can be astronomically large (overflow)
+
 - We need C(n,k) mod p where p is typically 10^9 + 7
 
 **Solution:** Use modular arithmetic with inverse factorials.

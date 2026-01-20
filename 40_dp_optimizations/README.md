@@ -49,61 +49,94 @@ permalink: /40_dp_optimizations/
 <td width="50%">
 
 ### [01. Space Optimization](./01_space_optimization/)
+
 - Rolling arrays
+
 - O(n²) → O(n) memory
+
 - **Problems:** 12+
 
 ### [02. Monotonic Queue](./02_monotonic_queue/)
+
 - Sliding window DP
+
 - O(nk) → O(n)
+
 - **Problems:** 13+
 
 ### [03. Convex Hull Trick](./03_convex_hull_trick/)
+
 - Linear function optimization
+
 - O(n²) → O(n log n)
+
 - **Problems:** 8+
 
 ### [04. Li Chao Tree](./04_li_chao_tree/)
+
 - Dynamic CHT
+
 - Any order insertion
+
 - **Problems:** Advanced
 
 ### [05. Divide & Conquer](./05_divide_conquer/)
+
 - Monge property
+
 - O(n²k) → O(nk log n)
+
 - **Problems:** 5+
 
 ### [06. Knuth's Optimization](./06_knuth_optimization/)
+
 - Quadrangle inequality
+
 - O(n³) → O(n²)
+
 - **Problems:** 10+
 
 </td>
 <td width="50%">
 
 ### [07. SOS DP](./07_sos_dp/)
+
 - Sum over subsets
+
 - O(3ⁿ) → O(n·2ⁿ)
+
 - **Problems:** 4+
 
 ### [08. Matrix Exponentiation](./08_matrix_exponentiation/)
+
 - Linear recurrence
+
 - O(n) → O(log n)
+
 - **Problems:** 5+
 
 ### [09. Aliens Trick](./09_aliens_trick/)
+
 - Wqs binary search
+
 - O(n²k) → O(n² log C)
+
 - **Problems:** Advanced
 
 ### [10. Bitmask DP](./10_bitmask_dp/)
+
 - State compression
+
 - Subset enumeration
+
 - **Problems:** 10+
 
 ### [11. Tree DP Rerooting](./11_tree_dp_rerooting/)
+
 - All roots in O(n)
+
 - Two-pass DFS
+
 - **Problems:** Advanced
 
 </td>
@@ -120,8 +153,11 @@ permalink: /40_dp_optimizations/
 
 **Problem Signs:**
 - ✅ TLE on large inputs (n > 10⁴)
+
 - ✅ O(n²) or O(n³) recurrence
+
 - ✅ Many redundant computations
+
 - ✅ Transition has special structure
 
 ### Optimization Techniques Overview
@@ -370,7 +406,9 @@ Where m[j], b[j] are from previous DP states, x[i] is current query point.
 
 **Geometric Interpretation:**
 - Each DP state j defines a line: y = m[j]·x + b[j]
+
 - We want lower (or upper) envelope of these lines
+
 - Query at x[i] returns minimum (or maximum) y value
 
 **Complexity:** O(n²) → O(n log n) or O(n) with special properties
@@ -538,8 +576,11 @@ Lines: L1: y = -2x + 10
     0   1   2   3   4   5
 
 Lower Envelope:
+
 - x ∈ [0, 2]: L1 optimal
+
 - x ∈ [2, 3]: L2 optimal
+
 - x ∈ [3, ∞): L3 optimal
 
 CHT maintains only [L1, L2, L3] (convex hull)
@@ -565,6 +606,7 @@ CHT maintains only [L1, L2, L3] (convex hull)
 
 **Complexity:**
 - Insert line: O(log C) where C is coordinate range
+
 - Query: O(log C)
 
 ### Implementation
@@ -1441,41 +1483,65 @@ def rerooting_dp(graph, n):
 
 **Monotonic Queue (10):**
 - 739. Daily Temperatures
+
 - 901. Online Stock Span
+
 - 907. Sum of Subarray Minimums
+
 - 1475. Final Prices With Special Discount
+
 - 1673. Find Most Competitive Subsequence
 
 **Space Optimization (8):**
 - 198. House Robber
+
 - 213. House Robber II
+
 - 300. Longest Increasing Subsequence
+
 - 322. Coin Change
+
 - 416. Partition Equal Subset Sum
+
 - 494. Target Sum
+
 - 518. Coin Change II
+
 - 1049. Last Stone Weight II
 
 **Knuth's Optimization (6):**
 - 96. Unique Binary Search Trees
+
 - 95. Unique Binary Search Trees II
+
 - 1039. Minimum Score Triangulation
+
 - 1312. Minimum Insertion Steps for Palindrome
 
 **Matrix Exponentiation (5):**
 - 70. Climbing Stairs
+
 - 91. Decode Ways
+
 - 746. Min Cost Climbing Stairs
+
 - 790. Domino and Tromino Tiling
 
 **Bitmask DP (8):**
 - 464. Can I Win
+
 - 473. Matchsticks to Square
+
 - 526. Beautiful Arrangement
+
 - 698. Partition to K Equal Sum Subsets
+
 - 847. Shortest Path Visiting All Nodes
+
 - 943. Find Shortest Superstring
+
 - 980. Unique Paths III
+
 - 1986. Minimum Work Sessions
 
 ---
@@ -1524,37 +1590,54 @@ def rerooting_dp(graph, n):
 **Goal:** Master basic optimizations
 
 - [ ] 72. Edit Distance (Space)
+
 - [ ] 1143. LCS (Space)
+
 - [ ] 239. Sliding Window Max (Monotonic)
+
 - [ ] 1425. Constrained Sum (Monotonic Queue)
+
 - [ ] 1696. Jump Game VI (Monotonic Queue)
 
 ### Week 2: Advanced Techniques
 **Goal:** CHT and D&C
 
 - [ ] 1499. Max Value of Equation (Transform + Deque)
+
 - [ ] 862. Shortest Subarray (Deque)
+
 - [ ] 410. Split Array (D&C or Aliens)
+
 - [ ] 1478. Allocate Mailboxes (D&C)
+
 - [ ] 1335. Minimum Difficulty (D&C)
 
 ### Week 3: Knuth & Matrix
 **Goal:** Complex optimizations
 
 - [ ] 312. Burst Balloons (Knuth)
+
 - [ ] 1000. Merge Stones (Knuth)
+
 - [ ] 1547. Cut Stick (Knuth)
+
 - [ ] 664. Strange Printer (Knuth)
+
 - [ ] 509/1137. Fibonacci/Tribonacci (Matrix)
+
 - [ ] 552. Attendance Record (Matrix)
 
 ### Week 4: Special Techniques
 **Goal:** SOS, Aliens, Bitmask
 
 - [ ] 898. Bitwise ORs (SOS)
+
 - [ ] 1986. Work Sessions (Bitmask)
+
 - [ ] 847. Shortest Path All Nodes (Bitmask)
+
 - [ ] 546. Remove Boxes (3D Knuth) ⭐
+
 - [ ] Practice mixed problems
 
 ---
@@ -1656,9 +1739,13 @@ You've mastered the most advanced DP optimization techniques!
 
 **Your DP Arsenal:**
 - 🎯 11 Optimization Techniques
+
 - 💻 Production-Ready Implementations
+
 - 📝 60+ LeetCode Problems
+
 - 🧮 Mathematical Proofs
+
 - ⚡ From O(n³) to O(n log n)
 
 **These techniques separate good programmers from great ones!** 🚀

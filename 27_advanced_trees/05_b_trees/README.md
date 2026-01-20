@@ -62,8 +62,11 @@ permalink: /27_advanced_trees/05_b_trees/
 ```
 
 where:
+
 - $K\_i$ = keys (sorted)
+
 - $P\_i$ = pointers to children
+
 - All keys in subtree $P\_i$ are between $K\_i$ and $K\_{i+1}$
 
 **Height bound:** $h \leq \log\_{\lceil m/2 \rceil}(n)$
@@ -74,15 +77,19 @@ where:
 
 **Disk access is expensive:**
 - RAM access: ~100 ns
+
 - Disk access: ~10 ms (100,000× slower!)
 
 **B-Tree minimizes disk I/O:**
 - Large nodes (match disk block size)
+
 - Shallow tree (fewer disk accesses)
+
 - Sequential within node (cache-friendly)
 
 **Used in:**
 - Filesystems (NTFS, ext4, HFS+)
+
 - Databases (MySQL, PostgreSQL, SQLite)
 
 ---
@@ -143,11 +150,14 @@ where:
 
 **Advantages:**
 - Better for range queries (scan leaves)
+
 - Higher fanout (more keys per internal node)
+
 - Used in most databases
 
 **Structure:**
 - Leaves linked (sequential access)
+
 - Internal nodes are pure index
 
 ---

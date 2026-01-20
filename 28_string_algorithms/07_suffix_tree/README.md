@@ -12,10 +12,15 @@ nav_order: 7
 ![Suffix Tree](./images/suffix-tree.svg)
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
+
 - **Time Complexity:** O(n) construction, O(m) query
+
 - **Space Complexity:** O(n)
+
 - **Topics:** Suffix Tree, Ukkonen's Algorithm, String Indexing
+
 - **Prerequisites:** Tries, Suffix arrays, Advanced data structures
 
 ---
@@ -26,8 +31,11 @@ A **Suffix Tree** is a compressed trie of all suffixes of a string. It's one of 
 
 **Key Properties:**
 - Contains all suffixes in compressed form
+
 - O(n) space (linear in string length)
+
 - O(m) pattern matching (linear in pattern length)
+
 - Supports many string operations in optimal time
 
 ---
@@ -37,9 +45,13 @@ A **Suffix Tree** is a compressed trie of all suffixes of a string. It's one of 
 ### Definition
 
 For string s$ (with sentinel $):
+
 - **Suffix tree** is a compressed trie of all suffixes
+
 - Each edge labeled with substring
+
 - Each leaf represents one suffix
+
 - Internal nodes have at least 2 children
 
 **Example:**
@@ -69,7 +81,9 @@ Suffix Tree (compressed):
 
 **Trie → Suffix Tree:**
 - Combine nodes with single child into one edge
+
 - Label edge with substring (store as [start, end])
+
 - Space: O(n) edges, each stores 2 integers
 
 **Key Insight:** Store edge labels as indices, not strings!
@@ -633,25 +647,37 @@ def longest_palindrome_suffix_tree(text):
 
 ✅ **Use suffix trees when:**
 - Need O(m) pattern matching (fastest possible)
+
 - Many different string operations on same text
+
 - Theoretical optimality required
+
 - Text is preprocessed once, queried many times
 
 ❌ **Consider alternatives when:**
 - Simple pattern matching (use KMP/Rabin-Karp)
+
 - Memory is limited (use suffix array)
+
 - Implementation complexity matters
+
 - Need to modify text frequently
 
 ### Common Applications Summary
 
 ```python
 # Fast operations with suffix tree:
+
 - Pattern matching: O(m)
+
 - Longest repeated substring: O(n)
+
 - Longest common substring: O(n+m)
+
 - Count distinct substrings: O(n)
+
 - Substring queries: O(m)
+
 - Find all occurrences: O(m + k)
 
 ```
@@ -698,8 +724,11 @@ class GeneralizedSuffixTree:
 Suffix link from node representing "aα" points to node representing "α"
 
 Uses:
+
 - Fast construction in Ukkonen's algorithm
+
 - Linear time guarantee
+
 - Navigate between related suffixes
 
 ```
@@ -709,7 +738,9 @@ Uses:
 ## 🔗 Related Topics
 
 - [Suffix Array](../04_suffix_structures/) - Memory-efficient alternative
+
 - [Tries](../../11_tries/) - Foundation data structure
+
 - [KMP Algorithm](../01_kmp/) - Simpler pattern matching
 
 ---
@@ -717,8 +748,11 @@ Uses:
 ## 📚 Additional Resources
 
 - [Ukkonen's Algorithm Paper (1995)](https://www.cs.helsinki.fi/u/ukkonen/SuffixT1withFigs.pdf)
+
 - [CP-Algorithms: Suffix Tree](https://cp-algorithms.com/string/suffix-tree-ukkonen.html)
+
 - [Stanford CS166: Suffix Trees](https://web.stanford.edu/class/cs166/lectures/03/Small03.pdf)
+
 - [Visualization Tool](https://brenden.github.io/ukkonen-animation/)
 
 ---

@@ -90,13 +90,19 @@ For a random variable $X$ with mean $\mu$:
 ### Interpretation
 
 **Skewness ($\gamma\_1$)** measures **asymmetry**:
+
 - $\gamma\_1 = 0$: Symmetric (e.g., normal distribution)
+
 - $\gamma\_1 > 0$: Right-skewed (long tail on right)
+
 - $\gamma\_1 < 0$: Left-skewed (long tail on left)
 
 **Kurtosis ($\gamma\_2$)** measures **tailedness**:
+
 - $\gamma\_2 = 0$: Mesokurtic (normal distribution)
+
 - $\gamma\_2 > 0$: Leptokurtic (heavy tails, more outliers)
+
 - $\gamma\_2 < 0$: Platykurtic (light tails, fewer outliers)
 
 ---
@@ -272,7 +278,9 @@ Let $y\_i = x\_i - \bar{x}\_{n-1}$ for simplicity.
 **Step 5: Use properties of mean**
 
 - $\sum\_{i=1}^{n-1} y\_i^3 = M\_3^{(n-1)}$ (by definition)
+
 - $\sum\_{i=1}^{n-1} y\_i^2 = M\_2^{(n-1)}$ (by definition)
+
 - $\sum\_{i=1}^{n-1} y\_i = 0$ (property of mean!)
 
 So:
@@ -325,8 +333,11 @@ M_3^{(n)} = M_3^{(n-1)} + \frac{(n-1)(n-2)}{n^2}\delta_n^3 - \frac{3}{n}M_2^{(n-
 
 **The pattern:**
 - **First moment:** No coupling (just the mean)
+
 - **Second moment:** Couples with first moment (mean shift)
+
 - **Third moment:** Couples with second moment (variance shift)
+
 - **Fourth moment:** Couples with second AND third moments!
 
 **Key insight:** Higher moments depend on lower moments because the mean shift affects all deviations.
@@ -354,6 +365,7 @@ M_3^{(n)} = M_3^{(n-1)} + \frac{(n-1)(n-2)}{n^2}\delta_n^3 - \frac{3}{n}M_2^{(n-
 ```
 
 - Three factors of $\delta$ in first term
+
 - Coupling with $M\_2$
 
 **Fourth moment:**
@@ -364,6 +376,7 @@ M_4^{(n)} = M_4^{(n-1)} + \frac{(n-1)(n^2-3n+3)}{n^3}\delta_n^4 + \frac{6}{n^2}M
 ```
 
 - Four factors of $\delta$ in first term
+
 - Coupling with both $M\_2$ and $M\_3$
 
 **General principle:** The $k$-th moment couples with all lower moments!

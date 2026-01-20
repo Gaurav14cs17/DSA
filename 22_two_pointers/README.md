@@ -161,12 +161,17 @@ We can safely discard \(l\) and move to \(l+1\). ∎
 #### Phase 1: Meeting Point
 
 Let:
+
 - \(\mu\) = distance from head to cycle start
+
 - \(\lambda\) = cycle length
+
 - Meeting point is at distance \(k\) into the cycle
 
 When they meet:
+
 - Slow traveled: \(\mu + k\) steps
+
 - Fast traveled: \(\mu + k + n\lambda\) steps (for some \(n \geq 1\))
 
 Since fast moves twice as fast:
@@ -183,6 +188,7 @@ Since fast moves twice as fast:
 After meeting, reset one pointer to head. Both move 1 step at a time.
 
 - Pointer from head travels: \(\mu\) steps
+
 - Pointer from meeting point travels: \(\mu = n\lambda - k\) steps
   - This equals \(n\) complete cycles minus \(k\) steps
   - Which brings it exactly to the cycle start!
@@ -201,7 +207,9 @@ They meet at the cycle start! ∎
 Instead of precomputing maxLeft and maxRight arrays (O(n) space), use two pointers:
 
 - Maintain \(leftMax\) and \(rightMax\) as we go
+
 - If \(leftMax < rightMax\): water at left is determined by \(leftMax\)
+
 - If \(rightMax \leq leftMax\): water at right is determined by \(rightMax\)
 
 **Why?** If \(leftMax < rightMax\), there exists some bar on the right ≥ \(rightMax\) > \(leftMax\), so the water level at left is exactly \(leftMax\).

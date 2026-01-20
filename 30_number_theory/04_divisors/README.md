@@ -47,6 +47,7 @@ permalink: /30_number_theory/04_divisors/
 
 **Examples:**
 - $\tau(12) = \tau(2^2 \cdot 3^1) = (2+1)(1+1) = 6$
+
 - Divisors of 12: 1, 2, 3, 4, 6, 12
 
 ---

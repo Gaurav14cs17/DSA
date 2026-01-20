@@ -515,9 +515,13 @@ A: Floyd's tortoise and hare (fast-slow pointers). Fast moves 2x speed, if cycle
 ## 🔥 Key Insights
 
 - **Set = O(1) Lookup:** Perfect for existence checks and uniqueness
+
 - **XOR Cancellation:** Pairs cancel, single element survives
+
 - **Smart Iteration:** Longest consecutive only starts from sequence beginnings
+
 - **Index as Hash:** Use array indices as hash table for O(1) space
+
 - **Cycle Detection:** Set tracks visited states, detects cycles
 
 ---

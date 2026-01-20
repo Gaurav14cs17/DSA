@@ -39,24 +39,33 @@ Advanced tree structures: **AVL Trees**, **Red-Black Trees**, **B-Trees**, **Spl
 <td width="33%">
 
 ### [01. AVL Trees](./01_avl_trees/)
+
 - Self-balancing BST
+
 - Rotations O(log n)
+
 - Height ≤ 1.44 log n
 
 </td>
 <td width="33%">
 
 ### [02. Red-Black Trees](./02_red_black_trees/)
+
 - Color properties
+
 - TreeMap/TreeSet
+
 - Industry standard
 
 </td>
 <td width="33%">
 
 ### [03. Fenwick Tree (BIT)](./03_fenwick_tree/)
+
 - Binary Indexed Tree
+
 - Range sum O(log n)
+
 - Point updates
 
 </td>
@@ -65,24 +74,33 @@ Advanced tree structures: **AVL Trees**, **Red-Black Trees**, **B-Trees**, **Spl
 <td width="33%">
 
 ### [04. Splay Trees](./04_splay_trees/)
+
 - Self-adjusting
+
 - Amortized O(log n)
+
 - Cache-friendly
 
 </td>
 <td width="33%">
 
 ### [05. B-Trees](./05_b_trees/)
+
 - Multi-way search
+
 - Databases/filesystems
+
 - O(log n) operations
 
 </td>
 <td width="33%">
 
 ### [06. Treap](./06_treap/)
+
 - Tree + Heap hybrid
+
 - Randomized BST
+
 - Simple implementation
 
 </td>
@@ -91,8 +109,11 @@ Advanced tree structures: **AVL Trees**, **Red-Black Trees**, **B-Trees**, **Spl
 <td width="33%">
 
 ### [07. Segment Tree (Advanced)](./07_segment_tree_advanced/)
+
 - Lazy propagation
+
 - Range updates
+
 - 2D segment trees
 
 </td>

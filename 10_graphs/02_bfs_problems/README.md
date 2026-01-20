@@ -35,6 +35,7 @@ permalink: /10_graphs/02_bfs_problems/
 
 **Proof:**
 - BFS explores vertices level by level
+
 - When vertex $v$ is discovered from $u$, distance$(v)$ = distance$(u)$ + 1
 - First discovery of $v$ is optimal since all shorter paths already explored ∎
 
@@ -49,6 +50,7 @@ permalink: /10_graphs/02_bfs_problems/
 
 **Breakdown:**
 - Each vertex enqueued/dequeued once: O(V)
+
 - Each edge examined once: O(E)
 
 ---

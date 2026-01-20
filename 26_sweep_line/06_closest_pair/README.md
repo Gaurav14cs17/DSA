@@ -90,8 +90,11 @@ T(n) = 2T(n/2) + O(n) = O(n \log n)
 
 **Proof:**
 - Divide strip into squares of side $\delta/2$
+
 - Each square contains at most 1 point (otherwise distance < $\delta$)
+
 - Current point can only interact with points in adjacent 8 squares
+
 - But only 6 are to the right/above ∎
 
 ---
@@ -102,6 +105,7 @@ T(n) = 2T(n/2) + O(n) = O(n \log n)
 
 **Algorithm:**
 - Maintain k-d tree or sweep line with heap
+
 - For each point, find k nearest
 
 **Time:** $O(n \log n)$ with proper data structures

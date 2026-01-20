@@ -54,8 +54,11 @@ T = O(m \times n \times 4^L)
 ```
 
 Where:
+
 - $m \times n$ = grid size
+
 - $L$ = max word length
+
 - 4 = directions
 
 **Optimization:** Prune trie branches after finding words.

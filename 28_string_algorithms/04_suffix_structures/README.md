@@ -12,10 +12,15 @@ nav_order: 4
 ![Suffix Structures](./images/suffix-structures.svg)
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
+
 - **Time Complexity:** O(n log n) construction, O(m log n) query
+
 - **Space Complexity:** O(n)
+
 - **Topics:** Suffix Array, LCP, String Sorting
+
 - **Prerequisites:** Sorting, Binary search, String basics
 
 ---
@@ -574,13 +579,18 @@ print(f"Original: {inverse_bwt(bwt)}")
 
 ✅ **Use suffix arrays when:**
 - Need memory efficiency
+
 - Simpler implementation preferred
+
 - Pattern matching with moderate frequency
+
 - Building offline (preprocessing acceptable)
 
 ❌ **Consider alternatives when:**
 - Need O(m) pattern matching (use suffix tree)
+
 - Many online updates (use different structure)
+
 - Small strings (simpler algorithms work)
 
 ### Common Optimizations
@@ -663,7 +673,9 @@ class LCPQuery:
 ## 🔗 Related Topics
 
 - [Suffix Tree](../07_suffix_tree/) - More powerful but complex
+
 - [String Hashing](../08_string_hashing/) - For substring comparisons
+
 - [KMP Algorithm](../01_kmp/) - Pattern matching alternative
 
 ---
@@ -671,7 +683,9 @@ class LCPQuery:
 ## 📚 Additional Resources
 
 - [CP-Algorithms: Suffix Array](https://cp-algorithms.com/string/suffix-array.html)
+
 - [Stanford CS166: Suffix Arrays](https://web.stanford.edu/class/cs166/)
+
 - [Kasai's Algorithm Paper](https://www.sciencedirect.com/science/article/pii/S0304397501000225)
 
 ---

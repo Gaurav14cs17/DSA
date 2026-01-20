@@ -69,6 +69,7 @@ Tour: [0, 1, 2, 1, 0, 3, 0]
 
 **Path from $u$ to $v$:**
 - Convert to ranges in Euler tour
+
 - Use LCA to split into two ranges
 
 ---
@@ -77,6 +78,7 @@ Tour: [0, 1, 2, 1, 0, 3, 0]
 
 **Path $(u, v)$ with LCA $l$:**
 - Range 1: $[\text{first}[u], \text{first}[l]]$
+
 - Range 2: $[\text{first}[l], \text{first}[v]]$
 
 **Combine ranges** to get path coverage.
@@ -86,8 +88,11 @@ Tour: [0, 1, 2, 1, 0, 3, 0]
 ### 5️⃣ Complexity Analysis
 
 **Time:** $O((n + q) \sqrt{n})$
+
 - $O(n)$ preprocessing
+
 - $O(q \sqrt{n})$ for sorted queries
+
 - $O(n \sqrt{n})$ for transitions
 
 **Space:** $O(n)$
@@ -100,6 +105,7 @@ Tour: [0, 1, 2, 1, 0, 3, 0]
 
 **Intuition:**
 - Too large: many queries per block
+
 - Too small: many blocks to process
 
 ---

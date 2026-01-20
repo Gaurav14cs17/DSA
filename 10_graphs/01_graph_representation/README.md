@@ -39,7 +39,9 @@ permalink: /10_graphs/01_graph_representation/
 ```
 
 Where:
+
 - $V$ = set of vertices (nodes)
+
 - $E \subseteq V \times V$ = set of edges
 
 **Types:**
@@ -79,7 +81,9 @@ For undirected graph:
 ```
 
 For directed graph:
+
 - **In-degree:** $\deg^-(v) = |\{u : (u, v) \in E\}|$
+
 - **Out-degree:** $\deg^+(v) = |\{u : (v, u) \in E\}|$
 
 **Handshaking Lemma:**
@@ -112,6 +116,7 @@ Stores $|V| \times |V|$ matrix regardless of $|E|$
 ```
 
 - Undirected: $|V|$ lists with total $2|E|$ entries
+
 - Directed: $|V|$ lists with total $|E|$ entries
 
 **When to use which:**
@@ -149,11 +154,14 @@ Every pair of vertices connected.
 
 **Proof:**
 - Choose 2 vertices from $n$: $\binom{n}{2}$
+
 - Each pair forms one edge ∎
 
 **Examples:**
 - $K\_3$ (triangle): $\frac{3 \times 2}{2} = 3$ edges
+
 - $K\_4$: $\frac{4 \times 3}{2} = 6$ edges
+
 - $K\_5$: $\frac{5 \times 4}{2} = 10$ edges
 
 ---
@@ -297,7 +305,9 @@ D: [A, B, C]
 
 Each edge appears in BOTH adjacency lists.
 Edge (A,B) means:
+
 - A is in B's list
+
 - B is in A's list
 
 DIRECTED GRAPH
@@ -315,7 +325,9 @@ C: [D]        ← Out-edges from C
 D: [B]        ← Out-edges from D
 
 Edge (A,B) means:
+
 - B is in A's list (A→B)
+
 - A is NOT in B's list (no B→A)
 
 Key Difference:
@@ -359,7 +371,9 @@ D | ∞  3  4  0 |
 0 on diagonal (no self-loops)
 
 Common weight representations:
+
 - Distance/Cost: positive numbers
+
 - No edge: ∞ or -1
 - Self-loops: typically 0
 
@@ -921,14 +935,20 @@ def can_finish(num_courses: int, prerequisites: List[List[int]]) -> bool:
 
 **Matrix preferred when:**
 - Frequent edge existence checks: O(1) vs O(degree)
+
 - Dense graph: Space difference minimal
+
 - Simple implementation needed
+
 - Small graphs ($V \leq 1000$)
 
 **List preferred when:**
 - Sparse graph: Huge space savings
+
 - Need to iterate neighbors frequently
+
 - Large graphs ($V > 10000$)
+
 - Most real-world networks
 
 ### Real-World Examples

@@ -107,8 +107,11 @@ permalink: /16_recursion/11_parser_recursion/
 ### 1️⃣ Recursive Descent Parsing
 
 A top-down parsing technique where:
+
 - Each grammar rule becomes a function
+
 - Functions call each other based on grammar
+
 - Recursion handles nesting
 
 ```

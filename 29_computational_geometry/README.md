@@ -11,9 +11,12 @@ permalink: /29_computational_geometry/
 ![Computational Geometry Overview](./images/geometry-overview.svg)
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
+
 - **Subtopics:** 6
 - **Problems:** 50+
+
 - **Prerequisites:** Linear algebra, Vectors, Coordinate geometry
 
 ---
@@ -33,26 +36,37 @@ permalink: /29_computational_geometry/
 <td width="33%">
 
 ### [01. Geometric Primitives](./01_geometric_primitives/)
+
 - Points, vectors, lines
+
 - Cross product, dot product
+
 - Orientation tests
+
 - Distance calculations
 
 </td>
 <td width="33%">
 
 ### [02. Convex Hull](./02_convex_hull/)
+
 - Graham's Scan
+
 - Jarvis March
+
 - QuickHull
+
 - Andrew's Algorithm
 
 </td>
 <td width="33%">
 
 ### [03. Line Intersection](./03_line_intersection/)
+
 - Segment intersection
+
 - Bentley-Ottmann
+
 - Sweep line algorithm
 
 </td>
@@ -61,26 +75,37 @@ permalink: /29_computational_geometry/
 <td width="33%">
 
 ### [04. Point Location](./04_point_location/)
+
 - Point in polygon
+
 - Point in triangle
+
 - Winding number
+
 - Ray casting
 
 </td>
 <td width="33%">
 
 ### [05. Polygon Operations](./05_polygon_operations/)
+
 - Area calculation
+
 - Triangulation
+
 - Boolean operations
+
 - Minkowski sum
 
 </td>
 <td width="33%">
 
 ### [06. Closest Pair](./06_closest_pair/)
+
 - Divide & conquer
+
 - Sweep line approach
+
 - Voronoi diagram
 
 </td>
@@ -102,10 +127,15 @@ permalink: /29_computational_geometry/
 **Computational Geometry** studies algorithms for geometric problems, combining mathematics and computer science:
 
 - **Geometric Primitives:** Fundamental operations on points, lines, and shapes
+
 - **Convex Hull:** Finding smallest convex polygon containing all points
+
 - **Intersections:** Detecting and computing intersections of geometric objects
+
 - **Point Location:** Determining spatial relationships between points and regions
+
 - **Polygon Operations:** Computing properties and transformations of polygons
+
 - **Proximity:** Finding closest pairs and nearest neighbors
 
 ---
@@ -138,7 +168,9 @@ permalink: /29_computational_geometry/
 u × v = u_x · v_y - u_y · v_x
 
 Geometric interpretation:
+
 - Magnitude: |u × v| = area of parallelogram formed by u and v
+
 - Sign: determines relative orientation
   > 0: v is counter-clockwise from u
   = 0: u and v are collinear
@@ -148,8 +180,11 @@ Geometric interpretation:
 
 **Applications:**
 - Orientation test
+
 - Convex hull construction
+
 - Line intersection detection
+
 - Area calculations
 
 ---
@@ -165,16 +200,22 @@ u · v = u_x · v_x + u_y · v_y
 where θ is angle between vectors
 
 Properties:
+
 - u · v > 0: acute angle (< 90°)
+
 - u · v = 0: perpendicular (90°)
+
 - u · v < 0: obtuse angle (> 90°)
 
 ```
 
 **Applications:**
 - Angle calculations
+
 - Projection
+
 - Perpendicularity testing
+
 - Distance to line
 
 ---
@@ -543,9 +584,13 @@ Key for: Convex hull, orientation tests, polygon winding
 
 **Handle special cases:**
 - Collinear points
+
 - Duplicate points
+
 - Vertical lines
+
 - Zero-length segments
+
 - Self-intersecting polygons
 
 ### Coordinate System

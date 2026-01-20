@@ -8,9 +8,13 @@ nav_order: 3
 # ⚡ Line Intersection Algorithms
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
+
 - **Time Complexity:** O(n²) naive, O((n+k) log n) sweep line
+
 - **Space Complexity:** O(n)
+
 - **Topics:** Segment Intersection, Sweep Line, Bentley-Ottmann
 
 ---

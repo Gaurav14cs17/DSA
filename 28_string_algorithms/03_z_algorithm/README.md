@@ -12,10 +12,15 @@ nav_order: 3
 ![Z-Algorithm](./images/z-algorithm.svg)
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+
 - **Time Complexity:** O(n)
+
 - **Space Complexity:** O(n)
+
 - **Topics:** String Matching, Z-array, Pattern Preprocessing
+
 - **Prerequisites:** String basics, Two pointers
 
 ---
@@ -69,7 +74,9 @@ Result: Z = [0, 1, 0, 0, 3, 1, 0, 0, 2, 1, 0]
 **Z-box:** The substring s[l..r] that matches prefix s[0..r-l].
 
 **Key Invariant:** For current position i:
+
 - We maintain rightmost Z-box [l, r] where r is maximum
+
 - If i ≤ r, we can use previously computed Z-values
 
 **Optimization:**
@@ -476,9 +483,12 @@ print(find_period("abcd"))       # 4
 
 **Proof:**
 - Each position i is processed once in outer loop: O(n)
+
 - The key: r (right boundary) never decreases more than it increases
+
 - r starts at 0, ends at most at n-1
 - Total increase in r: at most n
+
 - Each while loop increases r by at least 1
 - Therefore, total while loop iterations: at most n
 
@@ -500,7 +510,9 @@ Therefore: T ≤ n + (n-1) = O(n)
 ### Space Complexity
 
 - Z-array: O(n)
+
 - For pattern matching: O(n + m) where m = pattern length
+
 - No additional data structures needed
 
 ---
@@ -542,13 +554,18 @@ Therefore: T ≤ n + (n-1) = O(n)
 
 ✅ **Use Z-Algorithm when:**
 - Need all prefix matches at each position
+
 - Problem involves prefix-suffix relationships
+
 - Want simpler code than KMP
+
 - Need to process each position independently
 
 ❌ **Consider alternatives when:**
 - Only need first occurrence (simpler algorithms exist)
+
 - Pattern changes frequently (preprocessing overhead)
+
 - Need approximate matching (different algorithms)
 
 ### Common Applications
@@ -642,7 +659,9 @@ def longest_common_prefix_multiple(strings):
 ## 🔗 Related Topics
 
 - [KMP Algorithm](../01_kmp/) - Similar pattern matching approach
+
 - [Manacher's Algorithm](../05_manacher/) - Palindrome detection
+
 - [String Hashing](../08_string_hashing/) - Alternative string comparison
 
 ---
@@ -650,7 +669,9 @@ def longest_common_prefix_multiple(strings):
 ## 📚 Additional Resources
 
 - [CP-Algorithms: Z-Algorithm](https://cp-algorithms.com/string/z-function.html)
+
 - [Codeforces Tutorial](https://codeforces.com/blog/entry/3107)
+
 - [Visualization Tool](https://personal.utdallas.edu/~besp/demo/John2010/z-algorithm.htm)
 
 ---

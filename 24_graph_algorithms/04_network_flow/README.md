@@ -42,8 +42,11 @@ permalink: /24_graph_algorithms/04_network_flow/
 ### 1️⃣ Flow Network
 
 **Flow network** $G = (V, E)$ with:
+
 - Source $s \in V$
+
 - Sink $t \in V$
+
 - Capacity function $c: E \rightarrow \mathbb{R}^+$
 
 **Flow** $f: E \rightarrow \mathbb{R}$ satisfies:
@@ -150,6 +153,7 @@ c(S, T) = \sum_{u \in S, v \in T, (u,v) \in E} c(u,v)
 
 **Operations:**
 - **Push:** Send excess flow to neighbor
+
 - **Relabel:** Increase height of vertex
 
 **Time:** $O(V^2 E)$ generic, $O(V^3)$ with heuristics
@@ -159,8 +163,11 @@ c(S, T) = \sum_{u \in S, v \in T, (u,v) \in E} c(u,v)
 ### 9️⃣ Bipartite Matching
 
 **Maximum matching** in bipartite graph = **Maximum flow** with:
+
 - Source connected to left partition (capacity 1)
+
 - Right partition connected to sink (capacity 1)
+
 - Original edges (capacity 1)
 
 ```math
@@ -180,8 +187,11 @@ c(S, T) = \sum_{u \in S, v \in T, (u,v) \in E} c(u,v)
 ### 🔟 Minimum Cut Applications
 
 **Minimum cut** found by max-flow:
+
 - After max-flow, run BFS/DFS from source in residual graph
+
 - $S$ = reachable vertices, $T$ = unreachable vertices
+
 - Cut edges: $(u, v)$ where $u \in S, v \in T$
 
 ---

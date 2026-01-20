@@ -78,8 +78,11 @@ M \cdot (M^{(n-1)/2})^2 & \text{if } n \text{ is odd}
 
 **Time Complexity:**
 - Naive: $O(n)$ matrix multiplications
+
 - Binary: $O(\log n)$ matrix multiplications
+
 - Each multiplication: $O(k^3)$ for $k \times k$ matrix
+
 - **Total: $O(k^3 \log n)$**
 
 ---

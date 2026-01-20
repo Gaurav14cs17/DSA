@@ -77,8 +77,11 @@ Guaranteed $O(n)$ by choosing better pivot:
 ### 3️⃣ Partition Invariant
 
 After partition with pivot at index $p$:
+
 - Elements $[0, p-1]$: all $\leq$ pivot
+
 - Element $[p]$: pivot
+
 - Elements $[p+1, n-1]$: all $\geq$ pivot
 
 ---

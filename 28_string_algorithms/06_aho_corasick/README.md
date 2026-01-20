@@ -12,10 +12,15 @@ nav_order: 6
 ![Aho-Corasick Algorithm](./images/aho-corasick.svg)
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
+
 - **Time Complexity:** O(n + m + k) where k = matches
+
 - **Space Complexity:** O(m · σ) where σ = alphabet size
+
 - **Topics:** Trie, Automaton, Multiple Pattern Matching
+
 - **Prerequisites:** Trie, BFS, KMP failure function
 
 ---
@@ -26,8 +31,11 @@ The **Aho-Corasick** algorithm efficiently finds all occurrences of multiple pat
 
 **Key Applications:**
 - Virus/malware scanning
+
 - Dictionary matching
+
 - Log analysis
+
 - DNA sequence matching
 
 ---
@@ -64,7 +72,9 @@ Numbers = pattern IDs
 Similar to KMP failure function, but for trie nodes
 
 For node representing "she":
+
 - Failure link points to node "he"
+
 - Because "he" is longest suffix of "she" in trie
 
 ```
@@ -73,7 +83,9 @@ For node representing "she":
 
 ```
 If we're at "she" and "he" is also a pattern:
+
 - Both "she" and "he" match
+
 - Output link tracks this
 
 ```
@@ -661,7 +673,9 @@ def reverse_complement(seq):
 
 ```
 - Building trie: O(Σ|patterns|)
+
 - Building failure links: O(m · σ) where σ = alphabet size
+
 - Total: O(m · σ)
 
 ```
@@ -670,7 +684,9 @@ def reverse_complement(seq):
 
 ```
 - Each character processed once: O(n)
+
 - Reporting matches: O(k) where k = number of matches
+
 - Total: O(n + k)
 
 ```
@@ -679,14 +695,20 @@ def reverse_complement(seq):
 
 ✅ **Use when:**
 - Searching for multiple patterns simultaneously
+
 - Patterns don't change frequently
+
 - Need to find ALL occurrences
+
 - Working with large texts (virus scanning, log analysis)
 
 ❌ **Consider alternatives when:**
 - Only one pattern (use KMP or Rabin-Karp)
+
 - Patterns change frequently (rebuilding is expensive)
+
 - Alphabet is very large (space overhead)
+
 - Approximate matching needed (different algorithms)
 
 ### Comparison with Alternatives
@@ -703,7 +725,9 @@ def reverse_complement(seq):
 ## 🔗 Related Topics
 
 - [Tries](../../11_tries/) - Foundation data structure
+
 - [KMP Algorithm](../01_kmp/) - Similar failure link concept
+
 - [Suffix Tree](../07_suffix_tree/) - Alternative for pattern matching
 
 ---
@@ -711,7 +735,9 @@ def reverse_complement(seq):
 ## 📚 Additional Resources
 
 - [Original Paper (1975)](https://doi.org/10.1145/360825.360855)
+
 - [CP-Algorithms: Aho-Corasick](https://cp-algorithms.com/string/aho_corasick.html)
+
 - [Visualization](https://www.cs.uku.fi/~kilpelai/BSA05/lectures/slides04.pdf)
 
 ---

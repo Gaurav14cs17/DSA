@@ -52,9 +52,13 @@ permalink: /21_bit_manipulation/03_bitmask/
 ## 🎯 What You'll Master
 
 - Representing subsets as integers
+
 - Enumerating all \(2^n\) subsets
+
 - Enumerating all subsets of a specific mask
+
 - Bitmask Dynamic Programming
+
 - Traveling Salesman and Partition problems
 
 ---
@@ -268,8 +272,11 @@ for mask in range(1 << n):
 ```
 
 #### Time Complexity
+
 - States: \(O(2^n)\)
+
 - Transitions per state: \(O(n)\)
+
 - Total: \(O(n \cdot 2^n)\)
 
 ---
@@ -321,7 +328,9 @@ Partition array into \(k\) subsets of equal sum.
 ```
 
 If we can partition elements in mask into complete buckets:
+
 - `dp[mask] = 0` means we have exactly filled some buckets
+
 - `dp[mask] = x > 0` means current partial bucket has sum x
 
 ---

@@ -36,24 +36,33 @@ permalink: /27_advanced_trees/03_fenwick_tree/
 <td width="33%">
 
 ### [01. Basic BIT](./01_basic_bit/)
+
 - Point update
+
 - Range query
+
 - Range update
 
 </td>
 <td width="33%">
 
 ### [02. Inversion Counting](./02_inversion_counting/)
+
 - Count inversions
+
 - Reverse pairs
+
 - Coordinate compression
 
 </td>
 <td width="33%">
 
 ### [03. 2D BIT](./03_2d_bit/)
+
 - 2D updates
+
 - 2D range queries
+
 - Matrix operations
 
 </td>
@@ -62,16 +71,22 @@ permalink: /27_advanced_trees/03_fenwick_tree/
 <td width="33%">
 
 ### [04. Order Statistics](./04_order_statistics/)
+
 - Kth smallest
+
 - K empty slots
+
 - Dynamic ranking
 
 </td>
 <td width="33%">
 
 ### [05. DP with BIT](./05_dp_with_bit/)
+
 - LIS variants
+
 - DP optimization
+
 - State compression
 
 </td>
@@ -94,8 +109,11 @@ permalink: /27_advanced_trees/03_fenwick_tree/
 ## 📋 Overview
 
 **Fenwick Tree (Binary Indexed Tree)** is a data structure that efficiently supports:
+
 - **Point updates:** Modify single element in O(log n)
+
 - **Prefix queries:** Compute prefix sum in O(log n)
+
 - **Range queries:** Sum of any range in O(log n)
 
 **Invented by:** Peter Fenwick (1994)
@@ -139,7 +157,9 @@ where $\text{LSB}(i)$ = least significant bit = $i \& (-i)$
 
 **Examples:**
 - $\text{LSB}(12) = 12 \& (-12) = 1100\_2 \& 0100\_2 = 0100\_2 = 4$
+
 - $\text{LSB}(10) = 10 \& (-10) = 1010\_2 \& 0110\_2 = 0010\_2 = 2$
+
 - $\text{LSB}(8) = 8 \& (-8) = 1000\_2 \& 1000\_2 = 1000\_2 = 8$
 
 **Why it works:** Two's complement: $-i = \sim i + 1$

@@ -13,9 +13,13 @@ nav_order: 1
 ![Basic Rolling Hash](./images/basic-rolling-hash.svg)
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+
 - **Time Complexity:** O(n) for n characters
+
 - **Space Complexity:** O(1)
+
 - **Pattern:** Hash Function, Modular Arithmetic
 
 ---
@@ -39,8 +43,11 @@ Expanded:
 h(s) = (s[0]·p^(m-1) + s[1]·p^(m-2) + ... + s[m-1]·p^0) mod M
 
 where:
+
 - p = prime base
+
 - M = prime modulus
+
 - s[i] = character value (usually ord(s[i]))
 
 ```
@@ -78,7 +85,9 @@ h_new = ((h_old - s[i]·p^(m-1)) · p + s[i+m]) mod M
 
 **Why use modulo?**
 - Prevent integer overflow
+
 - Keep hash values bounded
+
 - Maintain mathematical properties
 
 **Key operations:**

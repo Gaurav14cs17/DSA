@@ -52,9 +52,13 @@ permalink: /21_bit_manipulation/02_xor_tricks/
 ## 🎯 What You'll Master
 
 - All 5 fundamental XOR properties with proofs
+
 - Finding unique elements in arrays (Single Number variants)
+
 - XOR-based range queries
+
 - Bit partitioning techniques
+
 - Maximum XOR problems with Tries
 
 ---
@@ -77,7 +81,9 @@ permalink: /21_bit_manipulation/02_xor_tricks/
 #### 🔍 Deep Dive: Why \(a \oplus a = 0\)?
 
 For each bit position:
+
 - If bit is 0: \(0 \oplus 0 = 0\)
+
 - If bit is 1: \(1 \oplus 1 = 0\)
 
 Every bit becomes 0, so \(a \oplus a = 0\).
@@ -160,7 +166,9 @@ Every number except the missing one appears twice (once as index, once as value)
 This bit is 1 in exactly one of \(a, b\) (say \(a\)) and 0 in the other (say \(b\)).
 
 **Step 3**: Partitioning by this bit:
+
 - Group 1: Contains \(a\) and some pairs → XOR = \(a\)
+
 - Group 2: Contains \(b\) and some pairs → XOR = \(b\)
 
 Each pair goes entirely into one group (both elements have same bit value).
@@ -188,10 +196,13 @@ If the count is 1, the unique number has this bit set.
 #### 🔍 Proof
 
 For elements appearing 3 times:
+
 - Their contribution to bit count at any position is 3k (multiple of 3)
+
 - This becomes 0 after mod 3
 
 For the unique element:
+
 - Its contribution is either 0 or 1
 - After mod 3, we recover its original bits
 
@@ -238,13 +249,17 @@ By cancellation, elements \([0, L-1]\) cancel out:
 #### Greedy Strategy
 
 For each number, traverse a binary trie:
+
 - At each bit position (high to low), try to go opposite
+
 - This maximizes the XOR bit by bit
 
 #### Time Complexity
 
 - Build trie: \(O(n \times 32)\)
+
 - Query each number: \(O(32)\)
+
 - Total: \(O(n)\)
 
 ---

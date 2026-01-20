@@ -56,7 +56,9 @@ permalink: /34_sqrt_decomposition/
 
 **Why √n?**
 - Too small blocks: Many blocks → slow queries
+
 - Too large blocks: Big blocks → slow updates
+
 - **√n is optimal**: Balances query and update complexity
 
 ---
@@ -71,19 +73,27 @@ T_{\text{build}} = O(n)
 ```
 
 **Query (Range):** 
+
 - Partial blocks at ends: $O(\sqrt{n})$
+
 - Complete blocks in middle: $O(\sqrt{n})$ blocks × $O(1)$ lookup
+
 - **Total:** $O(\sqrt{n})$
 
 **Update (Single Element):**
 - Find block: $O(1)$
+
 - Update element: $O(1)$
+
 - Update block summary: $O(1)$
+
 - **Total:** $O(1)$
 
 **Update (Range):**
 - Partial blocks: $O(\sqrt{n})$
+
 - Complete blocks: $O(\sqrt{n})$
+
 - **Total:** $O(\sqrt{n})$
 
 ---
@@ -96,6 +106,7 @@ S = O(n + \sqrt{n}) = O(n)
 ```
 
 - Original array: $O(n)$
+
 - Block data: $O(\sqrt{n})$ blocks
 
 ---
@@ -112,8 +123,11 @@ S = O(n + \sqrt{n}) = O(n)
 
 **When to Use Sqrt Decomposition:**
 - ✅ Simpler to implement than Segment Tree
+
 - ✅ Works for problems where Segment Tree doesn't apply easily
+
 - ✅ Good for competitions when time is limited
+
 - ✅ Flexible - easy to modify for different operations
 
 ---
@@ -124,7 +138,9 @@ S = O(n + \sqrt{n}) = O(n)
 
 **Proof:**
 - Query touches at most $\frac{n}{b}$ complete blocks: $O(\frac{n}{b})$
+
 - Query touches at most 2 partial blocks: $O(b)$
+
 - Total: $T(b) = O(\frac{n}{b} + b)$
 
 To minimize, take derivative:
@@ -478,14 +494,20 @@ class SqrtDecompMinMax:
 
 **Core Concepts:**
 - Range sum
+
 - Range min/max
+
 - Range GCD
+
 - Point update
+
 - Range update
 
 **Key Operations:**
 - Build: O(n)
+
 - Query: O(√n)
+
 - Update: O(1) or O(√n)
 
 **Problems:** 15+
@@ -497,14 +519,20 @@ class SqrtDecompMinMax:
 
 **Core Concepts:**
 - Query reordering
+
 - Offline processing
+
 - Add/remove elements
+
 - Block sorting
+
 - Hilbert curve optimization
 
 **Key Ideas:**
 - Sort queries by blocks
+
 - Move pointers efficiently
+
 - O(n√n) total
 
 **Problems:** 10+

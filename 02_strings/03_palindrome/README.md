@@ -53,6 +53,7 @@ S[i] = S[n-1-i] \quad \forall i \in [0, \lfloor n/2 \rfloor]
 
 **Centers:**
 - **Odd length:** $n$ centers at indices $0, 1, \ldots, n-1$
+
 - **Even length:** $n-1$ centers between indices
 
 **Total centers:** $2n - 1$
@@ -427,14 +428,19 @@ Palindrome Problem
 **Total palindromic substrings:**
 
 For each center $c$ in $[0, 2n-2]$:
+
 - Expand while $s[left] = s[right]$
+
 - Each expansion adds 1 palindrome
 
 **Upper bound:** $O(n^2)$ - each substring could be palindrome
 
 **Example:** "aaa" has 6 palindromes:
+
 - Single: "a", "a", "a" (3)
+
 - Length 2: "aa", "aa" (2)  
+
 - Length 3: "aaa" (1)
 Total: 3 + 2 + 1 = 6 = n(n+1)/2
 
@@ -554,8 +560,11 @@ n > 10,000:  Consider Manacher's
 10. **Shortest Palindrome** (#214) - KMP application
 
 ### Expert Challenge
+
 - Implement Manacher's algorithm
+
 - Solve in O(n) time
+
 - Explain the proof clearly
 
 ---

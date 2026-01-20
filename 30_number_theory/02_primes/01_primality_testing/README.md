@@ -93,7 +93,9 @@ a^{p-1} \equiv 1 \pmod{p}
 **Setup:** Write $n - 1 = 2^r \cdot d$ where $d$ is odd.
 
 **Theorem:** If $n$ is an odd prime, then for any $a$ with $\gcd(a, n) = 1$:
+
 - Either $a^d \equiv 1 \pmod{n}$
+
 - Or $a^{2^j d} \equiv -1 \pmod{n}$ for some $0 \leq j < r$
 
 **Contrapositive:** If neither condition holds, $n$ is composite (and $a$ is a "witness").

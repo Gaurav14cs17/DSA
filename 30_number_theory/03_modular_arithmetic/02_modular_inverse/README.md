@@ -9,9 +9,13 @@ nav_order: 2
 # 🔄 Modular Inverse
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+
 - **Time Complexity:** O(log m)
+
 - **Space Complexity:** O(1) iterative, O(log m) recursive
+
 - **Pattern:** Number Theory, Extended GCD, Fermat's Theorem
 
 ---

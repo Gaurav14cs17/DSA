@@ -13,9 +13,13 @@ nav_order: 6
 ![Multiple Patterns](./images/multiple-patterns.svg)
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
+
 - **Time Complexity:** O(n · k + m) where k = patterns
+
 - **Space Complexity:** O(m)
+
 - **Pattern:** Multiple Searches, Pattern Variations
 
 ---
@@ -485,13 +489,18 @@ for pattern, matches in results.items():
 
 ✅ **Good for:**
 - Small number of patterns (k < 10)
+
 - Patterns preprocessed once, many texts
+
 - Need exact matches
+
 - Simpler implementation than Aho-Corasick
 
 ❌ **Better alternatives:**
 - **Many patterns (k > 100):** Use Aho-Corasick
+
 - **Approximate matching:** Use edit distance algorithms
+
 - **Pattern discovery:** Use suffix arrays/trees
 
 ### Optimization Strategies
@@ -543,7 +552,9 @@ KMP for multiple patterns naturally leads to Aho-Corasick:
 
 **When to graduate to Aho-Corasick:**
 - More than ~10 patterns
+
 - Patterns share common prefixes
+
 - Need optimal O(n + k) matching
 
 ---

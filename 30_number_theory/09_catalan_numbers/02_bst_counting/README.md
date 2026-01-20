@@ -57,8 +57,11 @@ For n distinct values, the number of structurally unique BSTs equals C_n:
 ### Intuition
 
 When we pick root = i:
+
 - Left subtree has (i-1) nodes → C_{i-1} structures
+
 - Right subtree has (n-i) nodes → C_{n-i} structures
+
 - Total = sum over all roots = Catalan recurrence!
 
 ---

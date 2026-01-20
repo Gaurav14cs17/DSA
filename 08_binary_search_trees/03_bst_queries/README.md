@@ -106,9 +106,11 @@ node.val_{new} = node.val + \sum_{x > node.val} x
 ### 6️⃣ Two Sum in BST
 
 **Approach 1:** Inorder → sorted array → two pointers
+
 - Time: O(n), Space: O(n)
 
 **Approach 2:** Inorder + HashSet
+
 - Time: O(n), Space: O(n)
 
 **Key:** Convert BST to sorted sequence!
@@ -119,11 +121,14 @@ node.val_{new} = node.val + \sum_{x > node.val} x
 
 **Operations:**
 - `next()`: O(1) amortized
+
 - `hasNext()`: O(1)
 
 **Why Amortized O(1)?**
 - Each node pushed/popped exactly once
+
 - Total n nodes → n pushes + n pops
+
 - Per operation: O(2n)/n = O(1) ✓
 
 ---
@@ -198,6 +203,7 @@ Case 2: Node has no right child (15 has no right child)
 
 **Rule:**
 - If right exists → min of right
+
 - Else → first left-turn ancestor
 
 ---
@@ -484,16 +490,24 @@ def closestValue(root: TreeNode, target: float) -> int:
 
 ### ✅ **Do's:**
 - ✓ For k-th smallest: stop early at k, don't traverse all
+
 - ✓ LCA in BST: O(h) using property, not O(n) like regular tree
+
 - ✓ Greater sum tree: reverse inorder (right first!)
+
 - ✓ BST Iterator: controlled inorder with stack
+
 - ✓ Range queries: prune branches outside range
 
 ### ❌ **Don'ts:**
 - ✗ Don't traverse entire tree for k-th smallest
+
 - ✗ Don't use regular tree LCA algorithm (slower!)
+
 - ✗ Don't confuse regular inorder with reverse inorder
+
 - ✗ Don't forget to handle edge cases (k > n, target not in tree)
+
 - ✗ Don't use O(n) space when O(h) possible
 
 ### ⚡ **Optimization Tricks:**
@@ -558,33 +572,52 @@ def closestValue(root: TreeNode, target: float) -> int:
 
 ### **Phase 1: Basic Queries (Week 1)**
 - [ ] Understand inorder = sorted
+
 - [ ] Implement k-th smallest
+
 - [ ] Find min absolute difference
+
 - [ ] Solve: #230 Kth Smallest
+
 - [ ] Solve: #530 Min Absolute Difference
 
 ### **Phase 2: Navigation (Week 2)**
 - [ ] Understand successor/predecessor
+
 - [ ] Implement LCA in BST
+
 - [ ] Range sum queries
+
 - [ ] Solve: #235 LCA of BST
+
 - [ ] Solve: #285 Inorder Successor
+
 - [ ] Solve: #938 Range Sum of BST
 
 ### **Phase 3: Advanced Queries (Week 3)**
 - [ ] Implement BST Iterator
+
 - [ ] Convert to greater sum tree
+
 - [ ] Two sum in BST
+
 - [ ] Solve: #173 BST Iterator
+
 - [ ] Solve: #538 Convert BST to Greater Tree
+
 - [ ] Solve: #653 Two Sum IV
 
 ### **Phase 4: Mastery (Week 4)**
 - [ ] Closest value in BST
+
 - [ ] Count nodes in range
+
 - [ ] Kth largest element
+
 - [ ] Solve: #270 Closest BST Value
+
 - [ ] Solve: #1038 BST to Greater Sum Tree
+
 - [ ] Practice all variations!
 
 ---

@@ -62,15 +62,21 @@ Let $bh(x)$ = black height of node $x$.
 **Lemma:** Subtree rooted at $x$ contains at least $2^{bh(x)} - 1$ internal nodes.
 
 Proof by induction:
+
 - Base: $bh(x) = 0 \implies$ leaf $\implies 0 = 2^0 - 1$ ✓
+
 - Step: Each child has black height $\geq bh(x) - 1$
   - By induction: $\geq 2^{bh(x)-1} - 1$ nodes
   - Total: $2(2^{bh(x)-1} - 1) + 1 = 2^{bh(x)} - 1$ ✓
 
 For root with black height $bh$:
+
 - $n \geq 2^{bh} - 1$
+
 - By property 4: $bh \geq h/2$
+
 - Therefore: $n \geq 2^{h/2} - 1$
+
 - Solving: $h \leq 2\log\_2(n+1)$ ∎
 
 ---
@@ -90,13 +96,17 @@ For root with black height $bh$:
 **After standard BST insert (new node is RED):**
 
 **Case 1:** Uncle is RED
+
 - Recolor parent, uncle, grandparent
+
 - Continue with grandparent
 
 **Case 2:** Uncle is BLACK, node is "inside"
+
 - Rotate to convert to Case 3
 
 **Case 3:** Uncle is BLACK, node is "outside"  
+
 - Rotate grandparent + recolor
 
 **Max operations:** $O(\log n)$ recolorings, $O(1)$ rotations
@@ -107,6 +117,7 @@ For root with black height $bh$:
 
 **More complex than insert (6 cases):**
 - Deleting BLACK node requires rebalancing
+
 - May need up to $O(\log n)$ rotations
 
 **Practical:** Java TreeMap/TreeSet use Red-Black trees

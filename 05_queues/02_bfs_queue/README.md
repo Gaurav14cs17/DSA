@@ -54,8 +54,11 @@ permalink: /05_queues/02_bfs_queue/
 **Base:** Source $s$ has $d[s] = 0$ (correct).
 
 **Inductive:** Assume true for all vertices at distance $\leq k$.
+
 - Vertices at distance $k+1$ are discovered from vertices at distance $k$
+
 - They're assigned distance $k+1$ when first seen
+
 - BFS processes in order → first discovery = shortest path ∎
 
 ---
@@ -69,6 +72,7 @@ T(V, E) = O(V + E)
 
 **Breakdown:**
 - Queue operations: Each vertex enqueued/dequeued once → $O(V)$
+
 - Edge examination: Each edge checked once (directed) or twice (undirected) → $O(E)$
 
 **Space:** $O(V)$ for visited set and queue.
@@ -605,9 +609,13 @@ A: Mark visited when adding to queue (not when processing). Can modify grid or u
 ## 🔥 Key Insights
 
 - **BFS Guarantee:** First visit = shortest path in unweighted graphs
+
 - **Level Processing:** Track queue size to separate levels
+
 - **Multi-Source:** Start from ALL sources simultaneously
+
 - **Grid = Graph:** 4/8 neighbors = edges, cells = vertices
+
 - **State Space BFS:** Each state is a node, transitions are edges
 
 ---

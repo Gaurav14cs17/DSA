@@ -5,9 +5,13 @@
 Implement a basic calculator to evaluate a simple expression string.
 
 The expression string may contain:
+
 - `+`, `-` operators
+
 - `(`, `)` parentheses  
+
 - Non-negative integers
+
 - Spaces
 
 ### Examples:
@@ -433,7 +437,9 @@ if char == '(':
 ## 🔗 See Also
 
 - [Decode String Explained](./decode_string_explained.md) - Similar recursion pattern
+
 - [Number of Atoms Explained](./number_of_atoms_explained.md) - Parsing chemical formulas
+
 - [Parser Recursion README](../) - Full topic overview
 
 ---

@@ -446,7 +446,9 @@ if char == '[':
 ## 🔗 See Also
 
 - [Number of Atoms Explained](./number_of_atoms_explained.md) - Similar pattern with chemical formulas
+
 - [Basic Calculator Explained](./basic_calculator_explained.md) - Expression parsing
+
 - [Parser Recursion README](../) - Full topic overview
 
 ---

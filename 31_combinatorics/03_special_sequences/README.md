@@ -51,8 +51,11 @@ C_0 = 1, \quad C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
 
 **Applications:**
 - Valid parentheses with n pairs
+
 - Number of BSTs with n nodes
+
 - Ways to triangulate (n+2)-gon
+
 - Paths in n×n grid not crossing diagonal
 
 ---

@@ -8,9 +8,13 @@ nav_order: 2
 # 🔺 Convex Hull Algorithms
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
+
 - **Time Complexity:** O(n log n) optimal
+
 - **Space Complexity:** O(n)
+
 - **Algorithms:** Graham's Scan, Jarvis March, QuickHull, Andrew's
 
 ---

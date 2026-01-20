@@ -276,18 +276,25 @@ def next_meeting(interval1: int, interval2: int) -> int:
 
 **Week 1: Foundations**
 - Day 1-2: Basic Euclidean Algorithm
+
 - Day 3-4: Extended GCD and modular inverse
+
 - Day 5: LCM applications
+
 - Day 6-7: Practice easy problems
 
 **Week 2: Advanced Patterns**
 - Day 1-2: Binary GCD and optimizations
+
 - Day 3-4: Array GCD techniques
+
 - Day 5-7: Medium problems
 
 **Week 3: Expert Level**
 - Day 1-3: Hard problems
+
 - Day 4-5: Contest problems
+
 - Day 6-7: Review and speed practice
 
 ---

@@ -27,12 +27,19 @@ permalink: /01_arrays/
 ### 📚 Comprehensive Documentation Available
 
 Each subfolder contains **complete mini-courses** with:
+
 - ✅ Mathematical foundations with proofs
+
 - ✅ Visual algorithm walkthroughs (ASCII art)
+
 - ✅ Fully commented code implementations
+
 - ✅ 15-25 curated LeetCode problems each
+
 - ✅ Pattern recognition guides
+
 - ✅ Video tutorials and references
+
 - ✅ Practice roadmaps
 
 **Total: 90+ problems covered with detailed explanations!**
@@ -65,7 +72,9 @@ Element i: B + i×S
 
 **Time Complexity Proof:**
 - Address calculation: 1 multiplication + 1 addition = O(1)
+
 - Memory access: Direct addressing = O(1)
+
 - Total: O(1) ✓
 
 ---
@@ -131,9 +140,11 @@ Each element has 2 choices: include or exclude.
 
 **Optimal Substructure Proof:**
 - Let $S\_i$ = max subarray sum ending at index $i$
+
 - Subarray ending at $i$ either:
   - Starts at $i$: sum = $A[i]$
   - Extends from $j < i$: sum = $S\_{i-1} + A[i]$
+
 - Therefore: $S\_i = \max(A[i], S\_{i-1} + A[i])$ ∎
 
 ---
@@ -178,8 +189,11 @@ For opposite-direction pointers on sorted array:
 
 **Proof:**
 - Each iteration: either $left++$ or $right--$ (or both)
+
 - Initial gap: $right - left = n - 1$
+
 - Gap decreases by ≥1 each iteration
+
 - Maximum iterations = $n - 1$ = O(n) ∎
 
 ---
@@ -234,8 +248,11 @@ Let array = $[A\_1, \ldots, A\_{n-k}, A\_{n-k+1}, \ldots, A\_n]$
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Basic programming knowledge (Python, Java, C++, or JavaScript)
+
 - Understanding of Big-O notation
+
 - Familiarity with loops and conditionals
 
 ---
@@ -245,46 +262,71 @@ Let array = $[A\_1, \ldots, A\_{n-k}, A\_{n-k+1}, \ldots, A\_n]$
 ### 📁 01_basic_operations
 **Master the foundations of in-place array manipulation**
 - Two Pointers technique (opposite & same direction)
+
 - Dutch National Flag algorithm (3-way partitioning)
+
 - Array rotation using three reversals
+
 - Floyd's Cycle Detection for duplicates
+
 - Remove duplicates, move zeroes, merge sorted arrays
+
 - **15+ LeetCode problems** with full solutions
 
 ### 📁 02_subarray_problems  
 **Learn to find maximum/minimum subarrays efficiently**
 - Kadane's Algorithm (maximum subarray sum)
+
 - Maximum Product Subarray (handling negatives)
+
 - Subarray sum equals K (prefix + hash map)
+
 - Sliding window for minimum length
+
 - Continuous subarray sum divisible by K
+
 - **15+ LeetCode problems** with visual traces
 
 ### 📁 03_prefix_sum
 **Preprocess once, query in O(1) time**
 - 1D and 2D prefix sum construction
+
 - Range sum queries in constant time
+
 - Subarray sum with modulo arithmetic
+
 - Product of array except self
+
 - Find pivot index and equilibrium
+
 - **20+ LeetCode problems** with mathematical proofs
 
 ### 📁 04_matrix_problems
 **Navigate 2D arrays like a pro**
 - Matrix rotation (90°, 180°, 270°)
+
 - Spiral matrix traversal (all 4 variants)
+
 - Staircase search in sorted matrix
+
 - Set matrix zeroes (O(1) space)
+
 - Diagonal traverse and transpose
+
 - **25+ LeetCode problems** with visual diagrams
 
 ### 📁 05_interval_problems
 **Sort, merge, and schedule like an expert**
 - Merge overlapping intervals
+
 - Insert interval in O(n) time
+
 - Meeting rooms (I, II, III)
+
 - Sweep line algorithm for counting
+
 - Greedy interval scheduling
+
 - **20+ LeetCode problems** with proofs
 
 ---
@@ -402,19 +444,31 @@ Solve these first for maximum interview impact:
 ## 💡 Study Tips for Success
 
 ### ✅ DO:
+
 - Solve problems without looking at solutions (30 min attempt)
+
 - Understand WHY algorithm works (proof/intuition)
+
 - Write code from scratch multiple times
+
 - Explain solutions out loud
+
 - Track time and space complexity
+
 - Review solved problems after 3 days
 
 ### ❌ DON'T:
+
 - Copy solutions without understanding
+
 - Skip "easy" problems (they build foundation)
+
 - Memorize code without comprehension
+
 - Ignore edge cases
+
 - Move on without optimizing
+
 - Practice only one type of problem
 
 ---
@@ -433,6 +487,7 @@ Solve these first for maximum interview impact:
 ### Mistake #2: Ignoring Edge Cases
 ❌ **Wrong:** Test only normal cases  
 ✅ **Right:** Always test:
+
 - Empty array `[]`
 - Single element `[1]`
 - All same `[5,5,5,5]`
@@ -452,11 +507,17 @@ Solve these first for maximum interview impact:
 ## 📂 Subtopics Navigation
 
 Each subtopic contains:
+
 - 📐 **Mathematical Foundations** - Theorems, proofs, and formulas
+
 - 🎨 **Visual Walkthroughs** - ASCII diagrams and step-by-step traces
+
 - 💻 **Code Implementations** - Python with detailed comments
+
 - 🏆 **LeetCode Problems** - Curated and sorted by difficulty
+
 - 💡 **Key Insights** - Pro tips and pattern recognition
+
 - 📚 **Learning Resources** - Videos, tutorials, and references
 
 | # | Topic | Problems | Key Techniques | Link |
@@ -652,16 +713,24 @@ Use this flowchart to quickly identify which technique to apply:
 
 ❌ **Don't:**
 - Jump into coding without clarifying requirements
+
 - Ignore edge cases (empty array, single element)
+
 - Forget about integer overflow
+
 - Assume array is sorted (unless stated)
+
 - Modify input without asking if it's allowed
 
 ✅ **Do:**
 - Start with brute force, then optimize
+
 - Discuss time/space complexity before coding
+
 - Test with small examples
+
 - Consider negative numbers and zeros
+
 - Ask about duplicates and array size constraints
 
 ### Optimization Checklist
@@ -686,8 +755,11 @@ Use this flowchart to quickly identify which technique to apply:
 
 **Progress Tracker:**
 - 🥉 **Bronze:** Solve 20 array problems
+
 - 🥈 **Silver:** Solve 50 array problems
+
 - 🥇 **Gold:** Solve 100 array problems
+
 - 💎 **Platinum:** Can solve any array problem under 30 minutes
 
 **Remember:** Every expert was once a beginner. Keep practicing! 💪
@@ -697,9 +769,13 @@ Use this flowchart to quickly identify which technique to apply:
 ## 📊 Statistics & Fun Facts
 
 - **Most Common Data Structure:** Arrays appear in ~40% of coding interviews
+
 - **Average Time to Master:** 4-6 weeks of consistent practice
+
 - **Most Googled Problem:** Two Sum (LeetCode #1)
+
 - **Hardest Concept:** Understanding amortized complexity
+
 - **Most Elegant Algorithm:** Kadane's (5 lines to solve maximum subarray!)
 
 ---

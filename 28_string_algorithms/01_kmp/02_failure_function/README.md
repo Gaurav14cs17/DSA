@@ -13,9 +13,13 @@ nav_order: 2
 ![Failure Function](./images/failure-function.svg)
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+
 - **Time Complexity:** O(m)
+
 - **Space Complexity:** O(m)
+
 - **Pattern:** Prefix Analysis, Border Properties
 
 ---
@@ -650,6 +654,7 @@ class Solution:
 Define Φ = k (current border length)
 
 For each iteration i:
+
 - k increases by at most 1: ΔΦ ≤ 1
 - While loop decreases k: ΔΦ < 0
 - Initial Φ = 0, Final Φ ≤ m

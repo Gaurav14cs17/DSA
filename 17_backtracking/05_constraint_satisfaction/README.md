@@ -35,7 +35,9 @@ permalink: /17_backtracking/05_constraint_satisfaction/
 
 **Constraint Satisfaction Problem:**
 - Variables: $X\_1, X\_2, \ldots, X\_n$
+
 - Domains: $D\_1, D\_2, \ldots, D\_n$
+
 - Constraints: Relations between variables
 
 ---

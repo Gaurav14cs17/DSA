@@ -80,7 +80,9 @@ permalink: /24_graph_algorithms/05_strongly_connected_components/
 
 **Single DFS with auxiliary information:**
 - `disc[v]`: Discovery time
+
 - `low[v]`: Lowest discovery time reachable from subtree of $v$
+
 - Stack: Maintains current path
 
 **SCC found when:** `disc[v] == low[v]`
@@ -95,7 +97,9 @@ permalink: /24_graph_algorithms/05_strongly_connected_components/
 
 **Properties:**
 - Always acyclic
+
 - Topological order exists
+
 - Useful for many problems
 
 ```math

@@ -423,9 +423,13 @@ A: When alphabet is fixed (e.g., 26 lowercase letters). Array of size 26 is O(1)
 ## 🔥 Key Insights
 
 - **Frequency = HashMap:** Count occurrences in O(n) time
+
 - **Anagram = Same Frequency:** Two strings are anagrams iff frequency maps match
+
 - **Top-K = Bucket Sort:** O(n) solution using frequency buckets
+
 - **Majority = Boyer-Moore:** O(1) space using cancellation principle
+
 - **Fixed Alphabet = O(1) Space:** Array instead of hash for small alphabets
 
 ---

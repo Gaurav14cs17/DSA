@@ -71,7 +71,9 @@ Split inversions counted during merge.
 ### 3️⃣ Merge Sort Properties
 
 - **Stable:** Equal elements maintain relative order
+
 - **Not in-place:** Requires $O(n)$ auxiliary space
+
 - **Optimal for linked lists:** No random access needed
 
 ---

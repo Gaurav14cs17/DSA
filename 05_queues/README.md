@@ -92,7 +92,9 @@ For graph with $V$ vertices and $E$ edges:
 
 **Proof:**
 - Each vertex enqueued at most once: $O(V)$
+
 - Each edge examined at most twice (undirected): $O(E)$
+
 - Total: $O(V + E)$ ∎
 
 ---
@@ -430,16 +432,24 @@ Tree BFS      Graph BFS       Monotonic Deque
 
 ❌ **Don't:**
 - Forget to mark nodes as visited WHEN ENQUEUING (not when dequeuing)
+
 - Use BFS for problems requiring all paths (use DFS)
+
 - Forget to check boundaries in grid problems
+
 - Use regular queue for sliding window max (use monotonic deque)
+
 - Forget level separation in tree level-order
 
 ✅ **Do:**
 - Mark visited when adding to queue (prevents duplicates)
+
 - Track level/distance explicitly if needed
+
 - Use multi-source BFS for "nearest" problems
+
 - Consider 0-1 BFS for 0/1 weighted graphs
+
 - Test with small grids (2x2, 3x3)
 
 ### Optimization Checklist
@@ -462,8 +472,11 @@ Tree BFS      Graph BFS       Monotonic Deque
 
 **Progress Tracker:**
 - 🥉 **Bronze:** Solve 10 BFS problems
+
 - 🥈 **Silver:** Solve 20 BFS problems + master monotonic deque
+
 - 🥇 **Gold:** Solve 35 BFS problems + multi-source patterns
+
 - 💎 **Platinum:** Master 0-1 BFS and bidirectional search
 
 **Remember:** BFS guarantees shortest path in unweighted graphs. That's its superpower! 🚀

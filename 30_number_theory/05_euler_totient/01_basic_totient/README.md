@@ -260,7 +260,9 @@ print(first_totients(20))
 The only numbers not coprime to a prime p are multiples of p, and only p itself (≤p) qualifies.
 
 ### 2. φ(2n) Relationship
+
 - If n is odd: φ(2n) = φ(n)
+
 - If n is even: φ(2n) = 2·φ(n)
 
 ### 3. Average Value

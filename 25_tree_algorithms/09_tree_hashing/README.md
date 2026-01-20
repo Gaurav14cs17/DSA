@@ -54,7 +54,9 @@ permalink: /25_tree_algorithms/09_tree_hashing/
 
 **Properties:**
 - **Deterministic:** Same tree → same hash
+
 - **Fast:** $O(n)$ to compute
+
 - **Collision-resistant:** Different trees → (likely) different hashes
 
 **Application:** Quickly check if two trees are isomorphic.

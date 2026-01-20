@@ -43,6 +43,7 @@ permalink: /25_tree_algorithms/08_virtual_trees/
 
 **Given:**
 - Original tree $T$ with $n$ nodes
+
 - Set $K$ of $k$ important nodes ($k \ll n$)
 
 **Build:** Tree with only nodes in $K$ plus their LCAs.
@@ -55,7 +56,9 @@ permalink: /25_tree_algorithms/08_virtual_trees/
 
 **Problem pattern:**
 - Query on subset of nodes
+
 - Need tree structure between them
+
 - Don't want to process entire tree
 
 **Example:** Sum of edges on paths between k nodes.
@@ -108,7 +111,9 @@ permalink: /25_tree_algorithms/08_virtual_trees/
 ### 6️⃣ Edge Weights in Virtual Tree
 
 **Edge weight** from $u$ to $v$ in virtual tree:
+
 - Distance in original tree
+
 - Or sum of edges on path
 
 **Computation:** Using LCA and precomputed depths/distances.

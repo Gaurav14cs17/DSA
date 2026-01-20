@@ -38,8 +38,11 @@ permalink: /14_sorting/
 ```
 
 **Proof:** 
+
 - $n!$ possible permutations
+
 - Each comparison gives 1 bit of information
+
 - Need $\log\_2(n!) = \Omega(n \log n)$ bits
 
 ---

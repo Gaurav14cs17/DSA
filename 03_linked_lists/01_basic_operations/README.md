@@ -120,7 +120,9 @@ For 32-bit integer + 64-bit pointer:
 Let $n$ = length of list, $k$ = number of iterations.
 
 After $k$ iterations:
+
 - Slow pointer position: $k$
+
 - Fast pointer position: $2k$
 
 Fast reaches end when:
@@ -134,6 +136,7 @@ Therefore, slow at position $\left\lfloor \frac{n}{2} \right\rfloor$ ∎
 
 **Cases:**
 - Odd length ($n = 5$): slow at position $2$ (exact middle)
+
 - Even length ($n = 6$): slow at position $3$ (second middle)
 
 ---
@@ -143,12 +146,17 @@ Therefore, slow at position $\left\lfloor \frac{n}{2} \right\rfloor$ ∎
 **Phase 1: Detect Cycle**
 
 Let:
+
 - $\mu$ = distance from head to cycle start
+
 - $\lambda$ = cycle length  
+
 - $k$ = position in cycle where pointers meet
 
 When they meet:
+
 - Slow traveled: $\mu + k$ steps
+
 - Fast traveled: $\mu + k + m\lambda$ steps (for some $m \geq 1$)
 
 Since fast = 2 × slow:
@@ -174,7 +182,9 @@ From previous equation: $\mu = m\lambda - k$
 ```
 
 This means:
+
 - $\mu$ steps from head reaches cycle start
+
 - $\lambda - k$ steps from meeting point also reaches cycle start (after $m-1$ complete cycles)
 
 **Therefore:** Reset one pointer to head, move both at same speed → meet at cycle start ∎
@@ -849,9 +859,13 @@ def getLength(head: ListNode) -> int:
 9. **Odd Even List** (#328) - Two-list pattern
 
 ### Mastery Challenge
+
 - Solve each problem in < 15 minutes
+
 - Explain the mathematical proof
+
 - Code without syntax errors
+
 - Handle all edge cases
 
 ---

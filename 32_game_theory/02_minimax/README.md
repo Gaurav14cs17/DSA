@@ -44,7 +44,9 @@ permalink: /32_game_theory/02_minimax/
 
 **Examples:**
 - Chess (win/lose/draw)
+
 - Tic-Tac-Toe
+
 - Stone games with scores
 
 ---

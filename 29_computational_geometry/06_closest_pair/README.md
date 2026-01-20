@@ -8,9 +8,13 @@ nav_order: 6
 # 🎯 Closest Pair of Points
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
+
 - **Time Complexity:** O(n log n)
+
 - **Space Complexity:** O(n)
+
 - **Algorithm:** Divide and Conquer
 
 ---
@@ -254,7 +258,9 @@ def farthest_pair(points):
 Recurrence: T(n) = 2T(n/2) + O(n)
 
 - Divide: O(1)
+
 - Conquer: 2T(n/2)
+
 - Combine (strip): O(n) - but only check 7 points per point
 
 By Master Theorem: T(n) = O(n log n)

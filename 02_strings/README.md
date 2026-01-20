@@ -132,6 +132,7 @@ S \sim T \iff \vec{f}(S) = \vec{f}(T) \iff \text{sorted}(S) = \text{sorted}(T) \
 ```
 
 - Odd length palindromes: $n$ centers at indices $0, 1, \ldots, n-1$
+
 - Even length palindromes: $n-1$ centers between indices
 
 **Expansion Formula:**
@@ -174,7 +175,9 @@ dp[i-1][j-1] & \text{(replace)}
 
 **Operations Cost:**
 - Delete from $S$: $dp[i-1][j] + 1$
+
 - Insert into $S$: $dp[i][j-1] + 1$
+
 - Replace in $S$: $dp[i-1][j-1] + 1$
 
 **Optimal Substructure Proof:**
@@ -189,8 +192,11 @@ E(i,j) = E(i-1, j-1)
 ```
 
 **Case 2:** If $S[i-1] \neq T[j-1]$, try all operations:
+
 - Delete $S[i-1]$: match $S[0..i-2]$ with $T[0..j-1]$ → $E(i-1,j) + 1$
+
 - Insert $T[j-1]$: match $S[0..i-1]$ with $T[0..j-2]$ → $E(i,j-1) + 1$
+
 - Replace $S[i-1]$ with $T[j-1]$: match $S[0..i-2]$ with $T[0..j-2]$ → $E(i-1,j-1) + 1$
 
 Take minimum → optimal ∎
@@ -257,7 +263,9 @@ By induction on string lengths, DP computes optimal solution ∎
 ```
 
 Where:
+
 - $p$ is a prime (typically 31 for lowercase, 53 for mixed case)
+
 - $m$ is a large prime ($10^9 + 7$ or $10^9 + 9$)
 
 **Rolling Update (add character on right):**
@@ -316,7 +324,9 @@ Let $k$ = value of $\pi[i]$ at any point.
 
 - Each successful match: $k$ increases by 1
 - Each mismatch: $k$ decreases (follows $\pi$ links)
+
 - $k$ can increase at most $n$ times
+
 - $k$ can decrease at most $n$ times (can't go negative)
 
 Total operations: $O(n)$ ∎
@@ -328,8 +338,11 @@ Total operations: $O(n)$ ∎
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Understanding of arrays and hash maps
+
 - Familiarity with two pointers technique
+
 - Basic knowledge of dynamic programming
 
 ### Study Strategy
@@ -599,16 +612,24 @@ Palindrome  Hash
 
 ❌ **Don't:**
 - Concatenate strings in loops without StringBuilder
+
 - Forget about empty string edge case
+
 - Ignore case sensitivity requirements
+
 - Use nested loops when sliding window works
+
 - Forget to handle Unicode characters
 
 ✅ **Do:**
 - Use StringBuilder/list for multiple concatenations
+
 - Test with edge cases: empty, single char, all same
+
 - Clarify case sensitivity and special characters
+
 - Recognize sliding window patterns early
+
 - Consider both ASCII and Unicode
 
 ### Optimization Checklist
@@ -631,8 +652,11 @@ Palindrome  Hash
 
 **Progress Tracker:**
 - 🥉 **Bronze:** Solve 20 string problems
+
 - 🥈 **Silver:** Solve 50 string problems  
+
 - 🥇 **Gold:** Solve 100 string problems
+
 - 💎 **Platinum:** Can explain KMP and solve hard DP problems
 
 **Remember:** Every string algorithm you learn makes you a better programmer! 💪

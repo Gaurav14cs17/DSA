@@ -65,6 +65,7 @@ permalink: /24_graph_algorithms/01_shortest_path/
 
 **Correctness Proof:**
 - When vertex $u$ is extracted from priority queue, $\text{dist}[u]$ is optimal
+
 - No shorter path can exist (would require negative edge)
 
 **Priority Queue Implementation:**
@@ -129,6 +130,7 @@ f(n) = g(n) + h(n)
 ```
 
 - $g(n)$: actual cost from start to $n$
+
 - $h(n)$: heuristic estimate from $n$ to goal
 
 **Admissible Heuristic:** $h(n) \leq h^*(n)$ (never overestimate)
@@ -142,6 +144,7 @@ f(n) = g(n) + h(n)
 **For graphs with edge weights 0 or 1:**
 
 - Weight 0 edges: add to **front** of deque
+
 - Weight 1 edges: add to **back** of deque
 
 ```math

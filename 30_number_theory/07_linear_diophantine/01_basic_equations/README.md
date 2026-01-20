@@ -58,6 +58,7 @@ where $a, b, c \in \mathbb{Z}$ and we seek integer solutions $(x, y)$.
 
 **Proof:**
 - (⟹) If $ax + by = c$, then since $\gcd(a,b) | a$ and $\gcd(a,b) | b$, we have $\gcd(a,b) | c$.
+
 - (⟸) By Bézout's identity, $\exists x\_0, y\_0$ with $ax\_0 + by\_0 = \gcd(a,b)$.
   Multiply by $c/\gcd(a,b)$ to get solution.
 

@@ -42,8 +42,11 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/05_range_queries/
 
 **Supported Operations:**
 - Range Min/Max
+
 - Range GCD/LCM
+
 - Range AND/OR/XOR
+
 - Range Product
 
 ---

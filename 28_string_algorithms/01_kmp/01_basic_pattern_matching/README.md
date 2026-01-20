@@ -13,9 +13,13 @@ nav_order: 1
 ![Basic Pattern Matching](./images/basic-pattern-matching.svg)
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Easy-Medium](https://img.shields.io/badge/Easy--Medium-yellow)
+
 - **Time Complexity:** O(n + m)
+
 - **Space Complexity:** O(m)
+
 - **Pattern:** String Matching, Linear Scanning
 
 ---
@@ -31,7 +35,9 @@ Basic pattern matching problems using KMP algorithm - finding occurrences, count
 ### Problem Statement
 
 Given:
+
 - Text T of length n
+
 - Pattern P of length m
 
 Find: All positions where P occurs in T
@@ -43,8 +49,11 @@ Find: All positions where P occurs in T
 
 ```
 When mismatch occurs:
+
 - Don't restart from next position in text
+
 - Use failure function to skip ahead
+
 - Each text character examined at most once
 
 ```

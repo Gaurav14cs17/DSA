@@ -31,11 +31,14 @@ permalink: /13_union_find/
 ### 1️⃣ Disjoint Set Definition
 
 A **Disjoint Set** data structure maintains:
+
 - Collection of non-overlapping sets
+
 - Each set has a representative (root)
 
 **Operations:**
 - `find(x)`: Find representative of set containing x
+
 - `union(x, y)`: Merge sets containing x and y
 
 ---

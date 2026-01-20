@@ -77,7 +77,9 @@ permalink: /04_stacks/01_basic_stack/
 ```
 
 Where:
+
 - $D$ = domain (set of elements)
+
 - $\Omega = \{push, pop, peek, isEmpty, size\}$ = operations
 
 **Axioms:**
@@ -107,9 +109,13 @@ size(push(S, x)) &= size(S) + 1
 **Inductive Hypothesis:** Assume stack $S$ of size $n$ maintains LIFO.
 
 **Inductive Step:** For stack $S' = push(S, x)$:
+
 - $x$ becomes new top element
+
 - $pop(S')$ removes $x$ → returns to $S$
+
 - $S$ maintains LIFO by hypothesis
+
 - Therefore $S'$ maintains LIFO ∎
 
 ---
@@ -147,16 +153,23 @@ size(push(S, x)) &= size(S) + 1
 **Proof using Accounting Method:**
 
 Cost of operations:
+
 - Normal push: 1 unit
+
 - Push with resize: $1 + k$ units (where $k$ = current size)
 
 Charge 3 units per push:
+
 - 1 unit for actual push
+
 - 2 units saved for future resize
 
 When resizing from size $k$ to $2k$:
+
 - Cost: $k$ (copy all elements)
+
 - Saved credit: $2k$ (2 units × $k$ elements)
+
 - Sufficient to pay for resize!
 
 **Total cost for $n$ pushes:**
@@ -204,6 +217,7 @@ When $stored[i] < 0$: new minimum found!
 
 **Operations:**
 - enqueue: push to $S\_1$
+
 - dequeue: pop from $S\_2$ (transfer from $S\_1$ if $S\_2$ empty)
 
 **Amortized Cost Proof:**
@@ -517,8 +531,11 @@ Implement Queue using two stacks: S1 (input) and S2 (output)
 +--------------------------------------------------------------------+
 
 Amortized Analysis:
+
 - Each element: pushed to S1 once, moved to S2 once, popped once
+
 - Total: 3 operations per element
+
 - Amortized: O(1) per enqueue/dequeue ✓
 
 ```

@@ -39,30 +39,45 @@ permalink: /30_number_theory/02_primes/
 <td width="33%">
 
 ### [01. Primality Testing](./01_primality_testing/)
+
 - Trial division O(√n)
+
 - Optimized 6k±1 check
+
 - Miller-Rabin test
+
 - Fermat primality test
+
 - Deterministic witnesses
 
 </td>
 <td width="33%">
 
 ### [02. Sieve of Eratosthenes](./02_sieve_eratosthenes/)
+
 - Basic sieve O(n log log n)
+
 - Space optimization
+
 - Linear sieve O(n)
+
 - Bitset implementation
+
 - SPF computation
 
 </td>
 <td width="33%">
 
 ### [03. Prime Factorization](./03_prime_factorization/)
+
 - Trial division method
+
 - Using SPF for O(log n)
+
 - Divisor counting
+
 - Divisor sum formula
+
 - Applications
 
 </td>
@@ -71,30 +86,45 @@ permalink: /30_number_theory/02_primes/
 <td width="33%">
 
 ### [04. Segmented Sieve](./04_segmented_sieve/)
+
 - Primes in range [L, R]
+
 - Memory efficient
+
 - Block-based sieve
+
 - Prime counting π(n)
+
 - Large range handling
 
 </td>
 <td width="33%">
 
 ### [05. Prime Applications](./05_prime_applications/)
+
 - Ugly numbers
+
 - Prime gaps & twins
+
 - Goldbach conjecture
+
 - Sophie Germain primes
+
 - Sum of primes
 
 </td>
 <td width="33%">
 
 ### [06. Applications](./06_applications/)
+
 - LeetCode problems
+
 - Multiplicative functions
+
 - Euler's totient sieve
+
 - Möbius function
+
 - Competition patterns
 
 </td>
@@ -120,7 +150,9 @@ permalink: /30_number_theory/02_primes/
 **Key Properties:**
 - **Only even prime:** 2
 - **Infinite count:** Euclid's proof (~300 BC)
+
 - **Density:** $\pi(n) \approx \frac{n}{\ln n}$ (Prime Number Theorem)
+
 - **Coprime:** $\gcd(p, q) = 1$ for distinct primes
 
 ---
@@ -148,7 +180,9 @@ where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
 
 **Applications:**
 - **Count divisors:** $\tau(n) = (a\_1+1)(a\_2+1)\cdots(a\_k+1)$
+
 - **Sum of divisors:** $\sigma(n) = \prod \frac{p\_i^{a\_i+1} - 1}{p\_i - 1}$
+
 - **Euler's totient:** $\phi(n) = n \prod \left(1 - \frac{1}{p\_i}\right)$
 
 ---

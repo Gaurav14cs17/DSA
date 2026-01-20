@@ -52,7 +52,9 @@ permalink: /24_graph_algorithms/02_minimum_spanning_tree/
 
 **Properties:**
 - Has exactly $V - 1$ edges
+
 - Unique if all edge weights distinct
+
 - May have multiple MSTs if edge weights repeat
 
 ---
@@ -95,6 +97,7 @@ T = O(E \log E) = O(E \log V)
 ```
 
 - Sorting: $O(E \log E)$
+
 - Union-Find operations: $O(E \cdot \alpha(V)) \approx O(E)$
 
 ---

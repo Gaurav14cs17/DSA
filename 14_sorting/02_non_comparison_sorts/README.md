@@ -34,8 +34,11 @@ permalink: /14_sorting/02_non_comparison_sorts/
 ### 1️⃣ Breaking the O(n log n) Barrier
 
 Non-comparison sorts use:
+
 - **Counting:** Values as indices
+
 - **Radix:** Digit-by-digit processing
+
 - **Bucket:** Distribution into ranges
 
 ```math
@@ -71,7 +74,9 @@ T = O(d \cdot (n + k))
 ```
 
 Where:
+
 - $d$ = number of digits
+
 - $k$ = base (radix)
 
 For 32-bit integers with base 256: $d = 4$, $k = 256$.
@@ -101,8 +106,11 @@ T = O(n), \quad S = O(1)
 ```
 
 **Invariant:** 
+
 - $[0, low)$: all 0s
+
 - $[low, mid)$: all 1s
+
 - $[high+1, n)$: all 2s
 
 ---

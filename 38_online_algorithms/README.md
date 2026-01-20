@@ -54,8 +54,11 @@ permalink: /38_online_algorithms/
 ALGₒₙₗᵢₙₑ(σ) ≤ c · ALGₒₚₜ(σ) + α
 
 Where:
+
 - σ = input sequence
+
 - c = competitive ratio
+
 - α = additive constant
 
 ```
@@ -380,7 +383,9 @@ class SlidingWindowMax:
 
 **Theoretical Results:**
 - LRU is **k-competitive** (k = cache size)
+
 - No deterministic online algorithm can beat k-competitive
+
 - Random eviction is **2k-competitive** (worse but simpler)
 
 ---
@@ -388,18 +393,29 @@ class SlidingWindowMax:
 ## 📊 Practice Roadmap
 
 ### Week 1: Cache Design (5 problems)
+
 - [ ] 146. LRU Cache ⭐
+
 - [ ] 155. Min Stack
+
 - [ ] 380. Insert Delete GetRandom O(1)
+
 - [ ] 460. LFU Cache
+
 - [ ] 432. All O`one Data Structure
 
 ### Week 2: Stream Processing (6 problems)
+
 - [ ] 295. Find Median from Stream ⭐
+
 - [ ] 346. Moving Average
+
 - [ ] 703. Kth Largest in Stream
+
 - [ ] 239. Sliding Window Maximum ⭐
+
 - [ ] 352. Data Stream as Disjoint Intervals
+
 - [ ] 716. Max Stack
 
 ---
@@ -415,8 +431,11 @@ class SlidingWindowMax:
 
 **Common Mistakes:**
 - ❌ Using OrderedDict for LRU without understanding internals
+
 - ❌ Not maintaining heap invariants properly
+
 - ❌ Forgetting to update frequency mappings in LFU
+
 - ❌ Off-by-one errors in sliding window
 
 ---

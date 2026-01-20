@@ -320,7 +320,9 @@ MOD3 = 998244353   # Prime with primitive root, good for NTT
 
 **Why these values?**
 - Prime (Fermat's theorem works)
+
 - Fits in 32-bit signed integer
+
 - Product of two numbers < MOD fits in 64-bit
 
 ### 2. Avoiding Overflow

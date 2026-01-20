@@ -36,30 +36,45 @@ permalink: /30_number_theory/03_modular_arithmetic/
 <td width="33%">
 
 ### [01. Basic Operations](./01_basic_operations/)
+
 - Addition mod m
+
 - Multiplication mod m
+
 - Subtraction mod m
+
 - Properties
+
 - Modular congruence
 
 </td>
 <td width="33%">
 
 ### [02. Modular Inverse](./02_modular_inverse/)
+
 - Extended GCD method
+
 - Fermat's theorem method
+
 - Euler's theorem method
+
 - Applications
+
 - When inverse exists
 
 </td>
 <td width="33%">
 
 ### [03. Fast Exponentiation](./03_fast_exponentiation/)
+
 - Binary exponentiation
+
 - Iterative method
+
 - Recursive method
+
 - Matrix exponentiation
+
 - Applications
 
 </td>
@@ -68,30 +83,45 @@ permalink: /30_number_theory/03_modular_arithmetic/
 <td width="33%">
 
 ### [04. Fermat's Theorem](./04_fermats_theorem/)
+
 - a^(p-1) ≡ 1 (mod p)
+
 - Primality testing
+
 - Computing inverses
+
 - Proof and applications
+
 - Euler's generalization
 
 </td>
 <td width="33%">
 
 ### [05. Euler's Theorem](./05_eulers_theorem/)
+
 - a^φ(n) ≡ 1 (mod n)
+
 - RSA cryptography
+
 - Totient function
+
 - Applications
+
 - Advanced uses
 
 </td>
 <td width="33%">
 
 ### [06. Applications](./06_applications/)
+
 - LeetCode problems
+
 - Power computations
+
 - Cryptography basics
+
 - Competitive problems
+
 - Real-world uses
 
 </td>
@@ -106,16 +136,24 @@ permalink: /30_number_theory/03_modular_arithmetic/
 
 **Core Concepts:**
 - **Congruence:** a ≡ b (mod m) means m | (a - b)
+
 - **Clock Arithmetic:** Like hours on a clock (mod 12 or 24)
+
 - **Fast Operations:** Exponentiation in O(log n) time
+
 - **Modular Inverse:** Division in modular systems
+
 - **Applications:** RSA, hashing, competitive programming
 
 **Why This Matters:**
 - **Cryptography:** RSA encryption relies on modular arithmetic
+
 - **Large Numbers:** Keep calculations manageable (mod 10⁹+7)
+
 - **Cyclic Patterns:** Model repeating phenomena
+
 - **Efficiency:** Fast exponentiation beats naive methods
+
 - **Ubiquitous:** Appears in 30%+ of competitive problems
 
 ---
@@ -697,7 +735,9 @@ MOD3 = 998244353   # Prime, has primitive root
 
 **Why these?**
 - Prime (Fermat works)
+
 - Fits in 32-bit integer
+
 - No overflow when multiplying two numbers < MOD
 
 ---
@@ -705,16 +745,23 @@ MOD3 = 998244353   # Prime, has primitive root
 ## 📚 Additional Resources
 
 ### Theory
+
 - [CP-Algorithms: Modular Arithmetic](https://cp-algorithms.com/algebra/module-inverse.html)
+
 - [Brilliant: Modular Arithmetic](https://brilliant.org/wiki/modular-arithmetic/)
+
 - [Khan Academy: Modular Arithmetic](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic)
 
 ### Practice
+
 - **Codeforces:** Modular arithmetic tag
+
 - **AtCoder:** Math problems
+
 - **Project Euler:** Many modular problems
 
 ### Books
+
 - **Concrete Mathematics** - Chapter 4
 - **Introduction to Algorithms** - Chapter 31
 

@@ -230,19 +230,27 @@ class Solution:
 ## 📚 Common Patterns
 
 ### 1. Divisor Counting Problems
+
 - Use formula τ(n) = ∏(aᵢ + 1)
+
 - Special cases: τ(n) = 2 (prime), τ(n) = 3 (p²)
 
 ### 2. Sum of Divisors Problems
+
 - Perfect numbers: σ(n) = 2n
+
 - Abundant/Deficient classification
 
 ### 3. k-th Divisor Problems
+
 - Find divisors up to √n
+
 - Pair small with large divisors
 
 ### 4. Common Factor Problems
+
 - Use Union-Find with prime factors
+
 - GCD-based connectivity
 
 ---

@@ -33,8 +33,11 @@ Each previous DP state j gives a **line**:
 f[j](x) = m[j] · x + b[j]
 
 Where:
+
 - m[j] = slope (from dp[j])
+
 - b[j] = intercept (from dp[j])
+
 - x = query point (current state)
 
 ```
@@ -78,6 +81,7 @@ Keep only lines that form convex hull
 
 ✅ **For O(n) complexity:**
 - Slopes added in monotonic order (m[i] ≥ m[i+1])
+
 - Queries in monotonic order (x[i] ≤ x[i+1])
 
 ---
@@ -403,11 +407,15 @@ CHT: Already in linear form!
 ## 🚀 Practice Roadmap
 
 ### Week 1: Understanding (2 problems)
+
 - [ ] Implement basic CHT from scratch
+
 - [ ] Solve 1 example problem with quadratic cost
 
 ### Week 2: Application (2 problems)
+
 - [ ] 1687. Delivering Boxes (complex transformation)
+
 - [ ] Practice identifying CHT patterns
 
 ---

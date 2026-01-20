@@ -40,11 +40,14 @@ permalink: /30_number_theory/02_primes/04_segmented_sieve/
 
 **Standard Sieve Limitation:**
 - Requires O(R) memory
+
 - For R = 10^12, need ~1TB of memory!
 
 **Segmented Sieve Solution:**
 - Only need primes up to √R (about 10^6)
+
 - Process range in blocks of size √R
+
 - Space: O(√R) instead of O(R)
 
 ---

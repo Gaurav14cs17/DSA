@@ -12,7 +12,9 @@
 
 **Common Patterns:**
 - TSP: O(n! ) → O(n²·2ⁿ)
+
 - Assignment: O(n!) → O(n·2ⁿ)
+
 - Profile DP: Grid tiling
 
 **Key Optimization:** Process one bit at a time.

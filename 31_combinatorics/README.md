@@ -79,9 +79,13 @@ P(n, r) = \frac{n!}{(n-r)!} = n \times (n-1) \times \cdots \times (n-r+1)
 
 **Proof:**
 - First position: $n$ choices
+
 - Second position: $n-1$ choices
+
 - ...
+
 - r-th position: $(n-r+1)$ choices
+
 - Total: $n \times (n-1) \times \cdots \times (n-r+1) = \frac{n!}{(n-r)!}$ ∎
 
 **With Repetition:**
@@ -113,7 +117,9 @@ C(n, r) = \binom{n}{r} = \frac{n!}{r!(n-r)!}
 
 **Proof:**
 - Permutations of r from n: $P(n,r) = \frac{n!}{(n-r)!}$
+
 - Each combination counted $r!$ times (different orders)
+
 - Combinations: $\frac{P(n,r)}{r!} = \frac{n!}{r!(n-r)!}$ ∎
 
 **Pascal's Identity:**
@@ -124,7 +130,9 @@ C(n, r) = \binom{n}{r} = \frac{n!}{r!(n-r)!}
 ```
 
 **Proof:** Choose from $n$ objects. Either:
+
 - Include first object: choose $r-1$ from remaining $n-1$ → $\binom{n-1}{r-1}$
+
 - Exclude first object: choose $r$ from remaining $n-1$ → $\binom{n-1}{r}$ ∎
 
 ---
@@ -168,13 +176,18 @@ C_0 = 1, \quad C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
 
 **Applications:**
 - Valid parentheses sequences of length $2n$
+
 - Number of BSTs with $n$ nodes
+
 - Number of ways to triangulate polygon
+
 - Paths not crossing diagonal in grid
 
 **Proof (Parentheses):**
 - Total sequences: $\binom{2n}{n}$
+
 - Invalid (crossing): $\binom{2n}{n+1}$
+
 - Valid: $\binom{2n}{n} - \binom{2n}{n+1} = \frac{1}{n+1}\binom{2n}{n}$ ∎
 
 ---
@@ -230,9 +243,13 @@ C_0 = 1, \quad C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
         1   6  15  20  15   6   1
 
 Properties:
+
 - Entry = C(n,r) = nCr
+
 - Each entry = sum of two above it
+
 - Row sum = 2^n
+
 - Alternating sum = 0
 
 ```
@@ -268,14 +285,20 @@ C₃ = 5:  ()()()()
 
 **Core Concepts:**
 - Generate all permutations
+
 - Next permutation algorithm
+
 - Kth permutation
+
 - Permutations with duplicates
+
 - Circular permutations
 
 **Key Problems:**
 - Permutations (#46)
+
 - Next Permutation (#31)
+
 - Permutation Sequence (#60)
 
 **Time:** O(n×n!)
@@ -287,14 +310,20 @@ C₃ = 5:  ()()()()
 
 **Core Concepts:**
 - nCr calculation
+
 - Generate combinations
+
 - Pascal's triangle
+
 - Combination sum variants
+
 - Binomial coefficients
 
 **Key Problems:**
 - Combinations (#77)
+
 - Combination Sum (#39, #40)
+
 - Pascal's Triangle (#118)
 
 **Time:** O(2^n)
@@ -306,14 +335,20 @@ C₃ = 5:  ()()()()
 
 **Core Concepts:**
 - Catalan numbers
+
 - Fibonacci variants
+
 - Derangements
+
 - Stirling numbers
+
 - Bell numbers
 
 **Key Problems:**
 - Unique BSTs (#96)
+
 - Valid Parentheses (#22)
+
 - Climbing Stairs (#70)
 
 **Applications:** Many!

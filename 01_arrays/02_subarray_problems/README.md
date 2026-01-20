@@ -56,7 +56,9 @@ permalink: /01_arrays/02_subarray_problems/
 **Proof (Combinatorial):**
 
 A subarray is defined by choosing:
+
 - Start index $i$ where $0 \leq i < n$
+
 - End index $j$ where $i \leq j < n$
 
 ```math
@@ -196,6 +198,7 @@ Answer: max_so_far = 6  (subarray [4, -1, 2, 1])
 **Why track minimum?**
 
 - If $A[i] < 0$ and $\text{min\_prod}[i-1] < 0$
+
 - Then $A[i] \times \text{min\_prod}[i-1] > 0$ (potentially maximum!)
 
 ---
@@ -496,6 +499,7 @@ Total = n + (n-1) + ... + 1 = n(n+1)/2
 
 **Proof by Induction:**
 - Base: At i=0, max_ending[0] = A[0] ✓
+
 - Inductive: Assume correct for i-1
   - If max_ending[i-1] < 0, best to start fresh at i
   - If max_ending[i-1] ≥ 0, extend to include A[i]
@@ -567,8 +571,11 @@ Total = n + (n-1) + ... + 1 = n(n+1)/2
 8. **Subarrays with K Different** (#992) - Sliding window
 
 ### Pro Level
+
 - Solve variations (max product, min length, count)
+
 - Optimize space to O(1)
+
 - Handle circular arrays
 
 ---
@@ -578,6 +585,7 @@ Total = n + (n-1) + ... + 1 = n(n+1)/2
 ### Why Kadane's Works: Intuition
 
 Think of it as a running investment:
+
 - If your portfolio (current sum) is negative, **sell everything and start fresh**
 - If positive, **keep holding** and add the next stock
 
@@ -616,12 +624,16 @@ So: prefix[j] - prefix[i] = k
 
 ✅ **O(n) is achievable if:**
 - Each element is visited once
+
 - Operations per element are O(1)
+
 - Can use hash map for lookups
 
 ❌ **Requires O(n²) if:**
 - Need to compare all pairs
+
 - No monotonic property to exploit
+
 - Cannot maintain running state
 
 ### Kadane's vs Brute Force

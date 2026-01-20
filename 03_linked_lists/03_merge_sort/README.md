@@ -322,7 +322,9 @@ Case 2: $f(n) = \Theta(n^{\log\_b a})$
 
 **Proof:**
 - Recursion depth = $\log\_2 n$ levels
+
 - Each level: O(1) space for pointers
+
 - Total: $O(\log n)$ ✓
 
 Array merge sort: O(n) for auxiliary array + O(log n) stack = O(n)
@@ -333,8 +335,11 @@ Linked list merge sort: O(log n) stack only! ∎
 
 **Operations:**
 - n total elements to process
+
 - Each extraction: O(log k)
+
 - Each insertion: O(log k)
+
 - Total: $n \times O(\log k) = O(n \log k)$ ∎
 
 ---
@@ -390,7 +395,9 @@ Linked list merge sort: O(log n) stack only! ∎
 5. **Merge K Lists** (#23) - Heap optimization
 
 ### Pro Tips
+
 - Always use dummy node for merge
+
 - Test with lists of length 0, 1, 2
 - Draw diagrams for pointer updates
 

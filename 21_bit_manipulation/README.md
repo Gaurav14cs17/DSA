@@ -125,6 +125,7 @@ This is the most powerful bit trick! It clears the lowest set bit.
 #### 🔍 Proof
 
 When we subtract 1 from \( n \):
+
 - All bits to the right of the lowest set bit become 1
 - The lowest set bit becomes 0
 - All other bits remain unchanged
@@ -148,7 +149,9 @@ n&(n-1) = 1 0 0 0   (8)
 ```
 
 #### 💡 Applications
+
 - **Count set bits** (Brian Kernighan's Algorithm): O(number of set bits)
+
 - **Check power of 2**: `n & (n-1) == 0` means only one bit is set
 
 ---

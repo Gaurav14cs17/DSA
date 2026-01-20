@@ -35,9 +35,13 @@ permalink: /22_two_pointers/02_same_direction/
 ## 🎯 What You'll Master
 
 - In-place array modification techniques
+
 - The fast-slow pointer pattern
+
 - Dutch National Flag algorithm (3-way partition)
+
 - Subsequence checking
+
 - Merging sorted arrays
 
 ---
@@ -115,7 +119,9 @@ for fast in range(1, n):
 **Inductive step**: Assume \([0, slow)\) contains \(k\) unique elements.
 
 When \(fast\) points to element \(x\):
+
 - If \(x = arr[slow-1]\): duplicate, skip (invariant preserved)
+
 - If \(x \neq arr[slow-1]\): 
   - Since array is sorted and \(x > arr[slow-1]\)
   - \(x\) is different from all elements in \([0, slow)\)
@@ -180,8 +186,11 @@ Compare with element \(k\) positions back:
 #### Proof
 
 If we're keeping at most \(k\) copies:
+
 - \(arr[slow-k]\) through \(arr[slow-1]\) are the last \(k\) written elements
+
 - If \(arr[fast] = arr[slow-k]\), then we already have \(k\) copies of this value
+
 - If \(arr[fast] \neq arr[slow-k]\), we have fewer than \(k\) copies, safe to add
 
 ---
@@ -194,8 +203,11 @@ If we're keeping at most \(k\) copies:
 #### State Definition
 
 We maintain three pointers:
+
 - \(low\): boundary of 0s region
+
 - \(mid\): current element being examined
+
 - \(high\): boundary of 2s region
 
 #### Invariant
@@ -229,17 +241,25 @@ while mid <= high:
 **Claim**: The invariant is maintained after each operation.
 
 **Case arr[mid] = 0**:
+
 - \(arr[low]\) is in the 1s region (or \(low = mid\))
+
 - Swap puts 0 at correct position
+
 - Both boundaries advance, maintaining invariant
 
 **Case arr[mid] = 1**:
+
 - Element already in correct region
+
 - Just advance \(mid\)
 
 **Case arr[mid] = 2**:
+
 - Swap with \(high\), putting 2 at end
+
 - Decrement \(high\) (2s region expands)
+
 - Don't increment \(mid\) (new element at \(mid\) is unknown)
 
 **Termination**: When \(mid > high\), unknown region is empty. ∎
@@ -328,7 +348,9 @@ while p2 >= 0:
 **Claim**: No unprocessed element is overwritten.
 
 At any point:
+
 - We've filled positions \((p, m+n)\) with largest elements
+
 - Remaining positions \([0, p]\) need \(p1+1\) elements from nums1 and \(p2+1\) from nums2
 - \(p = p1 + p2 + 1\) (exactly enough space!)
 

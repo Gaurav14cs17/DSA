@@ -165,7 +165,9 @@ Store seen values, check for complement.
 
 **Applications:**
 - Anagram detection: $\text{freq}\_s = \text{freq}\_t$
+
 - Majority element: $\text{freq}[x] > n/2$
+
 - K most frequent: Top-k by frequency
 
 ---
@@ -463,16 +465,24 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
 
 ❌ **Don't:**
 - Forget to check if key exists before accessing (use `.get()` or `in`)
+
 - Use hash when order matters (use OrderedDict or list)
+
 - Ignore hash collision worst case (O(n) in pathological cases)
+
 - Forget that Python dict is ordered (since 3.7+)
+
 - Use mutable objects as keys (lists, sets - use tuples instead)
 
 ✅ **Do:**
 - Use `defaultdict` to avoid key existence checks
+
 - Use `Counter` for frequency counting
+
 - Consider space-time tradeoff (hash uses O(n) space)
+
 - Test with duplicate keys
+
 - Use tuple for multi-dimensional keys: `(row, col)`
 
 ### Optimization Checklist
@@ -495,8 +505,11 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
 
 **Progress Tracker:**
 - 🥉 **Bronze:** Solve 15 hash problems
+
 - 🥈 **Silver:** Solve 30 hash problems + master Two Sum pattern
+
 - 🥇 **Gold:** Solve 50 hash problems + frequency patterns
+
 - 💎 **Platinum:** Master all patterns + design problems (LRU, LFU)
 
 **Remember:** Hash tables turn O(n²) into O(n) for many problems. That's their superpower! 🚀

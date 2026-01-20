@@ -87,6 +87,7 @@ D^{(k)}[i][j] = \min(D^{(k-1)}[i][j], D^{(k-1)}[i][k] + D^{(k-1)}[k][j])
 **For graphs with edge weights 0 or 1:**
 
 - Weight 0: add to front of deque
+
 - Weight 1: add to back of deque
 
 ```math

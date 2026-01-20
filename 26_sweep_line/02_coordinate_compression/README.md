@@ -65,7 +65,9 @@ where $k$ = number of distinct coordinates.
 
 **Time Complexity:**
 - Collect: $O(n)$
+
 - Sort: $O(k \log k)$ where $k \leq 2n$
+
 - Map: $O(1)$ per query with hash map
 
 **Total:** $O(n \log n)$
@@ -156,6 +158,7 @@ where $x\_1, \ldots, x\_k$ are sorted distinct x-coordinates.
 
 **Node stores:**
 - Coverage count (how many rectangles cover this range)
+
 - Total length covered in this range
 
 **Update:** Add/remove rectangle (range update)

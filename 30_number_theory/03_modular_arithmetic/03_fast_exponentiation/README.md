@@ -9,9 +9,13 @@ nav_order: 3
 # ⚡ Fast Modular Exponentiation
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Easy-Medium](https://img.shields.io/badge/Easy--Medium-yellow)
+
 - **Time Complexity:** O(log n)
+
 - **Space Complexity:** O(1) iterative, O(log n) recursive
+
 - **Pattern:** Divide and Conquer, Binary Representation
 
 ---

@@ -12,10 +12,15 @@ nav_order: 5
 ![Manacher's Algorithm](./images/manacher.svg)
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
+
 - **Time Complexity:** O(n)
+
 - **Space Complexity:** O(n)
+
 - **Topics:** Palindromes, Dynamic Programming, String Processing
+
 - **Prerequisites:** String basics, Two pointers
 
 ---
@@ -33,6 +38,7 @@ nav_order: 5
 ### Problem Definition
 
 Given string s of length n, find:
+
 - **Longest palindromic substring**
 - **All palindromic substrings**
 - **Palindrome radius at each position**
@@ -106,7 +112,9 @@ For position i where C-R ≤ i ≤ C+R:
 
 **Proof of Case 1:**
 - Palindrome at i' is fully contained within palindrome at C
+
 - By symmetry, same palindrome exists at i
+
 - Cannot extend further (would contradict R being boundary)
 
 ---
@@ -578,8 +586,11 @@ def maxProduct(s):
 Key observation: Variable 'right' never decreases
 
 - Outer loop: n iterations
+
 - Inner while loop: each iteration increases 'right'
+
 - 'right' can increase at most n times total
+
 - Therefore: Total iterations = O(n)
 
 ```
@@ -599,14 +610,20 @@ T = Σ(1 + expansions at position i)
 
 ✅ **Use Manacher's when:**
 - Need ALL palindromic information
+
 - Time limit is tight (must be O(n))
+
 - Working with very long strings
+
 - Need to count/find all palindromes
 
 ❌ **Consider alternatives when:**
 - Only need existence check (two pointers)
+
 - String is very short (naive works)
+
 - Need palindromic subsequences (DP better)
+
 - Memory is very limited
 
 ### Common Pitfalls
@@ -683,7 +700,9 @@ def palindrome_density(s):
 ## 🔗 Related Topics
 
 - [KMP Algorithm](../01_kmp/) - Prefix-suffix matching
+
 - [Z-Algorithm](../03_z_algorithm/) - Prefix computations
+
 - [String Hashing](../08_string_hashing/) - Fast palindrome checks
 
 ---
@@ -691,7 +710,9 @@ def palindrome_density(s):
 ## 📚 Additional Resources
 
 - [Original Paper (1975)](https://doi.org/10.1016/0022-0000(75)90058-3)
+
 - [CP-Algorithms: Manacher's](https://cp-algorithms.com/string/manacher.html)
+
 - [Visualization](https://www.hackerearth.com/practice/algorithms/string-algorithm/manachars-algorithm/tutorial/)
 
 ---

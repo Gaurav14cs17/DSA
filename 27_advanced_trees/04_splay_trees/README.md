@@ -69,6 +69,7 @@ where $size(x)$ = number of nodes in subtree rooted at $x$.
 
 **Zig (x is root's child):**
 - Single rotation
+
 - Only happens at end
 
 **Zig-Zig (x and p are both left or both right children):**
@@ -108,8 +109,11 @@ A   B               C   D
 **Zig-zig reduces depth faster** than double rotation.
 
 After zig-zig:
+
 - $x$ moves up 2 levels
+
 - Many nodes in $x$'s original path move to other subtrees
+
 - Better amortized performance
 
 ---

@@ -48,7 +48,9 @@ permalink: /25_tree_algorithms/01_lowest_common_ancestor/
 
 **Properties:**
 - $\text{LCA}(u, u) = u$
+
 - $\text{LCA}(u, v) = \text{LCA}(v, u)$ (symmetric)
+
 - If $u$ is ancestor of $v$, then $\text{LCA}(u, v) = u$
 
 ---
@@ -87,7 +89,9 @@ permalink: /25_tree_algorithms/01_lowest_common_ancestor/
 
 **Complexity:**
 - Preprocess: $O(n \log n)$
+
 - Query: $O(\log n)$
+
 - Space: $O(n \log n)$
 
 ---
@@ -98,6 +102,7 @@ permalink: /25_tree_algorithms/01_lowest_common_ancestor/
 
 **Properties:**
 - Length $= 2n - 1$
+
 - LCA$(u, v)$ = node with minimum depth in tour between first occurrences of $u$ and $v$
 
 **Steps:**
@@ -107,7 +112,9 @@ permalink: /25_tree_algorithms/01_lowest_common_ancestor/
 
 **Complexity:**
 - Preprocess: $O(n)$ with RMQ
+
 - Query: $O(1)$
+
 - Space: $O(n)$
 
 ---

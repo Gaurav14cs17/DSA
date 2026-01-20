@@ -107,6 +107,7 @@ node.\text{right} = \text{insert}(node.right, val) & \text{if } val > node.val
 
 **Proof by Induction:**
 - **Base:** Empty tree → new node is BST ✓
+
 - **Inductive:** If T is BST, inserting val creates BST
   - If val < root.val → insert in left subtree
   - If val > root.val → insert in right subtree
@@ -225,6 +226,7 @@ Final:
 
 **Why Successor?**
 - Successor is smallest in right subtree
+
 - Maintains BST property: left < successor < right ✓
 
 ---
@@ -256,6 +258,7 @@ Result:
 
 **Pruning Logic:**
 - If node < L → entire left subtree < L, check only right
+
 - If node > R → entire right subtree > R, check only left
 
 ---
@@ -405,16 +408,24 @@ def trimBST(root: TreeNode, low: int, high: int) -> TreeNode:
 
 ### ✅ **Do's:**
 - ✓ Use iterative search for O(1) space
+
 - ✓ Handle null pointers before accessing
+
 - ✓ Master all 3 deletion cases
+
 - ✓ Remember: Successor = min(right subtree)
+
 - ✓ Use BST property to optimize pruning
 
 ### ❌ **Don'ts:**
 - ✗ Don't use BFS/DFS when BST property available
+
 - ✗ Don't forget to return modified root in insertion/deletion
+
 - ✗ Don't confuse predecessor (max of left) with successor
+
 - ✗ Don't validate only immediate children (check whole subtree)
+
 - ✗ Don't use global variables for tree modifications
 
 ### ⚡ **Optimization Tricks:**
@@ -476,20 +487,29 @@ def trimBST(root: TreeNode, low: int, high: int) -> TreeNode:
 
 ### **Phase 1: Foundations (Week 1)**
 - [ ] Implement search (iterative & recursive)
+
 - [ ] Implement insert (iterative & recursive)
+
 - [ ] Implement findMin/findMax
+
 - [ ] Solve: #700 Search in BST
 
 ### **Phase 2: Deletion (Week 2)**
 - [ ] Implement all 3 deletion cases
+
 - [ ] Understand successor/predecessor
+
 - [ ] Solve: #450 Delete Node in BST
+
 - [ ] Solve: #701 Insert into BST
 
 ### **Phase 3: Advanced Operations (Week 3)**
 - [ ] Implement trimBST
+
 - [ ] Range-based operations
+
 - [ ] Solve: #669 Trim a BST
+
 - [ ] Practice edge cases (empty, single node)
 
 ---

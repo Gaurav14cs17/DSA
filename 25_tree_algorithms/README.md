@@ -39,34 +39,48 @@ Comprehensive collection of **advanced tree algorithms** including LCA, Tree DP,
 <td width="25%">
 
 ### [01. LCA](./01_lowest_common_ancestor/)
+
 - Binary Lifting
+
 - Euler Tour + RMQ
+
 - Sparse Table
+
 - K-th Ancestor
 
 </td>
 <td width="25%">
 
 ### [02. Tree DP](./02_tree_dp/)
+
 - Subtree DP
+
 - Rerooting technique
+
 - Multi-state DP
+
 - Path problems
 
 </td>
 <td width="25%">
 
 ### [03. Construction](./03_tree_construction/)
+
 - Build from traversals
+
 - Serialize/Deserialize
+
 - BST construction
 
 </td>
 <td width="25%">
 
 ### [04. HLD](./04_heavy_light_decomposition/)
+
 - Heavy-Light Decomposition
+
 - Path queries O(log² n)
+
 - Subtree queries
 
 </td>
@@ -75,32 +89,44 @@ Comprehensive collection of **advanced tree algorithms** including LCA, Tree DP,
 <td width="25%">
 
 ### [05. Centroid Decomp](./05_centroid_decomposition/)
+
 - Centroid finding
+
 - Path counting
+
 - Distance queries
 
 </td>
 <td width="25%">
 
 ### [06. DSU on Tree](./06_dsu_on_tree/)
+
 - Small to Large
+
 - Subtree queries
+
 - Color counting
 
 </td>
 <td width="25%">
 
 ### [07. Euler Tour](./07_euler_tour/)
+
 - Tree flattening
+
 - Range queries
+
 - Ancestor checking
 
 </td>
 <td width="25%">
 
 ### [08. Virtual Trees](./08_virtual_trees/)
+
 - Auxiliary trees
+
 - Compress to k nodes
+
 - Steiner tree
 
 </td>
@@ -109,24 +135,33 @@ Comprehensive collection of **advanced tree algorithms** including LCA, Tree DP,
 <td width="33%">
 
 ### [09. Tree Hashing](./09_tree_hashing/)
+
 - Tree isomorphism
+
 - AHU algorithm
+
 - Pattern matching
 
 </td>
 <td width="33%">
 
 ### [10. Link-Cut Trees](./10_link_cut_trees/)
+
 - Dynamic trees
+
 - Link/cut edges
+
 - Path queries O(log n)
 
 </td>
 <td width="33%">
 
 ### [11. Mo's Algorithm](./11_mos_algorithm_trees/)
+
 - Offline path queries
+
 - O((n+q)√n)
+
 - Euler tour based
 
 </td>

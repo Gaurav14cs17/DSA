@@ -38,7 +38,9 @@ permalink: /31_combinatorics/01_permutations/
 **Definition:** A permutation is an arrangement of objects in a specific order.
 
 For set $S = \{a, b, c\}$:
+
 - Permutations: ABC, ACB, BAC, BCA, CAB, CBA (6 total)
+
 - Order matters: ABC ≠ BAC
 
 ---
@@ -53,9 +55,13 @@ P(n) = n!
 ```
 
 **Proof:** 
+
 - First position: n choices
+
 - Second position: n-1 choices
+
 - Continue... last position: 1 choice
+
 - Total: $n \times (n-1) \times \cdots \times 1 = n!$ ∎
 
 **r-Permutation (r from n):**
@@ -89,7 +95,9 @@ P = \frac{n!}{n_1! \times n_2! \times \cdots \times n_k!}
 
 **Proof:**
 - Linear arrangements: $n!$
+
 - Each circular arrangement corresponds to $n$ linear arrangements (rotations)
+
 - Circular permutations: $\frac{n!}{n} = (n-1)!$ ∎
 
 ---

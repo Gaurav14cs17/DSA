@@ -96,7 +96,9 @@ E[h] = O(\log n)
 
 **Proof:**
 - Inorder visits: Left → Node → Right
+
 - BST property: Left < Node < Right
+
 - By induction, entire sequence is sorted ∎
 
 ---
@@ -441,16 +443,24 @@ BST Problem
 
 ❌ **Don't:**
 - Validate BST by only checking immediate children
+
 - Forget to handle duplicate values (usually not allowed)
+
 - Use global variables for tracking state
+
 - Forget the three cases in deletion
+
 - Ignore that inorder gives sorted sequence
 
 ✅ **Do:**
 - Validate with min/max bounds for entire subtree
+
 - Clarify if duplicates allowed (usually no)
+
 - Pass state through parameters or return values
+
 - Master deletion: leaf, one child, two children
+
 - Use inorder for sorted-order problems
 
 ### Optimization Checklist
@@ -473,8 +483,11 @@ BST Problem
 
 **Progress Tracker:**
 - 🥉 **Bronze:** Solve 10 BST problems
+
 - 🥈 **Silver:** Solve 20 BST problems + master operations
+
 - 🥇 **Gold:** Solve 30 BST problems + validation patterns
+
 - 💎 **Platinum:** Master all patterns + balanced trees
 
 **Remember:** BST property enables O(log n) operations. That's the power of ordering! 🚀

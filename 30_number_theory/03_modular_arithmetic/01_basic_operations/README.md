@@ -9,9 +9,13 @@ nav_order: 1
 # 🔢 Basic Modular Operations
 
 ## 📊 Metadata
+
 - **Difficulty:** ![Easy](https://img.shields.io/badge/Easy-green)
+
 - **Time Complexity:** O(1) per operation
+
 - **Space Complexity:** O(1)
+
 - **Pattern:** Number Theory, Clock Arithmetic
 
 ---
@@ -203,8 +207,11 @@ def mod_safe(n, m=MOD_1):
 ### Why MOD = 10^9 + 7?
 
 - It's prime (Fermat's theorem works)
+
 - Fits in 32-bit signed integer
+
 - (MOD-1)² fits in 64-bit integer
+
 - Easy to remember
 
 ---

@@ -144,14 +144,18 @@ for right in range(n):
 **Proof**:
 
 Let's count pointer movements:
+
 - `right` pointer: moves from 0 to n-1 exactly once = \(n\) moves
+
 - `left` pointer: only moves right, never left
   - Can move at most \(n\) times total (can't exceed right)
 
 Total pointer movements: \(n + n = 2n = O(n)\)
 
 Each element:
+
 - Added to window: exactly once (when `right` reaches it)
+
 - Removed from window: at most once (when `left` passes it)
 
 **Amortized cost**: \(O(1)\) per element ∎
@@ -201,7 +205,9 @@ while window_is_VALID:
 #### 🔍 Proof
 
 Let:
+
 - \(f(k)\) = count of subarrays with at most \(k\) distinct elements
+
 - \(g(k)\) = count of subarrays with exactly \(k\) distinct elements
 
 Then:
@@ -231,9 +237,13 @@ So: `exactly(k) = atMost(k) - atMost(k-1)` ∎
 #### 🔍 Proof
 
 All subarrays ending at `right` that start anywhere in \([left, right]\) are valid:
+
 - Starting at `left`: \([left, right]\)
+
 - Starting at `left+1`: \([left+1, right]\)
+
 - ...
+
 - Starting at `right`: \([right, right]\)
 
 Count = \(right - left + 1\) subarrays ∎

@@ -52,8 +52,11 @@ permalink: /37_interval_trees/
 
 **Operations:**
 - **Insert(interval):** Add interval to set
+
 - **Delete(interval):** Remove interval from set
+
 - **Query(point):** Find all intervals containing point
+
 - **Overlap(interval):** Find all intervals overlapping with given interval
 
 ### Key Property
@@ -361,19 +364,31 @@ def max_overlap(intervals):
 ## 📊 Practice Roadmap
 
 ### Week 1: Foundation (6 problems)
+
 - [ ] 56. Merge Intervals
+
 - [ ] 57. Insert Interval
+
 - [ ] 435. Non-overlapping Intervals
+
 - [ ] 986. Interval List Intersections
+
 - [ ] 729. My Calendar I
+
 - [ ] 731. My Calendar II
 
 ### Week 2: Advanced (6 problems)
+
 - [ ] 732. My Calendar III
+
 - [ ] 715. Range Module
+
 - [ ] 2276. Count Integers in Intervals
+
 - [ ] 2158. Amount of New Area Painted
+
 - [ ] 352. Data Stream as Disjoint Intervals
+
 - [ ] 218. The Skyline Problem
 
 ---
@@ -389,8 +404,11 @@ def max_overlap(intervals):
 
 **Common Mistakes:**
 - ❌ Not sorting intervals first
+
 - ❌ Wrong overlap condition (use `a[0] <= b[1] and b[0] <= a[1]`)
+
 - ❌ Not handling edge cases (empty, single interval)
+
 - ❌ Inefficient coordinate compression
 
 ---

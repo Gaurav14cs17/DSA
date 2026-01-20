@@ -43,7 +43,9 @@ permalink: /26_sweep_line/05_rectangle_problems/
 
 **Properties:**
 - Area: $(x\_2 - x\_1) \times (y\_2 - y\_1)$
+
 - Perimeter: $2 \times ((x\_2 - x\_1) + (y\_2 - y\_1))$
+
 - Diagonal: $\sqrt{(x\_2 - x\_1)^2 + (y\_2 - y\_1)^2}$
 
 ---
@@ -89,7 +91,9 @@ A = \max(0, \min(x_2, x_4) - \max(x_1, x_3)) \times \max(0, \min(y_2, y_4) - \ma
 **Stack-based sweep:** $O(n)$ time
 
 **Key Idea:** For each bar, find:
+
 - Left boundary: first bar shorter than current
+
 - Right boundary: first bar shorter than current
 
 **Area with bar $i$ as minimum:**
