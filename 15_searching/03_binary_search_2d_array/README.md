@@ -38,6 +38,7 @@ If matrix is row-major sorted:
 ```math
 \text{1D index } k \Leftrightarrow \text{2D } (k / n, k \% n)
 T = O(\log(m \times n))
+
 ```
 
 ---
@@ -52,6 +53,7 @@ For row-sorted and column-sorted matrix:
 
 ```math
 T = O(m + n)
+
 ```
 
 ---
@@ -63,6 +65,7 @@ T = O(m + n)
 ```math
 \text{count}(x) = \sum_{i} \text{elements in row } i \leq x
 T = O(n \log(\max - \min))
+
 ```
 
 ---
@@ -175,6 +178,7 @@ def countNegatives(grid: list[list[int]]) -> int:
             col += 1
     
     return count
+
 ```
 
 ---
@@ -207,6 +211,7 @@ def countNegatives(grid: list[list[int]]) -> int:
        +-- Row + Column sorted → Staircase O(m+n)
        |
        +-- Kth element → BS on value + count
+
 ```
 
 ---

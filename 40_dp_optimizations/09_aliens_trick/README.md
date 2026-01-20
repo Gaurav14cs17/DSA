@@ -72,6 +72,7 @@ def aliens_trick(arr, k):
             left = mid
     
     return best_cost
+
 ```
 
 ---

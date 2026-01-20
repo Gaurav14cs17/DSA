@@ -88,6 +88,7 @@ class DynamicSegmentTree:
         left_val = node.left.value if node.left else 0
         right_val = node.right.value if node.right else 0
         node.value = left_val + right_val
+
 ```
 
 ---

@@ -56,6 +56,7 @@ x \equiv a_2 \pmod{m_2} \\
 \vdots \\
 x \equiv a_k \pmod{m_k}
 \end{cases}
+
 ```
 
 has a **unique solution** modulo $M = m\_1 \cdot m\_2 \cdots m\_k$.
@@ -68,6 +69,7 @@ Let $M\_i = M / m\_i$ and $y\_i = M\_i^{-1} \pmod{m\_i}$
 
 ```math
 x = \sum_{i=1}^{k} a_i \cdot M_i \cdot y_i \pmod{M}
+
 ```
 
 **Why this works:** Each term $a\_i M\_i y\_i$ is:
@@ -106,6 +108,7 @@ x = \sum_{i=1}^{k} a_i \cdot M_i \cdot y_i \pmod{M}
 |   23 mod 5 = 3 ✓                                               |
 |   23 mod 7 = 2 ✓                                               |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -155,6 +158,7 @@ def chinese_remainder(remainders: list[int], moduli: list[int]) -> int:
 
 # Example
 print(chinese_remainder([2, 3, 2], [3, 5, 7]))  # 23
+
 ```
 
 ### 2. CRT with Verification
@@ -181,6 +185,7 @@ def chinese_remainder_verified(remainders: list[int], moduli: list[int]) -> int:
             raise ValueError(f"Verification failed: {result} mod {m} ≠ {a}")
     
     return result
+
 ```
 
 ### 3. Two Moduli Case (Simplified)
@@ -202,6 +207,7 @@ def crt_two(a1: int, m1: int, a2: int, m2: int) -> int:
 
 # Example
 print(crt_two(2, 3, 3, 5))  # 8 (x ≡ 2 mod 3, x ≡ 3 mod 5)
+
 ```
 
 ### 4. Iterative CRT for Multiple Equations
@@ -230,6 +236,7 @@ def crt_iterative(remainders: list[int], moduli: list[int]) -> tuple[int, int]:
     return x, m
 
 print(crt_iterative([2, 3, 2], [3, 5, 7]))  # (23, 105)
+
 ```
 
 ---
@@ -258,6 +265,7 @@ def factorial_mod(n: int, p: int) -> int:
 primes = [101, 103, 107, 109]
 remainders = [factorial_mod(50, p) for p in primes]
 # Reconstruct full value (within the product of primes)
+
 ```
 
 ### 2. Clock Problem
@@ -273,6 +281,7 @@ def clock_problem():
     return chinese_remainder([2, 1, 3], [3, 4, 7])
 
 print(clock_problem())  # Solution within 0-83
+
 ```
 
 ---

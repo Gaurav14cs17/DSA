@@ -42,6 +42,7 @@ A function that calls itself with a smaller input:
 
 ```math
 f(n) = g(f(n-1), n)
+
 ```
 
 **Requirements:**
@@ -80,6 +81,7 @@ For recurrence $T(n) = aT(n/b) + f(n)$:
 
 ```math
 \text{Space} = O(\text{depth} \times \text{frame size})
+
 ```
 
 **Tail recursion:** Can be optimized to O(1) space (in some languages).
@@ -92,6 +94,7 @@ When function calls itself multiple times:
 
 ```math
 T(n) = T(n-1) + T(n-2) + \ldots
+
 ```
 
 **Example:** Fibonacci without memoization → O(2ⁿ)
@@ -145,6 +148,7 @@ T(n) = T(n-1) + T(n-2) + \ldots
    | • Linked list   |    | • Permutations  |      | • Indirect      |
    | • Tail recursion|    | • Combinations  |      | • Generative    |
    +-----------------+    +-----------------+      +-----------------+
+
 ```
 
 ---
@@ -176,6 +180,7 @@ def sumArray(arr: list[int], i: int = 0) -> int:
     if i == len(arr):
         return 0
     return arr[i] + sumArray(arr, i + 1)
+
 ```
 
 ### Tail Recursion
@@ -191,6 +196,7 @@ def factorialTail(n: int, acc: int = 1) -> int:
     if n <= 1:
         return acc
     return factorialTail(n - 1, n * acc)
+
 ```
 
 ### String Recursion
@@ -224,6 +230,7 @@ def decodeString(s: str) -> str:
         return result, index
     
     return decode(0)[0]
+
 ```
 
 ### Divide and Conquer
@@ -246,6 +253,7 @@ def power(x: float, n: int) -> float:
     if n % 2 == 0:
         return half * half
     return half * half * x
+
 ```
 
 ---
@@ -313,6 +321,7 @@ Recursion Problem
        |   +-- Examples: parser, state machine
        |
        +-- Deep recursion → Consider iterative + stack
+
 ```
 
 ---

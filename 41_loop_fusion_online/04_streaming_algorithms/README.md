@@ -87,6 +87,7 @@ def reservoir_sample(stream, k: int) -> list:
 stream = range(1, 101)  # Stream of 1 to 100
 sample = reservoir_sample(stream, k=5)
 print(f"Random sample of 5: {sample}")
+
 ```
 
 ### 🔬 Proof of Correctness with Intuition
@@ -127,6 +128,7 @@ For **old element** $j$ (where $j < i$):
 
 ```math
 P(\text{stay}) = \left(1 - \frac{k}{i}\right) + \frac{k}{i} \cdot \frac{k-1}{k} = 1 - \frac{k}{i} + \frac{k-1}{i} = \frac{i-1}{i}
+
 ```
 
 Therefore:
@@ -205,6 +207,7 @@ for word in text.split():
 
 print(f"Frequency of 'the': {sketch.estimate('the')}")  # 3
 print(f"Frequency of 'fox': {sketch.estimate('fox')}")  # 2
+
 ```
 
 ### 🔬 Accuracy Proof with Intuition
@@ -225,6 +228,7 @@ print(f"Frequency of 'fox': {sketch.estimate('fox')}")  # 2
 **Theorem (Count-Min Sketch Accuracy):**
 
 With $w = \lceil e/\epsilon \rceil$ and $d = \lceil \ln(1/\delta) \rceil$:
+
 ```
 P(\hat{f}_i \leq f_i + \epsilon \|\mathbf{f}\|_1) \geq 1 - \delta
 
@@ -234,12 +238,14 @@ P(\hat{f}_i \leq f_i + \epsilon \|\mathbf{f}\|_1) \geq 1 - \delta
 **Step 1: Analyze single hash function**
 
 For hash function $h\_j$ and item $i$:
+
 ```
 
 C[j][h_j(i)] = f_i + \sum_{k: h_j(k) = h_j(i), k \neq i} f_k
 
 ```math
 The error is the collision sum:
+
 ```
 
 \text{Error}_j = \sum_{k \neq i} f_k \cdot \mathbb{1}[h_j(k) = h_j(i)]
@@ -248,6 +254,7 @@ The error is the collision sum:
 **Step 2: Expected error**
 
 By pairwise independence of hash functions:
+
 ```
 
 E[\text{Error}_j] = \sum_{k \neq i} f_k \cdot P(h_j(k) = h_j(i)) = \sum_{k \neq i} f_k \cdot \frac{1}{w}
@@ -255,12 +262,14 @@ E[\text{Error}_j] = \sum_{k \neq i} f_k \cdot P(h_j(k) = h_j(i)) = \sum_{k \neq 
 
 ```math
 **Step 3: Apply Markov's inequality**
+
 ```
 
 P(\text{Error}_j > \epsilon \|\mathbf{f}\|_1) \leq \frac{E[\text{Error}_j]}{\epsilon \|\mathbf{f}\|_1} \leq \frac{1}{w\epsilon}
 
 ```math
 With $w = e/\epsilon$:
+
 ```
 
 P(\text{Error}_j > \epsilon \|\mathbf{f}\|_1) \leq \frac{1}{e}
@@ -269,18 +278,21 @@ P(\text{Error}_j > \epsilon \|\mathbf{f}\|_1) \leq \frac{1}{e}
 **Step 4: Multiple hash functions**
 
 We take minimum over $d$ independent hash functions:
+
 ```
 
 P(\text{all } d \text{ hash functions fail}) \leq \left(\frac{1}{e}\right)^d
 
 ```math
 With $d = \ln(1/\delta)$:
+
 ```
 
 P(\text{all fail}) \leq e^{-d} = e^{-\ln(1/\delta)} = \delta
 
 ```math
 Therefore:
+
 ```
 
 P(\hat{f}_i \leq f_i + \epsilon \|\mathbf{f}\|_1) \geq 1 - \delta \quad \blacksquare
@@ -388,6 +400,7 @@ for i in range(100000):
 print(f"True count: 100000")
 print(f"Estimated: {hll.cardinality()}")
 print(f"Error: {abs(hll.cardinality() - 100000) / 100000 * 100:.2f}%")
+
 ```
 
 **Error Bound:**
@@ -469,9 +482,11 @@ for url in urls:
         bloom.add(url)
 
 print(f"\nFalse positive rate: {bloom.false_positive_rate():.4f}")
+
 ```
 
 **False Positive Rate:**
+
 ```
 p \approx \left(1 - e^{-kn/m}\right)^k
 

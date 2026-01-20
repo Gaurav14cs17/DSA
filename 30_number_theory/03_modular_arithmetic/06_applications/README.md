@@ -87,6 +87,7 @@ class Solution:
             n >>= 1
         
         return result
+
 ```
 
 ---
@@ -122,6 +123,7 @@ class Solution:
             result = pow_mod(result, 10) * pow_mod(a, digit) % MOD
         
         return result
+
 ```
 
 ---
@@ -147,6 +149,7 @@ class Solution:
         odd_positions = n // 2          # 1, 3, 5, ...
         
         return pow(5, even_positions, MOD) * pow(4, odd_positions, MOD) % MOD
+
 ```
 
 ---
@@ -183,6 +186,7 @@ class Solution:
             return pow(3, n // 3 - 1, MOD) * 4 % MOD
         else:  # n % 3 == 2
             return pow(3, n // 3, MOD) * 2 % MOD
+
 ```
 
 ---
@@ -212,6 +216,7 @@ class Solution:
                 count = 0
         
         return result
+
 ```
 
 ---
@@ -226,6 +231,7 @@ MOD = 10**9 + 7
 def solve_power(a: int, b: int) -> int:
     """Compute a^b mod MOD efficiently."""
     return pow(a, b, MOD)  # Python's built-in is optimized!
+
 ```
 
 ### Pattern 2: Factorial and Inverse Factorial
@@ -249,6 +255,7 @@ def nCr(n: int, r: int, fact: list, inv_fact: list, mod: int) -> int:
     if r > n or r < 0:
         return 0
     return fact[n] * inv_fact[r] % mod * inv_fact[n - r] % mod
+
 ```
 
 ### Pattern 3: Modular Division
@@ -257,6 +264,7 @@ def nCr(n: int, r: int, fact: list, inv_fact: list, mod: int) -> int:
 def mod_divide(a: int, b: int, mod: int) -> int:
     """Compute (a / b) mod p = a × b^(-1) mod p."""
     return a * pow(b, mod - 2, mod) % mod
+
 ```
 
 ### Pattern 4: Sum of Arithmetic Progression
@@ -266,6 +274,7 @@ def sum_ap_mod(n: int, mod: int) -> int:
     """Compute 1 + 2 + ... + n mod p."""
     # n(n+1)/2 mod p = n × (n+1) × inverse(2) mod p
     return n * (n + 1) % mod * pow(2, mod - 2, mod) % mod
+
 ```
 
 ---
@@ -292,6 +301,7 @@ def sum_ap_mod(n: int, mod: int) -> int:
 | Final: 3^13 mod 1000 = 323                                     |
 | Verify: 3^13 = 1594323, 1594323 % 1000 = 323 ✓                |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -304,6 +314,7 @@ def sum_ap_mod(n: int, mod: int) -> int:
 MOD1 = 10**9 + 7   # 1000000007 (prime)
 MOD2 = 10**9 + 9   # 1000000009 (prime)
 MOD3 = 998244353   # Prime with primitive root, good for NTT
+
 ```
 
 **Why these values?**
@@ -328,6 +339,7 @@ def safe_mul_large(a: int, b: int, mod: int) -> int:
         a = (a * 2) % mod
         b >>= 1
     return result
+
 ```
 
 ### 3. When to Use Which Inverse Method

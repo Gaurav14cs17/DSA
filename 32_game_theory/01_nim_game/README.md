@@ -51,6 +51,7 @@ permalink: /32_game_theory/01_nim_game/
 
 ```math
 a_1 \oplus a_2 \oplus \cdots \oplus a_n = 0
+
 ```
 
 where $\oplus$ denotes bitwise XOR.
@@ -86,14 +87,17 @@ a \oplus 0 &= a \\
 a \oplus b &= b \oplus a \quad \text{(commutative)} \\
 (a \oplus b) \oplus c &= a \oplus (b \oplus c) \quad \text{(associative)}
 \end{align}
+
 ```
 
 **Binary XOR:**
+
 ```
   5 = 101₂
 ⊕ 3 = 011₂
   -------
   6 = 110₂
+
 ```
 
 ---
@@ -170,6 +174,7 @@ a \oplus b &= b \oplus a \quad \text{(commutative)} \\
 |                                                                  |
 | RESULT: First player wins with optimal play! ✓                  |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -205,6 +210,7 @@ a \oplus b &= b \oplus a \quad \text{(commutative)} \\
 | Strategy: Whatever opponent takes from one pile,                |
 |           take same amount from other pile!                     |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -230,6 +236,7 @@ def can_win_nim(piles: list[int]) -> bool:
     for pile in piles:
         nim_sum ^= pile
     return nim_sum != 0
+
 ```
 
 ---
@@ -263,6 +270,7 @@ def find_winning_move(piles: list[int]) -> tuple[int, int] | None:
             return (i, target)
     
     return None
+
 ```
 
 ---
@@ -288,6 +296,7 @@ def canWinNim(n: int) -> bool:
     - Pattern repeats every 4
     """
     return n % 4 != 0
+
 ```
 
 ---
@@ -320,6 +329,7 @@ def can_win_misere_nim(piles: list[int]) -> bool:
     else:
         # Normal nim strategy
         return nim_sum != 0
+
 ```
 
 ---
@@ -357,6 +367,7 @@ def nim_with_moves(n: int, moves: list[int]) -> bool:
         grundy[i] = mex
     
     return grundy[n] != 0
+
 ```
 
 ---
@@ -364,17 +375,20 @@ def nim_with_moves(n: int, moves: list[int]) -> bool:
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
+
 | # | Problem | Key Insight | Solution |
 |:-:|---------|-------------|----------|
 | 292 | [Nim Game](https://leetcode.com/problems/nim-game/) | `n % 4 != 0` | O(1) pattern |
 | 1025 | [Divisor Game](https://leetcode.com/problems/divisor-game/) | Even wins | `n % 2 == 0` |
 
 ### 🟡 Medium
+
 | # | Problem | Key Insight | Solution |
 |:-:|---------|-------------|----------|
 | 294 | [Flip Game II](https://leetcode.com/problems/flip-game-ii/) | Grundy numbers | Impartial game |
 
 ### 🔴 Hard
+
 | # | Problem | Key Insight | Solution |
 |:-:|---------|-------------|----------|
 | 810 | [Chalkboard XOR Game](https://leetcode.com/problems/chalkboard-xor-game/) | XOR + parity | Nim variant |

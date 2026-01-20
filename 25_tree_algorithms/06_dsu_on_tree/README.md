@@ -72,6 +72,7 @@ For each node u:
 3. Add nodes from light subtrees one by one
 4. Compute answer for u
 5. If u is light child of parent, remove all data
+
 ```
 
 ---
@@ -447,6 +448,7 @@ def example_mode_finding():
     print("Most frequent value in each subtree:")
     for i, mode in enumerate(result):
         print(f"  Node {i}: {mode}")
+
 ```
 
 ---
@@ -479,6 +481,7 @@ Subtree Query Problem
      |
      +-- Complex aggregation
          +-- Merge small to large → O(n log n)
+
 ```
 
 ---

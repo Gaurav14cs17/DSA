@@ -48,6 +48,7 @@ node & \text{if } node.val = val \\
 \text{search}(node.right, val) & \text{if } val > node.val \\
 \text{null} & \text{if } node = \text{null}
 \end{cases}
+
 ```
 
 **Time:** O(h), **Space:** O(1) iterative
@@ -62,6 +63,7 @@ node & \text{if } node.val = val \\
 node.\text{left} = \text{insert}(node.left, val) & \text{if } val < node.val \\
 node.\text{right} = \text{insert}(node.right, val) & \text{if } val > node.val
 \end{cases}
+
 ```
 
 ---
@@ -80,6 +82,7 @@ node.\text{right} = \text{insert}(node.right, val) & \text{if } val > node.val
 
 ```math
 \text{successor}(x) = \min(T_R(x))
+
 ```
 
 ---
@@ -89,6 +92,7 @@ node.\text{right} = \text{insert}(node.right, val) & \text{if } val > node.val
 ```math
 \text{min}(T) = \text{leftmost node}
 \text{max}(T) = \text{rightmost node}
+
 ```
 
 **Time:** O(h)
@@ -120,6 +124,7 @@ O(1) & \text{leaf node} \\
 O(1) & \text{one child (replace)} \\
 O(h) & \text{two children (find successor)}
 \end{cases}
+
 ```
 
 **Overall:** O(h) where h = height of tree.
@@ -137,6 +142,7 @@ O(h) & \text{two children (find successor)}
 \text{trim}(node.left, L, R) & \text{if } node.val > R \\
 \text{node with trimmed children} & \text{otherwise}
 \end{cases}
+
 ```
 
 **Key Insight:** If node.val < L, entire left subtree is < L → prune!
@@ -168,6 +174,7 @@ Step 2: 15 > 10 → go right
       15 (existing, stop or handle duplicate)
 
 If 15 doesn't exist, it becomes right child of 10!
+
 ```
 
 **Key Steps:**
@@ -213,6 +220,7 @@ Final:
    10    30
   /  \     \
  5   15    35
+
 ```
 
 **Why Successor?**
@@ -243,6 +251,7 @@ Result:
        25
       /  \
     10    30
+
 ```
 
 **Pruning Logic:**
@@ -272,6 +281,7 @@ Problem mentions:
 +-- "minimum" / "maximum" → findMin() / findMax()
 +-- "in range [L, R]" → trimBST() or range query
 +-- "valid BST?" → See validation section
+
 ```
 
 ---
@@ -366,6 +376,7 @@ def trimBST(root: TreeNode, low: int, high: int) -> TreeNode:
     root.left = trimBST(root.left, low, high)
     root.right = trimBST(root.right, low, high)
     return root
+
 ```
 
 ---
@@ -417,6 +428,7 @@ def trimBST(root: TreeNode, low: int, high: int) -> TreeNode:
 ## 📚 References & Resources
 
 ### 📖 Books & Courses
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **CLRS Chapter 12** | BST operations detailed | [MIT Press](https://mitpress.mit.edu/books/introduction-algorithms) |
@@ -424,6 +436,7 @@ def trimBST(root: TreeNode, low: int, high: int) -> TreeNode:
 | **Princeton Algorithms** | BST implementations | [Coursera](https://www.coursera.org/learn/algorithms-part1) |
 
 ### 🌐 Online Tutorials
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **GeeksforGeeks** | BST operations | [Tutorial](https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/) |
@@ -432,6 +445,7 @@ def trimBST(root: TreeNode, low: int, high: int) -> TreeNode:
 | **Programiz** | BST operations guide | [Tutorial](https://www.programiz.com/dsa/binary-search-tree) |
 
 ### 📺 Video Resources
+
 | Creator | Topic | Link |
 |---------|-------|------|
 | **Abdul Bari** | BST operations | [YouTube](https://www.youtube.com/watch?v=pYT9F8_LFTM) |
@@ -441,6 +455,7 @@ def trimBST(root: TreeNode, low: int, high: int) -> TreeNode:
 | **William Fiset** | BST algorithms | [YouTube](https://www.youtube.com/watch?v=JfSdGQdAzq8) |
 
 ### 🔧 Interactive Tools
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo BST** | Visualize operations | [Website](https://visualgo.net/en/bst) |
@@ -448,6 +463,7 @@ def trimBST(root: TreeNode, low: int, high: int) -> TreeNode:
 | **Algorithm Visualizer** | BST animations | [Website](https://algorithm-visualizer.org/brute-force/binary-search-tree) |
 
 ### 📝 Practice Platforms
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | BST operations tag | [Problems](https://leetcode.com/tag/binary-search-tree/) |

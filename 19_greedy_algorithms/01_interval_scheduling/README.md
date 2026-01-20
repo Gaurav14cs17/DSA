@@ -39,6 +39,7 @@ permalink: /19_greedy_algorithms/01_interval_scheduling/
 
 ```math
 \text{Sort by } end_i, \text{ select if } start_i \geq \text{last\_end}
+
 ```
 
 ---
@@ -49,6 +50,7 @@ permalink: /19_greedy_algorithms/01_interval_scheduling/
 
 ```math
 \text{rooms} = \max(\text{concurrent intervals at any time})
+
 ```
 
 ---
@@ -176,6 +178,7 @@ def partitionLabels(s: str) -> list[int]:
             start = end + 1
     
     return result
+
 ```
 
 ---

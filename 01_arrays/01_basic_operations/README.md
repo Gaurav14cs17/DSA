@@ -37,6 +37,7 @@ permalink: /01_arrays/01_basic_operations/
 
 ```math
 \text{Address}(A[i]) = \text{Base} + i \times \text{sizeof(element)}
+
 ```
 
 Operations: 1 multiplication + 1 addition = constant time ∎
@@ -57,6 +58,7 @@ Operations: 1 multiplication + 1 addition = constant time ∎
 
 ```math
 \text{Iterations} = \frac{n}{2} \text{ (for symmetric operations)}
+
 ```
 
 ---
@@ -72,6 +74,7 @@ A[low..mid-1] &= \{1\} \\
 A[mid..high] &= \text{unknown} \\
 A[high+1..n-1] &= \{2\}
 \end{aligned}
+
 ```
 
 **Correctness Proof:**
@@ -87,12 +90,14 @@ A[high+1..n-1] &= \{2\}
 
 ```math
 A'[i] = A[(i - k + n) \mod n]
+
 ```
 
 **Reversal Algorithm Correctness:**
 
 ```math
 \text{Rev}(\text{Rev}(A[0..n-k-1]) \| \text{Rev}(A[n-k..n-1])) = A[n-k..n-1] \| A[0..n-k-1]
+
 ```
 
 **Proof:**
@@ -119,6 +124,7 @@ A'[i] = A[(i - k + n) \mod n]
 ```math
 \text{slow travels: } \mu + \lambda k_1
 \text{fast travels: } \mu + \lambda k_2 = 2(\mu + \lambda k_1)
+
 ```
 
 Where $\mu$ = distance to cycle, $\lambda$ = cycle length.
@@ -182,6 +188,7 @@ Input: [1, 1, 2, 2, 2, 3, 3]
 |  Result: First 3 elements [1, 2, 3] are unique                       |
 |  Return: i + 1 = 3                                                    |
 +-----------------------------------------------------------------------+
+
 ```
 
 ### Rotate Array (Three Reversals)
@@ -209,6 +216,7 @@ Input: [1, 2, 3, 4, 5, 6, 7], k = 3
 |              ↑---------------↑                                        |
 |              reverse this part                                        |
 +-----------------------------------------------------------------------+
+
 ```
 
 ### Dutch National Flag (Sort Colors)
@@ -242,6 +250,7 @@ Input: [2, 0, 2, 1, 1, 0]
 |                                                                       |
 |  Continue... Final: [0, 0, 1, 1, 2, 2] ✓                             |
 +-----------------------------------------------------------------------+
+
 ```
 
 ---
@@ -340,6 +349,7 @@ def findDuplicate(nums: list[int]) -> int:
         fast = nums[fast]
     
     return slow
+
 ```
 
 ---
@@ -430,6 +440,7 @@ Nested loops:           O(n²)  → Try two pointers → O(n)
 Linear scan:            O(n)   → Best possible
 Multiple passes:        O(kn)  → k constants → O(n)
 Sort then scan:         O(n log n) → Often good solution
+
 ```
 
 ---
@@ -437,6 +448,7 @@ Sort then scan:         O(n log n) → Often good solution
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **Two Pointers Technique** | Comprehensive guide | [GeeksforGeeks](https://www.geeksforgeeks.org/two-pointers-technique/) |
@@ -444,6 +456,7 @@ Sort then scan:         O(n log n) → Often good solution
 | **Floyd's Cycle Detection** | Tortoise and hare algorithm | [Wikipedia](https://en.wikipedia.org/wiki/Cycle_detection) |
 
 ### 🎥 Video Tutorials
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **NeetCode** | Two pointers explained | [YouTube](https://www.youtube.com/watch?v=cQ1Oz4ckceM) |
@@ -451,6 +464,7 @@ Sort then scan:         O(n log n) → Often good solution
 | **Tushar Roy** | Dutch national flag | [YouTube](https://www.youtube.com/watch?v=BOt1DAvR0zI) |
 
 ### 📝 Interactive Practice
+
 | Platform | Problem Set | Link |
 |----------|-------------|------|
 | **LeetCode** | Two pointers tag | [Problems](https://leetcode.com/tag/two-pointers/) |
@@ -458,6 +472,7 @@ Sort then scan:         O(n log n) → Often good solution
 | **InterviewBit** | Arrays problems | [Practice](https://www.interviewbit.com/courses/programming/topics/arrays/) |
 
 ### 🔬 Advanced Reading
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **Bentley's Programming Pearls** | Column 2: Aha! Algorithms | [PDF](https://www.cs.cmu.edu/~15451-f17/Handouts/bentley1984.pdf) |

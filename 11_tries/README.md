@@ -85,6 +85,7 @@ Where:
 
 ```math
 \text{Space: } O(\text{total characters in all words})
+
 ```
 
 ---
@@ -97,6 +98,7 @@ Where:
 
 ```math
 \text{For each bit, prefer } 1 \oplus \text{current\_bit} = 1
+
 ```
 
 ---
@@ -156,6 +158,7 @@ class Trie:
                 return None
             node = node.children[char]
         return node
+
 ```
 
 ### Word Dictionary with Wildcard
@@ -195,6 +198,7 @@ class WordDictionary:
                 return dfs(node.children[char], i + 1)
         
         return dfs(self.root, 0)
+
 ```
 
 ---
@@ -238,6 +242,7 @@ String Problem
      +-- Maximum XOR → Binary Trie
      |
      +-- Dictionary lookup only → Hash Set
+
 ```
 
 ---

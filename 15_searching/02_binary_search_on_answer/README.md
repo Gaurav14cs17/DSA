@@ -39,6 +39,7 @@ permalink: /15_searching/02_binary_search_on_answer/
 
 ```math
 \text{feasible}(x) \text{ is monotonic in } x
+
 ```
 
 ---
@@ -47,6 +48,7 @@ permalink: /15_searching/02_binary_search_on_answer/
 
 ```math
 \text{answer} = \min\{x : \text{canAchieve}(x) = \text{true}\}
+
 ```
 
 **Example:** Minimum capacity to ship all packages in D days.
@@ -57,6 +59,7 @@ permalink: /15_searching/02_binary_search_on_answer/
 
 ```math
 \text{answer} = \max\{x : \text{canAchieve}(x) = \text{true}\}
+
 ```
 
 **Example:** Maximum minimum distance between cows.
@@ -67,6 +70,7 @@ permalink: /15_searching/02_binary_search_on_answer/
 
 ```math
 T = O(\log R \times \text{check}(n))
+
 ```
 
 Where $R$ = search range, check() = feasibility check.
@@ -229,6 +233,7 @@ def smallestDivisor(nums: list[int], threshold: int) -> int:
             left = mid + 1
     
     return left
+
 ```
 
 ---
@@ -269,6 +274,7 @@ def binarySearchOnAnswer(constraint):
             left = mid + 1
     
     return left
+
 ```
 
 ---

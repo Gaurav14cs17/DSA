@@ -32,6 +32,7 @@ permalink: /10_graphs/
 
 ```math
 G = (V, E)
+
 ```
 
 - $V$: Set of vertices (nodes)
@@ -57,18 +58,21 @@ G = (V, E)
 
 ```math
 \deg(v) = |\{e \in E : v \in e\}|
+
 ```
 
 **Handshaking Lemma:**
 
 ```math
 \sum_{v \in V} \deg(v) = 2|E|
+
 ```
 
 **Directed graph:**
 
 ```math
 \text{in-deg}(v) + \text{out-deg}(v) = \text{total degree}
+
 ```
 
 ---
@@ -87,6 +91,7 @@ G = (V, E)
 
 ```math
 \boxed{T = O(V + E), \quad S = O(V)}
+
 ```
 
 **Proof:** Each vertex enqueued once, each edge examined once.
@@ -97,6 +102,7 @@ G = (V, E)
 
 ```math
 \boxed{T = O(V + E), \quad S = O(V)}
+
 ```
 
 **Space:** O(V) for recursion stack in worst case.
@@ -120,6 +126,7 @@ G = (V, E)
 
 ```math
 \text{dist}[v] = \min(\text{dist}[v], \text{dist}[u] + w(u,v))
+
 ```
 
 **Invariant:** When vertex $u$ is extracted from priority queue, $\text{dist}[u]$ is optimal.
@@ -132,6 +139,7 @@ G = (V, E)
 
 ```math
 \text{If any relaxation after } V-1 \text{ iterations} \Rightarrow \text{negative cycle}
+
 ```
 
 ---
@@ -144,6 +152,7 @@ G = (V, E)
 
 ```math
 \text{Order: } v_1, v_2, \ldots, v_n \text{ where } (v_i, v_j) \in E \Rightarrow i < j
+
 ```
 
 ---
@@ -232,6 +241,7 @@ Graph Problem
      +-- Ordering dependencies → Topological Sort
      |
      +-- Minimum Spanning Tree → Kruskal's or Prim's
+
 ```
 
 ---
@@ -304,6 +314,7 @@ Graph Problem
 ## 📚 References & Learning Resources
 
 ### 📖 Books & Courses
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **CLRS Chapter 22-25** | Graph algorithms | [MIT Press](https://mitpress.mit.edu/books/introduction-algorithms) |
@@ -312,6 +323,7 @@ Graph Problem
 | **Competitive Programming 3** | Chapter 4 - Graphs | [Book](https://cpbook.net/) |
 
 ### 🌐 Online Tutorials
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **GeeksforGeeks** | Graph algorithms | [Tutorial](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/) |
@@ -321,6 +333,7 @@ Graph Problem
 | **CP-Algorithms** | Advanced graph algorithms | [Website](https://cp-algorithms.com/graph/breadth-first-search.html) |
 
 ### 📺 Video Resources
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **Abdul Bari** | Graph complete playlist | [YouTube](https://www.youtube.com/watch?v=pcKY4hjDrxk&list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O) |
@@ -331,6 +344,7 @@ Graph Problem
 | **Back To Back SWE** | Graph problems | [YouTube](https://www.youtube.com/playlist?list=PLiQ766zSC5jMW0kE6TYTe0V-l-8xJhEcG) |
 
 ### 📝 Practice Platforms
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Graph tag | [Problems](https://leetcode.com/tag/graph/) |
@@ -339,6 +353,7 @@ Graph Problem
 | **SPOJ** | Graph practice | [Practice](https://www.spoj.com/problems/tag/graph-theory) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Tarjan's Algorithm** | Strongly connected components | [CP-Algorithms](https://cp-algorithms.com/graph/strongly-connected-components.html) |
@@ -349,6 +364,7 @@ Graph Problem
 | **Eulerian Path** | Circuit problems | [Tutorial](https://www.geeksforgeeks.org/eulerian-path-and-circuit/) |
 
 ### 🎯 Problem Collections
+
 | Collection | Focus | Link |
 |-----------|-------|------|
 | **NeetCode 150** | Essential graph | [List](https://neetcode.io/practice) |
@@ -357,6 +373,7 @@ Graph Problem
 | **Striver's SDE Sheet** | Must-do graph | [Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/) |
 
 ### 📊 Visualization Tools
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo** | Graph algorithms | [Website](https://visualgo.net/en/dfsbfs) |
@@ -365,6 +382,7 @@ Graph Problem
 | **Graph Online** | Draw and analyze | [Website](https://graphonline.ru/en/) |
 
 ### 🏆 Competition Resources
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **USACO Guide** | Graph algorithms guide | [Guide](https://usaco.guide/gold/intro-dp) |
@@ -401,6 +419,7 @@ Graph Problem
 [ ] Need ordering? Use topological sort on DAG!
 [ ] Detecting cycles? DFS with coloring!
 [ ] Multiple starting points? Multi-source BFS!
+
 ```
 
 ---

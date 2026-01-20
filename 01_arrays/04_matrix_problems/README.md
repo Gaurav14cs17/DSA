@@ -55,12 +55,14 @@ permalink: /01_arrays/04_matrix_problems/
 
 ```math
 \text{Address}(i, j) = \text{Base} + (i \times n + j) \times \text{sizeof(element)}
+
 ```
 
 **Column-major order (Fortran, MATLAB):**
 
 ```math
 \text{Address}(i, j) = \text{Base} + (j \times m + i) \times \text{sizeof(element)}
+
 ```
 
 Where $m$ = rows, $n$ = columns.
@@ -73,12 +75,14 @@ Where $m$ = rows, $n$ = columns.
 
 ```math
 \boxed{M'[j][m-1-i] = M[i][j]}
+
 ```
 
 **Transpose + Reverse Rows Algorithm:**
 
 ```math
 \text{Rotate 90°} = \text{Transpose} \circ \text{Reverse Each Row}
+
 ```
 
 **Proof by Example (3×3):**
@@ -93,6 +97,7 @@ Original:           Transpose:          Reverse Rows:
 | 7 | 8 | 9 |      | 3 | 6 | 9 |      | 9 | 6 | 3 |
 +---+---+---+      +---+---+---+      +---+---+---+
                                         (90° clockwise ✓)
+
 ```
 
 **Rotation Angles:**
@@ -104,6 +109,7 @@ Original:           Transpose:          Reverse Rows:
 \text{270° clockwise} &: (i, j) \to (n-1-j, i) \\
 \text{90° counter-clockwise} &: (i, j) \to (n-1-j, i)
 \end{aligned}
+
 ```
 
 ---
@@ -119,18 +125,21 @@ Original:           Transpose:          Reverse Rows:
 \text{left} &: \text{current left column} \\
 \text{right} &: \text{current right column}
 \end{aligned}
+
 ```
 
 **Total elements in $m \times n$ matrix:**
 
 ```math
 \text{total} = m \times n
+
 ```
 
 **Number of complete layers:**
 
 ```math
 \text{layers} = \left\lceil \min(m, n) / 2 \right\rceil
+
 ```
 
 ---
@@ -141,6 +150,7 @@ Original:           Transpose:          Reverse Rows:
 
 ```math
 T(m, n) = O(m \times n)
+
 ```
 
 **Staircase search (sorted rows & columns):**
@@ -149,6 +159,7 @@ Start at top-right or bottom-left:
 
 ```math
 \boxed{T(m, n) = O(m + n)}
+
 ```
 
 **Proof of O(m+n) for staircase search:**
@@ -196,6 +207,7 @@ Mathematical Verification:
 Original [0][3] = 4  →  New [3][3] = 4  ✓
 Original [3][0] = 13 →  New [0][0] = 13 ✓
 Formula: (i,j) → (j, n-1-i)
+
 ```
 
 ---
@@ -262,6 +274,7 @@ Input: m=4, n=4
 |  Continue with inner spiral...                                    |
 |  Result: [1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10]                 |
 +--------------------------------------------------------------------+
+
 ```
 
 ---
@@ -349,6 +362,7 @@ Algorithm:
 - If current > target: move left (eliminate column)
 - If current < target: move down (eliminate row)
 - Each step eliminates one row or column!
+
 ```
 
 ---
@@ -586,6 +600,7 @@ def transpose(matrix: list[list[int]]) -> list[list[int]]:
             result[j][i] = matrix[i][j]
     
     return result
+
 ```
 
 ---
@@ -644,6 +659,7 @@ def transpose(matrix: list[list[int]]) -> list[list[int]]:
    |       |      |       |      |       |
  Boundary Diagonal Trans- In-place Binary Staircase
  Tracking        pose  Markers  Search
+
 ```
 
 ---
@@ -711,6 +727,7 @@ Problem: Set Matrix Zeroes
    - Track if first row/col originally had zeros
    - Process inner matrix using markers
    - Handle first row/col separately
+
 ```
 
 ---
@@ -729,6 +746,7 @@ R_2 &= R_1 \circ R_1 = \text{180° rotation} \\
 R_3 &= R_1 \circ R_1 \circ R_1 = \text{270° rotation} \\
 R_4 &= R_1 \circ R_1 \circ R_1 \circ R_1 = R_0
 \end{aligned}
+
 ```
 
 **Properties:**
@@ -772,6 +790,7 @@ For Game of Life (cell dies/lives based on neighbors):
 for i in range(m):
     for j in range(n):
         board[i][j] >>= 1
+
 ```
 
 ### Diagonal Indexing
@@ -795,6 +814,7 @@ for i in range(m):
         
         # Anti-diagonal: i + j
         # anti_diagonals[i + j].append(matrix[i][j])
+
 ```
 
 ---

@@ -51,6 +51,7 @@ permalink: /16_recursion/03_memoization/
 
 ```math
 \text{memo}[args] = f(args)
+
 ```
 
 Return cached result on repeated calls.
@@ -215,6 +216,7 @@ def minPathSum(grid: list[list[int]]) -> int:
         return grid[r][c] + min(dp(r + 1, c), dp(r, c + 1))
     
     return dp(0, 0)
+
 ```
 
 ---
@@ -257,6 +259,7 @@ def solve(state):
         result = combine(result, solve(next_state))
     
     return result
+
 ```
 
 ---

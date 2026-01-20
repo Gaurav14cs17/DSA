@@ -70,6 +70,7 @@ For a set \(\{a_0, a_1, ..., a_{n-1}\}\), a subset \(S\) is represented by bitma
 
 ```math
 i \in S \Leftrightarrow (m >> i) \land 1 = 1
+
 ```
 
 #### 📊 Visual Example
@@ -89,6 +90,7 @@ Bit:       1   0   1   0
 
 Check: (10 >> 1) & 1 = 5 & 1 = 1 → banana ∈ S ✓
        (10 >> 0) & 1 = 10 & 1 = 0 → apple ∉ S ✓
+
 ```
 
 ---
@@ -99,6 +101,7 @@ For \(n\) elements, there are exactly \(2^n\) subsets (including empty set):
 
 ```math
 \text{Subsets} = \{0, 1, 2, ..., 2^n - 1\}
+
 ```
 
 #### The Algorithm
@@ -109,6 +112,7 @@ for mask in range(1 << n):  # 0 to 2^n - 1
     for i in range(n):
         if mask & (1 << i):
             # Element i is in this subset
+
 ```
 
 #### 📊 Complete Enumeration for n=3
@@ -124,6 +128,7 @@ mask | binary | subset
   5  |  101   | {a₀, a₂}
   6  |  110   | {a₁, a₂}
   7  |  111   | {a₀, a₁, a₂}
+
 ```
 
 ---
@@ -141,6 +146,7 @@ while sub > 0:
     # Process submask 'sub'
     sub = (sub - 1) & m
 # Don't forget to process empty set (0) if needed
+
 ```
 
 #### 🔍 Mathematical Proof
@@ -184,6 +190,7 @@ Step 7: sub = 0001 (1)
 
 Submasks: {1011, 1010, 1001, 1000, 0011, 0010, 0001, 0000}
           = {11, 10, 9, 8, 3, 2, 1, 0}
+
 ```
 
 #### ⏱️ Time Complexity
@@ -192,6 +199,7 @@ For all masks and their submasks:
 
 ```math
 \sum_{m=0}^{2^n-1} 2^{\text{popcount}(m)} = 3^n
+
 ```
 
 This is because each element has 3 choices: not in \(m\), in \(m\) but not in \(sub\), or in both.
@@ -204,6 +212,7 @@ Represent a set of lowercase letters using 26 bits:
 
 ```math
 \text{mask} = \sum_{c \in \text{word}} 2^{c - \text{'a'}}
+
 ```
 
 #### Use Cases
@@ -233,6 +242,7 @@ Checking "abc" and "def" have no common letters:
   mask_def = 0111000 (56)
   
   mask_abc & mask_def = 0 → No overlap! ✓
+
 ```
 
 ---
@@ -254,6 +264,7 @@ for mask in range(1 << n):
         if not (mask & (1 << i)):  # i not yet chosen
             new_mask = mask | (1 << i)
             dp[new_mask] = optimize(dp[new_mask], dp[mask] + cost(mask, i))
+
 ```
 
 #### Time Complexity
@@ -272,24 +283,28 @@ for mask in range(1 << n):
 
 ```math
 \text{dp}[\text{mask}][i] = \text{minimum cost to visit cities in mask, ending at } i
+
 ```
 
 #### Recurrence
 
 ```math
 \text{dp}[\text{mask}][i] = \min_{j \in \text{mask}, j \neq i} \left( \text{dp}[\text{mask} \setminus \{i\}][j] + \text{dist}[j][i] \right)
+
 ```
 
 #### Base Case
 
 ```math
 \text{dp}[1 << \text{start}][\text{start}] = 0
+
 ```
 
 #### Answer
 
 ```math
 \text{answer} = \min_{i} \left( \text{dp}[(1 << n) - 1][i] + \text{dist}[i][\text{start}] \right)
+
 ```
 
 ---
@@ -302,6 +317,7 @@ Partition array into \(k\) subsets of equal sum.
 
 ```math
 \text{dp}[\text{mask}] = \text{current bucket sum} \mod \text{target}
+
 ```
 
 If we can partition elements in mask into complete buckets:
@@ -333,6 +349,7 @@ If we can partition elements in mask into complete buckets:
                     ({})
 
 Arrows represent "is subset of" relation
+
 ```
 
 ### TSP State Transitions
@@ -358,6 +375,7 @@ dp[0001][0] = 0  (at city 0, visited {0})
                 +--→ dp[1101][2] = dp[1001][3] + dist(3,2)
 
 Final: dp[1111][i] + dist(i, 0) for all i
+
 ```
 
 ---
@@ -756,6 +774,7 @@ def maxStudents(seats: list[list[str]]) -> int:
         prev_dp = curr_dp
     
     return max(prev_dp.values()) if prev_dp else 0
+
 ```
 
 ---
@@ -796,6 +815,7 @@ def maxStudents(seats: list[list[str]]) -> int:
 |  Warning: n > 20 usually means TLE/MLE!                |
 |                                                         |
 +---------------------------------------------------------+
+
 ```
 
 ---
@@ -881,6 +901,7 @@ def maxStudents(seats: list[list[str]]) -> int:
 |  • n > 25: Look for different approach                |
 |                                                        |
 +--------------------------------------------------------+
+
 ```
 
 ---

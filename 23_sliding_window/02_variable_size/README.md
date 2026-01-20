@@ -111,6 +111,7 @@ for right in range(n):
     
     # Window is now valid (or empty)
     max_len = max(max_len, right - left + 1)
+
 ```
 
 #### 🔍 Why Shrink When Invalid?
@@ -134,6 +135,7 @@ for right in range(n):
         min_len = min(min_len, right - left + 1)  # Update first!
         remove(arr[left])
         left += 1
+
 ```
 
 #### 🔍 Why Shrink While Valid?
@@ -151,6 +153,7 @@ We want the **shortest** valid window. Once valid, we keep shrinking to find sho
 
 ```math
 \text{exactly}(k) = \text{atMost}(k) - \text{atMost}(k-1)
+
 ```
 
 #### 🔍 Proof
@@ -160,12 +163,14 @@ Let \(S_k\) = set of subarrays with exactly \(k\) property.
 ```math
 \text{atMost}(k) = |S_0| + |S_1| + ... + |S_k|
 \text{atMost}(k-1) = |S_0| + |S_1| + ... + |S_{k-1}|
+
 ```
 
 Subtracting:
 
 ```math
 \text{atMost}(k) - \text{atMost}(k-1) = |S_k| = \text{exactly}(k)
+
 ```
 
 ∎
@@ -173,6 +178,7 @@ Subtracting:
 #### Counting Subarrays in atMost
 
 When window \([left, right]\) is valid, count subarrays ending at `right`:
+
 ```
 \text{count} += right - left + 1
 
@@ -240,6 +246,7 @@ set = {c,a,b}, len=3
 ...continue...
 
 Maximum Length: 3
+
 ```
 
 ### Minimum Size Subarray Sum ≥ 7
@@ -287,6 +294,7 @@ Shrink: sum = 9-2 = 7 ≥ 7 ✓, min_len = 2
 Shrink: sum = 7-4 = 3 < 7 ✗
 
 Answer: 2 (subarray [4, 3])
+
 ```
 
 ### atMost(k) Counting
@@ -316,6 +324,7 @@ Window [2,3]: 2 > 1, shrink → [3]: count += 1
 atMost(1) = 5
 
 exactly(2) = atMost(2) - atMost(1) = 12 - 5 = 7
+
 ```
 
 ---
@@ -642,6 +651,7 @@ def balancedString(s: str) -> int:
             left += 1
     
     return min_length
+
 ```
 
 ---

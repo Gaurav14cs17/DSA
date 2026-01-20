@@ -37,6 +37,7 @@ permalink: /14_sorting/03_custom_sorting/
 
 ```math
 a \prec b \Leftrightarrow \text{key}(a) < \text{key}(b)
+
 ```
 
 Or use comparator function:
@@ -47,6 +48,7 @@ Or use comparator function:
 0 & a = b \\
 1 & a \succ b
 \end{cases}
+
 ```
 
 ---
@@ -57,6 +59,7 @@ Comparator must be transitive:
 
 ```math
 a \prec b \land b \prec c \Rightarrow a \prec c
+
 ```
 
 Violation causes undefined behavior!
@@ -69,6 +72,7 @@ Violation causes undefined behavior!
 
 ```math
 a \prec b \Leftrightarrow ab > ba \text{ (string comparison)}
+
 ```
 
 **Example:** "3" vs "30" → "330" > "303" → 3 comes first.
@@ -81,6 +85,7 @@ a \prec b \Leftrightarrow ab > ba \text{ (string comparison)}
 
 ```math
 \text{key}(x) = (\text{key}_1(x), \text{key}_2(x), \ldots)
+
 ```
 
 Python: Use tuple as sort key.
@@ -219,6 +224,7 @@ def hIndex(citations: list[int]) -> int:
             break
     
     return h
+
 ```
 
 ---
@@ -256,6 +262,7 @@ Custom Sort
      +-- Relative order → Index mapping
      |
      +-- After sort merge → Sort then iterate
+
 ```
 
 ---

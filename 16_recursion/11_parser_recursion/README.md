@@ -116,6 +116,7 @@ Grammar:
   Expression → Term (('+' | '-') Term)*
   Term       → Factor (('*' | '/') Factor)*
   Factor     → Number | '(' Expression ')'
+
 ```
 
 ---
@@ -142,6 +143,7 @@ Highest precedence → innermost rule (evaluated first)
 
 1 + 2 * 3 = 1 + (2 * 3) = 7  ✓
             NOT (1 + 2) * 3 = 9  ✗
+
 ```
 
 ---
@@ -238,6 +240,7 @@ def calculate(s: str) -> int:
     """Wrapper function."""
     parser = ExpressionParser(s)
     return parser.parse()
+
 ```
 
 ### Full Calculator with Parentheses
@@ -333,6 +336,7 @@ class FullCalculator:
     def skip_spaces(self):
         while self.pos < len(self.s) and self.s[self.pos] == ' ':
             self.pos += 1
+
 ```
 
 ### Decode String Parser
@@ -386,6 +390,7 @@ def decodeString(s: str) -> str:
     
     decoded, _ = parse(0)
     return decoded
+
 ```
 
 ### Lisp Expression Parser
@@ -486,6 +491,7 @@ def parseLisp(expression: str) -> int:
     
     result, _ = parse(0, {})
     return result
+
 ```
 
 ### Nested List Parser
@@ -552,6 +558,7 @@ def deserializeNestedList(s: str) -> 'NestedInteger':
     
     result, _ = parse(0)
     return result
+
 ```
 
 ### S-Expression Parser
@@ -615,6 +622,7 @@ def parseAtom(s: str) -> list:
     
     result, _ = parse(0)
     return result
+
 ```
 
 ### JSON Parser
@@ -717,6 +725,7 @@ def parseJSON(s: str) -> any:
     
     result, _ = parse(0)
     return result
+
 ```
 
 ### Valid Parentheses Variants
@@ -806,6 +815,7 @@ def longestValidParentheses(s: str) -> int:
             max_len = max(max_len, parse(i))
     
     return max_len
+
 ```
 
 ---
@@ -856,6 +866,7 @@ Parser Recursion Patterns
          +-- Grammar-driven Parsing
              +-- One function per rule
              +-- Mutual recursion between rules
+
 ```
 
 ---
@@ -899,6 +910,7 @@ class RecursiveDescentParser:
         """Skip spaces."""
         while self.peek() == ' ':
             self.pos += 1
+
 ```
 
 ---

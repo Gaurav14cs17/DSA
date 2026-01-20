@@ -248,15 +248,18 @@ permalink: /30_number_theory/
 ## 📐 Core Algorithms Reference
 
 ### 1. Euclidean Algorithm
+
 ```python
 def gcd(a, b):
     """Greatest Common Divisor - O(log min(a,b))"""
     while b:
         a, b = b, a % b
     return a
+
 ```
 
 ### 2. Fast Modular Exponentiation
+
 ```python
 def pow_mod(base, exp, mod):
     """Compute (base^exp) % mod - O(log exp)"""
@@ -268,9 +271,11 @@ def pow_mod(base, exp, mod):
         base = (base * base) % mod
         exp >>= 1
     return result
+
 ```
 
 ### 3. Sieve of Eratosthenes
+
 ```python
 def sieve(n):
     """Find all primes up to n - O(n log log n)"""
@@ -283,9 +288,11 @@ def sieve(n):
                 is_prime[j] = False
     
     return [i for i in range(n + 1) if is_prime[i]]
+
 ```
 
 ### 4. Euler's Totient Function
+
 ```python
 def phi(n):
     """Count numbers coprime to n - O(√n)"""
@@ -300,6 +307,7 @@ def phi(n):
     if n > 1:
         result -= result // n
     return result
+
 ```
 
 ---
@@ -308,20 +316,26 @@ def phi(n):
 
 ### Fundamental Theorem of Arithmetic
 **Every integer > 1 has a unique prime factorization**
+
 ```
 n = p₁^a₁ × p₂^a₂ × ... × pₖ^aₖ
+
 ```
 
 ### Fermat's Little Theorem
 **If p is prime and gcd(a,p) = 1:**
+
 ```
 a^(p-1) ≡ 1 (mod p)
+
 ```
 
 ### Euler's Theorem
 **If gcd(a,n) = 1:**
+
 ```
 a^φ(n) ≡ 1 (mod n)
+
 ```
 
 ### Chinese Remainder Theorem
@@ -329,8 +343,10 @@ a^φ(n) ≡ 1 (mod n)
 
 ### Wilson's Theorem
 **p is prime iff:**
+
 ```
 (p-1)! ≡ -1 (mod p)
+
 ```
 
 ---
@@ -447,6 +463,7 @@ Week 7-8: Mastery
 +-- Catalan numbers applications
 +-- Multiplicative functions
 +-- Competition-level problems
+
 ```
 
 ---

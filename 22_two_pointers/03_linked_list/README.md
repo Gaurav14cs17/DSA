@@ -91,6 +91,7 @@ Head ------○------○------○------●
                 ╲╱   ╲  ╱
                  ●----●
                    x (meeting point)
+
 ```
 
 #### 🔍 Proof: They Will Meet
@@ -125,6 +126,7 @@ Let slow have traveled \(s\) steps:
 
 ```math
 s = \mu + x + a\lambda
+
 ```
 
 where \(a\) is the number of complete cycles slow made.
@@ -133,6 +135,7 @@ Fast traveled \(2s\) steps:
 
 ```math
 2s = \mu + x + b\lambda
+
 ```
 
 where \(b\) is the number of complete cycles fast made.
@@ -141,6 +144,7 @@ Subtracting:
 
 ```math
 s = (b - a)\lambda = k\lambda
+
 ```
 
 for some positive integer \(k\).
@@ -150,6 +154,7 @@ So:
 ```math
 \mu + x + a\lambda = k\lambda
 \mu + x = (k - a)\lambda = m\lambda
+
 ```
 
 for some non-negative integer \(m\).
@@ -167,12 +172,14 @@ From meeting point (distance \(x\) from cycle start):
 
 ```math
 \text{Position after } \mu \text{ steps} = x + \mu \pmod{\lambda}
+
 ```
 
 Since \(\mu + x = m\lambda\):
 
 ```math
 x + \mu \equiv 0 \pmod{\lambda}
+
 ```
 
 This is exactly the cycle start position! ∎
@@ -215,6 +222,7 @@ This is exactly the cycle start position! ∎
 |  They meet at cycle start! ∎                                |
 |                                                              |
 +--------------------------------------------------------------+
+
 ```
 
 ---
@@ -288,6 +296,7 @@ Step 5:  🐢→6    🐇→→5 (wrapped)
 Step 6:  🐢→7    🐇→→7
 
 🐢 = 🐇 at node 7! Cycle detected! ✓
+
 ```
 
 ### Finding Cycle Start
@@ -310,6 +319,7 @@ Verification:
 x = 3 (steps from 4 to 7 in cycle)
 λ = 6 (cycle: 4→5→6→7→8→9→4)
 μ + x = 6 = λ ✓
+
 ```
 
 ### Finding Middle
@@ -333,6 +343,7 @@ List: 1 → 2 → 3 → 4 → 5 → 6
 🐇.next is end (6.next = null)
 
 Middle = 🐢 = 4 (second of two middles) ✓
+
 ```
 
 ### List Intersection
@@ -349,6 +360,7 @@ Pointer B path: 3 → 4 → 5 → 6 → 7 → null → 1 → 2 → [5]
 
 Distance traveled by each: 2 + 3 + 2 = 7 steps
 They meet at intersection node 5 ✓
+
 ```
 
 ---
@@ -678,6 +690,7 @@ def sortList(head: ListNode) -> ListNode:
     curr.next = left or right
     
     return dummy.next
+
 ```
 
 ---
@@ -783,6 +796,7 @@ def sortList(head: ListNode) -> ListNode:
 |  | Hash Set    | O(n)   | O(n)  |                           |
 |                                                              |
 +--------------------------------------------------------------+
+
 ```
 
 ---

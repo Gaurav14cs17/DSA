@@ -50,6 +50,7 @@ class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+
 ```
 
 ### 2️⃣ Recursion Pattern
@@ -57,6 +58,7 @@ class ListNode:
 ```
 Base Case: head is None or head.next is None
 Recursive Case: Process head, recurse on head.next
+
 ```
 
 ---
@@ -123,6 +125,7 @@ def getNth(head: ListNode, n: int) -> ListNode:
     if n == 0:
         return head
     return getNth(head.next, n - 1)
+
 ```
 
 ### Reverse Operations
@@ -205,6 +208,7 @@ def reverseKGroup(head: ListNode, k: int) -> ListNode:
     head.next = reverseKGroup(curr, k)
     
     return prev
+
 ```
 
 ### Merge and Combine
@@ -280,6 +284,7 @@ def addTwoNumbers(l1: ListNode, l2: ListNode, carry: int = 0) -> ListNode:
     )
     
     return node
+
 ```
 
 ### Delete and Remove
@@ -336,6 +341,7 @@ def removeNthFromEnd(head: ListNode, n: int) -> ListNode:
     
     _, result = remove(head)
     return result
+
 ```
 
 ### Check Properties
@@ -384,6 +390,7 @@ def hasCycle(head: ListNode, visited: set = None) -> bool:
     
     visited.add(id(head))
     return hasCycle(head.next, visited)
+
 ```
 
 ---

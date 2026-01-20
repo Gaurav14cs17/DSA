@@ -45,6 +45,7 @@ Rotated by 2: $[4, 5, 1, 2, 3]$
 ```math
 \text{If } arr[left] \leq arr[mid]: \text{left half sorted}
 \text{Otherwise: right half sorted}
+
 ```
 
 ---
@@ -63,6 +64,7 @@ Worst case: all elements same except one.
 
 ```math
 T = O(n) \text{ worst case}
+
 ```
 
 **Handle:** When $arr[left] = arr[mid] = arr[right]$, shrink both ends.
@@ -208,6 +210,7 @@ def findRotationCount(nums: list[int]) -> int:
             right = mid
     
     return left
+
 ```
 
 ---
@@ -240,6 +243,7 @@ Rotated Array
       +-- Find minimum → Compare mid with right
       |
       +-- With duplicates → Shrink when equal
+
 ```
 
 ---

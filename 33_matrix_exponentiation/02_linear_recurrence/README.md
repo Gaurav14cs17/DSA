@@ -67,6 +67,7 @@ permalink: /33_matrix_exponentiation/02_linear_recurrence/
 
 ```math
 a_n = c_1 a_{n-1} + c_2 a_{n-2} + \cdots + c_k a_{n-k}
+
 ```
 
 **Examples:**
@@ -95,6 +96,7 @@ def fibonacci(n: int, mod: int = 10**9 + 7) -> int:
     M = [[1, 1], [1, 0]]
     result = matrix_power(M, n - 1, mod)
     return result[0][0]
+
 ```
 
 ### Implementation 2: Tribonacci
@@ -121,6 +123,7 @@ def tribonacci(n: int, mod: int = 10**9 + 7) -> int:
     
     # T(2)=1, T(1)=1, T(0)=0
     return (result[0][0] + result[0][1]) % mod
+
 ```
 
 ### Implementation 3: General k-term Recurrence
@@ -159,6 +162,7 @@ def linear_recurrence(coeffs: list[int], initial: list[int],
         ans %= mod
     
     return ans
+
 ```
 
 ---
@@ -166,12 +170,14 @@ def linear_recurrence(coeffs: list[int], initial: list[int],
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
+
 | # | Problem | Recurrence | Solution |
 |:-:|---------|-----------|----------|
 | 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Fibonacci | Matrix power |
 | 509 | [Fibonacci](https://leetcode.com/problems/fibonacci-number/) | F(n)=F(n-1)+F(n-2) | 2×2 matrix |
 
 ### 🟡 Medium
+
 | # | Problem | Type | Matrix Size |
 |:-:|---------|------|-------------|
 | 1137 | [Tribonacci](https://leetcode.com/problems/n-th-tribonacci-number/) | 3-term | 3×3 |
@@ -179,6 +185,7 @@ def linear_recurrence(coeffs: list[int], initial: list[int],
 | 1220 | [Vowel Permutation](https://leetcode.com/problems/count-vowels-permutation/) | Transitions | 5×5 |
 
 ### 🔴 Hard
+
 | # | Problem | Type | Complexity |
 |:-:|---------|------|-----------|
 | 935 | [Knight Dialer](https://leetcode.com/problems/knight-dialer/) | Graph transitions | 10×10 |

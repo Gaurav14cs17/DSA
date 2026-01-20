@@ -45,6 +45,7 @@ x \equiv a_2 \pmod{m_2} \\
 \vdots \\
 x \equiv a_k \pmod{m_k}
 \end{cases}
+
 ```
 
 has a unique solution modulo $M = m\_1 \cdot m\_2 \cdots m\_k$.
@@ -57,6 +58,7 @@ Let $M\_i = M / m\_i$ and $y\_i = M\_i^{-1} \pmod{m\_i}$
 
 ```math
 x = \sum_{i=1}^{k} a_i \cdot M_i \cdot y_i \pmod{M}
+
 ```
 
 ---
@@ -67,6 +69,7 @@ For $x \equiv a\_1 \pmod{m\_1}$ and $x \equiv a\_2 \pmod{m\_2}$:
 
 ```math
 x = a_1 + m_1 \cdot \frac{(a_2 - a_1) \cdot m_1^{-1} \pmod{m_2}}{1} \pmod{m_1 \cdot m_2}
+
 ```
 
 ---
@@ -97,6 +100,7 @@ x = a_1 + m_1 \cdot \frac{(a_2 - a_1) \cdot m_1^{-1} \pmod{m_2}}{1} \pmod{m_1 \c
 |                                                                 |
 | VERIFY: 23 mod 3 = 2 ✓, 23 mod 5 = 3 ✓, 23 mod 7 = 2 ✓        |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -163,6 +167,7 @@ def crt_two_moduli(a1: int, m1: int, a2: int, m2: int) -> tuple[int, int]:
 
 # Example usage
 print(chinese_remainder([2, 3, 2], [3, 5, 7]))  # 23
+
 ```
 
 ---

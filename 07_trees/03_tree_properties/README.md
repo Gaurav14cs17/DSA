@@ -40,6 +40,7 @@ h(node) = \begin{cases}
 0 & \text{if node is null} \\
 1 + \max(h(left), h(right)) & \text{otherwise}
 \end{cases}
+
 ```
 
 ---
@@ -50,6 +51,7 @@ h(node) = \begin{cases}
 
 ```math
 \text{maxDepth} = h(root)
+
 ```
 
 **Min Depth:** Shortest root-to-leaf path.
@@ -60,6 +62,7 @@ h(node) = \begin{cases}
 1 + \text{minDepth}(child) & \text{if one child null} \\
 1 + \min(\text{minDepth}(left), \text{minDepth}(right)) & \text{otherwise}
 \end{cases}
+
 ```
 
 ---
@@ -70,6 +73,7 @@ h(node) = \begin{cases}
 
 ```math
 |h(left) - h(right)| \leq 1 \quad \forall \text{nodes}
+
 ```
 
 **AVL Property:** Self-balancing BST maintains this.
@@ -82,6 +86,7 @@ h(node) = \begin{cases}
 
 ```math
 \text{diameter} = \max_{v \in T} (h(v.left) + h(v.right))
+
 ```
 
 **Key Insight:** Diameter passes through some node as the highest point.
@@ -94,12 +99,14 @@ h(node) = \begin{cases}
 
 ```math
 \text{symmetric}(T) \iff \text{mirror}(T_L, T_R)
+
 ```
 
 Where:
 
 ```math
 \text{mirror}(A, B) = (A.val = B.val) \land \text{mirror}(A_L, B_R) \land \text{mirror}(A_R, B_L)
+
 ```
 
 ---
@@ -112,12 +119,14 @@ Where:
 
 ```math
 2^h \leq n \leq 2^{h+1} - 1
+
 ```
 
 **Counting Nodes:** Use binary search on last level.
 
 ```math
 \text{Time: } O(\log^2 n)
+
 ```
 
 ---
@@ -279,6 +288,7 @@ def countNodes(root: TreeNode) -> int:
             right = mid - 1
     
     return 2**depth - 1 + left
+
 ```
 
 ---
@@ -342,6 +352,7 @@ Node 5: diameter = 0
 
 Global maximum diameter = 2
 Path: 4 → 2 → 1 (length 2 edges)
+
 ```
 
 ### Balanced Binary Tree (#110)
@@ -373,6 +384,7 @@ Node 3:
   height = 2
 
 Result: Balanced ✓
+
 ```
 
 ### Symmetric Tree (#101)
@@ -404,6 +416,7 @@ Non-symmetric example:
 
 left.right(3) vs right.right(3) ✗
 Not mirror positions → Not symmetric
+
 ```
 
 ### Count Complete Tree Nodes (#222)
@@ -431,6 +444,7 @@ Nodes in last level: 3
 Total: 3 + 3 = 6
 
 Time: O(log²n) - O(log n) binary search × O(log n) path check
+
 ```
 
 ---
@@ -453,6 +467,7 @@ Time: O(log²n) - O(log n) binary search × O(log n) path check
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **GeeksforGeeks** | Tree height | [Tutorial](https://www.geeksforgeeks.org/write-a-c-program-to-find-the-maximum-depth-or-height-of-a-tree/) |
@@ -461,6 +476,7 @@ Time: O(log²n) - O(log n) binary search × O(log n) path check
 | **GeeksforGeeks** | Symmetric tree | [Tutorial](https://www.geeksforgeeks.org/symmetric-tree-tree-which-is-mirror-image-of-itself/) |
 
 ### 📺 Video Tutorials
+
 | Creator | Topic | Link |
 |---------|-------|------|
 | **NeetCode** | Diameter of Tree | [YouTube](https://www.youtube.com/watch?v=bkxqA8Rfv04) |
@@ -469,12 +485,14 @@ Time: O(log²n) - O(log n) binary search × O(log n) path check
 | **Back To Back SWE** | Tree properties | [YouTube](https://www.youtube.com/watch?v=H5JubkIy_p8) |
 
 ### 🎯 Practice Collections
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Tree tag | [Problems](https://leetcode.com/tag/tree/) |
 | **HackerRank** | Tree challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=trees) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **AVL Trees** | Self-balancing BST | [Tutorial](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/) |
@@ -482,6 +500,7 @@ Time: O(log²n) - O(log n) binary search × O(log n) path check
 | **Complete vs Perfect** | Tree type differences | [Article](https://www.geeksforgeeks.org/complete-binary-tree/) |
 
 ### 📊 Visualization
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo** | Tree properties | [Website](https://visualgo.net/en/bst) |

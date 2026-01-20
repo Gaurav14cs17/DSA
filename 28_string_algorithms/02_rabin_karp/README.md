@@ -104,9 +104,11 @@ where:
 - p = prime base (31 for lowercase, 53 for mixed case)
 - M = large prime modulus (10^9+7 or 10^9+9)
 - s[i] = character value (typically ASCII)
+
 ```
 
 **Example:**
+
 ```
 String: "abc"
 p = 31, M = 10^9+7
@@ -114,6 +116,7 @@ p = 31, M = 10^9+7
 h("abc") = (97·31² + 98·31 + 99) mod M
          = (93367 + 3038 + 99) mod M
          = 96504
+
 ```
 
 ### Rolling Hash Property
@@ -121,14 +124,17 @@ h("abc") = (97·31² + 98·31 + 99) mod M
 **Key Innovation:** Update hash in O(1) when window slides.
 
 **Formula:**
+
 ```
 Given: h(s[i..i+m-1])
 Want: h(s[i+1..i+m])
 
 h(s[i+1..i+m]) = ((h(s[i..i+m-1]) - s[i]·p^(m-1)) · p + s[i+m]) mod M
+
 ```
 
 **Proof:**
+
 ```
 h(s[i..i+m-1]) = s[i]·p^(m-1) + s[i+1]·p^(m-2) + ... + s[i+m-1]·p^0
 
@@ -141,6 +147,7 @@ Multiply by p:
 Add s[i+m]:
     = s[i+1]·p^(m-1) + ... + s[i+m-1]·p^1 + s[i+m]·p^0
     = h(s[i+1..i+m])
+
 ```
 
 ### Collision Probability
@@ -152,12 +159,15 @@ P(h(s₁) = h(s₂) | s₁ ≠ s₂) ≈ |Σ|·m / M
 
 For m = 100, |Σ| = 26, M = 10^9+7:
 P(collision) ≈ 2600 / 10^9 ≈ 2.6 × 10^-6 (very small!)
+
 ```
 
 **Double Hashing:**
+
 ```
 Use two independent hash functions h₁ and h₂
 P(both collide) ≈ 1/(M₁·M₂) ≈ 10^-18 (negligible!)
+
 ```
 
 ---
@@ -243,6 +253,7 @@ rk = RabinKarp()
 text = "AABAACAADAABAABA"
 pattern = "AABA"
 print(rk.search(text, pattern))  # [0, 9, 12]
+
 ```
 
 ### Double Hashing Implementation
@@ -318,6 +329,7 @@ class DoubleHashRabinKarp:
                     matches.append(i - m + 1)
         
         return matches
+
 ```
 
 ---
@@ -356,6 +368,7 @@ MOD1 = 10**9 + 7
 MOD2 = 10**9 + 9
 BASE1 = 31
 BASE2 = 53
+
 ```
 
 ### Common Patterns
@@ -384,6 +397,7 @@ def check_length(L):
             return True
         hashes.add(h)
     return False
+
 ```
 
 ---
@@ -456,14 +470,17 @@ This section contains **50+ problems** across **6 categories**:
 ### Hash Function Quality
 
 **Good hash properties:**
+
 ```python
 1. Uniform distribution: P(h(x) = v) ≈ 1/M for all v
 2. Avalanche effect: Small change → large hash change
 3. Fast computation: O(1) per character
 4. Rolling property: O(1) window update
+
 ```
 
 **Common pitfalls:**
+
 ```python
 # ❌ Wrong: Negative hash values
 hash = (hash - old * power) % MOD
@@ -476,6 +493,7 @@ hash = hash * BASE + char
 
 # ✓ Correct: Modulo at each step
 hash = (hash * BASE % MOD + char) % MOD
+
 ```
 
 ---
@@ -487,6 +505,7 @@ hash = (hash * BASE % MOD + char) % MOD
 **Question:** How many strings before collision likely?
 
 **Answer:**
+
 ```
 Expected collisions with n strings:
 E[collisions] ≈ n²/(2M)
@@ -496,6 +515,7 @@ n ≈ √(2M·ln(2)) ≈ 1.18√M
 
 For M = 10^9:
 n ≈ 37,000 strings before 50% collision chance
+
 ```
 
 ### Hash Space Analysis
@@ -511,26 +531,33 @@ Expected collisions per 10^6 strings: ~5 × 10^-7 (negligible)
 
 # Triple hash (overkill)
 Expected collisions: ~10^-25
+
 ```
 
 ### Rolling Hash Variants
 
 **1. Cyclic polynomial:**
+
 ```python
 h = (h << 1) | (h >> (bits - 1))  # Rotate left
 h ^= char
+
 ```
 
 **2. Buzhash:**
+
 ```python
 h ^= table[s[i]]
 h = rotate_left(h, 1)
+
 ```
 
 **3. Rabin fingerprint:**
+
 ```python
 # Uses irreducible polynomial over GF(2^k)
 h = (h * x + char) mod P(x)
+
 ```
 
 ---
@@ -540,24 +567,30 @@ h = (h * x + char) mod P(x)
 ### Fermat's Little Theorem
 
 **Theorem:** If p is prime and gcd(a, p) = 1:
+
 ```
 a^(p-1) ≡ 1 (mod p)
+
 ```
 
 **Application:** Compute modular inverse
+
 ```python
 # To divide by a mod p:
 inv_a = pow(a, p - 2, p)  # Uses Fermat
 result = (b * inv_a) % p   # Equivalent to b/a mod p
+
 ```
 
 ### Chinese Remainder Theorem
 
 **Use in double hashing:**
+
 ```
 If gcd(M1, M2) = 1:
 h1 ≡ v (mod M1) and h2 ≡ v (mod M2)
 determines unique v (mod M1·M2)
+
 ```
 
 ---

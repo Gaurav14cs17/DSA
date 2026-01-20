@@ -39,6 +39,7 @@ permalink: /11_tries/02_word_search/
 
 ```math
 T = O(26^{\text{dots}} \times L)
+
 ```
 
 ---
@@ -49,6 +50,7 @@ T = O(26^{\text{dots}} \times L)
 
 ```math
 T = O(m \times n \times 4^L)
+
 ```
 
 Where:
@@ -66,6 +68,7 @@ Where:
 
 ```math
 \text{If prefix not in trie} \Rightarrow \text{stop exploring}
+
 ```
 
 ---
@@ -209,6 +212,7 @@ def wordBreak(s: str, wordDict: list[str]) -> bool:
                 dp[j + 1] = True
     
     return dp[n]
+
 ```
 
 ---
@@ -243,6 +247,7 @@ Word Search Problem
         +-- Wildcards → Trie + Branching
         |
         +-- Word segmentation → Trie + DP
+
 ```
 
 ---

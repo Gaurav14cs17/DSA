@@ -47,6 +47,7 @@ Find smallest index where $arr[i] \geq target$:
 
 ```math
 \text{lower\_bound} = \min\{i : arr[i] \geq target\}
+
 ```
 
 ---
@@ -57,6 +58,7 @@ Find smallest index where $arr[i] > target$:
 
 ```math
 \text{upper\_bound} = \min\{i : arr[i] > target\}
+
 ```
 
 ---
@@ -65,6 +67,7 @@ Find smallest index where $arr[i] > target$:
 
 ```math
 \text{count}(target) = \text{upper\_bound} - \text{lower\_bound}
+
 ```
 
 ---
@@ -215,6 +218,7 @@ def singleNonDuplicate(nums: list[int]) -> int:
             right = mid
     
     return nums[left]
+
 ```
 
 ---

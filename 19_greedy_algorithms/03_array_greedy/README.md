@@ -37,6 +37,7 @@ Track furthest reachable position:
 
 ```math
 \text{max\_reach} = \max(\text{max\_reach}, i + nums[i])
+
 ```
 
 ---
@@ -172,6 +173,7 @@ def maxProfit(prices: list[int]) -> int:
         if prices[i] > prices[i - 1]:
             profit += prices[i] - prices[i - 1]
     return profit
+
 ```
 
 ---

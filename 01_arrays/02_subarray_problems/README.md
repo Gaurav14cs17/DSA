@@ -61,12 +61,14 @@ A subarray is defined by choosing:
 
 ```math
 \text{Count} = \sum_{i=0}^{n-1} (n-i) = n + (n-1) + \cdots + 1 = \frac{n(n+1)}{2}
+
 ```
 
 **Alternative Proof (Choose 2 endpoints):**
 
 ```math
 \binom{n+1}{2} = \frac{(n+1)!}{2!(n-1)!} = \frac{(n+1) \cdot n}{2} = \frac{n(n+1)}{2}
+
 ```
 
 ---
@@ -79,6 +81,7 @@ A subarray is defined by choosing:
 
 ```math
 \boxed{M[i] = \max(A[i], \; M[i-1] + A[i])}
+
 ```
 
 Where $M[i]$ = maximum subarray sum ending at index $i$.
@@ -91,12 +94,14 @@ Let $S\_{i}$ be the maximum sum of subarray ending at index $i$.
 
 ```math
 S_i = A[i]
+
 ```
 
 **Case 2:** Subarray extends from some $j < i$
 
 ```math
 S_i = S_{i-1} + A[i]
+
 ```
 
 **Decision:** $S\_i = \max(\text{Case 1}, \text{Case 2}) = \max(A[i], S\_{i-1} + A[i])$
@@ -105,6 +110,7 @@ S_i = S_{i-1} + A[i]
 
 ```math
 A[i] > S_{i-1} + A[i] \iff S_{i-1} < 0
+
 ```
 
 **Insight:** Start new subarray when previous sum is negative.
@@ -150,6 +156,7 @@ Input: [-2, 1, -3, 4, -1, 2, 1, -5, 4]
 +=======+=======+==============================================================+
 
 Answer: max_so_far = 6  (subarray [4, -1, 2, 1])
+
 ```
 
 ---
@@ -165,6 +172,7 @@ Answer: max_so_far = 6  (subarray [4, -1, 2, 1])
 \text{max\_prod}[i] &= \text{Maximum product ending at } i \\
 \text{min\_prod}[i] &= \text{Minimum product ending at } i
 \end{aligned}
+
 ```
 
 **Recurrence:**
@@ -172,6 +180,7 @@ Answer: max_so_far = 6  (subarray [4, -1, 2, 1])
 ```math
 \boxed{\text{max\_prod}[i] = \max(A[i], \; A[i] \times \text{max\_prod}[i-1], \; A[i] \times \text{min\_prod}[i-1])}
 \boxed{\text{min\_prod}[i] = \min(A[i], \; A[i] \times \text{max\_prod}[i-1], \; A[i] \times \text{min\_prod}[i-1])}
+
 ```
 
 **Why track minimum?**
@@ -206,6 +215,7 @@ Input: [2, 3, -2, 4]
 +----------------------------------------------------------------------------+
 
 Answer: 6 (subarray [2, 3])
+
 ```
 
 ---
@@ -216,6 +226,7 @@ Answer: 6 (subarray [2, 3])
 
 ```math
 \text{sum}(i, j) = k \iff P[j] - P[i-1] = k \iff P[i-1] = P[j] - k
+
 ```
 
 **Algorithm:** At each index $j$, count how many previous prefix sums equal $P[j] - k$.
@@ -224,6 +235,7 @@ Answer: 6 (subarray [2, 3])
 
 ```math
 \text{count} = \sum_{j=0}^{n-1} \text{freq}[P[j] - k]
+
 ```
 
 ```
@@ -233,6 +245,7 @@ Target k = 3
 For j=3: P[3]=3, P[3]-k=0 exists once → count += 1
 For j=5: P[5]=2, P[5]-k=-1 exists 0 times
 For j=6: P[6]=4, P[6]-k=1 exists twice → count += 2
+
 ```
 
 ---
@@ -328,6 +341,7 @@ def minSubArrayLen(target: int, nums: list[int]) -> int:
             left += 1
     
     return min_len if min_len != float('inf') else 0
+
 ```
 
 ---
@@ -378,6 +392,7 @@ def minSubArrayLen(target: int, nums: list[int]) -> int:
     |         |     |         |
  Kadane   min/max  Prefix   Prefix+Mod
          tracking  +Hash
+
 ```
 
 ---
@@ -439,6 +454,7 @@ def minSubArrayLen(target: int, nums: list[int]) -> int:
    - Product instead of sum (needs min tracking)
 
 ✅ Use modified versions or different approaches
+
 ```
 
 ---
@@ -457,6 +473,7 @@ i=2: n-2 choices
 i=n-1: 1 choice
 
 Total = n + (n-1) + ... + 1 = n(n+1)/2
+
 ```
 
 ### Kadane's Correctness Proof
@@ -475,6 +492,7 @@ Total = n + (n-1) + ... + 1 = n(n+1)/2
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **Kadane's Algorithm** | Maximum subarray problem | [Wikipedia](https://en.wikipedia.org/wiki/Maximum_subarray_problem) |
@@ -483,6 +501,7 @@ Total = n + (n-1) + ... + 1 = n(n+1)/2
 | **Sliding Window Pattern** | Comprehensive guide | [LeetCode Discuss](https://leetcode.com/discuss/study-guide/657507/) |
 
 ### 🎥 Video Tutorials
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **CS Dojo** | Kadane's algorithm explained | [YouTube](https://www.youtube.com/watch?v=86CQq3pKSUw) |
@@ -491,6 +510,7 @@ Total = n + (n-1) + ... + 1 = n(n+1)/2
 | **Abdul Bari** | Dynamic programming basics | [YouTube](https://www.youtube.com/watch?v=nqowUJzG-iM) |
 
 ### 📝 Interactive Learning
+
 | Platform | Problem Set | Link |
 |----------|-------------|------|
 | **LeetCode** | Sliding window tag | [Problems](https://leetcode.com/tag/sliding-window/) |
@@ -499,6 +519,7 @@ Total = n + (n-1) + ... + 1 = n(n+1)/2
 | **Codeforces** | DP problems | [Problemset](https://codeforces.com/problemset?tags=dp) |
 
 ### 🔬 Advanced Topics
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **CLRS Chapter 4** | Divide and conquer max subarray | [MIT](https://mitpress.mit.edu/books/introduction-algorithms) |
@@ -506,6 +527,7 @@ Total = n + (n-1) + ... + 1 = n(n+1)/2
 | **CP-Algorithms** | Various array techniques | [Website](https://cp-algorithms.com/) |
 
 ### 🎯 Problem Collections
+
 | Collection | Focus | Link |
 |-----------|-------|------|
 | **NeetCode 150** | Curated interview problems | [List](https://neetcode.io/) |
@@ -554,6 +576,7 @@ for stock_value in prices:
     # Should I keep my current portfolio or start fresh?
     portfolio = max(stock_value, portfolio + stock_value)
     best_ever = max(best_ever, portfolio)
+
 ```
 
 ### The Power of Prefix Sums
@@ -568,6 +591,7 @@ sum(i, j) = prefix[j] - prefix[i]
 Want: sum = k
 So: prefix[j] - prefix[i] = k
     prefix[i] = prefix[j] - k  ← Store in hash map!
+
 ```
 
 ---
@@ -606,6 +630,7 @@ Kadane's:
 for i in range(n):
     max_ending = max(arr[i], max_ending + arr[i])
 # Total: O(n) ✨
+
 ```
 
 ---

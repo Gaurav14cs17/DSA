@@ -33,6 +33,7 @@ nav_order: 4
 For string s of length n, the **suffix array SA** is an array of integers representing the starting positions of suffixes in lexicographical order.
 
 **Example:**
+
 ```
 String: s = "banana$"
 Suffixes:
@@ -54,6 +55,7 @@ Sorted suffixes:
   2: nana$
 
 SA = [6, 5, 3, 1, 0, 4, 2]
+
 ```
 
 ### LCP Array Definition
@@ -71,6 +73,7 @@ LCP[5] = 0  (banana$ vs na$)
 LCP[6] = 2  (na$ vs nana$) → "na"
 
 LCP = [0, 0, 1, 3, 0, 0, 2]
+
 ```
 
 ### Key Properties
@@ -148,6 +151,7 @@ s = "banana"
 sa = build_suffix_array(s)
 print(f"Suffix Array: {sa}")
 # Output: [5, 3, 1, 0, 4, 2]
+
 ```
 
 ### Kasai's LCP Algorithm (O(n))
@@ -194,6 +198,7 @@ s = "banana"
 sa = build_suffix_array(s)
 lcp = kasai_lcp(s, sa)
 print(f"LCP Array: {lcp}")
+
 ```
 
 ### Pattern Matching with Suffix Array
@@ -253,6 +258,7 @@ s = "banana"
 sa = build_suffix_array(s)
 matches = pattern_match_sa(s, sa, "ana")
 print(f"Pattern 'ana' found at: {matches}")  # [1, 3]
+
 ```
 
 ---
@@ -290,6 +296,7 @@ def longest_repeated_substring(s):
 # Example
 print(longest_repeated_substring("banana"))     # "ana"
 print(longest_repeated_substring("abcdefg"))    # ""
+
 ```
 
 ### 2. Number of Distinct Substrings
@@ -323,6 +330,7 @@ def count_distinct_substrings(s):
 # Example
 print(count_distinct_substrings("aaa"))      # 3: "a", "aa", "aaa"
 print(count_distinct_substrings("banana"))   # 15
+
 ```
 
 ### 3. Longest Common Substring (Two Strings)
@@ -365,6 +373,7 @@ def longest_common_substring(s1, s2):
 
 # Example
 print(longest_common_substring("abcdefgh", "xyzabc"))  # "abc"
+
 ```
 
 ### 4. K-Mismatch Problem
@@ -402,6 +411,7 @@ def count_k_mismatch(s, k):
                 count += 1
     
     return count
+
 ```
 
 ### 5. Circular String Matching
@@ -423,6 +433,7 @@ def circular_string_match(s, pattern):
     
     # Filter matches within first n characters
     return [m for m in matches if m < len(s)]
+
 ```
 
 ### 6. Palindrome Queries
@@ -470,6 +481,7 @@ def longest_palindrome_sa(s):
                 center = left_pos
     
     return s[center:center + max_len]
+
 ```
 
 ### 7. Burrows-Wheeler Transform
@@ -521,6 +533,7 @@ def inverse_bwt(bwt):
 bwt = burrows_wheeler_transform("banana")
 print(f"BWT: {bwt}")
 print(f"Original: {inverse_bwt(bwt)}")
+
 ```
 
 ---
@@ -528,6 +541,7 @@ print(f"Original: {inverse_bwt(bwt)}")
 ## 🧩 LeetCode Problems
 
 ### Medium
+
 | # | Problem | Difficulty | Pattern |
 |---|---------|------------|---------|
 | 1062 | [Longest Repeating Substring](https://leetcode.com/problems/longest-repeating-substring/) | 🟡 Medium | Max LCP |
@@ -535,6 +549,7 @@ print(f"Original: {inverse_bwt(bwt)}")
 | 1044 | [Longest Duplicate Substring](https://leetcode.com/problems/longest-duplicate-substring/) | 🟡 Medium | SA + binary search |
 
 ### Hard
+
 | # | Problem | Difficulty | Pattern |
 |---|---------|------------|---------|
 | 1923 | [Longest Common Subpath](https://leetcode.com/problems/longest-common-subpath/) | 🔴 Hard | Multiple LCS |
@@ -601,6 +616,7 @@ def sa_is(s):
     # from suffix_array import sais
     # return sais(s)
     pass
+
 ```
 
 ### Range Minimum Query on LCP
@@ -639,6 +655,7 @@ class LCPQuery:
         """Query min LCP in range [l, r]"""
         j = self.log[r - l + 1]
         return min(self.st[l][j], self.st[r - (1 << j) + 1][j])
+
 ```
 
 ---

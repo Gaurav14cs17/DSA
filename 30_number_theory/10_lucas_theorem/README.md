@@ -40,6 +40,7 @@ permalink: /30_number_theory/10_lucas_theorem/
 
 ```math
 \binom{m}{n} \equiv \prod_{i=0}^{k} \binom{m_i}{n_i} \pmod{p}
+
 ```
 
 where $m = \sum m\_i p^i$ and $n = \sum n\_i p^i$ are base-p representations.
@@ -136,6 +137,7 @@ print(lucas(1000000, 500000, 13))
 # 10 = 1010₂, 3 = 0011₂
 # 3 & 10 = 0010 ≠ 3, so C(10, 3) = 120 is even ✓
 print(is_binomial_odd(10, 3))  # False
+
 ```
 
 ---

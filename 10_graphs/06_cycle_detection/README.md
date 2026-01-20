@@ -38,6 +38,7 @@ permalink: /10_graphs/06_cycle_detection/
 
 ```math
 \text{Cycle exists} \Leftrightarrow \text{Back edge to gray vertex}
+
 ```
 
 ---
@@ -59,6 +60,7 @@ Graph with $n$ vertices is a tree iff:
 
 ```math
 \text{Tree} \Leftrightarrow |E| = |V| - 1 \land \text{connected}
+
 ```
 
 ---
@@ -69,6 +71,7 @@ Use BFS/DFS with distance tracking:
 
 ```math
 \text{cycle length} = \text{dist}[u] + \text{dist}[v] + 1
+
 ```
 
 when back edge $(u, v)$ discovered.
@@ -235,6 +238,7 @@ def eventualSafeNodes(graph: list[list[int]]) -> list[int]:
         return True
     
     return [i for i in range(n) if dfs(i)]
+
 ```
 
 ---
@@ -268,6 +272,7 @@ Cycle Detection
      +-- Undirected graph → DFS with parent tracking
      |
      +-- Edge-by-edge → Union-Find
+
 ```
 
 ---

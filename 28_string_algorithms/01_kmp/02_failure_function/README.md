@@ -36,6 +36,7 @@ For pattern P of length m:
 π[i] = max{ k : 0 ≤ k < i and P[0..k-1] = P[i-k+1..i] }
      = length of longest proper prefix of P[0..i]
        that is also a suffix of P[0..i]
+
 ```
 
 **Proper prefix:** Prefix that is not the entire substring.
@@ -49,34 +50,41 @@ For "ABCAB":
 Borders: "", "AB"
 Longest proper border: "AB" (length 2)
 π[4] = 2
+
 ```
 
 ### Key Properties
 
 **Property 1: Border Chain**
+
 ```
 All borders can be found by following π:
 border₀ = P[0..π[m-1]-1]
 border₁ = P[0..π[π[m-1]-1]-1]
 ...
 border_k = P[0..π^k[m-1]-1] until π^k = 0
+
 ```
 
 **Property 2: Monotonicity**
+
 ```
 π[i] ≤ π[i-1] + 1 for all i > 0
 
 Proof: If P[0..k-1] = P[i-k+1..i], then
        P[0..k-2] = P[i-k+1..i-1]
        So π[i] ≤ k = π[i-1] + 1
+
 ```
 
 **Property 3: Number of Borders**
+
 ```
 String of length n has at most O(log n) borders on average
 
 Worst case: O(n) borders
 Example: "aaa...a" has n borders
+
 ```
 
 ---
@@ -158,6 +166,7 @@ def compute_failure_function_verbose(pattern):
 
 # Example
 compute_failure_function_verbose("ABABCABAA")
+
 ```
 
 ### 2. Failure Function with Border Enumeration
@@ -196,6 +205,7 @@ pi, borders = compute_pi_with_borders(pattern)
 
 for i in range(len(pattern)):
     print(f"Position {i} ('{pattern[:i+1]}'): π={pi[i]}, borders={borders[i]}")
+
 ```
 
 ### 3. Optimized Failure Function (with Path Compression)
@@ -232,6 +242,7 @@ def compute_failure_function_optimized(pattern):
 # Example showing linear time
 pattern = "A" * 100
 pi = compute_failure_function_optimized(pattern)
+
 ```
 
 ### 4. Failure Function for Specific Applications
@@ -269,6 +280,7 @@ pattern = "ABABCABAA"
 stats = compute_pi_with_statistics(pattern)
 print(f"Pattern: {pattern}")
 print(f"Statistics: {stats}")
+
 ```
 
 ---
@@ -306,6 +318,7 @@ def has_period(s):
 print(has_period("abcabcabc"))    # (True, "abc")
 print(has_period("abcabcab"))     # (False, None)
 print(has_period("aaaa"))         # (True, "a")
+
 ```
 
 ### 2. Find All Borders
@@ -338,6 +351,7 @@ borders = find_all_borders(s)
 print(f"String: {s}")
 print(f"Border lengths: {borders}")
 print(f"Borders: {[s[:b] for b in borders]}")
+
 ```
 
 ### 3. Minimum Characters to Add for Palindrome
@@ -373,6 +387,7 @@ count, chars = min_chars_for_palindrome(s)
 print(f"String: {s}")
 print(f"Add {count} chars: {chars}")
 print(f"Result: {s + chars}")  # "aacecaaa" → palindrome "aacecaaa"
+
 ```
 
 ### 4. Longest Happy Prefix (LeetCode 1392)
@@ -396,6 +411,7 @@ print(longest_happy_prefix("level"))       # "l"
 print(longest_happy_prefix("ababab"))      # "abab"
 print(longest_happy_prefix("leetcodeleet"))# "leet"
 print(longest_happy_prefix("a"))           # ""
+
 ```
 
 ### 5. String Compression Analysis
@@ -444,6 +460,7 @@ s = "abcabcabcab"
 analysis = analyze_repetition_structure(s)
 print(f"String: {s}")
 print(f"Analysis: {analysis}")
+
 ```
 
 ### 6. Pattern Preprocessing for Multiple Texts
@@ -506,6 +523,7 @@ texts = [
 for idx, text in enumerate(texts):
     matches = matcher.search(text)
     print(f"Text {idx}: {len(matches)} matches at {matches}")
+
 ```
 
 ---
@@ -513,6 +531,7 @@ for idx, text in enumerate(texts):
 ## 🧩 LeetCode Problems
 
 ### Medium
+
 | # | Problem | Difficulty | Approach |
 |---|---------|------------|----------|
 | 1392 | [Longest Happy Prefix](https://leetcode.com/problems/longest-happy-prefix/) | 🟡 Medium | Direct π[n-1] |
@@ -616,6 +635,7 @@ class Solution:
         to_add = s[palindrome_prefix_len:]
         
         return to_add[::-1] + s
+
 ```
 
 ---
@@ -625,6 +645,7 @@ class Solution:
 ### Why π Computation is O(m)
 
 **Potential Function Analysis:**
+
 ```
 Define Φ = k (current border length)
 
@@ -636,6 +657,7 @@ For each iteration i:
 Total increase in Φ = O(m)
 Total decrease in Φ = O(m)
 Therefore total operations = O(m)
+
 ```
 
 ### Border Properties

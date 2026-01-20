@@ -46,6 +46,7 @@ When mismatch occurs:
 - Don't restart from next position in text
 - Use failure function to skip ahead
 - Each text character examined at most once
+
 ```
 
 ---
@@ -124,6 +125,7 @@ text = "ABABDABACDABABCABAB"
 pattern = "AB"
 print(find_all_occurrences(text, pattern))
 # Output: [0, 2, 5, 10, 12, 17]
+
 ```
 
 ### 2. Find First Occurrence
@@ -187,6 +189,7 @@ def find_first_occurrence(text, pattern):
 print(find_first_occurrence("hello", "ll"))      # 2
 print(find_first_occurrence("aaaaa", "bba"))     # -1
 print(find_first_occurrence("", ""))             # 0
+
 ```
 
 ### 3. Count Occurrences
@@ -257,6 +260,7 @@ pattern = "AABA"
 
 print(count_pattern_occurrences(text, pattern, overlapping=True))   # 3
 print(count_pattern_occurrences(text, pattern, overlapping=False))  # 2
+
 ```
 
 ### 4. Check if Pattern Exists
@@ -276,6 +280,7 @@ def contains_pattern(text, pattern):
 # Example
 print(contains_pattern("hello world", "world"))  # True
 print(contains_pattern("hello world", "abc"))    # False
+
 ```
 
 ### 5. Find Last Occurrence
@@ -297,6 +302,7 @@ def find_last_occurrence(text, pattern):
 text = "ABABDABACDABABCABAB"
 pattern = "AB"
 print(find_last_occurrence(text, pattern))  # 17
+
 ```
 
 ### 6. Find All with Context
@@ -330,6 +336,7 @@ pattern = "the"
 matches = find_with_context(text.lower(), pattern, context_size=3)
 for idx, context in matches:
     print(f"Match at {idx}: '...{context}...'")
+
 ```
 
 ### 7. Multiple Text Search
@@ -364,6 +371,7 @@ pattern = "AB"
 results = search_in_multiple_texts(texts, pattern)
 print(results)
 # {0: [0, 2, 5, 10, 12, 17], 1: [0], 2: [0, 2, 4, 6, 8]}
+
 ```
 
 ---
@@ -371,6 +379,7 @@ print(results)
 ## 🧩 LeetCode Problems
 
 ### Easy
+
 | # | Problem | Difficulty | Solution |
 |---|---------|------------|----------|
 | 28 | [Find Index of First Occurrence](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | 🟢 Easy | `find_first_occurrence` |
@@ -378,6 +387,7 @@ print(results)
 | 459 | [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/) | 🟢 Easy | Uses LPS properties |
 
 ### Medium
+
 | # | Problem | Difficulty | Solution |
 |---|---------|------------|----------|
 | 686 | [Repeated String Match](https://leetcode.com/problems/repeated-string-match/) | 🟡 Medium | KMP with repetition |
@@ -439,6 +449,7 @@ class Solution:
                     i += 1
         
         return -1
+
 ```
 
 ### Problem 796: Rotate String
@@ -503,6 +514,7 @@ class Solution:
                     i += 1
         
         return -1
+
 ```
 
 ### Problem 686: Repeated String Match
@@ -570,6 +582,7 @@ class Solution:
                     i += 1
         
         return False
+
 ```
 
 ---
@@ -632,6 +645,7 @@ def kmp_with_wildcard(text, pattern, wildcard='?'):
 text = "ABABDABACDABABCABAB"
 pattern = "AB??CA"
 print(kmp_with_wildcard(text, pattern))
+
 ```
 
 ### Case-Insensitive Matching
@@ -652,6 +666,7 @@ def kmp_case_insensitive(text, pattern):
 text = "Hello World, hello world"
 pattern = "HELLO"
 print(kmp_case_insensitive(text, pattern))  # [0, 13]
+
 ```
 
 ---

@@ -54,6 +54,7 @@ class MatrixExp:
         A = [[1, 1], [1, 0]]
         A_n = self.power(A, n-1)
         return A_n[0][0]
+
 ```
 
 ---

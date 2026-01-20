@@ -48,6 +48,7 @@ For prime p and non-negative m, n:
 
 ```math
 C(m, n) \equiv \prod_{i=0}^{k} C(m_i, n_i) \pmod{p}
+
 ```
 
 where $m = \sum m\_i p^i$ and $n = \sum n\_i p^i$ are base-p representations.
@@ -95,6 +96,7 @@ def lucas(m: int, n: int, p: int) -> int:
 
 # Example: C(10^18, 10^9) mod 7
 print(lucas(10**18, 10**9, 7))  # Instant!
+
 ```
 
 ---

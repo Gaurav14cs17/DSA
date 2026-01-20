@@ -86,6 +86,7 @@ Given n pairs of parentheses, generate all valid (balanced) combinations.
 |   - Add '(' if open < n                                        |
 |   - Add ')' if close < open                                    |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -150,6 +151,7 @@ class SolutionOptimized:
         
         backtrack(0, 0)
         return result
+
 ```
 
 ### LeetCode 32: Longest Valid Parentheses
@@ -207,6 +209,7 @@ class SolutionDP:
                         dp[i] += dp[i - dp[i - 1] - 2]
         
         return max(dp) if dp else 0
+
 ```
 
 ### LeetCode 678: Valid Parenthesis String (with *)
@@ -240,6 +243,7 @@ class Solution:
                 return False
         
         return lo == 0
+
 ```
 
 ---

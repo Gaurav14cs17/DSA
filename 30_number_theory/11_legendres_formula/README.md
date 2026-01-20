@@ -40,6 +40,7 @@ permalink: /30_number_theory/11_legendres_formula/
 
 ```math
 \nu_p(n!) = \sum_{i=1}^{\infty} \left\lfloor \frac{n}{p^i} \right\rfloor = \frac{n - s_p(n)}{p - 1}
+
 ```
 
 where $s\_p(n)$ is the sum of digits of n in base p.
@@ -52,6 +53,7 @@ where $s\_p(n)$ is the sum of digits of n in base p.
 
 ```math
 \text{trailing\_zeros}(n!) = \left\lfloor \frac{n}{5} \right\rfloor + \left\lfloor \frac{n}{25} \right\rfloor + \left\lfloor \frac{n}{125} \right\rfloor + \cdots
+
 ```
 
 ---
@@ -85,6 +87,7 @@ where $s\_p(n)$ is the sum of digits of n in base p.
 | Verification: 100! = ...00000000000000000000000                |
 |                      +------- 24 zeros -------+                 |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -168,6 +171,7 @@ print(trailing_zeros(1000))  # 249
 
 # Example: Power of 2 in 10!
 print(legendre(10, 2))  # 8 (10! = 2^8 × odd)
+
 ```
 
 ---

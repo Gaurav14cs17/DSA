@@ -52,6 +52,7 @@ permalink: /30_number_theory/01_gcd_lcm/
 \gcd(a, 1) &= 1 \\
 \gcd(a, b) &= 1 \iff \text{a and b are coprime}
 \end{align}
+
 ```
 
 ---
@@ -62,6 +63,7 @@ permalink: /30_number_theory/01_gcd_lcm/
 
 ```math
 \gcd(a, b) = \gcd(b, a \bmod b)
+
 ```
 
 **Proof:**
@@ -73,6 +75,7 @@ a \bmod b &= a - q \cdot b \quad \text{where } q = \lfloor a/b \rfloor \\
 &= d \cdot m - q \cdot d \cdot n \\
 &= d \cdot (m - q \cdot n)
 \end{align}
+
 ```
 
 So $d$ divides $(a \bmod b)$. By similar reasoning, any common divisor of $b$ and $(a \bmod b)$ also divides $a$ and $b$.
@@ -83,6 +86,7 @@ Therefore: $\gcd(a, b) = \gcd(b, a \bmod b)$ ∎
 
 ```math
 T(a, b) = O(\log \min(a, b))
+
 ```
 
 **Proof:** If $a > b$, then $a \bmod b < a/2$, so problem size halves every 2 steps at most. ∎
@@ -95,9 +99,11 @@ T(a, b) = O(\log \min(a, b))
 
 ```math
 a \cdot x + b \cdot y = \gcd(a, b)
+
 ```
 
 **Algorithm:**
+
 ```
 Base case: If b = 0, then gcd = a, x = 1, y = 0
 Recursive case:
@@ -105,6 +111,7 @@ Recursive case:
   x = y₁
   y = x₁ - ⌊a/b⌋ · y₁
   return (d, x, y)
+
 ```
 
 **Applications:**
@@ -125,6 +132,7 @@ Recursive case:
 
 ```math
 \text{lcm}(a, b) = \frac{a \times b}{\gcd(a, b)}
+
 ```
 
 **Proof:**
@@ -134,6 +142,7 @@ The LCM must be $d \cdot x \cdot y$ (smallest number divisible by both):
 
 ```math
 \text{lcm}(a, b) = d \cdot x \cdot y = \frac{(d \cdot x) \cdot (d \cdot y)}{d} = \frac{a \cdot b}{\gcd(a, b)}
+
 ```
 
 ∎
@@ -143,6 +152,7 @@ The LCM must be $d \cdot x \cdot y$ (smallest number divisible by both):
 ### 5️⃣ GCD and Prime Factorization
 
 **Theorem:** If $a = p\_1^{a\_1} \cdot p\_2^{a\_2} \cdots p\_k^{a\_k}$ and $b = p\_1^{b\_1} \cdot p\_2^{b\_2} \cdots p\_k^{b\_k}$, then:
+
 ```
 \begin{align}
 \gcd(a, b) &= p_1^{\min(a_1, b_1)} \cdot p_2^{\min(a_2, b_2)} \cdots p_k^{\min(a_k, b_k)} \\
@@ -151,6 +161,7 @@ The LCM must be $d \cdot x \cdot y$ (smallest number divisible by both):
 
 ```math
 **Example:**
+
 ```
 
 \begin{align}
@@ -211,6 +222,7 @@ The LCM must be $d \cdot x \cdot y$ (smallest number divisible by both):
 |   18 = 6 × 3  ✓                                                 |
 |   gcd(8, 3) = 1  ✓ (coprime)                                    |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -258,6 +270,7 @@ The LCM must be $d \cdot x \cdot y$ (smallest number divisible by both):
 | Verification:                                                    |
 |   35 × 1 + 15 × (-2) = 35 - 30 = 5  ✓                          |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -292,6 +305,7 @@ def gcd_recursive(a: int, b: int) -> int:
     if b == 0:
         return a
     return gcd_recursive(b, a % b)
+
 ```
 
 ---
@@ -339,6 +353,7 @@ def extended_gcd_iterative(a: int, b: int) -> tuple[int, int, int]:
         old_t, t = t, old_t - quotient * t
     
     return old_r, old_s, old_t
+
 ```
 
 ---
@@ -366,6 +381,7 @@ def lcm_safe(a: int, b: int) -> int:
     Overflow-safe version: divide before multiply.
     """
     return a // gcd(a, b) * b
+
 ```
 
 ---
@@ -398,6 +414,7 @@ def lcm_array(arr: List[int]) -> int:
         lcm_array([4, 6, 8]) = 24
     """
     return reduce(lcm, arr)
+
 ```
 
 ---
@@ -448,6 +465,7 @@ def binary_gcd(a: int, b: int) -> int:
         b -= a
     
     return a << shift
+
 ```
 
 ---
@@ -498,6 +516,7 @@ def simplify_fraction(num: int, den: int) -> tuple[int, int]:
     """
     g = gcd(num, den)
     return num // g, den // g
+
 ```
 
 ### Pattern 2: Modular Inverse
@@ -515,6 +534,7 @@ def mod_inverse(a: int, m: int) -> int:
     if g != 1:
         return None  # No inverse exists
     return x % m
+
 ```
 
 ### Pattern 3: Linear Diophantine Equations
@@ -537,6 +557,7 @@ def solve_diophantine(a: int, b: int, c: int) -> tuple[int, int] | None:
     # Scale solution
     scale = c // g
     return x0 * scale, y0 * scale
+
 ```
 
 ### Pattern 4: Coprimality Check
@@ -559,6 +580,7 @@ def count_coprime_pairs(nums: List[int]) -> int:
             if are_coprime(nums[i], nums[j]):
                 count += 1
     return count
+
 ```
 
 ### Pattern 5: LCM of Multiple Numbers
@@ -572,6 +594,7 @@ def lcm_multiple(numbers: List[int]) -> int:
     """
     from functools import reduce
     return reduce(lambda x, y: x * y // gcd(x, y), numbers)
+
 ```
 
 ---

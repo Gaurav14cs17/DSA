@@ -67,6 +67,7 @@ For string $S$ with brackets:
 
 ```math
 \boxed{\sum_{i=0}^{n-1} \text{score}(S[i]) = 0}
+
 ```
 
 Where:
@@ -78,6 +79,7 @@ Where:
 
 ```math
 \boxed{\forall k \in [0, n-1]: \sum_{i=0}^{k} \text{score}(S[i]) \geq 0}
+
 ```
 
 **Proof:** If prefix sum becomes negative, we have more closing than opening brackets up to that point → invalid.
@@ -114,6 +116,7 @@ Where:
 
 ```math
 \boxed{\text{additions} = \text{unmatched\_open} + \text{unmatched\_close}}
+
 ```
 
 **Proof:**
@@ -128,6 +131,7 @@ Input: "(()"
 Scan: ( → open=1, ( → open=2, ) → open=1
 Result: open=1, close=0
 Answer: 1 (need one more ')')
+
 ```
 
 ---
@@ -142,6 +146,7 @@ Answer: 1 (need one more ')')
 dp[i-2] + 2 & \text{if } S[i-1] = '(' \text{ and } i \geq 1 \\
 dp[i-1] + 2 + dp[j] & \text{if } j = i - dp[i-1] - 2 \geq 0 \text{ and } S[j+1] = '('
 \end{cases}}
+
 ```
 
 Where:
@@ -158,12 +163,14 @@ Where:
 
 ```math
 \boxed{C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)! \cdot n!}}
+
 ```
 
 **Recurrence Relation:**
 
 ```math
 C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
+
 ```
 
 **First few Catalan numbers:**
@@ -187,6 +194,7 @@ C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
 
 ```math
 C_n \sim \frac{4^n}{n^{3/2}\sqrt{\pi}}
+
 ```
 
 This means generating all valid parentheses has exponential time complexity!
@@ -252,6 +260,7 @@ Counterexample - Invalid: "([)]"
 |  Index 2: ')' → Top is '[', doesn't match! ✗                       |
 |  Result: INVALID ✗                                                 |
 +--------------------------------------------------------------------+
+
 ```
 
 ---
@@ -299,6 +308,7 @@ Another Example: "((("
 |  Answer: 3 (add three ')' at the end)                             |
 |  Result: "((()))" ✓                                                |
 +--------------------------------------------------------------------+
+
 ```
 
 ---
@@ -361,6 +371,7 @@ Input: ")()())"
 |  x [-----] x                                                       |
 |    valid!                                                          |
 +--------------------------------------------------------------------+
+
 ```
 
 ---
@@ -424,6 +435,7 @@ Algorithm Logic:
   * If open < n: can add '('
   * If close < open: can add ')'
 - Base case: length == 2n → add to result
+
 ```
 
 ---
@@ -471,6 +483,7 @@ Input: "lee(t(c)o)de)"
 |                                                                    |
 |  Result: "lee(t(c)o)de" ✓                                          |
 +--------------------------------------------------------------------+
+
 ```
 
 ---
@@ -766,6 +779,7 @@ def scoreOfParentheses(s: str) -> int:
             stack[-1] += max(2 * score, 1)
     
     return stack[0]
+
 ```
 
 ---
@@ -939,6 +953,7 @@ if pairs[stack.pop()] != char:
 # ✅ CORRECT: Check first
 if not stack or pairs[stack.pop()] != char:
     return False
+
 ```
 
 ### Pitfall 2: Forgetting Base Case
@@ -949,6 +964,7 @@ stack = []  # Crash on first valid ')'
 
 # ✅ CORRECT: Base index
 stack = [-1]  # Enables length calculation
+
 ```
 
 ### Pitfall 3: Wrong Backtracking Constraint
@@ -961,6 +977,7 @@ if close_count <= n:  # Too permissive!
 # ✅ CORRECT: Maintain validity
 if close_count < open_count:  # Always valid
     backtrack(current + ')')
+
 ```
 
 ---

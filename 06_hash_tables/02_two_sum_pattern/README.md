@@ -54,6 +54,7 @@ permalink: /06_hash_tables/02_two_sum_pattern/
 
 ```math
 a[j] = target - a[i]
+
 ```
 
 **Algorithm:** For each $a[i]$, check if $target - a[i]$ exists in hash map.
@@ -78,6 +79,7 @@ a[j] = target - a[i]
 
 ```math
 \text{Two Sum with target} = -a
+
 ```
 
 **Time:** O(n²) with hash or two pointers after sorting.
@@ -92,6 +94,7 @@ a[j] = target - a[i]
 
 ```math
 A[i] + B[j] = -(C[k] + D[l])
+
 ```
 
 Store all $A[i] + B[j]$ sums, then count matches with $-(C[k] + D[l])$.
@@ -107,6 +110,7 @@ Store all $A[i] + B[j]$ sums, then count matches with $-(C[k] + D[l])$.
 ```math
 \text{sum}(i, j) = P[j] - P[i-1] = k
 P[i-1] = P[j] - k
+
 ```
 
 Count previous prefixes that equal $P[j] - k$.
@@ -238,6 +242,7 @@ def twoSumLessThanK(nums: list[int], k: int) -> int:
             right -= 1
     
     return max_sum
+
 ```
 
 ---
@@ -281,6 +286,7 @@ i   num   complement   seen         Action
 1    7        2        {2:0}        Found! Return [0,1]
 
 Time: O(n), Space: O(n)
+
 ```
 
 ### Three Sum (#15)
@@ -306,6 +312,7 @@ i=1, nums[i]=-1, target=1
   L++, R--
 
 Result: [[-1,-1,2], [-1,0,1]]
+
 ```
 
 ### Four Sum II (#454)
@@ -326,6 +333,7 @@ Step 2: Count matching -(C+D)
   C=2, D=2: -(2+2)=-4 → count[-4]=0
 
 Total: 2 tuples
+
 ```
 
 ### Subarray Sum = K (#560)
@@ -346,6 +354,7 @@ j   P[j]  P[j]-k  count[P[j]-k]  Result
 3    3       1          1           2 (subarray [1,2])
 
 Total: 2 subarrays
+
 ```
 
 ---
@@ -366,6 +375,7 @@ Total: 2 subarrays
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **LeetCode** | Two Sum problem | [Problem](https://leetcode.com/problems/two-sum/) |
@@ -374,6 +384,7 @@ Total: 2 subarrays
 | **CP Algorithms** | Two pointers | [Guide](https://cp-algorithms.com/data_structures/stack_queue_modification.html) |
 
 ### 📺 Video Tutorials
+
 | Creator | Topic | Link |
 |---------|-------|------|
 | **NeetCode** | Two Sum | [YouTube](https://www.youtube.com/watch?v=KLlXCFG5TnA) |
@@ -383,12 +394,14 @@ Total: 2 subarrays
 | **Abdul Bari** | Two pointer technique | [YouTube](https://www.youtube.com/watch?v=YXZgxAh3iyE) |
 
 ### 🎯 Practice Collections
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Two Sum variations | [Tag](https://leetcode.com/tag/two-pointers/) |
 | **HackerRank** | Array problems | [Practice](https://www.hackerrank.com/domains/algorithms?filters%5Bsubdomains%5D%5B%5D=arrays) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Prefix Sum** | Cumulative sum technique | [Tutorial](https://www.geeksforgeeks.org/prefix-sum-array-implementation-applications-competitive-programming/) |
@@ -396,6 +409,7 @@ Total: 2 subarrays
 | **Two Pointers** | Sorted array technique | [Guide](https://www.geeksforgeeks.org/two-pointers-technique/) |
 
 ### 📊 Visualization
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo** | Two pointers | [Website](https://visualgo.net/en) |

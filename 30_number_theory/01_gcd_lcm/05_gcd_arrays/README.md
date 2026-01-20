@@ -38,6 +38,7 @@ permalink: /30_number_theory/01_gcd_lcm/05_gcd_arrays/
 
 ```math
 \gcd(a, \gcd(b, c)) = \gcd(\gcd(a, b), c) = \gcd(a, b, c)
+
 ```
 
 This means we can compute GCD of multiple numbers in any order!
@@ -46,6 +47,7 @@ This means we can compute GCD of multiple numbers in any order!
 
 ```math
 \gcd(a_1, a_2, \ldots, a_n) = \gcd(a_1, \gcd(a_2, \ldots, a_n))
+
 ```
 
 ---
@@ -92,6 +94,7 @@ def gcd_array_optimized(arr: list[int]) -> int:
         if result == 1:
             return 1  # Can't get smaller
     return result
+
 ```
 
 ---
@@ -127,6 +130,7 @@ def suffix_gcd(arr: list[int]) -> list[int]:
         suffix[i] = gcd(arr[i], suffix[i+1])
     
     return suffix
+
 ```
 
 ---
@@ -174,6 +178,7 @@ def gcd_all_excluding_each(arr: list[int]) -> list[int]:
             result.append(gcd(prefix[i-1], suffix[i+1]))
     
     return result
+
 ```
 
 ---
@@ -229,6 +234,7 @@ class SubarrayGCD:
             self.st[left][j],
             self.st[right - (1 << j) + 1][j]
         )
+
 ```
 
 ---
@@ -236,11 +242,13 @@ class SubarrayGCD:
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
+
 | # | Problem | Concept |
 |:-:|---------|---------|
 | 1979 | [Find GCD of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) | Basic array GCD |
 
 ### 🟡 Medium
+
 | # | Problem | Concept |
 |:-:|---------|---------|
 | 1819 | [Number of Different Subsequences GCDs](https://leetcode.com/problems/number-of-different-subsequences-gcds/) | GCD properties |

@@ -39,6 +39,7 @@ permalink: /32_game_theory/02_minimax/
 
 ```math
 \text{Player 1 score} + \text{Player 2 score} = \text{constant}
+
 ```
 
 **Examples:**
@@ -60,6 +61,7 @@ permalink: /32_game_theory/02_minimax/
 \max_{a} \text{minimax}(\text{result}(s,a)) & \text{if MAX's turn} \\
 \min_{a} \text{minimax}(\text{result}(s,a)) & \text{if MIN's turn}
 \end{cases}
+
 ```
 
 ---
@@ -73,6 +75,7 @@ permalink: /32_game_theory/02_minimax/
 
 ```math
 \text{If } \alpha \geq \beta \text{, prune remaining branches}
+
 ```
 
 **Improvement:** From $O(b^d)$ to $O(b^{d/2})$ with perfect ordering!
@@ -154,6 +157,7 @@ permalink: /32_game_theory/02_minimax/
 |   But if next value was 1 < β=15:                               |
 |   Since this won't beat α=3, prune remaining!                   |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -194,6 +198,7 @@ def minimax(state, depth: int, is_maximizing: bool) -> int:
             eval_score = minimax(child, depth - 1, True)
             min_eval = min(min_eval, eval_score)
         return min_eval
+
 ```
 
 ---
@@ -252,6 +257,7 @@ def minimax_alpha_beta(
                 break
         
         return min_eval
+
 ```
 
 ---
@@ -314,6 +320,7 @@ def predictTheWinner_minimax(nums: list[int]) -> bool:
         return result
     
     return minimax(0, len(nums) - 1) >= 0
+
 ```
 
 ---
@@ -360,6 +367,7 @@ def canIWin(max_choosable: int, desired_total: int) -> bool:
         return False
     
     return can_win(0, desired_total)
+
 ```
 
 ---
@@ -367,6 +375,7 @@ def canIWin(max_choosable: int, desired_total: int) -> bool:
 ## 🏆 LeetCode Problems
 
 ### 🟡 Medium
+
 | # | Problem | Technique | Difficulty |
 |:-:|---------|-----------|-----------|
 | 486 | [Predict the Winner](https://leetcode.com/problems/predict-the-winner/) | Interval DP / Minimax | ⭐⭐⭐ |
@@ -375,6 +384,7 @@ def canIWin(max_choosable: int, desired_total: int) -> bool:
 | 375 | [Guess Number II](https://leetcode.com/problems/guess-number-higher-or-lower-ii/) | Min-Max DP | ⭐⭐⭐ |
 
 ### 🔴 Hard
+
 | # | Problem | Technique | Difficulty |
 |:-:|---------|-----------|-----------|
 | 913 | [Cat and Mouse](https://leetcode.com/problems/cat-and-mouse/) | Graph + Game theory | ⭐⭐⭐⭐⭐ |

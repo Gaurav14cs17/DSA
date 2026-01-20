@@ -126,6 +126,7 @@ class RangeSumQuery:
                 result += self.arr[i]
         
         return result
+
 ```
 
 ---
@@ -192,6 +193,7 @@ class RangeMinQuery:
                 result = min(result, self.arr[i])
         
         return result
+
 ```
 
 ---
@@ -257,6 +259,7 @@ class RangeUpdateQuery:
             block_id = i // self.block_size
             result += self.arr[i] + self.lazy[block_id]
         return result
+
 ```
 
 ---
@@ -264,11 +267,13 @@ class RangeUpdateQuery:
 ## 🏆 LeetCode Problems
 
 ### 🟡 Medium
+
 | # | Problem | Type | Solution |
 |:-:|---------|------|----------|
 | 307 | [Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/) | Point update | Sqrt decomp |
 
 ### 🔴 Hard
+
 | # | Problem | Type | Solution |
 |:-:|---------|------|----------|
 | 327 | [Count of Range Sum](https://leetcode.com/problems/count-of-range-sum/) | Complex query | Modified sqrt decomp |

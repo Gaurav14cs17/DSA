@@ -425,6 +425,7 @@ def example_dynamic_tree():
     dt.cut(1, 2)
     print("\nAfter cutting 1-2:")
     print(f"  0 and 2 connected? {dt.connected(0, 2)}")  # False
+
 ```
 
 ---
@@ -451,6 +452,7 @@ Dynamic Tree Problem
      +-- Dynamic connectivity? → Link-Cut Tree or DSU
      |
      +-- Static tree? → Use simpler structures (HLD, binary lifting)
+
 ```
 
 ---

@@ -35,6 +35,7 @@ permalink: /09_heaps/02_top_k_problems/
 
 ```math
 \text{Invariant: Heap contains k largest seen so far}
+
 ```
 
 **Why Min-Heap?** We need to quickly remove the smallest of top-k.
@@ -60,6 +61,7 @@ permalink: /09_heaps/02_top_k_problems/
 
 ```math
 \text{answer} = \text{heap}[0] \text{ (root of min-heap)}
+
 ```
 
 ---
@@ -87,6 +89,7 @@ permalink: /09_heaps/02_top_k_problems/
 
 ```math
 \boxed{\text{Keep opposite of what you want to remove!}}
+
 ```
 
 ---
@@ -107,6 +110,7 @@ permalink: /09_heaps/02_top_k_problems/
 
 ```math
 \text{frequencies} \in [0, n] \implies \text{use bucket sort for } O(n)
+
 ```
 
 **Bucket i:** contains all elements with frequency i
@@ -227,6 +231,7 @@ class KthLargest:
         if len(self.heap) > self.k:
             heapq.heappop(self.heap)
         return self.heap[0]
+
 ```
 
 ---
@@ -263,6 +268,7 @@ Top K Problem
      +-- K most frequent → Count + Heap or Bucket Sort
      |
      +-- Exact kth → Quickselect O(n) avg
+
 ```
 
 ---

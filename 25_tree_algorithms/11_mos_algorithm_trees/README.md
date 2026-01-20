@@ -64,6 +64,7 @@ permalink: /25_tree_algorithms/11_mos_algorithm_trees/
 ```
 DFS: 0 → 1 → 2 → 1 → 0 → 3 → 0
 Tour: [0, 1, 2, 1, 0, 3, 0]
+
 ```
 
 **Path from $u$ to $v$:**
@@ -438,6 +439,7 @@ def example_mo_on_tree():
     print("Distinct colors on paths:")
     for (u, v), count in zip(queries, results):
         print(f"  Path {u} to {v}: {count} distinct colors")
+
 ```
 
 ---
@@ -467,6 +469,7 @@ Tree Query Problem
      |
      +-- Few queries?
          +-- Simple DFS per query may be better
+
 ```
 
 ---

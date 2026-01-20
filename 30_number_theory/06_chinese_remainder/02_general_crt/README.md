@@ -76,6 +76,7 @@ For $x \equiv a\_1 \pmod{m\_1}$ and $x \equiv a\_2 \pmod{m\_2}$:
 |                                                                 |
 | Verify: 15 mod 6 = 3 ✓, 15 mod 10 = 5 ✓                       |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -116,6 +117,7 @@ def crt_general_two(a1: int, m1: int, a2: int, m2: int) -> tuple[int, int]:
 # Example
 print(crt_general_two(3, 6, 5, 10))  # (15, 30)
 print(crt_general_two(3, 6, 4, 10))  # (None, None) - no solution
+
 ```
 
 ### 2. Multiple Equations - General Case
@@ -142,6 +144,7 @@ def crt_general(remainders: list[int], moduli: list[int]) -> tuple[int, int]:
 
 # Example with non-coprime moduli
 print(crt_general([3, 5, 2], [6, 10, 15]))  # May or may not have solution
+
 ```
 
 ### 3. Check Solvability
@@ -160,6 +163,7 @@ def crt_solvable(remainders: list[int], moduli: list[int]) -> bool:
                 return False
     
     return True
+
 ```
 
 ### 4. Find All Solutions in Range
@@ -190,6 +194,7 @@ def crt_all_solutions(remainders: list[int], moduli: list[int],
 
 # Example: Solutions to x ≡ 2 (mod 5), x ≡ 3 (mod 7) in [1, 100]
 print(crt_all_solutions([2, 3], [5, 7], 1, 100))
+
 ```
 
 ---

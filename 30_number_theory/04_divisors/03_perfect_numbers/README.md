@@ -51,6 +51,7 @@ A positive integer n is **perfect** if it equals the sum of its proper divisors:
 
 ```math
 n = \sum_{\substack{d|n \\ d < n}} d
+
 ```
 
 Equivalently: $\sigma(n) = 2n$
@@ -77,6 +78,7 @@ Equivalently: $\sigma(n) = 2n$
 
 ```math
 n = 2^{p-1}(2^p - 1)
+
 ```
 
 where $2^p - 1$ is a **Mersenne prime**.
@@ -120,6 +122,7 @@ where $2^p - 1$ is a **Mersenne prime**.
 |      = 4 × 7                                                    |
 |   7 is prime (Mersenne prime M₃) ✓                             |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -166,6 +169,7 @@ print(check_perfect_number(6))     # True
 print(check_perfect_number(28))    # True
 print(check_perfect_number(496))   # True
 print(check_perfect_number(12))    # False (sum = 16)
+
 ```
 
 ### 2. Generate Perfect Numbers
@@ -206,6 +210,7 @@ def generate_perfect_numbers(count: int) -> list[int]:
 # Generate first 5 perfect numbers
 print(generate_perfect_numbers(5))
 # [6, 28, 496, 8128, 33550336]
+
 ```
 
 ### 3. Classify Numbers (Perfect/Deficient/Abundant)
@@ -239,6 +244,7 @@ for i in range(1, 30):
     classification = classify_number(i)
     if classification != "deficient":
         print(f"{i}: {classification}")
+
 ```
 
 ### 4. Find All Abundant Numbers
@@ -270,6 +276,7 @@ def find_abundant_numbers(limit: int) -> list[int]:
 # First 10 abundant numbers
 print(find_abundant_numbers(50))
 # [12, 18, 20, 24, 30, 36, 40, 42, 48]
+
 ```
 
 ### 5. Check Mersenne Prime
@@ -309,6 +316,7 @@ def is_mersenne_prime(p: int) -> bool:
 for p in range(2, 20):
     if is_mersenne_prime(p):
         print(f"M_{p} = {(1 << p) - 1} is prime")
+
 ```
 
 ---
@@ -340,6 +348,7 @@ class Solution:
             i += 1
         
         return total == num
+
 ```
 
 ---
@@ -373,6 +382,7 @@ def are_amicable(a: int, b: int) -> bool:
 # First pair: (220, 284)
 # s(220) = 1+2+4+5+10+11+20+22+44+55+110 = 284
 # s(284) = 1+2+4+71+142 = 220
+
 ```
 
 ---

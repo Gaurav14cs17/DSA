@@ -44,6 +44,7 @@ permalink: /10_graphs/02_bfs_problems/
 
 ```math
 \boxed{T(V, E) = O(V + E)}
+
 ```
 
 **Breakdown:**
@@ -58,6 +59,7 @@ permalink: /10_graphs/02_bfs_problems/
 
 ```math
 \text{dist}[v] = \min_{s \in S} \text{dist}(s, v)
+
 ```
 
 **Solution:** Start BFS with all sources in queue.
@@ -70,6 +72,7 @@ BFS naturally gives level-order for trees:
 
 ```math
 \text{Level } k = \{v : \text{dist}(\text{root}, v) = k\}
+
 ```
 
 ---
@@ -215,6 +218,7 @@ def updateMatrix(mat: list[list[int]]) -> list[list[int]]:
                     queue.append((nr, nc))
     
     return result
+
 ```
 
 ---
@@ -252,6 +256,7 @@ BFS Problem
      +-- Level-by-level processing → BFS with level tracking
      |
      +-- Bipartite check → BFS with 2-coloring
+
 ```
 
 ---

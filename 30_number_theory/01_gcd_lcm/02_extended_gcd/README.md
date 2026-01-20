@@ -40,6 +40,7 @@ permalink: /30_number_theory/01_gcd_lcm/02_extended_gcd/
 
 ```math
 a \cdot x + b \cdot y = \gcd(a, b)
+
 ```
 
 Furthermore, the set of all linear combinations $\{ax + by : x, y \in \mathbb{Z}\}$ equals all multiples of $\gcd(a, b)$.
@@ -63,6 +64,7 @@ r &= a - qd \\
 &= a - q(ax_0 + by_0) \\
 &= a(1 - qx_0) + b(-qy_0)
 \end{align}
+
 ```
 
 If $r > 0$, then $r \in S$ and $r < d$, contradicting minimality of $d$.  
@@ -91,6 +93,7 @@ ExtendedGCD(a, b):
     y = x₁ - ⌊a/b⌋ · y₁
     
     return (d, x, y)
+
 ```
 
 **Correctness Proof:**
@@ -108,6 +111,7 @@ d &= b \cdot x_1 + (a - \lfloor a/b \rfloor \cdot b) \cdot y_1 \\
 &= a \cdot y_1 + b \cdot (x_1 - \lfloor a/b \rfloor \cdot y_1) \\
 &= a \cdot x + b \cdot y
 \end{align}
+
 ```
 
 where $x = y\_1$ and $y = x\_1 - \lfloor a/b \rfloor \cdot y\_1$. $\blacksquare$
@@ -120,6 +124,7 @@ where $x = y\_1$ and $y = x\_1 - \lfloor a/b \rfloor \cdot y\_1$. $\blacksquare$
 
 ```math
 a \cdot x \equiv 1 \pmod{m}
+
 ```
 
 **Existence Condition:** $a^{-1} \bmod m$ exists **if and only if** $\gcd(a, m) = 1$.
@@ -132,12 +137,14 @@ If $\gcd(a, m) = 1$:
 
 ```math
 a \cdot x + m \cdot y = 1
+
 ```
 
 Taking modulo $m$:
 
 ```math
 a \cdot x \equiv 1 \pmod{m}
+
 ```
 
 So $x \bmod m$ is the modular inverse!
@@ -162,6 +169,7 @@ So $x \bmod m$ is the modular inverse!
 x = x_0 \cdot c/d + k \cdot (b/d) \\
 y = y_0 \cdot c/d - k \cdot (a/d)
 \end{cases}
+
 ```
 
 for any integer $k$.
@@ -230,6 +238,7 @@ for any integer $k$.
 | Verification:                                                    |
 |   240×(-9) + 46×47 = -2160 + 2162 = 2  ✓                        |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -275,6 +284,7 @@ for any integer $k$.
 |   646 = 15×43 + 1  ✓                                            |
 |   17 × 38 ≡ 1 (mod 43)  ✓                                       |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -307,6 +317,7 @@ def extended_gcd(a: int, b: int) -> tuple[int, int, int]:
     y = x1 - (a // b) * y1
     
     return gcd_val, x, y
+
 ```
 
 ---
@@ -332,6 +343,7 @@ def extended_gcd_iterative(a: int, b: int) -> tuple[int, int, int]:
         old_t, t = t, old_t - quotient * t
     
     return old_r, old_s, old_t  # gcd, x, y
+
 ```
 
 ---
@@ -367,6 +379,7 @@ def mod_inverse_fast(a: int, m: int) -> int:
     """
     _, x, _ = extended_gcd(a, m)
     return x % m
+
 ```
 
 ---
@@ -421,6 +434,7 @@ def all_solutions_diophantine(a: int, b: int, c: int, k_range: range):
         solutions.append((x, y))
     
     return solutions
+
 ```
 
 ---
@@ -459,6 +473,7 @@ def batch_mod_inverse(numbers: list[int], m: int) -> list[int]:
         result.append((prefix[i] * suffix_inv[i + 1]) % m)
     
     return result
+
 ```
 
 ---

@@ -34,12 +34,14 @@ permalink: /09_heaps/
 
 ```math
 \boxed{\forall i: A[\text{parent}(i)] \geq A[i]}
+
 ```
 
 **Min-Heap:**
 
 ```math
 \boxed{\forall i: A[\text{parent}(i)] \leq A[i]}
+
 ```
 
 ---
@@ -52,6 +54,7 @@ For 0-indexed array:
 \text{parent}(i) = \lfloor (i-1)/2 \rfloor
 \text{left}(i) = 2i + 1
 \text{right}(i) = 2i + 2
+
 ```
 
 ---
@@ -62,6 +65,7 @@ For heap with $n$ elements:
 
 ```math
 \boxed{h = \lfloor \log_2 n \rfloor}
+
 ```
 
 **Proof:** Complete binary tree property.
@@ -89,6 +93,7 @@ For heap with $n$ elements:
 ```math
 T(n) = \sum_{h=0}^{\lfloor \log n \rfloor} \lceil \frac{n}{2^{h+1}} \rceil \cdot O(h)
 = O(n \sum_{h=0}^{\log n} \frac{h}{2^h}) = O(n \cdot 2) = O(n)
+
 ```
 
 The sum converges to 2.
@@ -101,6 +106,7 @@ The sum converges to 2.
 
 ```math
 \text{heapify}(i) = \text{swap with largest child, recurse}
+
 ```
 
 **Time:** O(h) = O(log n)
@@ -114,6 +120,7 @@ The sum converges to 2.
 
 ```math
 \boxed{T(n) = O(n \log n)}
+
 ```
 
 **Space:** O(1) in-place
@@ -128,6 +135,7 @@ The sum converges to 2.
 
 ```math
 T(n, k) = O(n \log k)
+
 ```
 
 Each element: insert once, extract once → 2 × O(log k).
@@ -160,6 +168,7 @@ heapq.heappush(heap, 7)
 
 min_val = heapq.heappop(heap)  # 3
 peek = heap[0]  # 5 (next minimum)
+
 ```
 
 ### Max-Heap (Negate Values)
@@ -172,6 +181,7 @@ heapq.heappush(max_heap, -3)
 heapq.heappush(max_heap, -7)
 
 max_val = -heapq.heappop(max_heap)  # 7
+
 ```
 
 ### Heap with Custom Key
@@ -184,6 +194,7 @@ heapq.heappush(heap, (1, "task A"))
 heapq.heappush(heap, (3, "task C"))
 
 priority, task = heapq.heappop(heap)  # (1, "task A")
+
 ```
 
 ---
@@ -243,6 +254,7 @@ Heap Problem
      +-- Median stream → Two Heaps (max + min)
      |
      +-- Schedule/Priority → Priority Queue
+
 ```
 
 ---
@@ -308,6 +320,7 @@ Heap Problem
 ## 📚 References & Learning Resources
 
 ### 📖 Books & Courses
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **CLRS Chapter 6** | Heapsort and priority queues | [MIT Press](https://mitpress.mit.edu/books/introduction-algorithms) |
@@ -316,6 +329,7 @@ Heap Problem
 | **Competitive Programming 3** | Chapter 2.3 - Heap | [Book](https://cpbook.net/) |
 
 ### 🌐 Online Tutorials
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **GeeksforGeeks** | Heap data structure | [Tutorial](https://www.geeksforgeeks.org/heap-data-structure/) |
@@ -325,6 +339,7 @@ Heap Problem
 | **Programiz** | Binary heap guide | [Tutorial](https://www.programiz.com/dsa/heap-data-structure) |
 
 ### 📺 Video Resources
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **Abdul Bari** | Heap complete playlist | [YouTube](https://www.youtube.com/watch?v=HqPJF2L5h9U) |
@@ -335,6 +350,7 @@ Heap Problem
 | **Tushar Roy** | Heap problems | [YouTube](https://www.youtube.com/watch?v=B7hVxCmfPtM) |
 
 ### 📝 Practice Platforms
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Heap tag | [Problems](https://leetcode.com/tag/heap-priority-queue/) |
@@ -343,6 +359,7 @@ Heap Problem
 | **CodeChef** | Heap practice | [Practice](https://www.codechef.com/practice) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Fibonacci Heap** | O(1) amortized decrease-key | [Wikipedia](https://en.wikipedia.org/wiki/Fibonacci_heap) |
@@ -352,6 +369,7 @@ Heap Problem
 | **Huffman Coding** | Heap application | [Tutorial](https://www.geeksforgeeks.org/huffman-coding-greedy-algo-3/) |
 
 ### 🎯 Problem Collections
+
 | Collection | Focus | Link |
 |-----------|-------|------|
 | **NeetCode 150** | Essential heap | [List](https://neetcode.io/practice) |
@@ -360,6 +378,7 @@ Heap Problem
 | **Striver's SDE Sheet** | Must-do heap | [Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/) |
 
 ### 📊 Visualization Tools
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo** | Heap operations | [Website](https://visualgo.net/en/heap) |
@@ -367,6 +386,7 @@ Heap Problem
 | **CS Animations** | Heap visualizations | [Website](https://www.cs.usfca.edu/~galles/visualization/Heap.html) |
 
 ### 🏆 Competition Resources
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **USACO Guide** | Priority queue guide | [Guide](https://usaco.guide/silver/intro-sorted-sets) |
@@ -402,6 +422,7 @@ Heap Problem
 [ ] Do I need dynamic median? (Two heaps!)
 [ ] Is this greedy + priority? (Heap for next choice)
 [ ] Can I build heap once instead of repeated inserts?
+
 ```
 
 ---

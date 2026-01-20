@@ -44,6 +44,7 @@ dp[i][j] = \begin{cases}
 dp[i-1][j-1] & \text{if } s[i] = t[j] \\
 1 + \min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) & \text{otherwise}
 \end{cases}
+
 ```
 
 ---
@@ -55,6 +56,7 @@ dp[i][j] = \begin{cases}
 \text{true} & \text{if } i \geq j \\
 s[i] = s[j] \land dp[i+1][j-1] & \text{otherwise}
 \end{cases}
+
 ```
 
 ---
@@ -155,6 +157,7 @@ def numDistinct(s: str, t: str) -> int:
                 dp[j] += dp[j - 1]
     
     return dp[n]
+
 ```
 
 ---

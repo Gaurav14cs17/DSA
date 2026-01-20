@@ -96,6 +96,7 @@ class PersistentSegmentTree:
         else:
             new_right = self._update(node.right, mid+1, end, idx, val)
             return PersistentSegTreeNode(node.left, new_right)
+
 ```
 
 ---

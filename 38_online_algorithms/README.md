@@ -57,6 +57,7 @@ Where:
 - σ = input sequence
 - c = competitive ratio
 - α = additive constant
+
 ```
 
 **Example:** LRU Cache is **k-competitive** for cache size k.
@@ -145,6 +146,7 @@ class LRUCache:
                 lru = self.tail.prev
                 self._remove(lru)
                 del self.cache[lru.key]
+
 ```
 
 ### 2. Median from Data Stream (Two Heaps)
@@ -189,6 +191,7 @@ class MedianFinder:
 # Invariant:
 # |len(small) - len(large)| ≤ 1
 # max(small) ≤ min(large)
+
 ```
 
 ### 3. LFU Cache (Frequency Tracking)
@@ -255,6 +258,7 @@ class LFUCache:
         self.key_to_freq[key] = 1
         self.freq_to_keys[1][key] = None
         self.min_freq = 1
+
 ```
 
 ### 4. Sliding Window Maximum (Monotonic Deque)
@@ -297,6 +301,7 @@ class SlidingWindowMax:
                 result.append(nums[self.dq[0]])
         
         return result
+
 ```
 
 ---
@@ -304,6 +309,7 @@ class SlidingWindowMax:
 ## 🏆 LeetCode Problems by Pattern
 
 ### 🎯 Cache Design (6 problems)
+
 | # | Problem | Difficulty | Competitive Ratio |
 |:-:|---------|-----------|-------------------|
 | 146 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | ⭐⭐ | k-competitive |
@@ -312,6 +318,7 @@ class SlidingWindowMax:
 | 355 | [Design Twitter](https://leetcode.com/problems/design-twitter/) | ⭐⭐ | Timeline merging |
 
 ### 📊 Stream Statistics (8 problems)
+
 | # | Problem | Difficulty | Key Insight |
 |:-:|---------|-----------|-------------|
 | 295 | [Find Median from Stream](https://leetcode.com/problems/find-median-from-data-stream/) | ⭐⭐⭐⭐ | Two heaps |
@@ -321,6 +328,7 @@ class SlidingWindowMax:
 | 716 | [Max Stack](https://leetcode.com/problems/max-stack/) | ⭐⭐ | Two stacks or TreeMap |
 
 ### 🪟 Sliding Window (5 problems)
+
 | # | Problem | Difficulty | Key Insight |
 |:-:|---------|-----------|-------------|
 | 239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | ⭐⭐⭐⭐ | Monotonic deque |
@@ -328,6 +336,7 @@ class SlidingWindowMax:
 | 1696 | [Jump Game VI](https://leetcode.com/problems/jump-game-vi/) | ⭐⭐⭐ | DP + monotonic deque |
 
 ### 🎲 Randomized Data Structures (4 problems)
+
 | # | Problem | Difficulty | Key Insight |
 |:-:|---------|-----------|-------------|
 | 380 | [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/) | ⭐⭐ | Array + HashMap |

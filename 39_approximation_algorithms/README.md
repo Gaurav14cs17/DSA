@@ -55,11 +55,14 @@ Where:
 - ALG(I) = algorithm's solution
 - OPT(I) = optimal solution
 - ρ(n) ≥ 1
+
 ```
 
 **Example:** 2-approximation for Vertex Cover means:
+
 ```
 ALG ≤ 2 · OPT
+
 ```
 
 ### PTAS vs FPTAS
@@ -114,6 +117,7 @@ def vertex_cover_approx(edges):
 # Cover: {1, 2, 3, 4}
 # OPT: {2, 3} (size 2)
 # ALG: size 4 = 2 × OPT ✓
+
 ```
 
 ### 2. Set Cover (ln n + 1 Approximation)
@@ -147,6 +151,7 @@ def set_cover_greedy(universe, subsets):
 
 # Greedy is optimal among polynomial algorithms
 # (unless P = NP)
+
 ```
 
 ### 3. Knapsack FPTAS
@@ -194,6 +199,7 @@ def knapsack_fptas(weights, values, capacity, epsilon):
 # Rounding error per item: ≤ K
 # Total error: ≤ nK = ε·V_max
 # ALG ≥ OPT - ε·V_max ≥ (1-ε)·OPT ✓
+
 ```
 
 ### 4. TSP (2-Approximation for Metric)
@@ -238,6 +244,7 @@ def tsp_mst_approx(distances):
 # cost(DFS) = 2·cost(MST)    (traverse each edge twice)
 # cost(shortcut) ≤ cost(DFS) (triangle inequality)
 # ⟹ ALG ≤ 2·OPT ✓
+
 ```
 
 ### 5. Bin Packing (First Fit Decreasing)
@@ -277,6 +284,7 @@ def bin_packing_ffd(items, bin_capacity):
 # FFD Analysis:
 # If OPT uses k bins, FFD uses ≤ (11/9)k + 6/9 bins
 # For large k, ratio approaches 11/9 ≈ 1.222
+
 ```
 
 ---
@@ -284,6 +292,7 @@ def bin_packing_ffd(items, bin_capacity):
 ## 🏆 LeetCode Problems by Pattern
 
 ### 🎯 Greedy Approximation (8 problems)
+
 | # | Problem | Difficulty | Approximation |
 |:-:|---------|-----------|---------------|
 | 621 | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) | ⭐⭐ | Optimal greedy |
@@ -292,6 +301,7 @@ def bin_packing_ffd(items, bin_capacity):
 | 630 | [Course Schedule III](https://leetcode.com/problems/course-schedule-iii/) | ⭐⭐⭐⭐ | Heap greedy |
 
 ### 🎒 Knapsack Variants (6 problems)
+
 | # | Problem | Difficulty | Type |
 |:-:|---------|-----------|------|
 | 416 | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) | ⭐⭐ | 0/1 Knapsack |
@@ -300,6 +310,7 @@ def bin_packing_ffd(items, bin_capacity):
 | 879 | [Profitable Schemes](https://leetcode.com/problems/profitable-schemes/) | ⭐⭐⭐⭐ | 2D Knapsack |
 
 ### 📦 Packing/Covering (4 problems)
+
 | # | Problem | Difficulty | Pattern |
 |:-:|---------|-----------|---------|
 | 1235 | [Maximum Profit in Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling/) | ⭐⭐⭐⭐ | Weighted interval |

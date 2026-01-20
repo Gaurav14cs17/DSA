@@ -51,6 +51,7 @@ permalink: /30_number_theory/04_divisors/02_sum_divisors/
 
 ```math
 \sigma(n) = \sum_{d|n} d = \text{sum of all positive divisors of } n
+
 ```
 
 **Examples:**
@@ -67,6 +68,7 @@ permalink: /30_number_theory/04_divisors/02_sum_divisors/
 
 ```math
 \sigma(n) = \prod_{i=1}^{k} \frac{p_i^{a_i+1} - 1}{p_i - 1}
+
 ```
 
 **Proof:**
@@ -74,6 +76,7 @@ For a single prime power $p^a$:
 
 ```math
 \sigma(p^a) = 1 + p + p^2 + \cdots + p^a = \frac{p^{a+1} - 1}{p - 1}
+
 ```
 
 Since σ is multiplicative: $\sigma(mn) = \sigma(m)\sigma(n)$ when $\gcd(m,n) = 1$.
@@ -86,6 +89,7 @@ Since σ is multiplicative: $\sigma(mn) = \sigma(m)\sigma(n)$ when $\gcd(m,n) = 
 
 ```math
 \sigma(12) = \frac{2^3 - 1}{2 - 1} \cdot \frac{3^2 - 1}{3 - 1} = \frac{7}{1} \cdot \frac{8}{2} = 7 \times 4 = 28
+
 ```
 
 Verify: $1 + 2 + 3 + 4 + 6 + 12 = 28$ ✓
@@ -94,6 +98,7 @@ Verify: $1 + 2 + 3 + 4 + 6 + 12 = 28$ ✓
 
 ```math
 \sigma(60) = \frac{2^3-1}{1} \cdot \frac{3^2-1}{2} \cdot \frac{5^2-1}{4} = 7 \times 4 \times 6 = 168
+
 ```
 
 ---
@@ -121,6 +126,7 @@ Verify: $1 + 2 + 3 + 4 + 6 + 12 = 28$ ✓
 |         Divisors: 1,2,3,4,5,6,10,12,15,20,30,60               |
 |         Sum = 1+2+3+4+5+6+10+12+15+20+30+60 = 168 ✓           |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -176,6 +182,7 @@ print(sum_divisors(1))    # 1
 print(sum_divisors(6))    # 12
 print(sum_divisors(12))   # 28
 print(sum_divisors(60))   # 168
+
 ```
 
 ### 2. Sum Divisors by Direct Enumeration
@@ -202,6 +209,7 @@ def sum_divisors_simple(n: int) -> int:
         d += 1
     
     return total
+
 ```
 
 ### 3. Sum of Proper Divisors
@@ -221,6 +229,7 @@ def sum_proper_divisors(n: int) -> int:
 print(sum_proper_divisors(6))   # 1+2+3 = 6 (perfect!)
 print(sum_proper_divisors(28))  # 1+2+4+7+14 = 28 (perfect!)
 print(sum_proper_divisors(12))  # 1+2+3+4+6 = 16 (abundant)
+
 ```
 
 ### 4. Sieve for Multiple Queries
@@ -245,6 +254,7 @@ def sieve_divisor_sum(limit: int) -> list[int]:
 sigma = sieve_divisor_sum(20)
 for i in range(1, 21):
     print(f"σ({i}) = {sigma[i]}")
+
 ```
 
 ### 5. Generalized Divisor Sum σₖ(n)
@@ -277,6 +287,7 @@ def sigma_k(n: int, k: int) -> int:
 print(sigma_k(12, 0))  # τ(12) = 6
 print(sigma_k(12, 1))  # σ(12) = 28
 print(sigma_k(12, 2))  # 1² + 2² + 3² + 4² + 6² + 12² = 210
+
 ```
 
 ---
@@ -320,6 +331,7 @@ def check_perfect_number(num: int) -> bool:
 perfect = [6, 28, 496, 8128, 33550336]
 for p in perfect:
     print(f"{p}: {check_perfect_number(p)}")  # All True
+
 ```
 
 ---
@@ -338,6 +350,7 @@ for p in perfect:
 
 ```math
 \text{abundancy}(n) = \frac{\sigma(n)}{n}
+
 ```
 
 - Perfect: abundancy = 2
@@ -350,12 +363,14 @@ for p in perfect:
 
 ```math
 \sigma(mn) = \sigma(m) \cdot \sigma(n) \text{ when } \gcd(m,n) = 1
+
 ```
 
 ### 4. Identity Involving τ and σ
 
 ```math
 \sum_{d|n} \tau(d) = (\text{number of divisor pairs } (a,b) \text{ with } ab | n)
+
 ```
 
 ---

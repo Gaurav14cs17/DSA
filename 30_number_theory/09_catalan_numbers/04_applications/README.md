@@ -84,6 +84,7 @@ class Solution:
             return memo[n]
         
         return generate(n) if n % 2 == 1 else []
+
 ```
 
 ### 2. Dyck Paths (Grid Paths Not Crossing Diagonal)
@@ -122,6 +123,7 @@ def generate_dyck_paths(n: int) -> list[str]:
     
     backtrack([], 0, 0)
     return result
+
 ```
 
 ### 3. Polygon Triangulation
@@ -140,6 +142,7 @@ def triangulation_count(n: int) -> int:
 
 # Example: Pentagon (5 vertices) = C_3 = 5 triangulations
 print(triangulation_count(5))  # 5
+
 ```
 
 ### 4. Mountain Ranges
@@ -180,6 +183,7 @@ def visualize_mountain(path: str) -> str:
 
 # Example
 print(visualize_mountain("(())()"))
+
 ```
 
 ### 5. Non-Crossing Partitions
@@ -197,6 +201,7 @@ def non_crossing_partitions(n: int) -> int:
     """
     from math import comb
     return comb(2 * n, n) // (n + 1)
+
 ```
 
 ### 6. Stack-Sortable Permutations
@@ -222,6 +227,7 @@ def count_stack_sortable(n: int) -> int:
     """Count stack-sortable permutations of n elements."""
     from math import comb
     return comb(2 * n, n) // (n + 1)
+
 ```
 
 ---

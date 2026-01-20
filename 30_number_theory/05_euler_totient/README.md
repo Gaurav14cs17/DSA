@@ -40,6 +40,7 @@ permalink: /30_number_theory/05_euler_totient/
 
 ```math
 \phi(n) = |\{k : 1 \leq k \leq n, \gcd(k, n) = 1\}|
+
 ```
 
 ---
@@ -56,6 +57,7 @@ permalink: /30_number_theory/05_euler_totient/
 
 ```math
 \phi(n) = n \prod_{p|n}\left(1 - \frac{1}{p}\right)
+
 ```
 
 ---
@@ -121,6 +123,7 @@ def phi_sum_over_divisors(n: int) -> int:
 # Example values
 # φ(1)=1, φ(2)=1, φ(3)=2, φ(4)=2, φ(5)=4, φ(6)=2
 # φ(7)=6, φ(8)=4, φ(9)=6, φ(10)=4, φ(12)=4
+
 ```
 
 ---

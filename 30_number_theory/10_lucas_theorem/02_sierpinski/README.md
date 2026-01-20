@@ -46,6 +46,7 @@ By Lucas' theorem with p = 2:
 
 ```math
 C(m, n) \equiv 1 \pmod{2} \iff n \text{ is a binary submask of } m
+
 ```
 
 That is: $(n \mathbin{\&} m) = n$
@@ -63,6 +64,7 @@ Row 4:    1 0 0 0 1
 Row 5:   1 1 0 0 1 1
 Row 6:  1 0 1 0 1 0 1
 Row 7: 1 1 1 1 1 1 1 1
+
 ```
 
 This forms a **Sierpiński triangle** fractal pattern!
@@ -93,6 +95,7 @@ def generate_sierpinski(rows: int):
         print(line)
 
 generate_sierpinski(16)
+
 ```
 
 ---

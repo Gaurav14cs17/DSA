@@ -34,6 +34,7 @@ At each step, make the choice that looks best right now.
 
 ```math
 \text{Local optimum} \Rightarrow \text{Global optimum}
+
 ```
 
 **Warning:** This only works for specific problem types!
@@ -114,6 +115,7 @@ def eraseOverlapIntervals(intervals: list[list[int]]) -> int:
             end = intervals[i][1]
     
     return removals
+
 ```
 
 ### Jump Game
@@ -135,6 +137,7 @@ def canJump(nums: list[int]) -> bool:
         max_reach = max(max_reach, i + jump)
     
     return True
+
 ```
 
 ---
@@ -190,6 +193,7 @@ Greedy Problem
       +-- Assignment → Sort both, match greedily
       |
       +-- Always verify greedy works!
+
 ```
 
 ---

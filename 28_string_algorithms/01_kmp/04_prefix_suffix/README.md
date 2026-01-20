@@ -36,6 +36,7 @@ Prefix-suffix matching problems involve finding strings that are both prefixes a
 String: "ABCAB"
 Borders: "", "AB"
 Longest proper border: "AB" (length 2)
+
 ```
 
 ### Happy Prefix
@@ -45,20 +46,25 @@ Longest proper border: "AB" (length 2)
 ```
 "level" → "l" is happy prefix
 "ababab" → "ab", "abab" are happy prefixes
+
 ```
 
 ### Mathematical Properties
 
 **Property 1:** All borders form a chain
+
 ```
 If b₁ is border of s and b₂ is border of b₁,
 then b₂ is border of s
+
 ```
 
 **Property 2:** Number of borders
+
 ```
 String of length n has at most O(log n) borders on average
 Worst case: O(n) (e.g., "aaa...a")
+
 ```
 
 ---
@@ -106,6 +112,7 @@ print(longest_happy_prefix("level"))         # "l"
 print(longest_happy_prefix("ababab"))        # "abab"
 print(longest_happy_prefix("leetcodeleet"))  # "leet"
 print(longest_happy_prefix("a"))             # ""
+
 ```
 
 ### 2. All Happy Prefixes
@@ -152,6 +159,7 @@ def all_happy_prefixes(s):
 print(all_happy_prefixes("ababab"))     # ['ab', 'abab']
 print(all_happy_prefixes("aaa"))        # ['a', 'aa']
 print(all_happy_prefixes("abcabc"))     # ['abc']
+
 ```
 
 ### 3. Count Happy Prefixes at Each Position
@@ -201,6 +209,7 @@ s = "ababab"
 counts = count_borders_at_positions(s)
 for i, count in enumerate(counts):
     print(f"s[0..{i}] = '{s[:i+1]}' has {count} borders")
+
 ```
 
 ### 4. Symmetric Substrings
@@ -245,6 +254,7 @@ def count_symmetric_substrings(s):
 
 # Example
 print(count_symmetric_substrings("aabaa"))   # Count substrings with borders
+
 ```
 
 ### 5. Maximum Border Length
@@ -288,6 +298,7 @@ def max_border_length(s):
 s = "ababcababa"
 pos, length, border = max_border_length(s)
 print(f"Max border at position {pos}: '{border}' (length {length})")
+
 ```
 
 ### 6. Border Array Construction
@@ -339,6 +350,7 @@ borders = build_border_array(s)
 for i, border_list in enumerate(borders):
     substring = s[:i+1]
     print(f"Borders of '{substring}': {border_list}")
+
 ```
 
 ### 7. Prefix-Suffix Overlap
@@ -394,6 +406,7 @@ s2 = "CGATTAC"
 overlap = max_prefix_suffix_overlap(s1, s2)
 print(f"Maximum overlap: {overlap}")
 print(f"Merged: {s1 + s2[overlap:]}")
+
 ```
 
 ---
@@ -401,6 +414,7 @@ print(f"Merged: {s1 + s2[overlap:]}")
 ## 🧩 LeetCode Problems
 
 ### Medium
+
 | # | Problem | Difficulty | Approach |
 |---|---------|------------|----------|
 | 1392 | [Longest Happy Prefix](https://leetcode.com/problems/longest-happy-prefix/) | 🟡 Medium | Direct π[n-1] |
@@ -461,6 +475,7 @@ class Solution:
         # Add reverse of remaining part to front
         to_add = s[palindrome_len:]
         return to_add[::-1] + s
+
 ```
 
 ---
@@ -495,6 +510,7 @@ def merge_strings(strings):
 fragments = ["GATCGA", "CGATTAC", "TACGAT"]
 assembled = merge_strings(fragments)
 print(f"Assembled sequence: {assembled}")
+
 ```
 
 ### 2. Palindrome Construction
@@ -529,6 +545,7 @@ def min_chars_to_palindrome(s):
 # Example
 print(min_chars_to_palindrome("abc"))    # "abcba"
 print(min_chars_to_palindrome("aacecaaa"))  # "aacecaaa"
+
 ```
 
 ---

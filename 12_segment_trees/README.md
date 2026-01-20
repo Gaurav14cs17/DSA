@@ -53,6 +53,7 @@ For array of size $n$:
 
 ```math
 \text{Tree size} \leq 4n
+
 ```
 
 **Node indices (1-indexed):**
@@ -60,6 +61,7 @@ For array of size $n$:
 ```math
 \text{left child} = 2i, \quad \text{right child} = 2i + 1
 \text{parent} = \lfloor i/2 \rfloor
+
 ```
 
 ---
@@ -87,6 +89,7 @@ Query [L, R] decomposes into O(log n) disjoint segments.
 
 ```math
 \text{query}(L, R) = \bigoplus_{i} \text{segment}_i
+
 ```
 
 Where $\oplus$ is the associative operation (sum, min, max, gcd, etc.).
@@ -113,6 +116,7 @@ Update propagates from leaf to root, updating all ancestors.
 
 ```math
 \text{lazy}[node] = \text{pending operation for subtree}
+
 ```
 
 **Push down before:**
@@ -127,6 +131,7 @@ Segment tree works when merge function is **associative**:
 
 ```math
 f(f(a, b), c) = f(a, f(b, c))
+
 ```
 
 **Examples:**
@@ -191,6 +196,7 @@ class SegmentTree:
         left_sum = self._query(2 * node, start, mid, left, right)
         right_sum = self._query(2 * node + 1, mid + 1, end, left, right)
         return left_sum + right_sum
+
 ```
 
 ### Segment Tree with Lazy Propagation
@@ -263,6 +269,7 @@ class LazySegmentTree:
         mid = (start + end) // 2
         return (self._query(2 * node, start, mid, left, right) +
                 self._query(2 * node + 1, mid + 1, end, left, right))
+
 ```
 
 ### Range Min/Max Query
@@ -299,6 +306,7 @@ class RangeMinQuery:
             self._query(2 * node, start, mid, left, right),
             self._query(2 * node + 1, mid + 1, end, left, right)
         )
+
 ```
 
 ---
@@ -345,6 +353,7 @@ Range Query Problem
         +-- 2D queries → 2D Segment Tree
         |
         +-- Persistence needed → Persistent Segment Tree
+
 ```
 
 ---
@@ -362,6 +371,7 @@ Segment Tree (Sum):
     4 [0-1]  5[2]    16[3-4]   11[5]
     /    \           /    \
   1[0]  3[1]      7[3]   9[4]
+
 ```
 
 ---

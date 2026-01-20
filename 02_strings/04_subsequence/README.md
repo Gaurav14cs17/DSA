@@ -39,6 +39,7 @@ permalink: /02_strings/04_subsequence/
 
 ```math
 \boxed{2^n}
+
 ```
 
 (Each character: include or exclude)
@@ -56,6 +57,7 @@ permalink: /02_strings/04_subsequence/
 dp[i-1][j-1] + 1 & \text{if } S[i-1] = T[j-1] \\
 \max(dp[i-1][j], dp[i][j-1]) & \text{otherwise}
 \end{cases}}
+
 ```
 
 **Base Case:** $dp[0][j] = dp[i][0] = 0$
@@ -79,6 +81,7 @@ dp[i][j-1] & \text{(insert)} \\
 dp[i-1][j-1] & \text{(replace)}
 \end{cases} & \text{otherwise}
 \end{cases}
+
 ```
 
 ---
@@ -96,6 +99,7 @@ dp[i][j] = \begin{cases}
 dp[i-1][j] + dp[i-1][j-1] & \text{if } S[i-1] = T[j-1] \\
 dp[i-1][j] & \text{otherwise}
 \end{cases}
+
 ```
 
 ---
@@ -225,6 +229,7 @@ def numDistinct(s: str, t: str) -> int:
                 dp[i][j] += dp[i-1][j-1]  # Use s[i-1]
     
     return dp[m][n]
+
 ```
 
 ---
@@ -281,6 +286,7 @@ Tracing back the solution:
   dp[1][1] = 1, s1[0]='A', s2[0]='A' → match → include 'A'
 
 Result: "ACE" ✓
+
 ```
 
 ### Edit Distance Example: "horse" → "ros"
@@ -299,6 +305,7 @@ Operations: Delete, Insert, Replace
 Minimum operations = 3
 Path: horse → rorse → rose → ros
       (replace)  (delete) (delete)
+
 ```
 
 ---
@@ -338,6 +345,7 @@ Subsequence Problem
        DP O(2ⁿ) ++-+
               LCS Edit
              O(mn) O(mn)
+
 ```
 
 ### When to Use Each Approach
@@ -423,6 +431,7 @@ By induction, DP computes optimal solution ∎
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **LCS Algorithm** | Complete guide with proof | [Wikipedia](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem) |
@@ -431,6 +440,7 @@ By induction, DP computes optimal solution ∎
 | **Subsequence vs Substring** | Key differences | [GeeksforGeeks](https://www.geeksforgeeks.org/subarraysubstring-vs-subsequence-and-programs-to-generate-them/) |
 
 ### 🎥 Video Tutorials
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **Abdul Bari** | LCS explained | [YouTube](https://www.youtube.com/watch?v=sSno9rV8Rhg) |
@@ -441,6 +451,7 @@ By induction, DP computes optimal solution ∎
 | **NeetCode** | Longest common subsequence | [YouTube](https://www.youtube.com/watch?v=Ua0GhsJSlWM) |
 
 ### 📝 Interactive Practice
+
 | Platform | Problem Set | Link |
 |----------|-------------|------|
 | **LeetCode** | Dynamic programming tag | [Problems](https://leetcode.com/tag/dynamic-programming/) |
@@ -449,6 +460,7 @@ By induction, DP computes optimal solution ∎
 | **CSES** | DP section | [Problemset](https://cses.fi/problemset/list/) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Hirschberg's Algorithm** | O(n) space LCS | [Wikipedia](https://en.wikipedia.org/wiki/Hirschberg%27s_algorithm) |
@@ -457,6 +469,7 @@ By induction, DP computes optimal solution ∎
 | **Sequence Alignment** | Bioinformatics application | [Wikipedia](https://en.wikipedia.org/wiki/Sequence_alignment) |
 
 ### 🎯 Problem Collections
+
 | Collection | Focus | Link |
 |-----------|-------|------|
 | **NeetCode 150** | Essential DP problems | [List](https://neetcode.io/practice) |
@@ -465,6 +478,7 @@ By induction, DP computes optimal solution ∎
 | **CSES DP Section** | Practice problems | [Problems](https://cses.fi/problemset/) |
 
 ### 📊 Visualization Tools
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **DP Visualizer** | See DP table fill | [Tool](https://algorithm-visualizer.org/) |
@@ -472,6 +486,7 @@ By induction, DP computes optimal solution ∎
 | **Edit Distance Viz** | Step-by-step operations | [Tool](https://planetcalc.com/1721/) |
 
 ### 🏆 Competition Resources
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **USACO Guide** | DP on strings | [Guide](https://usaco.guide/gold/string-search) |
@@ -479,6 +494,7 @@ By induction, DP computes optimal solution ∎
 | **Codeforces EDU** | DP course | [Course](https://codeforces.com/edu/course/2/lesson/5) |
 
 ### 📚 Research Papers
+
 | Paper | Topic | Link |
 |-------|-------|------|
 | **Wagner-Fischer (1974)** | Edit distance algorithm | [Paper](https://dl.acm.org/doi/10.1145/321796.321811) |

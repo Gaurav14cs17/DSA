@@ -61,6 +61,7 @@ One recursive call per function invocation:
 
 ```math
 T(n) = T(n-1) + O(1) = O(n)
+
 ```
 
 **Examples:** Factorial, sum, list traversal.
@@ -81,6 +82,7 @@ def f(n, acc):
 def f(n):
     if n == 0: return 1
     return n * f(n-1)  # Multiplication after call
+
 ```
 
 ---
@@ -94,6 +96,7 @@ Each call creates a stack frame storing:
 
 ```math
 \text{Space} = O(\text{max depth})
+
 ```
 
 ---
@@ -198,6 +201,7 @@ def swapPairs(head: 'ListNode') -> 'ListNode':
     second.next = first
     
     return second
+
 ```
 
 ---

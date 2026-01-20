@@ -34,6 +34,7 @@ For a tree with $n$ nodes:
 
 ```math
 \boxed{\text{edges} = n - 1}
+
 ```
 
 **Proof:** Each node except root has exactly one parent edge.
@@ -48,12 +49,14 @@ For a tree with $n$ nodes:
 
 ```math
 \boxed{\sum_{k=0}^{h} 2^k = 2^{h+1} - 1}
+
 ```
 
 **Minimum height for $n$ nodes:**
 
 ```math
 h_{min} = \lfloor \log_2 n \rfloor
+
 ```
 
 ---
@@ -84,6 +87,7 @@ h_{min} = \lfloor \log_2 n \rfloor
 
 ```math
 \boxed{h(node) = 1 + \max(h(left), h(right))}
+
 ```
 
 Base: $h(\text{null}) = 0$ or $h(\text{leaf}) = 0$
@@ -96,6 +100,7 @@ Diameter passes through some node $v$:
 
 ```math
 \boxed{\text{diameter} = \max_{v} (h(v.left) + h(v.right))}
+
 ```
 
 ---
@@ -110,6 +115,7 @@ r & \text{if } p \in T_L \text{ and } q \in T_R \\
 \text{LCA}(r.left, p, q) & \text{if } p, q \in T_L \\
 \text{LCA}(r.right, p, q) & \text{if } p, q \in T_R
 \end{cases}
+
 ```
 
 Where $T\_L, T\_R$ are left and right subtrees.
@@ -122,12 +128,14 @@ Number of structurally unique BSTs with $n$ nodes:
 
 ```math
 \boxed{C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}}
+
 ```
 
 **Recurrence:**
 
 ```math
 C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
+
 ```
 
 First values: $C\_0=1, C\_1=1, C\_2=2, C\_3=5, C\_4=14, \ldots$
@@ -257,6 +265,7 @@ First values: $C\_0=1, C\_1=1, C\_2=2, C\_3=5, C\_4=14, \ldots$
 ## 📚 References & Learning Resources
 
 ### 📖 Books & Courses
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **CLRS Chapter 12** | Binary search trees | [MIT Press](https://mitpress.mit.edu/books/introduction-algorithms) |
@@ -264,6 +273,7 @@ First values: $C\_0=1, C\_1=1, C\_2=2, C\_3=5, C\_4=14, \ldots$
 | **Competitive Programming 3** | Chapter 2.4 - Trees | [Book](https://cpbook.net/) |
 
 ### 🌐 Online Tutorials
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **GeeksforGeeks** | Tree complete guide | [Tutorial](https://www.geeksforgeeks.org/binary-tree-data-structure/) |
@@ -272,6 +282,7 @@ First values: $C\_0=1, C\_1=1, C\_2=2, C\_3=5, C\_4=14, \ldots$
 | **HackerRank** | Tree challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=trees) |
 
 ### 📺 Video Resources
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **NeetCode** | Trees playlist | [YouTube](https://www.youtube.com/playlist?list=PLot-Xpze53ldg4pN6PfzoJY7KsKcxF1jg) |
@@ -281,6 +292,7 @@ First values: $C\_0=1, C\_1=1, C\_2=2, C\_3=5, C\_4=14, \ldots$
 | **William Fiset** | Tree algorithms | [YouTube](https://www.youtube.com/watch?v=fAAZixBzIAI) |
 
 ### 📝 Practice Platforms
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Tree tag | [Problems](https://leetcode.com/tag/tree/) |
@@ -289,6 +301,7 @@ First values: $C\_0=1, C\_1=1, C\_2=2, C\_3=5, C\_4=14, \ldots$
 | **CodeChef** | Tree practice | [Practice](https://www.codechef.com/practice) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Morris Traversal** | O(1) space traversal | [Tutorial](https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion-and-without-stack/) |
@@ -298,6 +311,7 @@ First values: $C\_0=1, C\_1=1, C\_2=2, C\_3=5, C\_4=14, \ldots$
 | **Heavy-Light Decomposition** | Path queries | [CP-Algorithms](https://cp-algorithms.com/graph/hld.html) |
 
 ### 🎯 Problem Collections
+
 | Collection | Focus | Link |
 |-----------|-------|------|
 | **NeetCode 150** | Essential trees | [List](https://neetcode.io/practice) |
@@ -306,6 +320,7 @@ First values: $C\_0=1, C\_1=1, C\_2=2, C\_3=5, C\_4=14, \ldots$
 | **Striver's SDE Sheet** | Must-do trees | [Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/) |
 
 ### 📊 Visualization Tools
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo** | Tree operations | [Website](https://visualgo.net/en/bst) |
@@ -313,6 +328,7 @@ First values: $C\_0=1, C\_1=1, C\_2=2, C\_3=5, C\_4=14, \ldots$
 | **CS Animations** | Tree visualizations | [Website](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html) |
 
 ### 🏆 Competition Resources
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **USACO Guide** | Tree algorithms | [Guide](https://usaco.guide/silver/intro-tree) |
@@ -348,6 +364,7 @@ First values: $C\_0=1, C\_1=1, C\_2=2, C\_3=5, C\_4=14, \ldots$
 [ ] Is this a construction problem (need hash map)?
 [ ] Can I use Morris traversal for O(1) space?
 [ ] Do I need parent pointers or can I solve without?
+
 ```
 
 ---

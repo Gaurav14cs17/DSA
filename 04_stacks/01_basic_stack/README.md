@@ -73,6 +73,7 @@ permalink: /04_stacks/01_basic_stack/
 
 ```math
 \boxed{S = (D, \Omega)}
+
 ```
 
 Where:
@@ -90,6 +91,7 @@ isEmpty(push(S, x)) &= false \\
 size(\emptyset) &= 0 \\
 size(push(S, x)) &= size(S) + 1
 \end{aligned}
+
 ```
 
 ---
@@ -161,6 +163,7 @@ When resizing from size $k$ to $2k$:
 
 ```math
 \sum_{i=0}^{\log n} 2^i = 2^{\log n + 1} - 1 < 2n
+
 ```
 
 **Amortized cost:** $\frac{3n}{n} = O(1)$ ∎
@@ -175,6 +178,7 @@ When resizing from size $k$ to $2k$:
 
 ```math
 \boxed{min\_at[i] = \min(value[i], min\_at[i-1])}
+
 ```
 
 **Space:** $O(n)$ extra
@@ -185,6 +189,7 @@ Store $difference = value - current\_min$ instead of value.
 
 ```math
 \boxed{stored[i] = value[i] - min\_at[i]}
+
 ```
 
 When $stored[i] < 0$: new minimum found!
@@ -291,6 +296,7 @@ Total: 3 operations per element
 |                  ↑                                                 |
 |                 top                                                |
 +--------------------------------------------------------------------+
+
 ```
 
 ---
@@ -392,6 +398,7 @@ Solution: Store (value, min_so_far) pairs
 |  Key Insight: Each element "remembers" what the minimum was        |
 |  when it was pushed. Popping automatically restores correct min!   |
 +--------------------------------------------------------------------+
+
 ```
 
 ---
@@ -490,6 +497,7 @@ Amortized Analysis:
 - Each element: pushed to S1 once, moved to S2 once, popped once
 - Total: 3 operations per element
 - Amortized: O(1) per enqueue/dequeue ✓
+
 ```
 
 ---
@@ -761,6 +769,7 @@ def baseball_game(operations: list[str]) -> int:
             stack.append(int(op))
     
     return sum(stack)
+
 ```
 
 ---
@@ -944,6 +953,7 @@ def pop(self):
     if not self.items:
         raise IndexError("pop from empty stack")
     return self.items.pop()
+
 ```
 
 ### Pitfall 2: Forgetting Min Update
@@ -963,6 +973,7 @@ class MinStack:
     def push(self, val):
         current_min = min(val, self.stack[-1][1]) if self.stack else val
         self.stack.append((val, current_min))
+
 ```
 
 ### Pitfall 3: Inefficient Queue from Stacks
@@ -980,6 +991,7 @@ def dequeue(self):
         while self.s1:
             self.s2.append(self.s1.pop())
     return self.s2.pop()
+
 ```
 
 ---

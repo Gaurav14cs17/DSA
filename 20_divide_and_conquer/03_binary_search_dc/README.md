@@ -50,6 +50,7 @@ permalink: /20_divide_and_conquer/03_binary_search_dc/
 
 ```math
 T(n) = T(n/2) + O(1) = O(\log n)
+
 ```
 
 ---
@@ -60,12 +61,14 @@ Find position where:
 
 ```math
 \text{partitionX} + \text{partitionY} = \frac{m + n + 1}{2}
+
 ```
 
 Such that:
 
 ```math
 \max(\text{leftX}, \text{leftY}) \leq \min(\text{rightX}, \text{rightY})
+
 ```
 
 ---
@@ -76,6 +79,7 @@ Each step eliminates half the search space:
 
 ```math
 n \to \frac{n}{2} \to \frac{n}{4} \to \cdots \to 1
+
 ```
 
 Steps: $\log\_2 n$
@@ -188,6 +192,7 @@ def maxSubArray(nums: list[int]) -> int:
         return left_sum + right_sum
     
     return divide_conquer(0, len(nums) - 1)
+
 ```
 
 ---

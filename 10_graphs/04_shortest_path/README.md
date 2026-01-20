@@ -47,6 +47,7 @@ permalink: /10_graphs/04_shortest_path/
 
 ```math
 \text{dist}[v] = \min(\text{dist}[v], \text{dist}[u] + w(u,v))
+
 ```
 
 **Correctness:** Greedy choice property - when $u$ is extracted, $\text{dist}[u]$ is optimal.
@@ -61,6 +62,7 @@ permalink: /10_graphs/04_shortest_path/
 
 ```math
 \text{After } k \text{ iterations: shortest paths using } \leq k \text{ edges}
+
 ```
 
 **Negative cycle detection:** If any relaxation possible after V-1 iterations.
@@ -73,6 +75,7 @@ permalink: /10_graphs/04_shortest_path/
 
 ```math
 D^{(k)}[i][j] = \min(D^{(k-1)}[i][j], D^{(k-1)}[i][k] + D^{(k-1)}[k][j])
+
 ```
 
 **Meaning:** Shortest $i \to j$ using vertices $\{1, \ldots, k\}$ as intermediates.
@@ -88,6 +91,7 @@ D^{(k)}[i][j] = \min(D^{(k-1)}[i][j], D^{(k-1)}[i][k] + D^{(k-1)}[k][j])
 
 ```math
 T = O(V + E)
+
 ```
 
 ---
@@ -251,6 +255,7 @@ def swimInWater(grid: list[list[int]]) -> int:
                 heapq.heappush(pq, (max(time, grid[nr][nc]), nr, nc))
     
     return -1
+
 ```
 
 ---
@@ -289,6 +294,7 @@ Shortest Path
      +-- All pairs → Floyd-Warshall O(V³)
      |
      +-- 0-1 weights → 0-1 BFS O(V+E)
+
 ```
 
 ---

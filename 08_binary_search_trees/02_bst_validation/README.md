@@ -45,6 +45,7 @@ Every node must satisfy:
 
 ```math
 \boxed{min < node.val < max}
+
 ```
 
 **Recurrence:**
@@ -55,6 +56,7 @@ Every node must satisfy:
 \text{false} & \text{if } node.val \leq min \text{ or } node.val \geq max \\
 \text{isValid}(left, min, node.val) \land \text{isValid}(right, node.val, max) & \text{otherwise}
 \end{cases}
+
 ```
 
 ---
@@ -65,6 +67,7 @@ Every node must satisfy:
 
 ```math
 \text{inorder}[i] < \text{inorder}[i+1] \quad \forall i
+
 ```
 
 ---
@@ -90,6 +93,7 @@ Every node must satisfy:
 
 ```math
 \text{height} = \lceil \log_2(n+1) \rceil - 1
+
 ```
 
 At each level, split array in half → balanced subtrees.
@@ -98,6 +102,7 @@ At each level, split array in half → balanced subtrees.
 
 ```math
 T(n) = 2T(n/2) + O(1) = O(n)
+
 ```
 
 ---
@@ -105,9 +110,11 @@ T(n) = 2T(n/2) + O(1) = O(n)
 ### 5️⃣ BST Validation - Common Mistakes
 
 **❌ Wrong Approach:**
+
 ```python
 # Only checks immediate children!
 return node.left.val < node.val < node.right.val  # WRONG!
+
 ```
 
 **✓ Correct Approach:**
@@ -125,6 +132,7 @@ return node.left.val < node.val < node.right.val  # WRONG!
 
 ```math
 \text{Time: } O(n), \text{ Space: } O(1)
+
 ```
 
 ---
@@ -156,6 +164,7 @@ Step 4: validate(6, 10, 15)
         6 ∉ (10, 15) ✗  INVALID!
 
 Why? 6 is in right subtree of 10, but 6 < 10!
+
 ```
 
 **Key Insight:** Must track min/max bounds from ancestors, not just parent!
@@ -195,6 +204,7 @@ Corrected:
   1   3
 
 Inorder: [1, 2, 3, 15] ✓
+
 ```
 
 ---
@@ -243,6 +253,7 @@ Actually should be:
 Wait, let me reconsider...
 Actually the swap of 15 and 1 gives:
 [5, 1, 8, 10, 15] → need to swap 15 and 1 back.
+
 ```
 
 ---
@@ -269,6 +280,7 @@ Result:
 
 Height = 2 (log₂ 7 ≈ 2.8)
 Perfectly balanced! ✓
+
 ```
 
 ---
@@ -299,6 +311,7 @@ BST Validation Problem
     |
     +-- Build balanced BST?
         +-- Use middle element
+
 ```
 
 ---
@@ -400,6 +413,7 @@ def sortedArrayToBST(nums: list[int]) -> TreeNode:
         return root
     
     return build(0, len(nums) - 1)
+
 ```
 
 ---
@@ -457,6 +471,7 @@ def sortedArrayToBST(nums: list[int]) -> TreeNode:
 ## 📚 References & Resources
 
 ### 📖 Books & Courses
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **CLRS Chapter 12.3** | BST validation proofs | [MIT Press](https://mitpress.mit.edu/books/introduction-algorithms) |
@@ -464,6 +479,7 @@ def sortedArrayToBST(nums: list[int]) -> TreeNode:
 | **Algorithm Design Manual** | Tree validation | [Springer](https://www.algorist.com/) |
 
 ### 🌐 Online Tutorials
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **GeeksforGeeks** | BST validation | [Tutorial](https://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/) |
@@ -472,6 +488,7 @@ def sortedArrayToBST(nums: list[int]) -> TreeNode:
 | **Programiz** | BST validation guide | [Tutorial](https://www.programiz.com/dsa/binary-search-tree) |
 
 ### 📺 Video Resources
+
 | Creator | Topic | Link |
 |---------|-------|------|
 | **NeetCode** | Validate BST | [YouTube](https://www.youtube.com/watch?v=s6ATEkipzow) |
@@ -481,6 +498,7 @@ def sortedArrayToBST(nums: list[int]) -> TreeNode:
 | **Kevin Naughton Jr** | Validate BST walkthrough | [YouTube](https://www.youtube.com/watch?v=Z_-h_mpDmeg) |
 
 ### 🔧 Interactive Tools
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo BST** | Visualize validation | [Website](https://visualgo.net/en/bst) |
@@ -488,6 +506,7 @@ def sortedArrayToBST(nums: list[int]) -> TreeNode:
 | **Algorithm Visualizer** | BST recovery | [Website](https://algorithm-visualizer.org/) |
 
 ### 📝 Practice Platforms
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Validation problems | [#98](https://leetcode.com/problems/validate-binary-search-tree/), [#99](https://leetcode.com/problems/recover-binary-search-tree/) |

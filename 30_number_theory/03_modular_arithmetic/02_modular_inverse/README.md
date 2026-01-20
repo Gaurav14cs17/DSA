@@ -19,8 +19,10 @@ nav_order: 2
 ## 🎯 Overview
 
 The **modular inverse** of a modulo m is an integer x such that:
+
 ```
 a × x ≡ 1 (mod m)
+
 ```
 
 Notation: x = a⁻¹ (mod m)
@@ -89,6 +91,7 @@ def mod_inverse_gcd(a, m):
 print(mod_inverse_gcd(3, 11))   # 4: 3×4 = 12 ≡ 1 (mod 11)
 print(mod_inverse_gcd(5, 7))    # 3: 5×3 = 15 ≡ 1 (mod 7)
 print(mod_inverse_gcd(4, 6))    # None: gcd(4, 6) = 2
+
 ```
 
 ### 2. Fermat's Theorem Method
@@ -114,6 +117,7 @@ def mod_inverse_fermat(a, p):
 MOD = 10**9 + 7
 print(mod_inverse_fermat(2, MOD))
 print(mod_inverse_fermat(3, MOD))
+
 ```
 
 ### 3. Iterative Extended GCD
@@ -145,6 +149,7 @@ def mod_inverse_iterative(a, m):
 # Examples
 print(mod_inverse_iterative(3, 11))  # 4
 print(mod_inverse_iterative(7, 26))  # 15
+
 ```
 
 ### 4. Batch Modular Inverse
@@ -191,6 +196,7 @@ arr = [2, 3, 5, 7]
 inverses = mod_inverse_batch(arr, MOD)
 for a, inv in zip(arr, inverses):
     print(f"{a}⁻¹ = {inv}, verify: {(a * inv) % MOD}")
+
 ```
 
 ### 5. Modular Division
@@ -211,6 +217,7 @@ def mod_div(a, b, m):
 MOD = 10**9 + 7
 print(mod_div(10, 2, MOD))  # 5
 print(mod_div(7, 3, MOD))   # 7 × 3⁻¹ mod MOD
+
 ```
 
 ### 6. Precompute Factorials and Inverses
@@ -251,6 +258,7 @@ MOD = 10**9 + 7
 fact, inv_fact = precompute_factorials(1000, MOD)
 print(nCr_mod(10, 3, fact, inv_fact, MOD))  # C(10,3) = 120
 print(nCr_mod(100, 50, fact, inv_fact, MOD))
+
 ```
 
 ---
@@ -291,6 +299,7 @@ class Solution:
         if r < 0 or r > n:
             return 0
         return self.fact[n] * self.inv_fact[r] % self.MOD * self.inv_fact[n - r] % self.MOD
+
 ```
 
 ---
@@ -308,16 +317,20 @@ class Solution:
 ### 2. Inverse for Combinations
 
 For nCr mod p where p is prime:
+
 ```
 nCr = n! / (r! × (n-r)!)
     ≡ n! × (r!)⁻¹ × ((n-r)!)⁻¹ (mod p)
+
 ```
 
 ### 3. Python's Built-in
 
 Python 3.8+ has:
+
 ```python
 pow(a, -1, m)  # Returns a⁻¹ mod m
+
 ```
 
 ---

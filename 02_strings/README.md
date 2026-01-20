@@ -34,18 +34,21 @@ A string $S$ of length $n$ over alphabet $\Sigma$:
 
 ```math
 S = s_0 s_1 s_2 \cdots s_{n-1} \quad \text{where } s_i \in \Sigma
+
 ```
 
 **ASCII Encoding:**
 
 ```math
 \text{char\_value} = \text{ord}(c) \in [0, 127]
+
 ```
 
 **Memory:**
 
 ```math
 \text{Address}(S[i]) = \text{Base} + i \times \text{sizeof(char)}
+
 ```
 
 ---
@@ -56,15 +59,18 @@ S = s_0 s_1 s_2 \cdots s_{n-1} \quad \text{where } s_i \in \Sigma
 
 ```math
 n - k + 1
+
 ```
 
 **Total substrings (including empty):**
 
 ```math
 \boxed{\frac{n(n+1)}{2} + 1}
+
 ```
 
 **Proof:**
+
 ```
 Substrings starting at position 0: n choices
 Substrings starting at position 1: n-1 choices
@@ -73,6 +79,7 @@ Substrings starting at position n-1: 1 choice
 
 Total = n + (n-1) + ... + 1 = n(n+1)/2
 Plus 1 for empty string = n(n+1)/2 + 1 ∎
+
 ```
 
 ---
@@ -83,6 +90,7 @@ Plus 1 for empty string = n(n+1)/2 + 1 ∎
 
 ```math
 \boxed{\forall c \in \Sigma: \text{count}_S(c) = \text{count}_T(c)}
+
 ```
 
 **Equivalent Conditions:**
@@ -95,12 +103,14 @@ Plus 1 for empty string = n(n+1)/2 + 1 ∎
 
 ```math
 \vec{f}(S) = [\text{count}_S('a'), \text{count}_S('b'), \ldots, \text{count}_S('z')] \in \mathbb{Z}^{26}
+
 ```
 
 **Proof:**
 
 ```math
 S \sim T \iff \vec{f}(S) = \vec{f}(T) \iff \text{sorted}(S) = \text{sorted}(T) \; \blacksquare
+
 ```
 
 ---
@@ -111,12 +121,14 @@ S \sim T \iff \vec{f}(S) = \vec{f}(T) \iff \text{sorted}(S) = \text{sorted}(T) \
 
 ```math
 \boxed{S[i] = S[n-1-i] \quad \forall i \in [0, \lfloor n/2 \rfloor]}
+
 ```
 
 **Palindrome Centers Formula:**
 
 ```math
 \text{Total centers} = 2n - 1
+
 ```
 
 - Odd length palindromes: $n$ centers at indices $0, 1, \ldots, n-1$
@@ -128,13 +140,16 @@ For center at position $c$ (using $2n-1$ indexing):
 
 ```math
 \text{left} = \left\lfloor \frac{c}{2} \right\rfloor, \quad \text{right} = \left\lfloor \frac{c}{2} \right\rfloor + (c \bmod 2)
+
 ```
 
 **Proof of Center Count:**
+
 ```
 Odd-length: Center at each character → n centers
 Even-length: Center between each pair → n-1 centers
 Total: n + (n-1) = 2n - 1 ∎
+
 ```
 
 ---
@@ -154,6 +169,7 @@ dp[i][j-1] & \text{(insert)} \\
 dp[i-1][j-1] & \text{(replace)}
 \end{cases} & \text{otherwise}
 \end{cases}}
+
 ```
 
 **Operations Cost:**
@@ -169,6 +185,7 @@ Let $E(i,j)$ = edit distance between $S[0..i-1]$ and $T[0..j-1]$
 
 ```math
 E(i,j) = E(i-1, j-1)
+
 ```
 
 **Case 2:** If $S[i-1] \neq T[j-1]$, try all operations:
@@ -186,6 +203,7 @@ Take minimum → optimal ∎
 
 ```math
 dp[i][j] = \text{LCS length of } S[0..i-1] \text{ and } T[0..j-1]
+
 ```
 
 **Recurrence:**
@@ -195,6 +213,7 @@ dp[i][j] = \text{LCS length of } S[0..i-1] \text{ and } T[0..j-1]
 dp[i-1][j-1] + 1 & \text{if } S[i-1] = T[j-1] \\
 \max(dp[i-1][j], dp[i][j-1]) & \text{otherwise}
 \end{cases}}
+
 ```
 
 **Base Case:** $dp[0][j] = dp[i][0] = 0$
@@ -203,6 +222,7 @@ dp[i-1][j-1] + 1 & \text{if } S[i-1] = T[j-1] \\
 
 ```math
 \text{LCS}(S, \text{reverse}(S)) = \text{Longest Palindromic Subsequence}
+
 ```
 
 **Correctness Proof:**
@@ -213,12 +233,14 @@ If $S[i-1] = T[j-1]$, they must appear in LCS (greedy is optimal):
 
 ```math
 \text{LCS}(S[0..i-1], T[0..j-1]) = \text{LCS}(S[0..i-2], T[0..j-2]) + 1
+
 ```
 
 If $S[i-1] \neq T[j-1]$, one must be excluded:
 
 ```math
 \text{LCS} = \max(\text{LCS}(S[0..i-2], T[0..j-1]), \text{LCS}(S[0..i-1], T[0..j-2]))
+
 ```
 
 By induction on string lengths, DP computes optimal solution ∎
@@ -231,6 +253,7 @@ By induction on string lengths, DP computes optimal solution ∎
 
 ```math
 \boxed{H(S) = \sum_{i=0}^{n-1} s_i \cdot p^i \mod m}
+
 ```
 
 Where:
@@ -241,12 +264,14 @@ Where:
 
 ```math
 H(S + c) = (H(S) + c \cdot p^n) \mod m
+
 ```
 
 **Rolling Update (remove character from left):**
 
 ```math
 H(S[1..n]) = \frac{H(S[0..n]) - s_0}{p} \mod m
+
 ```
 
 **Collision Probability:**
@@ -255,6 +280,7 @@ For two different strings:
 
 ```math
 P(\text{collision}) \approx \frac{1}{m}
+
 ```
 
 **Example Calculation:**
@@ -264,6 +290,7 @@ For string "abc" with $p=31$, $m=10^9+7$:
 ```math
 H(\text{"abc"}) = (97 \cdot 31^0 + 98 \cdot 31^1 + 99 \cdot 31^2) \bmod (10^9+7)
 = (97 + 3038 + 95139) \bmod (10^9+7) = 98274
+
 ```
 
 ---
@@ -280,6 +307,7 @@ H(\text{"abc"}) = (97 \cdot 31^0 + 98 \cdot 31^1 + 99 \cdot 31^2) \bmod (10^9+7)
 \pi[\pi[i-1]] & \text{if } P[i] \neq P[\pi[i-1]] \text{ (backtrack)} \\
 \pi[i-1] + 1 & \text{if } P[i] = P[\pi[i-1]]
 \end{cases}
+
 ```
 
 **Time Complexity Proof:**
@@ -467,6 +495,7 @@ Total operations: $O(n)$ ∎
    |         |       |      Hash            |
 Two Ptr  Anagram   O(n)    O(n+m)         O(mn)
 Palindrome  Hash
+
 ```
 
 ---
@@ -474,6 +503,7 @@ Palindrome  Hash
 ## 📚 References & Learning Resources
 
 ### 📖 Books & Courses
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **CLRS Chapter 32** | String matching algorithms | [MIT Press](https://mitpress.mit.edu/books/introduction-algorithms) |
@@ -482,6 +512,7 @@ Palindrome  Hash
 | **Algorithms 4th Edition** | Sedgewick & Wayne | [Book Site](https://algs4.cs.princeton.edu/) |
 
 ### 🌐 Online Tutorials
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **CP-Algorithms** | String algorithms encyclopedia | [Strings](https://cp-algorithms.com/string/) |
@@ -490,6 +521,7 @@ Palindrome  Hash
 | **HackerEarth** | String algorithms tutorial | [Tutorial](https://www.hackerearth.com/practice/algorithms/string-algorithm/basics-of-string-manipulation/tutorial/) |
 
 ### 📺 Video Resources
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **NeetCode** | String patterns playlist | [YouTube](https://www.youtube.com/playlist?list=PLot-Xpze53ldVwtstag2TL4HQhAnC8ATf) |
@@ -500,6 +532,7 @@ Palindrome  Hash
 | **Tushar Roy** | DP on strings | [YouTube](https://www.youtube.com/watch?v=NnD96abizww) |
 
 ### 📝 Practice Platforms
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Interview problems | [String Tag](https://leetcode.com/tag/string/) |
@@ -509,6 +542,7 @@ Palindrome  Hash
 | **AtCoder** | Japanese contests | [Problems](https://atcoder.jp/) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **KMP Algorithm** | O(n+m) pattern matching | [Wikipedia](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm) |
@@ -521,6 +555,7 @@ Palindrome  Hash
 | **Boyer-Moore** | Fast pattern matching | [Wikipedia](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm) |
 
 ### 🎯 Problem Collections
+
 | Collection | Focus | Link |
 |-----------|-------|------|
 | **NeetCode 150** | Curated interview problems | [Strings](https://neetcode.io/practice) |
@@ -530,6 +565,7 @@ Palindrome  Hash
 | **LeetCode Patterns** | 14 patterns guide | [Sean Prashad](https://seanprashad.com/leetcode-patterns/) |
 
 ### 📊 Visualization Tools
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **Regex101** | Regular expressions tester | [Website](https://regex101.com/) |
@@ -538,6 +574,7 @@ Palindrome  Hash
 | **String Matching Viz** | Pattern matching demo | [Tool](http://whocouldthat.be/visualizing-string-matching/) |
 
 ### 🏆 Competition Resources
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **USACO Guide** | String algorithms guide | [Guide](https://usaco.guide/) |
@@ -546,6 +583,7 @@ Palindrome  Hash
 | **CSES Problem Set** | Finnish platform | [Strings](https://cses.fi/problemset/list/) |
 
 ### 📚 Research Papers
+
 | Paper | Topic | Link |
 |-------|-------|------|
 | **Knuth-Morris-Pratt (1977)** | Original KMP paper | [Paper](https://epubs.siam.org/doi/10.1137/0206024) |
@@ -581,6 +619,7 @@ Palindrome  Hash
 [ ] Is this a DP problem? (LCS, edit distance patterns)
 [ ] Can rolling hash optimize substring search?
 [ ] Am I avoiding O(n²) string concatenation?
+
 ```
 
 ---

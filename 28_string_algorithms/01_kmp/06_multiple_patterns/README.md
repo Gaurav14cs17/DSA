@@ -31,9 +31,11 @@ While KMP is designed for single pattern matching, it can be adapted for multipl
 ### Naive Multiple KMP
 
 Run KMP k times:
+
 ```
 Time: O(k(n + m))
 Space: O(m)
+
 ```
 
 ### Optimized Approaches
@@ -112,6 +114,7 @@ patterns = ["AB", "ABC", "ABABC"]
 results = search_multiple_patterns(text, patterns)
 for pattern, matches in results.items():
     print(f"'{pattern}': {matches}")
+
 ```
 
 ### 2. Optimized for Same-Length Patterns
@@ -173,6 +176,7 @@ def search_same_length_patterns(text, patterns):
 text = "ABCABDABC"
 patterns = ["ABC", "ABD"]
 print(search_same_length_patterns(text, patterns))
+
 ```
 
 ### 3. Pattern with Wildcards
@@ -241,6 +245,7 @@ text = "ABABDABAC"
 patterns = ["AB?D", "?BAC", "AB"]
 results = search_with_wildcards(text, patterns)
 print(results)
+
 ```
 
 ### 4. Dictionary Word Search
@@ -279,6 +284,7 @@ text = "the quick brown fox jumps"
 dictionary = ["the", "quick", "fox", "jumps", "slow"]
 found = find_dictionary_words(text, dictionary)
 print(f"Found words: {list(found.keys())}")
+
 ```
 
 ### 5. Find All Anagrams of Multiple Patterns
@@ -319,6 +325,7 @@ text = "cbaebabacd"
 patterns = ["abc", "ab"]
 results = find_anagram_matches(text, patterns)
 print(results)
+
 ```
 
 ### 6. Pattern Set Matching
@@ -402,6 +409,7 @@ for idx, text in enumerate(texts):
     for pattern, matches in results.items():
         if matches:
             print(f"  '{pattern}': {matches}")
+
 ```
 
 ### 7. Pattern Matching with Errors
@@ -447,6 +455,7 @@ for pattern, matches in results.items():
     print(f"'{pattern}':")
     for pos, errors in matches:
         print(f"  Position {pos} with {errors} errors")
+
 ```
 
 ---
@@ -454,6 +463,7 @@ for pattern, matches in results.items():
 ## 🧩 LeetCode Problems
 
 ### Medium
+
 | # | Problem | Difficulty | Approach |
 |---|---------|------------|----------|
 | 3008 | [Find Beautiful Indices I](https://leetcode.com/problems/find-beautiful-indices-in-the-given-array-i/) | 🟡 Medium | Multiple patterns |
@@ -461,6 +471,7 @@ for pattern, matches in results.items():
 | 472 | [Concatenated Words](https://leetcode.com/problems/concatenated-words/) | 🟡 Medium | Dictionary matching |
 
 ### Hard
+
 | # | Problem | Difficulty | Approach |
 |---|---------|------------|----------|
 | 30 | [Substring with Concatenation](https://leetcode.com/problems/substring-with-concatenation-of-all-words/) | 🔴 Hard | Multiple word matching |
@@ -527,6 +538,7 @@ KMP for multiple patterns naturally leads to Aho-Corasick:
 
 # Aho-Corasick: Tree structure
 #   Patterns → Trie + Failure links
+
 ```
 
 **When to graduate to Aho-Corasick:**

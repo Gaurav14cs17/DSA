@@ -72,6 +72,7 @@ For recurrence $T(n) = aT(n/b) + f(n)$:
 
 ```math
 T(n) = 2T(n/2) + cn
+
 ```
 
 **Recursion tree:**
@@ -82,6 +83,7 @@ T(n) = 2T(n/2) + cn
 
 ```math
 T(n) = cn \times \log n = O(n \log n)
+
 ```
 
 ---
@@ -131,6 +133,7 @@ def merge(left: list[int], right: list[int]) -> list[int]:
     result.extend(left[i:])
     result.extend(right[j:])
     return result
+
 ```
 
 ### Quick Select
@@ -171,6 +174,7 @@ def quickSelect(arr: list[int], k: int) -> int:
             right = pivot_idx - 1
     
     return arr[k]
+
 ```
 
 ---

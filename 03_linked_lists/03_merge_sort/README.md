@@ -51,6 +51,7 @@ permalink: /03_linked_lists/03_merge_sort/
 ```math
 T(n) = 2T(n/2) + O(n)
 \boxed{T(n) = O(n \log n)}
+
 ```
 
 **Space for Linked List:** $O(\log n)$ stack space (no auxiliary array needed)
@@ -70,6 +71,7 @@ L_1 & \text{if } L_2 = \text{null} \\
 L_1 \to \text{merge}(L_1.\text{next}, L_2) & \text{if } L_1.\text{val} < L_2.\text{val} \\
 L_2 \to \text{merge}(L_1, L_2.\text{next}) & \text{otherwise}
 \end{cases}
+
 ```
 
 ---
@@ -80,6 +82,7 @@ L_2 \to \text{merge}(L_1, L_2.\text{next}) & \text{otherwise}
 
 ```math
 O(n \log k)
+
 ```
 
 Where $n$ = total elements, $k$ = number of lists.
@@ -147,6 +150,7 @@ def mergeKLists(lists: list[ListNode]) -> ListNode:
             heapq.heappush(heap, (node.next.val, i, node.next))
     
     return dummy.next
+
 ```
 
 ---
@@ -201,6 +205,7 @@ Step 4: Final merge
      [1 → 2 → 3 → 4] ✓
 
 Time: O(n log n), Space: O(log n) for recursion
+
 ```
 
 ### Merge Two Sorted Lists - Dummy Node Pattern
@@ -227,6 +232,7 @@ Continue until one list exhausted...
 
 Final: dummy → 1 → 2 → 3 → 4 → 5 → 6
 Return dummy.next ✓
+
 ```
 
 ### Merge K Lists - Min Heap Strategy
@@ -243,6 +249,7 @@ Step 3: Pop (2,2), add 2 to result, push 6 from list 2
 ...continue...
 
 Time: O(n log k) where n=total nodes, k=lists
+
 ```
 
 ---
@@ -294,18 +301,21 @@ Time: O(n log k) where n=total nodes, k=lists
 
 ```math
 T(n) = 2T(n/2) + O(n)
+
 ```
 
 **Master Theorem:** $a=2, b=2, f(n)=O(n)$
 
 ```math
 n^{\log_b a} = n^{\log_2 2} = n^1 = n
+
 ```
 
 Case 2: $f(n) = \Theta(n^{\log\_b a})$
 
 ```math
 \boxed{T(n) = \Theta(n \log n)}
+
 ```
 
 ### Why O(log n) Space for Linked List?
@@ -332,6 +342,7 @@ Linked list merge sort: O(log n) stack only! ∎
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **Merge Sort** | Complete analysis | [GeeksforGeeks](https://www.geeksforgeeks.org/merge-sort-for-linked-list/) |
@@ -339,6 +350,7 @@ Linked list merge sort: O(log n) stack only! ∎
 | **Sorting Algorithms** | Comparison | [Wikipedia](https://en.wikipedia.org/wiki/Sorting_algorithm) |
 
 ### 🎥 Video Tutorials
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **NeetCode** | Merge two lists | [YouTube](https://www.youtube.com/watch?v=XIdigk956u0) |
@@ -348,12 +360,14 @@ Linked list merge sort: O(log n) stack only! ∎
 | **Tushar Roy** | K-way merge | [YouTube](https://www.youtube.com/watch?v=ptYUCjfNhJY) |
 
 ### 📝 Practice
+
 | Platform | Problems | Link |
 |----------|----------|------|
 | **LeetCode** | Merge problems | [Filter](https://leetcode.com/tag/linked-list/) |
 | **HackerRank** | Merge challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=linked-lists) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Master Theorem** | Recurrence analysis | [Wikipedia](https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)) |

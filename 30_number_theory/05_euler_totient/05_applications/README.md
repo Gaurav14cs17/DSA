@@ -81,6 +81,7 @@ class Solution:
             exp = 1140  # a^0 would be 1, but we need a^1140
         
         return pow(a, exp, MOD)
+
 ```
 
 ### Counting Reduced Fractions
@@ -99,6 +100,7 @@ def count_reduced_fractions(n: int) -> int:
 # Example: Fractions with denominator ≤ 8
 # 1/2, 1/3, 2/3, 1/4, 3/4, 1/5, 2/5, 3/5, 4/5, 1/6, 5/6, 1/7, 2/7, ...
 print(count_reduced_fractions(8))
+
 ```
 
 ### Primitive Roots
@@ -136,6 +138,7 @@ def count_primitive_roots(n: int) -> int:
 # Example
 print(count_primitive_roots(7))   # φ(φ(7)) = φ(6) = 2
 print(count_primitive_roots(11))  # φ(φ(11)) = φ(10) = 4
+
 ```
 
 ### Cyclic Group Generators
@@ -172,6 +175,7 @@ def find_primitive_roots(n: int) -> list[int]:
     return roots
 
 print(find_primitive_roots(7))  # [3, 5]
+
 ```
 
 ---

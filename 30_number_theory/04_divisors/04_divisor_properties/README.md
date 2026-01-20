@@ -64,12 +64,14 @@ A function f is **multiplicative** if:
 
 ```math
 \sum_{d|n} \phi(d) = n
+
 ```
 
 **Möbius Inversion:**
 
 ```math
 g(n) = \sum_{d|n} f(d) \implies f(n) = \sum_{d|n} \mu(d) g(n/d)
+
 ```
 
 **Dirichlet Convolution:**
@@ -77,6 +79,7 @@ g(n) = \sum_{d|n} f(d) \implies f(n) = \sum_{d|n} \mu(d) g(n/d)
 ```math
 \tau = 1 * 1
 \sigma = \text{id} * 1
+
 ```
 
 ---
@@ -87,6 +90,7 @@ For multiplicative f, if $n = p\_1^{a\_1} \cdots p\_k^{a\_k}$:
 
 ```math
 f(n) = f(p_1^{a_1}) \cdot f(p_2^{a_2}) \cdots f(p_k^{a_k})
+
 ```
 
 ---
@@ -122,6 +126,7 @@ def get_divisors(n: int) -> list[int]:
 # Example
 print(get_divisors(60))
 # [1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60]
+
 ```
 
 ### 2. Möbius Function
@@ -160,6 +165,7 @@ print(mobius(1))   # 1
 print(mobius(6))   # 1 (6 = 2×3, two primes)
 print(mobius(30))  # -1 (30 = 2×3×5, three primes)
 print(mobius(4))   # 0 (4 = 2²)
+
 ```
 
 ### 3. Common Divisors of Two Numbers
@@ -177,6 +183,7 @@ def common_divisors(a: int, b: int) -> list[int]:
 
 # Example
 print(common_divisors(12, 18))  # [1, 2, 3, 6]
+
 ```
 
 ### 4. Count of Common Divisors
@@ -200,6 +207,7 @@ def gcd_sum(n: int) -> int:
         total += d * euler_phi(n // d)
     
     return total
+
 ```
 
 ### 5. Multiplicativity Verification
@@ -222,6 +230,7 @@ def verify_multiplicativity(f, limit: int = 100) -> bool:
                     return False
     
     return True
+
 ```
 
 ---

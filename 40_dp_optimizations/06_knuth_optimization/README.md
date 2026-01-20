@@ -60,6 +60,7 @@ def knuth_optimization(arr):
                     opt[i][j] = k
     
     return dp[0][n-1]
+
 ```
 
 ---

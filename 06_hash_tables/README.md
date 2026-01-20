@@ -45,6 +45,7 @@ A hash function $h: U \to \{0, 1, \ldots, m-1\}$ maps keys from universe $U$ to 
 
 ```math
 h(k) = k \mod m
+
 ```
 
 Choose $m$ as prime not close to power of 2.
@@ -53,6 +54,7 @@ Choose $m$ as prime not close to power of 2.
 
 ```math
 h(k) = \lfloor m \cdot (kA \mod 1) \rfloor
+
 ```
 
 Where $A \approx \frac{\sqrt{5} - 1}{2} \approx 0.618$ (golden ratio).
@@ -61,6 +63,7 @@ Where $A \approx \frac{\sqrt{5} - 1}{2} \approx 0.618$ (golden ratio).
 
 ```math
 h(s) = \sum_{i=0}^{n-1} s[i] \cdot p^i \mod m
+
 ```
 
 ---
@@ -71,6 +74,7 @@ h(s) = \sum_{i=0}^{n-1} s[i] \cdot p^i \mod m
 
 ```math
 \text{Expected chain length} = \alpha = \frac{n}{m}
+
 ```
 
 Where $\alpha$ is the load factor.
@@ -79,6 +83,7 @@ Where $\alpha$ is the load factor.
 
 ```math
 h(k, i) = (h'(k) + f(i)) \mod m
+
 ```
 
 | Method | $f(i)$ |
@@ -104,6 +109,7 @@ h(k, i) = (h'(k) + f(i)) \mod m
 ```math
 E[\text{comparisons}] = 1 + \frac{\alpha}{2} \text{ (successful search)}
 E[\text{comparisons}] = \alpha \text{ (unsuccessful search)}
+
 ```
 
 ---
@@ -114,6 +120,7 @@ E[\text{comparisons}] = \alpha \text{ (unsuccessful search)}
 
 ```math
 \alpha = \frac{n}{m}
+
 ```
 
 **Resize Trigger:** When $\alpha > \text{threshold}$ (typically 0.75)
@@ -125,6 +132,7 @@ After doubling at capacities $1, 2, 4, \ldots, n$:
 ```math
 \text{Total cost} = n + \sum_{i=0}^{\log n} 2^i = n + (2n - 1) = O(n)
 \text{Amortized per insert} = O(1)
+
 ```
 
 ---
@@ -137,6 +145,7 @@ After doubling at capacities $1, 2, 4, \ldots, n$:
 
 ```math
 a[j] = target - a[i]
+
 ```
 
 Store seen values, check for complement.
@@ -151,6 +160,7 @@ Store seen values, check for complement.
 
 ```math
 \text{freq}[x] = |\{i : a[i] = x\}|
+
 ```
 
 **Applications:**
@@ -204,6 +214,7 @@ def twoSum(nums: list[int], target: int) -> list[int]:
         seen[num] = i
     
     return []
+
 ```
 
 ### Frequency Counter
@@ -219,6 +230,7 @@ def topKFrequent(nums: list[int], k: int) -> list[int]:
     """
     freq = Counter(nums)
     return [x for x, _ in freq.most_common(k)]
+
 ```
 
 ### Group Anagrams
@@ -240,6 +252,7 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
         groups[key].append(s)
     
     return list(groups.values())
+
 ```
 
 ---
@@ -306,6 +319,7 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
    Two Sum     Counter/Map      HashSet
       |              |              |
  Complement   Top-K, Anagram   Duplicates
+
 ```
 
 ---
@@ -371,6 +385,7 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
 ## 📚 References & Learning Resources
 
 ### 📖 Books & Courses
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **CLRS Chapter 11** | Hash tables theory | [MIT Press](https://mitpress.mit.edu/books/introduction-algorithms) |
@@ -378,6 +393,7 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
 | **Competitive Programming 3** | Chapter 2.2 - Data structures | [Book](https://cpbook.net/) |
 
 ### 🌐 Online Tutorials
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **GeeksforGeeks** | Hash table complete guide | [Tutorial](https://www.geeksforgeeks.org/hashing-data-structure/) |
@@ -386,6 +402,7 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
 | **HackerRank** | Hash challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=hash-tables) |
 
 ### 📺 Video Resources
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **NeetCode** | Hash table playlist | [YouTube](https://www.youtube.com/playlist?list=PLot-Xpze53lf0yCpSXBhXRCLu1ibZUGBU) |
@@ -395,6 +412,7 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
 | **William Fiset** | Hash table theory | [YouTube](https://www.youtube.com/watch?v=2E54GqF0H4s) |
 
 ### 📝 Practice Platforms
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Hash table tag | [Problems](https://leetcode.com/tag/hash-table/) |
@@ -403,6 +421,7 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
 | **CodeChef** | Hash practice | [Practice](https://www.codechef.com/practice) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Collision Resolution** | Chaining vs open addressing | [Tutorial](https://www.geeksforgeeks.org/hashing-set-2-separate-chaining/) |
@@ -412,6 +431,7 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
 | **Consistent Hashing** | Distributed systems | [Article](https://www.toptal.com/big-data/consistent-hashing) |
 
 ### 🎯 Problem Collections
+
 | Collection | Focus | Link |
 |-----------|-------|------|
 | **NeetCode 150** | Essential hash problems | [List](https://neetcode.io/practice) |
@@ -420,6 +440,7 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
 | **Striver's SDE Sheet** | Must-do hash | [Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/) |
 
 ### 📊 Visualization Tools
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo** | Hash table operations | [Website](https://visualgo.net/en/hashtable) |
@@ -427,6 +448,7 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
 | **CS Animations** | Collision resolution | [Website](https://www.cs.usfca.edu/~galles/visualization/OpenHash.html) |
 
 ### 🏆 Competition Resources
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **USACO Guide** | Hash maps guide | [Guide](https://usaco.guide/bronze/intro-sets) |
@@ -462,6 +484,7 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
 [ ] Can prefix sum + hash solve subarray problem?
 [ ] Should I use set for uniqueness check?
 [ ] Do I need to track indices (use dict) or just existence (use set)?
+
 ```
 
 ---

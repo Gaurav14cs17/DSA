@@ -78,6 +78,7 @@ nav_order: 4
 
 ```math
 M' = M \oplus P = (M \setminus P) \cup (P \setminus M)
+
 ```
 
 This increases matching size by 1.
@@ -89,12 +90,14 @@ This increases matching size by 1.
 **Time Complexity:** $O(VE)$ for bipartite matching.
 
 **Algorithm:**
+
 ```
 1. Start with empty matching M = ∅
 2. For each unmatched vertex u in L:
     3. Try to find augmenting path starting from u using DFS
     4. If found, augment matching M
 5. Return M
+
 ```
 
 **Key Insight:** Each augmenting path increases matching size by 1.
@@ -126,6 +129,7 @@ This increases matching size by 1.
 
 ```math
 \text{Maximum Matching} = \text{Minimum Vertex Cover}
+
 ```
 
 **Application:** After finding max matching, can find min vertex cover efficiently.
@@ -183,6 +187,7 @@ def is_bipartite(n, edges):
             partition_R.append(i)
     
     return True, (partition_L, partition_R)
+
 ```
 
 ### Maximum Bipartite Matching (Hungarian/Kuhn)
@@ -238,6 +243,7 @@ edges = [[0,3], [0,4], [1,4], [1,5], [2,5]]
 matching = max_bipartite_matching(L, R, edges)
 print(f"Maximum Matching: {matching}")
 print(f"Matching size: {len(matching)}")
+
 ```
 
 ### Hopcroft-Karp Algorithm
@@ -311,6 +317,7 @@ def hopcroft_karp(L, R, edges):
                 dfs(u, dist)
     
     return match_L
+
 ```
 
 ### Minimum Vertex Cover (König's Theorem)
@@ -361,6 +368,7 @@ def min_vertex_cover(L, R, edges):
     cover = (set(L) - visited_L) | visited_R
     
     return list(cover)
+
 ```
 
 ---

@@ -45,6 +45,7 @@ permalink: /24_graph_algorithms/03_topological_sort/
 
 ```math
 \text{Linear ordering } v_1, v_2, \ldots, v_n \text{ where } (v_i, v_j) \in E \Rightarrow i < j
+
 ```
 
 **Key property:** Every directed edge goes from earlier to later in the ordering.
@@ -58,9 +59,11 @@ permalink: /24_graph_algorithms/03_topological_sort/
 **Multiple orderings** may exist for same DAG.
 
 **Example:**
+
 ```
 A → C
 B → C
+
 ```
 Valid orderings: `[A, B, C]`, `[B, A, C]`
 
@@ -95,6 +98,7 @@ Valid orderings: `[A, B, C]`, `[B, A, C]`
 
 ```math
 \text{topo\_order} = \text{reverse}(\text{post\_order})
+
 ```
 
 **Proof:** If $(u, v) \in E$, then $\text{finish}[u] > \text{finish}[v]$ in DFS.
@@ -586,6 +590,7 @@ def sortItems(n: int, m: int, group: List[int],
         result.extend(sorted_items)
     
     return result
+
 ```
 
 ---
@@ -627,6 +632,7 @@ Topological Sort
      +-- Detect cycle → DFS with colors
      |
      +-- All orderings → Backtracking O(V!)
+
 ```
 
 ---

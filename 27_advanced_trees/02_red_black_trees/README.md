@@ -474,6 +474,7 @@ def contains_nearby_almost_duplicate(nums: List[int], k: int, t: int) -> bool:
         window.add(num)
     
     return False
+
 ```
 
 ---

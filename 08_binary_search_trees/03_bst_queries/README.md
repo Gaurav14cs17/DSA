@@ -45,6 +45,7 @@ permalink: /08_binary_search_trees/03_bst_queries/
 
 ```math
 \text{kth\_smallest} = \text{inorder}[k-1]
+
 ```
 
 **Time:** O(H + k) where H = height.
@@ -58,6 +59,7 @@ permalink: /08_binary_search_trees/03_bst_queries/
 \min(T_R(x)) & \text{if } T_R(x) \neq \emptyset \\
 \text{lowest ancestor with } x \text{ in left subtree} & \text{otherwise}
 \end{cases}
+
 ```
 
 ---
@@ -70,6 +72,7 @@ root & \text{if } p.val \leq root.val \leq q.val \\
 \text{LCA}(root.left, p, q) & \text{if } p.val, q.val < root.val \\
 \text{LCA}(root.right, p, q) & \text{if } p.val, q.val > root.val
 \end{cases}
+
 ```
 
 **Time:** O(h) using BST property.
@@ -80,6 +83,7 @@ root & \text{if } p.val \leq root.val \leq q.val \\
 
 ```math
 \text{rangeSum}(L, R) = \sum_{L \leq node.val \leq R} node.val
+
 ```
 
 **Pruning:** Skip subtrees outside range.
@@ -92,6 +96,7 @@ root & \text{if } p.val \leq root.val \leq q.val \\
 
 ```math
 node.val_{new} = node.val + \sum_{x > node.val} x
+
 ```
 
 **Correctness:** Reverse inorder visits larger values first → accumulate and update!
@@ -129,6 +134,7 @@ node.val_{new} = node.val + \sum_{x > node.val} x
 
 ```math
 \text{closest} = \arg\min_{node \in BST} |node.val - target|
+
 ```
 
 **Time:** O(h) — prune half the tree at each step!
@@ -160,6 +166,7 @@ Step 3: Go right to 15
         count = 3, value = 15 ← ANSWER!
 
 Stop early! Don't need to visit 20 or 30.
+
 ```
 
 **Optimization:** Stop at k-th element, don't traverse entire tree!
@@ -186,6 +193,7 @@ Case 2: Node has no right child (15 has no right child)
         
         15 → 10 (we are right child)
         10 → 20 (we are left child) ← Successor!
+
 ```
 
 **Rule:**
@@ -215,6 +223,7 @@ Step 2: At 10
 
 Why? 5 is in left subtree, 15 in right.
 10 is the lowest node with this split.
+
 ```
 
 **O(h) vs O(n) for regular binary tree!**
@@ -255,6 +264,7 @@ Result:
  36 35 26 15
        \    \
        33    8
+
 ```
 
 ---
@@ -289,6 +299,7 @@ BST Query Problem
     +-- Need sorted order? → Inorder traversal
     |
     +-- Closest to target? → Binary search with tracking
+
 ```
 
 ---
@@ -438,6 +449,7 @@ def closestValue(root: TreeNode, target: float) -> int:
         root = root.left if target < root.val else root.right
     
     return closest
+
 ```
 
 ---
@@ -496,6 +508,7 @@ def closestValue(root: TreeNode, target: float) -> int:
 ## 📚 References & Resources
 
 ### 📖 Books & Courses
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **CLRS Chapter 12** | BST queries | [MIT Press](https://mitpress.mit.edu/books/introduction-algorithms) |
@@ -503,6 +516,7 @@ def closestValue(root: TreeNode, target: float) -> int:
 | **Elements of Programming Interviews** | BST problems | [Book](http://elementsofprogramminginterviews.com/) |
 
 ### 🌐 Online Tutorials
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **GeeksforGeeks** | BST queries | [Tutorial](https://www.geeksforgeeks.org/binary-search-tree-data-structure/) |
@@ -511,6 +525,7 @@ def closestValue(root: TreeNode, target: float) -> int:
 | **Programiz** | BST operations | [Tutorial](https://www.programiz.com/dsa/binary-search-tree) |
 
 ### 📺 Video Resources
+
 | Creator | Topic | Link |
 |---------|-------|------|
 | **NeetCode** | Kth Smallest in BST | [YouTube](https://www.youtube.com/watch?v=5LUXSvjmGCw) |
@@ -521,6 +536,7 @@ def closestValue(root: TreeNode, target: float) -> int:
 | **Kevin Naughton Jr** | Greater sum tree | [YouTube](https://www.youtube.com/watch?v=7vVtYIL2_Yw) |
 
 ### 🔧 Interactive Tools
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo BST** | Visualize queries | [Website](https://visualgo.net/en/bst) |
@@ -528,6 +544,7 @@ def closestValue(root: TreeNode, target: float) -> int:
 | **Algorithm Visualizer** | BST algorithms | [Website](https://algorithm-visualizer.org/) |
 
 ### 📝 Practice Platforms
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | BST queries | [Tag](https://leetcode.com/tag/binary-search-tree/) |

@@ -24,14 +24,17 @@ nav_order: 4
 ### Collision Probability Analysis
 
 **Single Hash:**
+
 ```
 P(h(s₁) = h(s₂) | s₁ ≠ s₂) ≈ |Σ|·m / M
 
 For lowercase, m=100, M=10⁹+7:
 P ≈ 2600 / 10⁹ ≈ 2.6 × 10⁻⁶
+
 ```
 
 **Birthday Paradox:**
+
 ```
 With n strings:
 P(at least one collision) ≈ 1 - e^(-n²/(2M))
@@ -40,14 +43,17 @@ For M = 10⁹:
 n = 10⁴: P ≈ 0.005%
 n = 10⁵: P ≈ 0.5%
 n = 10⁶: P ≈ 40%
+
 ```
 
 **Double Hashing:**
+
 ```
 P(both collide) ≈ 1 / (M₁ · M₂)
 
 For M₁=10⁹+7, M₂=10⁹+9:
 P ≈ 10⁻¹⁸ (negligible!)
+
 ```
 
 ---
@@ -126,6 +132,7 @@ class DoubleHashRK:
                     matches.append(i - m + 1)
         
         return matches
+
 ```
 
 ### 2. Triple Hashing (Overkill but Instructive)
@@ -156,6 +163,7 @@ class TripleHashRK:
             h3 = (h3 * self.BASE3 + ord(c)) % self.MOD3
         
         return (h1, h2, h3)
+
 ```
 
 ### 3. Collision Detection and Reporting
@@ -203,6 +211,7 @@ def gen_random_strings(n, length):
 strings = gen_random_strings(100000, 10)
 collisions = detect_collisions(strings)
 print(f"Found {len(collisions)} collisions in {len(strings)} strings")
+
 ```
 
 ### 4. Adaptive Hash Selection
@@ -262,6 +271,7 @@ class AdaptiveHashRK:
         """Double hash search"""
         dh = DoubleHashRK()
         return dh.search(text, pattern)
+
 ```
 
 ---
@@ -279,6 +289,7 @@ class AdaptiveHashRK:
 ✗ Simple applications
 ✗ Small datasets
 ✗ Performance critical (extra overhead)
+
 ```
 
 ### Hash Parameter Selection
@@ -293,6 +304,7 @@ MOD1 = 10**9 + 7
 MOD2 = 10**9 + 9  # Different prime
 BASE1 = 31
 BASE2 = 53        # Different base
+
 ```
 
 ### Collision Probability Table

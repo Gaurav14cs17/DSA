@@ -58,6 +58,7 @@ permalink: /27_advanced_trees/05_b_trees/
 
 ```math
 [P_0, K_1, P_1, K_2, P_2, \ldots, K_{k-1}, P_{k-1}]
+
 ```
 
 where:
@@ -89,12 +90,14 @@ where:
 ### 4️⃣ Search Operation
 
 **Algorithm:**
+
 ```
 1. Start at root
 2. Binary search within node for key or range
 3. If found, return
 4. Otherwise, follow appropriate child pointer
 5. Repeat until found or reach leaf
+
 ```
 
 **Time:** $O(\log\_m n)$ disk accesses, $O(m \log m)$ comparisons per node
@@ -443,6 +446,7 @@ def my_calendar_btree():
             return True
     
     return MyCalendar
+
 ```
 
 ---

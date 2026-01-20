@@ -103,6 +103,7 @@ A **recurrence relation** defines a sequence where each term is a function of pr
 
 ```math
 S(n) = f(S(n-1), S(n-2), \ldots, S(0))
+
 ```
 
 **Key Examples:**
@@ -117,6 +118,7 @@ S(n) = f(S(n-1), S(n-2), \ldots, S(0))
 ### Loop Fusion Example
 
 **Traditional (Multiple Passes):**
+
 ```python
 # Pass 1: Calculate sum
 total = sum(data)
@@ -130,9 +132,11 @@ variance = sum((x - mean)**2 for x in data) / len(data)
 # Pass 4: Find min/max
 min_val = min(data)
 max_val = max(data)
+
 ```
 
 **Optimized (Single Pass):**
+
 ```python
 n = 0
 mean = 0.0
@@ -151,6 +155,7 @@ for x in data:
     M2 += delta * (x - mean)
 
 variance = M2 / n
+
 ```
 
 **Result:** 4× fewer passes, better cache locality, O(1) space!
@@ -190,6 +195,7 @@ class OnlineStats:
     def get_std(self, ddof: int = 0) -> float:
         """Return standard deviation."""
         return self.get_variance(ddof) ** 0.5
+
 ```
 
 ### 2. Kadane's Algorithm
@@ -208,6 +214,7 @@ def max_subarray(arr: list[int]) -> int:
         max_so_far = max(max_so_far, max_ending_here)
     
     return max_so_far
+
 ```
 
 ### 3. Reservoir Sampling
@@ -232,6 +239,7 @@ def reservoir_sample(stream, k: int) -> list:
                 reservoir[j] = item
     
     return reservoir
+
 ```
 
 ---
@@ -294,29 +302,35 @@ Computing statistics traditionally requires multiple passes:
 **Body:**
 
 **Pass 1:** Compute sum
+
 ```
 sum ← 0
 for i ← 1, N do
     sum ← sum + x_i
 end
 μ_N ← sum / N
+
 ```
 
 **Pass 2:** Compute variance
+
 ```
 M2 ← 0
 for i ← 1, N do
     M2 ← M2 + (x_i - μ_N)²
 end
 σ²_N ← M2 / N
+
 ```
 
 **Pass 3:** Find maximum
+
 ```
 m_N ← -∞
 for i ← 1, N do
     m_N ← max(m_N, x_i)
 end
+
 ```
 
 **Problem:** This requires 3 passes over data. If data doesn't fit in memory, we must re-read it 3 times!
@@ -335,6 +349,7 @@ The mean after $n$ elements is:
 
 ```math
 \mu_n = \frac{1}{n}\sum_{i=1}^{n} x_i
+
 ```
 
 We can relate $\mu\_n$ to $\mu\_{n-1}$:
@@ -344,6 +359,7 @@ We can relate $\mu\_n$ to $\mu\_{n-1}$:
 = \frac{1}{n}((n-1)\mu_{n-1} + x_n)
 = \frac{n-1}{n}\mu_{n-1} + \frac{x_n}{n}
 = \mu_{n-1} + \frac{x_n - \mu_{n-1}}{n}
+
 ```
 
 **Recurrence:** $\mu\_n = \mu\_{n-1} + \frac{x\_n - \mu\_{n-1}}{n}$
@@ -358,6 +374,7 @@ Define $M\_2(n) = \sum\_{i=1}^{n}(x\_i - \mu\_n)^2$ (the sum of squared deviatio
 
 ```math
 \sigma^2 = E[X^2] - E[X]^2
+
 ```
 
 This suffers from **catastrophic cancellation** when $\sigma^2 \ll E[X]^2$.
@@ -366,12 +383,14 @@ This suffers from **catastrophic cancellation** when $\sigma^2 \ll E[X]^2$.
 
 ```math
 M_2(n) = \sum_{i=1}^{n}(x_i - \mu_n)^2
+
 ```
 
 Split into old and new elements:
 
 ```math
 = \sum_{i=1}^{n-1}(x_i - \mu_n)^2 + (x_n - \mu_n)^2
+
 ```
 
 **Key observation:** When we add $x\_n$, the mean changes from $\mu\_{n-1}$ to $\mu\_n$!
@@ -380,6 +399,7 @@ For old elements ($i < n$):
 
 ```math
 x_i - \mu_n = (x_i - \mu_{n-1}) - (\mu_n - \mu_{n-1})
+
 ```
 
 Let $\delta = x\_n - \mu\_{n-1}$. From Step 1: $\mu\_n - \mu\_{n-1} = \frac{\delta}{n}$
@@ -390,24 +410,28 @@ Squaring:
 
 ```math
 (x_i - \mu_n)^2 = (x_i - \mu_{n-1})^2 - 2(x_i - \mu_{n-1})\frac{\delta}{n} + \frac{\delta^2}{n^2}
+
 ```
 
 Summing over old elements:
 
 ```math
 \sum_{i=1}^{n-1}(x_i - \mu_n)^2 = \sum_{i=1}^{n-1}(x_i - \mu_{n-1})^2 - \frac{2\delta}{n}\sum_{i=1}^{n-1}(x_i - \mu_{n-1}) + (n-1)\frac{\delta^2}{n^2}
+
 ```
 
 **Crucial property:** $\sum\_{i=1}^{n-1}(x\_i - \mu\_{n-1}) = 0$ (definition of mean!)
 
 ```math
 = M_2(n-1) + (n-1)\frac{\delta^2}{n^2}
+
 ```
 
 For the new element:
 
 ```math
 (x_n - \mu_n)^2 = \left(\delta - \frac{\delta}{n}\right)^2 = \frac{(n-1)^2\delta^2}{n^2}
+
 ```
 
 Combining:
@@ -416,6 +440,7 @@ Combining:
 M_2(n) = M_2(n-1) + (n-1)\frac{\delta^2}{n^2} + \frac{(n-1)^2\delta^2}{n^2}
 = M_2(n-1) + \frac{(n-1)\delta^2}{n^2}(1 + n - 1)
 = M_2(n-1) + \frac{(n-1)\delta^2}{n}
+
 ```
 
 Note: $x\_n - \mu\_n = \frac{(n-1)\delta}{n}$
@@ -424,6 +449,7 @@ Therefore:
 
 ```math
 \frac{(n-1)\delta^2}{n} = \delta \cdot \frac{(n-1)\delta}{n} = (x_n - \mu_{n-1})(x_n - \mu_n)
+
 ```
 
 **Final recurrence:**
@@ -431,6 +457,7 @@ Therefore:
 ```math
 M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n)
 \sigma^2_n = \frac{M_2(n)}{n}
+
 ```
 
 ---
@@ -448,6 +475,7 @@ Now we can fuse all three passes into one!
 - $m \leftarrow -\infty$
 
 **Body:**
+
 ```
 for i ← 1, N do
     n ← n + 1
@@ -462,6 +490,7 @@ for i ← 1, N do
 end
 
 σ² ← M_2 / n
+
 ```
 
 **Result:**
@@ -499,6 +528,7 @@ This is exactly the same trick used in **FlashAttention** for online softmax!
 
 ```math
 M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n)
+
 ```
 
 where $M\_2(n) = \sum\_{i=1}^{n} (x\_i - \mu\_n)^2$ and $\sigma^2 = M\_2(n) / n$.

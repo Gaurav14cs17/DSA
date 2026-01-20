@@ -35,6 +35,7 @@ permalink: /31_combinatorics/02_combinations/
 
 ```math
 \binom{n}{r} = C(n,r) = \frac{n!}{r!(n-r)!}
+
 ```
 
 **Key Properties:**
@@ -53,6 +54,7 @@ Row 4:            1   4   6   4   1
 Row 5:          1   5  10  10   5   1
 
 Entry at row n, position r = C(n,r)
+
 ```
 
 ---
@@ -98,6 +100,7 @@ def nCr_mod(n: int, r: int, mod: int) -> int:
             dp[j] = (dp[j] + dp[j - 1]) % mod
     
     return dp[r]
+
 ```
 
 ### Generate All Combinations
@@ -125,6 +128,7 @@ def combine(n: int, k: int) -> List[List[int]]:
     
     backtrack(1, [])
     return result
+
 ```
 
 ### Pascal's Triangle Generation
@@ -150,6 +154,7 @@ def generate_pascal(numRows: int) -> List[List[int]]:
         triangle.append(row)
     
     return triangle
+
 ```
 
 ---
@@ -157,6 +162,7 @@ def generate_pascal(numRows: int) -> List[List[int]]:
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
+
 | # | Problem | Concept |
 |:-:|---------|---------|
 | 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Fibonacci |
@@ -164,6 +170,7 @@ def generate_pascal(numRows: int) -> List[List[int]]:
 | 119 | [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/) | Space optimized |
 
 ### 🟡 Medium
+
 | # | Problem | Concept |
 |:-:|---------|---------|
 | 39 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | With repetition |
@@ -174,6 +181,7 @@ def generate_pascal(numRows: int) -> List[List[int]]:
 | 377 | [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/) | Order matters |
 
 ### 🔴 Hard
+
 | # | Problem | Concept |
 |:-:|---------|---------|
 | 1735 | [Count Ways to Make Array](https://leetcode.com/problems/count-ways-to-make-array-with-product/) | Prime factorization |

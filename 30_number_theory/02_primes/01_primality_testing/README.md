@@ -79,6 +79,7 @@ Only $6k+1$ and $6k+5 = 6(k+1)-1$ remain as candidates. ∎
 
 ```math
 a^{p-1} \equiv 1 \pmod{p}
+
 ```
 
 **Contrapositive (Fermat Test):** If $a^{n-1} \not\equiv 1 \pmod{n}$ for some $a$ with $\gcd(a, n) = 1$, then $n$ is composite.
@@ -137,6 +138,7 @@ a^{p-1} \equiv 1 \pmod{p}
 |                                                                 |
 | RESULT: No divisors found → 97 is PRIME ✓                     |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -168,6 +170,7 @@ a^{p-1} \equiv 1 \pmod{p}
 |     check if n % i == 0 or n % (i+2) == 0                      |
 |     i += 6                                                      |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -210,6 +213,7 @@ a^{p-1} \equiv 1 \pmod{p}
 |                                                                 |
 | VERIFICATION: 221 = 13 × 17 ✓                                  |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -250,6 +254,7 @@ def is_prime_basic(n: int) -> bool:
         i += 2
     
     return True
+
 ```
 
 ---
@@ -282,6 +287,7 @@ def is_prime_optimized(n: int) -> bool:
         i += 6
     
     return True
+
 ```
 
 ---
@@ -328,6 +334,7 @@ def fermat_test(n: int, k: int = 5) -> bool:
 
 # Carmichael numbers - composites that fool Fermat test
 CARMICHAEL = [561, 1105, 1729, 2465, 2821, 6601, 8911]
+
 ```
 
 ---
@@ -386,6 +393,7 @@ def miller_rabin(n: int, k: int = 10) -> bool:
             return False
     
     return True
+
 ```
 
 ---
@@ -457,6 +465,7 @@ def is_prime_deterministic(n: int) -> bool:
         witnesses = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]
     
     return all(check_witness(a) for a in witnesses)
+
 ```
 
 ---
@@ -508,6 +517,7 @@ def is_prime_verbose(n: int) -> bool:
 # Example usage
 # is_prime_verbose(97)
 # is_prime_verbose(91)
+
 ```
 
 ---
@@ -577,6 +587,7 @@ class Solution:
             # Skip 8-digit range (all divisible by 11)
             if 10**7 < n < 10**8:
                 n = 10**8
+
 ```
 
 ### Problem 762: Prime Number of Set Bits
@@ -601,6 +612,7 @@ class Solution:
                 count += 1
         
         return count
+
 ```
 
 ---

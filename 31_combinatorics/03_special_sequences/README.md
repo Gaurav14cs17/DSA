@@ -37,12 +37,14 @@ permalink: /31_combinatorics/03_special_sequences/
 
 ```math
 C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}
+
 ```
 
 **Recurrence:**
 
 ```math
 C_0 = 1, \quad C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
+
 ```
 
 **Sequence:** 1, 1, 2, 5, 14, 42, 132, 429, 1430, ...
@@ -61,6 +63,7 @@ C_0 = 1, \quad C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
 
 ```math
 F_0 = 0, \quad F_1 = 1, \quad F_n = F_{n-1} + F_{n-2}
+
 ```
 
 **Sequence:** 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
@@ -69,6 +72,7 @@ F_0 = 0, \quad F_1 = 1, \quad F_n = F_{n-1} + F_{n-2}
 
 ```math
 F_n = \frac{\phi^n - \psi^n}{\sqrt{5}}
+
 ```
 
 where $\phi = \frac{1+\sqrt{5}}{2}$ (golden ratio), $\psi = \frac{1-\sqrt{5}}{2}$
@@ -81,6 +85,7 @@ where $\phi = \frac{1+\sqrt{5}}{2}$ (golden ratio), $\psi = \frac{1-\sqrt{5}}{2}
 
 ```math
 B_0 = 1, \quad B_n = \sum_{k=0}^{n-1} \binom{n-1}{k} B_k
+
 ```
 
 **Sequence:** 1, 1, 2, 5, 15, 52, 203, 877, ...
@@ -95,6 +100,7 @@ B_0 = 1, \quad B_n = \sum_{k=0}^{n-1} \binom{n-1}{k} B_k
 
 ```math
 S(n,k) = k \cdot S(n-1,k) + S(n-1,k-1)
+
 ```
 
 ---
@@ -137,6 +143,7 @@ def catalan_dp(n: int) -> List[int]:
             cat[i] += cat[j] * cat[i - 1 - j]
     
     return cat[1:]
+
 ```
 
 ### Fibonacci Variants
@@ -187,6 +194,7 @@ def fibonacci_matrix(n: int) -> int:
     
     result = matrix_power([[1, 1], [1, 0]], n)
     return result[0][1]
+
 ```
 
 ### Tribonacci
@@ -209,6 +217,7 @@ def tribonacci(n: int) -> int:
         a, b, c = b, c, a + b + c
     
     return c
+
 ```
 
 ---
@@ -232,6 +241,7 @@ Binary Search Trees (n=3 nodes: 1,2,3):
 
 Triangulations of Pentagon:
 [5 different ways to divide pentagon into triangles]
+
 ```
 
 ---
@@ -239,6 +249,7 @@ Triangulations of Pentagon:
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
+
 | # | Problem | Sequence |
 |:-:|---------|----------|
 | 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Fibonacci |
@@ -246,6 +257,7 @@ Triangulations of Pentagon:
 | 1137 | [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number/) | Tribonacci |
 
 ### 🟡 Medium
+
 | # | Problem | Sequence |
 |:-:|---------|----------|
 | 22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Catalan |
@@ -256,6 +268,7 @@ Triangulations of Pentagon:
 | 1414 | [Find Min Fibonacci Numbers Sum](https://leetcode.com/problems/find-the-minimum-number-of-fibonacci-numbers-whose-sum-is-k/) | Fibonacci |
 
 ### 🔴 Hard
+
 | # | Problem | Sequence |
 |:-:|---------|----------|
 | 1411 | [Number of Ways to Paint N×3 Grid](https://leetcode.com/problems/number-of-ways-to-paint-n-3-grid/) | Recurrence |

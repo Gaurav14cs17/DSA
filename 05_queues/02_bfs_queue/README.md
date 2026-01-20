@@ -64,6 +64,7 @@ permalink: /05_queues/02_bfs_queue/
 
 ```math
 T(V, E) = O(V + E)
+
 ```
 
 **Breakdown:**
@@ -80,6 +81,7 @@ T(V, E) = O(V + E)
 
 ```math
 \text{Level } k = \{v : \text{dist}(root, v) = k\}
+
 ```
 
 **Processing:** Separate levels by tracking queue size.
@@ -89,6 +91,7 @@ Level 0: [root]
 Level 1: [children of root]
 Level 2: [grandchildren]
 ...
+
 ```
 
 ---
@@ -103,6 +106,7 @@ Level 2: [grandchildren]
 
 ```math
 d[v] = \min_{s \in \text{sources}} \text{dist}(s, v)
+
 ```
 
 ---
@@ -113,12 +117,14 @@ d[v] = \min_{s \in \text{sources}} \text{dist}(s, v)
 
 ```math
 \text{neighbors}(x, y) = \{(x±1, y), (x, y±1)\}
+
 ```
 
 **8-directional movement:**
 
 ```math
 \text{neighbors}(x, y) = \{(x+dx, y+dy) : dx, dy \in \{-1, 0, 1\}, (dx, dy) \neq (0, 0)\}
+
 ```
 
 ---
@@ -130,6 +136,7 @@ For problems with additional state (e.g., keys collected):
 ```math
 \text{state} = (\text{position}, \text{extra\_info})
 d[(x, y, state)] = \text{shortest path to } (x, y) \text{ with given state}
+
 ```
 
 ---
@@ -297,6 +304,7 @@ def openLock(deadends: list[str], target: str) -> int:
                     queue.append((new_combo, turns + 1))
     
     return -1
+
 ```
 
 ---
@@ -376,6 +384,7 @@ Level 2:
   Process: 7 → level = [15, 7]
   queue = []
   result = [[3], [9, 20], [15, 7]]
+
 ```
 
 ### Number of Islands (#200)
@@ -403,6 +412,7 @@ Island 2: Start (2,2)
   Count = 2
 
 Result: 2 islands
+
 ```
 
 ### Rotting Oranges (#994)
@@ -439,6 +449,7 @@ Time 4: Process (1,2)
   Fresh = 0
 
 Result: 4 minutes
+
 ```
 
 ### Open the Lock (#752)
@@ -459,6 +470,7 @@ Turn 2-5: Continue exploring...
 Turn 6: Reach "0202"
   Path: 0000 → 1000 → 1100 → 1200 → 1201 → 1202 → 0202
   Result: 6 turns
+
 ```
 
 ---
@@ -481,6 +493,7 @@ Turn 6: Reach "0202"
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **Wikipedia** | BFS algorithm | [Article](https://en.wikipedia.org/wiki/Breadth-first_search) |
@@ -489,6 +502,7 @@ Turn 6: Reach "0202"
 | **CP Algorithms** | BFS applications | [Guide](https://cp-algorithms.com/graph/breadth-first-search.html) |
 
 ### 📺 Video Tutorials
+
 | Creator | Topic | Link |
 |---------|-------|------|
 | **NeetCode** | BFS problems playlist | [YouTube](https://www.youtube.com/playlist?list=PLot-Xpze53leU0Ec0VkBhnf4npMRFiNcB) |
@@ -499,6 +513,7 @@ Turn 6: Reach "0202"
 | **Back To Back SWE** | BFS problems | [YouTube](https://www.youtube.com/watch?v=xlVX7dXLS64) |
 
 ### 🎯 Practice Collections
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | BFS tag | [Problems](https://leetcode.com/tag/breadth-first-search/) |
@@ -506,6 +521,7 @@ Turn 6: Reach "0202"
 | **HackerRank** | BFS challenges | [Practice](https://www.hackerrank.com/domains/algorithms?filters%5Bsubdomains%5D%5B%5D=graph-theory) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Multi-Source BFS** | Simultaneous BFS from multiple sources | [Tutorial](https://www.geeksforgeeks.org/multi-source-shortest-path-in-unweighted-graph/) |
@@ -514,6 +530,7 @@ Turn 6: Reach "0202"
 | **BFS Tree Properties** | Level, parent tracking | [Article](https://en.wikipedia.org/wiki/Breadth-first_search#Analysis) |
 
 ### 📊 Visualization Tools
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo** | BFS visualization | [Website](https://visualgo.net/en/dfsbfs) |
@@ -521,6 +538,7 @@ Turn 6: Reach "0202"
 | **CS Animations** | BFS step-by-step | [Website](https://www.cs.usfca.edu/~galles/visualization/BFS.html) |
 
 ### 📐 Mathematical Proofs
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **BFS Correctness** | Shortest path proof | [MIT OCW](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/) |

@@ -70,6 +70,7 @@ For prime $p$ and range starting at $L$:
 
 ```math
 \text{start} = \left\lceil \frac{L}{p} \right\rceil \times p = \left(\frac{L + p - 1}{p}\right) \times p
+
 ```
 
 **But skip p itself if it's in range:**
@@ -131,6 +132,7 @@ If start = p, then start = 2p (we want composite multiples only).
 | PRIMES in [100, 150]:                                          |
 |   101, 103, 107, 109, 113, 127, 131, 137, 139, 149            |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -169,6 +171,7 @@ If start = p, then start = 2p (we want composite multiples only).
 |   start = 101 (which is prime p itself)                        |
 |   So use start = 202 instead                                   |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -213,6 +216,7 @@ If start = p, then start = 2p (we want composite multiples only).
 |   Block array: ~1 MB                                           |
 |   TOTAL: ~1 MB (vs 1 GB for standard sieve!)                   |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -278,6 +282,7 @@ def segmented_sieve(L: int, R: int) -> list[int]:
         is_prime[1 - L] = False
     
     return [L + i for i in range(size) if is_prime[i]]
+
 ```
 
 ---
@@ -330,6 +335,7 @@ def segmented_sieve_optimized(L: int, R: int) -> list[int]:
             is_prime[j] = False
     
     return [L + i for i in range(size) if is_prime[i]]
+
 ```
 
 ---
@@ -374,6 +380,7 @@ def count_primes_in_range(L: int, R: int) -> int:
             is_prime[j - L] = False
     
     return sum(is_prime)
+
 ```
 
 ---
@@ -432,6 +439,7 @@ def segmented_sieve_blocks(n: int, block_size: int = 10**6) -> list[int]:
                 all_primes.append(start + i)
     
     return all_primes
+
 ```
 
 ---
@@ -490,6 +498,7 @@ def prime_pi(n: int) -> int:
         count += sum(block)
     
     return count
+
 ```
 
 ---
@@ -558,6 +567,7 @@ class Solution:
                 result = [primes[i-1], primes[i]]
         
         return result
+
 ```
 
 ---

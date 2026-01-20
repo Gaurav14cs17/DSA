@@ -37,6 +37,7 @@ Set of all subsets of $S$:
 
 ```math
 |P(S)| = 2^n
+
 ```
 
 Each element has 2 choices: include or exclude.
@@ -49,6 +50,7 @@ Subset can be represented as $n$-bit binary number:
 
 ```math
 \text{bit } i = 1 \Leftrightarrow \text{element } i \text{ included}
+
 ```
 
 ---
@@ -157,6 +159,7 @@ def findSubsequences(nums: list[int]) -> list[list[int]]:
     
     backtrack(0, [])
     return result
+
 ```
 
 ---

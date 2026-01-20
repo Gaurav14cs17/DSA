@@ -35,6 +35,7 @@ permalink: /17_backtracking/03_combinations/
 
 ```math
 C(n, k) = \binom{n}{k} = \frac{n!}{k!(n-k)!}
+
 ```
 
 ---
@@ -43,6 +44,7 @@ C(n, k) = \binom{n}{k} = \frac{n!}{k!(n-k)!}
 
 ```math
 C(n, k) = C(n-1, k-1) + C(n-1, k)
+
 ```
 
 ---
@@ -52,6 +54,7 @@ C(n, k) = C(n-1, k-1) + C(n-1, k)
 ```math
 C(n, k) = C(n, n-k)
 \sum_{k=0}^{n} C(n, k) = 2^n
+
 ```
 
 ---
@@ -194,6 +197,7 @@ def letterCombinations(digits: str) -> list[str]:
     
     backtrack(0, [])
     return result
+
 ```
 
 ---

@@ -31,16 +31,20 @@ Modular arithmetic is "clock arithmetic" where numbers wrap around upon reaching
 **Definition:** a ≡ b (mod m) means m divides (a - b)
 
 **Equivalently:**
+
 ```
 a ≡ b (mod m) ⟺ a mod m = b mod m
                 ⟺ a = b + km for some integer k
+
 ```
 
 **Examples:**
+
 ```
 17 ≡ 5 (mod 12)   because 17 - 5 = 12
 -3 ≡ 7 (mod 10)   because -3 - 7 = -10
 25 ≡ 0 (mod 5)    because 25 - 0 = 25
+
 ```
 
 ---
@@ -87,6 +91,7 @@ def mod_mul(a, b, m):
 print(mod_add(10**18, 10**18, 10**9 + 7))  # Large numbers
 print(mod_sub(5, 10, 7))                    # -5 mod 7 = 2
 print(mod_mul(10**9, 10**9, 10**9 + 7))
+
 ```
 
 ### 2. Handling Negative Numbers
@@ -105,6 +110,7 @@ def mod_positive(a, m):
 print(mod_positive(-5, 7))   # 2
 print(mod_positive(-17, 5))  # 3
 print(mod_positive(10, 3))   # 1
+
 ```
 
 ### 3. Modular Arithmetic Class
@@ -142,6 +148,7 @@ a = ModInt(10**18)
 b = ModInt(10**18)
 print(a + b)  # Automatic modular addition
 print(a * b)  # Automatic modular multiplication
+
 ```
 
 ### 4. Congruence Check
@@ -157,6 +164,7 @@ def are_congruent(a, b, m):
 print(are_congruent(17, 5, 12))   # True
 print(are_congruent(100, 10, 9))  # True
 print(are_congruent(7, 3, 5))     # False
+
 ```
 
 ### 5. Common Moduli
@@ -170,6 +178,7 @@ MOD_3 = 998244353   # Prime with primitive root (used for NTT)
 def mod_safe(n, m=MOD_1):
     """Safe modulo operation"""
     return ((n % m) + m) % m
+
 ```
 
 ---

@@ -122,6 +122,7 @@ class PersistentSegmentTree:
         mid = (tl + tr) // 2
         return (self._query(node.left, tl, mid, l, min(r, mid)) +
                 self._query(node.right, mid + 1, tr, max(l, mid + 1), r))
+
 ```
 
 ---
@@ -129,12 +130,14 @@ class PersistentSegmentTree:
 ## 🏆 LeetCode Problems
 
 ### 🟡 Medium
+
 | # | Problem | Technique | Difficulty |
 |:-:|---------|-----------|-----------|
 | 981 | [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/) | Versioning | ⭐⭐ |
 | 1146 | [Snapshot Array](https://leetcode.com/problems/snapshot-array/) | Persistent array | ⭐⭐⭐ |
 
 ### 🔴 Hard
+
 | # | Problem | Technique | Difficulty |
 |:-:|---------|-----------|-----------|
 | 2080 | [Range Frequency Queries](https://leetcode.com/problems/range-frequency-queries/) | Persistent segment tree | ⭐⭐⭐⭐ |

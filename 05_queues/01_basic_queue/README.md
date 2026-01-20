@@ -50,6 +50,7 @@ permalink: /05_queues/01_basic_queue/
 
 ```math
 \text{dequeue order} = \text{enqueue order}
+
 ```
 
 **Proof:** Elements are added to rear and removed from front. First added → first removed. ∎
@@ -63,6 +64,7 @@ For queue with capacity $n$:
 ```math
 \text{next}(i) = (i + 1) \mod n
 \text{prev}(i) = (i - 1 + n) \mod n
+
 ```
 
 **Size Calculation:**
@@ -72,6 +74,7 @@ For queue with capacity $n$:
 \text{rear} - \text{front} & \text{if } \text{rear} \geq \text{front} \\
 n - \text{front} + \text{rear} & \text{otherwise}
 \end{cases}
+
 ```
 
 Or unified: $\text{size} = (\text{rear} - \text{front} + n) \mod n$
@@ -89,6 +92,7 @@ Each element:
 
 ```math
 \text{Amortized cost per operation} = \frac{3n}{n} = O(1)
+
 ```
 
 ---
@@ -97,12 +101,14 @@ Each element:
 
 ```math
 \text{avg}[i] = \frac{1}{k} \sum_{j=i-k+1}^{i} x[j]
+
 ```
 
 **Sliding Window Update:**
 
 ```math
 \text{avg}[i] = \text{avg}[i-1] + \frac{x[i] - x[i-k]}{k}
+
 ```
 
 ---
@@ -198,6 +204,7 @@ class MyStack:
     
     def empty(self) -> bool:
         return len(self.queue) == 0
+
 ```
 
 ---
@@ -254,6 +261,7 @@ DeQueue():
 EnQueue(4):
   array[3] = 4, rear = (3+1)%4 = 0
   [1, 2, 3, 4], front=1, rear=0 (wrapped around!)
+
 ```
 
 ### Queue using Two Stacks (#232)
@@ -280,6 +288,7 @@ Dequeue():
 
 Each element: pushed once, transferred once, popped once = 3 operations
 Amortized: 3n/n = O(1) per operation
+
 ```
 
 ### Moving Average (#346)
@@ -292,6 +301,7 @@ next(10): queue=[1,10], sum=11, avg=11/2=5.5
 next(3): queue=[1,10,3], sum=14, avg=14/3=4.67
 next(5): queue=[10,3,5], sum=18, avg=18/3=6.0
          (removed 1, added 5)
+
 ```
 
 ---
@@ -311,6 +321,7 @@ next(5): queue=[10,3,5], sum=18, avg=18/3=6.0
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **GeeksforGeeks** | Queue implementation | [Tutorial](https://www.geeksforgeeks.org/queue-data-structure/) |
@@ -319,6 +330,7 @@ next(5): queue=[10,3,5], sum=18, avg=18/3=6.0
 | **Wikipedia** | Queue ADT | [Article](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)) |
 
 ### 📺 Video Tutorials
+
 | Creator | Topic | Link |
 |---------|-------|------|
 | **Abdul Bari** | Queue data structure | [YouTube](https://www.youtube.com/watch?v=A3ZUpyrnCbM) |
@@ -326,12 +338,14 @@ next(5): queue=[10,3,5], sum=18, avg=18/3=6.0
 | **MIT OCW** | Queue implementation | [Lecture](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/) |
 
 ### 🎯 Practice Problems
+
 | Platform | Collection | Link |
 |----------|-----------|------|
 | **LeetCode** | Queue tag | [Problems](https://leetcode.com/tag/queue/) |
 | **HackerRank** | Queue challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=queues) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Circular Buffer** | Ring buffer applications | [Wikipedia](https://en.wikipedia.org/wiki/Circular_buffer) |
@@ -339,6 +353,7 @@ next(5): queue=[10,3,5], sum=18, avg=18/3=6.0
 | **Priority Queue** | Heap-based queue | [Tutorial](https://www.geeksforgeeks.org/priority-queue-set-1-introduction/) |
 
 ### 📊 Visualization
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo** | Interactive queue | [Website](https://visualgo.net/en/list) |

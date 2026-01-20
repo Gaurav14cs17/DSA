@@ -51,6 +51,7 @@ permalink: /30_number_theory/04_divisors/01_count_divisors/
 
 ```math
 \tau(n) = \text{number of positive divisors of } n
+
 ```
 
 **Examples:**
@@ -67,6 +68,7 @@ permalink: /30_number_theory/04_divisors/01_count_divisors/
 
 ```math
 \tau(n) = (a_1 + 1)(a_2 + 1) \cdots (a_k + 1) = \prod_{i=1}^{k}(a_i + 1)
+
 ```
 
 **Proof:**
@@ -84,6 +86,7 @@ By the multiplication principle, total divisors = $(a\_1 + 1)(a\_2 + 1) \cdots (
 
 ```math
 \tau(12) = (2+1)(1+1) = 3 \times 2 = 6
+
 ```
 
 Divisors: 1, 2, 3, 4, 6, 12 ✓
@@ -92,12 +95,14 @@ Divisors: 1, 2, 3, 4, 6, 12 ✓
 
 ```math
 \tau(360) = (3+1)(2+1)(1+1) = 4 \times 3 \times 2 = 24
+
 ```
 
 **Example 3:** $n = p^k$ (prime power)
 
 ```math
 \tau(p^k) = k + 1
+
 ```
 
 ---
@@ -127,6 +132,7 @@ Divisors: 1, 2, 3, 4, 6, 12 ✓
 |                                                                 |
 |         Count = 12 ✓                                           |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -186,6 +192,7 @@ print(count_divisors(12))     # 6
 print(count_divisors(60))     # 12
 print(count_divisors(100))    # 9
 print(count_divisors(997))    # 2 (prime)
+
 ```
 
 ### 2. Count by Direct Enumeration
@@ -218,6 +225,7 @@ def count_divisors_simple(n: int) -> int:
     return count
 
 # This is simpler but doesn't give prime factorization
+
 ```
 
 ### 3. Count Divisors with Verbose Output
@@ -251,6 +259,7 @@ def count_divisors_verbose(n: int) -> tuple[int, list[int]]:
 count, divisors = count_divisors_verbose(60)
 print(f"60 has {count} divisors: {divisors}")
 # 60 has 12 divisors: [1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60]
+
 ```
 
 ### 4. Sieve for Multiple Queries
@@ -277,6 +286,7 @@ def sieve_divisor_count(limit: int) -> list[int]:
 tau = sieve_divisor_count(20)
 for i in range(1, 21):
     print(f"τ({i}) = {tau[i]}")
+
 ```
 
 ### 5. Using Smallest Prime Factor Sieve
@@ -311,6 +321,7 @@ def build_spf(limit: int) -> list[int]:
 # Example
 spf = build_spf(1000)
 print(spf_divisor_count(360, spf))  # 24
+
 ```
 
 ---
@@ -355,6 +366,7 @@ def is_three(n: int) -> bool:
 print(is_three(4))   # True (4 = 2², divisors: 1,2,4)
 print(is_three(9))   # True (9 = 3², divisors: 1,3,9)
 print(is_three(12))  # False
+
 ```
 
 ### LeetCode 1390: Four Divisors
@@ -388,6 +400,7 @@ def sum_four_divisors(nums: list[int]) -> int:
             total += sum(divs)
     
     return total
+
 ```
 
 ---
@@ -425,6 +438,7 @@ Numbers with record number of divisors:
 
 ```math
 \sum_{i=1}^{n} \tau(i) \approx n \ln n + (2\gamma - 1)n
+
 ```
 
 where γ ≈ 0.5772 is the Euler-Mascheroni constant.

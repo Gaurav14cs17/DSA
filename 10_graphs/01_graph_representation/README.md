@@ -35,6 +35,7 @@ permalink: /10_graphs/01_graph_representation/
 
 ```math
 \boxed{G = (V, E)}
+
 ```
 
 Where:
@@ -47,18 +48,21 @@ Where:
 
 ```math
 E = \{(u, v) : u, v \in V\} \text{ where } (u, v) = (v, u)
+
 ```
 
 **Directed Graph (Digraph):**
 
 ```math
 E = \{(u, v) : u, v \in V\} \text{ where } (u, v) \neq (v, u)
+
 ```
 
 **Weighted Graph:**
 
 ```math
 E = \{(u, v, w) : u, v \in V, w \in \mathbb{R}\}
+
 ```
 
 ---
@@ -71,6 +75,7 @@ For undirected graph:
 
 ```math
 \boxed{\deg(v) = |\{u \in V : (v, u) \in E\}|}
+
 ```
 
 For directed graph:
@@ -81,6 +86,7 @@ For directed graph:
 
 ```math
 \boxed{\sum_{v \in V} \deg(v) = 2|E|}
+
 ```
 
 **Proof:** Each edge contributes 2 to the sum (once for each endpoint) ∎
@@ -93,6 +99,7 @@ For directed graph:
 
 ```math
 \boxed{S_{matrix} = O(|V|^2)}
+
 ```
 
 Stores $|V| \times |V|$ matrix regardless of $|E|$
@@ -101,6 +108,7 @@ Stores $|V| \times |V|$ matrix regardless of $|E|$
 
 ```math
 \boxed{S_{list} = O(|V| + |E|)}
+
 ```
 
 - Undirected: $|V|$ lists with total $2|E|$ entries
@@ -135,6 +143,7 @@ Every pair of vertices connected.
 
 ```math
 |E| = \binom{n}{2} = \frac{n(n-1)}{2}
+
 ```
 
 **Proof:**
@@ -166,6 +175,7 @@ For graph $G$ with $k$ components:
 
 ```math
 \boxed{\text{rank}(G) = |V| - k}
+
 ```
 
 ---
@@ -221,6 +231,7 @@ Advantages:
 Disadvantages:
 ✗ O(V²) space even for sparse graphs
 ✗ O(V) to find all neighbors
+
 ```
 
 ---
@@ -259,6 +270,7 @@ Advantages:
 Disadvantages:
 ✗ O(degree) to check edge existence
 ✗ More complex implementation
+
 ```
 
 ---
@@ -306,6 +318,7 @@ Edge (A,B) means:
 Key Difference:
 Undirected: |E| edges → 2|E| list entries
 Directed:   |E| edges → |E| list entries
+
 ```
 
 ---
@@ -346,6 +359,7 @@ Common weight representations:
 - Distance/Cost: positive numbers
 - No edge: ∞ or -1
 - Self-loops: typically 0
+
 ```
 
 ---
@@ -425,6 +439,7 @@ Node 4: neighbors = [1, 3]
 |  Key Insight: HashMap prevents infinite recursion                 |
 |  on cycles and ensures each node cloned exactly once!              |
 +--------------------------------------------------------------------+
+
 ```
 
 ---
@@ -827,6 +842,7 @@ def can_finish(num_courses: int, prerequisites: List[List[int]]) -> bool:
             return False
     
     return True
+
 ```
 
 ---
@@ -1006,6 +1022,7 @@ def clone(node):
             clone.neighbors.append(dfs(neighbor))
         return clone
     return dfs(node)
+
 ```
 
 ### Pitfall 2: Forgetting Reverse Edge
@@ -1019,6 +1036,7 @@ def add_edge(u, v):
 def add_edge(u, v):
     adj_list[u].append(v)
     adj_list[v].append(u)  # Undirected!
+
 ```
 
 ### Pitfall 3: Not Handling Disconnected Components
@@ -1035,6 +1053,7 @@ def is_connected():
     visited = set()
     dfs(0, visited)
     return len(visited) == n  # OK if all nodes reachable from 0
+
 ```
 
 ---

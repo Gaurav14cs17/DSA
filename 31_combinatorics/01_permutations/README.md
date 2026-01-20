@@ -49,6 +49,7 @@ For set $S = \{a, b, c\}$:
 
 ```math
 P(n) = n!
+
 ```
 
 **Proof:** 
@@ -61,6 +62,7 @@ P(n) = n!
 
 ```math
 P(n, r) = \frac{n!}{(n-r)!}
+
 ```
 
 **Permutations with Repetition:**
@@ -69,12 +71,14 @@ If object $i$ appears $n\_i$ times:
 
 ```math
 P = \frac{n!}{n_1! \times n_2! \times \cdots \times n_k!}
+
 ```
 
 **Example:** Permutations of "AABBC":
 
 ```math
 \frac{5!}{2! \times 2! \times 1!} = \frac{120}{4} = 30
+
 ```
 
 ---
@@ -98,12 +102,14 @@ P = \frac{n!}{n_1! \times n_2! \times \cdots \times n_k!}
 
 ```math
 D_n = n! \sum_{i=0}^{n} \frac{(-1)^i}{i!} \approx \frac{n!}{e}
+
 ```
 
 **Recurrence:**
 
 ```math
 D_n = (n-1)(D_{n-1} + D_{n-2})
+
 ```
 
 **First few:** $D\_0=1, D\_1=0, D\_2=1, D\_3=2, D\_4=9, D\_5=44$
@@ -146,6 +152,7 @@ D_n = (n-1)(D_{n-1} + D_{n-2})
 |   - n! permutations                                             |
 |   - Each takes O(n) to construct                                |
 +----------------------------------------------------------------+
+
 ```
 
 ---
@@ -189,6 +196,7 @@ D_n = (n-1)(D_{n-1} + D_{n-2})
 |                                                                 |
 | Why reverse? To get smallest arrangement of suffix             |
 +----------------------------------------------------------------+
+
 ```
 
 ---
@@ -257,6 +265,7 @@ def permute_swap(nums: List[int]) -> List[List[int]]:
     
     backtrack(0)
     return result
+
 ```
 
 ---
@@ -308,6 +317,7 @@ def permuteUnique(nums: List[int]) -> List[List[int]]:
     
     backtrack([])
     return result
+
 ```
 
 ---
@@ -352,6 +362,7 @@ def nextPermutation(nums: List[int]) -> None:
         nums[left], nums[right] = nums[right], nums[left]
         left += 1
         right -= 1
+
 ```
 
 ---
@@ -396,6 +407,7 @@ def getPermutation(n: int, k: int) -> str:
         k %= factorial
     
     return ''.join(result)
+
 ```
 
 ---
@@ -430,6 +442,7 @@ def numPermutations(word: str) -> int:
         denominator *= math.factorial(count)
     
     return numerator // denominator
+
 ```
 
 ---
@@ -492,6 +505,7 @@ def permutation_backtrack(elements):
     
     backtrack([], elements)
     return result
+
 ```
 
 ### Pattern 2: Skip Duplicates
@@ -503,6 +517,7 @@ nums.sort()
 # Then skip duplicates at same level
 if i > start and nums[i] == nums[i-1]:
     continue
+
 ```
 
 ### Pattern 3: Factorial Number System
@@ -525,6 +540,7 @@ def kth_permutation(n, k):
         k %= factorial[i]
     
     return result
+
 ```
 
 ---

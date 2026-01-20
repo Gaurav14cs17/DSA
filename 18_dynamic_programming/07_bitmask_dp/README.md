@@ -43,6 +43,7 @@ Subset of $n$ elements as $n$-bit integer:
 
 ```math
 \text{bit } i = 1 \Leftrightarrow \text{element } i \in \text{subset}
+
 ```
 
 **States:** $2^n$
@@ -65,6 +66,7 @@ Subset of $n$ elements as $n$-bit integer:
 
 ```math
 dp[\text{mask}][i] = \min_{j \in \text{mask}} (dp[\text{mask} \setminus \{i\}][j] + dist[j][i])
+
 ```
 
 ---
@@ -202,6 +204,7 @@ def minStickers(stickers: list[str], target: str) -> int:
     
     ans = dp(0)
     return ans if ans != float('inf') else -1
+
 ```
 
 ---

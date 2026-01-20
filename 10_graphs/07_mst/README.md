@@ -37,6 +37,7 @@ permalink: /10_graphs/07_mst/
 
 ```math
 \text{MST weight} = \sum_{e \in T} w(e) \text{ is minimized}
+
 ```
 
 ---
@@ -60,6 +61,7 @@ permalink: /10_graphs/07_mst/
 
 ```math
 T = O(E \log E) = O(E \log V)
+
 ```
 
 ---
@@ -73,6 +75,7 @@ T = O(E \log E) = O(E \log V)
 ```math
 T = O((V + E) \log V) \text{ with binary heap}
 T = O(E + V \log V) \text{ with Fibonacci heap}
+
 ```
 
 ---
@@ -227,6 +230,7 @@ def minCostConnectPointsPrim(points: list[list[int]]) -> int:
                 min_dist[v] = min(min_dist[v], dist)
     
     return total_cost
+
 ```
 
 ---
@@ -259,6 +263,7 @@ MST Problem
      +-- Dense graph (E ≈ V²) → Prim's O(V²)
      |
      +-- Edge-by-edge processing → Kruskal's with Union-Find
+
 ```
 
 ---

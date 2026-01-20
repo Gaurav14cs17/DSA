@@ -42,6 +42,7 @@ where:
 - p = prime base
 - M = prime modulus
 - s[i] = character value (usually ord(s[i]))
+
 ```
 
 ### Rolling Property Derivation
@@ -70,6 +71,7 @@ Solution:
 
 Formula:
 h_new = ((h_old - s[i]·p^(m-1)) · p + s[i+m]) mod M
+
 ```
 
 ### Modular Arithmetic
@@ -93,6 +95,7 @@ Subtraction (handle negative):
 
 Power:
 a^k mod M = pow(a, k, M)  # Python built-in
+
 ```
 
 ---
@@ -128,6 +131,7 @@ def compute_hash(s, base=31, mod=10**9 + 7):
 print(compute_hash("abc"))      # Specific hash value
 print(compute_hash("def"))      # Different value
 print(compute_hash("abc"))      # Same as first (deterministic)
+
 ```
 
 ### 2. Rolling Hash Class
@@ -206,6 +210,7 @@ rh = RollingHash(s, window_size=3)
 print(f"Window: {rh.get_window()}, Hash: {rh.get_hash()}")
 while rh.roll() is not None:
     print(f"Window: {rh.get_window()}, Hash: {rh.get_hash()}")
+
 ```
 
 ### 3. Prefix Hash Array
@@ -277,6 +282,7 @@ ph = PrefixHash(s)
 print(ph.compare(0, 3, 3, 6))  # True: "abc" == "abc"
 print(ph.compare(0, 3, 6, 9))  # True: "abc" == "abc"
 print(ph.compare(0, 2, 3, 5))  # False: "ab" != "ca"
+
 ```
 
 ### 4. Hash with Different Bases
@@ -302,6 +308,7 @@ def compare_hash_bases(s):
 compare_hash_bases("abc")
 print()
 compare_hash_bases("xyz")
+
 ```
 
 ### 5. Modular Arithmetic Helpers
@@ -362,6 +369,7 @@ print(f"Subtract: {mod_math.subtract(a, b)}")
 print(f"Multiply: {mod_math.multiply(a, b)}")
 print(f"Power: {mod_math.power(2, 30)}")
 print(f"Inverse of 10: {mod_math.inverse(10)}")
+
 ```
 
 ### 6. Hash Collision Detector
@@ -415,6 +423,7 @@ print(f"Found {len(collisions)} hash collisions")
 if collisions:
     print(f"Example collision: '{collisions[0][0]}' and '{collisions[0][1]}'")
     print(f"Both have hash: {collisions[0][2]}")
+
 ```
 
 ### 7. Hash Quality Analysis
@@ -464,6 +473,7 @@ print(f"Collision rate: {stats['collision_rate']:.4%}")
 print(f"Max bucket size: {stats['max_bucket_size']}")
 print(f"Avg bucket size: {stats['avg_bucket_size']:.2f}")
 print(f"Load factor: {stats['load_factor']:.2e}")
+
 ```
 
 ---
@@ -473,6 +483,7 @@ print(f"Load factor: {stats['load_factor']:.2e}")
 ### Choosing Good Parameters
 
 **Base (p):**
+
 ```python
 # For lowercase letters (26 chars)
 p = 31  # Prime close to 26, good distribution
@@ -484,9 +495,11 @@ p = 53  # Prime close to 52
 p = 257 # Prime close to 128
 
 # General rule: p should be prime and ≈ alphabet size
+
 ```
 
 **Modulus (M):**
+
 ```python
 # Common choices:
 M = 10**9 + 7   # Fits in 32-bit int, prime
@@ -497,6 +510,7 @@ M = 2**61 - 1   # Mersenne prime, very large
 # 1. M should be prime
 # 2. M should be large (reduce collisions)
 # 3. M < 2^63 (fit in long long)
+
 ```
 
 ### Common Mistakes
@@ -520,6 +534,7 @@ power = BASE ** (m - 1) % MOD  # Slow for large m
 
 # ✓ Correct: Precompute once
 power = pow(BASE, m - 1, MOD)  # Fast modular exponentiation
+
 ```
 
 ### Rolling vs Recomputation
@@ -534,6 +549,7 @@ power = pow(BASE, m - 1, MOD)  # Fast modular exponentiation
 ✓ Fixed window size
 ✓ Sequential access
 ✓ String unchanged
+
 ```
 
 ---
@@ -551,6 +567,7 @@ s1+s2 = a₀a₁...aₙb₀b₁...bₘ
 
 h(s1+s2) = Σ aᵢ·p^(n+m-i) + Σ bⱼ·p^(m-1-j)
          = h(s1)·p^m + h(s2)
+
 ```
 
 ### Collision Probability
@@ -566,6 +583,7 @@ m = 100 (string length)
 M = 10^9+7
 
 P ≈ 2600 / 10^9 ≈ 2.6 × 10^-6 (very low!)
+
 ```
 
 ---

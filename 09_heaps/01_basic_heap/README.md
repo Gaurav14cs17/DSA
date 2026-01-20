@@ -35,20 +35,24 @@ permalink: /09_heaps/01_basic_heap/
 
 ```
 Add at end → Bubble up until heap property restored
+
 ```
 
 ```math
 \text{Time: } O(\log n)
+
 ```
 
 **Extract (Sift Down):**
 
 ```
 Replace root with last → Bubble down until heap property restored
+
 ```
 
 ```math
 \text{Time: } O(\log n)
+
 ```
 
 ---
@@ -59,6 +63,7 @@ Replace root with last → Bubble down until heap property restored
 \text{parent}(i) = \lfloor (i-1)/2 \rfloor
 \text{left}(i) = 2i + 1
 \text{right}(i) = 2i + 2
+
 ```
 
 ---
@@ -69,6 +74,7 @@ Starting from last non-leaf node $\lfloor n/2 \rfloor - 1$:
 
 ```math
 T(n) = \sum_{h=0}^{\log n} \frac{n}{2^{h+1}} \cdot O(h) = O(n)
+
 ```
 
 **Key Insight:** Most nodes are near leaves (low height).
@@ -92,6 +98,7 @@ The series $\sum\_{h=0}^{\infty} \frac{h}{2^h} = 2$, so $T(n) = O(n)$. ∎
 
 ```math
 \boxed{T(n) = O(n) + O(n \log n) = O(n \log n)}
+
 ```
 
 **Space:** $O(1)$ in-place (better than merge sort!)
@@ -122,6 +129,7 @@ The series $\sum\_{h=0}^{\infty} \frac{h}{2^h} = 2$, so $T(n) = O(n)$. ∎
 
 ```math
 \text{Time: } O(n \log n)
+
 ```
 
 **Why Optimal?** Greedy choice: combine least frequent first minimizes weighted path length.
@@ -134,6 +142,7 @@ The series $\sum\_{h=0}^{\infty} \frac{h}{2^h} = 2$, so $T(n) = O(n)$. ∎
 
 ```math
 \text{answer} = \text{heap}[0]
+
 ```
 
 **Invariant:** Heap contains k largest elements seen so far.
@@ -192,6 +201,7 @@ Step 3: Compare with parent 3
    10 7 9  8
 
 Done! Heap property restored.
+
 ```
 
 ---
@@ -231,6 +241,7 @@ Step 3: Compare 8 with child 9
         9 > 8, stop!
 
 Done! Return 2, heap property restored.
+
 ```
 
 ---
@@ -278,6 +289,7 @@ Step 3: After swap, heapify at index 1 (value 9)
 
 Final min-heap: [2, 3, 6, 5, 9] ✓
 Time: O(n), not O(n log n)!
+
 ```
 
 ---
@@ -303,6 +315,7 @@ Round 4: Extract -1 and -1 → same → nothing
 heap = [-1]
 
 Answer: 1 (last remaining stone)
+
 ```
 
 ---
@@ -328,6 +341,7 @@ Problem mentions:
 +-- "merge smallest pairs" → Min-Heap (Huffman)
 +-- "schedule by priority" → Priority Queue
 +-- "sort in-place" → Heap Sort
+
 ```
 
 ---
@@ -404,6 +418,7 @@ def lastStoneWeight(stones: list[int]) -> int:
             heapq.heappush(heap, -(first - second))
     
     return -heap[0] if heap else 0
+
 ```
 
 ---
@@ -455,6 +470,7 @@ def lastStoneWeight(stones: list[int]) -> int:
 ## 📚 References & Resources
 
 ### 📖 Books & Courses
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **CLRS Chapter 6** | Heapsort & priority queues | [MIT Press](https://mitpress.mit.edu/books/introduction-algorithms) |
@@ -462,6 +478,7 @@ def lastStoneWeight(stones: list[int]) -> int:
 | **Algorithm Design Manual** | Heap implementations | [Springer](https://www.algorist.com/) |
 
 ### 🌐 Online Tutorials
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **GeeksforGeeks** | Binary heap basics | [Tutorial](https://www.geeksforgeeks.org/binary-heap/) |
@@ -471,6 +488,7 @@ def lastStoneWeight(stones: list[int]) -> int:
 | **InterviewBit** | Heap tutorial | [Tutorial](https://www.interviewbit.com/tutorial/introduction-to-heap-data-structure/) |
 
 ### 📺 Video Resources
+
 | Creator | Topic | Link |
 |---------|-------|------|
 | **Abdul Bari** | Heap insertion/deletion | [YouTube](https://www.youtube.com/watch?v=HqPJF2L5h9U) |
@@ -480,6 +498,7 @@ def lastStoneWeight(stones: list[int]) -> int:
 | **Tushar Roy** | Heap basics | [YouTube](https://www.youtube.com/watch?v=t0Cq6tVNRBA) |
 
 ### 🔧 Interactive Tools
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo Heap** | Visualize operations | [Website](https://visualgo.net/en/heap) |
@@ -487,6 +506,7 @@ def lastStoneWeight(stones: list[int]) -> int:
 | **Algorithm Visualizer** | Heap algorithms | [Website](https://algorithm-visualizer.org/) |
 
 ### 📝 Practice Platforms
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Heap/PQ tag | [Problems](https://leetcode.com/tag/heap-priority-queue/) |

@@ -48,6 +48,7 @@ If $(x\_0, y\_0)$ is one solution to $ax + by = c$, **all solutions** are:
 
 ```math
 x = x_0 + k \cdot \frac{b}{\gcd(a,b)}, \quad y = y_0 - k \cdot \frac{a}{\gcd(a,b)}
+
 ```
 
 for any integer $k$.
@@ -113,6 +114,7 @@ def solutions_in_range(a: int, b: int, c: int,
 def positive_solutions(a: int, b: int, c: int) -> list[tuple]:
     """Find all solutions with x > 0 and y > 0."""
     return solutions_in_range(a, b, c, (1, c//a + 1), (1, c//b + 1))
+
 ```
 
 ---

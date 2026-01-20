@@ -50,6 +50,7 @@ permalink: /30_number_theory/05_euler_totient/03_euler_theorem/
 
 ```math
 a^{\phi(n)} \equiv 1 \pmod{n}
+
 ```
 
 ### Special Case: Fermat's Little Theorem
@@ -58,6 +59,7 @@ For prime p and $\gcd(a, p) = 1$:
 
 ```math
 a^{p-1} \equiv 1 \pmod{p}
+
 ```
 
 (Since φ(p) = p - 1)
@@ -84,6 +86,7 @@ a^{p-1} \equiv 1 \pmod{p}
 |   a^φ(n) · (r₁r₂...rₖ) ≡ r₁r₂...rₖ (mod n)                   |
 |   a^φ(n) ≡ 1 (mod n) ✓                                        |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -109,6 +112,7 @@ for n in range(2, 20):
         if gcd(a, n) == 1:
             assert verify_euler(a, n), f"Failed: a={a}, n={n}"
 print("Euler's theorem verified!")
+
 ```
 
 ### 2. Modular Exponentiation with Euler
@@ -130,6 +134,7 @@ def mod_pow_euler(a: int, k: int, n: int) -> int:
 
 # Example: 2^(10^18) mod 1000
 print(mod_pow_euler(2, 10**18, 1000))  # Fast!
+
 ```
 
 ### 3. Modular Inverse via Euler
@@ -151,6 +156,7 @@ def mod_inverse_euler(a: int, n: int) -> int:
 
 # Example
 print(mod_inverse_euler(3, 11))  # 4, because 3×4 ≡ 1 (mod 11)
+
 ```
 
 ### 4. RSA Key Generation
@@ -189,6 +195,7 @@ def rsa_demo():
     # m^(ed) = m · (m^φ(n))^k ≡ m · 1^k ≡ m (mod n)
 
 rsa_demo()
+
 ```
 
 ---

@@ -35,6 +35,7 @@ permalink: /02_strings/02_anagram_problems/
 
 ```math
 \boxed{\forall c \in \Sigma: \text{count}_S(c) = \text{count}_T(c)}
+
 ```
 
 **Equivalent conditions:**
@@ -50,12 +51,14 @@ For lowercase alphabet ($|\Sigma| = 26$):
 
 ```math
 \vec{f}(S) = [f_a, f_b, \ldots, f_z] \in \mathbb{Z}^{26}
+
 ```
 
 **Anagram Hash (Canonical Form):**
 
 ```math
 H(S) = \text{tuple}(\text{sorted}(S)) \quad \text{or} \quad H(S) = \text{tuple}(\vec{f}(S))
+
 ```
 
 ---
@@ -73,6 +76,7 @@ H(S) = \text{tuple}(\text{sorted}(S)) \quad \text{or} \quad H(S) = \text{tuple}(
 ```math
 \vec{f}_{\text{window}}[S[i]] += 1 \quad \text{(add right)}
 \vec{f}_{\text{window}}[S[i-|P|]] -= 1 \quad \text{(remove left)}
+
 ```
 
 ---
@@ -85,6 +89,7 @@ H(S) = \text{tuple}(\text{sorted}(S)) \quad \text{or} \quad H(S) = \text{tuple}(
 
 ```math
 \forall c \in T: \text{count}_{\text{window}}(c) \geq \text{count}_T(c)
+
 ```
 
 **Two Pointers:**
@@ -235,6 +240,7 @@ def minWindow(s: str, t: str) -> str:
             left += 1
     
     return result
+
 ```
 
 ---
@@ -308,6 +314,7 @@ Step-by-step:
 +----------------------------------------------------------+
 
 Result: [0, 6]
+
 ```
 
 ---
@@ -392,6 +399,7 @@ Result: [0, 6]
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **Anagram Algorithms** | Complete guide | [GeeksforGeeks](https://www.geeksforgeeks.org/check-whether-two-strings-are-anagram-of-each-other/) |
@@ -400,6 +408,7 @@ Result: [0, 6]
 | **Permutation vs Anagram** | Key differences | [StackOverflow](https://stackoverflow.com/questions/6470089/what-is-the-difference-between-permutation-and-anagram) |
 
 ### 🎥 Video Tutorials
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **NeetCode** | Valid anagram explained | [YouTube](https://www.youtube.com/watch?v=9UtInBqnCgA) |
@@ -409,6 +418,7 @@ Result: [0, 6]
 | **Tushar Roy** | Sliding window technique | [YouTube](https://www.youtube.com/watch?v=jM2dhDPYMQM) |
 
 ### 📝 Interactive Practice
+
 | Platform | Problem Set | Link |
 |----------|-------------|------|
 | **LeetCode** | Sliding window tag | [Problems](https://leetcode.com/tag/sliding-window/) |
@@ -417,6 +427,7 @@ Result: [0, 6]
 | **CodeSignal** | Anagram challenges | [Arcade](https://app.codesignal.com/) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Rolling Hash** | For fast string comparison | [CP-Algorithms](https://cp-algorithms.com/string/string-hashing.html) |
@@ -424,6 +435,7 @@ Result: [0, 6]
 | **Perfect Hashing** | Anagram detection in O(1) | [Wikipedia](https://en.wikipedia.org/wiki/Perfect_hash_function) |
 
 ### 🎯 Problem Collections
+
 | Collection | Focus | Link |
 |-----------|-------|------|
 | **LeetCode Patterns** | Sliding window section | [Guide](https://seanprashad.com/leetcode-patterns/) |

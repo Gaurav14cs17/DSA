@@ -11,8 +11,10 @@
 **Monotonic Queue** optimizes DP when transitions involve finding min/max over a **sliding window** of previous states.
 
 **Key Pattern:**
+
 ```
 dp[i] = min/max(dp[j] + cost(j, i)) for j ∈ [i-k, i-1]
+
 ```
 
 **Complexity:** O(nk) → O(n)
@@ -24,20 +26,24 @@ dp[i] = min/max(dp[j] + cost(j, i)) for j ∈ [i-k, i-1]
 ### Problem Structure
 
 **Without Optimization:**
+
 ```python
 for i in range(n):
     for j in range(max(0, i-k), i):  # O(k) iterations
         dp[i] = min(dp[i], dp[j] + cost[j][i])
+
 ```
 **Total:** O(nk)
 
 **With Monotonic Deque:**
+
 ```python
 for i in range(n):
     # Remove out-of-range: O(1) amortized
     # Query min/max: O(1)
     # Update deque: O(1) amortized
     dp[i] = compute()
+
 ```
 **Total:** O(n)
 
@@ -48,6 +54,7 @@ for i in range(n):
 ```
 Total operations = n adds + n removes = 2n = O(n)
 Amortized per element = O(1)
+
 ```
 
 ---
@@ -105,6 +112,7 @@ def monotonic_deque_dp(nums, k, minimize=True):
         dq.append(i)
     
     return dp[n - 1]
+
 ```
 
 ---
@@ -153,6 +161,7 @@ def constrained_subset_sum(nums, k):
 # nums = [10, -2, -10, -5, 20], k = 2
 # dp = [10, 8, 0, 3, 23]
 # Answer: 23 (take 10, -2, 20)
+
 ```
 
 ### Visual Walkthrough
@@ -183,6 +192,7 @@ i=4: window [2,3] (remove 1)
 
 Final dp = [10, 8, 0, 3, 23]
 max = 23
+
 ```
 
 ### Example 2: Jump Game VI
@@ -227,6 +237,7 @@ def max_result(nums, k):
 # Example:
 # nums = [1, -1, -2, 4, -7, 3], k = 2
 # Path: 0 → 1 → 3 → 5 → score = 1 + (-1) + 4 + 3 = 7
+
 ```
 
 ### Example 3: Max Value of Equation
@@ -272,6 +283,7 @@ def find_max_value_of_equation(points, k):
 # Original: max(y[i] + y[j] + |x[i] - x[j]|)
 # Rewrite: max((y[i] + x[i]) + (y[j] - x[j]))
 # At each i, query max(y[j] - x[j]) from valid j's
+
 ```
 
 ### Example 4: Shortest Subarray with Sum ≥ K
@@ -317,6 +329,7 @@ def shortest_subarray(nums, k):
 # Why monotonic?
 # If prefix[j] ≥ prefix[i] and j > i, then j is always better
 # (shorter subarray, same or larger sum difference)
+
 ```
 
 ### Example 5: Sliding Window Maximum
@@ -350,6 +363,7 @@ def max_sliding_window(nums, k):
             result.append(nums[dq[0]])
     
     return result
+
 ```
 
 ---
@@ -382,6 +396,7 @@ i=7: Remove 5 (out of range), dq=[6,7] → [2,6]
      Window [9,2,6], max = 9 ✓
 
 Invariant: Deque always decreasing, front = maximum
+
 ```
 
 ---
@@ -389,12 +404,14 @@ Invariant: Deque always decreasing, front = maximum
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy (2 problems)
+
 | # | Problem | Key Insight |
 |:-:|---------|-------------|
 | 239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Classic template |
 | 1475 | [Final Prices With Discount](https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/) | Next smaller element |
 
 ### 🟡 Medium (6 problems)
+
 | # | Problem | Key Insight |
 |:-:|---------|-------------|
 | 739 | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Next greater element |
@@ -404,6 +421,7 @@ Invariant: Deque always decreasing, front = maximum
 | 1673 | [Most Competitive Subsequence](https://leetcode.com/problems/find-the-most-competitive-subsequence/) | Monotonic stack variant |
 
 ### 🔴 Hard (5 problems)
+
 | # | Problem | Key Insight |
 |:-:|---------|-------------|
 | 862 | [Shortest Subarray Sum ≥ K](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/) | Prefix sum + deque |
@@ -433,6 +451,7 @@ Invariant: Deque always decreasing, front = maximum
 
 # Strategy: Separate into "fixed" and "variable" parts
 # Query max/min of variable part from deque
+
 ```
 
 ---

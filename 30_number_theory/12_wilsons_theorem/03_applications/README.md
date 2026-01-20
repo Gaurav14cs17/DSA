@@ -87,6 +87,7 @@ def find_sqrt_minus_one(p: int) -> int:
 print(find_sqrt_minus_one(5))   # 2 (because 2² = 4 ≡ -1 mod 5)
 print(find_sqrt_minus_one(13))  # 5 (because 5² = 25 ≡ -1 mod 13)
 print(find_sqrt_minus_one(17))  # 4 (because 4² = 16 ≡ -1 mod 17)
+
 ```
 
 ### Corollary 2: Partial Factorials
@@ -139,6 +140,7 @@ for k in range(1, p):
     v2 = partial_factorial_from_wilson(k, p)
     assert v1 == v2, f"Mismatch at k={k}"
 print("Both methods agree!")
+
 ```
 
 ### Corollary 3: Clausen's Generalization
@@ -168,6 +170,7 @@ for p in [5, 7, 11, 13]:
     for n in range(1, 5):
         assert clausen_theorem(n, p), f"Failed for p={p}, n={n}"
 print("Clausen's theorem verified!")
+
 ```
 
 ---
@@ -204,6 +207,7 @@ def lucas_binomial(n: int, k: int, p: int) -> int:
         return binomial_mod_prime_wilson(n, k, p)
     return (binomial_mod_prime_wilson(n % p, k % p, p) * 
             lucas_binomial(n // p, k // p, p)) % p
+
 ```
 
 ### 2. Sum of Reciprocals (Wolstenholme's Theorem)
@@ -239,6 +243,7 @@ def wolstenholme_check(p: int) -> bool:
 # Test Wolstenholme's theorem
 for p in [5, 7, 11, 13, 17, 19, 23]:
     print(f"p={p}: Wolstenholme holds: {wolstenholme_check(p)}")
+
 ```
 
 ### 3. Generating Quadratic Non-Residues
@@ -261,6 +266,7 @@ def find_quadratic_nonresidue(p: int) -> int:
 for p in [5, 7, 11, 13, 17, 19, 23]:
     nqr = find_quadratic_nonresidue(p)
     print(f"p={p}: first NQR = {nqr}")
+
 ```
 
 ---
@@ -285,6 +291,7 @@ for p in [5, 7, 11, 13, 17, 19, 23]:
 |                                                                 |
 | Verify: 5² = 25 = 2×13 - 1 = -1 (mod 13) ✓                    |
 +-----------------------------------------------------------------+
+
 ```
 
 ---

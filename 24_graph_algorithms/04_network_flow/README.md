@@ -52,12 +52,14 @@ permalink: /24_graph_algorithms/04_network_flow/
 
 ```math
 0 \leq f(u, v) \leq c(u, v) \quad \forall (u,v) \in E
+
 ```
 
 **Flow conservation:**
 
 ```math
 \sum_{v:(u,v) \in E} f(u,v) = \sum_{v:(v,u) \in E} f(v,u) \quad \forall u \in V \setminus \{s,t\}
+
 ```
 
 ---
@@ -80,6 +82,7 @@ c(u,v) - f(u,v) & \text{if } (u,v) \in E \\
 f(v,u) & \text{if } (v,u) \in E \\
 0 & \text{otherwise}
 \end{cases}
+
 ```
 
 **Augmenting path:** Path from $s$ to $t$ in residual graph with positive capacity.
@@ -94,12 +97,14 @@ f(v,u) & \text{if } (v,u) \in E \\
 
 ```math
 c(S, T) = \sum_{u \in S, v \in T, (u,v) \in E} c(u,v)
+
 ```
 
 **Theorem:**
 
 ```math
 \max_{f \text{ flow}} |f| = \min_{(S,T) \text{ cut}} c(S,T)
+
 ```
 
 ---
@@ -160,12 +165,14 @@ c(S, T) = \sum_{u \in S, v \in T, (u,v) \in E} c(u,v)
 
 ```math
 \text{Max matching} = |f^*|
+
 ```
 
 **König's Theorem:** In bipartite graph,
 
 ```math
 \text{Max matching} = \text{Min vertex cover}
+
 ```
 
 ---
@@ -560,6 +567,7 @@ def minCostMaxFlow(n: int, edges: List[List[int]], source: int,
         flow_sent += path_flow
     
     return total_cost if flow_sent == max_flow else -1
+
 ```
 
 ---
@@ -600,6 +608,7 @@ Network Flow Problem
      +-- Min cost max flow → Bellman-Ford + augmenting paths
      |
      +-- Min cut → Max flow + BFS in residual graph
+
 ```
 
 ---

@@ -95,6 +95,7 @@ Given array \([a_1, a_2, ..., a_n]\) where every element appears exactly twice e
 
 ```math
 \bigoplus_{i=1}^{n} a_i = x
+
 ```
 
 #### 🔍 Proof
@@ -103,12 +104,14 @@ Let pairs be \(\{(p_1, p_1), (p_2, p_2), ..., (p_k, p_k), x\}\):
 
 ```math
 \bigoplus_{i=1}^{n} a_i = (p_1 \oplus p_1) \oplus (p_2 \oplus p_2) \oplus ... \oplus (p_k \oplus p_k) \oplus x
+
 ```
 
 By self-inverse: \(p_i \oplus p_i = 0\)
 
 ```math
 = 0 \oplus 0 \oplus ... \oplus 0 \oplus x = x \quad \square
+
 ```
 
 ---
@@ -122,6 +125,7 @@ By self-inverse: \(p_i \oplus p_i = 0\)
 
 ```math
 \text{missing} = \left(\bigoplus_{i=0}^{n} i\right) \oplus \left(\bigoplus_{j=0}^{n-1} \text{nums}[j]\right)
+
 ```
 
 #### 🔍 Proof
@@ -131,6 +135,7 @@ Every number except the missing one appears twice (once as index, once as value)
 ```math
 = \underbrace{(0 \oplus 0) \oplus (1 \oplus 1) \oplus ... \oplus (\text{missing skipped})}_{\text{paired}} \oplus \text{missing}
 = 0 \oplus \text{missing} = \text{missing} \quad \square
+
 ```
 
 ---
@@ -175,6 +180,7 @@ For each bit position \(i\):
 
 ```math
 \text{bit}_i = \left(\sum_{j} \text{bit}_i(\text{nums}[j])\right) \mod 3
+
 ```
 
 If the count is 1, the unique number has this bit set.
@@ -197,12 +203,14 @@ Just like regular prefix sums, but with XOR:
 
 ```math
 \text{prefix}[i] = \text{nums}[0] \oplus \text{nums}[1] \oplus ... \oplus \text{nums}[i]
+
 ```
 
 #### Range XOR Query
 
 ```math
 \text{XOR}[L, R] = \text{prefix}[R] \oplus \text{prefix}[L-1]
+
 ```
 
 #### 🔍 Proof
@@ -210,12 +218,14 @@ Just like regular prefix sums, but with XOR:
 ```math
 \text{prefix}[R] \oplus \text{prefix}[L-1]
 = (\text{nums}[0] \oplus ... \oplus \text{nums}[R]) \oplus (\text{nums}[0] \oplus ... \oplus \text{nums}[L-1])
+
 ```
 
 By cancellation, elements \([0, L-1]\) cancel out:
 
 ```math
 = \text{nums}[L] \oplus ... \oplus \text{nums}[R] \quad \square
+
 ```
 
 ---
@@ -266,6 +276,7 @@ Why it works:
   1 ⊕ 1 = 0   (cancelled)
   2 ⊕ 2 = 0   (cancelled)
   4 ⊕ 0 = 4   (unique remains)
+
 ```
 
 ---
@@ -289,6 +300,7 @@ Detailed calculation:
   = 3 ⊕ 1 ⊕ 3 ⊕ 3 ⊕ 0 ⊕ 1 ⊕ 2
   
   Rearranging: (0⊕0) ⊕ (1⊕1) ⊕ (3⊕3) ⊕ 2 = 0 ⊕ 0 ⊕ 0 ⊕ 2 = 2 ✓
+
 ```
 
 ---
@@ -338,6 +350,7 @@ Find: 3 and 5 (appear once)
 +===============================================================+
 
 Result: [3, 5] ✓
+
 ```
 
 ---
@@ -361,6 +374,7 @@ Query: XOR[1, 3] = ?
   prefix[3] ⊕ prefix[0] = 1110 ⊕ 0001 = 1111 = 15
 
 Verify: 3 ⊕ 4 ⊕ 8 = 0011 ⊕ 0100 ⊕ 1000 = 1111 = 15 ✓
+
 ```
 
 ---
@@ -398,6 +412,7 @@ Finding max XOR for 5 (00101):
   Max XOR = 5 ⊕ 25 = 00101 ⊕ 11001 = 11100 = 28
 
 Overall max: 5 ⊕ 25 = 28 ✓
+
 ```
 
 ---
@@ -732,6 +747,7 @@ def xorAllNums(nums1: list[int], nums2: list[int]) -> int:
             result ^= num
     
     return result
+
 ```
 
 ---
@@ -775,6 +791,7 @@ def xorAllNums(nums1: list[int], nums2: list[int]) -> int:
      ▼           ▼
  XOR all    Partition
  elements   by diff bit
+
 ```
 
 ---

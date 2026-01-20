@@ -48,6 +48,7 @@ permalink: /34_sqrt_decomposition/02_mos_algorithm/
 
 ```math
 T = O(n\sqrt{n} + q\sqrt{n}) = O((n+q)\sqrt{n})
+
 ```
 
 ---
@@ -184,6 +185,7 @@ def count_distinct_in_ranges(arr: list[int],
     """
     mo = MoAlgorithm(arr)
     return mo.process_queries(queries)
+
 ```
 
 ---
@@ -234,6 +236,7 @@ def count_distinct_in_ranges(arr: list[int],
 |                                                                  |
 | Total movements: 16 (instead of 40 without sorting!)            |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -252,6 +255,7 @@ def distinct_elements(arr: list[int],
     """
     mo = MoAlgorithm(arr)
     return mo.process_queries(queries)
+
 ```
 
 ### Template: Sum in Range
@@ -271,6 +275,7 @@ class MoSum(MoAlgorithm):
     
     def get_answer(self) -> int:
         return self.current_sum
+
 ```
 
 ---

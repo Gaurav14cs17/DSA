@@ -44,6 +44,7 @@ Root (empty)
 |       +-- 'd' [end: "and"]
 +-- 'b'
     +-- 'e' [end: "be"]
+
 ```
 
 ---
@@ -197,6 +198,7 @@ def replaceWords(dictionary: list[str], sentence: str) -> str:
     
     words = sentence.split()
     return ' '.join(find_root(word) for word in words)
+
 ```
 
 ---

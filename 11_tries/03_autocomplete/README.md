@@ -37,6 +37,7 @@ permalink: /11_tries/03_autocomplete/
 
 ```math
 T = O(|P| + k)
+
 ```
 
 Where $k$ = number of matching words.
@@ -57,6 +58,7 @@ Where $k$ = number of matching words.
 
 ```math
 \text{suggestion}(prefix) = \text{top-k by weight}
+
 ```
 
 Use heap for top-k selection.
@@ -69,6 +71,7 @@ Use heap for top-k selection.
 
 ```math
 \text{mapSum}(prefix) = \sum_{\text{word starts with prefix}} \text{value}[word]
+
 ```
 
 ---
@@ -255,6 +258,7 @@ class AutocompleteSystem:
         
         for child in node.children.values():
             self._collect(child, heap)
+
 ```
 
 ---
@@ -288,6 +292,7 @@ Autocomplete
      +-- Prefix sum → Store cumulative weights
      |
      +-- Real-time input → Maintain current prefix
+
 ```
 
 ---

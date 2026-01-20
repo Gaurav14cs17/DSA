@@ -72,6 +72,7 @@ where $size(x)$ = number of nodes in subtree rooted at $x$.
 - Only happens at end
 
 **Zig-Zig (x and p are both left or both right children):**
+
 ```
       g           x
      /           / \
@@ -80,10 +81,12 @@ where $size(x)$ = number of nodes in subtree rooted at $x$.
   x               B   g
  / \                 / \
 A   B               C   D
+
 ```
 - Rotate p, then rotate x
 
 **Zig-Zag (x is left child, p is right child or vice versa):**
+
 ```
     g           x
    /           / \
@@ -92,6 +95,7 @@ A   B               C   D
     x       A B C  D
    / \
   B   C
+
 ```
 - Rotate x twice (like AVL LR/RL)
 
@@ -495,6 +499,7 @@ def contains_nearby_duplicate(nums: list, k: int) -> bool:
             tree.delete(nums[i - k])
     
     return False
+
 ```
 
 ---

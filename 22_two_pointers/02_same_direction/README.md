@@ -71,6 +71,7 @@ At any point, \([0, slow)\) contains the valid result built so far.
 [Valid Result | To Process...]
  ↑            ↑
  0          slow            fast →
+
 ```
 
 #### The Pattern
@@ -82,6 +83,7 @@ for fast in range(n):
         arr[slow] = arr[fast]
         slow += 1
 return slow  # Length of result
+
 ```
 
 ---
@@ -99,6 +101,7 @@ for fast in range(1, n):
     if arr[fast] != arr[slow - 1]:  # New unique element
         arr[slow] = arr[fast]
         slow += 1
+
 ```
 
 #### 🔍 Proof of Correctness
@@ -155,6 +158,7 @@ Result:  [1, 2, 3, 4, _, _, _, _]
                       S=4
          
          Return 4 (4 unique elements)
+
 ```
 
 ---
@@ -170,6 +174,7 @@ Compare with element \(k\) positions back:
 
 ```math
 \text{if } arr[fast] \neq arr[slow - k]: \text{ keep element}
+
 ```
 
 #### Proof
@@ -200,6 +205,7 @@ We maintain three pointers:
 [low, mid) = \text{all 1s}
 [mid, high] = \text{unknown}
 (high, n) = \text{all 2s}
+
 ```
 
 #### Algorithm
@@ -215,6 +221,7 @@ while mid <= high:
         swap(arr[mid], arr[high])
         high--
         # Don't increment mid (swapped element is unknown)
+
 ```
 
 #### 🔍 Proof of Correctness
@@ -284,6 +291,7 @@ Step 6: arr[M]=1, M++
 M > H, done!
 
 Result: [0, 0, 1, 1, 2, 2] ✓
+
 ```
 
 ---
@@ -312,6 +320,7 @@ while p2 >= 0:
         nums1[p] = nums2[p2]
         p2--
     p--
+
 ```
 
 #### 🔍 Proof
@@ -342,6 +351,7 @@ for c in t:
     if i < len(s) and c == s[i]:
         i += 1
 return i == len(s)
+
 ```
 
 #### Time Complexity
@@ -381,6 +391,7 @@ return i == len(s)
 |   Return S = length of valid result                        |
 |                                                             |
 +-------------------------------------------------------------+
+
 ```
 
 ### Dutch National Flag Regions
@@ -409,6 +420,7 @@ return i == len(s)
 |   When mid > high, unknown region empty → DONE             |
 |                                                             |
 +-------------------------------------------------------------+
+
 ```
 
 ### Merge From End
@@ -447,6 +459,7 @@ nums1 = [1, 2, 3, 4, 5, 6]
 
 p2 < 0, done!
 Result: [1, 2, 3, 4, 5, 6] ✓
+
 ```
 
 ---
@@ -697,6 +710,7 @@ def findMaxConsecutiveOnes(nums: list[int]) -> int:
             count = 0
     
     return max_count
+
 ```
 
 ---

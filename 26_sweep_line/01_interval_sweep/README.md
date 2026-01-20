@@ -49,6 +49,7 @@ permalink: /26_sweep_line/01_interval_sweep/
 
 ```math
 \text{active}(t) = \sum_{\substack{i : s_i \leq t < e_i}} 1
+
 ```
 
 ---
@@ -73,12 +74,14 @@ permalink: /26_sweep_line/01_interval_sweep/
 
 ```math
 \max(a, c) < \min(b, d)
+
 ```
 
 Equivalently:
 
 ```math
 a < d \land c < b
+
 ```
 
 **Proof:**
@@ -93,6 +96,7 @@ a < d \land c < b
 **Problem:** Find maximum number of overlapping intervals at any point.
 
 **Algorithm:** Event-based sweep
+
 ```
 1. For each interval [s, e]:
    - Add event (s, +1)
@@ -100,6 +104,7 @@ a < d \land c < b
 2. Sort events by time
 3. Process events, maintaining active count
 4. Return maximum active count
+
 ```
 
 **Correctness:** Active count at any time = number of intervals covering that point.
@@ -128,11 +133,13 @@ a < d \land c < b
 **Theorem:** Sorted merge produces minimal merged intervals.
 
 **Algorithm:**
+
 ```
 1. Sort intervals by start time
 2. For each interval:
    - If overlaps with last merged: extend
    - Otherwise: add as new merged interval
+
 ```
 
 **Invariant:** At step $i$, all intervals $[1, i]$ are minimally merged.
@@ -150,6 +157,7 @@ a < d \land c < b
 
 ```math
 \Delta[i] = A[i] - A[i-1]
+
 ```
 
 **Update:** $\Delta[l] += val, \Delta[r+1] -= val$
@@ -502,6 +510,7 @@ def employee_free_time_heap(schedule: List[List[Interval]]) -> List[Interval]:
             heapq.heappush(heap, (next_interval.start, emp_idx, int_idx + 1))
     
     return result
+
 ```
 
 ---

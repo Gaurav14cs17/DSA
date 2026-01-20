@@ -69,6 +69,7 @@ class SegmentTreeRMQ:
             self._build(arr, 2*node+1, start, mid)
             self._build(arr, 2*node+2, mid+1, end)
             self.tree[node] = min(self.tree[2*node+1], self.tree[2*node+2])
+
 ```
 
 ### Range GCD
@@ -84,6 +85,7 @@ class SegmentTreeGCD:
     
     def _combine(self, left, right):
         return self._gcd(left, right)
+
 ```
 
 ---

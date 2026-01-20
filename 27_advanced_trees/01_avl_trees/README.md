@@ -45,6 +45,7 @@ permalink: /27_advanced_trees/01_avl_trees/
 
 ```math
 BF(node) = height(left) - height(right)
+
 ```
 
 **AVL Property:** $|BF(node)| \leq 1$ for all nodes.
@@ -64,6 +65,7 @@ Let $N(h)$ = minimum nodes in AVL tree of height $h$.
 
 ```math
 N(h) = N(h-1) + N(h-2) + 1
+
 ```
 
 Similar to Fibonacci: $N(h) \geq F\_{h+2} - 1$
@@ -86,6 +88,7 @@ Therefore: $h \leq 1.44 \log\_2(n+2)$ ∎
   x  T3            T1 T2 T3 T4
  / \
 T1 T2
+
 ```
 
 **Single Left Rotation (RR case):** Mirror of right rotation
@@ -108,6 +111,7 @@ After rotation, update heights:
 
 ```math
 height(node) = 1 + \max(height(left), height(right))
+
 ```
 
 **Propagation:** May need to update ancestors up to root: $O(\log n)$
@@ -555,6 +559,7 @@ def range_sum_bst(root: Optional[AVLNode], low: int, high: int) -> int:
         total += range_sum_bst(root.right, low, high)
     
     return total
+
 ```
 
 ---

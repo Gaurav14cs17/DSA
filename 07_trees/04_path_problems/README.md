@@ -37,12 +37,14 @@ permalink: /07_trees/04_path_problems/
 
 ```math
 \text{path}(root, leaf) = [root, ..., leaf]
+
 ```
 
 **Any-to-Any Path (through some node):**
 
 ```math
 \text{path}(u, v) = \text{path}(u, lca) + \text{path}(lca, v)
+
 ```
 
 ---
@@ -56,6 +58,7 @@ permalink: /07_trees/04_path_problems/
 S = node.val & \text{if leaf} \\
 \text{hasPath}(left, S - node.val) \lor \text{hasPath}(right, S - node.val) & \text{otherwise}
 \end{cases}
+
 ```
 
 ---
@@ -66,12 +69,14 @@ S = node.val & \text{if leaf} \\
 
 ```math
 \text{maxSum}(node) = node.val + \max(0, \text{gain}(left)) + \max(0, \text{gain}(right))
+
 ```
 
 Where:
 
 ```math
 \text{gain}(node) = node.val + \max(\text{gain}(left), \text{gain}(right), 0)
+
 ```
 
 **Global answer:** Maximum of `maxSum` over all nodes.
@@ -87,6 +92,7 @@ Where:
 ```math
 \text{pathSum}(i, j) = prefix[j] - prefix[i-1] = k
 prefix[i-1] = prefix[j] - k
+
 ```
 
 Count previous prefixes that equal $prefix[j] - k$.
@@ -99,6 +105,7 @@ Count previous prefixes that equal $prefix[j] - k$.
 
 ```math
 \text{paths}(node) = \bigcup_{leaf \in \text{leaves}} \text{path}(root, leaf)
+
 ```
 
 ---
@@ -262,6 +269,7 @@ def sumNumbers(root: TreeNode) -> int:
         return dfs(node.left, current_num) + dfs(node.right, current_num)
     
     return dfs(root, 0)
+
 ```
 
 ---
@@ -339,6 +347,7 @@ Node -10:
   max_so_far = 42
 
 Result: 42 (path: 15 → 20 → 7)
+
 ```
 
 ### Path Sum III (#437)
@@ -379,6 +388,7 @@ Paths found:
 4. -3 → 11 (sum=8) ✓
 
 Result: 3 paths with sum=8
+
 ```
 
 ### Path Sum II (#113)
@@ -409,6 +419,7 @@ Path 4: [5, 8, 4, 1]
   sum = 18 ≠ 22 ✗
 
 Result: [[5, 4, 11, 2]]
+
 ```
 
 ---
@@ -429,6 +440,7 @@ Result: [[5, 4, 11, 2]]
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **GeeksforGeeks** | Path problems | [Tutorial](https://www.geeksforgeeks.org/print-paths-root-specified-sum-binary-tree/) |
@@ -436,6 +448,7 @@ Result: [[5, 4, 11, 2]]
 | **LeetCode** | Path Sum III explanation | [Discussion](https://leetcode.com/problems/path-sum-iii/) |
 
 ### 📺 Video Tutorials
+
 | Creator | Topic | Link |
 |---------|-------|------|
 | **NeetCode** | Maximum Path Sum | [YouTube](https://www.youtube.com/watch?v=Hr5cWUld4vU) |
@@ -443,18 +456,21 @@ Result: [[5, 4, 11, 2]]
 | **Back To Back SWE** | Path problems | [YouTube](https://www.youtube.com/watch?v=GF4McxL3bMg) |
 
 ### 🎯 Practice Collections
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Path sum tag | [Problems](https://leetcode.com/tag/tree/) |
 | **HackerRank** | Tree path problems | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=trees) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Prefix Sum in Trees** | Any-to-any paths | [Tutorial](https://www.geeksforgeeks.org/count-paths-with-given-sum-in-a-binary-tree/) |
 | **Backtracking in Trees** | All paths enumeration | [Article](https://www.geeksforgeeks.org/given-a-binary-tree-print-all-root-to-leaf-paths/) |
 
 ### 📊 Visualization
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo** | Tree paths | [Website](https://visualgo.net/en/bst) |

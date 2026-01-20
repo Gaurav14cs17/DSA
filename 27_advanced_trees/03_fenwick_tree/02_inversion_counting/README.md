@@ -93,6 +93,7 @@ def countSmaller(nums: List[int]) -> List[int]:
         bit.update(r)
     
     return result[::-1]
+
 ```
 
 ### 2. Reverse Pairs (LeetCode 493)
@@ -139,6 +140,7 @@ def reversePairs(nums: List[int]) -> int:
         bit.update(rank[num])
     
     return count
+
 ```
 
 ### 3. Create Sorted Array (LeetCode 1649)
@@ -180,6 +182,7 @@ def createSortedArray(instructions: List[int]) -> int:
         bit.update(num)
     
     return cost
+
 ```
 
 ---

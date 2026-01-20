@@ -40,6 +40,7 @@ A function $f: \mathbb{Z}^+ \to \mathbb{C}$ is **multiplicative** if:
 
 ```math
 f(mn) = f(m) \cdot f(n) \quad \text{when } \gcd(m, n) = 1
+
 ```
 
 **Important Multiplicative Functions:**
@@ -63,6 +64,7 @@ f(mn) = f(m) \cdot f(n) \quad \text{when } \gcd(m, n) = 1
 (-1)^k & \text{if } n \text{ is product of } k \text{ distinct primes} \\
 0 & \text{if } n \text{ has squared prime factor}
 \end{cases}
+
 ```
 
 **Key Property (Möbius Inversion):**
@@ -134,6 +136,7 @@ If $g(n) = \sum\_{d|n} f(d)$, then $f(n) = \sum\_{d|n} \mu(d) \cdot g(n/d)$
 | VERIFICATION: φ(12) = 4                                         |
 |   Numbers coprime to 12: 1, 5, 7, 11 → count = 4 ✓             |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -170,6 +173,7 @@ If $g(n) = \sum\_{d|n} f(d)$, then $f(n) = \sum\_{d|n} \mu(d) \cdot g(n/d)$
 |                                                                 |
 | RESULT: 4                                                       |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -198,6 +202,7 @@ def euler_phi_sieve(n: int) -> list[int]:
                 phi[j] -= phi[j] // i
     
     return phi
+
 ```
 
 ---
@@ -235,6 +240,7 @@ def mobius_sieve(n: int) -> list[int]:
                 mu[j] = 0
     
     return mu
+
 ```
 
 ---
@@ -290,6 +296,7 @@ class Solution:
         from collections import Counter
         roots = Counter(uf.find(num) for num in nums)
         return max(roots.values())
+
 ```
 
 ---
@@ -318,6 +325,7 @@ def count_divisors_array(nums: list[int]) -> list[int]:
             divisor_count[multiple] += 1
     
     return [divisor_count[n] for n in nums]
+
 ```
 
 ---
@@ -363,6 +371,7 @@ def gcd_sum(n: int) -> int:
     
     # Sum d × φ(n/d)
     return sum(d * euler_phi(n // d) for d in divisors)
+
 ```
 
 ---
@@ -407,6 +416,7 @@ def count_k_almost_primes(n: int, k: int) -> int:
             count += 1
     
     return count
+
 ```
 
 ---
@@ -443,6 +453,7 @@ def primorial(n: int) -> int:
             result *= i
     
     return result
+
 ```
 
 ---
@@ -468,6 +479,7 @@ def count_with_k_distinct_primes(n: int, k: int) -> int:
                 omega[j] += 1
     
     return sum(1 for i in range(2, n + 1) if omega[i] == k)
+
 ```
 
 ---
@@ -520,6 +532,7 @@ def group_by_prime_factors(nums: list[int]) -> dict[int, list[int]]:
         groups[uf.find(num)].append(num)
     
     return dict(groups)
+
 ```
 
 ### Pattern 2: Inclusion-Exclusion with Primes
@@ -550,6 +563,7 @@ def count_divisible_by_any(n: int, primes: list[int]) -> int:
                 total -= n // product
     
     return total
+
 ```
 
 ### Pattern 3: Multiplicative Function Computation
@@ -585,6 +599,7 @@ def compute_multiplicative(n: int, prime_val, combine):
             result[i] = combine(prime_val(p, e), result[temp])
     
     return result
+
 ```
 
 ---

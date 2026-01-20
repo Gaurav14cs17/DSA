@@ -39,6 +39,7 @@ Polygon operations compute properties and perform transformations on polygons.
 Area = ½|Σ(xᵢyᵢ₊₁ - xᵢ₊₁yᵢ)|
 
 where indices are mod n
+
 ```
 
 **Signed area:** Positive if counter-clockwise, negative if clockwise.
@@ -82,6 +83,7 @@ def signed_area(polygon):
         area -= polygon[j].x * polygon[i].y
     
     return area / 2
+
 ```
 
 ### 2. Polygon Perimeter
@@ -103,6 +105,7 @@ def polygon_perimeter(polygon):
         perimeter += polygon[i].distance(polygon[j])
     
     return perimeter
+
 ```
 
 ### 3. Polygon Centroid
@@ -135,6 +138,7 @@ def polygon_centroid(polygon):
     
     factor = 1 / (6 * area)
     return Point(cx * factor, cy * factor)
+
 ```
 
 ### 4. Polygon Triangulation (Ear Clipping)
@@ -196,6 +200,7 @@ def triangulate_ear_clipping(polygon):
         triangles.append(tuple(polygon[i] for i in indices))
     
     return triangles
+
 ```
 
 ### 5. Rectangle Overlap
@@ -236,6 +241,7 @@ def rectangle_intersection_area(rect1, rect2):
         return 0
     
     return (x_right - x_left) * (y_top - y_bottom)
+
 ```
 
 ---

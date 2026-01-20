@@ -51,6 +51,7 @@ The **n-th Catalan number** is:
 
 ```math
 C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)! \cdot n!}
+
 ```
 
 ### First Few Values
@@ -75,12 +76,14 @@ C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)! \cdot n!}
 
 ```math
 C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
+
 ```
 
 **Closed Form Recurrence:**
 
 ```math
 C_n = \frac{2(2n-1)}{n+1} \cdot C_{n-1}
+
 ```
 
 ---
@@ -114,6 +117,7 @@ C_n = \frac{2(2n-1)}{n+1} \cdot C_{n-1}
 | 5. FULL BINARY TREES with n+1 leaves:                          |
 |    5 different trees                                           |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -155,6 +159,7 @@ def catalan_fast(n: int) -> int:
 # Examples
 for i in range(11):
     print(f"C({i}) = {catalan(i)}")
+
 ```
 
 ### 2. Modular Catalan (For Large n)
@@ -188,6 +193,7 @@ def catalan_mod(n: int, mod: int = 10**9 + 7) -> int:
 
 # Example
 print(catalan_mod(1000))  # Catalan(1000) mod 10^9+7
+
 ```
 
 ### 3. DP Approach (Precompute All)
@@ -216,6 +222,7 @@ def catalan_dp(n: int) -> list[int]:
 
 # Example
 print(catalan_dp(10))  # [1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796]
+
 ```
 
 ### 4. Efficient Recurrence
@@ -236,6 +243,7 @@ def catalan_recurrence(n: int) -> int:
         result = result * (4 * i - 2) // (i + 1)
     
     return result
+
 ```
 
 ---

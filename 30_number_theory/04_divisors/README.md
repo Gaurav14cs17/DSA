@@ -42,6 +42,7 @@ permalink: /30_number_theory/04_divisors/
 
 ```math
 \tau(n) = (a_1 + 1)(a_2 + 1) \cdots (a_k + 1)
+
 ```
 
 **Examples:**
@@ -58,6 +59,7 @@ permalink: /30_number_theory/04_divisors/
 
 ```math
 \sigma(n) = \prod_{i=1}^{k} \frac{p_i^{a_i+1} - 1}{p_i - 1}
+
 ```
 
 **Examples:**
@@ -134,6 +136,7 @@ def sieve_divisor_count(limit: int) -> list[int]:
         for multiple in range(d, limit + 1, d):
             tau[multiple] += 1
     return tau
+
 ```
 
 ---

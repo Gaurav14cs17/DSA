@@ -67,12 +67,14 @@ permalink: /25_tree_algorithms/09_tree_hashing/
 
 ```math
 \text{hash}(v) = \text{combine}(\text{hash}(\text{child}_1), \text{hash}(\text{child}_2), \ldots)
+
 ```
 
 **Common formula:**
 
 ```math
 \text{hash}(v) = 1 + \sum_{c \in \text{children}(v)} p^{\text{hash}(c)}
+
 ```
 
 where $p$ is a large prime.
@@ -488,6 +490,7 @@ def example_general_tree_isomorphism():
     
     result = are_trees_isomorphic(n1, edges1, n2, edges2)
     print(f"Are trees isomorphic? {result}")
+
 ```
 
 ---
@@ -522,6 +525,7 @@ Tree Comparison Problem
      |
      +-- Pattern matching in tree
          +-- Hash pattern → Find matching subtrees
+
 ```
 
 ---

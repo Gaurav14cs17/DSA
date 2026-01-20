@@ -40,6 +40,7 @@ permalink: /30_number_theory/02_primes/03_prime_factorization/
 
 ```math
 n = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k}
+
 ```
 
 where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
@@ -48,6 +49,7 @@ where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
 
 ```math
 360 = 2^3 \times 3^2 \times 5^1
+
 ```
 
 ---
@@ -58,18 +60,21 @@ where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
 
 ```math
 \tau(n) = (a_1 + 1)(a_2 + 1) \cdots (a_k + 1)
+
 ```
 
 **Divisor Sum (σ function):**
 
 ```math
 \sigma(n) = \prod_{i=1}^{k} \frac{p_i^{a_i+1} - 1}{p_i - 1}
+
 ```
 
 **Euler's Totient (φ function):**
 
 ```math
 \phi(n) = n \prod_{i=1}^{k} \left(1 - \frac{1}{p_i}\right)
+
 ```
 
 ---
@@ -132,6 +137,7 @@ where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
 |   2³ = 8, 3² = 9, 5¹ = 5                                       |
 |   8 × 9 × 5 = 72 × 5 = 360 ✓                                  |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -167,6 +173,7 @@ where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
 |                                                                 |
 |   Count: 24 ✓                                                   |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -209,6 +216,7 @@ where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
 | TIME: O(log n) - only 6 steps for 360!                         |
 |       (vs O(√n) ≈ 19 steps for trial division)                 |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -253,6 +261,7 @@ def prime_factorize(n: int) -> dict[int, int]:
         factors[n] = 1
     
     return factors
+
 ```
 
 ---
@@ -286,6 +295,7 @@ def get_prime_factors_list(n: int) -> list[int]:
         factors.append(n)
     
     return factors
+
 ```
 
 ---
@@ -342,6 +352,7 @@ def factorize_list_with_spf(n: int, spf: list[int]) -> list[int]:
         factors.append(spf[n])
         n //= spf[n]
     return factors
+
 ```
 
 ---
@@ -396,6 +407,7 @@ def count_divisors_with_spf(n: int, spf: list[int]) -> int:
             n //= p
         count *= (exp + 1)
     return count
+
 ```
 
 ---
@@ -440,6 +452,7 @@ def sum_of_divisors(n: int) -> int:
         result *= (1 + n)  # Remaining prime contributes 1 + p
     
     return result
+
 ```
 
 ---
@@ -493,6 +506,7 @@ def get_all_divisors_direct(n: int) -> list[int]:
         d += 1
     
     return sorted(divisors)
+
 ```
 
 ---
@@ -531,6 +545,7 @@ def euler_totient(n: int) -> int:
         result -= result // n
     
     return result
+
 ```
 
 ---
@@ -580,6 +595,7 @@ class Solution:
                 n //= p
         
         return n == 1
+
 ```
 
 ### Problem 264: Ugly Number II
@@ -614,6 +630,7 @@ class Solution:
                 i5 += 1
         
         return ugly[n - 1]
+
 ```
 
 ### Problem 1390: Four Divisors
@@ -648,6 +665,7 @@ class Solution:
             return sum(divisors) if len(divisors) == 4 else 0
         
         return sum(sum_if_four_divisors(n) for n in nums)
+
 ```
 
 ---

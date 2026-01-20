@@ -147,19 +147,23 @@ where $\text{LSB}(i)$ = least significant bit = $i \& (-i)$
 ### 3️⃣ Operations
 
 **Update:** Add $\delta$ to index $i$
+
 ```
 while i <= n:
     BIT[i] += delta
     i += LSB(i)  # Move to parent
+
 ```
 
 **Query:** Get prefix sum $[1, i]$
+
 ```
 sum = 0
 while i > 0:
     sum += BIT[i]
     i -= LSB(i)  # Move to next range
 return sum
+
 ```
 
 **Range Query:** $\text{sum}(L, R) = \text{query}(R) - \text{query}(L-1)$
@@ -193,6 +197,7 @@ class FenwickTree:
     def range_query(self, left, right):
         """Return sum in range [left, right]."""
         return self.query(right) - self.query(left - 1)
+
 ```
 
 ---

@@ -44,8 +44,10 @@ permalink: /25_tree_algorithms/02_tree_dp/
 **Key insight:** Tree structure provides natural subproblems.
 
 **General pattern:**
+
 ```
 dp[node] = combine(dp[child₁], dp[child₂], ..., dp[childₖ])
+
 ```
 
 ---
@@ -67,6 +69,7 @@ dp[node] = combine(dp[child₁], dp[child₂], ..., dp[childₖ])
 
 ```math
 \text{dp}[v] = f(\text{dp}[\text{child}_1], \text{dp}[\text{child}_2], \ldots)
+
 ```
 
 **Post-order traversal:** Process children before parent.
@@ -99,6 +102,7 @@ dp[node] = combine(dp[child₁], dp[child₂], ..., dp[childₖ])
 
 ```math
 \text{ans}[v] = \text{combine}(\text{in}[v], \text{out}[v])
+
 ```
 
 ---
@@ -116,6 +120,7 @@ dp[node] = combine(dp[child₁], dp[child₂], ..., dp[childₖ])
 ```math
 \text{rob}[v] = v.\text{val} + \sum \text{not\_rob}[\text{child}]
 \text{not\_rob}[v] = \sum \max(\text{rob}[\text{child}], \text{not\_rob}[\text{child}])
+
 ```
 
 ---
@@ -559,6 +564,7 @@ def max_product_splitted_tree(root: TreeNode) -> int:
         max_product = max(max_product, subtree_sum * other_sum)
     
     return max_product % MOD
+
 ```
 
 ---
@@ -612,6 +618,7 @@ Tree DP Problem
      |
      +-- Need parent info → In/Out DP
          Examples: all distances from node
+
 ```
 
 ---

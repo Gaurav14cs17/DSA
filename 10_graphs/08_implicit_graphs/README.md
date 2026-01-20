@@ -45,6 +45,7 @@ permalink: /10_graphs/08_implicit_graphs/
 
 ```math
 G_{implicit} = (V, E) \text{ where } V = f(\text{input}), E = g(\text{rules})
+
 ```
 
 **Example (Jump Game):**
@@ -69,6 +70,7 @@ G_{implicit} = (V, E) \text{ where } V = f(\text{input}), E = g(\text{rules})
 
 ```math
 \text{Reach}(s) = \{v \in V : \exists \text{ path } s \rightsquigarrow v\}
+
 ```
 
 ---
@@ -87,6 +89,7 @@ G_{implicit} = (V, E) \text{ where } V = f(\text{input}), E = g(\text{rules})
 
 ```math
 d(u, v) = \min\{k : \exists \text{ path of length } k \text{ from } u \text{ to } v\}
+
 ```
 
 ---
@@ -107,6 +110,7 @@ d(u, v) = \min\{k : \exists \text{ path of length } k \text{ from } u \text{ to 
 ```math
 C_i = \{v \in V : v \text{ is reachable from seed } s_i\}
 V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j
+
 ```
 
 ---
@@ -131,6 +135,7 @@ V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j
 
 ```math
 \forall (u, v) \in E : \text{pos}(u) < \text{pos}(v)
+
 ```
 
 ---
@@ -141,6 +146,7 @@ V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j
 
 ```math
 |\text{States}| = \prod_{i=1}^{k} |D_i|
+
 ```
 
 **Example (Sliding Puzzle 2×3):**
@@ -152,6 +158,7 @@ V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j
 
 ```math
 E = \{(s, s') : s' \text{ reachable from } s \text{ by one move}\}
+
 ```
 
 ---
@@ -170,6 +177,7 @@ E = \{(s, s') : s' \text{ reachable from } s \text{ by one move}\}
 
 ```math
 d_{multi}(v) = \min_{s \in S} d(s, v)
+
 ```
 
 ---
@@ -262,6 +270,7 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 |                                                                 |
 | Answer: TRUE (path exists: 0 → 1 → 4)                          |
 +----------------------------------------------------------------+
+
 ```
 
 ---
@@ -344,6 +353,7 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 | No GRAY node revisited → No cycle!                             |
 | Answer: TRUE (can finish all courses)                          |
 +----------------------------------------------------------------+
+
 ```
 
 ---
@@ -423,6 +433,7 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 |                                                                 |
 | Answer: 3 islands                                               |
 +----------------------------------------------------------------+
+
 ```
 
 ---
@@ -508,6 +519,7 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 | Sequence: hit → hot → dot → dog → cog (5 words)                |
 | Answer: 5                                                       |
 +----------------------------------------------------------------+
+
 ```
 
 ---
@@ -586,6 +598,7 @@ def can_jump_bfs(nums: List[int]) -> bool:
                 queue.append(next_pos)
     
     return False
+
 ```
 
 ---
@@ -699,6 +712,7 @@ def find_order(numCourses: int, prerequisites: List[List[int]]) -> List[int]:
             return []  # Cycle exists, impossible
     
     return order  # Already in valid topological order
+
 ```
 
 ---
@@ -797,6 +811,7 @@ def num_islands_bfs(grid: List[List[str]]) -> int:
                 islands += 1
     
     return islands
+
 ```
 
 ---
@@ -893,6 +908,7 @@ def ladder_length_optimized(beginWord: str, endWord: str,
                     queue.append((next_word, length + 1))
     
     return 0
+
 ```
 
 ---
@@ -960,6 +976,7 @@ def oranges_rotting(grid: List[List[int]]) -> int:
     
     # Check if all fresh oranges rotted
     return max_time if fresh_count == 0 else -1
+
 ```
 
 ---
@@ -1324,8 +1341,10 @@ A: For interviews: 30-40 problems covering all patterns. Use the roadmap above.
 > Once you see the graph, the algorithm becomes obvious.
 
 **The Hidden Graph Principle:**
+
 ```
 Problem without "graph" keywords + Relationships = Hidden Graph
+
 ```
 
 **Universal Recognition Questions:**

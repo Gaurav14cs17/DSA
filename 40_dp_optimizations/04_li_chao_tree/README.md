@@ -93,6 +93,7 @@ class LiChaoTree:
             return min(result, self.query(x, 2*node, l, mid))
         else:
             return min(result, self.query(x, 2*node+1, mid+1, r))
+
 ```
 
 ---

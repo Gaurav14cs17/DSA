@@ -44,12 +44,14 @@ permalink: /34_sqrt_decomposition/
 
 ```math
 \text{block\_size} = \lceil \sqrt{n} \rceil
+
 ```
 
 **Number of Blocks:**
 
 ```math
 \text{num\_blocks} = \lceil \frac{n}{\text{block\_size}} \rceil \approx \sqrt{n}
+
 ```
 
 **Why √n?**
@@ -65,6 +67,7 @@ permalink: /34_sqrt_decomposition/
 
 ```math
 T_{\text{build}} = O(n)
+
 ```
 
 **Query (Range):** 
@@ -89,6 +92,7 @@ T_{\text{build}} = O(n)
 
 ```math
 S = O(n + \sqrt{n}) = O(n)
+
 ```
 
 - Original array: $O(n)$
@@ -129,6 +133,7 @@ To minimize, take derivative:
 \frac{dT}{db} = -\frac{n}{b^2} + 1 = 0
 b^2 = n
 b = \sqrt{n}
+
 ```
 
 At $b = \sqrt{n}$: $T = O(\frac{n}{\sqrt{n}} + \sqrt{n}) = O(\sqrt{n} + \sqrt{n}) = O(\sqrt{n})$ $\blacksquare$
@@ -190,6 +195,7 @@ At $b = \sqrt{n}$: $T = O(\frac{n}{\sqrt{n}} + \sqrt{n}) = O(\sqrt{n} + \sqrt{n}
 |                                                                  |
 |   Operations: O(1) - constant time update!                      |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -266,6 +272,7 @@ class SqrtDecomposition:
                 result += self.arr[i]
         
         return result
+
 ```
 
 ---
@@ -343,6 +350,7 @@ class SqrtDecompRangeUpdate:
             result += self.arr[i] + self.lazy[block_id]
         
         return result
+
 ```
 
 ---
@@ -366,6 +374,7 @@ class NumArray:
     def sumRange(self, left: int, right: int) -> int:
         """Return sum of elements in range [left, right]"""
         return self.sqrt_decomp.query(left, right)
+
 ```
 
 ---
@@ -432,6 +441,7 @@ class SqrtDecompMinMax:
                 result = min(result, self.arr[i])
         
         return result
+
 ```
 
 ---

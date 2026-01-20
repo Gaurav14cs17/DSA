@@ -73,6 +73,7 @@ permalink: /22_two_pointers/
 |     Use: Cycle detection, finding middle, nth from end         |
 |                                                                 |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -94,6 +95,7 @@ permalink: /22_two_pointers/
 \text{sum} > \text{target} & \Rightarrow right := right - 1 \\
 \text{sum} = \text{target} & \Rightarrow \text{Found!}
 \end{cases}
+
 ```
 
 #### 🔍 Proof of Correctness
@@ -125,6 +127,7 @@ permalink: /22_two_pointers/
 
 ```math
 \text{Area}(l, r) = \min(h[l], h[r]) \times (r - l)
+
 ```
 
 #### 🔍 Proof: Why Move the Shorter Side?
@@ -133,12 +136,14 @@ Suppose \(h[l] < h[r]\). Consider all containers involving position \(l\):
 
 ```math
 \text{Area}(l, k) = \min(h[l], h[k]) \times (k - l) \leq h[l] \times (k - l)
+
 ```
 
 For any \(k < r\):
 
 ```math
 \text{Area}(l, k) \leq h[l] \times (k - l) < h[l] \times (r - l) = \text{Area}(l, r)
+
 ```
 
 So \((l, r)\) is already the **best container involving position \(l\)**!
@@ -169,6 +174,7 @@ Since fast moves twice as fast:
 2(\mu + k) = \mu + k + n\lambda
 \mu + k = n\lambda
 \mu = n\lambda - k
+
 ```
 
 #### Phase 2: Finding Cycle Start
@@ -233,6 +239,7 @@ Instead of precomputing maxLeft and maxRight arrays (O(n) space), use two pointe
 |Two Sum | |3Sum,   |   |Remove  | |Partition|   | Cycle  | | Middle |
 |Opposite| |4Sum    |   |In-place| |Dutch   |   | Floyd's| | Nth End|
 +--------+ +--------+   +--------+ +--------+   +--------+ +--------+
+
 ```
 
 ---
@@ -258,6 +265,7 @@ Step 3: 1 + 9 = 10 > 9   →  Move R left
          L           R
 
 Step 4: 1 + 8 = 9 = 9    →  FOUND! ✓
+
 ```
 
 ### Pattern 2: Same Direction (Remove Duplicates)
@@ -286,6 +294,7 @@ Step 3: nums[F] = 2 ≠ nums[S-1] = 1? Write 2, S++
 Result: [1, 2, 3, 4, _, _, _, _]
                      S
         Return S = 4 unique elements
+
 ```
 
 ### Pattern 3: Floyd's Cycle Detection
@@ -313,6 +322,7 @@ Step 4:  🐢 → 5, 🐇 → 6
          ... Wait, let me recalculate
 
 Cycle start = 4 ✓
+
 ```
 
 ---
@@ -341,6 +351,7 @@ def two_sum_sorted(arr: list[int], target: int) -> tuple[int, int]:
             right -= 1     # Need smaller sum
     
     return (-1, -1)  # Not found
+
 ```
 
 ### Template 2: Same Direction (Partition)
@@ -361,6 +372,7 @@ def partition(arr: list[int], predicate) -> int:
             slow += 1
     
     return slow
+
 ```
 
 ### Template 3: Floyd's Cycle Detection
@@ -389,6 +401,7 @@ def find_cycle_start(head: ListNode) -> ListNode:
             return slow
     
     return None  # No cycle
+
 ```
 
 ---
@@ -550,6 +563,7 @@ Two pointers maintain an **invariant** that eliminates possibilities:
 |  • Palindrome → Opposite                                    |
 |  • Subsequence → Same direction                             |
 +--------------------------------------------------------------+
+
 ```
 
 ---

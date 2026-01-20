@@ -72,6 +72,7 @@ while n ≠ 0:
     n = n & (n - 1)
     count = count + 1
 return count
+
 ```
 
 **Time Complexity**: \( O(k) \) where \( k \) = number of set bits (not 32!)
@@ -82,18 +83,21 @@ Let \( n \) have binary representation with lowest set bit at position \( p \):
 
 ```math
 n = b_{31}b_{30}...b_{p+1}1\underbrace{00...0}_{p \text{ zeros}}
+
 ```
 
 Then:
 
 ```math
 n - 1 = b_{31}b_{30}...b_{p+1}0\underbrace{11...1}_{p \text{ ones}}
+
 ```
 
 Therefore:
 
 ```math
 n \land (n-1) = b_{31}b_{30}...b_{p+1}0\underbrace{00...0}_{p+1 \text{ zeros}}
+
 ```
 
 The lowest set bit is cleared! ✓
@@ -111,6 +115,7 @@ n&(n-1) = 1 1 0 0 0 0    = 1 0 0 0 0 0        = 0 0 0 0 0 0
 count = 1             count = 2             count = 3
 
 Result: 3 set bits ✓
+
 ```
 
 ---
@@ -124,6 +129,7 @@ Result: 3 set bits ✓
 
 ```math
 n \text{ is power of 2} \Leftrightarrow n > 0 \land n \land (n-1) = 0
+
 ```
 
 #### 🔍 Proof
@@ -137,6 +143,7 @@ n \text{ is power of 2} \Leftrightarrow n > 0 \land n \land (n-1) = 0
 n = 16:     1 0 0 0 0
 n - 1 = 15: 0 1 1 1 1
 n & (n-1):  0 0 0 0 0 = 0 ✓
+
 ```
 
 **If \( n \neq 2^k \)**:
@@ -148,6 +155,7 @@ n & (n-1):  0 0 0 0 0 = 0 ✓
 n = 12:     1 1 0 0
 n - 1 = 11: 1 0 1 1
 n & (n-1):  1 0 0 0 = 8 ≠ 0 ✗
+
 ```
 
 ---
@@ -171,12 +179,14 @@ Powers of 4:
 4² =  16 = bit 4  ✓
 4³ =  64 = bit 6  ✓
 4⁴ = 256 = bit 8  ✓
+
 ```
 
 #### Alternative Method: Modulo Check
 
 ```math
 n \text{ is power of 4} \Leftrightarrow n > 0 \land n \land (n-1) = 0 \land (n - 1) \mod 3 = 0
+
 ```
 
 This works because \( 4^k - 1 = (4-1)(4^{k-1} + 4^{k-2} + ... + 1) \) is always divisible by 3.
@@ -191,12 +201,14 @@ Build an array where `dp[i]` = number of 1 bits in \( i \).
 
 ```math
 \text{dp}[i] = \text{dp}[i \land (i-1)] + 1
+
 ```
 
 Or equivalently:
 
 ```math
 \text{dp}[i] = \text{dp}[i >> 1] + (i \land 1)
+
 ```
 
 #### 🔍 Proof of the Second Formula
@@ -211,6 +223,7 @@ i >> 1 = 6 = 110₂
 i & 1 = 1 (LSB is set)
 
 bits(13) = bits(6) + 1 = 2 + 1 = 3 ✓
+
 ```
 
 ---
@@ -226,6 +239,7 @@ For each of 32 bits:
     1. Extract LSB from input
     2. Append to result (shift result left, OR with bit)
     3. Shift input right
+
 ```
 
 #### 📊 Visual Example
@@ -234,6 +248,7 @@ For each of 32 bits:
 Input:  43261596 = 00000010100101000001111010011100
 Output: 964176192 = 00111001011110000010100101000000
                     ←--------- reversed ----------→
+
 ```
 
 #### 🚀 O(1) Divide and Conquer
@@ -246,6 +261,7 @@ n = ((n & 0xFF00FF00) >> 8)  | ((n & 0x00FF00FF) << 8)   # Swap 8-bit pairs
 n = ((n & 0xF0F0F0F0) >> 4)  | ((n & 0x0F0F0F0F) << 4)   # Swap nibbles
 n = ((n & 0xCCCCCCCC) >> 2)  | ((n & 0x33333333) << 2)   # Swap bit pairs
 n = ((n & 0xAAAAAAAA) >> 1)  | ((n & 0x55555555) << 1)   # Swap adjacent bits
+
 ```
 
 ---
@@ -275,6 +291,7 @@ carry = (a AND b) << 1     carry = (a AND b) << 1
       = (0101 & 0111)<<1         = (0010 & 1010)<<1
       = 0101 << 1                = 0010 << 1
       = 1010 (10)                = 0100 (4)
+
 ```
 
 #### ⚠️ Handling Negative Numbers (Python)
@@ -292,6 +309,7 @@ b = ((a_prev & b) << 1) & MASK
 # At the end, convert back if negative
 if a > MAX_INT:
     a = ~(a ^ MASK)  # Convert from unsigned to signed
+
 ```
 
 ---
@@ -329,6 +347,7 @@ right = 7 = 111
 After shifting until equal:
 left = right = 1 (shifted 2 times)
 Result: 1 << 2 = 4 ✓
+
 ```
 
 ---
@@ -520,6 +539,7 @@ def rangeBitwiseAndAlt(left: int, right: int) -> int:
     while left < right:
         right &= (right - 1)  # Clear lowest set bit
     return right
+
 ```
 
 ---
@@ -554,6 +574,7 @@ def rangeBitwiseAndAlt(left: int, right: int) -> int:
 |     Return 3 ✓                                        |
 |                                                        |
 +--------------------------------------------------------+
+
 ```
 
 ### Power Detection Decision Tree
@@ -570,6 +591,7 @@ def rangeBitwiseAndAlt(left: int, right: int) -> int:
       == 0           AND         AND
         |      n & 0x55555555  n & 0x49249249
         |         == n           == n
+
 ```
 
 ---

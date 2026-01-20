@@ -52,6 +52,7 @@ Row 3:        1   3   3   1
 Row 4:      1   4   6   4   1
 Row 5:    1   5  10  10   5   1
 Row 6:  1   6  15  20  15   6   1
+
 ```
 
 **Pascal's Rule:** $C(n,k) = C(n-1,k-1) + C(n-1,k)$
@@ -80,6 +81,7 @@ class Solution:
             triangle.append(curr)
         
         return triangle
+
 ```
 
 ### LeetCode 119: Pascal's Triangle II
@@ -100,6 +102,7 @@ class Solution:
                 row[j] += row[j - 1]
         
         return row
+
 ```
 
 ---

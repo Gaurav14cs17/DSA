@@ -33,6 +33,7 @@ Formula  →  (Group | Atom)*
 Group    →  '(' Formula ')' Number?
 Atom     →  UPPER LOWER* Number?
 Number   →  DIGIT+
+
 ```
 
 ### Grammar Rules Explained:
@@ -53,6 +54,7 @@ Formula               →    parseFormula()
 Group                 →    parseGroup()  
 Atom                  →    parseAtom()
 Number                →    parseNumber()
+
 ```
 
 ---
@@ -67,6 +69,7 @@ K4(ON(SO3)2)2
    Nested parentheses!
    
 When we see '(' we must RECURSE to handle what's inside.
+
 ```
 
 ### The Key Insight:
@@ -74,6 +77,7 @@ When we see '(' we must RECURSE to handle what's inside.
 ```
 '('  →  PUSH (enter new recursion level)
 ')'  →  POP  (exit current level, return counts)
+
 ```
 
 ### Recursion Pattern Visualization:
@@ -107,6 +111,7 @@ parse("K4(ON(SO3)2)2")
 combine with K4 → {K: 4, N: 2, O: 14, S: 4}
 
 FINAL OUTPUT: K4N2O14S4
+
 ```
 
 ---
@@ -257,6 +262,7 @@ class Solution:
             self.pos += 1
         
         return num
+
 ```
 
 ---
@@ -264,10 +270,12 @@ class Solution:
 ## 🔍 Step 4: Detailed Trace Through "Mg(OH)2"
 
 ### Initial State:
+
 ```
 formula = "Mg(OH)2"
 pos = 0
 n = 7
+
 ```
 
 ### Execution Trace:
@@ -324,6 +332,7 @@ parseFormula() starts at pos=0
 +-- Returns {"Mg": 1, "O": 2, "H": 2}
 
 FINAL: Sort keys → "H2MgO2"
+
 ```
 
 ---
@@ -396,6 +405,7 @@ Step 7: Merge all counts
   {Mg: 1} + {O: 2, H: 2} = {H: 2, Mg: 1, O: 2}
   
   Sorted alphabetically → "H2MgO2" ✓
+
 ```
 
 ---
@@ -423,6 +433,7 @@ def parseGroup(self):
     for atom in inner:
         inner[atom] *= mult
     return inner
+
 ```
 
 ### 3. When to Recurse vs Stop

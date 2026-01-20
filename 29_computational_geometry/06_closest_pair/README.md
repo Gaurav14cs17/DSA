@@ -43,6 +43,7 @@ nav_order: 6
 3. Recursively find closest pairs in each half
 4. Find closest pair across the dividing line
 5. Return minimum of three distances
+
 ```
 
 **Key Insight:** Points in the strip near dividing line that could be closer than δ (minimum distance from recursive calls) must be within δ vertically.
@@ -148,6 +149,7 @@ def _closest_split_pair(px, py, mid_point, delta):
                 p1, p2 = strip[i], strip[j]
     
     return min_dist, p1, p2
+
 ```
 
 ### 2. K Closest Points to Origin
@@ -176,6 +178,7 @@ def k_closest_to_origin(points, k):
             heapq.heapreplace(heap, (-dist_sq, point))
     
     return [point for _, point in heap]
+
 ```
 
 ### 3. All Points Within Distance
@@ -196,6 +199,7 @@ def points_within_distance(points, center, max_dist):
             result.append(point)
     
     return result
+
 ```
 
 ### 4. Farthest Pair (Convex Hull)
@@ -228,6 +232,7 @@ def farthest_pair(points):
                 p1, p2 = hull[i], hull[j]
     
     return p1, p2, max_dist
+
 ```
 
 ---
@@ -253,6 +258,7 @@ Recurrence: T(n) = 2T(n/2) + O(n)
 - Combine (strip): O(n) - but only check 7 points per point
 
 By Master Theorem: T(n) = O(n log n)
+
 ```
 
 ### Why Check Only 7 Points?
@@ -262,6 +268,7 @@ In a δ × 2δ rectangle, at most 8 points can be placed
 such that all pairwise distances are ≥ δ
 
 Therefore, need to check at most 7 points ahead in strip
+
 ```
 
 ### Optimization: Use Squared Distances
@@ -272,6 +279,7 @@ if point1.distance(point2) < min_dist:
 
 # ✓ Faster: Use squared distance
 if point1.distance_squared(point2) < min_dist_sq:
+
 ```
 
 ---

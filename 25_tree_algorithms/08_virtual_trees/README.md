@@ -80,6 +80,7 @@ permalink: /25_tree_algorithms/08_virtual_trees/
 ### 4️⃣ Stack-Based Construction
 
 **Algorithm:**
+
 ```
 1. Sort nodes by in-time (DFS order)
 2. Stack maintains path from root to current node
@@ -87,6 +88,7 @@ permalink: /25_tree_algorithms/08_virtual_trees/
    - Pop stack until top is ancestor of u
    - LCA(top, u) becomes parent
    - Add edge, push u
+
 ```
 
 **Invariant:** Stack contains ancestors in DFS order.
@@ -466,6 +468,7 @@ def count_subtrees_with_k_marked(n: int, edges: List[List[int]],
     
     dfs(virtual_root, -1)
     return count[0]
+
 ```
 
 ---
@@ -497,6 +500,7 @@ Tree Problem
      +-- Subtree queries on subsets
          +-- Don't need full tree
              → Virtual Tree compression
+
 ```
 
 ---

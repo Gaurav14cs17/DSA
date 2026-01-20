@@ -50,6 +50,7 @@ permalink: /06_hash_tables/03_set_operations/
 
 ```math
 S = \{x : x \text{ is unique}\}
+
 ```
 
 **Hash Set Property:** No duplicates, O(1) lookup.
@@ -74,6 +75,7 @@ S = \{x : x \text{ is unique}\}
 
 ```math
 \exists i \neq j: a[i] = a[j]
+
 ```
 
 **Set Solution:** If $|set(a)| < n$, duplicates exist.
@@ -84,12 +86,14 @@ S = \{x : x \text{ is unique}\}
 
 ```math
 A \cap B = \{x : x \in A \land x \in B\}
+
 ```
 
 **Multiplicity (for multisets):**
 
 ```math
 \text{count}_{A \cap B}(x) = \min(\text{count}_A(x), \text{count}_B(x))
+
 ```
 
 ---
@@ -223,6 +227,7 @@ def missingNumber(nums: list[int]) -> int:
     n = len(nums)
     expected_sum = n * (n + 1) // 2
     return expected_sum - sum(nums)
+
 ```
 
 ---
@@ -290,6 +295,7 @@ Step 2: Find sequence starts (no predecessor)
 Max length: 4 (sequence: 1,2,3,4)
 
 Time: O(n) - each element checked at most twice
+
 ```
 
 ### Intersection of Arrays (#349, #350)
@@ -309,6 +315,7 @@ With duplicates (#350):
     2: count1[2]=2 > 0 → add, decrement
     2: count1[2]=1 > 0 → add, decrement
   result = [2, 2]
+
 ```
 
 ### Happy Number (#202)
@@ -326,6 +333,7 @@ Result: True (reached 1)
 
 Unhappy example: n = 2
 2 → 4 → 16 → 37 → 58 → 89 → 145 → 42 → 20 → 4 (cycle!)
+
 ```
 
 ### Single Number (#136)
@@ -348,6 +356,7 @@ Process:
 Result: 4 (the single number)
 
 Why: All pairs cancel out (a ^ a = 0)
+
 ```
 
 ---
@@ -366,6 +375,7 @@ Unique elements needed?
                  +-- O(1) space needed → XOR or Index trick
                  |
                  +-- O(n) space OK → HashSet
+
 ```
 
 ### Pattern Decision Table
@@ -398,6 +408,7 @@ Unique elements needed?
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **Wikipedia** | Set theory | [Article](https://en.wikipedia.org/wiki/Set_(mathematics)) |
@@ -406,6 +417,7 @@ Unique elements needed?
 | **GeeksforGeeks** | XOR tricks | [Tutorial](https://www.geeksforgeeks.org/xor-of-all-elements-in-an-array/) |
 
 ### 📺 Video Tutorials
+
 | Creator | Topic | Link |
 |---------|-------|------|
 | **NeetCode** | Longest Consecutive | [YouTube](https://www.youtube.com/watch?v=P6RZZMu_maU) |
@@ -414,12 +426,14 @@ Unique elements needed?
 | **Abdul Bari** | Hashing applications | [YouTube](https://www.youtube.com/watch?v=KyUTuwz_b7Q) |
 
 ### 🎯 Practice Collections
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Hash set tag | [Problems](https://leetcode.com/tag/hash-table/) |
 | **HackerRank** | Set problems | [Practice](https://www.hackerrank.com/domains/python?filters%5Bsubdomains%5D%5B%5D=py-sets) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **XOR Properties** | Bit manipulation tricks | [Tutorial](https://www.geeksforgeeks.org/bitwise-operators-in-c-cpp/) |
@@ -428,12 +442,14 @@ Unique elements needed?
 | **Bloom Filters** | Probabilistic sets | [Wikipedia](https://en.wikipedia.org/wiki/Bloom_filter) |
 
 ### 📊 Visualization
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo** | Set operations | [Website](https://visualgo.net/en/hashtable) |
 | **Algorithm Visualizer** | Hash problems | [Website](https://algorithm-visualizer.org/) |
 
 ### 📐 Mathematical Background
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Set Theory** | Union, intersection, difference | [Wikipedia](https://en.wikipedia.org/wiki/Set_theory) |

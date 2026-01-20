@@ -109,6 +109,7 @@ def search_2d_pattern(grid, pattern):
                     matches.append((i - n + 1, col))
     
     return matches
+
 ```
 
 ### 2. Document Similarity (Plagiarism Detection)
@@ -161,6 +162,7 @@ doc1 = "The quick brown fox jumps over the lazy dog"
 doc2 = "The quick brown fox leaps over the lazy dog"
 similarity = document_similarity(doc1, doc2, window_size=5)
 print(f"Similarity: {similarity:.2%}")
+
 ```
 
 ### 3. Chunking for Deduplication (CDC)
@@ -205,6 +207,7 @@ data = "A" * 10000 + "B" * 10000 + "A" * 10000
 chunks = content_defined_chunking(data, avg_chunk_size=1024)
 print(f"Split into {len(chunks)} chunks")
 print(f"Chunk sizes: {[len(c) for c in chunks[:5]]}...")
+
 ```
 
 ### 4. Rolling Hash for Diff Algorithm
@@ -276,6 +279,7 @@ def quick_diff(text1, text2, block_size=64):
                     matches.append((pos1, i - block_size + 1, block_size))
     
     return matches
+
 ```
 
 ### 5. MinHash for Large-Scale Similarity
@@ -330,6 +334,7 @@ def minhash_similarity(doc1, doc2, num_hashes=100):
     matches = sum(1 for i in range(num_hashes) if sig1[i] == sig2[i])
     
     return matches / num_hashes
+
 ```
 
 ---
@@ -372,6 +377,7 @@ def minhash_similarity(doc1, doc2, num_hashes=100):
 ```python
 # Used in rsync, Low Bandwidth Network Filesystem
 # Polynomial over GF(2) instead of integers
+
 ```
 
 ### Locality-Sensitive Hashing
@@ -379,6 +385,7 @@ def minhash_similarity(doc1, doc2, num_hashes=100):
 ```python
 # For approximate nearest neighbor search
 # MinHash is one example
+
 ```
 
 ### Content-Addressable Storage
@@ -386,6 +393,7 @@ def minhash_similarity(doc1, doc2, num_hashes=100):
 ```python
 # Hash-based addressing
 # Used in Git, IPFS
+
 ```
 
 ---

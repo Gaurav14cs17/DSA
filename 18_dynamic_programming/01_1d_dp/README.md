@@ -41,6 +41,7 @@ permalink: /18_dynamic_programming/01_1d_dp/
 
 ```math
 dp[i] = f(dp[i-1], dp[i-2], \ldots, dp[0])
+
 ```
 
 **Space optimization:** If only last k values needed, use O(k) space.
@@ -164,6 +165,7 @@ def wordBreak(s: str, wordDict: list[str]) -> bool:
                 break
     
     return dp[n]
+
 ```
 
 ---

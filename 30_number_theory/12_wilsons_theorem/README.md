@@ -40,6 +40,7 @@ permalink: /30_number_theory/12_wilsons_theorem/
 
 ```math
 (p-1)! \equiv -1 \pmod{p}
+
 ```
 
 **Equivalently:** $(p-1)! \equiv p - 1 \pmod{p}$
@@ -65,6 +66,7 @@ permalink: /30_number_theory/12_wilsons_theorem/
 
 ```math
 (p - k)! \cdot (k-1)! \equiv (-1)^k \pmod{p}
+
 ```
 
 ---
@@ -125,6 +127,7 @@ print(wilson_primality_test(7))   # True: 6! = 720 ≡ 6 (mod 7) ✓
 print(wilson_primality_test(10))  # False: 9! = 362880 ≡ 0 (mod 10)
 
 # Why impractical: computing 10^9! mod (10^9+7) takes forever!
+
 ```
 
 ---
@@ -152,6 +155,7 @@ print(wilson_primality_test(10))  # False: 9! = 362880 ≡ 0 (mod 10)
 |                                                                 |
 | 6 ≡ -1 (mod 7) ✓ Prime confirmed!                              |
 +-----------------------------------------------------------------+
+
 ```
 
 ---

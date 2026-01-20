@@ -50,6 +50,7 @@ Two or more functions call each other:
 ```
 f(n) → g(n-1)
 g(n) → f(n-1)
+
 ```
 
 **Example:** isEven/isOdd, parser for grammar.
@@ -62,6 +63,7 @@ Function calls itself through chain of other functions:
 
 ```
 f → g → h → f
+
 ```
 
 ---
@@ -72,6 +74,7 @@ Recursive call as argument to recursive call:
 
 ```
 f(n) = f(f(n-1))
+
 ```
 
 **Example:** Ackermann function.
@@ -84,6 +87,7 @@ Creates new subproblems (not just decomposition):
 
 ```
 Problem → Generate new subproblems
+
 ```
 
 **Example:** Quick sort (pivot creates new partitions).
@@ -181,6 +185,7 @@ def parseFactor(tokens: list, pos: int) -> tuple:
         return result, pos
     else:
         return float(tokens[pos]), pos + 1
+
 ```
 
 ### Nested Recursion
@@ -236,6 +241,7 @@ def tarai(x: int, y: int, z: int) -> int:
         tarai(y - 1, z, x),
         tarai(z - 1, x, y)
     )
+
 ```
 
 ### Generative Recursion
@@ -291,6 +297,7 @@ def fractal(n: int, x: float, y: float, size: float) -> list:
     right = fractal(n - 1, x + half/2, y + half, half)
     
     return top + left + right
+
 ```
 
 ### Indirect Recursion
@@ -336,6 +343,7 @@ def stateB(input_str: str, pos: int) -> bool:
     if input_str[pos] == 'b':
         return stateA(input_str, pos + 1)  # Back to A
     return False
+
 ```
 
 ### Tower of Hanoi Variants
@@ -394,6 +402,7 @@ def frameStewartHanoi(n: int, pegs: int = 4) -> int:
         min_moves = min(min_moves, moves)
     
     return min_moves
+
 ```
 
 ---

@@ -143,6 +143,7 @@ Geometric interpretation:
   > 0: v is counter-clockwise from u
   = 0: u and v are collinear
   < 0: v is clockwise from u
+
 ```
 
 **Applications:**
@@ -167,6 +168,7 @@ Properties:
 - u · v > 0: acute angle (< 90°)
 - u · v = 0: perpendicular (90°)
 - u · v < 0: obtuse angle (> 90°)
+
 ```
 
 **Applications:**
@@ -182,6 +184,7 @@ Properties:
 **Problem:** Given three points P, Q, R, determine their orientation.
 
 **Formula:**
+
 ```
 orientation(P, Q, R) = sign((Q - P) × (R - P))
                      = sign((Q.x - P.x)(R.y - P.y) - (Q.y - P.y)(R.x - P.x))
@@ -190,9 +193,11 @@ Result:
   > 0: Counter-clockwise (left turn)
   = 0: Collinear (no turn)
   < 0: Clockwise (right turn)
+
 ```
 
 **Visual:**
+
 ```
     R
    /
@@ -203,6 +208,7 @@ Result:
   \
    \
     R     CW: negative
+
 ```
 
 ---
@@ -216,6 +222,7 @@ Result:
 2. Orientation test: C, D must be on opposite sides of line AB
 
 **Formula:**
+
 ```
 Segments intersect if:
   orientation(A, B, C) · orientation(A, B, D) < 0
@@ -223,6 +230,7 @@ Segments intersect if:
   orientation(C, D, A) · orientation(C, D, B) < 0
 
 Special case: Collinear segments require bounding box check
+
 ```
 
 ---
@@ -238,6 +246,7 @@ Odd count → inside
 Even count → outside
 
 Mathematical basis: Jordan Curve Theorem
+
 ```
 
 **Winding Number:**
@@ -248,6 +257,7 @@ Non-zero → inside
 Zero → outside
 
 More robust for complex polygons
+
 ```
 
 ---
@@ -320,6 +330,7 @@ def orientation(p, q, r):
         return 0
     
     return 1 if val > 0 else -1
+
 ```
 
 ### Convex Hull (Graham's Scan)
@@ -362,6 +373,7 @@ def convex_hull_graham(points):
         hull.append(p)
     
     return hull
+
 ```
 
 ### Line Segment Intersection
@@ -401,6 +413,7 @@ def segments_intersect(p1, q1, p2, q2):
         return True
     
     return False
+
 ```
 
 ### Point in Polygon (Ray Casting)
@@ -437,6 +450,7 @@ def point_in_polygon(point, polygon):
         p1 = p2
     
     return inside
+
 ```
 
 ---
@@ -500,6 +514,7 @@ This section contains **50+ problems** across **6 categories**:
 **Problem:** Floating point comparisons are inexact.
 
 **Solution:** Use epsilon for equality checks
+
 ```python
 EPS = 1e-9
 
@@ -510,6 +525,7 @@ def compare(a, b):
     if abs(a - b) < EPS:
         return 0
     return 1 if a > b else -1
+
 ```
 
 ### Cross Product Sign
@@ -520,6 +536,7 @@ Zero: Collinear (straight)
 Negative: Clockwise turn (right turn)
 
 Key for: Convex hull, orientation tests, polygon winding
+
 ```
 
 ### Degeneracies
@@ -538,6 +555,7 @@ Standard: Origin at bottom-left, y increases upward
 Screen: Origin at top-left, y increases downward
 
 Convert when needed for graphics applications
+
 ```
 
 ---

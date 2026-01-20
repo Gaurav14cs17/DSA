@@ -121,6 +121,7 @@ class SegmentTreeLazy:
         mid = (start + end) // 2
         return (self._query_range(2*node+1, start, mid, l, r) +
                 self._query_range(2*node+2, mid+1, end, l, r))
+
 ```
 
 ---

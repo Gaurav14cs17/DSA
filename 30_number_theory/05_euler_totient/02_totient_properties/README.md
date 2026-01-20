@@ -48,6 +48,7 @@ permalink: /30_number_theory/05_euler_totient/02_totient_properties/
 
 ```math
 \phi(mn) = \phi(m) \cdot \phi(n) \text{ when } \gcd(m, n) = 1
+
 ```
 
 **Example:** φ(12) = φ(4) × φ(3) = 2 × 2 = 4 ✓
@@ -58,6 +59,7 @@ permalink: /30_number_theory/05_euler_totient/02_totient_properties/
 
 ```math
 \sum_{d|n} \phi(d) = n
+
 ```
 
 **Example for n = 12:**
@@ -71,6 +73,7 @@ permalink: /30_number_theory/05_euler_totient/02_totient_properties/
 
 ```math
 \phi(n) = \sum_{d|n} \mu(d) \cdot \frac{n}{d} = n \sum_{d|n} \frac{\mu(d)}{d}
+
 ```
 
 ---
@@ -81,6 +84,7 @@ For any m, n:
 
 ```math
 \phi(mn) = \phi(m) \cdot \phi(n) \cdot \frac{d}{\phi(d)}
+
 ```
 
 where d = gcd(m, n).
@@ -104,6 +108,7 @@ def verify_multiplicativity(limit: int = 100) -> bool:
     return True
 
 print(verify_multiplicativity())  # True
+
 ```
 
 ### 2. Verify Sum Property
@@ -126,6 +131,7 @@ def verify_divisor_sum(n: int) -> bool:
 for n in range(1, 50):
     assert verify_divisor_sum(n), f"Failed for n={n}"
 print("All verified!")
+
 ```
 
 ### 3. General Product Formula
@@ -143,6 +149,7 @@ def phi_product(m: int, n: int) -> int:
 # Test
 print(phi_product(6, 10))  # φ(60) = 16
 print(euler_phi(60))       # 16 ✓
+
 ```
 
 ### 4. Inversion Using Möbius
@@ -168,6 +175,7 @@ def phi_via_mobius(n: int) -> int:
 # Verify
 for n in range(1, 50):
     assert phi_via_mobius(n) == euler_phi(n)
+
 ```
 
 ---

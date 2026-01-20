@@ -39,6 +39,7 @@ permalink: /30_number_theory/02_primes/02_sieve_eratosthenes/
 **Core Idea:** Iteratively mark multiples of each prime as composite.
 
 **Pseudocode:**
+
 ```
 1. Create list [0, 1, 2, 3, ..., n], mark 0 and 1 as not prime
 2. Start with first prime p = 2
@@ -46,6 +47,7 @@ permalink: /30_number_theory/02_primes/02_sieve_eratosthenes/
 4. Find next unmarked number > p, set as new p
 5. Repeat until p² > n
 6. Remaining unmarked numbers are prime
+
 ```
 
 ---
@@ -146,6 +148,7 @@ Therefore: $T(n) = O(n \log \log n)$ ∎
 | RESULT: Primes = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29}         |
 |         Count = 10 primes                                      |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -180,6 +183,7 @@ Therefore: $T(n) = O(n \log \log n)$ ∎
 |   With: 7 multiples (49, 56, 63, ..., 98)                     |
 |   50% fewer operations!                                        |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -222,6 +226,7 @@ Therefore: $T(n) = O(n \log \log n)$ ∎
 |                                                                 |
 | TIME: O(n) - truly linear!                                     |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -257,6 +262,7 @@ def sieve_of_eratosthenes(n: int) -> list[int]:
                 is_prime[j] = False
     
     return [i for i in range(n + 1) if is_prime[i]]
+
 ```
 
 ---
@@ -298,6 +304,7 @@ def sieve_optimized(n: int) -> list[int]:
                     is_prime[j] = False
     
     return primes
+
 ```
 
 ---
@@ -346,6 +353,7 @@ def linear_sieve(n: int) -> tuple[list[int], list[int]]:
                 break
     
     return primes, spf
+
 ```
 
 ---
@@ -374,6 +382,7 @@ class Solution:
                     is_prime[j] = False
         
         return sum(is_prime)
+
 ```
 
 ---
@@ -416,6 +425,7 @@ def sieve_bitset(n: int) -> list[int]:
                     clear_bit(j)
     
     return primes
+
 ```
 
 ---
@@ -472,6 +482,7 @@ def sieve_visualize(n: int) -> list[int]:
 
 # Example
 # sieve_visualize(50)
+
 ```
 
 ---
@@ -552,6 +563,7 @@ class Solution:
                 result = [primes[i-1], primes[i]]
         
         return result
+
 ```
 
 ---

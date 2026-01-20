@@ -90,6 +90,7 @@ def longest_duplicate_substring(s):
 # Examples
 print(longest_duplicate_substring("banana"))    # "ana"
 print(longest_duplicate_substring("abcd"))      # ""
+
 ```
 
 ### 2. Longest Repeating Substring
@@ -145,6 +146,7 @@ def longest_repeating_substring(s):
 # Examples
 print(longest_repeating_substring("abbaba"))    # 2 ("ab" or "ba")
 print(longest_repeating_substring("aabcaabdaab"))  # 3 ("aab")
+
 ```
 
 ### 3. Distinct Substrings Count
@@ -178,6 +180,7 @@ def count_distinct_substrings(s):
 # Examples
 print(count_distinct_substrings("aaa"))      # 4: "", "a", "aa", "aaa"
 print(count_distinct_substrings("banana"))   # 16
+
 ```
 
 ### 4. Repeated DNA Sequences
@@ -226,6 +229,7 @@ def find_repeated_dna_sequences(s):
 # Example
 dna = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"
 print(find_repeated_dna_sequences(dna))
+
 ```
 
 ### 5. Longest Common Substring (Two Strings)
@@ -296,6 +300,7 @@ def longest_common_substring(s1, s2):
 
 # Example
 print(longest_common_substring("abcdefgh", "xyzabcpqr"))  # "abc"
+
 ```
 
 ### 6. Substring with Concatenation of All Words
@@ -352,6 +357,7 @@ def find_substring_concatenation(s, words):
             result.append(i)
     
     return result
+
 ```
 
 ---
@@ -395,6 +401,7 @@ def binary_search_hash_template(s):
             right = mid - 1  # Try smaller
     
     return result
+
 ```
 
 ---

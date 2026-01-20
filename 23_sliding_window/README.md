@@ -72,6 +72,7 @@ permalink: /23_sliding_window/
 |     Find longest/shortest valid window                         |
 |                                                                 |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -87,12 +88,14 @@ permalink: /23_sliding_window/
 
 ```math
 \text{Window at position } i = [a_i, a_{i+1}, ..., a_{i+k-1}]
+
 ```
 
 #### Sliding Update
 
 ```math
 \text{sum}_{i+1} = \text{sum}_i - a_i + a_{i+k}
+
 ```
 
 #### 📊 Visual Proof
@@ -110,6 +113,7 @@ Window at i+1:   [a, b, c, d, e, f, g]
 
 Instead of summing k elements each time: O(k)
 We update in O(1)!
+
 ```
 
 ---
@@ -129,6 +133,7 @@ for right in range(n):
         # Remove arr[left] from window
         left += 1
     # Process valid window
+
 ```
 
 #### 🔍 Proof of O(n) Time Complexity
@@ -171,6 +176,7 @@ while window_is_INVALID:
     shrink()
 # Window is now valid (or empty)
 max_length = max(max_length, window_size)
+
 ```
 
 #### Minimum Length Pattern
@@ -181,6 +187,7 @@ while window_is_VALID:
     min_length = min(min_length, window_size)
     shrink()  # Try to find shorter
 # Window is now invalid
+
 ```
 
 ---
@@ -201,12 +208,14 @@ Then:
 ```math
 f(k) = g(1) + g(2) + ... + g(k)
 f(k-1) = g(1) + g(2) + ... + g(k-1)
+
 ```
 
 Subtracting:
 
 ```math
 g(k) = f(k) - f(k-1)
+
 ```
 
 So: `exactly(k) = atMost(k) - atMost(k-1)` ∎
@@ -269,6 +278,7 @@ Count = \(right - left + 1\) subarrays ∎
                    |  when    | |  while   |
                    | INVALID  | |  VALID   |
                    +----------+ +----------+
+
 ```
 
 ---
@@ -309,6 +319,7 @@ Step 4: Slide right (remove 5, add 2)
   sum = 9 - 5 + 2 = 6   max = 9
 
 Answer: 9 (window [5, 1, 3])
+
 ```
 
 ### Variable Size Window (Minimum Length with Sum ≥ 7)
@@ -361,6 +372,7 @@ Step 4: Shrink while valid
 ...continue...
 
 Answer: 2 (window [4, 3])
+
 ```
 
 ---
@@ -391,6 +403,7 @@ def fixed_window(arr: list, k: int) -> int:
         result = max(result, window_sum)  # or min, or other operation
     
     return result
+
 ```
 
 ### Template 2: Variable Window — Find Longest
@@ -419,6 +432,7 @@ def longest_valid_window(arr: list) -> int:
         max_length = max(max_length, right - left + 1)
     
     return max_length
+
 ```
 
 ### Template 3: Variable Window — Find Shortest
@@ -445,6 +459,7 @@ def shortest_valid_window(arr: list, target) -> int:
             left += 1
     
     return min_length if min_length != float('inf') else 0
+
 ```
 
 ### Template 4: Count Subarrays with Exactly K
@@ -482,6 +497,7 @@ def count_exact_k(arr: list, k: int) -> int:
         return count
     
     return at_most(k) - at_most(k - 1)
+
 ```
 
 ---
@@ -630,6 +646,7 @@ def count_exact_k(arr: list, k: int) -> int:
 |  SUBARRAYS ENDING AT right = right - left + 1              |
 |                                                              |
 +--------------------------------------------------------------+
+
 ```
 
 ---

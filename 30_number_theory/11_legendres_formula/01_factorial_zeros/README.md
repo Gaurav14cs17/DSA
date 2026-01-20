@@ -51,6 +51,7 @@ The exponent of prime p in n! is:
 
 ```math
 \nu_p(n!) = \sum_{i=1}^{\infty} \left\lfloor \frac{n}{p^i} \right\rfloor = \left\lfloor \frac{n}{p} \right\rfloor + \left\lfloor \frac{n}{p^2} \right\rfloor + \left\lfloor \frac{n}{p^3} \right\rfloor + \cdots
+
 ```
 
 ### Why Trailing Zeros?
@@ -88,6 +89,7 @@ The exponent of prime p in n! is:
 | 100! = 933262154439...00000000000000000000000000               |
 |                        ↑ 24 zeros ↑                            |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -129,6 +131,7 @@ class SolutionElegant:
 sol = Solution()
 print(sol.trailingZeroes(100))  # 24
 print(sol.trailingZeroes(1000)) # 249
+
 ```
 
 ### LeetCode 793: Preimage Size of Factorial Zeroes Function
@@ -180,6 +183,7 @@ sol = Solution()
 print(sol.preimageSizeFZF(0))   # 5 (n = 0,1,2,3,4)
 print(sol.preimageSizeFZF(5))   # 0 (skipped!)
 print(sol.preimageSizeFZF(24))  # 5
+
 ```
 
 ---
@@ -225,6 +229,7 @@ def find_skipped(limit: int) -> list[int]:
 # Skipped values up to 50
 print(find_skipped(50))
 # [5, 11, 17, 23, 29, 30, 36, 42, 48]
+
 ```
 
 **Pattern:** Values k where k ≡ 0 (mod 5) but there's a carry in base-5 representation.

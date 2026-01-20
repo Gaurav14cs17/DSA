@@ -51,6 +51,7 @@ permalink: /30_number_theory/12_wilsons_theorem/01_basic_wilson/
 
 ```math
 (n-1)! \equiv -1 \pmod{n}
+
 ```
 
 Equivalently: $(n-1)! \equiv n-1 \pmod{n}$
@@ -87,6 +88,7 @@ This is one of the few **if and only if** characterizations of primes!
 |                                                                 |
 | The pairs cancel out, leaving only 1 and p-1!                  |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -125,6 +127,7 @@ composites = [4, 6, 8, 9, 10, 12]
 for n in composites:
     result = verify_wilson(n)
     print(f"Wilson for n={n}: {result}")  # All False!
+
 ```
 
 ### 2. Compute (n-1)! mod n Efficiently
@@ -151,6 +154,7 @@ for n in range(2, 15):
     fm = factorial_mod_n(n)
     is_prime = fm == n - 1
     print(f"({n}-1)! mod {n} = {fm}, prime: {is_prime}")
+
 ```
 
 ### 3. Wilson's Theorem with Optimization
@@ -181,6 +185,7 @@ def wilson_check_optimized(n: int) -> bool:
             return False
     
     return factorial_mod == n - 1
+
 ```
 
 ---
@@ -221,6 +226,7 @@ Therefore:
 
 ```math
 (p-1)! = 1 \times \underbrace{(2 \times 2^{-1}) \times (3 \times 3^{-1}) \times \cdots}_{\text{all pairs = 1}} \times (p-1) \equiv 1 \times 1 \times (p-1) \equiv -1
+
 ```
 
 ### Why Composites Fail

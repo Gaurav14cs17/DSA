@@ -43,6 +43,7 @@ Count numbers in range $[0, N]$ satisfying property:
 
 ```math
 dp[\text{pos}][\text{state}][\text{tight}]
+
 ```
 
 - **pos:** Current digit position
@@ -55,6 +56,7 @@ dp[\text{pos}][\text{state}][\text{tight}]
 
 ```math
 \text{count}[L, R] = f(R) - f(L-1)
+
 ```
 
 ---
@@ -186,6 +188,7 @@ def digitsCount(d: int, low: int, high: int) -> int:
         return dp(0, 0, True, False)
     
     return count(high, d) - count(low - 1, d)
+
 ```
 
 ---
@@ -232,6 +235,7 @@ def count(n: int) -> int:
         return result
     
     return dp(0, initial_state, True, False)
+
 ```
 
 ---

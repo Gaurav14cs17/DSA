@@ -28,6 +28,7 @@ expression → term (('+' | '-') term)*
 term       → factor
 factor     → number | '(' expression ')' | ('-' | '+') factor
 number     → digit+
+
 ```
 
 ### Why This Grammar?
@@ -48,6 +49,7 @@ number     → digit+
  Nested parentheses!
  
 When we see '(', we RECURSE to evaluate the inner expression.
+
 ```
 
 ### Recursion Flow:
@@ -81,6 +83,7 @@ evaluate("(1+(4+5+2)-3)+(6+8)")
 |   Second part = 14
 |
 +-► FINAL: 9 + 14 = 23
+
 ```
 
 ---
@@ -219,6 +222,7 @@ class Calculator:
 def calculate(s: str) -> int:
     """Wrapper function for LeetCode."""
     return Calculator(s).calculate()
+
 ```
 
 ---
@@ -226,9 +230,11 @@ def calculate(s: str) -> int:
 ## 🔍 Step-by-Step Trace: `"(1+(4+5+2)-3)"`
 
 ### Initial State:
+
 ```
 s = "(1+(4+5+2)-3)"
 pos = 0
+
 ```
 
 ### Execution Trace:
@@ -284,6 +290,7 @@ expression() starts
     |   Returns 9
     
 FINAL: 9 ✓
+
 ```
 
 ---
@@ -306,6 +313,7 @@ FINAL: 9 ✓
             9                      14
                     
                     = 9 + 14 = 23
+
 ```
 
 ---
@@ -338,6 +346,7 @@ FINAL: 9 ✓
                                2 * 3 = 6
     
     Result: 1 + 6 = 7 ✓
+
 ```
 
 ---
@@ -368,6 +377,7 @@ if char == '(':
 
 # 3. Implicit Recursion (expression → term → factor → expression)
 # The grammar itself is mutually recursive
+
 ```
 
 ### 3. Handling Edge Cases

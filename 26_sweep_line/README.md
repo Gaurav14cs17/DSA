@@ -35,6 +35,7 @@ Events: S=Start, E=End
         S1  S2    E1  S3  E2    E3
 Time    |---|-----|---|---|-----|
         1   2     3   4   5     6
+
 ```
 
 ---
@@ -102,11 +103,13 @@ Time    |---|-----|---|---|-----|
 ## 🏆 Must-Do Problems
 
 ### 🟢 Easy
+
 | Problem | Link |
 |---------|------|
 | Meeting Rooms | [LeetCode 252](https://leetcode.com/problems/meeting-rooms/) |
 
 ### 🟡 Medium
+
 | Problem | Link |
 |---------|------|
 | Meeting Rooms II | [LeetCode 253](https://leetcode.com/problems/meeting-rooms-ii/) |
@@ -118,6 +121,7 @@ Time    |---|-----|---|---|-----|
 | Corporate Flight Bookings | [LeetCode 1109](https://leetcode.com/problems/corporate-flight-bookings/) |
 
 ### 🔴 Hard
+
 | Problem | Link |
 |---------|------|
 | The Skyline Problem | [LeetCode 218](https://leetcode.com/problems/the-skyline-problem/) |

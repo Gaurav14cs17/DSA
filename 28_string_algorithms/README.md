@@ -173,15 +173,19 @@ permalink: /28_string_algorithms/
 **Core Idea:** Avoid redundant comparisons by preprocessing pattern.
 
 **Failure Function π[i]:**
+
 ```
 π[i] = length of longest proper prefix of P[0..i] 
        that is also a suffix of P[0..i]
+
 ```
 
 **Mathematical Property:**
+
 ```
 If P[0..i] matches T[j-i..j] but P[i+1] ≠ T[j+1],
 then next potential match starts at position j - π[i]
+
 ```
 
 **Time Complexity Analysis:**
@@ -194,13 +198,17 @@ then next potential match starts at position j - π[i]
 ### 3️⃣ Rabin-Karp Hashing
 
 **Rolling Hash Formula:**
+
 ```
 h(s[i..i+m-1]) = Σ(j=0 to m-1) s[i+j] · p^(m-1-j) mod M
+
 ```
 
 **Rolling Property:**
+
 ```
 h(s[i+1..i+m]) = (h(s[i..i+m-1]) - s[i]·p^(m-1))·p + s[i+m] mod M
+
 ```
 
 **Key Parameters:**
@@ -208,14 +216,18 @@ h(s[i+1..i+m]) = (h(s[i..i+m-1]) - s[i]·p^(m-1))·p + s[i+m] mod M
 - **M:** Large prime modulus (10^9 + 7 or 10^9 + 9)
 
 **Collision Probability:**
+
 ```
 P(collision) ≈ 1/M for random strings
+
 ```
 
 **Double Hashing:**
+
 ```
 Use two hash functions with different primes
 P(both collide) ≈ 1/(M₁ · M₂) ≈ 10^-18
+
 ```
 
 ---
@@ -223,15 +235,19 @@ P(both collide) ≈ 1/(M₁ · M₂) ≈ 10^-18
 ### 4️⃣ Z-Algorithm
 
 **Z-Array Definition:**
+
 ```
 Z[i] = length of longest substring starting at i 
        that matches prefix of string
+
 ```
 
 **Example:**
+
 ```
 String: "aabcaabxaaz"
 Z:      [0,1,0,0,3,1,0,0,2,1,0]
+
 ```
 
 **Key Observation:**
@@ -247,6 +263,7 @@ Z:      [0,1,0,0,3,1,0,0,2,1,0]
 **Definition:** Array of integers representing sorted suffixes.
 
 **Construction:**
+
 ```
 For string s = "banana$":
 Suffixes (sorted):
@@ -259,11 +276,14 @@ Suffixes (sorted):
 2: nana$
 
 SA = [6, 5, 3, 1, 4, 2, 0]
+
 ```
 
 **LCP (Longest Common Prefix) Array:**
+
 ```
 LCP[i] = longest common prefix of SA[i] and SA[i-1]
+
 ```
 
 **Applications:**
@@ -278,21 +298,27 @@ LCP[i] = longest common prefix of SA[i] and SA[i-1]
 **Problem:** Find all palindromic substrings in O(n).
 
 **Transformation:** Convert to odd-length palindromes
+
 ```
 "abba" → "#a#b#b#a#"
+
 ```
 
 **P[i]:** Radius of palindrome centered at i
 
 **Key Property:**
+
 ```
 If palindrome centered at c extends to position r,
 then P[i] can be initialized from P[2c - i] (mirror)
+
 ```
 
 **Recurrence:**
+
 ```
 P[i] = min(P[2c - i], r - i) + expansion
+
 ```
 
 **Time Complexity:** O(n) because each position expanded at most once
@@ -309,8 +335,10 @@ P[i] = min(P[2c - i], r - i) + expansion
 3. **Output Links:** Find all matches ending at current state
 
 **Failure Link Computation:**
+
 ```
 fail[node] = longest proper suffix that is in trie
+
 ```
 
 **Time Complexity:**
@@ -401,6 +429,7 @@ def kmp_search(text, pattern):
             k = pi[k - 1]
     
     return matches
+
 ```
 
 ### Rabin-Karp with Double Hashing
@@ -466,6 +495,7 @@ class RabinKarp:
         h = (h - old_char * pow_val % mod + mod) % mod
         h = (h * base + new_char) % mod
         return h
+
 ```
 
 ### Z-Algorithm
@@ -527,6 +557,7 @@ def z_search(text, pattern):
             matches.append(i - m - 1)
     
     return matches
+
 ```
 
 ### Suffix Array Construction
@@ -608,6 +639,7 @@ def kasai_lcp(s, sa):
                 h -= 1
     
     return lcp
+
 ```
 
 ### Manacher's Algorithm
@@ -668,6 +700,7 @@ def longest_palindrome(s):
     # Extract substring from original string
     start = (center_index - max_len) // 2
     return s[start:start + max_len]
+
 ```
 
 ---
@@ -734,6 +767,7 @@ hash = (hash * BASE + ord(char)) % MOD
 
 # Rolling hash update
 hash = (hash - old_char * pow_base) * BASE + new_char
+
 ```
 
 ### Palindrome Detection
@@ -743,6 +777,7 @@ Center Expansion: O(n²)
 Manacher's: O(n)
 DP: O(n²) but finds count
 Hash + Binary Search: O(n log n) for longest
+
 ```
 
 ### Common Patterns
@@ -776,6 +811,7 @@ Hash + Binary Search: O(n log n) for longest
 
 6. Need approximate matching
    → DP-based approaches
+
 ```
 
 ### Hash vs Exact Matching
@@ -791,26 +827,33 @@ Hash + Binary Search: O(n log n) for longest
 ✗ Need exact matches (critical applications)
 ✗ Adversarial input possible
 ✗ Small alphabet (better alternatives exist)
+
 ```
 
 ### Optimization Techniques
 
 1. **Early Termination:**
+
 ```python
 if len(pattern) > len(text):
     return []  # No match possible
+
 ```
 
 2. **Character Frequency Check:**
+
 ```python
 from collections import Counter
 if Counter(pattern) - Counter(text):
     return []  # Pattern has chars not in text
+
 ```
 
 3. **First/Last Character Heuristic:**
+
 ```python
 # Jump positions where first char doesn't match
+
 ```
 
 ---
@@ -820,6 +863,7 @@ if Counter(pattern) - Counter(text):
 ### 1️⃣ Suffix Array Applications
 
 **Longest Repeated Substring:**
+
 ```python
 def longest_repeated(s):
     sa = build_suffix_array(s)
@@ -827,24 +871,30 @@ def longest_repeated(s):
     max_lcp = max(lcp)
     idx = lcp.index(max_lcp)
     return s[sa[idx]:sa[idx] + max_lcp]
+
 ```
 
 **Number of Distinct Substrings:**
+
 ```
 Total substrings = n(n+1)/2
 Repeated = Σ LCP[i]
 Distinct = n(n+1)/2 - Σ LCP[i]
+
 ```
 
 ### 2️⃣ String Periodicity
 
 **Period Lemma:**
+
 ```
 If string s has periods p and q with p + q ≤ n,
 then s also has period gcd(p, q)
+
 ```
 
 **Application:** Find smallest period using KMP failure function
+
 ```python
 def smallest_period(s):
     n = len(s)
@@ -853,6 +903,7 @@ def smallest_period(s):
     if n % period == 0:
         return period
     return n
+
 ```
 
 ### 3️⃣ String Matching with Wildcards
@@ -893,10 +944,12 @@ def smallest_period(s):
 4. **Rolling property:** Update in O(1)
 
 **Polynomial hash advantages:**
+
 ```
 - Position-dependent: "abc" ≠ "cba"
 - Prefix property: Easy to extend
 - Rolling updates: O(1) window slides
+
 ```
 
 ---

@@ -39,9 +39,11 @@ Z[i] = max{ k : s[0..k-1] = s[i..i+k-1] }
      = length of longest prefix of s that matches substring starting at i
 
 By convention: Z[0] = 0 or Z[0] = n
+
 ```
 
 **Example:**
+
 ```
 String: "aabcaabxaaz"
 Index:   01234567890
@@ -59,6 +61,7 @@ Z[9] = 1  ("a" matches prefix)
 Z[10]= 0  ("z" doesn't match "a")
 
 Result: Z = [0, 1, 0, 0, 3, 1, 0, 0, 2, 1, 0]
+
 ```
 
 ### Z-Box Concept
@@ -70,6 +73,7 @@ Result: Z = [0, 1, 0, 0, 3, 1, 0, 0, 2, 1, 0]
 - If i ≤ r, we can use previously computed Z-values
 
 **Optimization:**
+
 ```
 If i is inside current Z-box [l, r]:
   Mirror position k = i - l
@@ -79,6 +83,7 @@ If i is inside current Z-box [l, r]:
   
   Case 2: Z[k] ≥ r - i + 1
     → Initialize Z[i] = r - i + 1, then expand
+
 ```
 
 ---
@@ -140,6 +145,7 @@ def z_algorithm(s):
 s = "aabcaabxaaz"
 z = z_algorithm(s)
 print(z)  # [11, 1, 0, 0, 3, 1, 0, 0, 2, 1, 0]
+
 ```
 
 ### Pattern Matching with Z-Algorithm
@@ -178,6 +184,7 @@ text = "ABABDABACDABABCABAB"
 pattern = "ABABCABAB"
 matches = z_search(text, pattern)
 print(f"Pattern found at: {matches}")
+
 ```
 
 ### Optimized Z-Algorithm (Alternative)
@@ -218,6 +225,7 @@ def z_algorithm_optimized(s):
                 r -= 1
     
     return z
+
 ```
 
 ---
@@ -242,6 +250,7 @@ def count_pattern(text, pattern):
 
 # Example
 print(count_pattern("abababa", "aba"))  # 3 (overlapping)
+
 ```
 
 ### 2. Find All Palindrome Prefixes
@@ -272,6 +281,7 @@ def palindrome_prefixes(s):
 
 # Example
 print(palindrome_prefixes("aabaa"))  # [1, 5] (a, aabaa)
+
 ```
 
 ### 3. Minimum Rotation
@@ -305,6 +315,7 @@ def min_rotation(s):
 # Example
 print(min_rotation("bca"))   # "acb"
 print(min_rotation("baaa"))  # "aaab"
+
 ```
 
 ### 4. Longest Prefix-Suffix Match
@@ -330,6 +341,7 @@ def longest_prefix_suffix(s):
 # Example
 print(longest_prefix_suffix("abcab"))   # 2 ("ab")
 print(longest_prefix_suffix("aaa"))     # 2 ("aa")
+
 ```
 
 ### 5. String Matching with Mismatches
@@ -392,6 +404,7 @@ def match_k_mismatches_optimized(text, pattern, k):
             matches.append(start)
     
     return matches
+
 ```
 
 ### 6. Distinct Substrings Using Z-Array
@@ -420,6 +433,7 @@ def count_distinct_substrings_z(s):
         # This is simplified
     
     return count
+
 ```
 
 ### 7. Period Detection
@@ -449,6 +463,7 @@ def find_period(s):
 print(find_period("abcabcabc"))  # 3
 print(find_period("abab"))       # 2
 print(find_period("abcd"))       # 4
+
 ```
 
 ---
@@ -468,6 +483,7 @@ print(find_period("abcd"))       # 4
 - Therefore, total while loop iterations: at most n
 
 **Formal argument:**
+
 ```
 Let T = total number of iterations (outer + inner)
 
@@ -478,6 +494,7 @@ Inner loop (while r < n and s[r-l] == s[r]):
   r can increase from 0 to n-1 (total: n-1 times)
   
 Therefore: T ≤ n + (n-1) = O(n)
+
 ```
 
 ### Space Complexity
@@ -491,6 +508,7 @@ Therefore: T ≤ n + (n-1) = O(n)
 ## 🧩 LeetCode Problems
 
 ### Medium
+
 | # | Problem | Difficulty | Pattern |
 |---|---------|------------|---------|
 | 28 | [Find Index of First Occurrence](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | 🟡 Medium | Basic Z-algorithm |
@@ -500,6 +518,7 @@ Therefore: T ≤ n + (n-1) = O(n)
 | 1392 | [Longest Happy Prefix](https://leetcode.com/problems/longest-happy-prefix/) | 🟡 Medium | Prefix-suffix match |
 
 ### Hard
+
 | # | Problem | Difficulty | Pattern |
 |---|---------|------------|---------|
 | 1316 | [Distinct Echo Substrings](https://leetcode.com/problems/distinct-echo-substrings/) | 🔴 Hard | Z-array + hash |
@@ -580,6 +599,7 @@ def longest_palindrome_substring(s):
                     start = center - z[i] + 1
     
     return s[start:start + max_len]
+
 ```
 
 ### 2. Z-Algorithm on Multiple Strings
@@ -614,6 +634,7 @@ def longest_common_prefix_multiple(strings):
             return ""
     
     return reference
+
 ```
 
 ---

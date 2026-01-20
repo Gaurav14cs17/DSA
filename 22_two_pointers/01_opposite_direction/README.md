@@ -66,6 +66,7 @@ permalink: /22_two_pointers/01_opposite_direction/
 
 ```math
 left = 0, \quad right = n - 1
+
 ```
 
 #### Loop Invariant
@@ -91,6 +92,7 @@ while left < right:
     if sum == target: return (left, right)
     if sum < target: left++
     if sum > target: right--
+
 ```
 
 #### 🔍 Proof of Correctness
@@ -113,6 +115,7 @@ For any \(k \in [left, right]\):
 
 ```math
 arr[left] + arr[k] \leq arr[left] + arr[right] < target
+
 ```
 
 Since the array is sorted, \(arr[k] \leq arr[right]\).
@@ -127,6 +130,7 @@ For any \(k \in [left, right]\):
 
 ```math
 arr[k] + arr[right] \geq arr[left] + arr[right] > target
+
 ```
 
 We safely decrement \(right\).
@@ -141,6 +145,7 @@ Each iteration moves at least one pointer. Maximum \(n\) moves before \(left \ge
 
 ```math
 T(n) = O(n)
+
 ```
 
 ---
@@ -154,6 +159,7 @@ T(n) = O(n)
 
 ```math
 \text{Area}(l, r) = \min(h[l], h[r]) \times (r - l)
+
 ```
 
 The area is limited by the **shorter** line.
@@ -170,12 +176,14 @@ Then:
 
 ```math
 \text{Area}(l, k) = \min(h[l], h[k]) \times (k - l)
+
 ```
 
 Since \(h[l]\) is the minimum (given \(h[l] < h[r]\) and we're looking at containers with \(l\)):
 
 ```math
 \text{Area}(l, k) \leq h[l] \times (k - l) < h[l] \times (r - l)
+
 ```
 
 Because \(k < r\), we have \(k - l < r - l\).
@@ -184,6 +192,7 @@ But:
 
 ```math
 h[l] \times (r - l) = \min(h[l], h[r]) \times (r - l) = \text{Area}(l, r)
+
 ```
 
 So \(\text{Area}(l, k) < \text{Area}(l, r)\).
@@ -213,6 +222,7 @@ Why moving L was correct:
 - Width < 8 (current width)
 - Area < 8 (already recorded)
 - No loss in moving L
+
 ```
 
 ---
@@ -226,6 +236,7 @@ Why moving L was correct:
 
 ```math
 \text{water}[i] = \max(0, \min(\text{maxLeft}[i], \text{maxRight}[i]) - h[i])
+
 ```
 
 #### 🔍 Proof of Two-Pointer Optimization
@@ -244,12 +255,14 @@ For position \(left\), the actual maximum on the right side is:
 
 ```math
 \text{actualRightMax} = \max(h[left+1], ..., h[n-1]) \geq rightMax > leftMax
+
 ```
 
 Therefore:
 
 ```math
 \min(leftMax, \text{actualRightMax}) = leftMax
+
 ```
 
 The water level at \(left\) is determined solely by \(leftMax\)! ∎
@@ -274,6 +287,7 @@ leftMax = 1, rightMax = 1
 Continue until L meets R...
 
 Total water = 6 units
+
 ```
 
 ---
@@ -295,9 +309,11 @@ Find \(a + b + c = 0\) where \(a \leq b \leq c\).
 #### Handling Duplicates
 
 Skip duplicate values for \(a\):
+
 ```python
 if i > 0 and nums[i] == nums[i-1]:
     continue
+
 ```
 
 Skip duplicate \(b\) and \(c\) after finding a valid triplet.
@@ -310,6 +326,7 @@ For \(k\)-Sum problem:
 
 ```math
 T(k, n) = O(n^{k-1})
+
 ```
 
 Reduction: Fix one element, solve \((k-1)\)-Sum on remaining.
@@ -340,6 +357,7 @@ Step 2:
  sum = 1 + 8 = 9 = target ✓
 
 Found: indices (0, 7)
+
 ```
 
 ### Container Area Visualization
@@ -361,6 +379,7 @@ Max container: between indices 1 and 8
 Area = min(8, 7) × (8 - 1) = 7 × 7 = 49
 
 Water fills up to height 7 (the shorter of 8 and 7)
+
 ```
 
 ### 3Sum Reduction Flow
@@ -403,6 +422,7 @@ Water fills up to height 7 (the shorter of 8 and 7)
 |  Result: [[-1, -1, 2], [-1, 0, 1]]                         |
 |                                                             |
 +-------------------------------------------------------------+
+
 ```
 
 ---
@@ -739,6 +759,7 @@ def reverseVowels(s: str) -> str:
         right -= 1
     
     return ''.join(chars)
+
 ```
 
 ---

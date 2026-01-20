@@ -64,8 +64,10 @@ permalink: /25_tree_algorithms/07_euler_tour/
 ### 3️⃣ Subtree to Range Query
 
 **Key transformation:**
+
 ```
 Subtree query on v → Range query on [in[v], out[v]]
+
 ```
 
 **Applications:**
@@ -425,6 +427,7 @@ def ancestor_queries(n: int, edges: List[List[int]],
         result.append(euler.is_ancestor(u, v))
     
     return result
+
 ```
 
 ---
@@ -460,6 +463,7 @@ Tree Query Problem
      |
      +-- LCA with RMQ
          +-- Euler tour + depth → RMQ for LCA
+
 ```
 
 ---

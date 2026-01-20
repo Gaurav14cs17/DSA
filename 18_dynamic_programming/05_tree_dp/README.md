@@ -43,6 +43,7 @@ Compute DP values bottom-up (post-order):
 
 ```math
 dp[node] = f(dp[left], dp[right], node.val)
+
 ```
 
 ---
@@ -53,6 +54,7 @@ dp[node] = f(dp[left], dp[right], node.val)
 dp[node] = (\text{rob}, \text{not\_rob})
 \text{rob} = node.val + \text{not\_rob}_{left} + \text{not\_rob}_{right}
 \text{not\_rob} = \max(dp_{left}) + \max(dp_{right})
+
 ```
 
 ---
@@ -150,6 +152,7 @@ def longestUnivaluePath(root: TreeNode) -> int:
     
     dfs(root)
     return result[0]
+
 ```
 
 ---

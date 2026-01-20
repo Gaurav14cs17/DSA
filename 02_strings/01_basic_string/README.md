@@ -35,6 +35,7 @@ permalink: /02_strings/01_basic_string/
 
 ```math
 \boxed{S'[i] = S[n-1-i]}
+
 ```
 
 **Two-Pointer Proof:**
@@ -51,6 +52,7 @@ For string over lowercase alphabet:
 
 ```math
 f[c] = |\{i : S[i] = c\}|
+
 ```
 
 **Space Complexity:** $O(|\Sigma|)$ where $|\Sigma| = 26$
@@ -141,6 +143,7 @@ def longestCommonPrefix(strs: list[str]) -> str:
                 return strs[0][:i]
     
     return strs[0]
+
 ```
 
 ---
@@ -218,6 +221,7 @@ Single pass:           O(n)   → Most basic operations
 Vertical scan:         O(S)   → S = sum of all lengths
 Two passes:            O(n)   → Reverse + reverse
 With sorting:          O(n log n) → When order matters
+
 ```
 
 ---
@@ -225,6 +229,7 @@ With sorting:          O(n log n) → When order matters
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **String Basics** | Comprehensive tutorial | [GeeksforGeeks](https://www.geeksforgeeks.org/string-data-structure/) |
@@ -233,6 +238,7 @@ With sorting:          O(n log n) → When order matters
 | **Java StringBuilder** | Efficient concatenation | [Oracle Docs](https://docs.oracle.com/javase/tutorial/java/data/buffers.html) |
 
 ### 🎥 Video Tutorials
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **NeetCode** | Reverse string variations | [YouTube](https://www.youtube.com/watch?v=_d0T_2Lk2qA) |
@@ -240,6 +246,7 @@ With sorting:          O(n log n) → When order matters
 | **Tushar Roy** | String algorithms basics | [YouTube](https://www.youtube.com/watch?v=GTJr8OvyEVQ) |
 
 ### 📝 Interactive Practice
+
 | Platform | Problem Set | Link |
 |----------|-------------|------|
 | **LeetCode** | String easy problems | [Problems](https://leetcode.com/tag/string/) |
@@ -247,6 +254,7 @@ With sorting:          O(n log n) → When order matters
 | **Edabit** | String challenges | [Challenges](https://edabit.com/challenges) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **String Interning** | Memory optimization | [Wikipedia](https://en.wikipedia.org/wiki/String_interning) |

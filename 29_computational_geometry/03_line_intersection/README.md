@@ -43,14 +43,17 @@ Line intersection problems determine if and where geometric segments intersect. 
 2. Collinear case:
    - All four points collinear
    - Segments overlap (bounding box check)
+
 ```
 
 **Formula:**
+
 ```
 Segments intersect ⟺
   orientation(A,B,C) · orientation(A,B,D) < 0
   AND
   orientation(C,D,A) · orientation(C,D,B) < 0
+
 ```
 
 ---
@@ -94,6 +97,7 @@ def segments_intersect(p1, q1, p2, q2):
         return True
     
     return False
+
 ```
 
 ### 2. Intersection Point
@@ -126,6 +130,7 @@ def segment_intersection_point(p1, q1, p2, q2):
         return Point(p1.x + t1 * d1.x, p1.y + t1 * d1.y)
     
     return None
+
 ```
 
 ### 3. All Pairs Intersection (Naive)
@@ -153,6 +158,7 @@ def find_all_intersections_naive(segments):
                 intersections.append((i, j, point))
     
     return intersections
+
 ```
 
 ### 4. Sweep Line Algorithm (Simplified)
@@ -218,6 +224,7 @@ def check_and_add_intersection(i, j, segments, intersections):
     point = segment_intersection_point(p1, q1, p2, q2)
     if point:
         intersections.append((i, j, point))
+
 ```
 
 ---

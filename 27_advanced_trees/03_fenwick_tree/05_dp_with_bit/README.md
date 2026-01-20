@@ -93,6 +93,7 @@ def lengthOfLIS(nums: List[int], k: int) -> int:
         result = max(result, new_len)
     
     return result
+
 ```
 
 ---

@@ -93,6 +93,7 @@ def count_ways_two(amount: int, a: int, b: int) -> int:
         if (amount - a * x) % b == 0:
             count += 1
     return count
+
 ```
 
 ### General DP Solution
@@ -129,6 +130,7 @@ def coin_change_2(amount: int, coins: list[int]) -> int:
             dp[i] += dp[i - coin]
     
     return dp[amount]
+
 ```
 
 ---

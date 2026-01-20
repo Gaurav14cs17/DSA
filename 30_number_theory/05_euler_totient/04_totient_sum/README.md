@@ -48,6 +48,7 @@ permalink: /30_number_theory/05_euler_totient/04_totient_sum/
 
 ```math
 \Phi(n) = \sum_{i=1}^{n} \phi(i)
+
 ```
 
 **Asymptotic:** $\Phi(n) \approx \frac{3n^2}{\pi^2}$
@@ -86,6 +87,7 @@ def phi_sieve(limit: int) -> list[int]:
 phi = phi_sieve(20)
 print("φ values:", phi[1:21])
 # [1, 1, 2, 2, 4, 2, 6, 4, 6, 4, 10, 4, 12, 6, 8, 8, 16, 6, 18, 8]
+
 ```
 
 ### 2. Totient Summatory Function
@@ -103,6 +105,7 @@ def totient_sum(n: int) -> int:
 # Example
 print(totient_sum(10))  # 1+1+2+2+4+2+6+4+6+4 = 32
 print(totient_sum(100))  # 3044
+
 ```
 
 ### 3. GCD Sum Using Totient
@@ -125,6 +128,7 @@ def gcd_sum(n: int) -> int:
     return result
 
 print(gcd_sum(10))  # Sum of all gcd(i,j) for i,j ≤ 10
+
 ```
 
 ### 4. Count Coprime Pairs
@@ -146,6 +150,7 @@ def count_coprime_pairs_with_n(n: int) -> int:
     This is exactly φ(n)!
     """
     return euler_phi(n)
+
 ```
 
 ### 5. Sublinear Totient Sum (Advanced)
@@ -188,6 +193,7 @@ def totient_sum_fast(n: int) -> int:
         return result
     
     return solve(n)
+
 ```
 
 ---

@@ -51,6 +51,7 @@ Multiple recursive calls per function:
 
 ```math
 T(n) = T(n-1) + T(n-2) + \ldots
+
 ```
 
 Creates a call tree, not a linear chain.
@@ -61,12 +62,14 @@ Creates a call tree, not a linear chain.
 
 ```math
 F(n) = F(n-1) + F(n-2)
+
 ```
 
 **Without memoization:**
 
 ```math
 T(n) = T(n-1) + T(n-2) + O(1) \approx O(\phi^n) \approx O(1.618^n)
+
 ```
 
 Where $\phi = \frac{1 + \sqrt{5}}{2}$ (golden ratio).
@@ -81,6 +84,7 @@ For binary trees with $n$ nodes:
 
 ```math
 T(n) = T(left) + T(right) + O(1) = O(n)
+
 ```
 
 Each node visited exactly once.
@@ -101,6 +105,7 @@ fib(5)
 +-- fib(3)      ← Computed again!
     +-- fib(2)
     +-- fib(1)
+
 ```
 
 **Solution:** Memoization or Dynamic Programming.
@@ -211,6 +216,7 @@ def numTrees(n: int) -> int:
             dp[nodes] += dp[left_count] * dp[right_count]
     
     return dp[n]
+
 ```
 
 ---
@@ -244,6 +250,7 @@ Tree Recursion
       +-- Generate all structures → Combine left × right
       |
       +-- Count structures → Catalan numbers
+
 ```
 
 ---

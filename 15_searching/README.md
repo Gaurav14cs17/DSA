@@ -34,6 +34,7 @@ permalink: /15_searching/
 
 ```math
 \text{After each iteration: } right - left \text{ decreases by at least half}
+
 ```
 
 ---
@@ -42,12 +43,14 @@ permalink: /15_searching/
 
 ```math
 T(n) = T(n/2) + O(1) = O(\log n)
+
 ```
 
 **Proof:** Search space halves each iteration.
 
 ```math
 n \rightarrow n/2 \rightarrow n/4 \rightarrow \ldots \rightarrow 1
+
 ```
 
 Number of steps: $\log\_2 n$
@@ -60,12 +63,14 @@ Number of steps: $\log\_2 n$
 
 ```math
 \text{leftmost } i \text{ where } arr[i] \geq target
+
 ```
 
 **Upper bound (first greater):**
 
 ```math
 \text{leftmost } i \text{ where } arr[i] > target
+
 ```
 
 ---
@@ -73,6 +78,7 @@ Number of steps: $\log\_2 n$
 ### 4️⃣ Binary Search Templates
 
 **Template 1: Exact match**
+
 ```
 while left <= right:
     mid = (left + right) // 2
@@ -80,15 +86,18 @@ while left <= right:
     elif arr[mid] < target: left = mid + 1
     else: right = mid - 1
 return -1
+
 ```
 
 **Template 2: Find boundary**
+
 ```
 while left < right:
     mid = (left + right) // 2
     if condition(mid): right = mid
     else: left = mid + 1
 return left
+
 ```
 
 ---
@@ -99,6 +108,7 @@ return left
 
 ```math
 \text{answer} = \min\{x : \text{feasible}(x) = \text{true}\}
+
 ```
 
 **Key insight:** Feasibility is monotonic.
@@ -111,6 +121,7 @@ return left
 
 ```math
 \text{One half is always sorted}
+
 ```
 
 Use sorted half to decide search direction.
@@ -153,6 +164,7 @@ def binarySearch(arr: list[int], target: int) -> int:
             right = mid - 1
     
     return -1
+
 ```
 
 ### Lower Bound (First >= Target)
@@ -174,6 +186,7 @@ def lowerBound(arr: list[int], target: int) -> int:
             right = mid
     
     return left
+
 ```
 
 ### Upper Bound (First > Target)
@@ -195,6 +208,7 @@ def upperBound(arr: list[int], target: int) -> int:
             right = mid
     
     return left
+
 ```
 
 ---
@@ -260,6 +274,7 @@ Binary Search Problem
         +-- 2D sorted matrix → Flatten or staircase
         |
         +-- Peak finding → Compare with neighbors
+
 ```
 
 ---

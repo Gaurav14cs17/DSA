@@ -65,12 +65,15 @@ Node:
   - interval: [low, high]
   - max: max(high, left.max, right.max)
   - left, right: child pointers
+
 ```
 
 **Query Optimization:**
+
 ```
 If node.left.max < query_low:
     ⟹ No overlap in left subtree (prune!)
+
 ```
 
 ---
@@ -155,6 +158,7 @@ class IntervalTree:
         # Check right subtree
         if node.interval[0] <= interval[1]:
             self._all_overlaps(node.right, interval, result)
+
 ```
 
 ### 2. Segment Tree with Lazy Propagation
@@ -214,6 +218,7 @@ class SegmentTreeLazy:
         tm = (tl + tr) // 2
         return (self._query(2*v, tl, tm, l, min(r, tm)) +
                 self._query(2*v+1, tm+1, tr, max(l, tm+1), r))
+
 ```
 
 ### 3. Coordinate Compression (For Large Ranges)
@@ -242,6 +247,7 @@ class CompressedIntervalTree:
         l_idx = self.coord_map[l]
         r_idx = self.coord_map[r]
         self.tree.update_range(l_idx, r_idx, val)
+
 ```
 
 ---
@@ -249,6 +255,7 @@ class CompressedIntervalTree:
 ## 🏆 LeetCode Problems by Pattern
 
 ### 🎯 Basic Interval Operations (8 problems)
+
 | # | Problem | Difficulty | Key Insight |
 |:-:|---------|-----------|-------------|
 | 56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | ⭐⭐ | Sort + greedy merge |
@@ -259,6 +266,7 @@ class CompressedIntervalTree:
 | 1288 | [Remove Covered Intervals](https://leetcode.com/problems/remove-covered-intervals/) | ⭐⭐ | Sort by start, desc by end |
 
 ### 📅 Calendar Problems (5 problems)
+
 | # | Problem | Difficulty | Key Insight |
 |:-:|---------|-----------|-------------|
 | 729 | [My Calendar I](https://leetcode.com/problems/my-calendar-i/) | ⭐⭐ | Binary search tree |
@@ -267,6 +275,7 @@ class CompressedIntervalTree:
 | 2276 | [Count Integers in Intervals](https://leetcode.com/problems/count-integers-in-intervals/) | ⭐⭐⭐⭐ | Merge on insert |
 
 ### 🎨 Range Module / Painting (6 problems)
+
 | # | Problem | Difficulty | Key Insight |
 |:-:|---------|-----------|-------------|
 | 715 | [Range Module](https://leetcode.com/problems/range-module/) | ⭐⭐⭐⭐ | Segment tree or sorted intervals |
@@ -275,6 +284,7 @@ class CompressedIntervalTree:
 | 218 | [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/) | ⭐⭐⭐⭐ | Sweep line + multiset |
 
 ### 🔍 Query Problems (6 problems)
+
 | # | Problem | Difficulty | Key Insight |
 |:-:|---------|-----------|-------------|
 | 352 | [Data Stream as Disjoint Intervals](https://leetcode.com/problems/data-stream-as-disjoint-intervals/) | ⭐⭐⭐ | TreeMap merge |
@@ -287,6 +297,7 @@ class CompressedIntervalTree:
 ## 🎯 Common Patterns
 
 ### Pattern 1: Merge Overlapping Intervals
+
 ```python
 def merge(intervals):
     intervals.sort()
@@ -300,18 +311,22 @@ def merge(intervals):
             result.append(curr)
     
     return result
+
 ```
 
 ### Pattern 2: Interval Intersection
+
 ```python
 def intersection(a, b):
     """Return intersection of two intervals."""
     start = max(a[0], b[0])
     end = min(a[1], b[1])
     return [start, end] if start <= end else None
+
 ```
 
 ### Pattern 3: Sweep Line for Max Overlap
+
 ```python
 def max_overlap(intervals):
     events = []
@@ -327,6 +342,7 @@ def max_overlap(intervals):
         max_count = max(max_count, curr)
     
     return max_count
+
 ```
 
 ---

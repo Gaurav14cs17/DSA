@@ -37,18 +37,21 @@ permalink: /07_trees/01_tree_traversal/
 
 ```math
 \text{preorder}(T) = [root] + \text{preorder}(T_L) + \text{preorder}(T_R)
+
 ```
 
 **Inorder (LNR):** Left subtree → Visit Node → Right subtree
 
 ```math
 \text{inorder}(T) = \text{inorder}(T_L) + [root] + \text{inorder}(T_R)
+
 ```
 
 **Postorder (LRN):** Left subtree → Right subtree → Visit Node
 
 ```math
 \text{postorder}(T) = \text{postorder}(T_L) + \text{postorder}(T_R) + [root]
+
 ```
 
 **Level Order (BFS):** Level by level, left to right
@@ -90,6 +93,7 @@ For node $x$, predecessor = rightmost node in left subtree.
 
 ```math
 \text{pred}(x) = \max\{y \in T_L(x)\}
+
 ```
 
 ---
@@ -247,6 +251,7 @@ def morrisInorder(root: TreeNode) -> list[int]:
                 current = current.right
     
     return result
+
 ```
 
 ---
@@ -311,6 +316,7 @@ current=1, stack=[]
   current=null, stack=[]
 
 Result: [1, 3, 2]
+
 ```
 
 ### Level Order Traversal
@@ -340,6 +346,7 @@ level_size = 2
   Process 7 → queue = []
 
 Result: [[3], [9, 20], [15, 7]]
+
 ```
 
 ### Morris Inorder (O(1) Space)
@@ -388,6 +395,7 @@ Current=6, no left
   current=null
 
 Result: [1, 2, 3, 4, 6]
+
 ```
 
 ---
@@ -404,6 +412,7 @@ Need order?
      +-- Children first → Postorder
      |
      +-- Level by level → Level Order (BFS)
+
 ```
 
 ### When to Use Each Traversal
@@ -435,6 +444,7 @@ Need order?
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **GeeksforGeeks** | Tree traversals | [Tutorial](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/) |
@@ -443,6 +453,7 @@ Need order?
 | **CP Algorithms** | DFS and BFS | [Guide](https://cp-algorithms.com/graph/depth-first-search.html) |
 
 ### 📺 Video Tutorials
+
 | Creator | Topic | Link |
 |---------|-------|------|
 | **NeetCode** | Inorder Traversal | [YouTube](https://www.youtube.com/watch?v=g_S5WuasWUE) |
@@ -451,12 +462,14 @@ Need order?
 | **Back To Back SWE** | Morris traversal | [YouTube](https://www.youtube.com/watch?v=wGXB9OWhPTg) |
 
 ### 🎯 Practice Collections
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Tree traversal tag | [Problems](https://leetcode.com/tag/tree/) |
 | **HackerRank** | Tree challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=trees) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Morris Traversal** | O(1) space inorder | [Detailed](https://www.geeksforgeeks.org/morris-traversal-for-preorder/) |
@@ -464,6 +477,7 @@ Need order?
 | **Threaded Trees** | Using null pointers | [Article](https://en.wikipedia.org/wiki/Threaded_binary_tree) |
 
 ### 📊 Visualization
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo** | Tree traversals | [Website](https://visualgo.net/en/bst) |

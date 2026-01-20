@@ -56,6 +56,7 @@ permalink: /26_sweep_line/04_angular_sweep/
 
 ```math
 \theta = \text{atan2}(y, x)
+
 ```
 
 **Range:** $[-\pi, \pi]$ or $[0, 2\pi]$
@@ -73,6 +74,7 @@ permalink: /26_sweep_line/04_angular_sweep/
 
 ```math
 \vec{a} \times \vec{b} = a_x b_y - a_y b_x
+
 ```
 
 - $> 0$: $\vec{b}$ is counter-clockwise from $\vec{a}$
@@ -475,6 +477,7 @@ def number_of_people_aware_of_secret(n: int, delay: int, forget: int) -> int:
         total = (total + dp[day]) % MOD
     
     return total
+
 ```
 
 ---

@@ -405,6 +405,7 @@ def seven_bridges():
     
     print(f"Seven Bridges of Königsberg: {'Solvable' if exists else 'No solution'}")
     # Output: No solution (Euler proved this in 1736)
+
 ```
 
 ---
@@ -436,6 +437,7 @@ Eulerian Problem
      |   +-- Directed → Check in/out degrees O(V)
      |
      +-- Find path → Hierholzer's algorithm O(E)
+
 ```
 
 ---

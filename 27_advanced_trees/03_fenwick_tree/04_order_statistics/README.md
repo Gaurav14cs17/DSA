@@ -90,6 +90,7 @@ def kEmptySlots(bulbs: List[int], k: int) -> int:
                 return day
     
     return -1
+
 ```
 
 ---

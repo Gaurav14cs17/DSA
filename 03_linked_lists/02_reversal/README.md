@@ -48,6 +48,7 @@ After iteration $i$:
 
 ```math
 \boxed{\text{null} \leftarrow node_0 \leftarrow node_1 \leftarrow \cdots \leftarrow node_i \quad | \quad node_{i+1} \to \cdots \to node_{n-1}}
+
 ```
 
 Where:
@@ -74,6 +75,7 @@ head & \text{if } head = \text{null or } head.next = \text{null} \\
 \quad head.next = \text{null} & \\
 \quad \text{return } rest
 \end{cases}
+
 ```
 
 **Recurrence Relation:**
@@ -81,6 +83,7 @@ head & \text{if } head = \text{null or } head.next = \text{null} \\
 ```math
 T(n) = T(n-1) + O(1)
 \boxed{T(n) = O(n) \text{ time}, \; O(n) \text{ stack space}}
+
 ```
 
 ---
@@ -101,12 +104,14 @@ Iterative uses fixed variables:
 
 ```math
 S_{\text{iter}}(n) = 3 \text{ pointers} = O(1)
+
 ```
 
 Recursive stacks n frames:
 
 ```math
 S_{\text{rec}}(n) = \sum_{i=1}^{n} O(1) = O(n)
+
 ```
 
 ---
@@ -123,6 +128,7 @@ Result: $n\_1 \to n\_2 \to \cdots \to n\_{left-1} \to n\_{right} \to \cdots \to 
 
 ```math
 \boxed{\text{reversals} = right - left}
+
 ```
 
 ---
@@ -135,18 +141,21 @@ Result: $n\_1 \to n\_2 \to \cdots \to n\_{left-1} \to n\_{right} \to \cdots \to 
 
 ```math
 \text{complete\_groups} = \left\lfloor \frac{n}{k} \right\rfloor
+
 ```
 
 **Remaining nodes:**
 
 ```math
 \text{remaining} = n \mod k
+
 ```
 
 **Total reversals:**
 
 ```math
 \text{total\_reversals} = \left\lfloor \frac{n}{k} \right\rfloor \times (k-1)
+
 ```
 
 **Time Complexity:** $O(n)$ - each node visited once
@@ -223,6 +232,7 @@ Goal:     4 → 3 → 2 → 1 → null
 |                                                                    |
 |  Result: 4 → 3 → 2 → 1 → null ✓                                    |
 +--------------------------------------------------------------------+
+
 ```
 
 ---
@@ -280,6 +290,7 @@ reverse(1 → 2 → 3 → 4 → null)
 Key Insight: 
   head.next.next = head  means "my next node should point back to me"
   head.next = null       means "I now point to nothing (will be updated)"
+
 ```
 
 ---
@@ -338,6 +349,7 @@ Goal:  1 → 4 → 3 → 2 → 5 → null
 |                                                                    |
 |  Total moves: right - left = 4 - 2 = 2 ✓                           |
 +--------------------------------------------------------------------+
+
 ```
 
 ---
@@ -383,6 +395,7 @@ Goal:  3 → 2 → 1 → 6 → 5 → 4 → 7 → 8 → null
 |  3. Connect to recursively reversed rest                          |
 |  4. If no: return head (don't reverse)                            |
 +--------------------------------------------------------------------+
+
 ```
 
 ---
@@ -424,6 +437,7 @@ Goal:  2 → 1 → 4 → 3 → 5 → null
 |  Remaining: 5 (odd node, no pair)                                 |
 |  Final: 2 → 1 → 4 → 3 → 5 → null ✓                                 |
 +--------------------------------------------------------------------+
+
 ```
 
 ---
@@ -674,6 +688,7 @@ def isPalindrome(head: ListNode) -> bool:
     # slow.next = reverseList(second_head_saved)
     
     return result
+
 ```
 
 ---
@@ -842,6 +857,7 @@ current.next = prev  # Oops, lost rest of list!
 # ✅ CORRECT: Save next first
 next_node = current.next  # Save reference
 current.next = prev       # Now safe to reverse
+
 ```
 
 ### Pitfall 2: Not Handling Single Node
@@ -858,6 +874,7 @@ def reverse(head):
     if not head or not head.next:
         return head
     ...
+
 ```
 
 ### Pitfall 3: Off-by-One in Partial Reversal
@@ -869,6 +886,7 @@ for _ in range(right - left + 1):  # One too many!
 # ✅ CORRECT: Exactly (right - left) swaps
 for _ in range(right - left):
     # Move nodes to front
+
 ```
 
 ---

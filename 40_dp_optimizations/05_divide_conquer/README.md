@@ -23,6 +23,7 @@
 ```
 cost[a][c] + cost[b][d] ≤ cost[a][d] + cost[b][c]
 for all a ≤ b ≤ c ≤ d
+
 ```
 
 **Intuition:** "Crossing is bad" - closer splits are better.
@@ -96,6 +97,7 @@ def divide_conquer_dp(arr, K):
 def compute_cost(subarray):
     """Example: sum of elements."""
     return sum(subarray)
+
 ```
 
 ---

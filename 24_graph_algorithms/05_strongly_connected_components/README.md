@@ -47,6 +47,7 @@ permalink: /24_graph_algorithms/05_strongly_connected_components/
 
 ```math
 \text{SCC } C \subseteq V: \forall u, v \in C, \exists \text{ path } u \rightsquigarrow v \text{ and } v \rightsquigarrow u
+
 ```
 
 **Key property:** SCCs partition the graph.
@@ -99,6 +100,7 @@ permalink: /24_graph_algorithms/05_strongly_connected_components/
 
 ```math
 G^{SCC} = (V_{SCC}, E_{SCC})
+
 ```
 
 ---
@@ -478,6 +480,7 @@ def example_tarjan():
     print("SCCs:")
     for i, component in enumerate(sccs):
         print(f"  SCC {i}: {component}")
+
 ```
 
 ---
@@ -514,6 +517,7 @@ SCC Problem
      |
      +-- Just cycle detection?
          +-- DFS with 3 colors O(V+E)
+
 ```
 
 ---

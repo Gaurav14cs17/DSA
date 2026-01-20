@@ -55,6 +55,7 @@ Three steps:
 1. DIVIDE:   Split problem into smaller subproblems
 2. CONQUER:  Solve subproblems recursively
 3. COMBINE:  Merge subproblem solutions
+
 ```
 
 ---
@@ -159,6 +160,7 @@ def binarySearchLast(arr: list, target: int, low: int = 0, high: int = None) -> 
         return binarySearchLast(arr, target, low, mid - 1)
     else:
         return binarySearchLast(arr, target, mid + 1, high)
+
 ```
 
 ### Merge Sort
@@ -260,6 +262,7 @@ def mergeRecursive(arr: list, left: int, mid: int, right: int) -> None:
             merge_helper(i, j + 1, k + 1)
     
     merge_helper(0, 0, left)
+
 ```
 
 ### Quick Sort
@@ -327,6 +330,7 @@ def quickSelect(arr: list, k: int, low: int = 0, high: int = None) -> int:
         return quickSelect(arr, k, low, pivot_idx - 1)
     else:
         return quickSelect(arr, k, pivot_idx + 1, high)
+
 ```
 
 ### Power and Exponentiation
@@ -394,6 +398,7 @@ def fibMatrix(n: int) -> int:
     base = [[1, 1], [1, 0]]
     result = matrixPower(base, n)
     return result[0][1]
+
 ```
 
 ### Other Divide and Conquer
@@ -481,6 +486,7 @@ def countInversions(arr: list) -> int:
     
     _, count = mergeSortCount(arr)
     return count
+
 ```
 
 ---
@@ -530,6 +536,7 @@ Divide and Conquer
          |
          +-- Fast Power
              +-- T(n) = T(n/2) + O(1) = O(log n)
+
 ```
 
 ---

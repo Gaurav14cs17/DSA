@@ -61,24 +61,28 @@ permalink: /03_linked_lists/01_basic_operations/
 |   data   |   next   |------► next node
 |  (4-8B)  |  (4-8B)  |
 +----------+----------+
+
 ```
 
 **Memory overhead per node:**
 
 ```math
 \text{Space} = \text{sizeof(data)} + \text{sizeof(pointer)}
+
 ```
 
 For 32-bit integer + 64-bit pointer:
 
 ```math
 \text{Space} = 4 + 8 = 12 \text{ bytes per node}
+
 ```
 
 **Total space for n nodes:**
 
 ```math
 \boxed{S(n) = n \times (\text{data\_size} + \text{pointer\_size})}
+
 ```
 
 ---
@@ -89,6 +93,7 @@ For 32-bit integer + 64-bit pointer:
 
 ```math
 \text{length} = \sum_{i=0}^{n-1} 1 = n
+
 ```
 
 **Time Complexity:** $O(n)$ - must traverse entire list
@@ -105,6 +110,7 @@ For 32-bit integer + 64-bit pointer:
 
 ```math
 \boxed{\text{slow\_position} = \left\lfloor \frac{n}{2} \right\rfloor}
+
 ```
 
 **Proof:**
@@ -119,6 +125,7 @@ Fast reaches end when:
 
 ```math
 2k = n \implies k = \frac{n}{2}
+
 ```
 
 Therefore, slow at position $\left\lfloor \frac{n}{2} \right\rfloor$ ∎
@@ -148,6 +155,7 @@ Since fast = 2 × slow:
 \mu + k + m\lambda = 2(\mu + k)
 \mu + k + m\lambda = 2\mu + 2k
 \boxed{m\lambda = \mu + k}
+
 ```
 
 **Phase 2: Find Cycle Start**
@@ -160,6 +168,7 @@ From previous equation: $\mu = m\lambda - k$
 
 ```math
 \mu = (m-1)\lambda + (\lambda - k)
+
 ```
 
 This means:
@@ -180,18 +189,21 @@ Given two lists A and B with lengths $L\_A$ and $L\_B$, intersecting at distance
 
 ```math
 L_A + (L_B - d)
+
 ```
 
 **Path of pointer B:**
 
 ```math
 L_B + (L_A - d)
+
 ```
 
 Both equal:
 
 ```math
 L_A + L_B - d = L_B + L_A - d
+
 ```
 
 They meet at intersection point after traveling equal distance! ∎
@@ -206,6 +218,7 @@ Pointer A path: a1 → a2 → c1 → c2 → null → b1 → b2 → b3 → c1 ✓
 Pointer B path: b1 → b2 → b3 → c1 → c2 → null → a1 → a2 → c1 ✓
 
 Both reach c1 (intersection) after same total distance!
+
 ```
 
 ---
@@ -285,6 +298,7 @@ Both reach c1 (intersection) after same total distance!
 |                                                                    |
 |  Answer: Cycle starts at node 3                                   |
 +--------------------------------------------------------------------+
+
 ```
 
 ---
@@ -345,6 +359,7 @@ Iteration 3:
 slow=4, fast=null (stop)
 
 Answer: 4 (second middle) ✓
+
 ```
 
 ---
@@ -382,6 +397,7 @@ Answer: 4 (second middle) ✓
 |  pB travels B + (A's unique part)                                 |
 |  Total distance equal → meet at intersection                      |
 +--------------------------------------------------------------------+
+
 ```
 
 ---
@@ -443,6 +459,7 @@ List: 1 → 2 → 3 → 4 → 5 → 6 → 7 → null
 |  Position from start = 7 - 3 = 4 (0-indexed)                      |
 |  Node at position 4 = 5 ✓                                         |
 +--------------------------------------------------------------------+
+
 ```
 
 ---
@@ -685,6 +702,7 @@ def getLength(head: ListNode) -> int:
         length += 1
         head = head.next
     return length
+
 ```
 
 ---
@@ -860,6 +878,7 @@ while fast.next:
 # ✅ CORRECT: Check both conditions
 while fast and fast.next:
     fast = fast.next.next
+
 ```
 
 ### Pitfall 2: Losing Head Reference
@@ -875,6 +894,7 @@ def deleteHead(head):
     dummy = ListNode(0, head)
     dummy.next = head.next
     return dummy.next
+
 ```
 
 ### Pitfall 3: Not Using Dummy Node
@@ -897,6 +917,7 @@ def removeElements(head, val):
         else:
             current = current.next
     return dummy.next
+
 ```
 
 ---

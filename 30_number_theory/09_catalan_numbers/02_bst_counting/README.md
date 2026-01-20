@@ -51,6 +51,7 @@ For n distinct values, the number of structurally unique BSTs equals C_n:
 
 ```math
 \text{Unique BSTs with n nodes} = C_n = \frac{1}{n+1}\binom{2n}{n}
+
 ```
 
 ### Intuition
@@ -88,6 +89,7 @@ When we pick root = i:
 |                                                                 |
 | Total: 2 + 1 + 2 = 5 = C₃ ✓                                   |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -127,6 +129,7 @@ class SolutionFormula:
         """Using Catalan formula: C(2n,n) / (n+1)"""
         from math import comb
         return comb(2 * n, n) // (n + 1)
+
 ```
 
 ### LeetCode 95: Unique Binary Search Trees II
@@ -174,6 +177,7 @@ class Solution:
             return trees
         
         return generate(1, n)
+
 ```
 
 ### With Memoization
@@ -199,6 +203,7 @@ class Solution:
             return tuple(trees)
         
         return list(generate(1, n)) if n else []
+
 ```
 
 ---

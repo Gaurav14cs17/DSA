@@ -32,6 +32,7 @@ nav_order: 3
 a^13 = a^(1101₂)
      = a^8 × a^4 × a^1
      = a^(2³) × a^(2²) × a^(2⁰)
+
 ```
 
 ### Algorithm
@@ -87,6 +88,7 @@ def pow_mod(base, exp, mod):
 print(pow_mod(2, 10, 1000))        # 24
 print(pow_mod(2, 100, 10**9 + 7))  # Large exponent
 print(pow_mod(3, 1000000, 10**9 + 7))
+
 ```
 
 ### 2. Recursive Version
@@ -110,6 +112,7 @@ def pow_mod_recursive(base, exp, mod):
 
 # Examples
 print(pow_mod_recursive(2, 10, 1000))  # 24
+
 ```
 
 ### 3. With Trace
@@ -144,6 +147,7 @@ def pow_mod_trace(base, exp, mod):
     return result
 
 pow_mod_trace(2, 13, 1000)
+
 ```
 
 ### 4. LeetCode 50: Pow(x, n)
@@ -170,6 +174,7 @@ class Solution:
             n >>= 1
         
         return result
+
 ```
 
 ### 5. Matrix Exponentiation
@@ -218,6 +223,7 @@ def fibonacci(n, mod=10**9+7):
 print(fibonacci(10))       # 55
 print(fibonacci(100))      # Large Fibonacci
 print(fibonacci(10**18))   # Very large, O(log n)
+
 ```
 
 ### 6. Solving Linear Recurrences
@@ -275,6 +281,7 @@ def solve_recurrence(coeffs, initial, n, mod):
 
 # Example: Fibonacci (a(n) = a(n-1) + a(n-2))
 print(solve_recurrence([1, 1], [0, 1], 10, 10**9 + 7))  # 55
+
 ```
 
 ---
@@ -321,6 +328,7 @@ class Solution:
             result = pow_mod(result, 10) * pow_mod(a, digit) % MOD
         
         return result
+
 ```
 
 ### Problem 1922: Count Good Numbers
@@ -344,6 +352,7 @@ class Solution:
         odd_pos = n // 2
         
         return pow(5, even_pos, MOD) * pow(4, odd_pos, MOD) % MOD
+
 ```
 
 ---
@@ -353,8 +362,10 @@ class Solution:
 ### 1. Why O(log n)?
 
 Each iteration halves the exponent:
+
 ```
 Operations = ⌈log₂(n)⌉
+
 ```
 
 ### 2. Comparison with Naive
@@ -368,8 +379,10 @@ Operations = ⌈log₂(n)⌉
 ### 3. Python Built-in
 
 Python's `pow(a, b, m)` uses fast exponentiation internally:
+
 ```python
 pow(2, 100, 10**9 + 7)  # Efficient built-in
+
 ```
 
 ---

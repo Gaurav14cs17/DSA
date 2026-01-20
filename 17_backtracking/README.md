@@ -55,6 +55,7 @@ permalink: /17_backtracking/
 
 ```math
 \text{If state invalid} \Rightarrow \text{return immediately}
+
 ```
 
 **Example:** N-Queens - don't continue if queens attack.
@@ -69,6 +70,7 @@ permalink: /17_backtracking/
        [1]    [2]   [3]    [4]
       / | \   / \    |
    [1,2][1,3][1,4]...
+
 ```
 
 Each path = one solution candidate.
@@ -81,6 +83,7 @@ Number of subsets of set with $n$ elements:
 
 ```math
 |P(S)| = 2^n
+
 ```
 
 ---
@@ -91,12 +94,14 @@ Number of permutations of $n$ elements:
 
 ```math
 P(n) = n!
+
 ```
 
 Permutations of $k$ elements from $n$:
 
 ```math
 P(n, k) = \frac{n!}{(n-k)!}
+
 ```
 
 ---
@@ -107,6 +112,7 @@ Number of ways to choose $k$ from $n$:
 
 ```math
 C(n, k) = \binom{n}{k} = \frac{n!}{k!(n-k)!}
+
 ```
 
 ---
@@ -143,6 +149,7 @@ def backtrack(state, choices):
             
             # Unchoose (backtrack)
             state.pop()
+
 ```
 
 ### Subsets Pattern
@@ -166,6 +173,7 @@ def subsets(nums: list[int]) -> list[list[int]]:
     
     backtrack(0, [])
     return result
+
 ```
 
 ### Permutations Pattern
@@ -191,6 +199,7 @@ def permute(nums: list[int]) -> list[list[int]]:
     
     backtrack([], nums)
     return result
+
 ```
 
 ---
@@ -242,6 +251,7 @@ Backtracking Problem
         +-- Grid path → 4-directional with visited
         |
         +-- Constraint satisfaction → Prune invalid states
+
 ```
 
 ---

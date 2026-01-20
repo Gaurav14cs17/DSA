@@ -46,9 +46,11 @@ where:
 - p = prime base (typically 31 for lowercase, 53 for mixed case)
 - M = large prime modulus (10^9+7 or 10^9+9)
 - s[i] = numerical value of character (often ASCII code)
+
 ```
 
 **Example:**
+
 ```
 String: "abc"
 p = 31, M = 10^9+7
@@ -56,28 +58,36 @@ p = 31, M = 10^9+7
 h("abc") = (97·31² + 98·31 + 99) mod M
          = (93367 + 3038 + 99) mod M
          = 96504
+
 ```
 
 ### Hash Properties
 
 **1. Deterministic:** Same string → same hash
+
 ```
 h("abc") always gives same value
+
 ```
 
 **2. Uniform Distribution:** Different strings likely have different hashes
+
 ```
 P(h(s1) = h(s2)) ≈ 1/M for s1 ≠ s2
+
 ```
 
 **3. Efficient Computation:** O(n) to compute
+
 ```
 Hash can be computed in single pass
+
 ```
 
 ### Collision Probability
 
 For random strings:
+
 ```
 P(collision) ≈ k²/(2M)  (Birthday paradox)
 
@@ -85,12 +95,15 @@ For M = 10^9+7:
 - 1000 strings: P ≈ 0.0005%
 - 10000 strings: P ≈ 0.05%
 - 100000 strings: P ≈ 5%
+
 ```
 
 **Mitigation:** Use double hashing
+
 ```
 Two independent hash functions h₁ and h₂
 P(both collide) ≈ 1/(M₁·M₂) ≈ 10^-18
+
 ```
 
 ---
@@ -157,6 +170,7 @@ sh = StringHash(s)
 
 # Check if s[0:3] == s[3:6]
 print(sh.compare_substrings(0, 3, 3, 6))  # True: "abc" == "abc"
+
 ```
 
 ### Double Hashing
@@ -220,6 +234,7 @@ class DoubleStringHash:
             return False
         
         return self.hash_substring(l1, r1) == self.hash_substring(l2, r2)
+
 ```
 
 ### Rolling Hash (for Sliding Window)
@@ -283,6 +298,7 @@ def find_all_k_substrings(s, k):
             hashes[current_hash] = s[i-k+1:i+1]
     
     return list(hashes.values())
+
 ```
 
 ---
@@ -333,6 +349,7 @@ def longest_common_substring(s1, s2):
 
 # Example
 print(longest_common_substring("abcdefgh", "xyzabcpqr"))  # "abc"
+
 ```
 
 ### 2. Distinct Substrings Count
@@ -360,6 +377,7 @@ def count_distinct_substrings(s):
 # Example
 print(count_distinct_substrings("aaa"))     # 3: "a", "aa", "aaa"
 print(count_distinct_substrings("banana"))  # 15
+
 ```
 
 ### 3. Check if Strings are Rotations
@@ -391,6 +409,7 @@ def are_rotations(s1, s2):
 # Example
 print(are_rotations("abcd", "cdab"))  # True
 print(are_rotations("abcd", "abdc"))  # False
+
 ```
 
 ### 4. Palindrome Substring Check
@@ -427,6 +446,7 @@ def count_palindrome_substrings_hash(s):
                     count += 1
     
     return count
+
 ```
 
 ### 5. Repeated DNA Sequences
@@ -471,6 +491,7 @@ def find_repeated_dna_sequences(s):
         seen.add(current_hash)
     
     return list(repeated)
+
 ```
 
 ### 6. Minimum Window with Same Hash
@@ -521,6 +542,7 @@ def min_window_same_hash(s, t):
             left += 1
     
     return s[min_start:min_start + min_len] if min_len != float('inf') else ""
+
 ```
 
 ### 7. Longest Duplicate Substring
@@ -564,6 +586,7 @@ def longest_duplicate_substring(s):
             right = mid - 1
     
     return result
+
 ```
 
 ### 8. String Matching with Wildcards
@@ -607,6 +630,7 @@ def match_with_wildcards(text, pattern):
             return False
     
     return True
+
 ```
 
 ---
@@ -614,12 +638,14 @@ def match_with_wildcards(text, pattern):
 ## 🧩 LeetCode Problems
 
 ### Easy
+
 | # | Problem | Difficulty | Pattern |
 |---|---------|------------|---------|
 | 28 | [Find Index of First Occurrence](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | 🟢 Easy | Rolling hash |
 | 205 | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) | 🟢 Easy | Hash mapping |
 
 ### Medium
+
 | # | Problem | Difficulty | Pattern |
 |---|---------|------------|---------|
 | 187 | [Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences/) | 🟡 Medium | Fixed window hash |
@@ -629,6 +655,7 @@ def match_with_wildcards(text, pattern):
 | 1554 | [Strings Differ by One Character](https://leetcode.com/problems/strings-differ-by-one-character/) | 🟡 Medium | Multiple hashes |
 
 ### Hard
+
 | # | Problem | Difficulty | Pattern |
 |---|---------|------------|---------|
 | 1923 | [Longest Common Subpath](https://leetcode.com/problems/longest-common-subpath/) | 🔴 Hard | Multiple string LCS |
@@ -642,6 +669,7 @@ def match_with_wildcards(text, pattern):
 ### Choosing Hash Parameters
 
 **Base (p):**
+
 ```python
 # Guidelines:
 - Lowercase only (a-z): p = 31
@@ -653,9 +681,11 @@ def match_with_wildcards(text, pattern):
 - Better distribution
 - Reduces patterns in collisions
 - Mathematical properties for proofs
+
 ```
 
 **Modulus (M):**
+
 ```python
 # Common choices:
 MOD = 10**9 + 7   # Large prime, fits in 32-bit
@@ -665,6 +695,7 @@ MOD = 2**61 - 1   # Mersenne prime (very large)
 # For double hashing:
 MOD1 = 10**9 + 7
 MOD2 = 10**9 + 9
+
 ```
 
 ### Hash vs Direct Comparison
@@ -704,6 +735,7 @@ if hash1 == hash2:
 # ✓ Correct: Verify on hash match (if critical)
 if hash1 == hash2:
     return s1[l1:r1] == s2[l2:r2]
+
 ```
 
 ---
@@ -729,6 +761,7 @@ class CarryHash:
         for c in self.s:
             h = h * self.base + ord(c)
         return h
+
 ```
 
 ### 2. Zobrist Hashing (for Sets)
@@ -753,6 +786,7 @@ class ZobristHash:
         for c in s:
             h ^= self.table[ord(c)]
         return h
+
 ```
 
 ### 3. Incremental Hashing
@@ -787,6 +821,7 @@ class IncrementalHash:
         self.hash = (self.hash - ord(char) + self.mod) % self.mod
         self.hash = (self.hash * pow(self.base, self.mod-2, self.mod)) % self.mod
         self.length -= 1
+
 ```
 
 ---

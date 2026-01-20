@@ -73,12 +73,14 @@ permalink: /04_stacks/03_monotonic_stack/
 
 ```math
 \forall i < j: S[i] \geq S[j]
+
 ```
 
 **Monotonically Increasing Stack:**
 
 ```math
 \forall i < j: S[i] \leq S[j]
+
 ```
 
 ---
@@ -89,6 +91,7 @@ permalink: /04_stacks/03_monotonic_stack/
 
 ```math
 \text{NGE}(i) = \min\{j : j > i \land A[j] > A[i]\}
+
 ```
 
 **Visual:**
@@ -102,6 +105,7 @@ Index 1: A[1]=1, first greater is A[2]=2
 Index 2: A[2]=2, first greater is A[3]=4
 Index 3: A[3]=4, no greater element
 Index 4: A[4]=3, no greater element
+
 ```
 
 ---
@@ -123,6 +127,7 @@ Index 4: A[4]=3, no greater element
 
 ```math
 \text{Area}(i) = h[i] \times (R[i] - L[i] - 1)
+
 ```
 
 Where:
@@ -142,6 +147,7 @@ Area = 5 × 2 = 10
 
 Maximum rectangle: h[2]=5, h[3]=6
 Width=2, Height=5, Area=10
+
 ```
 
 ---
@@ -152,6 +158,7 @@ Width=2, Height=5, Area=10
 
 ```math
 \text{answer}[i] = \text{NGE\_index}(i) - i
+
 ```
 
 ---
@@ -162,6 +169,7 @@ Width=2, Height=5, Area=10
 
 ```math
 \text{contribution}(i) = A[i] \times \text{left\_count} \times \text{right\_count}
+
 ```
 
 Where:
@@ -176,6 +184,7 @@ Where:
 
 ```math
 \text{water}[i] = \min(\max_{j \leq i} h[j], \max_{j \geq i} h[j]) - h[i]
+
 ```
 
 **Stack approach:** Find bounded regions.
@@ -312,6 +321,7 @@ def sumSubarrayMins(arr: list[int]) -> int:
         result = (result + arr[i] * left_count * right_count) % MOD
     
     return result
+
 ```
 
 ---
@@ -365,6 +375,7 @@ i   nums[i]  Action          Stack      Result
 4     3      Push (3<4)      [3,4]      [4,2,4,-1,-1]
 
 Final: [4, 2, 4, -1, -1]
+
 ```
 
 ### Daily Temperatures (#739)
@@ -384,6 +395,7 @@ i  T[i]  Stack       Action              Result
 7   73   [6,7]       Push (73<76)        [1,1,4,2,1,1,0,0]
 
 Final: [1, 1, 4, 2, 1, 1, 0, 0]
+
 ```
 
 ### Largest Rectangle (#84)
@@ -407,6 +419,7 @@ End      []          Pop all             10
                      h=1, w=6 → 6
 
 Maximum: 10
+
 ```
 
 ---
@@ -424,6 +437,7 @@ Finding next/prev greater/smaller?
 Area/Water problems?
          |
          +-- Find boundaries using monotonic stack
+
 ```
 
 ### Quick Reference Table
@@ -455,6 +469,7 @@ Area/Water problems?
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **LeetCode Discuss** | Complete monotonic stack guide | [Article](https://leetcode.com/discuss/study-guide/2347639/A-Comprehensive-Guide-and-Template-for-Monotonic-Stack-based-Problems) |
@@ -462,6 +477,7 @@ Area/Water problems?
 | **GeeksforGeeks** | Next greater element | [Tutorial](https://www.geeksforgeeks.org/next-greater-element/) |
 
 ### 📺 Video Tutorials
+
 | Creator | Topic | Link |
 |---------|-------|------|
 | **NeetCode** | Daily Temperatures | [YouTube](https://www.youtube.com/watch?v=cTBiBSnjO3c) |
@@ -472,12 +488,14 @@ Area/Water problems?
 | **Tech Dose** | Largest rectangle | [YouTube](https://www.youtube.com/watch?v=jC_cWLy7jSI) |
 
 ### 🎯 Practice Collections
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Monotonic stack tag | [Problems](https://leetcode.com/tag/monotonic-stack/) |
 | **Codeforces** | Stack problems | [Problemset](https://codeforces.com/problemset?tags=data+structures) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Histogram Problems** | Rectangle area variations | [GeeksforGeeks](https://www.geeksforgeeks.org/largest-rectangle-under-histogram/) |
@@ -486,12 +504,14 @@ Area/Water problems?
 | **Maximal Rectangle** | 2D histogram extension | [Article](https://www.geeksforgeeks.org/maximum-size-rectangle-binary-sub-matrix-1s/) |
 
 ### 📊 Visualization Tools
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo** | Stack operations | [Website](https://visualgo.net/en/list) |
 | **Algorithm Visualizer** | Histogram problems | [Website](https://algorithm-visualizer.org/) |
 
 ### 📐 Mathematical Deep Dive
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Amortized Analysis** | Why monotonic stack is O(n) | [Wikipedia](https://en.wikipedia.org/wiki/Amortized_analysis) |

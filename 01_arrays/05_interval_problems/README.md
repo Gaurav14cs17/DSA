@@ -55,6 +55,7 @@ permalink: /01_arrays/05_interval_problems/
 
 ```math
 [a, b] = \{x \in \mathbb{R} : a \leq x \leq b\}
+
 ```
 
 **Interval Relations:**
@@ -65,6 +66,7 @@ permalink: /01_arrays/05_interval_problems/
 \text{Overlap:} \quad & [a, b] \cap [c, d] \neq \emptyset \iff b \geq c \text{ and } d \geq a \\
 \text{Contains:} \quad & [a, b] \subseteq [c, d] \iff c \leq a \text{ and } b \leq d
 \end{aligned}
+
 ```
 
 **Merge Condition:**
@@ -73,12 +75,14 @@ Two intervals $[a, b]$ and $[c, d]$ can merge if:
 
 ```math
 \boxed{b \geq c \quad \text{(assuming } a \leq c \text{)}}
+
 ```
 
 Merged interval:
 
 ```math
 [a, b] \cup [c, d] = [\min(a, c), \max(b, d)]
+
 ```
 
 ---
@@ -132,6 +136,7 @@ Case 5: Same
   [-------]
     a,b
   a.start == b.start && a.end == b.end
+
 ```
 
 ---
@@ -190,6 +195,7 @@ Input: [[1,3], [2,6], [8,10], [15,18]]
 |               [10]                                                  |
 |                    [-18]                                            |
 +---------------------------------------------------------------------+
+
 ```
 
 ---
@@ -232,6 +238,7 @@ Input: intervals = [[1,3], [6,9]], newInterval = [2,5]
 |  [----5]                                                            |
 |            [6---9]                                                  |
 +---------------------------------------------------------------------+
+
 ```
 
 ---
@@ -246,6 +253,7 @@ Given intervals $I\_1, I\_2, \ldots, I\_n$ where $I\_i = [s\_i, e\_i]$:
 
 ```math
 \text{rooms needed} = \max_{t} \left|\{i : s_i \leq t < e_i\}\right|
+
 ```
 
 **Sweep Line Algorithm:**
@@ -316,6 +324,7 @@ Input: [[0,30], [5,10], [15,20]]
 |       ↑                                                             |
 |       Maximum overlap = 2 rooms                                     |
 +---------------------------------------------------------------------+
+
 ```
 
 ---
@@ -572,6 +581,7 @@ def employeeFreeTime(schedule: list[list[list[int]]]) -> list[list[int]]:
         free_time.append([merged[i-1][1], merged[i][0]])
     
     return free_time
+
 ```
 
 ---
@@ -625,6 +635,7 @@ by     intervals  needed        |
 start           |              Two
                Sweep          Pointers
                Line
+
 ```
 
 ---
@@ -694,6 +705,7 @@ Problem: Minimum arrows to burst balloons
    - Simple code
 
 Lesson: Right sort strategy simplifies problem!
+
 ```
 
 ---
@@ -725,6 +737,7 @@ For intervals $[a, b]$ and $[c, d]$ where $a \leq c$:
 
 ```math
 \text{Overlap length} = \max(0, \min(b, d) - c)
+
 ```
 
 **Proof:**
@@ -769,6 +782,7 @@ def maxConcurrentIntervals(intervals: list[list[int]]) -> int:
         max_concurrent = max(max_concurrent, len(active))
     
     return max_concurrent
+
 ```
 
 ### Interval Tree (Advanced Data Structure)
@@ -794,6 +808,7 @@ class IntervalTreeNode:
 
 # Full implementation omitted for brevity
 # Used in problems like Range Module (#715)
+
 ```
 
 ---
@@ -885,6 +900,7 @@ if prev_end > curr_start:  # Misses touching intervals
 
 # ✅ CORRECT: Non-strict inequality
 if prev_end >= curr_start:  # [1,3] and [3,5] overlap!
+
 ```
 
 ### Pitfall 2: Forgetting to Sort
@@ -898,6 +914,7 @@ for i in range(1, len(intervals)):
 intervals.sort(key=lambda x: x[0])
 for i in range(1, len(intervals)):
     # Now safe to check...
+
 ```
 
 ### Pitfall 3: Not Handling Edge Cases
@@ -910,6 +927,7 @@ merged = [intervals[0]]
 if not intervals:
     return []
 merged = [intervals[0]]
+
 ```
 
 ---
@@ -941,6 +959,7 @@ merged = [intervals[0]]
 |    - intersection = [max(a.start, b.start), min(a.end, b.end)] |
 |    - Advance pointer of interval that ends first            |
 +-------------------------------------------------------------+
+
 ```
 
 ---

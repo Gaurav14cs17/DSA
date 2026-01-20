@@ -36,6 +36,7 @@ Rabin-Karp excels at matching multiple patterns simultaneously by comparing a si
    - Check if in pattern set: O(1)
    - Verify if match: O(m)
 4. Total: O(n + km) average
+
 ```
 
 ---
@@ -111,6 +112,7 @@ results = search_multiple_patterns(text, patterns)
 for pattern, matches in results.items():
     if matches:
         print(f"'{pattern}': {matches}")
+
 ```
 
 ### 2. Optimized for Same-Length Patterns
@@ -162,6 +164,7 @@ def search_same_length_patterns(text, patterns, base=31, mod=10**9 + 7):
             w_hash = (w_hash * base + ord(text[i+m])) % mod
     
     return results
+
 ```
 
 ### 3. Find Any Pattern Match
@@ -211,6 +214,7 @@ def find_any_pattern(text, patterns, base=31, mod=10**9 + 7):
                 w_hash = (w_hash * base + ord(text[i+m])) % mod
     
     return False, None, -1
+
 ```
 
 ### 4. Pattern Set Matcher Class
@@ -300,6 +304,7 @@ for idx, text in enumerate(texts):
     for pattern, matches in results.items():
         if matches:
             print(f"  '{pattern}': {matches}")
+
 ```
 
 ---
@@ -307,6 +312,7 @@ for idx, text in enumerate(texts):
 ## 💡 Key Optimizations
 
 ### 1. Group by Length
+
 ```python
 # Instead of m different lengths:
 for pattern in patterns:  # O(k·n·m)
@@ -315,19 +321,24 @@ for pattern in patterns:  # O(k·n·m)
 # Group same lengths:
 for length in unique_lengths:  # O(unique·n + k·m)
     search_all_of_length(text, length)
+
 ```
 
 ### 2. Hash Set Lookup
+
 ```python
 # O(1) average to check if hash exists
 if window_hash in pattern_hash_set:
     verify_patterns()
+
 ```
 
 ### 3. Early Termination
+
 ```python
 if len(found_patterns) == len(patterns):
     break  # All patterns found
+
 ```
 
 ---

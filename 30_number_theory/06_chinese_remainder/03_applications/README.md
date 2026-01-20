@@ -95,6 +95,7 @@ def rsa_crt_decrypt(c: int, d: int, p: int, q: int) -> int:
     m = m_q + h * q
     
     return m % n
+
 ```
 
 ---
@@ -122,6 +123,7 @@ def robust_hash(s: str) -> tuple[int, int]:
 def compare_strings(s1: str, s2: str) -> bool:
     """Compare strings using double hash."""
     return robust_hash(s1) == robust_hash(s2)
+
 ```
 
 ---
@@ -150,6 +152,7 @@ def factorial_large(n: int, primes: list[int]) -> int:
         remainders.append(fact)
     
     return chinese_remainder(remainders, primes)
+
 ```
 
 ---
@@ -178,6 +181,7 @@ def count_arrangements(n: int, constraints: list[tuple]) -> int:
         return 0
     
     return (n - x - 1) // period + 1
+
 ```
 
 ---

@@ -138,6 +138,7 @@ def fibonacci(n: int) -> int:
     if n <= 1:
         return n
     return fibonacci(n - 1) + fibonacci(n - 2)
+
 ```
 
 ### Digit Operations
@@ -216,6 +217,7 @@ def countZeros(n: int) -> int:
     if n < 5:
         return 0
     return n // 5 + countZeros(n // 5)
+
 ```
 
 ### Series and Sequences
@@ -282,6 +284,7 @@ def catalan(n: int) -> int:
     for i in range(n):
         result += catalan(i) * catalan(n - 1 - i)
     return result
+
 ```
 
 ### Combinatorics
@@ -324,6 +327,7 @@ def derangements(n: int) -> int:
     if n == 1:
         return 0
     return (n - 1) * (derangements(n - 1) + derangements(n - 2))
+
 ```
 
 ---

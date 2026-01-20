@@ -38,6 +38,7 @@ nav_order: 2
 ```
 Mathematically:
 ∀p, q ∈ S, ∀λ ∈ [0,1]: λp + (1-λ)q ∈ S
+
 ```
 
 ### Convex Hull Properties
@@ -48,6 +49,7 @@ Mathematically:
 3. Subset: Hull points are subset of input points
 4. At most n vertices: For n input points
 5. At least 3 vertices: For non-collinear points
+
 ```
 
 ---
@@ -105,6 +107,7 @@ def convex_hull_graham(points):
 def cross_product(o, a, b):
     """Cross product of vectors OA and OB"""
     return (a.x - o.x) * (b.y - o.y) - (a.y - o.y) * (b.x - o.x)
+
 ```
 
 ### 2. Jarvis March (Gift Wrapping)
@@ -158,6 +161,7 @@ def convex_hull_jarvis(points):
             break
     
     return hull
+
 ```
 
 ### 3. Andrew's Monotone Chain
@@ -198,6 +202,7 @@ def convex_hull_andrew(points):
     
     # Concatenate (remove last point of each half - duplicates)
     return lower[:-1] + upper[:-1]
+
 ```
 
 ### 4. QuickHull (Divide and Conquer)
@@ -259,6 +264,7 @@ def quick_hull_recursive(points, p1, p2):
     hull.extend(quick_hull_recursive(left_points, farthest, p2))
     
     return hull
+
 ```
 
 ### 5. Convex Hull Applications
@@ -329,6 +335,7 @@ def point_in_convex_hull(point, hull):
             return False
     
     return True
+
 ```
 
 ---

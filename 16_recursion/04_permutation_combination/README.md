@@ -51,12 +51,14 @@ permalink: /16_recursion/04_permutation_combination/
 
 ```math
 P(n) = n!
+
 ```
 
 **Permutations of r elements from n:**
 
 ```math
 P(n, r) = \frac{n!}{(n-r)!}
+
 ```
 
 ---
@@ -67,12 +69,14 @@ P(n, r) = \frac{n!}{(n-r)!}
 
 ```math
 C(n, r) = \binom{n}{r} = \frac{n!}{r!(n-r)!}
+
 ```
 
 **Pascal's Triangle Recurrence:**
 
 ```math
 C(n, r) = C(n-1, r-1) + C(n-1, r)
+
 ```
 
 ---
@@ -83,6 +87,7 @@ C(n, r) = C(n-1, r-1) + C(n-1, r)
 
 ```math
 |\text{Power Set}| = 2^n
+
 ```
 
 Each element has 2 choices: include or exclude.
@@ -281,6 +286,7 @@ def letterCombinations(digits: str) -> list[str]:
     
     backtrack(0, [])
     return result
+
 ```
 
 ---
@@ -325,6 +331,7 @@ Combinatorial Problem
        +-- Can reuse elements?
            +-- YES → start from i (not i+1)
            +-- NO  → start from i+1
+
 ```
 
 ---
@@ -354,6 +361,7 @@ def permutation_template(nums):
     
     backtrack([])
     return result
+
 ```
 
 ### Combination/Subset Template
@@ -375,6 +383,7 @@ def combination_template(nums, k=None):
     
     backtrack(0, [])
     return result
+
 ```
 
 ---

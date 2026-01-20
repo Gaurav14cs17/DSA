@@ -38,12 +38,14 @@ permalink: /30_number_theory/01_gcd_lcm/03_lcm_applications/
 
 ```math
 \text{lcm}(a, b) = \frac{a \times b}{\gcd(a, b)}
+
 ```
 
 **Overflow-Safe Version:**
 
 ```math
 \text{lcm}(a, b) = \frac{a}{\gcd(a, b)} \times b
+
 ```
 
 ### 2️⃣ LCM Properties
@@ -55,12 +57,14 @@ permalink: /30_number_theory/01_gcd_lcm/03_lcm_applications/
 \gcd(a,b) \times \text{lcm}(a,b) &= a \times b \\
 \text{lcm}(ka, kb) &= k \times \text{lcm}(a, b)
 \end{align}
+
 ```
 
 ### 3️⃣ LCM of Multiple Numbers
 
 ```math
 \text{lcm}(a_1, a_2, \ldots, a_n) = \text{lcm}(\text{lcm}(a_1, a_2, \ldots, a_{n-1}), a_n)
+
 ```
 
 ---
@@ -99,6 +103,7 @@ def lcm_safe(a: int, b: int) -> int:
     Overflow-safe: divide before multiply.
     """
     return a // gcd(a, b) * b
+
 ```
 
 ### Implementation 2: LCM of Array
@@ -117,6 +122,7 @@ def lcm_array(arr: list[int]) -> int:
 # Python 3.9+
 import math
 result = math.lcm(*arr)
+
 ```
 
 ### Implementation 3: LCM in Range
@@ -132,6 +138,7 @@ def lcm_range(start: int, end: int) -> int:
     for num in range(start + 1, end + 1):
         result = lcm(result, num)
     return result
+
 ```
 
 ---
@@ -139,11 +146,13 @@ def lcm_range(start: int, end: int) -> int:
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
+
 | # | Problem | Key Concept |
 |:-:|---------|-------------|
 | 2413 | [Smallest Even Multiple](https://leetcode.com/problems/smallest-even-multiple/) | LCM with 2 |
 
 ### 🟡 Medium
+
 | # | Problem | Key Concept |
 |:-:|---------|-------------|
 | 2427 | [Number of Common Factors](https://leetcode.com/problems/number-of-common-factors/) | GCD factors |
@@ -170,6 +179,7 @@ def add_fractions(n1: int, d1: int, n2: int, d2: int) -> tuple[int, int]:
     
     g = gcd(result_num, result_den)
     return result_num // g, result_den // g
+
 ```
 
 ### Application 2: Synchronization (Meeting Problem)
@@ -184,6 +194,7 @@ def next_meeting_time(period1: int, period2: int, start: int = 0) -> int:
     When do they arrive together? LCM(12, 18) = 36 minutes
     """
     return start + lcm(period1, period2)
+
 ```
 
 ### Application 3: Pattern Repetition
@@ -197,6 +208,7 @@ def pattern_length(pattern1_len: int, pattern2_len: int) -> int:
     Combined pattern repeats every LCM(4,6) = 12 steps.
     """
     return lcm(pattern1_len, pattern2_len)
+
 ```
 
 ---

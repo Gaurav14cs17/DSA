@@ -49,6 +49,7 @@ permalink: /30_number_theory/08_binomial_coefficients/02_combinations/
 
 ```math
 C(n,k) = \binom{n}{k} = \frac{n!}{k!(n-k)!}
+
 ```
 
 **Meaning:** Number of ways to choose k items from n items (order doesn't matter).
@@ -57,6 +58,7 @@ C(n,k) = \binom{n}{k} = \frac{n!}{k!(n-k)!}
 
 ```math
 C(n,k) = \frac{n \times (n-1) \times \cdots \times (n-k+1)}{k \times (k-1) \times \cdots \times 1}
+
 ```
 
 ---
@@ -90,6 +92,7 @@ def nCr(n: int, k: int) -> int:
 print(nCr(5, 2))   # 10
 print(nCr(10, 3))  # 120
 print(nCr(52, 5))  # 2598960 (poker hands)
+
 ```
 
 ### 2. DP Approach (Pascal's Triangle)
@@ -116,6 +119,7 @@ def nCr_dp(n: int, k: int) -> int:
             dp[j] += dp[j - 1]
     
     return dp[k]
+
 ```
 
 ### 3. Using Python's Built-in
@@ -125,6 +129,7 @@ from math import comb  # Python 3.8+
 
 print(comb(10, 3))  # 120
 print(comb(52, 5))  # 2598960
+
 ```
 
 ### 4. Recursive with Memoization
@@ -144,6 +149,7 @@ def nCr_memo(n: int, k: int) -> int:
     if k > n or k < 0:
         return 0
     return nCr_memo(n - 1, k - 1) + nCr_memo(n - 1, k)
+
 ```
 
 ---
@@ -179,6 +185,7 @@ class Solution:
         """
         from math import comb
         return comb(m + n - 2, m - 1)
+
 ```
 
 ### LeetCode 77: Combinations
@@ -207,6 +214,7 @@ class Solution:
         
         backtrack(1, [])
         return result
+
 ```
 
 ### LeetCode 1641: Count Sorted Vowel Strings
@@ -225,6 +233,7 @@ class Solution:
         """
         from math import comb
         return comb(n + 4, 4)
+
 ```
 
 ---
@@ -246,6 +255,7 @@ class Solution:
 |                                                                 |
 | Total arrangements = C(n + k - 1, k - 1) = C(7, 4) = 35        |
 +-----------------------------------------------------------------+
+
 ```
 
 ---

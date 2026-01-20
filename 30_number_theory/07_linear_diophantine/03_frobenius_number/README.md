@@ -50,6 +50,7 @@ For positive coprime integers $a, b$, the **Frobenius number** $g(a, b)$ is the 
 
 ```math
 g(a, b) = ab - a - b
+
 ```
 
 ### Sylvester-Frobenius Theorem
@@ -83,6 +84,7 @@ For coprime $a, b$:
 | Largest = 7 ✓                                                  |
 | Count = 4 = (3-1)(5-1)/2 ✓                                     |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -131,6 +133,7 @@ def list_non_representable(a: int, b: int) -> list[int]:
 print(frobenius_two(3, 5))  # 7
 print(frobenius_two(6, 9))  # inf (not coprime)
 print(list_non_representable(3, 5))  # [1, 2, 4, 7]
+
 ```
 
 ---
@@ -168,6 +171,7 @@ def mcnugget_problem():
     return 0
 
 print(mcnugget_problem())  # 43
+
 ```
 
 ---

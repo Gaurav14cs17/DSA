@@ -421,6 +421,7 @@ def example_distance_queries():
     
     print(f"Distance(3, 4): {dq.distance(3, 4)}")  # 2
     print(f"Distance(3, 2): {dq.distance(3, 2)}")  # 3
+
 ```
 
 ---
@@ -456,6 +457,7 @@ Tree Problem
      |
      +-- Divide and conquer on tree
          +-- Needs O(log n) depth → Centroid decomposition
+
 ```
 
 ---

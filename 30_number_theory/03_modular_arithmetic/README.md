@@ -127,16 +127,20 @@ permalink: /30_number_theory/03_modular_arithmetic/
 **Definition:** a ≡ b (mod m) if m divides (a - b)
 
 **Equivalently:**
+
 ```
 a ≡ b (mod m) ⟺ a mod m = b mod m
                 ⟺ a = b + km for some integer k
+
 ```
 
 **Examples:**
+
 ```
 17 ≡ 5 (mod 12)  because 17 - 5 = 12
 -3 ≡ 7 (mod 10)  because -3 - 7 = -10
 100 ≡ 0 (mod 10) because 100 - 0 = 100
+
 ```
 
 **Properties:**
@@ -147,36 +151,48 @@ a ≡ b (mod m) ⟺ a mod m = b mod m
 ### 2️⃣ Modular Operations
 
 **Addition:**
+
 ```
 (a + b) mod m = ((a mod m) + (b mod m)) mod m
+
 ```
 
 **Multiplication:**
+
 ```
 (a × b) mod m = ((a mod m) × (b mod m)) mod m
+
 ```
 
 **Subtraction:**
+
 ```
 (a - b) mod m = ((a mod m) - (b mod m) + m) mod m
+
 ```
 
 **Exponentiation:**
+
 ```
 a^n mod m = ((a mod m)^n) mod m
+
 ```
 
 **Division (Special):**
+
 ```
 (a / b) mod m = (a × b^(-1)) mod m
 where b^(-1) is modular inverse of b
+
 ```
 
 ### 3️⃣ Modular Inverse
 
 **Definition:** The modular inverse of a modulo m is an integer x such that:
+
 ```
 a × x ≡ 1 (mod m)
+
 ```
 
 **Notation:** x = a^(-1) (mod m)
@@ -192,16 +208,20 @@ a × x ≡ 1 (mod m)
 
 **Fermat's Little Theorem:**
 If p is prime and gcd(a, p) = 1:
+
 ```
 a^(p-1) ≡ 1 (mod p)
+
 ```
 
 **Corollary:** a^p ≡ a (mod p) for all a
 
 **Euler's Theorem (Generalization):**
 If gcd(a, n) = 1:
+
 ```
 a^φ(n) ≡ 1 (mod n)
+
 ```
 
 Where φ(n) is Euler's totient function
@@ -246,6 +266,7 @@ def mod_mul(a, b, m):
 print(mod_add(10**18, 10**18, 10**9 + 7))
 print(mod_sub(5, 10, 7))  # -5 mod 7 = 2
 print(mod_mul(10**9, 10**9, 10**9 + 7))
+
 ```
 
 ### 2. Fast Modular Exponentiation
@@ -288,6 +309,7 @@ def pow_mod(base, exp, mod):
 print(pow_mod(2, 100, 10**9 + 7))    # 2^100 mod (10^9+7)
 print(pow_mod(3, 1000000, 10**9 + 7))  # Very large exponent
 print(pow_mod(5, 0, 10**9 + 7))      # 1 (anything^0 = 1)
+
 ```
 
 ### 3. Recursive Fast Exponentiation
@@ -310,6 +332,7 @@ def pow_mod_recursive(base, exp, mod):
     else:
         # Odd exponent: (base^exp) = base × base^(exp-1)
         return (base * pow_mod_recursive(base, exp - 1, mod)) % mod
+
 ```
 
 ### 4. Modular Inverse - Extended GCD
@@ -343,6 +366,7 @@ def mod_inverse_gcd(a, m):
 print(mod_inverse_gcd(3, 11))   # 4, because 3×4 ≡ 1 (mod 11)
 print(mod_inverse_gcd(5, 12))   # None, gcd(5,12)=1, so inverse exists
 print(mod_inverse_gcd(7, 26))   # 15, because 7×15 ≡ 1 (mod 26)
+
 ```
 
 ### 5. Modular Inverse - Fermat's Theorem
@@ -372,6 +396,7 @@ p = 10**9 + 7  # Common prime modulus
 print(mod_inverse_fermat(2, p))
 print(mod_inverse_fermat(3, p))
 print(mod_inverse_fermat(5, p))
+
 ```
 
 ### 6. Modular Division
@@ -396,6 +421,7 @@ def mod_div(a, b, m):
 # Example
 print(mod_div(10, 2, 10**9 + 7))  # 5
 print(mod_div(7, 3, 10**9 + 7))   # 7 × (3^-1) mod (10^9+7)
+
 ```
 
 ### 7. Matrix Exponentiation
@@ -454,6 +480,7 @@ def fibonacci_mod(n, mod):
     return result[0][1]
 
 print(fibonacci_mod(100, 10**9 + 7))
+
 ```
 
 ---
@@ -474,13 +501,16 @@ print(fibonacci_mod(100, 10**9 + 7))
 ### Common Patterns
 
 **Pattern 1: Large Power Modulo**
+
 ```python
 def solve_power(a, b, mod):
     """Compute a^b mod mod"""
     return pow(a, b, mod)  # Python built-in is optimized
+
 ```
 
 **Pattern 2: Factorial Modulo**
+
 ```python
 def factorial_mod(n, mod):
     """Compute n! mod mod"""
@@ -488,9 +518,11 @@ def factorial_mod(n, mod):
     for i in range(1, n + 1):
         result = (result * i) % mod
     return result
+
 ```
 
 **Pattern 3: Combinations Modulo**
+
 ```python
 def nCr_mod(n, r, mod):
     """
@@ -510,6 +542,7 @@ def nCr_mod(n, r, mod):
     
     # Divide using modular inverse
     return (num * mod_inverse_fermat(den, mod)) % mod
+
 ```
 
 ---
@@ -582,6 +615,7 @@ def are_congruent(a, b, m):
 
 print(are_congruent(17, 5, 12))  # True
 print(are_congruent(100, 10, 9))  # True
+
 ```
 
 ---
@@ -591,40 +625,52 @@ print(are_congruent(100, 10, 9))  # True
 ### 1. Why Fast Exponentiation Works
 
 **Naive Approach:** O(n) multiplications
+
 ```
 a^8 = a × a × a × a × a × a × a × a
+
 ```
 
 **Fast Approach:** O(log n) multiplications
+
 ```
 a^8 = ((a^2)^2)^2
     = ((a×a)^2)^2
+
 ```
 
 **Binary Representation:**
+
 ```
 a^13 = a^(1101₂)
      = a^8 × a^4 × a^1
      = a^(2³) × a^(2²) × a^(2⁰)
+
 ```
 
 ### 2. Modular Inverse Applications
 
 **Fraction Modulo:**
+
 ```
 (a/b) mod m = (a × b⁻¹) mod m
+
 ```
 
 **Solving Linear Congruences:**
+
 ```
 ax ≡ b (mod m)
 x ≡ b × a⁻¹ (mod m)
+
 ```
 
 **Combinations Modulo:**
+
 ```
 C(n,r) = n! / (r! × (n-r)!)
        ≡ n! × (r!)⁻¹ × ((n-r)!)⁻¹ (mod p)
+
 ```
 
 ### 3. When to Use Which Method
@@ -646,6 +692,7 @@ C(n,r) = n! / (r! × (n-r)!)
 MOD1 = 10**9 + 7   # 1000000007 (prime)
 MOD2 = 10**9 + 9   # 1000000009 (prime)
 MOD3 = 998244353   # Prime, has primitive root
+
 ```
 
 **Why these?**

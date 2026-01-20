@@ -143,6 +143,7 @@ permalink: /30_number_theory/02_primes/05_prime_applications/
 |                                                                 |
 | RESULT: [1, 2, 3, 4, 5, 6, 8, 9, 10, 12]                       |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -183,6 +184,7 @@ permalink: /30_number_theory/02_primes/05_prime_applications/
 |                                                                 |
 | COUNT: 8 pairs                                                  |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -216,6 +218,7 @@ permalink: /30_number_theory/02_primes/05_prime_applications/
 |   Smallest: 3 + 97                                              |
 |   Most balanced: 47 + 53                                        |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -248,6 +251,7 @@ def is_ugly(n: int) -> bool:
             n //= p
     
     return n == 1
+
 ```
 
 ---
@@ -287,6 +291,7 @@ def nth_ugly_number(n: int) -> int:
             i5 += 1
     
     return ugly[n - 1]
+
 ```
 
 ---
@@ -323,6 +328,7 @@ def nth_super_ugly(n: int, primes: list[int]) -> int:
         heapq.heappush(heap, (p * ugly[idx + 1], p, idx + 1))
     
     return ugly[n - 1]
+
 ```
 
 ---
@@ -357,6 +363,7 @@ def find_twin_primes(limit: int) -> list[tuple[int, int]]:
             twins.append((i, i + 2))
     
     return twins
+
 ```
 
 ---
@@ -403,6 +410,7 @@ def first_gap_of_size(gap_size: int, limit: int = 10**6) -> tuple[int, int] | No
         if gap == gap_size:
             return (p1, p2)
     return None
+
 ```
 
 ---
@@ -463,6 +471,7 @@ def all_goldbach_partitions(n: int) -> list[tuple[int, int]]:
             partitions.append((p, n - p))
     
     return partitions
+
 ```
 
 ---
@@ -497,6 +506,7 @@ def find_sophie_germain_primes(limit: int) -> list[int]:
             sophie.append(p)
     
     return sophie
+
 ```
 
 ---
@@ -529,6 +539,7 @@ def sum_of_primes(n: int) -> int:
                 is_prime[j] = False
     
     return sum(i for i in range(n + 1) if is_prime[i])
+
 ```
 
 ---
@@ -576,6 +587,7 @@ class Solution:
                 count += 1
         
         return count
+
 ```
 
 ### Problem 866: Prime Palindrome
@@ -615,6 +627,7 @@ class Solution:
             # Skip 8-digit range (all divisible by 11)
             if 10**7 < n < 10**8:
                 n = 10**8
+
 ```
 
 ---

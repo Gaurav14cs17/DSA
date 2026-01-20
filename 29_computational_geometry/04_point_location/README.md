@@ -77,6 +77,7 @@ def point_in_polygon(point, polygon):
         p1 = p2
     
     return inside
+
 ```
 
 ### 2. Winding Number
@@ -111,6 +112,7 @@ def is_left(p0, p1, p2):
     """Test if point is left of line"""
     return ((p1.x - p0.x) * (p2.y - p0.y) - 
             (p2.x - p0.x) * (p1.y - p0.y))
+
 ```
 
 ### 3. Point in Triangle
@@ -143,6 +145,7 @@ def point_in_triangle(p, a, b, c):
     
     # Check if point is in triangle
     return (u >= 0) and (v >= 0) and (u + v <= 1)
+
 ```
 
 ### 4. Point in Circle
@@ -160,6 +163,7 @@ def point_on_circle(point, center, radius, epsilon=1e-9):
     """Check if point is on circle boundary"""
     dist_sq = point.distance_squared(center)
     return abs(dist_sq - radius * radius) < epsilon
+
 ```
 
 ---

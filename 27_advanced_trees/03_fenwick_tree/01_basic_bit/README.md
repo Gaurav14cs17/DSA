@@ -99,6 +99,7 @@ class NumArray:
             return total
         
         return prefix_sum(right + 1) - prefix_sum(left)
+
 ```
 
 ---
@@ -128,6 +129,7 @@ def get_modified_array(length: int, updates: List[List[int]]) -> List[int]:
         result[i] += result[i - 1]
     
     return result
+
 ```
 
 ---
@@ -152,6 +154,7 @@ class NumArrayImmutable:
     
     def sumRange(self, left: int, right: int) -> int:
         return self.prefix[right + 1] - self.prefix[left]
+
 ```
 
 ---
@@ -197,6 +200,7 @@ class CustomStack:
         if self.inc:
             idx = min(k, len(self.inc)) - 1
             self.inc[idx] += val
+
 ```
 
 ---
@@ -244,6 +248,7 @@ def friendRequests(n: int, restrictions: List[List[int]],
         result.append(valid)
     
     return result
+
 ```
 
 ---
@@ -280,6 +285,7 @@ def count_subsequences_in_range(nums: List[int], min_sum: int, max_sum: int) -> 
             result = (result + dp[s]) % MOD
     
     return result
+
 ```
 
 ---

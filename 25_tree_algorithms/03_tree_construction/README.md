@@ -79,6 +79,7 @@ permalink: /25_tree_algorithms/03_tree_construction/
 **Space:** $O(n)$
 
 **Example:**
+
 ```
 Preorder: [3, 9, 20, 15, 7]
 Inorder:  [9, 3, 15, 20, 7]
@@ -86,6 +87,7 @@ Inorder:  [9, 3, 15, 20, 7]
 Root = 3
 Left subtree: [9] (preorder), [9] (inorder)
 Right subtree: [20, 15, 7] (preorder), [15, 20, 7] (inorder)
+
 ```
 
 ---
@@ -122,6 +124,7 @@ Right subtree: [20, 15, 7] (preorder), [15, 20, 7] (inorder)
 
 ```math
 C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}
+
 ```
 
 **First few:** 1, 1, 2, 5, 14, 42, 132, ...
@@ -582,6 +585,7 @@ def recover_from_preorder(traversal: str) -> Optional[TreeNode]:
         stack.append(node)
     
     return stack[0] if stack else None
+
 ```
 
 ---
@@ -636,6 +640,7 @@ Tree Construction
      +-- Serialization
          +-- DFS (preorder) → Simple, compact
          +-- BFS (level-order) → Natural representation
+
 ```
 
 ---

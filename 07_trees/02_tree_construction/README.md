@@ -53,6 +53,7 @@ permalink: /07_trees/02_tree_construction/
 ```
 preorder = [root] + preorder(left) + preorder(right)
 inorder  = inorder(left) + [root] + inorder(right)
+
 ```
 
 **Time:** O(n) with hash map for root lookup.
@@ -76,12 +77,14 @@ Number of structurally unique BSTs with $n$ nodes:
 
 ```math
 \boxed{C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}}
+
 ```
 
 **Recurrence:**
 
 ```math
 C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
+
 ```
 
 **Interpretation:** Choose root $i$, left subtree has $i$ nodes, right has $n-1-i$.
@@ -98,6 +101,7 @@ C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
 
 ```math
 \text{serialize}(T) = \text{val} + \text{serialize}(T_L) + \text{serialize}(T_R)
+
 ```
 
 Use "#" for null nodes.
@@ -112,6 +116,7 @@ Use "#" for null nodes.
      4   5
 
 Serialized: "1,2,#,#,3,4,#,#,5,#,#"
+
 ```
 
 ---
@@ -271,6 +276,7 @@ class Codec:
             return node
         
         return build()
+
 ```
 
 ---
@@ -349,6 +355,7 @@ Final tree:
     9  20
       /  \
      15   7
+
 ```
 
 ### Catalan Number - Count Unique BSTs (#96)
@@ -372,6 +379,7 @@ C₃ = C₀×C₂ + C₁×C₁ + C₂×C₀
       2             3          1    3          1             2
        \           /                          /               /
         3         2                          2               1
+
 ```
 
 ### Serialize/Deserialize (#297)
@@ -410,6 +418,7 @@ val=1 → create node(1)
         return node(5)
     return node(3)
 return node(1)
+
 ```
 
 ---
@@ -431,6 +440,7 @@ return node(1)
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **GeeksforGeeks** | Construct from traversals | [Tutorial](https://www.geeksforgeeks.org/construct-tree-from-given-inorder-and-preorder-traversal/) |
@@ -439,6 +449,7 @@ return node(1)
 | **CP Algorithms** | Tree construction | [Guide](https://cp-algorithms.com/) |
 
 ### 📺 Video Tutorials
+
 | Creator | Topic | Link |
 |---------|-------|------|
 | **NeetCode** | Construct from Pre+In | [YouTube](https://www.youtube.com/watch?v=ihj4IQGZ2zc) |
@@ -447,12 +458,14 @@ return node(1)
 | **Abdul Bari** | Catalan numbers | [YouTube](https://www.youtube.com/watch?v=CMaZ69P1bAc) |
 
 ### 🎯 Practice Collections
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Tree construction tag | [Problems](https://leetcode.com/tag/tree/) |
 | **HackerRank** | Tree building | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=trees) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Catalan Applications** | Various uses | [Tutorial](https://www.geeksforgeeks.org/applications-of-catalan-numbers/) |
@@ -460,12 +473,14 @@ return node(1)
 | **Cartesian Tree** | Special construction | [Wikipedia](https://en.wikipedia.org/wiki/Cartesian_tree) |
 
 ### 📊 Visualization
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo** | Tree construction | [Website](https://visualgo.net/en/bst) |
 | **CS Animations** | Build tree animations | [Website](https://www.cs.usfca.edu/~galles/visualization/BST.html) |
 
 ### 📐 Mathematical Background
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Catalan Formula** | \( C_n = \frac{1}{n+1}\binom{2n}{n} \) | [OEIS](https://oeis.org/A000108) |

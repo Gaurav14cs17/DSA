@@ -102,6 +102,7 @@ For pattern P of length m:
 π[i] = max{ k : 0 ≤ k < i and P[0..k-1] = P[i-k+1..i] }
      = length of longest proper prefix of P[0..i] 
        that is also a suffix of P[0..i]
+
 ```
 
 **Proper prefix:** A prefix that is not the entire string.
@@ -109,20 +110,26 @@ For pattern P of length m:
 ### Key Properties
 
 **Property 1:** Border Chain
+
 ```
 If π[i] = k, then π[k-1] is the next longest border
 Border chain: i → π[i] → π[π[i]] → ... → 0
+
 ```
 
 **Property 2:** Monotonicity
+
 ```
 π[i] ≤ π[i-1] + 1 for all i
+
 ```
 
 **Property 3:** Periodicity
+
 ```
 If π[m-1] > 0 and m % (m - π[m-1]) == 0,
 then string has period (m - π[m-1])
+
 ```
 
 ### Example Computation
@@ -143,6 +150,7 @@ i=7: "ABABCABA" → "ABA" matches → π[7] = 3
 i=8: "ABABCABAA" → "ABA" matches "ABA" but A≠C → π[8] = 1
 
 Result: π = [0, 0, 1, 2, 0, 1, 2, 3, 1]
+
 ```
 
 ---
@@ -205,6 +213,7 @@ def visualize_failure_function(pattern):
 
 # Example
 visualize_failure_function("ABABCABAA")
+
 ```
 
 ### Pattern Matching Algorithm
@@ -296,6 +305,7 @@ def kmp_search_verbose(text, pattern):
 text = "ABABDABACDABABCABAB"
 pattern = "ABABCABAB"
 print(kmp_search_verbose(text, pattern))
+
 ```
 
 ---
@@ -359,6 +369,7 @@ def kmp_case_insensitive(text, pattern):
     text_lower = text.lower()
     pattern_lower = pattern.lower()
     return kmp_search(text_lower, pattern_lower)
+
 ```
 
 ---
@@ -378,6 +389,7 @@ For iteration i:
 - **Potential change:** ΔΦ ≤ 1 (k increases by at most 1)
 
 **Amortized cost:** 
+
 ```
 Amortized cost = Actual cost + ΔΦ
                ≤ (1 + fallbacks) + 1
@@ -388,6 +400,7 @@ Sum of amortized costs = Σ(1 + 1) = 2m
 Sum of actual costs = Sum of amortized costs - (Φ_final - Φ_initial)
                    ≤ 2m - (-m) = 3m
                    = O(m)
+
 ```
 
 **Proof (Pattern Matching):**
@@ -448,6 +461,7 @@ This section contains **45+ problems** across **6 categories**:
 - Next comparison starts at pattern[π[k-1]]
 
 **Visual Example:**
+
 ```
 Text:    ...ABABCABAB...
 Pattern:    ABABCABAA
@@ -460,6 +474,7 @@ Next comparison:
 Text:    ...ABABCABAB...
 Pattern:       ABABCABAA
                ↑ continue from here (position 3)
+
 ```
 
 ### When to Use KMP
@@ -495,6 +510,7 @@ Pattern:       ABABCABAA
 ### Failure Function Properties
 
 **Theorem 1 (Border Chain):**
+
 ```
 All borders of string s can be enumerated by following π:
 border₁ = s[0..π[n-1]-1]
@@ -502,9 +518,11 @@ border₂ = s[0..π[π[n-1]-1]-1]
 ...until π becomes 0
 
 Time: O(number of borders) ≤ O(log n) typically
+
 ```
 
 **Theorem 2 (Period Detection):**
+
 ```
 If π[n-1] > 0 and n % (n - π[n-1]) == 0,
 then s has period p = n - π[n-1]
@@ -513,13 +531,16 @@ Example: "abcabcabc"
 n = 9, π[8] = 6
 Period = 9 - 6 = 3
 s = "abc" repeated 3 times
+
 ```
 
 **Theorem 3 (Critical Factorization):**
+
 ```
 For any string, there exists a position where
 the border relation provides optimal information
 for pattern matching.
+
 ```
 
 ### Online KMP
@@ -569,6 +590,7 @@ for i, char in enumerate(stream):
     match_pos = kmp.process_char(char)
     if match_pos is not None:
         print(f"Match found at position {match_pos}")
+
 ```
 
 ### KMP Automaton
@@ -623,6 +645,7 @@ def match_with_automaton(text, pattern):
             state = automaton[state].get('', 0)  # Failure transition
     
     return matches
+
 ```
 
 ---

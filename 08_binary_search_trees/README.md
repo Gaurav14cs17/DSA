@@ -44,6 +44,7 @@ For every node $x$:
 
 ```math
 \boxed{\forall y \in T_L(x): y.val < x.val < z.val \; \forall z \in T_R(x)}
+
 ```
 
 **Left subtree:** All values less than node
@@ -70,18 +71,21 @@ For every node $x$:
 
 ```math
 h_{min} = \lfloor \log_2 n \rfloor
+
 ```
 
 **Worst case (skewed):**
 
 ```math
 h_{max} = n - 1
+
 ```
 
 **Average case (random insertions):**
 
 ```math
 E[h] = O(\log n)
+
 ```
 
 ---
@@ -106,6 +110,7 @@ E[h] = O(\log n)
 \min(T_R(x)) & \text{if right subtree exists} \\
 \text{first ancestor where } x \text{ is in left subtree} & \text{otherwise}
 \end{cases}
+
 ```
 
 **Predecessor of x (next smaller):**
@@ -115,6 +120,7 @@ E[h] = O(\log n)
 \max(T_L(x)) & \text{if left subtree exists} \\
 \text{first ancestor where } x \text{ is in right subtree} & \text{otherwise}
 \end{cases}
+
 ```
 
 ---
@@ -125,6 +131,7 @@ E[h] = O(\log n)
 
 ```math
 \text{isValidBST}(node, min, max) = min < node.val < max
+
 ```
 
 ---
@@ -137,6 +144,7 @@ Store subtree size at each node.
 
 ```math
 \text{rank}(x) = \text{size}(T_L(x)) + 1
+
 ```
 
 **Search:** O(h) with size augmentation.
@@ -149,6 +157,7 @@ Store subtree size at each node.
 
 ```math
 \text{root} = arr[mid], \quad mid = \lfloor (left + right) / 2 \rfloor
+
 ```
 
 **Time:** O(n), **Height:** O(log n)
@@ -181,6 +190,7 @@ def searchBST(root: TreeNode, val: int) -> TreeNode:
     while root and root.val != val:
         root = root.left if val < root.val else root.right
     return root
+
 ```
 
 ### BST Insert
@@ -201,6 +211,7 @@ def insertIntoBST(root: TreeNode, val: int) -> TreeNode:
         root.right = insertIntoBST(root.right, val)
     
     return root
+
 ```
 
 ### BST Delete
@@ -236,6 +247,7 @@ def deleteNode(root: TreeNode, key: int) -> TreeNode:
         root.right = deleteNode(root.right, successor.val)
     
     return root
+
 ```
 
 ---
@@ -288,6 +300,7 @@ BST Problem
      +-- Range queries → Validate with bounds
      |
      +-- Kth element → Inorder with count
+
 ```
 
 ---
@@ -350,6 +363,7 @@ BST Problem
 ## 📚 References & Learning Resources
 
 ### 📖 Books & Courses
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **CLRS Chapter 12** | Binary search trees | [MIT Press](https://mitpress.mit.edu/books/introduction-algorithms) |
@@ -357,6 +371,7 @@ BST Problem
 | **Competitive Programming 3** | Chapter 2.3 - BST | [Book](https://cpbook.net/) |
 
 ### 🌐 Online Tutorials
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **GeeksforGeeks** | BST complete guide | [Tutorial](https://www.geeksforgeeks.org/binary-search-tree-data-structure/) |
@@ -365,6 +380,7 @@ BST Problem
 | **HackerRank** | BST challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=trees) |
 
 ### 📺 Video Resources
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **NeetCode** | BST playlist | [YouTube](https://www.youtube.com/playlist?list=PLot-Xpze53ldg4pN6PfzoJY7KsKcxF1jg) |
@@ -374,6 +390,7 @@ BST Problem
 | **William Fiset** | BST algorithms | [YouTube](https://www.youtube.com/watch?v=JfSdGQdAzq8) |
 
 ### 📝 Practice Platforms
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | BST tag | [Problems](https://leetcode.com/tag/binary-search-tree/) |
@@ -382,6 +399,7 @@ BST Problem
 | **CodeChef** | BST practice | [Practice](https://www.codechef.com/practice) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **AVL Trees** | Self-balancing BST | [Tutorial](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/) |
@@ -391,6 +409,7 @@ BST Problem
 | **Treap** | Randomized BST | [CP-Algorithms](https://cp-algorithms.com/data_structures/treap.html) |
 
 ### 🎯 Problem Collections
+
 | Collection | Focus | Link |
 |-----------|-------|------|
 | **NeetCode 150** | Essential BST | [List](https://neetcode.io/practice) |
@@ -399,6 +418,7 @@ BST Problem
 | **Striver's SDE Sheet** | Must-do BST | [Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/) |
 
 ### 📊 Visualization Tools
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo** | BST operations | [Website](https://visualgo.net/en/bst) |
@@ -406,6 +426,7 @@ BST Problem
 | **CS Animations** | BST visualizations | [Website](https://www.cs.usfca.edu/~galles/visualization/BST.html) |
 
 ### 🏆 Competition Resources
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **USACO Guide** | BST guide | [Guide](https://usaco.guide/silver/intro-tree) |
@@ -441,6 +462,7 @@ BST Problem
 [ ] Can I solve in O(h) instead of O(n)?
 [ ] Do I need to augment nodes with extra info (size, height)?
 [ ] Is this a balanced BST (guaranteed O(log n))?
+
 ```
 
 ---

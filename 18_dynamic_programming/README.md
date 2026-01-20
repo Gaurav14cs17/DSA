@@ -63,6 +63,7 @@ permalink: /18_dynamic_programming/
 ```math
 \text{Time} = O(\text{states} \times \text{transition cost})
 \text{Space} = O(\text{states})
+
 ```
 
 ---
@@ -73,6 +74,7 @@ Many 2D DP can be reduced to 1D:
 
 ```math
 \text{If } dp[i] \text{ only depends on } dp[i-1] \Rightarrow O(n) \text{ space}
+
 ```
 
 ---
@@ -111,6 +113,7 @@ def solve(input):
         dp[state] = recurrence(dp, state)
     
     return dp[answer_state]
+
 ```
 
 ### Fibonacci (1D DP)
@@ -123,6 +126,7 @@ def fib(n: int) -> int:
     for i in range(2, n + 1):
         dp.append(dp[-1] + dp[-2])
     return dp[n]
+
 ```
 
 ### LCS (2D DP)
@@ -140,6 +144,7 @@ def longestCommonSubsequence(text1: str, text2: str) -> int:
                 dp[i][j] = max(dp[i-1][j], dp[i][j-1])
     
     return dp[m][n]
+
 ```
 
 ---
@@ -214,6 +219,7 @@ DP Problem
     +-- Subset selection → Bitmask DP
     |
     +-- Counting with constraints → Digit DP
+
 ```
 
 ---

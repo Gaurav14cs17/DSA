@@ -51,6 +51,7 @@ The **p-adic valuation** (or **p-adic order**) of n, denoted ν_p(n), is the lar
 
 ```math
 \nu_p(n) = \max\{e \geq 0 : p^e \mid n\}
+
 ```
 
 ### Examples
@@ -69,6 +70,7 @@ The **p-adic valuation** (or **p-adic order**) of n, denoted ν_p(n), is the lar
 \nu_p(a \times b) = \nu_p(a) + \nu_p(b)
 \nu_p(a / b) = \nu_p(a) - \nu_p(b)
 \nu_p(a + b) \geq \min(\nu_p(a), \nu_p(b))
+
 ```
 
 ---
@@ -99,6 +101,7 @@ def p_adic_valuation(n: int, p: int) -> int:
 print(p_adic_valuation(72, 2))   # 3 (72 = 8 × 9 = 2³ × 3²)
 print(p_adic_valuation(72, 3))   # 2
 print(p_adic_valuation(100, 5))  # 2 (100 = 4 × 25 = 2² × 5²)
+
 ```
 
 ### 2. p-adic Valuation of Factorial (Legendre's Formula)
@@ -133,6 +136,7 @@ def p_adic_factorial_v2(n: int, p: int) -> int:
 # Examples
 print(p_adic_factorial(100, 5))  # 24 (trailing zeros in 100!)
 print(p_adic_factorial(100, 2))  # 97
+
 ```
 
 ### 3. p-adic Valuation of Binomial (Kummer's Theorem)
@@ -174,6 +178,7 @@ def p_adic_binomial_kummer(n: int, k: int, p: int) -> int:
 # Examples
 print(p_adic_binomial(10, 3, 2))  # ν₂(C(10,3)) = ν₂(120) = 3
 print(p_adic_binomial(10, 5, 5))  # ν₅(C(10,5)) = ν₅(252) = 0
+
 ```
 
 ### 4. Lifting the Exponent Lemma (LTE)
@@ -216,6 +221,7 @@ def lte_lemma_even(a: int, b: int, n: int) -> int:
 # Note: 2 - 1 = 1, so LTE doesn't apply directly
 # Instead: 2^2 - 1 = 3, ν₃(3) = 1, and 2^100 = (2^2)^50
 # So ν₃(2^100 - 1) = ν₃(4^50 - 1) = ν₃(4-1) + ν₃(50) = 1 + 0 = 1
+
 ```
 
 ---
@@ -247,6 +253,7 @@ def lte_lemma_even(a: int, b: int, n: int) -> int:
 |                                                                 |
 | Verify: C(10,3) = 120 = 8 × 15 = 2³ × 15 ✓                     |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -278,6 +285,7 @@ def is_divisible(n: int, k: int, m: int) -> bool:
         if p_adic_binomial(n, k, temp) < 1:
             return False
     return True
+
 ```
 
 ### 2. Exact Power of Prime in Product
@@ -286,6 +294,7 @@ def is_divisible(n: int, k: int, m: int) -> bool:
 def power_in_product(arr: list[int], p: int) -> int:
     """Find ν_p of product of array elements."""
     return sum(p_adic_valuation(x, p) for x in arr)
+
 ```
 
 ---

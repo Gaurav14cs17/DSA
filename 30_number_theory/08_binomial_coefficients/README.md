@@ -40,6 +40,7 @@ permalink: /30_number_theory/08_binomial_coefficients/
 
 ```math
 \binom{n}{k} = \frac{n!}{k!(n-k)!}
+
 ```
 
 **Meaning:** Number of ways to choose k items from n items.
@@ -68,6 +69,7 @@ permalink: /30_number_theory/08_binomial_coefficients/
         1   4   6   4   1
       1   5  10  10   5   1
     1   6  15  20  15   6   1
+
 ```
 
 ---
@@ -152,6 +154,7 @@ class BinomialCoeff:
         if r > n or r < 0:
             return 0
         return self.fact[n] * self.inv_fact[r] % self.mod * self.inv_fact[n - r] % self.mod
+
 ```
 
 ---

@@ -47,12 +47,14 @@ permalink: /06_hash_tables/01_frequency_counting/
 
 ```math
 \text{freq}(x, A) = |\{i : A[i] = x\}|
+
 ```
 
 **Total elements:**
 
 ```math
 \sum_{x \in \text{unique}(A)} \text{freq}(x) = n
+
 ```
 
 ---
@@ -69,6 +71,7 @@ Maintain candidate and count. If element matches, increment; otherwise decrement
 
 ```math
 \text{count}_{majority} > \frac{n}{2} > \text{count}_{all\_others}
+
 ```
 
 ---
@@ -79,6 +82,7 @@ Two strings are anagrams if:
 
 ```math
 \forall c \in \Sigma: \text{freq}_s(c) = \text{freq}_t(c)
+
 ```
 
 ---
@@ -186,6 +190,7 @@ def longestPalindrome(s: str) -> int:
             has_odd = True
     
     return length + (1 if has_odd else 0)
+
 ```
 
 ---
@@ -240,6 +245,7 @@ Final candidate: 2
 Verify: freq(2) = 4 > 7/2 ✓
 
 Why it works: Majority element survives all cancellations!
+
 ```
 
 ### Top K Frequent Elements (#347)
@@ -262,6 +268,7 @@ Step 3: Collect from highest frequency
   result = [1, 2]
 
 Time: O(n), Space: O(n)
+
 ```
 
 ### Group Anagrams (#49)
@@ -280,6 +287,7 @@ Group by sorted string:
 Result: [["eat","tea","ate"], ["tan","nat"], ["bat"]]
 
 Alternative key: frequency tuple (26 counts)
+
 ```
 
 ### First Unique Character (#387)
@@ -295,6 +303,7 @@ Pass 2: Find first with freq=1
   return 0
 
 Time: O(n), Space: O(1) for fixed alphabet
+
 ```
 
 ---
@@ -316,6 +325,7 @@ Time: O(n), Space: O(1) for fixed alphabet
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **Wikipedia** | Boyer-Moore algorithm | [Article](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_majority_vote_algorithm) |
@@ -324,6 +334,7 @@ Time: O(n), Space: O(1) for fixed alphabet
 | **CP Algorithms** | Frequency techniques | [Guide](https://cp-algorithms.com/) |
 
 ### 📺 Video Tutorials
+
 | Creator | Topic | Link |
 |---------|-------|------|
 | **NeetCode** | Top K Frequent | [YouTube](https://www.youtube.com/watch?v=YPTqKIgVk-k) |
@@ -332,12 +343,14 @@ Time: O(n), Space: O(1) for fixed alphabet
 | **Abdul Bari** | Hashing applications | [YouTube](https://www.youtube.com/watch?v=KyUTuwz_b7Q) |
 
 ### 🎯 Practice Collections
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Frequency tag | [Problems](https://leetcode.com/tag/counting/) |
 | **HackerRank** | Hash challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=hash-tables) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Bucket Sort** | O(n) sorting by frequency | [Tutorial](https://www.geeksforgeeks.org/bucket-sort-2/) |
@@ -345,6 +358,7 @@ Time: O(n), Space: O(1) for fixed alphabet
 | **Anagram Hashing** | Efficient anagram detection | [Tutorial](https://www.geeksforgeeks.org/check-whether-two-strings-are-anagram-of-each-other/) |
 
 ### 📊 Visualization
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo** | Hash table operations | [Website](https://visualgo.net/en/hashtable) |

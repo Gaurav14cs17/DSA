@@ -122,6 +122,7 @@ def gcdOfStrings(str1: str, str2: str) -> str:
     from math import gcd
     g = gcd(len(str1), len(str2))
     return str1[:g]
+
 ```
 
 ### Template 2: Nth Magical Number
@@ -155,6 +156,7 @@ def nthMagicalNumber(n: int, a: int, b: int) -> int:
             right = mid
     
     return left % MOD
+
 ```
 
 ### Template 3: Subarray GCD Equal to K
@@ -185,6 +187,7 @@ def subarrayGCD(nums: list[int], k: int) -> int:
                 break  # GCD can't increase
     
     return count
+
 ```
 
 ### Template 4: Check Reachable Point
@@ -205,6 +208,7 @@ def isReachable(targetX: int, targetY: int) -> bool:
     
     # Check if g is power of 2
     return (g & (g - 1)) == 0
+
 ```
 
 ---
@@ -226,6 +230,7 @@ def count_coprime_pairs(nums: list[int]) -> int:
                 count += 1
     
     return count
+
 ```
 
 ### Pattern 2: Simplifying Fractions
@@ -236,6 +241,7 @@ def simplify(num: int, den: int) -> tuple[int, int]:
     from math import gcd
     g = gcd(abs(num), abs(den))
     return num // g, den // g
+
 ```
 
 ### Pattern 3: Meeting Time (Synchronization)
@@ -245,6 +251,7 @@ def next_meeting(interval1: int, interval2: int) -> int:
     """When do two cyclic events next coincide?"""
     from math import lcm
     return lcm(interval1, interval2)
+
 ```
 
 ---

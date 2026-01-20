@@ -35,6 +35,7 @@ A queue $Q$ is a collection supporting:
 ```math
 \text{enqueue}(x): Q \to Q \cup \{x\} \text{ (add to rear)}
 \text{dequeue}(): Q \to Q \setminus \{\text{front}\} \text{ (remove from front)}
+
 ```
 
 **FIFO Property:** First element enqueued is first element dequeued.
@@ -61,18 +62,21 @@ A queue $Q$ is a collection supporting:
 ```math
 \text{rear} = (\text{rear} + 1) \mod \text{capacity}
 \text{front} = (\text{front} + 1) \mod \text{capacity}
+
 ```
 
 **Size Calculation:**
 
 ```math
 \text{size} = (\text{rear} - \text{front} + \text{capacity}) \mod \text{capacity}
+
 ```
 
 **Full Condition:**
 
 ```math
 (\text{rear} + 1) \mod \text{capacity} = \text{front}
+
 ```
 
 ---
@@ -83,6 +87,7 @@ For graph with $V$ vertices and $E$ edges:
 
 ```math
 \boxed{T(V, E) = O(V + E)}
+
 ```
 
 **Proof:**
@@ -171,6 +176,7 @@ class Queue:
     
     def is_empty(self):
         return len(self.items) == 0
+
 ```
 
 ### BFS Template
@@ -197,6 +203,7 @@ def bfs(graph, start):
                 distance[neighbor] = distance[node] + 1
     
     return distance
+
 ```
 
 ### Multi-source BFS
@@ -222,6 +229,7 @@ def multi_source_bfs(grid, sources):
                 queue.append((nx, ny))
     
     return distance
+
 ```
 
 ---
@@ -278,6 +286,7 @@ Level Order?   Shortest Path?   Sliding Window?
 Tree BFS      Graph BFS       Monotonic Deque
     |              |              |
  Zigzag?      Multi-source?   Max/Min tracking
+
 ```
 
 ---
@@ -343,6 +352,7 @@ Tree BFS      Graph BFS       Monotonic Deque
 ## 📚 References & Learning Resources
 
 ### 📖 Books & Courses
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **CLRS Chapter 22** | BFS algorithm | [MIT Press](https://mitpress.mit.edu/books/introduction-algorithms) |
@@ -350,6 +360,7 @@ Tree BFS      Graph BFS       Monotonic Deque
 | **Competitive Programming 3** | Chapter 4 - Graph traversal | [Book](https://cpbook.net/) |
 
 ### 🌐 Online Tutorials
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **GeeksforGeeks** | Queue complete guide | [Tutorial](https://www.geeksforgeeks.org/queue-data-structure/) |
@@ -358,6 +369,7 @@ Tree BFS      Graph BFS       Monotonic Deque
 | **HackerRank** | Queue challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=queues) |
 
 ### 📺 Video Resources
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **NeetCode** | BFS playlist | [YouTube](https://www.youtube.com/playlist?list=PLot-Xpze53leU0Ec0VkBhnf4npMRFiNcB) |
@@ -367,6 +379,7 @@ Tree BFS      Graph BFS       Monotonic Deque
 | **Tech Dose** | BFS problems series | [YouTube](https://www.youtube.com/watch?v=xlVX7dXLS64) |
 
 ### 📝 Practice Platforms
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | BFS tag | [Problems](https://leetcode.com/tag/breadth-first-search/) |
@@ -375,6 +388,7 @@ Tree BFS      Graph BFS       Monotonic Deque
 | **CodeChef** | BFS problems | [Practice](https://www.codechef.com/practice) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Multi-Source BFS** | Simultaneous BFS | [Tutorial](https://www.geeksforgeeks.org/multi-source-shortest-path-in-unweighted-graph/) |
@@ -384,6 +398,7 @@ Tree BFS      Graph BFS       Monotonic Deque
 | **A* Search** | Heuristic BFS | [Wikipedia](https://en.wikipedia.org/wiki/A*_search_algorithm) |
 
 ### 🎯 Problem Collections
+
 | Collection | Focus | Link |
 |-----------|-------|------|
 | **NeetCode 150** | Essential BFS | [List](https://neetcode.io/practice) |
@@ -392,6 +407,7 @@ Tree BFS      Graph BFS       Monotonic Deque
 | **Striver's SDE Sheet** | Must-do BFS | [Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/) |
 
 ### 📊 Visualization Tools
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo** | BFS visualization | [Website](https://visualgo.net/en/dfsbfs) |
@@ -399,6 +415,7 @@ Tree BFS      Graph BFS       Monotonic Deque
 | **CS Animations** | Data structure animations | [Website](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html) |
 
 ### 🏆 Competition Resources
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **USACO Guide** | BFS guide | [Guide](https://usaco.guide/silver/graph-traversal) |
@@ -434,6 +451,7 @@ Tree BFS      Graph BFS       Monotonic Deque
 [ ] Can monotonic deque optimize sliding window?
 [ ] Should I mark visited when enqueuing or dequeuing?
 [ ] Do I need bidirectional BFS for large state space?
+
 ```
 
 ---

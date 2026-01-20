@@ -54,6 +54,7 @@ permalink: /33_matrix_exponentiation/
 
 ```math
 a_n = c_1 a_{n-1} + c_2 a_{n-2} + \cdots + c_k a_{n-k}
+
 ```
 
 **Examples:**
@@ -62,18 +63,21 @@ a_n = c_1 a_{n-1} + c_2 a_{n-2} + \cdots + c_k a_{n-k}
 
 ```math
 F_n = F_{n-1} + F_{n-2}, \quad F_0 = 0, F_1 = 1
+
 ```
 
 **Tribonacci:**
 
 ```math
 T_n = T_{n-1} + T_{n-2} + T_{n-3}, \quad T_0 = 0, T_1 = 1, T_2 = 1
+
 ```
 
 **Lucas Numbers:**
 
 ```math
 L_n = L_{n-1} + L_{n-2}, \quad L_0 = 2, L_1 = 1
+
 ```
 
 ---
@@ -86,6 +90,7 @@ L_n = L_{n-1} + L_{n-2}, \quad L_0 = 2, L_1 = 1
 
 ```math
 \begin{bmatrix} F_{n+1} \\ F_n \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} F_n \\ F_{n-1} \end{bmatrix}
+
 ```
 
 **Proof by Induction:**
@@ -97,6 +102,7 @@ Base case:
 $$ ✓
 
 Inductive step: If true for $n$, then:
+
 ```
 
 \begin{bmatrix} F_{n+2} \\ F_{n+1} \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} F_{n+1} \\ F_n \end{bmatrix} = \begin{bmatrix} F_{n+1} + F_n \\ F_{n+1} \end{bmatrix} = \begin{bmatrix} F_{n+2} \\ F_{n+1} \end{bmatrix}
@@ -106,6 +112,7 @@ Therefore:
 
 ```math
 \begin{bmatrix} F_{n+1} \\ F_n \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix}^n \begin{bmatrix} F_1 \\ F_0 \end{bmatrix} = \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix}^n \begin{bmatrix} 1 \\ 0 \end{bmatrix}
+
 ```
 
 ---
@@ -125,6 +132,7 @@ I & \text{if } n = 0 \\
 (M^{n/2})^2 & \text{if } n \text{ is even} \\
 M \cdot (M^{(n-1)/2})^2 & \text{if } n \text{ is odd}
 \end{cases}
+
 ```
 
 **Time Complexity:**
@@ -160,6 +168,7 @@ a_{n-3} \\
 \vdots \\ 
 a_{n-k} 
 \end{bmatrix}
+
 ```
 
 This is called the **companion matrix**.
@@ -225,6 +234,7 @@ This is called the **companion matrix**.
 |                                                                  |
 |   Only 4 matrix multiplications instead of 10 iterations!       |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -277,6 +287,7 @@ This is called the **companion matrix**.
 |                                                                  |
 | So A³[0][2] should be 1                                         |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -315,6 +326,7 @@ def matrix_multiply(A: list[list[int]], B: list[list[int]],
                     result[i][j] %= mod
     
     return result
+
 ```
 
 ---
@@ -350,6 +362,7 @@ def matrix_power(matrix: list[list[int]], n: int,
         n //= 2
     
     return result
+
 ```
 
 ---
@@ -409,6 +422,7 @@ def fib_matrix_optimized(n: int, mod: int = 10**9 + 7) -> int:
         n //= 2
     
     return a
+
 ```
 
 ---
@@ -462,6 +476,7 @@ def linear_recurrence_matrix(coeffs: list[int], initial: list[int],
         result %= mod
     
     return result
+
 ```
 
 ---
@@ -495,6 +510,7 @@ def count_paths_graph(adj_matrix: list[list[int]],
     result_matrix = matrix_power(adj_matrix, k, mod)
     
     return result_matrix[start][end]
+
 ```
 
 ---

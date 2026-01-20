@@ -73,6 +73,7 @@ class Solution:
             d += 1
         
         return total == num
+
 ```
 
 ### LeetCode 1952: Three Divisors
@@ -92,6 +93,7 @@ class Solution:
             if root % i == 0:
                 return False
         return True
+
 ```
 
 ### LeetCode 1390: Four Divisors
@@ -113,6 +115,7 @@ class Solution:
             return sum(divisors) if len(divisors) == 4 else 0
         
         return sum(get_sum_if_four(n) for n in nums)
+
 ```
 
 ### LeetCode 1492: The kth Factor of n
@@ -141,6 +144,7 @@ class Solution:
         all_factors = factors + large
         
         return all_factors[k-1] if k <= len(all_factors) else -1
+
 ```
 
 ### LeetCode 829: Consecutive Numbers Sum
@@ -163,6 +167,7 @@ class Solution:
                 count += 1
             k += 1
         return count
+
 ```
 
 ### LeetCode 952: Largest Component Size by Common Factor
@@ -217,6 +222,7 @@ class Solution:
             count[find(num)] += 1
         
         return max(count.values())
+
 ```
 
 ---

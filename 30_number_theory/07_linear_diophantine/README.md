@@ -65,6 +65,7 @@ If $(x\_0, y\_0)$ is one solution, all solutions are:
 
 ```math
 x = x_0 + k \cdot \frac{b}{\gcd(a,b)}, \quad y = y_0 - k \cdot \frac{a}{\gcd(a,b)}
+
 ```
 
 for any integer $k$.
@@ -77,6 +78,7 @@ For positive coprime $a, b$, the **Frobenius number** (largest integer NOT repre
 
 ```math
 g(a, b) = ab - a - b
+
 ```
 
 ---
@@ -182,6 +184,7 @@ def frobenius_number(a: int, b: int) -> int:
 # Examples
 print(solve_diophantine(3, 5, 7))  # One solution
 print(frobenius_number(3, 5))  # 7
+
 ```
 
 ---

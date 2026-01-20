@@ -71,6 +71,7 @@ permalink: /05_queues/03_deque_problems/
 
 ```math
 \text{front of deque} = \text{index of maximum in current window}
+
 ```
 
 **Why O(n)?**
@@ -85,6 +86,7 @@ permalink: /05_queues/03_deque_problems/
 
 ```math
 \text{result}[i] = \max_{j=i}^{i+k-1} nums[j]
+
 ```
 
 **Monotonic Deque Approach:**
@@ -104,6 +106,7 @@ permalink: /05_queues/03_deque_problems/
 ```math
 \text{sum}(i, j) = P[j] - P[i-1] \geq k
 P[i-1] \leq P[j] - k
+
 ```
 
 Find smallest $j - i$ where condition holds.
@@ -268,6 +271,7 @@ def zeroOneBFS(graph: list[list[tuple]], n: int, start: int) -> list[int]:
                     dq.append(v)
     
     return dist
+
 ```
 
 ---
@@ -345,6 +349,7 @@ i=7, num=7:
   deque = [7]
   Window [3,6,7]: max = nums[7] = 7
   result = [3, 3, 5, 5, 6, 7]
+
 ```
 
 ### Shortest Subarray Sum ≥ K (#862)
@@ -376,6 +381,7 @@ j=3: P[3]=3
   deque = [2, 3]
 
 Result: 3 (subarray [2, -1, 2])
+
 ```
 
 ### 0-1 BFS Example
@@ -411,6 +417,7 @@ Process 2:
   deque = []
 
 Final distances: [0, 0, 1, 0]
+
 ```
 
 ---
@@ -425,6 +432,7 @@ Sliding Window Optimization?
           +-- 0-1 weighted graph → 0-1 BFS with Deque
           |
           +-- DP with sliding window max → Deque DP
+
 ```
 
 ### Pattern Decision Table
@@ -455,6 +463,7 @@ Sliding Window Optimization?
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **Python Docs** | collections.deque | [Documentation](https://docs.python.org/3/library/collections.html#collections.deque) |
@@ -462,6 +471,7 @@ Sliding Window Optimization?
 | **GeeksforGeeks** | Deque implementation | [Tutorial](https://www.geeksforgeeks.org/deque-set-1-introduction-applications/) |
 
 ### 📺 Video Tutorials
+
 | Creator | Topic | Link |
 |---------|-------|------|
 | **NeetCode** | Sliding Window Maximum | [YouTube](https://www.youtube.com/watch?v=DfljaUwZsOk) |
@@ -469,12 +479,14 @@ Sliding Window Optimization?
 | **Back To Back SWE** | Deque problems | [YouTube](https://www.youtube.com/watch?v=2SXqBsTR6a8) |
 
 ### 🎯 Practice Collections
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Deque tag | [Problems](https://leetcode.com/tag/monotonic-queue/) |
 | **Codeforces** | Deque problems | [Problemset](https://codeforces.com/problemset) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **0-1 BFS** | Deque for 0/1 weights | [Codeforces Blog](https://codeforces.com/blog/entry/22276) |
@@ -482,12 +494,14 @@ Sliding Window Optimization?
 | **Deque DP Optimization** | Sliding window DP | [Tutorial](https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/) |
 
 ### 📊 Visualization Tools
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo** | Deque operations | [Website](https://visualgo.net/en/list) |
 | **Algorithm Visualizer** | Monotonic deque | [Website](https://algorithm-visualizer.org/) |
 
 ### 📐 Mathematical Analysis
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Amortized O(n)** | Why monotonic deque is O(n) | [Analysis](https://en.wikipedia.org/wiki/Amortized_analysis) |

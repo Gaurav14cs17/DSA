@@ -113,6 +113,7 @@ def binary_gcd(a: int, b: int) -> int:
 # Example usage
 print(binary_gcd(48, 18))  # 6
 print(binary_gcd(100, 35))  # 5
+
 ```
 
 ---
@@ -144,6 +145,7 @@ print(binary_gcd(100, 35))  # 5
 | Step 4: Restore common factor                                   |
 |   result = 3 << 1 = 6  ✓                                        |
 +-----------------------------------------------------------------+
+
 ```
 
 ---

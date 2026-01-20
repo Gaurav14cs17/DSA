@@ -99,6 +99,7 @@ class NumMatrix:
                 self._query(r1, c2 + 1) -
                 self._query(r2 + 1, c1) + 
                 self._query(r1, c1))
+
 ```
 
 ---

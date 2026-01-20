@@ -24,6 +24,7 @@ string  →  (letters | group)*
 group   →  number '[' string ']'
 number  →  digit+
 letters →  letter+
+
 ```
 
 ### Grammar Rules Explained:
@@ -45,6 +46,7 @@ letters →  letter+
  Nested brackets!
  
 When we see '[', we RECURSE to decode what's inside.
+
 ```
 
 ### Recursion Flow:
@@ -73,6 +75,7 @@ decode("3[a2[c]]")
 |   result = "acc" × 3 = "accaccacc"
 |
 +-► FINAL: "accaccacc"
+
 ```
 
 ---
@@ -147,6 +150,7 @@ def decodeString(s: str) -> str:
     
     decoded, _ = parse(0)
     return decoded
+
 ```
 
 ---
@@ -154,9 +158,11 @@ def decodeString(s: str) -> str:
 ## 🔍 Step-by-Step Trace: `"3[a2[c]]"`
 
 ### Initial State:
+
 ```
 s = "3[a2[c]]"
 pos = 0
+
 ```
 
 ### Execution Trace:
@@ -229,6 +235,7 @@ parse(pos=0)
 +-► Returns ("accaccacc", 8)
 
 FINAL: "accaccacc" ✓
+
 ```
 
 ---
@@ -314,6 +321,7 @@ Step 8: See ']' → RETURN from Level 2
         Back in Level 1: result = 3×"acc" = "accaccacc"
 
 FINAL: "accaccacc" ✓
+
 ```
 
 ---
@@ -342,6 +350,7 @@ FINAL: "accaccacc" ✓
 |  Level:       1       2       3       2→1                    |
 |                                                              |
 +-------------------------------------------------------------+
+
 ```
 
 ---
@@ -365,6 +374,7 @@ if char == '[':
     nested, pos = parse(pos)         # ★ RECURSE ★
     result += num * nested           # Repeat
     num = 0                          # Reset
+
 ```
 
 ### 3. When to Recurse vs Stop

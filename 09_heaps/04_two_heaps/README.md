@@ -40,6 +40,7 @@ permalink: /09_heaps/04_two_heaps/
 ```math
 |left| = |right| \text{ or } |left| = |right| + 1
 \max(left) \leq \min(right)
+
 ```
 
 ---
@@ -51,6 +52,7 @@ permalink: /09_heaps/04_two_heaps/
 \max(left) & \text{if } |left| > |right| \\
 \frac{\max(left) + \min(right)}{2} & \text{if } |left| = |right|
 \end{cases}
+
 ```
 
 ---
@@ -65,6 +67,7 @@ If |left| > |right| + 1:
 
 If |right| > |left|:
     Move min(right) to left
+
 ```
 
 ---
@@ -222,6 +225,7 @@ def medianSlidingWindow(nums: list[int], k: int) -> list[float]:
         result.append(get_median())
     
     return result
+
 ```
 
 ---
@@ -248,6 +252,7 @@ Need dynamic median/partition?
            +-- Sliding window → Two Heaps + Lazy Delete
            |
            +-- Maximize with constraints → Two Heaps (available/unavailable)
+
 ```
 
 ---

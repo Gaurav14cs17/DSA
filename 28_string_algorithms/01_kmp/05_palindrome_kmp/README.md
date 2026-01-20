@@ -31,16 +31,20 @@ KMP can solve palindrome problems efficiently by combining with string reversal.
 ### Palindrome-Border Connection
 
 **Key Insight:**
+
 ```
 String s is palindrome ⟺ s = reverse(s)
 ⟺ entire string is border when concatenated with reverse
+
 ```
 
 **For longest palindrome prefix:**
+
 ```
 Build: s + '#' + reverse(s)
 Compute π on this combined string
 π[end] gives length of longest palindrome prefix
+
 ```
 
 ### Why It Works
@@ -51,6 +55,7 @@ If s[0..k] is palindrome:
   In combined string s + '#' + reverse(s):
     prefix s[0..k] matches suffix reverse(s)[...] 
     which is reverse(s[0..k])
+
 ```
 
 ---
@@ -107,6 +112,7 @@ def shortest_palindrome(s):
 print(shortest_palindrome("aacecaaa"))   # "aaacecaaa"
 print(shortest_palindrome("abcd"))       # "dcbabcd"
 print(shortest_palindrome(""))           # ""
+
 ```
 
 ### 2. Longest Palindrome Prefix
@@ -148,6 +154,7 @@ def longest_palindrome_prefix(s):
 # Examples
 print(longest_palindrome_prefix("aacecaabb"))  # (7, "aacecaa")
 print(longest_palindrome_prefix("abcdef"))     # (1, "a")
+
 ```
 
 ### 3. Longest Palindrome Suffix
@@ -190,6 +197,7 @@ def longest_palindrome_suffix(s):
 # Examples
 print(longest_palindrome_suffix("abcaacaa"))   # (5, "aacaa")
 print(longest_palindrome_suffix("xyz"))        # (1, "z")
+
 ```
 
 ### 4. Make Palindrome (Add to End)
@@ -234,6 +242,7 @@ def make_palindrome_add_end(s):
 # Examples
 print(make_palindrome_add_end("aacecaaa"))   # "aacecaaaca"
 print(make_palindrome_add_end("abc"))        # "abcba"
+
 ```
 
 ### 5. Check if Palindrome After One Delete
@@ -295,6 +304,7 @@ def valid_palindrome_one_delete(s):
 print(valid_palindrome_one_delete("aba"))      # (True, -1)
 print(valid_palindrome_one_delete("abca"))     # (True, 1 or 2)
 print(valid_palindrome_one_delete("abc"))      # (False, -1)
+
 ```
 
 ### 6. Count Palindromic Substrings Using KMP
@@ -343,6 +353,7 @@ def count_palindrome_substrings_kmp(s):
 # Example
 print(count_palindrome_substrings_kmp("abc"))    # 3
 print(count_palindrome_substrings_kmp("aaa"))    # 6
+
 ```
 
 ### 7. Minimum Insertions for Palindrome
@@ -386,6 +397,7 @@ def min_insertions_palindrome(s):
 print(min_insertions_palindrome("zzazz"))     # 0
 print(min_insertions_palindrome("mbadm"))     # 2
 print(min_insertions_palindrome("leetcode"))  # 5
+
 ```
 
 ---
@@ -393,12 +405,14 @@ print(min_insertions_palindrome("leetcode"))  # 5
 ## 🧩 LeetCode Problems
 
 ### Easy
+
 | # | Problem | Difficulty | Approach |
 |---|---------|------------|----------|
 | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | 🟢 Easy | Two pointers / KMP |
 | 680 | [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/) | 🟢 Easy | Check after delete |
 
 ### Medium
+
 | # | Problem | Difficulty | Approach |
 |---|---------|------------|----------|
 | 5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | 🟡 Medium | Multiple approaches |
@@ -406,6 +420,7 @@ print(min_insertions_palindrome("leetcode"))  # 5
 | 1312 | [Minimum Insertion Steps](https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/) | 🟡 Medium | LCS with reverse |
 
 ### Hard
+
 | # | Problem | Difficulty | Approach |
 |---|---------|------------|----------|
 | 214 | [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) | 🔴 Hard | KMP on s+'#'+reverse |
@@ -468,6 +483,7 @@ class Solution:
             right -= 1
         
         return True
+
 ```
 
 ---

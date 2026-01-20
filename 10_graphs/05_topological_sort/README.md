@@ -35,6 +35,7 @@ permalink: /10_graphs/05_topological_sort/
 
 ```math
 \text{Linear ordering of } V \text{ such that } (u, v) \in E \Rightarrow u \text{ appears before } v
+
 ```
 
 **Exists iff:** Graph is a DAG (Directed Acyclic Graph).
@@ -50,6 +51,7 @@ permalink: /10_graphs/05_topological_sort/
 
 ```math
 T = O(V + E)
+
 ```
 
 ---
@@ -60,6 +62,7 @@ T = O(V + E)
 
 ```math
 \text{topological order} = \text{reverse}(\text{finish order})
+
 ```
 
 ---
@@ -70,6 +73,7 @@ For DAG with $n$ vertices and $e$ edges:
 
 ```math
 \text{# of orders} \geq 1 \text{ if DAG}
+
 ```
 
 Can be exponentially many (e.g., independent vertices).
@@ -260,6 +264,7 @@ def alienOrder(words: list[str]) -> str:
                 queue.append(neighbor)
     
     return "".join(result) if len(result) == len(in_degree) else ""
+
 ```
 
 ---

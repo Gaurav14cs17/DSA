@@ -138,6 +138,7 @@ Comprehensive collection of **advanced tree algorithms** including LCA, Tree DP,
 ## 🏆 Must-Do Problems
 
 ### 🟢 Easy
+
 | Problem | Link |
 |---------|------|
 | Maximum Depth | [LeetCode 104](https://leetcode.com/problems/maximum-depth-of-binary-tree/) |
@@ -147,6 +148,7 @@ Comprehensive collection of **advanced tree algorithms** including LCA, Tree DP,
 | Path Sum | [LeetCode 112](https://leetcode.com/problems/path-sum/) |
 
 ### 🟡 Medium
+
 | Problem | Link |
 |---------|------|
 | LCA Binary Tree | [LeetCode 236](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) |
@@ -158,6 +160,7 @@ Comprehensive collection of **advanced tree algorithms** including LCA, Tree DP,
 | Binary Tree Right Side | [LeetCode 199](https://leetcode.com/problems/binary-tree-right-side-view/) |
 
 ### 🔴 Hard
+
 | Problem | Link |
 |---------|------|
 | Binary Tree Max Path Sum | [LeetCode 124](https://leetcode.com/problems/binary-tree-maximum-path-sum/) |

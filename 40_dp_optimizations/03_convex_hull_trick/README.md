@@ -11,8 +11,10 @@
 **Convex Hull Trick** optimizes DP when transitions are **linear functions** and we need to find minimum or maximum.
 
 **Problem Pattern:**
+
 ```
 dp[i] = min/max(m[j] × x[i] + b[j]) for all j < i
+
 ```
 
 **Geometric View:** Find lower/upper envelope of lines.
@@ -26,6 +28,7 @@ dp[i] = min/max(m[j] × x[i] + b[j]) for all j < i
 ### Line Representation
 
 Each previous DP state j gives a **line**:
+
 ```
 f[j](x) = m[j] · x + b[j]
 
@@ -33,18 +36,22 @@ Where:
 - m[j] = slope (from dp[j])
 - b[j] = intercept (from dp[j])
 - x = query point (current state)
+
 ```
 
 ### Lower Envelope
 
 **For minimization:**
+
 ```
 The lower envelope is the pointwise minimum of all lines.
 
 At any x, we want: min(f[0](x), f[1](x), ..., f[k](x))
+
 ```
 
 **Geometric Insight:**
+
 ```
     y
     | Line 1 (steep)
@@ -60,6 +67,7 @@ Lower envelope = piece
 
 wise minimum
 Keep only lines that form convex hull
+
 ```
 
 ### When CHT Applies
@@ -161,6 +169,7 @@ class ConvexHullTrick:
         
         m, b = self.lines[left]
         return m * x + b
+
 ```
 
 ### Optimized CHT with Pointer (O(n))
@@ -221,6 +230,7 @@ class ConvexHullTrickFast:
         
         m, b = self.lines[self.ptr]
         return m * x + b
+
 ```
 
 ---
@@ -288,6 +298,7 @@ def min_cost_split_array(arr):
 #
 # i=3: x=6, dp[3] = min(query(6)) + 36
 #           = min(-6·6 + 14, ...) + 36 = -22 + 36 = 14
+
 ```
 
 ### Visual Walkthrough
@@ -313,6 +324,7 @@ Lines in CHT:
 Query at x=1: Line 0 is best (y=0)
 Query at x=3: Line 1 is best (y=-4)
 Query at x=6: Line 2 is best (y=-22)
+
 ```
 
 ---
@@ -320,11 +332,13 @@ Query at x=6: Line 2 is best (y=-22)
 ## 🏆 LeetCode Problems
 
 ### 🟡 Medium (3 problems)
+
 | # | Problem | Transformation |
 |:-:|---------|---------------|
 | 1889 | [Minimum Space Wasted](https://leetcode.com/problems/minimum-space-wasted-from-packaging/) | Split into groups |
 
 ### 🔴 Hard (5 problems)
+
 | # | Problem | Transformation |
 |:-:|---------|---------------|
 | 1687 | [Delivering Boxes](https://leetcode.com/problems/delivering-boxes-from-storage-to-ports/) | Complex cost function |
@@ -345,6 +359,7 @@ Rearrange: (dp[j] + sum[j]²) - 2·sum[j]·sum[i] + sum[i]²
                 b[j]        +   m[j]  · x[i]   + constant
 
 CHT: m[j] = -2·sum[j], b[j] = dp[j] + sum[j]², x = sum[i]
+
 ```
 
 ### Pattern 2: Distance × Cost
@@ -357,6 +372,7 @@ Rearrange: min(dp[j] + cost[j]·i - cost[j]·j)
          =       b[j]              + m[j]  ·x[i]
 
 CHT: m[j] = cost[j], b[j] = dp[j] - cost[j]·j, x = i
+
 ```
 
 ### Pattern 3: Product of Sums
@@ -367,6 +383,7 @@ Original: dp[i] = min(dp[j] + A[i]·B[j])
 Direct form: m[j] = B[j], b[j] = dp[j], x = A[i]
 
 CHT: Already in linear form!
+
 ```
 
 ---

@@ -58,19 +58,25 @@ E[X + Y] = E[X] + E[Y]  (even if X, Y not independent!)
 ### Key Theorems
 
 **1. Markov's Inequality:**
+
 ```
 P(X ≥ a) ≤ E[X] / a
+
 ```
 
 **2. Chebyshev's Inequality:**
+
 ```
 P(|X - E[X]| ≥ k·σ) ≤ 1/k²
+
 ```
 
 **3. Chernoff Bound:**
 For sum of independent Bernoulli trials:
+
 ```
 P(X ≥ (1+δ)μ) ≤ e^(-δ²μ/3)
+
 ```
 
 ---
@@ -106,6 +112,7 @@ def reservoir_sample(stream, k):
 # P(selected) = k/(i+1) * product of not being replaced
 #             = k/(i+1) * (i+1)/(i+2) * ... * (n-1)/n
 #             = k/n ✓
+
 ```
 
 ### 2. Fisher-Yates Shuffle
@@ -127,6 +134,7 @@ def shuffle(arr):
 # Why it works:
 # After k iterations, last k elements are a random k-permutation
 # Probability of any permutation = 1/n!
+
 ```
 
 ### 3. QuickSelect (Randomized)
@@ -159,6 +167,7 @@ def quickselect(arr, k):
 # Expected recurrence:
 # T(n) = T(n/2) + O(n) = O(n)
 # With high probability, pivot near median
+
 ```
 
 ### 4. Weighted Random Sampling
@@ -192,6 +201,7 @@ class WeightedRandom:
             else:
                 right = mid
         return left
+
 ```
 
 ### 5. Skip List (Randomized BST)
@@ -236,6 +246,7 @@ class SkipList:
         for i in range(lvl + 1):
             new_node.forward[i] = update[i].forward[i]
             update[i].forward[i] = new_node
+
 ```
 
 ---
@@ -243,6 +254,7 @@ class SkipList:
 ## 🏆 LeetCode Problems by Pattern
 
 ### 🎯 Reservoir Sampling (5 problems)
+
 | # | Problem | Difficulty | Key Insight |
 |:-:|---------|-----------|-------------|
 | 382 | [Linked List Random Node](https://leetcode.com/problems/linked-list-random-node/) | ⭐⭐ | Stream of unknown length |
@@ -250,24 +262,28 @@ class SkipList:
 | 497 | [Random Point in Rectangles](https://leetcode.com/problems/random-point-in-non-overlapping-rectangles/) | ⭐⭐ | Weighted by area |
 
 ### 🔀 Shuffling (4 problems)
+
 | # | Problem | Difficulty | Key Insight |
 |:-:|---------|-----------|-------------|
 | 384 | [Shuffle an Array](https://leetcode.com/problems/shuffle-an-array/) | ⭐⭐ | Fisher-Yates |
 | 519 | [Random Flip Matrix](https://leetcode.com/problems/random-flip-matrix/) | ⭐⭐ | Virtual shuffle |
 
 ### ⚖️ Weighted Sampling (6 problems)
+
 | # | Problem | Difficulty | Key Insight |
 |:-:|---------|-----------|-------------|
 | 528 | [Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/) | ⭐⭐ | Prefix sum + binary search |
 | 710 | [Random Pick with Blacklist](https://leetcode.com/problems/random-pick-with-blacklist/) | ⭐⭐⭐⭐ | Virtual swapping |
 
 ### 🎲 Rejection Sampling (3 problems)
+
 | # | Problem | Difficulty | Key Insight |
 |:-:|---------|-----------|-------------|
 | 470 | [Implement Rand10() Using Rand7()](https://leetcode.com/problems/implement-rand10-using-rand7/) | ⭐⭐⭐ | Rejection + digit generation |
 | 478 | [Generate Random Point in Circle](https://leetcode.com/problems/generate-random-point-in-a-circle/) | ⭐⭐ | Polar coordinates |
 
 ### 🚀 QuickSelect (4 problems)
+
 | # | Problem | Difficulty | Key Insight |
 |:-:|---------|-----------|-------------|
 | 215 | [Kth Largest Element](https://leetcode.com/problems/kth-largest-element-in-an-array/) | ⭐⭐ | Classic quickselect |

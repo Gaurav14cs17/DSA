@@ -49,6 +49,7 @@ permalink: /30_number_theory/11_legendres_formula/03_applications/
 
 ```math
 \nu_p(n!) = \sum_{i=1}^{\infty} \left\lfloor \frac{n}{p^i} \right\rfloor = \frac{n - S_p(n)}{p - 1}
+
 ```
 
 where S_p(n) is the sum of digits of n in base p.
@@ -57,6 +58,7 @@ where S_p(n) is the sum of digits of n in base p.
 
 ```math
 \nu_p\binom{m+n}{m} = \text{carries when adding m + n in base } p
+
 ```
 
 ---
@@ -82,6 +84,7 @@ def largest_power_dividing_factorial(n: int, p: int) -> int:
 
 # Example: What's the largest power of 2 dividing 100!?
 print(largest_power_dividing_factorial(100, 2))  # 97
+
 ```
 
 ### 2. Is n! Divisible by m?
@@ -124,6 +127,7 @@ def factorial_divisible_by(n: int, m: int) -> bool:
 # Examples
 print(factorial_divisible_by(10, 1000))  # True (10! = 3628800)
 print(factorial_divisible_by(5, 1000))   # False (5! = 120)
+
 ```
 
 ### 3. Smallest n Such That n! is Divisible by m
@@ -155,6 +159,7 @@ def smallest_n_factorial_divisible(m: int) -> int:
 
 # Example: Smallest n where n! is divisible by 120
 print(smallest_n_factorial_divisible(120))  # 5 (since 5! = 120)
+
 ```
 
 ### 4. Prime Factorization of n!
@@ -187,6 +192,7 @@ def factorize_factorial(n: int) -> dict[int, int]:
 # Example: 10! = 2^8 × 3^4 × 5^2 × 7
 print(factorize_factorial(10))
 # {2: 8, 3: 4, 5: 2, 7: 1}
+
 ```
 
 ### 5. Number of Digits in n!
@@ -222,6 +228,7 @@ def digits_in_factorial(n: int) -> int:
 print(digits_in_factorial(100))    # 158
 print(digits_in_factorial(1000))   # 2568
 print(digits_in_factorial(10000))  # 35660
+
 ```
 
 ### 6. LeetCode 793: Preimage Size of Factorial Zeroes
@@ -255,6 +262,7 @@ class Solution:
         left = lower_bound(k)
         right = lower_bound(k + 1)
         return right - left
+
 ```
 
 ---
@@ -278,6 +286,7 @@ class Solution:
 |                                                                 |
 | This formula is O(log n) but with smaller constant!            |
 +-----------------------------------------------------------------+
+
 ```
 
 ---

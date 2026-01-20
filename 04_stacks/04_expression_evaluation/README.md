@@ -118,6 +118,7 @@ Token  Action          Stack    Output
 End    Pop all         []       3 4 2 * 1 5 - / +
 
 Postfix: 3 4 2 * 1 5 - / +
+
 ```
 
 ---
@@ -146,6 +147,7 @@ Stack trace:
 +      → [1]          (3 + -2 = 1)
 
 Result: 1
+
 ```
 
 ---
@@ -306,6 +308,7 @@ def infixToPostfix(expression: str) -> str:
         output.append(operator_stack.pop())
     
     return ' '.join(output)
+
 ```
 
 ---
@@ -349,6 +352,7 @@ Token   Action              Stack       Explanation
 "*"     Pop 3,3, Push 9     [9]         3 * 3 = 9
 
 Result: 9
+
 ```
 
 ### Basic Calculator II (#227)
@@ -367,6 +371,7 @@ End    *        2     [3, 4]      Pop 2, calc 2*2=4
                       [7]         Sum all
 
 Result: 7
+
 ```
 
 ### Shunting-Yard Visualization
@@ -383,6 +388,7 @@ C      Operand             [+, *]      [A, B, C]
 End    Pop all             []          [A, B, C, *, +]
 
 Postfix: A B C * +
+
 ```
 
 ---
@@ -399,6 +405,7 @@ Expression Problem
        +-- With ( ) → Recursive or nested stack
        |
        +-- Full expression → Shunting-yard
+
 ```
 
 ### Complexity Comparison
@@ -429,6 +436,7 @@ Expression Problem
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **Wikipedia** | Shunting-yard algorithm | [Article](https://en.wikipedia.org/wiki/Shunting-yard_algorithm) |
@@ -438,6 +446,7 @@ Expression Problem
 | **CP Algorithms** | Parsing expressions | [Guide](https://cp-algorithms.com/string/expression_parsing.html) |
 
 ### 📺 Video Tutorials
+
 | Creator | Topic | Link |
 |---------|-------|------|
 | **NeetCode** | Basic Calculator | [YouTube](https://www.youtube.com/watch?v=081AqOuasw0) |
@@ -447,12 +456,14 @@ Expression Problem
 | **Tushar Roy** | Evaluate RPN | [YouTube](https://www.youtube.com/watch?v=MeRb_1bddWg) |
 
 ### 🎯 Practice Collections
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Expression problems | [Tag](https://leetcode.com/tag/math/) |
 | **HackerRank** | Stack challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=stacks) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Operator Precedence** | Parsing theory | [Wikipedia](https://en.wikipedia.org/wiki/Operator-precedence_parser) |
@@ -461,12 +472,14 @@ Expression Problem
 | **AST Construction** | Building parse trees | [Tutorial](https://en.wikipedia.org/wiki/Abstract_syntax_tree) |
 
 ### 📊 Visualization Tools
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **CS Animations** | Expression evaluation | [Website](https://www.cs.usfca.edu/~galles/visualization/SimpleStack.html) |
 | **Algorithm Visualizer** | Shunting-yard | [Website](https://algorithm-visualizer.org/) |
 
 ### 📐 Mathematical Background
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Operator Associativity** | Left vs right | [Wikipedia](https://en.wikipedia.org/wiki/Operator_associativity) |
@@ -474,6 +487,7 @@ Expression Problem
 | **BNF Notation** | Formal expression syntax | [Wikipedia](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form) |
 
 ### 📚 Books
+
 | Book | Chapter | Topic |
 |------|---------|-------|
 | **Dragon Book** | Chapter 4 | Syntax Analysis |
@@ -565,6 +579,7 @@ Steps:    3 4 2  →  3 8  →  11
 Infix:    (3 + 4) * 2
 Postfix:  3 4 + 2 *
 Steps:    3 4  →  7 2  →  14
+
 ```
 
 ---

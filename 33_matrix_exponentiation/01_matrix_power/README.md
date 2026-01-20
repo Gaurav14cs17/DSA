@@ -73,6 +73,7 @@ I & \text{if } n = 0 \\
 (M^{n/2})^2 & \text{if } n \text{ is even} \\
 M \cdot (M^{(n-1)/2})^2 & \text{if } n \text{ is odd}
 \end{cases}
+
 ```
 
 **Time Complexity:**
@@ -110,6 +111,7 @@ def matrix_multiply(A: list[list[int]], B: list[list[int]],
                     C[i][j] %= mod
     
     return C
+
 ```
 
 ### Implementation 2: Matrix Power
@@ -138,6 +140,7 @@ def matrix_power(M: list[list[int]], n: int,
         n //= 2
     
     return result
+
 ```
 
 ### Implementation 3: Optimized 2×2 Matrix
@@ -176,6 +179,7 @@ def matrix_2x2_power(M: tuple, n: int, mod: int) -> tuple:
         n //= 2
     
     return result
+
 ```
 
 ---
@@ -183,11 +187,13 @@ def matrix_2x2_power(M: tuple, n: int, mod: int) -> tuple:
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
+
 | # | Problem | Matrix Size | Time |
 |:-:|---------|-------------|------|
 | 509 | [Fibonacci](https://leetcode.com/problems/fibonacci-number/) | 2×2 | O(log n) |
 
 ### 🟡 Medium
+
 | # | Problem | Matrix Size | Time |
 |:-:|---------|-------------|------|
 | 1137 | [Tribonacci](https://leetcode.com/problems/n-th-tribonacci-number/) | 3×3 | O(log n) |

@@ -47,6 +47,7 @@ permalink: /26_sweep_line/02_coordinate_compression/
 
 ```math
 f: \mathbb{R} \to \{0, 1, \ldots, k-1\}
+
 ```
 
 where $k$ = number of distinct coordinates.
@@ -78,12 +79,14 @@ where $k$ = number of distinct coordinates.
 **Strategy:** Sweep on one axis, compress coordinates on other axis.
 
 **Algorithm:**
+
 ```
 1. Sweep vertical line left to right (x-axis)
 2. For each x-position:
    - Maintain active y-intervals
    - Use compressed y-coordinates
 3. Calculate contribution of current segment
+
 ```
 
 **Complexity:** $O(n^2 \log n)$ with naive y-interval merging  
@@ -121,6 +124,7 @@ Height function: $H(x) = \max\_{i: l\_i \leq x < r\_i} h\_i$
 
 ```math
 A = \int_{-\infty}^{\infty} H(x) \, dx
+
 ```
 
 where $H(x)$ = total height covered at position $x$.
@@ -129,6 +133,7 @@ where $H(x)$ = total height covered at position $x$.
 
 ```math
 A = \sum_{i=1}^{k-1} (x_{i+1} - x_i) \cdot H(x_i)
+
 ```
 
 where $x\_1, \ldots, x\_k$ are sorted distinct x-coordinates.
@@ -175,9 +180,11 @@ Given sorted intervals $[(s\_1, e\_1), (s\_2, e\_2), \ldots]$:
 
 ```
 Merged length = sum of non-overlapping portions
+
 ```
 
 **Algorithm:**
+
 ```python
 total = 0
 curr_start, curr_end = intervals[0]
@@ -188,6 +195,7 @@ for start, end in intervals[1:]:
         total += curr_end - curr_start
         curr_start, curr_end = start, end
 total += curr_end - curr_start
+
 ```
 
 ---
@@ -618,6 +626,7 @@ def calculate_coverage(intervals: List[Tuple[int, int]]) -> int:
     
     total += end - start
     return total
+
 ```
 
 ---

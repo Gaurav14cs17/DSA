@@ -40,6 +40,7 @@ Non-comparison sorts use:
 
 ```math
 T = O(n + k) \text{ or } O(d \cdot (n + k))
+
 ```
 
 ---
@@ -50,6 +51,7 @@ T = O(n + k) \text{ or } O(d \cdot (n + k))
 
 ```math
 T = O(n + k), \quad S = O(k)
+
 ```
 
 **Steps:**
@@ -65,6 +67,7 @@ T = O(n + k), \quad S = O(k)
 
 ```math
 T = O(d \cdot (n + k))
+
 ```
 
 Where:
@@ -81,6 +84,7 @@ For 32-bit integers with base 256: $d = 4$, $k = 256$.
 
 ```math
 T = O(n + \frac{n^2}{k} + k) = O(n) \text{ if } k = O(n)
+
 ```
 
 **Best for:** Uniformly distributed data.
@@ -93,6 +97,7 @@ T = O(n + \frac{n^2}{k} + k) = O(n) \text{ if } k = O(n)
 
 ```math
 T = O(n), \quad S = O(1)
+
 ```
 
 **Invariant:** 
@@ -256,6 +261,7 @@ def maximumGap(nums: list[int]) -> int:
         prev_max = bucket[1]
     
     return max_gap
+
 ```
 
 ---
@@ -290,6 +296,7 @@ Non-Comparison Sort
         +-- Uniform floats [0,1) → Bucket Sort
         |
         +-- 3 values (0,1,2) → Dutch Flag
+
 ```
 
 ---

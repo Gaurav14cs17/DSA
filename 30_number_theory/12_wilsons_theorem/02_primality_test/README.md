@@ -51,6 +51,7 @@ permalink: /30_number_theory/12_wilsons_theorem/02_primality_test/
 is_prime(n):
     compute (n-1)! mod n
     return result == n - 1
+
 ```
 
 ### Properties
@@ -97,6 +98,7 @@ for n in range(2, 30):
     if is_prime_wilson(n):
         print(n, end=' ')
 # Output: 2 3 5 7 11 13 17 19 23 29
+
 ```
 
 ### 2. Comparison with Other Methods
@@ -192,6 +194,7 @@ def compare_methods(n: int):
 compare_methods(1009)    # Small prime
 compare_methods(10007)   # Medium prime
 compare_methods(104729)  # Larger prime (10000th prime)
+
 ```
 
 ---
@@ -236,6 +239,7 @@ compare_methods(104729)  # Larger prime (10000th prime)
 | Ratio: Wilson is 1000× slower than trial division              |
 |        and 10,000,000× slower than Miller-Rabin!               |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -279,6 +283,7 @@ def factorial_mod_prime(p: int) -> int:
     By Wilson: this equals -1 ≡ p-1 (mod p).
     """
     return p - 1  # Instant! No computation needed.
+
 ```
 
 ---

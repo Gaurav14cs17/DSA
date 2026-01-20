@@ -33,6 +33,7 @@ permalink: /10_graphs/03_dfs_problems/
 
 ```math
 \boxed{T(V, E) = O(V + E)}
+
 ```
 
 **Stack space:** O(V) worst case for path length.
@@ -66,6 +67,7 @@ permalink: /10_graphs/03_dfs_problems/
 
 ```math
 d[u] < d[v] < f[v] < f[u] \text{ (v is descendant of u)}
+
 ```
 
 **Parenthesis Theorem:** DFS forms valid nesting.
@@ -232,6 +234,7 @@ def canVisitAllRooms(rooms: list[list[int]]) -> bool:
     
     dfs(0)
     return len(visited) == len(rooms)
+
 ```
 
 ---

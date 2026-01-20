@@ -58,6 +58,7 @@ def process(arr, i):
     
     result = process(arr, i + 1)  # Recurse first
     return combine(arr[i], result)  # Then process
+
 ```
 
 **Effect:** Processes right-to-left (last element first).
@@ -75,6 +76,7 @@ def process(arr, i, acc):
     
     new_acc = combine(acc, arr[i])  # Process first
     return process(arr, i + 1, new_acc)  # Then recurse
+
 ```
 
 **Effect:** Processes left-to-right (first element first).
@@ -92,6 +94,7 @@ def process(arr, left, right):
     
     # Process arr[left] and arr[right]
     return process(arr, left + 1, right - 1)
+
 ```
 
 **Effect:** Good for reversing, palindrome check.
@@ -111,6 +114,7 @@ def process(arr, low, high):
     left = process(arr, low, mid)
     right = process(arr, mid + 1, high)
     return combine(left, right)
+
 ```
 
 **Effect:** O(log n) depth, good for max/min/search.
@@ -204,6 +208,7 @@ def findMaxDivideConquer(arr: list, low: int, high: int) -> int:
     
     # Combine
     return max(left_max, right_max)
+
 ```
 
 ### Search Operations
@@ -289,6 +294,7 @@ def lastOccurrence(arr: list, target: int, i: int = 0) -> int:
         return later
     
     return i if arr[i] == target else -1
+
 ```
 
 ### Array Modification
@@ -359,6 +365,7 @@ def removeDuplicates(arr: list, i: int = 0) -> list:
         return rest
     
     return [arr[i]] + rest
+
 ```
 
 ### Check Properties
@@ -425,6 +432,7 @@ def anyNegative(arr: list, i: int = 0) -> bool:
         return True
     
     return anyNegative(arr, i + 1)
+
 ```
 
 ### Advanced Array Operations
@@ -505,6 +513,7 @@ def flattenArray(arr: list) -> list:
         return flattenArray(first) + rest
     else:
         return [first] + rest
+
 ```
 
 ---
@@ -547,6 +556,7 @@ Array Recursion Patterns
          |
          +-- Accumulator
              +-- f(i, acc) → f(i+1, combine(acc, arr[i]))
+
 ```
 
 ---

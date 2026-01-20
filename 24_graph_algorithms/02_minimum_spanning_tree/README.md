@@ -47,6 +47,7 @@ permalink: /24_graph_algorithms/02_minimum_spanning_tree/
 
 ```math
 \text{MST}(G) = \arg\min_{T \text{ spanning}} \sum_{e \in T} w(e)
+
 ```
 
 **Properties:**
@@ -90,6 +91,7 @@ This property proves correctness of both Kruskal's and Prim's.
 
 ```math
 T = O(E \log E) = O(E \log V)
+
 ```
 
 - Sorting: $O(E \log E)$
@@ -481,6 +483,7 @@ def maxNumEdgesToRemove(n: int, edges: List[List[int]]) -> int:
         return -1
     
     return len(edges) - edges_used
+
 ```
 
 ---
@@ -516,6 +519,7 @@ MST Problem
      +-- Online/incremental edges → Prim's
      |
      +-- Need parallelization → Borůvka's O(E log V)
+
 ```
 
 ---

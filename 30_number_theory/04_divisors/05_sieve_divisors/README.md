@@ -75,6 +75,7 @@ def sieve_divisor_count(limit: int) -> list[int]:
 tau = sieve_divisor_count(20)
 print("τ values:", tau[1:21])
 # [1, 2, 2, 3, 2, 4, 2, 4, 3, 4, 2, 6, 2, 4, 4, 5, 2, 6, 2, 6]
+
 ```
 
 ### 2. Sieve for Divisor Sum σ(n)
@@ -99,6 +100,7 @@ def sieve_divisor_sum(limit: int) -> list[int]:
 sigma = sieve_divisor_sum(20)
 for i in range(1, 21):
     print(f"σ({i}) = {sigma[i]}")
+
 ```
 
 ### 3. Smallest Prime Factor (SPF) Sieve
@@ -139,6 +141,7 @@ def factorize_with_spf(n: int, spf: list[int]) -> dict[int, int]:
 # Example
 spf = spf_sieve(1000)
 print(factorize_with_spf(360, spf))  # {2: 3, 3: 2, 5: 1}
+
 ```
 
 ### 4. Sieve for Largest Prime Factor
@@ -161,6 +164,7 @@ def lpf_sieve(limit: int) -> list[int]:
 
 lpf = lpf_sieve(20)
 print("LPF values:", lpf[1:21])
+
 ```
 
 ### 5. Sieve for Number of Distinct Prime Factors
@@ -184,6 +188,7 @@ def omega_sieve(limit: int) -> list[int]:
 omega = omega_sieve(20)
 print("ω values:", omega[1:21])
 # ω(1)=0, ω(6)=2 (6=2×3), ω(12)=2 (12=2²×3)
+
 ```
 
 ### 6. Sieve for Euler's Totient φ(n)
@@ -206,6 +211,7 @@ def phi_sieve(limit: int) -> list[int]:
 
 phi = phi_sieve(20)
 print("φ values:", phi[1:21])
+
 ```
 
 ### 7. Sieve for Möbius Function
@@ -233,6 +239,7 @@ def mobius_sieve(limit: int) -> list[int]:
 
 mu = mobius_sieve(20)
 print("μ values:", mu[1:21])
+
 ```
 
 ---

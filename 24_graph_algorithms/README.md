@@ -329,6 +329,7 @@ def dijkstra(graph: Dict[int, List[tuple[int, int]]],
                 heapq.heappush(pq, (dist[v], v))
     
     return dist
+
 ```
 
 ---
@@ -384,6 +385,7 @@ def kruskal_mst(n: int, edges: List[tuple[int, int, int]]) -> int:
                 break
     
     return mst_weight if edges_used == n - 1 else -1
+
 ```
 
 ---
@@ -426,6 +428,7 @@ def topological_sort(n: int, edges: List[tuple[int, int]]) -> List[int]:
                 queue.append(v)
     
     return result if len(result) == n else []
+
 ```
 
 ---
@@ -478,6 +481,7 @@ def tarjan_scc(graph: Dict[int, List[int]], n: int) -> List[List[int]]:
             strongconnect(v)
     
     return sccs
+
 ```
 
 ---
@@ -494,6 +498,7 @@ def build_graph(n: int, prerequisites: List[List[int]]):
     for a, b in prerequisites:
         graph[b].append(a)  # b must come before a
     return graph
+
 ```
 
 ### Pattern 2: State Space Search
@@ -501,6 +506,7 @@ def build_graph(n: int, prerequisites: List[List[int]]):
 ```python
 # Model states as nodes, transitions as edges
 # Example: Word ladder → BFS on transformation graph
+
 ```
 
 ### Pattern 3: Binary Search + Graph
@@ -508,6 +514,7 @@ def build_graph(n: int, prerequisites: List[List[int]]):
 ```python
 # Binary search on answer + graph validation
 # Example: Minimum effort path → Binary search + BFS
+
 ```
 
 ---

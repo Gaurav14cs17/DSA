@@ -40,6 +40,7 @@ permalink: /30_number_theory/03_modular_arithmetic/05_eulers_theorem/
 
 ```math
 a^{\phi(n)} \equiv 1 \pmod{n}
+
 ```
 
 where $\phi(n)$ is Euler's totient function.
@@ -68,6 +69,7 @@ where $\phi(n)$ is Euler's totient function.
 
 ```math
 \phi(n) = n \prod_{p|n}\left(1 - \frac{1}{p}\right)
+
 ```
 
 ---
@@ -124,6 +126,7 @@ def rsa_example():
     decrypted = pow(cipher, d, n)
     
     print(f"Original: {message}, Encrypted: {cipher}, Decrypted: {decrypted}")
+
 ```
 
 ---

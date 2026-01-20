@@ -34,45 +34,57 @@ Geometric primitives are the fundamental building blocks of computational geomet
 ### Points and Vectors
 
 **Point:** Position in 2D space
+
 ```
 P = (x, y)
+
 ```
 
 **Vector:** Directed line segment
+
 ```
 v = (v_x, v_y)
 
 From point A to B:
 v = B - A = (B.x - A.x, B.y - A.y)
+
 ```
 
 **Vector magnitude:**
+
 ```
 |v| = √(v_x² + v_y²)
+
 ```
 
 **Unit vector:**
+
 ```
 v̂ = v / |v| = (v_x/|v|, v_y/|v|)
+
 ```
 
 ### Cross Product
 
 **Definition (2D):**
+
 ```
 u × v = u_x · v_y - u_y · v_x
 
 Geometric interpretation:
 - Magnitude: Area of parallelogram formed by u and v
 - Sign: Orientation of v relative to u
+
 ```
 
 **Properties:**
+
 ```
 1. Anticommutative: u × v = -(v × u)
 2. Distributive: u × (v + w) = u × v + u × w
 3. Scalar multiple: (αu) × v = α(u × v)
 4. Zero if parallel: u × v = 0 ⟺ u ∥ v
+
 ```
 
 **Applications:**
@@ -83,20 +95,24 @@ Geometric interpretation:
 ### Dot Product
 
 **Definition:**
+
 ```
 u · v = u_x · v_x + u_y · v_y
      = |u| · |v| · cos(θ)
 
 where θ = angle between vectors
+
 ```
 
 **Properties:**
+
 ```
 1. Commutative: u · v = v · u
 2. Distributive: u · (v + w) = u · v + u · w
 3. u · v > 0: acute angle (< 90°)
 4. u · v = 0: perpendicular (90°)
 5. u · v < 0: obtuse angle (> 90°)
+
 ```
 
 **Applications:**
@@ -200,6 +216,7 @@ class Point:
         rotated = translated.rotate(angle)
         # Translate back
         return rotated + center
+
 ```
 
 ### 2. Cross and Dot Products
@@ -245,6 +262,7 @@ b = Point(1, 1)
 
 print(f"Cross product: {cross_product(o, a, b)}")  # Positive: CCW
 print(f"Dot product: {dot_product(a, b)}")         # Positive: acute angle
+
 ```
 
 ### 3. Orientation Test
@@ -281,6 +299,7 @@ r3 = Point(2, 0)  # CW
 print(f"Orientation (collinear): {orientation(p, q, r1)}")  # 0
 print(f"Orientation (CCW): {orientation(p, q, r2)}")        # 1
 print(f"Orientation (CW): {orientation(p, q, r3)}")         # -1
+
 ```
 
 ### 4. Distance Calculations
@@ -349,6 +368,7 @@ p2 = Point(4, 0)
 
 print(f"Distance to line: {point_to_line_distance(point, p1, p2):.2f}")      # 2.00
 print(f"Distance to segment: {point_to_segment_distance(point, p1, p2):.2f}") # 2.00
+
 ```
 
 ### 5. Angle Calculations
@@ -407,6 +427,7 @@ v = Point(0, 1)
 
 print(f"Angle between: {angle_between_vectors(u, v):.4f} rad")  # π/2
 print(f"Signed angle: {signed_angle(u, v):.4f} rad")            # π/2
+
 ```
 
 ### 6. Projection
@@ -462,6 +483,7 @@ line_p2 = Point(5, 0)
 
 projection = project_point_onto_line(point, line_p1, line_p2)
 print(f"Projection: {projection}")  # Point(3.00, 0.00)
+
 ```
 
 ---
@@ -493,6 +515,7 @@ def compare(a, b):
     if abs(a - b) < EPS:
         return 0
     return 1 if a > b else -1
+
 ```
 
 ### Avoiding Square Roots
@@ -503,6 +526,7 @@ if point1.distance(ref) < point2.distance(ref):
 
 # ✓ Faster: Compare squared distances
 if point1.distance_squared(ref) < point2.distance_squared(ref):
+
 ```
 
 ### Cross Product Sign Table

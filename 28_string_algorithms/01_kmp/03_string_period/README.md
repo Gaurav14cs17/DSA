@@ -31,17 +31,21 @@ A **period** of string s is a positive integer p such that s[i] = s[i+p] for all
 ### Period Definition
 
 **Period p** of string s:
+
 ```
 s[i] = s[i + p] for all 0 ≤ i < n - p
 
 where n = len(s)
+
 ```
 
 **Examples:**
+
 ```
 "abcabcabc" has period 3 ("abc" repeats)
 "abababab" has periods 2 and 8
 "abcd" has period 4 (no repetition)
+
 ```
 
 ### Period Theorem
@@ -53,6 +57,7 @@ where n = len(s)
 ### Connection to Failure Function
 
 **Key Formula:**
+
 ```
 If π[n-1] > 0 and n % (n - π[n-1]) == 0,
 then smallest period = n - π[n-1]
@@ -61,6 +66,7 @@ Proof:
 - π[n-1] = length of longest proper border
 - If border length is k, then first k chars = last k chars
 - Pattern repeats every (n - k) characters
+
 ```
 
 ---
@@ -112,6 +118,7 @@ print(smallest_period("abcabcabc"))   # 3
 print(smallest_period("abab"))        # 2
 print(smallest_period("abcd"))        # 4
 print(smallest_period("aa"))          # 1
+
 ```
 
 ### 2. Check if String is Repeating Pattern
@@ -164,6 +171,7 @@ def is_repeated_pattern(s):
 print(is_repeated_pattern("abcabcabc"))  # (True, "abc")
 print(is_repeated_pattern("aba"))        # (False, "")
 print(is_repeated_pattern("abab"))       # (True, "ab")
+
 ```
 
 ### 3. Find All Periods
@@ -222,6 +230,7 @@ def find_all_periods(s):
 print(find_all_periods("abcabcabc"))    # [3, 9]
 print(find_all_periods("abababab"))     # [2, 8]
 print(find_all_periods("aaaaaa"))       # [1, 2, 3, 6]
+
 ```
 
 ### 4. Maximum Repetitions
@@ -282,6 +291,7 @@ def max_repetitions(s, pattern):
 s = "ababc"
 pattern = "ab"
 print(max_repetitions(s, pattern))  # 2 ("abab")
+
 ```
 
 ### 5. String Rotation Detection
@@ -345,6 +355,7 @@ def is_rotation(s1, s2):
 # Examples
 print(is_rotation("abcde", "cdeab"))    # True
 print(is_rotation("abcde", "abced"))    # False
+
 ```
 
 ### 6. Cyclic Equivalence
@@ -381,6 +392,7 @@ print(find_cyclic_shifts("abc"))
 # ['abc', 'bca', 'cab']
 
 print(are_cyclic_equivalent("abc", "cab"))  # True
+
 ```
 
 ### 7. Lyndon Factorization
@@ -421,6 +433,7 @@ def lyndon_factorization(s):
 # Example
 print(lyndon_factorization("ababb"))   # ['ab', 'abb']
 print(lyndon_factorization("banana"))  # ['b', 'an', 'an', 'a']
+
 ```
 
 ---
@@ -428,12 +441,14 @@ print(lyndon_factorization("banana"))  # ['b', 'an', 'an', 'a']
 ## 🧩 LeetCode Problems
 
 ### Easy
+
 | # | Problem | Difficulty | Solution |
 |---|---------|------------|----------|
 | 459 | [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/) | 🟢 Easy | Check period |
 | 796 | [Rotate String](https://leetcode.com/problems/rotate-string/) | 🟢 Easy | Pattern in doubled |
 
 ### Medium
+
 | # | Problem | Difficulty | Solution |
 |---|---------|------------|----------|
 | 1668 | [Maximum Repeating Substring](https://leetcode.com/problems/maximum-repeating-substring/) | 🟡 Medium | Count consecutive |
@@ -480,6 +495,7 @@ def verify_period_lemma(s, p, q):
 # Example
 s = "abababab"
 print(verify_period_lemma(s, 2, 8))  # True, gcd = 2
+
 ```
 
 ### Critical Factorization Theorem
@@ -515,6 +531,7 @@ def critical_factorization(s):
 # Example
 s = "abcabcabc"
 print(f"Critical point: {critical_factorization(s)}")
+
 ```
 
 ---

@@ -45,6 +45,7 @@ Given an array $A[1..n]$ of real numbers, find indices $i$ and $j$ such that:
 
 ```math
 \sum_{k=i}^{j} A[k] \text{ is maximized}
+
 ```
 
 **Constraints:**
@@ -65,6 +66,7 @@ Define:
 ```math
 S[i] = \max(A[i], S[i-1] + A[i])
 M[i] = \max(M[i-1], S[i])
+
 ```
 
 **Key Insight:** At each position, either:
@@ -102,6 +104,7 @@ def max_subarray(arr: list[int]) -> int:
 # Example usage
 arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
 print(max_subarray(arr))  # Output: 6
+
 ```
 
 ### With Indices
@@ -139,6 +142,7 @@ arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
 max_sum, start, end = max_subarray_with_indices(arr)
 print(f"Max sum: {max_sum}, Subarray: {arr[start:end+1]}")
 # Output: Max sum: 6, Subarray: [4, -1, 2, 1]
+
 ```
 
 ---
@@ -176,6 +180,7 @@ def max_product_subarray(arr: list[int]) -> int:
 # Example
 arr = [2, 3, -2, 4]
 print(max_product_subarray(arr))  # Output: 6 (from [2, 3])
+
 ```
 
 ### 2. Circular Array Maximum Subarray
@@ -219,6 +224,7 @@ def max_subarray_circular(arr: list[int]) -> int:
 # Example
 arr = [5, -3, 5]
 print(max_subarray_circular(arr))  # Output: 10 (wrap: 5 + 5)
+
 ```
 
 ### 3. Maximum Subarray with One Deletion
@@ -249,6 +255,7 @@ def max_subarray_one_deletion(arr: list[int]) -> int:
 # Example
 arr = [1, -2, 0, 3]
 print(max_subarray_one_deletion(arr))  # Output: 4 (delete -2)
+
 ```
 
 ---
@@ -283,6 +290,7 @@ print(max_subarray_one_deletion(arr))  # Output: 4 (delete -2)
 ```math
 S[i] = \max(A[i], S[i-1] + A[i])
 M[i] = \max(M[i-1], S[i])
+
 ```
 
 ---
@@ -342,6 +350,7 @@ Array:    -2    1   -3    4   -1    2    1   -5    4
           ↓     ↓    ↓    ↓    ↓    ↓    ↓    ↓    ↓
 S[i]:     -2    1   -2    4    3    5    6    1    5
 Decision: new  new  ext  new  ext  ext  ext  ext  ext
+
 ```
 
 **Why it works:**

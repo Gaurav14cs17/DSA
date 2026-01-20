@@ -56,6 +56,7 @@ Every positive integer \( n \) can be uniquely represented as a sum of powers of
 
 ```math
 n = \sum_{i=0}^{k} b_i \cdot 2^i = b_k \cdot 2^k + b_{k-1} \cdot 2^{k-1} + \cdots + b_1 \cdot 2 + b_0
+
 ```
 
 where each \( b_i \in \{0, 1\} \) is called a **bit**.
@@ -64,6 +65,7 @@ where each \( b_i \in \{0, 1\} \) is called a **bit**.
 
 ```math
 42 = 32 + 8 + 2 = 2^5 + 2^3 + 2^1 = \texttt{101010}_2
+
 ```
 
 ```
@@ -72,6 +74,7 @@ Power:    32  16   8   4   2   1
 Bit:       1   0   1   0   1   0
            ↓       ↓       ↓
           32  +   8   +   2  = 42
+
 ```
 
 ---
@@ -95,6 +98,7 @@ Bit:       1   0   1   0   1   0
   & 1 1 0 1 (13)      | 1 1 0 1 (13)      ^ 1 1 0 1 (13)
   -------------       -------------       -------------
     1 0 0 1 (9)         1 1 1 1 (15)        0 1 1 0 (6)
+
 ```
 
 ---
@@ -129,6 +133,7 @@ When we subtract 1 from \( n \):
 n     = ...a 1 0 0 0    (where 'a' are higher bits)
 n-1   = ...a 0 1 1 1    (flip the lowest 1 and all bits to its right)
 n&(n-1) = ...a 0 0 0 0    (lowest set bit is cleared!)
+
 ```
 
 #### 📊 Example: n = 12
@@ -139,6 +144,7 @@ n-1   = 1 0 1 1   (11)
 n&(n-1) = 1 0 0 0   (8)
             ↑
         Lowest 1 cleared!
+
 ```
 
 #### 💡 Applications
@@ -163,6 +169,7 @@ If every element appears twice except one:
 
 ```math
 \bigoplus_{i=0}^{n-1} \text{nums}[i] = \text{unique element}
+
 ```
 
 All pairs cancel out (\(a \oplus a = 0\)), leaving only the unique element!
@@ -175,6 +182,7 @@ In computers, negative numbers are represented using **two's complement**:
 
 ```math
 -n = \sim n + 1 = 2^k - n
+
 ```
 
 where \( k \) is the number of bits.
@@ -184,6 +192,7 @@ For 8-bit representation:
   5 = 0000 0101
  ~5 = 1111 1010
  -5 = 1111 1011  (add 1)
+
 ```
 
 #### 🔑 Key Insight: `n & (-n)` isolates the lowest set bit
@@ -192,6 +201,7 @@ For 8-bit representation:
  n  = 0...01100  (12)
 -n  = 1...10100  (-12 in two's complement)
 n&-n = 0...00100  (4) — only lowest set bit remains!
+
 ```
 
 ---
@@ -234,6 +244,7 @@ n&-n = 0...00100  (4) — only lowest set bit remains!
    | • Missing Num|            | • Power of 2 |            | • TSP        |
    | • XOR Queries|            | • Power of 4 |            | • Partition  |
    +--------------+            +--------------+            +--------------+
+
 ```
 
 ---
@@ -370,6 +381,7 @@ n&-n = 0...00100  (4) — only lowest set bit remains!
 |  Two's Complement:  -n = ~n + 1                              |
 |  Swap:  a ^= b; b ^= a; a ^= b;                              |
 +--------------------------------------------------------------+
+
 ```
 
 ---

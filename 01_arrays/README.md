@@ -49,15 +49,18 @@ For array `A` starting at base address `B` with element size `S` bytes:
 
 ```math
 \boxed{\text{Address}(A[i]) = B + i \times S}
+
 ```
 
 **Derivation:**
+
 ```
 Element 0: B + 0×S = B
 Element 1: B + 1×S = B + S  
 Element 2: B + 2×S = B + 2S
 ...
 Element i: B + i×S
+
 ```
 
 **Time Complexity Proof:**
@@ -73,6 +76,7 @@ Element i: B + i×S
 
 ```math
 \boxed{\sum_{i=1}^{n} i = \frac{n(n+1)}{2}}
+
 ```
 
 **Proof by Gauss's Method:**
@@ -80,6 +84,7 @@ Element i: B + i×S
 ```math
 S = 1 + 2 + 3 + \cdots + n
 S = n + (n-1) + (n-2) + \cdots + 1
+
 ```
 
 Adding both equations:
@@ -87,6 +92,7 @@ Adding both equations:
 ```math
 2S = (n+1) + (n+1) + \cdots + (n+1) = n(n+1)
 \therefore S = \frac{n(n+1)}{2}
+
 ```
 
 **Example:** n = 5 → 5×6/2 = 15 subarrays
@@ -99,6 +105,7 @@ Adding both equations:
 
 ```math
 \boxed{2^n}
+
 ```
 
 **Proof by Combinatorics:**
@@ -106,6 +113,7 @@ Each element has 2 choices: include or exclude.
 
 ```math
 \text{Total} = \underbrace{2 \times 2 \times \cdots \times 2}_{n \text{ times}} = 2^n
+
 ```
 
 **Non-empty subsequences:** $2^n - 1$
@@ -118,6 +126,7 @@ Each element has 2 choices: include or exclude.
 
 ```math
 \boxed{dp[i] = \max(A[i], \; dp[i-1] + A[i])}
+
 ```
 
 **Optimal Substructure Proof:**
@@ -135,12 +144,14 @@ Each element has 2 choices: include or exclude.
 
 ```math
 P[i] = \sum_{j=0}^{i} A[j]
+
 ```
 
 **Range Sum Formula:**
 
 ```math
 \boxed{\text{sum}(l, r) = P[r] - P[l-1]}
+
 ```
 
 **Proof:**
@@ -149,6 +160,7 @@ P[i] = \sum_{j=0}^{i} A[j]
 P[r] = A[0] + A[1] + \cdots + A[l-1] + A[l] + \cdots + A[r]
 P[l-1] = A[0] + A[1] + \cdots + A[l-1]
 P[r] - P[l-1] = A[l] + A[l+1] + \cdots + A[r] = \text{sum}(l, r) \; \blacksquare
+
 ```
 
 ---
@@ -161,6 +173,7 @@ For opposite-direction pointers on sorted array:
 
 ```math
 \boxed{\text{Iterations} \leq n}
+
 ```
 
 **Proof:**
@@ -177,12 +190,14 @@ For opposite-direction pointers on sorted array:
 
 ```math
 \boxed{\text{new\_index}(i) = (i + k) \mod n}
+
 ```
 
 **Inverse Mapping:**
 
 ```math
 \text{old\_index}(i) = (i - k + n) \mod n
+
 ```
 
 **Reversal Algorithm Proof:**
@@ -193,6 +208,7 @@ Let array = $[A\_1, \ldots, A\_{n-k}, A\_{n-k+1}, \ldots, A\_n]$
 \text{Rev}([A_1, \ldots, A_n]) = [A_n, \ldots, A_1]
 \text{Rev}([A_n, \ldots, A_{n-k+1}]) \cdot \text{Rev}([A_{n-k}, \ldots, A_1])
 = [A_{n-k+1}, \ldots, A_n, A_1, \ldots, A_{n-k}] \; \blacksquare
+
 ```
 
 ---
@@ -203,12 +219,14 @@ Let array = $[A\_1, \ldots, A\_{n-k}, A\_{n-k+1}, \ldots, A\_n]$
 
 ```math
 \boxed{T(n) = n + \sum_{i=0}^{\lfloor \log_2 n \rfloor} 2^i = n + (2^{\lfloor \log_2 n \rfloor + 1} - 1) \approx 3n}
+
 ```
 
 **Amortized cost per insertion:**
 
 ```math
 \frac{T(n)}{n} = \frac{3n}{n} = 3 = O(1)
+
 ```
 
 ---
@@ -295,6 +313,7 @@ Day 5-6: Dutch Flag
 Day 7: Review & Practice
 +- Solve: 5 random easy problems
 +- Explain one algorithm to a friend
+
 ```
 
 **Expected Outcome:** ✅ Comfortable with O(1) space algorithms
@@ -321,6 +340,7 @@ Day 7-8: Sliding Window
 +- Understand: Variable vs fixed window
 +- Solve: #209, #713, #1004
 +- Review: All patterns
+
 ```
 
 **Expected Outcome:** ✅ Can solve 90% of medium array problems
@@ -348,6 +368,7 @@ Day 5-7: Interval Problems
 +- Master: Greedy interval selection
 +- Solve: #56, #57, #253, #435
 +- Understand: Line sweep
+
 ```
 
 **Expected Outcome:** ✅ Ready for hard problems
@@ -479,6 +500,7 @@ Use this flowchart to quickly identify which technique to apply:
         |   Sliding Wnd    end time   or Sum     + Reverse    Greedy
         |       |               |         |       |               |
         +-------+---------------+---------+-------+---------------+
+
 ```
 
 ---
@@ -581,6 +603,7 @@ Use this flowchart to quickly identify which technique to apply:
 ## 📚 References & Learning Resources
 
 ### 📖 Books & Courses
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **CLRS Chapter 2** | Classic algorithms textbook | [MIT Press](https://mitpress.mit.edu/books/introduction-algorithms) |
@@ -588,6 +611,7 @@ Use this flowchart to quickly identify which technique to apply:
 | **NeetCode Roadmap** | Curated problem list | [Arrays & Hashing](https://neetcode.io/roadmap) |
 
 ### 🌐 Online Tutorials
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **GeeksforGeeks** | Comprehensive array tutorials | [Array Data Structure](https://www.geeksforgeeks.org/array-data-structure/) |
@@ -596,6 +620,7 @@ Use this flowchart to quickly identify which technique to apply:
 | **LeetCode Explore** | Structured learning path | [Array and String](https://leetcode.com/explore/learn/card/array-and-string/) |
 
 ### 📺 Video Resources
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **Abdul Bari** | Algorithm lectures | [YouTube](https://www.youtube.com/watch?v=0IAPZzGSbME&list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O) |
@@ -603,6 +628,7 @@ Use this flowchart to quickly identify which technique to apply:
 | **MIT OCW 6.006** | Introduction to algorithms | [MIT](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/) |
 
 ### 📝 Practice Platforms
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Interview preparation | [leetcode.com](https://leetcode.com/) |
@@ -611,6 +637,7 @@ Use this flowchart to quickly identify which technique to apply:
 | **CodeChef** | Monthly contests | [codechef.com](https://www.codechef.com/) |
 
 ### 🔬 Research Papers
+
 | Paper | Topic | Link |
 |-------|-------|------|
 | **Bentley (1984)** | Maximum subarray problem | [Programming Pearls](https://www.cs.cmu.edu/~15451-f17/Handouts/bentley1984.pdf) |
@@ -646,6 +673,7 @@ Use this flowchart to quickly identify which technique to apply:
 [ ] Can I preprocess with prefix sums?
 [ ] Is there a greedy approach?
 [ ] Can I use constant extra space?
+
 ```
 
 ---

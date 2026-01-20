@@ -53,6 +53,7 @@ permalink: /26_sweep_line/03_line_segment_intersection/
 
 ```math
 \text{orient}(p, q, r) = (q_y - p_y)(r_x - q_x) - (q_x - p_x)(r_y - q_y)
+
 ```
 
 **Result:**
@@ -72,6 +73,7 @@ permalink: /26_sweep_line/03_line_segment_intersection/
 \text{orient}(p_1, p_2, q_1) \cdot \text{orient}(p_1, p_2, q_2) < 0
 \land
 \text{orient}(q_1, q_2, p_1) \cdot \text{orient}(q_1, q_2, p_2) < 0
+
 ```
 
 **Special case:** Check bounding box overlap for collinear segments.
@@ -119,12 +121,14 @@ permalink: /26_sweep_line/03_line_segment_intersection/
 
 ```math
 x = \frac{b_2 - b_1}{m_1 - m_2}, \quad y = m_1x + b_1
+
 ```
 
 **For segments in parametric form:**
 
 ```math
 p(t) = p_1 + t(p_2 - p_1), \quad q(s) = q_1 + s(q_2 - q_1)
+
 ```
 
 Solve: $p\_1 + t(p\_2 - p\_1) = q\_1 + s(q\_2 - q\_1)$
@@ -140,6 +144,7 @@ Solve: $p\_1 + t(p\_2 - p\_1) = q\_1 + s(q\_2 - q\_1)$
 ```math
 \text{collinear}(p, q, r) \land \min(p_x, q_x) \leq r_x \leq \max(p_x, q_x)
 \land \min(p_y, q_y) \leq r_y \leq \max(p_y, q_y)
+
 ```
 
 ---
@@ -482,6 +487,7 @@ def valid_square(p1: List[int], p2: List[int],
             dists[0] == dists[1] == dists[2] == dists[3] and
             dists[4] == dists[5] and 
             dists[4] == 2 * dists[0])
+
 ```
 
 ---

@@ -110,9 +110,11 @@ permalink: /30_number_theory/02_primes/
 **Definition:** A prime number $p > 1$ is an integer with exactly two positive divisors: 1 and $p$.
 
 **First 25 Primes:**
+
 ```
 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 
 53, 59, 61, 67, 71, 73, 79, 83, 89, 97
+
 ```
 
 **Key Properties:**
@@ -129,6 +131,7 @@ permalink: /30_number_theory/02_primes/
 
 ```math
 n = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k}
+
 ```
 
 where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
@@ -140,6 +143,7 @@ where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
 360 &= 2^3 \times 3^2 \times 5^1 \\
 &= 8 \times 9 \times 5 = 360
 \end{align}
+
 ```
 
 **Applications:**
@@ -155,12 +159,14 @@ where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
 
 ```math
 \pi(n) \sim \frac{n}{\ln n}
+
 ```
 
 **Precise Version:**
 
 ```math
 \lim_{n \to \infty} \frac{\pi(n) \cdot \ln n}{n} = 1
+
 ```
 
 **Practical Approximations:**
@@ -218,6 +224,7 @@ where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
 | PRIMES: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29                    |
 | COUNT: 10 primes up to 30                                      |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -247,6 +254,7 @@ where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
 |                                                                 |
 | RESULT: 97 is PRIME ✓                                          |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -287,6 +295,7 @@ where $p\_1 < p\_2 < \cdots < p\_k$ are primes and $a\_i \geq 1$.
 | DIVISOR COUNT:                                                  |
 |   τ(360) = (3+1)(2+1)(1+1) = 4 × 3 × 2 = 24 divisors          |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -324,6 +333,7 @@ def is_prime(n: int) -> bool:
         i += 2
     
     return True
+
 ```
 
 ---
@@ -355,6 +365,7 @@ def is_prime_optimized(n: int) -> bool:
         i += 6
     
     return True
+
 ```
 
 ---
@@ -386,6 +397,7 @@ def sieve_of_eratosthenes(n: int) -> list[int]:
                 is_prime[j] = False
     
     return [i for i in range(n + 1) if is_prime[i]]
+
 ```
 
 ---
@@ -429,6 +441,7 @@ def factorize_with_spf(n: int, spf: list[int]) -> dict[int, int]:
         factors[p] = factors.get(p, 0) + 1
         n //= p
     return factors
+
 ```
 
 ---
@@ -479,6 +492,7 @@ def miller_rabin(n: int, k: int = 10) -> bool:
             return False
     
     return True
+
 ```
 
 ---
@@ -519,6 +533,7 @@ def prime_factorize(n: int) -> dict[int, int]:
         factors[n] = 1
     
     return factors
+
 ```
 
 ---
@@ -564,6 +579,7 @@ def segmented_sieve(L: int, R: int) -> list[int]:
             is_prime[j - L] = False
     
     return [L + i for i in range(size) if is_prime[i] and L + i >= 2]
+
 ```
 
 ---
@@ -619,6 +635,7 @@ def count_primes(n: int) -> int:
                 is_prime[j] = False
     
     return sum(is_prime)
+
 ```
 
 ### Pattern 2: Divisor Count from Factorization
@@ -648,6 +665,7 @@ def count_divisors(n: int) -> int:
         count *= 2  # Remaining prime factor
     
     return count
+
 ```
 
 ### Pattern 3: Euler's Totient Sieve
@@ -668,6 +686,7 @@ def euler_phi_sieve(n: int) -> list[int]:
                 phi[j] -= phi[j] // i
     
     return phi
+
 ```
 
 ### Pattern 4: Goldbach Partition
@@ -693,6 +712,7 @@ def goldbach_partition(n: int) -> tuple[int, int] | None:
             return (p, n - p)
     
     return None
+
 ```
 
 ---

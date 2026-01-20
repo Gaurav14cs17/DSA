@@ -111,6 +111,7 @@ binom = BinomialMod(10**6, MOD)
 print(binom.nCr(1000000, 500000))  # Instant!
 print(binom.nCr(100, 50))          # 538992043
 print(binom.nPr(10, 3))            # 720
+
 ```
 
 ### 2. Without Precomputation (Single Query)
@@ -142,6 +143,7 @@ def nCr_mod(n: int, k: int, mod: int) -> int:
 
 # Example
 print(nCr_mod(1000, 500, 10**9 + 7))
+
 ```
 
 ### 3. Batch Inverse Computation
@@ -173,6 +175,7 @@ def batch_inverse(arr: list[int], mod: int) -> list[int]:
         inv_total = inv_total * arr[i] % mod
     
     return result
+
 ```
 
 ---
@@ -200,6 +203,7 @@ def batch_inverse(arr: list[int], mod: int) -> list[int]:
 |   C(5,2) mod 7 = 1 × 4 × 6 mod 7 = 24 mod 7 = 3               |
 |   Verify: 10 mod 7 = 3 ✓                                       |
 +-----------------------------------------------------------------+
+
 ```
 
 ---

@@ -36,6 +36,7 @@ A stack $S$ is a collection supporting:
 \text{push}(x): S \to S \cup \{x\}
 \text{pop}(): S \to S \setminus \{\text{top}\}, \text{ returns top}
 \text{peek}(): \text{returns top without removal}
+
 ```
 
 **LIFO Property:** Last element pushed is first element popped.
@@ -64,6 +65,7 @@ For string $S$ with brackets $\{(, ), [, ], \{, \}\}$:
 ```math
 \text{Valid} \iff \forall i: \text{count}_{open}(0..i) \geq \text{count}_{close}(0..i)
 \text{AND } \text{count}_{open}(S) = \text{count}_{close}(S)
+
 ```
 
 **Stack Invariant:** Stack contains only unmatched opening brackets.
@@ -76,12 +78,14 @@ For string $S$ with brackets $\{(, ), [, ], \{, \}\}$:
 
 ```math
 \forall i < j: S[i] \leq S[j]
+
 ```
 
 **Monotonically Decreasing Stack:**
 
 ```math
 \forall i < j: S[i] \geq S[j]
+
 ```
 
 **Key Insight:** When element $x$ is pushed:
@@ -101,6 +105,7 @@ For string $S$ with brackets $\{(, ), [, ], \{, \}\}$:
 A[j] & \text{first } j > i \text{ where } A[j] > A[i] \\
 -1 & \text{if no such } j \text{ exists}
 \end{cases}
+
 ```
 
 **Time Complexity:** O(n) - each element pushed and popped at most once.
@@ -130,6 +135,7 @@ A[j] & \text{first } j > i \text{ where } A[j] > A[i] \\
 
 ```math
 \text{Area}[i] = h[i] \times (\text{right\_bound}[i] - \text{left\_bound}[i] - 1)
+
 ```
 
 Where:
@@ -148,6 +154,7 @@ Where:
 
 ```math
 \text{min\_at}[i] = \min(value[i], \text{min\_at}[i-1])
+
 ```
 
 **Space Trade-off:** O(n) extra space for O(1) getMin().
@@ -185,6 +192,7 @@ class Stack:
     
     def is_empty(self):
         return len(self.items) == 0
+
 ```
 
 ### Monotonic Stack Template
@@ -208,6 +216,7 @@ def next_greater_element(nums: list[int]) -> list[int]:
         stack.append(i)
     
     return result
+
 ```
 
 ---
@@ -274,6 +283,7 @@ Parentheses   Monotonic Stack   Shunting-Yard
     |              |              |
  Push open    Dec for NGE    Operator stack
  Pop to match  Inc for NSE    + operand stack
+
 ```
 
 ---
@@ -339,6 +349,7 @@ Parentheses   Monotonic Stack   Shunting-Yard
 ## 📚 References & Learning Resources
 
 ### 📖 Books & Courses
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **CLRS Chapter 10** | Stack implementation | [MIT Press](https://mitpress.mit.edu/books/introduction-algorithms) |
@@ -346,6 +357,7 @@ Parentheses   Monotonic Stack   Shunting-Yard
 | **Competitive Programming 3** | Chapter 2.3 - Data structures | [Book](https://cpbook.net/) |
 
 ### 🌐 Online Tutorials
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **GeeksforGeeks** | Stack complete guide | [Tutorial](https://www.geeksforgeeks.org/stack-data-structure/) |
@@ -354,6 +366,7 @@ Parentheses   Monotonic Stack   Shunting-Yard
 | **HackerRank** | Stack challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=stacks) |
 
 ### 📺 Video Resources
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **NeetCode** | Stack playlist | [YouTube](https://www.youtube.com/playlist?list=PLot-Xpze53lfxD6l5pAGvCD4nPvWKU8Qo) |
@@ -363,6 +376,7 @@ Parentheses   Monotonic Stack   Shunting-Yard
 | **Tech Dose** | Stack problems series | [YouTube](https://www.youtube.com/watch?v=T3o8vvLe2Xk) |
 
 ### 📝 Practice Platforms
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Interview problems | [Stack Tag](https://leetcode.com/tag/stack/) |
@@ -371,6 +385,7 @@ Parentheses   Monotonic Stack   Shunting-Yard
 | **CodeChef** | Stack problems | [Practice](https://www.codechef.com/practice) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Monotonic Stack** | Complete guide | [LeetCode Discuss](https://leetcode.com/discuss/study-guide/2347639/) |
@@ -379,6 +394,7 @@ Parentheses   Monotonic Stack   Shunting-Yard
 | **Catalan Numbers** | Valid parentheses count | [Wikipedia](https://en.wikipedia.org/wiki/Catalan_number) |
 
 ### 🎯 Problem Collections
+
 | Collection | Focus | Link |
 |-----------|-------|------|
 | **NeetCode 150** | Essential problems | [List](https://neetcode.io/practice) |
@@ -387,6 +403,7 @@ Parentheses   Monotonic Stack   Shunting-Yard
 | **Striver's SDE Sheet** | Must-do problems | [Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/) |
 
 ### 📊 Visualization Tools
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo** | Interactive stack ops | [Website](https://visualgo.net/en/list) |
@@ -394,6 +411,7 @@ Parentheses   Monotonic Stack   Shunting-Yard
 | **CS Animations** | Data structure animations | [Website](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html) |
 
 ### 🏆 Competition Resources
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **USACO Guide** | Data structures guide | [Guide](https://usaco.guide/) |
@@ -429,6 +447,7 @@ Parentheses   Monotonic Stack   Shunting-Yard
 [ ] Is this a matching/nesting problem?
 [ ] Can I solve without stack (two pointers)?
 [ ] Do I need to process in reverse?
+
 ```
 
 ---

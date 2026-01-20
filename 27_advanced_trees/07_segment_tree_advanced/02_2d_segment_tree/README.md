@@ -88,6 +88,7 @@ class SegmentTree2D:
     def query(self, x1, y1, x2, y2):
         """Query sum of rectangle."""
         return self._query_x(0, 0, self.m-1, x1, x2, y1, y2)
+
 ```
 
 ---

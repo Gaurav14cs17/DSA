@@ -150,6 +150,7 @@ permalink: /40_dp_optimizations/
 ```
 dp[i][j] depends only on dp[i-1][*]
 ⟹ Keep only 2 rows: current and previous
+
 ```
 
 **Space:** O(n²) → O(n)
@@ -199,6 +200,7 @@ def space_optimized_dp(arr):
         return prev[n-1]
     
     return optimized()
+
 ```
 
 ### Visual Example
@@ -217,6 +219,7 @@ prev: [2  3  5  8 13]
 curr: [3  5  8 13 21]  ← Computing
 
 Memory: 2n instead of n²
+
 ```
 
 ### Problems
@@ -235,8 +238,10 @@ Memory: 2n instead of n²
 ### Theory
 
 **Problem Pattern:**
+
 ```
 dp[i] = min/max(dp[j] + cost(j, i)) for j ∈ [i-k, i-1]
+
 ```
 
 **Key Insight:** Use deque to maintain min/max in sliding window.
@@ -305,6 +310,7 @@ class MonotonicQueueDP:
             dq.append(i)
         
         return dp[n - 1]
+
 ```
 
 ### Visual Walkthrough
@@ -334,6 +340,7 @@ i=4: Window [2,3], max_dp = 3
 
 Final: dp = [10, 8, 0, 3, 23]
 Answer: 23
+
 ```
 
 ### Problems (Monotonic Queue)
@@ -353,8 +360,10 @@ Answer: 23
 ### Theory
 
 **Problem Pattern:**
+
 ```
 dp[i] = min/max(m[j] × x[i] + b[j]) for all j < i
+
 ```
 
 Where m[j], b[j] are from previous DP states, x[i] is current query point.
@@ -460,6 +469,7 @@ class ConvexHullTrick:
         
         m, b = self.lines[ptr]
         return m * x + b, ptr
+
 ```
 
 ### Example Problem: Minimum Cost to Split Array
@@ -506,6 +516,7 @@ def min_cost_split(arr):
         cht.add_line(m, b)
     
     return dp[n]
+
 ```
 
 ### Visual Example (CHT)
@@ -532,6 +543,7 @@ Lower Envelope:
 - x ∈ [3, ∞): L3 optimal
 
 CHT maintains only [L1, L2, L3] (convex hull)
+
 ```
 
 ### Problems (Convex Hull Trick)
@@ -652,6 +664,7 @@ class LiChaoTree:
             return min(result, self.query(x, 2 * node_id, l, mid))
         else:
             return min(result, self.query(x, 2 * node_id + 1, mid + 1, r))
+
 ```
 
 ### Problems (Li Chao Tree)
@@ -667,16 +680,20 @@ class LiChaoTree:
 ### Theory
 
 **Condition:** Monotone optimal split point
+
 ```
 opt[i][j] ≤ opt[i][j+1]
+
 ```
 
 This is satisfied when cost matrix satisfies **Monge property**.
 
 **Monge Property (Quadrangle Inequality):**
+
 ```
 cost[a][c] + cost[b][d] ≤ cost[a][d] + cost[b][c]
 for all a ≤ b ≤ c ≤ d
+
 ```
 
 **Complexity:** O(n²k) → O(nk log n)
@@ -743,6 +760,7 @@ def divide_conquer_dp(arr, K):
         solve(k, 0, n - 1, 0, n - 1)
     
     return dp[K][n - 1]
+
 ```
 
 ### Visual Example
@@ -772,6 +790,7 @@ D&C Optimization: Binary search on optimal j
 +-----------------------------------+
 
 Reduces O(n²) work to O(n log n) per level!
+
 ```
 
 ### Problems (Divide & Conquer)
@@ -863,6 +882,7 @@ def knuth_optimization(arr):
                     opt[i][j] = k
     
     return dp[0][n - 1]
+
 ```
 
 ### Proof Sketch
@@ -887,6 +907,7 @@ Adding these inequalities and using quadrangle inequality
 leads to contradiction!
 
 Therefore: opt[i][j-1] ≤ opt[i][j]
+
 ```
 
 ### Problems (Knuth's Optimization)
@@ -909,6 +930,7 @@ Therefore: opt[i][j-1] ≤ opt[i][j]
 
 ```
 dp[mask] = Σ f[submask] for all submask ⊆ mask
+
 ```
 
 **Naive:** O(3ⁿ) - for each mask, iterate all 2ⁿ subsets
@@ -946,6 +968,7 @@ def sos_dp(arr):
                 dp[i + 1][mask] += dp[i][mask ^ (1 << i)]
     
     return dp[n]
+
 ```
 
 ### Space-Optimized SOS DP
@@ -966,6 +989,7 @@ def sos_dp_optimized(arr):
                 dp[mask] += dp[mask ^ (1 << i)]
     
     return dp
+
 ```
 
 ### Visual Example
@@ -1001,6 +1025,7 @@ i=2 (bit 2):
   dp[111] += dp[011]  (26+10=36)
 
 Final: dp = [1, 3, 4, 10, 6, 14, 16, 36]
+
 ```
 
 ### Problems (SOS DP)
@@ -1020,15 +1045,18 @@ Final: dp = [1, 3, 4, 10, 6, 14, 16, 36]
 
 ```
 f(n) = c₁·f(n-1) + c₂·f(n-2) + ... + cₖ·f(n-k)
+
 ```
 
 **Matrix Form:**
+
 ```
 [f(n)  ]   [c₁ c₂ ... cₖ] [f(n-1)]
 [f(n-1)]   [1  0  ... 0 ] [f(n-2)]
 [f(n-2)] = [0  1  ... 0 ] [f(n-3)]
 [...   ]   [...       ...] [...   ]
 [f(n-k+1)] [0  0  ... 0 ] [f(n-k)]
+
 ```
 
 **Solution:** Compute Aⁿ using binary exponentiation
@@ -1117,6 +1145,7 @@ class MatrixExponentiation:
         
         # f(2)=1, f(1)=1, f(0)=0
         return A_n[0][0] + A_n[0][1]
+
 ```
 
 ### Problems (Matrix Exponentiation)
@@ -1143,6 +1172,7 @@ class MatrixExponentiation:
 ```
 Define: g(λ) = min cost + λ × (number of groups)
 Binary search λ until number of groups = k
+
 ```
 
 **Complexity:** O(n²k) → O(n² log C)
@@ -1209,6 +1239,7 @@ def aliens_trick(arr, k):
             left = mid
     
     return best_cost
+
 ```
 
 ### Why It Works
@@ -1228,6 +1259,7 @@ Cost
 
 For each λ, find tangent point
 Binary search λ to hit k groups
+
 ```
 
 **Formal:** Lagrangian relaxation + convexity guarantee convergence.
@@ -1301,6 +1333,7 @@ def tiling_2xn(n):
         dp = next_dp
     
     return dp[3]  # Both cells filled in last column
+
 ```
 
 ---
@@ -1370,6 +1403,7 @@ def rerooting_dp(graph, n):
     dfs_up(0, -1, 0)
     
     return answer
+
 ```
 
 ---
@@ -1475,6 +1509,7 @@ def rerooting_dp(graph, n):
              
              Monge? →    Quad ineq?
              D&C DP      → Knuth
+
 ```
 
 ---

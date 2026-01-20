@@ -37,6 +37,7 @@ With cooldown $n$ between same tasks:
 
 ```math
 \text{time} = \max(\text{total tasks}, (\text{max freq} - 1) \times (n + 1) + \text{count of max freq})
+
 ```
 
 ---
@@ -47,6 +48,7 @@ With cooldown $n$ between same tasks:
 
 ```math
 \text{max frequency} \leq \lceil \frac{n}{2} \rceil
+
 ```
 
 ---
@@ -157,6 +159,7 @@ def carPooling(trips: list[list[int]], capacity: int) -> bool:
             return False
     
     return True
+
 ```
 
 ---

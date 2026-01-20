@@ -34,6 +34,7 @@ permalink: /14_sorting/
 
 ```math
 \boxed{\Omega(n \log n) \text{ comparisons}}
+
 ```
 
 **Proof:** 
@@ -65,6 +66,7 @@ permalink: /14_sorting/
 
 ```math
 a_i = a_j \land i < j \Rightarrow \text{pos}(a_i) < \text{pos}(a_j) \text{ after sort}
+
 ```
 
 **Important for:** Multi-key sorting, preserving original order.
@@ -75,12 +77,14 @@ a_i = a_j \land i < j \Rightarrow \text{pos}(a_i) < \text{pos}(a_j) \text{ after
 
 ```math
 T(n) = 2T(n/2) + O(n)
+
 ```
 
 **Solution (Master Theorem):**
 
 ```math
 T(n) = O(n \log n)
+
 ```
 
 ---
@@ -91,12 +95,14 @@ T(n) = O(n \log n)
 
 ```math
 T(n) = 2T(n/2) + O(n) = O(n \log n)
+
 ```
 
 **Worst case:** Unbalanced partitions (sorted array).
 
 ```math
 T(n) = T(n-1) + O(n) = O(n^2)
+
 ```
 
 ---
@@ -107,6 +113,7 @@ T(n) = T(n-1) + O(n) = O(n^2)
 
 ```math
 T = O(n + k), \quad S = O(k)
+
 ```
 
 **Works when:** $k = O(n)$.
@@ -119,6 +126,7 @@ T = O(n + k), \quad S = O(k)
 
 ```math
 T = O(d \cdot (n + k))
+
 ```
 
 Where $d$ = digits, $k$ = base (usually 10).
@@ -164,6 +172,7 @@ def partition(arr: list[int], low: int, high: int) -> int:
     
     arr[i + 1], arr[high] = arr[high], arr[i + 1]
     return i + 1
+
 ```
 
 ### Merge Sort
@@ -201,6 +210,7 @@ def merge(left: list[int], right: list[int]) -> list[int]:
     result.extend(left[i:])
     result.extend(right[j:])
     return result
+
 ```
 
 ---
@@ -260,6 +270,7 @@ Sorting Problem
      +-- Digits/strings → Radix Sort
      |
      +-- Uniform distribution → Bucket Sort
+
 ```
 
 ---

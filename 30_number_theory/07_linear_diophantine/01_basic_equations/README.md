@@ -93,6 +93,7 @@ where $a, b, c \in \mathbb{Z}$ and we seek integer solutions $(x, y)$.
 |                                                                 |
 | Verify: 3(14) + 5(-7) = 42 - 35 = 7 ✓                         |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -139,6 +140,7 @@ def solve_diophantine(a: int, b: int, c: int) -> tuple[int, int] | None:
 print(solve_diophantine(3, 5, 7))    # (14, -7)
 print(solve_diophantine(6, 9, 12))   # (8, -4) or similar
 print(solve_diophantine(6, 9, 10))   # None (gcd=3 doesn't divide 10)
+
 ```
 
 ---

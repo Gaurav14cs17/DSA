@@ -67,6 +67,7 @@ class Solution:
         from math import gcd
         from functools import reduce
         return reduce(gcd, nums) == 1
+
 ```
 
 ### LeetCode 365: Water and Jug Problem
@@ -89,6 +90,7 @@ class Solution:
             return False
         
         return target % gcd(x, y) == 0
+
 ```
 
 ### Linear Congruence Solver
@@ -115,6 +117,7 @@ def solve_linear_congruence(a: int, b: int, m: int) -> list[int]:
 
 # Example: 3x ≡ 6 (mod 9)
 print(solve_linear_congruence(3, 6, 9))  # [2, 5, 8]
+
 ```
 
 ---

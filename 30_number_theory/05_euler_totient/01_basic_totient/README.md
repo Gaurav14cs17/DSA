@@ -51,6 +51,7 @@ permalink: /30_number_theory/05_euler_totient/01_basic_totient/
 
 ```math
 \phi(n) = |\{k : 1 \leq k \leq n, \gcd(k, n) = 1\}|
+
 ```
 
 ---
@@ -61,12 +62,14 @@ For $n = p\_1^{a\_1} \cdot p\_2^{a\_2} \cdots p\_k^{a\_k}$:
 
 ```math
 \phi(n) = n \prod_{p|n}\left(1 - \frac{1}{p}\right) = n \cdot \frac{p_1-1}{p_1} \cdot \frac{p_2-1}{p_2} \cdots
+
 ```
 
 **Equivalently:**
 
 ```math
 \phi(n) = \prod_{i=1}^{k} p_i^{a_i - 1}(p_i - 1)
+
 ```
 
 ---
@@ -101,6 +104,7 @@ For $n = p\_1^{a\_1} \cdot p\_2^{a\_2} \cdots p\_k^{a\_k}$:
 |         = 12 × 1/2 × 2/3                                       |
 |         = 4 ✓                                                  |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -154,6 +158,7 @@ print(euler_phi(10))   # 4 (1, 3, 7, 9)
 print(euler_phi(12))   # 4 (1, 5, 7, 11)
 print(euler_phi(36))   # 12
 print(euler_phi(97))   # 96 (prime)
+
 ```
 
 ### 2. List Coprimes Explicitly
@@ -171,6 +176,7 @@ def list_coprimes(n: int) -> list[int]:
 # Example
 print(list_coprimes(12))  # [1, 5, 7, 11]
 print(list_coprimes(10))  # [1, 3, 7, 9]
+
 ```
 
 ### 3. Totient with Verbose Output
@@ -210,6 +216,7 @@ def euler_phi_verbose(n: int) -> int:
     return result
 
 euler_phi_verbose(360)
+
 ```
 
 ### 4. First n Values of Totient
@@ -222,6 +229,7 @@ def first_totients(n: int) -> list[int]:
 # First 20 values
 print(first_totients(20))
 # [1, 1, 2, 2, 4, 2, 6, 4, 6, 4, 10, 4, 12, 6, 8, 8, 16, 6, 18, 8]
+
 ```
 
 ---
@@ -258,6 +266,7 @@ The only numbers not coprime to a prime p are multiples of p, and only p itself 
 
 ```math
 \frac{1}{n}\sum_{i=1}^{n} \phi(i) \approx \frac{3n}{\pi^2}
+
 ```
 
 ---

@@ -107,6 +107,7 @@ class LucasCalculator:
 # Example usage
 calc = LucasCalculator(7)
 print(calc.nCr(10**18, 10**9))  # Instant!
+
 ```
 
 ---
@@ -129,6 +130,7 @@ def grid_paths_mod(rows: int, cols: int, p: int) -> int:
 
 # Example: Huge grid!
 print(grid_paths_mod(10**15, 10**15, 7))
+
 ```
 
 ### 2. Multinomial Coefficients
@@ -155,6 +157,7 @@ def multinomial_mod(n: int, groups: list[int], p: int) -> int:
 # Example: Ways to arrange "MISSISSIPPI" mod 7
 # 11! / (1! × 4! × 4! × 2!) 
 print(multinomial_mod(11, [1, 4, 4, 2], 7))
+
 ```
 
 ### 3. Stars and Bars with Large n
@@ -171,6 +174,7 @@ def distribute_items(n: int, k: int, p: int) -> int:
 
 # Example: Distribute 10^18 candies among 5 children mod 13
 print(distribute_items(10**18, 5, 13))
+
 ```
 
 ### 4. Kummer's Theorem (Carries in Addition)
@@ -207,6 +211,7 @@ def binomial_divisibility(n: int, k: int, p: int) -> int:
 # Example: Find power of 2 dividing C(10, 4)
 # C(10,4) = 210 = 2 × 105 = 2 × 3 × 5 × 7
 print(binomial_divisibility(10, 4, 2))  # 1
+
 ```
 
 ### 5. Composite Modulus (CRT)
@@ -261,6 +266,7 @@ def nCr_composite(n: int, r: int, m: int) -> int:
 
 # Example: C(100, 50) mod 30 = C(100,50) mod (2×3×5)
 print(nCr_composite(100, 50, 30))
+
 ```
 
 ---
@@ -285,6 +291,7 @@ print(nCr_composite(100, 50, 30))
 |                                                                 |
 | Key insight: ANY r_digit > n_digit makes result 0!             |
 +-----------------------------------------------------------------+
+
 ```
 
 ---

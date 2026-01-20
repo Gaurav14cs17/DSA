@@ -39,6 +39,7 @@ permalink: /15_searching/05_binary_search_advanced/
 
 ```math
 T = O(\log n)
+
 ```
 
 ---
@@ -50,6 +51,7 @@ T = O(\log n)
 ```math
 \text{left partition:} \quad \max(A[i-1], B[j-1]) \leq \min(A[i], B[j])
 T = O(\log(\min(m, n)))
+
 ```
 
 ---
@@ -61,6 +63,7 @@ T = O(\log(\min(m, n)))
 ```math
 \text{tails}[i] = \text{smallest tail of LIS of length } i+1
 T = O(n \log n)
+
 ```
 
 ---
@@ -71,6 +74,7 @@ Binary search on distance, count pairs with distance ≤ mid.
 
 ```math
 T = O(n \log n + n \log D)
+
 ```
 
 ---
@@ -255,6 +259,7 @@ def findInMountainArray(target: int, mountain_arr) -> int:
             right = mid - 1
     
     return -1
+
 ```
 
 ---

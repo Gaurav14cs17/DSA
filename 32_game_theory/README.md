@@ -72,6 +72,7 @@ permalink: /32_game_theory/
 \text{Position is L} &\iff \text{All successors are W} \\
 \text{Position is W} &\iff \exists \text{ successor that is L}
 \end{align}
+
 ```
 
 ---
@@ -84,6 +85,7 @@ permalink: /32_game_theory/
 
 ```math
 \text{Nim-Sum} = a_1 \oplus a_2 \oplus \cdots \oplus a_n
+
 ```
 
 **Bouton's Theorem (1901):**
@@ -93,6 +95,7 @@ permalink: /32_game_theory/
 \text{Nim-Sum} = 0 &\implies \text{Losing position (L)} \\
 \text{Nim-Sum} \neq 0 &\implies \text{Winning position (W)}
 \end{cases}
+
 ```
 
 **Proof:**
@@ -110,6 +113,7 @@ permalink: /32_game_theory/
 
 ```math
 g(P) = \text{mex}\{g(P') : P' \text{ is a successor of } P\}
+
 ```
 
 where $\text{mex}(S) = \min\{n \geq 0 : n \notin S\}$ (minimum excludant)
@@ -120,6 +124,7 @@ where $\text{mex}(S) = \min\{n \geq 0 : n \notin S\}$ (minimum excludant)
 - For multiple independent games: $g(G\_1 + G\_2 + \cdots) = g(G\_1) \oplus g(G\_2) \oplus \cdots$
 
 **Example:**
+
 ```
 Game: Remove 1, 2, or 3 stones from pile
 
@@ -131,6 +136,7 @@ g(4) = mex({g(1), g(2), g(3)}) = mex({1, 2, 3}) = 0  (losing!)
 g(5) = mex({g(2), g(3), g(4)}) = mex({2, 3, 0}) = 1
 
 Pattern: g(n) = n mod 4
+
 ```
 
 ---
@@ -142,6 +148,7 @@ Pattern: g(n) = n mod 4
 **Minimax Principle:** Maximize the minimum gain (or minimize the maximum loss).
 
 **Algorithm:**
+
 ```
 minimax(position, depth, isMaximizing):
     if terminal or depth = 0:
@@ -159,6 +166,7 @@ minimax(position, depth, isMaximizing):
             eval = minimax(child, depth-1, true)
             minEval = min(minEval, eval)
         return minEval
+
 ```
 
 **Time Complexity:** $O(b^d)$ where $b$ = branching factor, $d$ = depth
@@ -191,6 +199,7 @@ For many game problems, use **memoization** or **DP**:
 \text{win} &\text{if } \exists \text{ move to losing state} \\
 \text{lose} &\text{if all moves lead to winning states}
 \end{cases}
+
 ```
 
 ---
@@ -213,6 +222,7 @@ For many game problems, use **memoization** or **DP**:
          (Lose!)      (Win)        (Win)
          
     Choose move to [1,4,5] to guarantee win!
+
 ```
 
 ### Pattern 2: Grundy Numbers Visualization
@@ -223,6 +233,7 @@ Grundy:    0   1   2   3   0   1   2   3   0
            L   W   W   W   L   W   W   W   L
            
 Pattern repeats every 4 positions!
+
 ```
 
 ---
@@ -369,6 +380,7 @@ def find_winning_move(piles: list[int]) -> tuple[int, int]:
             return (i, pile - target)
     
     return None
+
 ```
 
 ---
@@ -415,6 +427,7 @@ def can_win_grundy(n: int, moves: list[int]) -> bool:
     Grundy number = 0 means losing position.
     """
     return calculate_grundy(n, moves) != 0
+
 ```
 
 ---
@@ -466,6 +479,7 @@ def minimax(state, depth: int, is_maximizing: bool,
                 break
         
         return min_eval
+
 ```
 
 ---
@@ -516,6 +530,7 @@ def stone_game_dp_optimized(piles: list[int]) -> bool:
             dp[i] = max(piles[i] - dp[i + 1], piles[j] - dp[i])
     
     return dp[0] > 0
+
 ```
 
 ---
@@ -564,6 +579,7 @@ def can_i_win(max_choosable: int, desired_total: int) -> bool:
         return False
     
     return can_win(0, desired_total)
+
 ```
 
 ---
@@ -579,6 +595,7 @@ def divisor_game(n: int) -> bool:
     LeetCode 1025: Player with even n wins
     """
     return n % 2 == 0
+
 ```
 
 ### Pattern 2: Symmetry Strategy
@@ -590,6 +607,7 @@ def can_win_symmetry(n: int) -> bool:
     If game has symmetry, second player often wins
     """
     return n % 2 == 0  # Even allows perfect mirroring
+
 ```
 
 ### Pattern 3: Backward Induction
@@ -611,6 +629,7 @@ def solve_game(n: int) -> bool:
                 break
     
     return dp[n]
+
 ```
 
 ---

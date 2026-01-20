@@ -49,6 +49,7 @@ After `partition(arr, low, high)`:
 ```math
 \forall i \in [low, pivot): arr[i] \leq arr[pivot]
 \forall i \in (pivot, high]: arr[i] > arr[pivot]
+
 ```
 
 ---
@@ -70,6 +71,7 @@ After `partition(arr, low, high)`:
 
 ```math
 T = O(n) + O(n \log n) = O(n \log n)
+
 ```
 
 ---
@@ -214,6 +216,7 @@ def mergeLists(l1: 'ListNode', l2: 'ListNode') -> 'ListNode':
     
     current.next = l1 or l2
     return dummy.next
+
 ```
 
 ---

@@ -43,6 +43,7 @@ For string s$ (with sentinel $):
 - Internal nodes have at least 2 children
 
 **Example:**
+
 ```
 String: "banana$"
 Suffixes:
@@ -61,6 +62,7 @@ Suffix Tree (compressed):
               /\
              na$ \
                  na$
+
 ```
 
 ### Compression
@@ -71,8 +73,10 @@ Suffix Tree (compressed):
 - Space: O(n) edges, each stores 2 integers
 
 **Key Insight:** Store edge labels as indices, not strings!
+
 ```
 Edge label: [3, 5] means s[3:6] (substring from index 3 to 5)
+
 ```
 
 ---
@@ -105,6 +109,7 @@ class SuffixTreeNode:
         if self.end == -1:
             return 0
         return self.end - self.start + 1
+
 ```
 
 ### Ukkonen's Algorithm (Simplified)
@@ -268,6 +273,7 @@ class SuffixTree:
             node = child
         
         return True
+
 ```
 
 ### Practical Suffix Tree (Using Library Concept)
@@ -339,6 +345,7 @@ class SimpleSuffixTree:
                 indices.extend(self._collect_leaves(child))
         
         return indices
+
 ```
 
 ---
@@ -362,6 +369,7 @@ def pattern_match_suffix_tree(text, pattern):
 text = "banana"
 pattern = "ana"
 print(pattern_match_suffix_tree(text, pattern))  # [1, 3]
+
 ```
 
 ### 2. Longest Repeated Substring
@@ -403,6 +411,7 @@ def longest_repeated_substring(text):
 
 # Example
 print(longest_repeated_substring("banana"))  # "ana"
+
 ```
 
 ### 3. Longest Common Substring
@@ -465,6 +474,7 @@ def longest_common_substring(s1, s2):
     
     _, result = dfs(st.root, 0, "")
     return result
+
 ```
 
 ### 4. Number of Distinct Substrings
@@ -495,6 +505,7 @@ def count_distinct_substrings(text):
 
 # Example
 print(count_distinct_substrings("banana"))  # 15
+
 ```
 
 ### 5. Substring Queries
@@ -522,6 +533,7 @@ class SubstringQueryDS:
     def positions(self, substring):
         """Get all positions where substring occurs"""
         return sorted(self.st.get_all_occurrences(substring))
+
 ```
 
 ### 6. Palindrome Substring Count
@@ -547,6 +559,7 @@ def count_palindromic_substrings_st(text):
                 count += 1
     
     return count
+
 ```
 
 ### 7. Longest Palindromic Substring
@@ -580,6 +593,7 @@ def longest_palindrome_suffix_tree(text):
                 result = substring
     
     return result
+
 ```
 
 ---
@@ -587,12 +601,14 @@ def longest_palindrome_suffix_tree(text):
 ## 🧩 LeetCode Problems
 
 ### Medium
+
 | # | Problem | Difficulty | Pattern |
 |---|---------|------------|---------|
 | 1062 | [Longest Repeating Substring](https://leetcode.com/problems/longest-repeating-substring/) | 🟡 Medium | Deepest internal node |
 | 1044 | [Longest Duplicate Substring](https://leetcode.com/problems/longest-duplicate-substring/) | 🟡 Medium | Repeated substring |
 
 ### Hard
+
 | # | Problem | Difficulty | Pattern |
 |---|---------|------------|---------|
 | 1923 | [Longest Common Subpath](https://leetcode.com/problems/longest-common-subpath/) | 🔴 Hard | Multiple LCS |
@@ -637,6 +653,7 @@ def longest_palindrome_suffix_tree(text):
 - Count distinct substrings: O(n)
 - Substring queries: O(m)
 - Find all occurrences: O(m + k)
+
 ```
 
 ---
@@ -672,6 +689,7 @@ class GeneralizedSuffixTree:
         """Find longest substring common to ALL strings"""
         # Find deepest node with leaves from all strings
         pass
+
 ```
 
 ### Suffix Links Properties
@@ -683,6 +701,7 @@ Uses:
 - Fast construction in Ukkonen's algorithm
 - Linear time guarantee
 - Navigate between related suffixes
+
 ```
 
 ---

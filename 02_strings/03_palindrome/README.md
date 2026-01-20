@@ -35,12 +35,14 @@ permalink: /02_strings/03_palindrome/
 
 ```math
 \boxed{S = \text{reverse}(S)}
+
 ```
 
 **Equivalently:**
 
 ```math
 S[i] = S[n-1-i] \quad \forall i \in [0, \lfloor n/2 \rfloor]
+
 ```
 
 ---
@@ -62,6 +64,7 @@ For center at position $c$ (using $2n-1$ mapping):
 ```math
 \text{left} = c // 2
 \text{right} = c // 2 + c \% 2
+
 ```
 
 ---
@@ -78,6 +81,7 @@ dp[i][j] = \begin{cases}
 S[i] = S[j] & \text{if } j = i + 1 \\
 S[i] = S[j] \land dp[i+1][j-1] & \text{if } j > i + 1
 \end{cases}
+
 ```
 
 ---
@@ -88,6 +92,7 @@ S[i] = S[j] \land dp[i+1][j-1] & \text{if } j > i + 1
 
 ```math
 \text{count} = \sum_{c=0}^{2n-2} \text{palindromes\_from\_center}(c)
+
 ```
 
 **Time:** $O(n^2)$ total
@@ -102,6 +107,7 @@ S[i] = S[j] \land dp[i+1][j-1] & \text{if } j > i + 1
 
 ```math
 S' = \#s_0\#s_1\#\ldots\#s_{n-1}\#
+
 ```
 
 **Property:** All palindromes become odd-length in $S'$.
@@ -273,6 +279,7 @@ def validPalindrome(s: str) -> bool:
         right -= 1
     
     return True
+
 ```
 
 ---
@@ -338,6 +345,7 @@ Center enumeration (2n-1 = 9 centers):
 +----------------------------------------------------------+
 
 Longest found: "bab" or "aba" (both length 3)
+
 ```
 
 ### Why 2n-1 Centers?
@@ -355,6 +363,7 @@ Total: 3 + 2 = 5 = 2(3) - 1 ✓
 Formula: center c maps to:
   left = c ÷ 2
   right = c ÷ 2 + (c mod 2)
+
 ```
 
 ---
@@ -394,6 +403,7 @@ Palindrome Problem
       Expand  +-+--+
        O(n²)  DP  Manacher
             O(n²) O(n)
+
 ```
 
 ### When to Use Each Approach
@@ -432,9 +442,11 @@ Total: 3 + 2 + 1 = 6 = n(n+1)/2
 **Key Idea:** Reuse previously computed palindrome information.
 
 **Augmented string:** Insert '#' between chars
+
 ```
 "aba" → "#a#b#a#"
 All palindromes become odd-length!
+
 ```
 
 **LPS array:** `lps[i]` = radius of palindrome centered at `i`
@@ -462,6 +474,7 @@ All palindromes become odd-length!
 n < 100:     Any approach works
 n < 10,000:  Expand around center recommended
 n > 10,000:  Consider Manacher's
+
 ```
 
 ---
@@ -469,6 +482,7 @@ n > 10,000:  Consider Manacher's
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **Palindrome Algorithms** | Complete guide | [GeeksforGeeks](https://www.geeksforgeeks.org/longest-palindrome-substring-set-1/) |
@@ -477,6 +491,7 @@ n > 10,000:  Consider Manacher's
 | **Palindrome Properties** | Mathematical insights | [MathWorld](https://mathworld.wolfram.com/Palindrome.html) |
 
 ### 🎥 Video Tutorials
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **NeetCode** | Longest palindromic substring | [YouTube](https://www.youtube.com/watch?v=XYQecbcd6_c) |
@@ -486,6 +501,7 @@ n > 10,000:  Consider Manacher's
 | **Abdul Bari** | Palindrome partitioning | [YouTube](https://www.youtube.com/watch?v=fOTlBKBPNdQ) |
 
 ### 📝 Interactive Practice
+
 | Platform | Problem Set | Link |
 |----------|-------------|------|
 | **LeetCode** | Palindrome tag | [Problems](https://leetcode.com/tag/palindrome/) |
@@ -493,6 +509,7 @@ n > 10,000:  Consider Manacher's
 | **Codeforces** | Palindrome problems | [Problemset](https://codeforces.com/problemset?tags=strings,1200-1400) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Manacher's Algorithm** | Linear time implementation | [CP-Algorithms](https://cp-algorithms.com/string/manacher.html) |
@@ -501,6 +518,7 @@ n > 10,000:  Consider Manacher's
 | **Aho-Corasick Palindrome** | Multiple palindrome patterns | [Paper](https://www.sciencedirect.com/science/article/pii/0022000075900115) |
 
 ### 🎯 Problem Collections
+
 | Collection | Focus | Link |
 |-----------|-------|------|
 | **NeetCode 150** | Essential palindromes | [List](https://neetcode.io/practice) |
@@ -508,6 +526,7 @@ n > 10,000:  Consider Manacher's
 | **Striver's SDE Sheet** | Palindrome section | [Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/) |
 
 ### 📊 Visualization Tools
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **Palindrome Visualizer** | Interactive demo | [Tool](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html) |

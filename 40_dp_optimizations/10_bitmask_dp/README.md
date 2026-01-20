@@ -56,6 +56,7 @@ def tsp(dist):
     # Return to start
     final_mask = (1 << n) - 1
     return min(dp[final_mask][i] + dist[i][0] for i in range(n))
+
 ```
 
 ### Pattern 2: Assignment Problems
@@ -89,6 +90,7 @@ def assignment(tasks, k):
             submask = (submask - 1) & remaining
     
     return dp[(1 << n) - 1]
+
 ```
 
 ---

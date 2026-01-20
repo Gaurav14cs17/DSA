@@ -37,6 +37,7 @@ permalink: /07_trees/05_lca_ancestor/
 
 ```math
 \text{LCA}(p, q) = \text{deepest node that is ancestor of both } p \text{ and } q
+
 ```
 
 **Properties:**
@@ -55,6 +56,7 @@ root & \text{if } p \in T_L \text{ and } q \in T_R \\
 \text{LCA}(root.left, p, q) & \text{if } p, q \in T_L \\
 \text{LCA}(root.right, p, q) & \text{if } p, q \in T_R
 \end{cases}
+
 ```
 
 ---
@@ -69,6 +71,7 @@ root & \text{if } p.val \leq root.val \leq q.val \\
 \text{LCA}(root.left, p, q) & \text{if } p.val, q.val < root.val \\
 \text{LCA}(root.right, p, q) & \text{if } p.val, q.val > root.val
 \end{cases}
+
 ```
 
 **Time:** O(h) instead of O(n).
@@ -79,6 +82,7 @@ root & \text{if } p.val \leq root.val \leq q.val \\
 
 ```math
 \text{dist}(p, q) = \text{dist}(root, p) + \text{dist}(root, q) - 2 \times \text{dist}(root, \text{LCA}(p, q))
+
 ```
 
 ---
@@ -89,6 +93,7 @@ root & \text{if } p.val \leq root.val \leq q.val \\
 
 ```math
 \text{ancestor}[i][j] = \text{ancestor}[\text{ancestor}[i][j-1]][j-1]
+
 ```
 
 Where $\text{ancestor}[i][j]$ = $2^j$-th ancestor of node $i$.
@@ -103,6 +108,7 @@ Where $\text{ancestor}[i][j]$ = $2^j$-th ancestor of node $i$.
 
 ```math
 k = \sum_{i} b_i \cdot 2^i
+
 ```
 
 Jump using precomputed $2^i$-th ancestors.
@@ -241,6 +247,7 @@ def distanceBetweenNodes(root: TreeNode, p: TreeNode, q: TreeNode) -> int:
     
     lca = lowestCommonAncestor(root, p, q)
     return find_distance(lca, p, 0) + find_distance(lca, q, 0)
+
 ```
 
 ---
@@ -301,6 +308,7 @@ Example 2: Find LCA(5, 4)
     4 found in left subtree, return up
   Since 5 itself is one target and 4 in its subtree
   Result: 5 (ancestor can be the node itself!)
+
 ```
 
 ### LCA of BST (#235)
@@ -323,6 +331,7 @@ At 6: 2 < 6 and 4 < 6 → both left
 At 2: 2 ≤ 2 ≤ 4 → Split! LCA = 2
 
 Time: O(h) - Only one path!
+
 ```
 
 ### Binary Lifting for Kth Ancestor
@@ -352,6 +361,7 @@ To find 3rd ancestor of node 4:
   Result: 0
 
 Time: O(log k) per query after O(n log n) preprocessing
+
 ```
 
 ---
@@ -368,6 +378,7 @@ LCA Problem
      +-- Multiple queries? → Binary Lifting
      |
      +-- Single query? → DFS recursive
+
 ```
 
 ### Complexity Comparison
@@ -397,6 +408,7 @@ LCA Problem
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **Wikipedia** | LCA definition | [Article](https://en.wikipedia.org/wiki/Lowest_common_ancestor) |
@@ -405,6 +417,7 @@ LCA Problem
 | **GeeksforGeeks** | LCA in BST | [Tutorial](https://www.geeksforgeeks.org/lowest-common-ancestor-in-a-binary-search-tree/) |
 
 ### 📺 Video Tutorials
+
 | Creator | Topic | Link |
 |---------|-------|------|
 | **NeetCode** | LCA Binary Tree | [YouTube](https://www.youtube.com/watch?v=gs2LMfuOR9k) |
@@ -413,12 +426,14 @@ LCA Problem
 | **Back To Back SWE** | LCA problems | [YouTube](https://www.youtube.com/watch?v=13m9ZCB8gjw) |
 
 ### 🎯 Practice Collections
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | LCA problems | [Tag](https://leetcode.com/tag/lowest-common-ancestor/) |
 | **HackerRank** | Tree challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=trees) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Binary Lifting** | Fast ancestor queries | [CP-Algorithms](https://cp-algorithms.com/graph/lca_binary_lifting.html) |
@@ -426,6 +441,7 @@ LCA Problem
 | **RMQ to LCA** | Reduction between problems | [Tutorial](https://www.geeksforgeeks.org/lca-using-rmq/) |
 
 ### 📊 Visualization
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo** | LCA visualization | [Website](https://visualgo.net/en/bst) |

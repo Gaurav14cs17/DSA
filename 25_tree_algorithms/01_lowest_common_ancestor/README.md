@@ -43,6 +43,7 @@ permalink: /25_tree_algorithms/01_lowest_common_ancestor/
 
 ```math
 \text{LCA}(u, v) = w \text{ where } w \text{ is ancestor of both } u, v \text{ and deepest such node}
+
 ```
 
 **Properties:**
@@ -77,6 +78,7 @@ permalink: /25_tree_algorithms/01_lowest_common_ancestor/
 \text{parent}[v] & \text{if } k = 0 \\
 \text{up}[\text{up}[v][k-1]][k-1] & \text{if } k > 0
 \end{cases}
+
 ```
 
 **Query Algorithm:**
@@ -129,6 +131,7 @@ permalink: /25_tree_algorithms/01_lowest_common_ancestor/
 
 ```math
 \text{dist}(u, v) = \text{depth}[u] + \text{depth}[v] - 2 \cdot \text{depth}[\text{LCA}(u, v)]
+
 ```
 
 ---
@@ -139,12 +142,14 @@ permalink: /25_tree_algorithms/01_lowest_common_ancestor/
 
 ```math
 w \text{ on path} \iff \text{LCA}(u, v) = \text{LCA}(u, w) = \text{LCA}(w, v)
+
 ```
 
 or equivalently:
 
 ```math
 \text{dist}(u, v) = \text{dist}(u, w) + \text{dist}(w, v)
+
 ```
 
 ---
@@ -569,6 +574,7 @@ def countPairs(n: int, edges: List[List[int]], queries: List[List[int]]) -> List
         return count
     
     return [count_close_pairs(q) for q in queries]
+
 ```
 
 ---
@@ -616,6 +622,7 @@ LCA Problem
      +-- Need O(1) queries → Euler Tour + RMQ
      |
      +-- BST → Use BST property O(h)
+
 ```
 
 ---

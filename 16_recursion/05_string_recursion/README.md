@@ -53,6 +53,7 @@ Process string from index 0 to end:
 
 ```
 f(s, i) → process s[i], then f(s, i+1)
+
 ```
 
 **Pattern:** Action first, then recurse.
@@ -65,6 +66,7 @@ Process string from end to start:
 
 ```
 f(s, i) → f(s, i-1), then process s[i]
+
 ```
 
 **Pattern:** Recurse first, then action.
@@ -77,6 +79,7 @@ Process from both ends:
 
 ```
 f(s, left, right) → process s[left] & s[right], then f(s, left+1, right-1)
+
 ```
 
 **Pattern:** Compare/swap ends, recurse inward.
@@ -89,6 +92,7 @@ Create new substrings:
 
 ```
 f(s) → process s[0], then f(s[1:])
+
 ```
 
 **Note:** Creates new strings - O(n) per call.
@@ -186,6 +190,7 @@ def removeChar(s: str, char: str) -> str:
         return removeChar(s[1:], char)
     else:
         return s[0] + removeChar(s[1:], char)
+
 ```
 
 ### String Decoding
@@ -307,6 +312,7 @@ def runLengthDecode(s: str) -> str:
         return char * count + decode(j)
     
     return decode()
+
 ```
 
 ### Advanced String Recursion
@@ -431,6 +437,7 @@ def addStrings(num1: str, num2: str) -> str:
         return add(i - 1, j - 1, new_carry) + str(digit)
     
     return add(len(num1) - 1, len(num2) - 1, 0)
+
 ```
 
 ### String Comparison
@@ -491,6 +498,7 @@ def longestCommonPrefix(strs: list) -> str:
     if not strs:
         return ""
     return lcp(0, len(strs) - 1)
+
 ```
 
 ---
@@ -543,6 +551,7 @@ String Recursion Patterns
          |
          +-- Nested/Bracket
              +-- Handle [...] with recursive call
+
 ```
 
 ---

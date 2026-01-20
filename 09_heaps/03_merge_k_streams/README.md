@@ -35,6 +35,7 @@ permalink: /09_heaps/03_merge_k_streams/
 
 ```math
 \boxed{T(n, k) = O(n \log k)}
+
 ```
 
 **Why?** Each element inserted and extracted once from heap of size k.
@@ -59,6 +60,7 @@ permalink: /09_heaps/03_merge_k_streams/
 
 ```math
 \text{pairs to consider} \leq 2k
+
 ```
 
 ---
@@ -190,6 +192,7 @@ def smallestRange(nums: list[list[int]]) -> list[int]:
             break  # One list exhausted
     
     return result
+
 ```
 
 ---

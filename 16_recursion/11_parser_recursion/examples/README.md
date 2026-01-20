@@ -28,6 +28,7 @@ What you'll learn:
 +-- Parsing numbers (e.g., "2", "12")
 +-- Handling nested parentheses with multipliers
 +-- Merging atom counts from recursive calls
+
 ```
 
 **Diagrams Included:**
@@ -50,6 +51,7 @@ What you'll learn:
 +-- Nested bracket recursion
 +-- String concatenation with repetition
 +-- Return value propagation
+
 ```
 
 ---
@@ -66,6 +68,7 @@ What you'll learn:
 +-- Parenthesized sub-expressions
 +-- Unary operators (-, +)
 +-- Operator precedence through grammar
+
 ```
 
 ---
@@ -106,6 +109,7 @@ class Parser:
                 self.pos += 1
         
         return result
+
 ```
 
 ---
@@ -138,6 +142,7 @@ Decode String:     3[a2[c]]
 Basic Calculator:  (1+(4+5))
                    ↑
                   '(' → RECURSE
+
 ```
 
 ### When to RETURN:
@@ -154,6 +159,7 @@ Decode String:     3[a2[c]]
 Basic Calculator:  (1+(4+5))
                           ↑
                          ')' → RETURN value
+
 ```
 
 ---
@@ -177,6 +183,7 @@ Basic Calculator:  (1+(4+5))
    +-- Operator precedence
    +-- Multiple grammar rules
    +-- Mutual recursion
+
 ```
 
 ---
@@ -189,6 +196,7 @@ examples/
 +-- number_of_atoms_explained.md       ← LeetCode 726
 +-- decode_string_explained.md         ← LeetCode 394
 +-- basic_calculator_explained.md      ← LeetCode 224
+
 ```
 
 ---

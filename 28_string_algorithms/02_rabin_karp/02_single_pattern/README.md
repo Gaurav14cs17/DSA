@@ -36,6 +36,7 @@ Single pattern matching finds all occurrences of one pattern in text using rolli
    b. If match, verify string: O(m)
    c. Roll hash: O(1)
 4. Total: O(n + m) average, O(nm) worst
+
 ```
 
 ---
@@ -94,6 +95,7 @@ def rabin_karp_search(text, pattern, base=31, mod=10**9 + 7):
 text = "AABAACAADAABAABA"
 pattern = "AABA"
 print(rabin_karp_search(text, pattern))  # [0, 9, 12]
+
 ```
 
 ### 2. First Occurrence Only
@@ -142,6 +144,7 @@ def find_first_occurrence_rk(text, pattern, base=31, mod=10**9 + 7):
 # Examples
 print(find_first_occurrence_rk("hello", "ll"))    # 2
 print(find_first_occurrence_rk("aaaaa", "bba"))   # -1
+
 ```
 
 ### 3. Count Occurrences (Overlapping)
@@ -160,6 +163,7 @@ def count_pattern_rk(text, pattern):
 text = "AABAACAADAABAABA"
 pattern = "AABA"
 print(f"Pattern '{pattern}' occurs {count_pattern_rk(text, pattern)} times")
+
 ```
 
 ### 4. Case-Insensitive Matching
@@ -182,6 +186,7 @@ text = "Hello World, HELLO world"
 pattern = "hello"
 matches = rabin_karp_case_insensitive(text, pattern)
 print(f"Found at: {matches}")  # [0, 13]
+
 ```
 
 ### 5. Pattern with Don't Care Characters
@@ -234,6 +239,7 @@ text = "ABABDABAC"
 pattern = "AB?D"
 matches = rabin_karp_wildcard(text, pattern)
 print(f"Pattern '{pattern}' found at: {matches}")
+
 ```
 
 ### 6. Longest Match
@@ -283,6 +289,7 @@ text = "ABCDEFGH"
 pattern = "CDEFXYZ"
 length, pos = longest_matching_prefix(text, pattern)
 print(f"Longest match: {length} chars at position {pos}")
+
 ```
 
 ### 7. Match with Mismatches
@@ -322,6 +329,7 @@ matches = rabin_karp_k_mismatches(text, pattern, k=2)
 print("Matches with ≤2 mismatches:")
 for pos, mm in matches:
     print(f"  Position {pos}: {mm} mismatches")
+
 ```
 
 ---
@@ -329,12 +337,14 @@ for pos, mm in matches:
 ## 🧩 LeetCode Problems
 
 ### Easy
+
 | # | Problem | Difficulty | Approach |
 |---|---------|------------|----------|
 | 28 | [Implement strStr()](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | 🟢 Easy | First occurrence |
 | 796 | [Rotate String](https://leetcode.com/problems/rotate-string/) | 🟢 Easy | Pattern in doubled |
 
 ### Medium
+
 | # | Problem | Difficulty | Approach |
 |---|---------|------------|----------|
 | 686 | [Repeated String Match](https://leetcode.com/problems/repeated-string-match/) | 🟡 Medium | Pattern in repeated |
@@ -415,6 +425,7 @@ class Solution:
                 return reps
         
         return -1
+
 ```
 
 ---
@@ -424,10 +435,12 @@ class Solution:
 ### Hash Verification
 
 **Always verify string match after hash match:**
+
 ```python
 if window_hash == pattern_hash:
     if text[i:i+m] == pattern:  # Verification
         matches.append(i)
+
 ```
 
 **Why?**
@@ -447,6 +460,7 @@ hash = (hash - old * power % MOD + MOD) % MOD  # +MOD for negative
 # 3. Early termination
 if found_all_needed:
     break  # Don't search entire text
+
 ```
 
 ### When Hash-Only Sufficient
@@ -459,6 +473,7 @@ if found_all_needed:
 
 # But for exact matching:
 ✗ Always verify!
+
 ```
 
 ---

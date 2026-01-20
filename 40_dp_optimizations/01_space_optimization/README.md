@@ -21,8 +21,10 @@
 ### Observation
 
 For many 2D DP problems:
+
 ```
 dp[i][j] = f(dp[i-1][*], dp[i][*])
+
 ```
 
 Only the **previous row** is needed to compute the **current row**.
@@ -33,6 +35,7 @@ Only the **previous row** is needed to compute the **current row**.
 Standard:    n × m array     → O(nm) space
 Optimized:   2 × m array     → O(m) space
 Further:     1 × m array     → O(m) space (if careful)
+
 ```
 
 ---
@@ -65,6 +68,7 @@ def dp_two_arrays(arr1, arr2):
         prev, curr = curr, [0] * (m + 1)
     
     return prev[m]
+
 ```
 
 ### Pattern 2: Single Array (Advanced)
@@ -94,6 +98,7 @@ def dp_single_array(arr1, arr2):
             prev_diag = temp
     
     return dp[m]
+
 ```
 
 ### Pattern 3: Reverse Iteration
@@ -114,6 +119,7 @@ def dp_reverse(arr, target):
             dp[j] = max(dp[j], dp[j - arr[i]] + arr[i])
     
     return dp[target]
+
 ```
 
 ---
@@ -156,6 +162,7 @@ def edit_distance(word1, word2):
         prev, curr = curr, [0] * (n + 1)
     
     return prev[n]
+
 ```
 
 ### Example 2: Longest Common Subsequence
@@ -189,6 +196,7 @@ def longest_common_subsequence(text1, text2):
         prev = curr
     
     return prev[n]
+
 ```
 
 ### Example 3: Coin Change
@@ -209,6 +217,7 @@ def coin_change(coins, amount):
             dp[j] = min(dp[j], dp[j - coin] + 1)
     
     return dp[amount] if dp[amount] != float('inf') else -1
+
 ```
 
 ### Example 4: House Robber
@@ -236,6 +245,7 @@ def rob(nums):
         prev1 = curr
     
     return prev1
+
 ```
 
 ### Example 5: Partition Equal Subset Sum
@@ -263,6 +273,7 @@ def can_partition(nums):
             dp[j] = dp[j] or dp[j - num]
     
     return dp[target]
+
 ```
 
 ---
@@ -284,6 +295,7 @@ prev: [1   2   2   3]  ← Row 1 (previous)
 curr: [1   2   2   ?]  ← Row 2 (computing)
 
 Memory: 2×4 = 8 cells instead of 4×4 = 16 cells
+
 ```
 
 ### Single Array with Diagonal
@@ -298,6 +310,7 @@ Before:  [... dp[i-1][j-1]  dp[i-1][j] ...]
               prev_diag      current position
 
 After:   [... dp[i][j-1]    dp[i][j] ...]
+
 ```
 
 ---
@@ -305,6 +318,7 @@ After:   [... dp[i][j-1]    dp[i][j] ...]
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy (4 problems)
+
 | # | Problem | Space Reduction |
 |:-:|---------|----------------|
 | 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | O(n) → O(1) |
@@ -313,6 +327,7 @@ After:   [... dp[i][j-1]    dp[i][j] ...]
 | 1137 | [N-th Tribonacci](https://leetcode.com/problems/n-th-tribonacci-number/) | O(n) → O(1) |
 
 ### 🟡 Medium (8 problems)
+
 | # | Problem | Space Reduction |
 |:-:|---------|----------------|
 | 72 | [Edit Distance](https://leetcode.com/problems/edit-distance/) | O(mn) → O(n) |
@@ -352,6 +367,7 @@ for item in items:
 for item in items:
     for w in range(weight[item], W + 1):
         dp[w] = max(dp[w], dp[w - weight[item]] + value[item])
+
 ```
 
 ---

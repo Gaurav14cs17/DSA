@@ -45,6 +45,7 @@ Given string s of length n, find:
 For transformed string (with sentinels):
 P[i] = maximum k such that 
        s[i-k] = s[i+k] for all k from 0 to P[i]
+
 ```
 
 ### Handling Even/Odd Length
@@ -52,6 +53,7 @@ P[i] = maximum k such that
 **Problem:** Palindromes can be even or odd length.
 
 **Solution:** Transform string to always have odd length:
+
 ```
 Original:  "abba"
 Transform: "^#a#b#b#a#$"
@@ -60,9 +62,11 @@ Transform: "^#a#b#b#a#$"
 # are separators
 
 Now all palindromes have odd length in transformed string
+
 ```
 
 **Example:**
+
 ```
 Original: "abba"
 Transform: "^#a#b#b#a#$"
@@ -81,6 +85,7 @@ P[9] = 0  (#)
 P[10]= 0  (sentinel $)
 
 Max P[i] = 4 at i=5 → original palindrome "abba" of length 4
+
 ```
 
 ### Symmetry Property
@@ -96,6 +101,7 @@ For position i where C-R ≤ i ≤ C+R:
   
   Case 2: If P[i'] ≥ R - i
     Then P[i] ≥ R - i (need to expand further)
+
 ```
 
 **Proof of Case 1:**
@@ -175,6 +181,7 @@ print(f"Longest palindrome: {longest_palindrome(s)}")  # "bab" or "aba"
 
 s = "cbbd"
 print(f"Longest palindrome: {longest_palindrome(s)}")  # "bb"
+
 ```
 
 ### Detailed Implementation with Comments
@@ -247,6 +254,7 @@ def visualize_manacher(s):
 
 # Example
 visualize_manacher("abba")
+
 ```
 
 ### Get All Palindromic Substrings
@@ -279,6 +287,7 @@ def all_palindromes(s):
 # Example
 print(all_palindromes("aabaa"))
 # ['a', 'aa', 'aabaa', 'aba', 'b', 'baa']
+
 ```
 
 ### Count All Palindromic Substrings
@@ -320,6 +329,7 @@ def count_palindromes_v2(s):
 # Example
 print(count_palindromes("abc"))   # 3: "a", "b", "c"
 print(count_palindromes("aaa"))   # 6: "a"(3), "aa"(2), "aaa"(1)
+
 ```
 
 ---
@@ -345,6 +355,7 @@ def longestPalindrome(s):
     
     start = (center_index - max_len) // 2
     return s[start:start + max_len]
+
 ```
 
 ### 2. Palindromic Substrings Count (LeetCode 647)
@@ -364,6 +375,7 @@ def countSubstrings(s):
         count += (radius + 1) // 2
     
     return count
+
 ```
 
 ### 3. Shortest Palindrome (LeetCode 214)
@@ -398,6 +410,7 @@ def shortestPalindrome(s):
     # Add reverse of suffix to front
     suffix = s[max_prefix:]
     return suffix[::-1] + s
+
 ```
 
 ### 4. Minimum Cuts for Palindrome Partitioning
@@ -437,6 +450,7 @@ def minCut(s):
                     dp[i] = min(dp[i], dp[j] + 1)
     
     return dp[n - 1]
+
 ```
 
 ### 5. Longest Palindrome by Removing One Character
@@ -461,6 +475,7 @@ def longest_pal_remove_one(s):
         max_len = max(max_len, max(P))
     
     return max_len
+
 ```
 
 ### 6. Palindrome Pairs
@@ -487,6 +502,7 @@ def palindrome_pairs_manacher(words):
                     result.append([i, j])
     
     return result
+
 ```
 
 ### 7. Maximum Product of Palindrome Lengths
@@ -517,6 +533,7 @@ def maxProduct(s):
     
     # ... rest of solution
     pass
+
 ```
 
 ---
@@ -524,6 +541,7 @@ def maxProduct(s):
 ## 🧩 LeetCode Problems
 
 ### Easy
+
 | # | Problem | Difficulty | Pattern |
 |---|---------|------------|---------|
 | 9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | 🟢 Easy | Basic palindrome |
@@ -531,6 +549,7 @@ def maxProduct(s):
 | 680 | [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/) | 🟢 Easy | Remove one char |
 
 ### Medium
+
 | # | Problem | Difficulty | Pattern |
 |---|---------|------------|---------|
 | 5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | 🟡 Medium | Classic Manacher's |
@@ -539,6 +558,7 @@ def maxProduct(s):
 | 1312 | [Minimum Insertion Steps](https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/) | 🟡 Medium | Manacher's + DP |
 
 ### Hard
+
 | # | Problem | Difficulty | Pattern |
 |---|---------|------------|---------|
 | 214 | [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) | 🔴 Hard | Palindrome prefix |
@@ -553,6 +573,7 @@ def maxProduct(s):
 ### Why O(n)?
 
 **Amortized Analysis:**
+
 ```
 Key observation: Variable 'right' never decreases
 
@@ -560,15 +581,18 @@ Key observation: Variable 'right' never decreases
 - Inner while loop: each iteration increases 'right'
 - 'right' can increase at most n times total
 - Therefore: Total iterations = O(n)
+
 ```
 
 **Proof:**
+
 ```
 Let T = total operations
 T = Σ(1 + expansions at position i)
   = n + (total increase in 'right')
   = n + O(n)
   = O(n)
+
 ```
 
 ### When to Use Manacher's
@@ -588,25 +612,31 @@ T = Σ(1 + expansions at position i)
 ### Common Pitfalls
 
 1. **Forgetting sentinels:**
+
 ```python
 # ❌ Wrong - may have index out of bounds
 t = '#'.join(s)
 
 # ✓ Correct
 t = '^#' + '#'.join(s) + '#$'
+
 ```
 
 2. **Incorrect mapping back to original:**
+
 ```python
 # Transform index i maps to original index:
 original_start = (i - P[i]) // 2
 original_end = (i + P[i]) // 2
+
 ```
 
 3. **Not handling empty string:**
+
 ```python
 if not s:
     return ""
+
 ```
 
 ---
@@ -627,6 +657,7 @@ class PalindromeTree:
     """
     # Implementation is complex, used in competitive programming
     pass
+
 ```
 
 ### Palindrome Density
@@ -644,6 +675,7 @@ def palindrome_density(s):
     palindromic_count = count_palindromes(s)
     
     return palindromic_count / total_substrings
+
 ```
 
 ---

@@ -138,6 +138,7 @@ def push(node, start, end):
             lazy[2*node] += lazy[node]
             lazy[2*node+1] += lazy[node]
         lazy[node] = 0
+
 ```
 
 ### 2️⃣ 2D Segment Tree
@@ -220,6 +221,7 @@ class LazySegmentTree:
         left = self.query_range(2*node, start, mid, l, r)
         right = self.query_range(2*node+1, mid+1, end, l, r)
         return left + right
+
 ```
 
 **Dynamic Segment Tree:**
@@ -253,6 +255,7 @@ class DynamicSegmentTree:
         mid = (start + end) // 2
         return (self.query(2*node, start, mid, l, r) + 
                 self.query(2*node+1, mid+1, end, l, r))
+
 ```
 
 ---

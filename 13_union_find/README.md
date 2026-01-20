@@ -46,12 +46,14 @@ With **path compression** and **union by rank**:
 
 ```math
 \text{Amortized time per operation} = O(\alpha(n))
+
 ```
 
 Where $\alpha(n)$ is the **inverse Ackermann function**:
 
 ```math
 \alpha(n) \leq 4 \text{ for all practical } n
+
 ```
 
 Effectively **O(1)** per operation!
@@ -64,6 +66,7 @@ Effectively **O(1)** per operation!
 
 ```math
 \text{parent}[x] = \text{find}(\text{parent}[x])
+
 ```
 
 ---
@@ -74,6 +77,7 @@ Effectively **O(1)** per operation!
 
 ```math
 \text{If rank}[root_x] < \text{rank}[root_y]: \text{parent}[root_x] = root_y
+
 ```
 
 This keeps tree height logarithmic.
@@ -84,6 +88,7 @@ This keeps tree height logarithmic.
 
 ```math
 \text{components} = \text{initial count} - \text{successful unions}
+
 ```
 
 ---
@@ -135,6 +140,7 @@ class UnionFind:
     def get_components(self) -> int:
         """Return number of disjoint sets."""
         return self.components
+
 ```
 
 ### Union-Find with Size
@@ -169,6 +175,7 @@ class UnionFindSize:
     def get_size(self, x: int) -> int:
         """Size of component containing x."""
         return self.size[self.find(x)]
+
 ```
 
 ### Weighted Union-Find
@@ -209,6 +216,7 @@ class WeightedUnionFind:
         if self.find(x) != self.find(y):
             return -1.0
         return self.weight[y] / self.weight[x]
+
 ```
 
 ---
@@ -255,6 +263,7 @@ Connectivity Problem
         +-- Weighted edges → Weighted Union-Find
         |
         +-- Grid connectivity → Virtual node for borders
+
 ```
 
 ---

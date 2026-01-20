@@ -34,6 +34,7 @@ permalink: /03_linked_lists/
 +---------+---------+
 |  data   |  next   |------►  next node
 +---------+---------+
+
 ```
 
 **Memory:** Each node requires $O(1)$ extra space for pointer.
@@ -76,6 +77,7 @@ Since fast = 2 × slow:
 ```math
 2(\mu + k) = \mu + k + m\lambda
 \mu + k = m\lambda
+
 ```
 
 **Finding cycle start:**
@@ -99,6 +101,7 @@ At each step: `prev → ... ← current`
 ```math
 \text{new\_head} = \text{last\_node}
 \text{original\_head.next} = \text{None}
+
 ```
 
 ---
@@ -109,6 +112,7 @@ At each step: `prev → ... ← current`
 
 ```math
 \text{slow position} = \lfloor n/2 \rfloor
+
 ```
 
 **Proof:**
@@ -145,6 +149,7 @@ def hasCycle(head: ListNode) -> bool:
         if slow == fast:
             return True
     return False
+
 ```
 
 ### Reversal
@@ -162,6 +167,7 @@ def reverseList(head: ListNode) -> ListNode:
         prev = head
         head = next_node
     return prev
+
 ```
 
 ### Dummy Node Pattern
@@ -186,6 +192,7 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
     
     current.next = l1 or l2
     return dummy.next
+
 ```
 
 ---
@@ -290,6 +297,7 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 ## 📚 References & Learning Resources
 
 ### 📖 Books & Courses
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **CLRS Chapter 10** | Linked lists fundamentals | [MIT Press](https://mitpress.mit.edu/books/introduction-algorithms) |
@@ -297,6 +305,7 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 | **Competitive Programming 3** | Chapter 2.2 - Data structures | [Book](https://cpbook.net/) |
 
 ### 🌐 Online Tutorials
+
 | Resource | Description | Link |
 |----------|-------------|------|
 | **GeeksforGeeks** | Complete linked list guide | [Tutorial](https://www.geeksforgeeks.org/data-structures/linked-list/) |
@@ -305,6 +314,7 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 | **HackerRank** | Linked list challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=linked-lists) |
 
 ### 📺 Video Resources
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **NeetCode** | Linked list playlist | [YouTube](https://www.youtube.com/playlist?list=PLot-Xpze53leU0Ec0VkBhnf4npMRFiNcB) |
@@ -314,6 +324,7 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 | **MIT OCW 6.006** | Lecture on pointers | [MIT](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/) |
 
 ### 📝 Practice Platforms
+
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Interview problems | [Linked List Tag](https://leetcode.com/tag/linked-list/) |
@@ -322,6 +333,7 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 | **CodeChef** | Practice section | [Problems](https://www.codechef.com/practice) |
 
 ### 🔬 Advanced Topics
+
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Floyd's Cycle Detection** | Tortoise and hare | [Wikipedia](https://en.wikipedia.org/wiki/Cycle_detection) |
@@ -330,6 +342,7 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 | **Unrolled Linked List** | Cache-friendly variant | [Wikipedia](https://en.wikipedia.org/wiki/Unrolled_linked_list) |
 
 ### 🎯 Problem Collections
+
 | Collection | Focus | Link |
 |-----------|-------|------|
 | **NeetCode 150** | Essential problems | [List](https://neetcode.io/practice) |
@@ -338,6 +351,7 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 | **Striver's SDE Sheet** | Must-do problems | [Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/) |
 
 ### 📊 Visualization Tools
+
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo** | Interactive linked list ops | [Website](https://visualgo.net/en/list) |
@@ -345,6 +359,7 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 | **CS Animations** | Data structure animations | [Website](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html) |
 
 ### 🏆 Competition Resources
+
 | Resource | Topic | Link |
 |----------|-------|------|
 | **USACO Guide** | Data structures guide | [Guide](https://usaco.guide/) |
@@ -380,6 +395,7 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 [ ] Can I reverse in-place?
 [ ] Do I need to restore the list after?
 [ ] Am I handling all null pointer cases?
+
 ```
 
 ---

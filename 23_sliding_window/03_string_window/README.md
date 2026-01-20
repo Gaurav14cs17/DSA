@@ -67,6 +67,7 @@ permalink: /23_sliding_window/03_string_window/
 
 ```math
 \text{Anagram}(s, t) \Leftrightarrow \forall c: \text{freq}_s[c] = \text{freq}_t[c]
+
 ```
 
 #### For Window Problems
@@ -93,6 +94,7 @@ A window is an anagram of pattern \(p\) if:
 
 ```math
 \text{Window valid} \Leftrightarrow \text{formed} = \text{required}
+
 ```
 
 ---
@@ -106,22 +108,26 @@ A window is an anagram of pattern \(p\) if:
 
 ```python
 if window_count == pattern_count:  # Compare 26 values
+
 ```
 
 #### After (O(1) per check)
 
 ```python
 if matches == 26:  # Single comparison
+
 ```
 
 #### Updating Matches
 
 When adding character \(c\):
+
 ```python
 if window[c] == pattern[c]:
     matches += 1
 elif window[c] == pattern[c] + 1:  # Was matched, now over
     matches -= 1
+
 ```
 
 ---
@@ -180,6 +186,7 @@ Step 3: Final answer
 Window = "BANC", length = 4 ⭐
 
 Answer: "BANC"
+
 ```
 
 ### Anagram Detection Flow
@@ -221,6 +228,7 @@ freq: {b:1, a:1, c:1}
 Match? ✓  → Result: [0, 6]
 
 Answer: [0, 6]
+
 ```
 
 ### Have vs Need State Machine
@@ -252,6 +260,7 @@ Answer: [0, 6]
 |   Now shrink while still valid!                              |
 |                                                               |
 +---------------------------------------------------------------+
+
 ```
 
 ---
@@ -639,6 +648,7 @@ def numberOfSubstrings(s: str) -> int:
             left += 1
     
     return result
+
 ```
 
 ---

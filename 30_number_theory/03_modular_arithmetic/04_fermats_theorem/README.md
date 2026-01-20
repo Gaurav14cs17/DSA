@@ -19,13 +19,17 @@ nav_order: 4
 ## 🎯 Overview
 
 **Fermat's Little Theorem:** If p is prime and gcd(a, p) = 1, then:
+
 ```
 a^(p-1) ≡ 1 (mod p)
+
 ```
 
 **Corollary:** For any integer a:
+
 ```
 a^p ≡ a (mod p)
+
 ```
 
 ---
@@ -35,8 +39,10 @@ a^p ≡ a (mod p)
 ### The Theorem
 
 **Statement:** For prime p and integer a not divisible by p:
+
 ```
 a^(p-1) ≡ 1 (mod p)
+
 ```
 
 **Proof Sketch:**
@@ -90,6 +96,7 @@ p = 10**9 + 7
 print(mod_inverse_fermat(2, p))   # 500000004
 print(mod_inverse_fermat(3, p))
 print((2 * mod_inverse_fermat(2, p)) % p)  # Should be 1
+
 ```
 
 ### 2. Fermat Primality Test
@@ -126,6 +133,7 @@ def fermat_test(n, k=5):
 print(fermat_test(17))       # True
 print(fermat_test(561))      # True (but 561 is Carmichael!)
 print(fermat_test(1000003))  # True
+
 ```
 
 ### 3. Reduce Large Exponents
@@ -153,6 +161,7 @@ def reduce_exponent(a, n, p):
 # Example: Compute 2^(10^18) mod (10^9+7)
 p = 10**9 + 7
 print(reduce_exponent(2, 10**18, p))
+
 ```
 
 ### 4. Modular Division
@@ -173,6 +182,7 @@ def mod_divide(a, b, p):
 p = 10**9 + 7
 print(mod_divide(10, 2, p))  # 5
 print(mod_divide(7, 3, p))   # 7 × 3⁻¹
+
 ```
 
 ### 5. Factorial Division mod p
@@ -195,6 +205,7 @@ def factorial_division_mod(n, k, p):
 
 # Example: 10! / 7! = 10 × 9 × 8 = 720
 print(factorial_division_mod(10, 7, 10**9 + 7))  # 720
+
 ```
 
 ### 6. Combinations using Fermat
@@ -228,6 +239,7 @@ class Combinations:
 comb = Combinations(1000, 10**9 + 7)
 print(comb.nCr(10, 3))   # 120
 print(comb.nCr(100, 50))
+
 ```
 
 ---
@@ -257,6 +269,7 @@ class Solution:
         """
         MOD = 10**9 + 7
         return (pow(2, n, MOD) - 2) % MOD
+
 ```
 
 ---
@@ -266,10 +279,12 @@ class Solution:
 ### 1. Carmichael Numbers
 
 Composite numbers that pass Fermat test for all a coprime to n:
+
 ```
 561 = 3 × 11 × 17
 1105 = 5 × 13 × 17
 1729 = 7 × 13 × 19 (Ramanujan's taxi number!)
+
 ```
 
 ### 2. When to Use Fermat
@@ -283,8 +298,10 @@ Composite numbers that pass Fermat test for all a coprime to n:
 ### 3. Exponent Reduction
 
 For prime p and gcd(a, p) = 1:
+
 ```
 a^(10^18) mod p = a^(10^18 mod (p-1)) mod p
+
 ```
 
 This is crucial for handling very large exponents.

@@ -65,6 +65,7 @@ permalink: /25_tree_algorithms/04_heavy_light_decomposition/
 
 ```math
 \text{Time} = O(\log^2 n)
+
 ```
 
 - $O(\log n)$ chains to traverse
@@ -424,6 +425,7 @@ def dynamicPathQueries(n: int, edges: List[List[int]],
             hld.update_node(op[1], op[2])
     
     return result
+
 ```
 
 ---
@@ -460,6 +462,7 @@ Tree Query Problem
      |
      +-- Complex operations
          +-- Path updates/queries → HLD + Lazy Propagation
+
 ```
 
 ---

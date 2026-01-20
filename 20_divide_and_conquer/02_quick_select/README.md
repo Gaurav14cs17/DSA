@@ -52,12 +52,14 @@ permalink: /20_divide_and_conquer/02_quick_select/
 
 ```math
 T(n) = T(n/2) + O(n) = O(n)
+
 ```
 
 **Worst case (bad pivots):**
 
 ```math
 T(n) = T(n-1) + O(n) = O(n^2)
+
 ```
 
 ---
@@ -193,6 +195,7 @@ def wiggleSort(nums: list[int]) -> None:
             right -= 1
         else:
             i += 1
+
 ```
 
 ---

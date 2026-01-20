@@ -40,12 +40,14 @@ permalink: /30_number_theory/01_gcd_lcm/01_euclidean_algorithm/
 
 ```math
 \gcd(a, b) = \gcd(b, a \bmod b)
+
 ```
 
 **Base Case:**
 
 ```math
 \gcd(a, 0) = a
+
 ```
 
 **Proof:**
@@ -62,6 +64,7 @@ a \bmod b &= a - q \cdot b \quad \text{where } q = \lfloor a/b \rfloor \\
 &= d \cdot m - q \cdot d \cdot n \\
 &= d \cdot (m - q \cdot n)
 \end{align}
+
 ```
 
 Since $d$ divides both $b$ and $(a \bmod b)$, $d$ is a common divisor of $b$ and $(a \bmod b)$.
@@ -70,12 +73,14 @@ Conversely, any common divisor of $b$ and $(a \bmod b)$ must divide:
 
 ```math
 a = q \cdot b + (a \bmod b)
+
 ```
 
 Therefore, the set of common divisors is identical, so:
 
 ```math
 \gcd(a, b) = \gcd(b, a \bmod b) \quad \blacksquare
+
 ```
 
 ---
@@ -98,6 +103,7 @@ Therefore, the problem size reduces by at least half every **two** steps.
 
 ```math
 T(a, b) = O(\log \min(a, b))
+
 ```
 
 ---
@@ -110,9 +116,11 @@ T(a, b) = O(\log \min(a, b))
 
 ```math
 \gcd(F_{n+1}, F_n) \text{ requires exactly } n \text{ steps}
+
 ```
 
 **Example:**
+
 ```
 gcd(F₇, F₆) = gcd(13, 8):
 13 = 1×8 + 5    → gcd(8, 5)
@@ -122,6 +130,7 @@ gcd(F₇, F₆) = gcd(13, 8):
 2  = 2×1 + 0    → gcd(1, 0) = 1
 
 5 steps for F₆ = 8 ✓
+
 ```
 
 ---
@@ -179,6 +188,7 @@ gcd(F₇, F₆) = gcd(13, 8):
 | Steps taken: 3                                                   |
 | Max possible: ⌈log₂(105)⌉ × 2 ≈ 14                              |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -234,6 +244,7 @@ gcd(F₇, F₆) = gcd(13, 8):
 |                                                                  |
 | gcd(21, 15) = 3 ✓                                               |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -283,6 +294,7 @@ def gcd_verbose(a: int, b: int) -> int:
     
     print(f"Result: {a}")
     return a
+
 ```
 
 ---
@@ -307,6 +319,7 @@ def gcd_recursive(a: int, b: int) -> int:
 def gcd_tail(a: int, b: int) -> int:
     """Tail-recursive version."""
     return a if b == 0 else gcd_tail(b, a % b)
+
 ```
 
 ---
@@ -338,6 +351,7 @@ print(f"gcd = {gcd_val}")
 print(f"Steps: {len(steps) - 1}")
 for i, (a, b) in enumerate(steps[:-1]):
     print(f"Step {i+1}: gcd({a}, {b}) → gcd({b}, {a % b})")
+
 ```
 
 ---
@@ -352,6 +366,7 @@ result = math.gcd(48, 18)  # 6
 
 # Python 3.9+ supports multiple arguments
 result = math.gcd(12, 18, 24)  # 6
+
 ```
 
 ---
@@ -392,6 +407,7 @@ def gcd_array(arr: list[int]) -> int:
 
 # Example
 print(gcd_array([12, 18, 24, 30]))  # 6
+
 ```
 
 ### Pattern 2: Optimize with Early Termination
@@ -407,6 +423,7 @@ def gcd_array_optimized(arr: list[int]) -> int:
         if result == 1:
             return 1  # Early termination
     return result
+
 ```
 
 ### Pattern 3: GCD of Range
@@ -422,6 +439,7 @@ def gcd_range(start: int, end: int) -> int:
     if end - start >= 1:
         return 1  # Has consecutive numbers
     return start  # Only one number
+
 ```
 
 ---

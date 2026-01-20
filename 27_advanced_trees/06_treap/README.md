@@ -72,12 +72,14 @@ Expected depth of node $x$ = number of ancestors
 **Treap maintains heap property through rotations:**
 
 **Right rotation:**
+
 ```
     y (py)          x (px)
    / \      =>     / \
   x   C           A   y
  / \                 / \
 A   B               B   C
+
 ```
 
 If `px > py`, rotate right to make `x` parent of `y`.
@@ -456,6 +458,7 @@ def kth_smallest_in_bst(root: TreapNode, k: int) -> int:
         return 0
     
     return kth(root, k)
+
 ```
 
 ---

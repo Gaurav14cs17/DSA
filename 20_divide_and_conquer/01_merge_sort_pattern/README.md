@@ -50,6 +50,7 @@ permalink: /20_divide_and_conquer/01_merge_sort_pattern/
 
 ```math
 T(n) = 2T(n/2) + O(n) = O(n \log n)
+
 ```
 
 ---
@@ -60,6 +61,7 @@ Count pairs $(i, j)$ where $i < j$ but $arr[i] > arr[j]$:
 
 ```math
 \text{inversions} = \text{left\_inv} + \text{right\_inv} + \text{split\_inv}
+
 ```
 
 Split inversions counted during merge.
@@ -218,6 +220,7 @@ def mergeKLists(lists: list) -> 'ListNode':
         return merge_two(left, right)
     
     return merge_range(0, len(lists) - 1)
+
 ```
 
 ---

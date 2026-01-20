@@ -49,6 +49,7 @@ permalink: /30_number_theory/08_binomial_coefficients/04_lucas_application/
 
 ```math
 \binom{m}{n} \equiv \prod_{i=0}^{k} \binom{m_i}{n_i} \pmod{p}
+
 ```
 
 where $m = \sum m\_i p^i$ and $n = \sum n\_i p^i$ are base-p representations.
@@ -81,6 +82,7 @@ If any digit $n\_i > m\_i$, then $\binom{m}{n} \equiv 0 \pmod{p}$
 |                                                                 |
 | Result: C(1000, 423) ≡ 0 (mod 7)                               |
 +-----------------------------------------------------------------+
+
 ```
 
 ---
@@ -143,6 +145,7 @@ def lucas(m: int, n: int, p: int) -> int:
 print(lucas(10**18, 10**9, 7))        # Instant!
 print(lucas(1000000000000, 500000000000, 13))  # Also instant!
 print(lucas(1000, 423, 7))            # 0
+
 ```
 
 ### 2. Lucas with Verbose Output
@@ -171,6 +174,7 @@ def lucas_verbose(m: int, n: int, p: int) -> int:
     return result
 
 lucas_verbose(1000, 423, 7)
+
 ```
 
 ### 3. Generalized Lucas (Prime Power Modulus)
@@ -188,6 +192,7 @@ def lucas_prime_power(m: int, n: int, p: int, k: int) -> int:
     # 1. Lucas' theorem for p
     # 2. Lifting lemmas for higher powers
     pass
+
 ```
 
 ---

@@ -55,6 +55,7 @@ permalink: /24_graph_algorithms/08_2sat/
 
 ```math
 (x_1 \lor x_2) \land (\neg x_1 \lor x_3) \land (\neg x_2 \lor \neg x_3) \land \ldots
+
 ```
 
 **Output:** Assignment of variables to TRUE/FALSE, or "UNSATISFIABLE"
@@ -81,6 +82,7 @@ Clause $(a \lor b)$ becomes:
 
 ```math
 x_i \text{ and } \neg x_i \text{ are in different SCCs}
+
 ```
 
 **Why?** If in same SCC, then $x\_i \Rightarrow \neg x\_i$ and $\neg x\_i \Rightarrow x\_i$ (contradiction).
@@ -373,6 +375,7 @@ def example_implications():
         print(f"  Rains: {assignment[1]}")
         print(f"  Ground wet: {assignment[2]}")
         print(f"  Can play: {assignment[3]}")
+
 ```
 
 ---
@@ -398,6 +401,7 @@ Boolean Constraint Problem
      |
      +-- Implications and constraints
          +-- Model as 2-SAT if possible
+
 ```
 
 ---

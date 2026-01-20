@@ -59,12 +59,14 @@ permalink: /24_graph_algorithms/06_bridges_articulation_points/
 \text{disc}[u] & \text{for back edges } (v, u) \\
 \text{low}[w] & \text{for tree edges } (v, w)
 \end{cases}
+
 ```
 
 **Bridge condition:** Edge $(u, v)$ is bridge iff:
 
 ```math
 \text{low}[v] > \text{disc}[u]
+
 ```
 
 **Time:** $O(V + E)$  
@@ -437,6 +439,7 @@ def example_biconnected():
     print("Biconnected components:")
     for i, comp in enumerate(components):
         print(f"  Component {i}: {comp}")
+
 ```
 
 ---
@@ -470,6 +473,7 @@ Graph Vulnerability Problem
      +-- 2-edge-connected? → Find bridges, check if 0
      |
      +-- Biconnected components → Stack-based algorithm O(V+E)
+
 ```
 
 ---

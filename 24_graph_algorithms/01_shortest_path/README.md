@@ -60,6 +60,7 @@ permalink: /24_graph_algorithms/01_shortest_path/
 
 ```math
 \text{dist}[v] = \min(\text{dist}[v], \text{dist}[u] + w(u,v))
+
 ```
 
 **Correctness Proof:**
@@ -70,6 +71,7 @@ permalink: /24_graph_algorithms/01_shortest_path/
 
 ```math
 T = O((V + E) \log V)
+
 ```
 
 ---
@@ -82,6 +84,7 @@ T = O((V + E) \log V)
 
 ```math
 D^{(k)}[v] = \min_{(u,v) \in E}(D^{(k-1)}[u] + w(u,v))
+
 ```
 
 **Meaning:** Shortest path to $v$ using at most $k$ edges.
@@ -98,6 +101,7 @@ If any edge can still be relaxed after $V-1$ iterations, negative cycle exists.
 
 ```math
 D^{(k)}[i][j] = \min(D^{(k-1)}[i][j], D^{(k-1)}[i][k] + D^{(k-1)}[k][j])
+
 ```
 
 **Meaning:** Shortest $i \to j$ using vertices $\{1, 2, \ldots, k\}$ as intermediates.
@@ -110,6 +114,7 @@ D^{(0)}[i][j] = \begin{cases}
 w(i,j) & \text{if } (i,j) \in E \\
 \infty & \text{otherwise}
 \end{cases}
+
 ```
 
 ---
@@ -120,6 +125,7 @@ w(i,j) & \text{if } (i,j) \in E \\
 
 ```math
 f(n) = g(n) + h(n)
+
 ```
 
 - $g(n)$: actual cost from start to $n$
@@ -140,6 +146,7 @@ f(n) = g(n) + h(n)
 
 ```math
 T = O(V + E), \quad S = O(V)
+
 ```
 
 Faster than Dijkstra for this special case.
@@ -505,6 +512,7 @@ def minimumEffortPath(heights: List[List[int]]) -> int:
                     heapq.heappush(pq, (new_effort, nr, nc))
     
     return 0
+
 ```
 
 ---
@@ -551,6 +559,7 @@ Shortest Path Problem
      |   +-- All pairs → Floyd-Warshall O(V³)
      |
      +-- Known goal with heuristic? → A* Search
+
 ```
 
 ---

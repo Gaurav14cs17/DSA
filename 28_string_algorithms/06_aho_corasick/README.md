@@ -37,6 +37,7 @@ The **Aho-Corasick** algorithm efficiently finds all occurrences of multiple pat
 ### Components
 
 **1. Trie:** Store all patterns
+
 ```
 Patterns: {"he", "she", "his", "hers"}
 
@@ -54,31 +55,38 @@ s
 (4)
 
 Numbers = pattern IDs
+
 ```
 
 **2. Failure Links:** Point to longest proper suffix that's in trie
+
 ```
 Similar to KMP failure function, but for trie nodes
 
 For node representing "she":
 - Failure link points to node "he"
 - Because "he" is longest suffix of "she" in trie
+
 ```
 
 **3. Output Links:** Find all patterns ending at current state
+
 ```
 If we're at "she" and "he" is also a pattern:
 - Both "she" and "he" match
 - Output link tracks this
+
 ```
 
 ### Automaton Transitions
 
 For each node and each character:
+
 ```
 goto(node, char):
   If child exists: return child
   Else: follow failure links until match found or reach root
+
 ```
 
 **Optimized:**
@@ -205,6 +213,7 @@ text = "ushers"
 matches = ac.search(text)
 print(f"Matches: {matches}")
 # Output: [(2, 'she'), (2, 'he'), (2, 'hers')]
+
 ```
 
 ### Optimized with Goto Function
@@ -282,6 +291,7 @@ class AhoCorasickOptimized:
                 results.append((i, pattern_id))
         
         return results
+
 ```
 
 ### With Pattern Position Information
@@ -318,6 +328,7 @@ class AhoCorasickWithPositions:
             results.append((start_pos, end_pos, pattern_id))
         
         return results
+
 ```
 
 ---
@@ -361,6 +372,7 @@ def word_break_ac(s, word_dict):
                 dp[end + 1] = True
     
     return dp[n]
+
 ```
 
 ### 2. Stream of Characters
@@ -399,6 +411,7 @@ class StreamChecker:
         matches = self.ac.search(self.stream[::-1])
         
         return len(matches) > 0
+
 ```
 
 ### 3. Find All Anagrams of Patterns
@@ -436,6 +449,7 @@ def find_anagram_matches(text, patterns):
             results.append((i, pattern))
     
     return results
+
 ```
 
 ### 4. Replace All Patterns
@@ -477,6 +491,7 @@ def replace_all_patterns(text, replacements):
 text = "she sells seashells"
 replacements = {"she": "he", "sea": "ocean"}
 print(replace_all_patterns(text, replacements))
+
 ```
 
 ### 5. Virus Scanner Simulation
@@ -531,6 +546,7 @@ scanner = VirusScanner(signatures)
 data = "some_data malicious_code_1 more_data exploit_string end"
 detected = scanner.scan(data)
 print(f"Detected viruses: {detected}")
+
 ```
 
 ### 6. Multi-String Replacement (with priority)
@@ -572,6 +588,7 @@ def replace_with_priority(text, rules):
             i += 1
     
     return ''.join(result)
+
 ```
 
 ### 7. DNA Sequence Analysis
@@ -611,6 +628,7 @@ def reverse_complement(seq):
     """Get reverse complement of DNA sequence"""
     complement = {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'}
     return ''.join(complement.get(c, c) for c in reversed(seq))
+
 ```
 
 ---
@@ -618,6 +636,7 @@ def reverse_complement(seq):
 ## 🧩 LeetCode Problems
 
 ### Medium
+
 | # | Problem | Difficulty | Pattern |
 |---|---------|------------|---------|
 | 1032 | [Stream of Characters](https://leetcode.com/problems/stream-of-characters/) | 🟡 Medium | Online matching |
@@ -625,6 +644,7 @@ def reverse_complement(seq):
 | 212 | [Word Search II](https://leetcode.com/problems/word-search-ii/) | 🟡 Medium | Trie + backtracking |
 
 ### Hard
+
 | # | Problem | Difficulty | Pattern |
 |---|---------|------------|---------|
 | 1032 | [Stream of Characters](https://leetcode.com/problems/stream-of-characters/) | 🔴 Hard | Multiple patterns |
@@ -638,17 +658,21 @@ def reverse_complement(seq):
 ### Complexity Analysis
 
 **Construction:**
+
 ```
 - Building trie: O(Σ|patterns|)
 - Building failure links: O(m · σ) where σ = alphabet size
 - Total: O(m · σ)
+
 ```
 
 **Matching:**
+
 ```
 - Each character processed once: O(n)
 - Reporting matches: O(k) where k = number of matches
 - Total: O(n + k)
+
 ```
 
 ### When to Use Aho-Corasick

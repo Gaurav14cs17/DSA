@@ -110,6 +110,7 @@ Advanced tree structures: **AVL Trees**, **Red-Black Trees**, **B-Trees**, **Spl
 ## 🏆 Must-Do Problems
 
 ### 🟡 Medium
+
 | Problem | Link |
 |---------|------|
 | Balance a BST | [LeetCode 1382](https://leetcode.com/problems/balance-a-binary-search-tree/) |
@@ -118,6 +119,7 @@ Advanced tree structures: **AVL Trees**, **Red-Black Trees**, **B-Trees**, **Spl
 | Count of Range Sum | [LeetCode 327](https://leetcode.com/problems/count-of-range-sum/) |
 
 ### 🔴 Hard
+
 | Problem | Link |
 |---------|------|
 | Count of Smaller Numbers | [LeetCode 315](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) |
