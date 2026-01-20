@@ -1,0 +1,12 @@
+title: "Data Structures & Algorithms"
+description: "By Gaurav Goswami"
+theme: jekyll-theme-cayman
+show_downloads: false
+google_analytics:
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - README.md
