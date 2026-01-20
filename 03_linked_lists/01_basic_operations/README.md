@@ -242,7 +242,6 @@ Both reach c1 (intersection) after same total distance!
 
 ```
 +--------------------------------------------------------------------+
-
 |  Example Linked List with Cycle                                    |
 |                                                                    |
 |  1 → 2 → 3 → 4 → 5 → 6 ↴                                          |
@@ -384,7 +383,6 @@ Answer: 4 (second middle) ✓
 
 ```
 +--------------------------------------------------------------------+
-
 |  List A: 1 → 2 ↘                                                   |
 |                  → 6 → 7 → 8 → null                                |
 |  List B: 3 → 4 → 5 ↗                                               |

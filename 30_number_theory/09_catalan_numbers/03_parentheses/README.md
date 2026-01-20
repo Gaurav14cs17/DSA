@@ -70,7 +70,6 @@ Given n pairs of parentheses, generate all valid (balanced) combinations.
 
 ```
 +-----------------------------------------------------------------+
-
 | GENERATING PARENTHESES for n=2                                 |
 +-----------------------------------------------------------------+
 |                                                                 |

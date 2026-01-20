@@ -241,7 +241,6 @@ The LCM must be $d \cdot x \cdot y$ (smallest number divisible by both):
 
 ```
 +-----------------------------------------------------------------+
-
 | PROBLEM: Find integers x, y such that 35x + 15y = gcd(35, 15)  |
 +-----------------------------------------------------------------+
 | FORWARD PHASE (Standard Euclidean):                             |

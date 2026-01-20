@@ -234,7 +234,6 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 
 ```
 +----------------------------------------------------------------+
-
 | PROBLEM: Jump Game                                             |
 | Input: nums = [2, 3, 1, 1, 4]                                  |
 | Question: Can you reach the last index?                        |
@@ -318,7 +317,6 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 
 ```
 +----------------------------------------------------------------+
-
 | PROBLEM: Course Schedule                                        |
 | Input: numCourses = 4, prerequisites = [[1,0],[2,0],[3,1],[3,2]]|
 | Question: Can you finish all courses?                          |
@@ -406,7 +404,6 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 
 ```
 +----------------------------------------------------------------+
-
 | PROBLEM: Number of Islands                                     |
 | Input: grid = [['1','1','0','0','0'],                          |
 |                ['1','1','0','0','0'],                          |
@@ -491,7 +488,6 @@ d_{multi}(v) = \min_{s \in S} d(s, v)
 
 ```
 +----------------------------------------------------------------+
-
 | PROBLEM: Word Ladder                                            |
 | Input: beginWord = "hit", endWord = "cog"                      |
 |        wordList = ["hot","dot","dog","lot","log","cog"]        |

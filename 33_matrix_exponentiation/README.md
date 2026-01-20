@@ -200,7 +200,6 @@ This is called the **companion matrix**.
 
 ```
 +-----------------------------------------------------------------+
-
 | PROBLEM: Compute F₁₀ using matrix exponentiation               |
 +-----------------------------------------------------------------+
 | STEP 1: Define transformation matrix                            |
@@ -253,7 +252,6 @@ This is called the **companion matrix**.
 
 ```
 +-----------------------------------------------------------------+
-
 | PROBLEM: Count paths of length 3 from vertex 0 to vertex 2     |
 |                                                                  |
 | Graph:  0 → 1 → 2                                               |

@@ -233,7 +233,6 @@ where $p_1 < p_2 < \cdots < p_k$ are primes and $a_i \geq 1$.
 
 ```
 +-----------------------------------------------------------------+
-
 | PROBLEM: Find all primes up to 30                              |
 +-----------------------------------------------------------------+
 | INITIAL STATE (all marked as potential primes):                |
@@ -270,7 +269,6 @@ where $p_1 < p_2 < \cdots < p_k$ are primes and $a_i \geq 1$.
 
 ```
 +-----------------------------------------------------------------+
-
 | PROBLEM: Is 97 prime?                                          |
 +-----------------------------------------------------------------+
 | ALGORITHM: Check divisibility by all integers from 2 to √97    |
@@ -301,7 +299,6 @@ where $p_1 < p_2 < \cdots < p_k$ are primes and $a_i \geq 1$.
 
 ```
 +-----------------------------------------------------------------+
-
 | PROBLEM: Factorize 360                                         |
 +-----------------------------------------------------------------+
 | STEP-BY-STEP:                                                   |
