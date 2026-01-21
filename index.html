@@ -3,22 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🔢 Data Structures & Algorithms</title>
+  <title>🔢 Data Structures & Algorithms | Gaurav Goswami</title>
+  <meta name="description" content="Master DSA for Coding Interviews - Complete guide by Gaurav Goswami">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    :root {
+      --primary: #00d26a;
+      --secondary: #00bbf9;
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --gray: #8b949e;
+      --text: #ffffff;
+    }
+    
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
     body {
       font-family: 'Inter', sans-serif;
-      background: #0a0a0f;
-      color: #fff;
+      background: var(--bg);
+      color: var(--text);
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
       overflow-x: hidden;
     }
     
@@ -28,20 +35,83 @@
       width: 100%; height: 100%;
       z-index: -1;
       background: 
-        radial-gradient(ellipse at 20% 20%, #00d4aa20 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 80%, #00b4d820 0%, transparent 50%),
-        radial-gradient(ellipse at 50% 50%, #00d4aa10 0%, transparent 70%);
+        radial-gradient(ellipse at 20% 20%, rgba(0, 210, 106, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(0, 187, 249, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(0, 210, 106, 0.08) 0%, transparent 70%);
       animation: pulse 8s ease-in-out infinite;
     }
     
     @keyframes pulse {
       0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.8; transform: scale(1.05); }
+      50% { opacity: 0.8; transform: scale(1.02); }
     }
     
-    .container {
-      max-width: 600px;
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 1rem 2rem;
+      background: rgba(10, 10, 15, 0.8);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .logo {
+      font-weight: 800;
+      font-size: 1.5rem;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    
+    .nav-links a {
+      color: var(--gray);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover { color: var(--text); }
+    
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 2rem 4rem;
       text-align: center;
+    }
+    
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(0, 210, 106, 0.2);
+      border: 1px solid rgba(0, 210, 106, 0.3);
+      border-radius: 50px;
+      font-size: 0.85rem;
+      color: var(--primary);
+      margin-bottom: 2rem;
+    }
+    
+    .badge i { font-size: 0.5rem; animation: blink 2s infinite; }
+    
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
     }
     
     .emoji {
@@ -52,30 +122,61 @@
     
     @keyframes float {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+      50% { transform: translateY(-15px); }
     }
     
     h1 {
-      font-size: 2.5rem;
+      font-size: 3.5rem;
       font-weight: 800;
-      background: linear-gradient(135deg, #00d4aa, #00b4d8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
       margin-bottom: 1rem;
+      line-height: 1.2;
     }
     
-    .desc {
-      font-size: 1.2rem;
-      color: #a0a0b0;
-      margin-bottom: 2.5rem;
-      line-height: 1.6;
+    .gradient {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .subtitle {
+      font-size: 1.3rem;
+      color: var(--gray);
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+    
+    .stats {
+      display: flex;
+      gap: 3rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .stat {
+      text-align: center;
+    }
+    
+    .stat-value {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .stat-label {
+      font-size: 0.9rem;
+      color: var(--gray);
+      margin-top: 0.25rem;
     }
     
     .buttons {
       display: flex;
       gap: 1rem;
-      justify-content: center;
+      margin: 2rem 0;
       flex-wrap: wrap;
+      justify-content: center;
     }
     
     .btn {
@@ -88,100 +189,262 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
+      border: none;
+      cursor: pointer;
     }
     
     .btn-primary {
-      background: linear-gradient(135deg, #00d4aa, #00b4d8);
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: white;
-      box-shadow: 0 4px 20px #00d4aa40;
+      box-shadow: 0 4px 20px rgba(0, 210, 106, 0.4);
     }
     
     .btn-primary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 30px #00d4aa60;
+      box-shadow: 0 8px 30px rgba(0, 210, 106, 0.5);
     }
     
-    .btn-secondary {
-      background: rgba(255,255,255,0.1);
+    .btn-outline {
+      background: transparent;
       color: white;
-      border: 1px solid rgba(255,255,255,0.2);
+      border: 2px solid rgba(255,255,255,0.2);
     }
     
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.2);
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.4);
       transform: translateY(-3px);
     }
     
-    .note {
-      margin-top: 3rem;
-      padding: 1.5rem;
-      background: rgba(255,255,255,0.05);
-      border-radius: 12px;
+    .modules {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .module-card {
+      background: var(--surface);
       border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
     }
     
-    .note p {
-      color: #8b949e;
+    .module-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+      box-shadow: 0 10px 40px rgba(0, 210, 106, 0.2);
+    }
+    
+    .module-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .module-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .module-card p {
       font-size: 0.9rem;
-      line-height: 1.6;
+      color: var(--gray);
+      line-height: 1.5;
     }
     
-    .note a {
-      color: #00d4aa;
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .social-link {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    .social-link:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-3px);
+    }
+    
+    .footer-text {
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+    
+    .footer-text a {
+      color: var(--primary);
       text-decoration: none;
     }
     
-    .note a:hover {
-      text-decoration: underline;
-    }
-    
-    .author {
-      margin-top: 3rem;
-      color: #6b7280;
-      font-size: 0.9rem;
-    }
-    
-    .author a {
-      color: #00d4aa;
-      text-decoration: none;
-    }
-    
-    @media (max-width: 600px) {
-      h1 { font-size: 1.8rem; }
+    @media (max-width: 768px) {
+      h1 { font-size: 2.5rem; }
       .emoji { font-size: 4rem; }
-      .buttons { flex-direction: column; }
-      .btn { width: 100%; justify-content: center; }
+      .stats { gap: 2rem; }
+      .stat-value { font-size: 2rem; }
+      .nav-links { display: none; }
     }
   </style>
 </head>
 <body>
   <div class="bg"></div>
   
-  <div class="container">
+  <nav>
+    <a href="#" class="logo">🔢 DSA</a>
+    <ul class="nav-links">
+      <li><a href="#modules">Topics</a></li>
+      <li><a href="https://github.com/Gaurav14cs17/DSA" target="_blank">GitHub</a></li>
+      <li><a href="https://github.com/Gaurav14cs17" target="_blank">Author</a></li>
+    </ul>
+  </nav>
+  
+  <section class="hero">
+    <div class="badge"><i class="fas fa-circle"></i> 1800+ Problems Solved</div>
     <div class="emoji">🔢</div>
-    <h1>🔢 Data Structures & Algorithms</h1>
-    <p class="desc">Master DSA for Coding Interviews<br>By Gaurav Goswami</p>
+    <h1>Data Structures & <span class="gradient">Algorithms</span></h1>
+    <p class="subtitle">Comprehensive DSA guide for coding interviews - from fundamentals to advanced topics with detailed explanations.</p>
+    
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-value">30+</div>
+        <div class="stat-label">Topics</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">300+</div>
+        <div class="stat-label">Problems</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">137</div>
+        <div class="stat-label">GitHub Stars</div>
+      </div>
+    </div>
     
     <div class="buttons">
       <a href="https://github.com/Gaurav14cs17/DSA" class="btn btn-primary">
-        📖 View Documentation
+        <i class="fab fa-github"></i> View on GitHub
       </a>
-      <a href="https://github.com/Gaurav14cs17/DSA/stargazers" class="btn btn-secondary">
-        ⭐ Star on GitHub
+      <a href="https://github.com/Gaurav14cs17/DSA/stargazers" class="btn btn-outline">
+        <i class="fas fa-star"></i> Star Repository
       </a>
     </div>
+  </section>
+  
+  <section class="modules" id="modules">
+    <h2 class="section-title">📚 <span class="gradient">Topics</span></h2>
     
-    <div class="note">
-      <p>
-        📝 <strong>Note:</strong> For the best viewing experience with math equations, 
-        diagrams, and formatted tables, please view the documentation directly on 
-        <a href="https://github.com/Gaurav14cs17/DSA">GitHub</a>.
-      </p>
+    <div class="module-grid">
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/01_arrays" class="module-card">
+        <div class="module-icon">📊</div>
+        <h3>Arrays</h3>
+        <p>Basic operations, subarray problems, prefix sum, matrix, intervals</p>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/02_strings" class="module-card">
+        <div class="module-icon">📝</div>
+        <h3>Strings</h3>
+        <p>Basic string, anagrams, palindromes, subsequences</p>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/03_linked_lists" class="module-card">
+        <div class="module-icon">🔗</div>
+        <h3>Linked Lists</h3>
+        <p>Basic operations, reversal, merge sort</p>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/04_stacks" class="module-card">
+        <div class="module-icon">📚</div>
+        <h3>Stacks</h3>
+        <p>Basic stack, parentheses, monotonic stack, expression evaluation</p>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/05_queues" class="module-card">
+        <div class="module-icon">🚶</div>
+        <h3>Queues</h3>
+        <p>Basic queue, deque, priority queue, sliding window</p>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/06_trees" class="module-card">
+        <div class="module-icon">🌳</div>
+        <h3>Trees</h3>
+        <p>Binary trees, BST, tree traversals, tree construction</p>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/07_graphs" class="module-card">
+        <div class="module-icon">🕸️</div>
+        <h3>Graphs</h3>
+        <p>BFS, DFS, shortest paths, topological sort, MST</p>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/08_dynamic_programming" class="module-card">
+        <div class="module-icon">🧩</div>
+        <h3>Dynamic Programming</h3>
+        <p>1D, 2D, knapsack, LCS, LIS, matrix chain</p>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/09_sorting" class="module-card">
+        <div class="module-icon">📈</div>
+        <h3>Sorting</h3>
+        <p>Comparison sorts, non-comparison sorts, custom sorting</p>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/10_searching" class="module-card">
+        <div class="module-icon">🔍</div>
+        <h3>Searching</h3>
+        <p>Binary search, ternary search, search patterns</p>
+      </a>
     </div>
-    
-    <p class="author">
-      Made with ❤️ by <a href="https://github.com/Gaurav14cs17">Gaurav Goswami</a>
+  </section>
+  
+  <footer>
+    <div class="social-links">
+      <a href="https://github.com/Gaurav14cs17" class="social-link" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/in/gaurav14cs17" class="social-link" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://leetcode.com/u/gou_rav/" class="social-link" target="_blank" title="LeetCode">
+        <i class="fas fa-code"></i>
+      </a>
+      <a href="mailto:gourav14cs17@gmail.com" class="social-link" title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+    <p class="footer-text">
+      © 2026 <a href="https://github.com/Gaurav14cs17">Gaurav Goswami</a> | Lead Deep Learning Engineer @ Samsung R&D
     </p>
-  </div>
+  </footer>
 </body>
 </html>
