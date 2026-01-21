@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🔢 Data Structures & Algorithms | Gaurav Goswami</title>
-  <meta name="description" content="Master DSA for Coding Interviews - Complete guide by Gaurav Goswami">
+  <meta name="description" content="Master DSA for Coding Interviews - 830+ Problems, 41 Topics - Complete guide by Gaurav Goswami">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -17,6 +17,9 @@
       --surface: #12121a;
       --gray: #8b949e;
       --text: #ffffff;
+      --easy: #00d26a;
+      --medium: #ffc107;
+      --hard: #ff6b6b;
     }
     
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -51,7 +54,7 @@
       top: 0;
       width: 100%;
       padding: 1rem 2rem;
-      background: rgba(10, 10, 15, 0.8);
+      background: rgba(10, 10, 15, 0.9);
       backdrop-filter: blur(10px);
       z-index: 100;
       display: flex;
@@ -218,53 +221,113 @@
     
     .modules {
       padding: 4rem 2rem;
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
     }
     
     .section-title {
       font-size: 2rem;
       font-weight: 700;
-      text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .section-subtitle {
+      color: var(--gray);
+      font-size: 1rem;
+    }
+    
+    .category-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 3rem 0 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid rgba(255,255,255,0.1);
     }
     
     .module-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
     }
     
     .module-card {
       background: var(--surface);
       border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 16px;
-      padding: 1.5rem;
+      border-radius: 12px;
+      padding: 1.25rem;
       transition: all 0.3s ease;
       text-decoration: none;
       color: inherit;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
     }
     
     .module-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-3px);
       border-color: var(--primary);
-      box-shadow: 0 10px 40px rgba(0, 210, 106, 0.2);
+      box-shadow: 0 8px 30px rgba(0, 210, 106, 0.15);
     }
     
-    .module-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+    .module-num {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--gray);
+      background: rgba(255,255,255,0.1);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      min-width: 32px;
+      text-align: center;
+    }
+    
+    .module-content {
+      flex: 1;
     }
     
     .module-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
     
     .module-card p {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       color: var(--gray);
-      line-height: 1.5;
+      line-height: 1.4;
+    }
+    
+    .level {
+      font-size: 0.7rem;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    
+    .level-easy { background: rgba(0, 210, 106, 0.2); color: var(--easy); }
+    .level-medium { background: rgba(255, 193, 7, 0.2); color: var(--medium); }
+    .level-hard { background: rgba(255, 107, 107, 0.2); color: var(--hard); }
+    
+    .roadmap {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 3rem 0;
+    }
+    
+    .roadmap pre {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--primary);
+      overflow-x: auto;
+      line-height: 1.4;
     }
     
     footer {
@@ -315,6 +378,7 @@
       .stats { gap: 2rem; }
       .stat-value { font-size: 2rem; }
       .nav-links { display: none; }
+      .module-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -324,9 +388,10 @@
   <nav>
     <a href="#" class="logo">🔢 DSA</a>
     <ul class="nav-links">
-      <li><a href="#modules">Topics</a></li>
+      <li><a href="#foundation">Foundation</a></li>
+      <li><a href="#intermediate">Intermediate</a></li>
+      <li><a href="#advanced">Advanced</a></li>
       <li><a href="https://github.com/Gaurav14cs17/DSA" target="_blank">GitHub</a></li>
-      <li><a href="https://github.com/Gaurav14cs17" target="_blank">Author</a></li>
     </ul>
   </nav>
   
@@ -334,19 +399,19 @@
     <div class="badge"><i class="fas fa-circle"></i> 1800+ Problems Solved</div>
     <div class="emoji">🔢</div>
     <h1>Data Structures & <span class="gradient">Algorithms</span></h1>
-    <p class="subtitle">Comprehensive DSA guide for coding interviews - from fundamentals to advanced topics with detailed explanations.</p>
+    <p class="subtitle">Comprehensive DSA guide for coding interviews - from fundamentals to advanced topics with detailed explanations and 830+ problems.</p>
     
     <div class="stats">
       <div class="stat">
-        <div class="stat-value">30+</div>
+        <div class="stat-value">41</div>
         <div class="stat-label">Topics</div>
       </div>
       <div class="stat">
-        <div class="stat-value">300+</div>
+        <div class="stat-value">830+</div>
         <div class="stat-label">Problems</div>
       </div>
       <div class="stat">
-        <div class="stat-value">137</div>
+        <div class="stat-value">139</div>
         <div class="stat-label">GitHub Stars</div>
       </div>
     </div>
@@ -361,69 +426,389 @@
     </div>
   </section>
   
-  <section class="modules" id="modules">
-    <h2 class="section-title">📚 <span class="gradient">Topics</span></h2>
+  <section class="modules" id="foundation">
+    <div class="section-header">
+      <h2 class="section-title">📚 <span class="gradient">All 41 Topics</span></h2>
+      <p class="section-subtitle">Complete DSA curriculum from basics to competition level</p>
+    </div>
     
+    <!-- Foundation -->
+    <h3 class="category-title">🟢 Foundation (Week 1-4)</h3>
     <div class="module-grid">
       <a href="https://github.com/Gaurav14cs17/DSA/tree/main/01_arrays" class="module-card">
-        <div class="module-icon">📊</div>
-        <h3>Arrays</h3>
-        <p>Basic operations, subarray problems, prefix sum, matrix, intervals</p>
+        <span class="module-num">01</span>
+        <div class="module-content">
+          <h3>Arrays <span class="level level-easy">Easy</span></h3>
+          <p>Basic operations, subarray problems, prefix sum, matrix, intervals</p>
+        </div>
       </a>
       
       <a href="https://github.com/Gaurav14cs17/DSA/tree/main/02_strings" class="module-card">
-        <div class="module-icon">📝</div>
-        <h3>Strings</h3>
-        <p>Basic string, anagrams, palindromes, subsequences</p>
+        <span class="module-num">02</span>
+        <div class="module-content">
+          <h3>Strings <span class="level level-easy">Easy</span></h3>
+          <p>Basic string, anagrams, palindromes, subsequences</p>
+        </div>
       </a>
       
       <a href="https://github.com/Gaurav14cs17/DSA/tree/main/03_linked_lists" class="module-card">
-        <div class="module-icon">🔗</div>
-        <h3>Linked Lists</h3>
-        <p>Basic operations, reversal, merge sort</p>
+        <span class="module-num">03</span>
+        <div class="module-content">
+          <h3>Linked Lists <span class="level level-easy">Easy</span></h3>
+          <p>Basic operations, reversal, merge sort, cycle detection</p>
+        </div>
       </a>
       
       <a href="https://github.com/Gaurav14cs17/DSA/tree/main/04_stacks" class="module-card">
-        <div class="module-icon">📚</div>
-        <h3>Stacks</h3>
-        <p>Basic stack, parentheses, monotonic stack, expression evaluation</p>
+        <span class="module-num">04</span>
+        <div class="module-content">
+          <h3>Stacks <span class="level level-easy">Easy</span></h3>
+          <p>Basic stack, parentheses, monotonic stack, expression evaluation</p>
+        </div>
       </a>
       
       <a href="https://github.com/Gaurav14cs17/DSA/tree/main/05_queues" class="module-card">
-        <div class="module-icon">🚶</div>
-        <h3>Queues</h3>
-        <p>Basic queue, deque, priority queue, sliding window</p>
+        <span class="module-num">05</span>
+        <div class="module-content">
+          <h3>Queues <span class="level level-easy">Easy</span></h3>
+          <p>Basic queue, deque, priority queue, sliding window</p>
+        </div>
       </a>
       
-      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/06_trees" class="module-card">
-        <div class="module-icon">🌳</div>
-        <h3>Trees</h3>
-        <p>Binary trees, BST, tree traversals, tree construction</p>
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/06_hash_tables" class="module-card">
+        <span class="module-num">06</span>
+        <div class="module-content">
+          <h3>Hash Tables <span class="level level-easy">Easy</span></h3>
+          <p>Hash maps, collision handling, frequency counting</p>
+        </div>
+      </a>
+    </div>
+    
+    <!-- Core Data Structures -->
+    <h3 class="category-title" id="intermediate">🟡 Core Data Structures (Week 5-8)</h3>
+    <div class="module-grid">
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/07_trees" class="module-card">
+        <span class="module-num">07</span>
+        <div class="module-content">
+          <h3>Trees <span class="level level-medium">Medium</span></h3>
+          <p>Binary trees, traversals, tree construction, path problems</p>
+        </div>
       </a>
       
-      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/07_graphs" class="module-card">
-        <div class="module-icon">🕸️</div>
-        <h3>Graphs</h3>
-        <p>BFS, DFS, shortest paths, topological sort, MST</p>
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/08_binary_search_trees" class="module-card">
+        <span class="module-num">08</span>
+        <div class="module-content">
+          <h3>Binary Search Trees <span class="level level-medium">Medium</span></h3>
+          <p>BST operations, balancing, AVL, Red-Black trees</p>
+        </div>
       </a>
       
-      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/08_dynamic_programming" class="module-card">
-        <div class="module-icon">🧩</div>
-        <h3>Dynamic Programming</h3>
-        <p>1D, 2D, knapsack, LCS, LIS, matrix chain</p>
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/09_heaps" class="module-card">
+        <span class="module-num">09</span>
+        <div class="module-content">
+          <h3>Heaps <span class="level level-medium">Medium</span></h3>
+          <p>Min/Max heap, heapify, priority queue, top-K problems</p>
+        </div>
       </a>
       
-      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/09_sorting" class="module-card">
-        <div class="module-icon">📈</div>
-        <h3>Sorting</h3>
-        <p>Comparison sorts, non-comparison sorts, custom sorting</p>
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/10_graphs" class="module-card">
+        <span class="module-num">10</span>
+        <div class="module-content">
+          <h3>Graphs <span class="level level-medium">Medium</span></h3>
+          <p>BFS, DFS, representations, connected components</p>
+        </div>
       </a>
       
-      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/10_searching" class="module-card">
-        <div class="module-icon">🔍</div>
-        <h3>Searching</h3>
-        <p>Binary search, ternary search, search patterns</p>
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/11_tries" class="module-card">
+        <span class="module-num">11</span>
+        <div class="module-content">
+          <h3>Tries <span class="level level-medium">Medium</span></h3>
+          <p>Prefix trees, autocomplete, word search</p>
+        </div>
       </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/12_segment_trees" class="module-card">
+        <span class="module-num">12</span>
+        <div class="module-content">
+          <h3>Segment Trees <span class="level level-hard">Hard</span></h3>
+          <p>Range queries, lazy propagation, point updates</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/13_union_find" class="module-card">
+        <span class="module-num">13</span>
+        <div class="module-content">
+          <h3>Union Find <span class="level level-medium">Medium</span></h3>
+          <p>Disjoint sets, path compression, union by rank</p>
+        </div>
+      </a>
+    </div>
+    
+    <!-- Algorithms -->
+    <h3 class="category-title">⚡ Core Algorithms (Week 9-12)</h3>
+    <div class="module-grid">
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/14_sorting" class="module-card">
+        <span class="module-num">14</span>
+        <div class="module-content">
+          <h3>Sorting <span class="level level-easy">Easy</span></h3>
+          <p>Comparison sorts, non-comparison sorts, custom sorting</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/15_searching" class="module-card">
+        <span class="module-num">15</span>
+        <div class="module-content">
+          <h3>Searching <span class="level level-easy">Easy</span></h3>
+          <p>Binary search, ternary search, search patterns</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/16_recursion" class="module-card">
+        <span class="module-num">16</span>
+        <div class="module-content">
+          <h3>Recursion <span class="level level-medium">Medium</span></h3>
+          <p>Base cases, recursive thinking, tail recursion</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/17_backtracking" class="module-card">
+        <span class="module-num">17</span>
+        <div class="module-content">
+          <h3>Backtracking <span class="level level-medium">Medium</span></h3>
+          <p>Permutations, combinations, N-Queens, Sudoku</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/18_dynamic_programming" class="module-card">
+        <span class="module-num">18</span>
+        <div class="module-content">
+          <h3>Dynamic Programming <span class="level level-hard">Hard</span></h3>
+          <p>1D, 2D, knapsack, LCS, LIS, matrix chain</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/19_greedy_algorithms" class="module-card">
+        <span class="module-num">19</span>
+        <div class="module-content">
+          <h3>Greedy Algorithms <span class="level level-medium">Medium</span></h3>
+          <p>Activity selection, Huffman, interval scheduling</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/20_divide_and_conquer" class="module-card">
+        <span class="module-num">20</span>
+        <div class="module-content">
+          <h3>Divide & Conquer <span class="level level-medium">Medium</span></h3>
+          <p>Merge sort, quick select, closest pair</p>
+        </div>
+      </a>
+    </div>
+    
+    <!-- Techniques -->
+    <h3 class="category-title">🎯 Problem-Solving Techniques</h3>
+    <div class="module-grid">
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/21_bit_manipulation" class="module-card">
+        <span class="module-num">21</span>
+        <div class="module-content">
+          <h3>Bit Manipulation <span class="level level-medium">Medium</span></h3>
+          <p>Bitwise operations, XOR tricks, bit masking</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/22_two_pointers" class="module-card">
+        <span class="module-num">22</span>
+        <div class="module-content">
+          <h3>Two Pointers <span class="level level-easy">Easy</span></h3>
+          <p>Opposite direction, same direction, fast-slow</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/23_sliding_window" class="module-card">
+        <span class="module-num">23</span>
+        <div class="module-content">
+          <h3>Sliding Window <span class="level level-medium">Medium</span></h3>
+          <p>Fixed window, variable window, with hash map</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/24_graph_algorithms" class="module-card">
+        <span class="module-num">24</span>
+        <div class="module-content">
+          <h3>Graph Algorithms <span class="level level-hard">Hard</span></h3>
+          <p>Dijkstra, Bellman-Ford, Floyd-Warshall, MST</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/25_tree_algorithms" class="module-card">
+        <span class="module-num">25</span>
+        <div class="module-content">
+          <h3>Tree Algorithms <span class="level level-medium">Medium</span></h3>
+          <p>LCA, tree DP, diameter, centroid decomposition</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/26_sweep_line" class="module-card">
+        <span class="module-num">26</span>
+        <div class="module-content">
+          <h3>Sweep Line <span class="level level-hard">Hard</span></h3>
+          <p>Event processing, interval problems, skyline</p>
+        </div>
+      </a>
+    </div>
+    
+    <!-- Advanced DS -->
+    <h3 class="category-title" id="advanced">🔴 Advanced Data Structures</h3>
+    <div class="module-grid">
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/27_advanced_trees" class="module-card">
+        <span class="module-num">27</span>
+        <div class="module-content">
+          <h3>Advanced Trees <span class="level level-hard">Hard</span></h3>
+          <p>Fenwick tree, 2D segment tree, treap</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/28_string_algorithms" class="module-card">
+        <span class="module-num">28</span>
+        <div class="module-content">
+          <h3>String Algorithms <span class="level level-hard">Hard</span></h3>
+          <p>KMP, Z-algorithm, suffix array, Rabin-Karp</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/29_computational_geometry" class="module-card">
+        <span class="module-num">29</span>
+        <div class="module-content">
+          <h3>Computational Geometry <span class="level level-hard">Hard</span></h3>
+          <p>Convex hull, line intersection, polygon area</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/37_interval_trees" class="module-card">
+        <span class="module-num">37</span>
+        <div class="module-content">
+          <h3>Interval Trees <span class="level level-medium">Medium</span></h3>
+          <p>Interval scheduling, range updates, overlapping</p>
+        </div>
+      </a>
+    </div>
+    
+    <!-- Math & Theory -->
+    <h3 class="category-title">📐 Mathematics & Theory</h3>
+    <div class="module-grid">
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/30_number_theory" class="module-card">
+        <span class="module-num">30</span>
+        <div class="module-content">
+          <h3>Number Theory <span class="level level-hard">Hard</span></h3>
+          <p>GCD, prime sieve, modular arithmetic, Euler's totient</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/31_combinatorics" class="module-card">
+        <span class="module-num">31</span>
+        <div class="module-content">
+          <h3>Combinatorics <span class="level level-hard">Hard</span></h3>
+          <p>Counting, generating functions, inclusion-exclusion</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/32_game_theory" class="module-card">
+        <span class="module-num">32</span>
+        <div class="module-content">
+          <h3>Game Theory <span class="level level-hard">Hard</span></h3>
+          <p>Nim, Sprague-Grundy, minimax, alpha-beta</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/33_matrix_exponentiation" class="module-card">
+        <span class="module-num">33</span>
+        <div class="module-content">
+          <h3>Matrix Exponentiation <span class="level level-hard">Hard</span></h3>
+          <p>Fast Fibonacci, linear recurrence, graph paths</p>
+        </div>
+      </a>
+    </div>
+    
+    <!-- Competition Level -->
+    <h3 class="category-title">⭐ Competition Level</h3>
+    <div class="module-grid">
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/34_sqrt_decomposition" class="module-card">
+        <span class="module-num">34</span>
+        <div class="module-content">
+          <h3>Sqrt Decomposition <span class="level level-hard">Hard</span></h3>
+          <p>Mo's algorithm, block decomposition</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/35_persistent_ds" class="module-card">
+        <span class="module-num">35</span>
+        <div class="module-content">
+          <h3>Persistent DS <span class="level level-hard">Hard</span></h3>
+          <p>Persistent segment tree, versioning</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/36_randomized_algorithms" class="module-card">
+        <span class="module-num">36</span>
+        <div class="module-content">
+          <h3>Randomized Algorithms <span class="level level-medium">Medium</span></h3>
+          <p>Reservoir sampling, skip lists, hashing</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/38_online_algorithms" class="module-card">
+        <span class="module-num">38</span>
+        <div class="module-content">
+          <h3>Online Algorithms <span class="level level-hard">Hard</span></h3>
+          <p>LRU cache, streaming algorithms</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/39_approximation_algorithms" class="module-card">
+        <span class="module-num">39</span>
+        <div class="module-content">
+          <h3>Approximation <span class="level level-hard">Hard</span></h3>
+          <p>Set cover, TSP approximation, vertex cover</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/40_dp_optimizations" class="module-card">
+        <span class="module-num">40</span>
+        <div class="module-content">
+          <h3>DP Optimizations <span class="level level-hard">Hard</span></h3>
+          <p>Convex hull trick, divide & conquer DP, Knuth</p>
+        </div>
+      </a>
+      
+      <a href="https://github.com/Gaurav14cs17/DSA/tree/main/41_loop_fusion_online" class="module-card">
+        <span class="module-num">41</span>
+        <div class="module-content">
+          <h3>Loop Fusion & Online <span class="level level-hard">Hard</span></h3>
+          <p>Welford, Kadane, recurrence relations</p>
+        </div>
+      </a>
+    </div>
+    
+    <!-- Roadmap -->
+    <div class="roadmap">
+      <h3 style="margin-bottom: 1rem;">🗺️ Learning Roadmap</h3>
+      <pre>
+                              🎯 DSA MASTERY PATH 🎯
+
+    +-----------------------------------------------------------------+
+    |                                                                 |
+    |   WEEK 1-4          WEEK 5-8          WEEK 9-12        WEEK 13+ |
+    |   ---------         ---------         ---------        -------- |
+    |                                                                 |
+    |   📦 Arrays         🌲 Trees          🧮 DP            🔴 Adv.   |
+    |   📝 Strings        📊 Graphs         ↩️ Backtrack     📐 Math   |
+    |   🔗 Lists          🏔️ Heaps          🔍 Binary        ⭐ Comp.  |
+    |   #️⃣ Hash Maps     🔀 Union-Find       Search                   |
+    |                                                                 |
+    |   ------------------------------------------------------------ |
+    |   🟢 FOUNDATION     🟡 INTERMEDIATE   🔴 ADVANCED      ⭐ EXPERT |
+    |                                                                 |
+    +-----------------------------------------------------------------+
+      </pre>
     </div>
   </section>
   
@@ -444,6 +829,9 @@
     </div>
     <p class="footer-text">
       © 2026 <a href="https://github.com/Gaurav14cs17">Gaurav Goswami</a> | Lead Deep Learning Engineer @ Samsung R&D
+    </p>
+    <p class="footer-text" style="margin-top: 0.5rem;">
+      <strong>830+ Problems • 41 Topics • Made with ❤️</strong>
     </p>
   </footer>
 </body>
