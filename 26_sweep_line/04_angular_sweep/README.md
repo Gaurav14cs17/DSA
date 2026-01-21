@@ -58,10 +58,7 @@ permalink: /26_sweep_line/04_angular_sweep/
 
 **Angle of vector $(x, y)$ from origin:**
 
-```math
-\theta = \text{atan2}(y, x)
-
-```
+$$\theta = \text{atan2}(y, x)$$
 
 **Range:** $[-\pi, \pi]$ or $[0, 2\pi]$
 
@@ -79,10 +76,7 @@ permalink: /26_sweep_line/04_angular_sweep/
 
 **Compare angles** of vectors $\vec{a}$ and $\vec{b}$ using cross product:
 
-```math
-\vec{a} \times \vec{b} = a_x b_y - a_y b_x
-
-```
+$$\vec{a} \times \vec{b} = a_x b_y - a_y b_x$$
 
 - $> 0$: $\vec{b}$ is counter-clockwise from $\vec{a}$
 

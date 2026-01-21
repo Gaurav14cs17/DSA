@@ -49,10 +49,7 @@ permalink: /16_recursion/02_tree_recursion/
 
 Multiple recursive calls per function:
 
-```math
-T(n) = T(n-1) + T(n-2) + \ldots
-
-```
+$$T(n) = T(n-1) + T(n-2) + \ldots$$
 
 Creates a call tree, not a linear chain.
 
@@ -60,17 +57,11 @@ Creates a call tree, not a linear chain.
 
 ### 2️⃣ Fibonacci Analysis
 
-```math
-F(n) = F(n-1) + F(n-2)
-
-```
+$$F(n) = F(n-1) + F(n-2)$$
 
 **Without memoization:**
 
-```math
-T(n) = T(n-1) + T(n-2) + O(1) \approx O(\phi^n) \approx O(1.618^n)
-
-```
+$$T(n) = T(n-1) + T(n-2) + O(1) \approx O(\phi^n) \approx O(1.618^n)$$
 
 Where $\phi = \frac{1 + \sqrt{5}}{2}$ (golden ratio).
 
@@ -82,10 +73,7 @@ Where $\phi = \frac{1 + \sqrt{5}}{2}$ (golden ratio).
 
 For binary trees with $n$ nodes:
 
-```math
-T(n) = T(left) + T(right) + O(1) = O(n)
-
-```
+$$T(n) = T(left) + T(right) + O(1) = O(n)$$
 
 Each node visited exactly once.
 

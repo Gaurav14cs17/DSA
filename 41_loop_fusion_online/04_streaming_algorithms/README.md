@@ -141,15 +141,11 @@ For **old element** $j$ (where $j < i$):
   - **Case 1:** Element $i$ not selected: probability $1 - k/i$
   - **Case 2:** Element $i$ selected but doesn't replace $j$: probability $(k/i) \cdot (k-1)/k$
 
-```math
-P(\text{stay}) = \left(1 - \frac{k}{i}\right) + \frac{k}{i} \cdot \frac{k-1}{k} = 1 - \frac{k}{i} + \frac{k-1}{i} = \frac{i-1}{i}
-
-```
+$$P(\text{stay}) = \left(1 - \frac{k}{i}\right) + \frac{k}{i} \cdot \frac{k-1}{k} = 1 - \frac{k}{i} + \frac{k-1}{i} = \frac{i-1}{i}$$
 
 Therefore:
 
-```math
-P(j \text{ in reservoir after } i) = \frac{k}{i-1} \cdot \frac{i-1}{i} = \frac{k}{i}
+$$P(j \text{ in reservoir after } i) = \frac{k}{i-1} \cdot \frac{i-1}{i} = \frac{k}{i}
 
 $$ ✓
 
@@ -171,9 +167,7 @@ Imagine a game where you're picking $k$ people from a line of $n$ people:
 
 ---
 
-### 2. Count-Min Sketch
-
-```python
+### 2. Count-Min Sketch$$python
 import hashlib
 
 class CountMinSketch:
@@ -253,73 +247,48 @@ With $w = \lceil e/\epsilon \rceil$ and $d = \lceil \ln(1/\delta) \rceil$:
 ```
 P(\hat{f}_i \leq f_i + \epsilon \|\mathbf{f}\|_1) \geq 1 - \delta
 
-```math
-**Proof:**
+$$**Proof:**
 
 **Step 1: Analyze single hash function**
 
-For hash function $h_j$ and item $i$:
-
-```
+For hash function $h_j$ and item $i$:$$
 
 C[j][h_j(i)] = f_i + \sum_{k: h_j(k) = h_j(i), k \neq i} f_k
 
-```math
-The error is the collision sum:
-
-```
+$$The error is the collision sum:$$
 
 \text{Error}_j = \sum_{k \neq i} f_k \cdot \mathbb{1}[h_j(k) = h_j(i)]
 
-```math
-**Step 2: Expected error**
+$$**Step 2: Expected error**
 
-By pairwise independence of hash functions:
-
-```
+By pairwise independence of hash functions:$$
 
 E[\text{Error}_j] = \sum_{k \neq i} f_k \cdot P(h_j(k) = h_j(i)) = \sum_{k \neq i} f_k \cdot \frac{1}{w}
 = \frac{1}{w} \sum_{k \neq i} f_k \leq \frac{\|\mathbf{f}\|_1}{w}
 
-```math
-**Step 3: Apply Markov's inequality**
-
-```
+$$**Step 3: Apply Markov's inequality**$$
 
 P(\text{Error}_j > \epsilon \|\mathbf{f}\|_1) \leq \frac{E[\text{Error}_j]}{\epsilon \|\mathbf{f}\|_1} \leq \frac{1}{w\epsilon}
 
-```math
-With $w = e/\epsilon$:
-
-```
+$$With $w = e/\epsilon$:$$
 
 P(\text{Error}_j > \epsilon \|\mathbf{f}\|_1) \leq \frac{1}{e}
 
-```math
-**Step 4: Multiple hash functions**
+$$**Step 4: Multiple hash functions**
 
-We take minimum over $d$ independent hash functions:
-
-```
+We take minimum over $d$ independent hash functions:$$
 
 P(\text{all } d \text{ hash functions fail}) \leq \left(\frac{1}{e}\right)^d
 
-```math
-With $d = \ln(1/\delta)$:
-
-```
+$$With $d = \ln(1/\delta)$:$$
 
 P(\text{all fail}) \leq e^{-d} = e^{-\ln(1/\delta)} = \delta
 
-```math
-Therefore:
-
-```
+$$Therefore:$$
 
 P(\hat{f}_i \leq f_i + \epsilon \|\mathbf{f}\|_1) \geq 1 - \delta \quad \blacksquare
 
-```math
----
+$$---
 
 **💡 Intuition:**
 
@@ -343,9 +312,7 @@ P(\hat{f}_i \leq f_i + \epsilon \|\mathbf{f}\|_1) \geq 1 - \delta \quad \blacksq
 
 ---
 
-### 3. HyperLogLog
-
-```python
+### 3. HyperLogLog$$python
 import math
 import hashlib
 
@@ -517,9 +484,7 @@ print(f"\nFalse positive rate: {bloom.false_positive_rate():.4f}")
 ```
 p \approx \left(1 - e^{-kn/m}\right)^k
 
-```math
-
-Optimal $k$: $k^* = \frac{m}{n} \ln 2 \approx 0.693 \frac{m}{n}$
+$$Optimal $k$: $k^* = \frac{m}{n} \ln 2 \approx 0.693 \frac{m}{n}$
 
 ---
 
@@ -585,6 +550,4 @@ Optimal $k$: $k^* = \frac{m}{n} \ln 2 \approx 0.693 \frac{m}{n}$
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
 |:------------|:----------:|--------:|
-| [← Higher Moments](../03_higher_moments/README.md) | **04. Streaming Algorithms** | [🏠 Loop Fusion Home](../README.md) |
-
-```
+| [← Higher Moments](../03_higher_moments/README.md) | **04. Streaming Algorithms** | [🏠 Loop Fusion Home](../README.md) |$$

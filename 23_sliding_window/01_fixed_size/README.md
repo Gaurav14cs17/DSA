@@ -71,26 +71,17 @@ permalink: /23_sliding_window/01_fixed_size/
 
 #### For Sum
 
-```math
-\text{sum}_{i+1} = \text{sum}_i - a_i + a_{i+k}
-
-```
+$$\text{sum}_{i+1} = \text{sum}_i - a_i + a_{i+k}$$
 
 #### For Product
 
-```math
-\text{product}_{i+1} = \frac{\text{product}_i}{a_i} \times a_{i+k}
-
-```
+$$\text{product}_{i+1} = \frac{\text{product}_i}{a_i} \times a_{i+k}$$
 
 (Note: Handle zeros specially!)
 
 #### For Count
 
-```math
-\text{count}_{i+1}[\text{new}]++, \quad \text{count}_{i+1}[\text{old}]--
-
-```
+$$\text{count}_{i+1}[\text{new}]++, \quad \text{count}_{i+1}[\text{old}]--$$
 
 ---
 
@@ -103,20 +94,14 @@ permalink: /23_sliding_window/01_fixed_size/
 
 For each of \(n - k + 1\) windows, sum \(k\) elements:
 
-```math
-T(n) = (n - k + 1) \times k = O(nk)
-
-```
+$$T(n) = (n - k + 1) \times k = O(nk)$$
 
 #### Sliding Window
 
 Initialize first window: \(O(k)\)
 Slide \(n - k\) times, each update: \(O(1)\)
 
-```math
-T(n) = k + (n - k) \times 1 = O(n)
-
-```
+$$T(n) = k + (n - k) \times 1 = O(n)$$
 
 **Speedup**: \(O(k)\) times faster!
 
@@ -131,10 +116,7 @@ T(n) = k + (n - k) \times 1 = O(n)
 
 The deque stores indices in decreasing order of their values:
 
-```math
-a[\text{deque}[0]] \geq a[\text{deque}[1]] \geq ... \geq a[\text{deque}[n-1]]
-
-```
+$$a[\text{deque}[0]] \geq a[\text{deque}[1]] \geq ... \geq a[\text{deque}[n-1]]$$
 
 #### Why It Works
 
@@ -190,17 +172,11 @@ When `matches == 26`, we found an anagram!
 
 For string \(s[i:i+k]\):
 
-```math
-H = s[i] \cdot b^{k-1} + s[i+1] \cdot b^{k-2} + ... + s[i+k-1] \cdot b^0
-
-```
+$$H = s[i] \cdot b^{k-1} + s[i+1] \cdot b^{k-2} + ... + s[i+k-1] \cdot b^0$$
 
 #### Rolling Update
 
-```math
-H_{i+1} = (H_i - s[i] \cdot b^{k-1}) \cdot b + s[i+k]
-
-```
+$$H_{i+1} = (H_i - s[i] \cdot b^{k-1}) \cdot b + s[i+k]$$
 
 All operations mod a large prime to prevent overflow.
 

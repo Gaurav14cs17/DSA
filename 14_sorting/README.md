@@ -32,10 +32,7 @@ permalink: /14_sorting/
 
 **Theorem:** Any comparison-based sort requires:
 
-```math
-\boxed{\Omega(n \log n) \text{ comparisons}}
-
-```
+$$\boxed{\Omega(n \log n) \text{ comparisons}}$$
 
 **Proof:** 
 
@@ -67,10 +64,7 @@ permalink: /14_sorting/
 
 **Stable sort:** Equal elements maintain relative order.
 
-```math
-a_i = a_j \land i < j \Rightarrow \text{pos}(a_i) < \text{pos}(a_j) \text{ after sort}
-
-```
+$$a_i = a_j \land i < j \Rightarrow \text{pos}(a_i) < \text{pos}(a_j) \text{ after sort}$$
 
 **Important for:** Multi-key sorting, preserving original order.
 
@@ -78,17 +72,11 @@ a_i = a_j \land i < j \Rightarrow \text{pos}(a_i) < \text{pos}(a_j) \text{ after
 
 ### 4️⃣ Merge Sort Recurrence
 
-```math
-T(n) = 2T(n/2) + O(n)
-
-```
+$$T(n) = 2T(n/2) + O(n)$$
 
 **Solution (Master Theorem):**
 
-```math
-T(n) = O(n \log n)
-
-```
+$$T(n) = O(n \log n)$$
 
 ---
 
@@ -96,17 +84,11 @@ T(n) = O(n \log n)
 
 **Best/Average case:** Balanced partitions.
 
-```math
-T(n) = 2T(n/2) + O(n) = O(n \log n)
-
-```
+$$T(n) = 2T(n/2) + O(n) = O(n \log n)$$
 
 **Worst case:** Unbalanced partitions (sorted array).
 
-```math
-T(n) = T(n-1) + O(n) = O(n^2)
-
-```
+$$T(n) = T(n-1) + O(n) = O(n^2)$$
 
 ---
 
@@ -114,10 +96,7 @@ T(n) = T(n-1) + O(n) = O(n^2)
 
 **When:** Values in range $[0, k]$.
 
-```math
-T = O(n + k), \quad S = O(k)
-
-```
+$$T = O(n + k), \quad S = O(k)$$
 
 **Works when:** $k = O(n)$.
 
@@ -127,10 +106,7 @@ T = O(n + k), \quad S = O(k)
 
 **Sort by each digit:** LSD (Least Significant Digit) first.
 
-```math
-T = O(d \cdot (n + k))
-
-```
+$$T = O(d \cdot (n + k))$$
 
 Where $d$ = digits, $k$ = base (usually 10).
 

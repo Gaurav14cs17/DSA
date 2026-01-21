@@ -38,10 +38,7 @@ Add at end → Bubble up until heap property restored
 
 ```
 
-```math
-\text{Time: } O(\log n)
-
-```
+$$\text{Time: } O(\log n)$$
 
 **Extract (Sift Down):**
 
@@ -50,21 +47,15 @@ Replace root with last → Bubble down until heap property restored
 
 ```
 
-```math
-\text{Time: } O(\log n)
-
-```
+$$\text{Time: } O(\log n)$$
 
 ---
 
 ### 2️⃣ Index Formulas (0-indexed)
 
-```math
-\text{parent}(i) = \lfloor (i-1)/2 \rfloor
+$$\text{parent}(i) = \lfloor (i-1)/2 \rfloor
 \text{left}(i) = 2i + 1
-\text{right}(i) = 2i + 2
-
-```
+\text{right}(i) = 2i + 2$$
 
 ---
 
@@ -72,10 +63,7 @@ Replace root with last → Bubble down until heap property restored
 
 Starting from last non-leaf node $\lfloor n/2 \rfloor - 1$:
 
-```math
-T(n) = \sum_{h=0}^{\log n} \frac{n}{2^{h+1}} \cdot O(h) = O(n)
-
-```
+$$T(n) = \sum_{h=0}^{\log n} \frac{n}{2^{h+1}} \cdot O(h) = O(n)$$
 
 **Key Insight:** Most nodes are near leaves (low height).
 
@@ -103,10 +91,7 @@ The series $\sum_{h=0}^{\infty} \frac{h}{2^h} = 2$, so $T(n) = O(n)$. ∎
 
 2. Extract max $n$ times: $n \times O(\log n) = O(n \log n)$
 
-```math
-\boxed{T(n) = O(n) + O(n \log n) = O(n \log n)}
-
-```
+$$\boxed{T(n) = O(n) + O(n \log n) = O(n \log n)}$$
 
 **Space:** $O(1)$ in-place (better than merge sort!)
 
@@ -137,10 +122,7 @@ The series $\sum_{h=0}^{\infty} \frac{h}{2^h} = 2$, so $T(n) = O(n)$. ∎
 
 3. Repeat until one node remains
 
-```math
-\text{Time: } O(n \log n)
-
-```
+$$\text{Time: } O(n \log n)$$
 
 **Why Optimal?** Greedy choice: combine least frequent first minimizes weighted path length.
 
@@ -150,10 +132,7 @@ The series $\sum_{h=0}^{\infty} \frac{h}{2^h} = 2$, so $T(n) = O(n)$. ∎
 
 **Maintain min-heap of size k:**
 
-```math
-\text{answer} = \text{heap}[0]
-
-```
+$$\text{answer} = \text{heap}[0]$$
 
 **Invariant:** Heap contains k largest elements seen so far.
 

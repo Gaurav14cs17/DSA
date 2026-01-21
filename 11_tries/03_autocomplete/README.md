@@ -35,10 +35,7 @@ permalink: /11_tries/03_autocomplete/
 
 **Find all words with prefix $P$:**
 
-```math
-T = O(|P| + k)
-
-```
+$$T = O(|P| + k)$$
 
 Where $k$ = number of matching words.
 
@@ -56,10 +53,7 @@ Where $k$ = number of matching words.
 
 **Store frequency/weight at nodes:**
 
-```math
-\text{suggestion}(prefix) = \text{top-k by weight}
-
-```
+$$\text{suggestion}(prefix) = \text{top-k by weight}$$
 
 Use heap for top-k selection.
 
@@ -69,10 +63,7 @@ Use heap for top-k selection.
 
 **Sum of values for all words with prefix:**
 
-```math
-\text{mapSum}(prefix) = \sum_{\text{word starts with prefix}} \text{value}[word]
-
-```
+$$\text{mapSum}(prefix) = \sum_{\text{word starts with prefix}} \text{value}[word]$$
 
 ---
 

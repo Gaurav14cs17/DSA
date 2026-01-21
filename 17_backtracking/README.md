@@ -55,10 +55,7 @@ permalink: /17_backtracking/
 
 **Cut branches early** when constraint violated:
 
-```math
-\text{If state invalid} \Rightarrow \text{return immediately}
-
-```
+$$\text{If state invalid} \Rightarrow \text{return immediately}$$
 
 **Example:** N-Queens - don't continue if queens attack.
 
@@ -83,11 +80,7 @@ Each path = one solution candidate.
 
 Number of subsets of set with $n$ elements:
 
-```math
-
-|P(S)| = 2^n
-
-```
+$$|P(S)| = 2^n$$
 
 ---
 
@@ -95,17 +88,11 @@ Number of subsets of set with $n$ elements:
 
 Number of permutations of $n$ elements:
 
-```math
-P(n) = n!
-
-```
+$$P(n) = n!$$
 
 Permutations of $k$ elements from $n$:
 
-```math
-P(n, k) = \frac{n!}{(n-k)!}
-
-```
+$$P(n, k) = \frac{n!}{(n-k)!}$$
 
 ---
 
@@ -113,10 +100,7 @@ P(n, k) = \frac{n!}{(n-k)!}
 
 Number of ways to choose $k$ from $n$:
 
-```math
-C(n, k) = \binom{n}{k} = \frac{n!}{k!(n-k)!}
-
-```
+$$C(n, k) = \binom{n}{k} = \frac{n!}{k!(n-k)!}$$
 
 ---
 

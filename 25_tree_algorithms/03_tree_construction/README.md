@@ -128,10 +128,7 @@ Right subtree: [20, 15, 7] (preorder), [15, 20, 7] (inorder)
 
 **N nodes → Catalan number of different binary trees:**
 
-```math
-C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}
-
-```
+$$C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}$$
 
 **First few:** 1, 1, 2, 5, 14, 42, 132, ...
 

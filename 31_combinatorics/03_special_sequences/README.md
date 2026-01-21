@@ -35,17 +35,11 @@ permalink: /31_combinatorics/03_special_sequences/
 
 **Formula:**
 
-```math
-C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}
-
-```
+$$C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}$$
 
 **Recurrence:**
 
-```math
-C_0 = 1, \quad C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
-
-```
+$$C_0 = 1, \quad C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}$$
 
 **Sequence:** 1, 1, 2, 5, 14, 42, 132, 429, 1430, ...
 
@@ -65,19 +59,13 @@ C_0 = 1, \quad C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
 
 **Definition:**
 
-```math
-F_0 = 0, \quad F_1 = 1, \quad F_n = F_{n-1} + F_{n-2}
-
-```
+$$F_0 = 0, \quad F_1 = 1, \quad F_n = F_{n-1} + F_{n-2}$$
 
 **Sequence:** 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
 
 **Closed Form (Binet's Formula):**
 
-```math
-F_n = \frac{\phi^n - \psi^n}{\sqrt{5}}
-
-```
+$$F_n = \frac{\phi^n - \psi^n}{\sqrt{5}}$$
 
 where $\phi = \frac{1+\sqrt{5}}{2}$ (golden ratio), $\psi = \frac{1-\sqrt{5}}{2}$
 
@@ -87,10 +75,7 @@ where $\phi = \frac{1+\sqrt{5}}{2}$ (golden ratio), $\psi = \frac{1-\sqrt{5}}{2}
 
 **Definition:** Number of ways to partition set of n elements.
 
-```math
-B_0 = 1, \quad B_n = \sum_{k=0}^{n-1} \binom{n-1}{k} B_k
-
-```
+$$B_0 = 1, \quad B_n = \sum_{k=0}^{n-1} \binom{n-1}{k} B_k$$
 
 **Sequence:** 1, 1, 2, 5, 15, 52, 203, 877, ...
 
@@ -102,10 +87,7 @@ B_0 = 1, \quad B_n = \sum_{k=0}^{n-1} \binom{n-1}{k} B_k
 
 **Second Kind** $S(n,k)$: Ways to partition n elements into k non-empty subsets.
 
-```math
-S(n,k) = k \cdot S(n-1,k) + S(n-1,k-1)
-
-```
+$$S(n,k) = k \cdot S(n-1,k) + S(n-1,k-1)$$
 
 ---
 

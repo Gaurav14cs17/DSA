@@ -42,17 +42,11 @@ permalink: /34_sqrt_decomposition/
 
 **Block Size:**
 
-```math
-\text{block_size} = \lceil \sqrt{n} \rceil
-
-```
+$$\text{block_size} = \lceil \sqrt{n} \rceil$$
 
 **Number of Blocks:**
 
-```math
-\text{num_blocks} = \lceil \frac{n}{\text{block_size}} \rceil \approx \sqrt{n}
-
-```
+$$\text{num_blocks} = \lceil \frac{n}{\text{block_size}} \rceil \approx \sqrt{n}$$
 
 **Why √n?**
 
@@ -68,10 +62,7 @@ permalink: /34_sqrt_decomposition/
 
 **Preprocessing:** Build block summaries
 
-```math
-T_{\text{build}} = O(n)
-
-```
+$$T_{\text{build}} = O(n)$$
 
 **Query (Range):** 
 
@@ -103,10 +94,7 @@ T_{\text{build}} = O(n)
 
 ### 3️⃣ Space Complexity
 
-```math
-S = O(n + \sqrt{n}) = O(n)
-
-```
+$$S = O(n + \sqrt{n}) = O(n)$$
 
 - Original array: $O(n)$
 
@@ -150,12 +138,9 @@ S = O(n + \sqrt{n}) = O(n)
 
 To minimize, take derivative:
 
-```math
-\frac{dT}{db} = -\frac{n}{b^2} + 1 = 0
+$$\frac{dT}{db} = -\frac{n}{b^2} + 1 = 0
 b^2 = n
-b = \sqrt{n}
-
-```
+b = \sqrt{n}$$
 
 At $b = \sqrt{n}$: $T = O(\frac{n}{\sqrt{n}} + \sqrt{n}) = O(\sqrt{n} + \sqrt{n}) = O(\sqrt{n})$ $\blacksquare$
 

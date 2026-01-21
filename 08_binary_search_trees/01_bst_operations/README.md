@@ -41,15 +41,12 @@ permalink: /08_binary_search_trees/01_bst_operations/
 
 ### 1️⃣ Search Operation
 
-```math
-\text{search}(node, val) = \begin{cases}
+$$\text{search}(node, val) = \begin{cases}
 node & \text{if } node.val = val \\
 \text{search}(node.left, val) & \text{if } val < node.val \\
 \text{search}(node.right, val) & \text{if } val > node.val \\
 \text{null} & \text{if } node = \text{null}
-\end{cases}
-
-```
+\end{cases}$$
 
 **Time:** O(h), **Space:** O(1) iterative
 
@@ -57,14 +54,11 @@ node & \text{if } node.val = val \\
 
 ### 2️⃣ Insert Operation
 
-```math
-\text{insert}(node, val) = \begin{cases}
+$$\text{insert}(node, val) = \begin{cases}
 \text{TreeNode}(val) & \text{if } node = \text{null} \\
 node.\text{left} = \text{insert}(node.left, val) & \text{if } val < node.val \\
 node.\text{right} = \text{insert}(node.right, val) & \text{if } val > node.val
-\end{cases}
-
-```
+\end{cases}$$
 
 ---
 
@@ -80,20 +74,14 @@ node.\text{right} = \text{insert}(node.right, val) & \text{if } val > node.val
 
 **Successor:** Minimum in right subtree.
 
-```math
-\text{successor}(x) = \min(T_R(x))
-
-```
+$$\text{successor}(x) = \min(T_R(x))$$
 
 ---
 
 ### 4️⃣ Min/Max Operations
 
-```math
-\text{min}(T) = \text{leftmost node}
-\text{max}(T) = \text{rightmost node}
-
-```
+$$\text{min}(T) = \text{leftmost node}
+\text{max}(T) = \text{rightmost node}$$
 
 **Time:** O(h)
 
@@ -120,14 +108,11 @@ node.\text{right} = \text{insert}(node.right, val) & \text{if } val > node.val
 
 **Three cases with time complexity:**
 
-```math
-T(h) = \begin{cases}
+$$T(h) = \begin{cases}
 O(1) & \text{leaf node} \\
 O(1) & \text{one child (replace)} \\
 O(h) & \text{two children (find successor)}
-\end{cases}
-
-```
+\end{cases}$$
 
 **Overall:** O(h) where h = height of tree.
 
@@ -137,15 +122,12 @@ O(h) & \text{two children (find successor)}
 
 **Trim to [L, R]:**
 
-```math
-\text{trim}(node, L, R) = \begin{cases}
+$$\text{trim}(node, L, R) = \begin{cases}
 \text{null} & \text{if } node = \text{null} \\
 \text{trim}(node.right, L, R) & \text{if } node.val < L \\
 \text{trim}(node.left, L, R) & \text{if } node.val > R \\
 \text{node with trimmed children} & \text{otherwise}
-\end{cases}
-
-```
+\end{cases}$$
 
 **Key Insight:** If node.val < L, entire left subtree is < L → prune!
 

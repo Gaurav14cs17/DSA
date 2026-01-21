@@ -49,10 +49,7 @@ permalink: /30_number_theory/04_divisors/01_count_divisors/
 
 **Divisor Count Function:** Also denoted as $\tau(n)$, $d(n)$, or $\sigma_0(n)$
 
-```math
-\tau(n) = \text{number of positive divisors of } n
-
-```
+$$\tau(n) = \text{number of positive divisors of } n$$
 
 **Examples:**
 
@@ -70,10 +67,7 @@ permalink: /30_number_theory/04_divisors/01_count_divisors/
 
 **Theorem:** If $n = p_1^{a_1} \cdot p_2^{a_2} \cdots p_k^{a_k}$ is the prime factorization, then:
 
-```math
-\tau(n) = (a_1 + 1)(a_2 + 1) \cdots (a_k + 1) = \prod_{i=1}^{k}(a_i + 1)
-
-```
+$$\tau(n) = (a_1 + 1)(a_2 + 1) \cdots (a_k + 1) = \prod_{i=1}^{k}(a_i + 1)$$
 
 **Proof:**
 Each divisor of n has the form $p_1^{b_1} \cdot p_2^{b_2} \cdots p_k^{b_k}$ where $0 \leq b_i \leq a_i$.
@@ -88,26 +82,17 @@ By the multiplication principle, total divisors = $(a_1 + 1)(a_2 + 1) \cdots (a_
 
 **Example 1:** $n = 12 = 2^2 \cdot 3^1$
 
-```math
-\tau(12) = (2+1)(1+1) = 3 \times 2 = 6
-
-```
+$$\tau(12) = (2+1)(1+1) = 3 \times 2 = 6$$
 
 Divisors: 1, 2, 3, 4, 6, 12 ✓
 
 **Example 2:** $n = 360 = 2^3 \cdot 3^2 \cdot 5^1$
 
-```math
-\tau(360) = (3+1)(2+1)(1+1) = 4 \times 3 \times 2 = 24
-
-```
+$$\tau(360) = (3+1)(2+1)(1+1) = 4 \times 3 \times 2 = 24$$
 
 **Example 3:** $n = p^k$ (prime power)
 
-```math
-\tau(p^k) = k + 1
-
-```
+$$\tau(p^k) = k + 1$$
 
 ---
 
@@ -440,10 +425,7 @@ Numbers with record number of divisors:
 
 ### 3. Average Number of Divisors
 
-```math
-\sum_{i=1}^{n} \tau(i) \approx n \ln n + (2\gamma - 1)n
-
-```
+$$\sum_{i=1}^{n} \tau(i) \approx n \ln n + (2\gamma - 1)n$$
 
 where γ ≈ 0.5772 is the Euler-Mascheroni constant.
 

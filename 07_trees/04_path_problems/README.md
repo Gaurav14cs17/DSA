@@ -35,17 +35,11 @@ permalink: /07_trees/04_path_problems/
 
 **Root-to-Leaf Path:**
 
-```math
-\text{path}(root, leaf) = [root, ..., leaf]
-
-```
+$$\text{path}(root, leaf) = [root, ..., leaf]$$
 
 **Any-to-Any Path (through some node):**
 
-```math
-\text{path}(u, v) = \text{path}(u, lca) + \text{path}(lca, v)
-
-```
+$$\text{path}(u, v) = \text{path}(u, lca) + \text{path}(lca, v)$$
 
 ---
 
@@ -53,13 +47,10 @@ permalink: /07_trees/04_path_problems/
 
 **Check if path with sum $S$ exists:**
 
-```math
-\text{hasPath}(node, S) = \begin{cases}
+$$\text{hasPath}(node, S) = \begin{cases}
 S = node.val & \text{if leaf} \\
 \text{hasPath}(left, S - node.val) \lor \text{hasPath}(right, S - node.val) & \text{otherwise}
-\end{cases}
-
-```
+\end{cases}$$
 
 ---
 
@@ -67,17 +58,11 @@ S = node.val & \text{if leaf} \\
 
 **Key Insight:** Max path passes through some node as the "turning point."
 
-```math
-\text{maxSum}(node) = node.val + \max(0, \text{gain}(left)) + \max(0, \text{gain}(right))
-
-```
+$$\text{maxSum}(node) = node.val + \max(0, \text{gain}(left)) + \max(0, \text{gain}(right))$$
 
 Where:
 
-```math
-\text{gain}(node) = node.val + \max(\text{gain}(left), \text{gain}(right), 0)
-
-```
+$$\text{gain}(node) = node.val + \max(\text{gain}(left), \text{gain}(right), 0)$$
 
 **Global answer:** Maximum of `maxSum` over all nodes.
 
@@ -89,11 +74,8 @@ Where:
 
 **Key Identity:**
 
-```math
-\text{pathSum}(i, j) = prefix[j] - prefix[i-1] = k
-prefix[i-1] = prefix[j] - k
-
-```
+$$\text{pathSum}(i, j) = prefix[j] - prefix[i-1] = k
+prefix[i-1] = prefix[j] - k$$
 
 Count previous prefixes that equal $prefix[j] - k$.
 
@@ -103,10 +85,7 @@ Count previous prefixes that equal $prefix[j] - k$.
 
 **All root-to-leaf paths:**
 
-```math
-\text{paths}(node) = \bigcup_{leaf \in \text{leaves}} \text{path}(root, leaf)
-
-```
+$$\text{paths}(node) = \bigcup_{leaf \in \text{leaves}} \text{path}(root, leaf)$$
 
 ---
 

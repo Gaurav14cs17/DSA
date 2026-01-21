@@ -37,19 +37,13 @@ permalink: /15_searching/02_binary_search_on_answer/
 
 **Requirement:** Feasibility function is monotonic.
 
-```math
-\text{feasible}(x) \text{ is monotonic in } x
-
-```
+$$\text{feasible}(x) \text{ is monotonic in } x$$
 
 ---
 
 ### 2️⃣ Minimize Maximum Pattern
 
-```math
-\text{answer} = \min\{x : \text{canAchieve}(x) = \text{true}\}
-
-```
+$$\text{answer} = \min\{x : \text{canAchieve}(x) = \text{true}\}$$
 
 **Example:** Minimum capacity to ship all packages in D days.
 
@@ -57,10 +51,7 @@ permalink: /15_searching/02_binary_search_on_answer/
 
 ### 3️⃣ Maximize Minimum Pattern
 
-```math
-\text{answer} = \max\{x : \text{canAchieve}(x) = \text{true}\}
-
-```
+$$\text{answer} = \max\{x : \text{canAchieve}(x) = \text{true}\}$$
 
 **Example:** Maximum minimum distance between cows.
 
@@ -68,10 +59,7 @@ permalink: /15_searching/02_binary_search_on_answer/
 
 ### 4️⃣ Time Complexity
 
-```math
-T = O(\log R \times \text{check}(n))
-
-```
+$$T = O(\log R \times \text{check}(n))$$
 
 Where $R$ = search range, check() = feasibility check.
 

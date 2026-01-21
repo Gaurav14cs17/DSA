@@ -43,17 +43,11 @@ Given a sequence of values $x_1, x_2, \ldots, x_n$, compute:
 
 **Sample Mean:**
 
-```math
-\mu_n = \frac{1}{n} \sum_{i=1}^{n} x_i
-
-```
+$$\mu_n = \frac{1}{n} \sum_{i=1}^{n} x_i$$
 
 **Sample Variance:**
 
-```math
-\sigma_n^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \mu_n)^2
-
-```
+$$\sigma_n^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \mu_n)^2$$
 
 The challenge: Compute these in **one pass** with **O(1) space** while maintaining **numerical stability**.
 
@@ -63,20 +57,14 @@ The challenge: Compute these in **one pass** with **O(1) space** while maintaini
 
 **Mean Update:**
 
-```math
-\mu_n = \mu_{n-1} + \frac{x_n - \mu_{n-1}}{n}
-
-```
+$$\mu_n = \mu_{n-1} + \frac{x_n - \mu_{n-1}}{n}$$
 
 **Variance Update:**
 
 Define $M_2(n) = \sum_{i=1}^{n} (x_i - \mu_n)^2$, then:
 
-```math
-M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n)
-\sigma_n^2 = \frac{M_2(n)}{n}
-
-```
+$$M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n)
+\sigma_n^2 = \frac{M_2(n)}{n}$$
 
 ---
 
@@ -220,10 +208,7 @@ def welford_merge(stats1: WelfordVariance, stats2: WelfordVariance) -> WelfordVa
 
 **Theorem:** Welford's variance recurrence is correct.
 
-```math
-M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n)
-
-```
+$$M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n)$$
 
 **Proof:**
 
@@ -231,26 +216,17 @@ M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n)
 
 By definition:
 
-```math
-M_2(n) = \sum_{i=1}^{n} (x_i - \mu_n)^2
-
-```
+$$M_2(n) = \sum_{i=1}^{n} (x_i - \mu_n)^2$$
 
 Split this into old elements and the new element:
 
-```math
-M_2(n) = \sum_{i=1}^{n-1} (x_i - \mu_n)^2 + (x_n - \mu_n)^2
-
-```
+$$M_2(n) = \sum_{i=1}^{n-1} (x_i - \mu_n)^2 + (x_n - \mu_n)^2$$
 
 **Step 2: Connect old mean to new mean**
 
 The mean changed! We know:
 
-```math
-\mu_n = \mu_{n-1} + \frac{x_n - \mu_{n-1}}{n}
-
-```
+$$\mu_n = \mu_{n-1} + \frac{x_n - \mu_{n-1}}{n}$$
 
 Let $\delta = x_n - \mu_{n-1}$ (how far new value is from old mean).
 
@@ -260,58 +236,37 @@ Then: $\mu_n = \mu_{n-1} + \frac{\delta}{n}$
 
 For each old element $x_i$ (where $i < n$):
 
-```math
-x_i - \mu_n = (x_i - \mu_{n-1}) - (\mu_n - \mu_{n-1})
-= (x_i - \mu_{n-1}) - \frac{\delta}{n}
-
-```
+$$x_i - \mu_n = (x_i - \mu_{n-1}) - (\mu_n - \mu_{n-1})
+= (x_i - \mu_{n-1}) - \frac{\delta}{n}$$
 
 **Step 4: Square and sum the old deviations**
 
-```math
-\sum_{i=1}^{n-1} (x_i - \mu_n)^2 = \sum_{i=1}^{n-1} \left[(x_i - \mu_{n-1}) - \frac{\delta}{n}\right]^2
-
-```
+$$\sum_{i=1}^{n-1} (x_i - \mu_n)^2 = \sum_{i=1}^{n-1} \left[(x_i - \mu_{n-1}) - \frac{\delta}{n}\right]^2$$
 
 Expand using $(a - b)^2 = a^2 - 2ab + b^2$:
 
-```math
-= \sum_{i=1}^{n-1} (x_i - \mu_{n-1})^2 - 2\frac{\delta}{n}\sum_{i=1}^{n-1}(x_i - \mu_{n-1}) + (n-1)\frac{\delta^2}{n^2}
-
-```
+$$= \sum_{i=1}^{n-1} (x_i - \mu_{n-1})^2 - 2\frac{\delta}{n}\sum_{i=1}^{n-1}(x_i - \mu_{n-1}) + (n-1)\frac{\delta^2}{n^2}$$
 
 **Key observation:** $\sum_{i=1}^{n-1}(x_i - \mu_{n-1}) = 0$ (property of mean!)
 
 So:
 
-```math
-= M_2(n-1) + (n-1)\frac{\delta^2}{n^2}
-
-```
+$$= M_2(n-1) + (n-1)\frac{\delta^2}{n^2}$$
 
 **Step 5: Handle the new element**
 
-```math
-(x_n - \mu_n)^2 = \left(x_n - \mu_{n-1} - \frac{\delta}{n}\right)^2 = \left(\delta - \frac{\delta}{n}\right)^2
-= \left(\frac{n\delta - \delta}{n}\right)^2 = \frac{(n-1)^2\delta^2}{n^2}
-
-```
+$$(x_n - \mu_n)^2 = \left(x_n - \mu_{n-1} - \frac{\delta}{n}\right)^2 = \left(\delta - \frac{\delta}{n}\right)^2
+= \left(\frac{n\delta - \delta}{n}\right)^2 = \frac{(n-1)^2\delta^2}{n^2}$$
 
 **Step 6: Combine everything**
 
-```math
-M_2(n) = M_2(n-1) + (n-1)\frac{\delta^2}{n^2} + \frac{(n-1)^2\delta^2}{n^2}
-
-```
+$$M_2(n) = M_2(n-1) + (n-1)\frac{\delta^2}{n^2} + \frac{(n-1)^2\delta^2}{n^2}$$
 
 Factor out $(n-1)\delta^2/n^2$:
 
-```math
-= M_2(n-1) + \frac{(n-1)\delta^2}{n^2}[1 + (n-1)]
+$$= M_2(n-1) + \frac{(n-1)\delta^2}{n^2}[1 + (n-1)]
 = M_2(n-1) + \frac{(n-1)\delta^2}{n^2} \cdot n
-= M_2(n-1) + \frac{(n-1)\delta^2}{n}
-
-```
+= M_2(n-1) + \frac{(n-1)\delta^2}{n}$$
 
 **Step 7: Simplify to final form**
 
@@ -319,17 +274,11 @@ Note that $x_n - \mu_n = \delta - \frac{\delta}{n} = \frac{(n-1)\delta}{n}$
 
 Therefore:
 
-```math
-\frac{(n-1)\delta^2}{n} = \delta \cdot \frac{(n-1)\delta}{n} = (x_n - \mu_{n-1})(x_n - \mu_n)
-
-```
+$$\frac{(n-1)\delta^2}{n} = \delta \cdot \frac{(n-1)\delta}{n} = (x_n - \mu_{n-1})(x_n - \mu_n)$$
 
 **Final result:**
 
-```math
-M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n) \quad \blacksquare
-
-```
+$$M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n) \quad \blacksquare$$
 
 ---
 

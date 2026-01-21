@@ -49,10 +49,7 @@ permalink: /30_number_theory/04_divisors/02_sum_divisors/
 
 **Divisor Sum Function:** $\sigma(n) = \sigma_1(n)$
 
-```math
-\sigma(n) = \sum_{d|n} d = \text{sum of all positive divisors of } n
-
-```
+$$\sigma(n) = \sum_{d|n} d = \text{sum of all positive divisors of } n$$
 
 **Examples:**
 
@@ -70,18 +67,12 @@ permalink: /30_number_theory/04_divisors/02_sum_divisors/
 
 **Theorem:** If $n = p_1^{a_1} \cdot p_2^{a_2} \cdots p_k^{a_k}$, then:
 
-```math
-\sigma(n) = \prod_{i=1}^{k} \frac{p_i^{a_i+1} - 1}{p_i - 1}
-
-```
+$$\sigma(n) = \prod_{i=1}^{k} \frac{p_i^{a_i+1} - 1}{p_i - 1}$$
 
 **Proof:**
 For a single prime power $p^a$:
 
-```math
-\sigma(p^a) = 1 + p + p^2 + \cdots + p^a = \frac{p^{a+1} - 1}{p - 1}
-
-```
+$$\sigma(p^a) = 1 + p + p^2 + \cdots + p^a = \frac{p^{a+1} - 1}{p - 1}$$
 
 Since σ is multiplicative: $\sigma(mn) = \sigma(m)\sigma(n)$ when $\gcd(m,n) = 1$.
 
@@ -91,19 +82,13 @@ Since σ is multiplicative: $\sigma(mn) = \sigma(m)\sigma(n)$ when $\gcd(m,n) = 
 
 **Example 1:** $n = 12 = 2^2 \cdot 3^1$
 
-```math
-\sigma(12) = \frac{2^3 - 1}{2 - 1} \cdot \frac{3^2 - 1}{3 - 1} = \frac{7}{1} \cdot \frac{8}{2} = 7 \times 4 = 28
-
-```
+$$\sigma(12) = \frac{2^3 - 1}{2 - 1} \cdot \frac{3^2 - 1}{3 - 1} = \frac{7}{1} \cdot \frac{8}{2} = 7 \times 4 = 28$$
 
 Verify: $1 + 2 + 3 + 4 + 6 + 12 = 28$ ✓
 
 **Example 2:** $n = 60 = 2^2 \cdot 3^1 \cdot 5^1$
 
-```math
-\sigma(60) = \frac{2^3-1}{1} \cdot \frac{3^2-1}{2} \cdot \frac{5^2-1}{4} = 7 \times 4 \times 6 = 168
-
-```
+$$\sigma(60) = \frac{2^3-1}{1} \cdot \frac{3^2-1}{2} \cdot \frac{5^2-1}{4} = 7 \times 4 \times 6 = 168$$
 
 ---
 
@@ -352,10 +337,7 @@ for p in perfect:
 
 ### 2. Abundancy Index
 
-```math
-\text{abundancy}(n) = \frac{\sigma(n)}{n}
-
-```
+$$\text{abundancy}(n) = \frac{\sigma(n)}{n}$$
 
 - Perfect: abundancy = 2
 - Deficient: abundancy < 2
@@ -365,17 +347,11 @@ for p in perfect:
 
 σ(n) is a **multiplicative function**:
 
-```math
-\sigma(mn) = \sigma(m) \cdot \sigma(n) \text{ when } \gcd(m,n) = 1
-
-```
+$$\sigma(mn) = \sigma(m) \cdot \sigma(n) \text{ when } \gcd(m,n) = 1$$
 
 ### 4. Identity Involving τ and σ
 
-```math
-\sum_{d|n} \tau(d) = (\text{number of divisor pairs } (a,b) \text{ with } ab | n)
-
-```
+$$\sum_{d|n} \tau(d) = (\text{number of divisor pairs } (a,b) \text{ with } ab | n)$$
 
 ---
 

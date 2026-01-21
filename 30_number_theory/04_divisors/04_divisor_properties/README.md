@@ -67,25 +67,16 @@ A function f is **multiplicative** if:
 
 **Sum over Divisors:**
 
-```math
-\sum_{d|n} \phi(d) = n
-
-```
+$$\sum_{d|n} \phi(d) = n$$
 
 **Möbius Inversion:**
 
-```math
-g(n) = \sum_{d|n} f(d) \implies f(n) = \sum_{d|n} \mu(d) g(n/d)
-
-```
+$$g(n) = \sum_{d|n} f(d) \implies f(n) = \sum_{d|n} \mu(d) g(n/d)$$
 
 **Dirichlet Convolution:**
 
-```math
-\tau = 1 * 1
-\sigma = \text{id} * 1
-
-```
+$$\tau = 1 * 1
+\sigma = \text{id} * 1$$
 
 ---
 
@@ -93,10 +84,7 @@ g(n) = \sum_{d|n} f(d) \implies f(n) = \sum_{d|n} \mu(d) g(n/d)
 
 For multiplicative f, if $n = p_1^{a_1} \cdots p_k^{a_k}$:
 
-```math
-f(n) = f(p_1^{a_1}) \cdot f(p_2^{a_2}) \cdots f(p_k^{a_k})
-
-```
+$$f(n) = f(p_1^{a_1}) \cdot f(p_2^{a_2}) \cdots f(p_k^{a_k})$$
 
 ---
 

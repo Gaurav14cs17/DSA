@@ -68,10 +68,7 @@ permalink: /22_two_pointers/01_opposite_direction/
 
 #### Initial State
 
-```math
-left = 0, \quad right = n - 1
-
-```
+$$left = 0, \quad right = n - 1$$
 
 #### Loop Invariant
 
@@ -117,10 +114,7 @@ We claim \(left\) cannot be part of any valid pair in the current range.
 
 For any \(k \in [left, right]\):
 
-```math
-arr[left] + arr[k] \leq arr[left] + arr[right] < target
-
-```
+$$arr[left] + arr[k] \leq arr[left] + arr[right] < target$$
 
 Since the array is sorted, \(arr[k] \leq arr[right]\).
 
@@ -132,10 +126,7 @@ By symmetric argument, \(right\) cannot be the right index of any solution.
 
 For any \(k \in [left, right]\):
 
-```math
-arr[k] + arr[right] \geq arr[left] + arr[right] > target
-
-```
+$$arr[k] + arr[right] \geq arr[left] + arr[right] > target$$
 
 We safely decrement \(right\).
 
@@ -147,10 +138,7 @@ Found the solution. ∎
 
 Each iteration moves at least one pointer. Maximum \(n\) moves before \(left \geq right\).
 
-```math
-T(n) = O(n)
-
-```
+$$T(n) = O(n)$$
 
 ---
 
@@ -161,10 +149,7 @@ T(n) = O(n)
 
 #### The Formula
 
-```math
-\text{Area}(l, r) = \min(h[l], h[r]) \times (r - l)
-
-```
+$$\text{Area}(l, r) = \min(h[l], h[r]) \times (r - l)$$
 
 The area is limited by the **shorter** line.
 
@@ -178,26 +163,17 @@ Suppose \(h[l] < h[r]\) and the optimal solution involves \(l\) with some \(k\) 
 
 Then:
 
-```math
-\text{Area}(l, k) = \min(h[l], h[k]) \times (k - l)
-
-```
+$$\text{Area}(l, k) = \min(h[l], h[k]) \times (k - l)$$
 
 Since \(h[l]\) is the minimum (given \(h[l] < h[r]\) and we're looking at containers with \(l\)):
 
-```math
-\text{Area}(l, k) \leq h[l] \times (k - l) < h[l] \times (r - l)
-
-```
+$$\text{Area}(l, k) \leq h[l] \times (k - l) < h[l] \times (r - l)$$
 
 Because \(k < r\), we have \(k - l < r - l\).
 
 But:
 
-```math
-h[l] \times (r - l) = \min(h[l], h[r]) \times (r - l) = \text{Area}(l, r)
-
-```
+$$h[l] \times (r - l) = \min(h[l], h[r]) \times (r - l) = \text{Area}(l, r)$$
 
 So \(\text{Area}(l, k) < \text{Area}(l, r)\).
 
@@ -241,10 +217,7 @@ Why moving L was correct:
 
 #### The Key Formula
 
-```math
-\text{water}[i] = \max(0, \min(\text{maxLeft}[i], \text{maxRight}[i]) - h[i])
-
-```
+$$\text{water}[i] = \max(0, \min(\text{maxLeft}[i], \text{maxRight}[i]) - h[i])$$
 
 #### 🔍 Proof of Two-Pointer Optimization
 
@@ -262,17 +235,11 @@ Since \(leftMax < rightMax\), and \(rightMax\) only considers positions \(\geq r
 
 For position \(left\), the actual maximum on the right side is:
 
-```math
-\text{actualRightMax} = \max(h[left+1], ..., h[n-1]) \geq rightMax > leftMax
-
-```
+$$\text{actualRightMax} = \max(h[left+1], ..., h[n-1]) \geq rightMax > leftMax$$
 
 Therefore:
 
-```math
-\min(leftMax, \text{actualRightMax}) = leftMax
-
-```
+$$\min(leftMax, \text{actualRightMax}) = leftMax$$
 
 The water level at \(left\) is determined solely by \(leftMax\)! ∎
 
@@ -335,10 +302,7 @@ Skip duplicate \(b\) and \(c\) after finding a valid triplet.
 
 For \(k\)-Sum problem:
 
-```math
-T(k, n) = O(n^{k-1})
-
-```
+$$T(k, n) = O(n^{k-1})$$
 
 Reduction: Fix one element, solve \((k-1)\)-Sum on remaining.
 

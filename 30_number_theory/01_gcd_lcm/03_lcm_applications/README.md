@@ -36,36 +36,24 @@ permalink: /30_number_theory/01_gcd_lcm/03_lcm_applications/
 
 ### 1️⃣ LCM Formula
 
-```math
-\text{lcm}(a, b) = \frac{a \times b}{\gcd(a, b)}
-
-```
+$$\text{lcm}(a, b) = \frac{a \times b}{\gcd(a, b)}$$
 
 **Overflow-Safe Version:**
 
-```math
-\text{lcm}(a, b) = \frac{a}{\gcd(a, b)} \times b
-
-```
+$$\text{lcm}(a, b) = \frac{a}{\gcd(a, b)} \times b$$
 
 ### 2️⃣ LCM Properties
 
-```math
-\begin{align}
+$$\begin{align}
 \text{lcm}(a, b) &= \text{lcm}(b, a) \quad \text{(Commutative)} \\
 \text{lcm}(a, \text{lcm}(b, c)) &= \text{lcm}(\text{lcm}(a, b), c) \quad \text{(Associative)} \\
 \gcd(a,b) \times \text{lcm}(a,b) &= a \times b \\
 \text{lcm}(ka, kb) &= k \times \text{lcm}(a, b)
-\end{align}
-
-```
+\end{align}$$
 
 ### 3️⃣ LCM of Multiple Numbers
 
-```math
-\text{lcm}(a_1, a_2, \ldots, a_n) = \text{lcm}(\text{lcm}(a_1, a_2, \ldots, a_{n-1}), a_n)
-
-```
+$$\text{lcm}(a_1, a_2, \ldots, a_n) = \text{lcm}(\text{lcm}(a_1, a_2, \ldots, a_{n-1}), a_n)$$
 
 ---
 

@@ -86,17 +86,11 @@ permalink: /23_sliding_window/
 
 #### Window Definition
 
-```math
-\text{Window at position } i = [a_i, a_{i+1}, ..., a_{i+k-1}]
-
-```
+$$\text{Window at position } i = [a_i, a_{i+1}, ..., a_{i+k-1}]$$
 
 #### Sliding Update
 
-```math
-\text{sum}_{i+1} = \text{sum}_i - a_i + a_{i+k}
-
-```
+$$\text{sum}_{i+1} = \text{sum}_i - a_i + a_{i+k}$$
 
 #### 📊 Visual Proof
 
@@ -211,18 +205,12 @@ Let:
 
 Then:
 
-```math
-f(k) = g(1) + g(2) + ... + g(k)
-f(k-1) = g(1) + g(2) + ... + g(k-1)
-
-```
+$$f(k) = g(1) + g(2) + ... + g(k)
+f(k-1) = g(1) + g(2) + ... + g(k-1)$$
 
 Subtracting:
 
-```math
-g(k) = f(k) - f(k-1)
-
-```
+$$g(k) = f(k) - f(k-1)$$
 
 So: `exactly(k) = atMost(k) - atMost(k-1)` ∎
 

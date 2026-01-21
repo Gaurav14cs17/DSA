@@ -77,10 +77,7 @@ Only $6k+1$ and $6k+5 = 6(k+1)-1$ remain as candidates. ∎
 
 **Theorem:** If $p$ is prime and $\gcd(a, p) = 1$, then:
 
-```math
-a^{p-1} \equiv 1 \pmod{p}
-
-```
+$$a^{p-1} \equiv 1 \pmod{p}$$
 
 **Contrapositive (Fermat Test):** If $a^{n-1} \not\equiv 1 \pmod{n}$ for some $a$ with $\gcd(a, n) = 1$, then $n$ is composite.
 

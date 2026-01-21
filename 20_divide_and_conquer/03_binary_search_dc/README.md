@@ -48,10 +48,7 @@ permalink: /20_divide_and_conquer/03_binary_search_dc/
 
 ### 1️⃣ Binary Search Recurrence
 
-```math
-T(n) = T(n/2) + O(1) = O(\log n)
-
-```
+$$T(n) = T(n/2) + O(1) = O(\log n)$$
 
 ---
 
@@ -59,17 +56,11 @@ T(n) = T(n/2) + O(1) = O(\log n)
 
 Find position where:
 
-```math
-\text{partitionX} + \text{partitionY} = \frac{m + n + 1}{2}
-
-```
+$$\text{partitionX} + \text{partitionY} = \frac{m + n + 1}{2}$$
 
 Such that:
 
-```math
-\max(\text{leftX}, \text{leftY}) \leq \min(\text{rightX}, \text{rightY})
-
-```
+$$\max(\text{leftX}, \text{leftY}) \leq \min(\text{rightX}, \text{rightY})$$
 
 ---
 
@@ -77,10 +68,7 @@ Such that:
 
 Each step eliminates half the search space:
 
-```math
-n \to \frac{n}{2} \to \frac{n}{4} \to \cdots \to 1
-
-```
+$$n \to \frac{n}{2} \to \frac{n}{4} \to \cdots \to 1$$
 
 Steps: $\log_2 n$
 

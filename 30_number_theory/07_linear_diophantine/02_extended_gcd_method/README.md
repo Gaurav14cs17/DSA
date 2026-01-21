@@ -46,10 +46,7 @@ permalink: /30_number_theory/07_linear_diophantine/02_extended_gcd_method/
 
 If $(x_0, y_0)$ is one solution to $ax + by = c$, **all solutions** are:
 
-```math
-x = x_0 + k \cdot \frac{b}{\gcd(a,b)}, \quad y = y_0 - k \cdot \frac{a}{\gcd(a,b)}
-
-```
+$$x = x_0 + k \cdot \frac{b}{\gcd(a,b)}, \quad y = y_0 - k \cdot \frac{a}{\gcd(a,b)}$$
 
 for any integer $k$.
 

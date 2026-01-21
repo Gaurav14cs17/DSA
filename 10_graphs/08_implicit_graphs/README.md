@@ -46,10 +46,7 @@ permalink: /10_graphs/08_implicit_graphs/
 
 **Formal Construction:**
 
-```math
-G_{implicit} = (V, E) \text{ where } V = f(\text{input}), E = g(\text{rules})
-
-```
+$$G_{implicit} = (V, E) \text{ where } V = f(\text{input}), E = g(\text{rules})$$
 
 **Example (Jump Game):**
 
@@ -79,10 +76,7 @@ G_{implicit} = (V, E) \text{ where } V = f(\text{input}), E = g(\text{rules})
 
 **Reachability Set:**
 
-```math
-\text{Reach}(s) = \{v \in V : \exists \text{ path } s \rightsquigarrow v\}
-
-```
+$$\text{Reach}(s) = \{v \in V : \exists \text{ path } s \rightsquigarrow v\}$$
 
 ---
 
@@ -102,10 +96,7 @@ G_{implicit} = (V, E) \text{ where } V = f(\text{input}), E = g(\text{rules})
 
 **Distance Formula:**
 
-```math
-d(u, v) = \min\{k : \exists \text{ path of length } k \text{ from } u \text{ to } v\}
-
-```
+$$d(u, v) = \min\{k : \exists \text{ path of length } k \text{ from } u \text{ to } v\}$$
 
 ---
 
@@ -126,11 +117,8 @@ d(u, v) = \min\{k : \exists \text{ path of length } k \text{ from } u \text{ to 
 
 **Component Definition:**
 
-```math
-C_i = \{v \in V : v \text{ is reachable from seed } s_i\}
-V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j
-
-```
+$$C_i = \{v \in V : v \text{ is reachable from seed } s_i\}
+V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j$$
 
 ---
 
@@ -159,10 +147,7 @@ V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j
 
 **Topological Order:**
 
-```math
-\forall (u, v) \in E : \text{pos}(u) < \text{pos}(v)
-
-```
+$$\forall (u, v) \in E : \text{pos}(u) < \text{pos}(v)$$
 
 ---
 
@@ -170,11 +155,7 @@ V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j
 
 **Theorem:** For state space $(x_1, x_2, \ldots, x_k)$ with domains $D_1, D_2, \ldots, D_k$:
 
-```math
-
-|\text{States}| = \prod_{i=1}^{k} |D_i|
-
-```
+$$|\text{States}| = \prod_{i=1}^{k} |D_i|$$
 
 **Example (Sliding Puzzle 2×3):**
 
@@ -186,10 +167,7 @@ V = \bigcup_{i=1}^{k} C_i, \quad C_i \cap C_j = \emptyset \text{ for } i \neq j
 
 **State Transition Graph:**
 
-```math
-E = \{(s, s') : s' \text{ reachable from } s \text{ by one move}\}
-
-```
+$$E = \{(s, s') : s' \text{ reachable from } s \text{ by one move}\}$$
 
 ---
 
@@ -209,10 +187,7 @@ E = \{(s, s') : s' \text{ reachable from } s \text{ by one move}\}
 
 **Multi-source Distance:**
 
-```math
-d_{multi}(v) = \min_{s \in S} d(s, v)
-
-```
+$$d_{multi}(v) = \min_{s \in S} d(s, v)$$
 
 ---
 

@@ -46,28 +46,19 @@ A hash function $h: U \to \{0, 1, \ldots, m-1\}$ maps keys from universe $U$ to 
 
 **Division Method:**
 
-```math
-h(k) = k \mod m
-
-```
+$$h(k) = k \mod m$$
 
 Choose $m$ as prime not close to power of 2.
 
 **Multiplication Method:**
 
-```math
-h(k) = \lfloor m \cdot (kA \mod 1) \rfloor
-
-```
+$$h(k) = \lfloor m \cdot (kA \mod 1) \rfloor$$
 
 Where $A \approx \frac{\sqrt{5} - 1}{2} \approx 0.618$ (golden ratio).
 
 **Polynomial Rolling Hash (for strings):**
 
-```math
-h(s) = \sum_{i=0}^{n-1} s[i] \cdot p^i \mod m
-
-```
+$$h(s) = \sum_{i=0}^{n-1} s[i] \cdot p^i \mod m$$
 
 ---
 
@@ -75,19 +66,13 @@ h(s) = \sum_{i=0}^{n-1} s[i] \cdot p^i \mod m
 
 **Chaining:** Each slot contains a linked list.
 
-```math
-\text{Expected chain length} = \alpha = \frac{n}{m}
-
-```
+$$\text{Expected chain length} = \alpha = \frac{n}{m}$$
 
 Where $\alpha$ is the load factor.
 
 **Open Addressing:**
 
-```math
-h(k, i) = (h'(k) + f(i)) \mod m
-
-```
+$$h(k, i) = (h'(k) + f(i)) \mod m$$
 
 | Method | $f(i)$ |
 |--------|--------|
@@ -109,11 +94,8 @@ h(k, i) = (h'(k) + f(i)) \mod m
 
 **Expected Operations (Chaining):**
 
-```math
-E[\text{comparisons}] = 1 + \frac{\alpha}{2} \text{ (successful search)}
-E[\text{comparisons}] = \alpha \text{ (unsuccessful search)}
-
-```
+$$E[\text{comparisons}] = 1 + \frac{\alpha}{2} \text{ (successful search)}
+E[\text{comparisons}] = \alpha \text{ (unsuccessful search)}$$
 
 ---
 
@@ -121,10 +103,7 @@ E[\text{comparisons}] = \alpha \text{ (unsuccessful search)}
 
 **Load Factor:**
 
-```math
-\alpha = \frac{n}{m}
-
-```
+$$\alpha = \frac{n}{m}$$
 
 **Resize Trigger:** When $\alpha > \text{threshold}$ (typically 0.75)
 
@@ -132,11 +111,8 @@ E[\text{comparisons}] = \alpha \text{ (unsuccessful search)}
 
 After doubling at capacities $1, 2, 4, \ldots, n$:
 
-```math
-\text{Total cost} = n + \sum_{i=0}^{\log n} 2^i = n + (2n - 1) = O(n)
-\text{Amortized per insert} = O(1)
-
-```
+$$\text{Total cost} = n + \sum_{i=0}^{\log n} 2^i = n + (2n - 1) = O(n)
+\text{Amortized per insert} = O(1)$$
 
 ---
 
@@ -146,10 +122,7 @@ After doubling at capacities $1, 2, 4, \ldots, n$:
 
 **Hash Map Insight:**
 
-```math
-a[j] = target - a[i]
-
-```
+$$a[j] = target - a[i]$$
 
 Store seen values, check for complement.
 
@@ -161,10 +134,7 @@ Store seen values, check for complement.
 
 **Counter Definition:**
 
-```math
-\text{freq}[x] = |\{i : a[i] = x\}|
-
-```
+$$\text{freq}[x] = |\{i : a[i] = x\}|$$
 
 **Applications:**
 

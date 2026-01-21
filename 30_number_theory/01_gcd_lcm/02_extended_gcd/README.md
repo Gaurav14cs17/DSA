@@ -38,10 +38,7 @@ permalink: /30_number_theory/01_gcd_lcm/02_extended_gcd/
 
 **Theorem:** For any integers $a, b$ (not both zero), there exist integers $x, y$ such that:
 
-```math
-a \cdot x + b \cdot y = \gcd(a, b)
-
-```
+$$a \cdot x + b \cdot y = \gcd(a, b)$$
 
 Furthermore, the set of all linear combinations $\{ax + by : x, y \in \mathbb{Z}\}$ equals all multiples of $\gcd(a, b)$.
 
@@ -58,14 +55,11 @@ Let $d$ be the smallest element in $S$, so $d = ax_0 + by_0$ for some $x_0, y_0$
 
 By division algorithm: $a = qd + r$ where $0 \leq r < d$.
 
-```math
-\begin{align}
+$$\begin{align}
 r &= a - qd \\
 &= a - q(ax_0 + by_0) \\
 &= a(1 - qx_0) + b(-qy_0)
-\end{align}
-
-```
+\end{align}$$
 
 If $r > 0$, then $r \in S$ and $r < d$, contradicting minimality of $d$.  
 Therefore $r = 0$, so $d \mid a$.  
@@ -104,15 +98,12 @@ By induction, assume we have: $b \cdot x_1 + (a \bmod b) \cdot y_1 = d$
 
 Substitute $a \bmod b = a - \lfloor a/b \rfloor \cdot b$:
 
-```math
-\begin{align}
+$$\begin{align}
 d &= b \cdot x_1 + (a - \lfloor a/b \rfloor \cdot b) \cdot y_1 \\
 &= b \cdot x_1 + a \cdot y_1 - \lfloor a/b \rfloor \cdot b \cdot y_1 \\
 &= a \cdot y_1 + b \cdot (x_1 - \lfloor a/b \rfloor \cdot y_1) \\
 &= a \cdot x + b \cdot y
-\end{align}
-
-```
+\end{align}$$
 
 where $x = y_1$ and $y = x_1 - \lfloor a/b \rfloor \cdot y_1$. $\blacksquare$
 
@@ -122,10 +113,7 @@ where $x = y_1$ and $y = x_1 - \lfloor a/b \rfloor \cdot y_1$. $\blacksquare$
 
 **Definition:** The modular inverse of $a$ modulo $m$ is an integer $x$ such that:
 
-```math
-a \cdot x \equiv 1 \pmod{m}
-
-```
+$$a \cdot x \equiv 1 \pmod{m}$$
 
 **Existence Condition:** $a^{-1} \bmod m$ exists **if and only if** $\gcd(a, m) = 1$.
 
@@ -135,17 +123,11 @@ From Bézout: $a \cdot x + m \cdot y = \gcd(a, m)$
 
 If $\gcd(a, m) = 1$:
 
-```math
-a \cdot x + m \cdot y = 1
-
-```
+$$a \cdot x + m \cdot y = 1$$
 
 Taking modulo $m$:
 
-```math
-a \cdot x \equiv 1 \pmod{m}
-
-```
+$$a \cdot x \equiv 1 \pmod{m}$$
 
 So $x \bmod m$ is the modular inverse!
 
@@ -167,13 +149,10 @@ So $x \bmod m$ is the modular inverse!
 
 4. General solution:
 
-```math
-\begin{cases}
+$$\begin{cases}
 x = x_0 \cdot c/d + k \cdot (b/d) \\
 y = y_0 \cdot c/d - k \cdot (a/d)
-\end{cases}
-
-```
+\end{cases}$$
 
 for any integer $k$.
 

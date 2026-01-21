@@ -69,10 +69,7 @@ permalink: /23_sliding_window/03_string_window/
 {: .highlight }
 > Two strings are **anagrams** if they have the same character frequencies.
 
-```math
-\text{Anagram}(s, t) \Leftrightarrow \forall c: \text{freq}_s[c] = \text{freq}_t[c]
-
-```
+$$\text{Anagram}(s, t) \Leftrightarrow \forall c: \text{freq}_s[c] = \text{freq}_t[c]$$
 
 #### For Window Problems
 
@@ -100,10 +97,7 @@ A window is an anagram of pattern \(p\) if:
 
 #### Validity Condition
 
-```math
-\text{Window valid} \Leftrightarrow \text{formed} = \text{required}
-
-```
+$$\text{Window valid} \Leftrightarrow \text{formed} = \text{required}$$
 
 ---
 

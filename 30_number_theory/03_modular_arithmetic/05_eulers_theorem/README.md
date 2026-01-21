@@ -38,10 +38,7 @@ permalink: /30_number_theory/03_modular_arithmetic/05_eulers_theorem/
 
 **Statement:** If $\gcd(a, n) = 1$, then:
 
-```math
-a^{\phi(n)} \equiv 1 \pmod{n}
-
-```
+$$a^{\phi(n)} \equiv 1 \pmod{n}$$
 
 where $\phi(n)$ is Euler's totient function.
 
@@ -67,10 +64,7 @@ where $\phi(n)$ is Euler's totient function.
 
 **Formula for general n:** If $n = p_1^{a_1} \cdots p_k^{a_k}$:
 
-```math
-\phi(n) = n \prod_{p|n}\left(1 - \frac{1}{p}\right)
-
-```
+$$\phi(n) = n \prod_{p|n}\left(1 - \frac{1}{p}\right)$$
 
 ---
 

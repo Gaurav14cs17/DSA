@@ -35,10 +35,7 @@ permalink: /19_greedy_algorithms/03_array_greedy/
 
 Track furthest reachable position:
 
-```math
-\text{max_reach} = \max(\text{max_reach}, i + nums[i])
-
-```
+$$\text{max_reach} = \max(\text{max_reach}, i + nums[i])$$
 
 ---
 

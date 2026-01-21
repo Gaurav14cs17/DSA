@@ -32,12 +32,9 @@ permalink: /04_stacks/
 
 A stack $S$ is a collection supporting:
 
-```math
-\text{push}(x): S \to S \cup \{x\}
+$$\text{push}(x): S \to S \cup \{x\}
 \text{pop}(): S \to S \setminus \{\text{top}\}, \text{ returns top}
-\text{peek}(): \text{returns top without removal}
-
-```
+\text{peek}(): \text{returns top without removal}$$
 
 **LIFO Property:** Last element pushed is first element popped.
 
@@ -62,11 +59,8 @@ A stack $S$ is a collection supporting:
 
 For string $S$ with brackets $\{(, ), [, ], \{, \}\}$:
 
-```math
-\text{Valid} \iff \forall i: \text{count}_{open}(0..i) \geq \text{count}_{close}(0..i)
-\text{AND } \text{count}_{open}(S) = \text{count}_{close}(S)
-
-```
+$$\text{Valid} \iff \forall i: \text{count}_{open}(0..i) \geq \text{count}_{close}(0..i)
+\text{AND } \text{count}_{open}(S) = \text{count}_{close}(S)$$
 
 **Stack Invariant:** Stack contains only unmatched opening brackets.
 
@@ -76,17 +70,11 @@ For string $S$ with brackets $\{(, ), [, ], \{, \}\}$:
 
 **Monotonically Increasing Stack:**
 
-```math
-\forall i < j: S[i] \leq S[j]
-
-```
+$$\forall i < j: S[i] \leq S[j]$$
 
 **Monotonically Decreasing Stack:**
 
-```math
-\forall i < j: S[i] \geq S[j]
-
-```
+$$\forall i < j: S[i] \geq S[j]$$
 
 **Key Insight:** When element $x$ is pushed:
 
@@ -102,13 +90,10 @@ For string $S$ with brackets $\{(, ), [, ], \{, \}\}$:
 
 **Monotonic Stack Approach:**
 
-```math
-\text{NGE}[i] = \begin{cases}
+$$\text{NGE}[i] = \begin{cases}
 A[j] & \text{first } j > i \text{ where } A[j] > A[i] \\
 -1 & \text{if no such } j \text{ exists}
-\end{cases}
-
-```
+\end{cases}$$
 
 **Time Complexity:** O(n) - each element pushed and popped at most once.
 
@@ -135,10 +120,7 @@ A[j] & \text{first } j > i \text{ where } A[j] > A[i] \\
 
 **Area Formula:**
 
-```math
-\text{Area}[i] = h[i] \times (\text{right_bound}[i] - \text{left_bound}[i] - 1)
-
-```
+$$\text{Area}[i] = h[i] \times (\text{right_bound}[i] - \text{left_bound}[i] - 1)$$
 
 Where:
 
@@ -156,10 +138,7 @@ Where:
 
 **Solution:** Store $(value, current_min)$ pairs.
 
-```math
-\text{min_at}[i] = \min(value[i], \text{min_at}[i-1])
-
-```
+$$\text{min_at}[i] = \min(value[i], \text{min_at}[i-1])$$
 
 **Space Trade-off:** O(n) extra space for O(1) getMin().
 

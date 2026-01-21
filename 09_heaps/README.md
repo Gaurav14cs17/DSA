@@ -32,17 +32,11 @@ permalink: /09_heaps/
 
 **Max-Heap:**
 
-```math
-\boxed{\forall i: A[\text{parent}(i)] \geq A[i]}
-
-```
+$$\boxed{\forall i: A[\text{parent}(i)] \geq A[i]}$$
 
 **Min-Heap:**
 
-```math
-\boxed{\forall i: A[\text{parent}(i)] \leq A[i]}
-
-```
+$$\boxed{\forall i: A[\text{parent}(i)] \leq A[i]}$$
 
 ---
 
@@ -50,12 +44,9 @@ permalink: /09_heaps/
 
 For 0-indexed array:
 
-```math
-\text{parent}(i) = \lfloor (i-1)/2 \rfloor
+$$\text{parent}(i) = \lfloor (i-1)/2 \rfloor
 \text{left}(i) = 2i + 1
-\text{right}(i) = 2i + 2
-
-```
+\text{right}(i) = 2i + 2$$
 
 ---
 
@@ -63,10 +54,7 @@ For 0-indexed array:
 
 For heap with $n$ elements:
 
-```math
-\boxed{h = \lfloor \log_2 n \rfloor}
-
-```
+$$\boxed{h = \lfloor \log_2 n \rfloor}$$
 
 **Proof:** Complete binary tree property.
 
@@ -90,11 +78,8 @@ For heap with $n$ elements:
 
 **Proof:**
 
-```math
-T(n) = \sum_{h=0}^{\lfloor \log n \rfloor} \lceil \frac{n}{2^{h+1}} \rceil \cdot O(h)
-= O(n \sum_{h=0}^{\log n} \frac{h}{2^h}) = O(n \cdot 2) = O(n)
-
-```
+$$T(n) = \sum_{h=0}^{\lfloor \log n \rfloor} \lceil \frac{n}{2^{h+1}} \rceil \cdot O(h)
+= O(n \sum_{h=0}^{\log n} \frac{h}{2^h}) = O(n \cdot 2) = O(n)$$
 
 The sum converges to 2.
 
@@ -104,10 +89,7 @@ The sum converges to 2.
 
 **Restore heap property after root change:**
 
-```math
-\text{heapify}(i) = \text{swap with largest child, recurse}
-
-```
+$$\text{heapify}(i) = \text{swap with largest child, recurse}$$
 
 **Time:** O(h) = O(log n)
 
@@ -119,10 +101,7 @@ The sum converges to 2.
 
 2. Extract max n times: O(n log n)
 
-```math
-\boxed{T(n) = O(n \log n)}
-
-```
+$$\boxed{T(n) = O(n \log n)}$$
 
 **Space:** O(1) in-place
 
@@ -134,10 +113,7 @@ The sum converges to 2.
 
 **Heap approach:**
 
-```math
-T(n, k) = O(n \log k)
-
-```
+$$T(n, k) = O(n \log k)$$
 
 Each element: insert once, extract once → 2 × O(log k).
 

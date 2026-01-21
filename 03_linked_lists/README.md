@@ -80,11 +80,8 @@ When they meet:
 
 Since fast = 2 × slow:
 
-```math
-2(\mu + k) = \mu + k + m\lambda
-\mu + k = m\lambda
-
-```
+$$2(\mu + k) = \mu + k + m\lambda
+\mu + k = m\lambda$$
 
 **Finding cycle start:**
 
@@ -107,11 +104,8 @@ At each step: `prev → ... ← current`
 
 **After reversal:**
 
-```math
-\text{new_head} = \text{last_node}
-\text{original_head.next} = \text{None}
-
-```
+$$\text{new_head} = \text{last_node}
+\text{original_head.next} = \text{None}$$
 
 ---
 
@@ -119,10 +113,7 @@ At each step: `prev → ... ← current`
 
 **When fast reaches end:**
 
-```math
-\text{slow position} = \lfloor n/2 \rfloor
-
-```
+$$\text{slow position} = \lfloor n/2 \rfloor$$
 
 **Proof:**
 

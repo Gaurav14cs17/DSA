@@ -38,10 +38,7 @@ permalink: /30_number_theory/05_euler_totient/
 
 **Euler's Totient Function:** $\phi(n)$ = count of integers from 1 to n that are coprime to n.
 
-```math
-\phi(n) = |\{k : 1 \leq k \leq n, \gcd(k, n) = 1\}|
-
-```
+$$\phi(n) = |\{k : 1 \leq k \leq n, \gcd(k, n) = 1\}|$$
 
 ---
 
@@ -55,10 +52,7 @@ permalink: /30_number_theory/05_euler_totient/
 
 **General formula:** 
 
-```math
-\phi(n) = n \prod_{p|n}\left(1 - \frac{1}{p}\right)
-
-```
+$$\phi(n) = n \prod_{p|n}\left(1 - \frac{1}{p}\right)$$
 
 ---
 

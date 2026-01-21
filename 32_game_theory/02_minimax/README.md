@@ -37,10 +37,7 @@ permalink: /32_game_theory/02_minimax/
 
 **Definition:** Game where one player's gain equals opponent's loss.
 
-```math
-\text{Player 1 score} + \text{Player 2 score} = \text{constant}
-
-```
+$$\text{Player 1 score} + \text{Player 2 score} = \text{constant}$$
 
 **Examples:**
 
@@ -58,14 +55,11 @@ permalink: /32_game_theory/02_minimax/
 
 **Recursive Definition:**
 
-```math
-\text{minimax}(s) = \begin{cases}
+$$\text{minimax}(s) = \begin{cases}
 \text{evaluate}(s) & \text{if } s \text{ is terminal} \\
 \max_{a} \text{minimax}(\text{result}(s,a)) & \text{if MAX's turn} \\
 \min_{a} \text{minimax}(\text{result}(s,a)) & \text{if MIN's turn}
-\end{cases}
-
-```
+\end{cases}$$
 
 ---
 
@@ -76,10 +70,7 @@ permalink: /32_game_theory/02_minimax/
 
 **Pruning Condition:**
 
-```math
-\text{If } \alpha \geq \beta \text{, prune remaining branches}
-
-```
+$$\text{If } \alpha \geq \beta \text{, prune remaining branches}$$
 
 **Improvement:** From $O(b^d)$ to $O(b^{d/2})$ with perfect ordering!
 

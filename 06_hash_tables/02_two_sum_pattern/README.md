@@ -52,10 +52,7 @@ permalink: /06_hash_tables/02_two_sum_pattern/
 
 **Rearrangement:**
 
-```math
-a[j] = target - a[i]
-
-```
+$$a[j] = target - a[i]$$
 
 **Algorithm:** For each $a[i]$, check if $target - a[i]$ exists in hash map.
 
@@ -77,10 +74,7 @@ a[j] = target - a[i]
 
 **Reduction:** For each $a$, find pairs where $b + c = -a$
 
-```math
-\text{Two Sum with target} = -a
-
-```
+$$\text{Two Sum with target} = -a$$
 
 **Time:** O(n²) with hash or two pointers after sorting.
 
@@ -92,10 +86,7 @@ a[j] = target - a[i]
 
 **Split into two pairs:**
 
-```math
-A[i] + B[j] = -(C[k] + D[l])
-
-```
+$$A[i] + B[j] = -(C[k] + D[l])$$
 
 Store all $A[i] + B[j]$ sums, then count matches with $-(C[k] + D[l])$.
 
@@ -107,11 +98,8 @@ Store all $A[i] + B[j]$ sums, then count matches with $-(C[k] + D[l])$.
 
 **Prefix Sum Identity:**
 
-```math
-\text{sum}(i, j) = P[j] - P[i-1] = k
-P[i-1] = P[j] - k
-
-```
+$$\text{sum}(i, j) = P[j] - P[i-1] = k
+P[i-1] = P[j] - k$$
 
 Count previous prefixes that equal $P[j] - k$.
 

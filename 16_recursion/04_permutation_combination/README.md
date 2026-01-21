@@ -49,17 +49,11 @@ permalink: /16_recursion/04_permutation_combination/
 
 **Definition:** All possible arrangements of n elements.
 
-```math
-P(n) = n!
-
-```
+$$P(n) = n!$$
 
 **Permutations of r elements from n:**
 
-```math
-P(n, r) = \frac{n!}{(n-r)!}
-
-```
+$$P(n, r) = \frac{n!}{(n-r)!}$$
 
 ---
 
@@ -67,17 +61,11 @@ P(n, r) = \frac{n!}{(n-r)!}
 
 **Definition:** Selection of r elements from n (order doesn't matter).
 
-```math
-C(n, r) = \binom{n}{r} = \frac{n!}{r!(n-r)!}
-
-```
+$$C(n, r) = \binom{n}{r} = \frac{n!}{r!(n-r)!}$$
 
 **Pascal's Triangle Recurrence:**
 
-```math
-C(n, r) = C(n-1, r-1) + C(n-1, r)
-
-```
+$$C(n, r) = C(n-1, r-1) + C(n-1, r)$$
 
 ---
 
@@ -85,11 +73,7 @@ C(n, r) = C(n-1, r-1) + C(n-1, r)
 
 **Definition:** All possible subsets of a set.
 
-```math
-
-|\text{Power Set}| = 2^n
-
-```
+$$|\text{Power Set}| = 2^n$$
 
 Each element has 2 choices: include or exclude.
 

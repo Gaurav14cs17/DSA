@@ -48,17 +48,11 @@ A **Disjoint Set** data structure maintains:
 
 With **path compression** and **union by rank**:
 
-```math
-\text{Amortized time per operation} = O(\alpha(n))
-
-```
+$$\text{Amortized time per operation} = O(\alpha(n))$$
 
 Where $\alpha(n)$ is the **inverse Ackermann function**:
 
-```math
-\alpha(n) \leq 4 \text{ for all practical } n
-
-```
+$$\alpha(n) \leq 4 \text{ for all practical } n$$
 
 Effectively **O(1)** per operation!
 
@@ -68,10 +62,7 @@ Effectively **O(1)** per operation!
 
 **Optimization:** Point all nodes directly to root during find.
 
-```math
-\text{parent}[x] = \text{find}(\text{parent}[x])
-
-```
+$$\text{parent}[x] = \text{find}(\text{parent}[x])$$
 
 ---
 
@@ -79,10 +70,7 @@ Effectively **O(1)** per operation!
 
 **Optimization:** Attach smaller tree under larger tree.
 
-```math
-\text{If rank}[root_x] < \text{rank}[root_y]: \text{parent}[root_x] = root_y
-
-```
+$$\text{If rank}[root_x] < \text{rank}[root_y]: \text{parent}[root_x] = root_y$$
 
 This keeps tree height logarithmic.
 
@@ -90,10 +78,7 @@ This keeps tree height logarithmic.
 
 ### 5️⃣ Number of Components
 
-```math
-\text{components} = \text{initial count} - \text{successful unions}
-
-```
+$$\text{components} = \text{initial count} - \text{successful unions}$$
 
 ---
 

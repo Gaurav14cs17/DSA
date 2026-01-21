@@ -41,10 +41,7 @@ Non-comparison sorts use:
 
 - **Bucket:** Distribution into ranges
 
-```math
-T = O(n + k) \text{ or } O(d \cdot (n + k))
-
-```
+$$T = O(n + k) \text{ or } O(d \cdot (n + k))$$
 
 ---
 
@@ -52,10 +49,7 @@ T = O(n + k) \text{ or } O(d \cdot (n + k))
 
 **Condition:** Values in range $[0, k]$ where $k = O(n)$.
 
-```math
-T = O(n + k), \quad S = O(k)
-
-```
+$$T = O(n + k), \quad S = O(k)$$
 
 **Steps:**
 
@@ -71,10 +65,7 @@ T = O(n + k), \quad S = O(k)
 
 **Sort by each digit:** LSD (Least Significant) to MSD.
 
-```math
-T = O(d \cdot (n + k))
-
-```
+$$T = O(d \cdot (n + k))$$
 
 Where:
 
@@ -90,10 +81,7 @@ For 32-bit integers with base 256: $d = 4$, $k = 256$.
 
 **Distribute into buckets, sort each bucket.**
 
-```math
-T = O(n + \frac{n^2}{k} + k) = O(n) \text{ if } k = O(n)
-
-```
+$$T = O(n + \frac{n^2}{k} + k) = O(n) \text{ if } k = O(n)$$
 
 **Best for:** Uniformly distributed data.
 
@@ -103,10 +91,7 @@ T = O(n + \frac{n^2}{k} + k) = O(n) \text{ if } k = O(n)
 
 **Three-way partition** for values in {0, 1, 2}.
 
-```math
-T = O(n), \quad S = O(1)
-
-```
+$$T = O(n), \quad S = O(1)$$
 
 **Invariant:** 
 

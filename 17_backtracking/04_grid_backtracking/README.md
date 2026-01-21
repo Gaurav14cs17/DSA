@@ -35,10 +35,7 @@ permalink: /17_backtracking/04_grid_backtracking/
 
 4-directional movement:
 
-```math
-\text{directions} = [(0,1), (0,-1), (1,0), (-1,0)]
-
-```
+$$\text{directions} = [(0,1), (0,-1), (1,0), (-1,0)]$$
 
 8-directional adds diagonals.
 
@@ -48,10 +45,7 @@ permalink: /17_backtracking/04_grid_backtracking/
 
 Worst case for path of length $L$:
 
-```math
-T = O(4^L)
-
-```
+$$T = O(4^L)$$
 
 With pruning, typically much better.
 

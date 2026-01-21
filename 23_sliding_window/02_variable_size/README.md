@@ -159,27 +159,18 @@ We want the **shortest** valid window. Once valid, we keep shrinking to find sho
 
 #### The Formula
 
-```math
-\text{exactly}(k) = \text{atMost}(k) - \text{atMost}(k-1)
-
-```
+$$\text{exactly}(k) = \text{atMost}(k) - \text{atMost}(k-1)$$
 
 #### 🔍 Proof
 
 Let \(S_k\) = set of subarrays with exactly \(k\) property.
 
-```math
-\text{atMost}(k) = |S_0| + |S_1| + ... + |S_k|
-\text{atMost}(k-1) = |S_0| + |S_1| + ... + |S_{k-1}|
-
-```
+$$\text{atMost}(k) = |S_0| + |S_1| + ... + |S_k|
+\text{atMost}(k-1) = |S_0| + |S_1| + ... + |S_{k-1}|$$
 
 Subtracting:
 
-```math
-\text{atMost}(k) - \text{atMost}(k-1) = |S_k| = \text{exactly}(k)
-
-```
+$$\text{atMost}(k) - \text{atMost}(k-1) = |S_k| = \text{exactly}(k)$$
 
 ∎
 
@@ -190,9 +181,7 @@ When window \([left, right]\) is valid, count subarrays ending at `right`:
 ```
 \text{count} += right - left + 1
 
-```math
-
-This counts: \([right]\), \([right-1, right]\), ..., \([left, right]\)
+$$This counts: \([right]\), \([right-1, right]\), ..., \([left, right]\)
 
 ---
 
@@ -219,9 +208,7 @@ Instead of tracking valid characters, track **violations**:
 
 ## 📊 Text Diagrams
 
-### Longest Without Repeating Characters
-
-```
+### Longest Without Repeating Characters$$
 
 String: "abcabcbb"
 

@@ -49,11 +49,8 @@ permalink: /14_sorting/01_comparison_sorts/
 
 After `partition(arr, low, high)`:
 
-```math
-\forall i \in [low, pivot): arr[i] \leq arr[pivot]
-\forall i \in (pivot, high]: arr[i] > arr[pivot]
-
-```
+$$\forall i \in [low, pivot): arr[i] \leq arr[pivot]
+\forall i \in (pivot, high]: arr[i] > arr[pivot]$$
 
 ---
 
@@ -74,10 +71,7 @@ After `partition(arr, low, high)`:
 **Build max-heap:** O(n)
 **Extract max n times:** O(n log n)
 
-```math
-T = O(n) + O(n \log n) = O(n \log n)
-
-```
+$$T = O(n) + O(n \log n) = O(n \log n)$$
 
 ---
 

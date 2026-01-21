@@ -162,22 +162,16 @@ permalink: /30_number_theory/02_primes/
 
 **Theorem:** Every integer $n > 1$ can be expressed **uniquely** as:
 
-```math
-n = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k}
-
-```
+$$n = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k}$$
 
 where $p_1 < p_2 < \cdots < p_k$ are primes and $a_i \geq 1$.
 
 **Example:**
 
-```math
-\begin{align}
+$$\begin{align}
 360 &= 2^3 \times 3^2 \times 5^1 \\
 &= 8 \times 9 \times 5 = 360
-\end{align}
-
-```
+\end{align}$$
 
 **Applications:**
 
@@ -193,17 +187,11 @@ where $p_1 < p_2 < \cdots < p_k$ are primes and $a_i \geq 1$.
 
 **Statement:** The prime counting function satisfies:
 
-```math
-\pi(n) \sim \frac{n}{\ln n}
-
-```
+$$\pi(n) \sim \frac{n}{\ln n}$$
 
 **Precise Version:**
 
-```math
-\lim_{n \to \infty} \frac{\pi(n) \cdot \ln n}{n} = 1
-
-```
+$$\lim_{n \to \infty} \frac{\pi(n) \cdot \ln n}{n} = 1$$
 
 **Practical Approximations:**
 

@@ -41,21 +41,15 @@ permalink: /18_dynamic_programming/05_tree_dp/
 
 Compute DP values bottom-up (post-order):
 
-```math
-dp[node] = f(dp[left], dp[right], node.val)
-
-```
+$$dp[node] = f(dp[left], dp[right], node.val)$$
 
 ---
 
 ### 2️⃣ House Robber III
 
-```math
-dp[node] = (\text{rob}, \text{not_rob})
+$$dp[node] = (\text{rob}, \text{not_rob})
 \text{rob} = node.val + \text{not_rob}_{left} + \text{not_rob}_{right}
-\text{not_rob} = \max(dp_{left}) + \max(dp_{right})
-
-```
+\text{not_rob} = \max(dp_{left}) + \max(dp_{right})$$
 
 ---
 

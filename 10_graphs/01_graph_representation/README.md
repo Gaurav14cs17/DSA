@@ -33,10 +33,7 @@ permalink: /10_graphs/01_graph_representation/
 
 **Formal Definition:**
 
-```math
-\boxed{G = (V, E)}
-
-```
+$$\boxed{G = (V, E)}$$
 
 Where:
 
@@ -48,24 +45,15 @@ Where:
 
 **Undirected Graph:**
 
-```math
-E = \{(u, v) : u, v \in V\} \text{ where } (u, v) = (v, u)
-
-```
+$$E = \{(u, v) : u, v \in V\} \text{ where } (u, v) = (v, u)$$
 
 **Directed Graph (Digraph):**
 
-```math
-E = \{(u, v) : u, v \in V\} \text{ where } (u, v) \neq (v, u)
-
-```
+$$E = \{(u, v) : u, v \in V\} \text{ where } (u, v) \neq (v, u)$$
 
 **Weighted Graph:**
 
-```math
-E = \{(u, v, w) : u, v \in V, w \in \mathbb{R}\}
-
-```
+$$E = \{(u, v, w) : u, v \in V, w \in \mathbb{R}\}$$
 
 ---
 
@@ -75,10 +63,7 @@ E = \{(u, v, w) : u, v \in V, w \in \mathbb{R}\}
 
 For undirected graph:
 
-```math
-\boxed{\deg(v) = |\{u \in V : (v, u) \in E\}|}
-
-```
+$$\boxed{\deg(v) = |\{u \in V : (v, u) \in E\}|}$$
 
 For directed graph:
 
@@ -88,10 +73,7 @@ For directed graph:
 
 **Handshaking Lemma:**
 
-```math
-\boxed{\sum_{v \in V} \deg(v) = 2|E|}
-
-```
+$$\boxed{\sum_{v \in V} \deg(v) = 2|E|}$$
 
 **Proof:** Each edge contributes 2 to the sum (once for each endpoint) ∎
 
@@ -101,19 +83,13 @@ For directed graph:
 
 **Adjacency Matrix:**
 
-```math
-\boxed{S_{matrix} = O(|V|^2)}
-
-```
+$$\boxed{S_{matrix} = O(|V|^2)}$$
 
 Stores $|V| \times |V|$ matrix regardless of $|E|$
 
 **Adjacency List:**
 
-```math
-\boxed{S_{list} = O(|V| + |E|)}
-
-```
+$$\boxed{S_{list} = O(|V| + |E|)}$$
 
 - Undirected: $|V|$ lists with total $2|E|$ entries
 
@@ -146,11 +122,7 @@ Stores $|V| \times |V|$ matrix regardless of $|E|$
 
 Every pair of vertices connected.
 
-```math
-
-|E| = \binom{n}{2} = \frac{n(n-1)}{2}
-
-```
+$$|E| = \binom{n}{2} = \frac{n(n-1)}{2}$$
 
 **Proof:**
 
@@ -184,10 +156,7 @@ Every pair of vertices connected.
 
 For graph $G$ with $k$ components:
 
-```math
-\boxed{\text{rank}(G) = |V| - k}
-
-```
+$$\boxed{\text{rank}(G) = |V| - k}$$
 
 ---
 

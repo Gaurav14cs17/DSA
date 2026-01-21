@@ -49,10 +49,7 @@ For set $S = \{a, b, c\}$:
 
 **Full Permutation (n distinct objects):**
 
-```math
-P(n) = n!
-
-```
+$$P(n) = n!$$
 
 **Proof:** 
 
@@ -66,26 +63,17 @@ P(n) = n!
 
 **r-Permutation (r from n):**
 
-```math
-P(n, r) = \frac{n!}{(n-r)!}
-
-```
+$$P(n, r) = \frac{n!}{(n-r)!}$$
 
 **Permutations with Repetition:**
 
 If object $i$ appears $n_i$ times:
 
-```math
-P = \frac{n!}{n_1! \times n_2! \times \cdots \times n_k!}
-
-```
+$$P = \frac{n!}{n_1! \times n_2! \times \cdots \times n_k!}$$
 
 **Example:** Permutations of "AABBC":
 
-```math
-\frac{5!}{2! \times 2! \times 1!} = \frac{120}{4} = 30
-
-```
+$$\frac{5!}{2! \times 2! \times 1!} = \frac{120}{4} = 30$$
 
 ---
 
@@ -109,17 +97,11 @@ P = \frac{n!}{n_1! \times n_2! \times \cdots \times n_k!}
 
 **Formula:**
 
-```math
-D_n = n! \sum_{i=0}^{n} \frac{(-1)^i}{i!} \approx \frac{n!}{e}
-
-```
+$$D_n = n! \sum_{i=0}^{n} \frac{(-1)^i}{i!} \approx \frac{n!}{e}$$
 
 **Recurrence:**
 
-```math
-D_n = (n-1)(D_{n-1} + D_{n-2})
-
-```
+$$D_n = (n-1)(D_{n-1} + D_{n-2})$$
 
 **First few:** $D_0=1, D_1=0, D_2=1, D_3=2, D_4=9, D_5=44$
 

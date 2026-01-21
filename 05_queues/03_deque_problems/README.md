@@ -69,10 +69,7 @@ permalink: /05_queues/03_deque_problems/
 
 **Property:**
 
-```math
-\text{front of deque} = \text{index of maximum in current window}
-
-```
+$$\text{front of deque} = \text{index of maximum in current window}$$
 
 **Why O(n)?**
 
@@ -86,10 +83,7 @@ permalink: /05_queues/03_deque_problems/
 
 **Formal:**
 
-```math
-\text{result}[i] = \max_{j=i}^{i+k-1} nums[j]
-
-```
+$$\text{result}[i] = \max_{j=i}^{i+k-1} nums[j]$$
 
 **Monotonic Deque Approach:**
 
@@ -107,11 +101,8 @@ permalink: /05_queues/03_deque_problems/
 
 **Key Insight:** Use monotonic deque on prefix sums.
 
-```math
-\text{sum}(i, j) = P[j] - P[i-1] \geq k
-P[i-1] \leq P[j] - k
-
-```
+$$\text{sum}(i, j) = P[j] - P[i-1] \geq k
+P[i-1] \leq P[j] - k$$
 
 Find smallest $j - i$ where condition holds.
 

@@ -44,10 +44,7 @@ permalink: /30_number_theory/10_lucas_theorem/02_sierpinski/
 
 By Lucas' theorem with p = 2:
 
-```math
-C(m, n) \equiv 1 \pmod{2} \iff n \text{ is a binary submask of } m
-
-```
+$$C(m, n) \equiv 1 \pmod{2} \iff n \text{ is a binary submask of } m$$
 
 That is: $(n \mathbin{\&} m) = n$
 

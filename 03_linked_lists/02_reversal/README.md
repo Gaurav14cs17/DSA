@@ -46,10 +46,7 @@ permalink: /03_linked_lists/02_reversal/
 
 After iteration $i$:
 
-```math
-\boxed{\text{null} \leftarrow node_0 \leftarrow node_1 \leftarrow \cdots \leftarrow node_i \quad | \quad node_{i+1} \to \cdots \to node_{n-1}}
-
-```
+$$\boxed{\text{null} \leftarrow node_0 \leftarrow node_1 \leftarrow \cdots \leftarrow node_i \quad | \quad node_{i+1} \to \cdots \to node_{n-1}}$$
 
 Where:
 
@@ -69,24 +66,18 @@ Where:
 
 **Recursive Definition:**
 
-```math
-\text{reverse}(head) = \begin{cases}
+$$\text{reverse}(head) = \begin{cases}
 head & \text{if } head = \text{null or } head.next = \text{null} \\
 \text{let } rest = \text{reverse}(head.next) & \\
 \quad head.next.next = head & \\
 \quad head.next = \text{null} & \\
 \quad \text{return } rest
-\end{cases}
-
-```
+\end{cases}$$
 
 **Recurrence Relation:**
 
-```math
-T(n) = T(n-1) + O(1)
-\boxed{T(n) = O(n) \text{ time}, \; O(n) \text{ stack space}}
-
-```
+$$T(n) = T(n-1) + O(1)
+\boxed{T(n) = O(n) \text{ time}, \; O(n) \text{ stack space}}$$
 
 ---
 
@@ -108,17 +99,11 @@ T(n) = T(n-1) + O(1)
 
 Iterative uses fixed variables:
 
-```math
-S_{\text{iter}}(n) = 3 \text{ pointers} = O(1)
-
-```
+$$S_{\text{iter}}(n) = 3 \text{ pointers} = O(1)$$
 
 Recursive stacks n frames:
 
-```math
-S_{\text{rec}}(n) = \sum_{i=1}^{n} O(1) = O(n)
-
-```
+$$S_{\text{rec}}(n) = \sum_{i=1}^{n} O(1) = O(n)$$
 
 ---
 
@@ -132,10 +117,7 @@ Result: $n_1 \to n_2 \to \cdots \to n_{left-1} \to n_{right} \to \cdots \to n_{l
 
 **Number of link reversals needed:**
 
-```math
-\boxed{\text{reversals} = right - left}
-
-```
+$$\boxed{\text{reversals} = right - left}$$
 
 ---
 
@@ -145,24 +127,15 @@ Result: $n_1 \to n_2 \to \cdots \to n_{left-1} \to n_{right} \to \cdots \to n_{l
 
 **Number of complete groups:**
 
-```math
-\text{complete_groups} = \left\lfloor \frac{n}{k} \right\rfloor
-
-```
+$$\text{complete_groups} = \left\lfloor \frac{n}{k} \right\rfloor$$
 
 **Remaining nodes:**
 
-```math
-\text{remaining} = n \mod k
-
-```
+$$\text{remaining} = n \mod k$$
 
 **Total reversals:**
 
-```math
-\text{total_reversals} = \left\lfloor \frac{n}{k} \right\rfloor \times (k-1)
-
-```
+$$\text{total_reversals} = \left\lfloor \frac{n}{k} \right\rfloor \times (k-1)$$
 
 **Time Complexity:** $O(n)$ - each node visited once
 

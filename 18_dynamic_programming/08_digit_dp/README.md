@@ -41,10 +41,7 @@ permalink: /18_dynamic_programming/08_digit_dp/
 
 Count numbers in range $[0, N]$ satisfying property:
 
-```math
-dp[\text{pos}][\text{state}][\text{tight}]
-
-```
+$$dp[\text{pos}][\text{state}][\text{tight}]$$
 
 - **pos:** Current digit position
 
@@ -56,10 +53,7 @@ dp[\text{pos}][\text{state}][\text{tight}]
 
 ### 2️⃣ Range Query
 
-```math
-\text{count}[L, R] = f(R) - f(L-1)
-
-```
+$$\text{count}[L, R] = f(R) - f(L-1)$$
 
 ---
 

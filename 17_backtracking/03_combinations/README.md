@@ -33,29 +33,20 @@ permalink: /17_backtracking/03_combinations/
 
 ### 1️⃣ Combination Formula
 
-```math
-C(n, k) = \binom{n}{k} = \frac{n!}{k!(n-k)!}
-
-```
+$$C(n, k) = \binom{n}{k} = \frac{n!}{k!(n-k)!}$$
 
 ---
 
 ### 2️⃣ Pascal's Triangle
 
-```math
-C(n, k) = C(n-1, k-1) + C(n-1, k)
-
-```
+$$C(n, k) = C(n-1, k-1) + C(n-1, k)$$
 
 ---
 
 ### 3️⃣ Properties
 
-```math
-C(n, k) = C(n, n-k)
-\sum_{k=0}^{n} C(n, k) = 2^n
-
-```
+$$C(n, k) = C(n, n-k)
+\sum_{k=0}^{n} C(n, k) = 2^n$$
 
 ---
 

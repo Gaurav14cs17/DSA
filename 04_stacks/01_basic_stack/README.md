@@ -71,10 +71,7 @@ permalink: /04_stacks/01_basic_stack/
 
 **Formal Definition:**
 
-```math
-\boxed{S = (D, \Omega)}
-
-```
+$$\boxed{S = (D, \Omega)}$$
 
 Where:
 
@@ -84,17 +81,14 @@ Where:
 
 **Axioms:**
 
-```math
-\begin{aligned}
+$$\begin{aligned}
 pop(push(S, x)) &= S \\
 peek(push(S, x)) &= x \\
 isEmpty(\emptyset) &= true \\
 isEmpty(push(S, x)) &= false \\
 size(\emptyset) &= 0 \\
 size(push(S, x)) &= size(S) + 1
-\end{aligned}
-
-```
+\end{aligned}$$
 
 ---
 
@@ -174,10 +168,7 @@ When resizing from size $k$ to $2k$:
 
 **Total cost for $n$ pushes:**
 
-```math
-\sum_{i=0}^{\log n} 2^i = 2^{\log n + 1} - 1 < 2n
-
-```
+$$\sum_{i=0}^{\log n} 2^i = 2^{\log n + 1} - 1 < 2n$$
 
 **Amortized cost:** $\frac{3n}{n} = O(1)$ ∎
 
@@ -189,10 +180,7 @@ When resizing from size $k$ to $2k$:
 
 **Solution 1: Store (value, min) pairs**
 
-```math
-\boxed{min_at[i] = \min(value[i], min_at[i-1])}
-
-```
+$$\boxed{min_at[i] = \min(value[i], min_at[i-1])}$$
 
 **Space:** $O(n)$ extra
 
@@ -200,10 +188,7 @@ When resizing from size $k$ to $2k$:
 
 Store $difference = value - current_min$ instead of value.
 
-```math
-\boxed{stored[i] = value[i] - min_at[i]}
-
-```
+$$\boxed{stored[i] = value[i] - min_at[i]}$$
 
 When $stored[i] < 0$: new minimum found!
 

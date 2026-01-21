@@ -51,10 +51,7 @@ permalink: /26_sweep_line/03_line_segment_intersection/
 
 **Cross Product** determines relative orientation of three points:
 
-```math
-\text{orient}(p, q, r) = (q_y - p_y)(r_x - q_x) - (q_x - p_x)(r_y - q_y)
-
-```
+$$\text{orient}(p, q, r) = (q_y - p_y)(r_x - q_x) - (q_x - p_x)(r_y - q_y)$$
 
 **Result:**
 
@@ -72,12 +69,9 @@ permalink: /26_sweep_line/03_line_segment_intersection/
 
 **Theorem:** Segments $s_1 = \overline{p_1p_2}$ and $s_2 = \overline{q_1q_2}$ intersect iff:
 
-```math
-\text{orient}(p_1, p_2, q_1) \cdot \text{orient}(p_1, p_2, q_2) < 0
+$$\text{orient}(p_1, p_2, q_1) \cdot \text{orient}(p_1, p_2, q_2) < 0
 \land
-\text{orient}(q_1, q_2, p_1) \cdot \text{orient}(q_1, q_2, p_2) < 0
-
-```
+\text{orient}(q_1, q_2, p_1) \cdot \text{orient}(q_1, q_2, p_2) < 0$$
 
 **Special case:** Check bounding box overlap for collinear segments.
 
@@ -131,17 +125,11 @@ permalink: /26_sweep_line/03_line_segment_intersection/
 
 **Intersection point:**
 
-```math
-x = \frac{b_2 - b_1}{m_1 - m_2}, \quad y = m_1x + b_1
-
-```
+$$x = \frac{b_2 - b_1}{m_1 - m_2}, \quad y = m_1x + b_1$$
 
 **For segments in parametric form:**
 
-```math
-p(t) = p_1 + t(p_2 - p_1), \quad q(s) = q_1 + s(q_2 - q_1)
-
-```
+$$p(t) = p_1 + t(p_2 - p_1), \quad q(s) = q_1 + s(q_2 - q_1)$$
 
 Solve: $p_1 + t(p_2 - p_1) = q_1 + s(q_2 - q_1)$
 
@@ -153,11 +141,8 @@ Solve: $p_1 + t(p_2 - p_1) = q_1 + s(q_2 - q_1)$
 
 **Check if point $r$ is on segment $\overline{pq}$:**
 
-```math
-\text{collinear}(p, q, r) \land \min(p_x, q_x) \leq r_x \leq \max(p_x, q_x)
-\land \min(p_y, q_y) \leq r_y \leq \max(p_y, q_y)
-
-```
+$$\text{collinear}(p, q, r) \land \min(p_x, q_x) \leq r_x \leq \max(p_x, q_x)
+\land \min(p_y, q_y) \leq r_y \leq \max(p_y, q_y)$$
 
 ---
 

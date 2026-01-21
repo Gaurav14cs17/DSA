@@ -31,10 +31,7 @@ permalink: /10_graphs/03_dfs_problems/
 
 ### 1️⃣ DFS Time Complexity
 
-```math
-\boxed{T(V, E) = O(V + E)}
-
-```
+$$\boxed{T(V, E) = O(V + E)}$$
 
 **Stack space:** O(V) worst case for path length.
 
@@ -65,10 +62,7 @@ permalink: /10_graphs/03_dfs_problems/
 
 ### 4️⃣ Discovery and Finish Times
 
-```math
-d[u] < d[v] < f[v] < f[u] \text{ (v is descendant of u)}
-
-```
+$$d[u] < d[v] < f[v] < f[u] \text{ (v is descendant of u)}$$
 
 **Parenthesis Theorem:** DFS forms valid nesting.
 

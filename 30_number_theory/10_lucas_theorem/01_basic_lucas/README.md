@@ -46,10 +46,7 @@ permalink: /30_number_theory/10_lucas_theorem/01_basic_lucas/
 
 For prime p and non-negative m, n:
 
-```math
-C(m, n) \equiv \prod_{i=0}^{k} C(m_i, n_i) \pmod{p}
-
-```
+$$C(m, n) \equiv \prod_{i=0}^{k} C(m_i, n_i) \pmod{p}$$
 
 where $m = \sum m_i p^i$ and $n = \sum n_i p^i$ are base-p representations.
 

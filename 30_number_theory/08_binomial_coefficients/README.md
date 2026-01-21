@@ -38,10 +38,7 @@ permalink: /30_number_theory/08_binomial_coefficients/
 
 **Binomial Coefficient:** "n choose k"
 
-```math
-\binom{n}{k} = \frac{n!}{k!(n-k)!}
-
-```
+$$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$
 
 **Meaning:** Number of ways to choose k items from n items.
 

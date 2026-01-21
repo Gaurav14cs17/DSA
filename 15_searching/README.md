@@ -32,26 +32,17 @@ permalink: /15_searching/
 
 **Loop invariant:** Target is in $[left, right]$ if it exists.
 
-```math
-\text{After each iteration: } right - left \text{ decreases by at least half}
-
-```
+$$\text{After each iteration: } right - left \text{ decreases by at least half}$$
 
 ---
 
 ### 2️⃣ Time Complexity
 
-```math
-T(n) = T(n/2) + O(1) = O(\log n)
-
-```
+$$T(n) = T(n/2) + O(1) = O(\log n)$$
 
 **Proof:** Search space halves each iteration.
 
-```math
-n \rightarrow n/2 \rightarrow n/4 \rightarrow \ldots \rightarrow 1
-
-```
+$$n \rightarrow n/2 \rightarrow n/4 \rightarrow \ldots \rightarrow 1$$
 
 Number of steps: $\log_2 n$
 
@@ -61,17 +52,11 @@ Number of steps: $\log_2 n$
 
 **Lower bound (first occurrence):**
 
-```math
-\text{leftmost } i \text{ where } arr[i] \geq target
-
-```
+$$\text{leftmost } i \text{ where } arr[i] \geq target$$
 
 **Upper bound (first greater):**
 
-```math
-\text{leftmost } i \text{ where } arr[i] > target
-
-```
+$$\text{leftmost } i \text{ where } arr[i] > target$$
 
 ---
 
@@ -106,10 +91,7 @@ return left
 
 **Problem:** Find minimum/maximum value satisfying condition.
 
-```math
-\text{answer} = \min\{x : \text{feasible}(x) = \text{true}\}
-
-```
+$$\text{answer} = \min\{x : \text{feasible}(x) = \text{true}\}$$
 
 **Key insight:** Feasibility is monotonic.
 
@@ -119,10 +101,7 @@ return left
 
 **Pivot:** Point where rotation occurs.
 
-```math
-\text{One half is always sorted}
-
-```
+$$\text{One half is always sorted}$$
 
 Use sorted half to decide search direction.
 

@@ -54,19 +54,13 @@ permalink: /21_bit_manipulation/
 
 Every positive integer \( n \) can be uniquely represented as a sum of powers of 2:
 
-```math
-n = \sum_{i=0}^{k} b_i \cdot 2^i = b_k \cdot 2^k + b_{k-1} \cdot 2^{k-1} + \cdots + b_1 \cdot 2 + b_0
-
-```
+$$n = \sum_{i=0}^{k} b_i \cdot 2^i = b_k \cdot 2^k + b_{k-1} \cdot 2^{k-1} + \cdots + b_1 \cdot 2 + b_0$$
 
 where each \( b_i \in \{0, 1\} \) is called a **bit**.
 
 #### 📝 Example: Converting 42 to Binary
 
-```math
-42 = 32 + 8 + 2 = 2^5 + 2^3 + 2^1 = \texttt{101010}_2
-
-```
+$$42 = 32 + 8 + 2 = 2^5 + 2^3 + 2^1 = \texttt{101010}_2$$
 
 ```
 Position:  5   4   3   2   1   0
@@ -170,10 +164,7 @@ n&(n-1) = 1 0 0 0   (8)
 
 If every element appears twice except one:
 
-```math
-\bigoplus_{i=0}^{n-1} \text{nums}[i] = \text{unique element}
-
-```
+$$\bigoplus_{i=0}^{n-1} \text{nums}[i] = \text{unique element}$$
 
 All pairs cancel out (\(a \oplus a = 0\)), leaving only the unique element!
 
@@ -183,10 +174,7 @@ All pairs cancel out (\(a \oplus a = 0\)), leaving only the unique element!
 
 In computers, negative numbers are represented using **two's complement**:
 
-```math
--n = \sim n + 1 = 2^k - n
-
-```
+$$-n = \sim n + 1 = 2^k - n$$
 
 where \( k \) is the number of bits.
 

@@ -90,10 +90,7 @@ Where:
 
 **Optimization:** Merge nodes with single child.
 
-```math
-\text{Space: } O(\text{total characters in all words})
-
-```
+$$\text{Space: } O(\text{total characters in all words})$$
 
 ---
 
@@ -103,10 +100,7 @@ Where:
 
 **Maximum XOR:** Greedily pick opposite bit at each level.
 
-```math
-\text{For each bit, prefer } 1 \oplus \text{current_bit} = 1
-
-```
+$$\text{For each bit, prefer } 1 \oplus \text{current_bit} = 1$$
 
 ---
 

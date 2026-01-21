@@ -87,16 +87,13 @@ permalink: /22_two_pointers/
 
 #### The Algorithm
 
-```math
-\text{Initialize: } left = 0, \quad right = n - 1
+$$\text{Initialize: } left = 0, \quad right = n - 1
 \text{While } left < right:
 \begin{cases}
 \text{sum} < \text{target} & \Rightarrow left := left + 1 \\
 \text{sum} > \text{target} & \Rightarrow right := right - 1 \\
 \text{sum} = \text{target} & \Rightarrow \text{Found!}
-\end{cases}
-
-```
+\end{cases}$$
 
 #### 🔍 Proof of Correctness
 
@@ -125,26 +122,17 @@ permalink: /22_two_pointers/
 
 #### The Formula
 
-```math
-\text{Area}(l, r) = \min(h[l], h[r]) \times (r - l)
-
-```
+$$\text{Area}(l, r) = \min(h[l], h[r]) \times (r - l)$$
 
 #### 🔍 Proof: Why Move the Shorter Side?
 
 Suppose \(h[l] < h[r]\). Consider all containers involving position \(l\):
 
-```math
-\text{Area}(l, k) = \min(h[l], h[k]) \times (k - l) \leq h[l] \times (k - l)
-
-```
+$$\text{Area}(l, k) = \min(h[l], h[k]) \times (k - l) \leq h[l] \times (k - l)$$
 
 For any \(k < r\):
 
-```math
-\text{Area}(l, k) \leq h[l] \times (k - l) < h[l] \times (r - l) = \text{Area}(l, r)
-
-```
+$$\text{Area}(l, k) \leq h[l] \times (k - l) < h[l] \times (r - l) = \text{Area}(l, r)$$
 
 So \((l, r)\) is already the **best container involving position \(l\)**!
 
@@ -175,12 +163,9 @@ When they meet:
 
 Since fast moves twice as fast:
 
-```math
-2(\mu + k) = \mu + k + n\lambda
+$$2(\mu + k) = \mu + k + n\lambda
 \mu + k = n\lambda
-\mu = n\lambda - k
-
-```
+\mu = n\lambda - k$$
 
 #### Phase 2: Finding Cycle Start
 

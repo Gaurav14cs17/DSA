@@ -33,11 +33,8 @@ permalink: /17_backtracking/02_permutations/
 
 ### 1️⃣ Permutation Count
 
-```math
-P(n) = n!
-P(n, k) = \frac{n!}{(n-k)!}
-
-```
+$$P(n) = n!
+P(n, k) = \frac{n!}{(n-k)!}$$
 
 ---
 
@@ -45,10 +42,7 @@ P(n, k) = \frac{n!}{(n-k)!}
 
 If elements repeat with frequencies $f_1, f_2, \ldots, f_k$:
 
-```math
-\text{Permutations} = \frac{n!}{f_1! \times f_2! \times \ldots \times f_k!}
-
-```
+$$\text{Permutations} = \frac{n!}{f_1! \times f_2! \times \ldots \times f_k!}$$
 
 ---
 

@@ -47,16 +47,13 @@ permalink: /30_number_theory/01_gcd_lcm/
 
 **Key Properties:**
 
-```math
-\begin{align}
+$$\begin{align}
 \gcd(a, b) &= \gcd(b, a) \quad \text{(Commutative)} \\
 \gcd(a, \gcd(b, c)) &= \gcd(\gcd(a, b), c) \quad \text{(Associative)} \\
 \gcd(a, 0) &= a \quad \text{(Identity)} \\
 \gcd(a, 1) &= 1 \\
 \gcd(a, b) &= 1 \iff \text{a and b are coprime}
-\end{align}
-
-```
+\end{align}$$
 
 ---
 
@@ -64,22 +61,16 @@ permalink: /30_number_theory/01_gcd_lcm/
 
 **Fundamental Theorem:**
 
-```math
-\gcd(a, b) = \gcd(b, a \bmod b)
-
-```
+$$\gcd(a, b) = \gcd(b, a \bmod b)$$
 
 **Proof:**
 Let $d = \gcd(a, b)$. Then $a = d \cdot m$ and $b = d \cdot n$ for some integers $m, n$.
 
-```math
-\begin{align}
+$$\begin{align}
 a \bmod b &= a - q \cdot b \quad \text{where } q = \lfloor a/b \rfloor \\
 &= d \cdot m - q \cdot d \cdot n \\
 &= d \cdot (m - q \cdot n)
-\end{align}
-
-```
+\end{align}$$
 
 So $d$ divides $(a \bmod b)$. By similar reasoning, any common divisor of $b$ and $(a \bmod b)$ also divides $a$ and $b$.
 
@@ -87,10 +78,7 @@ Therefore: $\gcd(a, b) = \gcd(b, a \bmod b)$ ∎
 
 **Time Complexity (Lamé's Theorem):**
 
-```math
-T(a, b) = O(\log \min(a, b))
-
-```
+$$T(a, b) = O(\log \min(a, b))$$
 
 **Proof:** If $a > b$, then $a \bmod b < a/2$, so problem size halves every 2 steps at most. ∎
 
@@ -100,10 +88,7 @@ T(a, b) = O(\log \min(a, b))
 
 **Bézout's Identity:** For any integers $a, b$, there exist integers $x, y$ such that:
 
-```math
-a \cdot x + b \cdot y = \gcd(a, b)
-
-```
+$$a \cdot x + b \cdot y = \gcd(a, b)$$
 
 **Algorithm:**
 
@@ -139,20 +124,14 @@ Recursive case:
 
 **Fundamental Formula:**
 
-```math
-\text{lcm}(a, b) = \frac{a \times b}{\gcd(a, b)}
-
-```
+$$\text{lcm}(a, b) = \frac{a \times b}{\gcd(a, b)}$$
 
 **Proof:**
 Let $d = \gcd(a, b)$. Then $a = d \cdot x$ and $b = d \cdot y$ where $\gcd(x, y) = 1$.
 
 The LCM must be $d \cdot x \cdot y$ (smallest number divisible by both):
 
-```math
-\text{lcm}(a, b) = d \cdot x \cdot y = \frac{(d \cdot x) \cdot (d \cdot y)}{d} = \frac{a \cdot b}{\gcd(a, b)}
-
-```
+$$\text{lcm}(a, b) = d \cdot x \cdot y = \frac{(d \cdot x) \cdot (d \cdot y)}{d} = \frac{a \cdot b}{\gcd(a, b)}$$
 
 ∎
 
@@ -168,10 +147,7 @@ The LCM must be $d \cdot x \cdot y$ (smallest number divisible by both):
 \text{lcm}(a, b) &= p_1^{\max(a_1, b_1)} \cdot p_2^{\max(a_2, b_2)} \cdots p_k^{\max(a_k, b_k)}
 \end{align}
 
-```math
-**Example:**
-
-```
+$$**Example:**$$
 
 \begin{align}
 12 &= 2^2 \cdot 3^1 \\
@@ -180,15 +156,11 @@ The LCM must be $d \cdot x \cdot y$ (smallest number divisible by both):
 \text{lcm}(12, 18) &= 2^{\max(2,1)} \cdot 3^{\max(1,2)} = 2^2 \cdot 3^2 = 36
 \end{align}
 
-```math
-
----
+$$---
 
 ## 🎨 Visual Walkthroughs
 
-### Walkthrough 1: Euclidean Algorithm
-
-```
+### Walkthrough 1: Euclidean Algorithm$$
 
 +-----------------------------------------------------------------+
 

@@ -54,18 +54,12 @@ A **Segment Tree** is a binary tree where:
 
 For array of size $n$:
 
-```math
-\text{Tree size} \leq 4n
-
-```
+$$\text{Tree size} \leq 4n$$
 
 **Node indices (1-indexed):**
 
-```math
-\text{left child} = 2i, \quad \text{right child} = 2i + 1
-\text{parent} = \lfloor i/2 \rfloor
-
-```
+$$\text{left child} = 2i, \quad \text{right child} = 2i + 1
+\text{parent} = \lfloor i/2 \rfloor$$
 
 ---
 
@@ -90,10 +84,7 @@ For array of size $n$:
 
 Query [L, R] decomposes into O(log n) disjoint segments.
 
-```math
-\text{query}(L, R) = \bigoplus_{i} \text{segment}_i
-
-```
+$$\text{query}(L, R) = \bigoplus_{i} \text{segment}_i$$
 
 Where $\oplus$ is the associative operation (sum, min, max, gcd, etc.).
 
@@ -117,10 +108,7 @@ Update propagates from leaf to root, updating all ancestors.
 
 **Deferred updates:** Store pending updates at nodes, push down when needed.
 
-```math
-\text{lazy}[node] = \text{pending operation for subtree}
-
-```
+$$\text{lazy}[node] = \text{pending operation for subtree}$$
 
 **Push down before:**
 
@@ -134,10 +122,7 @@ Update propagates from leaf to root, updating all ancestors.
 
 Segment tree works when merge function is **associative**:
 
-```math
-f(f(a, b), c) = f(a, f(b, c))
-
-```
+$$f(f(a, b), c) = f(a, f(b, c))$$
 
 **Examples:**
 

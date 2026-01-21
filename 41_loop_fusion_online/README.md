@@ -127,10 +127,7 @@ permalink: /41_loop_fusion_online/
 
 A **recurrence relation** defines a sequence where each term is a function of previous terms:
 
-```math
-S(n) = f(S(n-1), S(n-2), \ldots, S(0))
-
-```
+$$S(n) = f(S(n-1), S(n-2), \ldots, S(0))$$
 
 **Key Examples:**
 
@@ -377,20 +374,14 @@ end
 
 The mean after $n$ elements is:
 
-```math
-\mu_n = \frac{1}{n}\sum_{i=1}^{n} x_i
-
-```
+$$\mu_n = \frac{1}{n}\sum_{i=1}^{n} x_i$$
 
 We can relate $\mu_n$ to $\mu_{n-1}$:
 
-```math
-\mu_n = \frac{1}{n}\sum_{i=1}^{n} x_i = \frac{1}{n}\left(\sum_{i=1}^{n-1} x_i + x_n\right)
+$$\mu_n = \frac{1}{n}\sum_{i=1}^{n} x_i = \frac{1}{n}\left(\sum_{i=1}^{n-1} x_i + x_n\right)
 = \frac{1}{n}((n-1)\mu_{n-1} + x_n)
 = \frac{n-1}{n}\mu_{n-1} + \frac{x_n}{n}
-= \mu_{n-1} + \frac{x_n - \mu_{n-1}}{n}
-
-```
+= \mu_{n-1} + \frac{x_n - \mu_{n-1}}{n}$$
 
 **Recurrence:** $\mu_n = \mu_{n-1} + \frac{x_n - \mu_{n-1}}{n}$
 
@@ -402,35 +393,23 @@ Define $M_2(n) = \sum_{i=1}^{n}(x_i - \mu_n)^2$ (the sum of squared deviations).
 
 **Naive approach fails:**
 
-```math
-\sigma^2 = E[X^2] - E[X]^2
-
-```
+$$\sigma^2 = E[X^2] - E[X]^2$$
 
 This suffers from **catastrophic cancellation** when $\sigma^2 \ll E[X]^2$.
 
 **Welford's approach:** Maintain $M_2(n)$ using a recurrence.
 
-```math
-M_2(n) = \sum_{i=1}^{n}(x_i - \mu_n)^2
-
-```
+$$M_2(n) = \sum_{i=1}^{n}(x_i - \mu_n)^2$$
 
 Split into old and new elements:
 
-```math
-= \sum_{i=1}^{n-1}(x_i - \mu_n)^2 + (x_n - \mu_n)^2
-
-```
+$$= \sum_{i=1}^{n-1}(x_i - \mu_n)^2 + (x_n - \mu_n)^2$$
 
 **Key observation:** When we add $x_n$, the mean changes from $\mu_{n-1}$ to $\mu_n$!
 
 For old elements ($i < n$):
 
-```math
-x_i - \mu_n = (x_i - \mu_{n-1}) - (\mu_n - \mu_{n-1})
-
-```
+$$x_i - \mu_n = (x_i - \mu_{n-1}) - (\mu_n - \mu_{n-1})$$
 
 Let $\delta = x_n - \mu_{n-1}$. From Step 1: $\mu_n - \mu_{n-1} = \frac{\delta}{n}$
 
@@ -438,57 +417,36 @@ So: $x_i - \mu_n = (x_i - \mu_{n-1}) - \frac{\delta}{n}$
 
 Squaring:
 
-```math
-(x_i - \mu_n)^2 = (x_i - \mu_{n-1})^2 - 2(x_i - \mu_{n-1})\frac{\delta}{n} + \frac{\delta^2}{n^2}
-
-```
+$$(x_i - \mu_n)^2 = (x_i - \mu_{n-1})^2 - 2(x_i - \mu_{n-1})\frac{\delta}{n} + \frac{\delta^2}{n^2}$$
 
 Summing over old elements:
 
-```math
-\sum_{i=1}^{n-1}(x_i - \mu_n)^2 = \sum_{i=1}^{n-1}(x_i - \mu_{n-1})^2 - \frac{2\delta}{n}\sum_{i=1}^{n-1}(x_i - \mu_{n-1}) + (n-1)\frac{\delta^2}{n^2}
-
-```
+$$\sum_{i=1}^{n-1}(x_i - \mu_n)^2 = \sum_{i=1}^{n-1}(x_i - \mu_{n-1})^2 - \frac{2\delta}{n}\sum_{i=1}^{n-1}(x_i - \mu_{n-1}) + (n-1)\frac{\delta^2}{n^2}$$
 
 **Crucial property:** $\sum_{i=1}^{n-1}(x_i - \mu_{n-1}) = 0$ (definition of mean!)
 
-```math
-= M_2(n-1) + (n-1)\frac{\delta^2}{n^2}
-
-```
+$$= M_2(n-1) + (n-1)\frac{\delta^2}{n^2}$$
 
 For the new element:
 
-```math
-(x_n - \mu_n)^2 = \left(\delta - \frac{\delta}{n}\right)^2 = \frac{(n-1)^2\delta^2}{n^2}
-
-```
+$$(x_n - \mu_n)^2 = \left(\delta - \frac{\delta}{n}\right)^2 = \frac{(n-1)^2\delta^2}{n^2}$$
 
 Combining:
 
-```math
-M_2(n) = M_2(n-1) + (n-1)\frac{\delta^2}{n^2} + \frac{(n-1)^2\delta^2}{n^2}
+$$M_2(n) = M_2(n-1) + (n-1)\frac{\delta^2}{n^2} + \frac{(n-1)^2\delta^2}{n^2}
 = M_2(n-1) + \frac{(n-1)\delta^2}{n^2}(1 + n - 1)
-= M_2(n-1) + \frac{(n-1)\delta^2}{n}
-
-```
+= M_2(n-1) + \frac{(n-1)\delta^2}{n}$$
 
 Note: $x_n - \mu_n = \frac{(n-1)\delta}{n}$
 
 Therefore:
 
-```math
-\frac{(n-1)\delta^2}{n} = \delta \cdot \frac{(n-1)\delta}{n} = (x_n - \mu_{n-1})(x_n - \mu_n)
-
-```
+$$\frac{(n-1)\delta^2}{n} = \delta \cdot \frac{(n-1)\delta}{n} = (x_n - \mu_{n-1})(x_n - \mu_n)$$
 
 **Final recurrence:**
 
-```math
-M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n)
-\sigma^2_n = \frac{M_2(n)}{n}
-
-```
+$$M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n)
+\sigma^2_n = \frac{M_2(n)}{n}$$
 
 ---
 
@@ -571,10 +529,7 @@ This is exactly the same trick used in **FlashAttention** for online softmax!
 
 **Theorem:** The variance can be computed online using:
 
-```math
-M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n)
-
-```
+$$M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n)$$
 
 where $M_2(n) = \sum_{i=1}^{n} (x_i - \mu_n)^2$ and $\sigma^2 = M_2(n) / n$.
 

@@ -49,10 +49,7 @@ permalink: /16_recursion/03_memoization/
 
 **Cache** results of expensive function calls:
 
-```math
-\text{memo}[args] = f(args)
-
-```
+$$\text{memo}[args] = f(args)$$
 
 Return cached result on repeated calls.
 

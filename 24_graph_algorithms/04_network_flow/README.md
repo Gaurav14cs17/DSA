@@ -53,17 +53,11 @@ permalink: /24_graph_algorithms/04_network_flow/
 
 **Capacity constraint:**
 
-```math
-0 \leq f(u, v) \leq c(u, v) \quad \forall (u,v) \in E
-
-```
+$$0 \leq f(u, v) \leq c(u, v) \quad \forall (u,v) \in E$$
 
 **Flow conservation:**
 
-```math
-\sum_{v:(u,v) \in E} f(u,v) = \sum_{v:(v,u) \in E} f(v,u) \quad \forall u \in V \setminus \{s,t\}
-
-```
+$$\sum_{v:(u,v) \in E} f(u,v) = \sum_{v:(v,u) \in E} f(v,u) \quad \forall u \in V \setminus \{s,t\}$$
 
 ---
 
@@ -79,14 +73,11 @@ permalink: /24_graph_algorithms/04_network_flow/
 
 **Residual capacity:**
 
-```math
-c_f(u,v) = \begin{cases}
+$$c_f(u,v) = \begin{cases}
 c(u,v) - f(u,v) & \text{if } (u,v) \in E \\
 f(v,u) & \text{if } (v,u) \in E \\
 0 & \text{otherwise}
-\end{cases}
-
-```
+\end{cases}$$
 
 **Augmenting path:** Path from $s$ to $t$ in residual graph with positive capacity.
 
@@ -98,17 +89,11 @@ f(v,u) & \text{if } (v,u) \in E \\
 
 **Capacity of cut:**
 
-```math
-c(S, T) = \sum_{u \in S, v \in T, (u,v) \in E} c(u,v)
-
-```
+$$c(S, T) = \sum_{u \in S, v \in T, (u,v) \in E} c(u,v)$$
 
 **Theorem:**
 
-```math
-\max_{f \text{ flow}} |f| = \min_{(S,T) \text{ cut}} c(S,T)
-
-```
+$$\max_{f \text{ flow}} |f| = \min_{(S,T) \text{ cut}} c(S,T)$$
 
 ---
 
@@ -173,17 +158,11 @@ c(S, T) = \sum_{u \in S, v \in T, (u,v) \in E} c(u,v)
 
 - Original edges (capacity 1)
 
-```math
-\text{Max matching} = |f^*|
-
-```
+$$\text{Max matching} = |f^*|$$
 
 **König's Theorem:** In bipartite graph,
 
-```math
-\text{Max matching} = \text{Min vertex cover}
-
-```
+$$\text{Max matching} = \text{Min vertex cover}$$
 
 ---
 

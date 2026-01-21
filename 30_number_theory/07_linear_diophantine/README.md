@@ -66,10 +66,7 @@ permalink: /30_number_theory/07_linear_diophantine/
 
 If $(x_0, y_0)$ is one solution, all solutions are:
 
-```math
-x = x_0 + k \cdot \frac{b}{\gcd(a,b)}, \quad y = y_0 - k \cdot \frac{a}{\gcd(a,b)}
-
-```
+$$x = x_0 + k \cdot \frac{b}{\gcd(a,b)}, \quad y = y_0 - k \cdot \frac{a}{\gcd(a,b)}$$
 
 for any integer $k$.
 
@@ -79,10 +76,7 @@ for any integer $k$.
 
 For positive coprime $a, b$, the **Frobenius number** (largest integer NOT representable as $ax + by$ with $x, y \geq 0$):
 
-```math
-g(a, b) = ab - a - b
-
-```
+$$g(a, b) = ab - a - b$$
 
 ---
 

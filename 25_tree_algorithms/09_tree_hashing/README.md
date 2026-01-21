@@ -68,17 +68,11 @@ permalink: /25_tree_algorithms/09_tree_hashing/
 
 **For rooted tree:**
 
-```math
-\text{hash}(v) = \text{combine}(\text{hash}(\text{child}_1), \text{hash}(\text{child}_2), \ldots)
-
-```
+$$\text{hash}(v) = \text{combine}(\text{hash}(\text{child}_1), \text{hash}(\text{child}_2), \ldots)$$
 
 **Common formula:**
 
-```math
-\text{hash}(v) = 1 + \sum_{c \in \text{children}(v)} p^{\text{hash}(c)}
-
-```
+$$\text{hash}(v) = 1 + \sum_{c \in \text{children}(v)} p^{\text{hash}(c)}$$
 
 where $p$ is a large prime.
 

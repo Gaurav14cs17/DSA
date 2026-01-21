@@ -35,10 +35,7 @@ permalink: /10_graphs/07_mst/
 
 **Minimum Spanning Tree:** Spanning tree with minimum total edge weight.
 
-```math
-\text{MST weight} = \sum_{e \in T} w(e) \text{ is minimized}
-
-```
+$$\text{MST weight} = \sum_{e \in T} w(e) \text{ is minimized}$$
 
 ---
 
@@ -61,10 +58,7 @@ permalink: /10_graphs/07_mst/
 
 3. Stop when $V - 1$ edges added
 
-```math
-T = O(E \log E) = O(E \log V)
-
-```
+$$T = O(E \log E) = O(E \log V)$$
 
 ---
 
@@ -76,11 +70,8 @@ T = O(E \log E) = O(E \log V)
 
 3. Repeat until all vertices included
 
-```math
-T = O((V + E) \log V) \text{ with binary heap}
-T = O(E + V \log V) \text{ with Fibonacci heap}
-
-```
+$$T = O((V + E) \log V) \text{ with binary heap}
+T = O(E + V \log V) \text{ with Fibonacci heap}$$
 
 ---
 

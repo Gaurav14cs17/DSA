@@ -61,10 +61,7 @@ Every recursive function needs:
 
 One recursive call per function invocation:
 
-```math
-T(n) = T(n-1) + O(1) = O(n)
-
-```
+$$T(n) = T(n-1) + O(1) = O(n)$$
 
 **Examples:** Factorial, sum, list traversal.
 
@@ -99,10 +96,7 @@ Each call creates a stack frame storing:
 
 - Parameters
 
-```math
-\text{Space} = O(\text{max depth})
-
-```
+$$\text{Space} = O(\text{max depth})$$
 
 ---
 

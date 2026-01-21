@@ -38,10 +38,7 @@ permalink: /30_number_theory/10_lucas_theorem/
 
 **Statement:** For prime p and non-negative integers m, n:
 
-```math
-\binom{m}{n} \equiv \prod_{i=0}^{k} \binom{m_i}{n_i} \pmod{p}
-
-```
+$$\binom{m}{n} \equiv \prod_{i=0}^{k} \binom{m_i}{n_i} \pmod{p}$$
 
 where $m = \sum m_i p^i$ and $n = \sum n_i p^i$ are base-p representations.
 

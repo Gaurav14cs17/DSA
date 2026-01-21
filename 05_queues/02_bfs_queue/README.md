@@ -65,10 +65,7 @@ permalink: /05_queues/02_bfs_queue/
 
 ### 2️⃣ BFS Complexity Analysis
 
-```math
-T(V, E) = O(V + E)
-
-```
+$$T(V, E) = O(V + E)$$
 
 **Breakdown:**
 
@@ -84,10 +81,7 @@ T(V, E) = O(V + E)
 
 **Tree Levels:**
 
-```math
-\text{Level } k = \{v : \text{dist}(root, v) = k\}
-
-```
+$$\text{Level } k = \{v : \text{dist}(root, v) = k\}$$
 
 **Processing:** Separate levels by tracking queue size.
 
@@ -109,10 +103,7 @@ Level 2: [grandchildren]
 
 **Formula:**
 
-```math
-d[v] = \min_{s \in \text{sources}} \text{dist}(s, v)
-
-```
+$$d[v] = \min_{s \in \text{sources}} \text{dist}(s, v)$$
 
 ---
 
@@ -120,17 +111,11 @@ d[v] = \min_{s \in \text{sources}} \text{dist}(s, v)
 
 **4-directional movement:**
 
-```math
-\text{neighbors}(x, y) = \{(x±1, y), (x, y±1)\}
-
-```
+$$\text{neighbors}(x, y) = \{(x±1, y), (x, y±1)\}$$
 
 **8-directional movement:**
 
-```math
-\text{neighbors}(x, y) = \{(x+dx, y+dy) : dx, dy \in \{-1, 0, 1\}, (dx, dy) \neq (0, 0)\}
-
-```
+$$\text{neighbors}(x, y) = \{(x+dx, y+dy) : dx, dy \in \{-1, 0, 1\}, (dx, dy) \neq (0, 0)\}$$
 
 ---
 
@@ -138,11 +123,8 @@ d[v] = \min_{s \in \text{sources}} \text{dist}(s, v)
 
 For problems with additional state (e.g., keys collected):
 
-```math
-\text{state} = (\text{position}, \text{extra_info})
-d[(x, y, state)] = \text{shortest path to } (x, y) \text{ with given state}
-
-```
+$$\text{state} = (\text{position}, \text{extra_info})
+d[(x, y, state)] = \text{shortest path to } (x, y) \text{ with given state}$$
 
 ---
 

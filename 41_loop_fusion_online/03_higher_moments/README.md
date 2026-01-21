@@ -43,47 +43,29 @@ For a random variable $X$ with mean $\mu$:
 
 **First Moment (Mean):**
 
-```math
-\mu = E[X]
-
-```
+$$\mu = E[X]$$
 
 **Second Central Moment (Variance):**
 
-```math
-\mu_2 = E[(X - \mu)^2] = \sigma^2
-
-```
+$$\mu_2 = E[(X - \mu)^2] = \sigma^2$$
 
 **Third Central Moment (Skewness):**
 
-```math
-\mu_3 = E[(X - \mu)^3]
-
-```
+$$\mu_3 = E[(X - \mu)^3]$$
 
 **Fourth Central Moment (Kurtosis):**
 
-```math
-\mu_4 = E[(X - \mu)^4]
-
-```
+$$\mu_4 = E[(X - \mu)^4]$$
 
 ### Standardized Moments
 
 **Skewness (Third Standardized Moment):**
 
-```math
-\gamma_1 = \frac{\mu_3}{\sigma^3} = \frac{E[(X - \mu)^3]}{(E[(X - \mu)^2])^{3/2}}
-
-```
+$$\gamma_1 = \frac{\mu_3}{\sigma^3} = \frac{E[(X - \mu)^3]}{(E[(X - \mu)^2])^{3/2}}$$
 
 **Excess Kurtosis (Fourth Standardized Moment):**
 
-```math
-\gamma_2 = \frac{\mu_4}{\sigma^4} - 3
-
-```
+$$\gamma_2 = \frac{\mu_4}{\sigma^4} - 3$$
 
 ---
 
@@ -231,10 +213,7 @@ print(f"Kurtosis: {stats.get_kurtosis():.2f}")  # Positive (heavy tail)
 
 **Theorem (Third Moment Update):**
 
-```math
-M_3^{(n)} = M_3^{(n-1)} + \frac{(n-1)(n-2)}{n^2}\delta_n^3 - \frac{3}{n}M_2^{(n-1)}\delta_n
-
-```
+$$M_3^{(n)} = M_3^{(n-1)} + \frac{(n-1)(n-2)}{n^2}\delta_n^3 - \frac{3}{n}M_2^{(n-1)}\delta_n$$
 
 where $\delta_n = x_n - \bar{x}_{n-1}$.
 
@@ -242,42 +221,27 @@ where $\delta_n = x_n - \bar{x}_{n-1}$.
 
 **Step 1: Write out the definition**
 
-```math
-M_3^{(n)} = \sum_{i=1}^{n} (x_i - \bar{x}_n)^3
-
-```
+$$M_3^{(n)} = \sum_{i=1}^{n} (x_i - \bar{x}_n)^3$$
 
 Split into old and new:
 
-```math
-= \sum_{i=1}^{n-1} (x_i - \bar{x}_n)^3 + (x_n - \bar{x}_n)^3
-
-```
+$$= \sum_{i=1}^{n-1} (x_i - \bar{x}_n)^3 + (x_n - \bar{x}_n)^3$$
 
 **Step 2: Adjust old deviations**
 
 For $i < n$:
 
-```math
-x_i - \bar{x}_n = (x_i - \bar{x}_{n-1}) - \frac{\delta_n}{n}
-
-```
+$$x_i - \bar{x}_n = (x_i - \bar{x}_{n-1}) - \frac{\delta_n}{n}$$
 
 Let $y_i = x_i - \bar{x}_{n-1}$ for simplicity.
 
 **Step 3: Apply binomial theorem**
 
-```math
-(y_i - \frac{\delta_n}{n})^3 = y_i^3 - 3y_i^2 \frac{\delta_n}{n} + 3y_i \frac{\delta_n^2}{n^2} - \frac{\delta_n^3}{n^3}
-
-```
+$$(y_i - \frac{\delta_n}{n})^3 = y_i^3 - 3y_i^2 \frac{\delta_n}{n} + 3y_i \frac{\delta_n^2}{n^2} - \frac{\delta_n^3}{n^3}$$
 
 **Step 4: Sum over old elements**
 
-```math
-\sum_{i=1}^{n-1} (x_i - \bar{x}_n)^3 = \sum_{i=1}^{n-1} y_i^3 - \frac{3\delta_n}{n}\sum_{i=1}^{n-1} y_i^2 + \frac{3\delta_n^2}{n^2}\sum_{i=1}^{n-1} y_i - \frac{(n-1)\delta_n^3}{n^3}
-
-```
+$$\sum_{i=1}^{n-1} (x_i - \bar{x}_n)^3 = \sum_{i=1}^{n-1} y_i^3 - \frac{3\delta_n}{n}\sum_{i=1}^{n-1} y_i^2 + \frac{3\delta_n^2}{n^2}\sum_{i=1}^{n-1} y_i - \frac{(n-1)\delta_n^3}{n^3}$$
 
 **Step 5: Use properties of mean**
 
@@ -289,40 +253,25 @@ Let $y_i = x_i - \bar{x}_{n-1}$ for simplicity.
 
 So:
 
-```math
-= M_3^{(n-1)} - \frac{3\delta_n}{n}M_2^{(n-1)} - \frac{(n-1)\delta_n^3}{n^3}
-
-```
+$$= M_3^{(n-1)} - \frac{3\delta_n}{n}M_2^{(n-1)} - \frac{(n-1)\delta_n^3}{n^3}$$
 
 **Step 6: Handle new element**
 
-```math
-(x_n - \bar{x}_n)^3 = \left(\delta_n - \frac{\delta_n}{n}\right)^3 = \left(\frac{(n-1)\delta_n}{n}\right)^3 = \frac{(n-1)^3\delta_n^3}{n^3}
-
-```
+$$(x_n - \bar{x}_n)^3 = \left(\delta_n - \frac{\delta_n}{n}\right)^3 = \left(\frac{(n-1)\delta_n}{n}\right)^3 = \frac{(n-1)^3\delta_n^3}{n^3}$$
 
 **Step 7: Combine**
 
-```math
-M_3^{(n)} = M_3^{(n-1)} - \frac{3\delta_n}{n}M_2^{(n-1)} - \frac{(n-1)\delta_n^3}{n^3} + \frac{(n-1)^3\delta_n^3}{n^3}
-
-```
+$$M_3^{(n)} = M_3^{(n-1)} - \frac{3\delta_n}{n}M_2^{(n-1)} - \frac{(n-1)\delta_n^3}{n^3} + \frac{(n-1)^3\delta_n^3}{n^3}$$
 
 **Step 8: Simplify the $\delta_n^3$ terms**
 
-```math
--\frac{(n-1)\delta_n^3}{n^3} + \frac{(n-1)^3\delta_n^3}{n^3} = \frac{(n-1)\delta_n^3}{n^3}[(n-1)^2 - 1]
+$$-\frac{(n-1)\delta_n^3}{n^3} + \frac{(n-1)^3\delta_n^3}{n^3} = \frac{(n-1)\delta_n^3}{n^3}[(n-1)^2 - 1]
 = \frac{(n-1)\delta_n^3}{n^3}[n^2 - 2n + 1 - 1] = \frac{(n-1)\delta_n^3}{n^3} \cdot n(n-2)
-= \frac{(n-1)(n-2)\delta_n^3}{n^2}
-
-```
+= \frac{(n-1)(n-2)\delta_n^3}{n^2}$$
 
 **Final result:**
 
-```math
-M_3^{(n)} = M_3^{(n-1)} + \frac{(n-1)(n-2)}{n^2}\delta_n^3 - \frac{3}{n}M_2^{(n-1)}\delta_n \quad \blacksquare
-
-```
+$$M_3^{(n)} = M_3^{(n-1)} + \frac{(n-1)(n-2)}{n^2}\delta_n^3 - \frac{3}{n}M_2^{(n-1)}\delta_n \quad \blacksquare$$
 
 ---
 
@@ -358,19 +307,13 @@ Notice the pattern in the recurrences:
 
 **Second moment:**
 
-```math
-M_2^{(n)} = M_2^{(n-1)} + \delta_n \cdot \delta_n'
-
-```
+$$M_2^{(n)} = M_2^{(n-1)} + \delta_n \cdot \delta_n'$$
 
 - Two factors of $\delta$
 
 **Third moment:**
 
-```math
-M_3^{(n)} = M_3^{(n-1)} + \frac{(n-1)(n-2)}{n^2}\delta_n^3 - \frac{3}{n}M_2^{(n-1)}\delta_n
-
-```
+$$M_3^{(n)} = M_3^{(n-1)} + \frac{(n-1)(n-2)}{n^2}\delta_n^3 - \frac{3}{n}M_2^{(n-1)}\delta_n$$
 
 - Three factors of $\delta$ in first term
 
@@ -378,10 +321,7 @@ M_3^{(n)} = M_3^{(n-1)} + \frac{(n-1)(n-2)}{n^2}\delta_n^3 - \frac{3}{n}M_2^{(n-
 
 **Fourth moment:**
 
-```math
-M_4^{(n)} = M_4^{(n-1)} + \frac{(n-1)(n^2-3n+3)}{n^3}\delta_n^4 + \frac{6}{n^2}M_2^{(n-1)}\delta_n^2 - \frac{4}{n}M_3^{(n-1)}\delta_n
-
-```
+$$M_4^{(n)} = M_4^{(n-1)} + \frac{(n-1)(n^2-3n+3)}{n^3}\delta_n^4 + \frac{6}{n^2}M_2^{(n-1)}\delta_n^2 - \frac{4}{n}M_3^{(n-1)}\delta_n$$
 
 - Four factors of $\delta$ in first term
 

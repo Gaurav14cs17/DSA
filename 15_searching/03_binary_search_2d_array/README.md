@@ -35,11 +35,8 @@ permalink: /15_searching/03_binary_search_2d_array/
 
 If matrix is row-major sorted:
 
-```math
-\text{1D index } k \Leftrightarrow \text{2D } (k / n, k \% n)
-T = O(\log(m \times n))
-
-```
+$$\text{1D index } k \Leftrightarrow \text{2D } (k / n, k \% n)
+T = O(\log(m \times n))$$
 
 ---
 
@@ -53,10 +50,7 @@ For row-sorted and column-sorted matrix:
 
 - If target > current: go down
 
-```math
-T = O(m + n)
-
-```
+$$T = O(m + n)$$
 
 ---
 
@@ -64,11 +58,8 @@ T = O(m + n)
 
 **Binary search on value, count elements ≤ mid:**
 
-```math
-\text{count}(x) = \sum_{i} \text{elements in row } i \leq x
-T = O(n \log(\max - \min))
-
-```
+$$\text{count}(x) = \sum_{i} \text{elements in row } i \leq x
+T = O(n \log(\max - \min))$$
 
 ---
 

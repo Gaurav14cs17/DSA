@@ -40,10 +40,7 @@ permalink: /30_number_theory/04_divisors/
 
 **Formula:** If $n = p_1^{a_1} \cdots p_k^{a_k}$:
 
-```math
-\tau(n) = (a_1 + 1)(a_2 + 1) \cdots (a_k + 1)
-
-```
+$$\tau(n) = (a_1 + 1)(a_2 + 1) \cdots (a_k + 1)$$
 
 **Examples:**
 
@@ -59,10 +56,7 @@ permalink: /30_number_theory/04_divisors/
 
 **Formula:** If $n = p_1^{a_1} \cdots p_k^{a_k}$:
 
-```math
-\sigma(n) = \prod_{i=1}^{k} \frac{p_i^{a_i+1} - 1}{p_i - 1}
-
-```
+$$\sigma(n) = \prod_{i=1}^{k} \frac{p_i^{a_i+1} - 1}{p_i - 1}$$
 
 **Examples:**
 

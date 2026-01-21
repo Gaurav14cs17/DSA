@@ -48,10 +48,7 @@ permalink: /06_hash_tables/03_set_operations/
 
 ### 1️⃣ Set Definition
 
-```math
-S = \{x : x \text{ is unique}\}
-
-```
+$$S = \{x : x \text{ is unique}\}$$
 
 **Hash Set Property:** No duplicates, O(1) lookup.
 
@@ -73,10 +70,7 @@ S = \{x : x \text{ is unique}\}
 
 **Problem:** Check if any element appears more than once.
 
-```math
-\exists i \neq j: a[i] = a[j]
-
-```
+$$\exists i \neq j: a[i] = a[j]$$
 
 **Set Solution:** If $|set(a)| < n$, duplicates exist.
 
@@ -84,17 +78,11 @@ S = \{x : x \text{ is unique}\}
 
 ### 4️⃣ Intersection of Arrays
 
-```math
-A \cap B = \{x : x \in A \land x \in B\}
-
-```
+$$A \cap B = \{x : x \in A \land x \in B\}$$
 
 **Multiplicity (for multisets):**
 
-```math
-\text{count}_{A \cap B}(x) = \min(\text{count}_A(x), \text{count}_B(x))
-
-```
+$$\text{count}_{A \cap B}(x) = \min(\text{count}_A(x), \text{count}_B(x))$$
 
 ---
 

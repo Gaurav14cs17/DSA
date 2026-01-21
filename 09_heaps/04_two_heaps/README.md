@@ -39,24 +39,17 @@ permalink: /09_heaps/04_two_heaps/
 
 **Invariants:**
 
-```math
-
-|left| = |right| \text{ or } |left| = |right| + 1
-\max(left) \leq \min(right)
-
-```
+$$|left| = |right| \text{ or } |left| = |right| + 1
+\max(left) \leq \min(right)$$
 
 ---
 
 ### 2️⃣ Median Formula
 
-```math
-\text{median} = \begin{cases}
+$$\text{median} = \begin{cases}
 \max(left) & \text{if } |left| > |right| \\
 \frac{\max(left) + \min(right)}{2} & \text{if } |left| = |right|
-\end{cases}
-
-```
+\end{cases}$$
 
 ---
 

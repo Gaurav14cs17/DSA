@@ -49,10 +49,7 @@ permalink: /30_number_theory/09_catalan_numbers/01_basic_catalan/
 
 The **n-th Catalan number** is:
 
-```math
-C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)! \cdot n!}
-
-```
+$$C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)! \cdot n!}$$
 
 ### First Few Values
 
@@ -74,17 +71,11 @@ C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)! \cdot n!}
 
 **Direct Recurrence:**
 
-```math
-C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
-
-```
+$$C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}$$
 
 **Closed Form Recurrence:**
 
-```math
-C_n = \frac{2(2n-1)}{n+1} \cdot C_{n-1}
-
-```
+$$C_n = \frac{2(2n-1)}{n+1} \cdot C_{n-1}$$
 
 ---
 

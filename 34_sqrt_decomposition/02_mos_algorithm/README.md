@@ -53,10 +53,7 @@ permalink: /34_sqrt_decomposition/02_mos_algorithm/
 
 ### Time Complexity
 
-```math
-T = O(n\sqrt{n} + q\sqrt{n}) = O((n+q)\sqrt{n})
-
-```
+$$T = O(n\sqrt{n} + q\sqrt{n}) = O((n+q)\sqrt{n})$$
 
 ---
 

@@ -33,10 +33,7 @@ permalink: /02_strings/01_basic_string/
 
 **Definition:** For string $S[0..n-1]$, reverse $S'$:
 
-```math
-\boxed{S'[i] = S[n-1-i]}
-
-```
+$$\boxed{S'[i] = S[n-1-i]}$$
 
 **Two-Pointer Proof:**
 
@@ -54,10 +51,7 @@ permalink: /02_strings/01_basic_string/
 
 For string over lowercase alphabet:
 
-```math
-f[c] = |\{i : S[i] = c\}|
-
-```
+$$f[c] = |\{i : S[i] = c\}|$$
 
 **Space Complexity:** $O(|\Sigma|)$ where $|\Sigma| = 26$
 

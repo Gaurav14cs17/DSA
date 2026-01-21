@@ -33,10 +33,7 @@ permalink: /09_heaps/02_top_k_problems/
 
 **Finding K largest:** Use **Min-Heap** of size k.
 
-```math
-\text{Invariant: Heap contains k largest seen so far}
-
-```
+$$\text{Invariant: Heap contains k largest seen so far}$$
 
 **Why Min-Heap?** We need to quickly remove the smallest of top-k.
 
@@ -59,10 +56,7 @@ permalink: /09_heaps/02_top_k_problems/
 
 **Maintain heap of size k:**
 
-```math
-\text{answer} = \text{heap}[0] \text{ (root of min-heap)}
-
-```
+$$\text{answer} = \text{heap}[0] \text{ (root of min-heap)}$$
 
 ---
 
@@ -94,10 +88,7 @@ permalink: /09_heaps/02_top_k_problems/
 
 - Max-Heap root = largest → easy to remove!
 
-```math
-\boxed{\text{Keep opposite of what you want to remove!}}
-
-```
+$$\boxed{\text{Keep opposite of what you want to remove!}}$$
 
 ---
 
@@ -115,10 +106,7 @@ permalink: /09_heaps/02_top_k_problems/
 
 **When frequency range is small:**
 
-```math
-\text{frequencies} \in [0, n] \implies \text{use bucket sort for } O(n)
-
-```
+$$\text{frequencies} \in [0, n] \implies \text{use bucket sort for } O(n)$$
 
 **Bucket i:** contains all elements with frequency i
 

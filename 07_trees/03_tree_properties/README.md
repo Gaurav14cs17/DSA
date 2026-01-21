@@ -35,13 +35,10 @@ permalink: /07_trees/03_tree_properties/
 
 **Definition:** Longest path from root to any leaf.
 
-```math
-h(node) = \begin{cases}
+$$h(node) = \begin{cases}
 0 & \text{if node is null} \\
 1 + \max(h(left), h(right)) & \text{otherwise}
-\end{cases}
-
-```
+\end{cases}$$
 
 ---
 
@@ -49,21 +46,15 @@ h(node) = \begin{cases}
 
 **Max Depth:** Longest root-to-leaf path.
 
-```math
-\text{maxDepth} = h(root)
-
-```
+$$\text{maxDepth} = h(root)$$
 
 **Min Depth:** Shortest root-to-leaf path.
 
-```math
-\text{minDepth}(node) = \begin{cases}
+$$\text{minDepth}(node) = \begin{cases}
 0 & \text{if null} \\
 1 + \text{minDepth}(child) & \text{if one child null} \\
 1 + \min(\text{minDepth}(left), \text{minDepth}(right)) & \text{otherwise}
-\end{cases}
-
-```
+\end{cases}$$
 
 ---
 
@@ -71,11 +62,7 @@ h(node) = \begin{cases}
 
 **Definition:** Height difference of subtrees ≤ 1 for all nodes.
 
-```math
-
-|h(left) - h(right)| \leq 1 \quad \forall \text{nodes}
-
-```
+$$|h(left) - h(right)| \leq 1 \quad \forall \text{nodes}$$
 
 **AVL Property:** Self-balancing BST maintains this.
 
@@ -85,10 +72,7 @@ h(node) = \begin{cases}
 
 **Definition:** Longest path between any two nodes.
 
-```math
-\text{diameter} = \max_{v \in T} (h(v.left) + h(v.right))
-
-```
+$$\text{diameter} = \max_{v \in T} (h(v.left) + h(v.right))$$
 
 **Key Insight:** Diameter passes through some node as the highest point.
 
@@ -98,17 +82,11 @@ h(node) = \begin{cases}
 
 **Definition:** Mirror image of itself.
 
-```math
-\text{symmetric}(T) \iff \text{mirror}(T_L, T_R)
-
-```
+$$\text{symmetric}(T) \iff \text{mirror}(T_L, T_R)$$
 
 Where:
 
-```math
-\text{mirror}(A, B) = (A.val = B.val) \land \text{mirror}(A_L, B_R) \land \text{mirror}(A_R, B_L)
-
-```
+$$\text{mirror}(A, B) = (A.val = B.val) \land \text{mirror}(A_L, B_R) \land \text{mirror}(A_R, B_L)$$
 
 ---
 
@@ -118,17 +96,11 @@ Where:
 
 **Node Count Range:**
 
-```math
-2^h \leq n \leq 2^{h+1} - 1
-
-```
+$$2^h \leq n \leq 2^{h+1} - 1$$
 
 **Counting Nodes:** Use binary search on last level.
 
-```math
-\text{Time: } O(\log^2 n)
-
-```
+$$\text{Time: } O(\log^2 n)$$
 
 ---
 

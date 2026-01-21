@@ -53,10 +53,7 @@ permalink: /24_graph_algorithms/08_2sat/
 
 **Input:** Boolean formula in CNF with clauses of size ≤ 2:
 
-```math
-(x_1 \lor x_2) \land (\neg x_1 \lor x_3) \land (\neg x_2 \lor \neg x_3) \land \ldots
-
-```
+$$(x_1 \lor x_2) \land (\neg x_1 \lor x_3) \land (\neg x_2 \lor \neg x_3) \land \ldots$$
 
 **Output:** Assignment of variables to TRUE/FALSE, or "UNSATISFIABLE"
 
@@ -84,10 +81,7 @@ Clause $(a \lor b)$ becomes:
 
 **Key theorem:** 2-SAT is satisfiable **iff** for all variables $x_i$:
 
-```math
-x_i \text{ and } \neg x_i \text{ are in different SCCs}
-
-```
+$$x_i \text{ and } \neg x_i \text{ are in different SCCs}$$
 
 **Why?** If in same SCC, then $x_i \Rightarrow \neg x_i$ and $\neg x_i \Rightarrow x_i$ (contradiction).
 

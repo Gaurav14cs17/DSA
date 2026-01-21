@@ -35,10 +35,7 @@ permalink: /01_arrays/01_basic_operations/
 
 **Proof:**
 
-```math
-\text{Address}(A[i]) = \text{Base} + i \times \text{sizeof(element)}
-
-```
+$$\text{Address}(A[i]) = \text{Base} + i \times \text{sizeof(element)}$$
 
 Operations: 1 multiplication + 1 addition = constant time ∎
 
@@ -59,10 +56,7 @@ Operations: 1 multiplication + 1 addition = constant time ∎
 
 **Convergence Formula:**
 
-```math
-\text{Iterations} = \frac{n}{2} \text{ (for symmetric operations)}
-
-```
+$$\text{Iterations} = \frac{n}{2} \text{ (for symmetric operations)}$$
 
 ---
 
@@ -70,15 +64,12 @@ Operations: 1 multiplication + 1 addition = constant time ∎
 
 **Three-way partition maintains:**
 
-```math
-\begin{aligned}
+$$\begin{aligned}
 A[0..low-1] &= \{0\} \\
 A[low..mid-1] &= \{1\} \\
 A[mid..high] &= \text{unknown} \\
 A[high+1..n-1] &= \{2\}
-\end{aligned}
-
-```
+\end{aligned}$$
 
 **Correctness Proof:**
 
@@ -94,17 +85,11 @@ A[high+1..n-1] &= \{2\}
 
 **Right rotation by k positions:**
 
-```math
-A'[i] = A[(i - k + n) \mod n]
-
-```
+$$A'[i] = A[(i - k + n) \mod n]$$
 
 **Reversal Algorithm Correctness:**
 
-```math
-\text{Rev}(\text{Rev}(A[0..n-k-1]) \| \text{Rev}(A[n-k..n-1])) = A[n-k..n-1] \| A[0..n-k-1]
-
-```
+$$\text{Rev}(\text{Rev}(A[0..n-k-1]) \| \text{Rev}(A[n-k..n-1])) = A[n-k..n-1] \| A[0..n-k-1]$$
 
 **Proof:**
 
@@ -134,11 +119,8 @@ A'[i] = A[(i - k + n) \mod n]
 
 **Meeting Point Formula:**
 
-```math
-\text{slow travels: } \mu + \lambda k_1
-\text{fast travels: } \mu + \lambda k_2 = 2(\mu + \lambda k_1)
-
-```
+$$\text{slow travels: } \mu + \lambda k_1
+\text{fast travels: } \mu + \lambda k_2 = 2(\mu + \lambda k_1)$$
 
 Where $\mu$ = distance to cycle, $\lambda$ = cycle length.
 

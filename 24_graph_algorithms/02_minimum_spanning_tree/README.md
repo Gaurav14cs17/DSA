@@ -45,10 +45,7 @@ permalink: /24_graph_algorithms/02_minimum_spanning_tree/
 
 **Minimum Spanning Tree:** Spanning tree with minimum total edge weight.
 
-```math
-\text{MST}(G) = \arg\min_{T \text{ spanning}} \sum_{e \in T} w(e)
-
-```
+$$\text{MST}(G) = \arg\min_{T \text{ spanning}} \sum_{e \in T} w(e)$$
 
 **Properties:**
 
@@ -95,10 +92,7 @@ This property proves correctness of both Kruskal's and Prim's.
 
 **Time Complexity:**
 
-```math
-T = O(E \log E) = O(E \log V)
-
-```
+$$T = O(E \log E) = O(E \log V)$$
 
 - Sorting: $O(E \log E)$
 

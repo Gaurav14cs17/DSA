@@ -49,10 +49,7 @@ permalink: /26_sweep_line/01_interval_sweep/
 
 **Active Count at time $t$:**
 
-```math
-\text{active}(t) = \sum_{\substack{i : s_i \leq t < e_i}} 1
-
-```
+$$\text{active}(t) = \sum_{\substack{i : s_i \leq t < e_i}} 1$$
 
 ---
 
@@ -78,17 +75,11 @@ permalink: /26_sweep_line/01_interval_sweep/
 
 **Intervals Overlap:** Two intervals $[a, b]$ and $[c, d]$ overlap iff:
 
-```math
-\max(a, c) < \min(b, d)
-
-```
+$$\max(a, c) < \min(b, d)$$
 
 Equivalently:
 
-```math
-a < d \land c < b
-
-```
+$$a < d \land c < b$$
 
 **Proof:**
 
@@ -175,10 +166,7 @@ a < d \land c < b
 
 **Difference Array:** For range updates $[l, r] += val$:
 
-```math
-\Delta[i] = A[i] - A[i-1]
-
-```
+$$\Delta[i] = A[i] - A[i-1]$$
 
 **Update:** $\Delta[l] += val, \Delta[r+1] -= val$
 

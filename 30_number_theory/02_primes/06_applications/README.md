@@ -38,10 +38,7 @@ permalink: /30_number_theory/02_primes/06_applications/
 
 A function $f: \mathbb{Z}^+ \to \mathbb{C}$ is **multiplicative** if:
 
-```math
-f(mn) = f(m) \cdot f(n) \quad \text{when } \gcd(m, n) = 1
-
-```
+$$f(mn) = f(m) \cdot f(n) \quad \text{when } \gcd(m, n) = 1$$
 
 **Important Multiplicative Functions:**
 
@@ -58,14 +55,11 @@ f(mn) = f(m) \cdot f(n) \quad \text{when } \gcd(m, n) = 1
 
 **Definition:**
 
-```math
-\mu(n) = \begin{cases}
+$$\mu(n) = \begin{cases}
 1 & \text{if } n = 1 \\
 (-1)^k & \text{if } n \text{ is product of } k \text{ distinct primes} \\
 0 & \text{if } n \text{ has squared prime factor}
-\end{cases}
-
-```
+\end{cases}$$
 
 **Key Property (Möbius Inversion):**
 If $g(n) = \sum_{d|n} f(d)$, then $f(n) = \sum_{d|n} \mu(d) \cdot g(n/d)$

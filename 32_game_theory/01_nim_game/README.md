@@ -53,10 +53,7 @@ permalink: /32_game_theory/01_nim_game/
 
 **Theorem:** A Nim position with pile sizes $a_1, a_2, \ldots, a_n$ is a **losing position** (L-position) if and only if:
 
-```math
-a_1 \oplus a_2 \oplus \cdots \oplus a_n = 0
-
-```
+$$a_1 \oplus a_2 \oplus \cdots \oplus a_n = 0$$
 
 where $\oplus$ denotes bitwise XOR.
 
@@ -92,15 +89,12 @@ Therefore, from W-position, can always move to L-position. $\blacksquare$
 
 **XOR Properties:**
 
-```math
-\begin{align}
+$$\begin{align}
 a \oplus a &= 0 \\
 a \oplus 0 &= a \\
 a \oplus b &= b \oplus a \quad \text{(commutative)} \\
 (a \oplus b) \oplus c &= a \oplus (b \oplus c) \quad \text{(associative)}
-\end{align}
-
-```
+\end{align}$$
 
 **Binary XOR:**
 

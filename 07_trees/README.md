@@ -32,10 +32,7 @@ permalink: /07_trees/
 
 For a tree with $n$ nodes:
 
-```math
-\boxed{\text{edges} = n - 1}
-
-```
+$$\boxed{\text{edges} = n - 1}$$
 
 **Proof:** Each node except root has exactly one parent edge.
 
@@ -47,17 +44,11 @@ For a tree with $n$ nodes:
 
 **Maximum nodes in tree of height $h$:**
 
-```math
-\boxed{\sum_{k=0}^{h} 2^k = 2^{h+1} - 1}
-
-```
+$$\boxed{\sum_{k=0}^{h} 2^k = 2^{h+1} - 1}$$
 
 **Minimum height for $n$ nodes:**
 
-```math
-h_{min} = \lfloor \log_2 n \rfloor
-
-```
+$$h_{min} = \lfloor \log_2 n \rfloor$$
 
 ---
 
@@ -85,10 +76,7 @@ h_{min} = \lfloor \log_2 n \rfloor
 
 ### 5️⃣ Tree Height Recurrence
 
-```math
-\boxed{h(node) = 1 + \max(h(left), h(right))}
-
-```
+$$\boxed{h(node) = 1 + \max(h(left), h(right))}$$
 
 Base: $h(\text{null}) = 0$ or $h(\text{leaf}) = 0$
 
@@ -98,10 +86,7 @@ Base: $h(\text{null}) = 0$ or $h(\text{leaf}) = 0$
 
 Diameter passes through some node $v$:
 
-```math
-\boxed{\text{diameter} = \max_{v} (h(v.left) + h(v.right))}
-
-```
+$$\boxed{\text{diameter} = \max_{v} (h(v.left) + h(v.right))}$$
 
 ---
 
@@ -109,14 +94,11 @@ Diameter passes through some node $v$:
 
 For nodes $p$ and $q$ in a binary tree rooted at $r$:
 
-```math
-\text{LCA}(p, q) = \begin{cases}
+$$\text{LCA}(p, q) = \begin{cases}
 r & \text{if } p \in T_L \text{ and } q \in T_R \\
 \text{LCA}(r.left, p, q) & \text{if } p, q \in T_L \\
 \text{LCA}(r.right, p, q) & \text{if } p, q \in T_R
-\end{cases}
-
-```
+\end{cases}$$
 
 Where $T_L, T_R$ are left and right subtrees.
 
@@ -126,17 +108,11 @@ Where $T_L, T_R$ are left and right subtrees.
 
 Number of structurally unique BSTs with $n$ nodes:
 
-```math
-\boxed{C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}}
-
-```
+$$\boxed{C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}}$$
 
 **Recurrence:**
 
-```math
-C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
-
-```
+$$C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}$$
 
 First values: $C_0=1, C_1=1, C_2=2, C_3=5, C_4=14, \ldots$
 

@@ -61,10 +61,7 @@ permalink: /27_advanced_trees/05_b_trees/
 
 **Internal node with $k$ children:**
 
-```math
-[P_0, K_1, P_1, K_2, P_2, \ldots, K_{k-1}, P_{k-1}]
-
-```
+$$[P_0, K_1, P_1, K_2, P_2, \ldots, K_{k-1}, P_{k-1}]$$
 
 where:
 

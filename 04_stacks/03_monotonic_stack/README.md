@@ -71,17 +71,11 @@ permalink: /04_stacks/03_monotonic_stack/
 
 **Monotonically Decreasing Stack:**
 
-```math
-\forall i < j: S[i] \geq S[j]
-
-```
+$$\forall i < j: S[i] \geq S[j]$$
 
 **Monotonically Increasing Stack:**
 
-```math
-\forall i < j: S[i] \leq S[j]
-
-```
+$$\forall i < j: S[i] \leq S[j]$$
 
 ---
 
@@ -89,10 +83,7 @@ permalink: /04_stacks/03_monotonic_stack/
 
 **Definition:**
 
-```math
-\text{NGE}(i) = \min\{j : j > i \land A[j] > A[i]\}
-
-```
+$$\text{NGE}(i) = \min\{j : j > i \land A[j] > A[i]\}$$
 
 **Visual:**
 
@@ -128,10 +119,7 @@ Index 4: A[4]=3, no greater element
 
 **Area Formula:**
 
-```math
-\text{Area}(i) = h[i] \times (R[i] - L[i] - 1)
-
-```
+$$\text{Area}(i) = h[i] \times (R[i] - L[i] - 1)$$
 
 Where:
 
@@ -161,10 +149,7 @@ Width=2, Height=5, Area=10
 
 **Problem:** Days until warmer temperature.
 
-```math
-\text{answer}[i] = \text{NGE_index}(i) - i
-
-```
+$$\text{answer}[i] = \text{NGE_index}(i) - i$$
 
 ---
 
@@ -172,10 +157,7 @@ Width=2, Height=5, Area=10
 
 **Contribution Technique:**
 
-```math
-\text{contribution}(i) = A[i] \times \text{left_count} \times \text{right_count}
-
-```
+$$\text{contribution}(i) = A[i] \times \text{left_count} \times \text{right_count}$$
 
 Where:
 
@@ -189,10 +171,7 @@ Where:
 
 **Water at position $i$:**
 
-```math
-\text{water}[i] = \min(\max_{j \leq i} h[j], \max_{j \geq i} h[j]) - h[i]
-
-```
+$$\text{water}[i] = \min(\max_{j \leq i} h[j], \max_{j \geq i} h[j]) - h[i]$$
 
 **Stack approach:** Find bounded regions.
 

@@ -33,10 +33,7 @@ permalink: /10_graphs/05_topological_sort/
 
 **Topological ordering** of DAG $G = (V, E)$:
 
-```math
-\text{Linear ordering of } V \text{ such that } (u, v) \in E \Rightarrow u \text{ appears before } v
-
-```
+$$\text{Linear ordering of } V \text{ such that } (u, v) \in E \Rightarrow u \text{ appears before } v$$
 
 **Exists iff:** Graph is a DAG (Directed Acyclic Graph).
 
@@ -52,10 +49,7 @@ permalink: /10_graphs/05_topological_sort/
 
 4. If any vertex becomes in-degree 0, add to queue
 
-```math
-T = O(V + E)
-
-```
+$$T = O(V + E)$$
 
 ---
 
@@ -63,10 +57,7 @@ T = O(V + E)
 
 **Post-order DFS gives reverse topological order.**
 
-```math
-\text{topological order} = \text{reverse}(\text{finish order})
-
-```
+$$\text{topological order} = \text{reverse}(\text{finish order})$$
 
 ---
 
@@ -74,10 +65,7 @@ T = O(V + E)
 
 For DAG with $n$ vertices and $e$ edges:
 
-```math
-\text{# of orders} \geq 1 \text{ if DAG}
-
-```
+$$\text{# of orders} \geq 1 \text{ if DAG}$$
 
 Can be exponentially many (e.g., independent vertices).
 

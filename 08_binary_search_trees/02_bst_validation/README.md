@@ -43,21 +43,15 @@ permalink: /08_binary_search_trees/02_bst_validation/
 
 Every node must satisfy:
 
-```math
-\boxed{min < node.val < max}
-
-```
+$$\boxed{min < node.val < max}$$
 
 **Recurrence:**
 
-```math
-\text{isValid}(node, min, max) = \begin{cases}
+$$\text{isValid}(node, min, max) = \begin{cases}
 \text{true} & \text{if } node = \text{null} \\
 \text{false} & \text{if } node.val \leq min \text{ or } node.val \geq max \\
 \text{isValid}(left, min, node.val) \land \text{isValid}(right, node.val, max) & \text{otherwise}
-\end{cases}
-
-```
+\end{cases}$$
 
 ---
 
@@ -65,10 +59,7 @@ Every node must satisfy:
 
 **Property:** Inorder traversal of valid BST is strictly increasing.
 
-```math
-\text{inorder}[i] < \text{inorder}[i+1] \quad \forall i
-
-```
+$$\text{inorder}[i] < \text{inorder}[i+1] \quad \forall i$$
 
 ---
 
@@ -91,19 +82,13 @@ Every node must satisfy:
 
 **Proof:**
 
-```math
-\text{height} = \lceil \log_2(n+1) \rceil - 1
-
-```
+$$\text{height} = \lceil \log_2(n+1) \rceil - 1$$
 
 At each level, split array in half → balanced subtrees.
 
 **Recurrence:**
 
-```math
-T(n) = 2T(n/2) + O(1) = O(n)
-
-```
+$$T(n) = 2T(n/2) + O(1) = O(n)$$
 
 ---
 
@@ -133,10 +118,7 @@ return node.left.val < node.val < node.right.val  # WRONG!
 
 **Space:** O(1) instead of O(h) stack!
 
-```math
-\text{Time: } O(n), \text{ Space: } O(1)
-
-```
+$$\text{Time: } O(n), \text{ Space: } O(1)$$
 
 ---
 
