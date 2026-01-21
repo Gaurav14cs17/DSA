@@ -37,7 +37,7 @@ permalink: /19_greedy_algorithms/01_interval_scheduling/
 
 **Greedy Strategy:** Always pick interval with earliest end time.
 
-$$\text{Sort by } end_i, \text{ select if } start_i \geq \text{last_end}$$
+$$\text{Sort by } end_i, \text{ select if } start_i \geq \text{last\_end}$$
 
 ---
 

@@ -113,12 +113,12 @@ $$\text{ans}[v] = \text{combine}(\text{in}[v], \text{out}[v])$$
 
 - $\text{rob}[v]$ = max money if rob node $v$
 
-- $\text{not_rob}[v]$ = max money if don't rob $v$
+- $\text{not\_rob}[v]$ = max money if don't rob $v$
 
 **Recurrence:**
 
-$$\text{rob}[v] = v.\text{val} + \sum \text{not_rob}[\text{child}]
-\text{not_rob}[v] = \sum \max(\text{rob}[\text{child}], \text{not_rob}[\text{child}])$$
+$$\text{rob}[v] = v.\text{val} + \sum \text{not\_rob}[\text{child}]
+\text{not\_rob}[v] = \sum \max(\text{rob}[\text{child}], \text{not\_rob}[\text{child}])$$
 
 ---
 

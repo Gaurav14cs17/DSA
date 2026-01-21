@@ -100,7 +100,7 @@ $$\text{Space: } O(\text{total characters in all words})$$
 
 **Maximum XOR:** Greedily pick opposite bit at each level.
 
-$$\text{For each bit, prefer } 1 \oplus \text{current_bit} = 1$$
+$$\text{For each bit, prefer } 1 \oplus \text{current\_bit} = 1$$
 
 ---
 

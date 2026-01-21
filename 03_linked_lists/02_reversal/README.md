@@ -127,7 +127,7 @@ $$\boxed{\text{reversals} = right - left}$$
 
 **Number of complete groups:**
 
-$$\text{complete_groups} = \left\lfloor \frac{n}{k} \right\rfloor$$
+$$\text{complete\_groups} = \left\lfloor \frac{n}{k} \right\rfloor$$
 
 **Remaining nodes:**
 
@@ -135,7 +135,7 @@ $$\text{remaining} = n \mod k$$
 
 **Total reversals:**
 
-$$\text{total_reversals} = \left\lfloor \frac{n}{k} \right\rfloor \times (k-1)$$
+$$\text{total\_reversals} = \left\lfloor \frac{n}{k} \right\rfloor \times (k-1)$$
 
 **Time Complexity:** $O(n)$ - each node visited once
 

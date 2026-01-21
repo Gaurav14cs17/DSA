@@ -48,7 +48,7 @@ where $s_p(n)$ is the sum of digits of n in base p.
 
 **Trailing zeros in n!** = $\nu_5(n!)$ (since $10 = 2 \times 5$ and there are more 2s than 5s)
 
-$$\text{trailing_zeros}(n!) = \left\lfloor \frac{n}{5} \right\rfloor + \left\lfloor \frac{n}{25} \right\rfloor + \left\lfloor \frac{n}{125} \right\rfloor + \cdots$$
+$$\text{trailing\_zeros}(n!) = \left\lfloor \frac{n}{5} \right\rfloor + \left\lfloor \frac{n}{25} \right\rfloor + \left\lfloor \frac{n}{125} \right\rfloor + \cdots$$
 
 ---
 

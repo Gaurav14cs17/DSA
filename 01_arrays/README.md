@@ -172,11 +172,11 @@ $$\boxed{\text{Iterations} \leq n}$$
 
 **Position Mapping (right rotation by k):**
 
-$$\boxed{\text{new_index}(i) = (i + k) \mod n}$$
+$$\boxed{\text{new\_index}(i) = (i + k) \mod n}$$
 
 **Inverse Mapping:**
 
-$$\text{old_index}(i) = (i - k + n) \mod n$$
+$$\text{old\_index}(i) = (i - k + n) \mod n$$
 
 **Reversal Algorithm Proof:**
 

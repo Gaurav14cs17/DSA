@@ -136,7 +136,7 @@ $$S(n) = f(S(n-1), S(n-2), \ldots, S(0))$$
 | **Sum** | $S(n) = S(n-1) + x_n$ | $O(1)$ |
 | **Mean** | $\mu_n = \mu_{n-1} + \frac{x_n - \mu_{n-1}}{n}$ | $O(1)$ |
 | **Variance** | $M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n)$ | $O(1)$ |
-| **Kadane** | $\text{max_here}(i) = \max(a[i], \text{max_here}(i-1) + a[i])$ | $O(1)$ |
+| **Kadane** | $\text{max\_here}(i) = \max(a[i], \text{max\_here}(i-1) + a[i])$ | $O(1)$ |
 
 ### Loop Fusion Example
 

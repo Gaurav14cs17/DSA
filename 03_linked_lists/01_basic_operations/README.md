@@ -76,7 +76,7 @@ $$\text{Space} = 4 + 8 = 12 \text{ bytes per node}$$
 
 **Total space for n nodes:**
 
-$$\boxed{S(n) = n \times (\text{data_size} + \text{pointer_size})}$$
+$$\boxed{S(n) = n \times (\text{data\_size} + \text{pointer\_size})}$$
 
 ---
 
@@ -98,7 +98,7 @@ $$\text{length} = \sum_{i=0}^{n-1} 1 = n$$
 
 **Theorem:** When fast reaches end, slow is at middle.
 
-$$\boxed{\text{slow_position} = \left\lfloor \frac{n}{2} \right\rfloor}$$
+$$\boxed{\text{slow\_position} = \left\lfloor \frac{n}{2} \right\rfloor}$$
 
 **Proof:**
 

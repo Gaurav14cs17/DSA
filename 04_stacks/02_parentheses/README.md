@@ -115,7 +115,7 @@ $$\boxed{\forall k \in [0, n-1]: \sum_{i=0}^{k} \text{score}(S[i]) \geq 0}$$
 
 **Problem:** Minimum insertions to make string valid.
 
-$$\boxed{\text{additions} = \text{unmatched_open} + \text{unmatched_close}}$$
+$$\boxed{\text{additions} = \text{unmatched\_open} + \text{unmatched\_close}}$$
 
 **Proof:**
 

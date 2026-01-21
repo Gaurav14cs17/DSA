@@ -43,7 +43,7 @@ permalink: /08_binary_search_trees/03_bst_queries/
 
 **Using Inorder:**
 
-$$\text{kth_smallest} = \text{inorder}[k-1]$$
+$$\text{kth\_smallest} = \text{inorder}[k-1]$$
 
 **Time:** O(H + k) where H = height.
 

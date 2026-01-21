@@ -80,7 +80,7 @@ S[i] = S[j] \land dp[i+1][j-1] & \text{if } j > i + 1
 
 **Formula using expand around center:**
 
-$$\text{count} = \sum_{c=0}^{2n-2} \text{palindromes_from_center}(c)$$
+$$\text{count} = \sum_{c=0}^{2n-2} \text{palindromes\_from\_center}(c)$$
 
 **Time:** $O(n^2)$ total
 

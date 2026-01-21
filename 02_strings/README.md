@@ -36,7 +36,7 @@ $$S = s_0 s_1 s_2 \cdots s_{n-1} \quad \text{where } s_i \in \Sigma$$
 
 **ASCII Encoding:**
 
-$$\text{char_value} = \text{ord}(c) \in [0, 127]$$
+$$\text{char\_value} = \text{ord}(c) \in [0, 127]$$
 
 **Memory:**
 

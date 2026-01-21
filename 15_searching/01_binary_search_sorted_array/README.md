@@ -45,7 +45,7 @@ permalink: /15_searching/01_binary_search_sorted_array/
 
 Find smallest index where $arr[i] \geq target$:
 
-$$\text{lower_bound} = \min\{i : arr[i] \geq target\}$$
+$$\text{lower\_bound} = \min\{i : arr[i] \geq target\}$$
 
 ---
 
@@ -53,13 +53,13 @@ $$\text{lower_bound} = \min\{i : arr[i] \geq target\}$$
 
 Find smallest index where $arr[i] > target$:
 
-$$\text{upper_bound} = \min\{i : arr[i] > target\}$$
+$$\text{upper\_bound} = \min\{i : arr[i] > target\}$$
 
 ---
 
 ### 4️⃣ Count of Element
 
-$$\text{count}(target) = \text{upper_bound} - \text{lower_bound}$$
+$$\text{count}(target) = \text{upper\_bound} - \text{lower\_bound}$$
 
 ---
 

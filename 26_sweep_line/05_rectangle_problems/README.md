@@ -78,7 +78,7 @@ $$A = \max(0, \min(x_2, x_4) - \max(x_1, x_3)) \times \max(0, \min(y_2, y_4) - \
 
 2. Maintain active y-intervals at each x-position
 
-3. Calculate area contribution: $\text{width} \times \text{active_height}$
+3. Calculate area contribution: $\text{width} \times \text{active\_height}$
 
 ---
 
