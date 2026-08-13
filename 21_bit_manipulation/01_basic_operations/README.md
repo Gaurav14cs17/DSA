@@ -22,15 +22,7 @@ permalink: /21_bit_manipulation/01_basic_operations/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Bit Home](../README.md) | **01. Basic Operations** | [02. XOR Tricks →](../02_xor_tricks/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -47,8 +39,7 @@ permalink: /21_bit_manipulation/01_basic_operations/
 
 ---
 
-## 🎯 What You'll Learn
-
+## 🎯 At a Glance
 - Count set bits using Brian Kernighan's Algorithm
 
 - Check if a number is a power of 2, 4, or any other base
@@ -61,8 +52,20 @@ permalink: /21_bit_manipulation/01_basic_operations/
 
 ---
 
-## 📐 Mathematical Foundations
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [🏠 Bit Home](../README.md) | **01. Basic Operations** | [02. XOR Tricks →](../02_xor_tricks/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Brian Kernighan's Algorithm
 
 {: .highlight }
@@ -659,9 +662,3 @@ def rangeBitwiseAndAlt(left: int, right: int) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Bit Home](../README.md) | **01. Basic Operations** | [02. XOR Tricks →](../02_xor_tricks/README.md) |
