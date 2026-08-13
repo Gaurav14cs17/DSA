@@ -26,11 +26,25 @@ permalink: /07_trees/01_tree_traversal/
 
 ![Tree Traversal Diagram](./images/tree-traversal.png)
 
+*Tree Traversal Diagram*
+
 </div>
 
 ---
 
+---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Easy to Medium |
+| **Problems** | 15+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
