@@ -26,15 +26,7 @@ permalink: /30_number_theory/05_euler_totient/04_totient_sum/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Euler's Theorem](../03_euler_theorem/README.md) | **04. Totient Sum** | [05. Applications →](../05_applications/README.md) |
-
----
-
-## 📊 Visual Diagram
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -57,6 +49,15 @@ permalink: /30_number_theory/05_euler_totient/04_totient_sum/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 03. Euler's Theorem](../03_euler_theorem/README.md) | **04. Totient Sum** | [05. Applications →](../05_applications/README.md) |
+
+---
+
 ## 📐 Mathematical Background
 
 ### Totient Summatory Function
@@ -227,9 +228,3 @@ def totient_sum_fast(n: int) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Euler's Theorem](../03_euler_theorem/README.md) | **04. Totient Sum** | [05. Applications →](../05_applications/README.md) |
