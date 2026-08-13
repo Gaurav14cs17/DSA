@@ -37,13 +37,13 @@ permalink: /21_bit_manipulation/03_bitmask/
 <div align="center">
 
 ### Subset Enumeration with Bitmask
-<img src="./images/subset-enumeration.svg" alt="Subset Enumeration" width="100%">
+<img src="./images/subset-enumeration.png" alt="Subset Enumeration" width="100%">
 
 ### Submask Iteration
-<img src="./images/submask-iteration.svg" alt="Submask Iteration" width="100%">
+<img src="./images/submask-iteration.png" alt="Submask Iteration" width="100%">
 
 ### Bitmask Dynamic Programming
-<img src="./images/bitmask-dp.svg" alt="Bitmask DP" width="100%">
+<img src="./images/bitmask-dp.png" alt="Bitmask DP" width="100%">
 
 </div>
 
