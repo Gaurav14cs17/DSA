@@ -34,25 +34,25 @@ permalink: /16_recursion/11_parser_recursion/
 ### 1. Recursive Descent Parser
 
 <p align="center">
-  <img src="./images/recursive_descent.svg" alt="Recursive Descent Parser" width="90%">
+  <img src="./images/recursive_descent.png" alt="Recursive Descent Parser" width="90%">
 </p>
 
 ### 2. Expression Tree Parsing
 
 <p align="center">
-  <img src="./images/expression_tree.svg" alt="Expression Tree Parsing" width="90%">
+  <img src="./images/expression_tree.png" alt="Expression Tree Parsing" width="90%">
 </p>
 
 ### 3. Nested Structure Parsing
 
 <p align="center">
-  <img src="./images/nested_parsing.svg" alt="Nested Structure Parsing" width="90%">
+  <img src="./images/nested_parsing.png" alt="Nested Structure Parsing" width="90%">
 </p>
 
 ### 4. Number of Atoms Parser
 
 <p align="center">
-  <img src="./images/number_of_atoms.svg" alt="Number of Atoms Parser" width="90%">
+  <img src="./images/number_of_atoms.png" alt="Number of Atoms Parser" width="90%">
 </p>
 
 ---
@@ -77,25 +77,25 @@ permalink: /16_recursion/11_parser_recursion/
 #### 1. Call Stack Visualization
 
 <p align="center">
-  <img src="./images/atoms_call_stack.svg" alt="Call Stack" width="90%">
+  <img src="./images/atoms_call_stack.png" alt="Call Stack" width="90%">
 </p>
 
 #### 2. Decision Flowchart
 
 <p align="center">
-  <img src="./images/atoms_flowchart.svg" alt="Flowchart" width="90%">
+  <img src="./images/atoms_flowchart.png" alt="Flowchart" width="90%">
 </p>
 
 #### 3. Parse Tree (Complex Nested)
 
 <p align="center">
-  <img src="./images/atoms_tree_parse.svg" alt="Parse Tree" width="90%">
+  <img src="./images/atoms_tree_parse.png" alt="Parse Tree" width="90%">
 </p>
 
 #### 4. Position Pointer Animation
 
 <p align="center">
-  <img src="./images/atoms_pointer.svg" alt="Pointer Animation" width="90%">
+  <img src="./images/atoms_pointer.png" alt="Pointer Animation" width="90%">
 </p>
 
 </details>
