@@ -26,15 +26,7 @@ permalink: /30_number_theory/06_chinese_remainder/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 05. Euler Totient](../05_euler_totient/README.md) | **06. Chinese Remainder** | [07. Linear Diophantine →](../07_linear_diophantine/README.md) |
-
----
-
-## 🎨 Visual Walkthrough
+## 📊 Visual Overview
 
 ```
 +-----------------------------------------------------------------+
@@ -65,8 +57,28 @@ permalink: /30_number_theory/06_chinese_remainder/
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **In one line** | Solving Systems of Linear Congruences |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 05. Euler Totient](../05_euler_totient/README.md) | **06. Chinese Remainder** | [07. Linear Diophantine →](../07_linear_diophantine/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ The Theorem
 
 **Statement:** Given pairwise coprime moduli $m_1, m_2, \ldots, m_k$ and any integers $a_1, a_2, \ldots, a_k$, the system:
@@ -189,10 +201,3 @@ print(chinese_remainder([2, 3, 2], [3, 5, 7]))  # 23
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 05. Euler Totient](../05_euler_totient/README.md) | **06. Chinese Remainder** | [07. Linear Diophantine →](../07_linear_diophantine/README.md) |
-
