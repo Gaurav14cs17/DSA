@@ -10,6 +10,8 @@ permalink: /30_number_theory/
 
 # 🔢 Number Theory
 
+### *Mathematical foundations for competitive programming and algorithmic problem solving*
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
@@ -31,26 +33,22 @@ permalink: /30_number_theory/
 
 ![Number Theory Overview](./images/number-theory-overview.png)
 
+*Number Theory Overview*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
 
-## 📋 Overview
+| | |
+|:---|:---|
+| **In one line** | Mathematical foundations for competitive programming and algorithmic problem solving |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 150+ |
 
-**Number Theory** forms the mathematical backbone of competitive programming. This comprehensive guide covers essential algorithms and techniques from basic GCD computations to advanced theorems like Chinese Remainder Theorem and Lucas' Theorem.
-
-**What You'll Learn:**
-
-- **Fundamental Algorithms:** GCD/LCM, prime testing, factorization
-
-- **Modular Arithmetic:** Fast exponentiation, modular inverse, Fermat's theorem
-
-- **Advanced Theorems:** Euler's totient, CRT, Wilson's theorem
-
-- **Combinatorial Math:** Binomial coefficients, Catalan numbers, Lucas' theorem
-
-- **Applications:** RSA cryptography, competitive programming problems
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -273,6 +271,91 @@ permalink: /30_number_theory/
 
 ---
 
+## 📐 Core Algorithms Reference
+
+### 1. Euclidean Algorithm
+
+```python
+def gcd(a, b):
+    """Greatest Common Divisor - O(log min(a,b))"""
+    while b:
+        a, b = b, a % b
+    return a
+
+```
+
+### 2. Fast Modular Exponentiation
+
+```python
+def pow_mod(base, exp, mod):
+    """Compute (base^exp) % mod - O(log exp)"""
+    result = 1
+    base %= mod
+    while exp > 0:
+        if exp & 1:
+            result = (result * base) % mod
+        base = (base * base) % mod
+        exp >>= 1
+    return result
+
+```
+
+### 3. Sieve of Eratosthenes
+
+```python
+def sieve(n):
+    """Find all primes up to n - O(n log log n)"""
+    is_prime = [True] * (n + 1)
+    is_prime[0] = is_prime[1] = False
+    
+    for i in range(2, int(n**0.5) + 1):
+        if is_prime[i]:
+            for j in range(i*i, n + 1, i):
+                is_prime[j] = False
+    
+    return [i for i in range(n + 1) if is_prime[i]]
+
+```
+
+### 4. Euler's Totient Function
+
+```python
+def phi(n):
+    """Count numbers coprime to n - O(√n)"""
+    result = n
+    p = 2
+    while p * p <= n:
+        if n % p == 0:
+            result -= result // p
+            while n % p == 0:
+                n //= p
+        p += 1
+    if n > 1:
+        result -= result // n
+    return result
+
+```
+
+---
+
+## 📋 Overview
+
+**Number Theory** forms the mathematical backbone of competitive programming. This comprehensive guide covers essential algorithms and techniques from basic GCD computations to advanced theorems like Chinese Remainder Theorem and Lucas' Theorem.
+
+**What You'll Learn:**
+
+- **Fundamental Algorithms:** GCD/LCM, prime testing, factorization
+
+- **Modular Arithmetic:** Fast exponentiation, modular inverse, Fermat's theorem
+
+- **Advanced Theorems:** Euler's totient, CRT, Wilson's theorem
+
+- **Combinatorial Math:** Binomial coefficients, Catalan numbers, Lucas' theorem
+
+- **Applications:** RSA cryptography, competitive programming problems
+
+---
+
 ## 🎯 Quick Start Guide
 
 ### For Beginners
@@ -341,73 +424,6 @@ permalink: /30_number_theory/
 | Preimage Size of Factorial | Legendre | [LeetCode 793](https://leetcode.com/problems/preimage-size-of-factorial-zeroes-function/) |
 | K-th Smallest in Multiplication Table | Divisors | [LeetCode 668](https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/) |
 | Super Washing Machines | Number Theory | [LeetCode 517](https://leetcode.com/problems/super-washing-machines/) |
-
----
-
-## 📐 Core Algorithms Reference
-
-### 1. Euclidean Algorithm
-
-```python
-def gcd(a, b):
-    """Greatest Common Divisor - O(log min(a,b))"""
-    while b:
-        a, b = b, a % b
-    return a
-
-```
-
-### 2. Fast Modular Exponentiation
-
-```python
-def pow_mod(base, exp, mod):
-    """Compute (base^exp) % mod - O(log exp)"""
-    result = 1
-    base %= mod
-    while exp > 0:
-        if exp & 1:
-            result = (result * base) % mod
-        base = (base * base) % mod
-        exp >>= 1
-    return result
-
-```
-
-### 3. Sieve of Eratosthenes
-
-```python
-def sieve(n):
-    """Find all primes up to n - O(n log log n)"""
-    is_prime = [True] * (n + 1)
-    is_prime[0] = is_prime[1] = False
-    
-    for i in range(2, int(n**0.5) + 1):
-        if is_prime[i]:
-            for j in range(i*i, n + 1, i):
-                is_prime[j] = False
-    
-    return [i for i in range(n + 1) if is_prime[i]]
-
-```
-
-### 4. Euler's Totient Function
-
-```python
-def phi(n):
-    """Count numbers coprime to n - O(√n)"""
-    result = n
-    p = 2
-    while p * p <= n:
-        if n % p == 0:
-            result -= result // p
-            while n % p == 0:
-                n //= p
-        p += 1
-    if n > 1:
-        result -= result // n
-    return result
-
-```
 
 ---
 
@@ -603,6 +619,8 @@ Week 7-8: Mastery
 
 <div align="center">
 
+---
+
 ## 🎓 Certification Path
 
 Master all **12 topics** → Solve **100+ problems** → Become a **Number Theory Expert**
@@ -610,4 +628,3 @@ Master all **12 topics** → Solve **100+ problems** → Become a **Number Theor
 [⬅️ Previous: Computational Geometry](../29_computational_geometry/README.md) | [🏠 Home](../README.md) | [Next: Combinatorics ➡️](../31_combinatorics/README.md)
 
 </div>
-
