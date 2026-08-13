@@ -10,7 +10,7 @@ permalink: /15_searching/02_binary_search_on_answer/
 
 # 🎯 Binary Search on Answer
 
-![Binary Search on Answer](./images/bs-on-answer.svg)
+![Binary Search on Answer](./images/bs-on-answer.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
@@ -67,7 +67,7 @@ Where $R$ = search range, check() = feasibility check.
 
 ## 📊 Visual: Ship Packages Problem
 
-![Capacity To Ship Packages](./images/ship-packages.svg)
+![Capacity To Ship Packages](./images/ship-packages.png)
 
 ---
 
