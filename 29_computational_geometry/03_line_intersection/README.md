@@ -4,10 +4,20 @@ title: "Line Intersection"
 parent: "Computational Geometry"
 nav_order: 3
 ---
+<div align="center">
 
 # ⚡ Line Intersection Algorithms
 
 ### *Line intersection problems determine if and where geometric segments intersect.*
+
+<p><img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty"></p>
+
+[🏠 Computational Geometry](../README.md)
+
+</div>
+
+---
+
 
 
 ## 📊 Visual Overview
@@ -29,6 +39,14 @@ nav_order: 3
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Line Intersection](../03_line_intersection/README.md) | **03. Line Intersection** | [Point Location →](../04_point_location/README.md) |
+
+---
+
 
 ---
 
@@ -250,4 +268,3 @@ def check_and_add_intersection(i, j, segments, intersections):
 ---
 
 **Navigation:** [← Convex Hull](../02_convex_hull/) | [Next: Point Location →](../04_point_location/)
-
