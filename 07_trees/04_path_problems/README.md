@@ -10,7 +10,7 @@ permalink: /07_trees/04_path_problems/
 
 # 🛤️ Path Problems
 
-![Path Problems Diagram](./images/path-problems.svg)
+![Path Problems Diagram](./images/path-problems.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
