@@ -39,8 +39,6 @@ permalink: /03_linked_lists/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -264,8 +262,6 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 |:-:|---------|-----------|:----:|:-----:|
 | 23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Min Heap | O(n log k) | O(k) |
 | 25 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Group Reverse | O(n) | O(1) |
-
----
 
 ---
 
