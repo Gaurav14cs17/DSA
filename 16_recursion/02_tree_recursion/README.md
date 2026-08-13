@@ -30,15 +30,15 @@ permalink: /16_recursion/02_tree_recursion/
 ## 📊 Visual Diagrams
 
 <p align="center">
-  <img src="./images/fibonacci_tree.svg" alt="Fibonacci Tree Recursion" width="100%"/>
+  <img src="./images/fibonacci_tree.png" alt="Fibonacci Tree Recursion" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="./images/exponential_blowup.svg" alt="Exponential Blowup in Tree Recursion" width="100%"/>
+  <img src="./images/exponential_blowup.png" alt="Exponential Blowup in Tree Recursion" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="./images/catalan_numbers.svg" alt="Catalan Numbers and BST Structures" width="100%"/>
+  <img src="./images/catalan_numbers.png" alt="Catalan Numbers and BST Structures" width="100%"/>
 </p>
 
 ---
