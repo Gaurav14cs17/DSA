@@ -10,6 +10,8 @@ permalink: /12_segment_trees/
 
 # 🌲 Segment Trees
 
+### *Efficient range queries and point updates in O(log n)*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Topics-4-blue?style=for-the-badge" alt="Topics">
@@ -32,6 +34,20 @@ permalink: /12_segment_trees/
 
 ---
 
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Efficient range queries and point updates in O(log n) |
+| **Difficulty** | Hard |
+| **Problems** | 15+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ Segment Tree Definition
