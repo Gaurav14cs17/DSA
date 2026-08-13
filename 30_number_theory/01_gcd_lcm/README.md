@@ -25,15 +25,7 @@ permalink: /30_number_theory/01_gcd_lcm/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Number Theory Home](../README.md) | **01. GCD & LCM** | [02. Primes →](../02_primes/README.md) |
-
----
-
-## 🎨 Visual Walkthroughs
+## 📊 Visual Overview
 
 ### Walkthrough 1: Euclidean Algorithm$$
 
@@ -133,8 +125,28 @@ permalink: /30_number_theory/01_gcd_lcm/
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **In one line** | Greatest Common Divisor & Least Common Multiple |
+| **Difficulty** | Easy to Medium |
+| **Problems** | 30+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [🏠 Number Theory Home](../README.md) | **01. GCD & LCM** | [02. Primes →](../02_primes/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ GCD Definition & Properties
 
 **Definition:** The Greatest Common Divisor (GCD) of two integers a and b is the largest positive integer d such that:
@@ -642,11 +654,3 @@ A: Stein's algorithm using only subtraction and bit shifts, often faster than Eu
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Number Theory Home](../README.md) | **01. GCD & LCM** | [02. Primes →](../02_primes/README.md) |
-
-```
