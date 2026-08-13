@@ -1,12 +1,53 @@
+---
+layout: default
+title: "Tree DP Rerooting"
+parent: "DP Optimizations"
+nav_order: 11
+permalink: /40_dp_optimizations/11_tree_dp_rerooting/
+---
+
+<div align="center">
+
 # 🌲 Tree DP with Rerooting
 
-## 📊 Visual Diagram
+### *Rerooting technique for tree DP*
+
+</div>
+
+---
+
+## 📊 Visual Overview
 
 <p align="center">
   <img src="./images/tree-dp-rerooting.png" alt="Tree DP Rerooting" width="100%">
 </p>
 
-## Overview
+---
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Rerooting technique for tree DP |
+
+
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Bitmask DP](../10_bitmask_dp/README.md) | **11. Tree DP Rerooting** | [🏠 DP Optimizations](../README.md) |
+
+## 📐 Mathematical Foundation
+
+### Overview
 
 **Rerooting** computes tree DP with **each node as root** in O(n) time.
 
@@ -14,6 +55,10 @@
 
 **Naive:** Run tree DP from each node → O(n²)
 **Rerooting:** Smart reuse of computation → O(n)
+
+---
+
+
 
 ---
 
@@ -74,6 +119,10 @@ def rerooting_dp(graph, n):
     return answer
 
 ```
+
+---
+
+
 
 ---
 
