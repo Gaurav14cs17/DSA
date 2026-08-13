@@ -36,6 +36,17 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/02_2d_segment_tree/
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Hard |
+| **Problems** | 6 |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Core Concept
 
 **2D Segment Tree:** Tree of trees for 2D range queries.
