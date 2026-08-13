@@ -11,6 +11,8 @@ permalink: /30_number_theory/04_divisors/04_divisor_properties/
 
 # 🔍 Divisor Properties
 
+### *Multiplicative Functions and Divisor Identities*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Topic-Multiplicativity-blue?style=for-the-badge" alt="Topic">
@@ -38,10 +40,23 @@ permalink: /30_number_theory/04_divisors/04_divisor_properties/
 
 ![Divisor Properties](./images/divisor_properties.png)
 
+*Divisor Properties*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Multiplicative Functions and Divisor Identities |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Multiplicative Functions
