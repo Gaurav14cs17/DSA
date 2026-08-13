@@ -3,7 +3,7 @@
 ## 📊 Visual Diagram
 
 <p align="center">
-  <img src="./images/matrix-exponentiation.svg" alt="Matrix Exponentiation" width="100%">
+  <img src="./images/matrix-exponentiation.png" alt="Matrix Exponentiation" width="100%">
 </p>
 
 ## Overview
