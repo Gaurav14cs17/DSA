@@ -30,15 +30,15 @@ permalink: /16_recursion/03_memoization/
 ## 📊 Visual Diagrams
 
 <p align="center">
-  <img src="./images/memo_cache.svg" alt="Memoization Cache Lookup Flow" width="100%"/>
+  <img src="./images/memo_cache.png" alt="Memoization Cache Lookup Flow" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="./images/topdown_vs_bottomup.svg" alt="Top-Down vs Bottom-Up DP" width="100%"/>
+  <img src="./images/topdown_vs_bottomup.png" alt="Top-Down vs Bottom-Up DP" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="./images/2d_memoization.svg" alt="2D Memoization Unique Paths" width="100%"/>
+  <img src="./images/2d_memoization.png" alt="2D Memoization Unique Paths" width="100%"/>
 </p>
 
 ---
