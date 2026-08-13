@@ -10,7 +10,7 @@ permalink: /39_approximation_algorithms/
 
 # 🎯 Approximation Algorithms
 
-![Approximation Algorithms Overview](./images/approx-algo-overview.svg)
+![Approximation Algorithms Overview](./images/approx-algo-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
@@ -37,7 +37,7 @@ permalink: /39_approximation_algorithms/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/approximation-algorithms.svg" alt="Approximation Algorithms Overview" width="850"/>
+<img src="./images/approximation-algorithms.png" alt="Approximation Algorithms Overview" width="850"/>
 </div>
 
 ---
@@ -89,7 +89,7 @@ ALG ≤ 2 · OPT
 ### 1. Vertex Cover (2-Approximation)
 
 <div align="center">
-<img src="./images/vertex-cover-approximation.svg" alt="Vertex Cover 2-Approximation" width="900"/>
+<img src="./images/vertex-cover-approximation.png" alt="Vertex Cover 2-Approximation" width="900"/>
 </div>
 
 ```python
@@ -130,7 +130,7 @@ def vertex_cover_approx(edges):
 ### 2. Set Cover (ln n + 1 Approximation)
 
 <div align="center">
-<img src="./images/set-cover-greedy.svg" alt="Set Cover Greedy Algorithm" width="950"/>
+<img src="./images/set-cover-greedy.png" alt="Set Cover Greedy Algorithm" width="950"/>
 </div>
 
 ```python
@@ -164,7 +164,7 @@ def set_cover_greedy(universe, subsets):
 ### 3. Knapsack FPTAS
 
 <div align="center">
-<img src="./images/knapsack-fptas.svg" alt="Knapsack FPTAS" width="950"/>
+<img src="./images/knapsack-fptas.png" alt="Knapsack FPTAS" width="950"/>
 </div>
 
 ```python
@@ -212,7 +212,7 @@ def knapsack_fptas(weights, values, capacity, epsilon):
 ### 4. TSP (2-Approximation for Metric)
 
 <div align="center">
-<img src="./images/tsp-mst-approximation.svg" alt="TSP MST Approximation" width="1000"/>
+<img src="./images/tsp-mst-approximation.png" alt="TSP MST Approximation" width="1000"/>
 </div>
 
 ```python
@@ -257,7 +257,7 @@ def tsp_mst_approx(distances):
 ### 5. Bin Packing (First Fit Decreasing)
 
 <div align="center">
-<img src="./images/bin-packing-ffd.svg" alt="Bin Packing FFD" width="950"/>
+<img src="./images/bin-packing-ffd.png" alt="Bin Packing FFD" width="950"/>
 </div>
 
 ```python
@@ -328,7 +328,7 @@ def bin_packing_ffd(items, bin_capacity):
 ## 📊 Approximation Ratio Comparison
 
 <div align="center">
-<img src="./images/approximation-ratios-comparison.svg" alt="Approximation Ratios Comparison" width="900"/>
+<img src="./images/approximation-ratios-comparison.png" alt="Approximation Ratios Comparison" width="900"/>
 </div>
 
 | Problem | Best Known | Lower Bound | Note |
