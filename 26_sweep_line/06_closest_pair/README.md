@@ -10,6 +10,10 @@ permalink: /26_sweep_line/06_closest_pair/
 
 # 🎯 Closest Pair of Points
 
+### *Closest Pair of Points*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-7-blue?style=for-the-badge" alt="Problems">
@@ -38,6 +42,7 @@ permalink: /26_sweep_line/06_closest_pair/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -46,8 +51,7 @@ permalink: /26_sweep_line/06_closest_pair/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Closest Pair Problem
 
 **Given:** $n$ points in 2D plane  
@@ -587,10 +591,3 @@ def nearest_neighbor(root: KDNode,
 6. **Divide & conquer:** Optimal $O(n \log n)$ for closest pair
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 05. Rectangle Problems](../05_rectangle_problems/README.md) | **06. Closest Pair** | [Sweep Line →](../README.md) |
-
