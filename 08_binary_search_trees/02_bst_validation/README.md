@@ -39,8 +39,6 @@ permalink: /08_binary_search_trees/02_bst_validation/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -439,8 +437,6 @@ def sortedArrayToBST(nums: list[int]) -> TreeNode:
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 99 | [Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/) | Inorder Violation | O(n) | O(h) |
-
----
 
 ---
 
