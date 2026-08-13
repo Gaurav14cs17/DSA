@@ -10,7 +10,6 @@ permalink: /07_trees/01_tree_traversal/
 
 # 🚶 Tree Traversal
 
-![Tree Traversal Diagram](./images/tree-traversal.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-green?style=for-the-badge" alt="Difficulty">
@@ -20,6 +19,17 @@ permalink: /07_trees/01_tree_traversal/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Tree Traversal Diagram](./images/tree-traversal.png)
+
+</div>
+
+---
+
 
 ## 🧭 Navigation
 
@@ -87,6 +97,122 @@ Where $h$ = height, $w$ = max width.
 For node $x$, predecessor = rightmost node in left subtree.
 
 $$\text{pred}(x) = \max\{y \in T_L(x)\}$$
+
+---
+
+## 🎨 Visual Algorithm Walkthrough
+
+### Inorder Traversal (Iterative)
+
+```
+Tree:
+      1
+       \
+        2
+       /
+      3
+
+Inorder (Left → Node → Right): [1, 3, 2]
+
+Step-by-step with stack:
+current=1, stack=[]
+  Go left: current=null, stack=[1]
+  Pop 1, visit 1, go right
+  current=2, stack=[]
+  
+  Go left: current=3, stack=[2]
+  Go left: current=null, stack=[2, 3]
+  Pop 3, visit 3, go right
+  current=null, stack=[2]
+  
+  Pop 2, visit 2, go right
+  current=null, stack=[]
+
+Result: [1, 3, 2]
+
+```
+
+### Level Order Traversal
+
+```
+Tree:
+       3
+      / \
+     9  20
+       /  \
+      15   7
+
+Level 0: [3]
+Level 1: [9, 20]
+Level 2: [15, 7]
+
+Queue processing:
+queue = [3]
+  Process 3, add children → queue = [9, 20]
+  
+level_size = 2
+  Process 9 → queue = [20]
+  Process 20, add children → queue = [15, 7]
+  
+level_size = 2
+  Process 15 → queue = [7]
+  Process 7 → queue = []
+
+Result: [[3], [9, 20], [15, 7]]
+
+```
+
+### Morris Inorder (O(1) Space)
+
+```
+Tree:
+      4
+     / \
+    2   6
+   / \
+  1   3
+
+Threading process:
+Current=4, has left
+  Predecessor of 4 = 3 (rightmost in left subtree)
+  Create thread: 3.right = 4
+  Move to left: current=2
+
+Current=2, has left
+  Predecessor of 2 = 1
+  Create thread: 1.right = 2
+  Move to left: current=1
+
+Current=1, no left
+  Visit 1
+  Follow thread: current=2
+
+Current=2, has left
+  Predecessor=1, thread exists
+  Remove thread: 1.right = null
+  Visit 2
+  Move right: current=3
+
+Current=3, no left
+  Visit 3
+  Follow thread: current=4
+
+Current=4, has left
+  Predecessor=3, thread exists
+  Remove thread: 3.right = null
+  Visit 4
+  Move right: current=6
+
+Current=6, no left
+  Visit 6
+  current=null
+
+Result: [1, 2, 3, 4, 6]
+
+```
+
+---
+
 
 ---
 
@@ -276,119 +402,6 @@ def morrisInorder(root: TreeNode) -> list[int]:
 | 987 | [Vertical Order Traversal](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/) | DFS + Sort | O(n log n) | O(n) |
 
 ---
-
----
-
-## 🎨 Visual Algorithm Walkthrough
-
-### Inorder Traversal (Iterative)
-
-```
-Tree:
-      1
-       \
-        2
-       /
-      3
-
-Inorder (Left → Node → Right): [1, 3, 2]
-
-Step-by-step with stack:
-current=1, stack=[]
-  Go left: current=null, stack=[1]
-  Pop 1, visit 1, go right
-  current=2, stack=[]
-  
-  Go left: current=3, stack=[2]
-  Go left: current=null, stack=[2, 3]
-  Pop 3, visit 3, go right
-  current=null, stack=[2]
-  
-  Pop 2, visit 2, go right
-  current=null, stack=[]
-
-Result: [1, 3, 2]
-
-```
-
-### Level Order Traversal
-
-```
-Tree:
-       3
-      / \
-     9  20
-       /  \
-      15   7
-
-Level 0: [3]
-Level 1: [9, 20]
-Level 2: [15, 7]
-
-Queue processing:
-queue = [3]
-  Process 3, add children → queue = [9, 20]
-  
-level_size = 2
-  Process 9 → queue = [20]
-  Process 20, add children → queue = [15, 7]
-  
-level_size = 2
-  Process 15 → queue = [7]
-  Process 7 → queue = []
-
-Result: [[3], [9, 20], [15, 7]]
-
-```
-
-### Morris Inorder (O(1) Space)
-
-```
-Tree:
-      4
-     / \
-    2   6
-   / \
-  1   3
-
-Threading process:
-Current=4, has left
-  Predecessor of 4 = 3 (rightmost in left subtree)
-  Create thread: 3.right = 4
-  Move to left: current=2
-
-Current=2, has left
-  Predecessor of 2 = 1
-  Create thread: 1.right = 2
-  Move to left: current=1
-
-Current=1, no left
-  Visit 1
-  Follow thread: current=2
-
-Current=2, has left
-  Predecessor=1, thread exists
-  Remove thread: 1.right = null
-  Visit 2
-  Move right: current=3
-
-Current=3, no left
-  Visit 3
-  Follow thread: current=4
-
-Current=4, has left
-  Predecessor=3, thread exists
-  Remove thread: 3.right = null
-  Visit 4
-  Move right: current=6
-
-Current=6, no left
-  Visit 6
-  current=null
-
-Result: [1, 2, 3, 4, 6]
-
-```
 
 ---
 
