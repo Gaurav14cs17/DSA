@@ -27,6 +27,18 @@ permalink: /10_graphs/05_topological_sort/
 
 ---
 
+## 🎨 Visual Diagrams
+
+<div align="center">
+
+![Topological Sort](./images/topological_sort.png)
+
+*Kahn's Algorithm - Topological Sort with In-Degree*
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Definition
@@ -68,18 +80,6 @@ For DAG with $n$ vertices and $e$ edges:
 $$\text{# of orders} \geq 1 \text{ if DAG}$$
 
 Can be exponentially many (e.g., independent vertices).
-
----
-
-## 🎨 Visual Diagrams
-
-<div align="center">
-
-![Topological Sort](./images/topological_sort.png)
-
-*Kahn's Algorithm - Topological Sort with In-Degree*
-
-</div>
 
 ---
 
