@@ -34,7 +34,7 @@ permalink: /30_number_theory/05_euler_totient/05_applications/
 
 <div align="center">
 
-![Totient Applications](./images/totient_applications.svg)
+![Totient Applications](./images/totient_applications.png)
 
 </div>
 
