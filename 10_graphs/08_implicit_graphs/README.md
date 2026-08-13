@@ -32,6 +32,18 @@ permalink: /10_graphs/08_implicit_graphs/
 
 ---
 
+## 🎨 Visual Diagrams
+
+<div align="center">
+
+![Implicit Graphs](./images/implicit_graph.png)
+
+*Recognizing Hidden Graph Structures*
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Definition: Implicit Graph
@@ -188,18 +200,6 @@ $$E = \{(s, s') : s' \text{ reachable from } s \text{ by one move}\}$$
 **Multi-source Distance:**
 
 $$d_{multi}(v) = \min_{s \in S} d(s, v)$$
-
----
-
-## 🎨 Visual Diagrams
-
-<div align="center">
-
-![Implicit Graphs](./images/implicit_graph.png)
-
-*Recognizing Hidden Graph Structures*
-
-</div>
 
 ---
 
