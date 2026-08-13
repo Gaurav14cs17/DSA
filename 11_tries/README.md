@@ -52,6 +52,17 @@ permalink: /11_tries/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 📂 Subtopics Navigation
+
+| # | Topic | Problems | Link |
+|:-:|-------|:--------:|------|
+| 1 | Basic Trie | 5+ | [📖 Go →](./01_basic_trie/README.md) |
+| 2 | Word Search | 5+ | [📖 Go →](./02_word_search/README.md) |
+| 3 | Autocomplete | 5+ | [📖 Go →](./03_autocomplete/README.md) |
+
+---
+
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ Trie Definition
@@ -127,16 +138,6 @@ $$\text{Space: } O(\text{total characters in all words})$$
 **Maximum XOR:** Greedily pick opposite bit at each level.
 
 $$\text{For each bit, prefer } 1 \oplus \text{current\_bit} = 1$$
-
----
-
-## 📂 Subtopics Navigation
-
-| # | Topic | Problems | Link |
-|:-:|-------|:--------:|------|
-| 1 | Basic Trie | 5+ | [📖 Go →](./01_basic_trie/README.md) |
-| 2 | Word Search | 5+ | [📖 Go →](./02_word_search/README.md) |
-| 3 | Autocomplete | 5+ | [📖 Go →](./03_autocomplete/README.md) |
 
 ---
 
