@@ -10,6 +10,10 @@ permalink: /17_backtracking/02_permutations/
 
 # 🔀 Permutations
 
+### *Permutations*
+
+
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -43,6 +47,7 @@ permalink: /17_backtracking/02_permutations/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -51,8 +56,7 @@ permalink: /17_backtracking/02_permutations/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Permutation Count
 
 $$P(n) = n!
@@ -225,9 +229,3 @@ def getPermutation(n: int, k: int) -> str:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Subsets](../01_subsets/README.md) | **02. Permutations** | [03. Combinations →](../03_combinations/README.md) |
