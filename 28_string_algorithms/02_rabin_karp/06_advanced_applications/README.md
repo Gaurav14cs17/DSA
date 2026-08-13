@@ -12,13 +12,18 @@ nav_order: 6
 
 ![Advanced Applications](./images/advanced-applications.png)
 
-## 📊 Metadata
+*Advanced Applications*
 
-- **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
+---
 
-- **Topics:** 2D Hashing, Document Similarity, Plagiarism Detection
+## 🎯 At a Glance
 
-- **Applications:** Real-world string processing
+| | |
+|:---|:---|
+| **Topics** | 2D Hashing, Document Similarity, Plagiarism Detection |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
