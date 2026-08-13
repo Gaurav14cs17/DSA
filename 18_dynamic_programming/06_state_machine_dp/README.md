@@ -30,7 +30,7 @@ permalink: /18_dynamic_programming/06_state_machine_dp/
 ## 📊 Visual Guide
 
 <div align="center">
-  <img src="images/state-machine-dp.svg" alt="State Machine DP Visualization" width="100%">
+  <img src="images/state-machine-dp.png" alt="State Machine DP Visualization" width="100%">
 </div>
 
 ---
