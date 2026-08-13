@@ -48,6 +48,37 @@ permalink: /16_recursion/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 📂 Subtopics Navigation
+
+### Core Recursion Concepts
+
+| # | Topic | Description | Problems | Link |
+|:-:|-------|-------------|:--------:|------|
+| 1 | **Basic Recursion** | Factorial, tail recursion, call stack | 8+ | [📖 Go →](./01_basic_recursion/README.md) |
+| 2 | **Tree Recursion** | Fibonacci, exponential growth | 6+ | [📖 Go →](./02_tree_recursion/README.md) |
+| 3 | **Memoization** | Top-down DP, caching | 8+ | [📖 Go →](./03_memoization/README.md) |
+| 4 | **Permutations & Combinations** | Generate all possibilities | 10+ | [📖 Go →](./04_permutation_combination/README.md) |
+
+### Recursion by Data Type
+
+| # | Topic | Description | Problems | Link |
+|:-:|-------|-------------|:--------:|------|
+| 5 | **String Recursion** | Reverse, decode, palindrome | 12+ | [📖 Go →](./05_string_recursion/README.md) |
+| 6 | **Array Recursion** | Sum, search, reverse, max/min | 15+ | [📖 Go →](./06_array_recursion/README.md) |
+| 7 | **Divide & Conquer** | Merge sort, quick sort, binary search | 12+ | [📖 Go →](./07_divide_conquer/README.md) |
+| 8 | **Mathematical Recursion** | GCD, power, digit operations | 15+ | [📖 Go →](./08_mathematical_recursion/README.md) |
+| 9 | **Linked List Recursion** | Reverse, merge, operations | 10+ | [📖 Go →](./09_linked_list_recursion/README.md) |
+
+### Advanced Patterns
+
+| # | Topic | Description | Problems | Link |
+|:-:|-------|-------------|:--------:|------|
+| 10 | **Advanced Recursion** | Mutual, nested, indirect, generative | 10+ | [📖 Go →](./10_advanced_recursion/README.md) |
+| 11 | **Parser Recursion** | Expression parsing, grammars, decode string | 15+ | [📖 Go →](./11_parser_recursion/README.md) |
+
+---
+
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ Recursion Definition
@@ -106,36 +137,6 @@ When function calls itself multiple times:
 $$T(n) = T(n-1) + T(n-2) + \ldots$$
 
 **Example:** Fibonacci without memoization → O(2ⁿ)
-
----
-
-## 📂 Subtopics Navigation
-
-### Core Recursion Concepts
-
-| # | Topic | Description | Problems | Link |
-|:-:|-------|-------------|:--------:|------|
-| 1 | **Basic Recursion** | Factorial, tail recursion, call stack | 8+ | [📖 Go →](./01_basic_recursion/README.md) |
-| 2 | **Tree Recursion** | Fibonacci, exponential growth | 6+ | [📖 Go →](./02_tree_recursion/README.md) |
-| 3 | **Memoization** | Top-down DP, caching | 8+ | [📖 Go →](./03_memoization/README.md) |
-| 4 | **Permutations & Combinations** | Generate all possibilities | 10+ | [📖 Go →](./04_permutation_combination/README.md) |
-
-### Recursion by Data Type
-
-| # | Topic | Description | Problems | Link |
-|:-:|-------|-------------|:--------:|------|
-| 5 | **String Recursion** | Reverse, decode, palindrome | 12+ | [📖 Go →](./05_string_recursion/README.md) |
-| 6 | **Array Recursion** | Sum, search, reverse, max/min | 15+ | [📖 Go →](./06_array_recursion/README.md) |
-| 7 | **Divide & Conquer** | Merge sort, quick sort, binary search | 12+ | [📖 Go →](./07_divide_conquer/README.md) |
-| 8 | **Mathematical Recursion** | GCD, power, digit operations | 15+ | [📖 Go →](./08_mathematical_recursion/README.md) |
-| 9 | **Linked List Recursion** | Reverse, merge, operations | 10+ | [📖 Go →](./09_linked_list_recursion/README.md) |
-
-### Advanced Patterns
-
-| # | Topic | Description | Problems | Link |
-|:-:|-------|-------------|:--------:|------|
-| 10 | **Advanced Recursion** | Mutual, nested, indirect, generative | 10+ | [📖 Go →](./10_advanced_recursion/README.md) |
-| 11 | **Parser Recursion** | Expression parsing, grammars, decode string | 15+ | [📖 Go →](./11_parser_recursion/README.md) |
 
 ---
 
