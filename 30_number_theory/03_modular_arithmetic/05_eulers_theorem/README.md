@@ -50,7 +50,7 @@ where $\phi(n)$ is Euler's totient function.
 
 <div align="center">
 
-![Euler's Theorem](./images/eulers_theorem.svg)
+![Euler's Theorem](./images/eulers_theorem.png)
 
 </div>
 
