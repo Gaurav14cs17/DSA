@@ -10,6 +10,8 @@ permalink: /25_tree_algorithms/
 
 # 🌲 Tree Algorithms
 
+### *Advanced tree algorithms and techniques*
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
@@ -31,11 +33,25 @@ permalink: /25_tree_algorithms/
 
 ![Tree Algorithms Overview](./images/tree-algo-overview.png)
 
+*Tree Algorithms Overview*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **In one line** | Advanced tree algorithms and techniques |
+| **Difficulty** | Medium to Hard |
+| **Subtopics** | 11 |
+| **Problems** | 70+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📋 Overview
 
 Comprehensive collection of **advanced tree algorithms** including LCA, Tree DP, HLD, Centroid Decomposition, DSU on Tree, Virtual Trees, Tree Hashing, Link-Cut Trees, and more.
