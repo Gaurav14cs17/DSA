@@ -11,6 +11,8 @@ permalink: /30_number_theory/05_euler_totient/02_totient_properties/
 
 # 📐 Totient Properties
 
+### *Key Identities and Theorems*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Topic-Multiplicativity-blue?style=for-the-badge" alt="Topic">
@@ -38,10 +40,23 @@ permalink: /30_number_theory/05_euler_totient/02_totient_properties/
 
 ![Totient Properties](./images/totient_properties.png)
 
+*Totient Properties*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Key Identities and Theorems |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Key Properties
 
 ### 1️⃣ Multiplicativity
