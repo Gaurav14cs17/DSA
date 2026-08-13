@@ -3,7 +3,7 @@
 ## 📊 Visual Diagram
 
 <p align="center">
-  <img src="./images/space-optimization.svg" alt="Space Optimization" width="100%">
+  <img src="./images/space-optimization.png" alt="Space Optimization" width="100%">
 </p>
 
 ## Overview
