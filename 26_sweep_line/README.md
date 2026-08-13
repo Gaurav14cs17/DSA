@@ -52,19 +52,6 @@ permalink: /26_sweep_line/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 📋 Overview
-
-Sweep line processes **events sorted by coordinates**. Imagine a vertical line sweeping left to right, processing start/end points of intervals.
-
-```
-Events: S=Start, E=End
-        S1  S2    E1  S3  E2    E3
-Time    |---|-----|---|---|-----|
-        1   2     3   4   5     6
-
-```
-
----
 
 ## 📂 Subtopics
 
@@ -142,6 +129,20 @@ Time    |---|-----|---|---|-----|
 </td>
 </tr>
 </table>
+
+---
+
+## 📋 Overview
+
+Sweep line processes **events sorted by coordinates**. Imagine a vertical line sweeping left to right, processing start/end points of intervals.
+
+```
+Events: S=Start, E=End
+        S1  S2    E1  S3  E2    E3
+Time    |---|-----|---|---|-----|
+        1   2     3   4   5     6
+
+```
 
 ---
 
