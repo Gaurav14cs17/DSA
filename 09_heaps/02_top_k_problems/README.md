@@ -27,6 +27,16 @@ permalink: /09_heaps/02_top_k_problems/
 
 ---
 
+## 🎨 Visual Pattern Guide
+
+<div align="center">
+
+![Top K Pattern](./image/top_k_pattern.png)
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Top K Strategy
@@ -111,16 +121,6 @@ $$\text{frequencies} \in [0, n] \implies \text{use bucket sort for } O(n)$$
 **Bucket i:** contains all elements with frequency i
 
 Collect from highest bucket downward until k elements found!
-
----
-
-## 🎨 Visual Pattern Guide
-
-<div align="center">
-
-![Top K Pattern](./image/top_k_pattern.png)
-
-</div>
 
 ---
 
