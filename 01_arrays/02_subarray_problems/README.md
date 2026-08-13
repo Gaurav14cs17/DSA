@@ -10,6 +10,8 @@ permalink: /01_arrays/02_subarray_problems/
 
 # 🔢 Subarray Problems
 
+### *🔢 Subarray Problems*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-15+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +21,7 @@ permalink: /01_arrays/02_subarray_problems/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Basic Operations](../01_basic_operations/README.md) | **02. Subarray Problems** | [03. Prefix Sum →](../03_prefix_sum/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -47,8 +41,32 @@ permalink: /01_arrays/02_subarray_problems/
 
 ---
 
-## 📐 Mathematical Foundations
+---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🔢 Subarray Problems |
+| **Difficulty** | Medium |
+| **Problems** | 15+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 01. Basic Operations](../01_basic_operations/README.md) | **02. Subarray Problems** | [03. Prefix Sum →](../03_prefix_sum/README.md) |
+
+---
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Subarray Count Formula
 
 **Theorem:** Array of size n has exactly $\frac{n(n+1)}{2}$ subarrays.
@@ -237,6 +255,8 @@ For j=6: P[6]=4, P[6]-k=1 exists twice → count += 2
 
 ---
 
+---
+
 ## 💻 Code Implementations
 
 ```python
@@ -333,6 +353,8 @@ def minSubArrayLen(target: int, nums: list[int]) -> int:
 
 ---
 
+---
+
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
@@ -364,6 +386,8 @@ def minSubArrayLen(target: int, nums: list[int]) -> int:
 
 ---
 
+---
+
 ## 📊 Pattern Decision Tree
 
 ```
@@ -381,6 +405,8 @@ def minSubArrayLen(target: int, nums: list[int]) -> int:
          tracking  +Hash
 
 ```
+
+---
 
 ---
 
@@ -405,6 +431,8 @@ def minSubArrayLen(target: int, nums: list[int]) -> int:
 
 ---
 
+---
+
 ## 🎓 Pattern Recognition Guide
 
 ### Choosing the Right Technique
@@ -417,6 +445,8 @@ def minSubArrayLen(target: int, nums: list[int]) -> int:
 | **Sum ≥ K** | Sliding Window | Minimum length, non-negative | O(n) |
 | **Divisible by K** | Prefix + Modulo | Divisibility condition | O(n) |
 | **Fixed Size K** | Fixed Window | Window size given | O(n) |
+
+---
 
 ---
 
@@ -443,6 +473,8 @@ def minSubArrayLen(target: int, nums: list[int]) -> int:
 ✅ Use modified versions or different approaches
 
 ```
+
+---
 
 ---
 
@@ -475,6 +507,8 @@ Total = n + (n-1) + ... + 1 = n(n+1)/2
   - If max_ending[i-1] < 0, best to start fresh at i
   - If max_ending[i-1] ≥ 0, extend to include A[i]
   - Therefore max_ending[i] = max(A[i], max_ending[i-1] + A[i]) ∎
+
+---
 
 ---
 
@@ -525,6 +559,8 @@ Total = n + (n-1) + ... + 1 = n(n+1)/2
 
 ---
 
+---
+
 ## 🎯 Practice Roadmap
 
 ### Foundation (Must-Solve!)
@@ -556,6 +592,8 @@ Total = n + (n-1) + ... + 1 = n(n+1)/2
 - Optimize space to O(1)
 
 - Handle circular arrays
+
+---
 
 ---
 
@@ -595,6 +633,8 @@ So: prefix[j] - prefix[i] = k
     prefix[i] = prefix[j] - k  ← Store in hash map!
 
 ```
+
+---
 
 ---
 
@@ -661,9 +701,3 @@ for i in range(n):
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Basic Operations](../01_basic_operations/README.md) | **02. Subarray Problems** | [03. Prefix Sum →](../03_prefix_sum/README.md) |
