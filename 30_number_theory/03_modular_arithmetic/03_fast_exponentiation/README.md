@@ -5,12 +5,21 @@ parent: "Modular Arithmetic"
 grand_parent: "Number Theory"
 nav_order: 3
 ---
+<div align="center">
 
 # ⚡ Fast Modular Exponentiation
 
-## 📊 Visual Diagram
+### *Fast Modular Exponentiation*
 
-<div align="center">
+<p><img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty"></p>
+
+[🏠 Modular Arithmetic](../README.md)
+
+</div>
+
+---
+
+lign="center">
 
 ![Fast Exponentiation](./images/fast_exponentiation.png)
 
@@ -23,7 +32,8 @@ nav_order: 3
 ## 🎯 At a Glance
 
 | | |
-|:---|:---|
+|:---| **Topic** | Fast Exponentiation |
+|:---|
 | **Typical time** | O(log n) |
 | **Typical space** | O(1) iterative, O(log n) recursive |
 
@@ -31,6 +41,15 @@ nav_order: 3
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Modular Inverse](../02_modular_inverse/README.md) | **03. Fast Exponentiation** | [Fermat's Theorem →](../04_fermats_theorem/README.md) |
+
+---
+
 ## 🎯 Overview
 
 **Fast Exponentiation** (also called **Binary Exponentiation** or **Exponentiation by Squaring**) computes a^n in O(log n) time instead of O(n).
@@ -394,4 +413,3 @@ pow(2, 100, 10**9 + 7)  # Efficient built-in
 ---
 
 **Navigation:** [← Modular Inverse](../02_modular_inverse/) | [Fermat's Theorem →](../04_fermats_theorem/)
-
