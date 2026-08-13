@@ -9,7 +9,7 @@ nav_order: 6
 
 ## 📊 Visual Overview
 
-![Aho-Corasick Algorithm](./images/aho-corasick.svg)
+![Aho-Corasick Algorithm](./images/aho-corasick.png)
 
 ## 📊 Metadata
 
