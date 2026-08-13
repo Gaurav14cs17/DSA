@@ -10,6 +10,8 @@ permalink: /40_dp_optimizations/
 
 # ⚡ DP Optimizations
 
+### *Master Advanced DP: From O(n³) to O(n) - Complete Guide*
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
@@ -30,6 +32,19 @@ permalink: /40_dp_optimizations/
 <p align="center">
   <img src="./images/dp-opt-overview.png" alt="DP Optimizations Overview" width="100%">
 </p>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Master Advanced DP: From O(n³) to O(n) - Complete Guide |
+| **Difficulty** | Hard |
+| **Problems** | 60+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -1732,16 +1747,6 @@ def rerooting_dp(graph, n):
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Approximation Algorithms](../39_approximation_algorithms/README.md) | **DP Optimizations** | 🏁 **DSA Journey Complete!** 🎉 |
-
----
-
-<div align="center">
 
 ## 🎓 Congratulations!
 
