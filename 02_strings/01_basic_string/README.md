@@ -172,8 +172,6 @@ def longestCommonPrefix(strs: list[str]) -> str:
 
 ---
 
----
-
 ## 🎯 Pattern Recognition Guide
 
 ### When to Use Each Technique
