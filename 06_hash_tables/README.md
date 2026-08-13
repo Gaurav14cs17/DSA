@@ -10,6 +10,8 @@ permalink: /06_hash_tables/
 
 # #️⃣ Hash Tables
 
+### *O(1) average-case lookup - The backbone of efficient algorithms*
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-green?style=for-the-badge" alt="Difficulty">
@@ -31,11 +33,27 @@ permalink: /06_hash_tables/
 
 ![Hash Tables Overview](./images/hash-table-overview.png)
 
+*Hash Tables Overview*
+
 </div>
 
 ---
 
+---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | O(1) average-case lookup - The backbone of efficient algorithms |
+| **Difficulty** | Easy to Medium |
+| **Subtopics** | 3 |
+| **Problems** | 40+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ Hash Function Definition
