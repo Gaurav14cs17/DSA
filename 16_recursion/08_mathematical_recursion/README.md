@@ -23,15 +23,7 @@ permalink: /16_recursion/08_mathematical_recursion/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 07. Divide & Conquer](../07_divide_conquer/README.md) | **08. Mathematical Recursion** | [09. Linked List Recursion →](../09_linked_list_recursion/README.md) |
-
----
-
-## 📊 Visual Diagrams
+## 📊 Visual Overview
 
 <p align="center">
   <img src="./images/gcd_euclidean.png" alt="GCD Euclidean Algorithm" width="100%"/>
@@ -40,6 +32,27 @@ permalink: /16_recursion/08_mathematical_recursion/
 <p align="center">
   <img src="./images/digit_operations.png" alt="Digit Operations Recursion" width="100%"/>
 </p>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Solving mathematical problems using recursive definitions |
+| **Difficulty** | Easy to Medium |
+| **Problems** | 15+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 07. Divide & Conquer](../07_divide_conquer/README.md) | **08. Mathematical Recursion** | [09. Linked List Recursion →](../09_linked_list_recursion/README.md) |
 
 ---
 
@@ -371,10 +384,3 @@ def derangements(n: int) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 07. Divide & Conquer](../07_divide_conquer/README.md) | **08. Mathematical Recursion** | [09. Linked List Recursion →](../09_linked_list_recursion/README.md) |
-
