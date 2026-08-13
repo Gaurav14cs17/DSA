@@ -11,20 +11,16 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/04_dynamic_segtree/
 
 # 🌟 Dynamic Segment Tree
 
+### *Dynamic Segment Tree*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Persistent](../03_persistent_segtree/README.md) | **04. Dynamic** | [05. Range Queries →](../05_range_queries/README.md) |
 
 ---
 
@@ -47,6 +43,15 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/04_dynamic_segtree/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 03. Persistent](../03_persistent_segtree/README.md) | **04. Dynamic** | [05. Range Queries →](../05_range_queries/README.md) |
+
+---
+
 ## 📐 Core Concept
 
 **Dynamic Segment Tree:** Create nodes on-demand for sparse data.
@@ -118,10 +123,3 @@ class DynamicSegmentTree:
 | - | Coordinate Compression | Hard |
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Persistent](../03_persistent_segtree/README.md) | **04. Dynamic** | [05. Range Queries →](../05_range_queries/README.md) |
-
