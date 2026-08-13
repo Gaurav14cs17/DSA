@@ -25,7 +25,7 @@ permalink: /04_stacks/03_monotonic_stack/
 
 ### 📈 Monotonic Stack Types
 
-<img src="./images/monotonic_stack_types.svg" alt="Monotonic Stack Types" width="850"/>
+<img src="./images/monotonic_stack_types.png" alt="Monotonic Stack Types" width="850"/>
 
 *Decreasing for Next Greater, Increasing for Next Smaller*
 
@@ -33,7 +33,7 @@ permalink: /04_stacks/03_monotonic_stack/
 
 ### ➡️ Next Greater Element
 
-<img src="./images/next_greater_element.svg" alt="Next Greater Element" width="850"/>
+<img src="./images/next_greater_element.png" alt="Next Greater Element" width="850"/>
 
 *O(n) using decreasing stack - LeetCode #496, #503*
 
@@ -41,7 +41,7 @@ permalink: /04_stacks/03_monotonic_stack/
 
 ### 🌡️ Daily Temperatures
 
-<img src="./images/daily_temperatures.svg" alt="Daily Temperatures" width="850"/>
+<img src="./images/daily_temperatures.png" alt="Daily Temperatures" width="850"/>
 
 *Days until warmer temperature - LeetCode #739*
 
@@ -49,7 +49,7 @@ permalink: /04_stacks/03_monotonic_stack/
 
 ### 📊 Largest Rectangle in Histogram
 
-<img src="./images/largest_rectangle_histogram.svg" alt="Largest Rectangle" width="900"/>
+<img src="./images/largest_rectangle_histogram.png" alt="Largest Rectangle" width="900"/>
 
 *Find left/right boundaries using increasing stack - LeetCode #84*
 
