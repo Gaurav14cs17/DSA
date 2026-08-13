@@ -37,7 +37,7 @@ permalink: /30_number_theory/10_lucas_theorem/03_applications/
 
 <div align="center">
 
-![Lucas Applications](./images/lucas_applications.svg)
+![Lucas Applications](./images/lucas_applications.png)
 
 </div>
 
