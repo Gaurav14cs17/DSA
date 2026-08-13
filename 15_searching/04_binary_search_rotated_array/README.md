@@ -26,11 +26,25 @@ permalink: /15_searching/04_binary_search_rotated_array/
 
 ![Rotated Array Search](./images/rotated-array.png)
 
+*Rotated Array Search*
+
 </div>
 
 ---
 
+---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Medium |
+| **Problems** | 6+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
