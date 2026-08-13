@@ -10,7 +10,7 @@ permalink: /37_interval_trees/
 
 # 📊 Interval Trees
 
-![Interval Trees Overview](./images/interval-tree-overview.svg)
+![Interval Trees Overview](./images/interval-tree-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
@@ -38,7 +38,7 @@ permalink: /37_interval_trees/
 
 <div align="center">
 
-![Interval Trees](./images/interval-trees.svg)
+![Interval Trees](./images/interval-trees.png)
 
 </div>
 
