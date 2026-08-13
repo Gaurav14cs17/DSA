@@ -39,8 +39,6 @@ permalink: /08_binary_search_trees/01_bst_operations/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -402,8 +400,6 @@ def trimBST(root: TreeNode, low: int, high: int) -> TreeNode:
 | 450 | [Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/) | Three Cases | O(h) | O(h) |
 | 669 | [Trim a BST](https://leetcode.com/problems/trim-a-binary-search-tree/) | Recursive Trim | O(n) | O(h) |
 | 701 | [Insert into a BST](https://leetcode.com/problems/insert-into-a-binary-search-tree/) | BST Property | O(h) | O(h) |
-
----
 
 ---
 
