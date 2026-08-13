@@ -10,7 +10,7 @@ permalink: /07_trees/
 
 # 🌲 Trees
 
-![Trees Overview](./images/tree-overview.svg)
+![Trees Overview](./images/tree-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
