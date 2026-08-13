@@ -32,8 +32,6 @@ permalink: /11_tries/01_basic_trie/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
