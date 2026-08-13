@@ -33,10 +33,25 @@ permalink: /08_binary_search_trees/03_bst_queries/
 
 ![BST Queries](./image/bst_queries.png)
 
+*BST Queries*
+
 </div>
 
 ---
 
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Medium |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Kth Smallest Element
