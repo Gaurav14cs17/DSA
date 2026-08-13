@@ -11,6 +11,8 @@ permalink: /30_number_theory/06_chinese_remainder/
 
 # 🏛️ Chinese Remainder Theorem
 
+### *Solving Systems of Linear Congruences*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
