@@ -10,6 +10,8 @@ permalink: /03_linked_lists/03_merge_sort/
 
 # 🔀 Merge & Sort Linked Lists
 
+### *🔀 Merge & Sort Linked Lists*
+
 
 
 <p>
@@ -405,19 +407,6 @@ Linked list merge sort: O(log n) stack only! ∎
 </div>
 
 ---
-
----
-
-## 🎯 At a Glance
-
-| | |
-|:---|:---|
-| **Topic** | 🔀 Merge & Sort Linked Lists |
-| **Difficulty** | Medium to Hard |
-| **Problems** | 8+ |
-
-{: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
