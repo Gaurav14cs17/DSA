@@ -39,8 +39,6 @@ permalink: /14_sorting/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
