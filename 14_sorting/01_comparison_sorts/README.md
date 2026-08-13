@@ -10,6 +10,10 @@ permalink: /14_sorting/01_comparison_sorts/
 
 # ⚖️ Comparison-Based Sorting
 
+### *Comparison-Based Sorting*
+
+
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -43,6 +47,7 @@ permalink: /14_sorting/01_comparison_sorts/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -51,8 +56,7 @@ permalink: /14_sorting/01_comparison_sorts/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Lower Bound Proof
 
 **Theorem:** Comparison sorts require $\Omega(n \log n)$ comparisons.
@@ -278,9 +282,3 @@ def mergeLists(l1: 'ListNode', l2: 'ListNode') -> 'ListNode':
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Sorting Home](../README.md) | **01. Comparison Sorts** | [02. Non-Comparison Sorts →](../02_non_comparison_sorts/README.md) |
