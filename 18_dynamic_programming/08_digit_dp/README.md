@@ -30,7 +30,7 @@ permalink: /18_dynamic_programming/08_digit_dp/
 ## 📊 Visual Guide
 
 <div align="center">
-  <img src="images/digit-dp.svg" alt="Digit DP Visualization" width="100%">
+  <img src="images/digit-dp.png" alt="Digit DP Visualization" width="100%">
 </div>
 
 ---
