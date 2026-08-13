@@ -10,7 +10,7 @@ permalink: /11_tries/02_word_search/
 
 # 🔍 Word Search with Trie
 
-![Word Search with Trie](./image/word_search.svg)
+![Word Search with Trie](./image/word_search.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
