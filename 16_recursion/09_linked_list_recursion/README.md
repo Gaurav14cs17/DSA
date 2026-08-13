@@ -10,6 +10,8 @@ permalink: /16_recursion/09_linked_list_recursion/
 
 # 🔗 Linked List Recursion
 
+### *Traversing and manipulating linked lists recursively*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-green?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
