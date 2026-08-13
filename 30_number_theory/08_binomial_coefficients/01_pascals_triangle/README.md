@@ -26,15 +26,7 @@ permalink: /30_number_theory/08_binomial_coefficients/01_pascals_triangle/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Binomial Home](../README.md) | **01. Pascal's Triangle** | [02. Combinations →](../02_combinations/README.md) |
-
----
-
-## 📊 Visual Diagram
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -57,6 +49,15 @@ permalink: /30_number_theory/08_binomial_coefficients/01_pascals_triangle/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [🏠 Binomial Home](../README.md) | **01. Pascal's Triangle** | [02. Combinations →](../02_combinations/README.md) |
+
+---
+
 ## 📐 Structure
 
 ```
@@ -141,9 +142,3 @@ class Solution:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Binomial Home](../README.md) | **01. Pascal's Triangle** | [02. Combinations →](../02_combinations/README.md) |
