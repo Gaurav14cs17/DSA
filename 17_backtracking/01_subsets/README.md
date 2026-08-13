@@ -26,11 +26,23 @@ permalink: /17_backtracking/01_subsets/
 
 ![Subsets Tree](./images/subsets_tree.png)
 
+*Subsets Tree*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **Difficulty** | Medium |
+| **Problems** | 6+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
