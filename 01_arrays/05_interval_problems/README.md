@@ -95,6 +95,34 @@ $$[a, b] \cup [c, d] = [\min(a, c), \max(b, d)]$$
 
 ---
 
+### 6️⃣ Meeting Rooms Problem - Event Sorting
+
+**Problem:** Minimum number of meeting rooms required.
+
+**Mathematical Formulation:**
+
+Given intervals $I_1, I_2, \ldots, I_n$ where $I_i = [s_i, e_i]$:
+
+$$\text{rooms needed} = \max_{t} \left|\{i : s_i \leq t < e_i\}\right|$$
+
+**Sweep Line Algorithm:**
+
+1. Create events: $(s_i, \text{START})$ and $(e_i, \text{END})$
+
+2. Sort events by time
+
+3. Track running count: +1 for START, -1 for END
+
+4. Maximum count = rooms needed
+
+**Proof of Correctness:**
+
+At any time $t$, the number of active meetings equals the rooms needed at that moment. The maximum over all time points is the answer. ∎
+
+---
+
+## 🎨 Visual Algorithm Walkthroughs
+
 ### 3️⃣ Visual: Interval Relationships
 
 ```
@@ -244,32 +272,6 @@ Input: intervals = [[1,3], [6,9]], newInterval = [2,5]
 
 ---
 
-### 6️⃣ Meeting Rooms Problem - Event Sorting
-
-**Problem:** Minimum number of meeting rooms required.
-
-**Mathematical Formulation:**
-
-Given intervals $I_1, I_2, \ldots, I_n$ where $I_i = [s_i, e_i]$:
-
-$$\text{rooms needed} = \max_{t} \left|\{i : s_i \leq t < e_i\}\right|$$
-
-**Sweep Line Algorithm:**
-
-1. Create events: $(s_i, \text{START})$ and $(e_i, \text{END})$
-
-2. Sort events by time
-
-3. Track running count: +1 for START, -1 for END
-
-4. Maximum count = rooms needed
-
-**Proof of Correctness:**
-
-At any time $t$, the number of active meetings equals the rooms needed at that moment. The maximum over all time points is the answer. ∎
-
----
-
 ### 7️⃣ Visual: Meeting Rooms (Sweep Line)
 
 ```
@@ -331,6 +333,7 @@ Input: [[0,30], [5,10], [15,20]]
 ```
 
 ---
+
 
 ## 💻 Code Implementations
 
