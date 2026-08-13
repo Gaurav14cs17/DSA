@@ -10,6 +10,10 @@ nav_order: 4
 
 # 🔗 Bipartite Matching
 
+### *🔗 Bipartite Matching*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Algorithms-3-blue?style=for-the-badge" alt="Algorithms">
@@ -17,6 +21,29 @@ nav_order: 4
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Bipartite Matching - Hungarian Algorithm](./images/bipartite-matching.png)
+
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🔗 Bipartite Matching |
+| **Difficulty** | Hard |
+| **Problems** | 8 |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -28,18 +55,7 @@ nav_order: 4
 
 ---
 
-## 🎨 Visual Overview
-
-<div align="center">
-
-![Bipartite Matching - Hungarian Algorithm](./images/bipartite-matching.png)
-
-</div>
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Bipartite Graph Definition
 
 **Bipartite Graph:** Graph $G = (V, E)$ where $V = L \cup R$ and $L \cap R = \emptyset$, and all edges connect vertices in $L$ to vertices in $R$.
@@ -416,10 +432,3 @@ def min_vertex_cover(L, R, edges):
 7. **Flow Reduction:** Bipartite matching reduces to max flow problem
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 2-SAT](../08_2sat/README.md) | **Bipartite Matching** | [🏠 Graph Algorithms](../README.md) |
-
