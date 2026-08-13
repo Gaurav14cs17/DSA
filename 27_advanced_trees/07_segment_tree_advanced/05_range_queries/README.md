@@ -31,7 +31,7 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/05_range_queries/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/range-queries.svg" alt="Range Aggregate Queries" width="100%">
+<img src="./images/range-queries.png" alt="Range Aggregate Queries" width="100%">
 </div>
 
 ---
