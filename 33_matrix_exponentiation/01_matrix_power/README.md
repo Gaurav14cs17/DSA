@@ -85,6 +85,20 @@ M \cdot (M^{(n-1)/2})^2 & \text{if } n \text{ is odd}
 
 ---
 
+## 🔄 Algorithm Visualization
+
+The binary exponentiation algorithm works by:
+
+1. **Decompose** the exponent into binary form (e.g., 10 = 1010₂ = 8 + 2)
+
+2. **Square repeatedly** to compute M¹, M², M⁴, M⁸...
+
+3. **Multiply selected powers** where the binary bit is 1
+
+This reduces O(n) operations to O(log n)!
+
+---
+
 ## 💻 Code Implementations
 
 ### Implementation 1: Matrix Multiplication
@@ -199,20 +213,6 @@ def matrix_2x2_power(M: tuple, n: int, mod: int) -> tuple:
 |:-:|---------|-------------|------|
 | 1137 | [Tribonacci](https://leetcode.com/problems/n-th-tribonacci-number/) | 3×3 | O(log n) |
 | 935 | [Knight Dialer](https://leetcode.com/problems/knight-dialer/) | 10×10 | O(log n) |
-
----
-
-## 🔄 Algorithm Visualization
-
-The binary exponentiation algorithm works by:
-
-1. **Decompose** the exponent into binary form (e.g., 10 = 1010₂ = 8 + 2)
-
-2. **Square repeatedly** to compute M¹, M², M⁴, M⁸...
-
-3. **Multiply selected powers** where the binary bit is 1
-
-This reduces O(n) operations to O(log n)!
 
 ---
 
