@@ -5,14 +5,18 @@ parent: "Rabin-Karp Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 3
 ---
+<div align="center">
 
 # 🔀 Multiple Pattern Matching with Rabin-Karp
 
 ### *Rabin-Karp excels at matching multiple patterns simultaneously by comparing a single text window hash against a set of pattern hashes.*
 
 
-## 📊 Visual Overview
+</div>
 
+---
+
+## 📊 Visual Overview
 ![Multiple Pattern Matching](./images/multiple-patterns.png)
 
 *Multiple Pattern Matching*
@@ -29,6 +33,14 @@ nav_order: 3
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Single Pattern](../02_single_pattern/README.md) | **Multiple Patterns** | [Collision Handling →](../04_collision_handling/README.md) |
 
 ---
 
@@ -368,4 +380,3 @@ if len(found_patterns) == len(patterns):
 ---
 
 **Navigation:** [← Single Pattern](../02_single_pattern/) | [Next: Collision Handling →](../04_collision_handling/)
-
