@@ -30,7 +30,7 @@ permalink: /25_tree_algorithms/01_lowest_common_ancestor/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/lca-diagram.svg" alt="LCA Diagram" width="100%"/>
+<img src="./images/lca-diagram.png" alt="LCA Diagram" width="100%"/>
 </div>
 
 ---
