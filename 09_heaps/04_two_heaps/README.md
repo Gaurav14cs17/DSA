@@ -27,6 +27,16 @@ permalink: /09_heaps/04_two_heaps/
 
 ---
 
+## 🎨 Visual Pattern Guide
+
+<div align="center">
+
+![Two Heaps Pattern](./image/two_heaps_pattern.png)
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Median Tracking with Two Heaps
@@ -74,16 +84,6 @@ If |right| > |left|:
 |-----------|:----:|
 | addNum | O(log n) |
 | findMedian | O(1) |
-
----
-
-## 🎨 Visual Pattern Guide
-
-<div align="center">
-
-![Two Heaps Pattern](./image/two_heaps_pattern.png)
-
-</div>
 
 ---
 
