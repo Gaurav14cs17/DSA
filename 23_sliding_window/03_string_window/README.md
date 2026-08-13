@@ -24,29 +24,7 @@ permalink: /23_sliding_window/03_string_window/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
-|:------------|:----------:|--------:|
-| [← 02. Variable Size](../02_variable_size/README.md) | **03. String Window** | [🏠 Sliding Window Home](../README.md) → [Graph Algorithms](../../24_graph_algorithms/README.md) |
-
----
-
-## 🎯 What You'll Master
-
-- Anagram and permutation detection
-
-- Minimum window substring (the classic hard problem)
-
-- Character frequency tracking techniques
-
-- The "have vs need" pattern
-
-- Optimizations with match counters
-
----
-
-## 📊 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -184,8 +162,34 @@ Answer: [0, 6]
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 What You'll Master
 
+- Anagram and permutation detection
+
+- Minimum window substring (the classic hard problem)
+
+- Character frequency tracking techniques
+
+- The "have vs need" pattern
+
+- Optimizations with match counters
+
+---
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
+|:------------|:----------:|--------:|
+| [← 02. Variable Size](../02_variable_size/README.md) | **03. String Window** | [🏠 Sliding Window Home](../README.md) → [Graph Algorithms](../../24_graph_algorithms/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Anagram Definition
 
 {: .highlight }
@@ -258,7 +262,7 @@ elif window[c] == pattern[c] + 1:  # Was matched, now over
 
 ### 4️⃣ Substring with Concatenation of All Words
 
-{: .highlight }
+
 > For word-based windows, treat each word as a "character".
 
 #### The Approach
@@ -732,9 +736,3 @@ def numberOfSubstrings(s: str) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
-|:------------|:----------:|--------:|
-| [← 02. Variable Size](../02_variable_size/README.md) | **03. String Window** | [🏠 Sliding Window Home](../README.md) → [Graph Algorithms](../../24_graph_algorithms/README.md) |
