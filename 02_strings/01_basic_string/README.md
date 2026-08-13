@@ -10,7 +10,7 @@ permalink: /02_strings/01_basic_string/
 
 # 🔤 Basic String Operations
 
-### *🔤 Basic String Operations*
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy-green?style=for-the-badge" alt="Difficulty">
@@ -43,8 +43,6 @@ permalink: /02_strings/01_basic_string/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -63,8 +61,6 @@ permalink: /02_strings/01_basic_string/
 | ⬅️ Previous | 📂 Current | ➡️ Next |
 |:------------|:----------:|--------:|
 | [🏠 Strings Home](../README.md) | **01. Basic String** | [02. Anagram Problems →](../02_anagram_problems/README.md) |
-
----
 
 ---
 
@@ -106,8 +102,6 @@ $$f[c] = |\{i : S[i] = c\}|$$
 2. Find first index $i$ where $f[S[i]] = 1$
 
 **Time:** $O(n)$ for counting + $O(n)$ for search = $O(n)$
-
----
 
 ---
 
@@ -168,8 +162,6 @@ def longestCommonPrefix(strs: list[str]) -> str:
 
 ---
 
----
-
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
@@ -194,8 +186,6 @@ def longestCommonPrefix(strs: list[str]) -> str:
 
 ---
 
----
-
 ## 🎯 Pattern Recognition Guide
 
 ### When to Use Each Technique
@@ -207,8 +197,6 @@ def longestCommonPrefix(strs: list[str]) -> str:
 | **Common prefix** | Vertical Scan | Multiple strings | O(S) |
 | **Word reversal** | Two Passes | Reverse twice | O(n) |
 | **Compress string** | Two Pointers | Run-length encoding | O(n) |
-
----
 
 ---
 
@@ -225,8 +213,6 @@ def longestCommonPrefix(strs: list[str]) -> str:
 
 > **📊 Last Word Length Trick**  
 > Scan from right, skip spaces, count until next space. No split needed!
-
----
 
 ---
 
@@ -249,8 +235,6 @@ Two passes:            O(n)   → Reverse + reverse
 With sorting:          O(n log n) → When order matters
 
 ```
-
----
 
 ---
 
@@ -291,8 +275,6 @@ With sorting:          O(n log n) → When order matters
 
 ---
 
----
-
 ## 🎯 Practice Roadmap
 
 ### Beginner (Start Here!)
@@ -318,8 +300,6 @@ With sorting:          O(n log n) → When order matters
 - Optimize to O(1) space where possible
 
 - Explain time/space complexity
-
----
 
 ---
 
