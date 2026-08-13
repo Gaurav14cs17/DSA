@@ -77,6 +77,44 @@ What you'll learn:
 
 ---
 
+## 📊 Visual Comparison
+
+### When to RECURSE:
+
+```
+Number of Atoms:   Mg(OH)2
+                      ↑
+                    '(' → RECURSE
+
+Decode String:     3[a2[c]]
+                    ↑
+                   '[' → RECURSE
+
+Basic Calculator:  (1+(4+5))
+                   ↑
+                  '(' → RECURSE
+
+```
+
+### When to RETURN:
+
+```
+Number of Atoms:   Mg(OH)2
+                       ↑
+                     ')' → RETURN counts
+
+Decode String:     3[a2[c]]
+                        ↑
+                       ']' → RETURN string
+
+Basic Calculator:  (1+(4+5))
+                          ↑
+                         ')' → RETURN value
+
+```
+
+---
+
 ## 📐 Common Parser Pattern
 
 All three problems follow the same structure:
@@ -127,44 +165,6 @@ class Parser:
 | **Number Follows** | After `)` or Atom | Before `[` | N/A |
 | **Returns** | `dict` | `str` | `int` |
 | **Merge Operation** | Add counts | Concatenate × k | Evaluate operators |
-
----
-
-## 📊 Visual Comparison
-
-### When to RECURSE:
-
-```
-Number of Atoms:   Mg(OH)2
-                      ↑
-                    '(' → RECURSE
-
-Decode String:     3[a2[c]]
-                    ↑
-                   '[' → RECURSE
-
-Basic Calculator:  (1+(4+5))
-                   ↑
-                  '(' → RECURSE
-
-```
-
-### When to RETURN:
-
-```
-Number of Atoms:   Mg(OH)2
-                       ↑
-                     ')' → RETURN counts
-
-Decode String:     3[a2[c]]
-                        ↑
-                       ']' → RETURN string
-
-Basic Calculator:  (1+(4+5))
-                          ↑
-                         ')' → RETURN value
-
-```
 
 ---
 
