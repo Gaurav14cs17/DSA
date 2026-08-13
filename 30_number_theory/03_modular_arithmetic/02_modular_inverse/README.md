@@ -35,6 +35,16 @@ Notation: x = a⁻¹ (mod m)
 
 ---
 
+## 📊 Visual Diagram
+
+<div align="center">
+
+![Modular Inverse](./images/modular_inverse.png)
+
+</div>
+
+---
+
 ## 📐 Core Concepts
 
 ### When Does Inverse Exist?
@@ -51,16 +61,6 @@ Notation: x = a⁻¹ (mod m)
 2. **Fermat's Theorem:** a⁻¹ ≡ a^(p-2) (mod p), when p is prime
 
 3. **Euler's Theorem:** a⁻¹ ≡ a^(φ(m)-1) (mod m)
-
----
-
-## 📊 Visual Diagram
-
-<div align="center">
-
-![Modular Inverse](./images/modular_inverse.png)
-
-</div>
 
 ---
 
