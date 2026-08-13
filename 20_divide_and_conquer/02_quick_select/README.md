@@ -30,14 +30,14 @@ permalink: /20_divide_and_conquer/02_quick_select/
 ## 🖼️ Visual Overview
 
 <div align="center">
-  <img src="./images/quick-select.svg" alt="Quick Select Algorithm" width="100%">
+  <img src="./images/quick-select.png" alt="Quick Select Algorithm" width="100%">
 </div>
 
 <details>
 <summary>🔄 Partition Algorithm Visualization</summary>
 
 <div align="center">
-  <img src="./images/partition.svg" alt="Partition Algorithm" width="100%">
+  <img src="./images/partition.png" alt="Partition Algorithm" width="100%">
 </div>
 
 </details>
