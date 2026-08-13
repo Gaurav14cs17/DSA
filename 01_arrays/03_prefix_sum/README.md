@@ -10,6 +10,8 @@ permalink: /01_arrays/03_prefix_sum/
 
 # 📊 Prefix Sum Techniques
 
+### *📊 Prefix Sum Techniques*
+
 
 
 <p>
@@ -911,19 +913,6 @@ remainder = prefix_sum % k
 </div>
 
 ---
-
----
-
-## 🎯 At a Glance
-
-| | |
-|:---|:---|
-| **Topic** | 📊 Prefix Sum Techniques |
-| **Difficulty** | Easy to Hard |
-| **Problems** | 20+ |
-
-{: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
