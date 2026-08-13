@@ -70,7 +70,7 @@ Thus: a^(p-1) ≡ 1 (mod p)
 
 <div align="center">
 
-![Fermat's Little Theorem](./images/fermats_theorem.svg)
+![Fermat's Little Theorem](./images/fermats_theorem.png)
 
 </div>
 
