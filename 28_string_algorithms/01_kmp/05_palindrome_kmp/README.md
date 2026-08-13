@@ -5,14 +5,18 @@ parent: "KMP Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 5
 ---
+<div align="center">
 
 # 🎭 Palindrome Problems with KMP
 
 ### *KMP can solve palindrome problems efficiently by combining with string reversal.*
 
 
-## 📊 Visual Overview
+</div>
 
+---
+
+## 📊 Visual Overview
 ![Palindrome with KMP](./images/palindrome-kmp.png)
 
 *Palindrome with KMP*
@@ -29,6 +33,14 @@ nav_order: 5
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Prefix Suffix](../04_prefix_suffix/README.md) | **Palindrome KMP** | [Multiple Patterns →](../06_multiple_patterns/README.md) |
 
 ---
 
@@ -526,4 +538,3 @@ class Solution:
 ---
 
 **Navigation:** [← Prefix-Suffix](../04_prefix_suffix/) | [KMP Overview](../README.md) | [Next: Multiple Patterns →](../06_multiple_patterns/)
-
