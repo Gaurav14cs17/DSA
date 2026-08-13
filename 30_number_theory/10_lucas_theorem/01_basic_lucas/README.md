@@ -26,15 +26,7 @@ permalink: /30_number_theory/10_lucas_theorem/01_basic_lucas/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Lucas Home](../README.md) | **01. Basic Lucas** | [02. Sierpiński →](../02_sierpinski/README.md) |
-
----
-
-## 📊 Visual Diagram
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -57,6 +49,15 @@ permalink: /30_number_theory/10_lucas_theorem/01_basic_lucas/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [🏠 Lucas Home](../README.md) | **01. Basic Lucas** | [02. Sierpiński →](../02_sierpinski/README.md) |
+
+---
+
 ## 📐 The Theorem
 
 For prime p and non-negative m, n:
@@ -130,9 +131,3 @@ print(lucas(10**18, 10**9, 7))  # Instant!
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Lucas Home](../README.md) | **01. Basic Lucas** | [02. Sierpiński →](../02_sierpinski/README.md) |
