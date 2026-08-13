@@ -8,19 +8,27 @@ nav_order: 2
 
 # 📊 KMP Failure Function (π-array)
 
+### *The **failure function** (also called **prefix function** or **π-array**) is the heart of KMP.*
+
+
 ## 📊 Visual Overview
 
 ![Failure Function](./images/failure-function.png)
 
-## 📊 Metadata
+*Failure Function*
 
-- **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+---
 
-- **Time Complexity:** O(m)
+## 🎯 At a Glance
 
-- **Space Complexity:** O(m)
+| | |
+|:---|:---|
+| **In one line** | The **failure function** (also called **prefix function** or **π-array**) is the heart of KMP. |
+| **Typical time** | O(m) |
+| **Typical space** | O(m) |
 
-- **Pattern:** Prefix Analysis, Border Properties
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
