@@ -24,29 +24,7 @@ permalink: /23_sliding_window/02_variable_size/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Fixed Size](../01_fixed_size/README.md) | **02. Variable Size** | [03. String Window →](../03_string_window/README.md) |
-
----
-
-## 🎯 What You'll Master
-
-- Longest subarray/substring problems
-
-- Shortest subarray/substring problems  
-
-- The "atMost(k) - atMost(k-1)" trick for counting
-
-- Constraint-based window adjustment
-
-- Amortized O(n) analysis
-
----
-
-## 📊 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -189,8 +167,34 @@ exactly(2) = atMost(2) - atMost(1) = 12 - 5 = 7
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 What You'll Master
 
+- Longest subarray/substring problems
+
+- Shortest subarray/substring problems  
+
+- The "atMost(k) - atMost(k-1)" trick for counting
+
+- Constraint-based window adjustment
+
+- Amortized O(n) analysis
+
+---
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 01. Fixed Size](../01_fixed_size/README.md) | **02. Variable Size** | [03. String Window →](../03_string_window/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ The Two Goals
 
 {: .highlight }
@@ -257,7 +261,7 @@ We want the **longest** valid window. If invalid, we **must** shrink to make it 
 
 ### 4️⃣ Shortest Valid Window — The Pattern
 
-{: .highlight }
+
 > Shrink while **valid**, update **before** shrinking.
 
 #### Algorithm
@@ -736,11 +740,3 @@ def balancedString(s: str) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Fixed Size](../01_fixed_size/README.md) | **02. Variable Size** | [03. String Window →](../03_string_window/README.md) |
-
-```
