@@ -34,6 +34,8 @@ permalink: /01_arrays/
 
 ---
 
+---
+
 ## 🎯 At a Glance
 
 | | |
@@ -47,27 +49,36 @@ permalink: /01_arrays/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 📚 Comprehensive Documentation
 
-### What Each Subfolder Includes
+---
 
-Each subfolder contains **complete mini-courses** with:
+## 📂 Subtopics Navigation
 
-- ✅ Mathematical foundations with proofs
+Each subtopic contains:
 
-- ✅ Visual algorithm walkthroughs (ASCII art)
+- 📐 **Mathematical Foundations** - Theorems, proofs, and formulas
 
-- ✅ Fully commented code implementations
+- 🎨 **Visual Walkthroughs** - ASCII diagrams and step-by-step traces
 
-- ✅ 15-25 curated LeetCode problems each
+- 💻 **Code Implementations** - Python with detailed comments
 
-- ✅ Pattern recognition guides
+- 🏆 **LeetCode Problems** - Curated and sorted by difficulty
 
-- ✅ Video tutorials and references
+- 💡 **Key Insights** - Pro tips and pattern recognition
 
-- ✅ Practice roadmaps
+- 📚 **Learning Resources** - Videos, tutorials, and references
 
-**Total: 90+ problems covered with detailed explanations!**
+| # | Topic | Problems | Key Techniques | Link |
+|:-:|-------|:--------:|----------------|------|
+| 1 | **Basic Operations** | 15+ | Two Pointers, Dutch Flag, Floyd's Cycle | [📖 Go →](./01_basic_operations/README.md) |
+| 2 | **Subarray Problems** | 15+ | Kadane's, Sliding Window, Prefix+Hash | [📖 Go →](./02_subarray_problems/README.md) |
+| 3 | **Prefix Sum** | 20+ | Range Queries, 2D Prefix, Modulo Arithmetic | [📖 Go →](./03_prefix_sum/README.md) |
+| 4 | **Matrix Problems** | 25+ | Rotation, Spiral, Staircase Search | [📖 Go →](./04_matrix_problems/README.md) |
+| 5 | **Interval Problems** | 20+ | Merge, Sweep Line, Greedy Scheduling | [📖 Go →](./05_interval_problems/README.md) |
+
+> 💡 **Pro Tip:** Each subfolder is a complete mini-course. Start with Basic Operations and work your way through sequentially!
+
+---
 
 ---
 
@@ -223,6 +234,34 @@ $$\frac{T(n)}{n} = \frac{3n}{n} = 3 = O(1)$$
 
 ---
 
+---
+
+## 📚 Comprehensive Documentation
+
+### What Each Subfolder Includes
+
+Each subfolder contains **complete mini-courses** with:
+
+- ✅ Mathematical foundations with proofs
+
+- ✅ Visual algorithm walkthroughs (ASCII art)
+
+- ✅ Fully commented code implementations
+
+- ✅ 15-25 curated LeetCode problems each
+
+- ✅ Pattern recognition guides
+
+- ✅ Video tutorials and references
+
+- ✅ Practice roadmaps
+
+**Total: 90+ problems covered with detailed explanations!**
+
+---
+
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -232,6 +271,8 @@ $$\frac{T(n)}{n} = \frac{3n}{n} = 3 = O(1)$$
 - Understanding of Big-O notation
 
 - Familiarity with loops and conditionals
+
+---
 
 ---
 
@@ -311,6 +352,8 @@ $$\frac{T(n)}{n} = \frac{3n}{n} = 3 = O(1)$$
 - Greedy interval scheduling
 
 - **20+ LeetCode problems** with proofs
+
+---
 
 ---
 
@@ -400,6 +443,8 @@ Day 5-7: Interval Problems
 
 ---
 
+---
+
 ## 🎯 Must-Solve Problems (Top 15)
 
 Solve these first for maximum interview impact:
@@ -421,6 +466,8 @@ Solve these first for maximum interview impact:
 | 13 | [Container With Water](https://leetcode.com/problems/container-with-most-water/) | Two Pointers | 🟡 Medium | Greedy proof |
 | 14 | [3Sum](https://leetcode.com/problems/3sum/) | Two Pointers | 🟡 Medium | Extension of 2Sum |
 | 15 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Index Hash | 🔴 Hard | Interview favorite |
+
+---
 
 ---
 
@@ -453,6 +500,8 @@ Solve these first for maximum interview impact:
 - Move on without optimizing
 
 - Practice only one type of problem
+
+---
 
 ---
 
@@ -496,32 +545,6 @@ Solve these first for maximum interview impact:
 
 ---
 
-## 📂 Subtopics Navigation
-
-Each subtopic contains:
-
-- 📐 **Mathematical Foundations** - Theorems, proofs, and formulas
-
-- 🎨 **Visual Walkthroughs** - ASCII diagrams and step-by-step traces
-
-- 💻 **Code Implementations** - Python with detailed comments
-
-- 🏆 **LeetCode Problems** - Curated and sorted by difficulty
-
-- 💡 **Key Insights** - Pro tips and pattern recognition
-
-- 📚 **Learning Resources** - Videos, tutorials, and references
-
-| # | Topic | Problems | Key Techniques | Link |
-|:-:|-------|:--------:|----------------|------|
-| 1 | **Basic Operations** | 15+ | Two Pointers, Dutch Flag, Floyd's Cycle | [📖 Go →](./01_basic_operations/README.md) |
-| 2 | **Subarray Problems** | 15+ | Kadane's, Sliding Window, Prefix+Hash | [📖 Go →](./02_subarray_problems/README.md) |
-| 3 | **Prefix Sum** | 20+ | Range Queries, 2D Prefix, Modulo Arithmetic | [📖 Go →](./03_prefix_sum/README.md) |
-| 4 | **Matrix Problems** | 25+ | Rotation, Spiral, Staircase Search | [📖 Go →](./04_matrix_problems/README.md) |
-| 5 | **Interval Problems** | 20+ | Merge, Sweep Line, Greedy Scheduling | [📖 Go →](./05_interval_problems/README.md) |
-
-> 💡 **Pro Tip:** Each subfolder is a complete mini-course. Start with Basic Operations and work your way through sequentially!
-
 ---
 
 ## 🎯 Pattern Recognition Flowchart
@@ -558,6 +581,8 @@ Use this flowchart to quickly identify which technique to apply:
 
 ---
 
+---
+
 ## 🧩 Quick Pattern Reference
 
 | If You See... | Think... | Technique |
@@ -574,6 +599,8 @@ Use this flowchart to quickly identify which technique to apply:
 | "Subarray sum equals k" | Prefix + Hash Map | O(n) |
 | "Spiral matrix" | Layer by Layer | O(mn) |
 | "Search 2D sorted matrix" | Binary Search / Staircase | O(log mn) or O(m+n) |
+
+---
 
 ---
 
@@ -624,6 +651,8 @@ Use this flowchart to quickly identify which technique to apply:
 
 ---
 
+---
+
 ## 💡 Key Insights & Pro Tips
 
 > **🎯 Space-Time Tradeoff**  
@@ -640,6 +669,8 @@ Use this flowchart to quickly identify which technique to apply:
 
 ---
 
+---
+
 ## 🎓 Complexity Cheatsheet
 
 | Operation | Unsorted Array | Sorted Array | With Preprocessing |
@@ -650,6 +681,8 @@ Use this flowchart to quickly identify which technique to apply:
 | **Delete** | O(n) | O(n) | O(n) |
 | **Range Query** | O(n) | O(n) | **O(1) with prefix** |
 | **Find Min/Max** | O(n) | O(1) | O(1) with tracking |
+
+---
 
 ---
 
@@ -698,6 +731,8 @@ Use this flowchart to quickly identify which technique to apply:
 
 ---
 
+---
+
 ## 🎖️ Interview Success Tips
 
 ### Common Mistakes to Avoid
@@ -741,6 +776,8 @@ Use this flowchart to quickly identify which technique to apply:
 
 ---
 
+---
+
 ## 🌟 Motivational Corner
 
 > "Arrays are the foundation. Master them, and every other data structure becomes easier."  
@@ -760,6 +797,8 @@ Use this flowchart to quickly identify which technique to apply:
 
 ---
 
+---
+
 ## 📊 Statistics & Fun Facts
 
 - **Most Common Data Structure:** Arrays appear in ~40% of coding interviews
@@ -771,6 +810,8 @@ Use this flowchart to quickly identify which technique to apply:
 - **Hardest Concept:** Understanding amortized complexity
 
 - **Most Elegant Algorithm:** Kadane's (5 lines to solve maximum subarray!)
+
+---
 
 ---
 
