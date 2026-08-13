@@ -10,6 +10,8 @@ permalink: /01_arrays/04_matrix_problems/
 
 # 🎯 Matrix Problems
 
+### *🎯 Matrix Problems*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-25+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +21,7 @@ permalink: /01_arrays/04_matrix_problems/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Prefix Sum](../03_prefix_sum/README.md) | **04. Matrix Problems** | [05. Interval Problems →](../05_interval_problems/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -47,8 +41,32 @@ permalink: /01_arrays/04_matrix_problems/
 
 ---
 
-## 📐 Mathematical Foundations
+---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🎯 Matrix Problems |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 25+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 03. Prefix Sum](../03_prefix_sum/README.md) | **04. Matrix Problems** | [05. Interval Problems →](../05_interval_problems/README.md) |
+
+---
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Matrix Indexing & Coordinates
 
 **Row-major order (most programming languages):**
@@ -361,6 +379,8 @@ Algorithm:
 
 ---
 
+---
+
 ## 💻 Code Implementations
 
 ```python
@@ -599,6 +619,8 @@ def transpose(matrix: list[list[int]]) -> list[list[int]]:
 
 ---
 
+---
+
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
@@ -638,6 +660,8 @@ def transpose(matrix: list[list[int]]) -> list[list[int]]:
 
 ---
 
+---
+
 ## 📊 Pattern Decision Tree
 
 ```
@@ -655,6 +679,8 @@ def transpose(matrix: list[list[int]]) -> list[list[int]]:
  Tracking        pose  Markers  Search
 
 ```
+
+---
 
 ---
 
@@ -680,6 +706,8 @@ def transpose(matrix: list[list[int]]) -> list[list[int]]:
 
 ---
 
+---
+
 ## 🎓 Pattern Recognition Guide
 
 ### Identifying Matrix Patterns
@@ -693,6 +721,8 @@ def transpose(matrix: list[list[int]]) -> list[list[int]]:
 | **"Diagonal traversal"** | Direction control | Diagonal Traverse |
 | **"3×3 boxes"** | Box index formula | Sudoku problems |
 | **"Layer by layer"** | Nested boundaries | Rotate, Spiral |
+
+---
 
 ---
 
@@ -723,6 +753,8 @@ Problem: Set Matrix Zeroes
    - Handle first row/col separately
 
 ```
+
+---
 
 ---
 
@@ -761,6 +793,8 @@ R_4 &= R_1 \circ R_1 \circ R_1 \circ R_1 = R_0
      - All elements in row $i$ are $\leq M[i][j] < \text{target}$ ✓
 
 3. **Termination:** Either find target or exhaust all cells ∎
+
+---
 
 ---
 
@@ -816,6 +850,8 @@ for i in range(m):
 
 ---
 
+---
+
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
@@ -840,6 +876,8 @@ for i in range(m):
 |----------|-------|------|
 | **LeetCode** | Matrix tag | [Problems](https://leetcode.com/tag/matrix/) |
 | **HackerRank** | 2D Array problems | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=arrays) |
+
+---
 
 ---
 
@@ -876,6 +914,8 @@ for i in range(m):
 - Maximal Rectangle (#85) - Histogram technique
 
 - Longest Increasing Path (#329) - DFS + memoization
+
+---
 
 ---
 
@@ -916,9 +956,3 @@ A: Number of complete spirals = ceil(min(m, n) / 2). Each spiral is one "layer".
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Prefix Sum](../03_prefix_sum/README.md) | **04. Matrix Problems** | [05. Interval Problems →](../05_interval_problems/README.md) |
