@@ -89,6 +89,8 @@ ALG ≤ 2 · OPT
 <img src="./images/vertex-cover-approximation.png" alt="Vertex Cover 2-Approximation" width="900"/>
 </div>
 
+**Idea:** Greedily pick both endpoints of any uncovered edge. Each edge needs at least one vertex in any optimal cover, so this 2-approximation never picks more than twice the optimal vertex cover size.
+
 ```python
 def vertex_cover_approx(edges):
     """
@@ -129,6 +131,8 @@ def vertex_cover_approx(edges):
 <div align="center">
 <img src="./images/set-cover-greedy.png" alt="Set Cover Greedy Algorithm" width="950"/>
 </div>
+
+**Idea:** Repeatedly pick the set that covers the largest number of still-uncovered universe elements. This greedy rule achieves a ln(n) + 1 approximation — best possible among polynomial-time algorithms unless P = NP.
 
 ```python
 def set_cover_greedy(universe, subsets):
