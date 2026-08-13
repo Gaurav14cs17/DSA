@@ -10,6 +10,8 @@ permalink: /24_graph_algorithms/
 
 # 🗺️ Advanced Graph Algorithms
 
+### *Complete Collection of Advanced Graph Algorithms*
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
@@ -33,10 +35,25 @@ permalink: /24_graph_algorithms/
 
 ![Graph BFS and DFS](../assets/images/graph-bfs-dfs.png)
 
+*Graph BFS and DFS*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Complete Collection of Advanced Graph Algorithms |
+| **Difficulty** | Medium to Hard |
+| **Subtopics** | 9 |
+| **Problems** | 100+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
