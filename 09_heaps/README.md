@@ -10,8 +10,6 @@ permalink: /09_heaps/
 
 # ⛰️ Heaps / Priority Queues
 
-![Heaps Overview](./images/heap-overview.png)
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Subtopics-4-blue?style=for-the-badge" alt="Subtopics">
@@ -25,6 +23,17 @@ permalink: /09_heaps/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Heaps Overview](./images/heap-overview.png)
+
+</div>
+
+---
+
 
 ## 📐 Mathematical Foundation
 
