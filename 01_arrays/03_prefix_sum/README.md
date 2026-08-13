@@ -10,6 +10,8 @@ permalink: /01_arrays/03_prefix_sum/
 
 # 📊 Prefix Sum Techniques
 
+### *📊 Prefix Sum Techniques*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-20+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +21,7 @@ permalink: /01_arrays/03_prefix_sum/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. Subarray Problems](../02_subarray_problems/README.md) | **03. Prefix Sum** | [04. Matrix Problems →](../04_matrix_problems/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -47,130 +41,9 @@ permalink: /01_arrays/03_prefix_sum/
 
 ---
 
-## 📐 Mathematical Foundations
-
-### 1️⃣ Prefix Sum Definition & Formula
-
-**Definition:** Prefix sum array $P$ where:
-
-$$P[i] = \sum_{j=0}^{i} A[j]$$
-
-**Explicit Formula:**
-
-$$\boxed{P[0] = A[0], \quad P[i] = P[i-1] + A[i] \text{ for } i > 0}$$
-
-**Key Identity - Range Sum:**
-
-$$\text{sum}(L, R) = P[R] - P[L-1]$$
-
-**Proof:**
-
-$$\begin{aligned}
-P[R] - P[L-1] &= \sum_{i=0}^{R} A[i] - \sum_{i=0}^{L-1} A[i] \\
-&= \sum_{i=L}^{R} A[i] \quad \text{∎}
-\end{aligned}$$
-
 ---
 
-### 2️⃣ Why P[0] = 0 Convention?
-
-**Including P[0] = 0 simplifies boundary cases:**
-
-$$\text{sum}(0, R) = P[R] - P[-1] = P[R] - 0 = P[R]$$
-
-**With this convention:**
-
-$$P[i] = \sum_{j=0}^{i-1} A[j] \quad \text{(exclusive right bound)}$$
-
-**Comparison:**
-
-```
-Array:    [3, 1, -2, 5, -1]
-Indices:   0  1   2  3   4
-
-Without P[0]=0:
-Prefix:   [3, 4,  2, 7,  6]
-
-With P[0]=0:
-Prefix: [0, 3, 4,  2, 7,  6]
-         ↑
-    Simplifies sum(0,R)
-
-```
-
----
-
-### 5️⃣ 2D Prefix Sum (Matrix)
-
-**Definition for 2D array:**
-
-$$P[i][j] = \sum_{r=0}^{i} \sum_{c=0}^{j} A[r][c]$$
-
-**Recurrence Relation:**
-
-$$\boxed{P[i][j] = P[i-1][j] + P[i][j-1] - P[i-1][j-1] + A[i][j]}$$
-
-**Range Sum Query (r1,c1) to (r2,c2):**
-
-$$\boxed{\text{sum} = P[r2][c2] - P[r1-1][c2] - P[r2][c1-1] + P[r1-1][c1-1]}$$
-
-**Visual Explanation:**
-
-```
-      c1      c2
-r1  +---------+----+
-    |    A    | B  |
-    |         |    |
-r2  +---------+----+
-    |    C    | D  |
-    +---------+----+
-
-Want: Area A only
-
-P[r2][c2] = A + B + C + D
-P[r1-1][c2] = B
-P[r2][c1-1] = C
-P[r1-1][c1-1] = 0
-
-sum = (A+B+C+D) - B - C + 0 = A ✓
-
-Inclusion-Exclusion Principle!
-
-```
-
----
-
-### 6️⃣ Mathematical Properties
-
-**Property 1: Linearity**
-
-$$P[A + B] = P[A] + P[B]$$
-
-**Property 2: Difference**
-
-$$A[i] = P[i] - P[i-1]$$
-
-**Property 3: Telescoping**
-
-$$\sum_{i=L}^{R} (P[i] - P[i-1]) = P[R] - P[L-1]$$
-
-**Property 4: Modulo Arithmetic**
-
-If $P[i] \equiv P[j] \pmod{k}$, then:
-
-$$\sum_{x=i+1}^{j} A[x] \equiv 0 \pmod{k}$$
-
-**Proof:**
-
-$$\begin{aligned}
-P[j] - P[i] &\equiv 0 \pmod{k} \\
-\sum_{x=0}^{j} A[x] - \sum_{x=0}^{i} A[x] &\equiv 0 \pmod{k} \\
-\sum_{x=i+1}^{j} A[x] &\equiv 0 \pmod{k} \quad \text{∎}
-\end{aligned}$$
-
----
-
-## 🎨 Visual Algorithm Walkthroughs
+## 📊 Visual Overview
 
 ### 3️⃣ Visual: Prefix Sum Construction
 
@@ -338,6 +211,155 @@ Output: [24, 12, 8, 6]  (product of all elements except self)
 Time: O(n), Space: O(1) (output array doesn't count)
 
 ```
+
+---
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 📊 Prefix Sum Techniques |
+| **Difficulty** | Easy to Hard |
+| **Problems** | 20+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 02. Subarray Problems](../02_subarray_problems/README.md) | **03. Prefix Sum** | [04. Matrix Problems →](../04_matrix_problems/README.md) |
+
+---
+
+---
+
+## 📐 Mathematical Foundation
+### 1️⃣ Prefix Sum Definition & Formula
+
+**Definition:** Prefix sum array $P$ where:
+
+$$P[i] = \sum_{j=0}^{i} A[j]$$
+
+**Explicit Formula:**
+
+$$\boxed{P[0] = A[0], \quad P[i] = P[i-1] + A[i] \text{ for } i > 0}$$
+
+**Key Identity - Range Sum:**
+
+$$\text{sum}(L, R) = P[R] - P[L-1]$$
+
+**Proof:**
+
+$$\begin{aligned}
+P[R] - P[L-1] &= \sum_{i=0}^{R} A[i] - \sum_{i=0}^{L-1} A[i] \\
+&= \sum_{i=L}^{R} A[i] \quad \text{∎}
+\end{aligned}$$
+
+---
+
+### 2️⃣ Why P[0] = 0 Convention?
+
+**Including P[0] = 0 simplifies boundary cases:**
+
+$$\text{sum}(0, R) = P[R] - P[-1] = P[R] - 0 = P[R]$$
+
+**With this convention:**
+
+$$P[i] = \sum_{j=0}^{i-1} A[j] \quad \text{(exclusive right bound)}$$
+
+**Comparison:**
+
+```
+Array:    [3, 1, -2, 5, -1]
+Indices:   0  1   2  3   4
+
+Without P[0]=0:
+Prefix:   [3, 4,  2, 7,  6]
+
+With P[0]=0:
+Prefix: [0, 3, 4,  2, 7,  6]
+         ↑
+    Simplifies sum(0,R)
+
+```
+
+---
+
+### 5️⃣ 2D Prefix Sum (Matrix)
+
+**Definition for 2D array:**
+
+$$P[i][j] = \sum_{r=0}^{i} \sum_{c=0}^{j} A[r][c]$$
+
+**Recurrence Relation:**
+
+$$\boxed{P[i][j] = P[i-1][j] + P[i][j-1] - P[i-1][j-1] + A[i][j]}$$
+
+**Range Sum Query (r1,c1) to (r2,c2):**
+
+$$\boxed{\text{sum} = P[r2][c2] - P[r1-1][c2] - P[r2][c1-1] + P[r1-1][c1-1]}$$
+
+**Visual Explanation:**
+
+```
+      c1      c2
+r1  +---------+----+
+    |    A    | B  |
+    |         |    |
+r2  +---------+----+
+    |    C    | D  |
+    +---------+----+
+
+Want: Area A only
+
+P[r2][c2] = A + B + C + D
+P[r1-1][c2] = B
+P[r2][c1-1] = C
+P[r1-1][c1-1] = 0
+
+sum = (A+B+C+D) - B - C + 0 = A ✓
+
+Inclusion-Exclusion Principle!
+
+```
+
+---
+
+### 6️⃣ Mathematical Properties
+
+**Property 1: Linearity**
+
+$$P[A + B] = P[A] + P[B]$$
+
+**Property 2: Difference**
+
+$$A[i] = P[i] - P[i-1]$$
+
+**Property 3: Telescoping**
+
+$$\sum_{i=L}^{R} (P[i] - P[i-1]) = P[R] - P[L-1]$$
+
+**Property 4: Modulo Arithmetic**
+
+If $P[i] \equiv P[j] \pmod{k}$, then:
+
+$$\sum_{x=i+1}^{j} A[x] \equiv 0 \pmod{k}$$
+
+**Proof:**
+
+$$\begin{aligned}
+P[j] - P[i] &\equiv 0 \pmod{k} \\
+\sum_{x=0}^{j} A[x] - \sum_{x=0}^{i} A[x] &\equiv 0 \pmod{k} \\
+\sum_{x=i+1}^{j} A[x] &\equiv 0 \pmod{k} \quad \text{∎}
+\end{aligned}$$
+
+---
 
 ---
 
@@ -514,6 +536,8 @@ def continuousSubarraySum(nums: list[int], k: int) -> bool:
 
 ---
 
+---
+
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
@@ -549,6 +573,8 @@ def continuousSubarraySum(nums: list[int], k: int) -> bool:
 
 ---
 
+---
+
 ## 📊 Pattern Decision Tree
 
 ```
@@ -566,6 +592,8 @@ def continuousSubarraySum(nums: list[int], k: int) -> bool:
   Prefix
 
 ```
+
+---
 
 ---
 
@@ -591,6 +619,8 @@ def continuousSubarraySum(nums: list[int], k: int) -> bool:
 
 ---
 
+---
+
 ## 🎓 Pattern Recognition Guide
 
 ### Identifying Prefix Sum Problems
@@ -603,6 +633,8 @@ def continuousSubarraySum(nums: list[int], k: int) -> bool:
 | **Equal left/right** | "Find pivot index" | Running sum |
 | **2D region sum** | "Sum of submatrix?" | 2D Prefix Sum |
 | **Product except self** | "Product without division" | Prefix × Suffix |
+
+---
 
 ---
 
@@ -641,6 +673,8 @@ Speedup: 500,000× faster!
 
 ---
 
+---
+
 ## 🧮 Mathematical Deep Dive
 
 ### Why Prefix Sum Works: Telescoping Series
@@ -676,6 +710,8 @@ Mod 3:  [0, 1, 0, 0,  1,  0]
          → C(4,2) = 6 subarrays divisible by 3
 
 ```
+
+---
 
 ---
 
@@ -741,6 +777,8 @@ def subarraySumPattern(nums: list[int], target: int) -> int:
 
 ---
 
+---
+
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
@@ -773,6 +811,8 @@ def subarraySumPattern(nums: list[int], target: int) -> int:
 |----------|-------|------|
 | **Competitive Programmer's Handbook** | Chapter 9: Range queries | [PDF](https://cses.fi/book/book.pdf) |
 | **USACO Guide** | Prefix sums module | [Guide](https://usaco.guide/silver/prefix-sums) |
+
+---
 
 ---
 
@@ -812,6 +852,8 @@ def subarraySumPattern(nums: list[int], target: int) -> int:
 
 ---
 
+---
+
 ## 💭 Common Interview Questions
 
 **Q: When should I use prefix sum vs sliding window?**  
@@ -828,6 +870,8 @@ A: Not efficiently. Use segment tree or Fenwick tree for updates. Prefix sum is 
 
 **Q: What's the difference between prefix sum and cumulative sum?**  
 A: They're the same thing! Different terminology for the same concept.
+
+---
 
 ---
 
@@ -867,6 +911,8 @@ remainder = prefix_sum % k
 # remainder = ((prefix_sum % k) + k) % k
 
 ```
+
+---
 
 ---
 
@@ -915,9 +961,3 @@ remainder = prefix_sum % k
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. Subarray Problems](../02_subarray_problems/README.md) | **03. Prefix Sum** | [04. Matrix Problems →](../04_matrix_problems/README.md) |
