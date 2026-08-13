@@ -30,7 +30,7 @@ permalink: /25_tree_algorithms/11_mos_algorithm_trees/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/mos-algorithm-diagram.svg" alt="Mo's Algorithm on Trees Diagram" width="100%"/>
+<img src="./images/mos-algorithm-diagram.png" alt="Mo's Algorithm on Trees Diagram" width="100%"/>
 </div>
 
 ---
