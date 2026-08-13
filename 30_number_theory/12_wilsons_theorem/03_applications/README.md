@@ -37,7 +37,7 @@ permalink: /30_number_theory/12_wilsons_theorem/03_applications/
 
 <div align="center">
 
-![Wilson Applications](./images/wilson_applications.svg)
+![Wilson Applications](./images/wilson_applications.png)
 
 </div>
 
