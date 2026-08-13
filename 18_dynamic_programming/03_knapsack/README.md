@@ -30,7 +30,7 @@ permalink: /18_dynamic_programming/03_knapsack/
 ## 📊 Visual Guide
 
 <div align="center">
-  <img src="images/knapsack.svg" alt="Knapsack DP Visualization" width="100%">
+  <img src="images/knapsack.png" alt="Knapsack DP Visualization" width="100%">
 </div>
 
 ---
