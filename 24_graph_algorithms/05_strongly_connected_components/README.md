@@ -31,7 +31,7 @@ permalink: /24_graph_algorithms/05_strongly_connected_components/
 
 <div align="center">
 
-![Strongly Connected Components - Tarjan's Algorithm](./images/scc-tarjan.svg)
+![Strongly Connected Components - Tarjan's Algorithm](./images/scc-tarjan.png)
 
 </div>
 
