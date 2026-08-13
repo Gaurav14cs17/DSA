@@ -32,6 +32,16 @@ permalink: /30_number_theory/02_primes/02_sieve_eratosthenes/
 
 ---
 
+## 📊 Visual Diagram
+
+<div align="center">
+
+![Sieve of Eratosthenes](./images/sieve_visualization.png)
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Algorithm Overview
@@ -94,16 +104,6 @@ Therefore: $T(n) = O(n \log \log n)$ ∎
 | Odd-only | O(n/2) | Skip even numbers (except 2) |
 | Bitset | O(n/8) | Use bits instead of bytes |
 | Segmented | O(√n) | Process in blocks |
-
----
-
-## 📊 Visual Diagram
-
-<div align="center">
-
-![Sieve of Eratosthenes](./images/sieve_visualization.png)
-
-</div>
 
 ---
 
@@ -492,24 +492,6 @@ def sieve_visualize(n: int) -> list[int]:
 
 ---
 
-## 🏆 LeetCode Problems
-
-### 🟢 Easy
-
-| # | Problem | Key Concept | Time |
-|:-:|---------|-------------|------|
-| 204 | [Count Primes](https://leetcode.com/problems/count-primes/) | Basic sieve | O(n log log n) |
-
-### 🟡 Medium
-
-| # | Problem | Key Concept | Time |
-|:-:|---------|-------------|------|
-| 2523 | [Closest Prime Numbers in Range](https://leetcode.com/problems/closest-prime-numbers-in-range/) | Sieve + gap finding | O((R-L) log log R) |
-| 2601 | [Prime Subtraction Operation](https://leetcode.com/problems/prime-subtraction-operation/) | Precompute primes | O(n log m) |
-| 2761 | [Prime Pairs With Target Sum](https://leetcode.com/problems/prime-pairs-with-target-sum/) | Sieve + two-sum | O(n log log n) |
-
----
-
 ## 💻 Solutions to Key Problems
 
 ### Problem 2523: Closest Prime Numbers in Range
@@ -570,6 +552,24 @@ class Solution:
         return result
 
 ```
+
+---
+
+## 🏆 LeetCode Problems
+
+### 🟢 Easy
+
+| # | Problem | Key Concept | Time |
+|:-:|---------|-------------|------|
+| 204 | [Count Primes](https://leetcode.com/problems/count-primes/) | Basic sieve | O(n log log n) |
+
+### 🟡 Medium
+
+| # | Problem | Key Concept | Time |
+|:-:|---------|-------------|------|
+| 2523 | [Closest Prime Numbers in Range](https://leetcode.com/problems/closest-prime-numbers-in-range/) | Sieve + gap finding | O((R-L) log log R) |
+| 2601 | [Prime Subtraction Operation](https://leetcode.com/problems/prime-subtraction-operation/) | Precompute primes | O(n log m) |
+| 2761 | [Prime Pairs With Target Sum](https://leetcode.com/problems/prime-pairs-with-target-sum/) | Sieve + two-sum | O(n log log n) |
 
 ---
 
