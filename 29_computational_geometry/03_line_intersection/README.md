@@ -7,23 +7,28 @@ nav_order: 3
 
 # ⚡ Line Intersection Algorithms
 
-## 📊 Metadata
+### *Line intersection problems determine if and where geometric segments intersect.*
 
-- **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
-
-- **Time Complexity:** O(n²) naive, O((n+k) log n) sweep line
-
-- **Space Complexity:** O(n)
-
-- **Topics:** Segment Intersection, Sweep Line, Bentley-Ottmann
-
----
 
 ## 📊 Visual Overview
 
 ![Line Intersection](./images/line-intersection.png)
 
 *Segment intersection test using orientation conditions*
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Line intersection problems determine if and where geometric segments intersect. |
+| **Typical time** | O(n²) naive, O((n+k) log n) sweep line |
+| **Typical space** | O(n) |
+| **Topics** | Segment Intersection, Sweep Line, Bentley-Ottmann |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
