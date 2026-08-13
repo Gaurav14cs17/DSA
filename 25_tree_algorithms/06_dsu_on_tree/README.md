@@ -30,7 +30,7 @@ permalink: /25_tree_algorithms/06_dsu_on_tree/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/dsu-on-tree-diagram.svg" alt="DSU on Tree Diagram" width="100%"/>
+<img src="./images/dsu-on-tree-diagram.png" alt="DSU on Tree Diagram" width="100%"/>
 </div>
 
 ---
