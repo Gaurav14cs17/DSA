@@ -8,8 +8,6 @@ permalink: /29_computational_geometry/
 
 # 📐 Computational Geometry
 
-![Computational Geometry Overview](./images/geometry-overview.png)
-
 ## 📊 Metadata
 
 - **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
@@ -18,6 +16,16 @@ permalink: /29_computational_geometry/
 - **Problems:** 50+
 
 - **Prerequisites:** Linear algebra, Vectors, Coordinate geometry
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Computational Geometry Overview](./images/geometry-overview.png)
+
+</div>
 
 ---
 
