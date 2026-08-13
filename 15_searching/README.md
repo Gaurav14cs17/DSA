@@ -10,7 +10,6 @@ permalink: /15_searching/
 
 # 🔍 Binary Search
 
-![Binary Search Overview](./images/searching-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -25,6 +24,17 @@ permalink: /15_searching/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Binary Search Overview](./images/searching-overview.png)
+
+</div>
+
+---
+
 
 ## 📐 Mathematical Foundation
 
