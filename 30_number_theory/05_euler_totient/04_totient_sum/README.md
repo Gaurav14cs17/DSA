@@ -11,6 +11,8 @@ permalink: /30_number_theory/05_euler_totient/04_totient_sum/
 
 # 📈 Totient Summation
 
+### *Computing Sums of Totient Values*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Time-O(n_log_log_n)-blue?style=for-the-badge" alt="Time">
@@ -38,10 +40,23 @@ permalink: /30_number_theory/05_euler_totient/04_totient_sum/
 
 ![Totient Sum](./images/totient_sum.png)
 
+*Totient Sum*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Computing Sums of Totient Values |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Background
 
 ### Totient Summatory Function
