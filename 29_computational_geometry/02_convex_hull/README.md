@@ -27,7 +27,7 @@ nav_order: 2
 
 ## 📊 Visual Overview
 
-![Convex Hull Algorithms](./images/convex-hull.svg)
+![Convex Hull Algorithms](./images/convex-hull.png)
 
 *Graham's Scan step-by-step visualization with algorithm comparison*
 
