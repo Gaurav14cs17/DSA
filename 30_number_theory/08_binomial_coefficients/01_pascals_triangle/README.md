@@ -11,6 +11,8 @@ permalink: /30_number_theory/08_binomial_coefficients/01_pascals_triangle/
 
 # 📐 Pascal's Triangle
 
+### *The Foundation of Combinatorics*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy-green?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/LeetCode-118_119-blue?style=for-the-badge" alt="LeetCode">
@@ -38,10 +40,23 @@ permalink: /30_number_theory/08_binomial_coefficients/01_pascals_triangle/
 
 ![Pascal's Triangle](./images/pascals_triangle.png)
 
+*Pascal's Triangle*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | The Foundation of Combinatorics |
+| **Difficulty** | Easy |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Structure
 
 ```
