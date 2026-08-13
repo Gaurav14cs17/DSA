@@ -37,7 +37,7 @@ permalink: /33_matrix_exponentiation/01_matrix_power/
 
 ### Binary Exponentiation Process
 
-<img src="./images/binary-exponentiation.svg" alt="Binary Exponentiation for M^10" width="100%">
+<img src="./images/binary-exponentiation.png" alt="Binary Exponentiation for M^10" width="100%">
 
 *Computing M¹⁰ in only 4 multiplications using binary decomposition*
 
@@ -45,7 +45,7 @@ permalink: /33_matrix_exponentiation/01_matrix_power/
 
 ### Matrix Multiplication Fundamentals
 
-<img src="./images/matrix-multiplication.svg" alt="Matrix Multiplication" width="100%">
+<img src="./images/matrix-multiplication.png" alt="Matrix Multiplication" width="100%">
 
 *How matrix elements are computed: row × column dot product*
 
@@ -53,7 +53,7 @@ permalink: /33_matrix_exponentiation/01_matrix_power/
 
 ### Identity Matrix
 
-<img src="./images/identity-matrix.svg" alt="Identity Matrix" width="100%">
+<img src="./images/identity-matrix.png" alt="Identity Matrix" width="100%">
 
 *The multiplicative identity: M × I = I × M = M*
 
