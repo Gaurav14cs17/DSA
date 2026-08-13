@@ -10,6 +10,10 @@ permalink: /26_sweep_line/05_rectangle_problems/
 
 # ▭ Rectangle Problems
 
+### *Rectangle Problems*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10-blue?style=for-the-badge" alt="Problems">
@@ -38,6 +42,7 @@ permalink: /26_sweep_line/05_rectangle_problems/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -46,8 +51,7 @@ permalink: /26_sweep_line/05_rectangle_problems/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Rectangle Representation
 
 **Axis-aligned rectangle:** $R = [x_1, x_2] \times [y_1, y_2]$
@@ -567,10 +571,3 @@ def projection_area(grid: List[List[int]]) -> int:
 6. **Sweep line:** Efficient for union/intersection of many rectangles
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Angular Sweep](../04_angular_sweep/README.md) | **05. Rectangle Problems** | [06. Closest Pair →](../06_closest_pair/README.md) |
-
