@@ -11,6 +11,8 @@ permalink: /30_number_theory/04_divisors/05_sieve_divisors/
 
 # 🔢 Sieve for Divisors
 
+### *Precomputing Divisor Functions Efficiently*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Time-O(n_log_n)-blue?style=for-the-badge" alt="Time">
@@ -39,10 +41,23 @@ permalink: /30_number_theory/04_divisors/05_sieve_divisors/
 
 ![Sieve Divisors](./images/sieve_divisors.png)
 
+*Sieve Divisors*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Precomputing Divisor Functions Efficiently |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Overview
 
 When you need divisor information for many numbers, precomputation is faster than computing each individually.
