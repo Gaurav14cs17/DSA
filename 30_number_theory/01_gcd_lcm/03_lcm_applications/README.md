@@ -61,7 +61,7 @@ $$\text{lcm}(a_1, a_2, \ldots, a_n) = \text{lcm}(\text{lcm}(a_1, a_2, \ldots, a_
 
 <div align="center">
 
-![LCM Visualization](./images/lcm_visualization.svg)
+![LCM Visualization](./images/lcm_visualization.png)
 
 </div>
 
