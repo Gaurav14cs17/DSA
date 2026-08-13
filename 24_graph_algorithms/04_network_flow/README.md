@@ -31,7 +31,7 @@ permalink: /24_graph_algorithms/04_network_flow/
 
 <div align="center">
 
-![Network Flow - Ford-Fulkerson / Edmonds-Karp](./images/network-flow.svg)
+![Network Flow - Ford-Fulkerson / Edmonds-Karp](./images/network-flow.png)
 
 </div>
 
