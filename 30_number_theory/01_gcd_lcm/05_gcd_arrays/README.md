@@ -50,7 +50,7 @@ $$\gcd(a_1, a_2, \ldots, a_n) = \gcd(a_1, \gcd(a_2, \ldots, a_n))$$
 
 <div align="center">
 
-![GCD of Arrays](./images/gcd_arrays.svg)
+![GCD of Arrays](./images/gcd_arrays.png)
 
 </div>
 
