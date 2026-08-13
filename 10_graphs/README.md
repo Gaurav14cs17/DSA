@@ -10,7 +10,6 @@ permalink: /10_graphs/
 
 # 🕸️ Graphs
 
-![Graphs Overview](./images/graph-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
@@ -25,6 +24,17 @@ permalink: /10_graphs/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Graphs Overview](./images/graph-overview.png)
+
+</div>
+
+---
+
 
 ## 📐 Mathematical Foundation
 
