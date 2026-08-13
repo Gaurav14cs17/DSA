@@ -11,6 +11,8 @@ permalink: /30_number_theory/04_divisors/03_perfect_numbers/
 
 # ✨ Perfect Numbers
 
+### *Numbers Equal to the Sum of Their Proper Divisors*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy-green?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/LeetCode-507-orange?style=for-the-badge" alt="LeetCode">
@@ -39,10 +41,23 @@ permalink: /30_number_theory/04_divisors/03_perfect_numbers/
 
 ![Perfect Numbers](./images/perfect_numbers.png)
 
+*Perfect Numbers*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Numbers Equal to the Sum of Their Proper Divisors |
+| **Difficulty** | Easy |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Definition
