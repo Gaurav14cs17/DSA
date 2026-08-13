@@ -11,6 +11,8 @@ permalink: /30_number_theory/03_modular_arithmetic/06_applications/
 
 # 🎯 Modular Arithmetic Applications
 
+### *Real-World Problems & Competition Patterns*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-15+-blue?style=for-the-badge" alt="Problems">
@@ -39,10 +41,24 @@ permalink: /30_number_theory/03_modular_arithmetic/06_applications/
 
 ![Modular Applications](./images/modular_applications.png)
 
+*Modular Applications*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Real-World Problems & Competition Patterns |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 15+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Overview
 
 Modular arithmetic appears in **30%+ of competitive programming problems**. This section covers the most common patterns and their solutions.
