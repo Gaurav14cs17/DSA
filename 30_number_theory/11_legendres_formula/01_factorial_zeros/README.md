@@ -37,7 +37,7 @@ permalink: /30_number_theory/11_legendres_formula/01_factorial_zeros/
 
 <div align="center">
 
-![Factorial Zeros](./images/factorial_zeros.svg)
+![Factorial Zeros](./images/factorial_zeros.png)
 
 </div>
 
