@@ -10,6 +10,8 @@ permalink: /04_stacks/01_basic_stack/
 
 # 📚 Basic Stack Operations
 
+### *📚 Basic Stack Operations*
+
 
 
 <p>
@@ -1051,19 +1053,6 @@ def dequeue(self):
 </div>
 
 ---
-
----
-
-## 🎯 At a Glance
-
-| | |
-|:---|:---|
-| **Topic** | 📚 Basic Stack Operations |
-| **Difficulty** | Easy |
-| **Problems** | 12+ |
-
-{: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
