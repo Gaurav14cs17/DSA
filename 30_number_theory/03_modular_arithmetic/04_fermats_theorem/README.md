@@ -8,28 +8,29 @@ nav_order: 4
 
 # 🔬 Fermat's Little Theorem
 
-## 📊 Metadata
-
-- **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
-
-- **Time Complexity:** O(log p) for inverse/exponentiation
-
-- **Space Complexity:** O(1)
-
-- **Pattern:** Number Theory, Modular Inverse, Primality Testing
-
----
-
 ## 📊 Visual Diagram
 
 <div align="center">
 
 ![Fermat's Little Theorem](./images/fermats_theorem.png)
 
+*Fermat's Little Theorem*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Typical time** | O(log p) for inverse/exponentiation |
+| **Typical space** | O(1) |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🎯 Overview
 
 **Fermat's Little Theorem:** If p is prime and gcd(a, p) = 1, then:
