@@ -32,6 +32,16 @@ permalink: /30_number_theory/01_gcd_lcm/02_extended_gcd/
 
 ---
 
+## 📊 Visual Diagram
+
+<div align="center">
+
+![Extended GCD Algorithm](./images/extended_gcd.png)
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Bézout's Identity
@@ -155,16 +165,6 @@ y = y_0 \cdot c/d - k \cdot (a/d)
 \end{cases}$$
 
 for any integer $k$.
-
----
-
-## 📊 Visual Diagram
-
-<div align="center">
-
-![Extended GCD Algorithm](./images/extended_gcd.png)
-
-</div>
 
 ---
 
