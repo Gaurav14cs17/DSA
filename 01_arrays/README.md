@@ -34,8 +34,6 @@ permalink: /01_arrays/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
