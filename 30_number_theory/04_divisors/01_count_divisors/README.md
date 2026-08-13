@@ -37,7 +37,7 @@ permalink: /30_number_theory/04_divisors/01_count_divisors/
 
 <div align="center">
 
-![Count Divisors](./images/count_divisors.svg)
+![Count Divisors](./images/count_divisors.png)
 
 </div>
 
