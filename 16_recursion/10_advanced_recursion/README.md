@@ -10,6 +10,8 @@ permalink: /16_recursion/10_advanced_recursion/
 
 # 🚀 Advanced Recursion
 
+### *Advanced recursion patterns: mutual, indirect, nested, and generative*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
