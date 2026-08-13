@@ -57,6 +57,31 @@ $$\nu_p\binom{m+n}{m} = \text{carries when adding m + n in base } p$$
 
 ---
 
+## 🎨 Visual: Digit Sum Formula
+
+```
++-----------------------------------------------------------------+
+| ALTERNATIVE FORMULA: ν_p(n!) = (n - S_p(n)) / (p - 1)          |
++-----------------------------------------------------------------+
+|                                                                 |
+| Example: ν₅(100!)                                              |
+|                                                                 |
+| 100 in base 5: 400₅  (4×25 + 0×5 + 0×1)                       |
+| S₅(100) = 4 + 0 + 0 = 4                                        |
+|                                                                 |
+| ν₅(100!) = (100 - 4) / (5 - 1) = 96 / 4 = 24                  |
+|                                                                 |
+| Verify with standard formula:                                  |
+|   ⌊100/5⌋ + ⌊100/25⌋ + ⌊100/125⌋ = 20 + 4 + 0 = 24 ✓         |
+|                                                                 |
+| This formula is O(log n) but with smaller constant!            |
++-----------------------------------------------------------------+
+
+```
+
+---
+
+
 ## 💻 Complete Implementations
 
 ### 1. Largest Power of p Dividing n!
@@ -256,30 +281,6 @@ class Solution:
         left = lower_bound(k)
         right = lower_bound(k + 1)
         return right - left
-
-```
-
----
-
-## 🎨 Visual: Digit Sum Formula
-
-```
-+-----------------------------------------------------------------+
-| ALTERNATIVE FORMULA: ν_p(n!) = (n - S_p(n)) / (p - 1)          |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Example: ν₅(100!)                                              |
-|                                                                 |
-| 100 in base 5: 400₅  (4×25 + 0×5 + 0×1)                       |
-| S₅(100) = 4 + 0 + 0 = 4                                        |
-|                                                                 |
-| ν₅(100!) = (100 - 4) / (5 - 1) = 96 / 4 = 24                  |
-|                                                                 |
-| Verify with standard formula:                                  |
-|   ⌊100/5⌋ + ⌊100/25⌋ + ⌊100/125⌋ = 20 + 4 + 0 = 24 ✓         |
-|                                                                 |
-| This formula is O(log n) but with smaller constant!            |
-+-----------------------------------------------------------------+
 
 ```
 
