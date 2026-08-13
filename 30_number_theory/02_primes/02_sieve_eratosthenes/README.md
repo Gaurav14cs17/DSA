@@ -101,7 +101,7 @@ Therefore: $T(n) = O(n \log \log n)$ ∎
 
 <div align="center">
 
-![Sieve of Eratosthenes](./images/sieve_visualization.svg)
+![Sieve of Eratosthenes](./images/sieve_visualization.png)
 
 </div>
 
