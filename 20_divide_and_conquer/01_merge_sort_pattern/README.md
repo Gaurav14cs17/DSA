@@ -10,6 +10,10 @@ permalink: /20_divide_and_conquer/01_merge_sort_pattern/
 
 # 🔀 Merge Sort Pattern
 
+### *Master Merge Sort Pattern — patterns, proofs, and code*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +23,7 @@ permalink: /20_divide_and_conquer/01_merge_sort_pattern/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 D&C Home](../README.md) | **01. Merge Sort Pattern** | [02. Quick Select →](../02_quick_select/README.md) |
-
----
-
-## 🖼️ Visual Overview
+## 📊 Visual Overview
 
 <div align="center">
   <img src="./images/merge-sort.png" alt="Merge Sort Visualization" width="100%">
@@ -44,8 +40,33 @@ permalink: /20_divide_and_conquer/01_merge_sort_pattern/
 
 ---
 
-## 📐 Mathematical Foundations
 
+---
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🔀 Merge Sort Pattern |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 8+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [🏠 D&C Home](../README.md) | **01. Merge Sort Pattern** | [02. Quick Select →](../02_quick_select/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Merge Sort Recurrence
 
 $$T(n) = 2T(n/2) + O(n) = O(n \log n)$$
@@ -255,9 +276,3 @@ def mergeKLists(lists: list) -> 'ListNode':
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 D&C Home](../README.md) | **01. Merge Sort Pattern** | [02. Quick Select →](../02_quick_select/README.md) |
