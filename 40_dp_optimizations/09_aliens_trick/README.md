@@ -1,12 +1,53 @@
+---
+layout: default
+title: "Aliens Trick"
+parent: "DP Optimizations"
+nav_order: 9
+permalink: /40_dp_optimizations/09_aliens_trick/
+---
+
+<div align="center">
+
 # 👽 Aliens Trick (Wqs Binary Search)
 
-## 📊 Visual Diagram
+### *Lagrange multiplier DP trick*
+
+</div>
+
+---
+
+## 📊 Visual Overview
 
 <p align="center">
   <img src="./images/aliens-trick.png" alt="Aliens Trick" width="100%">
 </p>
 
-## Overview
+---
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Lagrange multiplier DP trick |
+
+
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Matrix Exponentiation](../08_matrix_exponentiation/README.md) | **09. Aliens Trick** | [Bitmask DP →](../10_bitmask_dp/README.md) |
+
+## 📐 Mathematical Foundation
+
+### Overview
 
 **Aliens Trick** solves "exactly k groups" problems by **binary searching on penalty**.
 
@@ -15,6 +56,10 @@
 **Solution:** Add penalty λ per group, binary search λ until k groups optimal.
 
 **Complexity:** O(n²k) → O(n² log C)
+
+---
+
+
 
 ---
 
@@ -77,12 +122,20 @@ def aliens_trick(arr, k):
 
 ---
 
+
+
+---
+
 ## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty |
 |:-:|---------|-----------|
 | 410 | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) | ⭐⭐⭐⭐ |
 | 1478 | [Allocate Mailboxes](https://leetcode.com/problems/allocate-mailboxes/) | ⭐⭐⭐⭐ |
+
+---
+
+
 
 ---
 
