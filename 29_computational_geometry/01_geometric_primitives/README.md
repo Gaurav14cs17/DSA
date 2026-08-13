@@ -27,7 +27,7 @@ Geometric primitives are the fundamental building blocks of computational geomet
 
 ## 📊 Visual Overview
 
-![Geometric Primitives](./images/geometric-primitives.svg)
+![Geometric Primitives](./images/geometric-primitives.png)
 
 *Visualization of vectors, cross product, dot product, and orientation tests*
 
