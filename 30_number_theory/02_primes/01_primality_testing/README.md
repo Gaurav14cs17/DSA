@@ -32,6 +32,16 @@ permalink: /30_number_theory/02_primes/01_primality_testing/
 
 ---
 
+## 📊 Visual Diagram
+
+<div align="center">
+
+![Primality Testing Methods](./images/primality_testing.png)
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Prime Definition
@@ -96,16 +106,6 @@ $$a^{p-1} \equiv 1 \pmod{p}$$
 - Or $a^{2^j d} \equiv -1 \pmod{n}$ for some $0 \leq j < r$
 
 **Contrapositive:** If neither condition holds, $n$ is composite (and $a$ is a "witness").
-
----
-
-## 📊 Visual Diagram
-
-<div align="center">
-
-![Primality Testing Methods](./images/primality_testing.png)
-
-</div>
 
 ---
 
@@ -521,24 +521,6 @@ def is_prime_verbose(n: int) -> bool:
 
 ---
 
-## 🏆 LeetCode Problems
-
-### 🟢 Easy
-
-| # | Problem | Key Concept | Time |
-|:-:|---------|-------------|------|
-| 762 | [Prime Number of Set Bits](https://leetcode.com/problems/prime-number-of-set-bits-in-binary-representation/) | Precompute small primes | O(n) |
-| 2614 | [Prime In Diagonal](https://leetcode.com/problems/prime-in-diagonal/) | Basic primality test | O(n√m) |
-
-### 🟡 Medium
-
-| # | Problem | Key Concept | Time |
-|:-:|---------|-------------|------|
-| 204 | [Count Primes](https://leetcode.com/problems/count-primes/) | Sieve (not individual testing) | O(n log log n) |
-| 866 | [Prime Palindrome](https://leetcode.com/problems/prime-palindrome/) | Generate palindromes + test | O(n^0.5 log n) |
-
----
-
 ## 💻 Solutions to Key Problems
 
 ### Problem 866: Prime Palindrome
@@ -613,6 +595,24 @@ class Solution:
         return count
 
 ```
+
+---
+
+## 🏆 LeetCode Problems
+
+### 🟢 Easy
+
+| # | Problem | Key Concept | Time |
+|:-:|---------|-------------|------|
+| 762 | [Prime Number of Set Bits](https://leetcode.com/problems/prime-number-of-set-bits-in-binary-representation/) | Precompute small primes | O(n) |
+| 2614 | [Prime In Diagonal](https://leetcode.com/problems/prime-in-diagonal/) | Basic primality test | O(n√m) |
+
+### 🟡 Medium
+
+| # | Problem | Key Concept | Time |
+|:-:|---------|-------------|------|
+| 204 | [Count Primes](https://leetcode.com/problems/count-primes/) | Sieve (not individual testing) | O(n log log n) |
+| 866 | [Prime Palindrome](https://leetcode.com/problems/prime-palindrome/) | Generate palindromes + test | O(n^0.5 log n) |
 
 ---
 
