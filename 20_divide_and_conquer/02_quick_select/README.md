@@ -10,6 +10,10 @@ permalink: /20_divide_and_conquer/02_quick_select/
 
 # ⚡ Quick Select
 
+### *Master Quick Select — patterns, proofs, and code*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-6+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +23,7 @@ permalink: /20_divide_and_conquer/02_quick_select/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Merge Sort Pattern](../01_merge_sort_pattern/README.md) | **02. Quick Select** | [03. Binary Search D&C →](../03_binary_search_dc/README.md) |
-
----
-
-## 🖼️ Visual Overview
+## 📊 Visual Overview
 
 <div align="center">
   <img src="./images/quick-select.png" alt="Quick Select Algorithm" width="100%">
@@ -44,8 +40,33 @@ permalink: /20_divide_and_conquer/02_quick_select/
 
 ---
 
-## 📐 Mathematical Foundations
 
+---
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | ⚡ Quick Select |
+| **Difficulty** | Medium |
+| **Problems** | 6+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 01. Merge Sort Pattern](../01_merge_sort_pattern/README.md) | **02. Quick Select** | [03. Binary Search D&C →](../03_binary_search_dc/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Quick Select Complexity
 
 **Average case:**
@@ -229,9 +250,3 @@ def wiggleSort(nums: list[int]) -> None:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Merge Sort Pattern](../01_merge_sort_pattern/README.md) | **02. Quick Select** | [03. Binary Search D&C →](../03_binary_search_dc/README.md) |
