@@ -10,6 +10,8 @@ permalink: /19_greedy_algorithms/
 
 # 🎯 Greedy Algorithms
 
+### *Make locally optimal choices to find global optimum*
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -31,11 +33,25 @@ permalink: /19_greedy_algorithms/
 
 ![Greedy Algorithms Overview](./images/greedy-overview.png)
 
+*Greedy Algorithms Overview*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **In one line** | Make locally optimal choices to find global optimum |
+| **Difficulty** | Medium |
+| **Subtopics** | 3 |
+| **Problems** | 25+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ Greedy Choice Property
