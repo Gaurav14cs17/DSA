@@ -10,6 +10,8 @@ permalink: /05_queues/03_deque_problems/
 
 # 🔄 Deque Problems
 
+### *🔄 Deque Problems*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +21,7 @@ permalink: /05_queues/03_deque_problems/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
-|:------------|:----------:|--------:|
-| [← 02. BFS Queue](../02_bfs_queue/README.md) | **03. Deque Problems** | [🏠 Queues Home](../README.md) → [Hash Tables](../../06_hash_tables/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -44,85 +38,9 @@ permalink: /05_queues/03_deque_problems/
 
 ---
 
-## 📐 Mathematical Foundations
-
-### 1️⃣ Deque Definition
-
-**Double-Ended Queue:** Insert/delete from both ends.
-
-| Operation | Complexity |
-|-----------|:----------:|
-| push_front(x) | O(1) |
-| push_back(x) | O(1) |
-| pop_front() | O(1) |
-| pop_back() | O(1) |
-| front() | O(1) |
-| back() | O(1) |
-
 ---
 
-### 2️⃣ Monotonic Deque for Sliding Window
-
-**Problem:** Find max/min in every window of size $k$.
-
-**Invariant:** Deque stores indices in decreasing order of values.
-
-**Property:**
-
-$$\text{front of deque} = \text{index of maximum in current window}$$
-
-**Why O(n)?**
-
-- Each element added once, removed once
-
-- Total operations: $2n = O(n)$ ∎
-
----
-
-### 3️⃣ Sliding Window Maximum
-
-**Formal:**
-
-$$\text{result}[i] = \max_{j=i}^{i+k-1} nums[j]$$
-
-**Monotonic Deque Approach:**
-
-1. Remove indices outside window from front
-
-2. Remove indices with smaller values from back
-
-3. Front is always the maximum
-
----
-
-### 4️⃣ Shortest Subarray with Sum ≥ K
-
-**Challenge:** Array may have negative numbers.
-
-**Key Insight:** Use monotonic deque on prefix sums.
-
-$$\text{sum}(i, j) = P[j] - P[i-1] \geq k
-P[i-1] \leq P[j] - k$$
-
-Find smallest $j - i$ where condition holds.
-
----
-
-### 5️⃣ 0-1 BFS
-
-**Problem:** Shortest path with edge weights 0 or 1.
-
-**Solution:** Use deque instead of priority queue.
-
-- Weight 0: push to front
-
-- Weight 1: push to back
-
-**Time:** O(V + E) instead of O((V+E) log V)
-
----
-
-## 🎨 Visual Algorithm Walkthrough
+## 📊 Visual Overview
 
 ### Sliding Window Maximum (#239)
 
@@ -247,6 +165,109 @@ Final distances: [0, 0, 1, 0]
 
 ---
 
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🔄 Deque Problems |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 8+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
+|:------------|:----------:|--------:|
+| [← 02. BFS Queue](../02_bfs_queue/README.md) | **03. Deque Problems** | [🏠 Queues Home](../README.md) → [Hash Tables](../../06_hash_tables/README.md) |
+
+---
+
+---
+
+## 📐 Mathematical Foundation
+### 1️⃣ Deque Definition
+
+**Double-Ended Queue:** Insert/delete from both ends.
+
+| Operation | Complexity |
+|-----------|:----------:|
+| push_front(x) | O(1) |
+| push_back(x) | O(1) |
+| pop_front() | O(1) |
+| pop_back() | O(1) |
+| front() | O(1) |
+| back() | O(1) |
+
+---
+
+### 2️⃣ Monotonic Deque for Sliding Window
+
+**Problem:** Find max/min in every window of size $k$.
+
+**Invariant:** Deque stores indices in decreasing order of values.
+
+**Property:**
+
+$$\text{front of deque} = \text{index of maximum in current window}$$
+
+**Why O(n)?**
+
+- Each element added once, removed once
+
+- Total operations: $2n = O(n)$ ∎
+
+---
+
+### 3️⃣ Sliding Window Maximum
+
+**Formal:**
+
+$$\text{result}[i] = \max_{j=i}^{i+k-1} nums[j]$$
+
+**Monotonic Deque Approach:**
+
+1. Remove indices outside window from front
+
+2. Remove indices with smaller values from back
+
+3. Front is always the maximum
+
+---
+
+### 4️⃣ Shortest Subarray with Sum ≥ K
+
+**Challenge:** Array may have negative numbers.
+
+**Key Insight:** Use monotonic deque on prefix sums.
+
+$$\text{sum}(i, j) = P[j] - P[i-1] \geq k
+P[i-1] \leq P[j] - k$$
+
+Find smallest $j - i$ where condition holds.
+
+---
+
+### 5️⃣ 0-1 BFS
+
+**Problem:** Shortest path with edge weights 0 or 1.
+
+**Solution:** Use deque instead of priority queue.
+
+- Weight 0: push to front
+
+- Weight 1: push to back
+
+**Time:** O(V + E) instead of O((V+E) log V)
+
+---
+
+---
 
 ## 💻 Code Implementations
 
@@ -399,6 +420,8 @@ def zeroOneBFS(graph: list[list[tuple]], n: int, start: int) -> list[int]:
 
 ---
 
+---
+
 ## 🏆 LeetCode Problems
 
 ### 🟡 Medium
@@ -416,6 +439,8 @@ def zeroOneBFS(graph: list[list[tuple]], n: int, start: int) -> list[int]:
 | 862 | [Shortest Subarray with Sum ≥ K](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/) | Prefix + Deque | O(n) | O(n) |
 | 1425 | [Constrained Subsequence Sum](https://leetcode.com/problems/constrained-subsequence-sum/) | DP + Deque | O(n) | O(n) |
 | 1499 | [Max Value of Equation](https://leetcode.com/problems/max-value-of-equation/) | Monotonic Deque | O(n) | O(n) |
+
+---
 
 ---
 
@@ -444,6 +469,8 @@ Sliding Window Optimization?
 
 ---
 
+---
+
 ## 💡 Pattern Recognition Guide
 
 | Problem Keywords | Pattern | Example |
@@ -454,6 +481,8 @@ Sliding Window Optimization?
 | "jump game" + "constraint" | DP + deque | #1696 |
 | "constrained subsequence" | DP + deque | #1425 |
 | "max value equation" | Monotonic deque | #1499 |
+
+---
 
 ---
 
@@ -506,6 +535,8 @@ Sliding Window Optimization?
 
 ---
 
+---
+
 ## 💡 Pro Tips
 
 > **🎯 Monotonic Deque Rule:** Decreasing for max, increasing for min. Front always has answer!
@@ -517,6 +548,8 @@ Sliding Window Optimization?
 > **📊 DP Optimization:** If DP needs max/min of last k values, use monotonic deque to reduce from O(nk) to O(n)!
 
 > **🌊 Prefix Sum Trick:** For subarray sum problems with negatives, use prefix sums + monotonic deque.
+
+---
 
 ---
 
@@ -548,6 +581,8 @@ Sliding Window Optimization?
 
 ---
 
+---
+
 ## ❓ Interview Q&A
 
 **Q: When to use deque vs priority queue for sliding window?**  
@@ -564,6 +599,8 @@ A: Stack for "next greater/smaller". Deque for "max/min in sliding window".
 
 **Q: Can we use deque for weighted graphs with weights > 1?**  
 A: No! Only for 0-1 weights. For general weights, use Dijkstra with priority queue.
+
+---
 
 ---
 
@@ -588,9 +625,3 @@ A: No! Only for 0-1 weights. For general weights, use Dijkstra with priority que
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
-|:------------|:----------:|--------:|
-| [← 02. BFS Queue](../02_bfs_queue/README.md) | **03. Deque Problems** | [🏠 Queues Home](../README.md) → [Hash Tables](../../06_hash_tables/README.md) |
