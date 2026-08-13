@@ -9,7 +9,7 @@ nav_order: 7
 
 ## 📊 Visual Overview
 
-![Suffix Tree](./images/suffix-tree.svg)
+![Suffix Tree](./images/suffix-tree.png)
 
 ## 📊 Metadata
 
