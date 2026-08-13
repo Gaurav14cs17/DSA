@@ -37,7 +37,7 @@ permalink: /30_number_theory/11_legendres_formula/03_applications/
 
 <div align="center">
 
-![Legendre Applications](./images/legendre_applications.svg)
+![Legendre Applications](./images/legendre_applications.png)
 
 </div>
 
