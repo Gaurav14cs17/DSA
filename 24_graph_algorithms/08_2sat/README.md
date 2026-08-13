@@ -10,12 +10,39 @@ permalink: /24_graph_algorithms/08_2sat/
 
 # 🔀 2-SAT Problem
 
+### *🔀 2-SAT Problem*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-5+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![2-SAT Implication Graph](./images/2sat-implication.png)
+
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🔀 2-SAT Problem |
+| **Difficulty** | Hard |
+| **Problems** | 5+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -27,18 +54,7 @@ permalink: /24_graph_algorithms/08_2sat/
 
 ---
 
-## 🎨 Visual Overview
-
-<div align="center">
-
-![2-SAT Implication Graph](./images/2sat-implication.png)
-
-</div>
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ SAT Problem
 
 **Boolean Satisfiability:** Given boolean formula, find assignment making it TRUE.
@@ -439,10 +455,3 @@ Boolean Constraint Problem
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 07. Eulerian Path](../07_eulerian_path/README.md) | **08. 2-SAT** | [🏠 Home](../README.md) |
-
