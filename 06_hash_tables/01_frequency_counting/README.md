@@ -295,8 +295,6 @@ def longestPalindrome(s: str) -> int:
 
 ---
 
----
-
 ## 💡 Pattern Recognition Guide
 
 | Problem Keywords | Pattern | Example |
