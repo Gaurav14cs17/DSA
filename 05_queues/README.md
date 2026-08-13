@@ -52,6 +52,17 @@ permalink: /05_queues/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 📂 Subtopics Navigation
+
+| # | Topic | Problems | Link |
+|:-:|-------|:--------:|------|
+| 1 | Basic Queue | 8+ | [📖 Go →](./01_basic_queue/README.md) |
+| 2 | BFS Queue | 15+ | [📖 Go →](./02_bfs_queue/README.md) |
+| 3 | Deque Problems | 8+ | [📖 Go →](./03_deque_problems/README.md) |
+
+---
+
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ Queue Definition (Abstract Data Type)
@@ -155,16 +166,6 @@ Inductive: If all vertices at distance $d$ are correctly computed, then vertices
 **Theorem:** Starting BFS from multiple sources simultaneously finds shortest distance to nearest source.
 
 **Implementation:** Initialize queue with all sources at distance 0.
-
----
-
-## 📂 Subtopics Navigation
-
-| # | Topic | Problems | Link |
-|:-:|-------|:--------:|------|
-| 1 | Basic Queue | 8+ | [📖 Go →](./01_basic_queue/README.md) |
-| 2 | BFS Queue | 15+ | [📖 Go →](./02_bfs_queue/README.md) |
-| 3 | Deque Problems | 8+ | [📖 Go →](./03_deque_problems/README.md) |
 
 ---
 
