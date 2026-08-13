@@ -27,6 +27,24 @@ permalink: /10_graphs/01_graph_representation/
 
 ---
 
+## 📊 Visual Diagrams
+
+### SVG Diagrams
+
+<div align="center">
+
+![Adjacency Comparison](./images/adjacency_comparison.png)
+
+*Adjacency Matrix vs Adjacency List Comparison*
+
+![Directed vs Undirected](./images/directed_undirected.png)
+
+*Directed vs Undirected Graph Representation*
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Graph Definition
@@ -160,23 +178,7 @@ $$\boxed{\text{rank}(G) = |V| - k}$$
 
 ---
 
-## 🎨 Visual Representations
-
-### SVG Diagrams
-
-<div align="center">
-
-![Adjacency Comparison](./images/adjacency_comparison.png)
-
-*Adjacency Matrix vs Adjacency List Comparison*
-
-![Directed vs Undirected](./images/directed_undirected.png)
-
-*Directed vs Undirected Graph Representation*
-
-</div>
-
----
+## 🎨 Visual Walkthroughs
 
 ### Adjacency Matrix Example
 
