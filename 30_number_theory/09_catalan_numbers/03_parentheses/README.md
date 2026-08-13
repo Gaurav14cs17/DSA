@@ -37,7 +37,7 @@ permalink: /30_number_theory/09_catalan_numbers/03_parentheses/
 
 <div align="center">
 
-![Valid Parentheses](./images/valid_parentheses.svg)
+![Valid Parentheses](./images/valid_parentheses.png)
 
 </div>
 
