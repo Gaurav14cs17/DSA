@@ -20,14 +20,6 @@ nav_order: 3
 
 ---
 
-## 🎯 Overview
-
-**Fast Exponentiation** (also called **Binary Exponentiation** or **Exponentiation by Squaring**) computes a^n in O(log n) time instead of O(n).
-
-**Key Idea:** Use the binary representation of the exponent to reduce multiplications.
-
----
-
 ## 📊 Visual Diagram
 
 <div align="center">
@@ -35,6 +27,14 @@ nav_order: 3
 ![Fast Exponentiation](./images/fast_exponentiation.png)
 
 </div>
+
+---
+
+## 🎯 Overview
+
+**Fast Exponentiation** (also called **Binary Exponentiation** or **Exponentiation by Squaring**) computes a^n in O(log n) time instead of O(n).
+
+**Key Idea:** Use the binary representation of the exponent to reduce multiplications.
 
 ---
 
