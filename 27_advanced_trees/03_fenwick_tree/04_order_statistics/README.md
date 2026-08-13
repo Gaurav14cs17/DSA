@@ -36,6 +36,17 @@ permalink: /27_advanced_trees/03_fenwick_tree/04_order_statistics/
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Hard |
+| **Problems** | 5 |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Core Concept
 
 **Order Statistics:** Find k-th smallest/largest element dynamically.
