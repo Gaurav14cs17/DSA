@@ -64,6 +64,37 @@ is_prime(n):
 
 ---
 
+## 🎨 Visual: Why Wilson's Test is Slow
+
+```
++-----------------------------------------------------------------+
+| COMPUTING (n-1)! mod n                                         |
++-----------------------------------------------------------------+
+|                                                                 |
+| For n = 1,000,000:                                              |
+|                                                                 |
+| Wilson: 999,999 multiplications!                                |
+|   1 × 2 × 3 × ... × 999,999                                    |
+|   Each multiplication: O(log n) for big integers               |
+|   Total: O(n × log n) operations                               |
+|                                                                 |
+| Trial Division: √n = 1000 divisions                            |
+|   Check divisibility by 2, 3, 5, ..., 1000                     |
+|   Total: O(√n) operations                                      |
+|                                                                 |
+| Miller-Rabin: O(k log³ n) = O(log³ n)                          |
+|   k random witnesses, each O(log³ n)                           |
+|   Total: ~100 operations for any n!                            |
+|                                                                 |
+| Ratio: Wilson is 1000× slower than trial division              |
+|        and 10,000,000× slower than Miller-Rabin!               |
++-----------------------------------------------------------------+
+
+```
+
+---
+
+
 ## 💻 Implementations
 
 ### 1. Basic Wilson Primality Test
@@ -211,36 +242,6 @@ compare_methods(104729)  # Larger prime (10000th prime)
 | 10¹⁸ | 0.03s | 0.00005s | **Forever** |
 
 **Conclusion:** Wilson's test is O(n) while others are O(√n) or O(log³n).
-
----
-
-## 🎨 Visual: Why Wilson's Test is Slow
-
-```
-+-----------------------------------------------------------------+
-| COMPUTING (n-1)! mod n                                         |
-+-----------------------------------------------------------------+
-|                                                                 |
-| For n = 1,000,000:                                              |
-|                                                                 |
-| Wilson: 999,999 multiplications!                                |
-|   1 × 2 × 3 × ... × 999,999                                    |
-|   Each multiplication: O(log n) for big integers               |
-|   Total: O(n × log n) operations                               |
-|                                                                 |
-| Trial Division: √n = 1000 divisions                            |
-|   Check divisibility by 2, 3, 5, ..., 1000                     |
-|   Total: O(√n) operations                                      |
-|                                                                 |
-| Miller-Rabin: O(k log³ n) = O(log³ n)                          |
-|   k random witnesses, each O(log³ n)                           |
-|   Total: ~100 operations for any n!                            |
-|                                                                 |
-| Ratio: Wilson is 1000× slower than trial division              |
-|        and 10,000,000× slower than Miller-Rabin!               |
-+-----------------------------------------------------------------+
-
-```
 
 ---
 
