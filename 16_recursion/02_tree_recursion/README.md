@@ -10,6 +10,10 @@ permalink: /16_recursion/02_tree_recursion/
 
 # 🌳 Tree Recursion
 
+### *🌳 Tree Recursion*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-6+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +23,7 @@ permalink: /16_recursion/02_tree_recursion/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Basic Recursion](../01_basic_recursion/README.md) | **02. Tree Recursion** | [03. Memoization →](../03_memoization/README.md) |
-
----
-
-## 📊 Visual Diagrams
+## 📊 Visual Overview
 
 <p align="center">
   <img src="./images/fibonacci_tree.png" alt="Fibonacci Tree Recursion" width="100%"/>
@@ -43,8 +39,28 @@ permalink: /16_recursion/02_tree_recursion/
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **Topic** | 🌳 Tree Recursion |
+| **Difficulty** | Medium |
+| **Problems** | 6+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 01. Basic Recursion](../01_basic_recursion/README.md) | **02. Tree Recursion** | [03. Memoization →](../03_memoization/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Tree Recursion Definition
 
 Multiple recursive calls per function:
@@ -261,9 +277,3 @@ Tree Recursion
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Basic Recursion](../01_basic_recursion/README.md) | **02. Tree Recursion** | [03. Memoization →](../03_memoization/README.md) |
