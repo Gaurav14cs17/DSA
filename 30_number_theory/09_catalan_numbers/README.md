@@ -26,15 +26,7 @@ permalink: /30_number_theory/09_catalan_numbers/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 08. Binomial Coefficients](../08_binomial_coefficients/README.md) | **09. Catalan Numbers** | [10. Lucas Theorem →](../10_lucas_theorem/README.md) |
-
----
-
-## 🎨 Visual Walkthrough
+## 📊 Visual Overview
 
 ```
 +-----------------------------------------------------------------+
@@ -58,8 +50,28 @@ permalink: /30_number_theory/09_catalan_numbers/
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **In one line** | The Magic Sequence That Counts Everything |
+| **Difficulty** | Medium |
+| **Problems** | 15+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 08. Binomial Coefficients](../08_binomial_coefficients/README.md) | **09. Catalan Numbers** | [10. Lucas Theorem →](../10_lucas_theorem/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Definition
 
 **nth Catalan Number:**
@@ -187,10 +199,3 @@ def generate_parentheses(n: int) -> list[str]:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 08. Binomial Coefficients](../08_binomial_coefficients/README.md) | **09. Catalan Numbers** | [10. Lucas Theorem →](../10_lucas_theorem/README.md) |
-
