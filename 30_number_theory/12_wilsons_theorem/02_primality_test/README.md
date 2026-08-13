@@ -37,7 +37,7 @@ permalink: /30_number_theory/12_wilsons_theorem/02_primality_test/
 
 <div align="center">
 
-![Wilson Primality](./images/wilson_primality.svg)
+![Wilson Primality](./images/wilson_primality.png)
 
 </div>
 
