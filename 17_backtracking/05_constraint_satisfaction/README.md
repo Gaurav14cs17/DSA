@@ -26,11 +26,23 @@ permalink: /17_backtracking/05_constraint_satisfaction/
 
 ![N-Queens](./images/nqueens.png)
 
+*N-Queens*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **Difficulty** | Hard |
+| **Problems** | 6+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next Topic |
