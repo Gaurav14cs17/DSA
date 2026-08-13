@@ -26,6 +26,25 @@ permalink: /30_number_theory/08_binomial_coefficients/
 
 ---
 
+## 📊 Visual Overview
+
+> *Concept map and key formulas — dive into subtopics for detailed walkthroughs and code.*
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Counting Combinations and Pascal's Triangle |
+| **Difficulty** | Easy to Medium |
+| **Problems** | 25+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -34,8 +53,7 @@ permalink: /30_number_theory/08_binomial_coefficients/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Definition
 
 **Binomial Coefficient:** "n choose k"
@@ -187,10 +205,3 @@ class BinomialCoeff:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 07. Linear Diophantine](../07_linear_diophantine/README.md) | **08. Binomial Coefficients** | [09. Catalan Numbers →](../09_catalan_numbers/README.md) |
-
