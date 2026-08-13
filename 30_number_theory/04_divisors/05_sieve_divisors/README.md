@@ -43,7 +43,7 @@ When you need divisor information for many numbers, precomputation is faster tha
 
 <div align="center">
 
-![Sieve Divisors](./images/sieve_divisors.svg)
+![Sieve Divisors](./images/sieve_divisors.png)
 
 </div>
 
