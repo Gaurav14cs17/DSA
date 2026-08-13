@@ -1,18 +1,63 @@
+---
+layout: default
+title: "Matrix Exponentiation"
+parent: "DP Optimizations"
+nav_order: 8
+permalink: /40_dp_optimizations/08_matrix_exponentiation/
+---
+
+<div align="center">
+
 # 🔢 Matrix Exponentiation
 
-## 📊 Visual Diagram
+### *Linear recurrences via matrix power*
+
+</div>
+
+---
+
+## 📊 Visual Overview
 
 <p align="center">
   <img src="./images/matrix-exponentiation.png" alt="Matrix Exponentiation" width="100%">
 </p>
 
-## Overview
+---
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Linear recurrences via matrix power |
+
+
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← SOS DP](../07_sos_dp/README.md) | **08. Matrix Exponentiation** | [Aliens Trick →](../09_aliens_trick/README.md) |
+
+## 📐 Mathematical Foundation
+
+### Overview
 
 **Matrix Exponentiation** solves linear recurrences in **O(k³ log n)** time.
 
 **Pattern:** `f(n) = c₁·f(n-1) + c₂·f(n-2) + ... + cₖ·f(n-k)`
 
 **Complexity:** O(n) → O(k³ log n)
+
+---
+
+
 
 ---
 
@@ -59,6 +104,10 @@ class MatrixExp:
 
 ---
 
+
+
+---
+
 ## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty |
@@ -67,6 +116,10 @@ class MatrixExp:
 | 1137 | [Tribonacci](https://leetcode.com/problems/n-th-tribonacci-number/) | ⭐ |
 | 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | ⭐ |
 | 552 | [Attendance Record II](https://leetcode.com/problems/student-attendance-record-ii/) | ⭐⭐⭐⭐ |
+
+---
+
+
 
 ---
 
