@@ -23,15 +23,7 @@ permalink: /16_recursion/11_parser_recursion/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 10. Advanced Recursion](../10_advanced_recursion/README.md) | **11. Parser Recursion** | [🏠 Recursion Home](../README.md) → [Backtracking](../../17_backtracking/README.md) |
-
----
-
-## 📊 Visual Diagrams
+## 📊 Visual Overview
 
 ### 1. Recursive Descent Parser
 
@@ -101,6 +93,27 @@ permalink: /16_recursion/11_parser_recursion/
 </p>
 
 </details>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Recursive descent parsing for expressions, grammars, and nested structures |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 15+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 10. Advanced Recursion](../10_advanced_recursion/README.md) | **11. Parser Recursion** | [🏠 Recursion Home](../README.md) → [Backtracking](../../17_backtracking/README.md) |
 
 ---
 
@@ -937,10 +950,3 @@ class RecursiveDescentParser:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 10. Advanced Recursion](../10_advanced_recursion/README.md) | **11. Parser Recursion** | [🏠 Recursion Home](../README.md) → [Backtracking](../../17_backtracking/README.md) |
-
