@@ -34,8 +34,6 @@ permalink: /02_strings/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -50,8 +48,6 @@ permalink: /02_strings/
 
 ---
 
----
-
 ## 📂 Subtopics Navigation
 
 | # | Topic | Problems | Link |
@@ -60,8 +56,6 @@ permalink: /02_strings/
 | 2 | Anagram Problems | 10+ | [📖 Go →](./02_anagram_problems/README.md) |
 | 3 | Palindrome | 12+ | [📖 Go →](./03_palindrome/README.md) |
 | 4 | Subsequence | 10+ | [📖 Go →](./04_subsequence/README.md) |
-
----
 
 ---
 
@@ -305,8 +299,6 @@ Total operations: $O(n)$ ∎
 
 ---
 
----
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -322,8 +314,6 @@ Total operations: $O(n)$ ∎
 > **Week 1-2:** Basic operations + Anagrams  
 > **Week 3-4:** Palindromes + Sliding window  
 > **Week 5-6:** DP problems (LCS, Edit distance)
-
----
 
 ---
 
@@ -348,8 +338,6 @@ Total operations: $O(n)$ ∎
 
 ---
 
----
-
 ## 🎯 Must-Solve Problems (Top 15)
 
 | # | Problem | Category | Difficulty | Why Important |
@@ -369,8 +357,6 @@ Total operations: $O(n)$ ∎
 | 13 | [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/) | DP | 🔴 Hard | Pattern matching |
 | 14 | [Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/) | DP | 🔴 Hard | Counting DP |
 | 15 | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | Stack/DP | 🔴 Hard | Multiple approaches |
-
----
 
 ---
 
@@ -414,8 +400,6 @@ Total operations: $O(n)$ ∎
 
 ---
 
----
-
 ## 💡 Key Insights & Pro Tips
 
 > **🎯 String Immutability**  
@@ -439,8 +423,6 @@ Total operations: $O(n)$ ∎
 
 ---
 
----
-
 ## 🧮 Quick Pattern Reference
 
 | If Problem Says... | Think... | Examples |
@@ -455,8 +437,6 @@ Total operations: $O(n)$ ∎
 | "edit distance" | 2D DP | #72 |
 | "minimum window" | Sliding Window | #76 |
 | "pattern matching" | KMP or DP | #28, #10 |
-
----
 
 ---
 
@@ -483,8 +463,6 @@ Two Ptr  Anagram   O(n)    O(n+m)         O(mn)
 Palindrome  Hash
 
 ```
-
----
 
 ---
 
@@ -580,8 +558,6 @@ Palindrome  Hash
 
 ---
 
----
-
 ## 🎖️ Interview Success Tips
 
 ### Common Mistakes to Avoid
@@ -621,8 +597,6 @@ Palindrome  Hash
 [ ] Am I avoiding O(n²) string concatenation?
 
 ```
-
----
 
 ---
 
