@@ -5,17 +5,20 @@ parent: "Computational Geometry"
 nav_order: 1
 ---
 
+<div align="center">
+
 # 🔷 Geometric Primitives
 
-## 📊 Metadata
+### *Points, vectors, and lines — cross/dot products, orientation, and distance*
 
-- **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+<p>
+  <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
+  <img src="https://img.shields.io/badge/Time-O(1)_ops-blue?style=for-the-badge" alt="Time">
+</p>
 
-- **Time Complexity:** O(1) for most operations
+[🏠 Computational Geometry](../README.md) | [Next: Convex Hull →](../02_convex_hull/README.md)
 
-- **Space Complexity:** O(1)
-
-- **Topics:** Vectors, Cross Product, Dot Product, Distances
+</div>
 
 ---
 
@@ -24,6 +27,28 @@ nav_order: 1
 ![Geometric Primitives](./images/geometric-primitives.png)
 
 *Visualization of vectors, cross product, dot product, and orientation tests*
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Geometric primitives are the fundamental building blocks of computational geometry: points, vectors, lines, and basic operations on them. |
+| **Typical time** | O(1) for most operations |
+| **Typical space** | O(1) |
+| **Topics** | Vectors, Cross Product, Dot Product, Distances |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [🏠 Computational Geometry](../README.md) | **01. Geometric Primitives** | [02. Convex Hull →](../02_convex_hull/README.md) |
 
 ---
 
