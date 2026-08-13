@@ -27,6 +27,22 @@ permalink: /10_graphs/04_shortest_path/
 
 ---
 
+## 🎨 Visual Diagrams
+
+<div align="center">
+
+![Dijkstra's Algorithm](./images/dijkstra.png)
+
+*Dijkstra's Algorithm - Shortest Path in Weighted Graphs*
+
+![Algorithm Comparison](./images/algorithm_comparison.png)
+
+*Shortest Path Algorithm Selection Guide*
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Algorithm Comparison
@@ -82,22 +98,6 @@ $$D^{(k)}[i][j] = \min(D^{(k-1)}[i][j], D^{(k-1)}[i][k] + D^{(k-1)}[k][j])$$
 - Weight 1: add to back of deque
 
 $$T = O(V + E)$$
-
----
-
-## 🎨 Visual Diagrams
-
-<div align="center">
-
-![Dijkstra's Algorithm](./images/dijkstra.png)
-
-*Dijkstra's Algorithm - Shortest Path in Weighted Graphs*
-
-![Algorithm Comparison](./images/algorithm_comparison.png)
-
-*Shortest Path Algorithm Selection Guide*
-
-</div>
 
 ---
 
