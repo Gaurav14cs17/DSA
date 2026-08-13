@@ -27,6 +27,28 @@ permalink: /02_strings/01_basic_string/
 
 ---
 
+## 🎨 Visual Diagrams
+
+### String Reversal - Two Pointer Approach
+
+<p align="center">
+  <img src="./images/string_reversal.png" alt="String Reversal Algorithm" width="700"/>
+</p>
+
+### Character Frequency Array
+
+<p align="center">
+  <img src="./images/frequency_array.png" alt="Frequency Array Visualization" width="700"/>
+</p>
+
+### First Unique Character
+
+<p align="center">
+  <img src="./images/first_unique_char.png" alt="First Unique Character Algorithm" width="700"/>
+</p>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ String Reversal
@@ -66,28 +88,6 @@ $$f[c] = |\{i : S[i] = c\}|$$
 2. Find first index $i$ where $f[S[i]] = 1$
 
 **Time:** $O(n)$ for counting + $O(n)$ for search = $O(n)$
-
----
-
-## 🎨 Visual Diagrams
-
-### String Reversal - Two Pointer Approach
-
-<p align="center">
-  <img src="./images/string_reversal.png" alt="String Reversal Algorithm" width="700"/>
-</p>
-
-### Character Frequency Array
-
-<p align="center">
-  <img src="./images/frequency_array.png" alt="Frequency Array Visualization" width="700"/>
-</p>
-
-### First Unique Character
-
-<p align="center">
-  <img src="./images/first_unique_char.png" alt="First Unique Character Algorithm" width="700"/>
-</p>
 
 ---
 
