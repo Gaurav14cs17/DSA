@@ -30,15 +30,15 @@ permalink: /16_recursion/04_permutation_combination/
 ## 📊 Visual Diagrams
 
 <p align="center">
-  <img src="./images/permutation_tree.svg" alt="Permutation Decision Tree" width="100%"/>
+  <img src="./images/permutation_tree.png" alt="Permutation Decision Tree" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="./images/combination_tree.svg" alt="Combination Decision Tree" width="100%"/>
+  <img src="./images/combination_tree.png" alt="Combination Decision Tree" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="./images/subsets_generation.svg" alt="Subsets Generation" width="100%"/>
+  <img src="./images/subsets_generation.png" alt="Subsets Generation" width="100%"/>
 </p>
 
 ---
