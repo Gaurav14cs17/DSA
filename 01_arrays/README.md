@@ -22,7 +22,7 @@ permalink: /01_arrays/
 
 ---
 
-![Arrays Overview](./images/array-overview.svg)
+![Arrays Overview](./images/array-overview.png)
 
 ### 📚 Comprehensive Documentation Available
 
