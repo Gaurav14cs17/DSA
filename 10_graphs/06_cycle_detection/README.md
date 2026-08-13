@@ -27,6 +27,18 @@ permalink: /10_graphs/06_cycle_detection/
 
 ---
 
+## 🎨 Visual Diagrams
+
+<div align="center">
+
+![Cycle Detection](./images/cycle_detection.png)
+
+*DFS 3-Color Cycle Detection in Directed Graphs*
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Cycle in Directed Graph
@@ -72,18 +84,6 @@ Use BFS/DFS with distance tracking:
 $$\text{cycle length} = \text{dist}[u] + \text{dist}[v] + 1$$
 
 when back edge $(u, v)$ discovered.
-
----
-
-## 🎨 Visual Diagrams
-
-<div align="center">
-
-![Cycle Detection](./images/cycle_detection.png)
-
-*DFS 3-Color Cycle Detection in Directed Graphs*
-
-</div>
 
 ---
 
