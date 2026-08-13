@@ -34,8 +34,6 @@ permalink: /12_segment_trees/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
