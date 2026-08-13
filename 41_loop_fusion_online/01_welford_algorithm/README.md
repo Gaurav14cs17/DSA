@@ -30,7 +30,7 @@ permalink: /41_loop_fusion_online/01_welford_algorithm/
 ## 📊 Visual Guide
 
 <div align="center">
-  <img src="images/welford-algorithm.svg" alt="Welford's Algorithm" width="100%">
+  <img src="images/welford-algorithm.png" alt="Welford's Algorithm" width="100%">
 </div>
 
 ---
