@@ -8,19 +8,27 @@ nav_order: 2
 
 # 🎯 Single Pattern Matching with Rabin-Karp
 
+### *Single pattern matching finds all occurrences of one pattern in text using rolling hash for O(1) window comparisons.*
+
+
 ## 📊 Visual Overview
 
 ![Single Pattern Matching](./images/single-pattern.png)
 
-## 📊 Metadata
+*Single Pattern Matching*
 
-- **Difficulty:** ![Easy-Medium](https://img.shields.io/badge/Easy--Medium-yellow)
+---
 
-- **Time Complexity:** O(n + m) average
+## 🎯 At a Glance
 
-- **Space Complexity:** O(1)
+| | |
+|:---|:---|
+| **In one line** | Single pattern matching finds all occurrences of one pattern in text using rolling hash for O(1) window comparisons. |
+| **Typical time** | O(n + m) average |
+| **Typical space** | O(1) |
 
-- **Pattern:** Pattern Matching, Hash Comparison
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
