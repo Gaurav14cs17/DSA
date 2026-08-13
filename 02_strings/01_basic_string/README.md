@@ -10,6 +10,8 @@ permalink: /02_strings/01_basic_string/
 
 # 🔤 Basic String Operations
 
+### *🔤 Basic String Operations*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy-green?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +21,7 @@ permalink: /02_strings/01_basic_string/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Strings Home](../README.md) | **01. Basic String** | [02. Anagram Problems →](../02_anagram_problems/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 ### String Reversal - Two Pointer Approach
 
@@ -49,8 +43,32 @@ permalink: /02_strings/01_basic_string/
 
 ---
 
-## 📐 Mathematical Foundations
+---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🔤 Basic String Operations |
+| **Difficulty** | Easy |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [🏠 Strings Home](../README.md) | **01. Basic String** | [02. Anagram Problems →](../02_anagram_problems/README.md) |
+
+---
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ String Reversal
 
 **Definition:** For string $S[0..n-1]$, reverse $S'$:
@@ -88,6 +106,8 @@ $$f[c] = |\{i : S[i] = c\}|$$
 2. Find first index $i$ where $f[S[i]] = 1$
 
 **Time:** $O(n)$ for counting + $O(n)$ for search = $O(n)$
+
+---
 
 ---
 
@@ -148,6 +168,8 @@ def longestCommonPrefix(strs: list[str]) -> str:
 
 ---
 
+---
+
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
@@ -172,6 +194,8 @@ def longestCommonPrefix(strs: list[str]) -> str:
 
 ---
 
+---
+
 ## 🎯 Pattern Recognition Guide
 
 ### When to Use Each Technique
@@ -183,6 +207,8 @@ def longestCommonPrefix(strs: list[str]) -> str:
 | **Common prefix** | Vertical Scan | Multiple strings | O(S) |
 | **Word reversal** | Two Passes | Reverse twice | O(n) |
 | **Compress string** | Two Pointers | Run-length encoding | O(n) |
+
+---
 
 ---
 
@@ -199,6 +225,8 @@ def longestCommonPrefix(strs: list[str]) -> str:
 
 > **📊 Last Word Length Trick**  
 > Scan from right, skip spaces, count until next space. No split needed!
+
+---
 
 ---
 
@@ -221,6 +249,8 @@ Two passes:            O(n)   → Reverse + reverse
 With sorting:          O(n log n) → When order matters
 
 ```
+
+---
 
 ---
 
@@ -261,6 +291,8 @@ With sorting:          O(n log n) → When order matters
 
 ---
 
+---
+
 ## 🎯 Practice Roadmap
 
 ### Beginner (Start Here!)
@@ -286,6 +318,8 @@ With sorting:          O(n log n) → When order matters
 - Optimize to O(1) space where possible
 
 - Explain time/space complexity
+
+---
 
 ---
 
@@ -319,9 +353,3 @@ A: Empty string "" is valid object with length 0. null means no object exists.
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Strings Home](../README.md) | **01. Basic String** | [02. Anagram Problems →](../02_anagram_problems/README.md) |
