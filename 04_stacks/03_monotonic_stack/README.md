@@ -177,6 +177,72 @@ $$\text{water}[i] = \min(\max_{j \leq i} h[j], \max_{j \geq i} h[j]) - h[i]$$
 
 ---
 
+## 🎨 Visual Algorithm Walkthrough
+
+### Next Greater Element (#496)
+
+```
+Array: [2, 1, 2, 4, 3]
+
+Step-by-step (Decreasing Stack):
+i   nums[i]  Action          Stack      Result
+0     2      Push            [0]        [-1,-1,-1,-1,-1]
+1     1      Push (1<2)      [0,1]      [-1,-1,-1,-1,-1]
+2     2      Pop 1, Push     [0,2]      [-1,2,-1,-1,-1]
+3     4      Pop 2,0, Push   [3]        [4,2,4,-1,-1]
+4     3      Push (3<4)      [3,4]      [4,2,4,-1,-1]
+
+Final: [4, 2, 4, -1, -1]
+
+```
+
+### Daily Temperatures (#739)
+
+```
+Temps: [73, 74, 75, 71, 69, 72, 76, 73]
+
+Decreasing stack (indices):
+i  T[i]  Stack       Action              Result
+0   73   [0]         Push                [0,0,0,0,0,0,0,0]
+1   74   [1]         Pop 0 (73<74)       [1,0,0,0,0,0,0,0]
+2   75   [2]         Pop 1 (74<75)       [1,1,0,0,0,0,0,0]
+3   71   [2,3]       Push (71<75)        [1,1,0,0,0,0,0,0]
+4   69   [2,3,4]     Push (69<71)        [1,1,0,0,0,0,0,0]
+5   72   [2,5]       Pop 4,3 (71<72)     [1,1,0,2,1,0,0,0]
+6   76   [6]         Pop all (72,75<76)  [1,1,4,2,1,1,0,0]
+7   73   [6,7]       Push (73<76)        [1,1,4,2,1,1,0,0]
+
+Final: [1, 1, 4, 2, 1, 1, 0, 0]
+
+```
+
+### Largest Rectangle (#84)
+
+```
+Heights: [2, 1, 5, 6, 2, 3]
+
+Increasing stack approach:
+i  h[i]  Stack       Action              Max Area
+0   2    [0]         Push                0
+1   1    [1]         Pop 0, Push         2×1=2
+2   5    [1,2]       Push                2
+3   6    [1,2,3]     Push                2
+4   2    [1,4]       Pop 3,2, Push       10
+                     h=6, w=1 → 6
+                     h=5, w=2 → 10 ✓
+5   3    [1,4,5]     Push                10
+End      []          Pop all             10
+                     h=3, w=1 → 3
+                     h=2, w=4 → 8
+                     h=1, w=6 → 6
+
+Maximum: 10
+
+```
+
+---
+
+
 ## 💻 Code Implementations
 
 ```python
@@ -342,71 +408,6 @@ def sumSubarrayMins(arr: list[int]) -> int:
 | 402 | [Remove K Digits](https://leetcode.com/problems/remove-k-digits/) | Monotonic Inc | O(n) | O(n) |
 
 ---
-
----
-
-## 🎨 Visual Algorithm Walkthrough
-
-### Next Greater Element (#496)
-
-```
-Array: [2, 1, 2, 4, 3]
-
-Step-by-step (Decreasing Stack):
-i   nums[i]  Action          Stack      Result
-0     2      Push            [0]        [-1,-1,-1,-1,-1]
-1     1      Push (1<2)      [0,1]      [-1,-1,-1,-1,-1]
-2     2      Pop 1, Push     [0,2]      [-1,2,-1,-1,-1]
-3     4      Pop 2,0, Push   [3]        [4,2,4,-1,-1]
-4     3      Push (3<4)      [3,4]      [4,2,4,-1,-1]
-
-Final: [4, 2, 4, -1, -1]
-
-```
-
-### Daily Temperatures (#739)
-
-```
-Temps: [73, 74, 75, 71, 69, 72, 76, 73]
-
-Decreasing stack (indices):
-i  T[i]  Stack       Action              Result
-0   73   [0]         Push                [0,0,0,0,0,0,0,0]
-1   74   [1]         Pop 0 (73<74)       [1,0,0,0,0,0,0,0]
-2   75   [2]         Pop 1 (74<75)       [1,1,0,0,0,0,0,0]
-3   71   [2,3]       Push (71<75)        [1,1,0,0,0,0,0,0]
-4   69   [2,3,4]     Push (69<71)        [1,1,0,0,0,0,0,0]
-5   72   [2,5]       Pop 4,3 (71<72)     [1,1,0,2,1,0,0,0]
-6   76   [6]         Pop all (72,75<76)  [1,1,4,2,1,1,0,0]
-7   73   [6,7]       Push (73<76)        [1,1,4,2,1,1,0,0]
-
-Final: [1, 1, 4, 2, 1, 1, 0, 0]
-
-```
-
-### Largest Rectangle (#84)
-
-```
-Heights: [2, 1, 5, 6, 2, 3]
-
-Increasing stack approach:
-i  h[i]  Stack       Action              Max Area
-0   2    [0]         Push                0
-1   1    [1]         Pop 0, Push         2×1=2
-2   5    [1,2]       Push                2
-3   6    [1,2,3]     Push                2
-4   2    [1,4]       Pop 3,2, Push       10
-                     h=6, w=1 → 6
-                     h=5, w=2 → 10 ✓
-5   3    [1,4,5]     Push                10
-End      []          Pop all             10
-                     h=3, w=1 → 3
-                     h=2, w=4 → 8
-                     h=1, w=6 → 6
-
-Maximum: 10
-
-```
 
 ---
 
