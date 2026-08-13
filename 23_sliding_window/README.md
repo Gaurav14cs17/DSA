@@ -34,11 +34,25 @@ permalink: /23_sliding_window/
 
 ![Sliding Window Overview](./images/sliding-window-overview.png)
 
+*Sliding Window Overview*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **In one line** | Transform brute-force subarray enumeration into elegant linear-time solutions |
+| **Difficulty** | Medium to Hard |
+| **Subtopics** | 3 |
+| **Problems** | 30+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🌟 Why Sliding Window?
 
 > *"Instead of recalculating from scratch, we slide and adjust — turning O(n×k) into O(n)."*
