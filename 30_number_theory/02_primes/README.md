@@ -11,6 +11,8 @@ permalink: /30_number_theory/02_primes/
 
 # 🔍 Prime Numbers
 
+### *The Atoms of Mathematics*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-35+-blue?style=for-the-badge" alt="Problems">
