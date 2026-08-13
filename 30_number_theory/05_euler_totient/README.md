@@ -11,6 +11,8 @@ permalink: /30_number_theory/05_euler_totient/
 
 # φ Euler's Totient Function
 
+### *Counting Numbers Coprime to n*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-15+-blue?style=for-the-badge" alt="Problems">
