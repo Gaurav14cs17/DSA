@@ -31,7 +31,7 @@ permalink: /27_advanced_trees/03_fenwick_tree/02_inversion_counting/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/inversion-counting.svg" alt="Inversion Counting with BIT" width="100%">
+<img src="./images/inversion-counting.png" alt="Inversion Counting with BIT" width="100%">
 </div>
 
 ---
