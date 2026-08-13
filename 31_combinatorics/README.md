@@ -10,7 +10,7 @@ permalink: /31_combinatorics/
 
 # 🎲 Combinatorics
 
-![Combinatorics Overview](./images/combinatorics-overview.svg)
+![Combinatorics Overview](./images/combinatorics-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
