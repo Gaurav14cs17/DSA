@@ -3,7 +3,7 @@
 ## 📊 Visual Diagram
 
 <p align="center">
-  <img src="./images/li-chao-tree.svg" alt="Li Chao Tree" width="100%">
+  <img src="./images/li-chao-tree.png" alt="Li Chao Tree" width="100%">
 </p>
 
 ## Overview
