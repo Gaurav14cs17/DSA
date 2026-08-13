@@ -10,6 +10,8 @@ permalink: /05_queues/01_basic_queue/
 
 # 📬 Basic Queue Operations
 
+### *📬 Basic Queue Operations*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy-green?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +21,7 @@ permalink: /05_queues/01_basic_queue/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Queues Home](../README.md) | **01. Basic Queue** | [02. BFS Queue →](../02_bfs_queue/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -44,61 +38,9 @@ permalink: /05_queues/01_basic_queue/
 
 ---
 
-## 📐 Mathematical Foundations
-
-### 1️⃣ FIFO Property
-
-$$\text{dequeue order} = \text{enqueue order}$$
-
-**Proof:** Elements are added to rear and removed from front. First added → first removed. ∎
-
 ---
 
-### 2️⃣ Circular Queue Index Formula
-
-For queue with capacity $n$:
-
-$$\text{next}(i) = (i + 1) \mod n
-\text{prev}(i) = (i - 1 + n) \mod n$$
-
-**Size Calculation:**
-
-$$\text{size} = \begin{cases}
-\text{rear} - \text{front} & \text{if } \text{rear} \geq \text{front} \\
-n - \text{front} + \text{rear} & \text{otherwise}
-\end{cases}$$
-
-Or unified: $\text{size} = (\text{rear} - \text{front} + n) \mod n$
-
----
-
-### 3️⃣ Queue using Two Stacks
-
-**Amortized Analysis:**
-
-Each element:
-
-1. Pushed to $S_1$ once: O(1)
-
-2. Transferred to $S_2$ once: O(1)
-
-3. Popped from $S_2$ once: O(1)
-
-$$\text{Amortized cost per operation} = \frac{3n}{n} = O(1)$$
-
----
-
-### 4️⃣ Moving Average Formula
-
-$$\text{avg}[i] = \frac{1}{k} \sum_{j=i-k+1}^{i} x[j]$$
-
-**Sliding Window Update:**
-
-$$\text{avg}[i] = \text{avg}[i-1] + \frac{x[i] - x[i-k]}{k}$$
-
----
-
-## 🎨 Visual Algorithm Walkthrough
+## 📊 Visual Overview
 
 ### Circular Queue Operations (#622)
 
@@ -173,6 +115,85 @@ next(5): queue=[10,3,5], sum=18, avg=18/3=6.0
 
 ---
 
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 📬 Basic Queue Operations |
+| **Difficulty** | Easy |
+| **Problems** | 8+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [🏠 Queues Home](../README.md) | **01. Basic Queue** | [02. BFS Queue →](../02_bfs_queue/README.md) |
+
+---
+
+---
+
+## 📐 Mathematical Foundation
+### 1️⃣ FIFO Property
+
+$$\text{dequeue order} = \text{enqueue order}$$
+
+**Proof:** Elements are added to rear and removed from front. First added → first removed. ∎
+
+---
+
+### 2️⃣ Circular Queue Index Formula
+
+For queue with capacity $n$:
+
+$$\text{next}(i) = (i + 1) \mod n
+\text{prev}(i) = (i - 1 + n) \mod n$$
+
+**Size Calculation:**
+
+$$\text{size} = \begin{cases}
+\text{rear} - \text{front} & \text{if } \text{rear} \geq \text{front} \\
+n - \text{front} + \text{rear} & \text{otherwise}
+\end{cases}$$
+
+Or unified: $\text{size} = (\text{rear} - \text{front} + n) \mod n$
+
+---
+
+### 3️⃣ Queue using Two Stacks
+
+**Amortized Analysis:**
+
+Each element:
+
+1. Pushed to $S_1$ once: O(1)
+
+2. Transferred to $S_2$ once: O(1)
+
+3. Popped from $S_2$ once: O(1)
+
+$$\text{Amortized cost per operation} = \frac{3n}{n} = O(1)$$
+
+---
+
+### 4️⃣ Moving Average Formula
+
+$$\text{avg}[i] = \frac{1}{k} \sum_{j=i-k+1}^{i} x[j]$$
+
+**Sliding Window Update:**
+
+$$\text{avg}[i] = \text{avg}[i-1] + \frac{x[i] - x[i-k]}{k}$$
+
+---
+
+---
 
 ## 💻 Code Implementations
 
@@ -270,6 +291,8 @@ class MyStack:
 
 ---
 
+---
+
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
@@ -290,6 +313,8 @@ class MyStack:
 
 ---
 
+---
+
 ## 💡 Pattern Recognition Guide
 
 | Problem Keywords | Pattern | Example |
@@ -299,6 +324,8 @@ class MyStack:
 | "queue using stacks" | Two stacks | #232 |
 | "stack using queues" | Rotation trick | #225 |
 | "recent calls" | Time window | #933 |
+
+---
 
 ---
 
@@ -345,6 +372,8 @@ class MyStack:
 
 ---
 
+---
+
 ## 💡 Pro Tips
 
 > **🎯 Circular Queue Trick:** Use capacity+1 array size. One wasted slot distinguishes full from empty!
@@ -354,6 +383,8 @@ class MyStack:
 > **🔍 Moving Average:** Maintain running sum. Update: `sum = sum - old + new`. O(1) per operation!
 
 > **📊 When to Use Queue:** FIFO order needed, BFS, level-order, task scheduling, buffering.
+
+---
 
 ---
 
@@ -383,6 +414,8 @@ class MyStack:
 
 ---
 
+---
+
 ## ❓ Interview Q&A
 
 **Q: Why use circular queue instead of linear queue?**  
@@ -406,9 +439,3 @@ A: Array (circular) for fixed max size and cache locality. Linked list for unbou
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Queues Home](../README.md) | **01. Basic Queue** | [02. BFS Queue →](../02_bfs_queue/README.md) |
