@@ -32,13 +32,13 @@ permalink: /06_hash_tables/03_set_operations/
 <div align="center">
 
 ### Set Operations Overview
-![Set Operations](image/set-operations.svg)
+![Set Operations](image/set-operations.png)
 
 ### Longest Consecutive Sequence
-![Longest Consecutive](image/longest-consecutive-sequence.svg)
+![Longest Consecutive](image/longest-consecutive-sequence.png)
 
 ### Single Number - XOR Trick
-![XOR Single Number](image/xor-single-number.svg)
+![XOR Single Number](image/xor-single-number.png)
 
 </div>
 
