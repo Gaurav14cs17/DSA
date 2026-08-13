@@ -10,7 +10,7 @@ nav_order: 2
 
 ## 📊 Visual Overview
 
-![Failure Function](./images/failure-function.svg)
+![Failure Function](./images/failure-function.png)
 
 ## 📊 Metadata
 
