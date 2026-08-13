@@ -7,21 +7,29 @@ nav_order: 8
 
 # 🔐 String Hashing
 
+### ***String Hashing** converts strings to numerical values (hashes) for fast comparison and manipulation.*
+
+
 ## 📊 Visual Overview
 
 ![String Hashing](./images/string-hashing.png)
 
-## 📊 Metadata
+*String Hashing*
 
-- **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+---
 
-- **Time Complexity:** O(n) preprocessing, O(1) query
+## 🎯 At a Glance
 
-- **Space Complexity:** O(n)
+| | |
+|:---|:---|
+| **In one line** | **String Hashing** converts strings to numerical values (hashes) for fast comparison and manipulation. |
+| **Typical time** | O(n) preprocessing, O(1) query |
+| **Typical space** | O(n) |
+| **Topics** | Hashing, Rolling Hash, Polynomial Hash |
+| **Prerequisites** | Modular arithmetic, Number theory basics |
 
-- **Topics:** Hashing, Rolling Hash, Polynomial Hash
-
-- **Prerequisites:** Modular arithmetic, Number theory basics
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
