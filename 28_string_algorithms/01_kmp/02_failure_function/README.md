@@ -5,14 +5,18 @@ parent: "KMP Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 2
 ---
+<div align="center">
 
 # 📊 KMP Failure Function (π-array)
 
 ### *The **failure function** (also called **prefix function** or **π-array**) is the heart of KMP.*
 
 
-## 📊 Visual Overview
+</div>
 
+---
+
+## 📊 Visual Overview
 ![Failure Function](./images/failure-function.png)
 
 *Failure Function*
@@ -29,6 +33,14 @@ nav_order: 2
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Basic Pattern Matching](../01_basic_pattern_matching/README.md) | **Failure Function** | [String Period →](../03_string_period/README.md) |
 
 ---
 
@@ -687,4 +699,3 @@ Therefore total operations = O(m)
 ---
 
 **Navigation:** [← Basic Matching](../01_basic_pattern_matching/) | [KMP Overview](../README.md) | [Next: String Period →](../03_string_period/)
-
