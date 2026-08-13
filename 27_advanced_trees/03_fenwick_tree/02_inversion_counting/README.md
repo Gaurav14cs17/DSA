@@ -36,6 +36,17 @@ permalink: /27_advanced_trees/03_fenwick_tree/02_inversion_counting/
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Hard |
+| **Problems** | 8 |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Core Concept
 
 **Inversion:** Pair $(i, j)$ where $i < j$ but $nums[i] > nums[j]$.
