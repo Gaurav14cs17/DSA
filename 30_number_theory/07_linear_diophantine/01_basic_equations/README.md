@@ -36,7 +36,7 @@ permalink: /30_number_theory/07_linear_diophantine/01_basic_equations/
 
 <div align="center">
 
-![Linear Diophantine](./images/linear_diophantine.svg)
+![Linear Diophantine](./images/linear_diophantine.png)
 
 </div>
 
