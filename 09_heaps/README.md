@@ -52,6 +52,17 @@ permalink: /09_heaps/
 
 ---
 
+## 📂 Subtopics Navigation
+
+| # | Topic | Problems | Link |
+|:-:|-------|:--------:|------|
+| 1 | Basic Heap | 8+ | [📖 Go →](./01_basic_heap/README.md) |
+| 2 | Top K Problems | 10+ | [📖 Go →](./02_top_k_problems/README.md) |
+| 3 | Merge K Streams | 6+ | [📖 Go →](./03_merge_k_streams/README.md) |
+| 4 | Two Heaps | 6+ | [📖 Go →](./04_two_heaps/README.md) |
+
+---
+
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ Heap Property
@@ -142,17 +153,6 @@ $$\boxed{T(n) = O(n \log n)}$$
 $$T(n, k) = O(n \log k)$$
 
 Each element: insert once, extract once → 2 × O(log k).
-
----
-
-## 📂 Subtopics Navigation
-
-| # | Topic | Problems | Link |
-|:-:|-------|:--------:|------|
-| 1 | Basic Heap | 8+ | [📖 Go →](./01_basic_heap/README.md) |
-| 2 | Top K Problems | 10+ | [📖 Go →](./02_top_k_problems/README.md) |
-| 3 | Merge K Streams | 6+ | [📖 Go →](./03_merge_k_streams/README.md) |
-| 4 | Two Heaps | 6+ | [📖 Go →](./04_two_heaps/README.md) |
 
 ---
 
