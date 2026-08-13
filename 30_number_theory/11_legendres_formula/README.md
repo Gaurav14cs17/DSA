@@ -26,15 +26,7 @@ permalink: /30_number_theory/11_legendres_formula/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 10. Lucas Theorem](../10_lucas_theorem/README.md) | **11. Legendre's Formula** | [12. Wilson's Theorem →](../12_wilsons_theorem/README.md) |
-
----
-
-## 🎨 Visual Walkthrough
+## 📊 Visual Overview
 
 ```
 +-----------------------------------------------------------------+
@@ -57,8 +49,28 @@ permalink: /30_number_theory/11_legendres_formula/
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **In one line** | Counting Prime Factors in Factorials |
+| **Difficulty** | Medium |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 10. Lucas Theorem](../10_lucas_theorem/README.md) | **11. Legendre's Formula** | [12. Wilson's Theorem →](../12_wilsons_theorem/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Legendre's Formula
 
 **Statement:** The exponent of prime p in n! is:
@@ -201,9 +213,3 @@ print(legendre(10, 2))  # 8 (10! = 2^8 × odd)
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 10. Lucas Theorem](../10_lucas_theorem/README.md) | **11. Legendre's Formula** | [12. Wilson's Theorem →](../12_wilsons_theorem/README.md) |
