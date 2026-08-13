@@ -10,7 +10,7 @@ permalink: /15_searching/04_binary_search_rotated_array/
 
 # 🔄 Binary Search in Rotated Array
 
-![Rotated Array Search](./images/rotated-array.svg)
+![Rotated Array Search](./images/rotated-array.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -69,7 +69,7 @@ $$T = O(n) \text{ worst case}$$
 
 ## 📊 Visual: Find Minimum
 
-![Find Minimum in Rotated Array](./images/find-minimum.svg)
+![Find Minimum in Rotated Array](./images/find-minimum.png)
 
 ---
 
