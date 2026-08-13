@@ -10,7 +10,6 @@ permalink: /15_searching/02_binary_search_on_answer/
 
 # 🎯 Binary Search on Answer
 
-![Binary Search on Answer](./images/bs-on-answer.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
@@ -21,11 +20,28 @@ permalink: /15_searching/02_binary_search_on_answer/
 
 ---
 
+## 📊 Visual Overview
+
+<div align="center">
+
+![Binary Search on Answer](./images/bs-on-answer.png)
+
+</div>
+
+---
+
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
 |:------------|:----------:|--------:|
 | [← 01. Sorted Array](../01_binary_search_sorted_array/README.md) | **02. BS on Answer** | [03. 2D Array →](../03_binary_search_2d_array/README.md) |
+
+---
+
+## 📊 Visual: Ship Packages Problem
+
+![Capacity To Ship Packages](./images/ship-packages.png)
 
 ---
 
@@ -62,12 +78,6 @@ $$\text{answer} = \max\{x : \text{canAchieve}(x) = \text{true}\}$$
 $$T = O(\log R \times \text{check}(n))$$
 
 Where $R$ = search range, check() = feasibility check.
-
----
-
-## 📊 Visual: Ship Packages Problem
-
-![Capacity To Ship Packages](./images/ship-packages.png)
 
 ---
 
