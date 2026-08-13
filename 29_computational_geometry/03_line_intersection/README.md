@@ -27,7 +27,7 @@ Line intersection problems determine if and where geometric segments intersect. 
 
 ## 📊 Visual Overview
 
-![Line Intersection](./images/line-intersection.svg)
+![Line Intersection](./images/line-intersection.png)
 
 *Segment intersection test using orientation conditions*
 
