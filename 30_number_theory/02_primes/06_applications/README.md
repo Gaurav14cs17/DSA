@@ -86,7 +86,7 @@ If $g(n) = \sum_{d|n} f(d)$, then $f(n) = \sum_{d|n} \mu(d) \cdot g(n/d)$
 
 <div align="center">
 
-![Miller-Rabin Primality Test](./images/miller_rabin.svg)
+![Miller-Rabin Primality Test](./images/miller_rabin.png)
 
 </div>
 
