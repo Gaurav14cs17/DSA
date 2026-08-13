@@ -9,7 +9,7 @@ nav_order: 3
 
 ## 📊 Visual Overview
 
-![Z-Algorithm](./images/z-algorithm.svg)
+![Z-Algorithm](./images/z-algorithm.png)
 
 ## 📊 Metadata
 
