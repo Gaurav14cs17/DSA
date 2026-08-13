@@ -32,6 +32,37 @@ permalink: /30_number_theory/06_chinese_remainder/
 
 ---
 
+## 🎨 Visual Walkthrough
+
+```
++-----------------------------------------------------------------+
+| PROBLEM: Solve x ≡ 2 (mod 3), x ≡ 3 (mod 5), x ≡ 2 (mod 7)   |
++-----------------------------------------------------------------+
+| STEP 1: Compute M = 3 × 5 × 7 = 105                            |
+|                                                                 |
+| STEP 2: Compute M_i values                                     |
+|   M₁ = 105/3 = 35                                              |
+|   M₂ = 105/5 = 21                                              |
+|   M₃ = 105/7 = 15                                              |
+|                                                                 |
+| STEP 3: Compute modular inverses y_i                           |
+|   y₁ = 35⁻¹ (mod 3) = 2⁻¹ (mod 3) = 2                         |
+|   y₂ = 21⁻¹ (mod 5) = 1⁻¹ (mod 5) = 1                         |
+|   y₃ = 15⁻¹ (mod 7) = 1⁻¹ (mod 7) = 1                         |
+|                                                                 |
+| STEP 4: Compute x                                               |
+|   x = 2×35×2 + 3×21×1 + 2×15×1                                 |
+|     = 140 + 63 + 30                                            |
+|     = 233                                                      |
+|     = 233 mod 105 = 23                                         |
+|                                                                 |
+| VERIFY: 23 mod 3 = 2 ✓, 23 mod 5 = 3 ✓, 23 mod 7 = 2 ✓        |
++-----------------------------------------------------------------+
+
+```
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ The Theorem
@@ -62,37 +93,6 @@ $$x = \sum_{i=1}^{k} a_i \cdot M_i \cdot y_i \pmod{M}$$
 For $x \equiv a_1 \pmod{m_1}$ and $x \equiv a_2 \pmod{m_2}$:
 
 $$x = a_1 + m_1 \cdot \frac{(a_2 - a_1) \cdot m_1^{-1} \pmod{m_2}}{1} \pmod{m_1 \cdot m_2}$$
-
----
-
-## 🎨 Visual Walkthrough
-
-```
-+-----------------------------------------------------------------+
-| PROBLEM: Solve x ≡ 2 (mod 3), x ≡ 3 (mod 5), x ≡ 2 (mod 7)   |
-+-----------------------------------------------------------------+
-| STEP 1: Compute M = 3 × 5 × 7 = 105                            |
-|                                                                 |
-| STEP 2: Compute M_i values                                     |
-|   M₁ = 105/3 = 35                                              |
-|   M₂ = 105/5 = 21                                              |
-|   M₃ = 105/7 = 15                                              |
-|                                                                 |
-| STEP 3: Compute modular inverses y_i                           |
-|   y₁ = 35⁻¹ (mod 3) = 2⁻¹ (mod 3) = 2                         |
-|   y₂ = 21⁻¹ (mod 5) = 1⁻¹ (mod 5) = 1                         |
-|   y₃ = 15⁻¹ (mod 7) = 1⁻¹ (mod 7) = 1                         |
-|                                                                 |
-| STEP 4: Compute x                                               |
-|   x = 2×35×2 + 3×21×1 + 2×15×1                                 |
-|     = 140 + 63 + 30                                            |
-|     = 233                                                      |
-|     = 233 mod 105 = 23                                         |
-|                                                                 |
-| VERIFY: 23 mod 3 = 2 ✓, 23 mod 5 = 3 ✓, 23 mod 7 = 2 ✓        |
-+-----------------------------------------------------------------+
-
-```
 
 ---
 
