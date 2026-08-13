@@ -128,6 +128,135 @@ d[(x, y, state)] = \text{shortest path to } (x, y) \text{ with given state}$$
 
 ---
 
+## 🎨 Visual Algorithm Walkthrough
+
+### Level-Order Traversal (#102)
+
+```
+Tree:
+       3
+      / \
+     9  20
+       /  \
+      15   7
+
+BFS with level tracking:
+
+Initial: queue = [3], result = []
+
+Level 0:
+  size = 1
+  Process: 3 → level = [3]
+  Add children: 9, 20
+  queue = [9, 20]
+  result = [[3]]
+
+Level 1:
+  size = 2
+  Process: 9 → level = [9]
+  Process: 20 → level = [9, 20]
+  Add children: 15, 7
+  queue = [15, 7]
+  result = [[3], [9, 20]]
+
+Level 2:
+  size = 2
+  Process: 15 → level = [15]
+  Process: 7 → level = [15, 7]
+  queue = []
+  result = [[3], [9, 20], [15, 7]]
+
+```
+
+### Number of Islands (#200)
+
+```
+Grid:
+1 1 0
+0 1 0
+0 0 1
+
+BFS from each unvisited '1':
+
+Island 1: Start (0,0)
+  Queue: [(0,0)]
+  Visit (0,0) → mark 0, add neighbors
+  Queue: [(0,1), (1,0)]
+  Visit (0,1) → mark 0, add (1,1)
+  Visit (1,0) → already 0
+  Visit (1,1) → mark 0
+  Count = 1
+
+Island 2: Start (2,2)
+  Queue: [(2,2)]
+  Visit (2,2) → mark 0
+  Count = 2
+
+Result: 2 islands
+
+```
+
+### Rotting Oranges (#994)
+
+```
+Grid (2=rotten, 1=fresh):
+2 1 1
+1 1 0
+0 1 1
+
+Multi-source BFS:
+
+Time 0: Queue = [(0,0)]
+  Fresh count = 6
+
+Time 1: Process (0,0)
+  Rot (0,1) and (1,0)
+  Queue = [(0,1,1), (1,0,1)]
+  Fresh = 4
+
+Time 2: Process (0,1) and (1,0)
+  Rot (0,2), (1,1)
+  Queue = [(0,2,2), (1,1,2)]
+  Fresh = 2
+
+Time 3: Process (0,2) and (1,1)
+  Rot (1,2)
+  Queue = [(1,2,3)]
+  Fresh = 1
+
+Time 4: Process (1,2)
+  Rot (2,2)
+  Queue = [(2,2,4)]
+  Fresh = 0
+
+Result: 4 minutes
+
+```
+
+### Open the Lock (#752)
+
+```
+Start: "0000", Target: "0202", Deadends: ["0201"]
+
+BFS on state space:
+
+Turn 0: Queue = [("0000", 0)]
+
+Turn 1: From "0000", generate 8 neighbors:
+  "1000", "9000", "0100", "0900", ...
+  Queue = [("1000",1), ("9000",1), ...]
+
+Turn 2-5: Continue exploring...
+
+Turn 6: Reach "0202"
+  Path: 0000 → 1000 → 1100 → 1200 → 1201 → 1202 → 0202
+  Result: 6 turns
+
+```
+
+---
+
+
 ## 💻 Code Implementations
 
 ```python
@@ -331,134 +460,6 @@ def openLock(deadends: list[str], target: str) -> int:
 | 815 | [Bus Routes](https://leetcode.com/problems/bus-routes/) | Route BFS | O(N²) | O(N) |
 
 ---
-
----
-
-## 🎨 Visual Algorithm Walkthrough
-
-### Level-Order Traversal (#102)
-
-```
-Tree:
-       3
-      / \
-     9  20
-       /  \
-      15   7
-
-BFS with level tracking:
-
-Initial: queue = [3], result = []
-
-Level 0:
-  size = 1
-  Process: 3 → level = [3]
-  Add children: 9, 20
-  queue = [9, 20]
-  result = [[3]]
-
-Level 1:
-  size = 2
-  Process: 9 → level = [9]
-  Process: 20 → level = [9, 20]
-  Add children: 15, 7
-  queue = [15, 7]
-  result = [[3], [9, 20]]
-
-Level 2:
-  size = 2
-  Process: 15 → level = [15]
-  Process: 7 → level = [15, 7]
-  queue = []
-  result = [[3], [9, 20], [15, 7]]
-
-```
-
-### Number of Islands (#200)
-
-```
-Grid:
-1 1 0
-0 1 0
-0 0 1
-
-BFS from each unvisited '1':
-
-Island 1: Start (0,0)
-  Queue: [(0,0)]
-  Visit (0,0) → mark 0, add neighbors
-  Queue: [(0,1), (1,0)]
-  Visit (0,1) → mark 0, add (1,1)
-  Visit (1,0) → already 0
-  Visit (1,1) → mark 0
-  Count = 1
-
-Island 2: Start (2,2)
-  Queue: [(2,2)]
-  Visit (2,2) → mark 0
-  Count = 2
-
-Result: 2 islands
-
-```
-
-### Rotting Oranges (#994)
-
-```
-Grid (2=rotten, 1=fresh):
-2 1 1
-1 1 0
-0 1 1
-
-Multi-source BFS:
-
-Time 0: Queue = [(0,0)]
-  Fresh count = 6
-
-Time 1: Process (0,0)
-  Rot (0,1) and (1,0)
-  Queue = [(0,1,1), (1,0,1)]
-  Fresh = 4
-
-Time 2: Process (0,1) and (1,0)
-  Rot (0,2), (1,1)
-  Queue = [(0,2,2), (1,1,2)]
-  Fresh = 2
-
-Time 3: Process (0,2) and (1,1)
-  Rot (1,2)
-  Queue = [(1,2,3)]
-  Fresh = 1
-
-Time 4: Process (1,2)
-  Rot (2,2)
-  Queue = [(2,2,4)]
-  Fresh = 0
-
-Result: 4 minutes
-
-```
-
-### Open the Lock (#752)
-
-```
-Start: "0000", Target: "0202", Deadends: ["0201"]
-
-BFS on state space:
-
-Turn 0: Queue = [("0000", 0)]
-
-Turn 1: From "0000", generate 8 neighbors:
-  "1000", "9000", "0100", "0900", ...
-  Queue = [("1000",1), ("9000",1), ...]
-
-Turn 2-5: Continue exploring...
-
-Turn 6: Reach "0202"
-  Path: 0000 → 1000 → 1100 → 1200 → 1201 → 1202 → 0202
-  Result: 6 turns
-
-```
 
 ---
 
