@@ -10,7 +10,6 @@ permalink: /20_divide_and_conquer/
 
 # ⚔️ Divide and Conquer
 
-![Divide and Conquer Overview](./images/dnc-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
@@ -25,6 +24,17 @@ permalink: /20_divide_and_conquer/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Divide and Conquer Overview](./images/dnc-overview.png)
+
+</div>
+
+---
+
 
 ## 🖼️ Visual Overview
 
