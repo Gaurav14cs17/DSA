@@ -10,6 +10,10 @@ permalink: /17_backtracking/04_grid_backtracking/
 
 # 🗺️ Grid Backtracking
 
+### *Grid Backtracking*
+
+
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -43,6 +47,7 @@ permalink: /17_backtracking/04_grid_backtracking/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -51,8 +56,7 @@ permalink: /17_backtracking/04_grid_backtracking/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Grid Exploration
 
 4-directional movement:
@@ -258,9 +262,3 @@ def getMaximumGold(grid: list[list[int]]) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Combinations](../03_combinations/README.md) | **04. Grid Backtracking** | [05. Constraint Satisfaction →](../05_constraint_satisfaction/README.md) |
