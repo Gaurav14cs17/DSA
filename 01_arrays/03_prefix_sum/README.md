@@ -100,6 +100,78 @@ Prefix: [0, 3, 4,  2, 7,  6]
 
 ---
 
+### 5️⃣ 2D Prefix Sum (Matrix)
+
+**Definition for 2D array:**
+
+$$P[i][j] = \sum_{r=0}^{i} \sum_{c=0}^{j} A[r][c]$$
+
+**Recurrence Relation:**
+
+$$\boxed{P[i][j] = P[i-1][j] + P[i][j-1] - P[i-1][j-1] + A[i][j]}$$
+
+**Range Sum Query (r1,c1) to (r2,c2):**
+
+$$\boxed{\text{sum} = P[r2][c2] - P[r1-1][c2] - P[r2][c1-1] + P[r1-1][c1-1]}$$
+
+**Visual Explanation:**
+
+```
+      c1      c2
+r1  +---------+----+
+    |    A    | B  |
+    |         |    |
+r2  +---------+----+
+    |    C    | D  |
+    +---------+----+
+
+Want: Area A only
+
+P[r2][c2] = A + B + C + D
+P[r1-1][c2] = B
+P[r2][c1-1] = C
+P[r1-1][c1-1] = 0
+
+sum = (A+B+C+D) - B - C + 0 = A ✓
+
+Inclusion-Exclusion Principle!
+
+```
+
+---
+
+### 6️⃣ Mathematical Properties
+
+**Property 1: Linearity**
+
+$$P[A + B] = P[A] + P[B]$$
+
+**Property 2: Difference**
+
+$$A[i] = P[i] - P[i-1]$$
+
+**Property 3: Telescoping**
+
+$$\sum_{i=L}^{R} (P[i] - P[i-1]) = P[R] - P[L-1]$$
+
+**Property 4: Modulo Arithmetic**
+
+If $P[i] \equiv P[j] \pmod{k}$, then:
+
+$$\sum_{x=i+1}^{j} A[x] \equiv 0 \pmod{k}$$
+
+**Proof:**
+
+$$\begin{aligned}
+P[j] - P[i] &\equiv 0 \pmod{k} \\
+\sum_{x=0}^{j} A[x] - \sum_{x=0}^{i} A[x] &\equiv 0 \pmod{k} \\
+\sum_{x=i+1}^{j} A[x] &\equiv 0 \pmod{k} \quad \text{∎}
+\end{aligned}$$
+
+---
+
+## 🎨 Visual Algorithm Walkthroughs
+
 ### 3️⃣ Visual: Prefix Sum Construction
 
 ```
@@ -179,77 +251,6 @@ P[4] - P[1] = elements 1,2,3 ✓
 
 ---
 
-### 5️⃣ 2D Prefix Sum (Matrix)
-
-**Definition for 2D array:**
-
-$$P[i][j] = \sum_{r=0}^{i} \sum_{c=0}^{j} A[r][c]$$
-
-**Recurrence Relation:**
-
-$$\boxed{P[i][j] = P[i-1][j] + P[i][j-1] - P[i-1][j-1] + A[i][j]}$$
-
-**Range Sum Query (r1,c1) to (r2,c2):**
-
-$$\boxed{\text{sum} = P[r2][c2] - P[r1-1][c2] - P[r2][c1-1] + P[r1-1][c1-1]}$$
-
-**Visual Explanation:**
-
-```
-      c1      c2
-r1  +---------+----+
-    |    A    | B  |
-    |         |    |
-r2  +---------+----+
-    |    C    | D  |
-    +---------+----+
-
-Want: Area A only
-
-P[r2][c2] = A + B + C + D
-P[r1-1][c2] = B
-P[r2][c1-1] = C
-P[r1-1][c1-1] = 0
-
-sum = (A+B+C+D) - B - C + 0 = A ✓
-
-Inclusion-Exclusion Principle!
-
-```
-
----
-
-### 6️⃣ Mathematical Properties
-
-**Property 1: Linearity**
-
-$$P[A + B] = P[A] + P[B]$$
-
-**Property 2: Difference**
-
-$$A[i] = P[i] - P[i-1]$$
-
-**Property 3: Telescoping**
-
-$$\sum_{i=L}^{R} (P[i] - P[i-1]) = P[R] - P[L-1]$$
-
-**Property 4: Modulo Arithmetic**
-
-If $P[i] \equiv P[j] \pmod{k}$, then:
-
-$$\sum_{x=i+1}^{j} A[x] \equiv 0 \pmod{k}$$
-
-**Proof:**
-
-$$\begin{aligned}
-P[j] - P[i] &\equiv 0 \pmod{k} \\
-\sum_{x=0}^{j} A[x] - \sum_{x=0}^{i} A[x] &\equiv 0 \pmod{k} \\
-\sum_{x=i+1}^{j} A[x] &\equiv 0 \pmod{k} \quad \text{∎}
-\end{aligned}$$
-
----
-
-## 🎨 Visual Algorithm Walkthroughs
 
 ### Subarray Sum Divisible by K
 
