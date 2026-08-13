@@ -11,6 +11,8 @@ permalink: /30_number_theory/01_gcd_lcm/01_euclidean_algorithm/
 
 # 🔄 Euclidean Algorithm
 
+### *The Ancient Algorithm That Changed Mathematics*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy-green?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Time-O(log_n)-blue?style=for-the-badge" alt="Time">
