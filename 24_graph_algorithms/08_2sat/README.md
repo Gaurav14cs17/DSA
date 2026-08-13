@@ -31,7 +31,7 @@ permalink: /24_graph_algorithms/08_2sat/
 
 <div align="center">
 
-![2-SAT Implication Graph](./images/2sat-implication.svg)
+![2-SAT Implication Graph](./images/2sat-implication.png)
 
 </div>
 
