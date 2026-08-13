@@ -39,8 +39,6 @@ permalink: /08_binary_search_trees/03_bst_queries/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -481,8 +479,6 @@ def closestValue(root: TreeNode, target: float) -> int:
 | 538 | [Convert BST to Greater Tree](https://leetcode.com/problems/convert-bst-to-greater-tree/) | Reverse Inorder | O(n) | O(h) |
 | 653 | [Two Sum IV - BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/) | Inorder + Hash | O(n) | O(n) |
 | 1038 | [BST to Greater Sum Tree](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/) | Reverse Inorder | O(n) | O(h) |
-
----
 
 ---
 
