@@ -37,7 +37,7 @@ permalink: /30_number_theory/06_chinese_remainder/01_basic_crt/
 
 <div align="center">
 
-![Chinese Remainder Theorem](./images/chinese_remainder.svg)
+![Chinese Remainder Theorem](./images/chinese_remainder.png)
 
 </div>
 
