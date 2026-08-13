@@ -10,7 +10,7 @@ nav_order: 1
 
 ## 📊 Visual Overview
 
-![Basic Rolling Hash](./images/basic-rolling-hash.svg)
+![Basic Rolling Hash](./images/basic-rolling-hash.png)
 
 ## 📊 Metadata
 
