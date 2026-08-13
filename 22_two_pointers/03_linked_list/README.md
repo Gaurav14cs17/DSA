@@ -57,6 +57,91 @@ permalink: /22_two_pointers/03_linked_list/
 ### Remove Nth Node From End
 ![Nth From End](./images/nth-from-end.png)
 
+### Floyd's Detection in Action
+
+```
+List: 1 → 2 → 3 → 4 → 5 → 6
+                  ↑       ↓
+                  9 ← 8 ← 7
+
+Initial:
+🐢🐇 at 1
+
+Step 1:  🐢→2    🐇→→3
+Step 2:  🐢→3    🐇→→5
+Step 3:  🐢→4    🐇→→7
+Step 4:  🐢→5    🐇→→9
+Step 5:  🐢→6    🐇→→5 (wrapped)
+Step 6:  🐢→7    🐇→→7
+
+🐢 = 🐇 at node 7! Cycle detected! ✓
+
+```
+
+### Finding Cycle Start
+
+```
+After detection (meeting at 7):
+
+Reset slow to head:
+🐢 at 1, 🐇 at 7
+
+Move both one step:
+Step 1: 🐢→2, 🐇→8
+Step 2: 🐢→3, 🐇→9
+Step 3: 🐢→4, 🐇→4
+
+🐢 = 🐇 at node 4! Cycle starts here! ✓
+
+Verification:
+μ = 3 (steps from 1 to 4)
+x = 3 (steps from 4 to 7 in cycle)
+λ = 6 (cycle: 4→5→6→7→8→9→4)
+μ + x = 6 = λ ✓
+
+```
+
+### Finding Middle
+
+```
+List: 1 → 2 → 3 → 4 → 5 → 6 → 7
+
+🐢=1, 🐇=1
+🐢→2, 🐇→→3
+🐢→3, 🐇→→5
+🐢→4, 🐇→→7
+🐇 reaches end!
+
+Middle = 🐢 = 4 ✓
+
+List: 1 → 2 → 3 → 4 → 5 → 6
+
+🐢=1, 🐇=1
+🐢→2, 🐇→→3
+🐢→3, 🐇→→5
+🐇.next is end (6.next = null)
+
+Middle = 🐢 = 4 (second of two middles) ✓
+
+```
+
+### List Intersection
+
+```
+List A:      1 → 2 ↘
+                     → 5 → 6 → 7
+List B:  3 → 4 ↗
+
+Pointer A path: 1 → 2 → 5 → 6 → 7 → null → 3 → 4 → [5]
+Pointer B path: 3 → 4 → 5 → 6 → 7 → null → 1 → 2 → [5]
+                                                    ↑
+                                                Meet here!
+
+Distance traveled by each: 2 + 3 + 2 = 7 steps
+They meet at intersection node 5 ✓
+
+```
+
 ---
 
 ## 📐 Mathematical Foundations
@@ -277,95 +362,6 @@ If list A has length \(a + c\) and list B has length \(b + c\) where \(c\) is co
 At step \(a + b + c\), both are at the intersection!
 
 If no intersection (\(c = 0\)), both reach null at step \(a + b\).
-
----
-
-## 📊 Visual Diagrams
-
-### Floyd's Detection in Action
-
-```
-List: 1 → 2 → 3 → 4 → 5 → 6
-                  ↑       ↓
-                  9 ← 8 ← 7
-
-Initial:
-🐢🐇 at 1
-
-Step 1:  🐢→2    🐇→→3
-Step 2:  🐢→3    🐇→→5
-Step 3:  🐢→4    🐇→→7
-Step 4:  🐢→5    🐇→→9
-Step 5:  🐢→6    🐇→→5 (wrapped)
-Step 6:  🐢→7    🐇→→7
-
-🐢 = 🐇 at node 7! Cycle detected! ✓
-
-```
-
-### Finding Cycle Start
-
-```
-After detection (meeting at 7):
-
-Reset slow to head:
-🐢 at 1, 🐇 at 7
-
-Move both one step:
-Step 1: 🐢→2, 🐇→8
-Step 2: 🐢→3, 🐇→9
-Step 3: 🐢→4, 🐇→4
-
-🐢 = 🐇 at node 4! Cycle starts here! ✓
-
-Verification:
-μ = 3 (steps from 1 to 4)
-x = 3 (steps from 4 to 7 in cycle)
-λ = 6 (cycle: 4→5→6→7→8→9→4)
-μ + x = 6 = λ ✓
-
-```
-
-### Finding Middle
-
-```
-List: 1 → 2 → 3 → 4 → 5 → 6 → 7
-
-🐢=1, 🐇=1
-🐢→2, 🐇→→3
-🐢→3, 🐇→→5
-🐢→4, 🐇→→7
-🐇 reaches end!
-
-Middle = 🐢 = 4 ✓
-
-List: 1 → 2 → 3 → 4 → 5 → 6
-
-🐢=1, 🐇=1
-🐢→2, 🐇→→3
-🐢→3, 🐇→→5
-🐇.next is end (6.next = null)
-
-Middle = 🐢 = 4 (second of two middles) ✓
-
-```
-
-### List Intersection
-
-```
-List A:      1 → 2 ↘
-                     → 5 → 6 → 7
-List B:  3 → 4 ↗
-
-Pointer A path: 1 → 2 → 5 → 6 → 7 → null → 3 → 4 → [5]
-Pointer B path: 3 → 4 → 5 → 6 → 7 → null → 1 → 2 → [5]
-                                                    ↑
-                                                Meet here!
-
-Distance traveled by each: 2 + 3 + 2 = 7 steps
-They meet at intersection node 5 ✓
-
-```
 
 ---
 
