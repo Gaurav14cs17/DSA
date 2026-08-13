@@ -27,7 +27,7 @@ Point location determines spatial relationships: Is a point inside, outside, or 
 
 ## 📊 Visual Overview
 
-![Point Location](./images/point-location.svg)
+![Point Location](./images/point-location.png)
 
 *Ray casting and winding number algorithms for point-in-polygon tests*
 
