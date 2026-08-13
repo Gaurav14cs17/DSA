@@ -105,6 +105,93 @@ Count previous prefixes that equal $P[j] - k$.
 
 ---
 
+## 🎨 Visual Algorithm Walkthrough
+
+### Two Sum (#1)
+
+```
+nums = [2, 7, 11, 15], target = 9
+
+Step-by-step:
+i   num   complement   seen         Action
+0    2        7        {}           Add 2→0
+1    7        2        {2:0}        Found! Return [0,1]
+
+Time: O(n), Space: O(n)
+
+```
+
+### Three Sum (#15)
+
+```
+nums = [-1, 0, 1, 2, -1, -4], target = 0
+
+Step 1: Sort → [-4, -1, -1, 0, 1, 2]
+
+Step 2: For each i, two-pointer on remaining:
+
+i=0, nums[i]=-4, target=-(-4)=4
+  L=1, R=5: -1+2=1 < 4, L++
+  L=2, R=5: -1+2=1 < 4, L++
+  L=3, R=5: 0+2=2 < 4, L++
+  L=4, R=5: 1+2=3 < 4, L++
+  No triplet
+
+i=1, nums[i]=-1, target=1
+  L=2, R=5: -1+2=1 ✓ → [-1,-1,2]
+  L++, R--
+  L=3, R=4: 0+1=1 ✓ → [-1,0,1]
+  L++, R--
+
+Result: [[-1,-1,2], [-1,0,1]]
+
+```
+
+### Four Sum II (#454)
+
+```
+A=[1,2], B=[-2,-1], C=[-1,2], D=[0,2]
+
+Step 1: All A+B sums
+  1+(-2)=-1 → count[-1]=1
+  1+(-1)=0  → count[0]=1
+  2+(-2)=0  → count[0]=2
+  2+(-1)=1  → count[1]=1
+
+Step 2: Count matching -(C+D)
+  C=-1, D=0: -(−1+0)=1 → count[1]=1 ✓
+  C=-1, D=2: -(−1+2)=-1 → count[-1]=1 ✓
+  C=2, D=0: -(2+0)=-2 → count[-2]=0
+  C=2, D=2: -(2+2)=-4 → count[-4]=0
+
+Total: 2 tuples
+
+```
+
+### Subarray Sum = K (#560)
+
+```
+nums = [1, 1, 1], k = 2
+
+Prefix sums: [0, 1, 2, 3]
+
+For sum(i,j) = k:
+  P[j] - P[i-1] = k
+  P[i-1] = P[j] - k
+
+j   P[j]  P[j]-k  count[P[j]-k]  Result
+0    0      -2          0           0
+1    1      -1          0           0
+2    2       0          1           1 (subarray [0,1])
+3    3       1          1           2 (subarray [1,2])
+
+Total: 2 subarrays
+
+```
+
+---
+
+
 ## 💻 Code Implementations
 
 ```python
@@ -258,92 +345,6 @@ def twoSumLessThanK(nums: list[int], k: int) -> int:
 | 560 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | Prefix + Hash | O(n) | O(n) |
 
 ---
-
----
-
-## 🎨 Visual Algorithm Walkthrough
-
-### Two Sum (#1)
-
-```
-nums = [2, 7, 11, 15], target = 9
-
-Step-by-step:
-i   num   complement   seen         Action
-0    2        7        {}           Add 2→0
-1    7        2        {2:0}        Found! Return [0,1]
-
-Time: O(n), Space: O(n)
-
-```
-
-### Three Sum (#15)
-
-```
-nums = [-1, 0, 1, 2, -1, -4], target = 0
-
-Step 1: Sort → [-4, -1, -1, 0, 1, 2]
-
-Step 2: For each i, two-pointer on remaining:
-
-i=0, nums[i]=-4, target=-(-4)=4
-  L=1, R=5: -1+2=1 < 4, L++
-  L=2, R=5: -1+2=1 < 4, L++
-  L=3, R=5: 0+2=2 < 4, L++
-  L=4, R=5: 1+2=3 < 4, L++
-  No triplet
-
-i=1, nums[i]=-1, target=1
-  L=2, R=5: -1+2=1 ✓ → [-1,-1,2]
-  L++, R--
-  L=3, R=4: 0+1=1 ✓ → [-1,0,1]
-  L++, R--
-
-Result: [[-1,-1,2], [-1,0,1]]
-
-```
-
-### Four Sum II (#454)
-
-```
-A=[1,2], B=[-2,-1], C=[-1,2], D=[0,2]
-
-Step 1: All A+B sums
-  1+(-2)=-1 → count[-1]=1
-  1+(-1)=0  → count[0]=1
-  2+(-2)=0  → count[0]=2
-  2+(-1)=1  → count[1]=1
-
-Step 2: Count matching -(C+D)
-  C=-1, D=0: -(−1+0)=1 → count[1]=1 ✓
-  C=-1, D=2: -(−1+2)=-1 → count[-1]=1 ✓
-  C=2, D=0: -(2+0)=-2 → count[-2]=0
-  C=2, D=2: -(2+2)=-4 → count[-4]=0
-
-Total: 2 tuples
-
-```
-
-### Subarray Sum = K (#560)
-
-```
-nums = [1, 1, 1], k = 2
-
-Prefix sums: [0, 1, 2, 3]
-
-For sum(i,j) = k:
-  P[j] - P[i-1] = k
-  P[i-1] = P[j] - k
-
-j   P[j]  P[j]-k  count[P[j]-k]  Result
-0    0      -2          0           0
-1    1      -1          0           0
-2    2       0          1           1 (subarray [0,1])
-3    3       1          1           2 (subarray [1,2])
-
-Total: 2 subarrays
-
-```
 
 ---
 
