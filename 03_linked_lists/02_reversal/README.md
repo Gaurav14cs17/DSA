@@ -10,6 +10,8 @@ permalink: /03_linked_lists/02_reversal/
 
 # 🔄 Linked List Reversal
 
+### *🔄 Linked List Reversal*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-12+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +21,7 @@ permalink: /03_linked_lists/02_reversal/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Basic Operations](../01_basic_operations/README.md) | **02. Reversal** | [03. Merge & Sort →](../03_merge_sort/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -38,110 +32,9 @@ permalink: /03_linked_lists/02_reversal/
 
 ---
 
-## 📐 Mathematical Foundations
-
-### 1️⃣ Reversal Invariant
-
-**Loop Invariant for Iterative Reversal:**
-
-After iteration $i$:
-
-$$\boxed{\text{null} \leftarrow node_0 \leftarrow node_1 \leftarrow \cdots \leftarrow node_i \quad | \quad node_{i+1} \to \cdots \to node_{n-1}}$$
-
-Where:
-
-- Left of `|`: Already reversed (prev points to $node_i$)
-
-- Right of `|`: Not yet processed (current points to $node_{i+1}$)
-
-**Initialization:** $i = 0$, prev = null, current = head
-
-**Maintenance:** Each iteration reverses one more link
-
-**Termination:** current = null, prev points to new head
-
 ---
 
-### 2️⃣ Recursive Reversal Formula
-
-**Recursive Definition:**
-
-$$\text{reverse}(head) = \begin{cases}
-head & \text{if } head = \text{null or } head.next = \text{null} \\
-\text{let } rest = \text{reverse}(head.next) & \\
-\quad head.next.next = head & \\
-\quad head.next = \text{null} & \\
-\quad \text{return } rest
-\end{cases}$$
-
-**Recurrence Relation:**
-
-$$T(n) = T(n-1) + O(1)
-\boxed{T(n) = O(n) \text{ time}, \; O(n) \text{ stack space}}$$
-
----
-
-### 3️⃣ Reversal Complexity Analysis
-
-**Iterative Approach:**
-
-- **Time:** One pass through list = $O(n)$
-
-- **Space:** Three pointers (prev, current, next) = $O(1)$
-
-**Recursive Approach:**
-
-- **Time:** One recursive call per node = $O(n)$
-
-- **Space:** Call stack depth = $O(n)$
-
-**Mathematical Proof of Space:**
-
-Iterative uses fixed variables:
-
-$$S_{\text{iter}}(n) = 3 \text{ pointers} = O(1)$$
-
-Recursive stacks n frames:
-
-$$S_{\text{rec}}(n) = \sum_{i=1}^{n} O(1) = O(n)$$
-
----
-
-### 4️⃣ Partial Reversal Formula
-
-**Reverse nodes from position left to right:**
-
-Original: $n_1 \to n_2 \to \cdots \to n_{left-1} \to n_{left} \to \cdots \to n_{right} \to n_{right+1} \to \cdots$
-
-Result: $n_1 \to n_2 \to \cdots \to n_{left-1} \to n_{right} \to \cdots \to n_{left} \to n_{right+1} \to \cdots$
-
-**Number of link reversals needed:**
-
-$$\boxed{\text{reversals} = right - left}$$
-
----
-
-### 5️⃣ K-Group Reversal Mathematics
-
-**Given:** List of length $n$, reverse every $k$ nodes
-
-**Number of complete groups:**
-
-$$\text{complete\_groups} = \left\lfloor \frac{n}{k} \right\rfloor$$
-
-**Remaining nodes:**
-
-$$\text{remaining} = n \mod k$$
-
-**Total reversals:**
-
-$$\text{total\_reversals} = \left\lfloor \frac{n}{k} \right\rfloor \times (k-1)$$
-
-**Time Complexity:** $O(n)$ - each node visited once
-
----
-
-## 🎨 Visual Algorithm Walkthroughs
+## 📊 Visual Overview
 
 ### Iterative Reversal - Complete Trace
 
@@ -436,6 +329,135 @@ Goal:  2 → 1 → 4 → 3 → 5 → null
 
 ---
 
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🔄 Linked List Reversal |
+| **Difficulty** | Easy to Hard |
+| **Problems** | 12+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 01. Basic Operations](../01_basic_operations/README.md) | **02. Reversal** | [03. Merge & Sort →](../03_merge_sort/README.md) |
+
+---
+
+---
+
+## 📐 Mathematical Foundation
+### 1️⃣ Reversal Invariant
+
+**Loop Invariant for Iterative Reversal:**
+
+After iteration $i$:
+
+$$\boxed{\text{null} \leftarrow node_0 \leftarrow node_1 \leftarrow \cdots \leftarrow node_i \quad | \quad node_{i+1} \to \cdots \to node_{n-1}}$$
+
+Where:
+
+- Left of `|`: Already reversed (prev points to $node_i$)
+
+- Right of `|`: Not yet processed (current points to $node_{i+1}$)
+
+**Initialization:** $i = 0$, prev = null, current = head
+
+**Maintenance:** Each iteration reverses one more link
+
+**Termination:** current = null, prev points to new head
+
+---
+
+### 2️⃣ Recursive Reversal Formula
+
+**Recursive Definition:**
+
+$$\text{reverse}(head) = \begin{cases}
+head & \text{if } head = \text{null or } head.next = \text{null} \\
+\text{let } rest = \text{reverse}(head.next) & \\
+\quad head.next.next = head & \\
+\quad head.next = \text{null} & \\
+\quad \text{return } rest
+\end{cases}$$
+
+**Recurrence Relation:**
+
+$$T(n) = T(n-1) + O(1)
+\boxed{T(n) = O(n) \text{ time}, \; O(n) \text{ stack space}}$$
+
+---
+
+### 3️⃣ Reversal Complexity Analysis
+
+**Iterative Approach:**
+
+- **Time:** One pass through list = $O(n)$
+
+- **Space:** Three pointers (prev, current, next) = $O(1)$
+
+**Recursive Approach:**
+
+- **Time:** One recursive call per node = $O(n)$
+
+- **Space:** Call stack depth = $O(n)$
+
+**Mathematical Proof of Space:**
+
+Iterative uses fixed variables:
+
+$$S_{\text{iter}}(n) = 3 \text{ pointers} = O(1)$$
+
+Recursive stacks n frames:
+
+$$S_{\text{rec}}(n) = \sum_{i=1}^{n} O(1) = O(n)$$
+
+---
+
+### 4️⃣ Partial Reversal Formula
+
+**Reverse nodes from position left to right:**
+
+Original: $n_1 \to n_2 \to \cdots \to n_{left-1} \to n_{left} \to \cdots \to n_{right} \to n_{right+1} \to \cdots$
+
+Result: $n_1 \to n_2 \to \cdots \to n_{left-1} \to n_{right} \to \cdots \to n_{left} \to n_{right+1} \to \cdots$
+
+**Number of link reversals needed:**
+
+$$\boxed{\text{reversals} = right - left}$$
+
+---
+
+### 5️⃣ K-Group Reversal Mathematics
+
+**Given:** List of length $n$, reverse every $k$ nodes
+
+**Number of complete groups:**
+
+$$\text{complete\_groups} = \left\lfloor \frac{n}{k} \right\rfloor$$
+
+**Remaining nodes:**
+
+$$\text{remaining} = n \mod k$$
+
+**Total reversals:**
+
+$$\text{total\_reversals} = \left\lfloor \frac{n}{k} \right\rfloor \times (k-1)$$
+
+**Time Complexity:** $O(n)$ - each node visited once
+
+---
+
+---
+
 ## 💻 Code Implementations
 
 ```python
@@ -687,6 +709,8 @@ def isPalindrome(head: ListNode) -> bool:
 
 ---
 
+---
+
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
@@ -714,6 +738,8 @@ def isPalindrome(head: ListNode) -> bool:
 
 ---
 
+---
+
 ## 💡 Key Insights & Pro Tips
 
 > **🎯 Three-Pointer Template**  
@@ -736,6 +762,8 @@ def isPalindrome(head: ListNode) -> bool:
 
 ---
 
+---
+
 ## 🎓 Pattern Recognition Guide
 
 ### Identifying Reversal Problems
@@ -751,6 +779,8 @@ def isPalindrome(head: ListNode) -> bool:
 
 ---
 
+---
+
 ## 🧮 Complexity Comparison
 
 ### Space-Time Tradeoffs
@@ -763,6 +793,8 @@ def isPalindrome(head: ListNode) -> bool:
 | **K-Group Iterative** | O(n) | **O(1)** | Best solution |
 | **K-Group Recursive** | O(n) | O(n/k) | Easier to understand |
 | **Palindrome Check** | O(n) | **O(1)** | Reverse second half only |
+
+---
 
 ---
 
@@ -794,6 +826,8 @@ def isPalindrome(head: ListNode) -> bool:
 |----------|-------|------|
 | **VisuAlgo** | Visual reversal | [Website](https://visualgo.net/en/list) |
 | **LeetCode Explore** | Reversal problems | [Card](https://leetcode.com/explore/learn/card/linked-list/) |
+
+---
 
 ---
 
@@ -833,6 +867,8 @@ def isPalindrome(head: ListNode) -> bool:
 
 ---
 
+---
+
 ## 💭 Common Interview Questions
 
 **Q: Why prefer iterative over recursive reversal?**  
@@ -849,6 +885,8 @@ A: First count if k nodes available. If not, return as-is. If yes, reverse k nod
 
 **Q: How to swap pairs without recursion?**  
 A: Use dummy node, iterate through pairs. For each pair: extract second, insert it before first. O(1) space.
+
+---
 
 ---
 
@@ -915,9 +953,3 @@ for _ in range(right - left):
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Basic Operations](../01_basic_operations/README.md) | **02. Reversal** | [03. Merge & Sort →](../03_merge_sort/README.md) |
