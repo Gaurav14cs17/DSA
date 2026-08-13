@@ -26,11 +26,23 @@ permalink: /19_greedy_algorithms/02_task_scheduling/
 
 ![Task Scheduling](./images/task_scheduling.png)
 
+*Task Scheduling*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **Difficulty** | Medium |
+| **Problems** | 8+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
