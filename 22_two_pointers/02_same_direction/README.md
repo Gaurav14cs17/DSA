@@ -24,29 +24,7 @@ permalink: /22_two_pointers/02_same_direction/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Opposite Direction](../01_opposite_direction/README.md) | **02. Same Direction** | [03. Linked List →](../03_linked_list/README.md) |
-
----
-
-## 🎯 What You'll Master
-
-- In-place array modification techniques
-
-- The fast-slow pointer pattern
-
-- Dutch National Flag algorithm (3-way partition)
-
-- Subsequence checking
-
-- Merging sorted arrays
-
----
-
-## 📊 Visual Diagrams
+## 📊 Visual Overview
 
 ### Fast-Slow Pointer Pattern
 ![Fast-Slow Pointer](./images/fast-slow-pointer.png)
@@ -159,8 +137,34 @@ Result: [1, 2, 3, 4, 5, 6] ✓
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 What You'll Master
 
+- In-place array modification techniques
+
+- The fast-slow pointer pattern
+
+- Dutch National Flag algorithm (3-way partition)
+
+- Subsequence checking
+
+- Merging sorted arrays
+
+---
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 01. Opposite Direction](../01_opposite_direction/README.md) | **02. Same Direction** | [03. Linked List →](../03_linked_list/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ The Reader-Writer Model
 
 {: .highlight }
@@ -294,7 +298,7 @@ If we're keeping at most \(k\) copies:
 
 ### 4️⃣ Dutch National Flag — 3-Way Partition
 
-{: .highlight }
+
 > Partition array into three regions in single pass: all 0s, all 1s, all 2s.
 
 #### State Definition
@@ -807,9 +811,3 @@ def findMaxConsecutiveOnes(nums: list[int]) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Opposite Direction](../01_opposite_direction/README.md) | **02. Same Direction** | [03. Linked List →](../03_linked_list/README.md) |
