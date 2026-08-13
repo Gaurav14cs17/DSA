@@ -32,7 +32,7 @@ permalink: /03_linked_lists/02_reversal/
 <div align="center">
 
 ### Iterative Reversal Algorithm
-![Iterative Reversal](./images/iterative-reversal.svg)
+![Iterative Reversal](./images/iterative-reversal.png)
 
 </div>
 
