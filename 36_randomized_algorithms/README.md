@@ -10,7 +10,6 @@ permalink: /36_randomized_algorithms/
 
 # 🎲 Randomized Algorithms
 
-![Randomized Algorithms Overview](./images/randomized-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
@@ -25,6 +24,17 @@ permalink: /36_randomized_algorithms/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Randomized Algorithms Overview](./images/randomized-overview.png)
+
+</div>
+
+---
+
 
 ## 🧭 Navigation
 
