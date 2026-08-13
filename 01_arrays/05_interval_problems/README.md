@@ -32,16 +32,16 @@ permalink: /01_arrays/05_interval_problems/
 <div align="center">
 
 ### Merge Intervals Algorithm
-![Merge Intervals](./images/merge_intervals.svg)
+![Merge Intervals](./images/merge_intervals.png)
 
 ### Meeting Rooms - Sweep Line
-![Meeting Rooms](./images/meeting_rooms.svg)
+![Meeting Rooms](./images/meeting_rooms.png)
 
 ### Interval Relationships
-![Interval Relationships](./images/interval_relationships.svg)
+![Interval Relationships](./images/interval_relationships.png)
 
 ### Sweep Line Algorithm
-![Sweep Line](./images/sweep_line.svg)
+![Sweep Line](./images/sweep_line.png)
 
 </div>
 
