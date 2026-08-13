@@ -10,7 +10,6 @@ permalink: /38_online_algorithms/
 
 # 🌐 Online Algorithms
 
-![Online Algorithms Overview](./images/online-algo-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
@@ -30,7 +29,9 @@ permalink: /38_online_algorithms/
 
 <div align="center">
 
-![Online Algorithms Overview](images/online-algorithms.png)
+![Online Algorithms Overview](./images/online-algo-overview.png)
+
+![Online Algorithms](images/online-algorithms.png)
 
 </div>
 
@@ -47,6 +48,12 @@ permalink: /38_online_algorithms/
 ## 📐 Mathematical Foundation
 
 ### Competitive Analysis
+
+<div align="center">
+
+![Competitive Analysis](images/competitive-analysis.png)
+
+</div>
 
 **Competitive Ratio:** Measure of online algorithm performance
 
@@ -65,12 +72,6 @@ Where:
 
 **Example:** LRU Cache is **k-competitive** for cache size k.
 
-<div align="center">
-
-![Competitive Analysis](images/competitive-analysis.png)
-
-</div>
-
 ### Adversarial Model
 
 **Oblivious Adversary:** Generates input without seeing algorithm's random choices  
@@ -87,6 +88,8 @@ Where:
 ![LRU Cache](images/lru-cache.png)
 
 </div>
+
+**Idea:** Pair a HashMap (`key → node`) with a doubly linked list ordered by recency. `get` and `put` move nodes to the head in O(1); overflow evicts the tail (least recently used). Competitive ratio is **k** for cache size k.
 
 ```python
 class LRUCache:
@@ -160,6 +163,8 @@ class LRUCache:
 
 </div>
 
+**Idea:** Maintain two heaps — max-heap `small` (smaller half, negated) and min-heap `large` (larger half). After each insert, rebalance so `|small| = |large|` or `|small| = |large| + 1` and `max(small) ≤ min(large)`. Median is O(1); each `addNum` is O(log n).
+
 ```python
 from heapq import *
 
@@ -204,6 +209,8 @@ class MedianFinder:
 ![LFU Cache](images/lfu-cache.png)
 
 </div>
+
+**Idea:** Track each key's frequency and group keys by frequency in hash maps. On access, promote the key to the next frequency bucket; on eviction, remove the oldest key at `min_freq`. All operations stay O(1) with careful frequency bookkeeping.
 
 ```python
 from collections import defaultdict
