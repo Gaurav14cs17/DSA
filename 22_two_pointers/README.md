@@ -34,11 +34,25 @@ permalink: /22_two_pointers/
 
 ![Two Pointers Overview](./images/two-pointers-overview.png)
 
+*Two Pointers Overview*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **In one line** | Transform quadratic brute-force into linear elegance |
+| **Difficulty** | Easy to Medium |
+| **Subtopics** | 3 |
+| **Problems** | 30+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🌟 Why Two Pointers?
 
 > *"Two pointers is not just a technique—it's a way of thinking about array problems. Once you see it, you'll find it everywhere."*
