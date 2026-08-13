@@ -10,7 +10,7 @@ permalink: /33_matrix_exponentiation/
 
 # 🔢 Matrix Exponentiation
 
-![Matrix Exponentiation Overview](./images/matrix-exp-overview.svg)
+![Matrix Exponentiation Overview](./images/matrix-exp-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
@@ -38,7 +38,7 @@ permalink: /33_matrix_exponentiation/
 
 <div align="center">
 
-<img src="./images/matrix-exponentiation.svg" alt="Matrix Exponentiation Overview" width="100%">
+<img src="./images/matrix-exp-overview.png" alt="Matrix Exponentiation Overview" width="100%">
 
 *Complete overview: Fibonacci matrix, binary exponentiation, and path counting*
 
