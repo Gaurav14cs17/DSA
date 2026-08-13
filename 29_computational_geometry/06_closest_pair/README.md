@@ -31,7 +31,7 @@ nav_order: 6
 
 ## 📊 Visual Overview
 
-![Closest Pair of Points](./images/closest-pair.svg)
+![Closest Pair of Points](./images/closest-pair.png)
 
 *Divide and conquer approach with strip optimization*
 
