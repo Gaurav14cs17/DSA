@@ -76,11 +76,11 @@ $$\text{Level } k = \{v : \text{dist}(\text{root}, v) = k\}$$
 
 <div align="center">
 
-![BFS Traversal](./images/bfs_traversal.svg)
+![BFS Traversal](./images/bfs_traversal.png)
 
 *BFS Level-by-Level Exploration*
 
-![Multi-Source BFS](./images/multi_source_bfs.svg)
+![Multi-Source BFS](./images/multi_source_bfs.png)
 
 *Multi-Source BFS (Rotting Oranges)*
 
