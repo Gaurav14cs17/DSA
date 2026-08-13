@@ -10,6 +10,10 @@ permalink: /26_sweep_line/02_coordinate_compression/
 
 # 🗜️ Coordinate Compression
 
+### *Coordinate Compression*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-5-blue?style=for-the-badge" alt="Problems">
@@ -38,6 +42,7 @@ permalink: /26_sweep_line/02_coordinate_compression/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -46,8 +51,7 @@ permalink: /26_sweep_line/02_coordinate_compression/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Coordinate Compression Definition
 
 **Problem:** Values span large range $[0, 10^9]$ but only $n$ distinct values used.
@@ -693,9 +697,3 @@ def calculate_coverage(intervals: List[Tuple[int, int]]) -> int:
 6. **Active intervals:** Merge overlapping to calculate coverage
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Interval Sweep](../01_interval_sweep/README.md) | **02. Coordinate Compression** | [Sweep Line →](../README.md) |
