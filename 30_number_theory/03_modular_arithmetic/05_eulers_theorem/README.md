@@ -11,6 +11,8 @@ permalink: /30_number_theory/03_modular_arithmetic/05_eulers_theorem/
 
 # 🔐 Euler's Theorem
 
+### *The Generalization of Fermat's Little Theorem*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Applications-RSA_Cryptography-red?style=for-the-badge" alt="Applications">
@@ -37,6 +39,8 @@ permalink: /30_number_theory/03_modular_arithmetic/05_eulers_theorem/
 <div align="center">
 
 ![Euler's Theorem](./images/eulers_theorem.png)
+
+*Euler's Theorem*
 
 </div>
 
@@ -72,6 +76,17 @@ $$\phi(n) = n \prod_{p|n}\left(1 - \frac{1}{p}\right)$$
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | The Generalization of Fermat's Little Theorem |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Euler's Theorem
