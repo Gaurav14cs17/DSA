@@ -11,6 +11,8 @@ permalink: /30_number_theory/12_wilsons_theorem/
 
 # 🎯 Wilson's Theorem
 
+### *The Factorial Characterization of Primes*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Type-Primality_Test-green?style=for-the-badge" alt="Type">
@@ -24,15 +26,7 @@ permalink: /30_number_theory/12_wilsons_theorem/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 11. Legendre's Formula](../11_legendres_formula/README.md) | **12. Wilson's Theorem** | [🏠 Number Theory Home](../README.md) |
-
----
-
-## 🎨 Visual Walkthrough
+## 📊 Visual Overview
 
 ```
 +-----------------------------------------------------------------+
@@ -60,8 +54,27 @@ permalink: /30_number_theory/12_wilsons_theorem/
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **In one line** | The Factorial Characterization of Primes |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 11. Legendre's Formula](../11_legendres_formula/README.md) | **12. Wilson's Theorem** | [🏠 Number Theory Home](../README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Wilson's Theorem
 
 **Statement:** A natural number $p > 1$ is prime **if and only if**:
@@ -195,10 +208,3 @@ print(wilson_primality_test(10))  # False: 9! = 362880 ≡ 0 (mod 10)
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 11. Legendre's Formula](../11_legendres_formula/README.md) | **12. Wilson's Theorem** | [🏠 Number Theory Home](../README.md) |
-
