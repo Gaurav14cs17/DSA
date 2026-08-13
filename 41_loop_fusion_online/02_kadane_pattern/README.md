@@ -30,7 +30,7 @@ permalink: /41_loop_fusion_online/02_kadane_pattern/
 ## 📊 Visual Guide
 
 <div align="center">
-  <img src="images/kadane-algorithm.svg" alt="Kadane's Algorithm" width="100%">
+  <img src="images/kadane-algorithm.png" alt="Kadane's Algorithm" width="100%">
 </div>
 
 ---
