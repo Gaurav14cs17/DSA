@@ -4,11 +4,18 @@ title: "Manacher's Algorithm"
 parent: "String Algorithms"
 nav_order: 5
 ---
+<div align="center">
 
 # 🎭 Manacher's Algorithm
 
-### ***Manacher's Algorithm** finds all palindromic substrings in linear time O(n).*
+### *Manacher's Algorithm finds all palindromic substrings in linear time O(n).*
 
+<p><img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty"></p>
+
+[🏠 String Algorithms](../../README.md)
+</div>
+
+---
 
 ## 📊 Visual Overview
 
@@ -30,6 +37,14 @@ nav_order: 5
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Suffix Structures](../04_suffix_structures/README.md) | **Manacher** | [Aho-Corasick →](../06_aho_corasick/README.md) |
 
 ---
 
@@ -731,4 +746,3 @@ def palindrome_density(s):
 ---
 
 **Navigation:** [← Suffix Structures](../04_suffix_structures/) | [String Algorithms](../README.md) | [Next: Aho-Corasick →](../06_aho_corasick/)
-
