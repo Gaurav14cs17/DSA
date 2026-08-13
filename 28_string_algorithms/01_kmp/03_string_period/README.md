@@ -5,14 +5,18 @@ parent: "KMP Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 3
 ---
+<div align="center">
 
 # 🔄 String Period Detection with KMP
 
 ### *A **period** of string s is a positive integer p such that s[i] = s[i+p] for all valid i.*
 
 
-## 📊 Visual Overview
+</div>
 
+---
+
+## 📊 Visual Overview
 ![String Period](./images/string-period.png)
 
 *String Period*
@@ -29,6 +33,14 @@ nav_order: 3
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Failure Function](../02_failure_function/README.md) | **String Period** | [Prefix Suffix →](../04_prefix_suffix/README.md) |
 
 ---
 
@@ -571,4 +583,3 @@ print(f"Critical point: {critical_factorization(s)}")
 ---
 
 **Navigation:** [← Failure Function](../02_failure_function/) | [KMP Overview](../README.md) | [Next: Prefix-Suffix →](../04_prefix_suffix/)
-
