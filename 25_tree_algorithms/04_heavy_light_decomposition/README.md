@@ -10,20 +10,16 @@ permalink: /25_tree_algorithms/04_heavy_light_decomposition/
 
 # ⚡ Heavy-Light Decomposition (HLD)
 
+### *Heavy-Light Decomposition (HLD)*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Tree Construction](../03_tree_construction/README.md) | **04. HLD** | [05. Centroid Decomposition →](../05_centroid_decomposition/README.md) |
 
 ---
 
@@ -46,8 +42,16 @@ permalink: /25_tree_algorithms/04_heavy_light_decomposition/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 📐 Mathematical Foundations
 
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 03. Tree Construction](../03_tree_construction/README.md) | **04. HLD** | [05. Centroid Decomposition →](../05_centroid_decomposition/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ HLD Definition
 
 **Heavy-Light Decomposition:** Partition tree edges into **heavy** and **light** chains.
@@ -522,10 +526,3 @@ Tree Query Problem
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Tree Construction](../03_tree_construction/README.md) | **04. HLD** | [05. Centroid Decomposition →](../05_centroid_decomposition/README.md) |
-
