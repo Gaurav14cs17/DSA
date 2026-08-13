@@ -5,10 +5,21 @@ parent: "Modular Arithmetic"
 grand_parent: "Number Theory"
 nav_order: 4
 ---
+<div align="center">
 
 # 🔬 Fermat's Little Theorem
 
-## 📊 Visual Diagram
+### *Fermat's Little Theorem*
+
+<p><img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty"></p>
+
+[🏠 Modular Arithmetic](../README.md)
+
+</div>
+
+---
+
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -23,7 +34,8 @@ nav_order: 4
 ## 🎯 At a Glance
 
 | | |
-|:---|:---|
+|:---| **Topic** | Fermat's Theorem |
+|:---|
 | **Typical time** | O(log p) for inverse/exponentiation |
 | **Typical space** | O(1) |
 
@@ -31,6 +43,15 @@ nav_order: 4
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Fast Exponentiation](../03_fast_exponentiation/README.md) | **04. Fermat's Theorem** | [🏠 Modular Arithmetic](../README.md) |
+
+---
+
 ## 🎯 Overview
 
 **Fermat's Little Theorem:** If p is prime and gcd(a, p) = 1, then:
@@ -316,4 +337,3 @@ This is crucial for handling very large exponents.
 ---
 
 **Navigation:** [← Fast Exponentiation](../03_fast_exponentiation/) | [Euler's Theorem →](../05_eulers_theorem/)
-
