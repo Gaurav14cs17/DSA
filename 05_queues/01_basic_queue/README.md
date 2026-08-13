@@ -32,13 +32,13 @@ permalink: /05_queues/01_basic_queue/
 <div align="center">
 
 ### Queue Operations
-![Queue Operations](./image/queue_operations.svg)
+![Queue Operations](./image/queue_operations.png)
 
 ### Circular Queue
-![Circular Queue](./image/circular_queue.svg)
+![Circular Queue](./image/circular_queue.png)
 
 ### Queue Using Two Stacks
-![Queue Two Stacks](./image/queue_two_stacks.svg)
+![Queue Two Stacks](./image/queue_two_stacks.png)
 
 </div>
 
