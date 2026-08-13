@@ -31,7 +31,7 @@ permalink: /24_graph_algorithms/02_minimum_spanning_tree/
 
 <div align="center">
 
-![Minimum Spanning Tree - Kruskal's Algorithm](./images/mst-kruskal.svg)
+![Minimum Spanning Tree - Kruskal's Algorithm](./images/mst-kruskal.png)
 
 </div>
 
