@@ -32,20 +32,6 @@ permalink: /30_number_theory/03_modular_arithmetic/05_eulers_theorem/
 
 ---
 
-## 📐 Mathematical Foundations
-
-### 1️⃣ Euler's Theorem
-
-**Statement:** If $\gcd(a, n) = 1$, then:
-
-$$a^{\phi(n)} \equiv 1 \pmod{n}$$
-
-where $\phi(n)$ is Euler's totient function.
-
-**Corollary:** $a^k \equiv a^{k \mod \phi(n)} \pmod{n}$ when $\gcd(a, n) = 1$
-
----
-
 ## 📊 Visual Diagram
 
 <div align="center">
@@ -83,6 +69,20 @@ $$\phi(n) = n \prod_{p|n}\left(1 - \frac{1}{p}\right)$$
 **Encryption:** $c = m^e \mod n$
 
 **Decryption:** $m = c^d \mod n$
+
+---
+
+## 📐 Mathematical Foundations
+
+### 1️⃣ Euler's Theorem
+
+**Statement:** If $\gcd(a, n) = 1$, then:
+
+$$a^{\phi(n)} \equiv 1 \pmod{n}$$
+
+where $\phi(n)$ is Euler's totient function.
+
+**Corollary:** $a^k \equiv a^{k \mod \phi(n)} \pmod{n}$ when $\gcd(a, n) = 1$
 
 ---
 
