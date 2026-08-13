@@ -10,7 +10,7 @@ permalink: /22_two_pointers/
 
 # 👆👆 Two Pointers
 
-![Two Pointers Overview](./images/two-pointers-overview.svg)
+![Two Pointers Overview](./images/two-pointers-overview.png)
 
 ### *The Elegant Dance of Indices*
 
