@@ -65,7 +65,7 @@ permalink: /30_number_theory/01_gcd_lcm/04_binary_gcd/
 
 <div align="center">
 
-![Binary GCD Algorithm](./images/binary_gcd.svg)
+![Binary GCD Algorithm](./images/binary_gcd.png)
 
 </div>
 
