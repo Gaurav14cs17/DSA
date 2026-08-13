@@ -3,7 +3,7 @@
 ## 📊 Visual Diagram
 
 <p align="center">
-  <img src="./images/knuth-optimization.svg" alt="Knuth's Optimization" width="100%">
+  <img src="./images/knuth-optimization.png" alt="Knuth's Optimization" width="100%">
 </p>
 
 ## Overview
