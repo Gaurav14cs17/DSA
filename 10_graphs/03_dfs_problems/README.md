@@ -10,6 +10,10 @@ permalink: /10_graphs/03_dfs_problems/
 
 # 🔍 DFS Problems
 
+### *🔍 DFS Problems*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +23,7 @@ permalink: /10_graphs/03_dfs_problems/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. BFS Problems](../02_bfs_problems/README.md) | **03. DFS Problems** | [04. Shortest Path →](../04_shortest_path/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -43,8 +39,28 @@ permalink: /10_graphs/03_dfs_problems/
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **Topic** | 🔍 DFS Problems |
+| **Difficulty** | Medium |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 02. BFS Problems](../02_bfs_problems/README.md) | **03. DFS Problems** | [04. Shortest Path →](../04_shortest_path/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ DFS Time Complexity
 
 $$\boxed{T(V, E) = O(V + E)}$$
@@ -270,9 +286,3 @@ def canVisitAllRooms(rooms: list[list[int]]) -> bool:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. BFS Problems](../02_bfs_problems/README.md) | **03. DFS Problems** | [04. Shortest Path →](../04_shortest_path/README.md) |
