@@ -7,23 +7,27 @@ nav_order: 2
 
 # 🔺 Convex Hull Algorithms
 
-## 📊 Metadata
+### ***Convex Hull:** Smallest convex polygon containing all given points.*
 
-- **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
-
-- **Time Complexity:** O(n log n) optimal
-
-- **Space Complexity:** O(n)
-
-- **Algorithms:** Graham's Scan, Jarvis March, QuickHull, Andrew's
-
----
 
 ## 📊 Visual Overview
 
 ![Convex Hull Algorithms](./images/convex-hull.png)
 
 *Graham's Scan step-by-step visualization with algorithm comparison*
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | **Convex Hull:** Smallest convex polygon containing all given points. |
+| **Typical time** | O(n log n) optimal |
+| **Typical space** | O(n) |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
