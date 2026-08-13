@@ -10,20 +10,16 @@ permalink: /25_tree_algorithms/11_mos_algorithm_trees/
 
 # 📊 Mo's Algorithm on Trees
 
+### *Mo's Algorithm on Trees*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-4+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 10. Link-Cut Trees](../10_link_cut_trees/README.md) | **11. Mo's Algorithm** | [🏠 Home](../README.md) |
 
 ---
 
@@ -46,8 +42,16 @@ permalink: /25_tree_algorithms/11_mos_algorithm_trees/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 📐 Mathematical Foundations
 
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 10. Link-Cut Trees](../10_link_cut_trees/README.md) | **11. Mo's Algorithm** | [🏠 Home](../README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Mo's Algorithm Review
 
 **Original Mo's Algorithm:** Offline range queries on array.
@@ -525,10 +529,3 @@ Tree Query Problem
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 10. Link-Cut Trees](../10_link_cut_trees/README.md) | **11. Mo's Algorithm** | [🏠 Home](../README.md) |
-
