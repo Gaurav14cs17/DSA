@@ -36,7 +36,7 @@ permalink: /30_number_theory/04_divisors/04_divisor_properties/
 
 <div align="center">
 
-![Divisor Properties](./images/divisor_properties.svg)
+![Divisor Properties](./images/divisor_properties.png)
 
 </div>
 
