@@ -170,6 +170,65 @@ Result: 1
 
 ---
 
+## 🎨 Visual Algorithm Walkthrough
+
+### Evaluate RPN (#150)
+
+```
+Input: ["2", "1", "+", "3", "*"]
+
+Stack trace:
+Token   Action              Stack       Explanation
+"2"     Push 2              [2]         Operand
+"1"     Push 1              [2, 1]      Operand
+"+"     Pop 1,2, Push 3     [3]         2 + 1 = 3
+"3"     Push 3              [3, 3]      Operand
+"*"     Pop 3,3, Push 9     [9]         3 * 3 = 9
+
+Result: 9
+
+```
+
+### Basic Calculator II (#227)
+
+```
+Input: "3+2*2"
+
+Process with precedence:
+Char   Prev_op  Num   Stack       Action
+'3'    +        3     []          Building num
+'+'    +        3     [3]         Push 3, op='+'
+'2'    +        2     [3]         Building num
+'*'    +        2     [3, 2]      Push 2, op='*'
+'2'    *        2     [3, 2]      Building num
+End    *        2     [3, 4]      Pop 2, calc 2*2=4
+                      [7]         Sum all
+
+Result: 7
+
+```
+
+### Shunting-Yard Visualization
+
+```
+Infix: A + B * C
+
+Token  Action              Op Stack    Output
+A      Operand             []          [A]
++      Push                [+]         [A]
+B      Operand             [+]         [A, B]
+
+*      Push (* > +)        [+, *]      [A, B]
+C      Operand             [+, *]      [A, B, C]
+End    Pop all             []          [A, B, C, *, +]
+
+Postfix: A B C * +
+
+```
+
+---
+
+
 ## 💻 Code Implementations
 
 ```python
@@ -339,64 +398,6 @@ def infixToPostfix(expression: str) -> str:
 | 772 | [Basic Calculator III](https://leetcode.com/problems/basic-calculator-iii/) | Full Expression | O(n) | O(n) |
 
 ---
-
----
-
-## 🎨 Visual Algorithm Walkthrough
-
-### Evaluate RPN (#150)
-
-```
-Input: ["2", "1", "+", "3", "*"]
-
-Stack trace:
-Token   Action              Stack       Explanation
-"2"     Push 2              [2]         Operand
-"1"     Push 1              [2, 1]      Operand
-"+"     Pop 1,2, Push 3     [3]         2 + 1 = 3
-"3"     Push 3              [3, 3]      Operand
-"*"     Pop 3,3, Push 9     [9]         3 * 3 = 9
-
-Result: 9
-
-```
-
-### Basic Calculator II (#227)
-
-```
-Input: "3+2*2"
-
-Process with precedence:
-Char   Prev_op  Num   Stack       Action
-'3'    +        3     []          Building num
-'+'    +        3     [3]         Push 3, op='+'
-'2'    +        2     [3]         Building num
-'*'    +        2     [3, 2]      Push 2, op='*'
-'2'    *        2     [3, 2]      Building num
-End    *        2     [3, 4]      Pop 2, calc 2*2=4
-                      [7]         Sum all
-
-Result: 7
-
-```
-
-### Shunting-Yard Visualization
-
-```
-Infix: A + B * C
-
-Token  Action              Op Stack    Output
-A      Operand             []          [A]
-+      Push                [+]         [A]
-B      Operand             [+]         [A, B]
-
-*      Push (* > +)        [+, *]      [A, B]
-C      Operand             [+, *]      [A, B, C]
-End    Pop all             []          [A, B, C, *, +]
-
-Postfix: A B C * +
-
-```
 
 ---
 
