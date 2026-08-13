@@ -34,8 +34,6 @@ permalink: /02_strings/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
