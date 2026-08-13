@@ -10,7 +10,7 @@ has_children: true
 
 ## 📊 Visual Overview
 
-![KMP Algorithm](./images/kmp-algorithm.svg)
+![KMP Algorithm](./images/kmp-algorithm.png)
 
 ## 📊 Metadata
 
