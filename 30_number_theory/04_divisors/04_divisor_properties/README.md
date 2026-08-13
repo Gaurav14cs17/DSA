@@ -26,15 +26,7 @@ permalink: /30_number_theory/04_divisors/04_divisor_properties/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Perfect Numbers](../03_perfect_numbers/README.md) | **04. Divisor Properties** | [05. Sieve Divisors →](../05_sieve_divisors/README.md) |
-
----
-
-## 📊 Visual Diagram
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -57,8 +49,16 @@ permalink: /30_number_theory/04_divisors/04_divisor_properties/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 📐 Mathematical Foundations
 
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 03. Perfect Numbers](../03_perfect_numbers/README.md) | **04. Divisor Properties** | [05. Sieve Divisors →](../05_sieve_divisors/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Multiplicative Functions
 
 A function f is **multiplicative** if:
@@ -284,9 +284,3 @@ Average: $\frac{1}{n}\sum_{i=1}^{n} \tau(i) \approx \ln n$
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Perfect Numbers](../03_perfect_numbers/README.md) | **04. Divisor Properties** | [05. Sieve Divisors →](../05_sieve_divisors/README.md) |
