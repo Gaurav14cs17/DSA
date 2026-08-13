@@ -26,11 +26,23 @@ permalink: /19_greedy_algorithms/03_array_greedy/
 
 ![Array Greedy](./images/array_greedy.png)
 
+*Array Greedy*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **Difficulty** | Medium |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next Topic |
