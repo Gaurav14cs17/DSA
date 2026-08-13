@@ -11,6 +11,8 @@ permalink: /30_number_theory/12_wilsons_theorem/02_primality_test/
 
 # 🧪 Wilson's Primality Test
 
+### *A Theoretically Perfect but Practically Useless Test*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Time-O(n)-yellow?style=for-the-badge" alt="Time">
@@ -39,10 +41,23 @@ permalink: /30_number_theory/12_wilsons_theorem/02_primality_test/
 
 ![Wilson Primality](./images/wilson_primality.png)
 
+*Wilson Primality*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | A Theoretically Perfect but Practically Useless Test |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 The Test
 
 ### Algorithm
