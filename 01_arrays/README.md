@@ -52,8 +52,6 @@ Each subfolder contains **complete mini-courses** with:
 
 **Total: 90+ problems covered with detailed explanations!**
 
-</div>
-
 ---
 
 ## 📐 Mathematical Foundation
