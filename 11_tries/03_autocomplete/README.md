@@ -10,7 +10,7 @@ permalink: /11_tries/03_autocomplete/
 
 # ⌨️ Autocomplete / Search Suggestions
 
-![Autocomplete System](./image/autocomplete.svg)
+![Autocomplete System](./image/autocomplete.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
