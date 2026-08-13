@@ -1,12 +1,53 @@
+---
+layout: default
+title: "Bitmask DP"
+parent: "DP Optimizations"
+nav_order: 10
+permalink: /40_dp_optimizations/10_bitmask_dp/
+---
+
+<div align="center">
+
 # 🎭 Bitmask DP Optimizations
 
-## 📊 Visual Diagram
+### *State compression with bitmasks*
+
+</div>
+
+---
+
+## 📊 Visual Overview
 
 <p align="center">
   <img src="./images/bitmask-dp.png" alt="Bitmask DP" width="100%">
 </p>
 
-## Overview
+---
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | State compression with bitmasks |
+
+
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Aliens Trick](../09_aliens_trick/README.md) | **10. Bitmask DP** | [Tree DP Rerooting →](../11_tree_dp_rerooting/README.md) |
+
+## 📐 Mathematical Foundation
+
+### Overview
 
 **Bitmask DP** represents states as bitmasks, enabling subset enumeration and manipulation.
 
@@ -19,6 +60,10 @@
 - Profile DP: Grid tiling
 
 **Key Optimization:** Process one bit at a time.
+
+---
+
+
 
 ---
 
@@ -98,6 +143,10 @@ def assignment(tasks, k):
 
 ---
 
+
+
+---
+
 ## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty |
@@ -109,6 +158,10 @@ def assignment(tasks, k):
 | 943 | [Find Shortest Superstring](https://leetcode.com/problems/find-the-shortest-superstring/) | ⭐⭐⭐⭐ |
 | 980 | [Unique Paths III](https://leetcode.com/problems/unique-paths-iii/) | ⭐⭐⭐⭐ |
 | 1986 | [Work Sessions](https://leetcode.com/problems/minimum-number-of-work-sessions-to-finish-the-tasks/) | ⭐⭐⭐ |
+
+---
+
+
 
 ---
 
