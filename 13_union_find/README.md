@@ -39,8 +39,6 @@ permalink: /13_union_find/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
