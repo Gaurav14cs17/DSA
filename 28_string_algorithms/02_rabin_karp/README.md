@@ -8,21 +8,29 @@ has_children: true
 
 # 🎲 Rabin-Karp Algorithm
 
+### ***Rabin-Karp** is a string matching algorithm that uses **hashing** to find patterns in O(n + m) average time.*
+
+
 ## 📊 Visual Overview
 
 ![Rabin-Karp Algorithm](./images/rabin-karp.png)
 
-## 📊 Metadata
+*Rabin-Karp Algorithm*
 
-- **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+---
 
-- **Time Complexity:** O(n + m) average, O(nm) worst
+## 🎯 At a Glance
 
-- **Space Complexity:** O(1)
+| | |
+|:---|:---|
+| **In one line** | **Rabin-Karp** is a string matching algorithm that uses **hashing** to find patterns in O(n + m) average time. |
+| **Typical time** | O(n + m) average, O(nm) worst |
+| **Typical space** | O(1) |
+| **Topics** | Rolling Hash, Polynomial Hash, Pattern Matching |
+| **Prerequisites** | Modular arithmetic, Hashing, Number theory |
 
-- **Topics:** Rolling Hash, Polynomial Hash, Pattern Matching
-
-- **Prerequisites:** Modular arithmetic, Hashing, Number theory
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
