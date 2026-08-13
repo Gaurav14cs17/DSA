@@ -6,7 +6,20 @@ has_children: true
 permalink: /29_computational_geometry/
 ---
 
+<div align="center">
+
 # 📐 Computational Geometry
+
+### *Points, lines, polygons — algorithms on the plane*
+
+<p>
+  <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
+  <img src="https://img.shields.io/badge/Subtopics-6-blue?style=for-the-badge" alt="Subtopics">
+</p>
+
+</div>
+
+---
 
 ## 📊 Visual Overview
 
@@ -123,48 +136,6 @@ permalink: /29_computational_geometry/
 </td>
 </tr>
 </table>
-
----
-
-## 🎨 Convex Hull Preview
-
-*Overview of computational geometry concepts and algorithms*
-
----
-
-## 📋 Overview
-
-**Computational Geometry** studies algorithms for geometric problems, combining mathematics and computer science:
-
-- **Geometric Primitives:** Fundamental operations on points, lines, and shapes
-
-- **Convex Hull:** Finding smallest convex polygon containing all points
-
-- **Intersections:** Detecting and computing intersections of geometric objects
-
-- **Point Location:** Determining spatial relationships between points and regions
-
-- **Polygon Operations:** Computing properties and transformations of polygons
-
-- **Proximity:** Finding closest pairs and nearest neighbors
-
----
-
-## 🎯 Quick Reference
-
-### Algorithm Complexity
-
-| Problem | Algorithm | Time | Space |
-|---------|-----------|:----:|:-----:|
-| **Convex Hull** | Graham's Scan | O(n log n) | O(n) |
-| **Convex Hull** | Jarvis March | O(nh) | O(1) |
-| **Line Intersection** | Sweep Line | O((n+k) log n) | O(n) |
-| **Point in Polygon** | Ray Casting | O(n) | O(1) |
-| **Closest Pair** | Divide & Conquer | O(n log n) | O(n) |
-| **Polygon Area** | Shoelace Formula | O(n) | O(1) |
-| **Triangulation** | Ear Clipping | O(n²) | O(n) |
-
-**Legend:** n = number of points/vertices, h = hull size, k = intersections
 
 ---
 
@@ -314,6 +285,48 @@ Zero → outside
 More robust for complex polygons
 
 ```
+
+---
+
+## 🎨 Convex Hull Preview
+
+*Overview of computational geometry concepts and algorithms*
+
+---
+
+## 📋 Overview
+
+**Computational Geometry** studies algorithms for geometric problems, combining mathematics and computer science:
+
+- **Geometric Primitives:** Fundamental operations on points, lines, and shapes
+
+- **Convex Hull:** Finding smallest convex polygon containing all points
+
+- **Intersections:** Detecting and computing intersections of geometric objects
+
+- **Point Location:** Determining spatial relationships between points and regions
+
+- **Polygon Operations:** Computing properties and transformations of polygons
+
+- **Proximity:** Finding closest pairs and nearest neighbors
+
+---
+
+## 🎯 Quick Reference
+
+### Algorithm Complexity
+
+| Problem | Algorithm | Time | Space |
+|---------|-----------|:----:|:-----:|
+| **Convex Hull** | Graham's Scan | O(n log n) | O(n) |
+| **Convex Hull** | Jarvis March | O(nh) | O(1) |
+| **Line Intersection** | Sweep Line | O((n+k) log n) | O(n) |
+| **Point in Polygon** | Ray Casting | O(n) | O(1) |
+| **Closest Pair** | Divide & Conquer | O(n log n) | O(n) |
+| **Polygon Area** | Shoelace Formula | O(n) | O(1) |
+| **Triangulation** | Ear Clipping | O(n²) | O(n) |
+
+**Legend:** n = number of points/vertices, h = hull size, k = intersections
 
 ---
 
@@ -617,14 +630,6 @@ Screen: Origin at top-left, y increases downward
 Convert when needed for graphics applications
 
 ```
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← String Algorithms](../28_string_algorithms/README.md) | **Computational Geometry** | [Number Theory →](../30_number_theory/README.md) |
 
 ---
 
