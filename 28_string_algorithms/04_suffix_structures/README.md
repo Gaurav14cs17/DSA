@@ -9,7 +9,7 @@ nav_order: 4
 
 ## 📊 Visual Overview
 
-![Suffix Structures](./images/suffix-structures.svg)
+![Suffix Structures](./images/suffix-structures.png)
 
 ## 📊 Metadata
 
