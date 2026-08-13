@@ -31,7 +31,7 @@ permalink: /24_graph_algorithms/06_bridges_articulation_points/
 
 <div align="center">
 
-![Bridges and Articulation Points](./images/bridges-articulation.svg)
+![Bridges and Articulation Points](./images/bridges-articulation.png)
 
 </div>
 
