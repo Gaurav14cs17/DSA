@@ -11,6 +11,8 @@ permalink: /30_number_theory/01_gcd_lcm/02_extended_gcd/
 
 # 🔐 Extended Euclidean Algorithm
 
+### *Finding Bézout Coefficients & Modular Inverses*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Applications-Cryptography-red?style=for-the-badge" alt="Applications">
@@ -38,10 +40,23 @@ permalink: /30_number_theory/01_gcd_lcm/02_extended_gcd/
 
 ![Extended GCD Algorithm](./images/extended_gcd.png)
 
+*Extended GCD Algorithm*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Finding Bézout Coefficients & Modular Inverses |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Bézout's Identity
