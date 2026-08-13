@@ -10,6 +10,8 @@ permalink: /04_stacks/01_basic_stack/
 
 # 📚 Basic Stack Operations
 
+### *📚 Basic Stack Operations*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy-green?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-12+-blue?style=for-the-badge" alt="Problems">
@@ -19,7 +21,7 @@ permalink: /04_stacks/01_basic_stack/
 
 ---
 
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -57,172 +59,9 @@ permalink: /04_stacks/01_basic_stack/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Stacks Home](../README.md) | **01. Basic Stack** | [02. Parentheses →](../02_parentheses/README.md) |
-
 ---
 
-## 📐 Mathematical Foundations
-
-### 1️⃣ Stack as Abstract Data Type (ADT)
-
-**Formal Definition:**
-
-$$\boxed{S = (D, \Omega)}$$
-
-Where:
-
-- $D$ = domain (set of elements)
-
-- $\Omega = \{push, pop, peek, isEmpty, size\}$ = operations
-
-**Axioms:**
-
-$$\begin{aligned}
-pop(push(S, x)) &= S \\
-peek(push(S, x)) &= x \\
-isEmpty(\emptyset) &= true \\
-isEmpty(push(S, x)) &= false \\
-size(\emptyset) &= 0 \\
-size(push(S, x)) &= size(S) + 1
-\end{aligned}$$
-
----
-
-### 2️⃣ LIFO Property - Mathematical Proof
-
-**Theorem:** Stack maintains Last-In-First-Out order.
-
-**Proof by Strong Induction:**
-
-**Base Case:** Empty stack $\emptyset$ trivially satisfies LIFO.
-
-**Inductive Hypothesis:** Assume stack $S$ of size $n$ maintains LIFO.
-
-**Inductive Step:** For stack $S' = push(S, x)$:
-
-- $x$ becomes new top element
-
-- $pop(S')$ removes $x$ → returns to $S$
-
-- $S$ maintains LIFO by hypothesis
-
-- Therefore $S'$ maintains LIFO ∎
-
----
-
-### 3️⃣ Time Complexity Analysis
-
-**Array-Based Implementation:**
-
-| Operation | Average | Worst | Amortized | Space |
-|-----------|:-------:|:-----:|:---------:|:-----:|
-| push(x) | **O(1)** | O(n)* | **O(1)** | O(1) |
-| pop() | **O(1)** | O(1) | **O(1)** | O(1) |
-| peek() | **O(1)** | O(1) | **O(1)** | O(1) |
-| isEmpty() | **O(1)** | O(1) | **O(1)** | O(1) |
-| size() | **O(1)** | O(1) | **O(1)** | O(1) |
-
-*Worst case when array needs resizing
-
-**Linked List Implementation:**
-
-| Operation | Time | Space |
-|-----------|:----:|:-----:|
-| push(x) | **O(1)** | O(1) |
-| pop() | **O(1)** | O(1) |
-| peek() | **O(1)** | O(1) |
-
-**Space Complexity:** $O(n)$ for $n$ elements
-
----
-
-### 4️⃣ Dynamic Array Amortized Analysis
-
-**Theorem:** Sequence of $n$ push operations has amortized cost $O(1)$ per operation.
-
-**Proof using Accounting Method:**
-
-Cost of operations:
-
-- Normal push: 1 unit
-
-- Push with resize: $1 + k$ units (where $k$ = current size)
-
-Charge 3 units per push:
-
-- 1 unit for actual push
-
-- 2 units saved for future resize
-
-When resizing from size $k$ to $2k$:
-
-- Cost: $k$ (copy all elements)
-
-- Saved credit: $2k$ (2 units × $k$ elements)
-
-- Sufficient to pay for resize!
-
-**Total cost for $n$ pushes:**
-
-$$\sum_{i=0}^{\log n} 2^i = 2^{\log n + 1} - 1 < 2n$$
-
-**Amortized cost:** $\frac{3n}{n} = O(1)$ ∎
-
----
-
-### 5️⃣ Min Stack Design - Mathematical Insight
-
-**Problem:** Support getMin() in O(1) along with push/pop in O(1).
-
-**Solution 1: Store (value, min) pairs**
-
-$$\boxed{min_at[i] = \min(value[i], min_at[i-1])}$$
-
-**Space:** $O(n)$ extra
-
-**Solution 2: Store differences**
-
-Store $difference = value - current_min$ instead of value.
-
-$$\boxed{stored[i] = value[i] - min_at[i]}$$
-
-When $stored[i] < 0$: new minimum found!
-
-**Space:** $O(1)$ extra (just track one min variable)
-
----
-
-### 6️⃣ Two Stacks for Queue - Amortized Analysis
-
-**Setup:** Two stacks $S_1$ (input) and $S_2$ (output)
-
-**Operations:**
-
-- enqueue: push to $S_1$
-
-- dequeue: pop from $S_2$ (transfer from $S_1$ if $S_2$ empty)
-
-**Amortized Cost Proof:**
-
-Each element:
-
-1. Pushed to $S_1$ once: 1 operation
-
-2. Moved to $S_2$ once: 1 operation  
-
-3. Popped from $S_2$ once: 1 operation
-
-Total: 3 operations per element
-
-**Amortized cost per operation:** $\frac{3n}{n} = O(1)$ ∎
-
----
-
-## 🎨 Visual Algorithm Walkthroughs
+## 📊 Visual Overview
 
 ### Stack Operations - Complete Trace
 
@@ -530,6 +369,189 @@ Amortized Analysis:
 
 ---
 
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 📚 Basic Stack Operations |
+| **Difficulty** | Easy |
+| **Problems** | 12+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [🏠 Stacks Home](../README.md) | **01. Basic Stack** | [02. Parentheses →](../02_parentheses/README.md) |
+
+---
+
+---
+
+## 📐 Mathematical Foundation
+### 1️⃣ Stack as Abstract Data Type (ADT)
+
+**Formal Definition:**
+
+$$\boxed{S = (D, \Omega)}$$
+
+Where:
+
+- $D$ = domain (set of elements)
+
+- $\Omega = \{push, pop, peek, isEmpty, size\}$ = operations
+
+**Axioms:**
+
+$$\begin{aligned}
+pop(push(S, x)) &= S \\
+peek(push(S, x)) &= x \\
+isEmpty(\emptyset) &= true \\
+isEmpty(push(S, x)) &= false \\
+size(\emptyset) &= 0 \\
+size(push(S, x)) &= size(S) + 1
+\end{aligned}$$
+
+---
+
+### 2️⃣ LIFO Property - Mathematical Proof
+
+**Theorem:** Stack maintains Last-In-First-Out order.
+
+**Proof by Strong Induction:**
+
+**Base Case:** Empty stack $\emptyset$ trivially satisfies LIFO.
+
+**Inductive Hypothesis:** Assume stack $S$ of size $n$ maintains LIFO.
+
+**Inductive Step:** For stack $S' = push(S, x)$:
+
+- $x$ becomes new top element
+
+- $pop(S')$ removes $x$ → returns to $S$
+
+- $S$ maintains LIFO by hypothesis
+
+- Therefore $S'$ maintains LIFO ∎
+
+---
+
+### 3️⃣ Time Complexity Analysis
+
+**Array-Based Implementation:**
+
+| Operation | Average | Worst | Amortized | Space |
+|-----------|:-------:|:-----:|:---------:|:-----:|
+| push(x) | **O(1)** | O(n)* | **O(1)** | O(1) |
+| pop() | **O(1)** | O(1) | **O(1)** | O(1) |
+| peek() | **O(1)** | O(1) | **O(1)** | O(1) |
+| isEmpty() | **O(1)** | O(1) | **O(1)** | O(1) |
+| size() | **O(1)** | O(1) | **O(1)** | O(1) |
+
+*Worst case when array needs resizing
+
+**Linked List Implementation:**
+
+| Operation | Time | Space |
+|-----------|:----:|:-----:|
+| push(x) | **O(1)** | O(1) |
+| pop() | **O(1)** | O(1) |
+| peek() | **O(1)** | O(1) |
+
+**Space Complexity:** $O(n)$ for $n$ elements
+
+---
+
+### 4️⃣ Dynamic Array Amortized Analysis
+
+**Theorem:** Sequence of $n$ push operations has amortized cost $O(1)$ per operation.
+
+**Proof using Accounting Method:**
+
+Cost of operations:
+
+- Normal push: 1 unit
+
+- Push with resize: $1 + k$ units (where $k$ = current size)
+
+Charge 3 units per push:
+
+- 1 unit for actual push
+
+- 2 units saved for future resize
+
+When resizing from size $k$ to $2k$:
+
+- Cost: $k$ (copy all elements)
+
+- Saved credit: $2k$ (2 units × $k$ elements)
+
+- Sufficient to pay for resize!
+
+**Total cost for $n$ pushes:**
+
+$$\sum_{i=0}^{\log n} 2^i = 2^{\log n + 1} - 1 < 2n$$
+
+**Amortized cost:** $\frac{3n}{n} = O(1)$ ∎
+
+---
+
+### 5️⃣ Min Stack Design - Mathematical Insight
+
+**Problem:** Support getMin() in O(1) along with push/pop in O(1).
+
+**Solution 1: Store (value, min) pairs**
+
+$$\boxed{min_at[i] = \min(value[i], min_at[i-1])}$$
+
+**Space:** $O(n)$ extra
+
+**Solution 2: Store differences**
+
+Store $difference = value - current_min$ instead of value.
+
+$$\boxed{stored[i] = value[i] - min_at[i]}$$
+
+When $stored[i] < 0$: new minimum found!
+
+**Space:** $O(1)$ extra (just track one min variable)
+
+---
+
+### 6️⃣ Two Stacks for Queue - Amortized Analysis
+
+**Setup:** Two stacks $S_1$ (input) and $S_2$ (output)
+
+**Operations:**
+
+- enqueue: push to $S_1$
+
+- dequeue: pop from $S_2$ (transfer from $S_1$ if $S_2$ empty)
+
+**Amortized Cost Proof:**
+
+Each element:
+
+1. Pushed to $S_1$ once: 1 operation
+
+2. Moved to $S_2$ once: 1 operation  
+
+3. Popped from $S_2$ once: 1 operation
+
+Total: 3 operations per element
+
+**Amortized cost per operation:** $\frac{3n}{n} = O(1)$ ∎
+
+---
+
+---
+
 ## 💻 Code Implementations
 
 ```python
@@ -802,6 +824,8 @@ def baseball_game(operations: list[str]) -> int:
 
 ---
 
+---
+
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
@@ -837,6 +861,8 @@ def baseball_game(operations: list[str]) -> int:
 
 ---
 
+---
+
 ## 💡 Key Insights & Pro Tips
 
 > **🎯 LIFO = Undo Mechanism**  
@@ -859,6 +885,8 @@ def baseball_game(operations: list[str]) -> int:
 
 ---
 
+---
+
 ## 🎓 Pattern Recognition Guide
 
 ### Identifying Stack Problems
@@ -873,6 +901,8 @@ def baseball_game(operations: list[str]) -> int:
 | "two data structures" | Convert ADT | #232 |
 | "call/return" | Simulate calls | #636 |
 | "baseball rounds" | Stateful simulation | #682 |
+
+---
 
 ---
 
@@ -896,6 +926,8 @@ def baseball_game(operations: list[str]) -> int:
 | **Min Stack (pairs)** | O(1) getMin | 2x space | Frequent min queries |
 | **Min Stack (diff)** | O(1) space overhead | Complex logic | Space-critical |
 | **Two Stacks Queue** | Amortized O(1) | Occasional O(n) | Queue from stacks |
+
+---
 
 ---
 
@@ -929,6 +961,8 @@ def baseball_game(operations: list[str]) -> int:
 
 ---
 
+---
+
 ## 🎯 Practice Roadmap
 
 ### Week 1: Fundamentals
@@ -957,6 +991,8 @@ def baseball_game(operations: list[str]) -> int:
 
 ---
 
+---
+
 ## 💭 Common Interview Questions
 
 **Q: Why use stack instead of array?**  
@@ -973,6 +1009,8 @@ A: Each element transferred exactly once. Total work = 3n operations for n eleme
 
 **Q: Can we make min stack truly O(1) space?**  
 A: Yes, using bit manipulation to store both value and min in one integer. But not recommended for interviews.
+
+---
 
 ---
 
@@ -1051,9 +1089,3 @@ def dequeue(self):
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Stacks Home](../README.md) | **01. Basic Stack** | [02. Parentheses →](../02_parentheses/README.md) |
