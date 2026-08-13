@@ -52,6 +52,22 @@ permalink: /18_dynamic_programming/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 📂 Subtopics Navigation
+
+| # | Topic | Problems | Link |
+|:-:|-------|:--------:|------|
+| 1 | 1D DP | 15+ | [📖 Go →](./01_1d_dp/README.md) |
+| 2 | 2D DP | 12+ | [📖 Go →](./02_2d_dp/README.md) |
+| 3 | Knapsack | 10+ | [📖 Go →](./03_knapsack/README.md) |
+| 4 | String DP | 12+ | [📖 Go →](./04_string_dp/README.md) |
+| 5 | Tree DP | 8+ | [📖 Go →](./05_tree_dp/README.md) |
+| 6 | State Machine DP | 8+ | [📖 Go →](./06_state_machine_dp/README.md) |
+| 7 | Bitmask DP | 8+ | [📖 Go →](./07_bitmask_dp/README.md) |
+| 8 | Digit DP | 6+ | [📖 Go →](./08_digit_dp/README.md) |
+
+---
+
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ DP Requirements
@@ -97,21 +113,6 @@ $$\text{Time} = O(\text{states} \times \text{transition cost})
 Many 2D DP can be reduced to 1D:
 
 $$\text{If } dp[i] \text{ only depends on } dp[i-1] \Rightarrow O(n) \text{ space}$$
-
----
-
-## 📂 Subtopics Navigation
-
-| # | Topic | Problems | Link |
-|:-:|-------|:--------:|------|
-| 1 | 1D DP | 15+ | [📖 Go →](./01_1d_dp/README.md) |
-| 2 | 2D DP | 12+ | [📖 Go →](./02_2d_dp/README.md) |
-| 3 | Knapsack | 10+ | [📖 Go →](./03_knapsack/README.md) |
-| 4 | String DP | 12+ | [📖 Go →](./04_string_dp/README.md) |
-| 5 | Tree DP | 8+ | [📖 Go →](./05_tree_dp/README.md) |
-| 6 | State Machine DP | 8+ | [📖 Go →](./06_state_machine_dp/README.md) |
-| 7 | Bitmask DP | 8+ | [📖 Go →](./07_bitmask_dp/README.md) |
-| 8 | Digit DP | 6+ | [📖 Go →](./08_digit_dp/README.md) |
 
 ---
 
