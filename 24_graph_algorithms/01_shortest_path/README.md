@@ -10,12 +10,39 @@ permalink: /24_graph_algorithms/01_shortest_path/
 
 # 🛤️ Advanced Shortest Path Algorithms
 
+### *🛤️ Advanced Shortest Path Algorithms*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-12+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Dijkstra's Algorithm](./images/dijkstra-algorithm.png)
+
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🛤️ Advanced Shortest Path Algorithms |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 12+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -27,18 +54,7 @@ permalink: /24_graph_algorithms/01_shortest_path/
 
 ---
 
-## 🎨 Visual Overview
-
-<div align="center">
-
-![Dijkstra's Algorithm](./images/dijkstra-algorithm.png)
-
-</div>
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Algorithm Comparison
 
 | Algorithm | Graph Type | Time | Space | Use Case |
@@ -579,10 +595,3 @@ Shortest Path Problem
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Graph Algorithms](../README.md) | **01. Shortest Path** | [02. MST →](../02_minimum_spanning_tree/README.md) |
-
