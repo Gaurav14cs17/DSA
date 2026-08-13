@@ -80,17 +80,17 @@ $$\text{If } \alpha \geq \beta \text{, prune remaining branches}$$
 
 ### Minimax Algorithm Tree
 <p align="center">
-  <img src="./images/minimax-tree.svg" alt="Minimax Tree" width="100%">
+  <img src="./images/minimax-tree.png" alt="Minimax Tree" width="100%">
 </p>
 
 ### Alpha-Beta Pruning
 <p align="center">
-  <img src="./images/alpha-beta-pruning.svg" alt="Alpha-Beta Pruning" width="100%">
+  <img src="./images/alpha-beta-pruning.png" alt="Alpha-Beta Pruning" width="100%">
 </p>
 
 ### Stone Game - Interval DP
 <p align="center">
-  <img src="./images/stone-game-dp.svg" alt="Stone Game DP" width="100%">
+  <img src="./images/stone-game-dp.png" alt="Stone Game DP" width="100%">
 </p>
 
 ---
