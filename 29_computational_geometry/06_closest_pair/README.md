@@ -4,10 +4,20 @@ title: "Closest Pair of Points"
 parent: "Computational Geometry"
 nav_order: 6
 ---
+<div align="center">
 
 # 🎯 Closest Pair of Points
 
-### ***Problem:** Given n points in 2D plane, find the pair with minimum distance.*
+### *Divide-and-conquer closest pair in O(n log n)*
+
+<p><img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty"></p>
+
+[🏠 Computational Geometry](../README.md)
+
+</div>
+
+---
+
 
 
 ## 📊 Visual Overview
@@ -28,6 +38,14 @@ nav_order: 6
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Closest Pair](../06_closest_pair/README.md) | **06. Closest Pair** | [🏠 Computational Geometry](../README.md) |
+
+---
+
 
 ---
 
@@ -299,4 +317,3 @@ if point1.distance_squared(point2) < min_dist_sq:
 ---
 
 **Navigation:** [← Polygon Operations](../05_polygon_operations/) | [Computational Geometry](../README.md) | [Number Theory →](../../30_number_theory/README.md)
-
