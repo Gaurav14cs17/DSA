@@ -10,7 +10,7 @@ permalink: /08_binary_search_trees/
 
 # 🔍 Binary Search Trees
 
-![BST Overview](./images/bst-overview.svg)
+![BST Overview](./images/bst-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -30,7 +30,7 @@ permalink: /08_binary_search_trees/
 
 <div align="center">
 
-![Binary Search Tree](../assets/images/tree-traversal.svg)
+![Binary Search Tree](../assets/images/tree-traversal.png)
 
 </div>
 
