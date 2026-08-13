@@ -52,6 +52,8 @@ permalink: /09_heaps/
 
 ---
 
+## 📐 Mathematical Foundation
+
 ### 1️⃣ Heap Property
 
 **Max-Heap:**
