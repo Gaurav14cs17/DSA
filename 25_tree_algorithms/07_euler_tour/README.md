@@ -35,6 +35,17 @@ permalink: /25_tree_algorithms/07_euler_tour/
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Medium to Hard |
+| **Problems** | 8+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Euler Tour Definition
