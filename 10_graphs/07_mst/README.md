@@ -27,6 +27,18 @@ permalink: /10_graphs/07_mst/
 
 ---
 
+## 🎨 Visual Diagrams
+
+<div align="center">
+
+![Kruskal's Algorithm](./images/kruskal_algorithm.png)
+
+*Kruskal's MST Algorithm with Union-Find*
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ MST Definition
@@ -80,18 +92,6 @@ T = O(E + V \log V) \text{ with Fibonacci heap}$$
 **Theorem:** For any cut $(S, V-S)$, the minimum-weight edge crossing the cut is in some MST.
 
 **Proof:** If not, we can swap it with a heavier edge → lower weight tree. Contradiction. ∎
-
----
-
-## 🎨 Visual Diagrams
-
-<div align="center">
-
-![Kruskal's Algorithm](./images/kruskal_algorithm.png)
-
-*Kruskal's MST Algorithm with Union-Find*
-
-</div>
 
 ---
 
