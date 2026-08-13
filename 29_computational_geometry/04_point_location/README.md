@@ -4,10 +4,20 @@ title: "Point Location"
 parent: "Computational Geometry"
 nav_order: 4
 ---
+<div align="center">
 
 # 📍 Point Location Problems
 
 ### *Point location determines spatial relationships: Is a point inside, outside, or on the boundary of a geometric region?.*
+
+<p><img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty"></p>
+
+[🏠 Computational Geometry](../README.md)
+
+</div>
+
+---
+
 
 
 ## 📊 Visual Overview
@@ -29,6 +39,14 @@ nav_order: 4
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Point Location](../04_point_location/README.md) | **04. Point Location** | [Polygon Operations →](../05_polygon_operations/README.md) |
+
+---
+
 
 ---
 
@@ -189,4 +207,3 @@ def point_on_circle(point, center, radius, epsilon=1e-9):
 ---
 
 **Navigation:** [← Line Intersection](../03_line_intersection/) | [Next: Polygon Operations →](../05_polygon_operations/)
-
