@@ -10,7 +10,7 @@ permalink: /07_trees/05_lca_ancestor/
 
 # 👴 LCA & Ancestor Problems
 
-![LCA & Ancestor Diagram](./images/lca-ancestor.svg)
+![LCA & Ancestor Diagram](./images/lca-ancestor.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
