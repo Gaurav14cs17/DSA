@@ -19,17 +19,17 @@ nav_order: 4
 
 ---
 
-## 🎯 Overview
-
-Point location determines spatial relationships: Is a point inside, outside, or on the boundary of a geometric region?
-
----
-
 ## 📊 Visual Overview
 
 ![Point Location](./images/point-location.png)
 
 *Ray casting and winding number algorithms for point-in-polygon tests*
+
+---
+
+## 🎯 Overview
+
+Point location determines spatial relationships: Is a point inside, outside, or on the boundary of a geometric region?
 
 ---
 
