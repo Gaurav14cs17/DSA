@@ -113,19 +113,19 @@ For each character in $T$, find first matching character in remaining $S$.
 ### Is Subsequence - Two Pointer Greedy Approach
 
 <p align="center">
-  <img src="./images/is_subsequence.svg" alt="Is Subsequence Algorithm" width="700"/>
+  <img src="./images/is_subsequence.png" alt="Is Subsequence Algorithm" width="700"/>
 </p>
 
 ### LCS Dynamic Programming Table
 
 <p align="center">
-  <img src="./images/lcs_dp_table.svg" alt="LCS DP Table Visualization" width="750"/>
+  <img src="./images/lcs_dp_table.png" alt="LCS DP Table Visualization" width="750"/>
 </p>
 
 ### Edit Distance (Levenshtein) Algorithm
 
 <p align="center">
-  <img src="./images/edit_distance.svg" alt="Edit Distance Algorithm" width="750"/>
+  <img src="./images/edit_distance.png" alt="Edit Distance Algorithm" width="750"/>
 </p>
 
 ---
