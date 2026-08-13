@@ -10,6 +10,10 @@ permalink: /41_loop_fusion_online/02_kadane_pattern/
 
 # 🎯 Kadane's Algorithm Pattern
 
+### *🎯 Kadane's Algorithm Pattern*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
@@ -19,19 +23,32 @@ permalink: /41_loop_fusion_online/02_kadane_pattern/
 
 ---
 
+## 📊 Visual Overview
+
+<div align="center">
+  <img src="images/kadane-algorithm.png" alt="Kadane's Algorithm" width="100%">
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🎯 Kadane's Algorithm Pattern |
+| **Difficulty** | Medium |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
 |:------------|:----------:|--------:|
 | [← Welford's Algorithm](../01_welford_algorithm/README.md) | **02. Kadane's Pattern** | [03. Higher Moments →](../03_higher_moments/README.md) |
-
----
-
-## 📊 Visual Guide
-
-<div align="center">
-  <img src="images/kadane-algorithm.png" alt="Kadane's Algorithm" width="100%">
-</div>
 
 ---
 
@@ -468,9 +485,3 @@ Array: $[-2, 1, -3, 4, -1, 2, 1, -5, 4]$
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Welford's Algorithm](../01_welford_algorithm/README.md) | **02. Kadane's Pattern** | [03. Higher Moments →](../03_higher_moments/README.md) |
