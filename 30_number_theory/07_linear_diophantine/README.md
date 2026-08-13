@@ -26,6 +26,25 @@ permalink: /30_number_theory/07_linear_diophantine/
 
 ---
 
+## 📊 Visual Overview
+
+> *Concept map and key formulas — dive into subtopics for detailed walkthroughs and code.*
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Integer Solutions to Linear Equations |
+| **Difficulty** | Medium |
+| **Problems** | 12+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -34,8 +53,7 @@ permalink: /30_number_theory/07_linear_diophantine/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Basic Form
 
 **Equation:** $ax + by = c$ where $a, b, c \in \mathbb{Z}$
@@ -215,10 +233,3 @@ print(frobenius_number(3, 5))  # 7
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 06. Chinese Remainder](../06_chinese_remainder/README.md) | **07. Linear Diophantine** | [08. Binomial Coefficients →](../08_binomial_coefficients/README.md) |
-
