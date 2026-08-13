@@ -32,8 +32,6 @@ permalink: /11_tries/02_word_search/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
