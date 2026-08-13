@@ -10,7 +10,6 @@ permalink: /15_searching/05_binary_search_advanced/
 
 # 🚀 Advanced Binary Search
 
-![Peak Finding](./images/peak-finding.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
@@ -21,11 +20,34 @@ permalink: /15_searching/05_binary_search_advanced/
 
 ---
 
+## 📊 Visual Overview
+
+<div align="center">
+
+![Peak Finding](./images/peak-finding.png)
+
+</div>
+
+---
+
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next Topic |
 |:------------|:----------:|--------:|
 | [← 04. Rotated Array](../04_binary_search_rotated_array/README.md) | **05. Advanced BS** | [🏠 Searching Home](../README.md) → [Recursion](../../16_recursion/README.md) |
+
+---
+
+## 📊 Visual: Median of Two Sorted Arrays
+
+![Median of Two Arrays](./images/median-two-arrays.png)
+
+---
+
+## 📊 Visual: Longest Increasing Subsequence
+
+![LIS with Binary Search](./images/lis-binary-search.png)
 
 ---
 
@@ -64,18 +86,6 @@ T = O(n \log n)$$
 Binary search on distance, count pairs with distance ≤ mid.
 
 $$T = O(n \log n + n \log D)$$
-
----
-
-## 📊 Visual: Median of Two Sorted Arrays
-
-![Median of Two Arrays](./images/median-two-arrays.png)
-
----
-
-## 📊 Visual: Longest Increasing Subsequence
-
-![LIS with Binary Search](./images/lis-binary-search.png)
 
 ---
 
