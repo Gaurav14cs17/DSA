@@ -80,6 +80,84 @@ Where $n$ = total elements, $k$ = number of lists.
 
 ---
 
+## 🎨 Visual Algorithm Walkthrough
+
+### Merge Sort on Linked List
+
+```
+Original: 4 → 2 → 1 → 3
+
+Step 1: Split using fast-slow pointers
+        4 → 2 → 1 → 3
+        ↓         ↓
+     [4 → 2]   [1 → 3]
+
+Step 2: Recursively split
+     [4 → 2]     [1 → 3]
+      ↓   ↓       ↓   ↓
+     [4] [2]     [1] [3]
+
+Step 3: Merge back up
+     [4] [2]     [1] [3]
+       ↓ ↓         ↓ ↓
+     [2 → 4]   [1 → 3]
+
+Step 4: Final merge
+     [2 → 4]   [1 → 3]
+          ↓ ↓
+     [1 → 2 → 3 → 4] ✓
+
+Time: O(n log n), Space: O(log n) for recursion
+
+```
+
+### Merge Two Sorted Lists - Dummy Node Pattern
+
+```
+L1: 1 → 3 → 5
+L2: 2 → 4 → 6
+
+dummy → ? (result will be dummy.next)
+  ↓
+ null
+
+Step 1: Compare 1 vs 2, take 1
+dummy → 1 → ?
+        ↑
+     current
+
+Step 2: Compare 3 vs 2, take 2
+dummy → 1 → 2 → ?
+            ↑
+         current
+
+Continue until one list exhausted...
+
+Final: dummy → 1 → 2 → 3 → 4 → 5 → 6
+Return dummy.next ✓
+
+```
+
+### Merge K Lists - Min Heap Strategy
+
+```
+Lists: [1→4→5], [1→3→4], [2→6]
+
+Heap initially: [(1,0), (1,1), (2,2)]
+                 val,listIdx
+
+Step 1: Pop (1,0), add 1 to result, push 4 from list 0
+Step 2: Pop (1,1), add 1 to result, push 3 from list 1
+Step 3: Pop (2,2), add 2 to result, push 6 from list 2
+...continue...
+
+Time: O(n log k) where n=total nodes, k=lists
+
+```
+
+---
+
+
 ## 💻 Code Implementations
 
 ```python
@@ -165,83 +243,6 @@ def mergeKLists(lists: list[ListNode]) -> ListNode:
 | # | Problem | Technique | Time | Space |
 |:-:|---------|-----------|:----:|:-----:|
 | 23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Min Heap | O(n log k) | O(k) |
-
----
-
-## 🎨 Visual Algorithm Walkthrough
-
-### Merge Sort on Linked List
-
-```
-Original: 4 → 2 → 1 → 3
-
-Step 1: Split using fast-slow pointers
-        4 → 2 → 1 → 3
-        ↓         ↓
-     [4 → 2]   [1 → 3]
-
-Step 2: Recursively split
-     [4 → 2]     [1 → 3]
-      ↓   ↓       ↓   ↓
-     [4] [2]     [1] [3]
-
-Step 3: Merge back up
-     [4] [2]     [1] [3]
-       ↓ ↓         ↓ ↓
-     [2 → 4]   [1 → 3]
-
-Step 4: Final merge
-     [2 → 4]   [1 → 3]
-          ↓ ↓
-     [1 → 2 → 3 → 4] ✓
-
-Time: O(n log n), Space: O(log n) for recursion
-
-```
-
-### Merge Two Sorted Lists - Dummy Node Pattern
-
-```
-L1: 1 → 3 → 5
-L2: 2 → 4 → 6
-
-dummy → ? (result will be dummy.next)
-  ↓
- null
-
-Step 1: Compare 1 vs 2, take 1
-dummy → 1 → ?
-        ↑
-     current
-
-Step 2: Compare 3 vs 2, take 2
-dummy → 1 → 2 → ?
-            ↑
-         current
-
-Continue until one list exhausted...
-
-Final: dummy → 1 → 2 → 3 → 4 → 5 → 6
-Return dummy.next ✓
-
-```
-
-### Merge K Lists - Min Heap Strategy
-
-```
-Lists: [1→4→5], [1→3→4], [2→6]
-
-Heap initially: [(1,0), (1,1), (2,2)]
-                 val,listIdx
-
-Step 1: Pop (1,0), add 1 to result, push 4 from list 0
-Step 2: Pop (1,1), add 1 to result, push 3 from list 1
-Step 3: Pop (2,2), add 2 to result, push 6 from list 2
-...continue...
-
-Time: O(n log k) where n=total nodes, k=lists
-
-```
 
 ---
 
