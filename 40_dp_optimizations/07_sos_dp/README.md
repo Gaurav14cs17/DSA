@@ -3,7 +3,7 @@
 ## 📊 Visual Diagram
 
 <p align="center">
-  <img src="./images/sos-dp.svg" alt="SOS DP" width="100%">
+  <img src="./images/sos-dp.png" alt="SOS DP" width="100%">
 </p>
 
 ## Overview
