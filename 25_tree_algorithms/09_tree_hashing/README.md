@@ -10,20 +10,16 @@ permalink: /25_tree_algorithms/09_tree_hashing/
 
 # 🔐 Tree Hashing & Isomorphism
 
+### *Tree Hashing & Isomorphism*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-6+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 08. Virtual Trees](../08_virtual_trees/README.md) | **09. Tree Hashing** | [10. Link-Cut Trees →](../10_link_cut_trees/README.md) |
 
 ---
 
@@ -46,8 +42,16 @@ permalink: /25_tree_algorithms/09_tree_hashing/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 📐 Mathematical Foundations
 
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 08. Virtual Trees](../08_virtual_trees/README.md) | **09. Tree Hashing** | [10. Link-Cut Trees →](../10_link_cut_trees/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Tree Isomorphism
 
 **Isomorphic trees:** Trees with same structure (bijection preserving edges).
@@ -577,10 +581,3 @@ Tree Comparison Problem
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 08. Virtual Trees](../08_virtual_trees/README.md) | **09. Tree Hashing** | [10. Link-Cut Trees →](../10_link_cut_trees/README.md) |
-
