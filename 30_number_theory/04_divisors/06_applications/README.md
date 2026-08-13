@@ -11,6 +11,8 @@ permalink: /30_number_theory/04_divisors/06_applications/
 
 # 🎯 Divisor Applications
 
+### *LeetCode Problems & Competition Patterns*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Hard-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
@@ -36,10 +38,24 @@ permalink: /30_number_theory/04_divisors/06_applications/
 
 ![Divisor Applications](./images/divisor_applications.png)
 
+*Divisor Applications*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | LeetCode Problems & Competition Patterns |
+| **Difficulty** | Easy to Hard |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty | Key Concept | Link |
