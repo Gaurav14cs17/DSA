@@ -32,13 +32,13 @@ permalink: /05_queues/03_deque_problems/
 <div align="center">
 
 ### Deque Operations
-![Deque Operations](./image/deque_operations.svg)
+![Deque Operations](./image/deque_operations.png)
 
 ### Sliding Window Maximum
-![Sliding Window Maximum](./image/sliding_window_maximum.svg)
+![Sliding Window Maximum](./image/sliding_window_maximum.png)
 
 ### 0-1 BFS
-![0-1 BFS](./image/zero_one_bfs.svg)
+![0-1 BFS](./image/zero_one_bfs.png)
 
 </div>
 
