@@ -40,6 +40,44 @@ Further:     1 × m array     → O(m) space (if careful)
 
 ---
 
+## 📊 Visual Examples
+
+### Two-Array Rolling
+
+```
+Original 2D DP:
+    j:  0   1   2   3
+i=0 |   0   1   1   1
+i=1 |   1   1   2   2
+i=2 |   1   2   2   3  ← Computing row 2
+i=3 |   ?   ?   ?   ?
+
+Space Optimized (2 arrays):
+prev: [1   2   2   3]  ← Row 1 (previous)
+curr: [1   2   2   ?]  ← Row 2 (computing)
+
+Memory: 2×4 = 8 cells instead of 4×4 = 16 cells
+
+```
+
+### Single Array with Diagonal
+
+```
+Computing dp[i][j]:
+
+- Needs: dp[i-1][j-1], dp[i-1][j], dp[i][j-1]
+
+In 1D array:
+Before:  [... dp[i-1][j-1]  dp[i-1][j] ...]
+                ↑ save         ↑
+              prev_diag      current position
+
+After:   [... dp[i][j-1]    dp[i][j] ...]
+
+```
+
+---
+
 ## 💻 Implementation Patterns
 
 ### Pattern 1: Two Arrays (Most Common)
@@ -273,44 +311,6 @@ def can_partition(nums):
             dp[j] = dp[j] or dp[j - num]
     
     return dp[target]
-
-```
-
----
-
-## 📊 Visual Examples
-
-### Two-Array Rolling
-
-```
-Original 2D DP:
-    j:  0   1   2   3
-i=0 |   0   1   1   1
-i=1 |   1   1   2   2
-i=2 |   1   2   2   3  ← Computing row 2
-i=3 |   ?   ?   ?   ?
-
-Space Optimized (2 arrays):
-prev: [1   2   2   3]  ← Row 1 (previous)
-curr: [1   2   2   ?]  ← Row 2 (computing)
-
-Memory: 2×4 = 8 cells instead of 4×4 = 16 cells
-
-```
-
-### Single Array with Diagonal
-
-```
-Computing dp[i][j]:
-
-- Needs: dp[i-1][j-1], dp[i-1][j], dp[i][j-1]
-
-In 1D array:
-Before:  [... dp[i-1][j-1]  dp[i-1][j] ...]
-                ↑ save         ↑
-              prev_diag      current position
-
-After:   [... dp[i][j-1]    dp[i][j] ...]
 
 ```
 
