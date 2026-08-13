@@ -8,19 +8,27 @@ nav_order: 4
 
 # 🔗 Prefix-Suffix Matching with KMP
 
+### *Prefix-suffix matching problems involve finding strings that are both prefixes and suffixes (borders).*
+
+
 ## 📊 Visual Overview
 
 ![Prefix-Suffix Matching](./images/prefix-suffix.png)
 
-## 📊 Metadata
+*Prefix-Suffix Matching*
 
-- **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+---
 
-- **Time Complexity:** O(n)
+## 🎯 At a Glance
 
-- **Space Complexity:** O(n)
+| | |
+|:---|:---|
+| **In one line** | Prefix-suffix matching problems involve finding strings that are both prefixes and suffixes (borders). |
+| **Typical time** | O(n) |
+| **Typical space** | O(n) |
 
-- **Pattern:** Border Analysis, Symmetric Properties
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
