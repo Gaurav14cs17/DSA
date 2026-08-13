@@ -26,15 +26,7 @@ permalink: /30_number_theory/01_gcd_lcm/05_gcd_arrays/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Binary GCD](../04_binary_gcd/README.md) | **05. GCD of Arrays** | [06. Applications →](../06_applications/README.md) |
-
----
-
-## 📊 Visual Diagram
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -58,8 +50,16 @@ permalink: /30_number_theory/01_gcd_lcm/05_gcd_arrays/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 📐 Mathematical Foundations
 
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 04. Binary GCD](../04_binary_gcd/README.md) | **05. GCD of Arrays** | [06. Applications →](../06_applications/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### Associativity Property
 
 $$\gcd(a, \gcd(b, c)) = \gcd(\gcd(a, b), c) = \gcd(a, b, c)$$
@@ -290,10 +290,3 @@ class SubarrayGCD:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Binary GCD](../04_binary_gcd/README.md) | **05. GCD of Arrays** | [06. Applications →](../06_applications/README.md) |
-
