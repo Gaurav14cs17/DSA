@@ -30,7 +30,7 @@ permalink: /25_tree_algorithms/04_heavy_light_decomposition/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/hld-diagram.svg" alt="HLD Diagram" width="100%"/>
+<img src="./images/hld-diagram.png" alt="HLD Diagram" width="100%"/>
 </div>
 
 ---
