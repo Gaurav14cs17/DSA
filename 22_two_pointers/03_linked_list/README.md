@@ -24,29 +24,7 @@ permalink: /22_two_pointers/03_linked_list/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
-|:------------|:----------:|--------:|
-| [← 02. Same Direction](../02_same_direction/README.md) | **03. Linked List** | [🏠 Two Pointers Home](../README.md) → [Sliding Window](../../23_sliding_window/README.md) |
-
----
-
-## 🎯 What You'll Master
-
-- Floyd's Cycle Detection with complete mathematical proof
-
-- Finding the start of a cycle
-
-- Finding the middle of a linked list
-
-- Nth node from end in single pass
-
-- Intersection of two linked lists
-
----
-
-## 📊 Visual Diagrams
+## 📊 Visual Overview
 
 ### Floyd's Cycle Detection
 ![Floyd's Cycle Detection](./images/floyd-cycle-detection.png)
@@ -144,8 +122,34 @@ They meet at intersection node 5 ✓
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 What You'll Master
 
+- Floyd's Cycle Detection with complete mathematical proof
+
+- Finding the start of a cycle
+
+- Finding the middle of a linked list
+
+- Nth node from end in single pass
+
+- Intersection of two linked lists
+
+---
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
+|:------------|:----------:|--------:|
+| [← 02. Same Direction](../02_same_direction/README.md) | **03. Linked List** | [🏠 Two Pointers Home](../README.md) → [Sliding Window](../../23_sliding_window/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Floyd's Cycle Detection — The Algorithm
 
 {: .highlight }
@@ -311,7 +315,7 @@ This is exactly the cycle start position! ∎
 
 ### 4️⃣ Finding Middle — Why It Works
 
-{: .highlight }
+
 > When fast reaches end, slow is at middle.
 
 #### Proof
@@ -810,9 +814,3 @@ def sortList(head: ListNode) -> ListNode:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
-|:------------|:----------:|--------:|
-| [← 02. Same Direction](../02_same_direction/README.md) | **03. Linked List** | [🏠 Two Pointers Home](../README.md) → [Sliding Window](../../23_sliding_window/README.md) |
