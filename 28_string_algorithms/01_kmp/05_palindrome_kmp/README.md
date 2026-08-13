@@ -8,19 +8,27 @@ nav_order: 5
 
 # 🎭 Palindrome Problems with KMP
 
+### *KMP can solve palindrome problems efficiently by combining with string reversal.*
+
+
 ## 📊 Visual Overview
 
 ![Palindrome with KMP](./images/palindrome-kmp.png)
 
-## 📊 Metadata
+*Palindrome with KMP*
 
-- **Difficulty:** ![Medium-Hard](https://img.shields.io/badge/Medium--Hard-red)
+---
 
-- **Time Complexity:** O(n)
+## 🎯 At a Glance
 
-- **Space Complexity:** O(n)
+| | |
+|:---|:---|
+| **In one line** | KMP can solve palindrome problems efficiently by combining with string reversal. |
+| **Typical time** | O(n) |
+| **Typical space** | O(n) |
 
-- **Pattern:** Palindrome Detection, String Reversal, KMP
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
