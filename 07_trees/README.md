@@ -10,7 +10,6 @@ permalink: /07_trees/
 
 # 🌲 Trees
 
-![Trees Overview](./images/tree-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -25,6 +24,17 @@ permalink: /07_trees/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Trees Overview](./images/tree-overview.png)
+
+</div>
+
+---
+
 
 ## 📐 Mathematical Foundation
 
