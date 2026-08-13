@@ -10,7 +10,6 @@ permalink: /17_backtracking/05_constraint_satisfaction/
 
 # 🧩 Constraint Satisfaction
 
-![N-Queens](./images/nqueens.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
@@ -20,6 +19,17 @@ permalink: /17_backtracking/05_constraint_satisfaction/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![N-Queens](./images/nqueens.png)
+
+</div>
+
+---
+
 
 ## 🧭 Navigation
 
