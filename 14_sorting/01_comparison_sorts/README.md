@@ -32,8 +32,6 @@ permalink: /14_sorting/01_comparison_sorts/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
