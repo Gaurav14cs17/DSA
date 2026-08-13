@@ -11,6 +11,8 @@ permalink: /30_number_theory/05_euler_totient/05_applications/
 
 # 🎯 Totient Applications
 
+### *LeetCode Problems & Real-World Uses*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
@@ -36,10 +38,24 @@ permalink: /30_number_theory/05_euler_totient/05_applications/
 
 ![Totient Applications](./images/totient_applications.png)
 
+*Totient Applications*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | LeetCode Problems & Real-World Uses |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty | Key Concept |
