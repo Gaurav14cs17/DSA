@@ -7,21 +7,29 @@ nav_order: 7
 
 # 🌳 Suffix Tree (Ukkonen's Algorithm)
 
+### *A **Suffix Tree** is a compressed trie of all suffixes of a string.*
+
+
 ## 📊 Visual Overview
 
 ![Suffix Tree](./images/suffix-tree.png)
 
-## 📊 Metadata
+*Suffix Tree*
 
-- **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
+---
 
-- **Time Complexity:** O(n) construction, O(m) query
+## 🎯 At a Glance
 
-- **Space Complexity:** O(n)
+| | |
+|:---|:---|
+| **In one line** | A **Suffix Tree** is a compressed trie of all suffixes of a string. |
+| **Typical time** | O(n) construction, O(m) query |
+| **Typical space** | O(n) |
+| **Topics** | Suffix Tree, Ukkonen's Algorithm, String Indexing |
+| **Prerequisites** | Tries, Suffix arrays, Advanced data structures |
 
-- **Topics:** Suffix Tree, Ukkonen's Algorithm, String Indexing
-
-- **Prerequisites:** Tries, Suffix arrays, Advanced data structures
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
