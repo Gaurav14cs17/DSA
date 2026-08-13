@@ -10,6 +10,10 @@ permalink: /10_graphs/04_shortest_path/
 
 # 🛤️ Shortest Path Algorithms
 
+### *🛤️ Shortest Path Algorithms*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +23,7 @@ permalink: /10_graphs/04_shortest_path/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. DFS Problems](../03_dfs_problems/README.md) | **04. Shortest Path** | [05. Topological Sort →](../05_topological_sort/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -43,8 +39,28 @@ permalink: /10_graphs/04_shortest_path/
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **Topic** | 🛤️ Shortest Path Algorithms |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 8+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 03. DFS Problems](../03_dfs_problems/README.md) | **04. Shortest Path** | [05. Topological Sort →](../05_topological_sort/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Algorithm Comparison
 
 | Algorithm | Graph Type | Time | Space |
@@ -305,9 +321,3 @@ Shortest Path
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. DFS Problems](../03_dfs_problems/README.md) | **04. Shortest Path** | [05. Topological Sort →](../05_topological_sort/README.md) |
