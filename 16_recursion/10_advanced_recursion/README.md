@@ -12,6 +12,8 @@ permalink: /16_recursion/10_advanced_recursion/
 
 ### *Advanced recursion patterns: mutual, indirect, nested, and generative*
 
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
@@ -23,15 +25,7 @@ permalink: /16_recursion/10_advanced_recursion/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 09. Linked List Recursion](../09_linked_list_recursion/README.md) | **10. Advanced Recursion** | [11. Parser Recursion →](../11_parser_recursion/README.md) |
-
----
-
-## 📊 Visual Diagrams
+## 📊 Visual Overview
 
 <p align="center">
   <img src="./images/mutual_recursion.png" alt="Mutual Recursion" width="100%"/>
@@ -40,6 +34,27 @@ permalink: /16_recursion/10_advanced_recursion/
 <p align="center">
   <img src="./images/nested_recursion.png" alt="Nested Recursion" width="100%"/>
 </p>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Advanced recursion patterns: mutual, indirect, nested, and generative |
+| **Difficulty** | Hard |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 09. Linked List Recursion](../09_linked_list_recursion/README.md) | **10. Advanced Recursion** | [11. Parser Recursion →](../11_parser_recursion/README.md) |
 
 ---
 
@@ -458,10 +473,3 @@ def frameStewartHanoi(n: int, pegs: int = 4) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 09. Linked List Recursion](../09_linked_list_recursion/README.md) | **10. Advanced Recursion** | [11. Parser Recursion →](../11_parser_recursion/README.md) |
-
