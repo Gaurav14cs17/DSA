@@ -30,7 +30,7 @@ permalink: /27_advanced_trees/05_b_trees/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/b-tree.svg" alt="B-Tree Structure" width="100%">
+<img src="./images/b-tree.png" alt="B-Tree Structure" width="100%">
 </div>
 
 ---
