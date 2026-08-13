@@ -34,7 +34,7 @@ permalink: /30_number_theory/08_binomial_coefficients/05_advanced_problems/
 
 <div align="center">
 
-![Binomial Applications](./images/binomial_applications.svg)
+![Binomial Applications](./images/binomial_applications.png)
 
 </div>
 
