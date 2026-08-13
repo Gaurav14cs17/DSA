@@ -30,7 +30,7 @@ permalink: /25_tree_algorithms/10_link_cut_trees/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/link-cut-trees-diagram.svg" alt="Link-Cut Trees Diagram" width="100%"/>
+<img src="./images/link-cut-trees-diagram.png" alt="Link-Cut Trees Diagram" width="100%"/>
 </div>
 
 ---
