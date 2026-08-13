@@ -27,7 +27,7 @@ permalink: /12_segment_trees/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/segment-tree.svg" alt="Segment Tree Overview" width="100%">
+<img src="./images/segment-tree.png" alt="Segment Tree Overview" width="100%">
 </div>
 
 ---
@@ -49,7 +49,7 @@ A **Segment Tree** is a binary tree where:
 ### 2️⃣ Tree Structure
 
 <div align="center">
-<img src="./images/segment-tree-structure.svg" alt="Segment Tree Structure" width="100%">
+<img src="./images/segment-tree-structure.png" alt="Segment Tree Structure" width="100%">
 </div>
 
 For array of size $n$:
@@ -79,7 +79,7 @@ $$\text{left child} = 2i, \quad \text{right child} = 2i + 1
 ### 4️⃣ Range Query Decomposition
 
 <div align="center">
-<img src="./images/segment-tree-query.svg" alt="Range Query Operation" width="100%">
+<img src="./images/segment-tree-query.png" alt="Range Query Operation" width="100%">
 </div>
 
 Query [L, R] decomposes into O(log n) disjoint segments.
@@ -93,7 +93,7 @@ Where $\oplus$ is the associative operation (sum, min, max, gcd, etc.).
 ### 5️⃣ Point Update Operation
 
 <div align="center">
-<img src="./images/segment-tree-update.svg" alt="Point Update Operation" width="100%">
+<img src="./images/segment-tree-update.png" alt="Point Update Operation" width="100%">
 </div>
 
 Update propagates from leaf to root, updating all ancestors.
@@ -103,7 +103,7 @@ Update propagates from leaf to root, updating all ancestors.
 ### 6️⃣ Lazy Propagation
 
 <div align="center">
-<img src="./images/lazy-propagation.svg" alt="Lazy Propagation" width="100%">
+<img src="./images/lazy-propagation.png" alt="Lazy Propagation" width="100%">
 </div>
 
 **Deferred updates:** Store pending updates at nodes, push down when needed.
@@ -332,7 +332,7 @@ class RangeMinQuery:
 ## 📊 Segment Tree Pattern Decision
 
 <div align="center">
-<img src="./images/segment-tree-patterns.svg" alt="Segment Tree Patterns Decision Tree" width="100%">
+<img src="./images/segment-tree-patterns.png" alt="Segment Tree Patterns Decision Tree" width="100%">
 </div>
 
 ```
