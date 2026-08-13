@@ -11,6 +11,8 @@ permalink: /30_number_theory/02_primes/05_prime_applications/
 
 # 🎯 Prime Applications
 
+### *Practical Applications of Prime Numbers*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-15+-blue?style=for-the-badge" alt="Problems">
@@ -38,10 +40,24 @@ permalink: /30_number_theory/02_primes/05_prime_applications/
 
 ![Prime Applications](./images/prime_applications.png)
 
+*Prime Applications*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Practical Applications of Prime Numbers |
+| **Difficulty** | Medium |
+| **Problems** | 15+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Ugly Numbers
