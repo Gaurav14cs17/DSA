@@ -22,7 +22,7 @@ permalink: /26_sweep_line/01_interval_sweep/
 ## 📊 Visual Overview
 
 <div align="center">
-  <img src="./images/interval-sweep.svg" alt="Interval Sweep Algorithm Visualization" width="800"/>
+  <img src="./images/interval-sweep.png" alt="Interval Sweep Algorithm Visualization" width="800"/>
 </div>
 
 ---
