@@ -195,7 +195,7 @@ $$d_{multi}(v) = \min_{s \in S} d(s, v)$$
 
 <div align="center">
 
-![Implicit Graphs](./images/implicit_graph.svg)
+![Implicit Graphs](./images/implicit_graph.png)
 
 *Recognizing Hidden Graph Structures*
 
