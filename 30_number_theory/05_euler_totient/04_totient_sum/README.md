@@ -36,7 +36,7 @@ permalink: /30_number_theory/05_euler_totient/04_totient_sum/
 
 <div align="center">
 
-![Totient Sum](./images/totient_sum.svg)
+![Totient Sum](./images/totient_sum.png)
 
 </div>
 
