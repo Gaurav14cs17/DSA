@@ -10,7 +10,6 @@ permalink: /07_trees/02_tree_construction/
 
 # 🏗️ Tree Construction
 
-![Tree Construction Diagram](./images/tree-construction.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -20,6 +19,17 @@ permalink: /07_trees/02_tree_construction/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Tree Construction Diagram](./images/tree-construction.png)
+
+</div>
+
+---
+
 
 ## 🧭 Navigation
 
@@ -113,6 +123,127 @@ Use "#" for null nodes.
 Serialized: "1,2,#,#,3,4,#,#,5,#,#"
 
 ```
+
+---
+
+## 🎨 Visual Algorithm Walkthrough
+
+### Construct from Preorder + Inorder (#105)
+
+```
+Preorder: [3, 9, 20, 15, 7]
+Inorder:  [9, 3, 15, 20, 7]
+
+Step 1: Preorder[0] = 3 is root
+Find 3 in inorder → index 1
+
+Inorder splits:
+Left subtree:  [9]       (index 0-0)
+Right subtree: [15,20,7] (index 2-4)
+
+      3
+     / \
+    ?   ?
+
+Step 2: Build left subtree
+Preorder: [9]
+Inorder:  [9]
+Root = 9 (leaf)
+
+      3
+     / \
+    9   ?
+
+Step 3: Build right subtree
+Preorder: [20, 15, 7]
+Inorder:  [15, 20, 7]
+Root = 20, find in inorder → index 1
+
+      3
+     / \
+    9  20
+      /  \
+     ?    ?
+
+Step 4: Build 20's children
+Left:  preorder=[15], inorder=[15] → 15
+Right: preorder=[7],  inorder=[7]  → 7
+
+Final tree:
+      3
+     / \
+    9  20
+      /  \
+     15   7
+
+```
+
+### Catalan Number - Count Unique BSTs (#96)
+
+```
+n = 3, find C₃
+
+For each i as root (0 ≤ i < n):
+  Left subtree: i nodes → Cᵢ ways
+  Right subtree: (n-1-i) nodes → Cₙ₋₁₋ᵢ ways
+  Total: Cᵢ × Cₙ₋₁₋ᵢ
+
+C₃ = C₀×C₂ + C₁×C₁ + C₂×C₀
+   = 1×2 + 1×1 + 2×1
+   = 2 + 1 + 2
+   = 5
+
+5 unique structures:
+
+1.  1         2.    1        3.    2        4.    3        5.    3
+     \             \            /  \            /              /
+      2             3          1    3          1             2
+       \           /                          /               /
+        3         2                          2               1
+
+```
+
+### Serialize/Deserialize (#297)
+
+```
+Original tree:
+      1
+     / \
+    2   3
+       / \
+      4   5
+
+Preorder serialization with # for null:
+[1, 2, #, #, 3, 4, #, #, 5, #, #]
+
+Deserialization (consume one by one):
+val=1 → create node(1)
+  left = deserialize()
+    val=2 → create node(2)
+      left = deserialize()
+        val=# → null
+      right = deserialize()
+        val=# → null
+    return node(2)
+  right = deserialize()
+    val=3 → create node(3)
+      left = deserialize()
+        val=4 → create node(4)
+          left = # → null
+          right = # → null
+        return node(4)
+      right = deserialize()
+        val=5 → create node(5)
+          left = # → null
+          right = # → null
+        return node(5)
+    return node(3)
+return node(1)
+
+```
+
+---
+
 
 ---
 
@@ -298,124 +429,6 @@ class Codec:
 | 297 | [Serialize and Deserialize](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | Preorder + Null | O(n) | O(n) |
 
 ---
-
----
-
-## 🎨 Visual Algorithm Walkthrough
-
-### Construct from Preorder + Inorder (#105)
-
-```
-Preorder: [3, 9, 20, 15, 7]
-Inorder:  [9, 3, 15, 20, 7]
-
-Step 1: Preorder[0] = 3 is root
-Find 3 in inorder → index 1
-
-Inorder splits:
-Left subtree:  [9]       (index 0-0)
-Right subtree: [15,20,7] (index 2-4)
-
-      3
-     / \
-    ?   ?
-
-Step 2: Build left subtree
-Preorder: [9]
-Inorder:  [9]
-Root = 9 (leaf)
-
-      3
-     / \
-    9   ?
-
-Step 3: Build right subtree
-Preorder: [20, 15, 7]
-Inorder:  [15, 20, 7]
-Root = 20, find in inorder → index 1
-
-      3
-     / \
-    9  20
-      /  \
-     ?    ?
-
-Step 4: Build 20's children
-Left:  preorder=[15], inorder=[15] → 15
-Right: preorder=[7],  inorder=[7]  → 7
-
-Final tree:
-      3
-     / \
-    9  20
-      /  \
-     15   7
-
-```
-
-### Catalan Number - Count Unique BSTs (#96)
-
-```
-n = 3, find C₃
-
-For each i as root (0 ≤ i < n):
-  Left subtree: i nodes → Cᵢ ways
-  Right subtree: (n-1-i) nodes → Cₙ₋₁₋ᵢ ways
-  Total: Cᵢ × Cₙ₋₁₋ᵢ
-
-C₃ = C₀×C₂ + C₁×C₁ + C₂×C₀
-   = 1×2 + 1×1 + 2×1
-   = 2 + 1 + 2
-   = 5
-
-5 unique structures:
-
-1.  1         2.    1        3.    2        4.    3        5.    3
-     \             \            /  \            /              /
-      2             3          1    3          1             2
-       \           /                          /               /
-        3         2                          2               1
-
-```
-
-### Serialize/Deserialize (#297)
-
-```
-Original tree:
-      1
-     / \
-    2   3
-       / \
-      4   5
-
-Preorder serialization with # for null:
-[1, 2, #, #, 3, 4, #, #, 5, #, #]
-
-Deserialization (consume one by one):
-val=1 → create node(1)
-  left = deserialize()
-    val=2 → create node(2)
-      left = deserialize()
-        val=# → null
-      right = deserialize()
-        val=# → null
-    return node(2)
-  right = deserialize()
-    val=3 → create node(3)
-      left = deserialize()
-        val=4 → create node(4)
-          left = # → null
-          right = # → null
-        return node(4)
-      right = deserialize()
-        val=5 → create node(5)
-          left = # → null
-          right = # → null
-        return node(5)
-    return node(3)
-return node(1)
-
-```
 
 ---
 
