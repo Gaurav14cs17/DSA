@@ -10,7 +10,7 @@ permalink: /15_searching/03_binary_search_2d_array/
 
 # 🔢 Binary Search in 2D Arrays
 
-![2D Matrix Search](./images/2d-matrix-search.svg)
+![2D Matrix Search](./images/2d-matrix-search.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
