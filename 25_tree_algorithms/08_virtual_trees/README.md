@@ -30,7 +30,7 @@ permalink: /25_tree_algorithms/08_virtual_trees/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/virtual-trees-diagram.svg" alt="Virtual Trees Diagram" width="100%"/>
+<img src="./images/virtual-trees-diagram.png" alt="Virtual Trees Diagram" width="100%"/>
 </div>
 
 ---
