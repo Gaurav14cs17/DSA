@@ -39,8 +39,6 @@ permalink: /15_searching/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
