@@ -10,7 +10,7 @@ permalink: /15_searching/01_binary_search_sorted_array/
 
 # 📋 Binary Search in Sorted Array
 
-![Sorted Array Search](./images/sorted-array-search.svg)
+![Sorted Array Search](./images/sorted-array-search.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-green?style=for-the-badge" alt="Difficulty">
@@ -65,7 +65,7 @@ $$\text{count}(target) = \text{upper\_bound} - \text{lower\_bound}$$
 
 ## 📊 Visual: Search Range
 
-![Search Range](./images/search-range.svg)
+![Search Range](./images/search-range.png)
 
 ---
 
