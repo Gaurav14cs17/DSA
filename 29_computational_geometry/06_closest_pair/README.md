@@ -7,23 +7,27 @@ nav_order: 6
 
 # 🎯 Closest Pair of Points
 
-## 📊 Metadata
+### ***Problem:** Given n points in 2D plane, find the pair with minimum distance.*
 
-- **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
-
-- **Time Complexity:** O(n log n)
-
-- **Space Complexity:** O(n)
-
-- **Algorithm:** Divide and Conquer
-
----
 
 ## 📊 Visual Overview
 
 ![Closest Pair of Points](./images/closest-pair.png)
 
 *Divide and conquer approach with strip optimization*
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | **Problem:** Given n points in 2D plane, find the pair with minimum distance. |
+| **Typical time** | O(n log n) |
+| **Typical space** | O(n) |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
