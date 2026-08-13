@@ -58,7 +58,7 @@ Notation: x = a⁻¹ (mod m)
 
 <div align="center">
 
-![Modular Inverse](./images/modular_inverse.svg)
+![Modular Inverse](./images/modular_inverse.png)
 
 </div>
 
