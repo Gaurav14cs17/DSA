@@ -34,8 +34,6 @@ permalink: /01_arrays/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -47,8 +45,6 @@ permalink: /01_arrays/
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
-
----
 
 ---
 
@@ -77,8 +73,6 @@ Each subtopic contains:
 | 5 | **Interval Problems** | 20+ | Merge, Sweep Line, Greedy Scheduling | [📖 Go →](./05_interval_problems/README.md) |
 
 > 💡 **Pro Tip:** Each subfolder is a complete mini-course. Start with Basic Operations and work your way through sequentially!
-
----
 
 ---
 
@@ -234,8 +228,6 @@ $$\frac{T(n)}{n} = \frac{3n}{n} = 3 = O(1)$$
 
 ---
 
----
-
 ## 📚 Comprehensive Documentation
 
 ### What Each Subfolder Includes
@@ -260,8 +252,6 @@ Each subfolder contains **complete mini-courses** with:
 
 ---
 
----
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -271,8 +261,6 @@ Each subfolder contains **complete mini-courses** with:
 - Understanding of Big-O notation
 
 - Familiarity with loops and conditionals
-
----
 
 ---
 
@@ -352,8 +340,6 @@ Each subfolder contains **complete mini-courses** with:
 - Greedy interval scheduling
 
 - **20+ LeetCode problems** with proofs
-
----
 
 ---
 
@@ -443,8 +429,6 @@ Day 5-7: Interval Problems
 
 ---
 
----
-
 ## 🎯 Must-Solve Problems (Top 15)
 
 Solve these first for maximum interview impact:
@@ -466,8 +450,6 @@ Solve these first for maximum interview impact:
 | 13 | [Container With Water](https://leetcode.com/problems/container-with-most-water/) | Two Pointers | 🟡 Medium | Greedy proof |
 | 14 | [3Sum](https://leetcode.com/problems/3sum/) | Two Pointers | 🟡 Medium | Extension of 2Sum |
 | 15 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Index Hash | 🔴 Hard | Interview favorite |
-
----
 
 ---
 
@@ -500,8 +482,6 @@ Solve these first for maximum interview impact:
 - Move on without optimizing
 
 - Practice only one type of problem
-
----
 
 ---
 
@@ -545,8 +525,6 @@ Solve these first for maximum interview impact:
 
 ---
 
----
-
 ## 🎯 Pattern Recognition Flowchart
 
 Use this flowchart to quickly identify which technique to apply:
@@ -581,8 +559,6 @@ Use this flowchart to quickly identify which technique to apply:
 
 ---
 
----
-
 ## 🧩 Quick Pattern Reference
 
 | If You See... | Think... | Technique |
@@ -599,8 +575,6 @@ Use this flowchart to quickly identify which technique to apply:
 | "Subarray sum equals k" | Prefix + Hash Map | O(n) |
 | "Spiral matrix" | Layer by Layer | O(mn) |
 | "Search 2D sorted matrix" | Binary Search / Staircase | O(log mn) or O(m+n) |
-
----
 
 ---
 
@@ -651,8 +625,6 @@ Use this flowchart to quickly identify which technique to apply:
 
 ---
 
----
-
 ## 💡 Key Insights & Pro Tips
 
 > **🎯 Space-Time Tradeoff**  
@@ -669,8 +641,6 @@ Use this flowchart to quickly identify which technique to apply:
 
 ---
 
----
-
 ## 🎓 Complexity Cheatsheet
 
 | Operation | Unsorted Array | Sorted Array | With Preprocessing |
@@ -681,8 +651,6 @@ Use this flowchart to quickly identify which technique to apply:
 | **Delete** | O(n) | O(n) | O(n) |
 | **Range Query** | O(n) | O(n) | **O(1) with prefix** |
 | **Find Min/Max** | O(n) | O(1) | O(1) with tracking |
-
----
 
 ---
 
@@ -731,8 +699,6 @@ Use this flowchart to quickly identify which technique to apply:
 
 ---
 
----
-
 ## 🎖️ Interview Success Tips
 
 ### Common Mistakes to Avoid
@@ -776,8 +742,6 @@ Use this flowchart to quickly identify which technique to apply:
 
 ---
 
----
-
 ## 🌟 Motivational Corner
 
 > "Arrays are the foundation. Master them, and every other data structure becomes easier."  
@@ -797,8 +761,6 @@ Use this flowchart to quickly identify which technique to apply:
 
 ---
 
----
-
 ## 📊 Statistics & Fun Facts
 
 - **Most Common Data Structure:** Arrays appear in ~40% of coding interviews
@@ -810,8 +772,6 @@ Use this flowchart to quickly identify which technique to apply:
 - **Hardest Concept:** Understanding amortized complexity
 
 - **Most Elegant Algorithm:** Kadane's (5 lines to solve maximum subarray!)
-
----
 
 ---
 
