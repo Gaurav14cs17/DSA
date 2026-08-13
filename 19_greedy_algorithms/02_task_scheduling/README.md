@@ -10,7 +10,6 @@ permalink: /19_greedy_algorithms/02_task_scheduling/
 
 # ⏰ Task Scheduling
 
-![Task Scheduling](./images/task_scheduling.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -20,6 +19,17 @@ permalink: /19_greedy_algorithms/02_task_scheduling/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Task Scheduling](./images/task_scheduling.png)
+
+</div>
+
+---
+
 
 ## 🧭 Navigation
 
