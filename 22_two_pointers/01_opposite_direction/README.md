@@ -49,13 +49,13 @@ permalink: /22_two_pointers/01_opposite_direction/
 ## 📊 Visual Diagrams
 
 ### Two Sum Convergence
-![Two Sum Convergence](./images/two-sum-convergence.svg)
+![Two Sum Convergence](./images/two-sum-convergence.png)
 
 ### Container With Most Water
-![Container With Most Water](./images/container-water.svg)
+![Container With Most Water](./images/container-water.png)
 
 ### 3Sum Algorithm
-![3Sum Algorithm](./images/three-sum.svg)
+![3Sum Algorithm](./images/three-sum.png)
 
 ---
 
