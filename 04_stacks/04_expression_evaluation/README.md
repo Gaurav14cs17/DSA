@@ -399,8 +399,6 @@ def infixToPostfix(expression: str) -> str:
 
 ---
 
----
-
 ## 📊 Expression Problem Decision
 
 ```
