@@ -26,11 +26,23 @@ permalink: /19_greedy_algorithms/01_interval_scheduling/
 
 ![Interval Scheduling](./images/interval_scheduling.png)
 
+*Interval Scheduling*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **Difficulty** | Medium |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
