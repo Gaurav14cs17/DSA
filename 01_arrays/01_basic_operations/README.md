@@ -27,6 +27,29 @@ permalink: /01_arrays/01_basic_operations/
 
 ---
 
+## 🎨 Visual Diagrams
+
+<div align="center">
+
+### Two Pointers Technique
+![Two Pointers](./images/two_pointers.png)
+
+### Array Rotation (Three Reversals)
+![Array Rotation](./images/array_rotation.png)
+
+### Dutch National Flag Algorithm
+![Dutch National Flag](./images/dutch_flag.png)
+
+### Dutch National Flag (Detailed)
+![Dutch National Flag Detailed](./images/dutch_national_flag.png)
+
+### Floyd's Cycle Detection
+![Floyd's Cycle](./images/floyds_cycle.png)
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Array Access Time Complexity
@@ -123,29 +146,6 @@ $$\text{slow travels: } \mu + \lambda k_1
 \text{fast travels: } \mu + \lambda k_2 = 2(\mu + \lambda k_1)$$
 
 Where $\mu$ = distance to cycle, $\lambda$ = cycle length.
-
----
-
-## 🎨 Visual Diagrams
-
-<div align="center">
-
-### Two Pointers Technique
-![Two Pointers](./images/two_pointers.png)
-
-### Array Rotation (Three Reversals)
-![Array Rotation](./images/array_rotation.png)
-
-### Dutch National Flag Algorithm
-![Dutch National Flag](./images/dutch_flag.png)
-
-### Dutch National Flag (Detailed)
-![Dutch National Flag Detailed](./images/dutch_national_flag.png)
-
-### Floyd's Cycle Detection
-![Floyd's Cycle](./images/floyds_cycle.png)
-
-</div>
 
 ---
 
