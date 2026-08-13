@@ -39,8 +39,6 @@ permalink: /10_graphs/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -245,8 +243,6 @@ Graph Problem
      +-- Minimum Spanning Tree → Kruskal's or Prim's
 
 ```
-
----
 
 ---
 
