@@ -34,6 +34,8 @@ permalink: /21_bit_manipulation/
 
 ![Bit Manipulation Overview](./images/bit-overview.png)
 
+*Bit Manipulation Overview*
+
 </div>
 
 ---
@@ -45,6 +47,19 @@ permalink: /21_bit_manipulation/
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Master the lowest level of computation for blazingly fast O(1) operations |
+| **Difficulty** | Medium |
+| **Subtopics** | 3 |
+| **Problems** | 25+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🌟 Why Bit Manipulation?
 
 > *"At the heart of every computer lies binary - the language of 0s and 1s. Mastering bit manipulation is mastering the machine itself."*
