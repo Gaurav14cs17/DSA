@@ -144,7 +144,7 @@ $$\text{answer} = \text{heap}[0]$$
 
 <div align="center">
 
-![Heap Operations](./image/heap_operations.svg)
+![Heap Operations](./image/heap_operations.png)
 
 </div>
 
