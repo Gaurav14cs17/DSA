@@ -52,6 +52,19 @@ permalink: /17_backtracking/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 📂 Subtopics Navigation
+
+| # | Topic | Problems | Link |
+|:-:|-------|:--------:|------|
+| 1 | Subsets | 6+ | [📖 Go →](./01_subsets/README.md) |
+| 2 | Permutations | 6+ | [📖 Go →](./02_permutations/README.md) |
+| 3 | Combinations | 6+ | [📖 Go →](./03_combinations/README.md) |
+| 4 | Grid Backtracking | 6+ | [📖 Go →](./04_grid_backtracking/README.md) |
+| 5 | Constraint Satisfaction | 6+ | [📖 Go →](./05_constraint_satisfaction/README.md) |
+
+---
+
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ Backtracking Definition
@@ -127,18 +140,6 @@ $$P(n, k) = \frac{n!}{(n-k)!}$$
 Number of ways to choose $k$ from $n$:
 
 $$C(n, k) = \binom{n}{k} = \frac{n!}{k!(n-k)!}$$
-
----
-
-## 📂 Subtopics Navigation
-
-| # | Topic | Problems | Link |
-|:-:|-------|:--------:|------|
-| 1 | Subsets | 6+ | [📖 Go →](./01_subsets/README.md) |
-| 2 | Permutations | 6+ | [📖 Go →](./02_permutations/README.md) |
-| 3 | Combinations | 6+ | [📖 Go →](./03_combinations/README.md) |
-| 4 | Grid Backtracking | 6+ | [📖 Go →](./04_grid_backtracking/README.md) |
-| 5 | Constraint Satisfaction | 6+ | [📖 Go →](./05_constraint_satisfaction/README.md) |
 
 ---
 
