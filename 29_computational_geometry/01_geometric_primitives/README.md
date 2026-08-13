@@ -19,17 +19,17 @@ nav_order: 1
 
 ---
 
-## 🎯 Overview
-
-Geometric primitives are the fundamental building blocks of computational geometry: points, vectors, lines, and basic operations on them.
-
----
-
 ## 📊 Visual Overview
 
 ![Geometric Primitives](./images/geometric-primitives.png)
 
 *Visualization of vectors, cross product, dot product, and orientation tests*
+
+---
+
+## 🎯 Overview
+
+Geometric primitives are the fundamental building blocks of computational geometry: points, vectors, lines, and basic operations on them.
 
 ---
 
