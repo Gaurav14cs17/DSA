@@ -34,7 +34,7 @@ permalink: /30_number_theory/07_linear_diophantine/04_coin_problems/
 
 <div align="center">
 
-![Coin Problem](./images/coin_problem.svg)
+![Coin Problem](./images/coin_problem.png)
 
 </div>
 
