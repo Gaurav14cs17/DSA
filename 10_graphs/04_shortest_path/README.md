@@ -89,11 +89,11 @@ $$T = O(V + E)$$
 
 <div align="center">
 
-![Dijkstra's Algorithm](./images/dijkstra.svg)
+![Dijkstra's Algorithm](./images/dijkstra.png)
 
 *Dijkstra's Algorithm - Shortest Path in Weighted Graphs*
 
-![Algorithm Comparison](./images/algorithm_comparison.svg)
+![Algorithm Comparison](./images/algorithm_comparison.png)
 
 *Shortest Path Algorithm Selection Guide*
 
