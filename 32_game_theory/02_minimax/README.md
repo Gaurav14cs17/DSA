@@ -10,6 +10,8 @@ permalink: /32_game_theory/02_minimax/
 
 # 🌳 Minimax Algorithm
 
+### *Optimal Decision Making in Adversarial Games*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Applications-AI-blue?style=for-the-badge" alt="Applications">
@@ -23,15 +25,7 @@ permalink: /32_game_theory/02_minimax/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Nim Game](../01_nim_game/README.md) | **Minimax** | [🏠 Game Theory](../README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 ### Minimax Algorithm Tree
 <p align="center">
@@ -47,6 +41,70 @@ permalink: /32_game_theory/02_minimax/
 <p align="center">
   <img src="./images/stone-game-dp.png" alt="Stone Game DP" width="100%">
 </p>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Optimal Decision Making in Adversarial Games |
+| **Difficulty** | Medium to Hard |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Nim Game](../01_nim_game/README.md) | **Minimax** | [🏠 Game Theory](../README.md) |
+
+---
+
+## 📐 Mathematical Foundation
+### 1️⃣ Zero-Sum Games
+
+**Definition:** Game where one player's gain equals opponent's loss.
+
+$$\text{Player 1 score} + \text{Player 2 score} = \text{constant}$$
+
+**Examples:**
+
+- Chess (win/lose/draw)
+
+- Tic-Tac-Toe
+
+- Stone games with scores
+
+---
+
+### 2️⃣ Minimax Principle
+
+**Idea:** Maximize the minimum payoff (worst-case optimization).
+
+**Recursive Definition:**
+
+$$\text{minimax}(s) = \begin{cases}
+\text{evaluate}(s) & \text{if } s \text{ is terminal} \\
+\max_{a} \text{minimax}(\text{result}(s,a)) & \text{if MAX's turn} \\
+\min_{a} \text{minimax}(\text{result}(s,a)) & \text{if MIN's turn}
+\end{cases}$$
+
+---
+
+### 3️⃣ Alpha-Beta Pruning
+
+**Alpha ($\alpha$):** Best value MAX can guarantee so far  
+**Beta ($\beta$):** Best value MIN can guarantee so far
+
+**Pruning Condition:**
+
+$$\text{If } \alpha \geq \beta \text{, prune remaining branches}$$
+
+**Improvement:** From $O(b^d)$ to $O(b^{d/2})$ with perfect ordering!
 
 ---
 
@@ -109,51 +167,6 @@ permalink: /32_game_theory/02_minimax/
 +-----------------------------------------------------------------+
 
 ```
-
----
-
-## 📐 Mathematical Foundations
-
-### 1️⃣ Zero-Sum Games
-
-**Definition:** Game where one player's gain equals opponent's loss.
-
-$$\text{Player 1 score} + \text{Player 2 score} = \text{constant}$$
-
-**Examples:**
-
-- Chess (win/lose/draw)
-
-- Tic-Tac-Toe
-
-- Stone games with scores
-
----
-
-### 2️⃣ Minimax Principle
-
-**Idea:** Maximize the minimum payoff (worst-case optimization).
-
-**Recursive Definition:**
-
-$$\text{minimax}(s) = \begin{cases}
-\text{evaluate}(s) & \text{if } s \text{ is terminal} \\
-\max_{a} \text{minimax}(\text{result}(s,a)) & \text{if MAX's turn} \\
-\min_{a} \text{minimax}(\text{result}(s,a)) & \text{if MIN's turn}
-\end{cases}$$
-
----
-
-### 3️⃣ Alpha-Beta Pruning
-
-**Alpha ($\alpha$):** Best value MAX can guarantee so far  
-**Beta ($\beta$):** Best value MIN can guarantee so far
-
-**Pruning Condition:**
-
-$$\text{If } \alpha \geq \beta \text{, prune remaining branches}$$
-
-**Improvement:** From $O(b^d)$ to $O(b^{d/2})$ with perfect ordering!
 
 ---
 
@@ -412,10 +425,3 @@ def canIWin(max_choosable: int, desired_total: int) -> bool:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Nim Game](../01_nim_game/README.md) | **Minimax** | [🏠 Game Theory](../README.md) |
-
