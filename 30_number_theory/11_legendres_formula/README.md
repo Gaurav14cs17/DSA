@@ -11,6 +11,8 @@ permalink: /30_number_theory/11_legendres_formula/
 
 # 📝 Legendre's Formula
 
+### *Counting Prime Factors in Factorials*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
