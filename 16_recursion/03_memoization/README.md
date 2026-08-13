@@ -10,6 +10,10 @@ permalink: /16_recursion/03_memoization/
 
 # 💾 Memoization
 
+### *💾 Memoization*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +23,7 @@ permalink: /16_recursion/03_memoization/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. Tree Recursion](../02_tree_recursion/README.md) | **03. Memoization** | [04. Permutations & Combinations →](../04_permutation_combination/README.md) |
-
----
-
-## 📊 Visual Diagrams
+## 📊 Visual Overview
 
 <p align="center">
   <img src="./images/memo_cache.png" alt="Memoization Cache Lookup Flow" width="100%"/>
@@ -43,8 +39,28 @@ permalink: /16_recursion/03_memoization/
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **Topic** | 💾 Memoization |
+| **Difficulty** | Medium |
+| **Problems** | 8+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 02. Tree Recursion](../02_tree_recursion/README.md) | **03. Memoization** | [04. Permutations & Combinations →](../04_permutation_combination/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Memoization Definition
 
 **Cache** results of expensive function calls:
@@ -277,9 +293,3 @@ def solve(state):
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. Tree Recursion](../02_tree_recursion/README.md) | **03. Memoization** | [04. Permutations & Combinations →](../04_permutation_combination/README.md) |
