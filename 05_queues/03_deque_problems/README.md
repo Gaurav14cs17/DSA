@@ -10,6 +10,8 @@ permalink: /05_queues/03_deque_problems/
 
 # 🔄 Deque Problems
 
+### *🔄 Deque Problems*
+
 
 
 <p>
@@ -587,19 +589,6 @@ A: No! Only for 0-1 weights. For general weights, use Dijkstra with priority que
 </div>
 
 ---
-
----
-
-## 🎯 At a Glance
-
-| | |
-|:---|:---|
-| **Topic** | 🔄 Deque Problems |
-| **Difficulty** | Medium to Hard |
-| **Problems** | 8+ |
-
-{: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
