@@ -52,11 +52,6 @@ permalink: /27_advanced_trees/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 📋 Overview
-
-Advanced tree structures: **AVL Trees**, **Red-Black Trees**, **B-Trees**, **Splay Trees**, **Treaps**.
-
----
 
 ## 📂 Subtopics
 
@@ -151,6 +146,12 @@ Advanced tree structures: **AVL Trees**, **Red-Black Trees**, **B-Trees**, **Spl
 </td>
 </tr>
 </table>
+
+---
+
+## 📋 Overview
+
+Advanced tree structures: **AVL Trees**, **Red-Black Trees**, **B-Trees**, **Splay Trees**, **Treaps**.
 
 ---
 
