@@ -60,6 +60,133 @@ permalink: /23_sliding_window/02_variable_size/
 
 </div>
 
+### Longest Without Repeating Characters
+
+```
+String: "abcabcbb"
+
+Step 1: Expand
+"a"      set={a}, len=1
+"ab"     set={a,b}, len=2
+"abc"    set={a,b,c}, len=3 ⭐
+
+Step 2: 'a' repeats! Shrink until valid
++---+---+---+---+---+---+---+---+
+
+| a | b | c | a | b | c | b | b |
++---+---+---+---+---+---+---+---+
+  L           R
+  ↓
+Remove 'a', move L
++---+---+---+---+---+---+---+---+
+
+| a | b | c | a | b | c | b | b |
++---+---+---+---+---+---+---+---+
+      L       R
+set = {b,c,a}, len=3
+
+Step 3: 'b' repeats!
++---+---+---+---+---+---+---+---+
+
+| a | b | c | a | b | c | b | b |
++---+---+---+---+---+---+---+---+
+      L           R
+Remove 'b', move L
++---+---+---+---+---+---+---+---+
+
+| a | b | c | a | b | c | b | b |
++---+---+---+---+---+---+---+---+
+          L       R
+set = {c,a,b}, len=3
+
+...continue...
+
+Maximum Length: 3
+
+```
+
+### Minimum Size Subarray Sum ≥ 7
+
+```
+Array: [2, 3, 1, 2, 4, 3]   Target: 7
+
+Expand until valid:
++---+---+---+---+---+---+
+
+| 2 | 3 | 1 | 2 | 4 | 3 |
++---+---+---+---+---+---+
+  L
+              R
+sum = 2+3+1+2 = 8 ≥ 7 ✓
+min_len = 4
+
+Shrink while valid:
++---+---+---+---+---+---+
+
+| 2 | 3 | 1 | 2 | 4 | 3 |
++---+---+---+---+---+---+
+      L
+              R
+sum = 8-2 = 6 < 7 ✗
+Stop shrinking, expand
+
++---+---+---+---+---+---+
+
+| 2 | 3 | 1 | 2 | 4 | 3 |
++---+---+---+---+---+---+
+      L
+                  R
+sum = 6+4 = 10 ≥ 7 ✓
+min_len = 4
+
+Shrink while valid:
+sum = 10-3 = 7 ≥ 7 ✓, min_len = 3
+sum = 7-1 = 6 < 7 ✗
+
++---+---+---+---+---+---+
+
+| 2 | 3 | 1 | 2 | 4 | 3 |
++---+---+---+---+---+---+
+              L
+                      R
+sum = 6+3 = 9 ≥ 7 ✓
+Shrink: sum = 9-2 = 7 ≥ 7 ✓, min_len = 2
+Shrink: sum = 7-4 = 3 < 7 ✗
+
+Answer: 2 (subarray [4, 3])
+
+```
+
+### atMost(k) Counting
+
+```
+Array: [1, 2, 1, 2, 3]   Exactly 2 distinct
+
+atMost(2):
+Window [1]: 1 distinct → count += 1
+Window [1,2]: 2 distinct → count += 2 (subarrays: [2], [1,2])
+Window [1,2,1]: 2 distinct → count += 3
+Window [1,2,1,2]: 2 distinct → count += 4
+Window [2,1,2,3]: Shrink! 3 distinct > 2
+  → [1,2,3]: still 3, shrink
+  → [2,3]: 2 distinct → count += 2
+Window [2,3]: count += 2
+
+atMost(2) = 1+2+3+4+2 = 12
+
+atMost(1):
+Window [1]: 1 distinct → count += 1
+Window [1,2]: 2 > 1, shrink → [2]: count += 1
+Window [2,1]: 2 > 1, shrink → [1]: count += 1
+Window [1,2]: 2 > 1, shrink → [2]: count += 1
+Window [2,3]: 2 > 1, shrink → [3]: count += 1
+
+atMost(1) = 5
+
+exactly(2) = atMost(2) - atMost(1) = 12 - 5 = 7
+
+```
+
 ---
 
 ## 📐 Mathematical Foundations
@@ -203,136 +330,6 @@ Instead of tracking valid characters, track **violations**:
 - Window valid when: violations ≤ k
 
 - Shrink when: violations > k
-
----
-
-## 📊 Text Diagrams
-
-### Longest Without Repeating Characters$$
-
-String: "abcabcbb"
-
-Step 1: Expand
-"a"      set={a}, len=1
-"ab"     set={a,b}, len=2
-"abc"    set={a,b,c}, len=3 ⭐
-
-Step 2: 'a' repeats! Shrink until valid
-+---+---+---+---+---+---+---+---+
-
-| a | b | c | a | b | c | b | b |
-+---+---+---+---+---+---+---+---+
-  L           R
-  ↓
-Remove 'a', move L
-+---+---+---+---+---+---+---+---+
-
-| a | b | c | a | b | c | b | b |
-+---+---+---+---+---+---+---+---+
-      L       R
-set = {b,c,a}, len=3
-
-Step 3: 'b' repeats!
-+---+---+---+---+---+---+---+---+
-
-| a | b | c | a | b | c | b | b |
-+---+---+---+---+---+---+---+---+
-      L           R
-Remove 'b', move L
-+---+---+---+---+---+---+---+---+
-
-| a | b | c | a | b | c | b | b |
-+---+---+---+---+---+---+---+---+
-          L       R
-set = {c,a,b}, len=3
-
-...continue...
-
-Maximum Length: 3
-
-```
-
-### Minimum Size Subarray Sum ≥ 7
-
-```
-Array: [2, 3, 1, 2, 4, 3]   Target: 7
-
-Expand until valid:
-+---+---+---+---+---+---+
-
-| 2 | 3 | 1 | 2 | 4 | 3 |
-+---+---+---+---+---+---+
-  L
-              R
-sum = 2+3+1+2 = 8 ≥ 7 ✓
-min_len = 4
-
-Shrink while valid:
-+---+---+---+---+---+---+
-
-| 2 | 3 | 1 | 2 | 4 | 3 |
-+---+---+---+---+---+---+
-      L
-              R
-sum = 8-2 = 6 < 7 ✗
-Stop shrinking, expand
-
-+---+---+---+---+---+---+
-
-| 2 | 3 | 1 | 2 | 4 | 3 |
-+---+---+---+---+---+---+
-      L
-                  R
-sum = 6+4 = 10 ≥ 7 ✓
-min_len = 4
-
-Shrink while valid:
-sum = 10-3 = 7 ≥ 7 ✓, min_len = 3
-sum = 7-1 = 6 < 7 ✗
-
-+---+---+---+---+---+---+
-
-| 2 | 3 | 1 | 2 | 4 | 3 |
-+---+---+---+---+---+---+
-              L
-                      R
-sum = 6+3 = 9 ≥ 7 ✓
-Shrink: sum = 9-2 = 7 ≥ 7 ✓, min_len = 2
-Shrink: sum = 7-4 = 3 < 7 ✗
-
-Answer: 2 (subarray [4, 3])
-
-```
-
-### atMost(k) Counting
-
-```
-Array: [1, 2, 1, 2, 3]   Exactly 2 distinct
-
-atMost(2):
-Window [1]: 1 distinct → count += 1
-Window [1,2]: 2 distinct → count += 2 (subarrays: [2], [1,2])
-Window [1,2,1]: 2 distinct → count += 3
-Window [1,2,1,2]: 2 distinct → count += 4
-Window [2,1,2,3]: Shrink! 3 distinct > 2
-  → [1,2,3]: still 3, shrink
-  → [2,3]: 2 distinct → count += 2
-Window [2,3]: count += 2
-
-atMost(2) = 1+2+3+4+2 = 12
-
-atMost(1):
-Window [1]: 1 distinct → count += 1
-Window [1,2]: 2 > 1, shrink → [2]: count += 1
-Window [2,1]: 2 > 1, shrink → [1]: count += 1
-Window [1,2]: 2 > 1, shrink → [2]: count += 1
-Window [2,3]: 2 > 1, shrink → [3]: count += 1
-
-atMost(1) = 5
-
-exactly(2) = atMost(2) - atMost(1) = 12 - 5 = 7
-
-```
 
 ---
 
