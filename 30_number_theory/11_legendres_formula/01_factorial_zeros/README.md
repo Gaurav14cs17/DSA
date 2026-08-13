@@ -11,6 +11,8 @@ permalink: /30_number_theory/11_legendres_formula/01_factorial_zeros/
 
 # 0️⃣ Factorial Trailing Zeros
 
+### *Counting Trailing Zeros in n! Without Computing n!*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Time-O(log_n)-blue?style=for-the-badge" alt="Time">
@@ -39,10 +41,23 @@ permalink: /30_number_theory/11_legendres_formula/01_factorial_zeros/
 
 ![Factorial Zeros](./images/factorial_zeros.png)
 
+*Factorial Zeros*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Counting Trailing Zeros in n! Without Computing n! |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundation
 
 ### Legendre's Formula
