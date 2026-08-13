@@ -31,7 +31,7 @@ permalink: /27_advanced_trees/03_fenwick_tree/01_basic_bit/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/basic-bit.svg" alt="Basic BIT Operations" width="100%">
+<img src="./images/basic-bit.png" alt="Basic BIT Operations" width="100%">
 </div>
 
 ---
