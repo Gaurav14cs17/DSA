@@ -32,13 +32,13 @@ permalink: /03_linked_lists/03_merge_sort/
 <div align="center">
 
 ### Merge Sort on Linked List
-![Merge Sort Linked List](./images/merge-sort-linked-list.svg)
+![Merge Sort Linked List](./images/merge-sort-linked-list.png)
 
 ### Merge Two Sorted Lists
-![Merge Two Sorted Lists](./images/merge-two-sorted-lists.svg)
+![Merge Two Sorted Lists](./images/merge-two-sorted-lists.png)
 
 ### Merge K Sorted Lists
-![Merge K Sorted Lists](./images/merge-k-sorted-lists.svg)
+![Merge K Sorted Lists](./images/merge-k-sorted-lists.png)
 
 </div>
 
