@@ -19,17 +19,17 @@ nav_order: 3
 
 ---
 
-## 🎯 Overview
-
-Line intersection problems determine if and where geometric segments intersect. Critical for CAD, GIS, collision detection.
-
----
-
 ## 📊 Visual Overview
 
 ![Line Intersection](./images/line-intersection.png)
 
 *Segment intersection test using orientation conditions*
+
+---
+
+## 🎯 Overview
+
+Line intersection problems determine if and where geometric segments intersect. Critical for CAD, GIS, collision detection.
 
 ---
 
