@@ -10,7 +10,7 @@ permalink: /18_dynamic_programming/
 
 # 📊 Dynamic Programming
 
-![Dynamic Programming Overview](./images/dp-overview.svg)
+![Dynamic Programming Overview](./images/dp-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
