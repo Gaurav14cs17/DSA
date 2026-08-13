@@ -10,12 +10,37 @@ permalink: /18_dynamic_programming/01_1d_dp/
 
 # 📈 1D Dynamic Programming
 
+### *📈 1D Dynamic Programming*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-green?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-15+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+  <img src="images/1d-dp.png" alt="1D DP Visualization" width="100%">
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 📈 1D Dynamic Programming |
+| **Difficulty** | Easy to Medium |
+| **Problems** | 15+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -27,16 +52,7 @@ permalink: /18_dynamic_programming/01_1d_dp/
 
 ---
 
-## 📊 Visual Guide
-
-<div align="center">
-  <img src="images/1d-dp.png" alt="1D DP Visualization" width="100%">
-</div>
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ General Form
 
 $$dp[i] = f(dp[i-1], dp[i-2], \ldots, dp[0])$$
@@ -207,9 +223,3 @@ def wordBreak(s: str, wordDict: list[str]) -> bool:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 DP Home](../README.md) | **01. 1D DP** | [02. 2D DP →](../02_2d_dp/README.md) |
