@@ -8,24 +8,28 @@ permalink: /29_computational_geometry/
 
 # 📐 Computational Geometry
 
-## 📊 Metadata
-
-- **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
-
-- **Subtopics:** 6
-- **Problems:** 50+
-
-- **Prerequisites:** Linear algebra, Vectors, Coordinate geometry
-
----
-
 ## 📊 Visual Overview
 
 <div align="center">
 
 ![Computational Geometry Overview](./images/geometry-overview.png)
 
+*Computational Geometry Overview*
+
 </div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Subtopics** | 6 |
+| **Problems** | 50+ |
+| **Prerequisites** | Linear algebra, Vectors, Coordinate geometry |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
