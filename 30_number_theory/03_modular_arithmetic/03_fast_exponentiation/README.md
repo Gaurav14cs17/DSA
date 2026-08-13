@@ -51,7 +51,7 @@ a^13 = a^(1101₂)
 
 <div align="center">
 
-![Fast Exponentiation](./images/fast_exponentiation.svg)
+![Fast Exponentiation](./images/fast_exponentiation.png)
 
 </div>
 
