@@ -30,7 +30,7 @@ permalink: /25_tree_algorithms/07_euler_tour/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/euler-tour-diagram.svg" alt="Euler Tour Diagram" width="100%"/>
+<img src="./images/euler-tour-diagram.png" alt="Euler Tour Diagram" width="100%"/>
 </div>
 
 ---
