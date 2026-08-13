@@ -36,7 +36,7 @@ permalink: /30_number_theory/05_euler_totient/02_totient_properties/
 
 <div align="center">
 
-![Totient Properties](./images/totient_properties.svg)
+![Totient Properties](./images/totient_properties.png)
 
 </div>
 
