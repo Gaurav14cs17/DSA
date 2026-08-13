@@ -11,20 +11,16 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/01_lazy_propagation/
 
 # ⏱️ Lazy Propagation
 
+### *Lazy Propagation*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Segment Tree Advanced](../README.md) | **01. Lazy Propagation** | [02. 2D Segment Tree →](../02_2d_segment_tree/README.md) |
 
 ---
 
@@ -47,6 +43,15 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/01_lazy_propagation/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Segment Tree Advanced](../README.md) | **01. Lazy Propagation** | [02. 2D Segment Tree →](../02_2d_segment_tree/README.md) |
+
+---
+
 ## 📐 Core Concept
 
 **Lazy Propagation:** Defer updates until absolutely necessary.
@@ -153,10 +158,3 @@ class SegmentTreeLazy:
 | - | Sqrt Decomposition | Hard | Block updates |
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Segment Tree Advanced](../README.md) | **01. Lazy Propagation** | [02. 2D Segment Tree →](../02_2d_segment_tree/README.md) |
-
