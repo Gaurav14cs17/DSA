@@ -22,7 +22,7 @@ permalink: /26_sweep_line/06_closest_pair/
 ## 📊 Visual Overview
 
 <div align="center">
-  <img src="./images/closest-pair.svg" alt="Closest Pair of Points Visualization" width="800"/>
+  <img src="./images/closest-pair.png" alt="Closest Pair of Points Visualization" width="800"/>
 </div>
 
 ---
