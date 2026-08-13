@@ -10,6 +10,8 @@ permalink: /16_recursion/06_array_recursion/
 
 # 📚 Array Recursion
 
+### *Processing arrays element by element using recursion*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-15+-blue?style=for-the-badge" alt="Problems">
