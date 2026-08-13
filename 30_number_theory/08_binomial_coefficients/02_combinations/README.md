@@ -37,7 +37,7 @@ permalink: /30_number_theory/08_binomial_coefficients/02_combinations/
 
 <div align="center">
 
-![Combinations](./images/combinations.svg)
+![Combinations](./images/combinations.png)
 
 </div>
 
