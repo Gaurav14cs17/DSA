@@ -10,6 +10,8 @@ permalink: /31_combinatorics/02_combinations/
 
 # 🎯 Combinations
 
+### *Selections Where Order Doesn't Matter*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Hard-green?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-25+-blue?style=for-the-badge" alt="Problems">
@@ -21,6 +23,25 @@ permalink: /31_combinatorics/02_combinations/
 
 ---
 
+## 📊 Visual Overview
+
+> *Combinations C(n,k) — choosing k items from n without regard to order.*
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Selections Where Order Doesn't Matter |
+| **Difficulty** | Easy to Hard |
+| **Problems** | 25+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -29,8 +50,7 @@ permalink: /31_combinatorics/02_combinations/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### Combination Formula
 
 $$\binom{n}{r} = C(n,r) = \frac{n!}{r!(n-r)!}$$
@@ -216,10 +236,3 @@ def generate_pascal(numRows: int) -> List[List[int]]:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Permutations](../01_permutations/README.md) | **02. Combinations** | [03. Special Sequences →](../03_special_sequences/README.md) |
-
