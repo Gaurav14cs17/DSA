@@ -10,7 +10,6 @@ permalink: /06_hash_tables/
 
 # #️⃣ Hash Tables
 
-![Hash Tables Overview](./images/hash-table-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-green?style=for-the-badge" alt="Difficulty">
@@ -25,6 +24,17 @@ permalink: /06_hash_tables/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Hash Tables Overview](./images/hash-table-overview.png)
+
+</div>
+
+---
+
 
 ## 📐 Mathematical Foundation
 
