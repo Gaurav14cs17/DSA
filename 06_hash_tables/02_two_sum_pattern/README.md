@@ -346,8 +346,6 @@ def twoSumLessThanK(nums: list[int], k: int) -> int:
 
 ---
 
----
-
 ## 💡 Pattern Recognition Guide
 
 | Problem Keywords | Pattern | Example |
