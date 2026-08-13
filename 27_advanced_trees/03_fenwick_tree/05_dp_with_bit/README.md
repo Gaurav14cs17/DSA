@@ -31,7 +31,7 @@ permalink: /27_advanced_trees/03_fenwick_tree/05_dp_with_bit/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/dp-bit.svg" alt="DP with BIT" width="100%">
+<img src="./images/dp-bit.png" alt="DP with BIT" width="100%">
 </div>
 
 ---
