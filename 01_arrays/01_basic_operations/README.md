@@ -10,6 +10,8 @@ permalink: /01_arrays/01_basic_operations/
 
 # 🔧 Basic Array Operations
 
+### *🔧 Basic Array Operations*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-green?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-15+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +21,7 @@ permalink: /01_arrays/01_basic_operations/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Arrays Home](../README.md) | **01. Basic Operations** | [02. Subarray Problems →](../02_subarray_problems/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -50,106 +44,9 @@ permalink: /01_arrays/01_basic_operations/
 
 ---
 
-## 📐 Mathematical Foundations
-
-### 1️⃣ Array Access Time Complexity
-
-**Theorem:** Array access is O(1).
-
-**Proof:**
-
-$$\text{Address}(A[i]) = \text{Base} + i \times \text{sizeof(element)}$$
-
-Operations: 1 multiplication + 1 addition = constant time ∎
-
 ---
 
-### 2️⃣ Two Pointers Complexity
-
-**Theorem:** Two opposite-direction pointers complete in O(n).
-
-**Proof:**
-
-- Let $d = right - left$ (initial distance)
-
-- Each iteration: $d$ decreases by at least 1
-- Maximum iterations: $d_{initial} = n - 1$
-
-- Therefore: O(n) ∎
-
-**Convergence Formula:**
-
-$$\text{Iterations} = \frac{n}{2} \text{ (for symmetric operations)}$$
-
----
-
-### 3️⃣ Dutch National Flag Invariants
-
-**Three-way partition maintains:**
-
-$$\begin{aligned}
-A[0..low-1] &= \{0\} \\
-A[low..mid-1] &= \{1\} \\
-A[mid..high] &= \text{unknown} \\
-A[high+1..n-1] &= \{2\}
-\end{aligned}$$
-
-**Correctness Proof:**
-
-- Invariant holds initially (all regions empty)
-
-- Each operation preserves invariant
-
-- When $mid > high$: no unknown elements remain ∎
-
----
-
-### 4️⃣ Array Rotation Formula
-
-**Right rotation by k positions:**
-
-$$A'[i] = A[(i - k + n) \mod n]$$
-
-**Reversal Algorithm Correctness:**
-
-$$\text{Rev}(\text{Rev}(A[0..n-k-1]) \| \text{Rev}(A[n-k..n-1])) = A[n-k..n-1] \| A[0..n-k-1]$$
-
-**Proof:**
-
-1. $\text{Rev}(A) = [a_n, a_{n-1}, \ldots, a_1]$
-
-2. $\text{Rev}(A[0..k-1]) = [a_k, \ldots, a_1]$
-
-3. $\text{Rev}(A[k..n-1]) = [a_n, \ldots, a_{k+1}]$
-
-4. Combined: $[a_{n-k+1}, \ldots, a_n, a_1, \ldots, a_{n-k}]$ ∎
-
----
-
-### 5️⃣ Floyd's Cycle Detection Mathematics
-
-**For array where $f(x) = nums[x]$:**
-
-**Theorem:** If duplicate exists, cycle exists.
-
-**Proof by Pigeonhole:**
-
-- n+1 values in range [1, n]
-
-- At least one value repeats
-
-- Repeated value = cycle entry point ∎
-
-**Meeting Point Formula:**
-
-$$\text{slow travels: } \mu + \lambda k_1
-\text{fast travels: } \mu + \lambda k_2 = 2(\mu + \lambda k_1)$$
-
-Where $\mu$ = distance to cycle, $\lambda$ = cycle length.
-
----
-
-## 🎨 Visual Algorithm Walkthroughs
+## 📊 Visual Overview
 
 ### Remove Duplicates from Sorted Array
 
@@ -256,6 +153,131 @@ Input: [2, 0, 2, 1, 1, 0]
 
 ---
 
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🔧 Basic Array Operations |
+| **Difficulty** | Easy to Medium |
+| **Problems** | 15+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [🏠 Arrays Home](../README.md) | **01. Basic Operations** | [02. Subarray Problems →](../02_subarray_problems/README.md) |
+
+---
+
+---
+
+## 📐 Mathematical Foundation
+### 1️⃣ Array Access Time Complexity
+
+**Theorem:** Array access is O(1).
+
+**Proof:**
+
+$$\text{Address}(A[i]) = \text{Base} + i \times \text{sizeof(element)}$$
+
+Operations: 1 multiplication + 1 addition = constant time ∎
+
+---
+
+### 2️⃣ Two Pointers Complexity
+
+**Theorem:** Two opposite-direction pointers complete in O(n).
+
+**Proof:**
+
+- Let $d = right - left$ (initial distance)
+
+- Each iteration: $d$ decreases by at least 1
+- Maximum iterations: $d_{initial} = n - 1$
+
+- Therefore: O(n) ∎
+
+**Convergence Formula:**
+
+$$\text{Iterations} = \frac{n}{2} \text{ (for symmetric operations)}$$
+
+---
+
+### 3️⃣ Dutch National Flag Invariants
+
+**Three-way partition maintains:**
+
+$$\begin{aligned}
+A[0..low-1] &= \{0\} \\
+A[low..mid-1] &= \{1\} \\
+A[mid..high] &= \text{unknown} \\
+A[high+1..n-1] &= \{2\}
+\end{aligned}$$
+
+**Correctness Proof:**
+
+- Invariant holds initially (all regions empty)
+
+- Each operation preserves invariant
+
+- When $mid > high$: no unknown elements remain ∎
+
+---
+
+### 4️⃣ Array Rotation Formula
+
+**Right rotation by k positions:**
+
+$$A'[i] = A[(i - k + n) \mod n]$$
+
+**Reversal Algorithm Correctness:**
+
+$$\text{Rev}(\text{Rev}(A[0..n-k-1]) \| \text{Rev}(A[n-k..n-1])) = A[n-k..n-1] \| A[0..n-k-1]$$
+
+**Proof:**
+
+1. $\text{Rev}(A) = [a_n, a_{n-1}, \ldots, a_1]$
+
+2. $\text{Rev}(A[0..k-1]) = [a_k, \ldots, a_1]$
+
+3. $\text{Rev}(A[k..n-1]) = [a_n, \ldots, a_{k+1}]$
+
+4. Combined: $[a_{n-k+1}, \ldots, a_n, a_1, \ldots, a_{n-k}]$ ∎
+
+---
+
+### 5️⃣ Floyd's Cycle Detection Mathematics
+
+**For array where $f(x) = nums[x]$:**
+
+**Theorem:** If duplicate exists, cycle exists.
+
+**Proof by Pigeonhole:**
+
+- n+1 values in range [1, n]
+
+- At least one value repeats
+
+- Repeated value = cycle entry point ∎
+
+**Meeting Point Formula:**
+
+$$\text{slow travels: } \mu + \lambda k_1
+\text{fast travels: } \mu + \lambda k_2 = 2(\mu + \lambda k_1)$$
+
+Where $\mu$ = distance to cycle, $\lambda$ = cycle length.
+
+---
+
+---
+
 ## 💻 Code with Mathematical Comments
 
 ```python
@@ -355,6 +377,8 @@ def findDuplicate(nums: list[int]) -> int:
 
 ---
 
+---
+
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
@@ -389,6 +413,8 @@ def findDuplicate(nums: list[int]) -> int:
 
 ---
 
+---
+
 ## 💡 Key Insights & Pro Tips
 
 > **🎯 Two Pointers Technique**  
@@ -408,6 +434,8 @@ def findDuplicate(nums: list[int]) -> int:
 
 ---
 
+---
+
 ## 🎓 Pattern Recognition Guide
 
 ### When to Use Each Technique
@@ -420,6 +448,8 @@ def findDuplicate(nums: list[int]) -> int:
 | **Array as Hash** | Values in [1,n], find duplicates | Find Duplicate, Missing Number |
 | **Reversal** | Rotate array, reverse string | Rotate Array, Reverse Words |
 | **Floyd's Cycle** | Linked list via array indices | Find Duplicate Number |
+
+---
 
 ---
 
@@ -443,6 +473,8 @@ Multiple passes:        O(kn)  → k constants → O(n)
 Sort then scan:         O(n log n) → Often good solution
 
 ```
+
+---
 
 ---
 
@@ -478,6 +510,8 @@ Sort then scan:         O(n log n) → Often good solution
 |----------|-------|------|
 | **Bentley's Programming Pearls** | Column 2: Aha! Algorithms | [PDF](https://www.cs.cmu.edu/~15451-f17/Handouts/bentley1984.pdf) |
 | **TAOCP Volume 3** | Sorting and searching | [Knuth](https://www-cs-faculty.stanford.edu/~knuth/taocp.html) |
+
+---
 
 ---
 
@@ -517,6 +551,8 @@ Sort then scan:         O(n log n) → Often good solution
 
 ---
 
+---
+
 ## 💭 Common Interview Questions
 
 **Q: Why use two pointers instead of extra space?**  
@@ -547,9 +583,3 @@ A: O(1) space vs O(n) space. Critical in memory-constrained environments.
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Arrays Home](../README.md) | **01. Basic Operations** | [02. Subarray Problems →](../02_subarray_problems/README.md) |
