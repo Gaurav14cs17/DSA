@@ -31,7 +31,7 @@ permalink: /24_graph_algorithms/01_shortest_path/
 
 <div align="center">
 
-![Dijkstra's Algorithm](./images/dijkstra-algorithm.svg)
+![Dijkstra's Algorithm](./images/dijkstra-algorithm.png)
 
 </div>
 
