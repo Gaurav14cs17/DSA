@@ -10,6 +10,10 @@ permalink: /15_searching/03_binary_search_2d_array/
 
 # 🔢 Binary Search in 2D Arrays
 
+### *Binary Search in 2D Arrays*
+
+
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -43,6 +47,7 @@ permalink: /15_searching/03_binary_search_2d_array/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -51,8 +56,7 @@ permalink: /15_searching/03_binary_search_2d_array/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Flattened 2D Array
 
 If matrix is row-major sorted:
@@ -246,9 +250,3 @@ def countNegatives(grid: list[list[int]]) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. BS on Answer](../02_binary_search_on_answer/README.md) | **03. 2D Array** | [04. Rotated Array →](../04_binary_search_rotated_array/README.md) |
