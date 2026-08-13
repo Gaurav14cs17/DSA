@@ -10,6 +10,10 @@ permalink: /10_graphs/02_bfs_problems/
 
 # 🌊 BFS Problems
 
+### *🌊 BFS Problems*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +23,7 @@ permalink: /10_graphs/02_bfs_problems/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Graph Representation](../01_graph_representation/README.md) | **02. BFS Problems** | [03. DFS Problems →](../03_dfs_problems/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -43,8 +39,28 @@ permalink: /10_graphs/02_bfs_problems/
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **Topic** | 🌊 BFS Problems |
+| **Difficulty** | Medium |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 01. Graph Representation](../01_graph_representation/README.md) | **02. BFS Problems** | [03. DFS Problems →](../03_dfs_problems/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ BFS Correctness
 
 **Theorem:** BFS finds shortest path in unweighted graphs.
@@ -271,9 +287,3 @@ BFS Problem
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Graph Representation](../01_graph_representation/README.md) | **02. BFS Problems** | [03. DFS Problems →](../03_dfs_problems/README.md) |
