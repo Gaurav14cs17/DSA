@@ -10,7 +10,7 @@ permalink: /07_trees/03_tree_properties/
 
 # 📏 Tree Properties
 
-![Tree Properties Diagram](./images/tree-properties.svg)
+![Tree Properties Diagram](./images/tree-properties.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-green?style=for-the-badge" alt="Difficulty">
