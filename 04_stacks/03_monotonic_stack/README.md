@@ -409,8 +409,6 @@ def sumSubarrayMins(arr: list[int]) -> int:
 
 ---
 
----
-
 ## 📊 Pattern Selection Guide
 
 ```
