@@ -36,7 +36,7 @@ permalink: /30_number_theory/06_chinese_remainder/02_general_crt/
 
 <div align="center">
 
-![General CRT](./images/general_crt.svg)
+![General CRT](./images/general_crt.png)
 
 </div>
 
