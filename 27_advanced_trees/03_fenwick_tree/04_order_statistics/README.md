@@ -11,20 +11,16 @@ permalink: /27_advanced_trees/03_fenwick_tree/04_order_statistics/
 
 # 📈 Order Statistics with BIT
 
+### *Order Statistics with BIT*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-5-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. 2D BIT](../03_2d_bit/README.md) | **04. Order Statistics** | [05. DP with BIT →](../05_dp_with_bit/README.md) |
 
 ---
 
@@ -47,6 +43,15 @@ permalink: /27_advanced_trees/03_fenwick_tree/04_order_statistics/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 03. 2D BIT](../03_2d_bit/README.md) | **04. Order Statistics** | [05. DP with BIT →](../05_dp_with_bit/README.md) |
+
+---
+
 ## 📐 Core Concept
 
 **Order Statistics:** Find k-th smallest/largest element dynamically.
@@ -117,10 +122,3 @@ def kEmptySlots(bulbs: List[int], k: int) -> int:
 | - | Count Elements in Range | Hard |
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. 2D BIT](../03_2d_bit/README.md) | **04. Order Statistics** | [05. DP with BIT →](../05_dp_with_bit/README.md) |
-
