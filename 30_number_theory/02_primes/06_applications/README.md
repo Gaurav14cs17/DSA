@@ -32,6 +32,16 @@ permalink: /30_number_theory/02_primes/06_applications/
 
 ---
 
+## 📊 Visual Diagram
+
+<div align="center">
+
+![Miller-Rabin Primality Test](./images/miller_rabin.png)
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Multiplicative Functions
@@ -79,16 +89,6 @@ If $g(n) = \sum_{d|n} f(d)$, then $f(n) = \sum_{d|n} \mu(d) \cdot g(n/d)$
 - $\sum_{d|n} \phi(d) = n$
 
 - $a^{\phi(n)} \equiv 1 \pmod{n}$ if $\gcd(a,n) = 1$ (Euler's theorem)
-
----
-
-## 📊 Visual Diagram
-
-<div align="center">
-
-![Miller-Rabin Primality Test](./images/miller_rabin.png)
-
-</div>
 
 ---
 
@@ -482,25 +482,6 @@ def count_with_k_distinct_primes(n: int, k: int) -> int:
 
 ---
 
-## 🏆 LeetCode Problems
-
-### 🟡 Medium
-
-| # | Problem | Key Concept | Time |
-|:-:|---------|-------------|------|
-| 204 | [Count Primes](https://leetcode.com/problems/count-primes/) | Sieve | O(n log log n) |
-| 2183 | [Count Pairs Divisible by K](https://leetcode.com/problems/count-array-pairs-divisible-by-k/) | GCD + factorization | O(n√K) |
-| 2507 | [Smallest Value After Replacing](https://leetcode.com/problems/smallest-value-after-replacing-with-sum-of-prime-factors/) | Prime factorization | O(√n log n) |
-
-### 🔴 Hard
-
-| # | Problem | Key Concept | Time |
-|:-:|---------|-------------|------|
-| 952 | [Largest Component Size by Common Factor](https://leetcode.com/problems/largest-component-size-by-common-factor/) | Union-Find + factorization | O(n√m) |
-| 1819 | [Number of Different Subsequences GCDs](https://leetcode.com/problems/number-of-different-subsequences-gcds/) | GCD properties | O(n log n) |
-
----
-
 ## 💻 Competition Problem Patterns
 
 ### Pattern 1: Factor-Based Grouping
@@ -599,6 +580,25 @@ def compute_multiplicative(n: int, prime_val, combine):
     return result
 
 ```
+
+---
+
+## 🏆 LeetCode Problems
+
+### 🟡 Medium
+
+| # | Problem | Key Concept | Time |
+|:-:|---------|-------------|------|
+| 204 | [Count Primes](https://leetcode.com/problems/count-primes/) | Sieve | O(n log log n) |
+| 2183 | [Count Pairs Divisible by K](https://leetcode.com/problems/count-array-pairs-divisible-by-k/) | GCD + factorization | O(n√K) |
+| 2507 | [Smallest Value After Replacing](https://leetcode.com/problems/smallest-value-after-replacing-with-sum-of-prime-factors/) | Prime factorization | O(√n log n) |
+
+### 🔴 Hard
+
+| # | Problem | Key Concept | Time |
+|:-:|---------|-------------|------|
+| 952 | [Largest Component Size by Common Factor](https://leetcode.com/problems/largest-component-size-by-common-factor/) | Union-Find + factorization | O(n√m) |
+| 1819 | [Number of Different Subsequences GCDs](https://leetcode.com/problems/number-of-different-subsequences-gcds/) | GCD properties | O(n log n) |
 
 ---
 
