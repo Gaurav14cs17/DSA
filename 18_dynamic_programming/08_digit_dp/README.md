@@ -10,12 +10,37 @@ permalink: /18_dynamic_programming/08_digit_dp/
 
 # 🔢 Digit DP
 
+### *🔢 Digit DP*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-6+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+  <img src="images/digit-dp.png" alt="Digit DP Visualization" width="100%">
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🔢 Digit DP |
+| **Difficulty** | Hard |
+| **Problems** | 6+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -27,16 +52,7 @@ permalink: /18_dynamic_programming/08_digit_dp/
 
 ---
 
-## 📊 Visual Guide
-
-<div align="center">
-  <img src="images/digit-dp.png" alt="Digit DP Visualization" width="100%">
-</div>
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Digit DP Pattern
 
 Count numbers in range $[0, N]$ satisfying property:
@@ -251,9 +267,3 @@ def count(n: int) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
-|:------------|:----------:|--------:|
-| [← 07. Bitmask DP](../07_bitmask_dp/README.md) | **08. Digit DP** | [🏠 DP Home](../README.md) → [Greedy](../../19_greedy_algorithms/README.md) |
