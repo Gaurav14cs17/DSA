@@ -10,6 +10,10 @@ permalink: /10_graphs/07_mst/
 
 # 🌲 Minimum Spanning Tree
 
+### *🌲 Minimum Spanning Tree*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-5+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +23,7 @@ permalink: /10_graphs/07_mst/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
-|:------------|:----------:|--------:|
-| [← 06. Cycle Detection](../06_cycle_detection/README.md) | **07. MST** | [🏠 Graphs Home](../README.md) → [Tries](../../11_tries/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -39,8 +35,28 @@ permalink: /10_graphs/07_mst/
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **Topic** | 🌲 Minimum Spanning Tree |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 5+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
+|:------------|:----------:|--------:|
+| [← 06. Cycle Detection](../06_cycle_detection/README.md) | **07. MST** | [🏠 Graphs Home](../README.md) → [Tries](../../11_tries/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ MST Definition
 
 **Spanning Tree:** Subgraph that connects all vertices with minimum edges.
@@ -280,9 +296,3 @@ MST Problem
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
-|:------------|:----------:|--------:|
-| [← 06. Cycle Detection](../06_cycle_detection/README.md) | **07. MST** | [🏠 Graphs Home](../README.md) → [Tries](../../11_tries/README.md) |
