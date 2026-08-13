@@ -37,7 +37,7 @@ permalink: /30_number_theory/05_euler_totient/01_basic_totient/
 
 <div align="center">
 
-![Euler's Totient](./images/euler_totient.svg)
+![Euler's Totient](./images/euler_totient.png)
 
 </div>
 
