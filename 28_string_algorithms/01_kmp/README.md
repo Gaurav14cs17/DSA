@@ -8,21 +8,29 @@ has_children: true
 
 # 🔍 KMP Algorithm (Knuth-Morris-Pratt)
 
+### *The **Knuth-Morris-Pratt (KMP)** algorithm is a linear-time string matching algorithm that uses a preprocessing step to avoid redundant comparisons.*
+
+
 ## 📊 Visual Overview
 
 ![KMP Algorithm](./images/kmp-algorithm.png)
 
-## 📊 Metadata
+*KMP Algorithm*
 
-- **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+---
 
-- **Time Complexity:** O(n + m)
+## 🎯 At a Glance
 
-- **Space Complexity:** O(m)
+| | |
+|:---|:---|
+| **In one line** | The **Knuth-Morris-Pratt (KMP)** algorithm is a linear-time string matching algorithm that uses a preprocessing step to avoid redundant comparisons. |
+| **Typical time** | O(n + m) |
+| **Typical space** | O(m) |
+| **Topics** | String Matching, Pattern Preprocessing, Failure Function |
+| **Prerequisites** | String basics, Arrays, Prefix analysis |
 
-- **Topics:** String Matching, Pattern Preprocessing, Failure Function
-
-- **Prerequisites:** String basics, Arrays, Prefix analysis
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
