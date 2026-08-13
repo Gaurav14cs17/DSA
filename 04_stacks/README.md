@@ -10,7 +10,6 @@ permalink: /04_stacks/
 
 # 📚 Stacks
 
-![Stacks Overview](./images/stack-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -25,6 +24,17 @@ permalink: /04_stacks/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Stacks Overview](./images/stack-overview.png)
+
+</div>
+
+---
+
 
 ## 📐 Mathematical Foundation
 
