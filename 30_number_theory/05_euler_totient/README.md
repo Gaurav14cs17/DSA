@@ -26,6 +26,25 @@ permalink: /30_number_theory/05_euler_totient/
 
 ---
 
+## 📊 Visual Overview
+
+> *Concept map and key formulas — dive into subtopics for detailed walkthroughs and code.*
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Counting Numbers Coprime to n |
+| **Difficulty** | Medium |
+| **Problems** | 15+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -34,8 +53,7 @@ permalink: /30_number_theory/05_euler_totient/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Definition
 
 **Euler's Totient Function:** $\phi(n)$ = count of integers from 1 to n that are coprime to n.
@@ -152,10 +170,3 @@ def phi_sum_over_divisors(n: int) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Divisors](../04_divisors/README.md) | **05. Euler Totient** | [06. Chinese Remainder →](../06_chinese_remainder/README.md) |
-
