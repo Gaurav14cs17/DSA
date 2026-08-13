@@ -43,7 +43,7 @@ Modular arithmetic appears in **30%+ of competitive programming problems**. This
 
 <div align="center">
 
-![Modular Applications](./images/modular_applications.svg)
+![Modular Applications](./images/modular_applications.png)
 
 </div>
 
