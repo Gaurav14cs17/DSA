@@ -25,7 +25,7 @@ permalink: /04_stacks/01_basic_stack/
 
 ### 📥 LIFO - Last In, First Out
 
-<img src="./images/lifo_concept.svg" alt="LIFO Concept" width="800"/>
+<img src="./images/lifo_concept.png" alt="LIFO Concept" width="800"/>
 
 *The fundamental property of stacks: elements are removed in reverse order of insertion*
 
@@ -33,7 +33,7 @@ permalink: /04_stacks/01_basic_stack/
 
 ### ⚙️ Stack Operations
 
-<img src="./images/stack_operations.svg" alt="Stack Operations" width="850"/>
+<img src="./images/stack_operations.png" alt="Stack Operations" width="850"/>
 
 *All core operations: push(), pop(), peek(), isEmpty(), size() - each O(1)*
 
@@ -41,7 +41,7 @@ permalink: /04_stacks/01_basic_stack/
 
 ### 📊 Min Stack Design
 
-<img src="./images/min_stack.svg" alt="Min Stack" width="850"/>
+<img src="./images/min_stack.png" alt="Min Stack" width="850"/>
 
 *O(1) getMin() by storing (value, min) pairs - LeetCode #155*
 
@@ -49,7 +49,7 @@ permalink: /04_stacks/01_basic_stack/
 
 ### 🔄 Queue Using Two Stacks
 
-<img src="./images/two_stacks_queue.svg" alt="Two Stacks Queue" width="850"/>
+<img src="./images/two_stacks_queue.png" alt="Two Stacks Queue" width="850"/>
 
 *Amortized O(1) enqueue/dequeue using input and output stacks - LeetCode #232*
 
