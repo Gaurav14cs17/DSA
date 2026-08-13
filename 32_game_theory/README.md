@@ -10,7 +10,7 @@ permalink: /32_game_theory/
 
 # 🎮 Game Theory
 
-![Game Theory Overview](./images/game-theory-overview.svg)
+![Game Theory Overview](./images/game-theory-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
@@ -29,7 +29,7 @@ permalink: /32_game_theory/
 ## 🎨 Visual Overview
 
 <p align="center">
-  <img src="./images/game-theory.svg" alt="Game Theory Overview" width="100%">
+  <img src="./images/game-theory-overview.png" alt="Game Theory Overview" width="100%">
 </p>
 
 ---
