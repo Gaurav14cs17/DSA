@@ -8,17 +8,28 @@ nav_order: 4
 
 # 🛡️ Collision Handling in Rabin-Karp
 
+### *9 + 7
+        self.MOD2 = 10*
+
+
 ## 📊 Visual Overview
 
 ![Collision Handling](./images/collision-handling.png)
 
-## 📊 Metadata
+*Collision Handling*
 
-- **Difficulty:** ![Medium-Hard](https://img.shields.io/badge/Medium--Hard-red)
+---
 
-- **Collision Probability:** ~1/M single hash, ~1/(M₁·M₂) double hash
+## 🎯 At a Glance
 
-- **Topics:** Hash Collisions, Double Hashing, Probabilistic Algorithms
+| | |
+|:---|:---|
+| **In one line** | 9 + 7
+        self.MOD2 = 10 |
+| **Topics** | Hash Collisions, Double Hashing, Probabilistic Algorithms |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
