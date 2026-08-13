@@ -290,8 +290,6 @@ class MyStack:
 
 ---
 
----
-
 ## 💡 Pattern Recognition Guide
 
 | Problem Keywords | Pattern | Example |
