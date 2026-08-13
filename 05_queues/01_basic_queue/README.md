@@ -10,6 +10,8 @@ permalink: /05_queues/01_basic_queue/
 
 # 📬 Basic Queue Operations
 
+### *📬 Basic Queue Operations*
+
 
 
 <p>
@@ -407,19 +409,6 @@ A: Array (circular) for fixed max size and cache locality. Linked list for unbou
 </div>
 
 ---
-
----
-
-## 🎯 At a Glance
-
-| | |
-|:---|:---|
-| **Topic** | 📬 Basic Queue Operations |
-| **Difficulty** | Easy |
-| **Problems** | 8+ |
-
-{: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
