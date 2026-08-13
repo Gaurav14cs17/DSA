@@ -10,6 +10,8 @@ permalink: /26_sweep_line/
 
 # 📏 Sweep Line Algorithm
 
+### *Process events by sweeping through coordinates*
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
@@ -31,11 +33,25 @@ permalink: /26_sweep_line/
 
 ![Sweep Line Overview](./images/sweep-line-overview.png)
 
+*Sweep Line Overview*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **In one line** | Process events by sweeping through coordinates |
+| **Difficulty** | Medium to Hard |
+| **Subtopics** | 6 |
+| **Problems** | 45+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📋 Overview
 
 Sweep line processes **events sorted by coordinates**. Imagine a vertical line sweeping left to right, processing start/end points of intervals.
