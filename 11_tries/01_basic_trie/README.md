@@ -10,7 +10,7 @@ permalink: /11_tries/01_basic_trie/
 
 # 📦 Basic Trie Operations
 
-![Basic Trie Operations](./image/basic_trie.svg)
+![Basic Trie Operations](./image/basic_trie.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
