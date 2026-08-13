@@ -11,6 +11,8 @@ permalink: /30_number_theory/05_euler_totient/03_euler_theorem/
 
 # 🔐 Euler's Theorem
 
+### *The Foundation of Modern Cryptography*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Applications-RSA_Cryptography-red?style=for-the-badge" alt="Applications">
@@ -38,10 +40,23 @@ permalink: /30_number_theory/05_euler_totient/03_euler_theorem/
 
 ![Euler's Theorem Application](./images/euler_theorem_app.png)
 
+*Euler's Theorem Application*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | The Foundation of Modern Cryptography |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 The Theorem
 
 ### Statement
