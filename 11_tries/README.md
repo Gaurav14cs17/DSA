@@ -10,7 +10,6 @@ permalink: /11_tries/
 
 # 🌳 Tries (Prefix Trees)
 
-![Tries Overview](./images/trie-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -25,6 +24,17 @@ permalink: /11_tries/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Tries Overview](./images/trie-overview.png)
+
+</div>
+
+---
+
 
 ## 📐 Mathematical Foundation
 
