@@ -32,8 +32,6 @@ permalink: /07_trees/01_tree_traversal/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -414,8 +412,6 @@ def morrisInorder(root: TreeNode) -> list[int]:
 | 314 | [Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/) | BFS + Column | O(n) | O(n) |
 | 429 | [N-ary Tree Level Order](https://leetcode.com/problems/n-ary-tree-level-order-traversal/) | BFS | O(n) | O(w) |
 | 987 | [Vertical Order Traversal](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/) | DFS + Sort | O(n log n) | O(n) |
-
----
 
 ---
 
