@@ -10,6 +10,8 @@ permalink: /04_stacks/03_monotonic_stack/
 
 # 📈 Monotonic Stack
 
+### *📈 Monotonic Stack*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-12+-blue?style=for-the-badge" alt="Problems">
@@ -19,7 +21,7 @@ permalink: /04_stacks/03_monotonic_stack/
 
 ---
 
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -57,6 +59,88 @@ permalink: /04_stacks/03_monotonic_stack/
 
 ---
 
+---
+
+## 📊 Visual Overview
+
+### Next Greater Element (#496)
+
+```
+Array: [2, 1, 2, 4, 3]
+
+Step-by-step (Decreasing Stack):
+i   nums[i]  Action          Stack      Result
+0     2      Push            [0]        [-1,-1,-1,-1,-1]
+1     1      Push (1<2)      [0,1]      [-1,-1,-1,-1,-1]
+2     2      Pop 1, Push     [0,2]      [-1,2,-1,-1,-1]
+3     4      Pop 2,0, Push   [3]        [4,2,4,-1,-1]
+4     3      Push (3<4)      [3,4]      [4,2,4,-1,-1]
+
+Final: [4, 2, 4, -1, -1]
+
+```
+
+### Daily Temperatures (#739)
+
+```
+Temps: [73, 74, 75, 71, 69, 72, 76, 73]
+
+Decreasing stack (indices):
+i  T[i]  Stack       Action              Result
+0   73   [0]         Push                [0,0,0,0,0,0,0,0]
+1   74   [1]         Pop 0 (73<74)       [1,0,0,0,0,0,0,0]
+2   75   [2]         Pop 1 (74<75)       [1,1,0,0,0,0,0,0]
+3   71   [2,3]       Push (71<75)        [1,1,0,0,0,0,0,0]
+4   69   [2,3,4]     Push (69<71)        [1,1,0,0,0,0,0,0]
+5   72   [2,5]       Pop 4,3 (71<72)     [1,1,0,2,1,0,0,0]
+6   76   [6]         Pop all (72,75<76)  [1,1,4,2,1,1,0,0]
+7   73   [6,7]       Push (73<76)        [1,1,4,2,1,1,0,0]
+
+Final: [1, 1, 4, 2, 1, 1, 0, 0]
+
+```
+
+### Largest Rectangle (#84)
+
+```
+Heights: [2, 1, 5, 6, 2, 3]
+
+Increasing stack approach:
+i  h[i]  Stack       Action              Max Area
+0   2    [0]         Push                0
+1   1    [1]         Pop 0, Push         2×1=2
+2   5    [1,2]       Push                2
+3   6    [1,2,3]     Push                2
+4   2    [1,4]       Pop 3,2, Push       10
+                     h=6, w=1 → 6
+                     h=5, w=2 → 10 ✓
+5   3    [1,4,5]     Push                10
+End      []          Pop all             10
+                     h=3, w=1 → 3
+                     h=2, w=4 → 8
+                     h=1, w=6 → 6
+
+Maximum: 10
+
+```
+
+---
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 📈 Monotonic Stack |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 12+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -65,8 +149,9 @@ permalink: /04_stacks/03_monotonic_stack/
 
 ---
 
-## 📐 Mathematical Foundations
+---
 
+## 📐 Mathematical Foundation
 ### 1️⃣ Monotonic Stack Definition
 
 **Monotonically Decreasing Stack:**
@@ -177,71 +262,7 @@ $$\text{water}[i] = \min(\max_{j \leq i} h[j], \max_{j \geq i} h[j]) - h[i]$$
 
 ---
 
-## 🎨 Visual Algorithm Walkthrough
-
-### Next Greater Element (#496)
-
-```
-Array: [2, 1, 2, 4, 3]
-
-Step-by-step (Decreasing Stack):
-i   nums[i]  Action          Stack      Result
-0     2      Push            [0]        [-1,-1,-1,-1,-1]
-1     1      Push (1<2)      [0,1]      [-1,-1,-1,-1,-1]
-2     2      Pop 1, Push     [0,2]      [-1,2,-1,-1,-1]
-3     4      Pop 2,0, Push   [3]        [4,2,4,-1,-1]
-4     3      Push (3<4)      [3,4]      [4,2,4,-1,-1]
-
-Final: [4, 2, 4, -1, -1]
-
-```
-
-### Daily Temperatures (#739)
-
-```
-Temps: [73, 74, 75, 71, 69, 72, 76, 73]
-
-Decreasing stack (indices):
-i  T[i]  Stack       Action              Result
-0   73   [0]         Push                [0,0,0,0,0,0,0,0]
-1   74   [1]         Pop 0 (73<74)       [1,0,0,0,0,0,0,0]
-2   75   [2]         Pop 1 (74<75)       [1,1,0,0,0,0,0,0]
-3   71   [2,3]       Push (71<75)        [1,1,0,0,0,0,0,0]
-4   69   [2,3,4]     Push (69<71)        [1,1,0,0,0,0,0,0]
-5   72   [2,5]       Pop 4,3 (71<72)     [1,1,0,2,1,0,0,0]
-6   76   [6]         Pop all (72,75<76)  [1,1,4,2,1,1,0,0]
-7   73   [6,7]       Push (73<76)        [1,1,4,2,1,1,0,0]
-
-Final: [1, 1, 4, 2, 1, 1, 0, 0]
-
-```
-
-### Largest Rectangle (#84)
-
-```
-Heights: [2, 1, 5, 6, 2, 3]
-
-Increasing stack approach:
-i  h[i]  Stack       Action              Max Area
-0   2    [0]         Push                0
-1   1    [1]         Pop 0, Push         2×1=2
-2   5    [1,2]       Push                2
-3   6    [1,2,3]     Push                2
-4   2    [1,4]       Pop 3,2, Push       10
-                     h=6, w=1 → 6
-                     h=5, w=2 → 10 ✓
-5   3    [1,4,5]     Push                10
-End      []          Pop all             10
-                     h=3, w=1 → 3
-                     h=2, w=4 → 8
-                     h=1, w=6 → 6
-
-Maximum: 10
-
-```
-
 ---
-
 
 ## 💻 Code Implementations
 
@@ -378,6 +399,8 @@ def sumSubarrayMins(arr: list[int]) -> int:
 
 ---
 
+---
+
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
@@ -409,6 +432,8 @@ def sumSubarrayMins(arr: list[int]) -> int:
 
 ---
 
+---
+
 ## 📊 Pattern Selection Guide
 
 ```
@@ -436,6 +461,8 @@ Area/Water problems?
 
 ---
 
+---
+
 ## 💡 Pattern Recognition Guide
 
 | Problem Keywords | Pattern | Stack Type | Example |
@@ -448,6 +475,8 @@ Area/Water problems?
 | "sum of minimums" | Contribution | Both | #907 |
 | "remove k digits" | Keep small | Increasing | #402 |
 | "remove duplicates" | Lexicographic | Increasing | #316 |
+
+---
 
 ---
 
@@ -504,6 +533,8 @@ Area/Water problems?
 
 ---
 
+---
+
 ## 💡 Pro Tips
 
 > **🎯 Monotonic Stack Rule:** Decreasing for "next greater", increasing for "next smaller". Opposite for "previous".
@@ -515,6 +546,8 @@ Area/Water problems?
 > **📊 Histogram Trick:** For each bar, find left/right boundaries where height drops. That's your rectangle width!
 
 > **🌊 Water Trapping:** When you find higher bar, water gets trapped between current and stack top. Calculate immediately!
+
+---
 
 ---
 
@@ -548,6 +581,8 @@ Area/Water problems?
 
 ---
 
+---
+
 ## ❓ Interview Q&A
 
 **Q: When to use decreasing vs increasing stack?**  
@@ -564,6 +599,8 @@ A: For each element, count how many subarrays it affects. Multiply element × le
 
 **Q: Can two pointers replace monotonic stack?**  
 A: Sometimes! For trapping water, two pointers is O(1) space. But stack is more intuitive.
+
+---
 
 ---
 
@@ -588,9 +625,3 @@ A: Sometimes! For trapping water, two pointers is O(1) space. But stack is more 
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. Parentheses](../02_parentheses/README.md) | **03. Monotonic Stack** | [04. Expression Evaluation →](../04_expression_evaluation/README.md) |
