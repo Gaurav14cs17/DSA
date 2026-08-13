@@ -28,6 +28,16 @@ Modular arithmetic is "clock arithmetic" where numbers wrap around upon reaching
 
 ---
 
+## 📊 Visual Diagram
+
+<div align="center">
+
+![Modular Operations](./images/modular_operations.png)
+
+</div>
+
+---
+
 ## 📐 Core Concepts
 
 ### Congruence
@@ -50,16 +60,6 @@ a ≡ b (mod m) ⟺ a mod m = b mod m
 25 ≡ 0 (mod 5)    because 25 - 0 = 25
 
 ```
-
----
-
-## 📊 Visual Diagram
-
-<div align="center">
-
-![Modular Operations](./images/modular_operations.png)
-
-</div>
 
 ---
 
