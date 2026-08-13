@@ -36,6 +36,17 @@ permalink: /27_advanced_trees/03_fenwick_tree/01_basic_bit/
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Medium |
+| **Problems** | 6 |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Core Concepts
 
 ### Point Update + Range Query
