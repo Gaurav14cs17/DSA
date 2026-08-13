@@ -7,23 +7,28 @@ nav_order: 4
 
 # 📍 Point Location Problems
 
-## 📊 Metadata
+### *Point location determines spatial relationships: Is a point inside, outside, or on the boundary of a geometric region?.*
 
-- **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
-
-- **Time Complexity:** O(n) for point in polygon
-
-- **Space Complexity:** O(1)
-
-- **Topics:** Ray Casting, Winding Number, Point in Triangle
-
----
 
 ## 📊 Visual Overview
 
 ![Point Location](./images/point-location.png)
 
 *Ray casting and winding number algorithms for point-in-polygon tests*
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Point location determines spatial relationships: Is a point inside, outside, or on the boundary of a geometric region?. |
+| **Typical time** | O(n) for point in polygon |
+| **Typical space** | O(1) |
+| **Topics** | Ray Casting, Winding Number, Point in Triangle |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
