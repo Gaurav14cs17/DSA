@@ -63,7 +63,7 @@ $$\text{pairs to consider} \leq 2k$$
 
 <div align="center">
 
-![Merge K Streams](./image/merge_k_streams.svg)
+![Merge K Streams](./image/merge_k_streams.png)
 
 </div>
 
