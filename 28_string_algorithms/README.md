@@ -10,7 +10,7 @@ permalink: /28_string_algorithms/
 
 # 🔤 String Algorithms
 
-![String Algorithms Overview](./images/string-algo-overview.svg)
+![String Algorithms Overview](./images/string-algo-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
@@ -24,7 +24,7 @@ permalink: /28_string_algorithms/
 
 ## 📊 Visual Overview
 
-![String Algorithms Overview](./01_kmp/01_basic_pattern_matching/images/basic-pattern-matching.svg)
+![String Algorithms Overview](./01_kmp/01_basic_pattern_matching/images/basic-pattern-matching.png)
 
 ---
 
