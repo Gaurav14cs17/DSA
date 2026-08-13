@@ -10,6 +10,8 @@ permalink: /03_linked_lists/02_reversal/
 
 # 🔄 Linked List Reversal
 
+### *🔄 Linked List Reversal*
+
 
 
 <p>
@@ -915,19 +917,6 @@ for _ in range(right - left):
 </div>
 
 ---
-
----
-
-## 🎯 At a Glance
-
-| | |
-|:---|:---|
-| **Topic** | 🔄 Linked List Reversal |
-| **Difficulty** | Easy to Hard |
-| **Problems** | 12+ |
-
-{: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
