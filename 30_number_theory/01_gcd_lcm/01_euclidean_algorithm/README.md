@@ -32,6 +32,20 @@ permalink: /30_number_theory/01_gcd_lcm/01_euclidean_algorithm/
 
 ---
 
+## 📊 Visual Diagrams
+
+<div align="center">
+
+### Algorithm Visualization
+![Euclidean Algorithm](./images/euclidean_algorithm.png)
+
+### Geometric Interpretation
+![Geometric GCD](./images/geometric_gcd.png)
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ The Fundamental Theorem
@@ -115,20 +129,6 @@ gcd(F₇, F₆) = gcd(13, 8):
 5 steps for F₆ = 8 ✓
 
 ```
-
----
-
-## 📊 Visual Diagrams
-
-<div align="center">
-
-### Algorithm Visualization
-![Euclidean Algorithm](./images/euclidean_algorithm.png)
-
-### Geometric Interpretation
-![Geometric GCD](./images/geometric_gcd.png)
-
-</div>
 
 ---
 
