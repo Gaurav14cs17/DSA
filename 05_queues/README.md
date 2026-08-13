@@ -10,6 +10,8 @@ permalink: /05_queues/
 
 # 📬 Queues
 
+### *First In, First Out (FIFO) - Essential for BFS and level-order traversal*
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -31,11 +33,27 @@ permalink: /05_queues/
 
 ![Queues Overview](./images/queue-overview.png)
 
+*Queues Overview*
+
 </div>
 
 ---
 
+---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | First In, First Out (FIFO) - Essential for BFS and level-order traversal |
+| **Difficulty** | Medium |
+| **Subtopics** | 3 |
+| **Problems** | 25+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ Queue Definition (Abstract Data Type)
