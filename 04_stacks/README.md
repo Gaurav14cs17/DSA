@@ -39,8 +39,6 @@ permalink: /04_stacks/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -296,8 +294,6 @@ Parentheses   Monotonic Stack   Shunting-Yard
  Pop to match  Inc for NSE    + operand stack
 
 ```
-
----
 
 ---
 
