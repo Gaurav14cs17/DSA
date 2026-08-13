@@ -122,9 +122,7 @@ permalink: /29_computational_geometry/
 
 ---
 
-## 📊 Visual Overview
-
-![Computational Geometry](./02_convex_hull/images/convex-hull.png)
+## 🎨 Convex Hull Preview
 
 *Overview of computational geometry concepts and algorithms*
 
