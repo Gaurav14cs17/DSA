@@ -5,11 +5,18 @@ parent: "Rabin-Karp Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 6
 ---
+<div align="center">
 
 # 🚀 Advanced Applications of Rabin-Karp
 
-## 📊 Visual Overview
+### *Advanced Applications of Rabin-Karp*
 
+
+</div>
+
+---
+
+## 📊 Visual Overview
 ![Advanced Applications](./images/advanced-applications.png)
 
 *Advanced Applications*
@@ -24,6 +31,14 @@ nav_order: 6
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Substring Problems](../05_substring_problems/README.md) | **Advanced Applications** | [🏠 Rabin-Karp Home](../README.md) |
 
 ---
 
@@ -407,4 +422,3 @@ def minhash_similarity(doc1, doc2, num_hashes=100):
 ---
 
 **Navigation:** [← Substring Problems](../05_substring_problems/) | [Rabin-Karp Overview](../README.md) | [String Algorithms](../../README.md)
-
