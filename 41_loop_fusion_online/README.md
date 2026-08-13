@@ -10,7 +10,7 @@ permalink: /41_loop_fusion_online/
 
 # 🔄 Loop Fusion & Online Algorithms
 
-![Loop Fusion Overview](./images/loop-fusion-overview.svg)
+![Loop Fusion Overview](./images/loop-fusion-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
