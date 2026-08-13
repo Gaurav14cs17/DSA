@@ -8,28 +8,29 @@ nav_order: 3
 
 # ⚡ Fast Modular Exponentiation
 
-## 📊 Metadata
-
-- **Difficulty:** ![Easy-Medium](https://img.shields.io/badge/Easy--Medium-yellow)
-
-- **Time Complexity:** O(log n)
-
-- **Space Complexity:** O(1) iterative, O(log n) recursive
-
-- **Pattern:** Divide and Conquer, Binary Representation
-
----
-
 ## 📊 Visual Diagram
 
 <div align="center">
 
 ![Fast Exponentiation](./images/fast_exponentiation.png)
 
+*Fast Exponentiation*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Typical time** | O(log n) |
+| **Typical space** | O(1) iterative, O(log n) recursive |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🎯 Overview
 
 **Fast Exponentiation** (also called **Binary Exponentiation** or **Exponentiation by Squaring**) computes a^n in O(log n) time instead of O(n).
