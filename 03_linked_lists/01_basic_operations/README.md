@@ -32,19 +32,19 @@ permalink: /03_linked_lists/01_basic_operations/
 <div align="center">
 
 ### Linked List Node Structure
-![Node Structure](./images/node-structure.svg)
+![Node Structure](./images/node-structure.png)
 
 ### Linked List Node (Alternate)
-![Linked List Node](./images/linked-list-node.svg)
+![Linked List Node](./images/linked-list-node.png)
 
 ### Floyd's Cycle Detection
-![Floyd's Cycle Detection](./images/floyds-cycle-detection.svg)
+![Floyd's Cycle Detection](./images/floyds-cycle-detection.png)
 
 ### Fast-Slow Pointer (Find Middle)
-![Fast Slow Middle](./images/fast-slow-middle.svg)
+![Fast Slow Middle](./images/fast-slow-middle.png)
 
 ### Intersection of Two Lists
-![Intersection](./images/intersection-two-lists.svg)
+![Intersection](./images/intersection-two-lists.png)
 
 </div>
 
