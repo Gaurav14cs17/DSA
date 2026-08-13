@@ -10,6 +10,8 @@ permalink: /10_graphs/08_implicit_graphs/
 
 # 🎭 Implicit Graph Problems
 
+### *Where Problems Never Say "Graph" But Relationships Create One*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-120+-blue?style=for-the-badge" alt="Problems">
