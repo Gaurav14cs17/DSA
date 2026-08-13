@@ -50,11 +50,11 @@ permalink: /23_sliding_window/03_string_window/
 
 <div align="center">
 
-![Minimum Window Substring](./images/minimum-window-substring.svg)
+![Minimum Window Substring](./images/minimum-window-substring.png)
 
 *The classic "Have vs Need" pattern for minimum window problems*
 
-![Anagram Detection](./images/anagram-detection.svg)
+![Anagram Detection](./images/anagram-detection.png)
 
 *Fixed window character frequency matching*
 
