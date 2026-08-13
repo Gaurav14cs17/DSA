@@ -7,21 +7,29 @@ nav_order: 6
 
 # 🔀 Aho-Corasick Algorithm
 
+### *The **Aho-Corasick** algorithm efficiently finds all occurrences of multiple patterns in a text simultaneously.*
+
+
 ## 📊 Visual Overview
 
 ![Aho-Corasick Algorithm](./images/aho-corasick.png)
 
-## 📊 Metadata
+*Aho-Corasick Algorithm*
 
-- **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
+---
 
-- **Time Complexity:** O(n + m + k) where k = matches
+## 🎯 At a Glance
 
-- **Space Complexity:** O(m · σ) where σ = alphabet size
+| | |
+|:---|:---|
+| **In one line** | The **Aho-Corasick** algorithm efficiently finds all occurrences of multiple patterns in a text simultaneously. |
+| **Typical time** | O(n + m + k) where k = matches |
+| **Typical space** | O(m · σ) where σ = alphabet size |
+| **Topics** | Trie, Automaton, Multiple Pattern Matching |
+| **Prerequisites** | Trie, BFS, KMP failure function |
 
-- **Topics:** Trie, Automaton, Multiple Pattern Matching
-
-- **Prerequisites:** Trie, BFS, KMP failure function
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
