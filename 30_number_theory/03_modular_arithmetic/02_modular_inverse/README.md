@@ -5,10 +5,21 @@ parent: "Modular Arithmetic"
 grand_parent: "Number Theory"
 nav_order: 2
 ---
+<div align="center">
 
 # 🔄 Modular Inverse
 
-## 📊 Visual Diagram
+### *Modular Inverse*
+
+<p><img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty"></p>
+
+[🏠 Modular Arithmetic](../README.md)
+
+</div>
+
+---
+
+view
 
 <div align="center">
 
@@ -23,7 +34,8 @@ nav_order: 2
 ## 🎯 At a Glance
 
 | | |
-|:---|:---|
+|:---| **Topic** | Modular Inverse |
+|:---|
 | **Typical time** | O(log m) |
 | **Typical space** | O(1) iterative, O(log m) recursive |
 
@@ -31,6 +43,15 @@ nav_order: 2
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Basic Modular Operations](../01_basic_operations/README.md) | **02. Modular Inverse** | [Fast Exponentiation →](../03_fast_exponentiation/README.md) |
+
+---
+
 ## 🎯 Overview
 
 The **modular inverse** of a modulo m is an integer x such that:
@@ -343,4 +364,3 @@ pow(a, -1, m)  # Returns a⁻¹ mod m
 ---
 
 **Navigation:** [← Basic Operations](../01_basic_operations/) | [Fast Exponentiation →](../03_fast_exponentiation/)
-
