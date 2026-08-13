@@ -34,7 +34,7 @@ permalink: /30_number_theory/04_divisors/06_applications/
 
 <div align="center">
 
-![Divisor Applications](./images/divisor_applications.svg)
+![Divisor Applications](./images/divisor_applications.png)
 
 </div>
 
