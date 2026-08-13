@@ -10,12 +10,37 @@ permalink: /18_dynamic_programming/04_string_dp/
 
 # 🔤 String DP
 
+### *🔤 String DP*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-12+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+  <img src="images/string-dp.png" alt="String DP Visualization" width="100%">
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🔤 String DP |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 12+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -27,16 +52,7 @@ permalink: /18_dynamic_programming/04_string_dp/
 
 ---
 
-## 📊 Visual Guide
-
-<div align="center">
-  <img src="images/string-dp.png" alt="String DP Visualization" width="100%">
-</div>
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Edit Distance
 
 $$dp[i][j] = \begin{cases}
@@ -193,9 +209,3 @@ def numDistinct(s: str, t: str) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Knapsack](../03_knapsack/README.md) | **04. String DP** | [05. Tree DP →](../05_tree_dp/README.md) |
