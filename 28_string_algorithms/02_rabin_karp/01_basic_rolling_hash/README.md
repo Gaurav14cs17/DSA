@@ -5,14 +5,22 @@ parent: "Rabin-Karp Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 1
 ---
+<div align="center">
 
 # 🎲 Basic Rolling Hash
+
+### *Rolling hash is the core technique enabling efficient string comparison.*
+
+
 
 ### ***Rolling hash** is the core technique enabling efficient string comparison.*
 
 
-## 📊 Visual Overview
+</div>
 
+---
+
+## 📊 Visual Overview
 ![Basic Rolling Hash](./images/basic-rolling-hash.png)
 
 *Basic Rolling Hash*
@@ -29,6 +37,14 @@ nav_order: 1
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [🏠 Rabin-Karp Home](../README.md) | **Basic Rolling Hash** | [Single Pattern →](../02_single_pattern/README.md) |
 
 ---
 
@@ -609,4 +625,3 @@ P ≈ 2600 / 10^9 ≈ 2.6 × 10^-6 (very low!)
 ---
 
 **Navigation:** [← Rabin-Karp Overview](../README.md) | [Next: Single Pattern →](../02_single_pattern/)
-
