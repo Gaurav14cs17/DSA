@@ -10,20 +10,16 @@ permalink: /27_advanced_trees/04_splay_trees/
 
 # 🔄 Splay Trees
 
+### *Splay Trees*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-6-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Fenwick Tree](../03_fenwick_tree/README.md) | **04. Splay Trees** | [05. B-Trees →](../05_b_trees/README.md) |
 
 ---
 
@@ -46,8 +42,16 @@ permalink: /27_advanced_trees/04_splay_trees/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 📐 Mathematical Foundations
 
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 03. Fenwick Tree](../03_fenwick_tree/README.md) | **04. Splay Trees** | [05. B-Trees →](../05_b_trees/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Splay Tree Definition
 
 **Splay Tree:** Self-adjusting BST where recently accessed elements are quick to access again.
@@ -575,10 +579,3 @@ def contains_nearby_duplicate(nums: list, k: int) -> bool:
 7. **Good for sequential access:** Recently accessed items are fast
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Fenwick Tree](../03_fenwick_tree/README.md) | **04. Splay Trees** | [05. B-Trees →](../05_b_trees/README.md) |
-
