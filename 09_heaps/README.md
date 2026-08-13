@@ -10,13 +10,15 @@ permalink: /09_heaps/
 
 # ⛰️ Heaps / Priority Queues
 
+### *Priority queues on a complete binary tree — O(log n) insert & extract*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Subtopics-4-blue?style=for-the-badge" alt="Subtopics">
   <img src="https://img.shields.io/badge/Problems-30+-orange?style=for-the-badge" alt="Problems">
 </p>
 
-**Complete binary tree with heap property - O(log n) insert and extract**
+**Complete binary tree with heap property — O(log n) insert and extract**
 
 [⬅️ Previous: BST](../08_binary_search_trees/README.md) | [🏠 Home](../README.md) | [Next: Graphs ➡️](../10_graphs/README.md)
 
@@ -30,12 +32,25 @@ permalink: /09_heaps/
 
 ![Heaps Overview](./images/heap-overview.png)
 
+*Min-heap tree, array layout, operations table, and real-world use cases*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
 
-## 📐 Mathematical Foundation
+| | |
+|:---|:---|
+| **Core idea** | Keep min (or max) at the root; parent ≤ children (min-heap) |
+| **Best for** | Top-K, merge K streams, streaming median, scheduling |
+| **Peek** | O(1) · **Insert / extract** | O(log n) · **Build heap** | O(n) |
+| **Python tip** | `heapq` is min-heap; negate values for max-heap |
+
+{: .highlight }
+> **Interview lens:** If the problem says *k largest*, *k smallest*, *merge k lists*, *running median*, or *next task by priority* — think heap first.
+
+---
 
 ### 1️⃣ Heap Property
 
