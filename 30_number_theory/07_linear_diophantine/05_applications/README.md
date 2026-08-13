@@ -34,7 +34,7 @@ permalink: /30_number_theory/07_linear_diophantine/05_applications/
 
 <div align="center">
 
-![Diophantine Applications](./images/diophantine_applications.svg)
+![Diophantine Applications](./images/diophantine_applications.png)
 
 </div>
 
