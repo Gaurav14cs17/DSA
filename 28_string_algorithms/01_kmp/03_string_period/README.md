@@ -10,7 +10,7 @@ nav_order: 3
 
 ## 📊 Visual Overview
 
-![String Period](./images/string-period.svg)
+![String Period](./images/string-period.png)
 
 ## 📊 Metadata
 
