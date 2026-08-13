@@ -5,14 +5,18 @@ parent: "Rabin-Karp Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 2
 ---
+<div align="center">
 
 # 🎯 Single Pattern Matching with Rabin-Karp
 
 ### *Single pattern matching finds all occurrences of one pattern in text using rolling hash for O(1) window comparisons.*
 
 
-## 📊 Visual Overview
+</div>
 
+---
+
+## 📊 Visual Overview
 ![Single Pattern Matching](./images/single-pattern.png)
 
 *Single Pattern Matching*
@@ -29,6 +33,14 @@ nav_order: 2
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Basic Rolling Hash](../01_basic_rolling_hash/README.md) | **Single Pattern** | [Multiple Patterns →](../03_multiple_patterns/README.md) |
 
 ---
 
@@ -497,4 +509,3 @@ if found_all_needed:
 ---
 
 **Navigation:** [← Basic Rolling Hash](../01_basic_rolling_hash/) | [Rabin-Karp Overview](../README.md) | [Next: Multiple Patterns →](../03_multiple_patterns/)
-
