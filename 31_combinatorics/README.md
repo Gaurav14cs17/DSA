@@ -10,7 +10,6 @@ permalink: /31_combinatorics/
 
 # 🎲 Combinatorics
 
-![Combinatorics Overview](./images/combinatorics-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
@@ -26,11 +25,68 @@ permalink: /31_combinatorics/
 
 ---
 
+## 📊 Visual Overview
+
+<div align="center">
+
+![Combinatorics Overview](./images/combinatorics-overview.png)
+
+</div>
+
+---
+
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
 |:------------|:----------:|--------:|
 | [← Number Theory](../30_number_theory/README.md) | **Combinatorics** | [Game Theory →](../32_game_theory/README.md) |
+
+---
+
+## 🎨 Visual Patterns
+
+### Pattern 1: Pascal's Triangle
+
+```
+                    1
+                  1   1
+                1   2   1
+              1   3   3   1
+            1   4   6   4   1
+          1   5  10  10   5   1
+        1   6  15  20  15   6   1
+
+Properties:
+
+- Entry = C(n,r) = nCr
+
+- Each entry = sum of two above it
+
+- Row sum = 2^n
+
+- Alternating sum = 0
+
+```
+
+### Pattern 2: Catalan Numbers Visualization
+
+```
+C₀ = 1:  ()
+C₁ = 1:  ()()
+C₂ = 2:  ()()()  (())()
+         ()(())  ((()))
+C₃ = 5:  ()()()()
+         ()()(())
+         ()(())()
+         (())(())
+         ((()))()
+         ()(()())
+         (()(()))
+         ((())())
+         (((())))
+
+```
 
 ---
 
@@ -183,52 +239,6 @@ $$\left|\bigcup_{i=1}^{n} A_i\right| = \sum_{i} |A_i| - \sum_{i<j} |A_i \cap A_j
 **Generalized:** If $n$ objects placed in $k$ boxes, at least one box contains $\geq \lceil \frac{n}{k} \rceil$ objects.
 
 **Application:** In any group of 367 people, at least 2 share same birthday.
-
----
-
-## 🎨 Visual Patterns
-
-### Pattern 1: Pascal's Triangle
-
-```
-                    1
-                  1   1
-                1   2   1
-              1   3   3   1
-            1   4   6   4   1
-          1   5  10  10   5   1
-        1   6  15  20  15   6   1
-
-Properties:
-
-- Entry = C(n,r) = nCr
-
-- Each entry = sum of two above it
-
-- Row sum = 2^n
-
-- Alternating sum = 0
-
-```
-
-### Pattern 2: Catalan Numbers Visualization
-
-```
-C₀ = 1:  ()
-C₁ = 1:  ()()
-C₂ = 2:  ()()()  (())()
-         ()(())  ((()))
-C₃ = 5:  ()()()()
-         ()()(())
-         ()(())()
-         (())(())
-         ((()))()
-         ()(()())
-         (()(()))
-         ((())())
-         (((())))
-
-```
 
 ---
 
