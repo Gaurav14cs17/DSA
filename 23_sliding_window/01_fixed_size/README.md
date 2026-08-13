@@ -24,29 +24,7 @@ permalink: /23_sliding_window/01_fixed_size/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Sliding Window Home](../README.md) | **01. Fixed Size** | [02. Variable Size →](../02_variable_size/README.md) |
-
----
-
-## 🎯 What You'll Master
-
-- Fixed-size window sliding technique
-
-- Incremental sum/product/count updates
-
-- Monotonic deque for window maximum/minimum
-
-- Anagram and permutation detection
-
-- Rolling hash for substring matching
-
----
-
-## 📊 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -177,8 +155,34 @@ Result: [0, 6]
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 What You'll Master
 
+- Fixed-size window sliding technique
+
+- Incremental sum/product/count updates
+
+- Monotonic deque for window maximum/minimum
+
+- Anagram and permutation detection
+
+- Rolling hash for substring matching
+
+---
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [🏠 Sliding Window Home](../README.md) | **01. Fixed Size** | [02. Variable Size →](../02_variable_size/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ The Sliding Update Formula
 
 {: .highlight }
@@ -255,7 +259,7 @@ Total operations: \(2n = O(n)\) ∎
 
 ### 4️⃣ Anagram Detection — Character Count Matching
 
-{: .highlight }
+
 > Two strings are anagrams if they have the same character frequency.
 
 #### The Approach
@@ -714,9 +718,3 @@ def maxVowels(s: str, k: int) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Sliding Window Home](../README.md) | **01. Fixed Size** | [02. Variable Size →](../02_variable_size/README.md) |
