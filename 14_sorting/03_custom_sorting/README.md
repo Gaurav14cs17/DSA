@@ -10,6 +10,10 @@ permalink: /14_sorting/03_custom_sorting/
 
 # 🎨 Custom Sorting
 
+### *Custom Sorting*
+
+
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -43,6 +47,7 @@ permalink: /14_sorting/03_custom_sorting/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next Topic |
@@ -51,8 +56,7 @@ permalink: /14_sorting/03_custom_sorting/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Custom Comparator
 
 **Define ordering relation** $\prec$ such that:
@@ -290,9 +294,3 @@ Custom Sort
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
-|:------------|:----------:|--------:|
-| [← 02. Non-Comparison Sorts](../02_non_comparison_sorts/README.md) | **03. Custom Sorting** | [🏠 Sorting Home](../README.md) → [Searching](../../15_searching/README.md) |
