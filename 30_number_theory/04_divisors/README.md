@@ -13,6 +13,8 @@ permalink: /30_number_theory/04_divisors/
 
 ### *Counting, Summing, and Understanding Divisors*
 
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-20+-blue?style=for-the-badge" alt="Problems">
@@ -26,6 +28,25 @@ permalink: /30_number_theory/04_divisors/
 
 ---
 
+## 📊 Visual Overview
+
+> *Concept map and key formulas — dive into subtopics for detailed walkthroughs and code.*
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Counting, Summing, and Understanding Divisors |
+| **Difficulty** | Easy to Medium |
+| **Problems** | 20+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -34,8 +55,7 @@ permalink: /30_number_theory/04_divisors/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Divisor Count Function τ(n)
 
 **Definition:** $\tau(n)$ = number of positive divisors of n.
@@ -168,10 +188,3 @@ def sieve_divisor_count(limit: int) -> list[int]:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Modular Arithmetic](../03_modular_arithmetic/README.md) | **04. Divisors** | [05. Euler Totient →](../05_euler_totient/README.md) |
-
