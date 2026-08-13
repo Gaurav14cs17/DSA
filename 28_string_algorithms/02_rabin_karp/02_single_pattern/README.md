@@ -10,7 +10,7 @@ nav_order: 2
 
 ## 📊 Visual Overview
 
-![Single Pattern Matching](./images/single-pattern.svg)
+![Single Pattern Matching](./images/single-pattern.png)
 
 ## 📊 Metadata
 
