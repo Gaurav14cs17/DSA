@@ -11,6 +11,8 @@ permalink: /30_number_theory/10_lucas_theorem/01_basic_lucas/
 
 # 🔮 Basic Lucas' Theorem
 
+### *C(m, n) mod p for Huge Numbers*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Large_n-Small_p-green?style=for-the-badge" alt="Large">
@@ -38,10 +40,23 @@ permalink: /30_number_theory/10_lucas_theorem/01_basic_lucas/
 
 ![Lucas' Theorem](./images/lucas_theorem.png)
 
+*Lucas' Theorem*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | C(m, n) mod p for Huge Numbers |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 The Theorem
 
 For prime p and non-negative m, n:
