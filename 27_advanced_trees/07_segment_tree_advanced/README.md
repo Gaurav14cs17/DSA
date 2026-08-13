@@ -106,6 +106,18 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Hard |
+| **Subtopics** | 5 |
+| **Problems** | 40+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📋 Overview
 
 **Advanced Segment Tree** techniques extend the basic segment tree to handle:
