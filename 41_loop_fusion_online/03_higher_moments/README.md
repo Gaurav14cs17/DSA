@@ -10,6 +10,10 @@ permalink: /41_loop_fusion_online/03_higher_moments/
 
 # 🎯 Higher Statistical Moments
 
+### *🎯 Higher Statistical Moments*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-5+-blue?style=for-the-badge" alt="Problems">
@@ -19,19 +23,32 @@ permalink: /41_loop_fusion_online/03_higher_moments/
 
 ---
 
+## 📊 Visual Overview
+
+<div align="center">
+  <img src="images/higher-moments.png" alt="Higher Moments" width="100%">
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🎯 Higher Statistical Moments |
+| **Difficulty** | Hard |
+| **Problems** | 5+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
 |:------------|:----------:|--------:|
 | [← Kadane's Pattern](../02_kadane_pattern/README.md) | **03. Higher Moments** | [04. Streaming Algorithms →](../04_streaming_algorithms/README.md) |
-
----
-
-## 📊 Visual Guide
-
-<div align="center">
-  <img src="images/higher-moments.png" alt="Higher Moments" width="100%">
-</div>
 
 ---
 
@@ -419,9 +436,3 @@ All four moments computed in **single pass** with **constant space**!
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Kadane's Pattern](../02_kadane_pattern/README.md) | **03. Higher Moments** | [04. Streaming Algorithms →](../04_streaming_algorithms/README.md) |
