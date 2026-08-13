@@ -30,14 +30,14 @@ permalink: /20_divide_and_conquer/01_merge_sort_pattern/
 ## 🖼️ Visual Overview
 
 <div align="center">
-  <img src="./images/merge-sort.svg" alt="Merge Sort Visualization" width="100%">
+  <img src="./images/merge-sort.png" alt="Merge Sort Visualization" width="100%">
 </div>
 
 <details>
 <summary>📊 Counting Inversions Visualization</summary>
 
 <div align="center">
-  <img src="./images/count-inversions.svg" alt="Counting Inversions" width="100%">
+  <img src="./images/count-inversions.png" alt="Counting Inversions" width="100%">
 </div>
 
 </details>
