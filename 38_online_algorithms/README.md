@@ -10,6 +10,8 @@ permalink: /38_online_algorithms/
 
 # 🌐 Online Algorithms
 
+### *Process Data Sequentially Without Knowing the Future*
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
@@ -33,7 +35,23 @@ permalink: /38_online_algorithms/
 
 ![Online Algorithms](images/online-algorithms.png)
 
+*Online Algorithms*
+
 </div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Process Data Sequentially Without Knowing the Future |
+| **Difficulty** | Hard |
+| **Subtopics** | 4 |
+| **Problems** | 25+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -485,9 +503,3 @@ class SlidingWindowMax:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Interval Trees](../37_interval_trees/README.md) | **Online Algorithms** | [Approximation Algorithms →](../39_approximation_algorithms/README.md) |
