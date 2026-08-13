@@ -27,15 +27,7 @@ permalink: /30_number_theory/04_divisors/05_sieve_divisors/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Divisor Properties](../04_divisor_properties/README.md) | **05. Sieve Divisors** | [06. Applications →](../06_applications/README.md) |
-
----
-
-## 📊 Visual Diagram
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -58,6 +50,15 @@ permalink: /30_number_theory/04_divisors/05_sieve_divisors/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 04. Divisor Properties](../04_divisor_properties/README.md) | **05. Sieve Divisors** | [06. Applications →](../06_applications/README.md) |
+
+---
+
 ## 📐 Overview
 
 When you need divisor information for many numbers, precomputation is faster than computing each individually.
@@ -298,9 +299,3 @@ print("μ values:", mu[1:21])
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Divisor Properties](../04_divisor_properties/README.md) | **05. Sieve Divisors** | [06. Applications →](../06_applications/README.md) |
