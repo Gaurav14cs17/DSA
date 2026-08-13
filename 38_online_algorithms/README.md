@@ -10,7 +10,7 @@ permalink: /38_online_algorithms/
 
 # 🌐 Online Algorithms
 
-![Online Algorithms Overview](./images/online-algo-overview.svg)
+![Online Algorithms Overview](./images/online-algo-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
@@ -30,7 +30,7 @@ permalink: /38_online_algorithms/
 
 <div align="center">
 
-![Online Algorithms Overview](images/online-algorithms.svg)
+![Online Algorithms Overview](images/online-algorithms.png)
 
 </div>
 
@@ -67,7 +67,7 @@ Where:
 
 <div align="center">
 
-![Competitive Analysis](images/competitive-analysis.svg)
+![Competitive Analysis](images/competitive-analysis.png)
 
 </div>
 
@@ -84,7 +84,7 @@ Where:
 
 <div align="center">
 
-![LRU Cache](images/lru-cache.svg)
+![LRU Cache](images/lru-cache.png)
 
 </div>
 
@@ -156,7 +156,7 @@ class LRUCache:
 
 <div align="center">
 
-![Median from Stream](images/median-stream.svg)
+![Median from Stream](images/median-stream.png)
 
 </div>
 
@@ -201,7 +201,7 @@ class MedianFinder:
 
 <div align="center">
 
-![LFU Cache](images/lfu-cache.svg)
+![LFU Cache](images/lfu-cache.png)
 
 </div>
 
@@ -268,7 +268,7 @@ class LFUCache:
 
 <div align="center">
 
-![Sliding Window Maximum](images/sliding-window-max.svg)
+![Sliding Window Maximum](images/sliding-window-max.png)
 
 </div>
 
