@@ -31,7 +31,7 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/03_persistent_segtree/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/persistent-segtree.svg" alt="Persistent Segment Tree" width="100%">
+<img src="./images/persistent-segtree.png" alt="Persistent Segment Tree" width="100%">
 </div>
 
 ---
