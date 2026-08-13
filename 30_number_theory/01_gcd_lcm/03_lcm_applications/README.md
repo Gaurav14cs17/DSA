@@ -26,15 +26,7 @@ permalink: /30_number_theory/01_gcd_lcm/03_lcm_applications/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. Extended GCD](../02_extended_gcd/README.md) | **03. LCM Applications** | [04. Binary GCD →](../04_binary_gcd/README.md) |
-
----
-
-## 📊 Visual Diagram
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -58,8 +50,16 @@ permalink: /30_number_theory/01_gcd_lcm/03_lcm_applications/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 📐 Mathematical Foundations
 
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 02. Extended GCD](../02_extended_gcd/README.md) | **03. LCM Applications** | [04. Binary GCD →](../04_binary_gcd/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ LCM Formula
 
 $$\text{lcm}(a, b) = \frac{a \times b}{\gcd(a, b)}$$
@@ -241,10 +241,3 @@ def pattern_length(pattern1_len: int, pattern2_len: int) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. Extended GCD](../02_extended_gcd/README.md) | **03. LCM Applications** | [04. Binary GCD →](../04_binary_gcd/README.md) |
-
