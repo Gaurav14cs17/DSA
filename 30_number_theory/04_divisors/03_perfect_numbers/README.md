@@ -37,7 +37,7 @@ permalink: /30_number_theory/04_divisors/03_perfect_numbers/
 
 <div align="center">
 
-![Perfect Numbers](./images/perfect_numbers.svg)
+![Perfect Numbers](./images/perfect_numbers.png)
 
 </div>
 
