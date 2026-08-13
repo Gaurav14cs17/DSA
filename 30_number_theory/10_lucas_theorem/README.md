@@ -26,6 +26,24 @@ permalink: /30_number_theory/10_lucas_theorem/
 
 ---
 
+## 📊 Visual Overview
+
+> *Concept map and key formulas — dive into subtopics for detailed walkthroughs and code.*
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Computing Binomial Coefficients Modulo Prime |
+| **Difficulty** | Medium to Hard |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -34,8 +52,7 @@ permalink: /30_number_theory/10_lucas_theorem/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Lucas' Theorem
 
 **Statement:** For prime p and non-negative integers m, n:
@@ -167,10 +184,3 @@ print(is_binomial_odd(10, 3))  # False
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 09. Catalan Numbers](../09_catalan_numbers/README.md) | **10. Lucas Theorem** | [11. Legendre's Formula →](../11_legendres_formula/README.md) |
-
