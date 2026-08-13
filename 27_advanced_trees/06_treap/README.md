@@ -30,7 +30,7 @@ permalink: /27_advanced_trees/06_treap/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/treap.svg" alt="Treap Structure" width="100%">
+<img src="./images/treap.png" alt="Treap Structure" width="100%">
 </div>
 
 ---
