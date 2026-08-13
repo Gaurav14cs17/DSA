@@ -7,21 +7,29 @@ nav_order: 3
 
 # 🔢 Z-Algorithm
 
+### *The **Z-Algorithm** computes the **Z-array** for a string in linear time.*
+
+
 ## 📊 Visual Overview
 
 ![Z-Algorithm](./images/z-algorithm.png)
 
-## 📊 Metadata
+*Z-Algorithm*
 
-- **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+---
 
-- **Time Complexity:** O(n)
+## 🎯 At a Glance
 
-- **Space Complexity:** O(n)
+| | |
+|:---|:---|
+| **In one line** | The **Z-Algorithm** computes the **Z-array** for a string in linear time. |
+| **Typical time** | O(n) |
+| **Typical space** | O(n) |
+| **Topics** | String Matching, Z-array, Pattern Preprocessing |
+| **Prerequisites** | String basics, Two pointers |
 
-- **Topics:** String Matching, Z-array, Pattern Preprocessing
-
-- **Prerequisites:** String basics, Two pointers
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
