@@ -88,7 +88,7 @@ If start = p, then start = 2p (we want composite multiples only).
 
 <div align="center">
 
-![Segmented Sieve](./images/segmented_sieve.svg)
+![Segmented Sieve](./images/segmented_sieve.png)
 
 </div>
 
