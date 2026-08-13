@@ -105,7 +105,7 @@ permalink: /30_number_theory/02_primes/05_prime_applications/
 
 <div align="center">
 
-![Prime Applications](./images/prime_applications.svg)
+![Prime Applications](./images/prime_applications.png)
 
 </div>
 
