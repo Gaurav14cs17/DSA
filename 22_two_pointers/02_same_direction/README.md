@@ -49,13 +49,13 @@ permalink: /22_two_pointers/02_same_direction/
 ## 📊 Visual Diagrams
 
 ### Fast-Slow Pointer Pattern
-![Fast-Slow Pointer](./images/fast-slow-pointer.svg)
+![Fast-Slow Pointer](./images/fast-slow-pointer.png)
 
 ### Dutch National Flag Algorithm
-![Dutch National Flag](./images/dutch-national-flag.svg)
+![Dutch National Flag](./images/dutch-national-flag.png)
 
 ### Merge Sorted Arrays
-![Merge Sorted Arrays](./images/merge-sorted-arrays.svg)
+![Merge Sorted Arrays](./images/merge-sorted-arrays.png)
 
 ---
 
