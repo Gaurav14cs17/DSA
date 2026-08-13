@@ -265,6 +265,8 @@ def tsp_mst_approx(distances):
 <img src="./images/bin-packing-ffd.png" alt="Bin Packing FFD" width="950"/>
 </div>
 
+**Idea:** Sort items by decreasing size, then place each into the first bin with enough remaining capacity (first fit). Sorting first tightens packing — FFD beats plain first fit with an 11/9 · OPT + 6/9 guarantee.
+
 ```python
 def bin_packing_ffd(items, bin_capacity):
     """
