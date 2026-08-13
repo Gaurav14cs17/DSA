@@ -24,15 +24,7 @@ permalink: /30_number_theory/04_divisors/06_applications/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 05. Sieve Divisors](../05_sieve_divisors/README.md) | **06. Applications** | [🏠 Divisors Home](../README.md) |
-
----
-
-## 📊 Visual Diagram
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -56,6 +48,15 @@ permalink: /30_number_theory/04_divisors/06_applications/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 05. Sieve Divisors](../05_sieve_divisors/README.md) | **06. Applications** | [🏠 Divisors Home](../README.md) |
+
+---
+
 ## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty | Key Concept | Link |
@@ -278,9 +279,3 @@ class Solution:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 05. Sieve Divisors](../05_sieve_divisors/README.md) | **06. Applications** | [🏠 Divisors Home](../README.md) |
