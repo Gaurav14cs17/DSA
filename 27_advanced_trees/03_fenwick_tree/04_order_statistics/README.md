@@ -31,7 +31,7 @@ permalink: /27_advanced_trees/03_fenwick_tree/04_order_statistics/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/order-statistics.svg" alt="Order Statistics with BIT" width="100%">
+<img src="./images/order-statistics.png" alt="Order Statistics with BIT" width="100%">
 </div>
 
 ---
