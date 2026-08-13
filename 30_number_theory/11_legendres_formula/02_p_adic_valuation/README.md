@@ -11,6 +11,8 @@ permalink: /30_number_theory/11_legendres_formula/02_p_adic_valuation/
 
 # 🔢 p-adic Valuation
 
+### *Measuring How Many Times a Prime Divides a Number*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Time-O(log_n)-blue?style=for-the-badge" alt="Time">
@@ -39,10 +41,23 @@ permalink: /30_number_theory/11_legendres_formula/02_p_adic_valuation/
 
 ![p-adic Valuation](./images/p_adic_valuation.png)
 
+*p-adic Valuation*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Measuring How Many Times a Prime Divides a Number |
+| **Difficulty** | Medium Hard |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundation
 
 ### Definition
