@@ -26,11 +26,25 @@ permalink: /14_sorting/01_comparison_sorts/
 
 ![Comparison Sorts](./images/comparison_sorts.png)
 
+*Comparison Sorts*
+
 </div>
 
 ---
 
+---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Medium |
+| **Problems** | 8+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
