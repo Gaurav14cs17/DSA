@@ -32,6 +32,16 @@ permalink: /30_number_theory/02_primes/04_segmented_sieve/
 
 ---
 
+## 📊 Visual Diagram
+
+<div align="center">
+
+![Segmented Sieve](./images/segmented_sieve.png)
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ The Problem
@@ -81,16 +91,6 @@ $$\text{start} = \left\lceil \frac{L}{p} \right\rceil \times p = \left(\frac{L +
 **But skip p itself if it's in range:**
 
 If start = p, then start = 2p (we want composite multiples only).
-
----
-
-## 📊 Visual Diagram
-
-<div align="center">
-
-![Segmented Sieve](./images/segmented_sieve.png)
-
-</div>
 
 ---
 
