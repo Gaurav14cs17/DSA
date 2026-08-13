@@ -36,7 +36,7 @@ permalink: /30_number_theory/07_linear_diophantine/02_extended_gcd_method/
 
 <div align="center">
 
-![Extended GCD Method](./images/extended_gcd_method.svg)
+![Extended GCD Method](./images/extended_gcd_method.png)
 
 </div>
 
