@@ -10,6 +10,8 @@ permalink: /02_strings/04_subsequence/
 
 # 📜 Subsequence Problems
 
+### *📜 Subsequence Problems*
+
 
 
 <p>
@@ -571,19 +573,6 @@ A: Edit distance = m + n - 2×LCS. Both can solve each other!
 </div>
 
 ---
-
----
-
-## 🎯 At a Glance
-
-| | |
-|:---|:---|
-| **Topic** | 📜 Subsequence Problems |
-| **Difficulty** | Medium to Hard |
-| **Problems** | 10+ |
-
-{: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
