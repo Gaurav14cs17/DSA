@@ -11,6 +11,8 @@ permalink: /30_number_theory/02_primes/06_applications/
 
 # 🏆 Prime Problem Applications
 
+### *Advanced Prime Problems & Competition Patterns*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-20+-blue?style=for-the-badge" alt="Problems">
@@ -38,10 +40,24 @@ permalink: /30_number_theory/02_primes/06_applications/
 
 ![Miller-Rabin Primality Test](./images/miller_rabin.png)
 
+*Miller-Rabin Primality Test*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Advanced Prime Problems & Competition Patterns |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 20+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Multiplicative Functions
