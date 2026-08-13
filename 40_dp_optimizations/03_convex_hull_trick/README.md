@@ -1,10 +1,49 @@
+---
+layout: default
+title: "Convex Hull Trick"
+parent: "DP Optimizations"
+nav_order: 3
+permalink: /40_dp_optimizations/03_convex_hull_trick/
+---
+
+<div align="center">
+
 # 🔺 Convex Hull Trick (CHT)
 
-## 📊 Visual Diagram
+### *Linear function optimization*
+
+</div>
+
+---
+
+## 📊 Visual Overview
 
 <p align="center">
   <img src="./images/convex-hull-trick.png" alt="Convex Hull Trick" width="100%">
 </p>
+
+---
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Linear function optimization |
+
+
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Monotonic Queue](../02_monotonic_queue/README.md) | **03. Convex Hull Trick** | [Li Chao Tree →](../04_li_chao_tree/README.md) |
 
 ## Overview
 
@@ -20,6 +59,10 @@ dp[i] = min/max(m[j] × x[i] + b[j]) for all j < i
 **Geometric View:** Find lower/upper envelope of lines.
 
 **Complexity:** O(n²) → O(n log n) or O(n)
+
+---
+
+
 
 ---
 
@@ -85,6 +128,10 @@ Keep only lines that form convex hull
 - Slopes added in monotonic order (m[i] ≥ m[i+1])
 
 - Queries in monotonic order (x[i] ≤ x[i+1])
+
+---
+
+
 
 ---
 
@@ -241,6 +288,10 @@ class ConvexHullTrickFast:
 
 ---
 
+
+
+---
+
 ## 🎯 Complete Example: Split Array with Min Cost
 
 ```python
@@ -335,6 +386,10 @@ Query at x=6: Line 2 is best (y=-22)
 
 ---
 
+
+
+---
+
 ## 🏆 LeetCode Problems
 
 ### 🟡 Medium (3 problems)
@@ -349,6 +404,10 @@ Query at x=6: Line 2 is best (y=-22)
 |:-:|---------|---------------|
 | 1687 | [Delivering Boxes](https://leetcode.com/problems/delivering-boxes-from-storage-to-ports/) | Complex cost function |
 | 2617 | [Minimum Visited Cells](https://leetcode.com/problems/minimum-number-of-visited-cells-in-a-grid/) | Grid DP optimization |
+
+---
+
+
 
 ---
 
@@ -394,6 +453,10 @@ CHT: Already in linear form!
 
 ---
 
+
+
+---
+
 ## 💡 Key Insights
 
 > **Geometric View:** CHT finds the lower/upper envelope of lines = convex hull.
@@ -403,6 +466,10 @@ CHT: Already in linear form!
 > **Transformation:** Expand quadratic expressions, separate into fixed and variable parts.
 
 > **Check Monotonicity:** If slopes or queries not monotonic, use Li Chao Tree instead.
+
+---
+
+
 
 ---
 
@@ -422,12 +489,20 @@ CHT: Already in linear form!
 
 ---
 
+
+
+---
+
 ## 🔍 Common Mistakes
 
 ❌ **Wrong slope order** - Must be monotonic for O(n) version
 ❌ **Forgetting to check bad() function** - Cross-multiplication matters
 ❌ **Not transforming correctly** - Expand and rearrange carefully
 ❌ **Using when not linear** - CHT only works for linear transitions
+
+---
+
+
 
 ---
 
@@ -445,4 +520,3 @@ CHT: Already in linear form!
 **[⬅️ Back to DP Optimizations](../README.md)**
 
 </div>
-
