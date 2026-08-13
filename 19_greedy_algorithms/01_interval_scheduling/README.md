@@ -10,7 +10,7 @@ permalink: /19_greedy_algorithms/01_interval_scheduling/
 
 # 📅 Interval Scheduling
 
-![Interval Scheduling](./images/interval_scheduling.svg)
+![Interval Scheduling](./images/interval_scheduling.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
