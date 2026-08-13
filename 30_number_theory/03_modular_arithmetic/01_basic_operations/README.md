@@ -20,14 +20,6 @@ nav_order: 1
 
 ---
 
-## 🎯 Overview
-
-Modular arithmetic is "clock arithmetic" where numbers wrap around upon reaching a certain value (modulus). It's fundamental to cryptography, hashing, and competitive programming.
-
-**Key Concept:** `a mod m` is the remainder when a is divided by m.
-
----
-
 ## 📊 Visual Diagram
 
 <div align="center">
@@ -35,6 +27,14 @@ Modular arithmetic is "clock arithmetic" where numbers wrap around upon reaching
 ![Modular Operations](./images/modular_operations.png)
 
 </div>
+
+---
+
+## 🎯 Overview
+
+Modular arithmetic is "clock arithmetic" where numbers wrap around upon reaching a certain value (modulus). It's fundamental to cryptography, hashing, and competitive programming.
+
+**Key Concept:** `a mod m` is the remainder when a is divided by m.
 
 ---
 
