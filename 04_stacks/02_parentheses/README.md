@@ -10,6 +10,8 @@ permalink: /04_stacks/02_parentheses/
 
 # 🔗 Parentheses Problems
 
+### *🔗 Parentheses Problems*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-15+-blue?style=for-the-badge" alt="Problems">
@@ -19,7 +21,7 @@ permalink: /04_stacks/02_parentheses/
 
 ---
 
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -49,150 +51,9 @@ permalink: /04_stacks/02_parentheses/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Basic Stack](../01_basic_stack/README.md) | **02. Parentheses** | [03. Monotonic Stack →](../03_monotonic_stack/README.md) |
-
 ---
 
-## 📐 Mathematical Foundations
-
-### 1️⃣ Valid Parentheses Conditions
-
-For string $S$ with brackets:
-
-**Condition 1 (Balance):**
-
-$$\boxed{\sum_{i=0}^{n-1} \text{score}(S[i]) = 0}$$
-
-Where:
-
-- $\text{score}('(') = +1, \; \text{score}(')') = -1$
-
-- $\text{score}('[') = +1, \; \text{score}(']') = -1$
-
-- $\text{score}('\{') = +1, \; \text{score}('\}') = -1$
-
-**Condition 2 (Prefix Non-negative):**
-
-$$\boxed{\forall k \in [0, n-1]: \sum_{i=0}^{k} \text{score}(S[i]) \geq 0}$$
-
-**Proof:** If prefix sum becomes negative, we have more closing than opening brackets up to that point → invalid.
-
----
-
-### 2️⃣ Stack Matching Correctness Proof
-
-**Invariant:** Stack contains only unmatched opening brackets.
-
-**Theorem:** String $S$ is valid iff stack is empty after processing.
-
-**Proof by Induction:**
-
-**Base:** Empty string → empty stack → valid ✓
-
-**Inductive Step:**
-
-- If $S[i]$ is opening bracket:
-  - Push to stack → invariant maintained
-
-- If $S[i]$ is closing bracket:
-  - If stack empty → invalid (prefix sum would be negative)
-  - If stack top matches → pop → invariant maintained
-  - If stack top doesn't match → invalid (wrong type)
-
-**Termination:**
-
-- Valid string: all opens matched → empty stack
-
-- Invalid string: unmatched opens remain → non-empty stack ∎
-
----
-
-### 3️⃣ Minimum Additions Formula
-
-**Problem:** Minimum insertions to make string valid.
-
-$$\boxed{\text{additions} = \text{unmatched\_open} + \text{unmatched\_close}}$$
-
-**Proof:**
-
-- Each unmatched `(` needs a matching `)`
-- Each unmatched `)` needs a matching `(`
-- These are independent → sum them ∎
-
-**Example:**
-
-```
-Input: "(()"
-Scan: ( → open=1, ( → open=2, ) → open=1
-Result: open=1, close=0
-Answer: 1 (need one more ')')
-
-```
-
----
-
-### 4️⃣ Longest Valid Parentheses - DP Formula
-
-**Recurrence Relation:**
-
-$$\boxed{dp[i] = \begin{cases}
-0 & \text{if } S[i] = '(' \\
-dp[i-2] + 2 & \text{if } S[i-1] = '(' \text{ and } i \geq 1 \\
-dp[i-1] + 2 + dp[j] & \text{if } j = i - dp[i-1] - 2 \geq 0 \text{ and } S[j+1] = '('
-\end{cases}}$$
-
-Where:
-
-- $dp[i]$ = length of longest valid substring ending at index $i$
-
-- Case 1: Opening bracket can't end a valid substring
-
-- Case 2: Immediate pair `()`
-- Case 3: Nested case `(...)`
-
----
-
-### 5️⃣ Catalan Number Connection
-
-**Number of valid strings with $n$ pairs:**
-
-$$\boxed{C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)! \cdot n!}}$$
-
-**Recurrence Relation:**
-
-$$C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}$$
-
-**First few Catalan numbers:**
-
-| n | 0 | 1 | 2 | 3 | 4 | 5 |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| $C_n$ | 1 | 1 | 2 | 5 | 14 | 42 |
-
-**Examples for $n=3$ ($C_3 = 5$):**
-
-1. `((()))`
-2. `(()())`
-3. `(())()`
-4. `()(())`
-5. `()()()`
-
----
-
-### 6️⃣ Asymptotic Growth
-
-**Catalan Number Growth:**
-
-$$C_n \sim \frac{4^n}{n^{3/2}\sqrt{\pi}}$$
-
-This means generating all valid parentheses has exponential time complexity!
-
----
-
-## 🎨 Visual Algorithm Walkthroughs
+## 📊 Visual Overview
 
 ### Valid Parentheses - Detailed Trace
 
@@ -510,6 +371,167 @@ Input: "lee(t(c)o)de)"
 
 ---
 
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🔗 Parentheses Problems |
+| **Difficulty** | Easy to Hard |
+| **Problems** | 15+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 01. Basic Stack](../01_basic_stack/README.md) | **02. Parentheses** | [03. Monotonic Stack →](../03_monotonic_stack/README.md) |
+
+---
+
+---
+
+## 📐 Mathematical Foundation
+### 1️⃣ Valid Parentheses Conditions
+
+For string $S$ with brackets:
+
+**Condition 1 (Balance):**
+
+$$\boxed{\sum_{i=0}^{n-1} \text{score}(S[i]) = 0}$$
+
+Where:
+
+- $\text{score}('(') = +1, \; \text{score}(')') = -1$
+
+- $\text{score}('[') = +1, \; \text{score}(']') = -1$
+
+- $\text{score}('\{') = +1, \; \text{score}('\}') = -1$
+
+**Condition 2 (Prefix Non-negative):**
+
+$$\boxed{\forall k \in [0, n-1]: \sum_{i=0}^{k} \text{score}(S[i]) \geq 0}$$
+
+**Proof:** If prefix sum becomes negative, we have more closing than opening brackets up to that point → invalid.
+
+---
+
+### 2️⃣ Stack Matching Correctness Proof
+
+**Invariant:** Stack contains only unmatched opening brackets.
+
+**Theorem:** String $S$ is valid iff stack is empty after processing.
+
+**Proof by Induction:**
+
+**Base:** Empty string → empty stack → valid ✓
+
+**Inductive Step:**
+
+- If $S[i]$ is opening bracket:
+  - Push to stack → invariant maintained
+
+- If $S[i]$ is closing bracket:
+  - If stack empty → invalid (prefix sum would be negative)
+  - If stack top matches → pop → invariant maintained
+  - If stack top doesn't match → invalid (wrong type)
+
+**Termination:**
+
+- Valid string: all opens matched → empty stack
+
+- Invalid string: unmatched opens remain → non-empty stack ∎
+
+---
+
+### 3️⃣ Minimum Additions Formula
+
+**Problem:** Minimum insertions to make string valid.
+
+$$\boxed{\text{additions} = \text{unmatched\_open} + \text{unmatched\_close}}$$
+
+**Proof:**
+
+- Each unmatched `(` needs a matching `)`
+- Each unmatched `)` needs a matching `(`
+- These are independent → sum them ∎
+
+**Example:**
+
+```
+Input: "(()"
+Scan: ( → open=1, ( → open=2, ) → open=1
+Result: open=1, close=0
+Answer: 1 (need one more ')')
+
+```
+
+---
+
+### 4️⃣ Longest Valid Parentheses - DP Formula
+
+**Recurrence Relation:**
+
+$$\boxed{dp[i] = \begin{cases}
+0 & \text{if } S[i] = '(' \\
+dp[i-2] + 2 & \text{if } S[i-1] = '(' \text{ and } i \geq 1 \\
+dp[i-1] + 2 + dp[j] & \text{if } j = i - dp[i-1] - 2 \geq 0 \text{ and } S[j+1] = '('
+\end{cases}}$$
+
+Where:
+
+- $dp[i]$ = length of longest valid substring ending at index $i$
+
+- Case 1: Opening bracket can't end a valid substring
+
+- Case 2: Immediate pair `()`
+- Case 3: Nested case `(...)`
+
+---
+
+### 5️⃣ Catalan Number Connection
+
+**Number of valid strings with $n$ pairs:**
+
+$$\boxed{C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)! \cdot n!}}$$
+
+**Recurrence Relation:**
+
+$$C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}$$
+
+**First few Catalan numbers:**
+
+| n | 0 | 1 | 2 | 3 | 4 | 5 |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| $C_n$ | 1 | 1 | 2 | 5 | 14 | 42 |
+
+**Examples for $n=3$ ($C_3 = 5$):**
+
+1. `((()))`
+2. `(()())`
+3. `(())()`
+4. `()(())`
+5. `()()()`
+
+---
+
+### 6️⃣ Asymptotic Growth
+
+**Catalan Number Growth:**
+
+$$C_n \sim \frac{4^n}{n^{3/2}\sqrt{\pi}}$$
+
+This means generating all valid parentheses has exponential time complexity!
+
+---
+
+---
+
 ## 💻 Code Implementations
 
 ```python
@@ -806,6 +828,8 @@ def scoreOfParentheses(s: str) -> int:
 
 ---
 
+---
+
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
@@ -838,6 +862,8 @@ def scoreOfParentheses(s: str) -> int:
 
 ---
 
+---
+
 ## 💡 Key Insights & Pro Tips
 
 > **🎯 Stack vs Counter**  
@@ -860,6 +886,8 @@ def scoreOfParentheses(s: str) -> int:
 
 ---
 
+---
+
 ## 🎓 Pattern Recognition Guide
 
 ### Identifying Parentheses Patterns
@@ -877,6 +905,8 @@ def scoreOfParentheses(s: str) -> int:
 
 ---
 
+---
+
 ## 🧮 Complexity Analysis
 
 ### Algorithm Comparison
@@ -887,6 +917,8 @@ def scoreOfParentheses(s: str) -> int:
 | **Min Add** | O(n) with stack | **O(1) counter** | Don't need order |
 | **Longest Valid** | O(n²) DP | **O(n) stack** | Track indices |
 | **Generate** | O(2^(2n)) all | **O(4ⁿ/√n)** | Prune invalid early |
+
+---
 
 ---
 
@@ -917,6 +949,8 @@ def scoreOfParentheses(s: str) -> int:
 |----------|-------|------|
 | **VisuAlgo** | Stack visualization | [Website](https://visualgo.net/en/list) |
 | **Algorithm Visualizer** | Backtracking tree | [Website](https://algorithm-visualizer.org/) |
+
+---
 
 ---
 
@@ -956,6 +990,8 @@ def scoreOfParentheses(s: str) -> int:
 
 ---
 
+---
+
 ## 💭 Common Interview Questions
 
 **Q: Why can't we use just a counter for multiple bracket types?**  
@@ -972,6 +1008,8 @@ A: It's the nth Catalan number (number of valid strings). Each string takes O(n)
 
 **Q: When to use stack vs counter?**  
 A: Stack for multiple types or when order matters. Counter for single type with just validity check.
+
+---
 
 ---
 
@@ -1034,9 +1072,3 @@ if close_count < open_count:  # Always valid
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Basic Stack](../01_basic_stack/README.md) | **02. Parentheses** | [03. Monotonic Stack →](../03_monotonic_stack/README.md) |
