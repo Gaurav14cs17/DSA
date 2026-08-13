@@ -9,7 +9,7 @@ nav_order: 5
 
 ## 📊 Visual Overview
 
-![Manacher's Algorithm](./images/manacher.svg)
+![Manacher's Algorithm](./images/manacher.png)
 
 ## 📊 Metadata
 
