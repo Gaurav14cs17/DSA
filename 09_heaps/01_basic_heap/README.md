@@ -27,6 +27,16 @@ permalink: /09_heaps/01_basic_heap/
 
 ---
 
+## 📊 Visual Diagrams
+
+<div align="center">
+
+![Heap Operations](./image/heap_operations.png)
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Heap Property Maintenance
@@ -141,12 +151,6 @@ $$\text{answer} = \text{heap}[0]$$
 ---
 
 ## 🎨 Visual Algorithm Walkthroughs
-
-<div align="center">
-
-![Heap Operations](./image/heap_operations.png)
-
-</div>
 
 ### ⬆️ **Walkthrough 1: Heap Insert (Sift Up)**
 
