@@ -39,8 +39,6 @@ permalink: /05_queues/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -304,8 +302,6 @@ Tree BFS      Graph BFS       Monotonic Deque
  Zigzag?      Multi-source?   Max/Min tracking
 
 ```
-
----
 
 ---
 
