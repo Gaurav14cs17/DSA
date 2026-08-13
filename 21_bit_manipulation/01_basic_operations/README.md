@@ -35,13 +35,13 @@ permalink: /21_bit_manipulation/01_basic_operations/
 <div align="center">
 
 ### Brian Kernighan's Algorithm
-<img src="./images/brian-kernighan.svg" alt="Brian Kernighan Algorithm" width="100%">
+<img src="./images/brian-kernighan.png" alt="Brian Kernighan Algorithm" width="100%">
 
 ### Power of Two Detection
-<img src="./images/power-of-two.svg" alt="Power of Two Detection" width="100%">
+<img src="./images/power-of-two.png" alt="Power of Two Detection" width="100%">
 
 ### Reverse Bits
-<img src="./images/reverse-bits.svg" alt="Reverse Bits Algorithm" width="100%">
+<img src="./images/reverse-bits.png" alt="Reverse Bits Algorithm" width="100%">
 
 </div>
 
