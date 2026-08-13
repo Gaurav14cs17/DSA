@@ -57,6 +57,92 @@ permalink: /22_two_pointers/01_opposite_direction/
 ### 3Sum Algorithm
 ![3Sum Algorithm](./images/three-sum.png)
 
+### Two Sum Convergence
+
+```
+Target = 9
+
+Initial:
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+ ↑                       ↑
+ L                       R
+ sum = 1 + 9 = 10 > 9, move R
+
+Step 2:
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+ ↑                    ↑
+ L                    R
+ sum = 1 + 8 = 9 = target ✓
+
+Found: indices (0, 7)
+
+```
+
+### Container Area Visualization
+
+```
+    |
+8   |     █           █
+7   |     █     █     █   █
+6   |     █ █   █     █   █
+5   |     █ █   █ █   █   █
+4   |     █ █   █ █ █ █   █
+3   |     █ █ █ █ █ █ █ █ █
+2   | █   █ █ █ █ █ █ █ █ █
+1   | █   █ █ █ █ █ █ █ █ █
+    +-+-+-+-+-+-+-+-+-+-+-
+      0 1 2 3 4 5 6 7 8
+
+Max container: between indices 1 and 8
+Area = min(8, 7) × (8 - 1) = 7 × 7 = 49
+
+Water fills up to height 7 (the shorter of 8 and 7)
+
+```
+
+### 3Sum Reduction Flow
+
+```
++-------------------------------------------------------------+
+|                    3SUM ALGORITHM                           |
++-------------------------------------------------------------+
+|                                                             |
+|  Input: [-4, -1, -1, 0, 1, 2]                              |
+|  Target: 0                                                  |
+|                                                             |
+|  Step 1: Sort → [-4, -1, -1, 0, 1, 2]  ✓ (already sorted)  |
+|                                                             |
+|  Step 2: Fix each element, solve 2Sum                       |
+|                                                             |
+|  i = 0: a = -4                                              |
+|  Find b + c = 4 in [-1, -1, 0, 1, 2]                       |
+|    L = -1, R = 2 → sum = 1 < 4, move L                     |
+|    L = -1, R = 2 → sum = 1 < 4, move L                     |
+|    L = 0, R = 2 → sum = 2 < 4, move L                      |
+|    L = 1, R = 2 → sum = 3 < 4, move L                      |
+|    L crosses R → no solution with a = -4                   |
+|                                                             |
+|  i = 1: a = -1                                              |
+|  Find b + c = 1 in [-1, 0, 1, 2]                           |
+|    L = -1, R = 2 → sum = 1 = 1 ✓                           |
+|    → Triplet: [-1, -1, 2]                                  |
+|    Move both L and R                                        |
+|    L = 0, R = 1 → sum = 1 = 1 ✓                            |
+|    → Triplet: [-1, 0, 1]                                   |
+|                                                             |
+|  i = 2: a = -1 (duplicate, skip)                           |
+|                                                             |
+|  i = 3: a = 0                                               |
+|  Find b + c = 0 in [1, 2]                                  |
+|    L = 1, R = 2 → sum = 3 > 0, move R                      |
+|    L crosses R → no solution                               |
+|                                                             |
+|  Result: [[-1, -1, 2], [-1, 0, 1]]                         |
+|                                                             |
++-------------------------------------------------------------+
+
+```
+
 ---
 
 ## 📐 Mathematical Foundations
@@ -311,96 +397,6 @@ Reduction: Fix one element, solve \((k-1)\)-Sum on remaining.
 - 3Sum: \(O(n^2)\)
 
 - 4Sum: \(O(n^3)\)
-
----
-
-## 📊 Visual Diagrams
-
-### Two Sum Convergence
-
-```
-Target = 9
-
-Initial:
-[1, 2, 3, 4, 5, 6, 7, 8, 9]
- ↑                       ↑
- L                       R
- sum = 1 + 9 = 10 > 9, move R
-
-Step 2:
-[1, 2, 3, 4, 5, 6, 7, 8, 9]
- ↑                    ↑
- L                    R
- sum = 1 + 8 = 9 = target ✓
-
-Found: indices (0, 7)
-
-```
-
-### Container Area Visualization
-
-```
-    |
-8   |     █           █
-7   |     █     █     █   █
-6   |     █ █   █     █   █
-5   |     █ █   █ █   █   █
-4   |     █ █   █ █ █ █   █
-3   |     █ █ █ █ █ █ █ █ █
-2   | █   █ █ █ █ █ █ █ █ █
-1   | █   █ █ █ █ █ █ █ █ █
-    +-+-+-+-+-+-+-+-+-+-+-
-      0 1 2 3 4 5 6 7 8
-
-Max container: between indices 1 and 8
-Area = min(8, 7) × (8 - 1) = 7 × 7 = 49
-
-Water fills up to height 7 (the shorter of 8 and 7)
-
-```
-
-### 3Sum Reduction Flow
-
-```
-+-------------------------------------------------------------+
-|                    3SUM ALGORITHM                           |
-+-------------------------------------------------------------+
-|                                                             |
-|  Input: [-4, -1, -1, 0, 1, 2]                              |
-|  Target: 0                                                  |
-|                                                             |
-|  Step 1: Sort → [-4, -1, -1, 0, 1, 2]  ✓ (already sorted)  |
-|                                                             |
-|  Step 2: Fix each element, solve 2Sum                       |
-|                                                             |
-|  i = 0: a = -4                                              |
-|  Find b + c = 4 in [-1, -1, 0, 1, 2]                       |
-|    L = -1, R = 2 → sum = 1 < 4, move L                     |
-|    L = -1, R = 2 → sum = 1 < 4, move L                     |
-|    L = 0, R = 2 → sum = 2 < 4, move L                      |
-|    L = 1, R = 2 → sum = 3 < 4, move L                      |
-|    L crosses R → no solution with a = -4                   |
-|                                                             |
-|  i = 1: a = -1                                              |
-|  Find b + c = 1 in [-1, 0, 1, 2]                           |
-|    L = -1, R = 2 → sum = 1 = 1 ✓                           |
-|    → Triplet: [-1, -1, 2]                                  |
-|    Move both L and R                                        |
-|    L = 0, R = 1 → sum = 1 = 1 ✓                            |
-|    → Triplet: [-1, 0, 1]                                   |
-|                                                             |
-|  i = 2: a = -1 (duplicate, skip)                           |
-|                                                             |
-|  i = 3: a = 0                                               |
-|  Find b + c = 0 in [1, 2]                                  |
-|    L = 1, R = 2 → sum = 3 > 0, move R                      |
-|    L crosses R → no solution                               |
-|                                                             |
-|  Result: [[-1, -1, 2], [-1, 0, 1]]                         |
-|                                                             |
-+-------------------------------------------------------------+
-
-```
 
 ---
 
