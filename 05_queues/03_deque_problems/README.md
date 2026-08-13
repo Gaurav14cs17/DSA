@@ -122,6 +122,132 @@ Find smallest $j - i$ where condition holds.
 
 ---
 
+## 🎨 Visual Algorithm Walkthrough
+
+### Sliding Window Maximum (#239)
+
+```
+nums = [1, 3, -1, -3, 5, 3, 6, 7], k = 3
+
+Monotonic decreasing deque (stores indices):
+
+i=0, num=1:
+  deque = [0]
+  (window not complete yet)
+
+i=1, num=3:
+  Pop 0 (nums[0]=1 < 3)
+  deque = [1]
+
+i=2, num=-1:
+  deque = [1, 2]  (3 > -1, keep both)
+  Window [1,3,-1]: max = nums[1] = 3
+  result = [3]
+
+i=3, num=-3:
+  deque = [1, 2, 3]
+  Window [3,-1,-3]: max = nums[1] = 3
+  result = [3, 3]
+
+i=4, num=5:
+  Remove 1 (outside window)
+  Pop 2, 3 (smaller than 5)
+  deque = [4]
+  Window [-1,-3,5]: max = nums[4] = 5
+  result = [3, 3, 5]
+
+i=5, num=3:
+  deque = [4, 5]  (5 > 3)
+  Window [-3,5,3]: max = nums[4] = 5
+  result = [3, 3, 5, 5]
+
+i=6, num=6:
+  Remove 4 (outside window)
+  Pop 5 (3 < 6)
+  deque = [6]
+  Window [5,3,6]: max = nums[6] = 6
+  result = [3, 3, 5, 5, 6]
+
+i=7, num=7:
+  Pop 6 (6 < 7)
+  deque = [7]
+  Window [3,6,7]: max = nums[7] = 7
+  result = [3, 3, 5, 5, 6, 7]
+
+```
+
+### Shortest Subarray Sum ≥ K (#862)
+
+```
+nums = [2, -1, 2], k = 3
+
+Prefix sums: P = [0, 2, 1, 3]
+
+Monotonic increasing deque on prefix sums:
+
+j=0: P[0]=0
+  deque = [0]
+
+j=1: P[1]=2
+  Check: P[1]-P[0] = 2 < 3 (not valid)
+  deque = [0, 1]  (2 > 0, add)
+
+j=2: P[2]=1
+  Check: P[2]-P[0] = 1 < 3 (not valid)
+  Pop 1 (P[1]=2 > P[2]=1, violates monotonicity)
+  deque = [0, 2]
+
+j=3: P[3]=3
+  Check: P[3]-P[0] = 3 ≥ 3 ✓
+    result = min(inf, 3-0) = 3
+    Remove 0
+  Check: P[3]-P[2] = 2 < 3 (not valid)
+  deque = [2, 3]
+
+Result: 3 (subarray [2, -1, 2])
+
+```
+
+### 0-1 BFS Example
+
+```
+Graph with 0/1 edge weights:
+0 --0--> 1
+
+|        |
+1        0
+|        |
+v        v
+2 --1--> 3
+
+Start from 0:
+
+Initial: deque = [0], dist = [0, ∞, ∞, ∞]
+
+Process 0:
+  Edge 0→1 (weight 0): dist[1] = 0, add to FRONT
+  Edge 0→2 (weight 1): dist[2] = 1, add to BACK
+  deque = [1, 2]
+
+Process 1 (from front):
+  Edge 1→3 (weight 0): dist[3] = 0, add to FRONT
+  deque = [3, 2]
+
+Process 3:
+  No updates
+  deque = [2]
+
+Process 2:
+  Edge 2→3 (weight 1): dist[3] = min(0, 2) = 0 (no update)
+  deque = []
+
+Final distances: [0, 0, 1, 0]
+
+```
+
+---
+
+
 ## 💻 Code Implementations
 
 ```python
@@ -292,131 +418,6 @@ def zeroOneBFS(graph: list[list[tuple]], n: int, start: int) -> list[int]:
 | 1499 | [Max Value of Equation](https://leetcode.com/problems/max-value-of-equation/) | Monotonic Deque | O(n) | O(n) |
 
 ---
-
----
-
-## 🎨 Visual Algorithm Walkthrough
-
-### Sliding Window Maximum (#239)
-
-```
-nums = [1, 3, -1, -3, 5, 3, 6, 7], k = 3
-
-Monotonic decreasing deque (stores indices):
-
-i=0, num=1:
-  deque = [0]
-  (window not complete yet)
-
-i=1, num=3:
-  Pop 0 (nums[0]=1 < 3)
-  deque = [1]
-
-i=2, num=-1:
-  deque = [1, 2]  (3 > -1, keep both)
-  Window [1,3,-1]: max = nums[1] = 3
-  result = [3]
-
-i=3, num=-3:
-  deque = [1, 2, 3]
-  Window [3,-1,-3]: max = nums[1] = 3
-  result = [3, 3]
-
-i=4, num=5:
-  Remove 1 (outside window)
-  Pop 2, 3 (smaller than 5)
-  deque = [4]
-  Window [-1,-3,5]: max = nums[4] = 5
-  result = [3, 3, 5]
-
-i=5, num=3:
-  deque = [4, 5]  (5 > 3)
-  Window [-3,5,3]: max = nums[4] = 5
-  result = [3, 3, 5, 5]
-
-i=6, num=6:
-  Remove 4 (outside window)
-  Pop 5 (3 < 6)
-  deque = [6]
-  Window [5,3,6]: max = nums[6] = 6
-  result = [3, 3, 5, 5, 6]
-
-i=7, num=7:
-  Pop 6 (6 < 7)
-  deque = [7]
-  Window [3,6,7]: max = nums[7] = 7
-  result = [3, 3, 5, 5, 6, 7]
-
-```
-
-### Shortest Subarray Sum ≥ K (#862)
-
-```
-nums = [2, -1, 2], k = 3
-
-Prefix sums: P = [0, 2, 1, 3]
-
-Monotonic increasing deque on prefix sums:
-
-j=0: P[0]=0
-  deque = [0]
-
-j=1: P[1]=2
-  Check: P[1]-P[0] = 2 < 3 (not valid)
-  deque = [0, 1]  (2 > 0, add)
-
-j=2: P[2]=1
-  Check: P[2]-P[0] = 1 < 3 (not valid)
-  Pop 1 (P[1]=2 > P[2]=1, violates monotonicity)
-  deque = [0, 2]
-
-j=3: P[3]=3
-  Check: P[3]-P[0] = 3 ≥ 3 ✓
-    result = min(inf, 3-0) = 3
-    Remove 0
-  Check: P[3]-P[2] = 2 < 3 (not valid)
-  deque = [2, 3]
-
-Result: 3 (subarray [2, -1, 2])
-
-```
-
-### 0-1 BFS Example
-
-```
-Graph with 0/1 edge weights:
-0 --0--> 1
-
-|        |
-1        0
-|        |
-v        v
-2 --1--> 3
-
-Start from 0:
-
-Initial: deque = [0], dist = [0, ∞, ∞, ∞]
-
-Process 0:
-  Edge 0→1 (weight 0): dist[1] = 0, add to FRONT
-  Edge 0→2 (weight 1): dist[2] = 1, add to BACK
-  deque = [1, 2]
-
-Process 1 (from front):
-  Edge 1→3 (weight 0): dist[3] = 0, add to FRONT
-  deque = [3, 2]
-
-Process 3:
-  No updates
-  deque = [2]
-
-Process 2:
-  Edge 2→3 (weight 1): dist[3] = min(0, 2) = 0 (no update)
-  deque = []
-
-Final distances: [0, 0, 1, 0]
-
-```
 
 ---
 
