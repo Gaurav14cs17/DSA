@@ -133,88 +133,6 @@ permalink: /30_number_theory/02_primes/
 
 ---
 
-## 📐 Mathematical Foundations
-
-### 1️⃣ Prime Definition
-
-**Definition:** A prime number $p > 1$ is an integer with exactly two positive divisors: 1 and $p$.
-
-**First 25 Primes:**
-
-```
-2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 
-53, 59, 61, 67, 71, 73, 79, 83, 89, 97
-
-```
-
-**Key Properties:**
-
-- **Only even prime:** 2
-- **Infinite count:** Euclid's proof (~300 BC)
-
-- **Density:** $\pi(n) \approx \frac{n}{\ln n}$ (Prime Number Theorem)
-
-- **Coprime:** $\gcd(p, q) = 1$ for distinct primes
-
----
-
-### 2️⃣ Fundamental Theorem of Arithmetic
-
-**Theorem:** Every integer $n > 1$ can be expressed **uniquely** as:
-
-$$n = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k}$$
-
-where $p_1 < p_2 < \cdots < p_k$ are primes and $a_i \geq 1$.
-
-**Example:**
-
-$$\begin{align}
-360 &= 2^3 \times 3^2 \times 5^1 \\
-&= 8 \times 9 \times 5 = 360
-\end{align}$$
-
-**Applications:**
-
-- **Count divisors:** $\tau(n) = (a_1+1)(a_2+1)\cdots(a_k+1)$
-
-- **Sum of divisors:** $\sigma(n) = \prod \frac{p_i^{a_i+1} - 1}{p_i - 1}$
-
-- **Euler's totient:** $\phi(n) = n \prod \left(1 - \frac{1}{p_i}\right)$
-
----
-
-### 3️⃣ Prime Number Theorem
-
-**Statement:** The prime counting function satisfies:
-
-$$\pi(n) \sim \frac{n}{\ln n}$$
-
-**Precise Version:**
-
-$$\lim_{n \to \infty} \frac{\pi(n) \cdot \ln n}{n} = 1$$
-
-**Practical Approximations:**
-
-| $n$ | $\pi(n)$ | $n/\ln n$ | Ratio |
-|-----|----------|-----------|-------|
-| $10^3$ | 168 | 145 | 1.16 |
-| $10^6$ | 78,498 | 72,382 | 1.08 |
-| $10^9$ | 50,847,534 | 48,254,942 | 1.05 |
-
----
-
-### 4️⃣ Primality Testing Overview
-
-| Method | Time Complexity | Deterministic? | Best For |
-|--------|----------------|----------------|----------|
-| **Trial Division** | $O(\sqrt{n})$ | ✅ Yes | Small $n$ |
-| **Optimized Trial** | $O(\sqrt{n}/3)$ | ✅ Yes | Small $n$ |
-| **Fermat Test** | $O(k \log n)$ | ❌ No | Quick check |
-| **Miller-Rabin** | $O(k \log^3 n)$ | ❌/✅ | Large $n$ |
-| **AKS** | $O(\log^6 n)$ | ✅ Yes | Theoretical |
-
----
-
 ## 🎨 Visual Walkthroughs
 
 ### Walkthrough 1: Sieve of Eratosthenes
@@ -321,6 +239,88 @@ $$\lim_{n \to \infty} \frac{\pi(n) \cdot \ln n}{n} = 1$$
 +-----------------------------------------------------------------+
 
 ```
+
+---
+
+## 📐 Mathematical Foundations
+
+### 1️⃣ Prime Definition
+
+**Definition:** A prime number $p > 1$ is an integer with exactly two positive divisors: 1 and $p$.
+
+**First 25 Primes:**
+
+```
+2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 
+53, 59, 61, 67, 71, 73, 79, 83, 89, 97
+
+```
+
+**Key Properties:**
+
+- **Only even prime:** 2
+- **Infinite count:** Euclid's proof (~300 BC)
+
+- **Density:** $\pi(n) \approx \frac{n}{\ln n}$ (Prime Number Theorem)
+
+- **Coprime:** $\gcd(p, q) = 1$ for distinct primes
+
+---
+
+### 2️⃣ Fundamental Theorem of Arithmetic
+
+**Theorem:** Every integer $n > 1$ can be expressed **uniquely** as:
+
+$$n = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k}$$
+
+where $p_1 < p_2 < \cdots < p_k$ are primes and $a_i \geq 1$.
+
+**Example:**
+
+$$\begin{align}
+360 &= 2^3 \times 3^2 \times 5^1 \\
+&= 8 \times 9 \times 5 = 360
+\end{align}$$
+
+**Applications:**
+
+- **Count divisors:** $\tau(n) = (a_1+1)(a_2+1)\cdots(a_k+1)$
+
+- **Sum of divisors:** $\sigma(n) = \prod \frac{p_i^{a_i+1} - 1}{p_i - 1}$
+
+- **Euler's totient:** $\phi(n) = n \prod \left(1 - \frac{1}{p_i}\right)$
+
+---
+
+### 3️⃣ Prime Number Theorem
+
+**Statement:** The prime counting function satisfies:
+
+$$\pi(n) \sim \frac{n}{\ln n}$$
+
+**Precise Version:**
+
+$$\lim_{n \to \infty} \frac{\pi(n) \cdot \ln n}{n} = 1$$
+
+**Practical Approximations:**
+
+| $n$ | $\pi(n)$ | $n/\ln n$ | Ratio |
+|-----|----------|-----------|-------|
+| $10^3$ | 168 | 145 | 1.16 |
+| $10^6$ | 78,498 | 72,382 | 1.08 |
+| $10^9$ | 50,847,534 | 48,254,942 | 1.05 |
+
+---
+
+### 4️⃣ Primality Testing Overview
+
+| Method | Time Complexity | Deterministic? | Best For |
+|--------|----------------|----------------|----------|
+| **Trial Division** | $O(\sqrt{n})$ | ✅ Yes | Small $n$ |
+| **Optimized Trial** | $O(\sqrt{n}/3)$ | ✅ Yes | Small $n$ |
+| **Fermat Test** | $O(k \log n)$ | ❌ No | Quick check |
+| **Miller-Rabin** | $O(k \log^3 n)$ | ❌/✅ | Large $n$ |
+| **AKS** | $O(\log^6 n)$ | ✅ Yes | Theoretical |
 
 ---
 
