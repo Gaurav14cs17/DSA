@@ -10,20 +10,16 @@ permalink: /25_tree_algorithms/08_virtual_trees/
 
 # 🌐 Virtual Trees (Auxiliary Trees)
 
+### *Virtual Trees (Auxiliary Trees)*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-5+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 07. Euler Tour](../07_euler_tour/README.md) | **08. Virtual Trees** | [09. Tree Hashing →](../09_tree_hashing/README.md) |
 
 ---
 
@@ -46,8 +42,16 @@ permalink: /25_tree_algorithms/08_virtual_trees/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 📐 Mathematical Foundations
 
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 07. Euler Tour](../07_euler_tour/README.md) | **08. Virtual Trees** | [09. Tree Hashing →](../09_tree_hashing/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Virtual Tree Definition
 
 **Virtual Tree (Auxiliary Tree):** Compressed tree containing only **important nodes** and their LCAs.
@@ -560,10 +564,3 @@ Tree Problem
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 07. Euler Tour](../07_euler_tour/README.md) | **08. Virtual Trees** | [09. Tree Hashing →](../09_tree_hashing/README.md) |
-
