@@ -10,7 +10,7 @@ nav_order: 6
 
 ## 📊 Visual Overview
 
-![Advanced Applications](./images/advanced-applications.svg)
+![Advanced Applications](./images/advanced-applications.png)
 
 ## 📊 Metadata
 
