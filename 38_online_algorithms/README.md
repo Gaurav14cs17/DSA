@@ -279,6 +279,8 @@ class LFUCache:
 
 </div>
 
+**Idea:** Keep a monotonic deque of indices in decreasing value order. The front is always the maximum for the current window; stale indices are dropped from both ends as the window slides. Each element is pushed and popped once — O(n) total.
+
 ```python
 from collections import deque
 
