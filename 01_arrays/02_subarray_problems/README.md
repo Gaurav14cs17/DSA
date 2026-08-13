@@ -32,16 +32,16 @@ permalink: /01_arrays/02_subarray_problems/
 <div align="center">
 
 ### Kadane's Algorithm
-![Kadane's Algorithm](./images/kadane_algorithm.svg)
+![Kadane's Algorithm](./images/kadane_algorithm.png)
 
 ### Kadane's Algorithm (Detailed)
-![Kadane's Algorithm Detailed](./images/kadanes_algorithm.svg)
+![Kadane's Algorithm Detailed](./images/kadanes_algorithm.png)
 
 ### Sliding Window Technique
-![Sliding Window](./images/sliding_window.svg)
+![Sliding Window](./images/sliding_window.png)
 
 ### Subarray Counting
-![Subarray Count](./images/subarray_count.svg)
+![Subarray Count](./images/subarray_count.png)
 
 </div>
 
