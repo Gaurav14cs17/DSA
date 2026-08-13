@@ -1,10 +1,49 @@
+---
+layout: default
+title: "Divide & Conquer"
+parent: "DP Optimizations"
+nav_order: 5
+permalink: /40_dp_optimizations/05_divide_conquer/
+---
+
+<div align="center">
+
 # ✂️ Divide & Conquer Optimization
 
-## 📊 Visual Diagram
+### *Monge property optimizations*
+
+</div>
+
+---
+
+## 📊 Visual Overview
 
 <p align="center">
   <img src="./images/divide-conquer.png" alt="Divide & Conquer Optimization" width="100%">
 </p>
+
+---
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Monge property optimizations |
+
+
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Li Chao Tree](../04_li_chao_tree/README.md) | **05. Divide & Conquer** | [Knuth Optimization →](../06_knuth_optimization/README.md) |
 
 ## Overview
 
@@ -13,6 +52,10 @@
 **Condition:** `opt[i][j] ≤ opt[i][j+1]` (Monge property)
 
 **Complexity:** O(n²k) → O(nk log n)
+
+---
+
+
 
 ---
 
@@ -35,6 +78,10 @@ for all a ≤ b ≤ c ≤ d
 - Mailbox allocation
 
 - Job scheduling by deadline
+
+---
+
+
 
 ---
 
@@ -105,6 +152,10 @@ def compute_cost(subarray):
 
 ---
 
+
+
+---
+
 ## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty |
@@ -112,6 +163,10 @@ def compute_cost(subarray):
 | 410 | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) | ⭐⭐⭐⭐ |
 | 1478 | [Allocate Mailboxes](https://leetcode.com/problems/allocate-mailboxes/) | ⭐⭐⭐⭐ |
 | 1335 | [Minimum Difficulty](https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/) | ⭐⭐⭐⭐ |
+
+---
+
+
 
 ---
 
