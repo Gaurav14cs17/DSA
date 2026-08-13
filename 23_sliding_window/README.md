@@ -10,7 +10,6 @@ permalink: /23_sliding_window/
 
 # 🪟 Sliding Window
 
-![Sliding Window Overview](./images/sliding-window-overview.png)
 
 ### *The Art of Moving Through Data — One Window at a Time*
 
@@ -29,6 +28,17 @@ permalink: /23_sliding_window/
 
 ---
 
+## 📊 Visual Overview
+
+<div align="center">
+
+![Sliding Window Overview](./images/sliding-window-overview.png)
+
+</div>
+
+---
+
+
 ## 🌟 Why Sliding Window?
 
 > *"Instead of recalculating from scratch, we slide and adjust — turning O(n×k) into O(n)."*
@@ -39,6 +49,109 @@ permalink: /23_sliding_window/
 | 💾 **Incremental** | Reuse previous computation by adding/removing elements |
 | 🎯 **Elegance** | Clean two-pointer-like structure |
 | 🏆 **Versatility** | Works for sums, counts, substrings, and more |
+
+---
+
+## 🎨 Visual: The Sliding Window in Motion
+
+### Fixed Size Window (k=3)
+
+```
+Array: [2, 1, 5, 1, 3, 2]   Find: Max sum of size 3
+
+Step 1: Initialize window
++-------------+
+
+| 2 | 1 | 5 | 1 | 3 | 2 |
++---+---+---+---+---+---+
+  +---------+
+  sum = 2+1+5 = 8   max = 8
+
+Step 2: Slide right (remove 2, add 1)
++-------------+
+
+| 2 | 1 | 5 | 1 | 3 | 2 |
++---+---+---+---+---+---+
+      +---------+
+  sum = 8 - 2 + 1 = 7   max = 8
+
+Step 3: Slide right (remove 1, add 3)
++-------------+
+
+| 2 | 1 | 5 | 1 | 3 | 2 |
++---+---+---+---+---+---+
+          +---------+
+  sum = 7 - 1 + 3 = 9   max = 9 ⭐
+
+Step 4: Slide right (remove 5, add 2)
++-------------+
+
+| 2 | 1 | 5 | 1 | 3 | 2 |
++---+---+---+---+---+---+
+              +---------+
+  sum = 9 - 5 + 2 = 6   max = 9
+
+Answer: 9 (window [5, 1, 3])
+
+```
+
+### Variable Size Window (Minimum Length with Sum ≥ 7)
+
+```
+Array: [2, 3, 1, 2, 4, 3]   Find: Shortest subarray with sum ≥ 7
+
+Step 1: Expand until valid
++-------------+
+
+| 2 | 3 | 1 | 2 | 4 | 3 |
++---+---+---+---+---+---+
+  L
+      R
+  sum = 2+3 = 5 < 7, expand...
+
++-------------+
+
+| 2 | 3 | 1 | 2 | 4 | 3 |
++---+---+---+---+---+---+
+  L
+          R
+  sum = 2+3+1 = 6 < 7, expand...
+
++-------------+
+
+| 2 | 3 | 1 | 2 | 4 | 3 |
++---+---+---+---+---+---+
+  L
+              R
+  sum = 2+3+1+2 = 8 ≥ 7 ✓   min_len = 4
+
+Step 2: Shrink while valid
++-------------+
+
+| 2 | 3 | 1 | 2 | 4 | 3 |
++---+---+---+---+---+---+
+      L
+              R
+  sum = 8-2 = 6 < 7 ✗, stop shrinking
+
+Step 3: Expand again
++-------------+
+
+| 2 | 3 | 1 | 2 | 4 | 3 |
++---+---+---+---+---+---+
+      L
+                  R
+  sum = 6+4 = 10 ≥ 7 ✓   min_len = 4
+
+Step 4: Shrink while valid
+  sum = 10-3 = 7 ≥ 7 ✓   min_len = 3
+  sum = 7-1 = 6 < 7 ✗
+
+...continue...
+
+Answer: 2 (window [4, 3])
+
+```
 
 ---
 
@@ -276,109 +389,6 @@ Count = \(right - left + 1\) subarrays ∎
                    |  when    | |  while   |
                    | INVALID  | |  VALID   |
                    +----------+ +----------+
-
-```
-
----
-
-## 🎨 Visual: The Sliding Window in Motion
-
-### Fixed Size Window (k=3)
-
-```
-Array: [2, 1, 5, 1, 3, 2]   Find: Max sum of size 3
-
-Step 1: Initialize window
-+-------------+
-
-| 2 | 1 | 5 | 1 | 3 | 2 |
-+---+---+---+---+---+---+
-  +---------+
-  sum = 2+1+5 = 8   max = 8
-
-Step 2: Slide right (remove 2, add 1)
-+-------------+
-
-| 2 | 1 | 5 | 1 | 3 | 2 |
-+---+---+---+---+---+---+
-      +---------+
-  sum = 8 - 2 + 1 = 7   max = 8
-
-Step 3: Slide right (remove 1, add 3)
-+-------------+
-
-| 2 | 1 | 5 | 1 | 3 | 2 |
-+---+---+---+---+---+---+
-          +---------+
-  sum = 7 - 1 + 3 = 9   max = 9 ⭐
-
-Step 4: Slide right (remove 5, add 2)
-+-------------+
-
-| 2 | 1 | 5 | 1 | 3 | 2 |
-+---+---+---+---+---+---+
-              +---------+
-  sum = 9 - 5 + 2 = 6   max = 9
-
-Answer: 9 (window [5, 1, 3])
-
-```
-
-### Variable Size Window (Minimum Length with Sum ≥ 7)
-
-```
-Array: [2, 3, 1, 2, 4, 3]   Find: Shortest subarray with sum ≥ 7
-
-Step 1: Expand until valid
-+-------------+
-
-| 2 | 3 | 1 | 2 | 4 | 3 |
-+---+---+---+---+---+---+
-  L
-      R
-  sum = 2+3 = 5 < 7, expand...
-
-+-------------+
-
-| 2 | 3 | 1 | 2 | 4 | 3 |
-+---+---+---+---+---+---+
-  L
-          R
-  sum = 2+3+1 = 6 < 7, expand...
-
-+-------------+
-
-| 2 | 3 | 1 | 2 | 4 | 3 |
-+---+---+---+---+---+---+
-  L
-              R
-  sum = 2+3+1+2 = 8 ≥ 7 ✓   min_len = 4
-
-Step 2: Shrink while valid
-+-------------+
-
-| 2 | 3 | 1 | 2 | 4 | 3 |
-+---+---+---+---+---+---+
-      L
-              R
-  sum = 8-2 = 6 < 7 ✗, stop shrinking
-
-Step 3: Expand again
-+-------------+
-
-| 2 | 3 | 1 | 2 | 4 | 3 |
-+---+---+---+---+---+---+
-      L
-                  R
-  sum = 6+4 = 10 ≥ 7 ✓   min_len = 4
-
-Step 4: Shrink while valid
-  sum = 10-3 = 7 ≥ 7 ✓   min_len = 3
-  sum = 7-1 = 6 < 7 ✗
-
-...continue...
-
-Answer: 2 (window [4, 3])
 
 ```
 
