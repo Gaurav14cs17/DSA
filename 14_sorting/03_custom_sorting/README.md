@@ -10,7 +10,6 @@ permalink: /14_sorting/03_custom_sorting/
 
 # 🎨 Custom Sorting
 
-![Custom Sorting](./images/custom_sorting.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -20,6 +19,17 @@ permalink: /14_sorting/03_custom_sorting/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Custom Sorting](./images/custom_sorting.png)
+
+</div>
+
+---
+
 
 ## 🧭 Navigation
 
