@@ -10,12 +10,37 @@ permalink: /18_dynamic_programming/02_2d_dp/
 
 # 📊 2D Dynamic Programming
 
+### *📊 2D Dynamic Programming*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-12+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+  <img src="images/2d-dp.png" alt="2D DP Visualization" width="100%">
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 📊 2D Dynamic Programming |
+| **Difficulty** | Medium |
+| **Problems** | 12+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -27,16 +52,7 @@ permalink: /18_dynamic_programming/02_2d_dp/
 
 ---
 
-## 📊 Visual Guide
-
-<div align="center">
-  <img src="images/2d-dp.png" alt="2D DP Visualization" width="100%">
-</div>
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ General Form
 
 $$dp[i][j] = f(dp[i-1][j], dp[i][j-1], dp[i-1][j-1], \ldots)$$
@@ -193,9 +209,3 @@ def longestPalindromeSubseq(s: str) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. 1D DP](../01_1d_dp/README.md) | **02. 2D DP** | [03. Knapsack →](../03_knapsack/README.md) |
