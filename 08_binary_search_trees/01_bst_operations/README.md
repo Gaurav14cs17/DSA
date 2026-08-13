@@ -31,7 +31,7 @@ permalink: /08_binary_search_trees/01_bst_operations/
 
 <div align="center">
 
-![BST Operations](./image/bst_operations.svg)
+![BST Operations](./image/bst_operations.png)
 
 </div>
 
