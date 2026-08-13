@@ -262,7 +262,7 @@ Heap Problem
 
 ---
 
-## 📐 Mathematical Foundation
+## 💡 Key Insights & Pro Tips
 
 > **🎯 Top K Pattern:** K largest → Min-Heap size k. K smallest → Max-Heap size k. Always opposite!
 
