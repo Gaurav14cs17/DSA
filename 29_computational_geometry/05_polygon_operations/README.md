@@ -27,7 +27,7 @@ Polygon operations compute properties and perform transformations on polygons.
 
 ## 📊 Visual Overview
 
-![Polygon Operations](./images/polygon-operations.svg)
+![Polygon Operations](./images/polygon-operations.png)
 
 *Shoelace formula for area calculation and ear clipping triangulation*
 
