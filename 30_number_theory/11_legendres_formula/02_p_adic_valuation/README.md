@@ -37,7 +37,7 @@ permalink: /30_number_theory/11_legendres_formula/02_p_adic_valuation/
 
 <div align="center">
 
-![p-adic Valuation](./images/p_adic_valuation.svg)
+![p-adic Valuation](./images/p_adic_valuation.png)
 
 </div>
 
