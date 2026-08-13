@@ -13,6 +13,8 @@ permalink: /25_tree_algorithms/
 ### *Advanced tree algorithms and techniques*
 
 
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Subtopics-11-blue?style=for-the-badge" alt="Subtopics">
@@ -50,11 +52,6 @@ permalink: /25_tree_algorithms/
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
-
----
-## 📋 Overview
-
-Comprehensive collection of **advanced tree algorithms** including LCA, Tree DP, HLD, Centroid Decomposition, DSU on Tree, Virtual Trees, Tree Hashing, Link-Cut Trees, and more.
 
 ---
 
@@ -193,6 +190,12 @@ Comprehensive collection of **advanced tree algorithms** including LCA, Tree DP,
 </td>
 </tr>
 </table>
+
+---
+
+## 📋 Overview
+
+Comprehensive collection of **advanced tree algorithms** including LCA, Tree DP, HLD, Centroid Decomposition, DSU on Tree, Virtual Trees, Tree Hashing, Link-Cut Trees, and more.
 
 ---
 
