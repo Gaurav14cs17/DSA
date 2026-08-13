@@ -10,6 +10,8 @@ permalink: /02_strings/02_anagram_problems/
 
 # 🔀 Anagram Problems
 
+### *🔀 Anagram Problems*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +21,7 @@ permalink: /02_strings/02_anagram_problems/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Basic String](../01_basic_string/README.md) | **02. Anagram Problems** | [03. Palindrome →](../03_palindrome/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 ### Anagram Check - Frequency Vector Comparison
 
@@ -59,8 +53,82 @@ permalink: /02_strings/02_anagram_problems/
 
 ---
 
-## 📐 Mathematical Foundations
+---
 
+## 📊 Visual Overview
+
+### Find All Anagrams - Sliding Window
+
+```
+Input: s = "cbaebabacd", p = "abc"
+
+Step-by-step:
++----------------------------------------------------------+
+
+| Initial: p_count = {a:1, b:1, c:1}                      |
++----------------------------------------------------------+
+| Window size = 3                                          |
+|                                                          |
+| Index 0-2: "cba"                                        |
+| window = {c:1, b:1, a:1} ← MATCH! ✓ Add index 0        |
+|                                                          |
+| Index 1-3: "bae"                                        |
+| Remove 'c', Add 'e'                                     |
+| window = {b:1, a:1, e:1} ← No match                    |
+|                                                          |
+| Index 2-4: "aeb"                                        |
+| Remove 'b', Add 'b'                                     |
+| window = {a:1, e:1, b:1} ← No match                    |
+|                                                          |
+| Index 3-5: "eba"                                        |
+| Remove 'a', Add 'a'                                     |
+| window = {e:1, b:1, a:1} ← No match                    |
+|                                                          |
+| Index 4-6: "bab"                                        |
+| Remove 'e', Add 'b'                                     |
+| window = {b:2, a:1} ← No match (extra b)               |
+|                                                          |
+| Index 5-7: "aba"                                        |
+| Remove 'b', Add 'a'                                     |
+| window = {b:1, a:2} ← No match (extra a)               |
+|                                                          |
+| Index 6-8: "bac"                                        |
+| Remove 'a', Add 'c'                                     |
+| window = {b:1, a:1, c:1} ← MATCH! ✓ Add index 6        |
++----------------------------------------------------------+
+
+Result: [0, 6]
+
+```
+
+---
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🔀 Anagram Problems |
+| **Difficulty** | Easy to Medium |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 01. Basic String](../01_basic_string/README.md) | **02. Anagram Problems** | [03. Palindrome →](../03_palindrome/README.md) |
+
+---
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Anagram Definition
 
 **Definition:** Two strings $S$ and $T$ are anagrams if:
@@ -123,52 +191,6 @@ $$\forall c \in T: \text{count}_{\text{window}}(c) \geq \text{count}_T(c)$$
 - Track minimum window
 
 ---
-
-## 🎨 Visual Algorithm Walkthrough
-
-### Find All Anagrams - Sliding Window
-
-```
-Input: s = "cbaebabacd", p = "abc"
-
-Step-by-step:
-+----------------------------------------------------------+
-
-| Initial: p_count = {a:1, b:1, c:1}                      |
-+----------------------------------------------------------+
-| Window size = 3                                          |
-|                                                          |
-| Index 0-2: "cba"                                        |
-| window = {c:1, b:1, a:1} ← MATCH! ✓ Add index 0        |
-|                                                          |
-| Index 1-3: "bae"                                        |
-| Remove 'c', Add 'e'                                     |
-| window = {b:1, a:1, e:1} ← No match                    |
-|                                                          |
-| Index 2-4: "aeb"                                        |
-| Remove 'b', Add 'b'                                     |
-| window = {a:1, e:1, b:1} ← No match                    |
-|                                                          |
-| Index 3-5: "eba"                                        |
-| Remove 'a', Add 'a'                                     |
-| window = {e:1, b:1, a:1} ← No match                    |
-|                                                          |
-| Index 4-6: "bab"                                        |
-| Remove 'e', Add 'b'                                     |
-| window = {b:2, a:1} ← No match (extra b)               |
-|                                                          |
-| Index 5-7: "aba"                                        |
-| Remove 'b', Add 'a'                                     |
-| window = {b:1, a:2} ← No match (extra a)               |
-|                                                          |
-| Index 6-8: "bac"                                        |
-| Remove 'a', Add 'c'                                     |
-| window = {b:1, a:1, c:1} ← MATCH! ✓ Add index 6        |
-+----------------------------------------------------------+
-
-Result: [0, 6]
-
-```
 
 ---
 
@@ -286,6 +308,8 @@ def minWindow(s: str, t: str) -> str:
 
 ---
 
+---
+
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
@@ -311,6 +335,8 @@ def minWindow(s: str, t: str) -> str:
 
 ---
 
+---
+
 ## 💡 Key Insights & Pro Tips
 
 > **🎯 Anagram Canonical Form**  
@@ -330,6 +356,8 @@ def minWindow(s: str, t: str) -> str:
 
 ---
 
+---
+
 ## 🎓 Pattern Recognition Guide
 
 ### When to Use Each Approach
@@ -341,6 +369,8 @@ def minWindow(s: str, t: str) -> str:
 | **Find all in string** | Sliding window | O(n) | O(1) |
 | **Minimum window** | Sliding window + formed counter | O(n) | O(k) |
 | **Permutation in string** | Same as find all | O(n) | O(1) |
+
+---
 
 ---
 
@@ -372,6 +402,8 @@ def minWindow(s: str, t: str) -> str:
 
 ---
 
+---
+
 ## 🎯 Complexity Comparison
 
 ### Anagram Detection Methods
@@ -391,6 +423,8 @@ def minWindow(s: str, t: str) -> str:
 | **Sort as key** | O(n·k log k) | O(nk) | `tuple(sorted(s))` |
 | **Count as key** | O(n·k) | O(nk) | `tuple(frequency)` |
 | **Prime hash** | O(n·k) | O(nk) | Product of primes |
+
+---
 
 ---
 
@@ -442,6 +476,8 @@ def minWindow(s: str, t: str) -> str:
 
 ---
 
+---
+
 ## 🎯 Practice Roadmap
 
 ### Beginner Level
@@ -467,6 +503,8 @@ def minWindow(s: str, t: str) -> str:
 - Then move to variable window (#76)
 
 - Practice optimizing space to O(1) for fixed alphabet
+
+---
 
 ---
 
@@ -503,9 +541,3 @@ A: Permutation = all possible arrangements. Anagram = specific arrangement that 
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Basic String](../01_basic_string/README.md) | **02. Anagram Problems** | [03. Palindrome →](../03_palindrome/README.md) |
