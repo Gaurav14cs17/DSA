@@ -36,6 +36,17 @@ permalink: /27_advanced_trees/03_fenwick_tree/05_dp_with_bit/
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Hard |
+| **Problems** | 6 |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Core Concept
 
 **DP + BIT:** Use BIT to optimize DP state transitions from $O(n^2)$ to $O(n \log n)$.
