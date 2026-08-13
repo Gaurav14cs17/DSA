@@ -10,12 +10,39 @@ permalink: /24_graph_algorithms/06_bridges_articulation_points/
 
 # 🌉 Bridges & Articulation Points
 
+### *🌉 Bridges & Articulation Points*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Bridges and Articulation Points](./images/bridges-articulation.png)
+
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🌉 Bridges & Articulation Points |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 8+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -27,18 +54,7 @@ permalink: /24_graph_algorithms/06_bridges_articulation_points/
 
 ---
 
-## 🎨 Visual Overview
-
-<div align="center">
-
-![Bridges and Articulation Points](./images/bridges-articulation.png)
-
-</div>
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Definitions
 
 **Bridge (Cut Edge):** Edge whose removal increases number of connected components.
@@ -509,10 +525,3 @@ Graph Vulnerability Problem
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 05. SCC](../05_strongly_connected_components/README.md) | **06. Bridges & Articulation** | [07. Eulerian Path →](../07_eulerian_path/README.md) |
-
