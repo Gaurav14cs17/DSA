@@ -10,6 +10,10 @@ permalink: /10_graphs/06_cycle_detection/
 
 # 🔄 Cycle Detection
 
+### *🔄 Cycle Detection*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-5+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +23,7 @@ permalink: /10_graphs/06_cycle_detection/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 05. Topological Sort](../05_topological_sort/README.md) | **06. Cycle Detection** | [07. MST →](../07_mst/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -39,8 +35,28 @@ permalink: /10_graphs/06_cycle_detection/
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **Topic** | 🔄 Cycle Detection |
+| **Difficulty** | Medium |
+| **Problems** | 5+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 05. Topological Sort](../05_topological_sort/README.md) | **06. Cycle Detection** | [07. MST →](../07_mst/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Cycle in Directed Graph
 
 **DFS with 3 states:**
@@ -290,9 +306,3 @@ Cycle Detection
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 05. Topological Sort](../05_topological_sort/README.md) | **06. Cycle Detection** | [07. MST →](../07_mst/README.md) |
