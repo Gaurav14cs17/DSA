@@ -10,6 +10,8 @@ permalink: /03_linked_lists/
 
 # 🔗 Linked Lists
 
+### *Dynamic data structure with non-contiguous memory allocation*
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-green?style=for-the-badge" alt="Difficulty">
@@ -31,11 +33,27 @@ permalink: /03_linked_lists/
 
 ![Linked Lists Overview](./images/linked-list-overview.png)
 
+*Linked Lists Overview*
+
 </div>
 
 ---
 
+---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Dynamic data structure with non-contiguous memory allocation |
+| **Difficulty** | Easy to Medium |
+| **Subtopics** | 3 |
+| **Problems** | 40+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ Node Structure
