@@ -60,16 +60,14 @@ permalink: /21_bit_manipulation/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 🌟 Why Bit Manipulation?
 
-> *"At the heart of every computer lies binary - the language of 0s and 1s. Mastering bit manipulation is mastering the machine itself."*
+## 📂 Subtopics Navigation
 
-| Advantage | Description |
-|-----------|-------------|
-| ⚡ **Speed** | Bitwise operations execute in a single CPU cycle |
-| 💾 **Memory** | Represent multiple boolean states in a single integer |
-| 🎯 **Elegance** | Solve complex problems with minimal code |
-| 🏆 **Interviews** | A favorite topic at FAANG companies |
+| # | Topic | Key Concepts | Problems | Link |
+|:-:|-------|--------------|:--------:|------|
+| 1 | **Basic Operations** | Kernighan, Power of 2, Reverse Bits | 10+ | [📖 Go →](./01_basic_operations/README.md) |
+| 2 | **XOR Tricks** | Single Number, Missing Number, Partition | 10+ | [📖 Go →](./02_xor_tricks/README.md) |
+| 3 | **Bitmask** | Subset Generation, State Compression, DP | 8+ | [📖 Go →](./03_bitmask/README.md) |
 
 ---
 
@@ -222,13 +220,16 @@ n&-n = 0...00100  (4) — only lowest set bit remains!
 
 ---
 
-## 📂 Subtopics Navigation
+## 🌟 Why Bit Manipulation?
 
-| # | Topic | Key Concepts | Problems | Link |
-|:-:|-------|--------------|:--------:|------|
-| 1 | **Basic Operations** | Kernighan, Power of 2, Reverse Bits | 10+ | [📖 Go →](./01_basic_operations/README.md) |
-| 2 | **XOR Tricks** | Single Number, Missing Number, Partition | 10+ | [📖 Go →](./02_xor_tricks/README.md) |
-| 3 | **Bitmask** | Subset Generation, State Compression, DP | 8+ | [📖 Go →](./03_bitmask/README.md) |
+> *"At the heart of every computer lies binary - the language of 0s and 1s. Mastering bit manipulation is mastering the machine itself."*
+
+| Advantage | Description |
+|-----------|-------------|
+| ⚡ **Speed** | Bitwise operations execute in a single CPU cycle |
+| 💾 **Memory** | Represent multiple boolean states in a single integer |
+| 🎯 **Elegance** | Solve complex problems with minimal code |
+| 🏆 **Interviews** | A favorite topic at FAANG companies |
 
 ---
 
