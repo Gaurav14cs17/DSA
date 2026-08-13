@@ -10,6 +10,10 @@ permalink: /17_backtracking/03_combinations/
 
 # 🎯 Combinations
 
+### *Combinations*
+
+
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -43,6 +47,7 @@ permalink: /17_backtracking/03_combinations/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -51,8 +56,7 @@ permalink: /17_backtracking/03_combinations/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Combination Formula
 
 $$C(n, k) = \binom{n}{k} = \frac{n!}{k!(n-k)!}$$
@@ -244,9 +248,3 @@ def letterCombinations(digits: str) -> list[str]:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. Permutations](../02_permutations/README.md) | **03. Combinations** | [04. Grid Backtracking →](../04_grid_backtracking/README.md) |
