@@ -5,10 +5,21 @@ parent: "Modular Arithmetic"
 grand_parent: "Number Theory"
 nav_order: 1
 ---
+<div align="center">
 
 # 🔢 Basic Modular Operations
 
-## 📊 Visual Diagram
+### *Basic Modular Operations*
+
+<p><img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty"></p>
+
+[🏠 Modular Arithmetic](../README.md)
+
+</div>
+
+---
+
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -23,7 +34,8 @@ nav_order: 1
 ## 🎯 At a Glance
 
 | | |
-|:---|:---|
+|:---| **Topic** | Basic Modular Operations |
+|:---|
 | **Typical time** | O(1) per operation |
 | **Typical space** | O(1) |
 
@@ -31,6 +43,15 @@ nav_order: 1
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [🏠 Modular Arithmetic](../README.md) | **01. Basic Modular Operations** | [Modular Inverse →](../02_modular_inverse/README.md) |
+
+---
+
 ## 🎯 Overview
 
 Modular arithmetic is "clock arithmetic" where numbers wrap around upon reaching a certain value (modulus). It's fundamental to cryptography, hashing, and competitive programming.
@@ -220,4 +241,3 @@ def mod_safe(n, m=MOD_1):
 ---
 
 **Navigation:** [← Modular Arithmetic Overview](../README.md) | [Modular Inverse →](../02_modular_inverse/)
-
