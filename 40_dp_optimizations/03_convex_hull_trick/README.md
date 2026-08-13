@@ -3,7 +3,7 @@
 ## 📊 Visual Diagram
 
 <p align="center">
-  <img src="./images/convex-hull-trick.svg" alt="Convex Hull Trick" width="100%">
+  <img src="./images/convex-hull-trick.png" alt="Convex Hull Trick" width="100%">
 </p>
 
 ## Overview
