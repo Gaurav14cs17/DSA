@@ -26,11 +26,25 @@ permalink: /15_searching/02_binary_search_on_answer/
 
 ![Binary Search on Answer](./images/bs-on-answer.png)
 
+*Binary Search on Answer*
+
 </div>
 
 ---
 
+---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Medium to Hard |
+| **Problems** | 8+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
