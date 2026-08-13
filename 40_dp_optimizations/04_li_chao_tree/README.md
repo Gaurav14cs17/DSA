@@ -1,12 +1,53 @@
+---
+layout: default
+title: "Li Chao Tree"
+parent: "DP Optimizations"
+nav_order: 4
+permalink: /40_dp_optimizations/04_li_chao_tree/
+---
+
+<div align="center">
+
 # 🌳 Li Chao Tree
 
-## 📊 Visual Diagram
+### *Dynamic convex hull trick*
+
+</div>
+
+---
+
+## 📊 Visual Overview
 
 <p align="center">
   <img src="./images/li-chao-tree.png" alt="Li Chao Tree" width="100%">
 </p>
 
-## Overview
+---
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Dynamic convex hull trick |
+
+
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Convex Hull Trick](../03_convex_hull_trick/README.md) | **04. Li Chao Tree** | [Divide & Conquer →](../05_divide_conquer/README.md) |
+
+## 📐 Mathematical Foundation
+
+### Overview
 
 **Li Chao Tree** is a dynamic Convex Hull Trick that allows adding lines in **any order** and supports **online queries**.
 
@@ -26,12 +67,20 @@
 
 ---
 
+
+
+---
+
 ## 📐 Core Idea
 
 Li Chao Tree is a **segment tree** where each node stores the **best line for its range's midpoint**.
 
 **Key Property:**
 If a line is best at the midpoint, it might be best for the entire half-range.
+
+---
+
+
 
 ---
 
@@ -103,6 +152,10 @@ class LiChaoTree:
 
 ---
 
+
+
+---
+
 ## 🎯 When to Use Li Chao vs CHT
 
 | Feature | CHT | Li Chao Tree |
@@ -113,6 +166,10 @@ class LiChaoTree:
 | **Implementation** | Simpler | More complex |
 
 **Use Li Chao when:** Lines or queries are not monotonic.
+
+---
+
+
 
 ---
 
