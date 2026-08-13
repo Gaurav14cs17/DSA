@@ -52,6 +52,17 @@ permalink: /19_greedy_algorithms/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 📂 Subtopics Navigation
+
+| # | Topic | Problems | Link |
+|:-:|-------|:--------:|------|
+| 1 | Interval Scheduling | 10+ | [📖 Go →](./01_interval_scheduling/README.md) |
+| 2 | Task Scheduling | 8+ | [📖 Go →](./02_task_scheduling/README.md) |
+| 3 | Array Greedy | 10+ | [📖 Go →](./03_array_greedy/README.md) |
+
+---
+
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ Greedy Choice Property
@@ -102,16 +113,6 @@ If non-greedy choice exists, swap it with greedy choice → solution doesn't wor
 3. $O$ doesn't worsen (greedy ends earliest)
 
 4. By induction, $|A| = |O|$ ∎
-
----
-
-## 📂 Subtopics Navigation
-
-| # | Topic | Problems | Link |
-|:-:|-------|:--------:|------|
-| 1 | Interval Scheduling | 10+ | [📖 Go →](./01_interval_scheduling/README.md) |
-| 2 | Task Scheduling | 8+ | [📖 Go →](./02_task_scheduling/README.md) |
-| 3 | Array Greedy | 10+ | [📖 Go →](./03_array_greedy/README.md) |
 
 ---
 
