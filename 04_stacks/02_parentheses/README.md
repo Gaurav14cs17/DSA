@@ -25,7 +25,7 @@ permalink: /04_stacks/02_parentheses/
 
 ### ✅ Valid Parentheses
 
-<img src="./images/valid_parentheses.svg" alt="Valid Parentheses" width="850"/>
+<img src="./images/valid_parentheses.png" alt="Valid Parentheses" width="850"/>
 
 *Stack-based matching for (), [], {} - LeetCode #20*
 
@@ -33,7 +33,7 @@ permalink: /04_stacks/02_parentheses/
 
 ### 🌳 Generate Parentheses
 
-<img src="./images/generate_parentheses.svg" alt="Generate Parentheses" width="900"/>
+<img src="./images/generate_parentheses.png" alt="Generate Parentheses" width="900"/>
 
 *Backtracking with Catalan numbers: C₃ = 5 valid combinations - LeetCode #22*
 
@@ -41,7 +41,7 @@ permalink: /04_stacks/02_parentheses/
 
 ### 📏 Longest Valid Parentheses
 
-<img src="./images/longest_valid_parentheses.svg" alt="Longest Valid Parentheses" width="850"/>
+<img src="./images/longest_valid_parentheses.png" alt="Longest Valid Parentheses" width="850"/>
 
 *Stack stores indices of unmatched positions - LeetCode #32*
 
