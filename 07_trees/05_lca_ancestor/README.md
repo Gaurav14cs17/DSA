@@ -10,7 +10,6 @@ permalink: /07_trees/05_lca_ancestor/
 
 # 👴 LCA & Ancestor Problems
 
-![LCA & Ancestor Diagram](./images/lca-ancestor.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -20,6 +19,17 @@ permalink: /07_trees/05_lca_ancestor/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![LCA & Ancestor Diagram](./images/lca-ancestor.png)
+
+</div>
+
+---
+
 
 ## 🧭 Navigation
 
@@ -97,6 +107,99 @@ Where $\text{ancestor}[i][j]$ = $2^j$-th ancestor of node $i$.
 $$k = \sum_{i} b_i \cdot 2^i$$
 
 Jump using precomputed $2^i$-th ancestors.
+
+---
+
+## 🎨 Visual Algorithm Walkthrough
+
+### LCA of Binary Tree (#236)
+
+```
+Tree:        Find LCA(5, 1)
+        3
+       / \
+      5   1
+     / \  / \
+    6  2 0  8
+      / \
+     7   4
+
+DFS Search:
+Start at 3:
+  Search left (5):
+    Found 5! Return 5
+  Search right (1):
+    Found 1! Return 1
+  Both left and right non-null → 3 is LCA!
+
+Result: 3
+
+Example 2: Find LCA(5, 4)
+  Search left (5):
+    Found 5! But continue checking subtree...
+    Search 5's left: found 6
+    Search 5's right: found 2, then 4
+    4 found in left subtree, return up
+  Since 5 itself is one target and 4 in its subtree
+  Result: 5 (ancestor can be the node itself!)
+
+```
+
+### LCA of BST (#235)
+
+```
+BST:         Find LCA(2, 8)
+        6
+       / \
+      2   8
+     / \ / \
+    0  4 7  9
+      / \
+     3   5
+
+Using BST property:
+At 6: 2 < 6 < 8 → Split! LCA = 6
+
+At 6: 2 < 6 and 4 < 6 → both left
+  Go left to 2
+At 2: 2 ≤ 2 ≤ 4 → Split! LCA = 2
+
+Time: O(h) - Only one path!
+
+```
+
+### Binary Lifting for Kth Ancestor
+
+```
+Tree with parent pointers:
+        0
+       / \
+      1   2
+     / \
+    3   4
+
+Precompute 2^j ancestors:
+up[node][j] = 2^j-th ancestor of node
+
+up[3][0] = 1  (2^0 = 1st parent)
+up[3][1] = 0  (2^1 = 2nd ancestor)
+up[3][2] = -1 (doesn't exist)
+
+up[4][0] = 1
+up[4][1] = 0
+
+To find 3rd ancestor of node 4:
+  k = 3 = binary 11 = 2^1 + 2^0
+  Jump 2^0: 4 → up[4][0] = 1
+  Jump 2^1: 1 → up[1][1] = 0
+  Result: 0
+
+Time: O(log k) per query after O(n log n) preprocessing
+
+```
+
+---
+
 
 ---
 
@@ -258,96 +361,6 @@ def distanceBetweenNodes(root: TreeNode, p: TreeNode, q: TreeNode) -> int:
 | 1676 | [LCA of Binary Tree IV](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iv/) | Set Match | O(n) | O(n) |
 
 ---
-
----
-
-## 🎨 Visual Algorithm Walkthrough
-
-### LCA of Binary Tree (#236)
-
-```
-Tree:        Find LCA(5, 1)
-        3
-       / \
-      5   1
-     / \  / \
-    6  2 0  8
-      / \
-     7   4
-
-DFS Search:
-Start at 3:
-  Search left (5):
-    Found 5! Return 5
-  Search right (1):
-    Found 1! Return 1
-  Both left and right non-null → 3 is LCA!
-
-Result: 3
-
-Example 2: Find LCA(5, 4)
-  Search left (5):
-    Found 5! But continue checking subtree...
-    Search 5's left: found 6
-    Search 5's right: found 2, then 4
-    4 found in left subtree, return up
-  Since 5 itself is one target and 4 in its subtree
-  Result: 5 (ancestor can be the node itself!)
-
-```
-
-### LCA of BST (#235)
-
-```
-BST:         Find LCA(2, 8)
-        6
-       / \
-      2   8
-     / \ / \
-    0  4 7  9
-      / \
-     3   5
-
-Using BST property:
-At 6: 2 < 6 < 8 → Split! LCA = 6
-
-At 6: 2 < 6 and 4 < 6 → both left
-  Go left to 2
-At 2: 2 ≤ 2 ≤ 4 → Split! LCA = 2
-
-Time: O(h) - Only one path!
-
-```
-
-### Binary Lifting for Kth Ancestor
-
-```
-Tree with parent pointers:
-        0
-       / \
-      1   2
-     / \
-    3   4
-
-Precompute 2^j ancestors:
-up[node][j] = 2^j-th ancestor of node
-
-up[3][0] = 1  (2^0 = 1st parent)
-up[3][1] = 0  (2^1 = 2nd ancestor)
-up[3][2] = -1 (doesn't exist)
-
-up[4][0] = 1
-up[4][1] = 0
-
-To find 3rd ancestor of node 4:
-  k = 3 = binary 11 = 2^1 + 2^0
-  Jump 2^0: 4 → up[4][0] = 1
-  Jump 2^1: 1 → up[1][1] = 0
-  Result: 0
-
-Time: O(log k) per query after O(n log n) preprocessing
-
-```
 
 ---
 
