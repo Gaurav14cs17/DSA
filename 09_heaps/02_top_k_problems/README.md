@@ -118,7 +118,7 @@ Collect from highest bucket downward until k elements found!
 
 <div align="center">
 
-![Top K Pattern](./image/top_k_pattern.svg)
+![Top K Pattern](./image/top_k_pattern.png)
 
 </div>
 
