@@ -10,7 +10,7 @@ permalink: /17_backtracking/03_combinations/
 
 # 🎯 Combinations
 
-![Combinations Tree](./images/combinations_tree.svg)
+![Combinations Tree](./images/combinations_tree.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
