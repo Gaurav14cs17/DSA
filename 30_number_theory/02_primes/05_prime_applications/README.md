@@ -32,6 +32,16 @@ permalink: /30_number_theory/02_primes/05_prime_applications/
 
 ---
 
+## 📊 Visual Diagram
+
+<div align="center">
+
+![Prime Applications](./images/prime_applications.png)
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Ugly Numbers
@@ -98,16 +108,6 @@ permalink: /30_number_theory/02_primes/05_prime_applications/
 **Examples:** 2, 3, 5, 11, 23, 29, 41, 53, 83, 89, 113...
 
 **Use:** Cryptography, especially for safe primes in Diffie-Hellman.
-
----
-
-## 📊 Visual Diagram
-
-<div align="center">
-
-![Prime Applications](./images/prime_applications.png)
-
-</div>
 
 ---
 
@@ -549,25 +549,6 @@ def sum_of_primes(n: int) -> int:
 
 ---
 
-## 🏆 LeetCode Problems
-
-### 🟢 Easy
-
-| # | Problem | Key Concept | Time |
-|:-:|---------|-------------|------|
-| 263 | [Ugly Number](https://leetcode.com/problems/ugly-number/) | Prime factor check | O(log n) |
-| 762 | [Prime Number of Set Bits](https://leetcode.com/problems/prime-number-of-set-bits-in-binary-representation/) | Bit counting | O(n) |
-
-### 🟡 Medium
-
-| # | Problem | Key Concept | Time |
-|:-:|---------|-------------|------|
-| 264 | [Ugly Number II](https://leetcode.com/problems/ugly-number-ii/) | Three-pointer DP | O(n) |
-| 313 | [Super Ugly Number](https://leetcode.com/problems/super-ugly-number/) | Heap + DP | O(n log k) |
-| 866 | [Prime Palindrome](https://leetcode.com/problems/prime-palindrome/) | Generate + check | O(√n log n) |
-
----
-
 ## 💻 Solutions to Key Problems
 
 ### Problem 762: Prime Number of Set Bits
@@ -634,6 +615,25 @@ class Solution:
                 n = 10**8
 
 ```
+
+---
+
+## 🏆 LeetCode Problems
+
+### 🟢 Easy
+
+| # | Problem | Key Concept | Time |
+|:-:|---------|-------------|------|
+| 263 | [Ugly Number](https://leetcode.com/problems/ugly-number/) | Prime factor check | O(log n) |
+| 762 | [Prime Number of Set Bits](https://leetcode.com/problems/prime-number-of-set-bits-in-binary-representation/) | Bit counting | O(n) |
+
+### 🟡 Medium
+
+| # | Problem | Key Concept | Time |
+|:-:|---------|-------------|------|
+| 264 | [Ugly Number II](https://leetcode.com/problems/ugly-number-ii/) | Three-pointer DP | O(n) |
+| 313 | [Super Ugly Number](https://leetcode.com/problems/super-ugly-number/) | Heap + DP | O(n log k) |
+| 866 | [Prime Palindrome](https://leetcode.com/problems/prime-palindrome/) | Generate + check | O(√n log n) |
 
 ---
 
