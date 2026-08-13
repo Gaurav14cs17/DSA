@@ -4,10 +4,20 @@ title: "Polygon Operations"
 parent: "Computational Geometry"
 nav_order: 5
 ---
+<div align="center">
 
 # 🔷 Polygon Operations
 
-### *Polygon operations compute properties and perform transformations on polygons.*
+### *Area, perimeter, and point-in-polygon tests*
+
+<p><img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty"></p>
+
+[🏠 Computational Geometry](../README.md)
+
+</div>
+
+---
+
 
 
 ## 📊 Visual Overview
@@ -29,6 +39,14 @@ nav_order: 5
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Polygon Operations](../05_polygon_operations/README.md) | **05. Polygon Operations** | [Closest Pair →](../06_closest_pair/README.md) |
+
+---
+
 
 ---
 
@@ -267,4 +285,3 @@ def rectangle_intersection_area(rect1, rect2):
 ---
 
 **Navigation:** [← Point Location](../04_point_location/) | [Next: Closest Pair →](../06_closest_pair/)
-
