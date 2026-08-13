@@ -10,20 +10,16 @@ permalink: /25_tree_algorithms/10_link_cut_trees/
 
 # 🔗 Link-Cut Trees (Dynamic Trees)
 
+### *Link-Cut Trees (Dynamic Trees)*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Very_Hard-darkred?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-5+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 09. Tree Hashing](../09_tree_hashing/README.md) | **10. Link-Cut Trees** | [11. Mo's Algorithm →](../11_mos_algorithm_trees/README.md) |
 
 ---
 
@@ -46,8 +42,16 @@ permalink: /25_tree_algorithms/10_link_cut_trees/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 📐 Mathematical Foundations
 
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 09. Tree Hashing](../09_tree_hashing/README.md) | **10. Link-Cut Trees** | [11. Mo's Algorithm →](../11_mos_algorithm_trees/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Dynamic Tree Problem
 
 **Static tree:** Fixed structure  
@@ -509,10 +513,3 @@ Dynamic Tree Problem
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 09. Tree Hashing](../09_tree_hashing/README.md) | **10. Link-Cut Trees** | [11. Mo's Algorithm →](../11_mos_algorithm_trees/README.md) |
-
