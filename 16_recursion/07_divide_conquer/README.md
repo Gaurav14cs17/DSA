@@ -10,6 +10,8 @@ permalink: /16_recursion/07_divide_conquer/
 
 # ⚔️ Divide and Conquer
 
+### *Break problem into subproblems, solve recursively, combine results*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-12+-blue?style=for-the-badge" alt="Problems">
