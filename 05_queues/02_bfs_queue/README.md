@@ -32,10 +32,10 @@ permalink: /05_queues/02_bfs_queue/
 <div align="center">
 
 ### BFS Graph Traversal
-![BFS Graph Traversal](./image/bfs_graph_traversal.svg)
+![BFS Graph Traversal](./image/bfs_graph_traversal.png)
 
 ### Level Order Tree Traversal
-![Level Order Tree](./image/level_order_tree.svg)
+![Level Order Tree](./image/level_order_tree.png)
 
 </div>
 
