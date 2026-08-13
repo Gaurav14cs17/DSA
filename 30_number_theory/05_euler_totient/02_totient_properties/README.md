@@ -26,15 +26,7 @@ permalink: /30_number_theory/05_euler_totient/02_totient_properties/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Basic Totient](../01_basic_totient/README.md) | **02. Properties** | [03. Euler's Theorem →](../03_euler_theorem/README.md) |
-
----
-
-## 📊 Visual Diagram
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -57,6 +49,15 @@ permalink: /30_number_theory/05_euler_totient/02_totient_properties/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 01. Basic Totient](../01_basic_totient/README.md) | **02. Properties** | [03. Euler's Theorem →](../03_euler_theorem/README.md) |
+
+---
+
 ## 📐 Key Properties
 
 ### 1️⃣ Multiplicativity
@@ -215,9 +216,3 @@ for n in range(1, 50):
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Basic Totient](../01_basic_totient/README.md) | **02. Properties** | [03. Euler's Theorem →](../03_euler_theorem/README.md) |
