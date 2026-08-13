@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Hero Banner -->
-<img src="./assets/dsa-hero-banner.svg" alt="DSA Mastery - Data Structures & Algorithms" width="100%"/>
+<img src="./assets/dsa-hero-banner.png" alt="DSA Mastery - Data Structures & Algorithms" width="100%"/>
 
 <br/>
 
@@ -166,7 +166,7 @@
 
 <div align="center">
 
-<img src="./assets/dsa-topics-overview.svg" alt="DSA Topics Overview - All 40 Topics" width="100%"/>
+<img src="./assets/dsa-topics-overview.png" alt="DSA Topics Overview - All 40 Topics" width="100%"/>
 
 </div>
 
@@ -217,7 +217,7 @@
 
 <div align="center">
 
-![Complexity Chart](./assets/images/complexity-chart.svg)
+![Complexity Chart](./assets/images/complexity-chart.png)
 
 | Algorithm | Time | Space | When to Use |
 |:----------|:----:|:-----:|:------------|
