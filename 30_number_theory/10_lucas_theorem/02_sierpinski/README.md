@@ -24,15 +24,7 @@ permalink: /30_number_theory/10_lucas_theorem/02_sierpinski/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Basic Lucas](../01_basic_lucas/README.md) | **02. Sierpiński** | [03. Applications →](../03_applications/README.md) |
-
----
-
-## 📊 Visual Diagram
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -55,6 +47,15 @@ permalink: /30_number_theory/10_lucas_theorem/02_sierpinski/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 01. Basic Lucas](../01_basic_lucas/README.md) | **02. Sierpiński** | [03. Applications →](../03_applications/README.md) |
+
+---
+
 ## 📐 The Connection
 
 By Lucas' theorem with p = 2:
@@ -119,9 +120,3 @@ generate_sierpinski(16)
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Basic Lucas](../01_basic_lucas/README.md) | **02. Sierpiński** | [03. Applications →](../03_applications/README.md) |
