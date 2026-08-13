@@ -10,7 +10,6 @@ permalink: /05_queues/
 
 # 📬 Queues
 
-![Queues Overview](./images/queue-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -25,6 +24,17 @@ permalink: /05_queues/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Queues Overview](./images/queue-overview.png)
+
+</div>
+
+---
+
 
 ## 📐 Mathematical Foundation
 
