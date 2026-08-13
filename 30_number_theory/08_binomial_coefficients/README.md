@@ -11,6 +11,8 @@ permalink: /30_number_theory/08_binomial_coefficients/
 
 # 🔢 Binomial Coefficients
 
+### *Counting Combinations and Pascal's Triangle*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-25+-blue?style=for-the-badge" alt="Problems">
