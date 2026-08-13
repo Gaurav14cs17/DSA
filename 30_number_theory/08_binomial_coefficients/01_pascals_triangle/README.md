@@ -36,7 +36,7 @@ permalink: /30_number_theory/08_binomial_coefficients/01_pascals_triangle/
 
 <div align="center">
 
-![Pascal's Triangle](./images/pascals_triangle.svg)
+![Pascal's Triangle](./images/pascals_triangle.png)
 
 </div>
 
