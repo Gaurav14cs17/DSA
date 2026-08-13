@@ -10,12 +10,39 @@ permalink: /24_graph_algorithms/07_eulerian_path/
 
 # 🔄 Eulerian Path & Circuit
 
+### *🔄 Eulerian Path & Circuit*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-6+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Eulerian Path and Circuit](./images/eulerian-path.png)
+
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🔄 Eulerian Path & Circuit |
+| **Difficulty** | Medium |
+| **Problems** | 6+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -27,18 +54,7 @@ permalink: /24_graph_algorithms/07_eulerian_path/
 
 ---
 
-## 🎨 Visual Overview
-
-<div align="center">
-
-![Eulerian Path and Circuit](./images/eulerian-path.png)
-
-</div>
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Definitions
 
 **Eulerian Path:** Path that visits every **edge** exactly once.
@@ -476,10 +492,3 @@ Eulerian Problem
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 06. Bridges & Articulation](../06_bridges_articulation_points/README.md) | **07. Eulerian Path** | [08. 2-SAT →](../08_2sat/README.md) |
-
