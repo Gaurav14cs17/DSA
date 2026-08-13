@@ -32,13 +32,13 @@ permalink: /06_hash_tables/02_two_sum_pattern/
 <div align="center">
 
 ### Two Sum - Hash Map Solution
-![Two Sum HashMap](image/two-sum-hashmap.svg)
+![Two Sum HashMap](image/two-sum-hashmap.png)
 
 ### Three Sum - Two Pointers
-![Three Sum Two Pointers](image/three-sum-two-pointers.svg)
+![Three Sum Two Pointers](image/three-sum-two-pointers.png)
 
 ### Subarray Sum = K - Prefix Sum
-![Prefix Sum Subarray](image/prefix-sum-subarray.svg)
+![Prefix Sum Subarray](image/prefix-sum-subarray.png)
 
 </div>
 
