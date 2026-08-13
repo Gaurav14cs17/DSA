@@ -3,7 +3,7 @@
 ## 📊 Visual Diagram
 
 <p align="center">
-  <img src="./images/bitmask-dp.svg" alt="Bitmask DP" width="100%">
+  <img src="./images/bitmask-dp.png" alt="Bitmask DP" width="100%">
 </p>
 
 ## Overview
