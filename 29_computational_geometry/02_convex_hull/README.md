@@ -19,17 +19,17 @@ nav_order: 2
 
 ---
 
-## 🎯 Overview
-
-**Convex Hull:** Smallest convex polygon containing all given points. Fundamental problem in computational geometry.
-
----
-
 ## 📊 Visual Overview
 
 ![Convex Hull Algorithms](./images/convex-hull.png)
 
 *Graham's Scan step-by-step visualization with algorithm comparison*
+
+---
+
+## 🎯 Overview
+
+**Convex Hull:** Smallest convex polygon containing all given points. Fundamental problem in computational geometry.
 
 ---
 
