@@ -10,12 +10,37 @@ permalink: /18_dynamic_programming/06_state_machine_dp/
 
 # 🔄 State Machine DP
 
+### *🔄 State Machine DP*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+  <img src="images/state-machine-dp.png" alt="State Machine DP Visualization" width="100%">
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🔄 State Machine DP |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 8+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -27,16 +52,7 @@ permalink: /18_dynamic_programming/06_state_machine_dp/
 
 ---
 
-## 📊 Visual Guide
-
-<div align="center">
-  <img src="images/state-machine-dp.png" alt="State Machine DP Visualization" width="100%">
-</div>
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ State Machine Pattern
 
 Track multiple states at each position:
@@ -212,9 +228,3 @@ def maxProfitIV(k: int, prices: list[int]) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 05. Tree DP](../05_tree_dp/README.md) | **06. State Machine DP** | [07. Bitmask DP →](../07_bitmask_dp/README.md) |
