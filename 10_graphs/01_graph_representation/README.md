@@ -166,11 +166,11 @@ $$\boxed{\text{rank}(G) = |V| - k}$$
 
 <div align="center">
 
-![Adjacency Comparison](./images/adjacency_comparison.svg)
+![Adjacency Comparison](./images/adjacency_comparison.png)
 
 *Adjacency Matrix vs Adjacency List Comparison*
 
-![Directed vs Undirected](./images/directed_undirected.svg)
+![Directed vs Undirected](./images/directed_undirected.png)
 
 *Directed vs Undirected Graph Representation*
 
