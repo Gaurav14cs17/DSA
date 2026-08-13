@@ -10,7 +10,7 @@ permalink: /21_bit_manipulation/
 
 # 🔢 Bit Manipulation
 
-![Bit Manipulation Overview](./images/bit-overview.svg)
+![Bit Manipulation Overview](./images/bit-overview.png)
 
 ### *The Art of Speaking Binary*
 
@@ -30,7 +30,7 @@ permalink: /21_bit_manipulation/
 ---
 
 <div align="center">
-<img src="./images/bit-manipulation.svg" alt="Bit Manipulation Overview" width="100%">
+<img src="./images/bit-overview.png" alt="Bit Manipulation Overview" width="100%">
 </div>
 
 ---
