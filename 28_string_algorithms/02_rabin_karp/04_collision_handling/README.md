@@ -5,6 +5,7 @@ parent: "Rabin-Karp Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 4
 ---
+<div align="center">
 
 # 🛡️ Collision Handling in Rabin-Karp
 
@@ -12,8 +13,11 @@ nav_order: 4
         self.MOD2 = 10*
 
 
-## 📊 Visual Overview
+</div>
 
+---
+
+## 📊 Visual Overview
 ![Collision Handling](./images/collision-handling.png)
 
 *Collision Handling*
@@ -30,6 +34,14 @@ nav_order: 4
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Multiple Patterns](../03_multiple_patterns/README.md) | **Collision Handling** | [Substring Problems →](../05_substring_problems/README.md) |
 
 ---
 
@@ -333,4 +345,3 @@ BASE2 = 53        # Different base
 ---
 
 **Navigation:** [← Multiple Patterns](../03_multiple_patterns/) | [Next: Substring Problems →](../05_substring_problems/)
-
