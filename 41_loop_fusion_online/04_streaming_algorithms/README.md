@@ -30,7 +30,7 @@ permalink: /41_loop_fusion_online/04_streaming_algorithms/
 ## 📊 Visual Guide
 
 <div align="center">
-  <img src="images/streaming-algorithms.svg" alt="Streaming Algorithms" width="100%">
+  <img src="images/streaming-algorithms.png" alt="Streaming Algorithms" width="100%">
 </div>
 
 ---
