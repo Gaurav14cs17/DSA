@@ -9,7 +9,7 @@ nav_order: 8
 
 ## 📊 Visual Overview
 
-![String Hashing](./images/string-hashing.svg)
+![String Hashing](./images/string-hashing.png)
 
 ## 📊 Metadata
 
