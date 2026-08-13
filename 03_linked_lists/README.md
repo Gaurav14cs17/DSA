@@ -39,8 +39,6 @@ permalink: /03_linked_lists/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -55,8 +53,6 @@ permalink: /03_linked_lists/
 
 ---
 
----
-
 ## 📂 Subtopics Navigation
 
 | # | Topic | Problems | Link |
@@ -64,8 +60,6 @@ permalink: /03_linked_lists/
 | 1 | Basic Operations | 12+ | [📖 Go →](./01_basic_operations/README.md) |
 | 2 | Reversal | 10+ | [📖 Go →](./02_reversal/README.md) |
 | 3 | Merge & Sort | 8+ | [📖 Go →](./03_merge_sort/README.md) |
-
----
 
 ---
 
@@ -168,8 +162,6 @@ $$\text{slow position} = \lfloor n/2 \rfloor$$
 
 ---
 
----
-
 ## 🎯 Key Techniques
 
 ### Fast-Slow Pointers
@@ -235,8 +227,6 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 
 ---
 
----
-
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
@@ -276,8 +266,6 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 
 ---
 
----
-
 ## 💡 Key Insights & Pro Tips
 
 > **🎯 Dummy Node Magic**  
@@ -297,8 +285,6 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 
 ---
 
----
-
 ## 🧮 Quick Pattern Reference
 
 | Pattern in Problem | Technique | Example |
@@ -311,8 +297,6 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 | "palindrome" | Fast-Slow + Reverse | #234 |
 | "intersection" | Length difference | #160 |
 | "sort list" | Merge Sort | #148 |
-
----
 
 ---
 
@@ -335,8 +319,6 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 | 13 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | Reversal | 🟡 Medium | Pair operations |
 | 14 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Heap | 🔴 Hard | Priority queue |
 | 15 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Reversal | 🔴 Hard | Group reverse |
-
----
 
 ---
 
@@ -414,8 +396,6 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 
 ---
 
----
-
 ## 🎖️ Interview Success Tips
 
 ### Common Mistakes to Avoid
@@ -454,8 +434,6 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 [ ] Am I handling all null pointer cases?
 
 ```
-
----
 
 ---
 
