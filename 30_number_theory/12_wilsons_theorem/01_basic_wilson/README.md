@@ -11,6 +11,8 @@ permalink: /30_number_theory/12_wilsons_theorem/01_basic_wilson/
 
 # 🔮 Basic Wilson's Theorem
 
+### *A Beautiful Connection Between Primes and Factorials*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Time-O(n)-blue?style=for-the-badge" alt="Time">
@@ -39,10 +41,23 @@ permalink: /30_number_theory/12_wilsons_theorem/01_basic_wilson/
 
 ![Wilson's Theorem](./images/wilsons_theorem.png)
 
+*Wilson's Theorem*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | A Beautiful Connection Between Primes and Factorials |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 The Theorem
 
 ### Statement
