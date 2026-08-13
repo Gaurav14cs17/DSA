@@ -33,10 +33,25 @@ permalink: /08_binary_search_trees/02_bst_validation/
 
 ![BST Validation](./image/bst_validation.png)
 
+*BST Validation*
+
 </div>
 
 ---
 
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Medium |
+| **Problems** | 8+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ BST Validation Condition
