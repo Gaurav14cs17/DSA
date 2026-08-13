@@ -36,7 +36,7 @@ permalink: /30_number_theory/05_euler_totient/03_euler_theorem/
 
 <div align="center">
 
-![Euler's Theorem Application](./images/euler_theorem_app.svg)
+![Euler's Theorem Application](./images/euler_theorem_app.png)
 
 </div>
 
