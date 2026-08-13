@@ -32,8 +32,6 @@ permalink: /14_sorting/03_custom_sorting/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
