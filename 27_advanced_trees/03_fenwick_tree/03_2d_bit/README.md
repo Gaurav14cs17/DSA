@@ -31,7 +31,7 @@ permalink: /27_advanced_trees/03_fenwick_tree/03_2d_bit/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/2d-bit.svg" alt="2D BIT" width="100%">
+<img src="./images/2d-bit.png" alt="2D BIT" width="100%">
 </div>
 
 ---
