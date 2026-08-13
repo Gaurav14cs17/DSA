@@ -11,20 +11,16 @@ permalink: /27_advanced_trees/03_fenwick_tree/03_2d_bit/
 
 # 📊 2D Binary Indexed Tree
 
+### *Binary Indexed Tree*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-5-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. Inversion Counting](../02_inversion_counting/README.md) | **03. 2D BIT** | [04. Order Statistics →](../04_order_statistics/README.md) |
 
 ---
 
@@ -47,6 +43,15 @@ permalink: /27_advanced_trees/03_fenwick_tree/03_2d_bit/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 02. Inversion Counting](../02_inversion_counting/README.md) | **03. 2D BIT** | [04. Order Statistics →](../04_order_statistics/README.md) |
+
+---
+
 ## 📐 Core Concept
 
 **2D BIT:** Extend 1D BIT to 2D matrices.
@@ -128,10 +133,3 @@ class NumMatrix:
 | - | Matrix Rain Water | Hard |
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. Inversion Counting](../02_inversion_counting/README.md) | **03. 2D BIT** | [04. Order Statistics →](../04_order_statistics/README.md) |
-
