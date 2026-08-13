@@ -11,6 +11,10 @@ permalink: /27_advanced_trees/03_fenwick_tree/
 
 # 🌲 Fenwick Tree (Binary Indexed Tree)
 
+### *Fenwick Tree (Binary Indexed Tree)*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Subtopics-5-blue?style=for-the-badge" alt="Subtopics">
@@ -18,6 +22,27 @@ permalink: /27_advanced_trees/03_fenwick_tree/
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+<img src="./images/fenwick-tree.png" alt="Fenwick Tree Structure" width="100%">
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Medium to Hard |
+| **Subtopics** | 5 |
+| **Problems** | 30+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -98,63 +123,7 @@ permalink: /27_advanced_trees/03_fenwick_tree/
 
 ---
 
-## 📊 Visual Overview
-
-<div align="center">
-<img src="./images/fenwick-tree.png" alt="Fenwick Tree Structure" width="100%">
-</div>
-
----
-
-## 🎯 At a Glance
-
-| | |
-|:---|:---|
-| **Difficulty** | Medium to Hard |
-| **Subtopics** | 5 |
-| **Problems** | 30+ |
-
-{: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
-
----
-## 📋 Overview
-
-**Fenwick Tree (Binary Indexed Tree)** is a data structure that efficiently supports:
-
-- **Point updates:** Modify single element in O(log n)
-
-- **Prefix queries:** Compute prefix sum in O(log n)
-
-- **Range queries:** Sum of any range in O(log n)
-
-**Invented by:** Peter Fenwick (1994)
-
-**Key Advantage:** Simpler than Segment Tree for sum queries, uses less memory.
-
----
-
-## 🎯 Quick Reference
-
-### Core Operations
-
-| Operation | Time | Description |
-|-----------|:----:|-------------|
-| **Build** | O(n) | Construct from array |
-| **Update** | O(log n) | Modify single element |
-| **Query** | O(log n) | Prefix or range sum |
-| **Space** | O(n) | Linear memory |
-
-### LSB Formula
-
-**Least Significant Bit:** `LSB(i) = i & (-i)`
-
-This isolates the rightmost set bit, determining which range each index stores.
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Fenwick Tree Definition
 
 **Binary Indexed Tree (BIT):** Data structure for efficient prefix sum queries and point updates.
@@ -200,6 +169,41 @@ return sum
 ```
 
 **Range Query:** $\text{sum}(L, R) = \text{query}(R) - \text{query}(L-1)$
+
+---
+
+## 📋 Overview
+
+**Fenwick Tree (Binary Indexed Tree)** is a data structure that efficiently supports:
+
+- **Point updates:** Modify single element in O(log n)
+
+- **Prefix queries:** Compute prefix sum in O(log n)
+
+- **Range queries:** Sum of any range in O(log n)
+
+**Invented by:** Peter Fenwick (1994)
+
+**Key Advantage:** Simpler than Segment Tree for sum queries, uses less memory.
+
+---
+
+## 🎯 Quick Reference
+
+### Core Operations
+
+| Operation | Time | Description |
+|-----------|:----:|-------------|
+| **Build** | O(n) | Construct from array |
+| **Update** | O(log n) | Modify single element |
+| **Query** | O(log n) | Prefix or range sum |
+| **Space** | O(n) | Linear memory |
+
+### LSB Formula
+
+**Least Significant Bit:** `LSB(i) = i & (-i)`
+
+This isolates the rightmost set bit, determining which range each index stores.
 
 ---
 
@@ -281,9 +285,3 @@ This section contains **30+ problems** organized into **5 categories**:
 7. **Not for range updates:** Use difference array or segment tree with lazy propagation
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. Red-Black Trees](../02_red_black_trees/README.md) | **03. Fenwick Tree** | [04. Splay Trees →](../04_splay_trees/README.md) |
