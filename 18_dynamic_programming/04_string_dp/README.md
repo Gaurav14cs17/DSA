@@ -30,7 +30,7 @@ permalink: /18_dynamic_programming/04_string_dp/
 ## 📊 Visual Guide
 
 <div align="center">
-  <img src="images/string-dp.svg" alt="String DP Visualization" width="100%">
+  <img src="images/string-dp.png" alt="String DP Visualization" width="100%">
 </div>
 
 ---
