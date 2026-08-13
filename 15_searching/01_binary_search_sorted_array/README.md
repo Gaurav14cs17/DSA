@@ -10,7 +10,6 @@ permalink: /15_searching/01_binary_search_sorted_array/
 
 # 📋 Binary Search in Sorted Array
 
-![Sorted Array Search](./images/sorted-array-search.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-green?style=for-the-badge" alt="Difficulty">
@@ -21,11 +20,28 @@ permalink: /15_searching/01_binary_search_sorted_array/
 
 ---
 
+## 📊 Visual Overview
+
+<div align="center">
+
+![Sorted Array Search](./images/sorted-array-search.png)
+
+</div>
+
+---
+
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
 |:------------|:----------:|--------:|
 | [🏠 Searching Home](../README.md) | **01. Sorted Array** | [02. BS on Answer →](../02_binary_search_on_answer/README.md) |
+
+---
+
+## 📊 Visual: Search Range
+
+![Search Range](./images/search-range.png)
 
 ---
 
@@ -60,12 +76,6 @@ $$\text{upper\_bound} = \min\{i : arr[i] > target\}$$
 ### 4️⃣ Count of Element
 
 $$\text{count}(target) = \text{upper\_bound} - \text{lower\_bound}$$
-
----
-
-## 📊 Visual: Search Range
-
-![Search Range](./images/search-range.png)
 
 ---
 
