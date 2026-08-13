@@ -3,7 +3,7 @@
 ## 📊 Visual Diagram
 
 <p align="center">
-  <img src="./images/monotonic-queue.svg" alt="Monotonic Queue Optimization" width="100%">
+  <img src="./images/monotonic-queue.png" alt="Monotonic Queue Optimization" width="100%">
 </p>
 
 ## Overview
