@@ -10,6 +10,8 @@ permalink: /03_linked_lists/01_basic_operations/
 
 # 🔧 Basic Linked List Operations
 
+### *🔧 Basic Linked List Operations*
+
 
 
 <p>
@@ -937,19 +939,6 @@ def removeElements(head, val):
 </div>
 
 ---
-
----
-
-## 🎯 At a Glance
-
-| | |
-|:---|:---|
-| **Topic** | 🔧 Basic Linked List Operations |
-| **Difficulty** | Easy |
-| **Problems** | 15+ |
-
-{: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
