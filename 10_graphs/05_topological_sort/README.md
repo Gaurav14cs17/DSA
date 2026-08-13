@@ -10,6 +10,10 @@ permalink: /10_graphs/05_topological_sort/
 
 # 📋 Topological Sort
 
+### *📋 Topological Sort*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-6+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +23,7 @@ permalink: /10_graphs/05_topological_sort/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Shortest Path](../04_shortest_path/README.md) | **05. Topological Sort** | [06. Cycle Detection →](../06_cycle_detection/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -39,8 +35,28 @@ permalink: /10_graphs/05_topological_sort/
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **Topic** | 📋 Topological Sort |
+| **Difficulty** | Medium |
+| **Problems** | 6+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 04. Shortest Path](../04_shortest_path/README.md) | **05. Topological Sort** | [06. Cycle Detection →](../06_cycle_detection/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Definition
 
 **Topological ordering** of DAG $G = (V, E)$:
@@ -295,9 +311,3 @@ def alienOrder(words: list[str]) -> str:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Shortest Path](../04_shortest_path/README.md) | **05. Topological Sort** | [06. Cycle Detection →](../06_cycle_detection/README.md) |
