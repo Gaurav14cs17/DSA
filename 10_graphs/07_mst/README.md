@@ -87,7 +87,7 @@ T = O(E + V \log V) \text{ with Fibonacci heap}$$
 
 <div align="center">
 
-![Kruskal's Algorithm](./images/kruskal_algorithm.svg)
+![Kruskal's Algorithm](./images/kruskal_algorithm.png)
 
 *Kruskal's MST Algorithm with Union-Find*
 
