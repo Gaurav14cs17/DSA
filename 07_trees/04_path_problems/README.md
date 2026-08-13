@@ -26,11 +26,25 @@ permalink: /07_trees/04_path_problems/
 
 ![Path Problems Diagram](./images/path-problems.png)
 
+*Path Problems Diagram*
+
 </div>
 
 ---
 
+---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Medium to Hard |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
