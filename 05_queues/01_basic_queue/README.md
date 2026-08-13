@@ -98,6 +98,82 @@ $$\text{avg}[i] = \text{avg}[i-1] + \frac{x[i] - x[i-k]}{k}$$
 
 ---
 
+## 🎨 Visual Algorithm Walkthrough
+
+### Circular Queue Operations (#622)
+
+```
+Capacity = 3 (array size = 4 for full/empty distinction)
+
+Initial: front=0, rear=0, array=[_, _, _, _]
+isEmpty: front == rear → True
+
+EnQueue(1):
+  array[0] = 1, rear = (0+1)%4 = 1
+  [1, _, _, _], front=0, rear=1
+
+EnQueue(2):
+  array[1] = 2, rear = (1+1)%4 = 2
+  [1, 2, _, _], front=0, rear=2
+
+EnQueue(3):
+  array[2] = 3, rear = (2+1)%4 = 3
+  [1, 2, 3, _], front=0, rear=3
+  isFull: (rear+1)%4 == front → (3+1)%4 == 0 → True
+
+DeQueue():
+  front = (0+1)%4 = 1
+  [1, 2, 3, _], front=1, rear=3
+
+EnQueue(4):
+  array[3] = 4, rear = (3+1)%4 = 0
+  [1, 2, 3, 4], front=1, rear=0 (wrapped around!)
+
+```
+
+### Queue using Two Stacks (#232)
+
+```
+Amortized O(1) analysis:
+
+s1 (input): [1, 2, 3]  ← push here
+s2 (output): []
+
+Enqueue(4): s1 = [1, 2, 3, 4]
+
+Dequeue():
+  Transfer s1 → s2:
+    s1 = []
+    s2 = [3, 2, 1]  (reversed!)
+  Pop from s2: return 1
+  s2 = [3, 2]
+
+Dequeue():
+  s2 not empty, just pop
+  return 2
+  s2 = [3]
+
+Each element: pushed once, transferred once, popped once = 3 operations
+Amortized: 3n/n = O(1) per operation
+
+```
+
+### Moving Average (#346)
+
+```
+size = 3
+
+next(1): queue=[1], sum=1, avg=1/1=1.0
+next(10): queue=[1,10], sum=11, avg=11/2=5.5
+next(3): queue=[1,10,3], sum=14, avg=14/3=4.67
+next(5): queue=[10,3,5], sum=18, avg=18/3=6.0
+         (removed 1, added 5)
+
+```
+
+---
+
+
 ## 💻 Code Implementations
 
 ```python
@@ -213,81 +289,6 @@ class MyStack:
 | 641 | [Design Circular Deque](https://leetcode.com/problems/design-circular-deque/) | Double-ended | O(1) | O(k) |
 
 ---
-
----
-
-## 🎨 Visual Algorithm Walkthrough
-
-### Circular Queue Operations (#622)
-
-```
-Capacity = 3 (array size = 4 for full/empty distinction)
-
-Initial: front=0, rear=0, array=[_, _, _, _]
-isEmpty: front == rear → True
-
-EnQueue(1):
-  array[0] = 1, rear = (0+1)%4 = 1
-  [1, _, _, _], front=0, rear=1
-
-EnQueue(2):
-  array[1] = 2, rear = (1+1)%4 = 2
-  [1, 2, _, _], front=0, rear=2
-
-EnQueue(3):
-  array[2] = 3, rear = (2+1)%4 = 3
-  [1, 2, 3, _], front=0, rear=3
-  isFull: (rear+1)%4 == front → (3+1)%4 == 0 → True
-
-DeQueue():
-  front = (0+1)%4 = 1
-  [1, 2, 3, _], front=1, rear=3
-
-EnQueue(4):
-  array[3] = 4, rear = (3+1)%4 = 0
-  [1, 2, 3, 4], front=1, rear=0 (wrapped around!)
-
-```
-
-### Queue using Two Stacks (#232)
-
-```
-Amortized O(1) analysis:
-
-s1 (input): [1, 2, 3]  ← push here
-s2 (output): []
-
-Enqueue(4): s1 = [1, 2, 3, 4]
-
-Dequeue():
-  Transfer s1 → s2:
-    s1 = []
-    s2 = [3, 2, 1]  (reversed!)
-  Pop from s2: return 1
-  s2 = [3, 2]
-
-Dequeue():
-  s2 not empty, just pop
-  return 2
-  s2 = [3]
-
-Each element: pushed once, transferred once, popped once = 3 operations
-Amortized: 3n/n = O(1) per operation
-
-```
-
-### Moving Average (#346)
-
-```
-size = 3
-
-next(1): queue=[1], sum=1, avg=1/1=1.0
-next(10): queue=[1,10], sum=11, avg=11/2=5.5
-next(3): queue=[1,10,3], sum=14, avg=14/3=4.67
-next(5): queue=[10,3,5], sum=18, avg=18/3=6.0
-         (removed 1, added 5)
-
-```
 
 ---
 
