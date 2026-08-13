@@ -24,15 +24,7 @@ permalink: /30_number_theory/01_gcd_lcm/06_applications/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 05. GCD of Arrays](../05_gcd_arrays/README.md) | **06. Applications** | [🏠 GCD & LCM Home](../README.md) |
-
----
-
-## 📊 Visual Diagram
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -55,6 +47,15 @@ permalink: /30_number_theory/01_gcd_lcm/06_applications/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 05. GCD of Arrays](../05_gcd_arrays/README.md) | **06. Applications** | [🏠 GCD & LCM Home](../README.md) |
+
+---
+
 ## 🏆 LeetCode Problems by Category
 
 ### Category 1: Basic GCD/LCM
@@ -324,10 +325,3 @@ def next_meeting(interval1: int, interval2: int) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 05. GCD of Arrays](../05_gcd_arrays/README.md) | **06. Applications** | [🏠 GCD & LCM Home](../README.md) |
-
