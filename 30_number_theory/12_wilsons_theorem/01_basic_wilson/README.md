@@ -37,7 +37,7 @@ permalink: /30_number_theory/12_wilsons_theorem/01_basic_wilson/
 
 <div align="center">
 
-![Wilson's Theorem](./images/wilsons_theorem.svg)
+![Wilson's Theorem](./images/wilsons_theorem.png)
 
 </div>
 
