@@ -31,7 +31,7 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/02_2d_segment_tree/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/2d-segment-tree.svg" alt="2D Segment Tree" width="100%">
+<img src="./images/2d-segment-tree.png" alt="2D Segment Tree" width="100%">
 </div>
 
 ---
