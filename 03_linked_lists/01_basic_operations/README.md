@@ -10,6 +10,8 @@ permalink: /03_linked_lists/01_basic_operations/
 
 # 🔧 Basic Linked List Operations
 
+### *🔧 Basic Linked List Operations*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy-green?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-15+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +21,7 @@ permalink: /03_linked_lists/01_basic_operations/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Linked Lists Home](../README.md) | **01. Basic Operations** | [02. Reversal →](../02_reversal/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -50,160 +44,9 @@ permalink: /03_linked_lists/01_basic_operations/
 
 ---
 
-## 📐 Mathematical Foundations
-
-### 1️⃣ Node Structure & Memory Layout
-
-**Single Node:**
-
-```
-+----------+----------+
-
-|   data   |   next   |------► next node
-
-|  (4-8B)  |  (4-8B)  |
-+----------+----------+
-
-```
-
-**Memory overhead per node:**
-
-$$\text{Space} = \text{sizeof(data)} + \text{sizeof(pointer)}$$
-
-For 32-bit integer + 64-bit pointer:
-
-$$\text{Space} = 4 + 8 = 12 \text{ bytes per node}$$
-
-**Total space for n nodes:**
-
-$$\boxed{S(n) = n \times (\text{data\_size} + \text{pointer\_size})}$$
-
 ---
 
-### 2️⃣ Length Calculation Time Complexity
-
-**Iterative counting:**
-
-$$\text{length} = \sum_{i=0}^{n-1} 1 = n$$
-
-**Time Complexity:** $O(n)$ - must traverse entire list
-
-**Space Complexity:** $O(1)$ - only counter variable
-
-**Alternative:** Maintain length counter → $O(1)$ lookup, $O(1)$ extra space
-
----
-
-### 3️⃣ Fast-Slow Pointer Mathematics
-
-**Theorem:** When fast reaches end, slow is at middle.
-
-$$\boxed{\text{slow\_position} = \left\lfloor \frac{n}{2} \right\rfloor}$$
-
-**Proof:**
-
-Let $n$ = length of list, $k$ = number of iterations.
-
-After $k$ iterations:
-
-- Slow pointer position: $k$
-
-- Fast pointer position: $2k$
-
-Fast reaches end when:
-
-$$2k = n \implies k = \frac{n}{2}$$
-
-Therefore, slow at position $\left\lfloor \frac{n}{2} \right\rfloor$ ∎
-
-**Cases:**
-
-- Odd length ($n = 5$): slow at position $2$ (exact middle)
-
-- Even length ($n = 6$): slow at position $3$ (second middle)
-
----
-
-### 4️⃣ Floyd's Cycle Detection - Complete Mathematics
-
-**Phase 1: Detect Cycle**
-
-Let:
-
-- $\mu$ = distance from head to cycle start
-
-- $\lambda$ = cycle length  
-
-- $k$ = position in cycle where pointers meet
-
-When they meet:
-
-- Slow traveled: $\mu + k$ steps
-
-- Fast traveled: $\mu + k + m\lambda$ steps (for some $m \geq 1$)
-
-Since fast = 2 × slow:
-
-$$\mu + k + m\lambda = 2(\mu + k)
-\mu + k + m\lambda = 2\mu + 2k
-\boxed{m\lambda = \mu + k}$$
-
-**Phase 2: Find Cycle Start**
-
-From meeting point to cycle start: $\lambda - k$ steps
-
-From head to cycle start: $\mu$ steps
-
-From previous equation: $\mu = m\lambda - k$
-
-$$\mu = (m-1)\lambda + (\lambda - k)$$
-
-This means:
-
-- $\mu$ steps from head reaches cycle start
-
-- $\lambda - k$ steps from meeting point also reaches cycle start (after $m-1$ complete cycles)
-
-**Therefore:** Reset one pointer to head, move both at same speed → meet at cycle start ∎
-
----
-
-### 5️⃣ Intersection Point Mathematics
-
-**Two-pointer technique proof:**
-
-Given two lists A and B with lengths $L_A$ and $L_B$, intersecting at distance $d$ from their ends.
-
-**Path of pointer A:**
-
-$$L_A + (L_B - d)$$
-
-**Path of pointer B:**
-
-$$L_B + (L_A - d)$$
-
-Both equal:
-
-$$L_A + L_B - d = L_B + L_A - d$$
-
-They meet at intersection point after traveling equal distance! ∎
-
-**Visual proof:**
-
-```
-A: a1 → a2 → c1 → c2 → null
-B: b1 → b2 → b3 → c1 → c2 → null
-
-Pointer A path: a1 → a2 → c1 → c2 → null → b1 → b2 → b3 → c1 ✓
-Pointer B path: b1 → b2 → b3 → c1 → c2 → null → a1 → a2 → c1 ✓
-
-Both reach c1 (intersection) after same total distance!
-
-```
-
----
-
-## 🎨 Visual Algorithm Walkthroughs
+## 📊 Visual Overview
 
 ### Floyd's Cycle Detection - Detailed Trace
 
@@ -446,6 +289,185 @@ List: 1 → 2 → 3 → 4 → 5 → 6 → 7 → null
 +--------------------------------------------------------------------+
 
 ```
+
+---
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🔧 Basic Linked List Operations |
+| **Difficulty** | Easy |
+| **Problems** | 15+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [🏠 Linked Lists Home](../README.md) | **01. Basic Operations** | [02. Reversal →](../02_reversal/README.md) |
+
+---
+
+---
+
+## 📐 Mathematical Foundation
+### 1️⃣ Node Structure & Memory Layout
+
+**Single Node:**
+
+```
++----------+----------+
+
+|   data   |   next   |------► next node
+
+|  (4-8B)  |  (4-8B)  |
++----------+----------+
+
+```
+
+**Memory overhead per node:**
+
+$$\text{Space} = \text{sizeof(data)} + \text{sizeof(pointer)}$$
+
+For 32-bit integer + 64-bit pointer:
+
+$$\text{Space} = 4 + 8 = 12 \text{ bytes per node}$$
+
+**Total space for n nodes:**
+
+$$\boxed{S(n) = n \times (\text{data\_size} + \text{pointer\_size})}$$
+
+---
+
+### 2️⃣ Length Calculation Time Complexity
+
+**Iterative counting:**
+
+$$\text{length} = \sum_{i=0}^{n-1} 1 = n$$
+
+**Time Complexity:** $O(n)$ - must traverse entire list
+
+**Space Complexity:** $O(1)$ - only counter variable
+
+**Alternative:** Maintain length counter → $O(1)$ lookup, $O(1)$ extra space
+
+---
+
+### 3️⃣ Fast-Slow Pointer Mathematics
+
+**Theorem:** When fast reaches end, slow is at middle.
+
+$$\boxed{\text{slow\_position} = \left\lfloor \frac{n}{2} \right\rfloor}$$
+
+**Proof:**
+
+Let $n$ = length of list, $k$ = number of iterations.
+
+After $k$ iterations:
+
+- Slow pointer position: $k$
+
+- Fast pointer position: $2k$
+
+Fast reaches end when:
+
+$$2k = n \implies k = \frac{n}{2}$$
+
+Therefore, slow at position $\left\lfloor \frac{n}{2} \right\rfloor$ ∎
+
+**Cases:**
+
+- Odd length ($n = 5$): slow at position $2$ (exact middle)
+
+- Even length ($n = 6$): slow at position $3$ (second middle)
+
+---
+
+### 4️⃣ Floyd's Cycle Detection - Complete Mathematics
+
+**Phase 1: Detect Cycle**
+
+Let:
+
+- $\mu$ = distance from head to cycle start
+
+- $\lambda$ = cycle length  
+
+- $k$ = position in cycle where pointers meet
+
+When they meet:
+
+- Slow traveled: $\mu + k$ steps
+
+- Fast traveled: $\mu + k + m\lambda$ steps (for some $m \geq 1$)
+
+Since fast = 2 × slow:
+
+$$\mu + k + m\lambda = 2(\mu + k)
+\mu + k + m\lambda = 2\mu + 2k
+\boxed{m\lambda = \mu + k}$$
+
+**Phase 2: Find Cycle Start**
+
+From meeting point to cycle start: $\lambda - k$ steps
+
+From head to cycle start: $\mu$ steps
+
+From previous equation: $\mu = m\lambda - k$
+
+$$\mu = (m-1)\lambda + (\lambda - k)$$
+
+This means:
+
+- $\mu$ steps from head reaches cycle start
+
+- $\lambda - k$ steps from meeting point also reaches cycle start (after $m-1$ complete cycles)
+
+**Therefore:** Reset one pointer to head, move both at same speed → meet at cycle start ∎
+
+---
+
+### 5️⃣ Intersection Point Mathematics
+
+**Two-pointer technique proof:**
+
+Given two lists A and B with lengths $L_A$ and $L_B$, intersecting at distance $d$ from their ends.
+
+**Path of pointer A:**
+
+$$L_A + (L_B - d)$$
+
+**Path of pointer B:**
+
+$$L_B + (L_A - d)$$
+
+Both equal:
+
+$$L_A + L_B - d = L_B + L_A - d$$
+
+They meet at intersection point after traveling equal distance! ∎
+
+**Visual proof:**
+
+```
+A: a1 → a2 → c1 → c2 → null
+B: b1 → b2 → b3 → c1 → c2 → null
+
+Pointer A path: a1 → a2 → c1 → c2 → null → b1 → b2 → b3 → c1 ✓
+Pointer B path: b1 → b2 → b3 → c1 → c2 → null → a1 → a2 → c1 ✓
+
+Both reach c1 (intersection) after same total distance!
+
+```
+
+---
 
 ---
 
@@ -692,6 +714,8 @@ def getLength(head: ListNode) -> int:
 
 ---
 
+---
+
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
@@ -718,6 +742,8 @@ def getLength(head: ListNode) -> int:
 
 ---
 
+---
+
 ## 💡 Key Insights & Pro Tips
 
 > **🎯 Floyd's Core Insight**  
@@ -740,6 +766,8 @@ def getLength(head: ListNode) -> int:
 
 ---
 
+---
+
 ## 🎓 Pattern Recognition Guide
 
 ### Identifying the Right Technique
@@ -753,6 +781,8 @@ def getLength(head: ListNode) -> int:
 | "palindrome" | Symmetry check | Find middle + reverse | #234 |
 | "delete all X" | Remove nodes | Dummy node | #203 |
 | "delete nth" | Remove specific | Two pointers | #19 |
+
+---
 
 ---
 
@@ -773,6 +803,8 @@ def getLength(head: ListNode) -> int:
 *Amortized for dynamic array  
 **If tail pointer maintained  
 ***O(1) if node reference given
+
+---
 
 ---
 
@@ -804,6 +836,8 @@ def getLength(head: ListNode) -> int:
 | **VisuAlgo** | Visual linked list operations | [Website](https://visualgo.net/en/list) |
 | **Algorithm Visualizer** | Step-by-step execution | [Website](https://algorithm-visualizer.org/) |
 | **LeetCode Explore** | Linked list card | [Course](https://leetcode.com/explore/learn/card/linked-list/) |
+
+---
 
 ---
 
@@ -844,6 +878,8 @@ def getLength(head: ListNode) -> int:
 
 ---
 
+---
+
 ## 💭 Common Interview Questions
 
 **Q: How do you detect a cycle without extra space?**  
@@ -860,6 +896,8 @@ A: Yes, if not the last node. Copy next node's value, then delete next node. O(1
 
 **Q: Linked list vs array - when to use which?**  
 A: Linked list: frequent insertions/deletions at head, unknown size. Array: random access, less memory overhead, cache-friendly.
+
+---
 
 ---
 
@@ -937,9 +975,3 @@ def removeElements(head, val):
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Linked Lists Home](../README.md) | **01. Basic Operations** | [02. Reversal →](../02_reversal/README.md) |
