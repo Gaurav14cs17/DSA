@@ -20,11 +20,19 @@ permalink: /01_arrays/
 
 [🏠 Home](../README.md) | [Next Topic: Strings ➡️](../02_strings/README.md)
 
+</div>
+
 ---
+
+## 📊 Visual Overview
 
 ![Arrays Overview](./images/array-overview.png)
 
-### 📚 Comprehensive Documentation Available
+---
+
+## 📚 Comprehensive Documentation
+
+### What Each Subfolder Includes
 
 Each subfolder contains **complete mini-courses** with:
 
