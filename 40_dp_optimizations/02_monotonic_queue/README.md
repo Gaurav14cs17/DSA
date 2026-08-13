@@ -59,6 +59,39 @@ Amortized per element = O(1)
 
 ---
 
+## 📊 Visual: Monotonic Deque Operations
+
+```
+Example: [3, 1, 4, 1, 5, 9, 2, 6], k = 3
+
+i=0: dq=[0] → [3]
+i=1: dq=[0,1] → [3,1]  (1 < 3, keep)
+i=2: Remove 0,1 (4 > both), dq=[2] → [4]
+     Window [3,1,4], max = 4 ✓
+
+i=3: dq=[2,3] → [4,1]  (1 < 4, keep)
+     Window [1,4,1], max = 4 ✓
+
+i=4: Remove 2,3 (5 > both), dq=[4] → [5]
+     Window [4,1,5], max = 5 ✓
+
+i=5: Remove 4 (9 > 5), dq=[5] → [9]
+     Window [1,5,9], max = 9 ✓
+
+i=6: Remove 5 (out of range), dq=[5,6] → [9,2]
+     Window [5,9,2], max = 9 ✓
+
+i=7: Remove 5 (out of range), dq=[6,7] → [2,6]
+     Window [9,2,6], max = 9... wait, 9 is at index 5
+     Actually: Remove 6 (6 > 2), dq=[5,7] → [9,6]
+     Window [9,2,6], max = 9 ✓
+
+Invariant: Deque always decreasing, front = maximum
+
+```
+
+---
+
 ## 💻 Core Implementation
 
 ### Template: Monotonic Deque for DP
@@ -363,39 +396,6 @@ def max_sliding_window(nums, k):
             result.append(nums[dq[0]])
     
     return result
-
-```
-
----
-
-## 📊 Visual: Monotonic Deque Operations
-
-```
-Example: [3, 1, 4, 1, 5, 9, 2, 6], k = 3
-
-i=0: dq=[0] → [3]
-i=1: dq=[0,1] → [3,1]  (1 < 3, keep)
-i=2: Remove 0,1 (4 > both), dq=[2] → [4]
-     Window [3,1,4], max = 4 ✓
-
-i=3: dq=[2,3] → [4,1]  (1 < 4, keep)
-     Window [1,4,1], max = 4 ✓
-
-i=4: Remove 2,3 (5 > both), dq=[4] → [5]
-     Window [4,1,5], max = 5 ✓
-
-i=5: Remove 4 (9 > 5), dq=[5] → [9]
-     Window [1,5,9], max = 9 ✓
-
-i=6: Remove 5 (out of range), dq=[5,6] → [9,2]
-     Window [5,9,2], max = 9 ✓
-
-i=7: Remove 5 (out of range), dq=[6,7] → [2,6]
-     Window [9,2,6], max = 9... wait, 9 is at index 5
-     Actually: Remove 6 (6 > 2), dq=[5,7] → [9,6]
-     Window [9,2,6], max = 9 ✓
-
-Invariant: Deque always decreasing, front = maximum
 
 ```
 
