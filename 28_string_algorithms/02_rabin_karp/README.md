@@ -10,7 +10,7 @@ has_children: true
 
 ## 📊 Visual Overview
 
-![Rabin-Karp Algorithm](./images/rabin-karp.svg)
+![Rabin-Karp Algorithm](./images/rabin-karp.png)
 
 ## 📊 Metadata
 
