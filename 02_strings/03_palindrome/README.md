@@ -27,6 +27,33 @@ permalink: /02_strings/03_palindrome/
 
 ---
 
+## 🎨 Visual Diagrams
+
+### Palindrome Check - Two Pointer Approach
+
+<p align="center">
+  <img src="./images/palindrome_check.png" alt="Palindrome Check Algorithm" width="700"/>
+</p>
+
+### Expand Around Center Algorithm
+
+<p align="center">
+  <img src="./images/expand_around_center.png" alt="Expand Around Center Algorithm" width="800"/>
+</p>
+
+### Why 2n-1 Centers?
+
+<p align="center">
+  <img src="./images/centers_concept.png" alt="Centers Concept Explanation" width="700"/>
+</p>
+
+### Palindrome Concept
+<p align="center">
+  <img src="./images/palindrome_concept.png" alt="Palindrome Concept" width="700"/>
+</p>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Palindrome Definition
@@ -100,30 +127,56 @@ $$S' = \#s_0\#s_1\#\ldots\#s_{n-1}\#$$
 
 ---
 
-## 🎨 Visual Diagrams
+## 🎨 Visual Algorithm Walkthrough
 
-### Palindrome Check - Two Pointer Approach
+### Expand Around Center - Step by Step
 
-<p align="center">
-  <img src="./images/palindrome_check.png" alt="Palindrome Check Algorithm" width="700"/>
-</p>
+```
+String: "babad"
 
-### Expand Around Center Algorithm
+Center enumeration (2n-1 = 9 centers):
++----------------------------------------------------------+
 
-<p align="center">
-  <img src="./images/expand_around_center.png" alt="Expand Around Center Algorithm" width="800"/>
-</p>
+| Center 0: b → "b" (length 1)                            |
+| Center 1: b|a → no palindrome (even)                    |
+| Center 2: a → "a" (length 1)                            |
+|           ↓ expand                                       |
+|         b a b → "bab" (length 3) ✓                      |
+|           ↓ expand                                       |
+|       (out of bounds)                                    |
+|                                                          |
+| Center 3: a|b → no palindrome (even)                    |
+| Center 4: b → "b" (length 1)                            |
+|           ↓ expand                                       |
+|         a b a → "aba" (length 3) ✓                      |
+|                                                          |
+| Center 5: b|a → no palindrome (even)                    |
+| Center 6: a → "a" (length 1)                            |
+| Center 7: a|d → no palindrome (even)                    |
+| Center 8: d → "d" (length 1)                            |
++----------------------------------------------------------+
+
+Longest found: "bab" or "aba" (both length 3)
+
+```
 
 ### Why 2n-1 Centers?
 
-<p align="center">
-  <img src="./images/centers_concept.png" alt="Centers Concept Explanation" width="700"/>
-</p>
+```
+For "abc" (n=3):
 
-### Palindrome Concept
-<p align="center">
-  <img src="./images/palindrome_concept.png" alt="Palindrome Concept" width="700"/>
-</p>
+Odd centers (n):         Even centers (n-1):
+  a   b   c                 a|b   b|c
+  ↑   ↑   ↑                  ↑     ↑
+  0   2   4                  1     3
+
+Total: 3 + 2 = 5 = 2(3) - 1 ✓
+
+Formula: center c maps to:
+  left = c ÷ 2
+  right = c ÷ 2 + (c mod 2)
+
+```
 
 ---
 
@@ -297,59 +350,6 @@ def validPalindrome(s: str) -> bool:
 | 336 | [Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/) | Trie/Hash | O(n⋅k²) | O(nk) |
 
 ---
-
----
-
-## 🎨 Visual Algorithm Walkthrough
-
-### Expand Around Center - Step by Step
-
-```
-String: "babad"
-
-Center enumeration (2n-1 = 9 centers):
-+----------------------------------------------------------+
-
-| Center 0: b → "b" (length 1)                            |
-| Center 1: b|a → no palindrome (even)                    |
-| Center 2: a → "a" (length 1)                            |
-|           ↓ expand                                       |
-|         b a b → "bab" (length 3) ✓                      |
-|           ↓ expand                                       |
-|       (out of bounds)                                    |
-|                                                          |
-| Center 3: a|b → no palindrome (even)                    |
-| Center 4: b → "b" (length 1)                            |
-|           ↓ expand                                       |
-|         a b a → "aba" (length 3) ✓                      |
-|                                                          |
-| Center 5: b|a → no palindrome (even)                    |
-| Center 6: a → "a" (length 1)                            |
-| Center 7: a|d → no palindrome (even)                    |
-| Center 8: d → "d" (length 1)                            |
-+----------------------------------------------------------+
-
-Longest found: "bab" or "aba" (both length 3)
-
-```
-
-### Why 2n-1 Centers?
-
-```
-For "abc" (n=3):
-
-Odd centers (n):         Even centers (n-1):
-  a   b   c                 a|b   b|c
-  ↑   ↑   ↑                  ↑     ↑
-  0   2   4                  1     3
-
-Total: 3 + 2 = 5 = 2(3) - 1 ✓
-
-Formula: center c maps to:
-  left = c ÷ 2
-  right = c ÷ 2 + (c mod 2)
-
-```
 
 ---
 
