@@ -27,6 +27,22 @@ permalink: /10_graphs/02_bfs_problems/
 
 ---
 
+## 🎨 Visual Diagrams
+
+<div align="center">
+
+![BFS Traversal](./images/bfs_traversal.png)
+
+*BFS Level-by-Level Exploration*
+
+![Multi-Source BFS](./images/multi_source_bfs.png)
+
+*Multi-Source BFS (Rotting Oranges)*
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ BFS Correctness
@@ -69,22 +85,6 @@ $$\text{dist}[v] = \min_{s \in S} \text{dist}(s, v)$$
 BFS naturally gives level-order for trees:
 
 $$\text{Level } k = \{v : \text{dist}(\text{root}, v) = k\}$$
-
----
-
-## 🎨 Visual Diagrams
-
-<div align="center">
-
-![BFS Traversal](./images/bfs_traversal.png)
-
-*BFS Level-by-Level Exploration*
-
-![Multi-Source BFS](./images/multi_source_bfs.png)
-
-*Multi-Source BFS (Rotting Oranges)*
-
-</div>
 
 ---
 
