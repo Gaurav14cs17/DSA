@@ -10,7 +10,7 @@ permalink: /17_backtracking/02_permutations/
 
 # 🔀 Permutations
 
-![Permutations Tree](./images/permutations_tree.svg)
+![Permutations Tree](./images/permutations_tree.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
