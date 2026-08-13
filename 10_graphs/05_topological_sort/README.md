@@ -75,7 +75,7 @@ Can be exponentially many (e.g., independent vertices).
 
 <div align="center">
 
-![Topological Sort](./images/topological_sort.svg)
+![Topological Sort](./images/topological_sort.png)
 
 *Kahn's Algorithm - Topological Sort with In-Degree*
 
