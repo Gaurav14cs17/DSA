@@ -37,13 +37,13 @@ permalink: /21_bit_manipulation/02_xor_tricks/
 <div align="center">
 
 ### XOR Properties - The Five Pillars
-<img src="./images/xor-properties.svg" alt="XOR Properties" width="100%">
+<img src="./images/xor-properties.png" alt="XOR Properties" width="100%">
 
 ### Single Number - XOR Magic
-<img src="./images/single-number.svg" alt="Single Number Algorithm" width="100%">
+<img src="./images/single-number.png" alt="Single Number Algorithm" width="100%">
 
 ### Finding Two Unique Numbers
-<img src="./images/two-unique-numbers.svg" alt="Two Unique Numbers" width="100%">
+<img src="./images/two-unique-numbers.png" alt="Two Unique Numbers" width="100%">
 
 </div>
 
