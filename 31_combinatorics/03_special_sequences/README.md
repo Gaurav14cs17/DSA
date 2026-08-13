@@ -10,6 +10,8 @@ permalink: /31_combinatorics/03_special_sequences/
 
 # ✨ Special Sequences
 
+### *Catalan, Fibonacci, and Other Famous Sequences*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-15+-blue?style=for-the-badge" alt="Problems">
@@ -21,15 +23,7 @@ permalink: /31_combinatorics/03_special_sequences/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. Combinations](../02_combinations/README.md) | **03. Special Sequences** | [🏠 Combinatorics Home](../README.md) |
-
----
-
-## 🎨 Visual Patterns
+## 📊 Visual Overview
 
 ### Catalan Applications
 
@@ -53,8 +47,28 @@ Triangulations of Pentagon:
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **In one line** | Catalan, Fibonacci, and Other Famous Sequences |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 15+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 02. Combinations](../02_combinations/README.md) | **03. Special Sequences** | [🏠 Combinatorics Home](../README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Catalan Numbers
 
 **Formula:**
@@ -300,10 +314,3 @@ def tribonacci(n: int) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. Combinations](../02_combinations/README.md) | **03. Special Sequences** | [🏠 Combinatorics Home](../README.md) |
-
