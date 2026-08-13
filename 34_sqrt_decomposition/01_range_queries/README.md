@@ -31,26 +31,6 @@ permalink: /34_sqrt_decomposition/01_range_queries/
 
 ---
 
-## 📐 Query Types
-
-### Supported Operations
-
-- ✅ Range Sum
-
-- ✅ Range Min/Max
-
-- ✅ Range GCD/LCM
-
-- ✅ Point Update
-
-- ✅ Range Update
-
-- ✅ Range Assignment
-
-All in **O(√n)** time!
-
----
-
 ## 🎨 Visual Diagrams
 
 ### Range Sum Query with Point Update
@@ -70,6 +50,26 @@ All in **O(√n)** time!
 <div align="center">
 <img src="./images/range-update-lazy.png" alt="Range Update with Lazy" width="100%">
 </div>
+
+---
+
+## 📐 Query Types
+
+### Supported Operations
+
+- ✅ Range Sum
+
+- ✅ Range Min/Max
+
+- ✅ Range GCD/LCM
+
+- ✅ Point Update
+
+- ✅ Range Update
+
+- ✅ Range Assignment
+
+All in **O(√n)** time!
 
 ---
 
