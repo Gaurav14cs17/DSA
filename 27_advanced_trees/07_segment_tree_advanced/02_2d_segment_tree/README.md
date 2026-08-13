@@ -11,20 +11,16 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/02_2d_segment_tree/
 
 # 📐 2D Segment Tree
 
+### *Segment Tree*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-6-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Lazy Propagation](../01_lazy_propagation/README.md) | **02. 2D Segment Tree** | [03. Persistent →](../03_persistent_segtree/README.md) |
 
 ---
 
@@ -47,6 +43,15 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/02_2d_segment_tree/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 01. Lazy Propagation](../01_lazy_propagation/README.md) | **02. 2D Segment Tree** | [03. Persistent →](../03_persistent_segtree/README.md) |
+
+---
+
 ## 📐 Core Concept
 
 **2D Segment Tree:** Tree of trees for 2D range queries.
@@ -118,10 +123,3 @@ class SegmentTree2D:
 | - | 2D Max/Min Query | Hard |
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Lazy Propagation](../01_lazy_propagation/README.md) | **02. 2D Segment Tree** | [03. Persistent →](../03_persistent_segtree/README.md) |
-
