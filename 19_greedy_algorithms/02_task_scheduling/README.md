@@ -10,6 +10,10 @@ permalink: /19_greedy_algorithms/02_task_scheduling/
 
 # ⏰ Task Scheduling
 
+### *Task Scheduling*
+
+
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -43,6 +47,7 @@ permalink: /19_greedy_algorithms/02_task_scheduling/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -51,8 +56,7 @@ permalink: /19_greedy_algorithms/02_task_scheduling/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Task Scheduler Formula
 
 With cooldown $n$ between same tasks:
@@ -213,9 +217,3 @@ def carPooling(trips: list[list[int]], capacity: int) -> bool:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Interval Scheduling](../01_interval_scheduling/README.md) | **02. Task Scheduling** | [03. Array Greedy →](../03_array_greedy/README.md) |
