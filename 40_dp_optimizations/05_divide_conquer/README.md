@@ -3,7 +3,7 @@
 ## 📊 Visual Diagram
 
 <p align="center">
-  <img src="./images/divide-conquer.svg" alt="Divide & Conquer Optimization" width="100%">
+  <img src="./images/divide-conquer.png" alt="Divide & Conquer Optimization" width="100%">
 </p>
 
 ## Overview
