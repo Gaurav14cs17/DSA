@@ -10,20 +10,16 @@ permalink: /25_tree_algorithms/02_tree_dp/
 
 # 🌿 Tree Dynamic Programming
 
+### *Tree Dynamic Programming*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-15+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. LCA](../01_lowest_common_ancestor/README.md) | **02. Tree DP** | [03. Tree Construction →](../03_tree_construction/README.md) |
 
 ---
 
@@ -46,8 +42,16 @@ permalink: /25_tree_algorithms/02_tree_dp/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 📐 Mathematical Foundations
 
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 01. LCA](../01_lowest_common_ancestor/README.md) | **02. Tree DP** | [03. Tree Construction →](../03_tree_construction/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Tree DP Definition
 
 **Dynamic Programming on Trees:** Compute optimal solutions by combining results from subtrees.
@@ -662,10 +666,3 @@ Tree DP Problem
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. LCA](../01_lowest_common_ancestor/README.md) | **02. Tree DP** | [03. Tree Construction →](../03_tree_construction/README.md) |
-
