@@ -10,6 +10,8 @@ permalink: /03_linked_lists/03_merge_sort/
 
 # 🔀 Merge & Sort Linked Lists
 
+### *🔀 Merge & Sort Linked Lists*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +21,7 @@ permalink: /03_linked_lists/03_merge_sort/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
-|:------------|:----------:|--------:|
-| [← 02. Reversal](../02_reversal/README.md) | **03. Merge & Sort** | [🏠 Linked Lists Home](../README.md) → [Stacks](../../04_stacks/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -44,43 +38,9 @@ permalink: /03_linked_lists/03_merge_sort/
 
 ---
 
-## 📐 Mathematical Foundations
-
-### Merge Sort Recurrence
-
-$$T(n) = 2T(n/2) + O(n)
-\boxed{T(n) = O(n \log n)}$$
-
-**Space for Linked List:** $O(\log n)$ stack space (no auxiliary array needed)
-
 ---
 
-### Merge Two Sorted Lists
-
-**Invariant:** Result contains smaller of two current heads.
-
-**Merge Formula:**
-
-$$\text{merge}(L_1, L_2) = \begin{cases}
-L_2 & \text{if } L_1 = \text{null} \\
-L_1 & \text{if } L_2 = \text{null} \\
-L_1 \to \text{merge}(L_1.\text{next}, L_2) & \text{if } L_1.\text{val} < L_2.\text{val} \\
-L_2 \to \text{merge}(L_1, L_2.\text{next}) & \text{otherwise}
-\end{cases}$$
-
----
-
-### Merge K Lists (Min Heap)
-
-**Time Complexity:**
-
-$$O(n \log k)$$
-
-Where $n$ = total elements, $k$ = number of lists.
-
----
-
-## 🎨 Visual Algorithm Walkthrough
+## 📊 Visual Overview
 
 ### Merge Sort on Linked List
 
@@ -157,6 +117,67 @@ Time: O(n log k) where n=total nodes, k=lists
 
 ---
 
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🔀 Merge & Sort Linked Lists |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 8+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
+|:------------|:----------:|--------:|
+| [← 02. Reversal](../02_reversal/README.md) | **03. Merge & Sort** | [🏠 Linked Lists Home](../README.md) → [Stacks](../../04_stacks/README.md) |
+
+---
+
+---
+
+## 📐 Mathematical Foundation
+### Merge Sort Recurrence
+
+$$T(n) = 2T(n/2) + O(n)
+\boxed{T(n) = O(n \log n)}$$
+
+**Space for Linked List:** $O(\log n)$ stack space (no auxiliary array needed)
+
+---
+
+### Merge Two Sorted Lists
+
+**Invariant:** Result contains smaller of two current heads.
+
+**Merge Formula:**
+
+$$\text{merge}(L_1, L_2) = \begin{cases}
+L_2 & \text{if } L_1 = \text{null} \\
+L_1 & \text{if } L_2 = \text{null} \\
+L_1 \to \text{merge}(L_1.\text{next}, L_2) & \text{if } L_1.\text{val} < L_2.\text{val} \\
+L_2 \to \text{merge}(L_1, L_2.\text{next}) & \text{otherwise}
+\end{cases}$$
+
+---
+
+### Merge K Lists (Min Heap)
+
+**Time Complexity:**
+
+$$O(n \log k)$$
+
+Where $n$ = total elements, $k$ = number of lists.
+
+---
+
+---
 
 ## 💻 Code Implementations
 
@@ -224,6 +245,8 @@ def mergeKLists(lists: list[ListNode]) -> ListNode:
 
 ---
 
+---
+
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
@@ -246,6 +269,8 @@ def mergeKLists(lists: list[ListNode]) -> ListNode:
 
 ---
 
+---
+
 ## 💡 Key Insights & Pro Tips
 
 > **🎯 Merge Sort Advantage**  
@@ -262,6 +287,8 @@ def mergeKLists(lists: list[ListNode]) -> ListNode:
 
 > **🔍 Merge Optimization**  
 > For k lists: pairwise merging is O(nk log k). Heap is better: O(n log k).
+
+---
 
 ---
 
@@ -282,6 +309,8 @@ def mergeKLists(lists: list[ListNode]) -> ListNode:
 | **Pairwise Merge** | O(nk log k) | O(1) | Simple to code |
 | **Min Heap** | **O(n log k)** | **O(k)** | Optimal for large k |
 | **Divide & Conquer** | O(n log k) | O(log k) | Recursive approach |
+
+---
 
 ---
 
@@ -329,6 +358,8 @@ Linked list merge sort: O(log n) stack only! ∎
 
 ---
 
+---
+
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
@@ -363,6 +394,8 @@ Linked list merge sort: O(log n) stack only! ∎
 | **Master Theorem** | Recurrence analysis | [Wikipedia](https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)) |
 | **External Sorting** | Large data merge | [GeeksforGeeks](https://www.geeksforgeeks.org/external-sorting/) |
 | **Priority Queue** | Heap implementation | [CP-Algorithms](https://cp-algorithms.com/data_structures/heap.html) |
+
+---
 
 ---
 
@@ -404,9 +437,3 @@ Linked list merge sort: O(log n) stack only! ∎
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
-|:------------|:----------:|--------:|
-| [← 02. Reversal](../02_reversal/README.md) | **03. Merge & Sort** | [🏠 Linked Lists Home](../README.md) → [Stacks](../../04_stacks/README.md) |
