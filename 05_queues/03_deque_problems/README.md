@@ -419,8 +419,6 @@ def zeroOneBFS(graph: list[list[tuple]], n: int, start: int) -> list[int]:
 
 ---
 
----
-
 ## 📊 When to Use Deque
 
 ```
