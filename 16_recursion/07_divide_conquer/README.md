@@ -23,15 +23,7 @@ permalink: /16_recursion/07_divide_conquer/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 06. Array Recursion](../06_array_recursion/README.md) | **07. Divide & Conquer** | [08. Mathematical Recursion →](../08_mathematical_recursion/README.md) |
-
----
-
-## 📊 Visual Diagrams
+## 📊 Visual Overview
 
 <p align="center">
   <img src="./images/merge_sort.png" alt="Merge Sort Recursion" width="100%"/>
@@ -44,6 +36,27 @@ permalink: /16_recursion/07_divide_conquer/
 <p align="center">
   <img src="./images/quick_sort.png" alt="Quick Sort Recursion" width="100%"/>
 </p>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Break problem into subproblems, solve recursively, combine results |
+| **Difficulty** | Medium |
+| **Problems** | 12+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 06. Array Recursion](../06_array_recursion/README.md) | **07. Divide & Conquer** | [08. Mathematical Recursion →](../08_mathematical_recursion/README.md) |
 
 ---
 
@@ -561,10 +574,3 @@ Divide and Conquer
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 06. Array Recursion](../06_array_recursion/README.md) | **07. Divide & Conquer** | [08. Mathematical Recursion →](../08_mathematical_recursion/README.md) |
-
