@@ -11,6 +11,8 @@ permalink: /30_number_theory/10_lucas_theorem/02_sierpinski/
 
 # 🔺 Sierpiński Triangle & Lucas
 
+### *Binary Patterns in Pascal's Triangle*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Pattern-Binary-blue?style=for-the-badge" alt="Pattern">
@@ -36,10 +38,23 @@ permalink: /30_number_theory/10_lucas_theorem/02_sierpinski/
 
 ![Sierpiński Triangle](./images/sierpinski_triangle.png)
 
+*Sierpiński Triangle*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Binary Patterns in Pascal's Triangle |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 The Connection
 
 By Lucas' theorem with p = 2:
