@@ -10,6 +10,8 @@ permalink: /01_arrays/05_interval_problems/
 
 # ⏱️ Interval Problems
 
+### *⏱️ Interval Problems*
+
 
 
 <p>
@@ -1001,19 +1003,6 @@ merged = [intervals[0]]
 </div>
 
 ---
-
----
-
-## 🎯 At a Glance
-
-| | |
-|:---|:---|
-| **Topic** | ⏱️ Interval Problems |
-| **Difficulty** | Medium to Hard |
-| **Problems** | 20+ |
-
-{: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
