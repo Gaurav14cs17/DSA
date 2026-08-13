@@ -10,20 +10,16 @@ permalink: /25_tree_algorithms/01_lowest_common_ancestor/
 
 # 🔍 Lowest Common Ancestor (LCA)
 
+### *Lowest Common Ancestor (LCA)*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-12+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Tree Algorithms](../README.md) | **01. LCA** | [02. Tree DP →](../02_tree_dp/README.md) |
 
 ---
 
@@ -46,8 +42,16 @@ permalink: /25_tree_algorithms/01_lowest_common_ancestor/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 📐 Mathematical Foundations
 
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Tree Algorithms](../README.md) | **01. LCA** | [02. Tree DP →](../02_tree_dp/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ LCA Definition
 
 **Lowest Common Ancestor** of nodes $u$ and $v$ in tree $T$:
@@ -673,10 +677,3 @@ LCA Problem
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Tree Algorithms](../README.md) | **01. LCA** | [02. Tree DP →](../02_tree_dp/README.md) |
-
