@@ -30,7 +30,7 @@ permalink: /27_advanced_trees/02_red_black_trees/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/red-black-tree.svg" alt="Red-Black Tree Properties" width="100%">
+<img src="./images/red-black-tree.png" alt="Red-Black Tree Properties" width="100%">
 </div>
 
 ---
