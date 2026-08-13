@@ -4,11 +4,18 @@ title: "Suffix Tree"
 parent: "String Algorithms"
 nav_order: 7
 ---
+<div align="center">
 
 # 🌳 Suffix Tree (Ukkonen's Algorithm)
 
-### *A **Suffix Tree** is a compressed trie of all suffixes of a string.*
+### *A Suffix Tree is a compressed trie of all suffixes of a string.*
 
+<p><img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty"></p>
+
+[🏠 String Algorithms](../../README.md)
+</div>
+
+---
 
 ## 📊 Visual Overview
 
@@ -30,6 +37,14 @@ nav_order: 7
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Aho-Corasick](../06_aho_corasick/README.md) | **Suffix Tree** | [String Hashing →](../08_string_hashing/README.md) |
 
 ---
 
@@ -770,4 +785,3 @@ Uses:
 ---
 
 **Navigation:** [← Aho-Corasick](../06_aho_corasick/) | [String Algorithms](../README.md) | [Next: String Hashing →](../08_string_hashing/)
-
