@@ -10,6 +10,10 @@ permalink: /17_backtracking/05_constraint_satisfaction/
 
 # 🧩 Constraint Satisfaction
 
+### *Constraint Satisfaction*
+
+
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
@@ -43,6 +47,7 @@ permalink: /17_backtracking/05_constraint_satisfaction/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next Topic |
@@ -51,8 +56,7 @@ permalink: /17_backtracking/05_constraint_satisfaction/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ CSP Definition
 
 **Constraint Satisfaction Problem:**
@@ -312,9 +316,3 @@ def canPartitionKSubsets(nums: list[int], k: int) -> bool:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
-|:------------|:----------:|--------:|
-| [← 04. Grid Backtracking](../04_grid_backtracking/README.md) | **05. Constraint Satisfaction** | [🏠 Backtracking Home](../README.md) → [DP](../../18_dynamic_programming/README.md) |
