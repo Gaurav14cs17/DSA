@@ -7,23 +7,28 @@ nav_order: 5
 
 # 🔷 Polygon Operations
 
-## 📊 Metadata
+### *Polygon operations compute properties and perform transformations on polygons.*
 
-- **Difficulty:** ![Medium-Hard](https://img.shields.io/badge/Medium--Hard-red)
-
-- **Time Complexity:** O(n) for area, O(n²) for triangulation
-
-- **Space Complexity:** O(n)
-
-- **Topics:** Area, Perimeter, Triangulation, Boolean Operations
-
----
 
 ## 📊 Visual Overview
 
 ![Polygon Operations](./images/polygon-operations.png)
 
 *Shoelace formula for area calculation and ear clipping triangulation*
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Polygon operations compute properties and perform transformations on polygons. |
+| **Typical time** | O(n) for area, O(n²) for triangulation |
+| **Typical space** | O(n) |
+| **Topics** | Area, Perimeter, Triangulation, Boolean Operations |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
