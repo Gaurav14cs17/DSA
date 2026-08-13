@@ -3,7 +3,7 @@
 ## 📊 Visual Overview
 
 <p align="center">
-  <img src="../images/number_of_atoms.svg" alt="Number of Atoms Overview" width="90%">
+  <img src="../images/number_of_atoms.png" alt="Number of Atoms Overview" width="90%">
 </p>
 
 > **See more diagrams below** for call stack, flowchart, parse tree, and pointer animation.
@@ -500,7 +500,7 @@ For visual learners, check these SVG diagrams:
 ### 1. Call Stack Visualization
 
 <p align="center">
-  <img src="../images/atoms_call_stack.svg" alt="Call Stack" width="90%">
+  <img src="../images/atoms_call_stack.png" alt="Call Stack" width="90%">
 </p>
 
 See how the call stack grows when entering `(` and shrinks when hitting `)`
@@ -508,7 +508,7 @@ See how the call stack grows when entering `(` and shrinks when hitting `)`
 ### 2. Decision Flowchart
 
 <p align="center">
-  <img src="../images/atoms_flowchart.svg" alt="Flowchart" width="90%">
+  <img src="../images/atoms_flowchart.png" alt="Flowchart" width="90%">
 </p>
 
 Decision flowchart for each character type
@@ -516,7 +516,7 @@ Decision flowchart for each character type
 ### 3. Parse Tree (Complex Formula)
 
 <p align="center">
-  <img src="../images/atoms_tree_parse.svg" alt="Parse Tree" width="90%">
+  <img src="../images/atoms_tree_parse.png" alt="Parse Tree" width="90%">
 </p>
 
 Complex formula `K4(ON(SO3)2)2` as a tree
@@ -524,7 +524,7 @@ Complex formula `K4(ON(SO3)2)2` as a tree
 ### 4. Position Pointer Animation
 
 <p align="center">
-  <img src="../images/atoms_pointer.svg" alt="Pointer Animation" width="90%">
+  <img src="../images/atoms_pointer.png" alt="Pointer Animation" width="90%">
 </p>
 
 Frame-by-frame animation of `pos` moving through string
