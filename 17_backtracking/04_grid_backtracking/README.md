@@ -10,7 +10,6 @@ permalink: /17_backtracking/04_grid_backtracking/
 
 # 🗺️ Grid Backtracking
 
-![Grid Search](./images/grid_search.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -20,6 +19,17 @@ permalink: /17_backtracking/04_grid_backtracking/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Grid Search](./images/grid_search.png)
+
+</div>
+
+---
+
 
 ## 🧭 Navigation
 
