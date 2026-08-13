@@ -101,7 +101,7 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/segment-tree-advanced.svg" alt="Advanced Segment Tree" width="100%">
+<img src="./images/segment-tree-advanced.png" alt="Advanced Segment Tree" width="100%">
 </div>
 
 ---
