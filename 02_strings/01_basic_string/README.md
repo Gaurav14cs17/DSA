@@ -74,19 +74,19 @@ $$f[c] = |\{i : S[i] = c\}|$$
 ### String Reversal - Two Pointer Approach
 
 <p align="center">
-  <img src="./images/string_reversal.svg" alt="String Reversal Algorithm" width="700"/>
+  <img src="./images/string_reversal.png" alt="String Reversal Algorithm" width="700"/>
 </p>
 
 ### Character Frequency Array
 
 <p align="center">
-  <img src="./images/frequency_array.svg" alt="Frequency Array Visualization" width="700"/>
+  <img src="./images/frequency_array.png" alt="Frequency Array Visualization" width="700"/>
 </p>
 
 ### First Unique Character
 
 <p align="center">
-  <img src="./images/first_unique_char.svg" alt="First Unique Character Algorithm" width="700"/>
+  <img src="./images/first_unique_char.png" alt="First Unique Character Algorithm" width="700"/>
 </p>
 
 ---
