@@ -97,29 +97,29 @@ $$\forall c \in T: \text{count}_{\text{window}}(c) \geq \text{count}_T(c)$$
 ### Anagram Check - Frequency Vector Comparison
 
 <p align="center">
-  <img src="./images/anagram_check.svg" alt="Anagram Check Visualization" width="750"/>
+  <img src="./images/anagram_check.png" alt="Anagram Check Visualization" width="750"/>
 </p>
 
 ### Sliding Window for Finding All Anagrams
 
 <p align="center">
-  <img src="./images/sliding_window_anagram.svg" alt="Sliding Window Anagram Detection" width="800"/>
+  <img src="./images/sliding_window_anagram.png" alt="Sliding Window Anagram Detection" width="800"/>
 </p>
 
 ### Group Anagrams Using Hash Map
 
 <p align="center">
-  <img src="./images/group_anagrams.svg" alt="Group Anagrams Algorithm" width="750"/>
+  <img src="./images/group_anagrams.png" alt="Group Anagrams Algorithm" width="750"/>
 </p>
 
 ### Anagram Concept
 <p align="center">
-  <img src="./images/anagram_concept.svg" alt="Anagram Concept" width="750"/>
+  <img src="./images/anagram_concept.png" alt="Anagram Concept" width="750"/>
 </p>
 
 ### Sliding Window for Anagrams
 <p align="center">
-  <img src="./images/sliding_window.svg" alt="Sliding Window" width="800"/>
+  <img src="./images/sliding_window.png" alt="Sliding Window" width="800"/>
 </p>
 
 ---
