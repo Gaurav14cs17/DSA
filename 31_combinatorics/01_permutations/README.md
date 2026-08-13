@@ -31,82 +31,6 @@ permalink: /31_combinatorics/01_permutations/
 
 ---
 
-## 📐 Mathematical Foundations
-
-### 1️⃣ Permutation Definition
-
-**Definition:** A permutation is an arrangement of objects in a specific order.
-
-For set $S = \{a, b, c\}$:
-
-- Permutations: ABC, ACB, BAC, BCA, CAB, CBA (6 total)
-
-- Order matters: ABC ≠ BAC
-
----
-
-### 2️⃣ Permutation Formulas
-
-**Full Permutation (n distinct objects):**
-
-$$P(n) = n!$$
-
-**Proof:** 
-
-- First position: n choices
-
-- Second position: n-1 choices
-
-- Continue... last position: 1 choice
-
-- Total: $n \times (n-1) \times \cdots \times 1 = n!$ ∎
-
-**r-Permutation (r from n):**
-
-$$P(n, r) = \frac{n!}{(n-r)!}$$
-
-**Permutations with Repetition:**
-
-If object $i$ appears $n_i$ times:
-
-$$P = \frac{n!}{n_1! \times n_2! \times \cdots \times n_k!}$$
-
-**Example:** Permutations of "AABBC":
-
-$$\frac{5!}{2! \times 2! \times 1!} = \frac{120}{4} = 30$$
-
----
-
-### 3️⃣ Circular Permutations
-
-**Theorem:** $n$ distinct objects arranged in a circle have $(n-1)!$ permutations.
-
-**Proof:**
-
-- Linear arrangements: $n!$
-
-- Each circular arrangement corresponds to $n$ linear arrangements (rotations)
-
-- Circular permutations: $\frac{n!}{n} = (n-1)!$ ∎
-
----
-
-### 4️⃣ Derangements
-
-**Definition:** Permutation where no element appears in its original position.
-
-**Formula:**
-
-$$D_n = n! \sum_{i=0}^{n} \frac{(-1)^i}{i!} \approx \frac{n!}{e}$$
-
-**Recurrence:**
-
-$$D_n = (n-1)(D_{n-1} + D_{n-2})$$
-
-**First few:** $D_0=1, D_1=0, D_2=1, D_3=2, D_4=9, D_5=44$
-
----
-
 ## 🎨 Visual Walkthrough
 
 ### Pattern: Generate All Permutations (Backtracking)
@@ -193,6 +117,82 @@ $$D_n = (n-1)(D_{n-1} + D_{n-2})$$
 +----------------------------------------------------------------+
 
 ```
+
+---
+
+## 📐 Mathematical Foundations
+
+### 1️⃣ Permutation Definition
+
+**Definition:** A permutation is an arrangement of objects in a specific order.
+
+For set $S = \{a, b, c\}$:
+
+- Permutations: ABC, ACB, BAC, BCA, CAB, CBA (6 total)
+
+- Order matters: ABC ≠ BAC
+
+---
+
+### 2️⃣ Permutation Formulas
+
+**Full Permutation (n distinct objects):**
+
+$$P(n) = n!$$
+
+**Proof:** 
+
+- First position: n choices
+
+- Second position: n-1 choices
+
+- Continue... last position: 1 choice
+
+- Total: $n \times (n-1) \times \cdots \times 1 = n!$ ∎
+
+**r-Permutation (r from n):**
+
+$$P(n, r) = \frac{n!}{(n-r)!}$$
+
+**Permutations with Repetition:**
+
+If object $i$ appears $n_i$ times:
+
+$$P = \frac{n!}{n_1! \times n_2! \times \cdots \times n_k!}$$
+
+**Example:** Permutations of "AABBC":
+
+$$\frac{5!}{2! \times 2! \times 1!} = \frac{120}{4} = 30$$
+
+---
+
+### 3️⃣ Circular Permutations
+
+**Theorem:** $n$ distinct objects arranged in a circle have $(n-1)!$ permutations.
+
+**Proof:**
+
+- Linear arrangements: $n!$
+
+- Each circular arrangement corresponds to $n$ linear arrangements (rotations)
+
+- Circular permutations: $\frac{n!}{n} = (n-1)!$ ∎
+
+---
+
+### 4️⃣ Derangements
+
+**Definition:** Permutation where no element appears in its original position.
+
+**Formula:**
+
+$$D_n = n! \sum_{i=0}^{n} \frac{(-1)^i}{i!} \approx \frac{n!}{e}$$
+
+**Recurrence:**
+
+$$D_n = (n-1)(D_{n-1} + D_{n-2})$$
+
+**First few:** $D_0=1, D_1=0, D_2=1, D_3=2, D_4=9, D_5=44$
 
 ---
 
