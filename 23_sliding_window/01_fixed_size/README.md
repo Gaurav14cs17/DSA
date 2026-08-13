@@ -50,11 +50,11 @@ permalink: /23_sliding_window/01_fixed_size/
 
 <div align="center">
 
-![Fixed Window Sliding](./images/fixed-window-sliding.svg)
+![Fixed Window Sliding](./images/fixed-window-sliding.png)
 
 *Step-by-step visualization of fixed window sliding technique*
 
-![Monotonic Deque](./images/monotonic-deque.svg)
+![Monotonic Deque](./images/monotonic-deque.png)
 
 *Monotonic deque for O(n) window maximum/minimum*
 
