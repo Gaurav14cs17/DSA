@@ -10,6 +10,10 @@ permalink: /26_sweep_line/03_line_segment_intersection/
 
 # 📐 Line Segment Intersection
 
+### *Line Segment Intersection*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8-blue?style=for-the-badge" alt="Problems">
@@ -38,6 +42,7 @@ permalink: /26_sweep_line/03_line_segment_intersection/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -46,8 +51,7 @@ permalink: /26_sweep_line/03_line_segment_intersection/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Line Segment Intersection Problem
 
 **Given:** $n$ line segments in 2D plane  
@@ -559,10 +563,3 @@ def valid_square(p1: List[int], p2: List[int],
 6. **Convex hull:** Related problem using sweep/orientation tests
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. Coordinate Compression](../02_coordinate_compression/README.md) | **03. Line Segment Intersection** | [04. Angular Sweep →](../04_angular_sweep/README.md) |
-
