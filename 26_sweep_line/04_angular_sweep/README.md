@@ -10,6 +10,10 @@ permalink: /26_sweep_line/04_angular_sweep/
 
 # 🌀 Angular Sweep (Radial Sweep)
 
+### *Angular Sweep (Radial Sweep)*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-6-blue?style=for-the-badge" alt="Problems">
@@ -38,6 +42,7 @@ permalink: /26_sweep_line/04_angular_sweep/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -46,8 +51,7 @@ permalink: /26_sweep_line/04_angular_sweep/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Angular Sweep Definition
 
 **Linear sweep:** Line moves in one direction (left to right)  
@@ -557,10 +561,3 @@ def number_of_people_aware_of_secret(n: int, delay: int, forget: int) -> int:
 6. **Visibility:** Angular sweep from viewpoint, track obstructions
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Line Segment Intersection](../03_line_segment_intersection/README.md) | **04. Angular Sweep** | [05. Rectangle Problems →](../05_rectangle_problems/README.md) |
-
