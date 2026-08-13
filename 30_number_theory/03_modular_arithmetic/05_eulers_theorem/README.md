@@ -26,15 +26,7 @@ permalink: /30_number_theory/03_modular_arithmetic/05_eulers_theorem/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Fermat's Theorem](../04_fermats_theorem/README.md) | **05. Euler's Theorem** | [06. Applications →](../06_applications/README.md) |
-
----
-
-## 📊 Visual Diagram
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -87,8 +79,16 @@ $$\phi(n) = n \prod_{p|n}\left(1 - \frac{1}{p}\right)$$
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 📐 Mathematical Foundations
 
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 04. Fermat's Theorem](../04_fermats_theorem/README.md) | **05. Euler's Theorem** | [06. Applications →](../06_applications/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Euler's Theorem
 
 **Statement:** If $\gcd(a, n) = 1$, then:
@@ -158,4 +158,3 @@ def rsa_example():
 **Made with ❤️ by [Gaurav Goswami](https://github.com/Gaurav14cs17)**
 
 </div>
-
