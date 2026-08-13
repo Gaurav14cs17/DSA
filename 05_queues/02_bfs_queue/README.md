@@ -10,6 +10,8 @@ permalink: /05_queues/02_bfs_queue/
 
 # 🌊 BFS Queue Problems
 
+### *🌊 BFS Queue Problems*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-15+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +21,7 @@ permalink: /05_queues/02_bfs_queue/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Basic Queue](../01_basic_queue/README.md) | **02. BFS Queue** | [03. Deque Problems →](../03_deque_problems/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -41,94 +35,9 @@ permalink: /05_queues/02_bfs_queue/
 
 ---
 
-## 📐 Mathematical Foundations
-
-### 1️⃣ BFS Correctness for Shortest Path
-
-**Theorem:** BFS finds shortest path in unweighted graph.
-
-**Proof by Induction:**
-
-**Invariant:** When vertex $v$ is dequeued, $d[v]$ = shortest distance from source.
-
-**Base:** Source $s$ has $d[s] = 0$ (correct).
-
-**Inductive:** Assume true for all vertices at distance $\leq k$.
-
-- Vertices at distance $k+1$ are discovered from vertices at distance $k$
-
-- They're assigned distance $k+1$ when first seen
-
-- BFS processes in order → first discovery = shortest path ∎
-
 ---
 
-### 2️⃣ BFS Complexity Analysis
-
-$$T(V, E) = O(V + E)$$
-
-**Breakdown:**
-
-- Queue operations: Each vertex enqueued/dequeued once → $O(V)$
-
-- Edge examination: Each edge checked once (directed) or twice (undirected) → $O(E)$
-
-**Space:** $O(V)$ for visited set and queue.
-
----
-
-### 3️⃣ Level-Order Traversal
-
-**Tree Levels:**
-
-$$\text{Level } k = \{v : \text{dist}(root, v) = k\}$$
-
-**Processing:** Separate levels by tracking queue size.
-
-```
-Level 0: [root]
-Level 1: [children of root]
-Level 2: [grandchildren]
-...
-
-```
-
----
-
-### 4️⃣ Multi-Source BFS
-
-**Problem:** Find shortest distance to nearest source.
-
-**Initialization:** Enqueue all sources with distance 0.
-
-**Formula:**
-
-$$d[v] = \min_{s \in \text{sources}} \text{dist}(s, v)$$
-
----
-
-### 5️⃣ Grid BFS
-
-**4-directional movement:**
-
-$$\text{neighbors}(x, y) = \{(x±1, y), (x, y±1)\}$$
-
-**8-directional movement:**
-
-$$\text{neighbors}(x, y) = \{(x+dx, y+dy) : dx, dy \in \{-1, 0, 1\}, (dx, dy) \neq (0, 0)\}$$
-
----
-
-### 6️⃣ Shortest Path with State
-
-For problems with additional state (e.g., keys collected):
-
-$$\text{state} = (\text{position}, \text{extra\_info})
-d[(x, y, state)] = \text{shortest path to } (x, y) \text{ with given state}$$
-
----
-
-## 🎨 Visual Algorithm Walkthrough
+## 📊 Visual Overview
 
 ### Level-Order Traversal (#102)
 
@@ -256,6 +165,118 @@ Turn 6: Reach "0202"
 
 ---
 
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🌊 BFS Queue Problems |
+| **Difficulty** | Medium |
+| **Problems** | 15+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 01. Basic Queue](../01_basic_queue/README.md) | **02. BFS Queue** | [03. Deque Problems →](../03_deque_problems/README.md) |
+
+---
+
+---
+
+## 📐 Mathematical Foundation
+### 1️⃣ BFS Correctness for Shortest Path
+
+**Theorem:** BFS finds shortest path in unweighted graph.
+
+**Proof by Induction:**
+
+**Invariant:** When vertex $v$ is dequeued, $d[v]$ = shortest distance from source.
+
+**Base:** Source $s$ has $d[s] = 0$ (correct).
+
+**Inductive:** Assume true for all vertices at distance $\leq k$.
+
+- Vertices at distance $k+1$ are discovered from vertices at distance $k$
+
+- They're assigned distance $k+1$ when first seen
+
+- BFS processes in order → first discovery = shortest path ∎
+
+---
+
+### 2️⃣ BFS Complexity Analysis
+
+$$T(V, E) = O(V + E)$$
+
+**Breakdown:**
+
+- Queue operations: Each vertex enqueued/dequeued once → $O(V)$
+
+- Edge examination: Each edge checked once (directed) or twice (undirected) → $O(E)$
+
+**Space:** $O(V)$ for visited set and queue.
+
+---
+
+### 3️⃣ Level-Order Traversal
+
+**Tree Levels:**
+
+$$\text{Level } k = \{v : \text{dist}(root, v) = k\}$$
+
+**Processing:** Separate levels by tracking queue size.
+
+```
+Level 0: [root]
+Level 1: [children of root]
+Level 2: [grandchildren]
+...
+
+```
+
+---
+
+### 4️⃣ Multi-Source BFS
+
+**Problem:** Find shortest distance to nearest source.
+
+**Initialization:** Enqueue all sources with distance 0.
+
+**Formula:**
+
+$$d[v] = \min_{s \in \text{sources}} \text{dist}(s, v)$$
+
+---
+
+### 5️⃣ Grid BFS
+
+**4-directional movement:**
+
+$$\text{neighbors}(x, y) = \{(x±1, y), (x, y±1)\}$$
+
+**8-directional movement:**
+
+$$\text{neighbors}(x, y) = \{(x+dx, y+dy) : dx, dy \in \{-1, 0, 1\}, (dx, dy) \neq (0, 0)\}$$
+
+---
+
+### 6️⃣ Shortest Path with State
+
+For problems with additional state (e.g., keys collected):
+
+$$\text{state} = (\text{position}, \text{extra\_info})
+d[(x, y, state)] = \text{shortest path to } (x, y) \text{ with given state}$$
+
+---
+
+---
 
 ## 💻 Code Implementations
 
@@ -425,6 +446,8 @@ def openLock(deadends: list[str], target: str) -> int:
 
 ---
 
+---
+
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
@@ -461,6 +484,8 @@ def openLock(deadends: list[str], target: str) -> int:
 
 ---
 
+---
+
 ## 💡 Pattern Recognition Guide
 
 | Problem Keywords | Pattern | Example |
@@ -473,6 +498,8 @@ def openLock(deadends: list[str], target: str) -> int:
 | "zigzag" | Level with direction flag | #103 |
 | "minimum depth" | BFS early termination | #111 |
 | "word ladder" | Graph transformation BFS | #127 |
+
+---
 
 ---
 
@@ -532,6 +559,8 @@ def openLock(deadends: list[str], target: str) -> int:
 
 ---
 
+---
+
 ## 💡 Pro Tips
 
 > **🎯 Mark Visited When Enqueuing:** Not when dequeuing! Prevents duplicate entries in queue.
@@ -543,6 +572,8 @@ def openLock(deadends: list[str], target: str) -> int:
 > **📊 Grid BFS:** Always check boundaries: `0 <= x < m and 0 <= y < n`. Mark visited to avoid cycles.
 
 > **🌊 Early Termination:** For "minimum depth" problems, return as soon as target found. BFS guarantees shortest!
+
+---
 
 ---
 
@@ -582,6 +613,8 @@ def openLock(deadends: list[str], target: str) -> int:
 
 ---
 
+---
+
 ## ❓ Interview Q&A
 
 **Q: Why BFS for shortest path, not DFS?**  
@@ -598,6 +631,8 @@ A: Both work! BFS uses queue, DFS uses recursion/stack. BFS better for shortest 
 
 **Q: How to avoid revisiting in grid BFS?**  
 A: Mark visited when adding to queue (not when processing). Can modify grid or use separate visited set.
+
+---
 
 ---
 
@@ -622,9 +657,3 @@ A: Mark visited when adding to queue (not when processing). Can modify grid or u
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Basic Queue](../01_basic_queue/README.md) | **02. BFS Queue** | [03. Deque Problems →](../03_deque_problems/README.md) |
