@@ -4,11 +4,18 @@ title: "Suffix Structures"
 parent: "String Algorithms"
 nav_order: 4
 ---
+<div align="center">
 
 # 📚 Suffix Arrays & LCP Arrays
 
-### ***Suffix Array** is a sorted array of all suffixes of a string.*
+### *Suffix Array is a sorted array of all suffixes of a string.*
 
+<p><img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty"></p>
+
+[🏠 String Algorithms](../../README.md)
+</div>
+
+---
 
 ## 📊 Visual Overview
 
@@ -30,6 +37,14 @@ nav_order: 4
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Z-Algorithm](../03_z_algorithm/README.md) | **Suffix Structures** | [Manacher →](../05_manacher/README.md) |
 
 ---
 
@@ -707,4 +722,3 @@ class LCPQuery:
 ---
 
 **Navigation:** [← Z-Algorithm](../03_z_algorithm/) | [String Algorithms](../README.md) | [Next: Manacher's →](../05_manacher/)
-
