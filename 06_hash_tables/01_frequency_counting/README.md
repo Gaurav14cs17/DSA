@@ -32,10 +32,10 @@ permalink: /06_hash_tables/01_frequency_counting/
 <div align="center">
 
 ### Boyer-Moore Voting Algorithm
-![Boyer-Moore Voting](image/boyer-moore-voting.svg)
+![Boyer-Moore Voting](image/boyer-moore-voting.png)
 
 ### Top K Frequent Elements - Bucket Sort
-![Bucket Sort Top K](image/bucket-sort-top-k.svg)
+![Bucket Sort Top K](image/bucket-sort-top-k.png)
 
 </div>
 
