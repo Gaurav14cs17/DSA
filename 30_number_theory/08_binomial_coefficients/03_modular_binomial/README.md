@@ -37,7 +37,7 @@ permalink: /30_number_theory/08_binomial_coefficients/03_modular_binomial/
 
 <div align="center">
 
-![Modular Binomial](./images/modular_binomial.svg)
+![Modular Binomial](./images/modular_binomial.png)
 
 </div>
 
