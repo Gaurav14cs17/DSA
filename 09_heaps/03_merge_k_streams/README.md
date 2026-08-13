@@ -27,6 +27,16 @@ permalink: /09_heaps/03_merge_k_streams/
 
 ---
 
+## 🎨 Visual Pattern Guide
+
+<div align="center">
+
+![Merge K Streams](./image/merge_k_streams.png)
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ K-way Merge Complexity
@@ -56,16 +66,6 @@ $$\boxed{T(n, k) = O(n \log k)}$$
 **Key Insight:** Start with (0,0), explore neighbors (i+1,j) and (i,j+1).
 
 $$\text{pairs to consider} \leq 2k$$
-
----
-
-## 🎨 Visual Pattern Guide
-
-<div align="center">
-
-![Merge K Streams](./image/merge_k_streams.png)
-
-</div>
 
 ---
 
