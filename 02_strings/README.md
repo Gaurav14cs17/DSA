@@ -24,7 +24,7 @@ permalink: /02_strings/
 
 ---
 
-![Strings Overview](./images/string-overview.svg)
+![Strings Overview](./images/string-overview.png)
 
 ## 📐 Mathematical Foundation
 
