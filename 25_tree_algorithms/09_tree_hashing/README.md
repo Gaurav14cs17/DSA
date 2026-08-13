@@ -30,7 +30,7 @@ permalink: /25_tree_algorithms/09_tree_hashing/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/tree-hashing-diagram.svg" alt="Tree Hashing Diagram" width="100%"/>
+<img src="./images/tree-hashing-diagram.png" alt="Tree Hashing Diagram" width="100%"/>
 </div>
 
 ---
