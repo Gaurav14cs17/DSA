@@ -10,7 +10,7 @@ nav_order: 4
 
 ## 📊 Visual Overview
 
-![Collision Handling](./images/collision-handling.svg)
+![Collision Handling](./images/collision-handling.png)
 
 ## 📊 Metadata
 
