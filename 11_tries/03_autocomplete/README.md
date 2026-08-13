@@ -32,8 +32,6 @@ permalink: /11_tries/03_autocomplete/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
