@@ -37,7 +37,7 @@ permalink: /30_number_theory/09_catalan_numbers/02_bst_counting/
 
 <div align="center">
 
-![BST Counting](./images/bst_counting.svg)
+![BST Counting](./images/bst_counting.png)
 
 </div>
 
