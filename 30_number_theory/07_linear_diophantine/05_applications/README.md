@@ -11,6 +11,8 @@ permalink: /30_number_theory/07_linear_diophantine/05_applications/
 
 # 🎯 Diophantine Applications
 
+### *LeetCode Problems & Competition Uses*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
@@ -36,10 +38,24 @@ permalink: /30_number_theory/07_linear_diophantine/05_applications/
 
 ![Diophantine Applications](./images/diophantine_applications.png)
 
+*Diophantine Applications*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | LeetCode Problems & Competition Uses |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty | Connection |
