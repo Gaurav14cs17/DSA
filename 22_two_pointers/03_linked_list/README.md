@@ -49,13 +49,13 @@ permalink: /22_two_pointers/03_linked_list/
 ## 📊 Visual Diagrams
 
 ### Floyd's Cycle Detection
-![Floyd's Cycle Detection](./images/floyd-cycle-detection.svg)
+![Floyd's Cycle Detection](./images/floyd-cycle-detection.png)
 
 ### Find Middle of Linked List
-![Find Middle](./images/find-middle.svg)
+![Find Middle](./images/find-middle.png)
 
 ### Remove Nth Node From End
-![Nth From End](./images/nth-from-end.svg)
+![Nth From End](./images/nth-from-end.png)
 
 ---
 
