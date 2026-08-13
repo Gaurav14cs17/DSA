@@ -11,6 +11,8 @@ permalink: /30_number_theory/08_binomial_coefficients/05_advanced_problems/
 
 # 🎯 Advanced Binomial Problems
 
+### *LeetCode & Competition Problems*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Competition-Ready-blue?style=for-the-badge" alt="Competition">
@@ -36,10 +38,23 @@ permalink: /30_number_theory/08_binomial_coefficients/05_advanced_problems/
 
 ![Binomial Applications](./images/binomial_applications.png)
 
+*Binomial Applications*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | LeetCode & Competition Problems |
+| **Difficulty** | Medium to Hard |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty | Key |
