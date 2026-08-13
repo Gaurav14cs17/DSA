@@ -11,6 +11,8 @@ permalink: /30_number_theory/07_linear_diophantine/02_extended_gcd_method/
 
 # 🔧 Extended GCD Method
 
+### *Finding All Integer Solutions*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/General_Solution-Parametric-blue?style=for-the-badge" alt="General">
@@ -38,10 +40,23 @@ permalink: /30_number_theory/07_linear_diophantine/02_extended_gcd_method/
 
 ![Extended GCD Method](./images/extended_gcd_method.png)
 
+*Extended GCD Method*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Finding All Integer Solutions |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 General Solution
 
 If $(x_0, y_0)$ is one solution to $ax + by = c$, **all solutions** are:
