@@ -37,7 +37,7 @@ permalink: /30_number_theory/09_catalan_numbers/04_applications/
 
 <div align="center">
 
-![Catalan Applications](./images/catalan_applications.svg)
+![Catalan Applications](./images/catalan_applications.png)
 
 </div>
 
