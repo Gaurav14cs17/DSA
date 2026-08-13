@@ -26,15 +26,7 @@ permalink: /30_number_theory/07_linear_diophantine/02_extended_gcd_method/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Basic Equations](../01_basic_equations/README.md) | **02. Extended GCD** | [03. Frobenius →](../03_frobenius_number/README.md) |
-
----
-
-## 📊 Visual Diagram
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -57,6 +49,15 @@ permalink: /30_number_theory/07_linear_diophantine/02_extended_gcd_method/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 01. Basic Equations](../01_basic_equations/README.md) | **02. Extended GCD** | [03. Frobenius →](../03_frobenius_number/README.md) |
+
+---
+
 ## 📐 General Solution
 
 If $(x_0, y_0)$ is one solution to $ax + by = c$, **all solutions** are:
@@ -148,9 +149,3 @@ def positive_solutions(a: int, b: int, c: int) -> list[tuple]:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Basic Equations](../01_basic_equations/README.md) | **02. Extended GCD** | [03. Frobenius →](../03_frobenius_number/README.md) |
