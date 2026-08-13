@@ -26,6 +26,128 @@ permalink: /30_number_theory/02_primes/
 
 ---
 
+## 📊 Visual Overview
+
+### Walkthrough 1: Sieve of Eratosthenes
+
+```
++-----------------------------------------------------------------+
+| PROBLEM: Find all primes up to 30                              |
++-----------------------------------------------------------------+
+| INITIAL STATE (all marked as potential primes):                |
+|                                                                 |
+|    2  3  4  5  6  7  8  9 10 11 12 13 14 15                   |
+|   16 17 18 19 20 21 22 23 24 25 26 27 28 29 30                |
+|                                                                 |
+| STEP 1: Process p = 2 (mark multiples starting from 2² = 4)   |
+|                                                                 |
+|    2  3  ×  5  ×  7  ×  9  × 11  × 13  × 15                   |
+|    × 17  × 19  × 21  × 23  × 25  × 27  × 29  ×                |
+|                                                                 |
+| STEP 2: Process p = 3 (mark multiples starting from 3² = 9)   |
+|                                                                 |
+|    2  3  ×  5  ×  7  ×  ×  × 11  × 13  ×  ×                   |
+|    × 17  × 19  ×  ×  × 23  × 25  ×  ×  × 29  ×                |
+|                                                                 |
+| STEP 3: Process p = 5 (mark multiples starting from 5² = 25)  |
+|                                                                 |
+|    2  3  ×  5  ×  7  ×  ×  × 11  × 13  ×  ×                   |
+|    × 17  × 19  ×  ×  × 23  ×  ×  ×  ×  × 29  ×                |
+|                                                                 |
+| DONE: √30 ≈ 5.5, so we stop at p = 5                          |
+|                                                                 |
+| PRIMES: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29                    |
+| COUNT: 10 primes up to 30                                      |
++-----------------------------------------------------------------+
+
+```
+
+---
+
+### Walkthrough 2: Trial Division Primality Test
+
+```
++-----------------------------------------------------------------+
+| PROBLEM: Is 97 prime?                                          |
++-----------------------------------------------------------------+
+| ALGORITHM: Check divisibility by all integers from 2 to √97    |
+|                                                                 |
+| √97 ≈ 9.85, so check divisors up to 9                         |
+|                                                                 |
+| Check d = 2:  97 % 2 = 1  ✗ (not divisible)                   |
+| Check d = 3:  97 % 3 = 1  ✗ (not divisible)                   |
+| Check d = 4:  Skip (composite, covered by 2)                   |
+| Check d = 5:  97 % 5 = 2  ✗ (not divisible)                   |
+| Check d = 6:  Skip (composite, covered by 2,3)                 |
+| Check d = 7:  97 % 7 = 6  ✗ (not divisible)                   |
+| Check d = 8:  Skip (composite, covered by 2)                   |
+| Check d = 9:  97 % 9 = 7  ✗ (not divisible)                   |
+|                                                                 |
+| OPTIMIZATION: Only check 2, 3, then 6k±1 pattern              |
+|                                                                 |
+| Check: 2, 3, 5, 7 (all primes up to √97)                      |
+|                                                                 |
+| RESULT: 97 is PRIME ✓                                          |
++-----------------------------------------------------------------+
+
+```
+
+---
+
+### Walkthrough 3: Prime Factorization
+
+```
++-----------------------------------------------------------------+
+| PROBLEM: Factorize 360                                         |
++-----------------------------------------------------------------+
+| STEP-BY-STEP:                                                   |
+|                                                                 |
+| Start: n = 360                                                  |
+|                                                                 |
+| +---------------------------------------------------------+    |
+| | d = 2: 360 ÷ 2 = 180  (360 = 2 × 180)                  |    |
+| | d = 2: 180 ÷ 2 = 90   (360 = 2² × 90)                  |    |
+| | d = 2: 90 ÷ 2 = 45    (360 = 2³ × 45)                  |    |
+| | d = 2: 45 % 2 ≠ 0     → move to next divisor           |    |
+| +---------------------------------------------------------+    |
+|                                                                 |
+| +---------------------------------------------------------+    |
+| | d = 3: 45 ÷ 3 = 15    (360 = 2³ × 3 × 15)              |    |
+| | d = 3: 15 ÷ 3 = 5     (360 = 2³ × 3² × 5)              |    |
+| | d = 3: 5 % 3 ≠ 0      → move to next divisor           |    |
+| +---------------------------------------------------------+    |
+|                                                                 |
+| +---------------------------------------------------------+    |
+| | d = 4: Skip (4² > 5)                                   |    |
+| | Remaining: 5 > 1      → 5 is prime factor              |    |
+| +---------------------------------------------------------+    |
+|                                                                 |
+| RESULT: 360 = 2³ × 3² × 5¹                                     |
+|                                                                 |
+| VERIFICATION:                                                   |
+|   8 × 9 × 5 = 72 × 5 = 360 ✓                                  |
+|                                                                 |
+| DIVISOR COUNT:                                                  |
+|   τ(360) = (3+1)(2+1)(1+1) = 4 × 3 × 2 = 24 divisors          |
++-----------------------------------------------------------------+
+
+```
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | The Atoms of Mathematics |
+| **Difficulty** | Easy to Hard |
+| **Problems** | 35+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -135,117 +257,7 @@ permalink: /30_number_theory/02_primes/
 
 ---
 
-## 🎨 Visual Walkthroughs
-
-### Walkthrough 1: Sieve of Eratosthenes
-
-```
-+-----------------------------------------------------------------+
-| PROBLEM: Find all primes up to 30                              |
-+-----------------------------------------------------------------+
-| INITIAL STATE (all marked as potential primes):                |
-|                                                                 |
-|    2  3  4  5  6  7  8  9 10 11 12 13 14 15                   |
-|   16 17 18 19 20 21 22 23 24 25 26 27 28 29 30                |
-|                                                                 |
-| STEP 1: Process p = 2 (mark multiples starting from 2² = 4)   |
-|                                                                 |
-|    2  3  ×  5  ×  7  ×  9  × 11  × 13  × 15                   |
-|    × 17  × 19  × 21  × 23  × 25  × 27  × 29  ×                |
-|                                                                 |
-| STEP 2: Process p = 3 (mark multiples starting from 3² = 9)   |
-|                                                                 |
-|    2  3  ×  5  ×  7  ×  ×  × 11  × 13  ×  ×                   |
-|    × 17  × 19  ×  ×  × 23  × 25  ×  ×  × 29  ×                |
-|                                                                 |
-| STEP 3: Process p = 5 (mark multiples starting from 5² = 25)  |
-|                                                                 |
-|    2  3  ×  5  ×  7  ×  ×  × 11  × 13  ×  ×                   |
-|    × 17  × 19  ×  ×  × 23  ×  ×  ×  ×  × 29  ×                |
-|                                                                 |
-| DONE: √30 ≈ 5.5, so we stop at p = 5                          |
-|                                                                 |
-| PRIMES: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29                    |
-| COUNT: 10 primes up to 30                                      |
-+-----------------------------------------------------------------+
-
-```
-
----
-
-### Walkthrough 2: Trial Division Primality Test
-
-```
-+-----------------------------------------------------------------+
-| PROBLEM: Is 97 prime?                                          |
-+-----------------------------------------------------------------+
-| ALGORITHM: Check divisibility by all integers from 2 to √97    |
-|                                                                 |
-| √97 ≈ 9.85, so check divisors up to 9                         |
-|                                                                 |
-| Check d = 2:  97 % 2 = 1  ✗ (not divisible)                   |
-| Check d = 3:  97 % 3 = 1  ✗ (not divisible)                   |
-| Check d = 4:  Skip (composite, covered by 2)                   |
-| Check d = 5:  97 % 5 = 2  ✗ (not divisible)                   |
-| Check d = 6:  Skip (composite, covered by 2,3)                 |
-| Check d = 7:  97 % 7 = 6  ✗ (not divisible)                   |
-| Check d = 8:  Skip (composite, covered by 2)                   |
-| Check d = 9:  97 % 9 = 7  ✗ (not divisible)                   |
-|                                                                 |
-| OPTIMIZATION: Only check 2, 3, then 6k±1 pattern              |
-|                                                                 |
-| Check: 2, 3, 5, 7 (all primes up to √97)                      |
-|                                                                 |
-| RESULT: 97 is PRIME ✓                                          |
-+-----------------------------------------------------------------+
-
-```
-
----
-
-### Walkthrough 3: Prime Factorization
-
-```
-+-----------------------------------------------------------------+
-| PROBLEM: Factorize 360                                         |
-+-----------------------------------------------------------------+
-| STEP-BY-STEP:                                                   |
-|                                                                 |
-| Start: n = 360                                                  |
-|                                                                 |
-| +---------------------------------------------------------+    |
-| | d = 2: 360 ÷ 2 = 180  (360 = 2 × 180)                  |    |
-| | d = 2: 180 ÷ 2 = 90   (360 = 2² × 90)                  |    |
-| | d = 2: 90 ÷ 2 = 45    (360 = 2³ × 45)                  |    |
-| | d = 2: 45 % 2 ≠ 0     → move to next divisor           |    |
-| +---------------------------------------------------------+    |
-|                                                                 |
-| +---------------------------------------------------------+    |
-| | d = 3: 45 ÷ 3 = 15    (360 = 2³ × 3 × 15)              |    |
-| | d = 3: 15 ÷ 3 = 5     (360 = 2³ × 3² × 5)              |    |
-| | d = 3: 5 % 3 ≠ 0      → move to next divisor           |    |
-| +---------------------------------------------------------+    |
-|                                                                 |
-| +---------------------------------------------------------+    |
-| | d = 4: Skip (4² > 5)                                   |    |
-| | Remaining: 5 > 1      → 5 is prime factor              |    |
-| +---------------------------------------------------------+    |
-|                                                                 |
-| RESULT: 360 = 2³ × 3² × 5¹                                     |
-|                                                                 |
-| VERIFICATION:                                                   |
-|   8 × 9 × 5 = 72 × 5 = 360 ✓                                  |
-|                                                                 |
-| DIVISOR COUNT:                                                  |
-|   τ(360) = (3+1)(2+1)(1+1) = 4 × 3 × 2 = 24 divisors          |
-+-----------------------------------------------------------------+
-
-```
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Prime Definition
 
 **Definition:** A prime number $p > 1$ is an integer with exactly two positive divisors: 1 and $p$.
@@ -802,9 +814,3 @@ A: The maximum gap is 282 (between 436273009 and 436273291). Average gap is abou
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. GCD & LCM](../01_gcd_lcm/README.md) | **02. Primes** | [03. Modular Arithmetic →](../03_modular_arithmetic/README.md) |
