@@ -10,6 +10,10 @@ permalink: /16_recursion/01_basic_recursion/
 
 # 📦 Basic Recursion
 
+### *📦 Basic Recursion*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +23,7 @@ permalink: /16_recursion/01_basic_recursion/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Recursion Home](../README.md) | **01. Basic Recursion** | [02. Tree Recursion →](../02_tree_recursion/README.md) |
-
----
-
-## 📊 Visual Diagrams
+## 📊 Visual Overview
 
 <p align="center">
   <img src="./images/factorial_stack.png" alt="Factorial Stack Frames" width="100%"/>
@@ -43,8 +39,28 @@ permalink: /16_recursion/01_basic_recursion/
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **Topic** | 📦 Basic Recursion |
+| **Difficulty** | Easy |
+| **Problems** | 8+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [🏠 Recursion Home](../README.md) | **01. Basic Recursion** | [02. Tree Recursion →](../02_tree_recursion/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Recursion Components
 
 Every recursive function needs:
@@ -239,9 +255,3 @@ def swapPairs(head: 'ListNode') -> 'ListNode':
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Recursion Home](../README.md) | **01. Basic Recursion** | [02. Tree Recursion →](../02_tree_recursion/README.md) |
