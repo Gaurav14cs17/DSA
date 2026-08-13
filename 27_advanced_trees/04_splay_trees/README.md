@@ -30,7 +30,7 @@ permalink: /27_advanced_trees/04_splay_trees/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/splay-tree.svg" alt="Splay Tree Operations" width="100%">
+<img src="./images/splay-tree.png" alt="Splay Tree Operations" width="100%">
 </div>
 
 ---
