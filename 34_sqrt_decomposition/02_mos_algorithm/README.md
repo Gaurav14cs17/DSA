@@ -62,19 +62,19 @@ $$T = O(n\sqrt{n} + q\sqrt{n}) = O((n+q)\sqrt{n})$$
 ### Mo's Algorithm Overview
 
 <div align="center">
-<img src="./images/mos-algorithm-overview.svg" alt="Mo's Algorithm Overview" width="100%">
+<img src="./images/mos-algorithm-overview.png" alt="Mo's Algorithm Overview" width="100%">
 </div>
 
 ### Pointer Movement Visualization
 
 <div align="center">
-<img src="./images/mos-pointer-movement.svg" alt="Mo's Pointer Movement" width="100%">
+<img src="./images/mos-pointer-movement.png" alt="Mo's Pointer Movement" width="100%">
 </div>
 
 ### Distinct Count Application
 
 <div align="center">
-<img src="./images/mos-distinct-count.svg" alt="Mo's Distinct Count" width="100%">
+<img src="./images/mos-distinct-count.png" alt="Mo's Distinct Count" width="100%">
 </div>
 
 ---
