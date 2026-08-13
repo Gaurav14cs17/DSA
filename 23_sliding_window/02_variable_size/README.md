@@ -50,11 +50,11 @@ permalink: /23_sliding_window/02_variable_size/
 
 <div align="center">
 
-![Variable Window](./images/variable-window.svg)
+![Variable Window](./images/variable-window.png)
 
 *Expand to explore, shrink to optimize — Longest vs Shortest patterns*
 
-![atMost(k) Trick](./images/atmost-k-trick.svg)
+![atMost(k) Trick](./images/atmost-k-trick.png)
 
 *The powerful technique for counting exact distinct elements*
 
