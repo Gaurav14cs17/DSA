@@ -20,6 +20,16 @@ nav_order: 4
 
 ---
 
+## 📊 Visual Diagram
+
+<div align="center">
+
+![Fermat's Little Theorem](./images/fermats_theorem.png)
+
+</div>
+
+---
+
 ## 🎯 Overview
 
 **Fermat's Little Theorem:** If p is prime and gcd(a, p) = 1, then:
@@ -35,16 +45,6 @@ a^(p-1) ≡ 1 (mod p)
 a^p ≡ a (mod p)
 
 ```
-
----
-
-## 📊 Visual Diagram
-
-<div align="center">
-
-![Fermat's Little Theorem](./images/fermats_theorem.png)
-
-</div>
 
 ---
 
