@@ -10,12 +10,37 @@ permalink: /18_dynamic_programming/05_tree_dp/
 
 # 🌲 Tree DP
 
+### *🌲 Tree DP*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+  <img src="images/tree-dp.png" alt="Tree DP Visualization" width="100%">
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🌲 Tree DP |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 8+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -27,16 +52,7 @@ permalink: /18_dynamic_programming/05_tree_dp/
 
 ---
 
-## 📊 Visual Guide
-
-<div align="center">
-  <img src="images/tree-dp.png" alt="Tree DP Visualization" width="100%">
-</div>
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Tree DP Pattern
 
 Compute DP values bottom-up (post-order):
@@ -189,9 +205,3 @@ def longestUnivaluePath(root: TreeNode) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. String DP](../04_string_dp/README.md) | **05. Tree DP** | [06. State Machine DP →](../06_state_machine_dp/README.md) |
