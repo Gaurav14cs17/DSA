@@ -11,6 +11,10 @@ permalink: /30_number_theory/03_modular_arithmetic/
 
 # 🔄 Modular Arithmetic
 
+### *Addition, multiplication, and inverses under a modulus*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Subtopics-6-blue?style=for-the-badge" alt="Subtopics">
@@ -18,6 +22,25 @@ permalink: /30_number_theory/03_modular_arithmetic/
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+> *Concept map and key formulas — dive into subtopics for detailed walkthroughs and code.*
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🔄 Modular Arithmetic |
+| **Difficulty** | Medium |
+| **Problems** | 28+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -127,36 +150,6 @@ permalink: /30_number_theory/03_modular_arithmetic/
 </td>
 </tr>
 </table>
-
----
-
-## 📋 Overview
-
-**Modular arithmetic** is arithmetic for integers where numbers "wrap around" upon reaching a certain value (the modulus). It's fundamental to cryptography, hashing, and countless algorithmic problems.
-
-**Core Concepts:**
-
-- **Congruence:** a ≡ b (mod m) means m | (a - b)
-
-- **Clock Arithmetic:** Like hours on a clock (mod 12 or 24)
-
-- **Fast Operations:** Exponentiation in O(log n) time
-
-- **Modular Inverse:** Division in modular systems
-
-- **Applications:** RSA, hashing, competitive programming
-
-**Why This Matters:**
-
-- **Cryptography:** RSA encryption relies on modular arithmetic
-
-- **Large Numbers:** Keep calculations manageable (mod 10⁹+7)
-
-- **Cyclic Patterns:** Model repeating phenomena
-
-- **Efficiency:** Fast exponentiation beats naive methods
-
-- **Ubiquitous:** Appears in 30%+ of competitive problems
 
 ---
 
@@ -274,6 +267,36 @@ Where φ(n) is Euler's totient function
 
 **Chinese Remainder Theorem:**
 System of congruences with coprime moduli has unique solution modulo their product
+
+---
+
+## 📋 Overview
+
+**Modular arithmetic** is arithmetic for integers where numbers "wrap around" upon reaching a certain value (the modulus). It's fundamental to cryptography, hashing, and countless algorithmic problems.
+
+**Core Concepts:**
+
+- **Congruence:** a ≡ b (mod m) means m | (a - b)
+
+- **Clock Arithmetic:** Like hours on a clock (mod 12 or 24)
+
+- **Fast Operations:** Exponentiation in O(log n) time
+
+- **Modular Inverse:** Division in modular systems
+
+- **Applications:** RSA, hashing, competitive programming
+
+**Why This Matters:**
+
+- **Cryptography:** RSA encryption relies on modular arithmetic
+
+- **Large Numbers:** Keep calculations manageable (mod 10⁹+7)
+
+- **Cyclic Patterns:** Model repeating phenomena
+
+- **Efficiency:** Fast exponentiation beats naive methods
+
+- **Ubiquitous:** Appears in 30%+ of competitive problems
 
 ---
 
@@ -792,14 +815,6 @@ MOD3 = 998244353   # Prime, has primitive root
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. Primes](../02_primes/README.md) | **03. Modular Arithmetic** | [04. Divisors →](../04_divisors/README.md) |
-
----
-
 ## 🗺️ Subtopic Navigation
 
 1. [Basic Operations →](./01_basic_operations/)
@@ -813,4 +828,3 @@ MOD3 = 998244353   # Prime, has primitive root
 5. [Euler's Theorem →](./05_eulers_theorem/)
 
 6. [Applications →](./06_applications/)
-
