@@ -81,7 +81,7 @@ If |right| > |left|:
 
 <div align="center">
 
-![Two Heaps Pattern](./image/two_heaps_pattern.svg)
+![Two Heaps Pattern](./image/two_heaps_pattern.png)
 
 </div>
 
