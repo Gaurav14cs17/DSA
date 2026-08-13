@@ -8,28 +8,29 @@ nav_order: 2
 
 # 🔄 Modular Inverse
 
-## 📊 Metadata
-
-- **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
-
-- **Time Complexity:** O(log m)
-
-- **Space Complexity:** O(1) iterative, O(log m) recursive
-
-- **Pattern:** Number Theory, Extended GCD, Fermat's Theorem
-
----
-
 ## 📊 Visual Diagram
 
 <div align="center">
 
 ![Modular Inverse](./images/modular_inverse.png)
 
+*Modular Inverse*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Typical time** | O(log m) |
+| **Typical space** | O(1) iterative, O(log m) recursive |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🎯 Overview
 
 The **modular inverse** of a modulo m is an integer x such that:
