@@ -5,14 +5,18 @@ parent: "String Algorithms"
 nav_order: 1
 has_children: true
 ---
+<div align="center">
 
 # 🔍 KMP Algorithm (Knuth-Morris-Pratt)
 
 ### *The **Knuth-Morris-Pratt (KMP)** algorithm is a linear-time string matching algorithm that uses a preprocessing step to avoid redundant comparisons.*
 
 
-## 📊 Visual Overview
+</div>
 
+---
+
+## 📊 Visual Overview
 ![KMP Algorithm](./images/kmp-algorithm.png)
 
 *KMP Algorithm*
@@ -31,6 +35,30 @@ has_children: true
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🎯 Overview
+
+The **Knuth-Morris-Pratt (KMP)** algorithm is a linear-time string matching algorithm that uses a preprocessing step to avoid redundant comparisons.
+
+**Core Concepts:**
+
+- **Failure Function (π):** Preprocesses pattern to enable smart backtracking
+
+- **No Character Re-examination:** Each text character examined at most once
+
+- **Linear Time:** O(n + m) guaranteed for any input
+
+- **Wide Applications:** Beyond simple pattern matching
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [String Algorithms](../README.md) | **KMP Algorithm** | [Rabin-Karp →](../02_rabin_karp/) |
 
 ---
 
@@ -108,22 +136,6 @@ has_children: true
 </td>
 </tr>
 </table>
-
----
-
-## 🎯 Overview
-
-The **Knuth-Morris-Pratt (KMP)** algorithm is a linear-time string matching algorithm that uses a preprocessing step to avoid redundant comparisons.
-
-**Core Concepts:**
-
-- **Failure Function (π):** Preprocesses pattern to enable smart backtracking
-
-- **No Character Re-examination:** Each text character examined at most once
-
-- **Linear Time:** O(n + m) guaranteed for any input
-
-- **Wide Applications:** Beyond simple pattern matching
 
 ---
 
@@ -728,14 +740,6 @@ def match_with_automaton(text, pattern):
 - **Algorithms on Strings**: Crochemore, Rytter
 
 - **Handbook of Exact String Matching**: Charras, Lecroq
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [String Algorithms](../README.md) | **KMP Algorithm** | [Rabin-Karp →](../02_rabin_karp/) |
 
 ---
 
