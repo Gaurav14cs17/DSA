@@ -10,12 +10,39 @@ permalink: /24_graph_algorithms/02_minimum_spanning_tree/
 
 # 🌳 Minimum Spanning Tree (MST)
 
+### *🌳 Minimum Spanning Tree (MST)*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Minimum Spanning Tree - Kruskal's Algorithm](./images/mst-kruskal.png)
+
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🌳 Minimum Spanning Tree (MST) |
+| **Difficulty** | Medium |
+| **Problems** | 8+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -27,18 +54,7 @@ permalink: /24_graph_algorithms/02_minimum_spanning_tree/
 
 ---
 
-## 🎨 Visual Overview
-
-<div align="center">
-
-![Minimum Spanning Tree - Kruskal's Algorithm](./images/mst-kruskal.png)
-
-</div>
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ MST Definition
 
 **Spanning Tree:** Connected acyclic subgraph containing all vertices.
@@ -562,10 +578,3 @@ MST Problem
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Shortest Path](../01_shortest_path/README.md) | **02. MST** | [03. Topological Sort →](../03_topological_sort/README.md) |
-
