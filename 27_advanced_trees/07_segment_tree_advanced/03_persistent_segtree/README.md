@@ -36,6 +36,17 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/03_persistent_segtree/
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Hard |
+| **Problems** | 6 |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Core Concept
 
 **Persistent Segment Tree:** Maintain all versions of tree.
