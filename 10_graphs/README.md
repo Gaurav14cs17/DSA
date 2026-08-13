@@ -52,6 +52,21 @@ permalink: /10_graphs/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 📂 Subtopics Navigation
+
+| # | Topic | Problems | Link |
+|:-:|-------|:--------:|------|
+| 1 | Graph Representation | 5+ | [📖 Go →](./01_graph_representation/README.md) |
+| 2 | BFS Problems | 10+ | [📖 Go →](./02_bfs_problems/README.md) |
+| 3 | DFS Problems | 10+ | [📖 Go →](./03_dfs_problems/README.md) |
+| 4 | Shortest Path | 8+ | [📖 Go →](./04_shortest_path/README.md) |
+| 5 | Topological Sort | 6+ | [📖 Go →](./05_topological_sort/README.md) |
+| 6 | Cycle Detection | 5+ | [📖 Go →](./06_cycle_detection/README.md) |
+| 7 | Minimum Spanning Tree | 5+ | [📖 Go →](./07_mst/README.md) |
+
+---
+
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ Graph Definition
@@ -154,20 +169,6 @@ $$\text{If any relaxation after } V-1 \text{ iterations} \Rightarrow \text{negat
 **Kahn's Algorithm:** Process vertices with in-degree 0.
 
 $$\text{Order: } v_1, v_2, \ldots, v_n \text{ where } (v_i, v_j) \in E \Rightarrow i < j$$
-
----
-
-## 📂 Subtopics Navigation
-
-| # | Topic | Problems | Link |
-|:-:|-------|:--------:|------|
-| 1 | Graph Representation | 5+ | [📖 Go →](./01_graph_representation/README.md) |
-| 2 | BFS Problems | 10+ | [📖 Go →](./02_bfs_problems/README.md) |
-| 3 | DFS Problems | 10+ | [📖 Go →](./03_dfs_problems/README.md) |
-| 4 | Shortest Path | 8+ | [📖 Go →](./04_shortest_path/README.md) |
-| 5 | Topological Sort | 6+ | [📖 Go →](./05_topological_sort/README.md) |
-| 6 | Cycle Detection | 5+ | [📖 Go →](./06_cycle_detection/README.md) |
-| 7 | Minimum Spanning Tree | 5+ | [📖 Go →](./07_mst/README.md) |
 
 ---
 
