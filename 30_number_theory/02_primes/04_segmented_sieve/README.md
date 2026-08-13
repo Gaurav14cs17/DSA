@@ -11,6 +11,8 @@ permalink: /30_number_theory/02_primes/04_segmented_sieve/
 
 # 📐 Segmented Sieve
 
+### *Memory-Efficient Prime Generation for Large Ranges*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Space-O(√n)-green?style=for-the-badge" alt="Space">
@@ -38,10 +40,23 @@ permalink: /30_number_theory/02_primes/04_segmented_sieve/
 
 ![Segmented Sieve](./images/segmented_sieve.png)
 
+*Segmented Sieve*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Memory-Efficient Prime Generation for Large Ranges |
+| **Difficulty** | Medium to Hard |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ The Problem
