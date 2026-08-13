@@ -31,6 +31,81 @@ permalink: /34_sqrt_decomposition/02_mos_algorithm/
 
 ---
 
+## 🎨 Visual Diagrams
+
+### Mo's Algorithm Overview
+
+<div align="center">
+<img src="./images/mos-algorithm-overview.png" alt="Mo's Algorithm Overview" width="100%">
+</div>
+
+### Pointer Movement Visualization
+
+<div align="center">
+<img src="./images/mos-pointer-movement.png" alt="Mo's Pointer Movement" width="100%">
+</div>
+
+### Distinct Count Application
+
+<div align="center">
+<img src="./images/mos-distinct-count.png" alt="Mo's Distinct Count" width="100%">
+</div>
+
+---
+
+## 🎨 Visual Example
+
+```
++-----------------------------------------------------------------+
+| EXAMPLE: Mo's Algorithm Query Processing                        |
++-----------------------------------------------------------------+
+| Array: [1, 2, 1, 3, 4, 2, 5, 1, 3, 4]  (n=10, block_size=3)   |
+|                                                                  |
+| Queries (unsorted):                                              |
+|   Q1: [0, 4]   Block 0                                          |
+|   Q2: [5, 9]   Block 1                                          |
+|   Q3: [2, 6]   Block 0                                          |
+|   Q4: [1, 5]   Block 0                                          |
++-----------------------------------------------------------------+
+
+| STEP 1: Sort queries by (block of L, R)                        |
+|                                                                  |
+|   Block 0: [0,4], [2,6], [1,5]  → sort by R → [0,4], [1,5], [2,6]|
+|   Block 1: [5,9]                                                 |
+|                                                                  |
+|   Sorted order: [0,4], [1,5], [2,6], [5,9]                     |
++-----------------------------------------------------------------+
+
+| STEP 2: Process queries with pointer movements                  |
+|                                                                  |
+|   Initial: L=0, R=-1                                            |
+|                                                                  |
+|   Query [0,4]:                                                   |
+|     Move R: 0→1→2→3→4  (5 adds)                                |
+|     Answer: 4 distinct [1,2,3,4]                                |
+|                                                                  |
+|   Query [1,5]:                                                   |
+|     Move L: 0→1  (1 remove)                                     |
+|     Move R: 4→5  (1 add)                                        |
+|     Answer: 4 distinct [1,2,3,4]                                |
+|                                                                  |
+|   Query [2,6]:                                                   |
+|     Move L: 1→2  (1 remove)                                     |
+|     Move R: 5→6  (1 add)                                        |
+|     Answer: 5 distinct [1,2,3,4,5]                              |
+|                                                                  |
+|   Query [5,9]:                                                   |
+|     Move L: 2→3→4→5  (3 removes)                                |
+|     Move R: 6→7→8→9  (4 adds)                                   |
+|     Answer: 5 distinct [1,2,3,4,5]                              |
+|                                                                  |
+| Total movements: 16 (instead of 40 without sorting!)            |
++-----------------------------------------------------------------+
+
+```
+
+---
+
 ## 📐 Mo's Algorithm Principle
 
 ### Core Idea
@@ -54,28 +129,6 @@ permalink: /34_sqrt_decomposition/02_mos_algorithm/
 ### Time Complexity
 
 $$T = O(n\sqrt{n} + q\sqrt{n}) = O((n+q)\sqrt{n})$$
-
----
-
-## 🎨 Visual Diagrams
-
-### Mo's Algorithm Overview
-
-<div align="center">
-<img src="./images/mos-algorithm-overview.png" alt="Mo's Algorithm Overview" width="100%">
-</div>
-
-### Pointer Movement Visualization
-
-<div align="center">
-<img src="./images/mos-pointer-movement.png" alt="Mo's Pointer Movement" width="100%">
-</div>
-
-### Distinct Count Application
-
-<div align="center">
-<img src="./images/mos-distinct-count.png" alt="Mo's Distinct Count" width="100%">
-</div>
 
 ---
 
@@ -189,59 +242,6 @@ def count_distinct_in_ranges(arr: list[int],
     """
     mo = MoAlgorithm(arr)
     return mo.process_queries(queries)
-
-```
-
----
-
-## 🎨 Visual Example
-
-```
-+-----------------------------------------------------------------+
-| EXAMPLE: Mo's Algorithm Query Processing                        |
-+-----------------------------------------------------------------+
-| Array: [1, 2, 1, 3, 4, 2, 5, 1, 3, 4]  (n=10, block_size=3)   |
-|                                                                  |
-| Queries (unsorted):                                              |
-|   Q1: [0, 4]   Block 0                                          |
-|   Q2: [5, 9]   Block 1                                          |
-|   Q3: [2, 6]   Block 0                                          |
-|   Q4: [1, 5]   Block 0                                          |
-+-----------------------------------------------------------------+
-
-| STEP 1: Sort queries by (block of L, R)                        |
-|                                                                  |
-|   Block 0: [0,4], [2,6], [1,5]  → sort by R → [0,4], [1,5], [2,6]|
-|   Block 1: [5,9]                                                 |
-|                                                                  |
-|   Sorted order: [0,4], [1,5], [2,6], [5,9]                     |
-+-----------------------------------------------------------------+
-
-| STEP 2: Process queries with pointer movements                  |
-|                                                                  |
-|   Initial: L=0, R=-1                                            |
-|                                                                  |
-|   Query [0,4]:                                                   |
-|     Move R: 0→1→2→3→4  (5 adds)                                |
-|     Answer: 4 distinct [1,2,3,4]                                |
-|                                                                  |
-|   Query [1,5]:                                                   |
-|     Move L: 0→1  (1 remove)                                     |
-|     Move R: 4→5  (1 add)                                        |
-|     Answer: 4 distinct [1,2,3,4]                                |
-|                                                                  |
-|   Query [2,6]:                                                   |
-|     Move L: 1→2  (1 remove)                                     |
-|     Move R: 5→6  (1 add)                                        |
-|     Answer: 5 distinct [1,2,3,4,5]                              |
-|                                                                  |
-|   Query [5,9]:                                                   |
-|     Move L: 2→3→4→5  (3 removes)                                |
-|     Move R: 6→7→8→9  (4 adds)                                   |
-|     Answer: 5 distinct [1,2,3,4,5]                              |
-|                                                                  |
-| Total movements: 16 (instead of 40 without sorting!)            |
-+-----------------------------------------------------------------+
 
 ```
 
