@@ -52,6 +52,17 @@ permalink: /14_sorting/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 📂 Subtopics Navigation
+
+| # | Topic | Problems | Link |
+|:-:|-------|:--------:|------|
+| 1 | Comparison Sorts | 8+ | [📖 Go →](./01_comparison_sorts/README.md) |
+| 2 | Non-Comparison Sorts | 5+ | [📖 Go →](./02_non_comparison_sorts/README.md) |
+| 3 | Custom Sorting | 8+ | [📖 Go →](./03_custom_sorting/README.md) |
+
+---
+
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ Comparison Sort Lower Bound
@@ -135,16 +146,6 @@ $$T = O(n + k), \quad S = O(k)$$
 $$T = O(d \cdot (n + k))$$
 
 Where $d$ = digits, $k$ = base (usually 10).
-
----
-
-## 📂 Subtopics Navigation
-
-| # | Topic | Problems | Link |
-|:-:|-------|:--------:|------|
-| 1 | Comparison Sorts | 8+ | [📖 Go →](./01_comparison_sorts/README.md) |
-| 2 | Non-Comparison Sorts | 5+ | [📖 Go →](./02_non_comparison_sorts/README.md) |
-| 3 | Custom Sorting | 8+ | [📖 Go →](./03_custom_sorting/README.md) |
 
 ---
 
