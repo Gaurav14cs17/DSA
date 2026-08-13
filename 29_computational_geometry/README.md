@@ -8,7 +8,7 @@ permalink: /29_computational_geometry/
 
 # 📐 Computational Geometry
 
-![Computational Geometry Overview](./images/geometry-overview.svg)
+![Computational Geometry Overview](./images/geometry-overview.png)
 
 ## 📊 Metadata
 
@@ -116,7 +116,7 @@ permalink: /29_computational_geometry/
 
 ## 📊 Visual Overview
 
-![Computational Geometry](./02_convex_hull/images/convex-hull.svg)
+![Computational Geometry](./02_convex_hull/images/convex-hull.png)
 
 *Overview of computational geometry concepts and algorithms*
 
