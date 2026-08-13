@@ -30,7 +30,7 @@ permalink: /25_tree_algorithms/03_tree_construction/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/tree-construction-diagram.svg" alt="Tree Construction Diagram" width="100%"/>
+<img src="./images/tree-construction-diagram.png" alt="Tree Construction Diagram" width="100%"/>
 </div>
 
 ---
