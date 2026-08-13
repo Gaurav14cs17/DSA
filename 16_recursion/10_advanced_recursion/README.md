@@ -32,11 +32,11 @@ permalink: /16_recursion/10_advanced_recursion/
 ## 📊 Visual Diagrams
 
 <p align="center">
-  <img src="./images/mutual_recursion.svg" alt="Mutual Recursion" width="100%"/>
+  <img src="./images/mutual_recursion.png" alt="Mutual Recursion" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="./images/nested_recursion.svg" alt="Nested Recursion" width="100%"/>
+  <img src="./images/nested_recursion.png" alt="Nested Recursion" width="100%"/>
 </p>
 
 ---
