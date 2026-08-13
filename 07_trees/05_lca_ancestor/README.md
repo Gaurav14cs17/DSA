@@ -32,8 +32,6 @@ permalink: /07_trees/05_lca_ancestor/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -373,8 +371,6 @@ def distanceBetweenNodes(root: TreeNode, p: TreeNode, q: TreeNode) -> int:
 | 1644 | [LCA of Binary Tree II](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/) | DFS + Verify | O(n) | O(h) |
 | 1650 | [LCA of Binary Tree III](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/) | Parent Pointers | O(h) | O(1) |
 | 1676 | [LCA of Binary Tree IV](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iv/) | Set Match | O(n) | O(n) |
-
----
 
 ---
 
