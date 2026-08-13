@@ -36,6 +36,17 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/05_range_queries/
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Hard |
+| **Problems** | 10 |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Core Concepts
 
 **Range Aggregates:** Compute various functions over ranges.
