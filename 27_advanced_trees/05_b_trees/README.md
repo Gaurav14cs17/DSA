@@ -10,20 +10,16 @@ permalink: /27_advanced_trees/05_b_trees/
 
 # 📚 B-Trees
 
+### *B-Trees*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-5-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Splay Trees](../04_splay_trees/README.md) | **05. B-Trees** | [06. Treap →](../06_treap/README.md) |
 
 ---
 
@@ -46,8 +42,16 @@ permalink: /27_advanced_trees/05_b_trees/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 📐 Mathematical Foundations
 
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 04. Splay Trees](../04_splay_trees/README.md) | **05. B-Trees** | [06. Treap →](../06_treap/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ B-Tree Definition
 
 **B-Tree of order $m$:** Self-balancing multi-way search tree optimized for disk I/O.
@@ -541,10 +545,3 @@ def my_calendar_btree():
 7. **Range queries:** B+ tree excels with leaf links
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Splay Trees](../04_splay_trees/README.md) | **05. B-Trees** | [06. Treap →](../06_treap/README.md) |
-
