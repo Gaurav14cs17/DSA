@@ -39,8 +39,6 @@ permalink: /11_tries/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
