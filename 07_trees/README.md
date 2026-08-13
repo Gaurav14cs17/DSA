@@ -52,6 +52,19 @@ permalink: /07_trees/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 📂 Subtopics Navigation
+
+| # | Topic | Problems | Link |
+|:-:|-------|:--------:|------|
+| 1 | Tree Traversal | 15+ | [📖 Go →](./01_tree_traversal/README.md) |
+| 2 | Tree Construction | 8+ | [📖 Go →](./02_tree_construction/README.md) |
+| 3 | Tree Properties | 12+ | [📖 Go →](./03_tree_properties/README.md) |
+| 4 | Path Problems | 10+ | [📖 Go →](./04_path_problems/README.md) |
+| 5 | LCA & Ancestor | 8+ | [📖 Go →](./05_lca_ancestor/README.md) |
+
+---
+
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ Tree Properties
@@ -141,18 +154,6 @@ $$\boxed{C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}}$$
 $$C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}$$
 
 First values: $C_0=1, C_1=1, C_2=2, C_3=5, C_4=14, \ldots$
-
----
-
-## 📂 Subtopics Navigation
-
-| # | Topic | Problems | Link |
-|:-:|-------|:--------:|------|
-| 1 | Tree Traversal | 15+ | [📖 Go →](./01_tree_traversal/README.md) |
-| 2 | Tree Construction | 8+ | [📖 Go →](./02_tree_construction/README.md) |
-| 3 | Tree Properties | 12+ | [📖 Go →](./03_tree_properties/README.md) |
-| 4 | Path Problems | 10+ | [📖 Go →](./04_path_problems/README.md) |
-| 5 | LCA & Ancestor | 8+ | [📖 Go →](./05_lca_ancestor/README.md) |
 
 ---
 
