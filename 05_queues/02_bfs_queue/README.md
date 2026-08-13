@@ -461,8 +461,6 @@ def openLock(deadends: list[str], target: str) -> int:
 
 ---
 
----
-
 ## 💡 Pattern Recognition Guide
 
 | Problem Keywords | Pattern | Example |
