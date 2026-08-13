@@ -37,7 +37,7 @@ permalink: /30_number_theory/04_divisors/02_sum_divisors/
 
 <div align="center">
 
-![Sum Divisors](./images/sum_divisors.svg)
+![Sum Divisors](./images/sum_divisors.png)
 
 </div>
 
