@@ -10,12 +10,39 @@ permalink: /09_heaps/03_merge_k_streams/
 
 # 🔀 Merge K Streams
 
+### *🔀 Merge K Streams*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-6+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Merge K Streams](./image/merge_k_streams.png)
+
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🔀 Merge K Streams |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 6+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -27,18 +54,7 @@ permalink: /09_heaps/03_merge_k_streams/
 
 ---
 
-## 🎨 Visual Pattern Guide
-
-<div align="center">
-
-![Merge K Streams](./image/merge_k_streams.png)
-
-</div>
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ K-way Merge Complexity
 
 **Problem:** Merge k sorted lists with total n elements.
@@ -224,9 +240,3 @@ def smallestRange(nums: list[list[int]]) -> list[int]:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. Top K Problems](../02_top_k_problems/README.md) | **03. Merge K Streams** | [04. Two Heaps →](../04_two_heaps/README.md) |
