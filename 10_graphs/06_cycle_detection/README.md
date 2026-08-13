@@ -79,7 +79,7 @@ when back edge $(u, v)$ discovered.
 
 <div align="center">
 
-![Cycle Detection](./images/cycle_detection.svg)
+![Cycle Detection](./images/cycle_detection.png)
 
 *DFS 3-Color Cycle Detection in Directed Graphs*
 
