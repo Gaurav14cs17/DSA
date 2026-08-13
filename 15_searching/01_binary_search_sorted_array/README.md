@@ -26,11 +26,25 @@ permalink: /15_searching/01_binary_search_sorted_array/
 
 ![Sorted Array Search](./images/sorted-array-search.png)
 
+*Sorted Array Search*
+
 </div>
 
 ---
 
+---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Easy to Medium |
+| **Problems** | 8+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
