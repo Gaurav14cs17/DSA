@@ -33,12 +33,6 @@ permalink: /30_number_theory/04_divisors/05_sieve_divisors/
 
 ---
 
-## 📐 Overview
-
-When you need divisor information for many numbers, precomputation is faster than computing each individually.
-
----
-
 ## 📊 Visual Diagram
 
 <div align="center">
@@ -46,6 +40,12 @@ When you need divisor information for many numbers, precomputation is faster tha
 ![Sieve Divisors](./images/sieve_divisors.png)
 
 </div>
+
+---
+
+## 📐 Overview
+
+When you need divisor information for many numbers, precomputation is faster than computing each individually.
 
 ---
 
