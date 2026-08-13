@@ -10,12 +10,37 @@ permalink: /18_dynamic_programming/07_bitmask_dp/
 
 # 🎭 Bitmask DP
 
+### *🎭 Bitmask DP*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+  <img src="images/bitmask-dp.png" alt="Bitmask DP Visualization" width="100%">
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🎭 Bitmask DP |
+| **Difficulty** | Hard |
+| **Problems** | 8+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -27,16 +52,7 @@ permalink: /18_dynamic_programming/07_bitmask_dp/
 
 ---
 
-## 📊 Visual Guide
-
-<div align="center">
-  <img src="images/bitmask-dp.png" alt="Bitmask DP Visualization" width="100%">
-</div>
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Bitmask Representation
 
 Subset of $n$ elements as $n$-bit integer:
@@ -238,9 +254,3 @@ def minStickers(stickers: list[str], target: str) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 06. State Machine DP](../06_state_machine_dp/README.md) | **07. Bitmask DP** | [08. Digit DP →](../08_digit_dp/README.md) |
