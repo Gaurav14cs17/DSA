@@ -123,10 +123,10 @@ gcd(F₇, F₆) = gcd(13, 8):
 <div align="center">
 
 ### Algorithm Visualization
-![Euclidean Algorithm](./images/euclidean_algorithm.svg)
+![Euclidean Algorithm](./images/euclidean_algorithm.png)
 
 ### Geometric Interpretation
-![Geometric GCD](./images/geometric_gcd.svg)
+![Geometric GCD](./images/geometric_gcd.png)
 
 </div>
 
