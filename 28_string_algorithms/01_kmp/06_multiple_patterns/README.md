@@ -5,14 +5,18 @@ parent: "KMP Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 6
 ---
+<div align="center">
 
 # 🔀 Multiple Pattern Matching with KMP
 
 ### *While KMP is designed for single pattern matching, it can be adapted for multiple patterns.*
 
 
-## 📊 Visual Overview
+</div>
 
+---
+
+## 📊 Visual Overview
 ![Multiple Patterns](./images/multiple-patterns.png)
 
 *Multiple Patterns*
@@ -29,6 +33,14 @@ nav_order: 6
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Palindrome KMP](../05_palindrome_kmp/README.md) | **Multiple Patterns** | [🏠 KMP Home](../README.md) |
 
 ---
 
@@ -573,4 +585,3 @@ KMP for multiple patterns naturally leads to Aho-Corasick:
 ---
 
 **Navigation:** [← Palindrome KMP](../05_palindrome_kmp/) | [KMP Overview](../README.md) | [String Algorithms](../../README.md)
-
