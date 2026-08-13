@@ -10,6 +10,8 @@ permalink: /15_searching/
 
 # 🔍 Binary Search
 
+### *Divide and conquer search in O(log n) time*
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -31,11 +33,27 @@ permalink: /15_searching/
 
 ![Binary Search Overview](./images/searching-overview.png)
 
+*Binary Search Overview*
+
 </div>
 
 ---
 
+---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Divide and conquer search in O(log n) time |
+| **Difficulty** | Medium |
+| **Subtopics** | 5 |
+| **Problems** | 35+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ Binary Search Invariant
