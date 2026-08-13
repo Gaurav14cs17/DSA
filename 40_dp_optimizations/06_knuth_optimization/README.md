@@ -1,12 +1,53 @@
+---
+layout: default
+title: "Knuth Optimization"
+parent: "DP Optimizations"
+nav_order: 6
+permalink: /40_dp_optimizations/06_knuth_optimization/
+---
+
+<div align="center">
+
 # 🎯 Knuth's Optimization
 
-## 📊 Visual Diagram
+### *Knuth's speedup for interval DP*
+
+</div>
+
+---
+
+## 📊 Visual Overview
 
 <p align="center">
   <img src="./images/knuth-optimization.png" alt="Knuth's Optimization" width="100%">
 </p>
 
-## Overview
+---
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Knuth's speedup for interval DP |
+
+
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Divide & Conquer](../05_divide_conquer/README.md) | **06. Knuth Optimization** | [SOS DP →](../07_sos_dp/README.md) |
+
+## 📐 Mathematical Foundation
+
+### Overview
 
 **Knuth's Optimization** reduces O(n³) to O(n²) for range DP problems.
 
@@ -18,6 +59,10 @@
 **Result:** `opt[i][j-1] ≤ opt[i][j] ≤ opt[i+1][j]`
 
 **Complexity:** O(n³) → O(n²)
+
+---
+
+
 
 ---
 
@@ -66,6 +111,10 @@ def knuth_optimization(arr):
 
 ---
 
+
+
+---
+
 ## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty |
@@ -75,6 +124,10 @@ def knuth_optimization(arr):
 | 1547 | [Cut Stick](https://leetcode.com/problems/minimum-cost-to-cut-a-stick/) | ⭐⭐⭐⭐ |
 | 664 | [Strange Printer](https://leetcode.com/problems/strange-printer/) | ⭐⭐⭐⭐ |
 | 546 | [Remove Boxes](https://leetcode.com/problems/remove-boxes/) | ⭐⭐⭐⭐⭐ |
+
+---
+
+
 
 ---
 
