@@ -34,7 +34,7 @@ permalink: /30_number_theory/10_lucas_theorem/02_sierpinski/
 
 <div align="center">
 
-![Sierpiński Triangle](./images/sierpinski_triangle.svg)
+![Sierpiński Triangle](./images/sierpinski_triangle.png)
 
 </div>
 
