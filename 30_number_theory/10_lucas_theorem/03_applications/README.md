@@ -11,6 +11,8 @@ permalink: /30_number_theory/10_lucas_theorem/03_applications/
 
 # 🎯 Lucas' Theorem Applications
 
+### *Advanced Problems Using Lucas' Theorem*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Large_n-10^18-red?style=for-the-badge" alt="Large">
@@ -39,10 +41,23 @@ permalink: /30_number_theory/10_lucas_theorem/03_applications/
 
 ![Lucas Applications](./images/lucas_applications.png)
 
+*Lucas Applications*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Advanced Problems Using Lucas' Theorem |
+| **Difficulty** | Medium Hard |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 When to Use Lucas
 
 | Scenario | Method |
