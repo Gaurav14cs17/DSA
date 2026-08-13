@@ -10,6 +10,8 @@ permalink: /02_strings/03_palindrome/
 
 # 🔄 Palindrome Problems
 
+### *🔄 Palindrome Problems*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-12+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +21,7 @@ permalink: /02_strings/03_palindrome/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. Anagram Problems](../02_anagram_problems/README.md) | **03. Palindrome** | [04. Subsequence →](../04_subsequence/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 ### Palindrome Check - Two Pointer Approach
 
@@ -54,8 +48,87 @@ permalink: /02_strings/03_palindrome/
 
 ---
 
-## 📐 Mathematical Foundations
+---
 
+## 📊 Visual Overview
+
+### Expand Around Center - Step by Step
+
+```
+String: "babad"
+
+Center enumeration (2n-1 = 9 centers):
++----------------------------------------------------------+
+
+| Center 0: b → "b" (length 1)                            |
+| Center 1: b|a → no palindrome (even)                    |
+| Center 2: a → "a" (length 1)                            |
+|           ↓ expand                                       |
+|         b a b → "bab" (length 3) ✓                      |
+|           ↓ expand                                       |
+|       (out of bounds)                                    |
+|                                                          |
+| Center 3: a|b → no palindrome (even)                    |
+| Center 4: b → "b" (length 1)                            |
+|           ↓ expand                                       |
+|         a b a → "aba" (length 3) ✓                      |
+|                                                          |
+| Center 5: b|a → no palindrome (even)                    |
+| Center 6: a → "a" (length 1)                            |
+| Center 7: a|d → no palindrome (even)                    |
+| Center 8: d → "d" (length 1)                            |
++----------------------------------------------------------+
+
+Longest found: "bab" or "aba" (both length 3)
+
+```
+
+### Why 2n-1 Centers?
+
+```
+For "abc" (n=3):
+
+Odd centers (n):         Even centers (n-1):
+  a   b   c                 a|b   b|c
+  ↑   ↑   ↑                  ↑     ↑
+  0   2   4                  1     3
+
+Total: 3 + 2 = 5 = 2(3) - 1 ✓
+
+Formula: center c maps to:
+  left = c ÷ 2
+  right = c ÷ 2 + (c mod 2)
+
+```
+
+---
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🔄 Palindrome Problems |
+| **Difficulty** | Medium |
+| **Problems** | 12+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 02. Anagram Problems](../02_anagram_problems/README.md) | **03. Palindrome** | [04. Subsequence →](../04_subsequence/README.md) |
+
+---
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Palindrome Definition
 
 **Definition:** String $S[0..n-1]$ is a palindrome if:
@@ -126,57 +199,6 @@ $$S' = \#s_0\#s_1\#\ldots\#s_{n-1}\#$$
 **Time Complexity:** $O(n)$
 
 ---
-
-## 🎨 Visual Algorithm Walkthrough
-
-### Expand Around Center - Step by Step
-
-```
-String: "babad"
-
-Center enumeration (2n-1 = 9 centers):
-+----------------------------------------------------------+
-
-| Center 0: b → "b" (length 1)                            |
-| Center 1: b|a → no palindrome (even)                    |
-| Center 2: a → "a" (length 1)                            |
-|           ↓ expand                                       |
-|         b a b → "bab" (length 3) ✓                      |
-|           ↓ expand                                       |
-|       (out of bounds)                                    |
-|                                                          |
-| Center 3: a|b → no palindrome (even)                    |
-| Center 4: b → "b" (length 1)                            |
-|           ↓ expand                                       |
-|         a b a → "aba" (length 3) ✓                      |
-|                                                          |
-| Center 5: b|a → no palindrome (even)                    |
-| Center 6: a → "a" (length 1)                            |
-| Center 7: a|d → no palindrome (even)                    |
-| Center 8: d → "d" (length 1)                            |
-+----------------------------------------------------------+
-
-Longest found: "bab" or "aba" (both length 3)
-
-```
-
-### Why 2n-1 Centers?
-
-```
-For "abc" (n=3):
-
-Odd centers (n):         Even centers (n-1):
-  a   b   c                 a|b   b|c
-  ↑   ↑   ↑                  ↑     ↑
-  0   2   4                  1     3
-
-Total: 3 + 2 = 5 = 2(3) - 1 ✓
-
-Formula: center c maps to:
-  left = c ÷ 2
-  right = c ÷ 2 + (c mod 2)
-
-```
 
 ---
 
@@ -321,6 +343,8 @@ def validPalindrome(s: str) -> bool:
 
 ---
 
+---
+
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
@@ -351,6 +375,8 @@ def validPalindrome(s: str) -> bool:
 
 ---
 
+---
+
 ## 💡 Key Insights & Pro Tips
 
 > **🎯 Center Count Formula**  
@@ -367,6 +393,8 @@ def validPalindrome(s: str) -> bool:
 
 > **🔍 Valid Palindrome II Trick**  
 > When mismatch found, try skip left OR skip right. If either works → valid with one deletion.
+
+---
 
 ---
 
@@ -399,6 +427,8 @@ Palindrome Problem
 | **Partition** | Backtracking + memo | O(n·2ⁿ) | O(n) | Need all partitions |
 | **Min cuts** | DP | O(n²) | O(n) | Optimization problem |
 | **Manacher's** | Linear scan | O(n) | O(n) | Asked specifically |
+
+---
 
 ---
 
@@ -445,6 +475,8 @@ All palindromes become odd-length!
 
 ---
 
+---
+
 ## 🎯 Complexity Comparison
 
 ### Approach Comparison
@@ -464,6 +496,8 @@ n < 10,000:  Expand around center recommended
 n > 10,000:  Consider Manacher's
 
 ```
+
+---
 
 ---
 
@@ -522,6 +556,8 @@ n > 10,000:  Consider Manacher's
 
 ---
 
+---
+
 ## 🎯 Practice Roadmap
 
 ### Beginner Level
@@ -560,6 +596,8 @@ n > 10,000:  Consider Manacher's
 
 ---
 
+---
+
 ## 💭 Common Interview Questions
 
 **Q: Why expand around center instead of checking every substring?**  
@@ -593,9 +631,3 @@ A: No for worst case. But average case with hashing can be faster in practice.
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. Anagram Problems](../02_anagram_problems/README.md) | **03. Palindrome** | [04. Subsequence →](../04_subsequence/README.md) |
