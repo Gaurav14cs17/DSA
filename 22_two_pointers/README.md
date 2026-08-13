@@ -10,7 +10,6 @@ permalink: /22_two_pointers/
 
 # 👆👆 Two Pointers
 
-![Two Pointers Overview](./images/two-pointers-overview.png)
 
 ### *The Elegant Dance of Indices*
 
@@ -29,6 +28,17 @@ permalink: /22_two_pointers/
 
 ---
 
+## 📊 Visual Overview
+
+<div align="center">
+
+![Two Pointers Overview](./images/two-pointers-overview.png)
+
+</div>
+
+---
+
+
 ## 🌟 Why Two Pointers?
 
 > *"Two pointers is not just a technique—it's a way of thinking about array problems. Once you see it, you'll find it everywhere."*
@@ -39,6 +49,89 @@ permalink: /22_two_pointers/
 | 💾 **Space** | In-place operations with O(1) extra space |
 | 🎯 **Simplicity** | Clean, readable code that's easy to debug |
 | 🏆 **Universality** | Works on arrays, strings, and linked lists |
+
+---
+
+## 🎨 Visual: The Three Patterns in Action
+
+### Pattern 1: Opposite Direction (Two Sum)
+
+```
+Target = 9, Array = [1, 2, 4, 6, 8, 9, 14, 15]
+                     L                    R
+
+Step 1: 1 + 15 = 16 > 9  →  Move R left
+        [1, 2, 4, 6, 8, 9, 14, 15]
+         L                 R
+
+Step 2: 1 + 14 = 15 > 9  →  Move R left
+        [1, 2, 4, 6, 8, 9, 14, 15]
+         L              R
+
+Step 3: 1 + 9 = 10 > 9   →  Move R left
+        [1, 2, 4, 6, 8, 9, 14, 15]
+         L           R
+
+Step 4: 1 + 8 = 9 = 9    →  FOUND! ✓
+
+```
+
+### Pattern 2: Same Direction (Remove Duplicates)
+
+```
+Array = [1, 1, 2, 2, 2, 3, 4, 4]
+         S
+         F
+
+Step 1: nums[F] = 1 = nums[S-1]? No (first element)
+        Write 1, S++
+        [1, 1, 2, 2, 2, 3, 4, 4]
+            S
+            F
+
+Step 2: nums[F] = 1 = nums[S-1] = 1? Yes, skip
+        [1, 1, 2, 2, 2, 3, 4, 4]
+            S  F
+
+Step 3: nums[F] = 2 ≠ nums[S-1] = 1? Write 2, S++
+        [1, 2, 2, 2, 2, 3, 4, 4]
+               S  F
+
+... continue until F reaches end
+
+Result: [1, 2, 3, 4, _, _, _, _]
+                     S
+        Return S = 4 unique elements
+
+```
+
+### Pattern 3: Floyd's Cycle Detection
+
+```
+List: 1 → 2 → 3 → 4 → 5
+                  ↑   ↓
+                  8 ← 6
+
+Initial:     🐢🐇 at 1
+
+Step 1:      🐢 → 2      🐇 → → 3
+Step 2:      🐢 → 3      🐇 → → 5
+Step 3:      🐢 → 4      🐇 → → 8
+Step 4:      🐢 → 5      🐇 → → 4
+Step 5:      🐢 → 6      🐇 → → 6   ← MEET!
+
+Phase 2: Reset 🐢 to head
+         🐢 at 1, 🐇 at 6
+         
+Step 1:  🐢 → 2, 🐇 → 8
+Step 2:  🐢 → 3, 🐇 → 4
+Step 3:  🐢 → 4, 🐇 → 5
+Step 4:  🐢 → 5, 🐇 → 6
+         ... Wait, let me recalculate
+
+Cycle start = 4 ✓
+
+```
 
 ---
 
@@ -233,89 +326,6 @@ Instead of precomputing maxLeft and maxRight arrays (O(n) space), use two pointe
 |Two Sum | |3Sum,   |   |Remove  | |Partition|   | Cycle  | | Middle |
 |Opposite| |4Sum    |   |In-place| |Dutch   |   | Floyd's| | Nth End|
 +--------+ +--------+   +--------+ +--------+   +--------+ +--------+
-
-```
-
----
-
-## 🎨 Visual: The Three Patterns in Action
-
-### Pattern 1: Opposite Direction (Two Sum)
-
-```
-Target = 9, Array = [1, 2, 4, 6, 8, 9, 14, 15]
-                     L                    R
-
-Step 1: 1 + 15 = 16 > 9  →  Move R left
-        [1, 2, 4, 6, 8, 9, 14, 15]
-         L                 R
-
-Step 2: 1 + 14 = 15 > 9  →  Move R left
-        [1, 2, 4, 6, 8, 9, 14, 15]
-         L              R
-
-Step 3: 1 + 9 = 10 > 9   →  Move R left
-        [1, 2, 4, 6, 8, 9, 14, 15]
-         L           R
-
-Step 4: 1 + 8 = 9 = 9    →  FOUND! ✓
-
-```
-
-### Pattern 2: Same Direction (Remove Duplicates)
-
-```
-Array = [1, 1, 2, 2, 2, 3, 4, 4]
-         S
-         F
-
-Step 1: nums[F] = 1 = nums[S-1]? No (first element)
-        Write 1, S++
-        [1, 1, 2, 2, 2, 3, 4, 4]
-            S
-            F
-
-Step 2: nums[F] = 1 = nums[S-1] = 1? Yes, skip
-        [1, 1, 2, 2, 2, 3, 4, 4]
-            S  F
-
-Step 3: nums[F] = 2 ≠ nums[S-1] = 1? Write 2, S++
-        [1, 2, 2, 2, 2, 3, 4, 4]
-               S  F
-
-... continue until F reaches end
-
-Result: [1, 2, 3, 4, _, _, _, _]
-                     S
-        Return S = 4 unique elements
-
-```
-
-### Pattern 3: Floyd's Cycle Detection
-
-```
-List: 1 → 2 → 3 → 4 → 5
-                  ↑   ↓
-                  8 ← 6
-
-Initial:     🐢🐇 at 1
-
-Step 1:      🐢 → 2      🐇 → → 3
-Step 2:      🐢 → 3      🐇 → → 5
-Step 3:      🐢 → 4      🐇 → → 8
-Step 4:      🐢 → 5      🐇 → → 4
-Step 5:      🐢 → 6      🐇 → → 6   ← MEET!
-
-Phase 2: Reset 🐢 to head
-         🐢 at 1, 🐇 at 6
-         
-Step 1:  🐢 → 2, 🐇 → 8
-Step 2:  🐢 → 3, 🐇 → 4
-Step 3:  🐢 → 4, 🐇 → 5
-Step 4:  🐢 → 5, 🐇 → 6
-         ... Wait, let me recalculate
-
-Cycle start = 4 ✓
 
 ```
 
