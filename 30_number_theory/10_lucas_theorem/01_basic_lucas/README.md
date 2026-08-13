@@ -36,7 +36,7 @@ permalink: /30_number_theory/10_lucas_theorem/01_basic_lucas/
 
 <div align="center">
 
-![Lucas' Theorem](./images/lucas_theorem.svg)
+![Lucas' Theorem](./images/lucas_theorem.png)
 
 </div>
 
