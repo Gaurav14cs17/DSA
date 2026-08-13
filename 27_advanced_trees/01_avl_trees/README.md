@@ -30,7 +30,7 @@ permalink: /27_advanced_trees/01_avl_trees/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/avl-rotations.svg" alt="AVL Tree Rotations" width="100%">
+<img src="./images/avl-rotations.png" alt="AVL Tree Rotations" width="100%">
 </div>
 
 ---
