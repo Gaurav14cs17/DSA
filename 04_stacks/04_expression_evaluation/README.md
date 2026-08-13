@@ -10,6 +10,8 @@ permalink: /04_stacks/04_expression_evaluation/
 
 # 🧮 Expression Evaluation
 
+### *🧮 Expression Evaluation*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8+-blue?style=for-the-badge" alt="Problems">
@@ -19,7 +21,7 @@ permalink: /04_stacks/04_expression_evaluation/
 
 ---
 
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -57,6 +59,81 @@ permalink: /04_stacks/04_expression_evaluation/
 
 ---
 
+---
+
+## 📊 Visual Overview
+
+### Evaluate RPN (#150)
+
+```
+Input: ["2", "1", "+", "3", "*"]
+
+Stack trace:
+Token   Action              Stack       Explanation
+"2"     Push 2              [2]         Operand
+"1"     Push 1              [2, 1]      Operand
+"+"     Pop 1,2, Push 3     [3]         2 + 1 = 3
+"3"     Push 3              [3, 3]      Operand
+"*"     Pop 3,3, Push 9     [9]         3 * 3 = 9
+
+Result: 9
+
+```
+
+### Basic Calculator II (#227)
+
+```
+Input: "3+2*2"
+
+Process with precedence:
+Char   Prev_op  Num   Stack       Action
+'3'    +        3     []          Building num
+'+'    +        3     [3]         Push 3, op='+'
+'2'    +        2     [3]         Building num
+'*'    +        2     [3, 2]      Push 2, op='*'
+'2'    *        2     [3, 2]      Building num
+End    *        2     [3, 4]      Pop 2, calc 2*2=4
+                      [7]         Sum all
+
+Result: 7
+
+```
+
+### Shunting-Yard Visualization
+
+```
+Infix: A + B * C
+
+Token  Action              Op Stack    Output
+A      Operand             []          [A]
++      Push                [+]         [A]
+B      Operand             [+]         [A, B]
+
+*      Push (* > +)        [+, *]      [A, B]
+C      Operand             [+, *]      [A, B, C]
+End    Pop all             []          [A, B, C, *, +]
+
+Postfix: A B C * +
+
+```
+
+---
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🧮 Expression Evaluation |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 8+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next Topic |
@@ -65,8 +142,9 @@ permalink: /04_stacks/04_expression_evaluation/
 
 ---
 
-## 📐 Mathematical Foundations
+---
 
+## 📐 Mathematical Foundation
 ### 1️⃣ Expression Notations
 
 | Notation | Example | Description |
@@ -170,64 +248,7 @@ Result: 1
 
 ---
 
-## 🎨 Visual Algorithm Walkthrough
-
-### Evaluate RPN (#150)
-
-```
-Input: ["2", "1", "+", "3", "*"]
-
-Stack trace:
-Token   Action              Stack       Explanation
-"2"     Push 2              [2]         Operand
-"1"     Push 1              [2, 1]      Operand
-"+"     Pop 1,2, Push 3     [3]         2 + 1 = 3
-"3"     Push 3              [3, 3]      Operand
-"*"     Pop 3,3, Push 9     [9]         3 * 3 = 9
-
-Result: 9
-
-```
-
-### Basic Calculator II (#227)
-
-```
-Input: "3+2*2"
-
-Process with precedence:
-Char   Prev_op  Num   Stack       Action
-'3'    +        3     []          Building num
-'+'    +        3     [3]         Push 3, op='+'
-'2'    +        2     [3]         Building num
-'*'    +        2     [3, 2]      Push 2, op='*'
-'2'    *        2     [3, 2]      Building num
-End    *        2     [3, 4]      Pop 2, calc 2*2=4
-                      [7]         Sum all
-
-Result: 7
-
-```
-
-### Shunting-Yard Visualization
-
-```
-Infix: A + B * C
-
-Token  Action              Op Stack    Output
-A      Operand             []          [A]
-+      Push                [+]         [A]
-B      Operand             [+]         [A, B]
-
-*      Push (* > +)        [+, *]      [A, B]
-C      Operand             [+, *]      [A, B, C]
-End    Pop all             []          [A, B, C, *, +]
-
-Postfix: A B C * +
-
-```
-
 ---
-
 
 ## 💻 Code Implementations
 
@@ -378,6 +399,8 @@ def infixToPostfix(expression: str) -> str:
 
 ---
 
+---
+
 ## 🏆 LeetCode Problems
 
 ### 🟡 Medium
@@ -396,6 +419,8 @@ def infixToPostfix(expression: str) -> str:
 | 224 | [Basic Calculator](https://leetcode.com/problems/basic-calculator/) | Parentheses | O(n) | O(n) |
 | 726 | [Number of Atoms](https://leetcode.com/problems/number-of-atoms/) | Nested Parse | O(n²) | O(n) |
 | 772 | [Basic Calculator III](https://leetcode.com/problems/basic-calculator-iii/) | Full Expression | O(n) | O(n) |
+
+---
 
 ---
 
@@ -426,6 +451,8 @@ Expression Problem
 
 ---
 
+---
+
 ## 💡 Pattern Recognition Guide
 
 | Problem Keywords | Pattern | Example |
@@ -436,6 +463,8 @@ Expression Problem
 | "operator precedence" | Precedence stack | #227 |
 | "decode string" | Nested decoding | #394 |
 | "number of atoms" | Recursive parse | #726 |
+
+---
 
 ---
 
@@ -502,6 +531,8 @@ Expression Problem
 
 ---
 
+---
+
 ## 💡 Pro Tips
 
 > **🎯 Postfix > Infix:** Postfix (RPN) has no ambiguity, no parentheses needed. Easier to evaluate!
@@ -513,6 +544,8 @@ Expression Problem
 > **📊 Handle Spaces:** Always skip spaces in parsing. Use `.strip()` or check `char.isspace()`.
 
 > **🌊 Unary Operators:** Detect by position (start, after '(', after operator). Convert to binary: `-x` → `0-x`.
+
+---
 
 ---
 
@@ -544,6 +577,8 @@ Expression Problem
 
 ---
 
+---
+
 ## ❓ Interview Q&A
 
 **Q: Why is postfix better than infix for computers?**  
@@ -563,6 +598,8 @@ A: Yes! Use two stacks (operator and operand) with precedence rules. Or recursiv
 
 ---
 
+---
+
 ## 🔥 Key Insights
 
 - **RPN Elegance:** Stack-based evaluation without precedence worries
@@ -574,6 +611,8 @@ A: Yes! Use two stacks (operator and operand) with precedence rules. Or recursiv
 - **Nested Expressions:** Stack naturally handles parentheses nesting
 
 - **Template Reusability:** Same pattern for many expression problems
+
+---
 
 ---
 
@@ -610,9 +649,3 @@ Steps:    3 4  →  7 2  →  14
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
-|:------------|:----------:|--------:|
-| [← 03. Monotonic Stack](../03_monotonic_stack/README.md) | **04. Expression Evaluation** | [🏠 Stacks Home](../README.md) → [Queues](../../05_queues/README.md) |
