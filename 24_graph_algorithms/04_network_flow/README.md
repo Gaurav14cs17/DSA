@@ -10,12 +10,39 @@ permalink: /24_graph_algorithms/04_network_flow/
 
 # 🌊 Network Flow Algorithms
 
+### *🌊 Network Flow Algorithms*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Network Flow - Ford-Fulkerson / Edmonds-Karp](./images/network-flow.png)
+
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🌊 Network Flow Algorithms |
+| **Difficulty** | Hard |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -27,18 +54,7 @@ permalink: /24_graph_algorithms/04_network_flow/
 
 ---
 
-## 🎨 Visual Overview
-
-<div align="center">
-
-![Network Flow - Ford-Fulkerson / Edmonds-Karp](./images/network-flow.png)
-
-</div>
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Flow Network
 
 **Flow network** $G = (V, E)$ with:
@@ -640,10 +656,3 @@ Network Flow Problem
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Topological Sort](../03_topological_sort/README.md) | **04. Network Flow** | [🏠 Home](../README.md) |
-
