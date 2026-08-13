@@ -10,6 +10,8 @@ permalink: /32_game_theory/01_nim_game/
 
 # 🎲 Nim Game
 
+### *The Foundation of Combinatorial Game Theory*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Year-1901-blue?style=for-the-badge" alt="Year">
@@ -23,15 +25,7 @@ permalink: /32_game_theory/01_nim_game/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Game Theory Home](../README.md) | **01. Nim Game** | [02. Minimax →](../02_minimax/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 ### Nim-Sum (XOR) Calculation
 <p align="center">
@@ -47,6 +41,114 @@ permalink: /32_game_theory/01_nim_game/
 <p align="center">
   <img src="./images/nim-decision-tree.png" alt="Nim Decision Tree" width="100%">
 </p>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | The Foundation of Combinatorial Game Theory |
+| **Difficulty** | Easy to Hard |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [🏠 Game Theory Home](../README.md) | **01. Nim Game** | [02. Minimax →](../02_minimax/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
+### 1️⃣ Classic Nim Rules
+
+**Setup:** $n$ piles of stones with sizes $a_1, a_2, \ldots, a_n$
+
+**Rules:**
+
+1. Two players alternate turns
+
+2. On each turn, player removes **any positive number** of stones from **exactly one** pile
+
+3. Player who removes the **last stone wins** (normal play)
+
+4. Both players play optimally
+
+---
+
+### 2️⃣ Bouton's Theorem (1901)
+
+**Theorem:** A Nim position with pile sizes $a_1, a_2, \ldots, a_n$ is a **losing position** (L-position) if and only if:
+
+$$a_1 \oplus a_2 \oplus \cdots \oplus a_n = 0$$
+
+where $\oplus$ denotes bitwise XOR.
+
+**Proof:**
+
+*Part 1:* Terminal position (all piles empty) has Nim-Sum = 0, and previous player won.
+
+*Part 2:* From position with Nim-Sum = 0:
+
+- Any move changes exactly one pile size
+
+- This changes the Nim-Sum to non-zero
+
+- Therefore, all moves from L-position lead to W-positions
+
+*Part 3:* From position with Nim-Sum ≠ 0:
+
+- Let $s = a_1 \oplus a_2 \oplus \cdots \oplus a_n \neq 0$
+
+- Let $k$ be position of highest bit in $s$
+
+- Find pile $a_i$ with bit $k$ set
+
+- New pile size: $a_i' = a_i \oplus s < a_i$
+
+- After this move: $a_1 \oplus \cdots \oplus a_i' \oplus \cdots \oplus a_n = 0$
+
+Therefore, from W-position, can always move to L-position. $\blacksquare$
+
+---
+
+### 3️⃣ Nim-Sum Properties
+
+**XOR Properties:**
+
+$$\begin{align}
+a \oplus a &= 0 \\
+a \oplus 0 &= a \\
+a \oplus b &= b \oplus a \quad \text{(commutative)} \\
+(a \oplus b) \oplus c &= a \oplus (b \oplus c) \quad \text{(associative)}
+\end{align}$$
+
+**Binary XOR:**
+
+```
+  5 = 101₂
+⊕ 3 = 011₂
+  -------
+  6 = 110₂
+
+```
+
+---
+
+### 4️⃣ Misère Nim
+
+**Variant:** Player who takes **last stone loses**.
+
+**Theorem:** Misère Nim strategy:
+
+- If all piles have size ≤ 1: Winning if odd number of piles
+
+- Otherwise: Same as normal Nim (make Nim-Sum = 0)
 
 ---
 
@@ -134,95 +236,6 @@ permalink: /32_game_theory/01_nim_game/
 +-----------------------------------------------------------------+
 
 ```
-
----
-
-## 📐 Mathematical Foundations
-
-### 1️⃣ Classic Nim Rules
-
-**Setup:** $n$ piles of stones with sizes $a_1, a_2, \ldots, a_n$
-
-**Rules:**
-
-1. Two players alternate turns
-
-2. On each turn, player removes **any positive number** of stones from **exactly one** pile
-
-3. Player who removes the **last stone wins** (normal play)
-
-4. Both players play optimally
-
----
-
-### 2️⃣ Bouton's Theorem (1901)
-
-**Theorem:** A Nim position with pile sizes $a_1, a_2, \ldots, a_n$ is a **losing position** (L-position) if and only if:
-
-$$a_1 \oplus a_2 \oplus \cdots \oplus a_n = 0$$
-
-where $\oplus$ denotes bitwise XOR.
-
-**Proof:**
-
-*Part 1:* Terminal position (all piles empty) has Nim-Sum = 0, and previous player won.
-
-*Part 2:* From position with Nim-Sum = 0:
-
-- Any move changes exactly one pile size
-
-- This changes the Nim-Sum to non-zero
-
-- Therefore, all moves from L-position lead to W-positions
-
-*Part 3:* From position with Nim-Sum ≠ 0:
-
-- Let $s = a_1 \oplus a_2 \oplus \cdots \oplus a_n \neq 0$
-
-- Let $k$ be position of highest bit in $s$
-
-- Find pile $a_i$ with bit $k$ set
-
-- New pile size: $a_i' = a_i \oplus s < a_i$
-
-- After this move: $a_1 \oplus \cdots \oplus a_i' \oplus \cdots \oplus a_n = 0$
-
-Therefore, from W-position, can always move to L-position. $\blacksquare$
-
----
-
-### 3️⃣ Nim-Sum Properties
-
-**XOR Properties:**
-
-$$\begin{align}
-a \oplus a &= 0 \\
-a \oplus 0 &= a \\
-a \oplus b &= b \oplus a \quad \text{(commutative)} \\
-(a \oplus b) \oplus c &= a \oplus (b \oplus c) \quad \text{(associative)}
-\end{align}$$
-
-**Binary XOR:**
-
-```
-  5 = 101₂
-⊕ 3 = 011₂
-  -------
-  6 = 110₂
-
-```
-
----
-
-### 4️⃣ Misère Nim
-
-**Variant:** Player who takes **last stone loses**.
-
-**Theorem:** Misère Nim strategy:
-
-- If all piles have size ≤ 1: Winning if odd number of piles
-
-- Otherwise: Same as normal Nim (make Nim-Sum = 0)
 
 ---
 
@@ -439,10 +452,3 @@ def nim_with_moves(n: int, moves: list[int]) -> bool:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Game Theory Home](../README.md) | **01. Nim Game** | [02. Minimax →](../02_minimax/README.md) |
-
