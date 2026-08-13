@@ -32,16 +32,16 @@ permalink: /01_arrays/04_matrix_problems/
 <div align="center">
 
 ### Matrix Rotation 90° Clockwise
-![Matrix Rotation](./images/matrix_rotation.svg)
+![Matrix Rotation](./images/matrix_rotation.png)
 
 ### Spiral Matrix Traversal
-![Spiral Traverse](./images/spiral_traverse.svg)
+![Spiral Traverse](./images/spiral_traverse.png)
 
 ### Staircase Search in Sorted Matrix
-![Staircase Search](./images/staircase_search.svg)
+![Staircase Search](./images/staircase_search.png)
 
 ### Spiral Traversal
-![Spiral Traversal](./images/spiral_traversal.svg)
+![Spiral Traversal](./images/spiral_traversal.png)
 
 </div>
 
