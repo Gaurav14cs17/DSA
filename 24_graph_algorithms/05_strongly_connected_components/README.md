@@ -10,12 +10,39 @@ permalink: /24_graph_algorithms/05_strongly_connected_components/
 
 # 🔄 Strongly Connected Components (SCC)
 
+### *🔄 Strongly Connected Components (SCC)*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Strongly Connected Components - Tarjan's Algorithm](./images/scc-tarjan.png)
+
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🔄 Strongly Connected Components (SCC) |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -27,18 +54,7 @@ permalink: /24_graph_algorithms/05_strongly_connected_components/
 
 ---
 
-## 🎨 Visual Overview
-
-<div align="center">
-
-![Strongly Connected Components - Tarjan's Algorithm](./images/scc-tarjan.png)
-
-</div>
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ SCC Definition
 
 **Strongly Connected Component:** Maximal set of vertices where every vertex is reachable from every other vertex.
@@ -557,10 +573,3 @@ SCC Problem
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Network Flow](../04_network_flow/README.md) | **05. SCC** | [06. Bridges & Articulation Points →](../06_bridges_articulation_points/README.md) |
-
