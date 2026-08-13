@@ -57,6 +57,29 @@ $$C(n,k) = \frac{n \times (n-1) \times \cdots \times (n-k+1)}{k \times (k-1) \ti
 
 ---
 
+## 🎨 Visual: Stars and Bars
+
+```
++-----------------------------------------------------------------+
+| STARS AND BARS: Distribute n=3 items into k=5 bins             |
++-----------------------------------------------------------------+
+|                                                                 |
+| Represent as: ★★★ and 4 bars (dividers)                        |
+|                                                                 |
+| Example arrangements:                                           |
+|   ★★★||||  → (3,0,0,0,0) - all in first bin                   |
+|   ★|★|★||  → (1,1,1,0,0) - one in each of first 3             |
+|   ||★★★||  → (0,0,3,0,0) - all in third bin                   |
+|   |★||★|★  → (0,1,0,1,1) - distributed                        |
+|                                                                 |
+| Total arrangements = C(n + k - 1, k - 1) = C(7, 4) = 35        |
++-----------------------------------------------------------------+
+
+```
+
+---
+
+
 ## 💻 Code Implementations
 
 ### 1. Multiplicative Formula (Best for Single Queries)
@@ -227,28 +250,6 @@ class Solution:
         """
         from math import comb
         return comb(n + 4, 4)
-
-```
-
----
-
-## 🎨 Visual: Stars and Bars
-
-```
-+-----------------------------------------------------------------+
-| STARS AND BARS: Distribute n=3 items into k=5 bins             |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Represent as: ★★★ and 4 bars (dividers)                        |
-|                                                                 |
-| Example arrangements:                                           |
-|   ★★★||||  → (3,0,0,0,0) - all in first bin                   |
-|   ★|★|★||  → (1,1,1,0,0) - one in each of first 3             |
-|   ||★★★||  → (0,0,3,0,0) - all in third bin                   |
-|   |★||★|★  → (0,1,0,1,1) - distributed                        |
-|                                                                 |
-| Total arrangements = C(n + k - 1, k - 1) = C(7, 4) = 35        |
-+-----------------------------------------------------------------+
 
 ```
 
