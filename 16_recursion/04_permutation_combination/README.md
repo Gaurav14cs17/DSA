@@ -10,6 +10,10 @@ permalink: /16_recursion/04_permutation_combination/
 
 # 🔀 Permutations & Combinations
 
+### *🔀 Permutations & Combinations*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +23,7 @@ permalink: /16_recursion/04_permutation_combination/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Memoization](../03_memoization/README.md) | **04. Permutations & Combinations** | [05. String Recursion →](../05_string_recursion/README.md) |
-
----
-
-## 📊 Visual Diagrams
+## 📊 Visual Overview
 
 <p align="center">
   <img src="./images/permutation_tree.png" alt="Permutation Decision Tree" width="100%"/>
@@ -43,8 +39,28 @@ permalink: /16_recursion/04_permutation_combination/
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **Topic** | 🔀 Permutations & Combinations |
+| **Difficulty** | Medium |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 03. Memoization](../03_memoization/README.md) | **04. Permutations & Combinations** | [05. String Recursion →](../05_string_recursion/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Permutations
 
 **Definition:** All possible arrangements of n elements.
@@ -390,10 +406,3 @@ def combination_template(nums, k=None):
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Memoization](../03_memoization/README.md) | **04. Permutations & Combinations** | [05. String Recursion →](../05_string_recursion/README.md) |
-
