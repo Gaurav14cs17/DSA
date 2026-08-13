@@ -27,6 +27,22 @@ permalink: /10_graphs/03_dfs_problems/
 
 ---
 
+## 🎨 Visual Diagrams
+
+<div align="center">
+
+![DFS Traversal](./images/dfs_traversal.png)
+
+*DFS Depth-First Exploration with 3-Color States*
+
+![Flood Fill](./images/flood_fill.png)
+
+*Number of Islands - DFS Flood Fill*
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ DFS Time Complexity
@@ -65,22 +81,6 @@ $$\boxed{T(V, E) = O(V + E)}$$
 $$d[u] < d[v] < f[v] < f[u] \text{ (v is descendant of u)}$$
 
 **Parenthesis Theorem:** DFS forms valid nesting.
-
----
-
-## 🎨 Visual Diagrams
-
-<div align="center">
-
-![DFS Traversal](./images/dfs_traversal.png)
-
-*DFS Depth-First Exploration with 3-Color States*
-
-![Flood Fill](./images/flood_fill.png)
-
-*Number of Islands - DFS Flood Fill*
-
-</div>
 
 ---
 
