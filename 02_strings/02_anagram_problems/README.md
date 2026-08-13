@@ -27,6 +27,38 @@ permalink: /02_strings/02_anagram_problems/
 
 ---
 
+## 🎨 Visual Diagrams
+
+### Anagram Check - Frequency Vector Comparison
+
+<p align="center">
+  <img src="./images/anagram_check.png" alt="Anagram Check Visualization" width="750"/>
+</p>
+
+### Sliding Window for Finding All Anagrams
+
+<p align="center">
+  <img src="./images/sliding_window_anagram.png" alt="Sliding Window Anagram Detection" width="800"/>
+</p>
+
+### Group Anagrams Using Hash Map
+
+<p align="center">
+  <img src="./images/group_anagrams.png" alt="Group Anagrams Algorithm" width="750"/>
+</p>
+
+### Anagram Concept
+<p align="center">
+  <img src="./images/anagram_concept.png" alt="Anagram Concept" width="750"/>
+</p>
+
+### Sliding Window for Anagrams
+<p align="center">
+  <img src="./images/sliding_window.png" alt="Sliding Window" width="800"/>
+</p>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Anagram Definition
@@ -92,35 +124,51 @@ $$\forall c \in T: \text{count}_{\text{window}}(c) \geq \text{count}_T(c)$$
 
 ---
 
-## 🎨 Visual Diagrams
+## 🎨 Visual Algorithm Walkthrough
 
-### Anagram Check - Frequency Vector Comparison
+### Find All Anagrams - Sliding Window
 
-<p align="center">
-  <img src="./images/anagram_check.png" alt="Anagram Check Visualization" width="750"/>
-</p>
+```
+Input: s = "cbaebabacd", p = "abc"
 
-### Sliding Window for Finding All Anagrams
+Step-by-step:
++----------------------------------------------------------+
 
-<p align="center">
-  <img src="./images/sliding_window_anagram.png" alt="Sliding Window Anagram Detection" width="800"/>
-</p>
+| Initial: p_count = {a:1, b:1, c:1}                      |
++----------------------------------------------------------+
+| Window size = 3                                          |
+|                                                          |
+| Index 0-2: "cba"                                        |
+| window = {c:1, b:1, a:1} ← MATCH! ✓ Add index 0        |
+|                                                          |
+| Index 1-3: "bae"                                        |
+| Remove 'c', Add 'e'                                     |
+| window = {b:1, a:1, e:1} ← No match                    |
+|                                                          |
+| Index 2-4: "aeb"                                        |
+| Remove 'b', Add 'b'                                     |
+| window = {a:1, e:1, b:1} ← No match                    |
+|                                                          |
+| Index 3-5: "eba"                                        |
+| Remove 'a', Add 'a'                                     |
+| window = {e:1, b:1, a:1} ← No match                    |
+|                                                          |
+| Index 4-6: "bab"                                        |
+| Remove 'e', Add 'b'                                     |
+| window = {b:2, a:1} ← No match (extra b)               |
+|                                                          |
+| Index 5-7: "aba"                                        |
+| Remove 'b', Add 'a'                                     |
+| window = {b:1, a:2} ← No match (extra a)               |
+|                                                          |
+| Index 6-8: "bac"                                        |
+| Remove 'a', Add 'c'                                     |
+| window = {b:1, a:1, c:1} ← MATCH! ✓ Add index 6        |
++----------------------------------------------------------+
 
-### Group Anagrams Using Hash Map
+Result: [0, 6]
 
-<p align="center">
-  <img src="./images/group_anagrams.png" alt="Group Anagrams Algorithm" width="750"/>
-</p>
-
-### Anagram Concept
-<p align="center">
-  <img src="./images/anagram_concept.png" alt="Anagram Concept" width="750"/>
-</p>
-
-### Sliding Window for Anagrams
-<p align="center">
-  <img src="./images/sliding_window.png" alt="Sliding Window" width="800"/>
-</p>
+```
 
 ---
 
@@ -262,54 +310,6 @@ def minWindow(s: str, t: str) -> str:
 | 76 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Sliding Window | O(n) | O(k) |
 
 ---
-
----
-
-## 🎨 Visual Algorithm Walkthrough
-
-### Find All Anagrams - Sliding Window
-
-```
-Input: s = "cbaebabacd", p = "abc"
-
-Step-by-step:
-+----------------------------------------------------------+
-
-| Initial: p_count = {a:1, b:1, c:1}                      |
-+----------------------------------------------------------+
-| Window size = 3                                          |
-|                                                          |
-| Index 0-2: "cba"                                        |
-| window = {c:1, b:1, a:1} ← MATCH! ✓ Add index 0        |
-|                                                          |
-| Index 1-3: "bae"                                        |
-| Remove 'c', Add 'e'                                     |
-| window = {b:1, a:1, e:1} ← No match                    |
-|                                                          |
-| Index 2-4: "aeb"                                        |
-| Remove 'b', Add 'b'                                     |
-| window = {a:1, e:1, b:1} ← No match                    |
-|                                                          |
-| Index 3-5: "eba"                                        |
-| Remove 'a', Add 'a'                                     |
-| window = {e:1, b:1, a:1} ← No match                    |
-|                                                          |
-| Index 4-6: "bab"                                        |
-| Remove 'e', Add 'b'                                     |
-| window = {b:2, a:1} ← No match (extra b)               |
-|                                                          |
-| Index 5-7: "aba"                                        |
-| Remove 'b', Add 'a'                                     |
-| window = {b:1, a:2} ← No match (extra a)               |
-|                                                          |
-| Index 6-8: "bac"                                        |
-| Remove 'a', Add 'c'                                     |
-| window = {b:1, a:1, c:1} ← MATCH! ✓ Add index 6        |
-+----------------------------------------------------------+
-
-Result: [0, 6]
-
-```
 
 ---
 
