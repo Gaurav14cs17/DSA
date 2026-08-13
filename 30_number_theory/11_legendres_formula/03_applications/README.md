@@ -11,6 +11,8 @@ permalink: /30_number_theory/11_legendres_formula/03_applications/
 
 # 🎯 Legendre's Formula Applications
 
+### *Real-World Problems Using Prime Factorization of Factorials*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Pattern-Divisibility-blue?style=for-the-badge" alt="Pattern">
@@ -39,10 +41,23 @@ permalink: /30_number_theory/11_legendres_formula/03_applications/
 
 ![Legendre Applications](./images/legendre_applications.png)
 
+*Legendre Applications*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Real-World Problems Using Prime Factorization of Factorials |
+| **Difficulty** | Medium Hard |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Core Formulas
 
 ### Legendre's Formula
