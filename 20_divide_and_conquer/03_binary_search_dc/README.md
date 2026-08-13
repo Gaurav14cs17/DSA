@@ -10,6 +10,10 @@ permalink: /20_divide_and_conquer/03_binary_search_dc/
 
 # 🔍 Binary Search as D&C
 
+### *Master Binary Search as D&C — patterns, proofs, and code*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-6+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +23,7 @@ permalink: /20_divide_and_conquer/03_binary_search_dc/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
-|:------------|:----------:|--------:|
-| [← 02. Quick Select](../02_quick_select/README.md) | **03. Binary Search D&C** | [🏠 D&C Home](../README.md) → [Bit Manipulation](../../21_bit_manipulation/README.md) |
-
----
-
-## 🖼️ Visual Overview
+## 📊 Visual Overview
 
 <div align="center">
   <img src="./images/binary-search.png" alt="Binary Search as D&C" width="100%">
@@ -44,8 +40,33 @@ permalink: /20_divide_and_conquer/03_binary_search_dc/
 
 ---
 
-## 📐 Mathematical Foundations
 
+---
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🔍 Binary Search as D&C |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 6+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
+|:------------|:----------:|--------:|
+| [← 02. Quick Select](../02_quick_select/README.md) | **03. Binary Search D&C** | [🏠 D&C Home](../README.md) → [Bit Manipulation](../../21_bit_manipulation/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Binary Search Recurrence
 
 $$T(n) = T(n/2) + O(1) = O(\log n)$$
@@ -217,9 +238,3 @@ def maxSubArray(nums: list[int]) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
-|:------------|:----------:|--------:|
-| [← 02. Quick Select](../02_quick_select/README.md) | **03. Binary Search D&C** | [🏠 D&C Home](../README.md) → [Bit Manipulation](../../21_bit_manipulation/README.md) |
