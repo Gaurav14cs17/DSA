@@ -10,6 +10,8 @@ permalink: /20_divide_and_conquer/
 
 # ⚔️ Divide and Conquer
 
+### *Divide → Conquer → Combine*
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
@@ -31,11 +33,25 @@ permalink: /20_divide_and_conquer/
 
 ![Divide and Conquer Overview](./images/dnc-overview.png)
 
+*Divide and Conquer Overview*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **In one line** | Divide → Conquer → Combine |
+| **Difficulty** | Medium to Hard |
+| **Subtopics** | 3 |
+| **Problems** | 20+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🖼️ Visual Overview
 
 <div align="center">
