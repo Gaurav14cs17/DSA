@@ -35,6 +35,17 @@ permalink: /25_tree_algorithms/04_heavy_light_decomposition/
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Hard |
+| **Problems** | 8+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ HLD Definition
