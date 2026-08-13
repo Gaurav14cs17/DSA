@@ -57,7 +57,7 @@ a ≡ b (mod m) ⟺ a mod m = b mod m
 
 <div align="center">
 
-![Modular Operations](./images/modular_operations.svg)
+![Modular Operations](./images/modular_operations.png)
 
 </div>
 
