@@ -46,6 +46,7 @@ permalink: /12_segment_trees/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ Segment Tree Definition
