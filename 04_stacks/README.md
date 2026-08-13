@@ -39,8 +39,6 @@ permalink: /04_stacks/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -55,8 +53,6 @@ permalink: /04_stacks/
 
 ---
 
----
-
 ## 📂 Subtopics Navigation
 
 | # | Topic | Problems | Link |
@@ -65,8 +61,6 @@ permalink: /04_stacks/
 | 2 | Parentheses | 10+ | [📖 Go →](./02_parentheses/README.md) |
 | 3 | Monotonic Stack | 12+ | [📖 Go →](./03_monotonic_stack/README.md) |
 | 4 | Expression Evaluation | 8+ | [📖 Go →](./04_expression_evaluation/README.md) |
-
----
 
 ---
 
@@ -188,8 +182,6 @@ $$\text{min\_at}[i] = \min(value[i], \text{min\_at}[i-1])$$
 
 ---
 
----
-
 ## 🎯 Key Patterns
 
 ### Basic Stack Operations
@@ -236,8 +228,6 @@ def next_greater_element(nums: list[int]) -> list[int]:
     return result
 
 ```
-
----
 
 ---
 
@@ -290,8 +280,6 @@ def next_greater_element(nums: list[int]) -> list[int]:
 
 ---
 
----
-
 ## 📊 Pattern Decision Tree
 
 ```
@@ -307,8 +295,6 @@ Parentheses   Monotonic Stack   Shunting-Yard
  Pop to match  Inc for NSE    + operand stack
 
 ```
-
----
 
 ---
 
@@ -331,8 +317,6 @@ Parentheses   Monotonic Stack   Shunting-Yard
 
 ---
 
----
-
 ## 🧮 Quick Pattern Reference
 
 | Pattern in Problem | Technique | Example |
@@ -345,8 +329,6 @@ Parentheses   Monotonic Stack   Shunting-Yard
 | "min/max in O(1)" | Auxiliary stack | #155 |
 | "trapping water" | Monotonic stack | #42 |
 | "daily temperatures" | Monotonic stack | #739 |
-
----
 
 ---
 
@@ -369,8 +351,6 @@ Parentheses   Monotonic Stack   Shunting-Yard
 | 13 | [Car Fleet](https://leetcode.com/problems/car-fleet/) | Stack | 🟡 Medium | Creative use |
 | 14 | [Sum of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/) | Monotonic | 🟡 Medium | Contribution |
 | 15 | [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/) | Histogram | 🔴 Hard | 2D extension |
-
----
 
 ---
 
@@ -448,8 +428,6 @@ Parentheses   Monotonic Stack   Shunting-Yard
 
 ---
 
----
-
 ## 🎖️ Interview Success Tips
 
 ### Common Mistakes to Avoid
@@ -489,8 +467,6 @@ Parentheses   Monotonic Stack   Shunting-Yard
 [ ] Do I need to process in reverse?
 
 ```
-
----
 
 ---
 
