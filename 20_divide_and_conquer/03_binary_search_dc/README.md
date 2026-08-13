@@ -30,14 +30,14 @@ permalink: /20_divide_and_conquer/03_binary_search_dc/
 ## 🖼️ Visual Overview
 
 <div align="center">
-  <img src="./images/binary-search.svg" alt="Binary Search as D&C" width="100%">
+  <img src="./images/binary-search.png" alt="Binary Search as D&C" width="100%">
 </div>
 
 <details>
 <summary>📊 Median of Two Sorted Arrays Visualization</summary>
 
 <div align="center">
-  <img src="./images/median-two-arrays.svg" alt="Median of Two Sorted Arrays" width="100%">
+  <img src="./images/median-two-arrays.png" alt="Median of Two Sorted Arrays" width="100%">
 </div>
 
 </details>
