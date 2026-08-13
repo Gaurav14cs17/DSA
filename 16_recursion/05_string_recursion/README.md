@@ -23,15 +23,7 @@ permalink: /16_recursion/05_string_recursion/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Permutations](../04_permutation_combination/README.md) | **05. String Recursion** | [06. Array Recursion →](../06_array_recursion/README.md) |
-
----
-
-## 📊 Visual Diagrams
+## 📊 Visual Overview
 
 <p align="center">
   <img src="./images/string_reverse.png" alt="String Reverse Recursion" width="100%"/>
@@ -44,6 +36,27 @@ permalink: /16_recursion/05_string_recursion/
 <p align="center">
   <img src="./images/palindrome_check.png" alt="Palindrome Check Recursion" width="100%"/>
 </p>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Processing strings character by character using recursion |
+| **Difficulty** | Easy to Medium |
+| **Problems** | 12+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 04. Permutations](../04_permutation_combination/README.md) | **05. String Recursion** | [06. Array Recursion →](../06_array_recursion/README.md) |
 
 ---
 
@@ -574,10 +587,3 @@ String Recursion Patterns
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Permutations](../04_permutation_combination/README.md) | **05. String Recursion** | [06. Array Recursion →](../06_array_recursion/README.md) |
-
