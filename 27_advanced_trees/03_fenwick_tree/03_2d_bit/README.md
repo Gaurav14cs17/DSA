@@ -36,6 +36,17 @@ permalink: /27_advanced_trees/03_fenwick_tree/03_2d_bit/
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Hard |
+| **Problems** | 5 |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Core Concept
 
 **2D BIT:** Extend 1D BIT to 2D matrices.
