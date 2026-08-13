@@ -32,6 +32,16 @@ permalink: /30_number_theory/02_primes/03_prime_factorization/
 
 ---
 
+## 📊 Visual Diagram
+
+<div align="center">
+
+![Prime Factorization](./images/prime_factorization.png)
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Fundamental Theorem of Arithmetic
@@ -71,16 +81,6 @@ $$\phi(n) = n \prod_{i=1}^{k} \left(1 - \frac{1}{p_i}\right)$$
 | Trial Division | O(√n) | O(log n) | Single number |
 | With SPF | O(log n) | O(n) | Multiple queries |
 | Pollard's Rho | O(n^(1/4)) | O(1) | Very large n |
-
----
-
-## 📊 Visual Diagram
-
-<div align="center">
-
-![Prime Factorization](./images/prime_factorization.png)
-
-</div>
 
 ---
 
@@ -535,30 +535,6 @@ def euler_totient(n: int) -> int:
 
 ---
 
-## 🏆 LeetCode Problems
-
-### 🟢 Easy
-
-| # | Problem | Key Concept | Time |
-|:-:|---------|-------------|------|
-| 263 | [Ugly Number](https://leetcode.com/problems/ugly-number/) | Prime factor check | O(log n) |
-
-### 🟡 Medium
-
-| # | Problem | Key Concept | Time |
-|:-:|---------|-------------|------|
-| 264 | [Ugly Number II](https://leetcode.com/problems/ugly-number-ii/) | Generate sequence | O(n) |
-| 313 | [Super Ugly Number](https://leetcode.com/problems/super-ugly-number/) | Multiple primes | O(nk) |
-| 1390 | [Four Divisors](https://leetcode.com/problems/four-divisors/) | Divisor counting | O(n√m) |
-
-### 🔴 Hard
-
-| # | Problem | Key Concept | Time |
-|:-:|---------|-------------|------|
-| 952 | [Largest Component Size by Common Factor](https://leetcode.com/problems/largest-component-size-by-common-factor/) | Union-Find + factorization | O(n√m) |
-
----
-
 ## 💻 Solutions to Key Problems
 
 ### Problem 263: Ugly Number
@@ -652,6 +628,30 @@ class Solution:
         return sum(sum_if_four_divisors(n) for n in nums)
 
 ```
+
+---
+
+## 🏆 LeetCode Problems
+
+### 🟢 Easy
+
+| # | Problem | Key Concept | Time |
+|:-:|---------|-------------|------|
+| 263 | [Ugly Number](https://leetcode.com/problems/ugly-number/) | Prime factor check | O(log n) |
+
+### 🟡 Medium
+
+| # | Problem | Key Concept | Time |
+|:-:|---------|-------------|------|
+| 264 | [Ugly Number II](https://leetcode.com/problems/ugly-number-ii/) | Generate sequence | O(n) |
+| 313 | [Super Ugly Number](https://leetcode.com/problems/super-ugly-number/) | Multiple primes | O(nk) |
+| 1390 | [Four Divisors](https://leetcode.com/problems/four-divisors/) | Divisor counting | O(n√m) |
+
+### 🔴 Hard
+
+| # | Problem | Key Concept | Time |
+|:-:|---------|-------------|------|
+| 952 | [Largest Component Size by Common Factor](https://leetcode.com/problems/largest-component-size-by-common-factor/) | Union-Find + factorization | O(n√m) |
 
 ---
 
