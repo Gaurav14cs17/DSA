@@ -10,20 +10,16 @@ permalink: /25_tree_algorithms/03_tree_construction/
 
 # 🏗️ Tree Construction & Serialization
 
+### *Tree Construction & Serialization*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. Tree DP](../02_tree_dp/README.md) | **03. Tree Construction** | [🏠 Home](../README.md) |
 
 ---
 
@@ -46,8 +42,16 @@ permalink: /25_tree_algorithms/03_tree_construction/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 📐 Mathematical Foundations
 
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 02. Tree DP](../02_tree_dp/README.md) | **03. Tree Construction** | [🏠 Home](../README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Tree Traversals
 
 **Three main traversals** of binary tree:
@@ -690,10 +694,3 @@ Tree Construction
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. Tree DP](../02_tree_dp/README.md) | **03. Tree Construction** | [🏠 Home](../README.md) |
-
