@@ -433,8 +433,6 @@ def lastStoneWeight(stones: list[int]) -> int:
 
 ---
 
----
-
 ## 💡 Pro Tips & Common Mistakes
 
 ### ✅ **Do's:**
