@@ -33,12 +33,6 @@ permalink: /30_number_theory/03_modular_arithmetic/06_applications/
 
 ---
 
-## 📐 Overview
-
-Modular arithmetic appears in **30%+ of competitive programming problems**. This section covers the most common patterns and their solutions.
-
----
-
 ## 📊 Visual Diagram
 
 <div align="center">
@@ -49,16 +43,36 @@ Modular arithmetic appears in **30%+ of competitive programming problems**. This
 
 ---
 
-## 🏆 LeetCode Problems
+## 📐 Overview
 
-| # | Problem | Difficulty | Key Concept | Link |
-|:-:|---------|:----------:|-------------|------|
-| 50 | Pow(x, n) | 🟡 Medium | Fast exponentiation | [LeetCode](https://leetcode.com/problems/powx-n/) |
-| 372 | Super Pow | 🟡 Medium | Modular power with array | [LeetCode](https://leetcode.com/problems/super-pow/) |
-| 1922 | Count Good Numbers | 🟡 Medium | Modular counting | [LeetCode](https://leetcode.com/problems/count-good-numbers/) |
-| 1808 | Maximize Nice Divisors | 🔴 Hard | Modular inverse | [LeetCode](https://leetcode.com/problems/maximize-number-of-nice-divisors/) |
-| 1513 | Number of Substrings With Only 1s | 🟡 Medium | Arithmetic series mod | [LeetCode](https://leetcode.com/problems/number-of-substrings-with-only-1s/) |
-| 1916 | Count Ways to Build Rooms | 🔴 Hard | Factorial + inverse | [LeetCode](https://leetcode.com/problems/count-ways-to-build-rooms-in-an-ant-colony/) |
+Modular arithmetic appears in **30%+ of competitive programming problems**. This section covers the most common patterns and their solutions.
+
+---
+
+## 🎨 Visual: Modular Exponentiation
+
+```
++-----------------------------------------------------------------+
+| COMPUTING 3^13 mod 1000 using Binary Exponentiation            |
++-----------------------------------------------------------------+
+|                                                                 |
+| 13 in binary = 1101                                            |
+| 3^13 = 3^8 × 3^4 × 3^1                                        |
+|                                                                 |
+| Step-by-step:                                                  |
+|   base = 3, result = 1                                         |
+|                                                                 |
+|   exp = 13 (1101)                                              |
+|   bit 0 = 1: result = 1 × 3 = 3, base = 9                     |
+|   bit 1 = 0: result = 3, base = 81                            |
+|   bit 2 = 1: result = 3 × 81 = 243, base = 6561 % 1000 = 561  |
+|   bit 3 = 1: result = 243 × 561 % 1000 = 323                  |
+|                                                                 |
+| Final: 3^13 mod 1000 = 323                                     |
+| Verify: 3^13 = 1594323, 1594323 % 1000 = 323 ✓                |
++-----------------------------------------------------------------+
+
+```
 
 ---
 
@@ -221,6 +235,19 @@ class Solution:
 
 ---
 
+## 🏆 LeetCode Problems
+
+| # | Problem | Difficulty | Key Concept | Link |
+|:-:|---------|:----------:|-------------|------|
+| 50 | Pow(x, n) | 🟡 Medium | Fast exponentiation | [LeetCode](https://leetcode.com/problems/powx-n/) |
+| 372 | Super Pow | 🟡 Medium | Modular power with array | [LeetCode](https://leetcode.com/problems/super-pow/) |
+| 1922 | Count Good Numbers | 🟡 Medium | Modular counting | [LeetCode](https://leetcode.com/problems/count-good-numbers/) |
+| 1808 | Maximize Nice Divisors | 🔴 Hard | Modular inverse | [LeetCode](https://leetcode.com/problems/maximize-number-of-nice-divisors/) |
+| 1513 | Number of Substrings With Only 1s | 🟡 Medium | Arithmetic series mod | [LeetCode](https://leetcode.com/problems/number-of-substrings-with-only-1s/) |
+| 1916 | Count Ways to Build Rooms | 🔴 Hard | Factorial + inverse | [LeetCode](https://leetcode.com/problems/count-ways-to-build-rooms-in-an-ant-colony/) |
+
+---
+
 ## 📚 Common Patterns
 
 ### Pattern 1: Large Power Modulo
@@ -274,33 +301,6 @@ def sum_ap_mod(n: int, mod: int) -> int:
     """Compute 1 + 2 + ... + n mod p."""
     # n(n+1)/2 mod p = n × (n+1) × inverse(2) mod p
     return n * (n + 1) % mod * pow(2, mod - 2, mod) % mod
-
-```
-
----
-
-## 🎨 Visual: Modular Exponentiation
-
-```
-+-----------------------------------------------------------------+
-| COMPUTING 3^13 mod 1000 using Binary Exponentiation            |
-+-----------------------------------------------------------------+
-|                                                                 |
-| 13 in binary = 1101                                            |
-| 3^13 = 3^8 × 3^4 × 3^1                                        |
-|                                                                 |
-| Step-by-step:                                                  |
-|   base = 3, result = 1                                         |
-|                                                                 |
-|   exp = 13 (1101)                                              |
-|   bit 0 = 1: result = 1 × 3 = 3, base = 9                     |
-|   bit 1 = 0: result = 3, base = 81                            |
-|   bit 2 = 1: result = 3 × 81 = 243, base = 6561 % 1000 = 561  |
-|   bit 3 = 1: result = 243 × 561 % 1000 = 323                  |
-|                                                                 |
-| Final: 3^13 mod 1000 = 323                                     |
-| Verify: 3^13 = 1594323, 1594323 % 1000 = 323 ✓                |
-+-----------------------------------------------------------------+
 
 ```
 
