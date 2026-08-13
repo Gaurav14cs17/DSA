@@ -25,7 +25,7 @@ permalink: /04_stacks/04_expression_evaluation/
 
 ### 📝 Expression Notations
 
-<img src="./images/expression_notations.svg" alt="Expression Notations" width="850"/>
+<img src="./images/expression_notations.png" alt="Expression Notations" width="850"/>
 
 *Infix, Prefix (Polish), and Postfix (RPN) comparison*
 
@@ -33,7 +33,7 @@ permalink: /04_stacks/04_expression_evaluation/
 
 ### 🔢 Postfix (RPN) Evaluation
 
-<img src="./images/postfix_evaluation.svg" alt="Postfix Evaluation" width="850"/>
+<img src="./images/postfix_evaluation.png" alt="Postfix Evaluation" width="850"/>
 
 *Stack-based evaluation without precedence rules - LeetCode #150*
 
@@ -41,7 +41,7 @@ permalink: /04_stacks/04_expression_evaluation/
 
 ### 🔀 Shunting-Yard Algorithm
 
-<img src="./images/shunting_yard.svg" alt="Shunting-Yard" width="900"/>
+<img src="./images/shunting_yard.png" alt="Shunting-Yard" width="900"/>
 
 *Dijkstra's algorithm: Infix → Postfix conversion*
 
@@ -49,7 +49,7 @@ permalink: /04_stacks/04_expression_evaluation/
 
 ### 🧮 Basic Calculator
 
-<img src="./images/basic_calculator.svg" alt="Basic Calculator" width="850"/>
+<img src="./images/basic_calculator.png" alt="Basic Calculator" width="850"/>
 
 *Handling +, - and nested parentheses - LeetCode #224*
 
