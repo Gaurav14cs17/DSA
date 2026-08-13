@@ -11,6 +11,8 @@ permalink: /30_number_theory/09_catalan_numbers/02_bst_counting/
 
 # 🌲 BST Counting with Catalan Numbers
 
+### *Counting and Generating Unique BSTs*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/LeetCode-96_95-blue?style=for-the-badge" alt="LeetCode">
@@ -39,10 +41,23 @@ permalink: /30_number_theory/09_catalan_numbers/02_bst_counting/
 
 ![BST Counting](./images/bst_counting.png)
 
+*BST Counting*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Counting and Generating Unique BSTs |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Why Catalan Numbers?
 
 ### The Connection
