@@ -34,7 +34,7 @@ permalink: /30_number_theory/01_gcd_lcm/06_applications/
 
 <div align="center">
 
-![GCD Applications](./images/gcd_applications.svg)
+![GCD Applications](./images/gcd_applications.png)
 
 </div>
 
