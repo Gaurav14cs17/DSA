@@ -10,6 +10,8 @@ permalink: /16_recursion/08_mathematical_recursion/
 
 # 🔢 Mathematical Recursion
 
+### *Solving mathematical problems using recursive definitions*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-green?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-15+-blue?style=for-the-badge" alt="Problems">
