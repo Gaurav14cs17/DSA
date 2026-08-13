@@ -10,6 +10,8 @@ permalink: /34_sqrt_decomposition/01_range_queries/
 
 # 📊 Range Queries with Sqrt Decomposition
 
+### *Efficient Range Operations Using Block Decomposition*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Time-O(√n)-blue?style=for-the-badge" alt="Time">
@@ -23,15 +25,7 @@ permalink: /34_sqrt_decomposition/01_range_queries/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Sqrt Decomp Home](../README.md) | **01. Range Queries** | [02. Mo's Algorithm →](../02_mos_algorithm/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 ### Range Sum Query with Point Update
 
@@ -50,6 +44,26 @@ permalink: /34_sqrt_decomposition/01_range_queries/
 <div align="center">
 <img src="./images/range-update-lazy.png" alt="Range Update with Lazy" width="100%">
 </div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Efficient Range Operations Using Block Decomposition |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [🏠 Sqrt Decomp Home](../README.md) | **01. Range Queries** | [02. Mo's Algorithm →](../02_mos_algorithm/README.md) |
 
 ---
 
@@ -309,10 +323,3 @@ class RangeUpdateQuery:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Sqrt Decomp Home](../README.md) | **01. Range Queries** | [02. Mo's Algorithm →](../02_mos_algorithm/README.md) |
-
