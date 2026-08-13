@@ -10,12 +10,39 @@ permalink: /24_graph_algorithms/03_topological_sort/
 
 # 📋 Topological Sort
 
+### *📋 Topological Sort*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Topological Sort - Kahn's Algorithm](./images/topological-sort.png)
+
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 📋 Topological Sort |
+| **Difficulty** | Medium |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -27,18 +54,7 @@ permalink: /24_graph_algorithms/03_topological_sort/
 
 ---
 
-## 🎨 Visual Overview
-
-<div align="center">
-
-![Topological Sort - Kahn's Algorithm](./images/topological-sort.png)
-
-</div>
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Definition
 
 **Topological ordering** of DAG $G = (V, E)$:
@@ -669,10 +685,3 @@ Topological Sort
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. MST](../02_minimum_spanning_tree/README.md) | **03. Topological Sort** | [04. Network Flow →](../04_network_flow/README.md) |
-
