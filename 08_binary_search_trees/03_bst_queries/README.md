@@ -31,7 +31,7 @@ permalink: /08_binary_search_trees/03_bst_queries/
 
 <div align="center">
 
-![BST Queries](./image/bst_queries.svg)
+![BST Queries](./image/bst_queries.png)
 
 </div>
 
