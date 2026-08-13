@@ -19,6 +19,14 @@ nav_order: 6
 
 ---
 
+## 📊 Visual Overview
+
+![Closest Pair of Points](./images/closest-pair.png)
+
+*Divide and conquer approach with strip optimization*
+
+---
+
 ## 🎯 Overview
 
 **Problem:** Given n points in 2D plane, find the pair with minimum distance.
@@ -26,14 +34,6 @@ nav_order: 6
 **Naive:** O(n²) - check all pairs
 
 **Optimal:** O(n log n) - divide and conquer
-
----
-
-## 📊 Visual Overview
-
-![Closest Pair of Points](./images/closest-pair.png)
-
-*Divide and conquer approach with strip optimization*
 
 ---
 
