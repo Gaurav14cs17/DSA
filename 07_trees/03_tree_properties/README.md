@@ -26,11 +26,25 @@ permalink: /07_trees/03_tree_properties/
 
 ![Tree Properties Diagram](./images/tree-properties.png)
 
+*Tree Properties Diagram*
+
 </div>
 
 ---
 
+---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Easy to Medium |
+| **Problems** | 12+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
