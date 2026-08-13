@@ -24,15 +24,7 @@ permalink: /30_number_theory/06_chinese_remainder/03_applications/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. General CRT](../02_general_crt/README.md) | **03. Applications** | [🏠 CRT Home](../README.md) |
-
----
-
-## 📊 Visual Diagram
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -55,6 +47,15 @@ permalink: /30_number_theory/06_chinese_remainder/03_applications/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 02. General CRT](../02_general_crt/README.md) | **03. Applications** | [🏠 CRT Home](../README.md) |
+
+---
+
 ## 🔐 1. RSA Speedup (Garner's Algorithm)
 
 ```python
@@ -220,9 +221,3 @@ def count_arrangements(n: int, constraints: list[tuple]) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. General CRT](../02_general_crt/README.md) | **03. Applications** | [🏠 CRT Home](../README.md) |
