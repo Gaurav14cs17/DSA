@@ -44,17 +44,17 @@ nav_order: 1
 
 ---
 
+## 🎯 Overview
+
+Geometric primitives are the fundamental building blocks of computational geometry: points, vectors, lines, and basic operations on them.
+
+---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
 |:------------|:----------:|--------:|
 | [🏠 Computational Geometry](../README.md) | **01. Geometric Primitives** | [02. Convex Hull →](../02_convex_hull/README.md) |
-
----
-
-## 🎯 Overview
-
-Geometric primitives are the fundamental building blocks of computational geometry: points, vectors, lines, and basic operations on them.
 
 ---
 
@@ -585,4 +585,3 @@ if point1.distance_squared(ref) < point2.distance_squared(ref):
 ---
 
 **Navigation:** [← Computational Geometry](../README.md) | [Next: Convex Hull →](../02_convex_hull/)
-
