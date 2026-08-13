@@ -11,6 +11,8 @@ permalink: /30_number_theory/07_linear_diophantine/
 
 # ➗ Linear Diophantine Equations
 
+### *Integer Solutions to Linear Equations*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-12+-blue?style=for-the-badge" alt="Problems">
