@@ -31,7 +31,7 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/01_lazy_propagation/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/lazy-propagation.svg" alt="Lazy Propagation" width="100%">
+<img src="./images/lazy-propagation.png" alt="Lazy Propagation" width="100%">
 </div>
 
 ---
