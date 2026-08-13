@@ -10,7 +10,7 @@ nav_order: 6
 
 ## 📊 Visual Overview
 
-![Multiple Patterns](./images/multiple-patterns.svg)
+![Multiple Patterns](./images/multiple-patterns.png)
 
 ## 📊 Metadata
 
