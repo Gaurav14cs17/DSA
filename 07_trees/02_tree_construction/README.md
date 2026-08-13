@@ -32,8 +32,6 @@ permalink: /07_trees/02_tree_construction/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -441,8 +439,6 @@ class Codec:
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 297 | [Serialize and Deserialize](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | Preorder + Null | O(n) | O(n) |
-
----
 
 ---
 
