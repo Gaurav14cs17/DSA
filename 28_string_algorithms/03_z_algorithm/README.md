@@ -4,11 +4,18 @@ title: "Z-Algorithm"
 parent: "String Algorithms"
 nav_order: 3
 ---
+<div align="center">
 
 # 🔢 Z-Algorithm
 
-### *The **Z-Algorithm** computes the **Z-array** for a string in linear time.*
+### *Linear-time Z-array construction for pattern matching*
 
+<p><img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty"></p>
+
+[🏠 String Algorithms](../../README.md)
+</div>
+
+---
 
 ## 📊 Visual Overview
 
@@ -30,6 +37,14 @@ nav_order: 3
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Rabin-Karp](../02_rabin_karp/README.md) | **Z-Algorithm** | [Suffix Structures →](../04_suffix_structures/README.md) |
 
 ---
 
@@ -692,4 +707,3 @@ def longest_common_prefix_multiple(strings):
 ---
 
 **Navigation:** [← Rabin-Karp](../02_rabin_karp/) | [String Algorithms](../README.md) | [Next: Suffix Structures →](../04_suffix_structures/)
-
