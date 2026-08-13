@@ -32,15 +32,15 @@ permalink: /16_recursion/05_string_recursion/
 ## 📊 Visual Diagrams
 
 <p align="center">
-  <img src="./images/string_reverse.svg" alt="String Reverse Recursion" width="100%"/>
+  <img src="./images/string_reverse.png" alt="String Reverse Recursion" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="./images/decode_string.svg" alt="Decode String Recursion" width="100%"/>
+  <img src="./images/decode_string.png" alt="Decode String Recursion" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="./images/palindrome_check.svg" alt="Palindrome Check Recursion" width="100%"/>
+  <img src="./images/palindrome_check.png" alt="Palindrome Check Recursion" width="100%"/>
 </p>
 
 ---
