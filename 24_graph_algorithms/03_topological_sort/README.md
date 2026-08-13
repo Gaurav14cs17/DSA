@@ -31,7 +31,7 @@ permalink: /24_graph_algorithms/03_topological_sort/
 
 <div align="center">
 
-![Topological Sort - Kahn's Algorithm](./images/topological-sort.svg)
+![Topological Sort - Kahn's Algorithm](./images/topological-sort.png)
 
 </div>
 
