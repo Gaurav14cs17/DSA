@@ -10,7 +10,6 @@ permalink: /19_greedy_algorithms/03_array_greedy/
 
 # 📊 Array Greedy Problems
 
-![Array Greedy](./images/array_greedy.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -20,6 +19,17 @@ permalink: /19_greedy_algorithms/03_array_greedy/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Array Greedy](./images/array_greedy.png)
+
+</div>
+
+---
+
 
 ## 🧭 Navigation
 
