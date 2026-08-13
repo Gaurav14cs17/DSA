@@ -30,7 +30,7 @@ permalink: /18_dynamic_programming/02_2d_dp/
 ## 📊 Visual Guide
 
 <div align="center">
-  <img src="images/2d-dp.svg" alt="2D DP Visualization" width="100%">
+  <img src="images/2d-dp.png" alt="2D DP Visualization" width="100%">
 </div>
 
 ---
