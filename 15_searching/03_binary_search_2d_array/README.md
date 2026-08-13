@@ -26,11 +26,25 @@ permalink: /15_searching/03_binary_search_2d_array/
 
 ![2D Matrix Search](./images/2d-matrix-search.png)
 
+*2D Matrix Search*
+
 </div>
 
 ---
 
+---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Medium |
+| **Problems** | 5+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
