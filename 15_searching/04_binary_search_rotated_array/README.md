@@ -10,7 +10,6 @@ permalink: /15_searching/04_binary_search_rotated_array/
 
 # 🔄 Binary Search in Rotated Array
 
-![Rotated Array Search](./images/rotated-array.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -21,11 +20,28 @@ permalink: /15_searching/04_binary_search_rotated_array/
 
 ---
 
+## 📊 Visual Overview
+
+<div align="center">
+
+![Rotated Array Search](./images/rotated-array.png)
+
+</div>
+
+---
+
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
 |:------------|:----------:|--------:|
 | [← 03. 2D Array](../03_binary_search_2d_array/README.md) | **04. Rotated Array** | [05. Advanced BS →](../05_binary_search_advanced/README.md) |
+
+---
+
+## 📊 Visual: Find Minimum
+
+![Find Minimum in Rotated Array](./images/find-minimum.png)
 
 ---
 
@@ -64,12 +80,6 @@ Worst case: all elements same except one.
 $$T = O(n) \text{ worst case}$$
 
 **Handle:** When $arr[left] = arr[mid] = arr[right]$, shrink both ends.
-
----
-
-## 📊 Visual: Find Minimum
-
-![Find Minimum in Rotated Array](./images/find-minimum.png)
 
 ---
 
