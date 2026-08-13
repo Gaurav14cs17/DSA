@@ -22,7 +22,7 @@ permalink: /26_sweep_line/04_angular_sweep/
 ## 📊 Visual Overview
 
 <div align="center">
-  <img src="./images/angular-sweep.svg" alt="Angular Sweep Visualization" width="800"/>
+  <img src="./images/angular-sweep.png" alt="Angular Sweep Visualization" width="800"/>
 </div>
 
 ---
