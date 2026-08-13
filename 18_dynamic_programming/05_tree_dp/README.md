@@ -30,7 +30,7 @@ permalink: /18_dynamic_programming/05_tree_dp/
 ## 📊 Visual Guide
 
 <div align="center">
-  <img src="images/tree-dp.svg" alt="Tree DP Visualization" width="100%">
+  <img src="images/tree-dp.png" alt="Tree DP Visualization" width="100%">
 </div>
 
 ---
