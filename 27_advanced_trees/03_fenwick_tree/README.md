@@ -101,7 +101,7 @@ permalink: /27_advanced_trees/03_fenwick_tree/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/fenwick-tree.svg" alt="Fenwick Tree Structure" width="100%">
+<img src="./images/fenwick-tree.png" alt="Fenwick Tree Structure" width="100%">
 </div>
 
 ---
