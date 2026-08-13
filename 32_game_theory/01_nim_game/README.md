@@ -124,17 +124,17 @@ a \oplus b &= b \oplus a \quad \text{(commutative)} \\
 
 ### Nim-Sum (XOR) Calculation
 <p align="center">
-  <img src="./images/nim-xor-calculation.svg" alt="Nim XOR Calculation" width="100%">
+  <img src="./images/nim-xor-calculation.png" alt="Nim XOR Calculation" width="100%">
 </p>
 
 ### Winning & Losing Positions
 <p align="center">
-  <img src="./images/nim-game-positions.svg" alt="Nim Game Positions" width="100%">
+  <img src="./images/nim-game-positions.png" alt="Nim Game Positions" width="100%">
 </p>
 
 ### Nim Decision Tree
 <p align="center">
-  <img src="./images/nim-decision-tree.svg" alt="Nim Decision Tree" width="100%">
+  <img src="./images/nim-decision-tree.png" alt="Nim Decision Tree" width="100%">
 </p>
 
 ---
