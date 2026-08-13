@@ -78,7 +78,7 @@ $$\phi(n) = n \prod_{i=1}^{k} \left(1 - \frac{1}{p_i}\right)$$
 
 <div align="center">
 
-![Prime Factorization](./images/prime_factorization.svg)
+![Prime Factorization](./images/prime_factorization.png)
 
 </div>
 
