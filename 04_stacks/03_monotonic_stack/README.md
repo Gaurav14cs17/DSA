@@ -10,6 +10,8 @@ permalink: /04_stacks/03_monotonic_stack/
 
 # 📈 Monotonic Stack
 
+### *📈 Monotonic Stack*
+
 
 
 <p>
@@ -587,19 +589,6 @@ A: Sometimes! For trapping water, two pointers is O(1) space. But stack is more 
 </div>
 
 ---
-
----
-
-## 🎯 At a Glance
-
-| | |
-|:---|:---|
-| **Topic** | 📈 Monotonic Stack |
-| **Difficulty** | Medium to Hard |
-| **Problems** | 12+ |
-
-{: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
