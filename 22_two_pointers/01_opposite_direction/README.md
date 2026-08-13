@@ -24,29 +24,7 @@ permalink: /22_two_pointers/01_opposite_direction/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Two Pointers Home](../README.md) | **01. Opposite Direction** | [02. Same Direction →](../02_same_direction/README.md) |
-
----
-
-## 🎯 What You'll Master
-
-- Two Sum in sorted arrays with mathematical proof
-
-- 3Sum and 4Sum reduction techniques
-
-- Container With Most Water with optimality proof
-
-- Trapping Rain Water with dual-max approach
-
-- Palindrome verification patterns
-
----
-
-## 📊 Visual Diagrams
+## 📊 Visual Overview
 
 ### Two Sum Convergence
 ![Two Sum Convergence](./images/two-sum-convergence.png)
@@ -145,8 +123,34 @@ Water fills up to height 7 (the shorter of 8 and 7)
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 What You'll Master
 
+- Two Sum in sorted arrays with mathematical proof
+
+- 3Sum and 4Sum reduction techniques
+
+- Container With Most Water with optimality proof
+
+- Trapping Rain Water with dual-max approach
+
+- Palindrome verification patterns
+
+---
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [🏠 Two Pointers Home](../README.md) | **01. Opposite Direction** | [02. Same Direction →](../02_same_direction/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ The Convergence Principle
 
 {: .highlight }
@@ -298,7 +302,7 @@ Why moving L was correct:
 
 ### 4️⃣ Trapping Rain Water — The Dual-Maximum Insight
 
-{: .highlight }
+
 > Water at position \(i\) depends on the **minimum** of the **maximum** heights on both sides.
 
 #### The Key Formula
@@ -821,9 +825,3 @@ def reverseVowels(s: str) -> str:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Two Pointers Home](../README.md) | **01. Opposite Direction** | [02. Same Direction →](../02_same_direction/README.md) |
