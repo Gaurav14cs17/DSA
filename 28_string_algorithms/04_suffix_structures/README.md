@@ -7,21 +7,29 @@ nav_order: 4
 
 # 📚 Suffix Arrays & LCP Arrays
 
+### ***Suffix Array** is a sorted array of all suffixes of a string.*
+
+
 ## 📊 Visual Overview
 
 ![Suffix Structures](./images/suffix-structures.png)
 
-## 📊 Metadata
+*Suffix Structures*
 
-- **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
+---
 
-- **Time Complexity:** O(n log n) construction, O(m log n) query
+## 🎯 At a Glance
 
-- **Space Complexity:** O(n)
+| | |
+|:---|:---|
+| **In one line** | **Suffix Array** is a sorted array of all suffixes of a string. |
+| **Typical time** | O(n log n) construction, O(m log n) query |
+| **Typical space** | O(n) |
+| **Topics** | Suffix Array, LCP, String Sorting |
+| **Prerequisites** | Sorting, Binary search, String basics |
 
-- **Topics:** Suffix Array, LCP, String Sorting
-
-- **Prerequisites:** Sorting, Binary search, String basics
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
