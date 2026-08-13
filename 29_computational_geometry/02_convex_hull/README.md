@@ -4,10 +4,20 @@ title: "Convex Hull"
 parent: "Computational Geometry"
 nav_order: 2
 ---
+<div align="center">
 
 # 🔺 Convex Hull Algorithms
 
-### ***Convex Hull:** Smallest convex polygon containing all given points.*
+### *Graham scan, Jarvis march, and convex hull algorithms*
+
+<p><img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty"></p>
+
+[🏠 Computational Geometry](../README.md)
+
+</div>
+
+---
+
 
 
 ## 📊 Visual Overview
@@ -28,6 +38,14 @@ nav_order: 2
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [🏠 Computational Geometry](../README.md) | **02. Convex Hull** | [Line Intersection →](../03_line_intersection/README.md) |
+
+---
+
 
 ---
 
@@ -376,4 +394,3 @@ def point_in_convex_hull(point, hull):
 ---
 
 **Navigation:** [← Geometric Primitives](../01_geometric_primitives/) | [Next: Line Intersection →](../03_line_intersection/)
-
