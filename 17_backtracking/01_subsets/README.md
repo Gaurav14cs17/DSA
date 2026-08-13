@@ -10,7 +10,7 @@ permalink: /17_backtracking/01_subsets/
 
 # 📦 Subsets
 
-![Subsets Tree](./images/subsets_tree.svg)
+![Subsets Tree](./images/subsets_tree.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
