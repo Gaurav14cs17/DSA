@@ -10,7 +10,6 @@ permalink: /13_union_find/
 
 # 🔗 Union-Find (Disjoint Set Union)
 
-![Union Find](../assets/images/union-find.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -25,6 +24,17 @@ permalink: /13_union_find/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Union Find](../assets/images/union-find.png)
+
+</div>
+
+---
+
 
 ## 📐 Mathematical Foundation
 
