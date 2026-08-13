@@ -11,6 +11,8 @@ permalink: /30_number_theory/07_linear_diophantine/04_coin_problems/
 
 # 🪙 Coin Problems
 
+### *Making Change with Diophantine Equations*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/LeetCode-322_518-blue?style=for-the-badge" alt="LeetCode">
@@ -36,10 +38,23 @@ permalink: /30_number_theory/07_linear_diophantine/04_coin_problems/
 
 ![Coin Problem](./images/coin_problem.png)
 
+*Coin Problem*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Making Change with Diophantine Equations |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty | Connection |
