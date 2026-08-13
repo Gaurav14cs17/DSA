@@ -37,7 +37,7 @@ permalink: /30_number_theory/09_catalan_numbers/01_basic_catalan/
 
 <div align="center">
 
-![Catalan Numbers](./images/catalan_numbers.svg)
+![Catalan Numbers](./images/catalan_numbers.png)
 
 </div>
 
