@@ -11,6 +11,8 @@ permalink: /30_number_theory/06_chinese_remainder/03_applications/
 
 # 🎯 CRT Applications
 
+### *Practical Uses of the Chinese Remainder Theorem*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Topics-Cryptography_Competition-blue?style=for-the-badge" alt="Topics">
@@ -36,10 +38,23 @@ permalink: /30_number_theory/06_chinese_remainder/03_applications/
 
 ![CRT Applications](./images/crt_applications.png)
 
+*CRT Applications*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Practical Uses of the Chinese Remainder Theorem |
+| **Difficulty** | Medium to Hard |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🔐 1. RSA Speedup (Garner's Algorithm)
 
 ```python
