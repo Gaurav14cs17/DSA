@@ -10,20 +10,16 @@ permalink: /25_tree_algorithms/06_dsu_on_tree/
 
 # 🔄 DSU on Tree (Small to Large)
 
+### *DSU on Tree (Small to Large)*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-5+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 05. Centroid Decomposition](../05_centroid_decomposition/README.md) | **06. DSU on Tree** | [07. Euler Tour →](../07_euler_tour/README.md) |
 
 ---
 
@@ -46,8 +42,16 @@ permalink: /25_tree_algorithms/06_dsu_on_tree/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 📐 Mathematical Foundations
 
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 05. Centroid Decomposition](../05_centroid_decomposition/README.md) | **06. DSU on Tree** | [07. Euler Tour →](../07_euler_tour/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Small to Large Technique
 
 **Idea:** When merging two sets, always add smaller to larger.
@@ -540,10 +544,3 @@ Subtree Query Problem
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 05. Centroid Decomposition](../05_centroid_decomposition/README.md) | **06. DSU on Tree** | [07. Euler Tour →](../07_euler_tour/README.md) |
-
