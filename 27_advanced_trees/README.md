@@ -10,6 +10,8 @@ permalink: /27_advanced_trees/
 
 # 🌳 Advanced Trees
 
+### *Self-balancing trees and advanced structures*
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
@@ -31,11 +33,25 @@ permalink: /27_advanced_trees/
 
 ![Advanced Trees Overview](./images/advanced-trees-overview.png)
 
+*Advanced Trees Overview*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **In one line** | Self-balancing trees and advanced structures |
+| **Difficulty** | Hard |
+| **Subtopics** | 7 |
+| **Problems** | 100+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📋 Overview
 
 Advanced tree structures: **AVL Trees**, **Red-Black Trees**, **B-Trees**, **Splay Trees**, **Treaps**.
