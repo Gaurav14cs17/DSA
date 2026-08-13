@@ -28,6 +28,16 @@ nav_order: 3
 
 ---
 
+## 📊 Visual Diagram
+
+<div align="center">
+
+![Fast Exponentiation](./images/fast_exponentiation.png)
+
+</div>
+
+---
+
 ## 📐 Core Concepts
 
 ### Binary Representation Method
@@ -44,16 +54,6 @@ a^13 = a^(1101₂)
 1. If n is even: a^n = (a^(n/2))²
 
 2. If n is odd: a^n = a × a^(n-1)
-
----
-
-## 📊 Visual Diagram
-
-<div align="center">
-
-![Fast Exponentiation](./images/fast_exponentiation.png)
-
-</div>
 
 ---
 
