@@ -10,6 +10,10 @@ permalink: /19_greedy_algorithms/01_interval_scheduling/
 
 # 📅 Interval Scheduling
 
+### *Interval Scheduling*
+
+
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -43,6 +47,7 @@ permalink: /19_greedy_algorithms/01_interval_scheduling/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -51,8 +56,7 @@ permalink: /19_greedy_algorithms/01_interval_scheduling/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Activity Selection
 
 **Goal:** Select maximum non-overlapping intervals.
@@ -234,9 +238,3 @@ def partitionLabels(s: str) -> list[int]:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Greedy Home](../README.md) | **01. Interval Scheduling** | [02. Task Scheduling →](../02_task_scheduling/README.md) |
