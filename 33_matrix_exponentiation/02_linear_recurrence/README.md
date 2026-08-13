@@ -37,7 +37,7 @@ permalink: /33_matrix_exponentiation/02_linear_recurrence/
 
 ### Fibonacci Matrix Transformation
 
-<img src="./images/fibonacci-matrix.svg" alt="Fibonacci Matrix Transformation" width="100%">
+<img src="./images/fibonacci-matrix.png" alt="Fibonacci Matrix Transformation" width="100%">
 
 *Converting the Fibonacci recurrence into matrix form*
 
@@ -45,7 +45,7 @@ permalink: /33_matrix_exponentiation/02_linear_recurrence/
 
 ### Companion Matrix Structure
 
-<img src="./images/companion-matrix.svg" alt="Companion Matrix" width="100%">
+<img src="./images/companion-matrix.png" alt="Companion Matrix" width="100%">
 
 *General k-term recurrence solved with companion matrix*
 
@@ -53,7 +53,7 @@ permalink: /33_matrix_exponentiation/02_linear_recurrence/
 
 ### Common Recurrence Types
 
-<img src="./images/recurrence-types.svg" alt="Recurrence Types" width="100%">
+<img src="./images/recurrence-types.png" alt="Recurrence Types" width="100%">
 
 *Popular sequences: Fibonacci, Tribonacci, Lucas, Pell, and more*
 
