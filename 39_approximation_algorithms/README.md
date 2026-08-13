@@ -168,6 +168,8 @@ def set_cover_greedy(universe, subsets):
 <img src="./images/knapsack-fptas.png" alt="Knapsack FPTAS" width="950"/>
 </div>
 
+**Idea:** Scale item values down by a factor K depending on ε, run standard 0/1 knapsack DP on scaled values, then rescale. Trades accuracy for polynomial time — a fully polynomial-time approximation scheme (FPTAS).
+
 ```python
 def knapsack_fptas(weights, values, capacity, epsilon):
     """
