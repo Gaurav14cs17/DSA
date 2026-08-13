@@ -10,6 +10,8 @@ permalink: /14_sorting/
 
 # 📊 Sorting Algorithms
 
+### *Fundamental algorithms for ordering data*
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Hard-green?style=for-the-badge" alt="Difficulty">
@@ -31,11 +33,27 @@ permalink: /14_sorting/
 
 ![Sorting Overview](./images/sorting-overview.png)
 
+*Sorting Overview*
+
 </div>
 
 ---
 
+---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Fundamental algorithms for ordering data |
+| **Difficulty** | Easy to Hard |
+| **Subtopics** | 3 |
+| **Problems** | 20+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ Comparison Sort Lower Bound
