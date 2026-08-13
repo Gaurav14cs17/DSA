@@ -11,6 +11,10 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/
 
 # 🌲 Segment Tree Advanced
 
+### *Segment Tree Advanced*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Subtopics-5-blue?style=for-the-badge" alt="Subtopics">
@@ -18,6 +22,27 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+<img src="./images/segment-tree-advanced.png" alt="Advanced Segment Tree" width="100%">
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Hard |
+| **Subtopics** | 5 |
+| **Problems** | 40+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -98,59 +123,7 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/
 
 ---
 
-## 📊 Visual Overview
-
-<div align="center">
-<img src="./images/segment-tree-advanced.png" alt="Advanced Segment Tree" width="100%">
-</div>
-
----
-
-## 🎯 At a Glance
-
-| | |
-|:---|:---|
-| **Difficulty** | Hard |
-| **Subtopics** | 5 |
-| **Problems** | 40+ |
-
-{: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
-
----
-## 📋 Overview
-
-**Advanced Segment Tree** techniques extend the basic segment tree to handle:
-
-- **Lazy Propagation:** Efficient range updates in O(log n)
-
-- **2D Segment Trees:** Range queries on matrices
-
-- **Persistent Segment Trees:** Query historical versions
-
-- **Dynamic Segment Trees:** Handle sparse or infinite ranges
-
-**Key Advantage:** Handles complex range operations that simple data structures cannot.
-
----
-
-## 🎯 Quick Reference
-
-### Core Operations
-
-| Operation | Time | Description |
-|-----------|:----:|-------------|
-| **Range Update (Lazy)** | O(log n) | Update entire range |
-| **Range Query (Lazy)** | O(log n) | Query with pending updates |
-| **2D Query** | O(log² n) | Query 2D range |
-| **Persistent Build** | O(n log n) | Create new version |
-| **Dynamic Update** | O(log n) | Sparse tree update |
-| **Space** | O(n) - O(n log n) | Depends on variant |
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Lazy Propagation
 
 **Problem:** Range update takes O(n log n) with naive approach.
@@ -205,6 +178,37 @@ def push(node, start, end):
 **Structure:** Use map/dict to store nodes.
 
 **Space:** O(q log n) for q queries.
+
+---
+
+## 📋 Overview
+
+**Advanced Segment Tree** techniques extend the basic segment tree to handle:
+
+- **Lazy Propagation:** Efficient range updates in O(log n)
+
+- **2D Segment Trees:** Range queries on matrices
+
+- **Persistent Segment Trees:** Query historical versions
+
+- **Dynamic Segment Trees:** Handle sparse or infinite ranges
+
+**Key Advantage:** Handles complex range operations that simple data structures cannot.
+
+---
+
+## 🎯 Quick Reference
+
+### Core Operations
+
+| Operation | Time | Description |
+|-----------|:----:|-------------|
+| **Range Update (Lazy)** | O(log n) | Update entire range |
+| **Range Query (Lazy)** | O(log n) | Query with pending updates |
+| **2D Query** | O(log² n) | Query 2D range |
+| **Persistent Build** | O(n log n) | Create new version |
+| **Dynamic Update** | O(log n) | Sparse tree update |
+| **Space** | O(n) - O(n log n) | Depends on variant |
 
 ---
 
@@ -339,9 +343,3 @@ This section contains **40+ problems** organized into **5 categories**:
 7. **Memory tradeoff:** Persistent and 2D trees use significantly more space
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Treap](../06_treap/README.md) | **Segment Tree Advanced** | [🏠 Advanced Trees](../README.md) |
