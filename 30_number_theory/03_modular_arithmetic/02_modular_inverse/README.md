@@ -20,6 +20,16 @@ nav_order: 2
 
 ---
 
+## 📊 Visual Diagram
+
+<div align="center">
+
+![Modular Inverse](./images/modular_inverse.png)
+
+</div>
+
+---
+
 ## 🎯 Overview
 
 The **modular inverse** of a modulo m is an integer x such that:
@@ -32,16 +42,6 @@ a × x ≡ 1 (mod m)
 Notation: x = a⁻¹ (mod m)
 
 **Existence:** Inverse exists if and only if gcd(a, m) = 1 (a and m are coprime)
-
----
-
-## 📊 Visual Diagram
-
-<div align="center">
-
-![Modular Inverse](./images/modular_inverse.png)
-
-</div>
 
 ---
 
