@@ -10,12 +10,37 @@ permalink: /18_dynamic_programming/03_knapsack/
 
 # 🎒 Knapsack Problems
 
+### *🎒 Knapsack Problems*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+  <img src="images/knapsack.png" alt="Knapsack DP Visualization" width="100%">
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🎒 Knapsack Problems |
+| **Difficulty** | Medium |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -27,16 +52,7 @@ permalink: /18_dynamic_programming/03_knapsack/
 
 ---
 
-## 📊 Visual Guide
-
-<div align="center">
-  <img src="images/knapsack.png" alt="Knapsack DP Visualization" width="100%">
-</div>
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ 0/1 Knapsack
 
 Each item used at most once:
@@ -233,9 +249,3 @@ Unbounded:    for j in range(num, target+1)      # Forward
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 02. 2D DP](../02_2d_dp/README.md) | **03. Knapsack** | [04. String DP →](../04_string_dp/README.md) |
