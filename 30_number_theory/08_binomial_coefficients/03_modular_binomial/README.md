@@ -11,6 +11,8 @@ permalink: /30_number_theory/08_binomial_coefficients/03_modular_binomial/
 
 # 🔐 Modular Binomial Coefficients
 
+### *Computing C(n,k) mod p Efficiently*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Precomputation-O(n)-blue?style=for-the-badge" alt="Precomp">
@@ -39,10 +41,23 @@ permalink: /30_number_theory/08_binomial_coefficients/03_modular_binomial/
 
 ![Modular Binomial](./images/modular_binomial.png)
 
+*Modular Binomial*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Computing C(n,k) mod p Efficiently |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 The Challenge
 
 For large n, k:
