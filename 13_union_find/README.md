@@ -51,6 +51,7 @@ permalink: /13_union_find/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ Disjoint Set Definition
