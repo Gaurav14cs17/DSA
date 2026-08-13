@@ -4,11 +4,18 @@ title: "Aho-Corasick Algorithm"
 parent: "String Algorithms"
 nav_order: 6
 ---
+<div align="center">
 
 # 🔀 Aho-Corasick Algorithm
 
-### *The **Aho-Corasick** algorithm efficiently finds all occurrences of multiple patterns in a text simultaneously.*
+### *Multi-pattern matching with trie + failure links*
 
+<p><img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty"></p>
+
+[🏠 String Algorithms](../../README.md)
+</div>
+
+---
 
 ## 📊 Visual Overview
 
@@ -30,6 +37,14 @@ nav_order: 6
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Manacher](../05_manacher/README.md) | **Aho-Corasick** | [Suffix Tree →](../07_suffix_tree/README.md) |
 
 ---
 
@@ -754,4 +769,3 @@ def reverse_complement(seq):
 ---
 
 **Navigation:** [← Manacher's](../05_manacher/) | [String Algorithms](../README.md) | [Next: Suffix Tree →](../07_suffix_tree/)
-
