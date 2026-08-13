@@ -24,15 +24,7 @@ permalink: /30_number_theory/07_linear_diophantine/05_applications/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Coin Problems](../04_coin_problems/README.md) | **05. Applications** | [🏠 Diophantine Home](../README.md) |
-
----
-
-## 📊 Visual Diagram
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -56,6 +48,15 @@ permalink: /30_number_theory/07_linear_diophantine/05_applications/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 04. Coin Problems](../04_coin_problems/README.md) | **05. Applications** | [🏠 Diophantine Home](../README.md) |
+
+---
+
 ## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty | Connection |
@@ -156,9 +157,3 @@ print(solve_linear_congruence(3, 6, 9))  # [2, 5, 8]
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Coin Problems](../04_coin_problems/README.md) | **05. Applications** | [🏠 Diophantine Home](../README.md) |
