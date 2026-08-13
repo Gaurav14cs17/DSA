@@ -10,6 +10,8 @@ permalink: /01_arrays/05_interval_problems/
 
 # ⏱️ Interval Problems
 
+### *⏱️ Interval Problems*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-20+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +21,7 @@ permalink: /01_arrays/05_interval_problems/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Matrix Problems](../04_matrix_problems/README.md) | **05. Interval Problems** | [🏠 Arrays Home](../README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -47,81 +41,9 @@ permalink: /01_arrays/05_interval_problems/
 
 ---
 
-## 📐 Mathematical Foundations
-
-### 1️⃣ Interval Representation
-
-**Interval Notation:**
-
-$$[a, b] = \{x \in \mathbb{R} : a \leq x \leq b\}$$
-
-**Interval Relations:**
-
-$$\begin{aligned}
-\text{Disjoint:} \quad & [a, b] \cap [c, d] = \emptyset \iff b < c \text{ or } d < a \\
-\text{Overlap:} \quad & [a, b] \cap [c, d] \neq \emptyset \iff b \geq c \text{ and } d \geq a \\
-\text{Contains:} \quad & [a, b] \subseteq [c, d] \iff c \leq a \text{ and } b \leq d
-\end{aligned}$$
-
-**Merge Condition:**
-
-Two intervals $[a, b]$ and $[c, d]$ can merge if:
-
-$$\boxed{b \geq c \quad \text{(assuming } a \leq c \text{)}}$$
-
-Merged interval:
-
-$$[a, b] \cup [c, d] = [\min(a, c), \max(b, d)]$$
-
 ---
 
-### 2️⃣ Sorting Strategy
-
-**Why sort by start time?**
-
-**Theorem:** Sorting intervals by start time allows linear-time merging.
-
-**Proof:**
-
-- After sorting: $s_1 \leq s_2 \leq \cdots \leq s_n$
-
-- To check if $I_i$ and $I_{i+1}$ overlap: compare $e_i$ with $s_{i+1}$
-
-- If $e_i \geq s_{i+1}$: overlap (merge)
-
-- If $e_i < s_{i+1}$: no overlap (start new interval)
-
-- One pass through sorted list: $O(n)$ ∎
-
----
-
-### 6️⃣ Meeting Rooms Problem - Event Sorting
-
-**Problem:** Minimum number of meeting rooms required.
-
-**Mathematical Formulation:**
-
-Given intervals $I_1, I_2, \ldots, I_n$ where $I_i = [s_i, e_i]$:
-
-$$\text{rooms needed} = \max_{t} \left|\{i : s_i \leq t < e_i\}\right|$$
-
-**Sweep Line Algorithm:**
-
-1. Create events: $(s_i, \text{START})$ and $(e_i, \text{END})$
-
-2. Sort events by time
-
-3. Track running count: +1 for START, -1 for END
-
-4. Maximum count = rooms needed
-
-**Proof of Correctness:**
-
-At any time $t$, the number of active meetings equals the rooms needed at that moment. The maximum over all time points is the answer. ∎
-
----
-
-## 🎨 Visual Algorithm Walkthroughs
+## 📊 Visual Overview
 
 ### 3️⃣ Visual: Interval Relationships
 
@@ -334,6 +256,105 @@ Input: [[0,30], [5,10], [15,20]]
 
 ---
 
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | ⏱️ Interval Problems |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 20+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 04. Matrix Problems](../04_matrix_problems/README.md) | **05. Interval Problems** | [🏠 Arrays Home](../README.md) |
+
+---
+
+---
+
+## 📐 Mathematical Foundation
+### 1️⃣ Interval Representation
+
+**Interval Notation:**
+
+$$[a, b] = \{x \in \mathbb{R} : a \leq x \leq b\}$$
+
+**Interval Relations:**
+
+$$\begin{aligned}
+\text{Disjoint:} \quad & [a, b] \cap [c, d] = \emptyset \iff b < c \text{ or } d < a \\
+\text{Overlap:} \quad & [a, b] \cap [c, d] \neq \emptyset \iff b \geq c \text{ and } d \geq a \\
+\text{Contains:} \quad & [a, b] \subseteq [c, d] \iff c \leq a \text{ and } b \leq d
+\end{aligned}$$
+
+**Merge Condition:**
+
+Two intervals $[a, b]$ and $[c, d]$ can merge if:
+
+$$\boxed{b \geq c \quad \text{(assuming } a \leq c \text{)}}$$
+
+Merged interval:
+
+$$[a, b] \cup [c, d] = [\min(a, c), \max(b, d)]$$
+
+---
+
+### 2️⃣ Sorting Strategy
+
+**Why sort by start time?**
+
+**Theorem:** Sorting intervals by start time allows linear-time merging.
+
+**Proof:**
+
+- After sorting: $s_1 \leq s_2 \leq \cdots \leq s_n$
+
+- To check if $I_i$ and $I_{i+1}$ overlap: compare $e_i$ with $s_{i+1}$
+
+- If $e_i \geq s_{i+1}$: overlap (merge)
+
+- If $e_i < s_{i+1}$: no overlap (start new interval)
+
+- One pass through sorted list: $O(n)$ ∎
+
+---
+
+### 6️⃣ Meeting Rooms Problem - Event Sorting
+
+**Problem:** Minimum number of meeting rooms required.
+
+**Mathematical Formulation:**
+
+Given intervals $I_1, I_2, \ldots, I_n$ where $I_i = [s_i, e_i]$:
+
+$$\text{rooms needed} = \max_{t} \left|\{i : s_i \leq t < e_i\}\right|$$
+
+**Sweep Line Algorithm:**
+
+1. Create events: $(s_i, \text{START})$ and $(e_i, \text{END})$
+
+2. Sort events by time
+
+3. Track running count: +1 for START, -1 for END
+
+4. Maximum count = rooms needed
+
+**Proof of Correctness:**
+
+At any time $t$, the number of active meetings equals the rooms needed at that moment. The maximum over all time points is the answer. ∎
+
+---
+
+---
 
 ## 💻 Code Implementations
 
@@ -592,6 +613,8 @@ def employeeFreeTime(schedule: list[list[list[int]]]) -> list[list[int]]:
 
 ---
 
+---
+
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
@@ -625,6 +648,8 @@ def employeeFreeTime(schedule: list[list[list[int]]]) -> list[list[int]]:
 
 ---
 
+---
+
 ## 📊 Pattern Decision Tree
 
 ```
@@ -643,6 +668,8 @@ start           |              Two
                Line
 
 ```
+
+---
 
 ---
 
@@ -668,6 +695,8 @@ start           |              Two
 
 ---
 
+---
+
 ## 🎓 Pattern Recognition Guide
 
 ### Identifying Interval Patterns
@@ -681,6 +710,8 @@ start           |              Two
 | **"Remove minimum"** | Greedy | By end time | Non-overlapping Intervals |
 | **"Find intersection"** | Two pointers | Both sorted | Interval Intersections |
 | **"Find gaps"** | Merge + gaps | By start time | Employee Free Time |
+
+---
 
 ---
 
@@ -713,6 +744,8 @@ Problem: Minimum arrows to burst balloons
 Lesson: Right sort strategy simplifies problem!
 
 ```
+
+---
 
 ---
 
@@ -758,6 +791,8 @@ $$\text{Overlap length} = \max(0, \min(b, d) - c)$$
 - Length = end - start = $\min(b, d) - c$
 
 - Use $\max(0, \cdot)$ to handle non-overlapping case ∎
+
+---
 
 ---
 
@@ -825,6 +860,8 @@ class IntervalTreeNode:
 
 ---
 
+---
+
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
@@ -856,6 +893,8 @@ class IntervalTreeNode:
 |----------|-------|------|
 | **CLRS Chapter 16** | Greedy algorithms | [MIT](https://mitpress.mit.edu/books/introduction-algorithms) |
 | **Competitive Programming Handbook** | Sweep line techniques | [PDF](https://cses.fi/book/book.pdf) |
+
+---
 
 ---
 
@@ -895,6 +934,8 @@ class IntervalTreeNode:
 
 ---
 
+---
+
 ## 💭 Common Interview Questions
 
 **Q: Why sort by start time for merging?**  
@@ -911,6 +952,8 @@ A: Sort by multiple keys: (end_time, -priority) for greedy. Or use weighted inte
 
 **Q: Can we use TreeMap for better complexity?**  
 A: Yes! TreeMap gives O(log n) insert/query instead of O(n). Useful for online/streaming problems.
+
+---
 
 ---
 
@@ -953,6 +996,8 @@ if not intervals:
 merged = [intervals[0]]
 
 ```
+
+---
 
 ---
 
@@ -1006,9 +1051,3 @@ merged = [intervals[0]]
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Matrix Problems](../04_matrix_problems/README.md) | **05. Interval Problems** | [🏠 Arrays Home](../README.md) |
