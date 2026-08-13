@@ -11,6 +11,8 @@ permalink: /30_number_theory/01_gcd_lcm/05_gcd_arrays/
 
 # 📊 GCD of Arrays
 
+### *Efficient GCD Computations on Multiple Numbers*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
@@ -38,10 +40,24 @@ permalink: /30_number_theory/01_gcd_lcm/05_gcd_arrays/
 
 ![GCD of Arrays](./images/gcd_arrays.png)
 
+*GCD of Arrays*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Efficient GCD Computations on Multiple Numbers |
+| **Difficulty** | Medium |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundations
 
 ### Associativity Property
