@@ -32,15 +32,15 @@ permalink: /16_recursion/06_array_recursion/
 ## 📊 Visual Diagrams
 
 <p align="center">
-  <img src="./images/array_sum.svg" alt="Array Sum Recursion" width="100%"/>
+  <img src="./images/array_sum.png" alt="Array Sum Recursion" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="./images/linear_search.svg" alt="Linear Search Recursion" width="100%"/>
+  <img src="./images/linear_search.png" alt="Linear Search Recursion" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="./images/array_operations.svg" alt="Array Operations Recursion" width="100%"/>
+  <img src="./images/array_operations.png" alt="Array Operations Recursion" width="100%"/>
 </p>
 
 ---
