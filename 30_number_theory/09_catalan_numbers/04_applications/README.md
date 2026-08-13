@@ -27,15 +27,7 @@ permalink: /30_number_theory/09_catalan_numbers/04_applications/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Parentheses](../03_parentheses/README.md) | **04. Applications** | [🏠 Catalan Home](../README.md) |
-
----
-
-## 📊 Visual Diagram
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -58,6 +50,15 @@ permalink: /30_number_theory/09_catalan_numbers/04_applications/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 03. Parentheses](../03_parentheses/README.md) | **04. Applications** | [🏠 Catalan Home](../README.md) |
+
+---
+
 ## 📋 What Catalan Numbers Count
 
 ### 1. Full Binary Trees (LeetCode 894)
@@ -292,9 +293,3 @@ def count_stack_sortable(n: int) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Parentheses](../03_parentheses/README.md) | **04. Applications** | [🏠 Catalan Home](../README.md) |
