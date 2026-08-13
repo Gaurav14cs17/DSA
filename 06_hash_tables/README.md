@@ -52,6 +52,17 @@ permalink: /06_hash_tables/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 📂 Subtopics Navigation
+
+| # | Topic | Problems | Link |
+|:-:|-------|:--------:|------|
+| 1 | Frequency Counting | 15+ | [📖 Go →](./01_frequency_counting/README.md) |
+| 2 | Two Sum Pattern | 12+ | [📖 Go →](./02_two_sum_pattern/README.md) |
+| 3 | Set Operations | 10+ | [📖 Go →](./03_set_operations/README.md) |
+
+---
+
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ Hash Function Definition
@@ -180,16 +191,6 @@ $$\text{freq}[x] = |\{i : a[i] = x\}|$$
 | Intersection | O(min(n,m)) | $A \cap B$ |
 | Difference | O(n) | $A \setminus B$ |
 | Subset Check | O(n) | $A \subseteq B$ |
-
----
-
-## 📂 Subtopics Navigation
-
-| # | Topic | Problems | Link |
-|:-:|-------|:--------:|------|
-| 1 | Frequency Counting | 15+ | [📖 Go →](./01_frequency_counting/README.md) |
-| 2 | Two Sum Pattern | 12+ | [📖 Go →](./02_two_sum_pattern/README.md) |
-| 3 | Set Operations | 10+ | [📖 Go →](./03_set_operations/README.md) |
 
 ---
 
