@@ -10,7 +10,7 @@ permalink: /07_trees/02_tree_construction/
 
 # 🏗️ Tree Construction
 
-![Tree Construction Diagram](./images/tree-construction.svg)
+![Tree Construction Diagram](./images/tree-construction.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
