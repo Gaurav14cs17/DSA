@@ -10,6 +10,10 @@ permalink: /19_greedy_algorithms/03_array_greedy/
 
 # 📊 Array Greedy Problems
 
+### *Array Greedy Problems*
+
+
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -43,6 +47,7 @@ permalink: /19_greedy_algorithms/03_array_greedy/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next Topic |
@@ -51,8 +56,7 @@ permalink: /19_greedy_algorithms/03_array_greedy/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Jump Game
 
 Track furthest reachable position:
@@ -234,9 +238,3 @@ def maxProfit(prices: list[int]) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
-|:------------|:----------:|--------:|
-| [← 02. Task Scheduling](../02_task_scheduling/README.md) | **03. Array Greedy** | [🏠 Greedy Home](../README.md) → [Divide & Conquer](../../20_divide_and_conquer/README.md) |
