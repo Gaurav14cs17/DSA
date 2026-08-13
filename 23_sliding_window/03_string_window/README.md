@@ -60,96 +60,6 @@ permalink: /23_sliding_window/03_string_window/
 
 </div>
 
----
-
-## 📐 Mathematical Foundations
-
-### 1️⃣ Anagram Definition
-
-{: .highlight }
-> Two strings are **anagrams** if they have the same character frequencies.
-
-$$\text{Anagram}(s, t) \Leftrightarrow \forall c: \text{freq}_s[c] = \text{freq}_t[c]$$
-
-#### For Window Problems
-
-A window is an anagram of pattern \(p\) if:
-
-- Window size = \(|p|\)
-
-- Character frequencies match
-
----
-
-### 2️⃣ The "Have vs Need" Pattern
-
-{: .important }
-> For minimum window substring: track what you **have** vs what you **need**.
-
-#### State Variables
-
-- `need[c]` = frequency of character \(c\) required
-
-- `have[c]` = frequency of character \(c\) in current window
-
-- `formed` = count of characters satisfying `have[c] >= need[c]`
-- `required` = count of unique characters in pattern
-
-#### Validity Condition
-
-$$\text{Window valid} \Leftrightarrow \text{formed} = \text{required}$$
-
----
-
-### 3️⃣ Match Counter Optimization
-
-{: .note }
-> Instead of comparing all 26 frequencies, track how many characters are "satisfied".
-
-#### Before (O(26) per check)
-
-```python
-if window_count == pattern_count:  # Compare 26 values
-
-```
-
-#### After (O(1) per check)
-
-```python
-if matches == 26:  # Single comparison
-
-```
-
-#### Updating Matches
-
-When adding character \(c\):
-
-```python
-if window[c] == pattern[c]:
-    matches += 1
-elif window[c] == pattern[c] + 1:  # Was matched, now over
-    matches -= 1
-
-```
-
----
-
-### 4️⃣ Substring with Concatenation of All Words
-
-{: .highlight }
-> For word-based windows, treat each word as a "character".
-
-#### The Approach
-
-- Window size = `word_count × word_length`
-- Slide by `word_length` at a time
-
-- Track word frequencies instead of char frequencies
-
----
-
-## 📊 Text Diagrams
-
 ### Minimum Window Substring
 
 ```
@@ -271,6 +181,92 @@ Answer: [0, 6]
 +---------------------------------------------------------------+
 
 ```
+
+---
+
+## 📐 Mathematical Foundations
+
+### 1️⃣ Anagram Definition
+
+{: .highlight }
+> Two strings are **anagrams** if they have the same character frequencies.
+
+$$\text{Anagram}(s, t) \Leftrightarrow \forall c: \text{freq}_s[c] = \text{freq}_t[c]$$
+
+#### For Window Problems
+
+A window is an anagram of pattern \(p\) if:
+
+- Window size = \(|p|\)
+
+- Character frequencies match
+
+---
+
+### 2️⃣ The "Have vs Need" Pattern
+
+{: .important }
+> For minimum window substring: track what you **have** vs what you **need**.
+
+#### State Variables
+
+- `need[c]` = frequency of character \(c\) required
+
+- `have[c]` = frequency of character \(c\) in current window
+
+- `formed` = count of characters satisfying `have[c] >= need[c]`
+- `required` = count of unique characters in pattern
+
+#### Validity Condition
+
+$$\text{Window valid} \Leftrightarrow \text{formed} = \text{required}$$
+
+---
+
+### 3️⃣ Match Counter Optimization
+
+{: .note }
+> Instead of comparing all 26 frequencies, track how many characters are "satisfied".
+
+#### Before (O(26) per check)
+
+```python
+if window_count == pattern_count:  # Compare 26 values
+
+```
+
+#### After (O(1) per check)
+
+```python
+if matches == 26:  # Single comparison
+
+```
+
+#### Updating Matches
+
+When adding character \(c\):
+
+```python
+if window[c] == pattern[c]:
+    matches += 1
+elif window[c] == pattern[c] + 1:  # Was matched, now over
+    matches -= 1
+
+```
+
+---
+
+### 4️⃣ Substring with Concatenation of All Words
+
+{: .highlight }
+> For word-based windows, treat each word as a "character".
+
+#### The Approach
+
+- Window size = `word_count × word_length`
+- Slide by `word_length` at a time
+
+- Track word frequencies instead of char frequencies
 
 ---
 
