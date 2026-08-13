@@ -38,6 +38,16 @@ a^p ≡ a (mod p)
 
 ---
 
+## 📊 Visual Diagram
+
+<div align="center">
+
+![Fermat's Little Theorem](./images/fermats_theorem.png)
+
+</div>
+
+---
+
 ## 📐 Core Concepts
 
 ### The Theorem
@@ -63,16 +73,6 @@ Thus: a^(p-1) ≡ 1 (mod p)
 2. **Primality Testing:** Fermat test
 
 3. **Reducing Exponents:** a^n ≡ a^(n mod (p-1)) (mod p)
-
----
-
-## 📊 Visual Diagram
-
-<div align="center">
-
-![Fermat's Little Theorem](./images/fermats_theorem.png)
-
-</div>
 
 ---
 
