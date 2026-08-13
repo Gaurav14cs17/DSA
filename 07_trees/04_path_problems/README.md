@@ -32,8 +32,6 @@ permalink: /07_trees/04_path_problems/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -428,8 +426,6 @@ def sumNumbers(root: TreeNode) -> int:
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | Gain Calculation | O(n) | O(h) |
-
----
 
 ---
 
