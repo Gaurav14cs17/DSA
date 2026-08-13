@@ -26,11 +26,25 @@ permalink: /14_sorting/02_non_comparison_sorts/
 
 ![Non-Comparison Sorts](./images/non_comparison_sorts.png)
 
+*Non-Comparison Sorts*
+
 </div>
 
 ---
 
+---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Medium |
+| **Problems** | 5+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
