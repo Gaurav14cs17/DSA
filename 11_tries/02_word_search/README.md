@@ -10,6 +10,10 @@ permalink: /11_tries/02_word_search/
 
 # 🔍 Word Search with Trie
 
+### *Word Search with Trie*
+
+
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
@@ -43,6 +47,7 @@ permalink: /11_tries/02_word_search/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -51,8 +56,7 @@ permalink: /11_tries/02_word_search/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Wildcard Search
 
 **Problem:** Search with '.' matching any character.
@@ -283,9 +287,3 @@ Word Search Problem
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Basic Trie](../01_basic_trie/README.md) | **02. Word Search** | [03. Autocomplete →](../03_autocomplete/README.md) |
