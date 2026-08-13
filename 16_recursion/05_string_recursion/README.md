@@ -10,6 +10,8 @@ permalink: /16_recursion/05_string_recursion/
 
 # 🔤 String Recursion
 
+### *Processing strings character by character using recursion*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-green?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-12+-blue?style=for-the-badge" alt="Problems">
