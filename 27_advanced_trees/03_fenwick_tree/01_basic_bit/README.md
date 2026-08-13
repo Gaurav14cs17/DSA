@@ -11,20 +11,16 @@ permalink: /27_advanced_trees/03_fenwick_tree/01_basic_bit/
 
 # 🔢 Basic BIT Operations
 
+### *Basic BIT Operations*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-6-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Fenwick Tree](../README.md) | **01. Basic BIT** | [02. Inversion Counting →](../02_inversion_counting/README.md) |
 
 ---
 
@@ -47,6 +43,15 @@ permalink: /27_advanced_trees/03_fenwick_tree/01_basic_bit/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Fenwick Tree](../README.md) | **01. Basic BIT** | [02. Inversion Counting →](../02_inversion_counting/README.md) |
+
+---
+
 ## 📐 Core Concepts
 
 ### Point Update + Range Query
@@ -329,10 +334,3 @@ def count_subsequences_in_range(nums: List[int], min_sum: int, max_sum: int) -> 
 5. **Multiple BITs:** Track different properties simultaneously
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Fenwick Tree](../README.md) | **01. Basic BIT** | [02. Inversion Counting →](../02_inversion_counting/README.md) |
-
