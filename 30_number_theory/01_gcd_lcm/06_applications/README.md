@@ -11,6 +11,8 @@ permalink: /30_number_theory/01_gcd_lcm/06_applications/
 
 # 🎯 GCD & LCM Applications
 
+### *Real-World Problems & Interview Patterns*
+
 <p>
   <img src="https://img.shields.io/badge/Problems-25+-green?style=for-the-badge" alt="Problems">
   <img src="https://img.shields.io/badge/LeetCode-Ready-brightgreen?style=for-the-badge" alt="LeetCode">
@@ -36,10 +38,23 @@ permalink: /30_number_theory/01_gcd_lcm/06_applications/
 
 ![GCD Applications](./images/gcd_applications.png)
 
+*GCD Applications*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Real-World Problems & Interview Patterns |
+| **Problems** | 25+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🏆 LeetCode Problems by Category
 
 ### Category 1: Basic GCD/LCM
