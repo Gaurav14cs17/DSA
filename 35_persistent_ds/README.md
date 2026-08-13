@@ -10,7 +10,6 @@ permalink: /35_persistent_ds/
 
 # 💾 Persistent Data Structures
 
-![Persistent DS Overview](./images/persistent-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
@@ -25,6 +24,17 @@ permalink: /35_persistent_ds/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Persistent DS Overview](./images/persistent-overview.png)
+
+</div>
+
+---
+
 
 ## 🧭 Navigation
 
