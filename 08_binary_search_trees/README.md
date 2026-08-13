@@ -54,6 +54,17 @@ permalink: /08_binary_search_trees/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 📂 Subtopics Navigation
+
+| # | Topic | Problems | Link |
+|:-:|-------|:--------:|------|
+| 1 | BST Operations | 10+ | [📖 Go →](./01_bst_operations/README.md) |
+| 2 | BST Validation | 8+ | [📖 Go →](./02_bst_validation/README.md) |
+| 3 | BST Queries | 10+ | [📖 Go →](./03_bst_queries/README.md) |
+
+---
+
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ BST Property
@@ -155,16 +166,6 @@ $$\text{rank}(x) = \text{size}(T_L(x)) + 1$$
 $$\text{root} = arr[mid], \quad mid = \lfloor (left + right) / 2 \rfloor$$
 
 **Time:** O(n), **Height:** O(log n)
-
----
-
-## 📂 Subtopics Navigation
-
-| # | Topic | Problems | Link |
-|:-:|-------|:--------:|------|
-| 1 | BST Operations | 10+ | [📖 Go →](./01_bst_operations/README.md) |
-| 2 | BST Validation | 8+ | [📖 Go →](./02_bst_validation/README.md) |
-| 3 | BST Queries | 10+ | [📖 Go →](./03_bst_queries/README.md) |
 
 ---
 
