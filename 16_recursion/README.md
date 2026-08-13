@@ -10,7 +10,7 @@ permalink: /16_recursion/
 
 # 🔄 Recursion
 
-![Recursion Overview](./images/recursion-overview.svg)
+![Recursion Overview](./images/recursion-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Hard-yellow?style=for-the-badge" alt="Difficulty">
@@ -29,7 +29,7 @@ permalink: /16_recursion/
 ## 📊 Visual Overview
 
 <p align="center">
-  <img src="./images/recursion.svg" alt="Recursion Overview" width="100%"/>
+  <img src="./images/recursion-overview.png" alt="Recursion Overview" width="100%"/>
 </p>
 
 ---
