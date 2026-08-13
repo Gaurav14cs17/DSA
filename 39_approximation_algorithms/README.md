@@ -10,7 +10,6 @@ permalink: /39_approximation_algorithms/
 
 # 🎯 Approximation Algorithms
 
-![Approximation Algorithms Overview](./images/approx-algo-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
@@ -26,21 +25,19 @@ permalink: /39_approximation_algorithms/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Online Algorithms](../38_online_algorithms/README.md) | **Approximation Algorithms** | [DP Optimizations →](../40_dp_optimizations/README.md) |
-
----
-
 ## 📊 Visual Overview
 
 <div align="center">
+
+![Approximation Algorithms Overview](./images/approx-algo-overview.png)
+
 <img src="./images/approximation-algorithms.png" alt="Approximation Algorithms Overview" width="850"/>
+
 </div>
 
 ---
+
+## 🧭 Navigation
 
 ## 📐 Mathematical Foundation
 
