@@ -31,7 +31,7 @@ permalink: /08_binary_search_trees/02_bst_validation/
 
 <div align="center">
 
-![BST Validation](./image/bst_validation.svg)
+![BST Validation](./image/bst_validation.png)
 
 </div>
 
