@@ -10,6 +10,10 @@ permalink: /11_tries/01_basic_trie/
 
 # 📦 Basic Trie Operations
 
+### *Basic Trie Operations*
+
+
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -43,6 +47,7 @@ permalink: /11_tries/01_basic_trie/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -51,8 +56,7 @@ permalink: /11_tries/01_basic_trie/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Trie Structure
 
 ```
@@ -259,9 +263,3 @@ def replaceWords(dictionary: list[str], sentence: str) -> str:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Tries Home](../README.md) | **01. Basic Trie** | [02. Word Search →](../02_word_search/README.md) |
