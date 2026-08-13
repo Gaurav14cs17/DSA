@@ -10,7 +10,6 @@ permalink: /34_sqrt_decomposition/
 
 # √ Square Root Decomposition
 
-![Sqrt Decomposition Overview](./images/sqrt-decomp-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
@@ -26,11 +25,80 @@ permalink: /34_sqrt_decomposition/
 
 ---
 
+## 📊 Visual Overview
+
+<div align="center">
+
+![Sqrt Decomposition Overview](./images/sqrt-decomp-overview.png)
+
+</div>
+
+---
+
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
 |:------------|:----------:|--------:|
 | [← Matrix Exponentiation](../33_matrix_exponentiation/README.md) | **Sqrt Decomposition** | [Persistent DS →](../35_persistent_ds/README.md) |
+
+---
+
+## 🎨 Visual Walkthrough
+
+### Step-by-Step Breakdown
+
+```
++-----------------------------------------------------------------+
+| EXAMPLE: Range Sum Query with Sqrt Decomposition               |
++-----------------------------------------------------------------+
+| Array: [2, 1, 4, 3, 5, 7, 6, 8, 9]  (n = 9, block_size = 3)   |
+|                                                                  |
+| STEP 1: Divide into blocks                                      |
+|                                                                  |
+|   Index:  0  1  2 | 3  4  5 | 6  7  8                          |
+|   Array: [2, 1, 4]|[3, 5, 7]|[6, 8, 9]                         |
+|           Block 0  | Block 1 | Block 2                          |
+|                                                                  |
+|   Block Sums: [7, 15, 23]                                       |
++-----------------------------------------------------------------+
+
+| STEP 2: Query sum(1, 7)  (indices 1 to 7 inclusive)           |
+|                                                                  |
+|   Visualization:                                                 |
+|   Index:  0  1  2 | 3  4  5 | 6  7  8                          |
+|   Array: [2, 1, 4]|[3, 5, 7]|[6, 8, 9]                         |
+|           -  ✓  ✓  ✓  ✓  ✓   ✓  ✓  -                          |
+|                                                                  |
+|   Analysis:                                                      |
+|   - Block 0: Partial (indices 1-2)  → sum individually          |
+|   - Block 1: Complete (indices 3-5) → use block sum             |
+|   - Block 2: Partial (indices 6-7)  → sum individually          |
+|                                                                  |
+|   Calculation:                                                   |
+|   Partial left  (1-2): 1 + 4 = 5                               |
+|   Complete (block 1): 15                                        |
+|   Partial right (6-7): 6 + 8 = 14                              |
+|   ----------------------------                                  |
+|   Total: 5 + 15 + 14 = 34 ✓                                    |
+|                                                                  |
+|   Operations: O(√n) = O(3) = 3 block checks                    |
++-----------------------------------------------------------------+
+
+| STEP 3: Update array[4] = 10  (was 5)                          |
+|                                                                  |
+|   Old: [2, 1, 4]|[3, 5, 7]|[6, 8, 9]                          |
+|   New: [2, 1, 4]|[3,10, 7]|[6, 8, 9]                          |
+|                       ↑                                          |
+|                    changed                                       |
+|                                                                  |
+|   Update block 1 sum: 15 + (10-5) = 20                         |
+|   Block Sums: [7, 20, 23]                                       |
+|                                                                  |
+|   Operations: O(1) - constant time update!                      |
++-----------------------------------------------------------------+
+
+```
 
 ---
 
@@ -143,68 +211,6 @@ b^2 = n
 b = \sqrt{n}$$
 
 At $b = \sqrt{n}$: $T = O(\frac{n}{\sqrt{n}} + \sqrt{n}) = O(\sqrt{n} + \sqrt{n}) = O(\sqrt{n})$ $\blacksquare$
-
----
-
-## 🎨 Visual Walkthrough
-
-<div align="center">
-<img src="./images/sqrt-decomp-overview.png" alt="Sqrt Decomposition Overview" width="100%">
-</div>
-
-### Step-by-Step Breakdown
-
-```
-+-----------------------------------------------------------------+
-| EXAMPLE: Range Sum Query with Sqrt Decomposition               |
-+-----------------------------------------------------------------+
-| Array: [2, 1, 4, 3, 5, 7, 6, 8, 9]  (n = 9, block_size = 3)   |
-|                                                                  |
-| STEP 1: Divide into blocks                                      |
-|                                                                  |
-|   Index:  0  1  2 | 3  4  5 | 6  7  8                          |
-|   Array: [2, 1, 4]|[3, 5, 7]|[6, 8, 9]                         |
-|           Block 0  | Block 1 | Block 2                          |
-|                                                                  |
-|   Block Sums: [7, 15, 23]                                       |
-+-----------------------------------------------------------------+
-
-| STEP 2: Query sum(1, 7)  (indices 1 to 7 inclusive)           |
-|                                                                  |
-|   Visualization:                                                 |
-|   Index:  0  1  2 | 3  4  5 | 6  7  8                          |
-|   Array: [2, 1, 4]|[3, 5, 7]|[6, 8, 9]                         |
-|           -  ✓  ✓  ✓  ✓  ✓   ✓  ✓  -                          |
-|                                                                  |
-|   Analysis:                                                      |
-|   - Block 0: Partial (indices 1-2)  → sum individually          |
-|   - Block 1: Complete (indices 3-5) → use block sum             |
-|   - Block 2: Partial (indices 6-7)  → sum individually          |
-|                                                                  |
-|   Calculation:                                                   |
-|   Partial left  (1-2): 1 + 4 = 5                               |
-|   Complete (block 1): 15                                        |
-|   Partial right (6-7): 6 + 8 = 14                              |
-|   ----------------------------                                  |
-|   Total: 5 + 15 + 14 = 34 ✓                                    |
-|                                                                  |
-|   Operations: O(√n) = O(3) = 3 block checks                    |
-+-----------------------------------------------------------------+
-
-| STEP 3: Update array[4] = 10  (was 5)                          |
-|                                                                  |
-|   Old: [2, 1, 4]|[3, 5, 7]|[6, 8, 9]                          |
-|   New: [2, 1, 4]|[3,10, 7]|[6, 8, 9]                          |
-|                       ↑                                          |
-|                    changed                                       |
-|                                                                  |
-|   Update block 1 sum: 15 + (10-5) = 20                         |
-|   Block Sums: [7, 20, 23]                                       |
-|                                                                  |
-|   Operations: O(1) - constant time update!                      |
-+-----------------------------------------------------------------+
-
-```
 
 ---
 
