@@ -22,7 +22,7 @@ permalink: /26_sweep_line/05_rectangle_problems/
 ## 📊 Visual Overview
 
 <div align="center">
-  <img src="./images/rectangle-problems.svg" alt="Rectangle Problems Visualization" width="800"/>
+  <img src="./images/rectangle-problems.png" alt="Rectangle Problems Visualization" width="800"/>
 </div>
 
 ---
