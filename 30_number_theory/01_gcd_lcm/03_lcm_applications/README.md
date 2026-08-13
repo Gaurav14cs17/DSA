@@ -32,6 +32,16 @@ permalink: /30_number_theory/01_gcd_lcm/03_lcm_applications/
 
 ---
 
+## 📊 Visual Diagram
+
+<div align="center">
+
+![LCM Visualization](./images/lcm_visualization.png)
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ LCM Formula
@@ -54,16 +64,6 @@ $$\begin{align}
 ### 3️⃣ LCM of Multiple Numbers
 
 $$\text{lcm}(a_1, a_2, \ldots, a_n) = \text{lcm}(\text{lcm}(a_1, a_2, \ldots, a_{n-1}), a_n)$$
-
----
-
-## 📊 Visual Diagram
-
-<div align="center">
-
-![LCM Visualization](./images/lcm_visualization.png)
-
-</div>
 
 ---
 
