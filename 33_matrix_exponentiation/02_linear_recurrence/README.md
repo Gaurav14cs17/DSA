@@ -10,6 +10,10 @@ permalink: /33_matrix_exponentiation/02_linear_recurrence/
 
 # 🔢 Linear Recurrence
 
+### *Solving Linear Recurrences in O(log n)*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-20+-green?style=for-the-badge" alt="Problems">
@@ -23,15 +27,7 @@ permalink: /33_matrix_exponentiation/02_linear_recurrence/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Matrix Power](../01_matrix_power/README.md) | **02. Linear Recurrence** | [🏠 Matrix Exp Home](../README.md) |
-
----
-
-## 🎨 Visual Guides
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -61,8 +57,28 @@ permalink: /33_matrix_exponentiation/02_linear_recurrence/
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **In one line** | Solving Linear Recurrences in O(log n) |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 20+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 01. Matrix Power](../01_matrix_power/README.md) | **02. Linear Recurrence** | [🏠 Matrix Exp Home](../README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### Linear Recurrence Definition
 
 $$a_n = c_1 a_{n-1} + c_2 a_{n-2} + \cdots + c_k a_{n-k}$$
@@ -232,10 +248,3 @@ def linear_recurrence(coeffs: list[int], initial: list[int],
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Matrix Power](../01_matrix_power/README.md) | **02. Linear Recurrence** | [🏠 Matrix Exp Home](../README.md) |
-
