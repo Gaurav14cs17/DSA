@@ -30,7 +30,7 @@ permalink: /25_tree_algorithms/02_tree_dp/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/tree-dp-diagram.svg" alt="Tree DP Diagram" width="100%"/>
+<img src="./images/tree-dp-diagram.png" alt="Tree DP Diagram" width="100%"/>
 </div>
 
 ---
