@@ -39,8 +39,6 @@ permalink: /06_hash_tables/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -325,8 +323,6 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
  Complement   Top-K, Anagram   Duplicates
 
 ```
-
----
 
 ---
 
