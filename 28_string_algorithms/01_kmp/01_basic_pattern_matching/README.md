@@ -5,14 +5,18 @@ parent: "KMP Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 1
 ---
+<div align="center">
 
 # 🎯 Basic Pattern Matching with KMP
 
 ### *Basic pattern matching problems using KMP algorithm - finding occurrences, counting matches, and handling edge cases.*
 
 
-## 📊 Visual Overview
+</div>
 
+---
+
+## 📊 Visual Overview
 ![Basic Pattern Matching](./images/basic-pattern-matching.png)
 
 *Basic Pattern Matching*
@@ -29,6 +33,14 @@ nav_order: 1
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [🏠 KMP Home](../README.md) | **Basic Pattern Matching** | [Failure Function →](../02_failure_function/README.md) |
 
 ---
 
@@ -711,4 +723,3 @@ print(kmp_case_insensitive(text, pattern))  # [0, 13]
 ---
 
 **Navigation:** [← KMP Overview](../README.md) | [Next: Failure Function →](../02_failure_function/)
-
