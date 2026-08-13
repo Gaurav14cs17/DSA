@@ -11,6 +11,8 @@ permalink: /30_number_theory/06_chinese_remainder/02_general_crt/
 
 # 🔄 General CRT
 
+### *CRT for Non-Coprime Moduli*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Non_Coprime_Moduli-Supported-green?style=for-the-badge" alt="Non-Coprime">
@@ -38,10 +40,23 @@ permalink: /30_number_theory/06_chinese_remainder/02_general_crt/
 
 ![General CRT](./images/general_crt.png)
 
+*General CRT*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | CRT for Non-Coprime Moduli |
+| **Difficulty** | Medium Hard |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundations
 
 ### When Moduli Aren't Coprime
