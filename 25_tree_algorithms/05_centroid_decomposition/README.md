@@ -30,7 +30,7 @@ permalink: /25_tree_algorithms/05_centroid_decomposition/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/centroid-decomposition-diagram.svg" alt="Centroid Decomposition Diagram" width="100%"/>
+<img src="./images/centroid-decomposition-diagram.png" alt="Centroid Decomposition Diagram" width="100%"/>
 </div>
 
 ---
