@@ -23,15 +23,7 @@ permalink: /16_recursion/06_array_recursion/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 05. String Recursion](../05_string_recursion/README.md) | **06. Array Recursion** | [07. Divide & Conquer →](../07_divide_conquer/README.md) |
-
----
-
-## 📊 Visual Diagrams
+## 📊 Visual Overview
 
 <p align="center">
   <img src="./images/array_sum.png" alt="Array Sum Recursion" width="100%"/>
@@ -44,6 +36,27 @@ permalink: /16_recursion/06_array_recursion/
 <p align="center">
   <img src="./images/array_operations.png" alt="Array Operations Recursion" width="100%"/>
 </p>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Processing arrays element by element using recursion |
+| **Difficulty** | Easy |
+| **Problems** | 15+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 05. String Recursion](../05_string_recursion/README.md) | **06. Array Recursion** | [07. Divide & Conquer →](../07_divide_conquer/README.md) |
 
 ---
 
@@ -579,10 +592,3 @@ Array Recursion Patterns
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 05. String Recursion](../05_string_recursion/README.md) | **06. Array Recursion** | [07. Divide & Conquer →](../07_divide_conquer/README.md) |
-
