@@ -39,8 +39,6 @@ permalink: /07_trees/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -198,8 +196,6 @@ First values: $C_0=1, C_1=1, C_2=2, C_3=5, C_4=14, \ldots$
 |:-:|---------|-----------|:----:|:-----:|
 | 124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | DFS | O(n) | O(h) |
 | 297 | [Serialize and Deserialize](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | BFS/DFS | O(n) | O(n) |
-
----
 
 ---
 
