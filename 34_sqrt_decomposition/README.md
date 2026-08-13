@@ -10,7 +10,7 @@ permalink: /34_sqrt_decomposition/
 
 # √ Square Root Decomposition
 
-![Sqrt Decomposition Overview](./images/sqrt-decomp-overview.svg)
+![Sqrt Decomposition Overview](./images/sqrt-decomp-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
@@ -149,7 +149,7 @@ At $b = \sqrt{n}$: $T = O(\frac{n}{\sqrt{n}} + \sqrt{n}) = O(\sqrt{n} + \sqrt{n}
 ## 🎨 Visual Walkthrough
 
 <div align="center">
-<img src="./images/sqrt-decomposition.svg" alt="Sqrt Decomposition Overview" width="100%">
+<img src="./images/sqrt-decomp-overview.png" alt="Sqrt Decomposition Overview" width="100%">
 </div>
 
 ### Step-by-Step Breakdown
