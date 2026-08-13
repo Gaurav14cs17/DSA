@@ -32,6 +32,16 @@ permalink: /30_number_theory/01_gcd_lcm/04_binary_gcd/
 
 ---
 
+## 📊 Visual Diagram
+
+<div align="center">
+
+![Binary GCD Algorithm](./images/binary_gcd.png)
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### Binary GCD Properties
@@ -61,13 +71,35 @@ permalink: /30_number_theory/01_gcd_lcm/04_binary_gcd/
 
 ---
 
-## 📊 Visual Diagram
+## 🎨 Visual Walkthrough
 
-<div align="center">
+```
++-----------------------------------------------------------------+
+| EXAMPLE: binary_gcd(48, 18)                                     |
++-----------------------------------------------------------------+
+| Step 1: Find common power of 2                                  |
+|   48 = 110000₂ (even)                                           |
+|   18 = 010010₂ (even)                                           |
+|   Both even → divide by 2                                       |
+|   shift = 1                                                     |
+|   a = 24, b = 9                                                 |
+|                                                                  |
+| Step 2: Remove factors of 2 from a                              |
+|   24 = 11000₂ (even)                                            |
+|   a = 12 → 6 → 3 (now odd)                                      |
+|                                                                  |
+| Step 3: Main loop                                               |
+|   a = 3, b = 9 (both odd)                                       |
+|   b = 9 - 3 = 6                                                 |
+|   Remove 2s from b: 6 → 3                                       |
+|   a = 3, b = 3                                                  |
+|   b = 3 - 3 = 0                                                 |
+|                                                                  |
+| Step 4: Restore common factor                                   |
+|   result = 3 << 1 = 6  ✓                                        |
++-----------------------------------------------------------------+
 
-![Binary GCD Algorithm](./images/binary_gcd.png)
-
-</div>
+```
 
 ---
 
@@ -121,38 +153,6 @@ def binary_gcd(a: int, b: int) -> int:
 # Example usage
 print(binary_gcd(48, 18))  # 6
 print(binary_gcd(100, 35))  # 5
-
-```
-
----
-
-## 🎨 Visual Walkthrough
-
-```
-+-----------------------------------------------------------------+
-| EXAMPLE: binary_gcd(48, 18)                                     |
-+-----------------------------------------------------------------+
-| Step 1: Find common power of 2                                  |
-|   48 = 110000₂ (even)                                           |
-|   18 = 010010₂ (even)                                           |
-|   Both even → divide by 2                                       |
-|   shift = 1                                                     |
-|   a = 24, b = 9                                                 |
-|                                                                  |
-| Step 2: Remove factors of 2 from a                              |
-|   24 = 11000₂ (even)                                            |
-|   a = 12 → 6 → 3 (now odd)                                      |
-|                                                                  |
-| Step 3: Main loop                                               |
-|   a = 3, b = 9 (both odd)                                       |
-|   b = 9 - 3 = 6                                                 |
-|   Remove 2s from b: 6 → 3                                       |
-|   a = 3, b = 3                                                  |
-|   b = 3 - 3 = 0                                                 |
-|                                                                  |
-| Step 4: Restore common factor                                   |
-|   result = 3 << 1 = 6  ✓                                        |
-+-----------------------------------------------------------------+
 
 ```
 
