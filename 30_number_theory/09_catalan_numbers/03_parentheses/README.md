@@ -11,6 +11,8 @@ permalink: /30_number_theory/09_catalan_numbers/03_parentheses/
 
 # 🔄 Parentheses Generation
 
+### *Generating All Valid Parentheses Combinations*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/LeetCode-22_32_678-blue?style=for-the-badge" alt="LeetCode">
@@ -39,10 +41,23 @@ permalink: /30_number_theory/09_catalan_numbers/03_parentheses/
 
 ![Valid Parentheses](./images/valid_parentheses.png)
 
+*Valid Parentheses*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Generating All Valid Parentheses Combinations |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundation
 
 ### The Core Problem
