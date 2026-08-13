@@ -32,7 +32,7 @@ nav_order: 4
 
 <div align="center">
 
-![Bipartite Matching - Hungarian Algorithm](./images/bipartite-matching.svg)
+![Bipartite Matching - Hungarian Algorithm](./images/bipartite-matching.png)
 
 </div>
 
