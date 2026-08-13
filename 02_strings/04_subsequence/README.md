@@ -10,6 +10,8 @@ permalink: /02_strings/04_subsequence/
 
 # 📜 Subsequence Problems
 
+### *📜 Subsequence Problems*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
@@ -19,15 +21,7 @@ permalink: /02_strings/04_subsequence/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
-|:------------|:----------:|--------:|
-| [← 03. Palindrome](../03_palindrome/README.md) | **04. Subsequence** | [🏠 Strings Home](../README.md) → [Linked Lists](../../03_linked_lists/README.md) |
-
----
-
-## 🎨 Visual Diagrams
+## 📊 Visual Overview
 
 ### Is Subsequence - Two Pointer Greedy Approach
 
@@ -49,8 +43,81 @@ permalink: /02_strings/04_subsequence/
 
 ---
 
-## 📐 Mathematical Foundations
+---
 
+## 📊 Visual Overview
+
+### LCS Example: "ABCDE" vs "ACE"
+
+```
+DP Table Construction:
+
+        ""  A  C  E
+    ""   0  0  0  0
+    A    0  1  1  1    ← A matches A: dp[1][1] = dp[0][0] + 1 = 1
+    B    0  1  1  1    ← B doesn't match: max(dp[0][2], dp[1][1]) = 1
+    C    0  1  2  2    ← C matches C: dp[2][2] = dp[1][1] + 1 = 2
+    D    0  1  2  2    ← D doesn't match: max(dp[2][2], dp[3][1]) = 2
+    E    0  1  2  3    ← E matches E: dp[3][3] = dp[2][2] + 1 = 3
+
+LCS length = 3 (corresponding to "ACE")
+
+Tracing back the solution:
+  dp[5][3] = 3, s1[4]='E', s2[2]='E' → match → include 'E'
+  dp[3][2] = 2, s1[2]='C', s2[1]='C' → match → include 'C'
+  dp[1][1] = 1, s1[0]='A', s2[0]='A' → match → include 'A'
+
+Result: "ACE" ✓
+
+```
+
+### Edit Distance Example: "horse" → "ros"
+
+```
+Operations: Delete, Insert, Replace
+
+        ""  r  o  s
+    ""   0  1  2  3
+    h    1  1  2  3    ← Replace h→r: dp[1][1] = dp[0][0] + 1 = 1
+    o    2  2  1  2    ← o matches: dp[2][2] = dp[1][1] = 1
+    r    3  2  2  2    ← r matches: dp[3][1] = dp[2][0] = 2
+    s    4  3  3  2    ← s matches: dp[4][3] = dp[3][2] = 2
+    e    5  4  4  3    ← Delete e: dp[5][3] = dp[4][3] + 1 = 3
+
+Minimum operations = 3
+Path: horse → rorse → rose → ros
+      (replace)  (delete) (delete)
+
+```
+
+---
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 📜 Subsequence Problems |
+| **Difficulty** | Medium to Hard |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
+|:------------|:----------:|--------:|
+| [← 03. Palindrome](../03_palindrome/README.md) | **04. Subsequence** | [🏠 Strings Home](../README.md) → [Linked Lists](../../03_linked_lists/README.md) |
+
+---
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Subsequence Definition
 
 **Definition:** $T$ is a subsequence of $S$ if $T$ can be obtained by deleting zero or more characters from $S$ without changing the order.
@@ -129,51 +196,6 @@ For each character in $T$, find first matching character in remaining $S$.
 **Time:** $O(n)$ where $n = |S|$
 
 ---
-
-## 🎨 Visual DP Tables
-
-### LCS Example: "ABCDE" vs "ACE"
-
-```
-DP Table Construction:
-
-        ""  A  C  E
-    ""   0  0  0  0
-    A    0  1  1  1    ← A matches A: dp[1][1] = dp[0][0] + 1 = 1
-    B    0  1  1  1    ← B doesn't match: max(dp[0][2], dp[1][1]) = 1
-    C    0  1  2  2    ← C matches C: dp[2][2] = dp[1][1] + 1 = 2
-    D    0  1  2  2    ← D doesn't match: max(dp[2][2], dp[3][1]) = 2
-    E    0  1  2  3    ← E matches E: dp[3][3] = dp[2][2] + 1 = 3
-
-LCS length = 3 (corresponding to "ACE")
-
-Tracing back the solution:
-  dp[5][3] = 3, s1[4]='E', s2[2]='E' → match → include 'E'
-  dp[3][2] = 2, s1[2]='C', s2[1]='C' → match → include 'C'
-  dp[1][1] = 1, s1[0]='A', s2[0]='A' → match → include 'A'
-
-Result: "ACE" ✓
-
-```
-
-### Edit Distance Example: "horse" → "ros"
-
-```
-Operations: Delete, Insert, Replace
-
-        ""  r  o  s
-    ""   0  1  2  3
-    h    1  1  2  3    ← Replace h→r: dp[1][1] = dp[0][0] + 1 = 1
-    o    2  2  1  2    ← o matches: dp[2][2] = dp[1][1] = 1
-    r    3  2  2  2    ← r matches: dp[3][1] = dp[2][0] = 2
-    s    4  3  3  2    ← s matches: dp[4][3] = dp[3][2] = 2
-    e    5  4  4  3    ← Delete e: dp[5][3] = dp[4][3] + 1 = 3
-
-Minimum operations = 3
-Path: horse → rorse → rose → ros
-      (replace)  (delete) (delete)
-
-```
 
 ---
 
@@ -271,6 +293,8 @@ def numDistinct(s: str, t: str) -> int:
 
 ---
 
+---
+
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
@@ -298,6 +322,8 @@ def numDistinct(s: str, t: str) -> int:
 
 ---
 
+---
+
 ## 💡 Key Insights & Pro Tips
 
 > **🎯 Subsequence vs Substring**  
@@ -314,6 +340,8 @@ def numDistinct(s: str, t: str) -> int:
 
 > **🔍 Space Optimization**  
 > DP uses 2D table, but only previous row needed. Optimize O(mn) → O(min(m,n)) space!
+
+---
 
 ---
 
@@ -345,6 +373,8 @@ Subsequence Problem
 | **Edit distance** | 2D DP | O(mn) | O(mn) | 3 operations |
 | **Distinct subsequences** | 2D DP | O(mn) | O(mn) | Count paths |
 | **LIS** | DP + Binary Search | O(n log n) | O(n) | Patience sorting |
+
+---
 
 ---
 
@@ -405,6 +435,8 @@ By induction, DP computes optimal solution ∎
 
 ---
 
+---
+
 ## 🎯 Complexity Comparison
 
 ### Space Optimization
@@ -424,6 +456,8 @@ By induction, DP computes optimal solution ∎
 | **K sequences** | O(n^k) | O(n^k) | Exponential! |
 | **With gaps** | O(mn) | O(mn) | Same as standard |
 | **LIS (special case)** | O(n log n) | O(n) | Single sequence |
+
+---
 
 ---
 
@@ -502,6 +536,8 @@ By induction, DP computes optimal solution ∎
 
 ---
 
+---
+
 ## 🎯 Practice Roadmap
 
 ### Beginner Level
@@ -538,6 +574,8 @@ By induction, DP computes optimal solution ∎
 
 ---
 
+---
+
 ## 💭 Common Interview Questions
 
 **Q: What's the difference between subsequence and substring?**  
@@ -571,9 +609,3 @@ A: Edit distance = m + n - 2×LCS. Both can solve each other!
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
-|:------------|:----------:|--------:|
-| [← 03. Palindrome](../03_palindrome/README.md) | **04. Subsequence** | [🏠 Strings Home](../README.md) → [Linked Lists](../../03_linked_lists/README.md) |
