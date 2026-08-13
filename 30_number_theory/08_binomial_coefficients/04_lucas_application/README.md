@@ -37,7 +37,7 @@ permalink: /30_number_theory/08_binomial_coefficients/04_lucas_application/
 
 <div align="center">
 
-![Lucas' Theorem](./images/lucas_binomial.svg)
+![Lucas' Theorem](./images/lucas_binomial.png)
 
 </div>
 
