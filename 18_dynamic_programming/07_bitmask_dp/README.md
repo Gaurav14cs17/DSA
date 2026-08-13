@@ -30,7 +30,7 @@ permalink: /18_dynamic_programming/07_bitmask_dp/
 ## 📊 Visual Guide
 
 <div align="center">
-  <img src="images/bitmask-dp.svg" alt="Bitmask DP Visualization" width="100%">
+  <img src="images/bitmask-dp.png" alt="Bitmask DP Visualization" width="100%">
 </div>
 
 ---
