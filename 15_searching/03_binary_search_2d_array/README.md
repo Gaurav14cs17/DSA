@@ -32,8 +32,6 @@ permalink: /15_searching/03_binary_search_2d_array/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
