@@ -8,28 +8,29 @@ nav_order: 1
 
 # 🔢 Basic Modular Operations
 
-## 📊 Metadata
-
-- **Difficulty:** ![Easy](https://img.shields.io/badge/Easy-green)
-
-- **Time Complexity:** O(1) per operation
-
-- **Space Complexity:** O(1)
-
-- **Pattern:** Number Theory, Clock Arithmetic
-
----
-
 ## 📊 Visual Diagram
 
 <div align="center">
 
 ![Modular Operations](./images/modular_operations.png)
 
+*Modular Operations*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Typical time** | O(1) per operation |
+| **Typical space** | O(1) |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🎯 Overview
 
 Modular arithmetic is "clock arithmetic" where numbers wrap around upon reaching a certain value (modulus). It's fundamental to cryptography, hashing, and competitive programming.
