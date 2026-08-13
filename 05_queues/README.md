@@ -10,7 +10,7 @@ permalink: /05_queues/
 
 # 📬 Queues
 
-![Queues Overview](./images/queue-overview.svg)
+![Queues Overview](./images/queue-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
