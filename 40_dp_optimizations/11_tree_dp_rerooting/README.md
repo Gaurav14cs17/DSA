@@ -3,7 +3,7 @@
 ## 📊 Visual Diagram
 
 <p align="center">
-  <img src="./images/tree-dp-rerooting.svg" alt="Tree DP Rerooting" width="100%">
+  <img src="./images/tree-dp-rerooting.png" alt="Tree DP Rerooting" width="100%">
 </p>
 
 ## Overview
