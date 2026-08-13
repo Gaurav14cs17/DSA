@@ -10,12 +10,39 @@ permalink: /09_heaps/04_two_heaps/
 
 # ⚖️ Two Heaps Pattern
 
+### *⚖️ Two Heaps Pattern*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-6+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Two Heaps Pattern](./image/two_heaps_pattern.png)
+
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | ⚖️ Two Heaps Pattern |
+| **Difficulty** | Hard |
+| **Problems** | 6+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -27,18 +54,7 @@ permalink: /09_heaps/04_two_heaps/
 
 ---
 
-## 🎨 Visual Pattern Guide
-
-<div align="center">
-
-![Two Heaps Pattern](./image/two_heaps_pattern.png)
-
-</div>
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Median Tracking with Two Heaps
 
 **Structure:**
@@ -269,9 +285,3 @@ Need dynamic median/partition?
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
-|:------------|:----------:|--------:|
-| [← 03. Merge K Streams](../03_merge_k_streams/README.md) | **04. Two Heaps** | [🏠 Heaps Home](../README.md) → [Graphs](../../10_graphs/README.md) |
