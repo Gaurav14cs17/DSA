@@ -32,6 +32,16 @@ permalink: /30_number_theory/01_gcd_lcm/05_gcd_arrays/
 
 ---
 
+## 📊 Visual Diagram
+
+<div align="center">
+
+![GCD of Arrays](./images/gcd_arrays.png)
+
+</div>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### Associativity Property
@@ -43,16 +53,6 @@ This means we can compute GCD of multiple numbers in any order!
 ### GCD of Array
 
 $$\gcd(a_1, a_2, \ldots, a_n) = \gcd(a_1, \gcd(a_2, \ldots, a_n))$$
-
----
-
-## 📊 Visual Diagram
-
-<div align="center">
-
-![GCD of Arrays](./images/gcd_arrays.png)
-
-</div>
 
 ---
 
