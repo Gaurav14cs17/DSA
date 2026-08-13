@@ -105,24 +105,24 @@ $$S' = \#s_0\#s_1\#\ldots\#s_{n-1}\#$$
 ### Palindrome Check - Two Pointer Approach
 
 <p align="center">
-  <img src="./images/palindrome_check.svg" alt="Palindrome Check Algorithm" width="700"/>
+  <img src="./images/palindrome_check.png" alt="Palindrome Check Algorithm" width="700"/>
 </p>
 
 ### Expand Around Center Algorithm
 
 <p align="center">
-  <img src="./images/expand_around_center.svg" alt="Expand Around Center Algorithm" width="800"/>
+  <img src="./images/expand_around_center.png" alt="Expand Around Center Algorithm" width="800"/>
 </p>
 
 ### Why 2n-1 Centers?
 
 <p align="center">
-  <img src="./images/centers_concept.svg" alt="Centers Concept Explanation" width="700"/>
+  <img src="./images/centers_concept.png" alt="Centers Concept Explanation" width="700"/>
 </p>
 
 ### Palindrome Concept
 <p align="center">
-  <img src="./images/palindrome_concept.svg" alt="Palindrome Concept" width="700"/>
+  <img src="./images/palindrome_concept.png" alt="Palindrome Concept" width="700"/>
 </p>
 
 ---
