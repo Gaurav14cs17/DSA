@@ -10,7 +10,6 @@ permalink: /33_matrix_exponentiation/
 
 # 🔢 Matrix Exponentiation
 
-![Matrix Exponentiation Overview](./images/matrix-exp-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
@@ -25,6 +24,17 @@ permalink: /33_matrix_exponentiation/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Matrix Exponentiation Overview](./images/matrix-exp-overview.png)
+
+</div>
+
+---
+
 
 ## 🧭 Navigation
 
