@@ -10,7 +10,7 @@ nav_order: 5
 
 ## 📊 Visual Overview
 
-![Substring Problems](./images/substring-problems.svg)
+![Substring Problems](./images/substring-problems.png)
 
 ## 📊 Metadata
 
