@@ -11,20 +11,16 @@ permalink: /27_advanced_trees/03_fenwick_tree/05_dp_with_bit/
 
 # 🎯 Dynamic Programming with BIT
 
+### *Dynamic Programming with BIT*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-6-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Order Statistics](../04_order_statistics/README.md) | **05. DP with BIT** | [Fenwick Tree →](../README.md) |
 
 ---
 
@@ -47,6 +43,15 @@ permalink: /27_advanced_trees/03_fenwick_tree/05_dp_with_bit/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 04. Order Statistics](../04_order_statistics/README.md) | **05. DP with BIT** | [Fenwick Tree →](../README.md) |
+
+---
+
 ## 📐 Core Concept
 
 **DP + BIT:** Use BIT to optimize DP state transitions from $O(n^2)$ to $O(n \log n)$.
@@ -121,10 +126,3 @@ def lengthOfLIS(nums: List[int], k: int) -> int:
 | - | Building Bridges | Hard |
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Order Statistics](../04_order_statistics/README.md) | **05. DP with BIT** | [Fenwick Tree →](../README.md) |
-
