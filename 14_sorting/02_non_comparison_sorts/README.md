@@ -10,6 +10,10 @@ permalink: /14_sorting/02_non_comparison_sorts/
 
 # 🔢 Non-Comparison Sorting
 
+### *Non-Comparison Sorting*
+
+
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -43,6 +47,7 @@ permalink: /14_sorting/02_non_comparison_sorts/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -51,8 +56,7 @@ permalink: /14_sorting/02_non_comparison_sorts/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Breaking the O(n log n) Barrier
 
 Non-comparison sorts use:
@@ -336,9 +340,3 @@ Non-Comparison Sort
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Comparison Sorts](../01_comparison_sorts/README.md) | **02. Non-Comparison Sorts** | [03. Custom Sorting →](../03_custom_sorting/README.md) |
