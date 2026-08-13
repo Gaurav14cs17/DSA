@@ -10,7 +10,6 @@ permalink: /03_linked_lists/
 
 # 🔗 Linked Lists
 
-![Linked Lists Overview](./images/linked-list-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-green?style=for-the-badge" alt="Difficulty">
@@ -25,6 +24,17 @@ permalink: /03_linked_lists/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Linked Lists Overview](./images/linked-list-overview.png)
+
+</div>
+
+---
+
 
 ## 📐 Mathematical Foundation
 
