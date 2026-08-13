@@ -10,20 +10,16 @@ permalink: /27_advanced_trees/01_avl_trees/
 
 # ⚖️ AVL Trees
 
+### *AVL Trees*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Advanced Trees](../README.md) | **01. AVL Trees** | [02. Red-Black Trees →](../02_red_black_trees/README.md) |
 
 ---
 
@@ -46,8 +42,16 @@ permalink: /27_advanced_trees/01_avl_trees/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 📐 Mathematical Foundations
 
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Advanced Trees](../README.md) | **01. AVL Trees** | [02. Red-Black Trees →](../02_red_black_trees/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ AVL Tree Definition
 
 **AVL Tree:** Self-balancing BST where height difference between left and right subtrees ≤ 1.
@@ -622,10 +626,3 @@ def range_sum_bst(root: Optional[AVLNode], low: int, high: int) -> int:
 6. **Optimal for lookups:** Faster than Red-Black due to stricter balance
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Advanced Trees](../README.md) | **01. AVL Trees** | [02. Red-Black Trees →](../02_red_black_trees/README.md) |
-
