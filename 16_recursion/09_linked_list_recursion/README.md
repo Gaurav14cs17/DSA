@@ -32,11 +32,11 @@ permalink: /16_recursion/09_linked_list_recursion/
 ## 📊 Visual Diagrams
 
 <p align="center">
-  <img src="./images/reverse_list.svg" alt="Reverse Linked List" width="100%"/>
+  <img src="./images/reverse_list.png" alt="Reverse Linked List" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="./images/merge_lists.svg" alt="Merge Sorted Lists" width="100%"/>
+  <img src="./images/merge_lists.png" alt="Merge Sorted Lists" width="100%"/>
 </p>
 
 ---
