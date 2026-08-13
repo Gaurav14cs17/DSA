@@ -7,21 +7,29 @@ nav_order: 5
 
 # 🎭 Manacher's Algorithm
 
+### ***Manacher's Algorithm** finds all palindromic substrings in linear time O(n).*
+
+
 ## 📊 Visual Overview
 
 ![Manacher's Algorithm](./images/manacher.png)
 
-## 📊 Metadata
+*Manacher's Algorithm*
 
-- **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
+---
 
-- **Time Complexity:** O(n)
+## 🎯 At a Glance
 
-- **Space Complexity:** O(n)
+| | |
+|:---|:---|
+| **In one line** | **Manacher's Algorithm** finds all palindromic substrings in linear time O(n). |
+| **Typical time** | O(n) |
+| **Typical space** | O(n) |
+| **Topics** | Palindromes, Dynamic Programming, String Processing |
+| **Prerequisites** | String basics, Two pointers |
 
-- **Topics:** Palindromes, Dynamic Programming, String Processing
-
-- **Prerequisites:** String basics, Two pointers
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
