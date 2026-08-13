@@ -24,15 +24,7 @@ permalink: /30_number_theory/08_binomial_coefficients/05_advanced_problems/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Lucas](../04_lucas_application/README.md) | **05. Advanced** | [🏠 Binomial Home](../README.md) |
-
----
-
-## 📊 Visual Diagram
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -55,6 +47,15 @@ permalink: /30_number_theory/08_binomial_coefficients/05_advanced_problems/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 04. Lucas](../04_lucas_application/README.md) | **05. Advanced** | [🏠 Binomial Home](../README.md) |
+
+---
+
 ## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty | Key |
@@ -125,9 +126,3 @@ def stars_and_bars(n: int, k: int) -> int:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Lucas](../04_lucas_application/README.md) | **05. Advanced** | [🏠 Binomial Home](../README.md) |
