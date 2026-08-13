@@ -8,19 +8,27 @@ nav_order: 1
 
 # 🎯 Basic Pattern Matching with KMP
 
+### *Basic pattern matching problems using KMP algorithm - finding occurrences, counting matches, and handling edge cases.*
+
+
 ## 📊 Visual Overview
 
 ![Basic Pattern Matching](./images/basic-pattern-matching.png)
 
-## 📊 Metadata
+*Basic Pattern Matching*
 
-- **Difficulty:** ![Easy-Medium](https://img.shields.io/badge/Easy--Medium-yellow)
+---
 
-- **Time Complexity:** O(n + m)
+## 🎯 At a Glance
 
-- **Space Complexity:** O(m)
+| | |
+|:---|:---|
+| **In one line** | Basic pattern matching problems using KMP algorithm - finding occurrences, counting matches, and handling edge cases. |
+| **Typical time** | O(n + m) |
+| **Typical space** | O(m) |
 
-- **Pattern:** String Matching, Linear Scanning
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
