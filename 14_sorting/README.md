@@ -10,7 +10,6 @@ permalink: /14_sorting/
 
 # 📊 Sorting Algorithms
 
-![Sorting Overview](./images/sorting-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Hard-green?style=for-the-badge" alt="Difficulty">
@@ -25,6 +24,17 @@ permalink: /14_sorting/
 </div>
 
 ---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Sorting Overview](./images/sorting-overview.png)
+
+</div>
+
+---
+
 
 ## 📐 Mathematical Foundation
 
