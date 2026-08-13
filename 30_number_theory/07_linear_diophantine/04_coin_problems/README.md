@@ -24,15 +24,7 @@ permalink: /30_number_theory/07_linear_diophantine/04_coin_problems/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Frobenius](../03_frobenius_number/README.md) | **04. Coin Problems** | [05. Applications →](../05_applications/README.md) |
-
----
-
-## 📊 Visual Diagram
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -55,6 +47,15 @@ permalink: /30_number_theory/07_linear_diophantine/04_coin_problems/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 03. Frobenius](../03_frobenius_number/README.md) | **04. Coin Problems** | [05. Applications →](../05_applications/README.md) |
+
+---
+
 ## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty | Connection |
@@ -169,9 +170,3 @@ For two coins a, b:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 03. Frobenius](../03_frobenius_number/README.md) | **04. Coin Problems** | [05. Applications →](../05_applications/README.md) |
