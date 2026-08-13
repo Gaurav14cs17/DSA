@@ -100,6 +100,101 @@ $$\text{count}_{A \cap B}(x) = \min(\text{count}_A(x), \text{count}_B(x))$$
 
 ---
 
+## 🎨 Visual Algorithm Walkthrough
+
+### Longest Consecutive Sequence (#128)
+
+```
+nums = [100, 4, 200, 1, 3, 2]
+
+Step 1: Build set
+  num_set = {100, 4, 200, 1, 3, 2}
+
+Step 2: Find sequence starts (no predecessor)
+  100: 99 not in set → start
+    100 → no 101 → length 1
+  
+  4: 3 in set → skip (not a start)
+  
+  200: 199 not in set → start
+    200 → no 201 → length 1
+  
+  1: 0 not in set → start ✓
+    1 → 2 in set
+    2 → 3 in set
+    3 → 4 in set
+    4 → no 5 → length 4
+
+Max length: 4 (sequence: 1,2,3,4)
+
+Time: O(n) - each element checked at most twice
+
+```
+
+### Intersection of Arrays (#349, #350)
+
+```
+nums1 = [1, 2, 2, 1], nums2 = [2, 2]
+
+Unique intersection (#349):
+  set1 = {1, 2}
+  set2 = {2}
+  intersection = {2}
+  result = [2]
+
+With duplicates (#350):
+  count1 = {1:2, 2:2}
+  For each in nums2:
+    2: count1[2]=2 > 0 → add, decrement
+    2: count1[2]=1 > 0 → add, decrement
+  result = [2, 2]
+
+```
+
+### Happy Number (#202)
+
+```
+n = 19
+
+Iteration 1: 1² + 9² = 1 + 81 = 82
+Iteration 2: 8² + 2² = 64 + 4 = 68
+Iteration 3: 6² + 8² = 36 + 64 = 100
+Iteration 4: 1² + 0² + 0² = 1 ✓
+
+seen = {19, 82, 68, 100}
+Result: True (reached 1)
+
+Unhappy example: n = 2
+2 → 4 → 16 → 37 → 58 → 89 → 145 → 42 → 20 → 4 (cycle!)
+
+```
+
+### Single Number (#136)
+
+```
+nums = [4, 1, 2, 1, 2]
+
+XOR properties:
+  a ^ a = 0
+  a ^ 0 = a
+  XOR is commutative
+
+Process:
+  0 ^ 4 = 4
+  4 ^ 1 = 5
+  5 ^ 2 = 7
+  7 ^ 1 = 6
+  6 ^ 2 = 4
+
+Result: 4 (the single number)
+
+Why: All pairs cancel out (a ^ a = 0)
+
+```
+
+---
+
+
 ## 💻 Code Implementations
 
 ```python
@@ -254,100 +349,6 @@ def missingNumber(nums: list[int]) -> int:
 | 41 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Index as Hash | O(n) | O(1) |
 
 ---
-
----
-
-## 🎨 Visual Algorithm Walkthrough
-
-### Longest Consecutive Sequence (#128)
-
-```
-nums = [100, 4, 200, 1, 3, 2]
-
-Step 1: Build set
-  num_set = {100, 4, 200, 1, 3, 2}
-
-Step 2: Find sequence starts (no predecessor)
-  100: 99 not in set → start
-    100 → no 101 → length 1
-  
-  4: 3 in set → skip (not a start)
-  
-  200: 199 not in set → start
-    200 → no 201 → length 1
-  
-  1: 0 not in set → start ✓
-    1 → 2 in set
-    2 → 3 in set
-    3 → 4 in set
-    4 → no 5 → length 4
-
-Max length: 4 (sequence: 1,2,3,4)
-
-Time: O(n) - each element checked at most twice
-
-```
-
-### Intersection of Arrays (#349, #350)
-
-```
-nums1 = [1, 2, 2, 1], nums2 = [2, 2]
-
-Unique intersection (#349):
-  set1 = {1, 2}
-  set2 = {2}
-  intersection = {2}
-  result = [2]
-
-With duplicates (#350):
-  count1 = {1:2, 2:2}
-  For each in nums2:
-    2: count1[2]=2 > 0 → add, decrement
-    2: count1[2]=1 > 0 → add, decrement
-  result = [2, 2]
-
-```
-
-### Happy Number (#202)
-
-```
-n = 19
-
-Iteration 1: 1² + 9² = 1 + 81 = 82
-Iteration 2: 8² + 2² = 64 + 4 = 68
-Iteration 3: 6² + 8² = 36 + 64 = 100
-Iteration 4: 1² + 0² + 0² = 1 ✓
-
-seen = {19, 82, 68, 100}
-Result: True (reached 1)
-
-Unhappy example: n = 2
-2 → 4 → 16 → 37 → 58 → 89 → 145 → 42 → 20 → 4 (cycle!)
-
-```
-
-### Single Number (#136)
-
-```
-nums = [4, 1, 2, 1, 2]
-
-XOR properties:
-  a ^ a = 0
-  a ^ 0 = a
-  XOR is commutative
-
-Process:
-  0 ^ 4 = 4
-  4 ^ 1 = 5
-  5 ^ 2 = 7
-  7 ^ 1 = 6
-  6 ^ 2 = 4
-
-Result: 4 (the single number)
-
-Why: All pairs cancel out (a ^ a = 0)
-
-```
 
 ---
 
