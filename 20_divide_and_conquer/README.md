@@ -10,7 +10,7 @@ permalink: /20_divide_and_conquer/
 
 # ⚔️ Divide and Conquer
 
-![Divide and Conquer Overview](./images/dnc-overview.svg)
+![Divide and Conquer Overview](./images/dnc-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
@@ -29,7 +29,7 @@ permalink: /20_divide_and_conquer/
 ## 🖼️ Visual Overview
 
 <div align="center">
-  <img src="./images/divide-conquer.svg" alt="Divide and Conquer Paradigm" width="100%">
+  <img src="./images/divide-conquer.png" alt="Divide and Conquer Paradigm" width="100%">
 </div>
 
 ---
@@ -210,7 +210,7 @@ def quickSelect(arr: list[int], k: int) -> int:
 ## 📊 D&C Pattern Decision
 
 <div align="center">
-  <img src="./images/dc-patterns.svg" alt="D&C Pattern Decision Tree" width="100%">
+  <img src="./images/dc-patterns.png" alt="D&C Pattern Decision Tree" width="100%">
 </div>
 
 ---
