@@ -32,15 +32,15 @@ permalink: /16_recursion/07_divide_conquer/
 ## 📊 Visual Diagrams
 
 <p align="center">
-  <img src="./images/merge_sort.svg" alt="Merge Sort Recursion" width="100%"/>
+  <img src="./images/merge_sort.png" alt="Merge Sort Recursion" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="./images/binary_search.svg" alt="Binary Search Recursion" width="100%"/>
+  <img src="./images/binary_search.png" alt="Binary Search Recursion" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="./images/quick_sort.svg" alt="Quick Sort Recursion" width="100%"/>
+  <img src="./images/quick_sort.png" alt="Quick Sort Recursion" width="100%"/>
 </p>
 
 ---
