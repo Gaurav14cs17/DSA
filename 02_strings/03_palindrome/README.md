@@ -10,6 +10,8 @@ permalink: /02_strings/03_palindrome/
 
 # 🔄 Palindrome Problems
 
+### *🔄 Palindrome Problems*
+
 
 
 <p>
@@ -593,19 +595,6 @@ A: No for worst case. But average case with hashing can be faster in practice.
 </div>
 
 ---
-
----
-
-## 🎯 At a Glance
-
-| | |
-|:---|:---|
-| **Topic** | 🔄 Palindrome Problems |
-| **Difficulty** | Medium |
-| **Problems** | 12+ |
-
-{: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
