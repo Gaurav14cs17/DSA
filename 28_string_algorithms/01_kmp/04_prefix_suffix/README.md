@@ -5,14 +5,18 @@ parent: "KMP Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 4
 ---
+<div align="center">
 
 # 🔗 Prefix-Suffix Matching with KMP
 
 ### *Prefix-suffix matching problems involve finding strings that are both prefixes and suffixes (borders).*
 
 
-## 📊 Visual Overview
+</div>
 
+---
+
+## 📊 Visual Overview
 ![Prefix-Suffix Matching](./images/prefix-suffix.png)
 
 *Prefix-Suffix Matching*
@@ -29,6 +33,14 @@ nav_order: 4
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← String Period](../03_string_period/README.md) | **Prefix Suffix** | [Palindrome KMP →](../05_palindrome_kmp/README.md) |
 
 ---
 
@@ -583,4 +595,3 @@ print(min_chars_to_palindrome("aacecaaa"))  # "aacecaaa"
 ---
 
 **Navigation:** [← String Period](../03_string_period/) | [KMP Overview](../README.md) | [Next: Palindrome KMP →](../05_palindrome_kmp/)
-
