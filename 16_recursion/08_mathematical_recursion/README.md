@@ -32,11 +32,11 @@ permalink: /16_recursion/08_mathematical_recursion/
 ## 📊 Visual Diagrams
 
 <p align="center">
-  <img src="./images/gcd_euclidean.svg" alt="GCD Euclidean Algorithm" width="100%"/>
+  <img src="./images/gcd_euclidean.png" alt="GCD Euclidean Algorithm" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="./images/digit_operations.svg" alt="Digit Operations Recursion" width="100%"/>
+  <img src="./images/digit_operations.png" alt="Digit Operations Recursion" width="100%"/>
 </p>
 
 ---
