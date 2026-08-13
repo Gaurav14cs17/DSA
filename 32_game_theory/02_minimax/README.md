@@ -31,51 +31,6 @@ permalink: /32_game_theory/02_minimax/
 
 ---
 
-## 📐 Mathematical Foundations
-
-### 1️⃣ Zero-Sum Games
-
-**Definition:** Game where one player's gain equals opponent's loss.
-
-$$\text{Player 1 score} + \text{Player 2 score} = \text{constant}$$
-
-**Examples:**
-
-- Chess (win/lose/draw)
-
-- Tic-Tac-Toe
-
-- Stone games with scores
-
----
-
-### 2️⃣ Minimax Principle
-
-**Idea:** Maximize the minimum payoff (worst-case optimization).
-
-**Recursive Definition:**
-
-$$\text{minimax}(s) = \begin{cases}
-\text{evaluate}(s) & \text{if } s \text{ is terminal} \\
-\max_{a} \text{minimax}(\text{result}(s,a)) & \text{if MAX's turn} \\
-\min_{a} \text{minimax}(\text{result}(s,a)) & \text{if MIN's turn}
-\end{cases}$$
-
----
-
-### 3️⃣ Alpha-Beta Pruning
-
-**Alpha ($\alpha$):** Best value MAX can guarantee so far  
-**Beta ($\beta$):** Best value MIN can guarantee so far
-
-**Pruning Condition:**
-
-$$\text{If } \alpha \geq \beta \text{, prune remaining branches}$$
-
-**Improvement:** From $O(b^d)$ to $O(b^{d/2})$ with perfect ordering!
-
----
-
 ## 🎨 Visual Diagrams
 
 ### Minimax Algorithm Tree
@@ -154,6 +109,51 @@ $$\text{If } \alpha \geq \beta \text{, prune remaining branches}$$
 +-----------------------------------------------------------------+
 
 ```
+
+---
+
+## 📐 Mathematical Foundations
+
+### 1️⃣ Zero-Sum Games
+
+**Definition:** Game where one player's gain equals opponent's loss.
+
+$$\text{Player 1 score} + \text{Player 2 score} = \text{constant}$$
+
+**Examples:**
+
+- Chess (win/lose/draw)
+
+- Tic-Tac-Toe
+
+- Stone games with scores
+
+---
+
+### 2️⃣ Minimax Principle
+
+**Idea:** Maximize the minimum payoff (worst-case optimization).
+
+**Recursive Definition:**
+
+$$\text{minimax}(s) = \begin{cases}
+\text{evaluate}(s) & \text{if } s \text{ is terminal} \\
+\max_{a} \text{minimax}(\text{result}(s,a)) & \text{if MAX's turn} \\
+\min_{a} \text{minimax}(\text{result}(s,a)) & \text{if MIN's turn}
+\end{cases}$$
+
+---
+
+### 3️⃣ Alpha-Beta Pruning
+
+**Alpha ($\alpha$):** Best value MAX can guarantee so far  
+**Beta ($\beta$):** Best value MIN can guarantee so far
+
+**Pruning Condition:**
+
+$$\text{If } \alpha \geq \beta \text{, prune remaining branches}$$
+
+**Improvement:** From $O(b^d)$ to $O(b^{d/2})$ with perfect ordering!
 
 ---
 
