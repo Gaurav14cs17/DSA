@@ -29,6 +29,30 @@ permalink: /31_combinatorics/03_special_sequences/
 
 ---
 
+## 🎨 Visual Patterns
+
+### Catalan Applications
+
+```
+n=3 Catalan = 5
+
+Valid Parentheses:
+()()()  ()(())  (())()  (()())  ((()))
+
+Binary Search Trees (n=3 nodes: 1,2,3):
+  1        1          2        3      3
+   \        \        / \      /      /
+    2        3      1   3    1      2
+     \      /                 \    /
+      3    2                   2  1
+
+Triangulations of Pentagon:
+[5 different ways to divide pentagon into triangles]
+
+```
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Catalan Numbers
@@ -203,30 +227,6 @@ def tribonacci(n: int) -> int:
         a, b, c = b, c, a + b + c
     
     return c
-
-```
-
----
-
-## 🎨 Visual Patterns
-
-### Catalan Applications
-
-```
-n=3 Catalan = 5
-
-Valid Parentheses:
-()()()  ()(())  (())()  (()())  ((()))
-
-Binary Search Trees (n=3 nodes: 1,2,3):
-  1        1          2        3      3
-   \        \        / \      /      /
-    2        3      1   3    1      2
-     \      /                 \    /
-      3    2                   2  1
-
-Triangulations of Pentagon:
-[5 different ways to divide pentagon into triangles]
 
 ```
 
