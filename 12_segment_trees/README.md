@@ -136,6 +136,24 @@ $$f(f(a, b), c) = f(a, f(b, c))$$
 
 ---
 
+## 📈 Visual Representation
+
+```
+Array: [1, 3, 5, 7, 9, 11]
+
+Segment Tree (Sum):
+                36 [0-5]
+               /          \
+         9 [0-2]          27 [3-5]
+         /    \           /      \
+    4 [0-1]  5[2]    16[3-4]   11[5]
+    /    \           /    \
+  1[0]  3[1]      7[3]   9[4]
+
+```
+
+---
+
 ## 🎯 Key Implementations
 
 ### Basic Segment Tree (Range Sum)
@@ -347,24 +365,6 @@ Range Query Problem
         +-- 2D queries → 2D Segment Tree
         |
         +-- Persistence needed → Persistent Segment Tree
-
-```
-
----
-
-## 📈 Visual Representation
-
-```
-Array: [1, 3, 5, 7, 9, 11]
-
-Segment Tree (Sum):
-                36 [0-5]
-               /          \
-         9 [0-2]          27 [3-5]
-         /    \           /      \
-    4 [0-1]  5[2]    16[3-4]   11[5]
-    /    \           /    \
-  1[0]  3[1]      7[3]   9[4]
 
 ```
 
