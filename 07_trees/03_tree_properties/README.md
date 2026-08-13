@@ -32,8 +32,6 @@ permalink: /07_trees/03_tree_properties/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -444,8 +442,6 @@ def countNodes(root: TreeNode) -> int:
 |:-:|---------|---------|:----:|:-----:|
 | 222 | [Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/) | Binary Search | O(log²n) | O(1) |
 | 958 | [Check Completeness](https://leetcode.com/problems/check-completeness-of-a-binary-tree/) | BFS | O(n) | O(w) |
-
----
 
 ---
 
