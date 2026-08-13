@@ -52,11 +52,14 @@ permalink: /20_divide_and_conquer/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 🖼️ Visual Overview
 
-<div align="center">
-  <img src="./images/divide-conquer.png" alt="Divide and Conquer Paradigm" width="100%">
-</div>
+## 📂 Subtopics Navigation
+
+| # | Topic | Problems | Link |
+|:-:|-------|:--------:|------|
+| 1 | Merge Sort Pattern | 8+ | [📖 Go →](./01_merge_sort_pattern/README.md) |
+| 2 | Quick Select | 6+ | [📖 Go →](./02_quick_select/README.md) |
+| 3 | Binary Search D&C | 6+ | [📖 Go →](./03_binary_search_dc/README.md) |
 
 ---
 
@@ -114,13 +117,11 @@ $$T(n) = cn \times \log n = O(n \log n)$$
 
 ---
 
-## 📂 Subtopics Navigation
+## 🖼️ Visual Overview
 
-| # | Topic | Problems | Link |
-|:-:|-------|:--------:|------|
-| 1 | Merge Sort Pattern | 8+ | [📖 Go →](./01_merge_sort_pattern/README.md) |
-| 2 | Quick Select | 6+ | [📖 Go →](./02_quick_select/README.md) |
-| 3 | Binary Search D&C | 6+ | [📖 Go →](./03_binary_search_dc/README.md) |
+<div align="center">
+  <img src="./images/divide-conquer.png" alt="Divide and Conquer Paradigm" width="100%">
+</div>
 
 ---
 
