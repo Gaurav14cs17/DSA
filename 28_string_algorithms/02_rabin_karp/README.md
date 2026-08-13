@@ -5,14 +5,22 @@ parent: "String Algorithms"
 nav_order: 2
 has_children: true
 ---
+<div align="center">
 
 # 🎲 Rabin-Karp Algorithm
+
+### *Rabin-Karp is a string matching algorithm that uses hashing to find…*
+
+
 
 ### ***Rabin-Karp** is a string matching algorithm that uses **hashing** to find patterns in O(n + m) average time.*
 
 
-## 📊 Visual Overview
+</div>
 
+---
+
+## 📊 Visual Overview
 ![Rabin-Karp Algorithm](./images/rabin-karp.png)
 
 *Rabin-Karp Algorithm*
@@ -31,6 +39,28 @@ has_children: true
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🎯 Overview
+
+**Rabin-Karp** is a string matching algorithm that uses **hashing** to find patterns in O(n + m) average time. It's particularly effective for:
+
+- Multiple pattern matching
+
+- Problems combining with binary search
+
+- Probabilistic pattern matching
+
+**Core Idea:** Convert strings to numbers using polynomial hash, compare numbers instead of strings.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← KMP Algorithm](../01_kmp/) | **Rabin-Karp** | [Z-Algorithm →](../03_z_algorithm/) |
 
 ---
 
@@ -108,20 +138,6 @@ has_children: true
 </td>
 </tr>
 </table>
-
----
-
-## 🎯 Overview
-
-**Rabin-Karp** is a string matching algorithm that uses **hashing** to find patterns in O(n + m) average time. It's particularly effective for:
-
-- Multiple pattern matching
-
-- Problems combining with binary search
-
-- Probabilistic pattern matching
-
-**Core Idea:** Convert strings to numbers using polynomial hash, compare numbers instead of strings.
 
 ---
 
@@ -642,14 +658,6 @@ h1 ≡ v (mod M1) and h2 ≡ v (mod M2)
 determines unique v (mod M1·M2)
 
 ```
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← KMP Algorithm](../01_kmp/) | **Rabin-Karp** | [Z-Algorithm →](../03_z_algorithm/) |
 
 ---
 
