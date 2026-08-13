@@ -36,7 +36,7 @@ permalink: /30_number_theory/07_linear_diophantine/03_frobenius_number/
 
 <div align="center">
 
-![Frobenius Number](./images/frobenius_number.svg)
+![Frobenius Number](./images/frobenius_number.png)
 
 </div>
 
