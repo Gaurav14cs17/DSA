@@ -10,6 +10,8 @@ permalink: /39_approximation_algorithms/
 
 # 🎯 Approximation Algorithms
 
+### *Near-Optimal Solutions for NP-Hard Problems*
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
@@ -31,13 +33,35 @@ permalink: /39_approximation_algorithms/
 
 ![Approximation Algorithms Overview](./images/approx-algo-overview.png)
 
+*Approximation Algorithms Overview*
+
 <img src="./images/approximation-algorithms.png" alt="Approximation Algorithms Overview" width="850"/>
 
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Near-Optimal Solutions for NP-Hard Problems |
+| **Difficulty** | Hard |
+| **Subtopics** | 4 |
+| **Problems** | 20+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
 ## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Online Algorithms](../38_online_algorithms/README.md) | **Approximation Algorithms** | [DP Optimizations →](../40_dp_optimizations/README.md) |
+
+---
 
 ## 📐 Mathematical Foundation
 
@@ -452,9 +476,3 @@ def bin_packing_ffd(items, bin_capacity):
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Online Algorithms](../38_online_algorithms/README.md) | **Approximation Algorithms** | [DP Optimizations →](../40_dp_optimizations/README.md) |
