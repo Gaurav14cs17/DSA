@@ -11,6 +11,8 @@ permalink: /30_number_theory/02_primes/02_sieve_eratosthenes/
 
 # 🔢 Sieve of Eratosthenes
 
+### *The Ancient Algorithm for Finding All Primes*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Time-O(n_log_log_n)-blue?style=for-the-badge" alt="Time">
@@ -38,10 +40,23 @@ permalink: /30_number_theory/02_primes/02_sieve_eratosthenes/
 
 ![Sieve of Eratosthenes](./images/sieve_visualization.png)
 
+*Sieve of Eratosthenes*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | The Ancient Algorithm for Finding All Primes |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Algorithm Overview
