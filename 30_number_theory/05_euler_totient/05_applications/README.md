@@ -24,15 +24,7 @@ permalink: /30_number_theory/05_euler_totient/05_applications/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Totient Sum](../04_totient_sum/README.md) | **05. Applications** | [🏠 Euler Totient Home](../README.md) |
-
----
-
-## 📊 Visual Diagram
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -56,6 +48,15 @@ permalink: /30_number_theory/05_euler_totient/05_applications/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 04. Totient Sum](../04_totient_sum/README.md) | **05. Applications** | [🏠 Euler Totient Home](../README.md) |
+
+---
+
 ## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty | Key Concept |
@@ -223,9 +224,3 @@ print(find_primitive_roots(7))  # [3, 5]
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 04. Totient Sum](../04_totient_sum/README.md) | **05. Applications** | [🏠 Euler Totient Home](../README.md) |
