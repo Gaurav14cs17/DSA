@@ -10,6 +10,8 @@ permalink: /04_stacks/02_parentheses/
 
 # 🔗 Parentheses Problems
 
+### *🔗 Parentheses Problems*
+
 
 
 <p>
@@ -1034,19 +1036,6 @@ if close_count < open_count:  # Always valid
 </div>
 
 ---
-
----
-
-## 🎯 At a Glance
-
-| | |
-|:---|:---|
-| **Topic** | 🔗 Parentheses Problems |
-| **Difficulty** | Easy to Hard |
-| **Problems** | 15+ |
-
-{: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
