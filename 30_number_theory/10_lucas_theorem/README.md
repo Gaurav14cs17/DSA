@@ -11,6 +11,8 @@ permalink: /30_number_theory/10_lucas_theorem/
 
 # 🔮 Lucas' Theorem
 
+### *Computing Binomial Coefficients Modulo Prime*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Applications-Large_Binomials-blue?style=for-the-badge" alt="Applications">
