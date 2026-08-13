@@ -10,6 +10,8 @@ permalink: /01_arrays/
 
 # 📦 Arrays
 
+### *Contiguous memory locations storing elements of the same type*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Beginner_to_Medium-green?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Subtopics-5-blue?style=for-the-badge" alt="Subtopics">
@@ -28,8 +30,25 @@ permalink: /01_arrays/
 
 ![Arrays Overview](./images/array-overview.png)
 
+*Arrays Overview*
+
 ---
 
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Contiguous memory locations storing elements of the same type |
+| **Difficulty** | Beginner to Medium |
+| **Subtopics** | 5 |
+| **Problems** | 50+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📚 Comprehensive Documentation
 
 ### What Each Subfolder Includes
