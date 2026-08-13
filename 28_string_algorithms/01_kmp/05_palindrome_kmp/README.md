@@ -10,7 +10,7 @@ nav_order: 5
 
 ## 📊 Visual Overview
 
-![Palindrome with KMP](./images/palindrome-kmp.svg)
+![Palindrome with KMP](./images/palindrome-kmp.png)
 
 ## 📊 Metadata
 
