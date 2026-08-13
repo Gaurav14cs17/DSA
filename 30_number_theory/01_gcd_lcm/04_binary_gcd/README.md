@@ -11,6 +11,8 @@ permalink: /30_number_theory/01_gcd_lcm/04_binary_gcd/
 
 # ⚡ Binary GCD (Stein's Algorithm)
 
+### *Faster GCD Using Only Bitwise Operations*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Operations-Bitwise-brightgreen?style=for-the-badge" alt="Operations">
@@ -38,10 +40,23 @@ permalink: /30_number_theory/01_gcd_lcm/04_binary_gcd/
 
 ![Binary GCD Algorithm](./images/binary_gcd.png)
 
+*Binary GCD Algorithm*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Faster GCD Using Only Bitwise Operations |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundations
 
 ### Binary GCD Properties
