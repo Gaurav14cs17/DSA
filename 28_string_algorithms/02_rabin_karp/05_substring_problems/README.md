@@ -8,19 +8,27 @@ nav_order: 5
 
 # 🔍 Substring Problems with Rabin-Karp
 
+### *Rabin-Karp combined with binary search solves many substring problems efficiently.*
+
+
 ## 📊 Visual Overview
 
 ![Substring Problems](./images/substring-problems.png)
 
-## 📊 Metadata
+*Substring Problems*
 
-- **Difficulty:** ![Medium-Hard](https://img.shields.io/badge/Medium--Hard-red)
+---
 
-- **Time Complexity:** O(n log n) typical (with binary search)
+## 🎯 At a Glance
 
-- **Space Complexity:** O(n)
+| | |
+|:---|:---|
+| **In one line** | Rabin-Karp combined with binary search solves many substring problems efficiently. |
+| **Typical time** | O(n log n) typical (with binary search) |
+| **Typical space** | O(n) |
 
-- **Pattern:** Binary Search + Hashing, Duplicate Detection
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
