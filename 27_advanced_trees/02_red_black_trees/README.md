@@ -10,20 +10,16 @@ permalink: /27_advanced_trees/02_red_black_trees/
 
 # 🔴⚫ Red-Black Trees
 
+### *Red-Black Trees*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-7-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. AVL Trees](../01_avl_trees/README.md) | **02. Red-Black Trees** | [03. Fenwick Tree →](../03_fenwick_tree/README.md) |
 
 ---
 
@@ -46,8 +42,16 @@ permalink: /27_advanced_trees/02_red_black_trees/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 📐 Mathematical Foundations
 
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 01. AVL Trees](../01_avl_trees/README.md) | **02. Red-Black Trees** | [03. Fenwick Tree →](../03_fenwick_tree/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Red-Black Tree Properties
 
 **Definition:** Self-balancing BST with color property (RED or BLACK).
@@ -558,10 +562,3 @@ def contains_nearby_almost_duplicate(nums: List[int], k: int, t: int) -> bool:
 6. **Color flips:** Often cheaper than rotations
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. AVL Trees](../01_avl_trees/README.md) | **02. Red-Black Trees** | [03. Fenwick Tree →](../03_fenwick_tree/README.md) |
-
