@@ -33,10 +33,25 @@ permalink: /08_binary_search_trees/01_bst_operations/
 
 ![BST Operations](./image/bst_operations.png)
 
+*BST Operations*
+
 </div>
 
 ---
 
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Medium |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Search Operation
