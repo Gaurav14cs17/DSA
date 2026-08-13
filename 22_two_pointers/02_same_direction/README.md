@@ -57,6 +57,106 @@ permalink: /22_two_pointers/02_same_direction/
 ### Merge Sorted Arrays
 ![Merge Sorted Arrays](./images/merge-sorted-arrays.png)
 
+### Fast-Slow Pointer Model
+
+```
++-------------------------------------------------------------+
+|           SAME DIRECTION POINTER MODEL                      |
++-------------------------------------------------------------+
+|                                                             |
+|   Array: [a, b, c, d, e, f, g, h, i, j]                    |
+|                                                             |
+|   Phase 1: Initial                                          |
+|   [a, b, c, d, e, f, g, h, i, j]                           |
+|    ↑                                                        |
+|   S,F                                                       |
+|                                                             |
+|   Phase 2: Processing                                       |
+|   [✓, ✓, ✓, _, _, _, g, h, i, j]                          |
+|             ↑        ↑                                      |
+|             S        F                                      |
+|   Valid     |        |                                      |
+|   result ---+        +-- Exploring                         |
+|                                                             |
+|   Phase 3: Complete                                         |
+|   [✓, ✓, ✓, ✓, ✓, _, _, _, _, _]                          |
+|                   ↑                 ↑                       |
+|                   S                 F (done)                |
+|                                                             |
+|   Return S = length of valid result                        |
+|                                                             |
++-------------------------------------------------------------+
+
+```
+
+### Dutch National Flag Regions
+
+```
++-------------------------------------------------------------+
+|                 DUTCH NATIONAL FLAG                         |
++-------------------------------------------------------------+
+|                                                             |
+|   Array State:                                              |
+|                                                             |
+|   [0, 0, 0 | 1, 1, 1 | ?, ?, ? | 2, 2, 2]                  |
+|    _____/   _____/   _____/   _____/                   |
+|      0s        1s      unknown     2s                       |
+|                                                             |
+|   Pointers:                                                 |
+|            ↑         ↑         ↑                            |
+|           low       mid       high                          |
+|                                                             |
+|   Invariants:                                               |
+|   • [0, low)     → all 0s                                  |
+|   • [low, mid)   → all 1s                                  |
+|   • [mid, high]  → unknown (to process)                    |
+|   • (high, n)    → all 2s                                  |
+|                                                             |
+|   When mid > high, unknown region empty → DONE             |
+|                                                             |
++-------------------------------------------------------------+
+
+```
+
+### Merge From End
+
+```
+Initial:
+nums1 = [1, 3, 5, 0, 0, 0]  m = 3
+                     p1↑        p↑
+nums2 = [2, 4, 6]  n = 3
+              p2↑
+
+Step 1: nums1[p1]=5 vs nums2[p2]=6 → 6 wins
+nums1 = [1, 3, 5, 0, 0, 6]
+                  p1↑  p↑
+nums2 = [2, 4, 6]
+           p2↑
+
+Step 2: 5 vs 4 → 5 wins
+nums1 = [1, 3, 5, 0, 5, 6]
+               p1↑p↑
+
+Step 3: 3 vs 4 → 4 wins
+nums1 = [1, 3, 5, 4, 5, 6]
+               ↑
+              p1,p
+
+Step 4: 3 vs 2 → 3 wins
+nums1 = [1, 3, 3, 4, 5, 6]
+            ↑
+           p1,p
+
+Step 5: 1 vs 2 → 2 wins
+nums1 = [1, 2, 3, 4, 5, 6]
+         ↑
+        p1,p
+
+p2 < 0, done!
+Result: [1, 2, 3, 4, 5, 6] ✓
+
+```
+
 ---
 
 ## 📐 Mathematical Foundations
@@ -373,110 +473,6 @@ return i == len(s)
 #### Time Complexity
 
 \(O(|t|)\) — single pass through \(t\).
-
----
-
-## 📊 Visual Diagrams
-
-### Fast-Slow Pointer Model
-
-```
-+-------------------------------------------------------------+
-|           SAME DIRECTION POINTER MODEL                      |
-+-------------------------------------------------------------+
-|                                                             |
-|   Array: [a, b, c, d, e, f, g, h, i, j]                    |
-|                                                             |
-|   Phase 1: Initial                                          |
-|   [a, b, c, d, e, f, g, h, i, j]                           |
-|    ↑                                                        |
-|   S,F                                                       |
-|                                                             |
-|   Phase 2: Processing                                       |
-|   [✓, ✓, ✓, _, _, _, g, h, i, j]                          |
-|             ↑        ↑                                      |
-|             S        F                                      |
-|   Valid     |        |                                      |
-|   result ---+        +-- Exploring                         |
-|                                                             |
-|   Phase 3: Complete                                         |
-|   [✓, ✓, ✓, ✓, ✓, _, _, _, _, _]                          |
-|                   ↑                 ↑                       |
-|                   S                 F (done)                |
-|                                                             |
-|   Return S = length of valid result                        |
-|                                                             |
-+-------------------------------------------------------------+
-
-```
-
-### Dutch National Flag Regions
-
-```
-+-------------------------------------------------------------+
-|                 DUTCH NATIONAL FLAG                         |
-+-------------------------------------------------------------+
-|                                                             |
-|   Array State:                                              |
-|                                                             |
-|   [0, 0, 0 | 1, 1, 1 | ?, ?, ? | 2, 2, 2]                  |
-|    _____/   _____/   _____/   _____/                   |
-|      0s        1s      unknown     2s                       |
-|                                                             |
-|   Pointers:                                                 |
-|            ↑         ↑         ↑                            |
-|           low       mid       high                          |
-|                                                             |
-|   Invariants:                                               |
-|   • [0, low)     → all 0s                                  |
-|   • [low, mid)   → all 1s                                  |
-|   • [mid, high]  → unknown (to process)                    |
-|   • (high, n)    → all 2s                                  |
-|                                                             |
-|   When mid > high, unknown region empty → DONE             |
-|                                                             |
-+-------------------------------------------------------------+
-
-```
-
-### Merge From End
-
-```
-Initial:
-nums1 = [1, 3, 5, 0, 0, 0]  m = 3
-                     p1↑        p↑
-nums2 = [2, 4, 6]  n = 3
-              p2↑
-
-Step 1: nums1[p1]=5 vs nums2[p2]=6 → 6 wins
-nums1 = [1, 3, 5, 0, 0, 6]
-                  p1↑  p↑
-nums2 = [2, 4, 6]
-           p2↑
-
-Step 2: 5 vs 4 → 5 wins
-nums1 = [1, 3, 5, 0, 5, 6]
-               p1↑p↑
-
-Step 3: 3 vs 4 → 4 wins
-nums1 = [1, 3, 5, 4, 5, 6]
-               ↑
-              p1,p
-
-Step 4: 3 vs 2 → 3 wins
-nums1 = [1, 3, 3, 4, 5, 6]
-            ↑
-           p1,p
-
-Step 5: 1 vs 2 → 2 wins
-nums1 = [1, 2, 3, 4, 5, 6]
-         ↑
-        p1,p
-
-p2 < 0, done!
-Result: [1, 2, 3, 4, 5, 6] ✓
-
-```
 
 ---
 
