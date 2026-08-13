@@ -30,15 +30,15 @@ permalink: /16_recursion/01_basic_recursion/
 ## 📊 Visual Diagrams
 
 <p align="center">
-  <img src="./images/factorial_stack.svg" alt="Factorial Stack Frames" width="100%"/>
+  <img src="./images/factorial_stack.png" alt="Factorial Stack Frames" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="./images/tail_recursion.svg" alt="Tail Recursion vs Regular Recursion" width="100%"/>
+  <img src="./images/tail_recursion.png" alt="Tail Recursion vs Regular Recursion" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="./images/reverse_linked_list.svg" alt="Reverse Linked List Recursive" width="100%"/>
+  <img src="./images/reverse_linked_list.png" alt="Reverse Linked List Recursive" width="100%"/>
 </p>
 
 ---
