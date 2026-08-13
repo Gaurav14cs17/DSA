@@ -131,19 +131,19 @@ Where $\mu$ = distance to cycle, $\lambda$ = cycle length.
 <div align="center">
 
 ### Two Pointers Technique
-![Two Pointers](./images/two_pointers.svg)
+![Two Pointers](./images/two_pointers.png)
 
 ### Array Rotation (Three Reversals)
-![Array Rotation](./images/array_rotation.svg)
+![Array Rotation](./images/array_rotation.png)
 
 ### Dutch National Flag Algorithm
-![Dutch National Flag](./images/dutch_flag.svg)
+![Dutch National Flag](./images/dutch_flag.png)
 
 ### Dutch National Flag (Detailed)
-![Dutch National Flag Detailed](./images/dutch_national_flag.svg)
+![Dutch National Flag Detailed](./images/dutch_national_flag.png)
 
 ### Floyd's Cycle Detection
-![Floyd's Cycle](./images/floyds_cycle.svg)
+![Floyd's Cycle](./images/floyds_cycle.png)
 
 </div>
 
