@@ -1,18 +1,63 @@
+---
+layout: default
+title: "SOS DP"
+parent: "DP Optimizations"
+nav_order: 7
+permalink: /40_dp_optimizations/07_sos_dp/
+---
+
+<div align="center">
+
 # 🎲 Sum over Subsets (SOS) DP
 
-## 📊 Visual Diagram
+### *Sum over subsets DP*
+
+</div>
+
+---
+
+## 📊 Visual Overview
 
 <p align="center">
   <img src="./images/sos-dp.png" alt="SOS DP" width="100%">
 </p>
 
-## Overview
+---
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Sum over subsets DP |
+
+
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Knuth Optimization](../06_knuth_optimization/README.md) | **07. SOS DP** | [Matrix Exponentiation →](../08_matrix_exponentiation/README.md) |
+
+## 📐 Mathematical Foundation
+
+### Overview
 
 **SOS DP** efficiently computes functions over all subsets of a bitmask.
 
 **Problem:** For each mask, compute sum over all its subsets.
 
 **Complexity:** O(3ⁿ) → O(n·2ⁿ)
+
+---
+
+
 
 ---
 
@@ -49,12 +94,20 @@ def sos_dp(arr):
 
 ---
 
+
+
+---
+
 ## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty |
 |:-:|---------|-----------|
 | 898 | [Bitwise ORs](https://leetcode.com/problems/bitwise-ors-of-subarrays/) | ⭐⭐ |
 | 1986 | [Work Sessions](https://leetcode.com/problems/minimum-number-of-work-sessions-to-finish-the-tasks/) | ⭐⭐⭐ |
+
+---
+
+
 
 ---
 
