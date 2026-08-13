@@ -32,16 +32,16 @@ permalink: /01_arrays/03_prefix_sum/
 <div align="center">
 
 ### Building Prefix Sum Array
-![Prefix Sum Build](./images/prefix_sum_build.svg)
+![Prefix Sum Build](./images/prefix_sum_build.png)
 
 ### Range Sum Query in O(1)
-![Range Query](./images/range_query.svg)
+![Range Query](./images/range_query.png)
 
 ### 2D Prefix Sum (Inclusion-Exclusion)
-![2D Prefix Sum](./images/2d_prefix_sum.svg)
+![2D Prefix Sum](./images/2d_prefix_sum.png)
 
 ### Prefix Sum Construction
-![Prefix Sum Construction](./images/prefix_sum_construction.svg)
+![Prefix Sum Construction](./images/prefix_sum_construction.png)
 
 </div>
 
