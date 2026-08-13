@@ -30,7 +30,7 @@ permalink: /18_dynamic_programming/01_1d_dp/
 ## 📊 Visual Guide
 
 <div align="center">
-  <img src="images/1d-dp.svg" alt="1D DP Visualization" width="100%">
+  <img src="images/1d-dp.png" alt="1D DP Visualization" width="100%">
 </div>
 
 ---
