@@ -13,6 +13,8 @@ permalink: /24_graph_algorithms/
 ### *Complete Collection of Advanced Graph Algorithms*
 
 
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Subtopics-9-blue?style=for-the-badge" alt="Subtopics">
@@ -54,35 +56,12 @@ permalink: /24_graph_algorithms/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
 |:------------|:----------:|--------:|
 | [← Sliding Window](../23_sliding_window/README.md) | **Graph Algorithms** | [Tree Algorithms →](../25_tree_algorithms/README.md) |
-
----
-
-## 📋 Overview
-
-Comprehensive collection of **advanced graph algorithms** including:
-
-- 🎯 Shortest Path Algorithms (Dijkstra, Bellman-Ford, Floyd-Warshall, A*)
-
-- 🌲 Minimum Spanning Trees (Kruskal, Prim, Borůvka)
-
-- 📊 Topological Sorting (Kahn's, DFS-based)
-
-- 💧 Network Flow (Ford-Fulkerson, Dinic, Push-Relabel)
-
-- 🔄 Strongly Connected Components (Kosaraju, Tarjan)
-
-- 🌉 Bridges & Articulation Points (Critical edges/vertices)
-
-- 🔗 Eulerian & Hamiltonian Paths
-
-- ⚖️ 2-SAT (Boolean Satisfiability)
-
-- 🎭 Bipartite Matching (Hungarian, Hopcroft-Karp)
 
 ---
 
@@ -353,6 +332,30 @@ Comprehensive collection of **advanced graph algorithms** including:
 </td>
 </tr>
 </table>
+
+---
+
+## 📋 Overview
+
+Comprehensive collection of **advanced graph algorithms** including:
+
+- 🎯 Shortest Path Algorithms (Dijkstra, Bellman-Ford, Floyd-Warshall, A*)
+
+- 🌲 Minimum Spanning Trees (Kruskal, Prim, Borůvka)
+
+- 📊 Topological Sorting (Kahn's, DFS-based)
+
+- 💧 Network Flow (Ford-Fulkerson, Dinic, Push-Relabel)
+
+- 🔄 Strongly Connected Components (Kosaraju, Tarjan)
+
+- 🌉 Bridges & Articulation Points (Critical edges/vertices)
+
+- 🔗 Eulerian & Hamiltonian Paths
+
+- ⚖️ 2-SAT (Boolean Satisfiability)
+
+- 🎭 Bipartite Matching (Hungarian, Hopcroft-Karp)
 
 ---
 
@@ -693,9 +696,3 @@ A: Depends. Floyd-Warshall O(V³) is simple. For sparse graphs, run Dijkstra fro
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Sliding Window](../23_sliding_window/README.md) | **Graph Algorithms** | [Tree Algorithms →](../25_tree_algorithms/README.md) |
