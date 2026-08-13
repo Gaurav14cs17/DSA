@@ -4,11 +4,18 @@ title: "String Hashing"
 parent: "String Algorithms"
 nav_order: 8
 ---
+<div align="center">
 
 # 🔐 String Hashing
 
-### ***String Hashing** converts strings to numerical values (hashes) for fast comparison and manipulation.*
+### *String Hashing converts strings to numerical values (hashes) for fast…*
 
+<p><img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty"></p>
+
+[🏠 String Algorithms](../../README.md)
+</div>
+
+---
 
 ## 📊 Visual Overview
 
@@ -30,6 +37,14 @@ nav_order: 8
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Suffix Tree](../07_suffix_tree/README.md) | **String Hashing** | [🏠 String Algorithms](../../README.md) |
 
 ---
 
@@ -878,4 +893,3 @@ class IncrementalHash:
 ---
 
 **Navigation:** [← Suffix Tree](../07_suffix_tree/) | [String Algorithms](../README.md) | [Next: Computational Geometry →](../../29_computational_geometry/README.md)
-
