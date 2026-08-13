@@ -69,6 +69,39 @@ $$\nu_p(a \times b) = \nu_p(a) + \nu_p(b)
 
 ---
 
+## 🎨 Visual: Kummer's Theorem
+
+```
++-----------------------------------------------------------------+
+| COMPUTING ν₂(C(10, 3)) using Kummer's Theorem                  |
++-----------------------------------------------------------------+
+|                                                                 |
+| C(10, 3) = C(10, 3) where k=3, n-k=7                           |
+|                                                                 |
+| Add 3 + 7 in base 2:                                           |
+|                                                                 |
+|       0011  (3 in binary)                                      |
+|     + 0111  (7 in binary)                                      |
+|     ------                                                     |
+|       1010  (10 in binary)                                     |
+|                                                                 |
+| Carries:                                                       |
+|   Position 0: 1+1=2, carry 1  ←                                |
+|   Position 1: 1+1+1=3, carry 1  ←                              |
+|   Position 2: 0+1+1=2, carry 1  ←                              |
+|   Position 3: 0+0+1=1, no carry                                |
+|                                                                 |
+| Total carries: 3                                               |
+| ∴ ν₂(C(10,3)) = 3                                              |
+|                                                                 |
+| Verify: C(10,3) = 120 = 8 × 15 = 2³ × 15 ✓                     |
++-----------------------------------------------------------------+
+
+```
+
+---
+
+
 ## 💻 Code Implementations
 
 ### 1. Basic p-adic Valuation
@@ -215,38 +248,6 @@ def lte_lemma_even(a: int, b: int, n: int) -> int:
 # Note: 2 - 1 = 1, so LTE doesn't apply directly
 # Instead: 2^2 - 1 = 3, ν₃(3) = 1, and 2^100 = (2^2)^50
 # So ν₃(2^100 - 1) = ν₃(4^50 - 1) = ν₃(4-1) + ν₃(50) = 1 + 0 = 1
-
-```
-
----
-
-## 🎨 Visual: Kummer's Theorem
-
-```
-+-----------------------------------------------------------------+
-| COMPUTING ν₂(C(10, 3)) using Kummer's Theorem                  |
-+-----------------------------------------------------------------+
-|                                                                 |
-| C(10, 3) = C(10, 3) where k=3, n-k=7                           |
-|                                                                 |
-| Add 3 + 7 in base 2:                                           |
-|                                                                 |
-|       0011  (3 in binary)                                      |
-|     + 0111  (7 in binary)                                      |
-|     ------                                                     |
-|       1010  (10 in binary)                                     |
-|                                                                 |
-| Carries:                                                       |
-|   Position 0: 1+1=2, carry 1  ←                                |
-|   Position 1: 1+1+1=3, carry 1  ←                              |
-|   Position 2: 0+1+1=2, carry 1  ←                              |
-|   Position 3: 0+0+1=1, no carry                                |
-|                                                                 |
-| Total carries: 3                                               |
-| ∴ ν₂(C(10,3)) = 3                                              |
-|                                                                 |
-| Verify: C(10,3) = 120 = 8 × 15 = 2³ × 15 ✓                     |
-+-----------------------------------------------------------------+
 
 ```
 
