@@ -32,6 +32,34 @@ permalink: /30_number_theory/12_wilsons_theorem/
 
 ---
 
+## 🎨 Visual Walkthrough
+
+```
++-----------------------------------------------------------------+
+| WILSON'S THEOREM FOR p = 7                                     |
++-----------------------------------------------------------------+
+|                                                                 |
+| Compute (7-1)! mod 7 = 6! mod 7                                |
+|                                                                 |
+| 6! = 1 × 2 × 3 × 4 × 5 × 6 = 720                              |
+|                                                                 |
+| 720 = 102 × 7 + 6                                              |
+| 720 mod 7 = 6 = 7 - 1 ✓                                        |
+|                                                                 |
+| Why? Pair inverses:                                             |
+|   2 × 4 ≡ 1 (mod 7)                                            |
+|   3 × 5 ≡ 1 (mod 7)                                            |
+|   1 and 6 are self-inverse (6 ≡ -1)                            |
+|                                                                 |
+| So 6! ≡ 1 × 6 × (2×4) × (3×5) ≡ 1 × 6 × 1 × 1 ≡ 6 (mod 7)    |
+|                                                                 |
+| 6 ≡ -1 (mod 7) ✓ Prime confirmed!                              |
++-----------------------------------------------------------------+
+
+```
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Wilson's Theorem
@@ -126,34 +154,6 @@ print(wilson_primality_test(7))   # True: 6! = 720 ≡ 6 (mod 7) ✓
 print(wilson_primality_test(10))  # False: 9! = 362880 ≡ 0 (mod 10)
 
 # Why impractical: computing 10^9! mod (10^9+7) takes forever!
-
-```
-
----
-
-## 🎨 Visual Walkthrough
-
-```
-+-----------------------------------------------------------------+
-| WILSON'S THEOREM FOR p = 7                                     |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Compute (7-1)! mod 7 = 6! mod 7                                |
-|                                                                 |
-| 6! = 1 × 2 × 3 × 4 × 5 × 6 = 720                              |
-|                                                                 |
-| 720 = 102 × 7 + 6                                              |
-| 720 mod 7 = 6 = 7 - 1 ✓                                        |
-|                                                                 |
-| Why? Pair inverses:                                             |
-|   2 × 4 ≡ 1 (mod 7)                                            |
-|   3 × 5 ≡ 1 (mod 7)                                            |
-|   1 and 6 are self-inverse (6 ≡ -1)                            |
-|                                                                 |
-| So 6! ≡ 1 × 6 × (2×4) × (3×5) ≡ 1 × 6 × 1 × 1 ≡ 6 (mod 7)    |
-|                                                                 |
-| 6 ≡ -1 (mod 7) ✓ Prime confirmed!                              |
-+-----------------------------------------------------------------+
 
 ```
 
