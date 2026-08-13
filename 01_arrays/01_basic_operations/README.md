@@ -10,6 +10,8 @@ permalink: /01_arrays/01_basic_operations/
 
 # 🔧 Basic Array Operations
 
+### *🔧 Basic Array Operations*
+
 
 
 <p>
@@ -548,19 +550,6 @@ A: O(1) space vs O(n) space. Critical in memory-constrained environments.
 </div>
 
 ---
-
----
-
-## 🎯 At a Glance
-
-| | |
-|:---|:---|
-| **Topic** | 🔧 Basic Array Operations |
-| **Difficulty** | Easy to Medium |
-| **Problems** | 15+ |
-
-{: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
