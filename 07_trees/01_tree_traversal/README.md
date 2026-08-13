@@ -10,7 +10,7 @@ permalink: /07_trees/01_tree_traversal/
 
 # 🚶 Tree Traversal
 
-![Tree Traversal Diagram](./images/tree-traversal.svg)
+![Tree Traversal Diagram](./images/tree-traversal.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-green?style=for-the-badge" alt="Difficulty">
