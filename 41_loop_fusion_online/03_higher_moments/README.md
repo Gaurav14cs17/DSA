@@ -30,7 +30,7 @@ permalink: /41_loop_fusion_online/03_higher_moments/
 ## 📊 Visual Guide
 
 <div align="center">
-  <img src="images/higher-moments.svg" alt="Higher Moments" width="100%">
+  <img src="images/higher-moments.png" alt="Higher Moments" width="100%">
 </div>
 
 ---
