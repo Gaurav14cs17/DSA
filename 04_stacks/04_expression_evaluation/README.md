@@ -10,6 +10,8 @@ permalink: /04_stacks/04_expression_evaluation/
 
 # 🧮 Expression Evaluation
 
+### *🧮 Expression Evaluation*
+
 
 
 <p>
@@ -608,19 +610,6 @@ Steps:    3 4  →  7 2  →  14
 </div>
 
 ---
-
----
-
-## 🎯 At a Glance
-
-| | |
-|:---|:---|
-| **Topic** | 🧮 Expression Evaluation |
-| **Difficulty** | Medium to Hard |
-| **Problems** | 8+ |
-
-{: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
