@@ -27,6 +27,28 @@ permalink: /02_strings/04_subsequence/
 
 ---
 
+## 🎨 Visual Diagrams
+
+### Is Subsequence - Two Pointer Greedy Approach
+
+<p align="center">
+  <img src="./images/is_subsequence.png" alt="Is Subsequence Algorithm" width="700"/>
+</p>
+
+### LCS Dynamic Programming Table
+
+<p align="center">
+  <img src="./images/lcs_dp_table.png" alt="LCS DP Table Visualization" width="750"/>
+</p>
+
+### Edit Distance (Levenshtein) Algorithm
+
+<p align="center">
+  <img src="./images/edit_distance.png" alt="Edit Distance Algorithm" width="750"/>
+</p>
+
+---
+
 ## 📐 Mathematical Foundations
 
 ### 1️⃣ Subsequence Definition
@@ -108,25 +130,50 @@ For each character in $T$, find first matching character in remaining $S$.
 
 ---
 
-## 🎨 Visual Diagrams
+## 🎨 Visual DP Tables
 
-### Is Subsequence - Two Pointer Greedy Approach
+### LCS Example: "ABCDE" vs "ACE"
 
-<p align="center">
-  <img src="./images/is_subsequence.png" alt="Is Subsequence Algorithm" width="700"/>
-</p>
+```
+DP Table Construction:
 
-### LCS Dynamic Programming Table
+        ""  A  C  E
+    ""   0  0  0  0
+    A    0  1  1  1    ← A matches A: dp[1][1] = dp[0][0] + 1 = 1
+    B    0  1  1  1    ← B doesn't match: max(dp[0][2], dp[1][1]) = 1
+    C    0  1  2  2    ← C matches C: dp[2][2] = dp[1][1] + 1 = 2
+    D    0  1  2  2    ← D doesn't match: max(dp[2][2], dp[3][1]) = 2
+    E    0  1  2  3    ← E matches E: dp[3][3] = dp[2][2] + 1 = 3
 
-<p align="center">
-  <img src="./images/lcs_dp_table.png" alt="LCS DP Table Visualization" width="750"/>
-</p>
+LCS length = 3 (corresponding to "ACE")
 
-### Edit Distance (Levenshtein) Algorithm
+Tracing back the solution:
+  dp[5][3] = 3, s1[4]='E', s2[2]='E' → match → include 'E'
+  dp[3][2] = 2, s1[2]='C', s2[1]='C' → match → include 'C'
+  dp[1][1] = 1, s1[0]='A', s2[0]='A' → match → include 'A'
 
-<p align="center">
-  <img src="./images/edit_distance.png" alt="Edit Distance Algorithm" width="750"/>
-</p>
+Result: "ACE" ✓
+
+```
+
+### Edit Distance Example: "horse" → "ros"
+
+```
+Operations: Delete, Insert, Replace
+
+        ""  r  o  s
+    ""   0  1  2  3
+    h    1  1  2  3    ← Replace h→r: dp[1][1] = dp[0][0] + 1 = 1
+    o    2  2  1  2    ← o matches: dp[2][2] = dp[1][1] = 1
+    r    3  2  2  2    ← r matches: dp[3][1] = dp[2][0] = 2
+    s    4  3  3  2    ← s matches: dp[4][3] = dp[3][2] = 2
+    e    5  4  4  3    ← Delete e: dp[5][3] = dp[4][3] + 1 = 3
+
+Minimum operations = 3
+Path: horse → rorse → rose → ros
+      (replace)  (delete) (delete)
+
+```
 
 ---
 
@@ -250,53 +297,6 @@ def numDistinct(s: str, t: str) -> int:
 | 940 | [Distinct Subsequences II](https://leetcode.com/problems/distinct-subsequences-ii/) | DP | O(n) | O(26) |
 
 ---
-
----
-
-## 🎨 Visual DP Tables
-
-### LCS Example: "ABCDE" vs "ACE"
-
-```
-DP Table Construction:
-
-        ""  A  C  E
-    ""   0  0  0  0
-    A    0  1  1  1    ← A matches A: dp[1][1] = dp[0][0] + 1 = 1
-    B    0  1  1  1    ← B doesn't match: max(dp[0][2], dp[1][1]) = 1
-    C    0  1  2  2    ← C matches C: dp[2][2] = dp[1][1] + 1 = 2
-    D    0  1  2  2    ← D doesn't match: max(dp[2][2], dp[3][1]) = 2
-    E    0  1  2  3    ← E matches E: dp[3][3] = dp[2][2] + 1 = 3
-
-LCS length = 3 (corresponding to "ACE")
-
-Tracing back the solution:
-  dp[5][3] = 3, s1[4]='E', s2[2]='E' → match → include 'E'
-  dp[3][2] = 2, s1[2]='C', s2[1]='C' → match → include 'C'
-  dp[1][1] = 1, s1[0]='A', s2[0]='A' → match → include 'A'
-
-Result: "ACE" ✓
-
-```
-
-### Edit Distance Example: "horse" → "ros"
-
-```
-Operations: Delete, Insert, Replace
-
-        ""  r  o  s
-    ""   0  1  2  3
-    h    1  1  2  3    ← Replace h→r: dp[1][1] = dp[0][0] + 1 = 1
-    o    2  2  1  2    ← o matches: dp[2][2] = dp[1][1] = 1
-    r    3  2  2  2    ← r matches: dp[3][1] = dp[2][0] = 2
-    s    4  3  3  2    ← s matches: dp[4][3] = dp[3][2] = 2
-    e    5  4  4  3    ← Delete e: dp[5][3] = dp[4][3] + 1 = 3
-
-Minimum operations = 3
-Path: horse → rorse → rose → ros
-      (replace)  (delete) (delete)
-
-```
 
 ---
 
