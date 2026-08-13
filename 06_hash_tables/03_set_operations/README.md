@@ -350,8 +350,6 @@ def missingNumber(nums: list[int]) -> int:
 
 ---
 
----
-
 ## 📊 Pattern Selection
 
 ```
