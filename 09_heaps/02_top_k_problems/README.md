@@ -10,12 +10,39 @@ permalink: /09_heaps/02_top_k_problems/
 
 # 🏆 Top K Problems
 
+### *🏆 Top K Problems*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Top K Pattern](./image/top_k_pattern.png)
+
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🏆 Top K Problems |
+| **Difficulty** | Medium |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
@@ -27,18 +54,7 @@ permalink: /09_heaps/02_top_k_problems/
 
 ---
 
-## 🎨 Visual Pattern Guide
-
-<div align="center">
-
-![Top K Pattern](./image/top_k_pattern.png)
-
-</div>
-
----
-
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Top K Strategy
 
 **Finding K largest:** Use **Min-Heap** of size k.
@@ -284,9 +300,3 @@ Top K Problem
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Basic Heap](../01_basic_heap/README.md) | **02. Top K Problems** | [03. Merge K Streams →](../03_merge_k_streams/README.md) |
