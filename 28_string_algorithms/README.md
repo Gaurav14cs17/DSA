@@ -10,6 +10,10 @@ permalink: /28_string_algorithms/
 
 # 🔤 String Algorithms
 
+### *String Algorithms*
+
+
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
@@ -157,49 +161,6 @@ permalink: /28_string_algorithms/
 </td>
 </tr>
 </table>
-
----
-
-## 📋 Overview
-
-**String Algorithms** are fundamental techniques for efficiently processing, searching, and analyzing text data:
-
-- **Pattern Matching:** Find occurrences of patterns in text efficiently
-
-- **Hashing Techniques:** Use rolling hashes for fast string comparisons
-
-- **Suffix Structures:** Build data structures for complex string queries
-
-- **Palindrome Detection:** Identify palindromic substrings in linear time
-
-- **Multiple Pattern Search:** Search for many patterns simultaneously
-
-- **String Preprocessing:** Build auxiliary structures for fast queries
-
----
-
-## 🎯 Quick Reference
-
-### Algorithm Comparison
-
-| Problem | Best Algorithm | Time Complexity | Space |
-|---------|---------------|:---------------:|:-----:|
-| **Single Pattern Match** | KMP | O(n + m) | O(m) |
-| **Multiple Patterns** | Aho-Corasick | O(n + m + k) | O(m) |
-| **Rolling Hash** | Rabin-Karp | O(n + m) avg | O(1) |
-| **All Palindromes** | Manacher's | O(n) | O(n) |
-| **Suffix Array** | SA-IS | O(n) | O(n) |
-| **Suffix Tree** | Ukkonen's | O(n) | O(n) |
-| **LCP Array** | Kasai's | O(n) | O(n) |
-| **Z-Function** | Z-Algorithm | O(n) | O(n) |
-
-**Key:**
-
-- n = text length
-
-- m = total pattern length
-
-- k = number of occurrences
 
 ---
 
@@ -456,6 +417,49 @@ fail[node] = longest proper suffix that is in trie
 - Longest common substring
 
 - Suffix array construction
+
+---
+
+## 📋 Overview
+
+**String Algorithms** are fundamental techniques for efficiently processing, searching, and analyzing text data:
+
+- **Pattern Matching:** Find occurrences of patterns in text efficiently
+
+- **Hashing Techniques:** Use rolling hashes for fast string comparisons
+
+- **Suffix Structures:** Build data structures for complex string queries
+
+- **Palindrome Detection:** Identify palindromic substrings in linear time
+
+- **Multiple Pattern Search:** Search for many patterns simultaneously
+
+- **String Preprocessing:** Build auxiliary structures for fast queries
+
+---
+
+## 🎯 Quick Reference
+
+### Algorithm Comparison
+
+| Problem | Best Algorithm | Time Complexity | Space |
+|---------|---------------|:---------------:|:-----:|
+| **Single Pattern Match** | KMP | O(n + m) | O(m) |
+| **Multiple Patterns** | Aho-Corasick | O(n + m + k) | O(m) |
+| **Rolling Hash** | Rabin-Karp | O(n + m) avg | O(1) |
+| **All Palindromes** | Manacher's | O(n) | O(n) |
+| **Suffix Array** | SA-IS | O(n) | O(n) |
+| **Suffix Tree** | Ukkonen's | O(n) | O(n) |
+| **LCP Array** | Kasai's | O(n) | O(n) |
+| **Z-Function** | Z-Algorithm | O(n) | O(n) |
+
+**Key:**
+
+- n = text length
+
+- m = total pattern length
+
+- k = number of occurrences
 
 ---
 
@@ -1057,9 +1061,3 @@ def smallest_period(s):
 ```
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Advanced Trees](../27_advanced_trees/README.md) | **String Algorithms** | [Computational Geometry →](../29_computational_geometry/README.md) |
