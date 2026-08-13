@@ -103,7 +103,7 @@ $$a^{p-1} \equiv 1 \pmod{p}$$
 
 <div align="center">
 
-![Primality Testing Methods](./images/primality_testing.svg)
+![Primality Testing Methods](./images/primality_testing.png)
 
 </div>
 
