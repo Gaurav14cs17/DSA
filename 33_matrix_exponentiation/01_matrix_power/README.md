@@ -10,6 +10,8 @@ permalink: /33_matrix_exponentiation/01_matrix_power/
 
 # ⚡ Matrix Power
 
+### *Fast Matrix Exponentiation Using Binary Method*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Time-O(k³_log_n)-blue?style=for-the-badge" alt="Time">
@@ -23,15 +25,7 @@ permalink: /33_matrix_exponentiation/01_matrix_power/
 
 ---
 
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Matrix Exp Home](../README.md) | **01. Matrix Power** | [02. Linear Recurrence →](../02_linear_recurrence/README.md) |
-
----
-
-## 🎨 Visual Guides
+## 📊 Visual Overview
 
 <div align="center">
 
@@ -61,8 +55,27 @@ permalink: /33_matrix_exponentiation/01_matrix_power/
 
 ---
 
-## 📐 Mathematical Foundations
+## 🎯 At a Glance
 
+| | |
+|:---|:---|
+| **In one line** | Fast Matrix Exponentiation Using Binary Method |
+| **Difficulty** | Medium |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [🏠 Matrix Exp Home](../README.md) | **01. Matrix Power** | [02. Linear Recurrence →](../02_linear_recurrence/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### Binary Exponentiation for Matrices
 
 **Formula:**
@@ -238,10 +251,3 @@ def matrix_2x2_power(M: tuple, n: int, mod: int) -> tuple:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Matrix Exp Home](../README.md) | **01. Matrix Power** | [02. Linear Recurrence →](../02_linear_recurrence/README.md) |
-
