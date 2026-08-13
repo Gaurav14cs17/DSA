@@ -8,19 +8,27 @@ nav_order: 3
 
 # 🔀 Multiple Pattern Matching with Rabin-Karp
 
+### *Rabin-Karp excels at matching multiple patterns simultaneously by comparing a single text window hash against a set of pattern hashes.*
+
+
 ## 📊 Visual Overview
 
 ![Multiple Pattern Matching](./images/multiple-patterns.png)
 
-## 📊 Metadata
+*Multiple Pattern Matching*
 
-- **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+---
 
-- **Time Complexity:** O(n + km) where k = number of patterns
+## 🎯 At a Glance
 
-- **Space Complexity:** O(k)
+| | |
+|:---|:---|
+| **In one line** | Rabin-Karp excels at matching multiple patterns simultaneously by comparing a single text window hash against a set of pattern hashes. |
+| **Typical time** | O(n + km) where k = number of patterns |
+| **Typical space** | O(k) |
 
-- **Pattern:** Batch Processing, Hash Sets
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
