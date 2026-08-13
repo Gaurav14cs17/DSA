@@ -10,6 +10,8 @@ permalink: /41_loop_fusion_online/
 
 # 🔄 Loop Fusion & Online Algorithms
 
+### *Single-Pass Algorithms Using Recurrence Relations*
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
@@ -33,30 +35,31 @@ permalink: /41_loop_fusion_online/
 
 ![Loop Fusion Overview](./images/loop-fusion-overview.png)
 
+*Loop Fusion Overview*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
 
-## 📋 Overview
+| | |
+|:---|:---|
+| **In one line** | Single-Pass Algorithms Using Recurrence Relations |
+| **Difficulty** | Hard |
+| **Subtopics** | 4 |
+| **Problems** | 57 |
 
-**Loop Fusion with Online Algorithms** combines three powerful optimization techniques:
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
-1. **Loop Fusion**: Merging multiple loops into a single pass
+---
 
-2. **Online Algorithms**: Processing data as it arrives without looking ahead
+## 🧭 Navigation
 
-3. **Recurrence Relations**: Using mathematical relations to maintain state efficiently
-
-**What You'll Learn:**
-
-- Welford's numerically stable variance algorithm
-
-- Kadane's maximum subarray pattern
-
-- Computing higher statistical moments (skewness, kurtosis)
-
-- Streaming algorithms (Reservoir Sampling, Count-Min Sketch, HyperLogLog)
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← DP Optimizations](../40_dp_optimizations/README.md) | **Loop Fusion & Online** | End |
 
 ---
 
@@ -192,6 +195,28 @@ variance = M2 / n
 ```
 
 **Result:** 4× fewer passes, better cache locality, O(1) space!
+
+---
+
+## 📋 Overview
+
+**Loop Fusion with Online Algorithms** combines three powerful optimization techniques:
+
+1. **Loop Fusion**: Merging multiple loops into a single pass
+
+2. **Online Algorithms**: Processing data as it arrives without looking ahead
+
+3. **Recurrence Relations**: Using mathematical relations to maintain state efficiently
+
+**What You'll Learn:**
+
+- Welford's numerically stable variance algorithm
+
+- Kadane's maximum subarray pattern
+
+- Computing higher statistical moments (skewness, kurtosis)
+
+- Streaming algorithms (Reservoir Sampling, Count-Min Sketch, HyperLogLog)
 
 ---
 
@@ -611,9 +636,3 @@ where $M_2(n) = \sum_{i=1}^{n} (x_i - \mu_n)^2$ and $\sigma^2 = M_2(n) / n$.
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← DP Optimizations](../40_dp_optimizations/README.md) | **Loop Fusion & Online** | End |
