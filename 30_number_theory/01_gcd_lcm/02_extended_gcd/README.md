@@ -162,7 +162,7 @@ for any integer $k$.
 
 <div align="center">
 
-![Extended GCD Algorithm](./images/extended_gcd.svg)
+![Extended GCD Algorithm](./images/extended_gcd.png)
 
 </div>
 
