@@ -41,8 +41,6 @@ permalink: /08_binary_search_trees/
 
 ---
 
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -298,8 +296,6 @@ BST Problem
      +-- Kth element → Inorder with count
 
 ```
-
----
 
 ---
 
