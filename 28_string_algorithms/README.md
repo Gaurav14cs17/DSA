@@ -29,7 +29,22 @@ permalink: /28_string_algorithms/
 
 ![Basic Pattern Matching](./01_kmp/01_basic_pattern_matching/images/basic-pattern-matching.png)
 
+*Basic Pattern Matching*
+
 </div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Medium to Hard |
+| **Subtopics** | 8 |
+| **Problems** | 70+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
