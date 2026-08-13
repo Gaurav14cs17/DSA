@@ -11,6 +11,8 @@ permalink: /30_number_theory/04_divisors/
 
 # 📊 Divisors
 
+### *Counting, Summing, and Understanding Divisors*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-20+-blue?style=for-the-badge" alt="Problems">
