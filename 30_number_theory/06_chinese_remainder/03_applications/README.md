@@ -34,7 +34,7 @@ permalink: /30_number_theory/06_chinese_remainder/03_applications/
 
 <div align="center">
 
-![CRT Applications](./images/crt_applications.svg)
+![CRT Applications](./images/crt_applications.png)
 
 </div>
 
