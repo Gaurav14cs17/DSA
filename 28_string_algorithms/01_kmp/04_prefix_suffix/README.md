@@ -10,7 +10,7 @@ nav_order: 4
 
 ## 📊 Visual Overview
 
-![Prefix-Suffix Matching](./images/prefix-suffix.svg)
+![Prefix-Suffix Matching](./images/prefix-suffix.png)
 
 ## 📊 Metadata
 
