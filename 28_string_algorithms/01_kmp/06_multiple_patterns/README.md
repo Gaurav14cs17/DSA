@@ -8,19 +8,27 @@ nav_order: 6
 
 # 🔀 Multiple Pattern Matching with KMP
 
+### *While KMP is designed for single pattern matching, it can be adapted for multiple patterns.*
+
+
 ## 📊 Visual Overview
 
 ![Multiple Patterns](./images/multiple-patterns.png)
 
-## 📊 Metadata
+*Multiple Patterns*
 
-- **Difficulty:** ![Hard](https://img.shields.io/badge/Hard-red)
+---
 
-- **Time Complexity:** O(n · k + m) where k = patterns
+## 🎯 At a Glance
 
-- **Space Complexity:** O(m)
+| | |
+|:---|:---|
+| **In one line** | While KMP is designed for single pattern matching, it can be adapted for multiple patterns. |
+| **Typical time** | O(n · k + m) where k = patterns |
+| **Typical space** | O(m) |
 
-- **Pattern:** Multiple Searches, Pattern Variations
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
