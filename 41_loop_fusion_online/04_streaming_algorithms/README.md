@@ -10,6 +10,10 @@ permalink: /41_loop_fusion_online/04_streaming_algorithms/
 
 # 🎯 Streaming Algorithms
 
+### *🎯 Streaming Algorithms*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
@@ -19,19 +23,32 @@ permalink: /41_loop_fusion_online/04_streaming_algorithms/
 
 ---
 
+## 📊 Visual Overview
+
+<div align="center">
+  <img src="images/streaming-algorithms.png" alt="Streaming Algorithms" width="100%">
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🎯 Streaming Algorithms |
+| **Difficulty** | Hard |
+| **Problems** | 10+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
 |:------------|:----------:|--------:|
 | [← Higher Moments](../03_higher_moments/README.md) | **04. Streaming Algorithms** | [🏠 Loop Fusion Home](../README.md) |
-
----
-
-## 📊 Visual Guide
-
-<div align="center">
-  <img src="images/streaming-algorithms.png" alt="Streaming Algorithms" width="100%">
-</div>
 
 ---
 
@@ -545,9 +562,3 @@ $$Optimal $k$: $k^* = \frac{m}{n} \ln 2 \approx 0.693 \frac{m}{n}$
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Higher Moments](../03_higher_moments/README.md) | **04. Streaming Algorithms** | [🏠 Loop Fusion Home](../README.md) |$$
