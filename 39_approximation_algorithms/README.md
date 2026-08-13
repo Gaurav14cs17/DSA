@@ -218,6 +218,8 @@ def knapsack_fptas(weights, values, capacity, epsilon):
 <img src="./images/tsp-mst-approximation.png" alt="TSP MST Approximation" width="1000"/>
 </div>
 
+**Idea:** Build a minimum spanning tree, walk it in DFS preorder, then shortcut repeated vertices. In a metric space (triangle inequality), shortcutting never increases tour length beyond twice the MST cost — a 2-approximation for metric TSP.
+
 ```python
 def tsp_mst_approx(distances):
     """
