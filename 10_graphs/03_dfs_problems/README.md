@@ -72,11 +72,11 @@ $$d[u] < d[v] < f[v] < f[u] \text{ (v is descendant of u)}$$
 
 <div align="center">
 
-![DFS Traversal](./images/dfs_traversal.svg)
+![DFS Traversal](./images/dfs_traversal.png)
 
 *DFS Depth-First Exploration with 3-Color States*
 
-![Flood Fill](./images/flood_fill.svg)
+![Flood Fill](./images/flood_fill.png)
 
 *Number of Islands - DFS Flood Fill*
 
