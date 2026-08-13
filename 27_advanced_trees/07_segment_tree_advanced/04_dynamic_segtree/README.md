@@ -31,7 +31,7 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/04_dynamic_segtree/
 ## 📊 Visual Overview
 
 <div align="center">
-<img src="./images/dynamic-segtree.svg" alt="Dynamic Segment Tree" width="100%">
+<img src="./images/dynamic-segtree.png" alt="Dynamic Segment Tree" width="100%">
 </div>
 
 ---
