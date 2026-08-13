@@ -11,6 +11,8 @@ permalink: /30_number_theory/09_catalan_numbers/04_applications/
 
 # 🎯 Catalan Number Applications
 
+### *Real-World Problems Solved by Catalan Numbers*
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Applications-10+-blue?style=for-the-badge" alt="Applications">
@@ -39,10 +41,23 @@ permalink: /30_number_theory/09_catalan_numbers/04_applications/
 
 ![Catalan Applications](./images/catalan_applications.png)
 
+*Catalan Applications*
+
 </div>
 
 ---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Real-World Problems Solved by Catalan Numbers |
+| **Difficulty** | Medium Hard |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📋 What Catalan Numbers Count
 
 ### 1. Full Binary Trees (LeetCode 894)
