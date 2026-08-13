@@ -10,6 +10,8 @@ permalink: /04_stacks/
 
 # 📚 Stacks
 
+### *Last In, First Out (LIFO) - Essential for recursion, parsing, and backtracking*
+
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
@@ -31,11 +33,27 @@ permalink: /04_stacks/
 
 ![Stacks Overview](./images/stack-overview.png)
 
+*Stacks Overview*
+
 </div>
 
 ---
 
+---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **In one line** | Last In, First Out (LIFO) - Essential for recursion, parsing, and backtracking |
+| **Difficulty** | Medium |
+| **Subtopics** | 4 |
+| **Problems** | 35+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ Stack Definition (Abstract Data Type)
