@@ -5,14 +5,18 @@ parent: "Rabin-Karp Algorithm"
 grand_parent: "String Algorithms"
 nav_order: 5
 ---
+<div align="center">
 
 # 🔍 Substring Problems with Rabin-Karp
 
 ### *Rabin-Karp combined with binary search solves many substring problems efficiently.*
 
 
-## 📊 Visual Overview
+</div>
 
+---
+
+## 📊 Visual Overview
 ![Substring Problems](./images/substring-problems.png)
 
 *Substring Problems*
@@ -29,6 +33,14 @@ nav_order: 5
 
 {: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← Collision Handling](../04_collision_handling/README.md) | **Substring Problems** | [Advanced Applications →](../06_advanced_applications/README.md) |
 
 ---
 
@@ -419,4 +431,3 @@ def binary_search_hash_template(s):
 ---
 
 **Navigation:** [← Collision Handling](../04_collision_handling/) | [Next: Advanced Applications →](../06_advanced_applications/)
-
