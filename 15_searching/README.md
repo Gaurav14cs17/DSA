@@ -52,6 +52,19 @@ permalink: /15_searching/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
+## 📂 Subtopics Navigation
+
+| # | Topic | Problems | Link |
+|:-:|-------|:--------:|------|
+| 1 | Sorted Array Search | 8+ | [📖 Go →](./01_binary_search_sorted_array/README.md) |
+| 2 | Binary Search on Answer | 8+ | [📖 Go →](./02_binary_search_on_answer/README.md) |
+| 3 | 2D Array Search | 5+ | [📖 Go →](./03_binary_search_2d_array/README.md) |
+| 4 | Rotated Array Search | 6+ | [📖 Go →](./04_binary_search_rotated_array/README.md) |
+| 5 | Advanced Binary Search | 8+ | [📖 Go →](./05_binary_search_advanced/README.md) |
+
+---
+
 ## 📐 Mathematical Foundation
 
 ### 1️⃣ Binary Search Invariant
@@ -130,18 +143,6 @@ $$\text{answer} = \min\{x : \text{feasible}(x) = \text{true}\}$$
 $$\text{One half is always sorted}$$
 
 Use sorted half to decide search direction.
-
----
-
-## 📂 Subtopics Navigation
-
-| # | Topic | Problems | Link |
-|:-:|-------|:--------:|------|
-| 1 | Sorted Array Search | 8+ | [📖 Go →](./01_binary_search_sorted_array/README.md) |
-| 2 | Binary Search on Answer | 8+ | [📖 Go →](./02_binary_search_on_answer/README.md) |
-| 3 | 2D Array Search | 5+ | [📖 Go →](./03_binary_search_2d_array/README.md) |
-| 4 | Rotated Array Search | 6+ | [📖 Go →](./04_binary_search_rotated_array/README.md) |
-| 5 | Advanced Binary Search | 8+ | [📖 Go →](./05_binary_search_advanced/README.md) |
 
 ---
 
