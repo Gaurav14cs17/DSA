@@ -26,11 +26,25 @@ permalink: /07_trees/05_lca_ancestor/
 
 ![LCA & Ancestor Diagram](./images/lca-ancestor.png)
 
+*LCA & Ancestor Diagram*
+
 </div>
 
 ---
 
+---
 
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Difficulty** | Medium |
+| **Problems** | 8+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next Topic |
