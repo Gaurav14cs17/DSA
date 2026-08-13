@@ -8,19 +8,27 @@ nav_order: 3
 
 # 🔄 String Period Detection with KMP
 
+### *A **period** of string s is a positive integer p such that s[i] = s[i+p] for all valid i.*
+
+
 ## 📊 Visual Overview
 
 ![String Period](./images/string-period.png)
 
-## 📊 Metadata
+*String Period*
 
-- **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+---
 
-- **Time Complexity:** O(n)
+## 🎯 At a Glance
 
-- **Space Complexity:** O(n)
+| | |
+|:---|:---|
+| **In one line** | A **period** of string s is a positive integer p such that s[i] = s[i+p] for all valid i. |
+| **Typical time** | O(n) |
+| **Typical space** | O(n) |
 
-- **Pattern:** Period Analysis, Repetition Detection
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
