@@ -10,6 +10,8 @@ permalink: /05_queues/02_bfs_queue/
 
 # 🌊 BFS Queue Problems
 
+### *🌊 BFS Queue Problems*
+
 
 
 <p>
@@ -622,19 +624,6 @@ A: Mark visited when adding to queue (not when processing). Can modify grid or u
 </div>
 
 ---
-
----
-
-## 🎯 At a Glance
-
-| | |
-|:---|:---|
-| **Topic** | 🌊 BFS Queue Problems |
-| **Difficulty** | Medium |
-| **Problems** | 15+ |
-
-{: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
