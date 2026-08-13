@@ -8,19 +8,27 @@ nav_order: 1
 
 # 🎲 Basic Rolling Hash
 
+### ***Rolling hash** is the core technique enabling efficient string comparison.*
+
+
 ## 📊 Visual Overview
 
 ![Basic Rolling Hash](./images/basic-rolling-hash.png)
 
-## 📊 Metadata
+*Basic Rolling Hash*
 
-- **Difficulty:** ![Medium](https://img.shields.io/badge/Medium-orange)
+---
 
-- **Time Complexity:** O(n) for n characters
+## 🎯 At a Glance
 
-- **Space Complexity:** O(1)
+| | |
+|:---|:---|
+| **In one line** | **Rolling hash** is the core technique enabling efficient string comparison. |
+| **Typical time** | O(n) for n characters |
+| **Typical space** | O(1) |
 
-- **Pattern:** Hash Function, Modular Arithmetic
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
