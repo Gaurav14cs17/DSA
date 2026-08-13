@@ -10,20 +10,16 @@ permalink: /27_advanced_trees/06_treap/
 
 # 🎲 Treap (Tree + Heap)
 
+### *Treap (Tree + Heap)*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-6-blue?style=for-the-badge" alt="Problems">
 </p>
 
 </div>
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 05. B-Trees](../05_b_trees/README.md) | **06. Treap** | [07. Segment Tree Advanced →](../07_segment_tree_advanced/README.md) |
 
 ---
 
@@ -46,8 +42,16 @@ permalink: /27_advanced_trees/06_treap/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
-## 📐 Mathematical Foundations
 
+## 🧭 Navigation
+
+| ⬅️ Previous | 📂 Current | ➡️ Next |
+|:------------|:----------:|--------:|
+| [← 05. B-Trees](../05_b_trees/README.md) | **06. Treap** | [07. Segment Tree Advanced →](../07_segment_tree_advanced/README.md) |
+
+---
+
+## 📐 Mathematical Foundation
 ### 1️⃣ Treap Definition
 
 **Treap = Tree + Heap:** Randomized BST that maintains both BST and heap properties.
@@ -539,10 +543,3 @@ def kth_smallest_in_bst(root: TreapNode, k: int) -> int:
 7. **Good in practice:** Despite worst-case O(n), performs well
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 05. B-Trees](../05_b_trees/README.md) | **06. Treap** | [07. Segment Tree Advanced →](../07_segment_tree_advanced/README.md) |
-
