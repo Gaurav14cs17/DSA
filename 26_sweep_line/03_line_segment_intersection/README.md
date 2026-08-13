@@ -22,7 +22,7 @@ permalink: /26_sweep_line/03_line_segment_intersection/
 ## 📊 Visual Overview
 
 <div align="center">
-  <img src="./images/line-segment-intersection.svg" alt="Line Segment Intersection Visualization" width="800"/>
+  <img src="./images/line-segment-intersection.png" alt="Line Segment Intersection Visualization" width="800"/>
 </div>
 
 ---
