@@ -60,6 +60,121 @@ permalink: /23_sliding_window/01_fixed_size/
 
 </div>
 
+### Fixed Window Sliding
+
+```
+Array: [1, 3, -1, -3, 5, 3, 6, 7]   k = 3
+
+Initial Window:
++---+---+---+---+---+---+---+---+
+
+| 1 | 3 |-1 |-3 | 5 | 3 | 6 | 7 |
++---+---+---+---+---+---+---+---+
+  +---------+
+  sum = 1 + 3 + (-1) = 3
+
+Slide 1:
++---+---+---+---+---+---+---+---+
+
+| 1 | 3 |-1 |-3 | 5 | 3 | 6 | 7 |
++---+---+---+---+---+---+---+---+
+  ↓   +---------+
+remove  add
+  sum = 3 - 1 + (-3) = -1
+
+Slide 2:
++---+---+---+---+---+---+---+---+
+
+| 1 | 3 |-1 |-3 | 5 | 3 | 6 | 7 |
++---+---+---+---+---+---+---+---+
+      ↓   +---------+
+   remove    add
+  sum = -1 - 3 + 5 = 1
+
+...and so on
+
+```
+
+### Monotonic Deque for Maximum
+
+```
+Array: [1, 3, -1, -3, 5, 3, 6, 7]   k = 3
+
+Window [1, 3, -1]:
+  Add 1: deque = [0]          (index of 1)
+  Add 3: 3 > 1, pop 0
+         deque = [1]          (index of 3)
+  Add -1: -1 < 3, append
+         deque = [1, 2]       (indices of 3, -1)
+  Max = arr[1] = 3 ✓
+
+Window [3, -1, -3]:
+  Remove: 0 not in deque (already gone)
+  Add -3: -3 < -1, append
+         deque = [1, 2, 3]    (3, -1, -3)
+  Max = arr[1] = 3 ✓
+
+Window [-1, -3, 5]:
+  Remove: 1 is front, pop front
+         deque = [2, 3]
+  Add 5: 5 > -3, pop; 5 > -1, pop
+         deque = [4]          (index of 5)
+  Max = arr[4] = 5 ✓
+
+Window [-3, 5, 3]:
+  Remove: 2, 3 not front
+  Add 3: 3 < 5, append
+         deque = [4, 5]       (5, 3)
+  Max = arr[4] = 5 ✓
+
+Window [5, 3, 6]:
+  Remove: 3 not front
+  Add 6: 6 > 3, pop; 6 > 5, pop
+         deque = [6]          (index of 6)
+  Max = arr[6] = 6 ✓
+
+Window [3, 6, 7]:
+  Remove: 4, 5 not front
+  Add 7: 7 > 6, pop
+         deque = [7]          (index of 7)
+  Max = arr[7] = 7 ✓
+
+Result: [3, 3, 5, 5, 6, 7]
+
+```
+
+### Anagram Detection
+
+```
+s = "cbaebabacd"   p = "abc"
+
+Pattern freq: {a:1, b:1, c:1}
+Window size: 3
+
+Window "cba":
+  freq: {c:1, b:1, a:1}
+  Match? Yes! → Index 0 ✓
+
+Window "bae":
+  Remove 'c': {b:1, a:1}
+  Add 'e': {b:1, a:1, e:1}
+  Match? No (missing c, extra e)
+
+Window "aeb":
+  Remove 'b': {a:1, e:1}
+  Add 'b': {a:1, e:1, b:1}
+  Match? No
+
+...continue...
+
+Window "bac":
+  freq: {b:1, a:1, c:1}
+  Match? Yes! → Index 6 ✓
+
+Result: [0, 6]
+
+```
+
 ---
 
 ## 📐 Mathematical Foundations
@@ -179,125 +294,6 @@ $$H = s[i] \cdot b^{k-1} + s[i+1] \cdot b^{k-2} + ... + s[i+k-1] \cdot b^0$$
 $$H_{i+1} = (H_i - s[i] \cdot b^{k-1}) \cdot b + s[i+k]$$
 
 All operations mod a large prime to prevent overflow.
-
----
-
-## 📊 Text Diagrams
-
-### Fixed Window Sliding
-
-```
-Array: [1, 3, -1, -3, 5, 3, 6, 7]   k = 3
-
-Initial Window:
-+---+---+---+---+---+---+---+---+
-
-| 1 | 3 |-1 |-3 | 5 | 3 | 6 | 7 |
-+---+---+---+---+---+---+---+---+
-  +---------+
-  sum = 1 + 3 + (-1) = 3
-
-Slide 1:
-+---+---+---+---+---+---+---+---+
-
-| 1 | 3 |-1 |-3 | 5 | 3 | 6 | 7 |
-+---+---+---+---+---+---+---+---+
-  ↓   +---------+
-remove  add
-  sum = 3 - 1 + (-3) = -1
-
-Slide 2:
-+---+---+---+---+---+---+---+---+
-
-| 1 | 3 |-1 |-3 | 5 | 3 | 6 | 7 |
-+---+---+---+---+---+---+---+---+
-      ↓   +---------+
-   remove    add
-  sum = -1 - 3 + 5 = 1
-
-...and so on
-
-```
-
-### Monotonic Deque for Maximum
-
-```
-Array: [1, 3, -1, -3, 5, 3, 6, 7]   k = 3
-
-Window [1, 3, -1]:
-  Add 1: deque = [0]          (index of 1)
-  Add 3: 3 > 1, pop 0
-         deque = [1]          (index of 3)
-  Add -1: -1 < 3, append
-         deque = [1, 2]       (indices of 3, -1)
-  Max = arr[1] = 3 ✓
-
-Window [3, -1, -3]:
-  Remove: 0 not in deque (already gone)
-  Add -3: -3 < -1, append
-         deque = [1, 2, 3]    (3, -1, -3)
-  Max = arr[1] = 3 ✓
-
-Window [-1, -3, 5]:
-  Remove: 1 is front, pop front
-         deque = [2, 3]
-  Add 5: 5 > -3, pop; 5 > -1, pop
-         deque = [4]          (index of 5)
-  Max = arr[4] = 5 ✓
-
-Window [-3, 5, 3]:
-  Remove: 2, 3 not front
-  Add 3: 3 < 5, append
-         deque = [4, 5]       (5, 3)
-  Max = arr[4] = 5 ✓
-
-Window [5, 3, 6]:
-  Remove: 3 not front
-  Add 6: 6 > 3, pop; 6 > 5, pop
-         deque = [6]          (index of 6)
-  Max = arr[6] = 6 ✓
-
-Window [3, 6, 7]:
-  Remove: 4, 5 not front
-  Add 7: 7 > 6, pop
-         deque = [7]          (index of 7)
-  Max = arr[7] = 7 ✓
-
-Result: [3, 3, 5, 5, 6, 7]
-
-```
-
-### Anagram Detection
-
-```
-s = "cbaebabacd"   p = "abc"
-
-Pattern freq: {a:1, b:1, c:1}
-Window size: 3
-
-Window "cba":
-  freq: {c:1, b:1, a:1}
-  Match? Yes! → Index 0 ✓
-
-Window "bae":
-  Remove 'c': {b:1, a:1}
-  Add 'e': {b:1, a:1, e:1}
-  Match? No (missing c, extra e)
-
-Window "aeb":
-  Remove 'b': {a:1, e:1}
-  Add 'b': {a:1, e:1, b:1}
-  Match? No
-
-...continue...
-
-Window "bac":
-  freq: {b:1, a:1, c:1}
-  Match? Yes! → Index 6 ✓
-
-Result: [0, 6]
-
-```
 
 ---
 
