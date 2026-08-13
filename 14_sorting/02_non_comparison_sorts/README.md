@@ -10,7 +10,7 @@ permalink: /14_sorting/02_non_comparison_sorts/
 
 # 🔢 Non-Comparison Sorting
 
-![Non-Comparison Sorts](./images/non_comparison_sorts.svg)
+![Non-Comparison Sorts](./images/non_comparison_sorts.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
