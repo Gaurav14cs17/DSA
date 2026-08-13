@@ -22,7 +22,7 @@ permalink: /26_sweep_line/02_coordinate_compression/
 ## 📊 Visual Overview
 
 <div align="center">
-  <img src="./images/coordinate-compression.svg" alt="Coordinate Compression Visualization" width="800"/>
+  <img src="./images/coordinate-compression.png" alt="Coordinate Compression Visualization" width="800"/>
 </div>
 
 ---
