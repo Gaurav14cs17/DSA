@@ -87,6 +87,91 @@ Collect from highest frequency buckets.
 
 ---
 
+## 🎨 Visual Algorithm Walkthrough
+
+### Boyer-Moore Majority Element (#169)
+
+```
+Array: [2, 2, 1, 1, 1, 2, 2]
+
+Step-by-step:
+i   num   candidate  count   Action
+0    2       2        1      Initialize
+1    2       2        2      Match, increment
+2    1       2        1      Mismatch, decrement
+3    1       2        0      Mismatch, count=0
+4    1       1        1      New candidate
+5    2       1        0      Mismatch, count=0
+6    2       2        1      New candidate
+
+Final candidate: 2
+Verify: freq(2) = 4 > 7/2 ✓
+
+Why it works: Majority element survives all cancellations!
+
+```
+
+### Top K Frequent Elements (#347)
+
+```
+nums = [1,1,1,2,2,3], k = 2
+
+Step 1: Count frequencies
+  freq = {1: 3, 2: 2, 3: 1}
+
+Step 2: Bucket sort by frequency
+  buckets[0] = []
+  buckets[1] = [3]
+  buckets[2] = [2]
+  buckets[3] = [1]
+
+Step 3: Collect from highest frequency
+  From bucket[3]: add 1
+  From bucket[2]: add 2
+  result = [1, 2]
+
+Time: O(n), Space: O(n)
+
+```
+
+### Group Anagrams (#49)
+
+```
+strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
+
+Group by sorted string:
+  "eat" → "aet" → group1
+  "tea" → "aet" → group1
+  "tan" → "ant" → group2
+  "ate" → "aet" → group1
+  "nat" → "ant" → group2
+  "bat" → "abt" → group3
+
+Result: [["eat","tea","ate"], ["tan","nat"], ["bat"]]
+
+Alternative key: frequency tuple (26 counts)
+
+```
+
+### First Unique Character (#387)
+
+```
+s = "leetcode"
+
+Pass 1: Count frequencies
+  freq = {l:1, e:3, t:1, c:1, o:1, d:1}
+
+Pass 2: Find first with freq=1
+  s[0]='l': freq=1 ✓
+  return 0
+
+Time: O(n), Space: O(1) for fixed alphabet
+
+```
+
+---
+
+
 ## 💻 Code Implementations
 
 ```python
@@ -209,90 +294,6 @@ def longestPalindrome(s: str) -> int:
 | 692 | [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/) | Heap | O(n log k) | O(n) |
 
 ---
-
----
-
-## 🎨 Visual Algorithm Walkthrough
-
-### Boyer-Moore Majority Element (#169)
-
-```
-Array: [2, 2, 1, 1, 1, 2, 2]
-
-Step-by-step:
-i   num   candidate  count   Action
-0    2       2        1      Initialize
-1    2       2        2      Match, increment
-2    1       2        1      Mismatch, decrement
-3    1       2        0      Mismatch, count=0
-4    1       1        1      New candidate
-5    2       1        0      Mismatch, count=0
-6    2       2        1      New candidate
-
-Final candidate: 2
-Verify: freq(2) = 4 > 7/2 ✓
-
-Why it works: Majority element survives all cancellations!
-
-```
-
-### Top K Frequent Elements (#347)
-
-```
-nums = [1,1,1,2,2,3], k = 2
-
-Step 1: Count frequencies
-  freq = {1: 3, 2: 2, 3: 1}
-
-Step 2: Bucket sort by frequency
-  buckets[0] = []
-  buckets[1] = [3]
-  buckets[2] = [2]
-  buckets[3] = [1]
-
-Step 3: Collect from highest frequency
-  From bucket[3]: add 1
-  From bucket[2]: add 2
-  result = [1, 2]
-
-Time: O(n), Space: O(n)
-
-```
-
-### Group Anagrams (#49)
-
-```
-strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
-
-Group by sorted string:
-  "eat" → "aet" → group1
-  "tea" → "aet" → group1
-  "tan" → "ant" → group2
-  "ate" → "aet" → group1
-  "nat" → "ant" → group2
-  "bat" → "abt" → group3
-
-Result: [["eat","tea","ate"], ["tan","nat"], ["bat"]]
-
-Alternative key: frequency tuple (26 counts)
-
-```
-
-### First Unique Character (#387)
-
-```
-s = "leetcode"
-
-Pass 1: Count frequencies
-  freq = {l:1, e:3, t:1, c:1, o:1, d:1}
-
-Pass 2: Find first with freq=1
-  s[0]='l': freq=1 ✓
-  return 0
-
-Time: O(n), Space: O(1) for fixed alphabet
-
-```
 
 ---
 
