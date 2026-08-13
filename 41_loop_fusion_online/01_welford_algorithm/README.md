@@ -10,6 +10,10 @@ permalink: /41_loop_fusion_online/01_welford_algorithm/
 
 # 🎯 Welford's Algorithm
 
+### *🎯 Welford's Algorithm*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-5+-blue?style=for-the-badge" alt="Problems">
@@ -19,19 +23,32 @@ permalink: /41_loop_fusion_online/01_welford_algorithm/
 
 ---
 
+## 📊 Visual Overview
+
+<div align="center">
+  <img src="images/welford-algorithm.png" alt="Welford's Algorithm" width="100%">
+</div>
+
+---
+
+## 🎯 At a Glance
+
+| | |
+|:---|:---|
+| **Topic** | 🎯 Welford's Algorithm |
+| **Difficulty** | Medium |
+| **Problems** | 5+ |
+
+{: .highlight }
+> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+
+---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
 |:------------|:----------:|--------:|
 | [🏠 Loop Fusion Home](../README.md) | **01. Welford's Algorithm** | [02. Kadane's Pattern →](../02_kadane_pattern/README.md) |
-
----
-
-## 📊 Visual Guide
-
-<div align="center">
-  <img src="images/welford-algorithm.png" alt="Welford's Algorithm" width="100%">
-</div>
 
 ---
 
@@ -358,9 +375,3 @@ Compare to naive approach:
 </div>
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Loop Fusion Home](../README.md) | **01. Welford's Algorithm** | [02. Kadane's Pattern →](../02_kadane_pattern/README.md) |
