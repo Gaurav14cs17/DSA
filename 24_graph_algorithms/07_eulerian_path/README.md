@@ -31,7 +31,7 @@ permalink: /24_graph_algorithms/07_eulerian_path/
 
 <div align="center">
 
-![Eulerian Path and Circuit](./images/eulerian-path.svg)
+![Eulerian Path and Circuit](./images/eulerian-path.png)
 
 </div>
 
