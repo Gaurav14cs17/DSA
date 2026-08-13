@@ -10,7 +10,7 @@ permalink: /25_tree_algorithms/
 
 # 🌲 Tree Algorithms
 
-![Tree Algorithms Overview](./images/tree-algo-overview.svg)
+![Tree Algorithms Overview](./images/tree-algo-overview.png)
 
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
