@@ -10,6 +10,10 @@ permalink: /26_sweep_line/01_interval_sweep/
 
 # 📊 Interval Sweep
 
+### *Interval Sweep*
+
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-9-blue?style=for-the-badge" alt="Problems">
@@ -38,6 +42,7 @@ permalink: /26_sweep_line/01_interval_sweep/
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
+
 ## 🧭 Navigation
 
 | ⬅️ Previous | 📂 Current | ➡️ Next |
@@ -46,8 +51,7 @@ permalink: /26_sweep_line/01_interval_sweep/
 
 ---
 
-## 📐 Mathematical Foundations
-
+## 📐 Mathematical Foundation
 ### 1️⃣ Interval Sweep Definition
 
 **Sweep Line** processes events at critical points (interval boundaries) in sorted order.
@@ -593,9 +597,3 @@ def employee_free_time_heap(schedule: List[List[Interval]]) -> List[Interval]:
 5. **Overlap formula:** `start1 < end2 && start2 < end1`
 
 ---
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← Sweep Line](../README.md) | **01. Interval Sweep** | [02. Coordinate Compression →](../02_coordinate_compression/README.md) |
