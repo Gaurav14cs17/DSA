@@ -870,7 +870,7 @@ remainder = prefix_sum % k
 
 ---
 
-## 🎨 Visual Summary
+## 📋 Cheat Sheet
 
 ```
 +-------------------------------------------------------------+
