@@ -27,18 +27,6 @@ permalink: /26_sweep_line/
 
 ---
 
-## 📊 Visual Overview
-
-<div align="center">
-
-![Sweep Line Overview](./images/sweep-line-overview.png)
-
-*Sweep Line Overview*
-
-</div>
-
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -49,7 +37,19 @@ permalink: /26_sweep_line/
 | **Problems** | 45+ |
 
 {: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+> **How to use this page:** Scan **At a Glance**, then work through theory → visuals → code.
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Sweep Line Overview](./images/sweep-line-overview.png)
+
+*Sweep Line Overview*
+
+</div>
 
 ---
 
@@ -136,48 +136,59 @@ permalink: /26_sweep_line/
 
 Sweep line processes **events sorted by coordinates**. Imagine a vertical line sweeping left to right, processing start/end points of intervals.
 
-```
-Events: S=Start, E=End
-        S1  S2    E1  S3  E2    E3
-Time    |---|-----|---|---|-----|
-        1   2     3   4   5     6
-
-```
+![Sweep Line Event Trace](./images/sweep-line-events.png)
 
 ---
 
-## 🏆 Must-Do Problems
+## 🏆 LeetCode Problems
 
 ### 🟢 Easy
 
-| Problem | Link |
-|---------|------|
-| Meeting Rooms | [LeetCode 252](https://leetcode.com/problems/meeting-rooms/) |
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 252 | [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) | Interval sweep | O(n log n) | O(n) |
 
 ### 🟡 Medium
 
-| Problem | Link |
-|---------|------|
-| Meeting Rooms II | [LeetCode 253](https://leetcode.com/problems/meeting-rooms-ii/) |
-| Merge Intervals | [LeetCode 56](https://leetcode.com/problems/merge-intervals/) |
-| Insert Interval | [LeetCode 57](https://leetcode.com/problems/insert-interval/) |
-| Car Pooling | [LeetCode 1094](https://leetcode.com/problems/car-pooling/) |
-| My Calendar I | [LeetCode 729](https://leetcode.com/problems/my-calendar-i/) |
-| My Calendar II | [LeetCode 731](https://leetcode.com/problems/my-calendar-ii/) |
-| Corporate Flight Bookings | [LeetCode 1109](https://leetcode.com/problems/corporate-flight-bookings/) |
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 253 | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | Min heap / sweep | O(n log n) | O(n) |
+| 56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Sort + merge | O(n log n) | O(n) |
+| 57 | [Insert Interval](https://leetcode.com/problems/insert-interval/) | Interval merge | O(n) | O(n) |
+| 1094 | [Car Pooling](https://leetcode.com/problems/car-pooling/) | Difference array | O(n log n) | O(n) |
+| 729 | [My Calendar I](https://leetcode.com/problems/my-calendar-i/) | Interval overlap | O(n) | O(n) |
+| 731 | [My Calendar II](https://leetcode.com/problems/my-calendar-ii/) | Overlap count | O(n²) | O(n) |
+| 1109 | [Corporate Flight Bookings](https://leetcode.com/problems/corporate-flight-bookings/) | Prefix diff | O(n) | O(n) |
 
 ### 🔴 Hard
 
-| Problem | Link |
-|---------|------|
-| The Skyline Problem | [LeetCode 218](https://leetcode.com/problems/the-skyline-problem/) |
-| My Calendar III | [LeetCode 732](https://leetcode.com/problems/my-calendar-iii/) |
-| Rectangle Area II | [LeetCode 850](https://leetcode.com/problems/rectangle-area-ii/) |
-| Employee Free Time | [LeetCode 759](https://leetcode.com/problems/employee-free-time/) |
-| Largest Rectangle in Histogram | [LeetCode 84](https://leetcode.com/problems/largest-rectangle-in-histogram/) |
-| Maximal Rectangle | [LeetCode 85](https://leetcode.com/problems/maximal-rectangle/) |
-| Perfect Rectangle | [LeetCode 391](https://leetcode.com/problems/perfect-rectangle/) |
-| Erect the Fence | [LeetCode 587](https://leetcode.com/problems/erect-the-fence/) |
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 218 | [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/) | Coordinate compression | O(n log n) | O(n) |
+| 732 | [My Calendar III](https://leetcode.com/problems/my-calendar-iii/) | Sweep + counter | O(n log n) | O(n) |
+| 850 | [Rectangle Area II](https://leetcode.com/problems/rectangle-area-ii/) | 2D sweep | O(n² log n) | O(n) |
+| 759 | [Employee Free Time](https://leetcode.com/problems/employee-free-time/) | Merge intervals | O(n log n) | O(n) |
+| 84 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | Monotonic stack | O(n) | O(n) |
+| 85 | [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/) | Stack + histogram | O(mn) | O(n) |
+| 391 | [Perfect Rectangle](https://leetcode.com/problems/perfect-rectangle/) | Corner counting | O(n) | O(n) |
+| 587 | [Erect the Fence](https://leetcode.com/problems/erect-the-fence/) | Convex hull | O(n log n) | O(n) |
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **Sweep Line** | GeeksforGeeks | [Line sweep](https://www.geeksforgeeks.org/sweep-line-algorithm/) |
+| **Computational Geometry** | CP-Algorithms | [Geometry](https://cp-algorithms.com/geometry/) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | Geometry tag | [Problems](https://leetcode.com/tag/geometry/) |
 
 ---
 
