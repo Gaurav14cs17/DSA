@@ -13,7 +13,6 @@ permalink: /06_hash_tables/01_frequency_counting/
 ### *📊 Frequency Counting*
 
 
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-green?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-15+-blue?style=for-the-badge" alt="Problems">
@@ -39,8 +38,6 @@ permalink: /06_hash_tables/01_frequency_counting/
 
 ### Boyer-Moore Majority Element (#169)
 
-```
-Array: [2, 2, 1, 1, 1, 2, 2]
 
 Step-by-step:
 i   num   candidate  count   Action
@@ -57,11 +54,9 @@ Verify: freq(2) = 4 > 7/2 ✓
 
 Why it works: Majority element survives all cancellations!
 
-```
 
 ### Top K Frequent Elements (#347)
 
-```
 nums = [1,1,1,2,2,3], k = 2
 
 Step 1: Count frequencies
@@ -80,30 +75,15 @@ Step 3: Collect from highest frequency
 
 Time: O(n), Space: O(n)
 
-```
 
 ### Group Anagrams (#49)
 
-```
-strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
 
-Group by sorted string:
-  "eat" → "aet" → group1
-  "tea" → "aet" → group1
-  "tan" → "ant" → group2
-  "ate" → "aet" → group1
-  "nat" → "ant" → group2
-  "bat" → "abt" → group3
+![Group Anagrams (#49)](./image/group-anagrams-49.png)
 
-Result: [["eat","tea","ate"], ["tan","nat"], ["bat"]]
-
-Alternative key: frequency tuple (26 counts)
-
-```
 
 ### First Unique Character (#387)
 
-```
 s = "leetcode"
 
 Pass 1: Count frequencies
@@ -114,8 +94,6 @@ Pass 2: Find first with freq=1
   return 0
 
 Time: O(n), Space: O(1) for fixed alphabet
-
-```
 
 
 ## 🎯 At a Glance
@@ -272,8 +250,6 @@ def longestPalindrome(s: str) -> int:
             has_odd = True
     
     return length + (1 if has_odd else 0)
-
-```
 
 
 ## 🏆 LeetCode Problems
@@ -589,7 +565,6 @@ def longestPalindrome(s: str) -> int:
     
     return length + (1 if has_odd else 0)
 
-```
 
 ---
 
