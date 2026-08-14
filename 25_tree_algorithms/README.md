@@ -199,38 +199,55 @@ Comprehensive collection of **advanced tree algorithms** including LCA, Tree DP,
 
 ---
 
-## 🏆 Must-Do Problems
+## 🏆 LeetCode Problems
 
 ### 🟢 Easy
 
-| Problem | Link |
-|---------|------|
-| Maximum Depth | [LeetCode 104](https://leetcode.com/problems/maximum-depth-of-binary-tree/) |
-| Same Tree | [LeetCode 100](https://leetcode.com/problems/same-tree/) |
-| Symmetric Tree | [LeetCode 101](https://leetcode.com/problems/symmetric-tree/) |
-| Invert Binary Tree | [LeetCode 226](https://leetcode.com/problems/invert-binary-tree/) |
-| Path Sum | [LeetCode 112](https://leetcode.com/problems/path-sum/) |
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | DFS depth | O(n) | O(h) |
+| 100 | [Same Tree](https://leetcode.com/problems/same-tree/) | DFS compare | O(n) | O(h) |
+| 101 | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | Mirror DFS | O(n) | O(h) |
+| 226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | DFS swap | O(n) | O(h) |
+| 112 | [Path Sum](https://leetcode.com/problems/path-sum/) | Root-to-leaf | O(n) | O(h) |
 
 ### 🟡 Medium
 
-| Problem | Link |
-|---------|------|
-| LCA Binary Tree | [LeetCode 236](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) |
-| Binary Tree Cameras | [LeetCode 968](https://leetcode.com/problems/binary-tree-cameras/) |
-| House Robber III | [LeetCode 337](https://leetcode.com/problems/house-robber-iii/) |
-| Sum Root to Leaf Numbers | [LeetCode 129](https://leetcode.com/problems/sum-root-to-leaf-numbers/) |
-| Path Sum III | [LeetCode 437](https://leetcode.com/problems/path-sum-iii/) |
-| Flatten Binary Tree | [LeetCode 114](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) |
-| Binary Tree Right Side | [LeetCode 199](https://leetcode.com/problems/binary-tree-right-side-view/) |
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 236 | [LCA of Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | LCA | O(n) | O(h) |
+| 968 | [Binary Tree Cameras](https://leetcode.com/problems/binary-tree-cameras/) | Tree DP | O(n) | O(h) |
+| 337 | [House Robber III](https://leetcode.com/problems/house-robber-iii/) | Tree DP | O(n) | O(h) |
+| 129 | [Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/) | DFS sum | O(n) | O(h) |
+| 437 | [Path Sum III](https://leetcode.com/problems/path-sum-iii/) | Prefix + DFS | O(n) | O(h) |
+| 114 | [Flatten Binary Tree](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) | Morris / stack | O(n) | O(h) |
+| 199 | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | BFS / DFS | O(n) | O(h) |
 
 ### 🔴 Hard
 
-| Problem | Link |
-|---------|------|
-| Binary Tree Max Path Sum | [LeetCode 124](https://leetcode.com/problems/binary-tree-maximum-path-sum/) |
-| Serialize/Deserialize | [LeetCode 297](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) |
-| Vertical Order Traversal | [LeetCode 987](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/) |
-| Count Nodes in Complete Tree | [LeetCode 222](https://leetcode.com/problems/count-complete-tree-nodes/) |
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | Tree DP | O(n) | O(h) |
+| 297 | [Serialize and Deserialize BT](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | BFS/DFS | O(n) | O(n) |
+| 987 | [Vertical Order Traversal](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/) | BFS + sort | O(n log n) | O(n) |
+| 222 | [Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/) | Binary search | O(log² n) | O(h) |
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **Tree Algorithms** | CP-Algorithms | [Trees](https://cp-algorithms.com/graph/tree_basic.html) |
+| **HLD** | GeeksforGeeks | [Heavy-Light](https://www.geeksforgeeks.org/heavy-light-decomposition/) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | Tree tag | [Problems](https://leetcode.com/tag/tree/) |
 
 ---
 
