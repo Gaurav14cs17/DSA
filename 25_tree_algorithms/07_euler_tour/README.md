@@ -38,7 +38,6 @@ permalink: /25_tree_algorithms/07_euler_tour/
 | **Difficulty** | Medium to Hard |
 | **Problems** | 8+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
