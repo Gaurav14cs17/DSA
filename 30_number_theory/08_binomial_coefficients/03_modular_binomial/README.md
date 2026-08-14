@@ -13,6 +13,9 @@ permalink: /30_number_theory/08_binomial_coefficients/03_modular_binomial/
 
 ### *Computing C(n,k) mod p Efficiently*
 
+![*Computing C(n,k) mod p Efficiently*](./images/computing-cnk-mod-p-efficiently.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Precomputation-O(n)-blue?style=for-the-badge" alt="Precomp">
@@ -39,29 +42,6 @@ permalink: /30_number_theory/08_binomial_coefficients/03_modular_binomial/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| COMPUTING C(5, 2) mod 7                                        |
-+-----------------------------------------------------------------+
-|                                                                 |
-| C(5,2) = 5! / (2! × 3!)                                        |
-|        = 120 / (2 × 6)                                         |
-|        = 120 / 12                                              |
-|        = 10                                                    |
-|                                                                 |
-| Modular version:                                               |
-|   fact[5] = 120 mod 7 = 1                                      |
-|   fact[2] = 2 mod 7 = 2                                        |
-|   fact[3] = 6 mod 7 = 6                                        |
-|                                                                 |
-|   inv_fact[2] = 2^(-1) mod 7 = 4  (because 2×4 = 8 ≡ 1)       |
-|   inv_fact[3] = 6^(-1) mod 7 = 6  (because 6×6 = 36 ≡ 1)      |
-|                                                                 |
-|   C(5,2) mod 7 = 1 × 4 × 6 mod 7 = 24 mod 7 = 3               |
-|   Verify: 10 mod 7 = 3 ✓                                       |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
