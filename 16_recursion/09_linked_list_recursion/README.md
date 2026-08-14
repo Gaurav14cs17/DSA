@@ -70,11 +70,12 @@ class ListNode:
 
 ### 2️⃣ Recursion Pattern
 
-```
-Base Case: head is None or head.next is None
-Recursive Case: Process head, recurse on head.next
+<div align="center">
 
-```
+<img src="./images/linked-list-recursion-pattern.png" alt="Linked List Recursion Pattern" width="100%">
+
+</div>
+
 
 ---
 
