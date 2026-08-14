@@ -39,7 +39,6 @@ permalink: /18_dynamic_programming/06_state_machine_dp/
 | **Difficulty** | Medium to Hard |
 | **Problems** | 8+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
