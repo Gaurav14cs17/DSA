@@ -556,23 +556,12 @@ def flattenArray(arr: list) -> list:
 
 ## 📊 Pattern Summary
 
-```
-Array Recursion Patterns
-         |
-         +-- Linear (Index-based)
-         |   +-- Left-to-Right: f(i) → f(i+1)
-         |   +-- Right-to-Left: f(i) → f(i-1)
-         |
-         +-- Two-Pointer
-         |   +-- f(left, right) → f(left+1, right-1)
-         |
-         +-- Divide & Conquer
-         |   +-- f(low, high) → combine(f(low,mid), f(mid+1,high))
-         |
-         +-- Accumulator
-             +-- f(i, acc) → f(i+1, combine(acc, arr[i]))
+<div align="center">
 
-```
+<img src="./images/array-recursion-patterns.png" alt="Array Recursion Patterns" width="100%">
+
+</div>
+
 
 ---
 
