@@ -256,22 +256,12 @@ def space_optimized_dp(arr):
 
 ### Visual Example
 
-```
-Original 2D DP (Fibonacci-like):
-    0  1  2  3  4
-  +--------------
-0 | 0  1  1  2  3
-1 | 1  1  2  3  5
-2 | 1  2  3  5  8
-3 | 2  3  5  8 13
+<div align="center">
 
-Space Optimized (only keep 2 rows):
-prev: [2  3  5  8 13]
-curr: [3  5  8 13 21]  ← Computing
+![Space Optimization Visual](./images/dp-space-opt-visual.png)
 
-Memory: 2n instead of n²
+</div>
 
-```
 
 ### Problems
 
@@ -366,33 +356,12 @@ class MonotonicQueueDP:
 
 ### Visual Walkthrough
 
-```
-Example: nums = [10, -2, -10, -5, 20], k = 2
+<div align="center">
 
-Initial: dp = [10, _, _, _, _]
-         dq = [0]
+![Monotonic Queue Walkthrough](./images/dp-monotonic-walkthrough.png)
 
-i=1: Window [0,0], max_dp = 10
-     dp[1] = -2 + 10 = 8
-     dq = [0, 1]  (8 < 10, don't remove)
-     
-i=2: Window [0,1], max_dp = 10
-     dp[2] = -10 + 10 = 0
-     dq = [0, 1, 2]  (0 < 8, don't remove)
-     
-i=3: Window [1,2], max_dp = 8 (removed index 0)
-     dp[3] = -5 + 8 = 3
-     dq = [1, 2, 3]
-     
-i=4: Window [2,3], max_dp = 3
-     dp[4] = 20 + 3 = 23
-     Remove 1,2,3 (all < 23)
-     dq = [4]
+</div>
 
-Final: dp = [10, 8, 0, 3, 23]
-Answer: 23
-
-```
 
 ### Problems (Monotonic Queue)
 
@@ -575,33 +544,12 @@ def min_cost_split(arr):
 
 ### Visual Example (CHT)
 
-```
-Lines: L1: y = -2x + 10
-       L2: y = -1x + 8
-       L3: y = 0x + 5
+<div align="center">
 
-    y
-    |
- 10 +-----╲                L1 (m=-2)
-    |      ╲╲
-  8 +-------╲╲-----        L2 (m=-1)
-    |        ╲╲╲╲╲
-  5 +---------╲╲╲╲-------  L3 (m=0)
-    |          ╲╲╲╲╲╲╲╲
-    +---------------------- x
-    0   1   2   3   4   5
+![Convex Hull Trick Visual](./images/dp-cht-visual.png)
 
-Lower Envelope:
+</div>
 
-- x ∈ [0, 2]: L1 optimal
-
-- x ∈ [2, 3]: L2 optimal
-
-- x ∈ [3, ∞): L3 optimal
-
-CHT maintains only [L1, L2, L3] (convex hull)
-
-```
 
 ### Problems (Convex Hull Trick)
 
@@ -824,35 +772,12 @@ def divide_conquer_dp(arr, K):
 
 ### Visual Example
 
-```
-Array: [1, 2, 3, 4, 5], K = 2
+<div align="center">
 
-Standard DP: For each (k, i), try all j < i
-+---------------------------------+
+![Divide & Conquer Optimization](./images/dp-dc-optimization.png)
 
-| dp[2][4] = ?                     |
-|                                  |
-| Try j=0: dp[1][0] + cost[1][4]  |
-| Try j=1: dp[1][1] + cost[2][4]  |
-| Try j=2: dp[1][2] + cost[3][4]  |
-| Try j=3: dp[1][3] + cost[4][4]  |
-+---------------------------------+
+</div>
 
-D&C Optimization: Binary search on optimal j
-+----------------------------------+
-
-| opt[2][0] ≤ opt[2][2] ≤ opt[2][4] |
-|                                   |
-| Compute mid=2 first, find opt    |
-| Use opt to bound left/right      |
-|                                   |
-| Left: opt[2][0..1] ∈ [0, opt[2]] |
-| Right: opt[2][3..4] ∈ [opt[2], 4]|
-+-----------------------------------+
-
-Reduces O(n²) work to O(n log n) per level!
-
-```
 
 ### Problems (Divide & Conquer)
 
@@ -1056,39 +981,12 @@ def sos_dp_optimized(arr):
 
 ### Visual Example
 
-```
-n = 3, arr = [1, 2, 3, 4, 5, 6, 7, 8]
-Indices:     000 001 010 011 100 101 110 111
+<div align="center">
 
-Goal: dp[mask] = sum of arr[submask] for submask ⊆ mask
+![SOS DP Visual](./images/dp-sos-visual.png)
 
-Example: mask = 101 (binary)
-Subsets: 000, 001, 100, 101
-dp[101] = arr[000] + arr[001] + arr[100] + arr[101]
-        = 1 + 2 + 5 + 6 = 14
+</div>
 
-SOS DP Process:
-i=0 (bit 0):
-  dp[001] += dp[000]  (1+2=3)
-  dp[011] += dp[010]  (3+4=7)
-  dp[101] += dp[100]  (5+6=11)
-  dp[111] += dp[110]  (7+8=15)
-
-i=1 (bit 1):
-  dp[010] += dp[000]  (3+1=4)
-  dp[011] += dp[001]  (7+3=10)
-  dp[110] += dp[100]  (7+5=12)
-  dp[111] += dp[101]  (15+11=26)
-
-i=2 (bit 2):
-  dp[100] += dp[000]  (5+1=6)
-  dp[101] += dp[001]  (11+3=14)
-  dp[110] += dp[010]  (12+4=16)
-  dp[111] += dp[011]  (26+10=36)
-
-Final: dp = [1, 3, 4, 10, 6, 14, 16, 36]
-
-```
 
 ### Problems (SOS DP)
 
@@ -1574,38 +1472,12 @@ def rerooting_dp(graph, n):
 
 ## 🎯 Decision Tree
 
-```
-+---------------------------------------------+
-| Identify DP bottleneck                     |
-+--------------+------------------------------+
-               |
-      +--------+--------+
-      | What type?      |
-      +--------+--------+
-               |
-   +-----------+-----------+
-   |           |           |
-   ▼           ▼           ▼
-+---------+ +---------+ +----------+
+<div align="center">
 
-| States  | | Trans-  | | Linear   |
-| too big?| | itions? | | recur?   |
-+----+----+ +----+----+ +----+-----+
-     |           |           |
-     ▼           ▼           ▼
- Space Opt   Range min/  Matrix Exp
- SOS DP      max? →      
- Bitmask     Mono Queue  
-             
-             Linear      Exactly k?
-             func? →     → Aliens
-             CHT/        
-             Li Chao     
-             
-             Monge? →    Quad ineq?
-             D&C DP      → Knuth
+![DP Optimizations Decision Tree](./images/dp-decision-tree.png)
 
-```
+</div>
+
 
 ---
 
