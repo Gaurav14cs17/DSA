@@ -50,7 +50,6 @@ permalink: /38_online_algorithms/
 | **Subtopics** | 4 |
 | **Problems** | 25+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
