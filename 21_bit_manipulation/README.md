@@ -28,25 +28,6 @@ permalink: /21_bit_manipulation/
 
 ---
 
-## 📊 Visual Overview
-
-<div align="center">
-
-![Bit Manipulation Overview](./images/bit-overview.png)
-
-*Bit Manipulation Overview*
-
-</div>
-
----
-
-
-<div align="center">
-<img src="./images/bit-overview.png" alt="Bit Manipulation Overview" width="100%">
-</div>
-
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -57,7 +38,7 @@ permalink: /21_bit_manipulation/
 | **Problems** | 25+ |
 
 {: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+> **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
 
@@ -220,6 +201,25 @@ n&-n = 0...00100  (4) — only lowest set bit remains!
 
 ---
 
+## 📊 Visual Overview
+
+<div align="center">
+
+![Bit Manipulation Overview](./images/bit-overview.png)
+
+*Bit Manipulation Overview*
+
+</div>
+
+---
+
+
+<div align="center">
+<img src="./images/bit-overview.png" alt="Bit Manipulation Overview" width="100%">
+</div>
+
+---
+
 ## 🌟 Why Bit Manipulation?
 
 > *"At the heart of every computer lies binary - the language of 0s and 1s. Mastering bit manipulation is mastering the machine itself."*
@@ -235,34 +235,18 @@ n&-n = 0...00100  (4) — only lowest set bit remains!
 
 ## 🎯 Pattern Recognition
 
-```
-                        +---------------------------------+
-                        |        BIT MANIPULATION         |
-                        |           PROBLEM               |
-                        +---------------+-----------------+
-                                        |
-          +-----------------------------+-----------------------------+
-          |                             |                             |
-          ▼                             ▼                             ▼
-   +--------------+            +--------------+            +--------------+
-   | Find unique  |            | Count/Check  |            |   Subsets/   |
-   |   element?   |            |    bits?     |            |    States    |
-   +------+-------+            +------+-------+            +------+-------+
-          |                           |                           |
-          ▼                           ▼                           ▼
-   +--------------+            +--------------+            +--------------+
-   |   XOR All    |            |   n & (n-1)  |            |   Bitmask    |
-   |   Elements   |            |  Kernighan   |            |   2^n enum   |
-   +--------------+            +--------------+            +--------------+
-          |                           |                           |
-          ▼                           ▼                           ▼
-   +--------------+            +--------------+            +--------------+
-   | • Single Num |            | • Count Bits |            | • Subsets    |
-   | • Missing Num|            | • Power of 2 |            | • TSP        |
-   | • XOR Queries|            | • Power of 4 |            | • Partition  |
-   +--------------+            +--------------+            +--------------+
 
-```
+---
+
+## 📊 Time Complexity Comparison
+
+| Operation | Bit Method | Alternative | Speedup |
+|-----------|------------|-------------|---------|
+| Multiply by 2 | `n << 1` | `n * 2` | ~2-5x |
+| Divide by 2 | `n >> 1` | `n // 2` | ~2-5x |
+| Check even/odd | `n & 1` | `n % 2` | ~3-10x |
+| Check power of 2 | `n & (n-1)` | Loop/Log | ~10-100x |
+| Swap values | `a ^= b ^= a ^= b` | Temp var | ~2x |
 
 ---
 
@@ -340,18 +324,6 @@ n&-n = 0...00100  (4) — only lowest set bit remains!
 
 ---
 
-## 📊 Time Complexity Comparison
-
-| Operation | Bit Method | Alternative | Speedup |
-|-----------|------------|-------------|---------|
-| Multiply by 2 | `n << 1` | `n * 2` | ~2-5x |
-| Divide by 2 | `n >> 1` | `n // 2` | ~2-5x |
-| Check even/odd | `n & 1` | `n % 2` | ~3-10x |
-| Check power of 2 | `n & (n-1)` | Loop/Log | ~10-100x |
-| Swap values | `a ^= b ^= a ^= b` | Temp var | ~2x |
-
----
-
 ## 📚 References & Further Reading
 
 ### 📖 Essential Reading
@@ -372,6 +344,9 @@ n&-n = 0...00100  (4) — only lowest set bit remains!
 
 ### 📝 Articles
 
+![📝 Articles](./images/articles.png)
+
+
 | Source | Title | Link |
 |--------|-------|------|
 | **GeeksforGeeks** | Complete Bit Manipulation Guide | [🔗 GFG](https://www.geeksforgeeks.org/bits-manipulation-important-tactics/) |
@@ -383,27 +358,6 @@ n&-n = 0...00100  (4) — only lowest set bit remains!
 
 ## 🎓 Quick Reference Card
 
-```
-+--------------------------------------------------------------+
-|                    BIT MANIPULATION CHEAT SHEET              |
-+--------------------------------------------------------------+
-|  Get bit i:       (n >> i) & 1                               |
-|  Set bit i:       n | (1 << i)                               |
-|  Clear bit i:     n & ~(1 << i)                              |
-|  Toggle bit i:    n ^ (1 << i)                               |
-|  Clear lowest 1:  n & (n - 1)                                |
-|  Isolate lowest:  n & (-n)                                   |
-|  Is power of 2:   n > 0 && (n & (n - 1)) == 0                |
-|  Count bits:      while n: n &= n-1; count++                 |
-+--------------------------------------------------------------+
-
-|  XOR:  a^a=0   a^0=a   a^b=b^a   (a^b)^c=a^(b^c)            |
-+--------------------------------------------------------------+
-|  Two's Complement:  -n = ~n + 1                              |
-|  Swap:  a ^= b; b ^= a; a ^= b;                              |
-+--------------------------------------------------------------+
-
-```
 
 ---
 
