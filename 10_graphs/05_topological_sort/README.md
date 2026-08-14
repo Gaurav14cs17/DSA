@@ -30,7 +30,6 @@ permalink: /10_graphs/05_topological_sort/
 | **Difficulty** | Medium |
 | **Problems** | 6+ |
 
-{: .highlight }
 > **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
@@ -277,7 +276,6 @@ def alienOrder(words: list[str]) -> str:
 ## 🏆 LeetCode Problems
 
 ### 🟡 Medium
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 207 | [Course Schedule](https://leetcode.com/problems/course-schedule/) | Kahn's | O(V+E) | O(V+E) |
@@ -286,7 +284,6 @@ def alienOrder(words: list[str]) -> str:
 | 802 | [Find Eventual Safe States](https://leetcode.com/problems/find-eventual-safe-states/) | Reverse Topo | O(V+E) | O(V) |
 
 ### 🔴 Hard
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 269 | [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/) | Topological Sort | O(C) | O(1) |
