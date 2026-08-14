@@ -45,7 +45,6 @@ permalink: /30_number_theory/10_lucas_theorem/01_basic_lucas/
 | **In one line** | C(m, n) mod p for Huge Numbers |
 | **Difficulty** | Medium |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
