@@ -13,6 +13,9 @@ permalink: /30_number_theory/12_wilsons_theorem/01_basic_wilson/
 
 ### *A Beautiful Connection Between Primes and Factorials*
 
+![*A Beautiful Connection Between Primes and Factorials*](./images/a-beautiful-connection-between-primes-and-factorials.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Time-O(n)-blue?style=for-the-badge" alt="Time">
@@ -39,29 +42,6 @@ permalink: /30_number_theory/12_wilsons_theorem/01_basic_wilson/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| WHY (p-1)! ≡ -1 (mod p) for prime p                            |
-+-----------------------------------------------------------------+
-|                                                                 |
-| For prime p=7, consider 1, 2, 3, 4, 5, 6 mod 7                 |
-|                                                                 |
-| Each number (except 1 and 6) pairs with its inverse:           |
-|   2 × 4 = 8 ≡ 1 (mod 7)                                        |
-|   3 × 5 = 15 ≡ 1 (mod 7)                                       |
-|                                                                 |
-| Only 1 and p-1 are their own inverses:                         |
-|   1 × 1 = 1 ≡ 1 (mod 7)                                        |
-|   6 × 6 = 36 ≡ 1 (mod 7)                                       |
-|                                                                 |
-| So (p-1)! = 1 × (2×4) × (3×5) × 6                              |
-|           = 1 × 1 × 1 × 6                                      |
-|           = 6 ≡ -1 (mod 7) ✓                                   |
-|                                                                 |
-| The pairs cancel out, leaving only 1 and p-1!                  |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
