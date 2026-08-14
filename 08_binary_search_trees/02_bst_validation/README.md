@@ -13,7 +13,6 @@ permalink: /08_binary_search_trees/02_bst_validation/
 ### *BST Validation*
 
 
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8+-blue?style=for-the-badge" alt="Problems">
@@ -39,29 +38,6 @@ permalink: /08_binary_search_trees/02_bst_validation/
 
 **Problem:** Is this a valid BST?
 
-```
-Tree:
-      10
-     /  \
-    5    15
-        /  \
-       6   20
-
-Step 1: validate(10, -∞, +∞)
-        10 ∈ (-∞, +∞) ✓
-
-Step 2: validate(5, -∞, 10)
-        5 ∈ (-∞, 10) ✓
-
-Step 3: validate(15, 10, +∞)
-        15 ∈ (10, +∞) ✓
-
-Step 4: validate(6, 10, 15)
-        6 ∉ (10, 15) ✗  INVALID!
-
-Why? 6 is in right subtree of 10, but 6 < 10!
-
-```
 
 **Key Insight:** Must track min/max bounds from ancestors, not just parent!
 
@@ -71,37 +47,9 @@ Why? 6 is in right subtree of 10, but 6 < 10!
 
 **Problem:** Two adjacent nodes swapped
 
-```
-Incorrect BST (3 and 2 swapped):
-      10
-     /  \
-    3    15
-   / \
-  1   2
 
-Inorder: [1, 3, 2, 15]
-               ↑  ↑
-          Violation!
+![🔄 Walkthrough 2: Recover BST (Adjacent Swap)](./image/bst_validation.png)
 
-Step 1: Find first violation (prev > curr)
-        prev = 3, curr = 2
-        first = 3, second = 2
-
-Step 2: No more violations (adjacent swap)
-
-Step 3: Swap 3 and 2
-        3.val, 2.val = 2.val, 3.val
-
-Corrected:
-      10
-     /  \
-    2    15
-   / \
-  1   3
-
-Inorder: [1, 2, 3, 15] ✓
-
-```
 
 ---
 
@@ -109,55 +57,14 @@ Inorder: [1, 2, 3, 15] ✓
 
 **Problem:** Two non-adjacent nodes swapped
 
-```
-Incorrect BST (15 and 1 swapped):
-      10
-     /  \
-    15   1
-   / \
-  5   8
 
-Inorder: [5, 15, 8, 10, 1]
-            ↑   ↑      ↑
-          1st violation   2nd violation
+![🔄 Walkthrough 3: Recover BST (Non-Adjacent Swap)](./image/bst_validation.png)
 
-Step 1: First violation: prev=15, curr=8
-        first = 15, second = 8
-
-Step 2: Second violation: prev=10, curr=1
-        second = 1 (update)
-
-Step 3: Swap first and second
-        15.val, 1.val = 1.val, 15.val
-
-Corrected:
-      10
-     /  \
-    1    15
-   / \
-  5   8
-
-Inorder: [5, 1, 8, 10, 15] ✗ Still wrong...
-
-Actually should be:
-      10
-     /  \
-    5    15
-   / \
-  1   8
-
-Wait, let me reconsider...
-Actually the swap of 15 and 1 gives:
-[5, 1, 8, 10, 15] → need to swap 15 and 1 back.
-
-```
 
 ---
 
 ### 🌳 **Walkthrough 4: Sorted Array to Balanced BST**
 
-```
-Array: [1, 2, 3, 4, 5, 6, 7]
 
 Step 1: Middle = 4 (root)
         Left = [1,2,3], Right = [5,6,7]
@@ -176,8 +83,6 @@ Result:
 
 Height = 2 (log₂ 7 ≈ 2.8)
 Perfectly balanced! ✓
-
-```
 
 
 ## 🎯 At a Glance
@@ -260,57 +165,11 @@ $$T(n) = 2T(n/2) + O(1) = O(n)$$
 # Only checks immediate children!
 return node.left.val < node.val < node.right.val  # WRONG!
 
-```
 
-**✓ Correct Approach:**
+![5️⃣ BST Validation - Common Mistakes](./image/bst_validation.png)
 
-- Every node in left subtree < node.val
-
-- Every node in right subtree > node.val
-
-- Check **entire** subtree with bounds
-
----
-
-### 6️⃣ Morris Traversal for O(1) Space
-
-**Threaded Binary Tree:** Temporarily link rightmost of left subtree to current node.
-
-**Space:** O(1) instead of O(h) stack!
-
-$$\text{Time: } O(n), \text{ Space: } O(1)$$
-
-
-## 🎯 Pattern Recognition Guide
-
-| Scenario | Approach | Example |
-|----------|----------|---------|
-| **Validate entire BST** | Range checking | #98 |
-| **Validate with inorder** | Track previous value | #98 alternative |
-| **Two nodes swapped** | Detect violations in inorder | #99 |
-| **Build balanced BST** | Middle element recursion | #108 |
-| **Sorted linked list → BST** | Slow/fast pointer or inorder | #109 |
-| **Find mode (most frequent)** | Inorder with counter | #501 |
-| **O(1) space validation** | Morris traversal | #99 follow-up |
-
-### Decision Tree
-
-```
 BST Validation Problem
     |
-    +-- Check if valid BST?
-    |   +-- Recursive → Range method
-    |   +-- Iterative → Inorder with prev
-    |
-    +-- Two nodes swapped?
-    |   +-- Inorder + detect violations
-    |
-    +-- Build balanced BST?
-        +-- Use middle element
-
-```
-
-
 ## 💻 Code Implementations
 
 ```python
@@ -408,8 +267,6 @@ def sortedArrayToBST(nums: list[int]) -> TreeNode:
         return root
     
     return build(0, len(nums) - 1)
-
-```
 
 
 ## 🏆 LeetCode Problems
@@ -669,57 +526,11 @@ $$T(n) = 2T(n/2) + O(1) = O(n)$$
 # Only checks immediate children!
 return node.left.val < node.val < node.right.val  # WRONG!
 
-```
 
-**✓ Correct Approach:**
+![5️⃣ BST Validation - Common Mistakes](./image/bst_validation.png)
 
-- Every node in left subtree < node.val
-
-- Every node in right subtree > node.val
-
-- Check **entire** subtree with bounds
-
----
-
-### 6️⃣ Morris Traversal for O(1) Space
-
-**Threaded Binary Tree:** Temporarily link rightmost of left subtree to current node.
-
-**Space:** O(1) instead of O(h) stack!
-
-$$\text{Time: } O(n), \text{ Space: } O(1)$$
-
----
-
-## 🎯 Pattern Recognition Guide
-
-| Scenario | Approach | Example |
-|----------|----------|---------|
-| **Validate entire BST** | Range checking | #98 |
-| **Validate with inorder** | Track previous value | #98 alternative |
-| **Two nodes swapped** | Detect violations in inorder | #99 |
-| **Build balanced BST** | Middle element recursion | #108 |
-| **Sorted linked list → BST** | Slow/fast pointer or inorder | #109 |
-| **Find mode (most frequent)** | Inorder with counter | #501 |
-| **O(1) space validation** | Morris traversal | #99 follow-up |
-
-### Decision Tree
-
-```
 BST Validation Problem
     |
-    +-- Check if valid BST?
-    |   +-- Recursive → Range method
-    |   +-- Iterative → Inorder with prev
-    |
-    +-- Two nodes swapped?
-    |   +-- Inorder + detect violations
-    |
-    +-- Build balanced BST?
-        +-- Use middle element
-
-```
-
 ---
 
 ## 💻 Code Implementations
@@ -820,7 +631,6 @@ def sortedArrayToBST(nums: list[int]) -> TreeNode:
     
     return build(0, len(nums) - 1)
 
-```
 
 ---
 
