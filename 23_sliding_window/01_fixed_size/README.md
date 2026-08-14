@@ -38,11 +38,7 @@ permalink: /23_sliding_window/01_fixed_size/
 
 </div>
 
-### Fixed Window Sliding
-
-
 ### Monotonic Deque for Maximum
-
 ```
 Array: [1, 3, -1, -3, 5, 3, 6, 7]   k = 3
 
@@ -90,7 +86,6 @@ Result: [3, 3, 5, 5, 6, 7]
 ```
 
 ### Anagram Detection
-
 ```
 s = "cbaebabacd"   p = "abc"
 
@@ -137,7 +132,6 @@ Result: [0, 6]
 
 ---
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
@@ -152,8 +146,6 @@ Result: [0, 6]
 
 ## 📐 Mathematical Foundation
 ### 1️⃣ The Sliding Update Formula
-
-{: .highlight }
 > Instead of recalculating the entire window, update by removing the outgoing element and adding the incoming element.
 
 #### For Sum
@@ -173,7 +165,6 @@ $$\text{count}_{i+1}[\text{new}]++, \quad \text{count}_{i+1}[\text{old}]--$$
 ---
 
 ### 2️⃣ Complexity Analysis
-
 {: .important }
 > Fixed window reduces O(n×k) to O(n) by reusing computation.
 
@@ -195,7 +186,6 @@ $$T(n) = k + (n - k) \times 1 = O(n)$$
 ---
 
 ### 3️⃣ Monotonic Deque — Window Maximum
-
 {: .note }
 > Maintain a decreasing deque of indices. Front is always the maximum.
 
@@ -226,8 +216,6 @@ Total operations: \(2n = O(n)\) ∎
 ---
 
 ### 4️⃣ Anagram Detection — Character Count Matching
-
-
 > Two strings are anagrams if they have the same character frequency.
 
 #### The Approach
@@ -251,7 +239,6 @@ When `matches == 26`, we found an anagram!
 ---
 
 ### 5️⃣ Rolling Hash — Rabin-Karp
-
 {: .important }
 > Compute hash of window in O(1) using polynomial rolling hash.
 
@@ -623,7 +610,6 @@ def maxVowels(s: str, k: int) -> int:
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
-
 | # | Problem | Technique | Time | Space |
 |:-:|---------|-----------|:----:|:-----:|
 | 219 | [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/) | HashSet | O(n) | O(k) |
@@ -631,7 +617,6 @@ def maxVowels(s: str, k: int) -> int:
 | 1456 | [Max Vowels in Substring](https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/) | Count | O(n) | O(1) |
 
 ### 🟡 Medium
-
 | # | Problem | Technique | Time | Space |
 |:-:|---------|-----------|:----:|:-----:|
 | 438 | [Find All Anagrams](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | Char Count | O(n) | O(1) |
@@ -641,7 +626,6 @@ def maxVowels(s: str, k: int) -> int:
 | 1176 | [Diet Plan Performance](https://leetcode.com/problems/diet-plan-performance/) | Sliding Sum | O(n) | O(1) |
 
 ### 🔴 Hard
-
 | # | Problem | Technique | Time | Space |
 |:-:|---------|-----------|:----:|:-----:|
 | 239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Monotonic Deque | O(n) | O(k) |
@@ -653,11 +637,9 @@ def maxVowels(s: str, k: int) -> int:
 ## 💡 Interview Tips
 
 ### Key Insight
-
 > "Fixed window = O(1) update per slide"
 
 ### Common Mistakes
-
 | Mistake | Fix |
 |---------|-----|
 | Forgetting initialization | First window: sum(arr[:k]) |
