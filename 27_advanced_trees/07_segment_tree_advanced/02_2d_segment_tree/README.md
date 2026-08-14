@@ -68,46 +68,8 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/02_2d_segment_tree/
 
 ## 💻 Implementation
 
-```python
-class SegmentTree2D:
-    """
-    2D Segment Tree for matrix range queries.
-    
-    Time: O(log m * log n)
-    """
-    
-    def __init__(self, matrix: List[List[int]]):
-        self.m = len(matrix)
-        self.n = len(matrix[0]) if matrix else 0
-        self.tree = [[0] * (4 * self.n) for _ in range(4 * self.m)]
-        
-        if matrix:
-            self._build_x(matrix, 0, 0, self.m - 1)
-    
-    def _build_y(self, matrix, vx, lx, vy, ly, ry):
-        if ly == ry:
-            if lx == rx:
-                self.tree[vx][vy] = matrix[lx][ly]
-            else:
-                self.tree[vx][vy] = self.tree[2*vx+1][vy] + self.tree[2*vx+2][vy]
-        else:
-            my = (ly + ry) // 2
-            self._build_y(matrix, vx, lx, 2*vy+1, ly, my)
-            self._build_y(matrix, vx, lx, 2*vy+2, my+1, ry)
-            self.tree[vx][vy] = self.tree[vx][2*vy+1] + self.tree[vx][2*vy+2]
-    
-    def _build_x(self, matrix, vx, lx, rx):
-        if lx != rx:
-            mx = (lx + rx) // 2
-            self._build_x(matrix, 2*vx+1, lx, mx)
-            self._build_x(matrix, 2*vx+2, mx+1, rx)
-        self._build_y(matrix, vx, lx, 0, 0, self.n - 1)
-    
-    def query(self, x1, y1, x2, y2):
-        """Query sum of rectangle."""
-        return self._query_x(0, 0, self.m-1, x1, x2, y1, y2)
+![2D Segment Tree Operations](./images/2d-segment-tree-operations.png)
 
-```
 
 ---
 
