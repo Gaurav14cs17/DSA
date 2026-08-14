@@ -30,7 +30,6 @@ permalink: /26_sweep_line/04_angular_sweep/
 | **Difficulty** | Hard |
 | **Problems** | 6 |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
@@ -165,7 +164,6 @@ $$\vec{a} \times \vec{b} = a_x b_y - a_y b_x$$
 ## 🏆 LeetCode Problems
 
 ### 🟡 Medium Problems
-
 | # | Problem | Difficulty | Solution Pattern |
 |---|---------|------------|------------------|
 | 973 | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/) | Medium | Heap / Quickselect |
@@ -176,7 +174,6 @@ $$\vec{a} \times \vec{b} = a_x b_y - a_y b_x$$
 ---
 
 ### 🔴 Hard Problems
-
 | # | Problem | Difficulty | Solution Pattern |
 |---|---------|------------|------------------|
 | 2127 | [Maximum Employees to Be Invited](https://leetcode.com/problems/maximum-employees-to-be-invited-to-a-meeting/) | Hard | Cycle detection + radial structure |
@@ -217,14 +214,12 @@ $$\vec{a} \times \vec{b} = a_x b_y - a_y b_x$$
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
-
 | Resource | Description | Link |
 |----------|-------------|------|
 | **Angular Sweep** | GeeksforGeeks | [Angular sweep](https://www.geeksforgeeks.org/angular-sweep/) |
 | **Polar Sorting** | CP-Algorithms | [Geometry](https://cp-algorithms.com/geometry/) |
 
 ### 📝 Practice
-
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Geometry tag | [Problems](https://leetcode.com/tag/geometry/) |
