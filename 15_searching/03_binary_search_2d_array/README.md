@@ -222,16 +222,12 @@ def countNegatives(grid: list[list[int]]) -> int:
 
 ## 📊 2D Search Strategy
 
-```
-2D Matrix Search
-       |
-       +-- Row-major sorted → Flatten to 1D BS
-       |
-       +-- Row + Column sorted → Staircase O(m+n)
-       |
-       +-- Kth element → BS on value + count
+<div align="center">
 
-```
+<img src="./images/2d-search-strategy.png" alt="2D Search Strategy" width="100%">
+
+</div>
+
 
 ---
 
