@@ -29,7 +29,6 @@ permalink: /07_trees/01_tree_traversal/
 | **Difficulty** | Easy to Medium |
 | **Problems** | 15+ |
 
-{: .highlight }
 > **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 
@@ -111,17 +110,7 @@ $$\text{pred}(x) = \max\{y \in T_L(x)\}$$
 
 ---
 
-### Inorder Traversal (Iterative)
-
-
-### Level Order Traversal
-
-
-![Level Order Traversal](./images/tree-traversal.png)
-
-
 ### Morris Inorder (O(1) Space)
-
 Tree:
       4
      / \
@@ -174,7 +163,6 @@ Result: [1, 2, 3, 4, 6]
 Need order?
      |
 ### When to Use Each Traversal
-
 | Traversal | Use Case | Pattern |
 |-----------|----------|---------|
 | **Inorder** | BST sorted order, validation | Left → Node → Right |
@@ -342,7 +330,6 @@ def morrisInorder(root: TreeNode) -> list[int]:
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 94 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Stack | O(n) | O(h) |
@@ -355,7 +342,6 @@ def morrisInorder(root: TreeNode) -> list[int]:
 | 617 | [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/) | DFS | O(n) | O(h) |
 
 ### 🟡 Medium
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 102 | [Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | BFS | O(n) | O(w) |
@@ -386,7 +372,6 @@ def morrisInorder(root: TreeNode) -> list[int]:
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
-
 | Resource | Topic | Link |
 |----------|-------|------|
 | **GeeksforGeeks** | Tree traversals | [Tutorial](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/) |
@@ -395,7 +380,6 @@ def morrisInorder(root: TreeNode) -> list[int]:
 | **CP Algorithms** | DFS and BFS | [Guide](https://cp-algorithms.com/graph/depth-first-search.html) |
 
 ### 📺 Video Tutorials
-
 | Creator | Topic | Link |
 |---------|-------|------|
 | **NeetCode** | Inorder Traversal | [YouTube](https://www.youtube.com/watch?v=g_S5WuasWUE) |
@@ -404,14 +388,12 @@ def morrisInorder(root: TreeNode) -> list[int]:
 | **Back To Back SWE** | Morris traversal | [YouTube](https://www.youtube.com/watch?v=wGXB9OWhPTg) |
 
 ### 🎯 Practice Collections
-
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Tree traversal tag | [Problems](https://leetcode.com/tag/tree/) |
 | **HackerRank** | Tree challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=trees) |
 
 ### 🔬 Advanced Topics
-
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Morris Traversal** | O(1) space inorder | [Detailed](https://www.geeksforgeeks.org/morris-traversal-for-preorder/) |
@@ -419,7 +401,6 @@ def morrisInorder(root: TreeNode) -> list[int]:
 | **Threaded Trees** | Using null pointers | [Article](https://en.wikipedia.org/wiki/Threaded_binary_tree) |
 
 ### 📊 Visualization
-
 | Tool | Purpose | Link |
 |------|---------|------|
 | **VisuAlgo** | Tree traversals | [Website](https://visualgo.net/en/bst) |
