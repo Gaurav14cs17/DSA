@@ -401,197 +401,25 @@ Comprehensive collection of **advanced graph algorithms** including:
 
 ### Template 1: Dijkstra's Algorithm
 
-```python
-import heapq
-from typing import List, Dict
-
-def dijkstra(graph: Dict[int, List[tuple[int, int]]], 
-            start: int, n: int) -> List[int]:
-    """
-    Dijkstra's shortest path algorithm.
-    
-    Args:
-        graph: Adjacency list {node: [(neighbor, weight), ...]}
-        start: Starting node
-        n: Number of nodes
-    
-    Returns:
-        List of shortest distances from start
-    
-    Time: O((V + E) log V)
-    Space: O(V)
-    """
-    dist = [float('inf')] * n
-    dist[start] = 0
-    
-    pq = [(0, start)]  # (distance, node)
-    
-    while pq:
-        d, u = heapq.heappop(pq)
-        
-        if d > dist[u]:
-            continue
-        
-        for v, weight in graph.get(u, []):
-            if dist[u] + weight < dist[v]:
-                dist[v] = dist[u] + weight
-                heapq.heappush(pq, (dist[v], v))
-    
-    return dist
-
-```
+![Dijkstra's Algorithm Visual Walkthrough](./images/dijkstra-template-visual.png)
 
 ---
 
 ### Template 2: Kruskal's MST with Union-Find
 
-```python
-class UnionFind:
-    def __init__(self, n: int):
-        self.parent = list(range(n))
-        self.rank = [0] * n
-    
-    def find(self, x: int) -> int:
-        if self.parent[x] != x:
-            self.parent[x] = self.find(self.parent[x])
-        return self.parent[x]
-    
-    def union(self, x: int, y: int) -> bool:
-        px, py = self.find(x), self.find(y)
-        if px == py:
-            return False
-        if self.rank[px] < self.rank[py]:
-            px, py = py, px
-        self.parent[py] = px
-        if self.rank[px] == self.rank[py]:
-            self.rank[px] += 1
-        return True
-
-def kruskal_mst(n: int, edges: List[tuple[int, int, int]]) -> int:
-    """
-    Kruskal's algorithm for MST.
-    
-    Args:
-        n: Number of nodes
-        edges: List of (u, v, weight)
-    
-    Returns:
-        Total weight of MST
-    
-    Time: O(E log E)
-    """
-    edges.sort(key=lambda x: x[2])  # Sort by weight
-    uf = UnionFind(n)
-    
-    mst_weight = 0
-    edges_used = 0
-    
-    for u, v, weight in edges:
-        if uf.union(u, v):
-            mst_weight += weight
-            edges_used += 1
-            if edges_used == n - 1:
-                break
-    
-    return mst_weight if edges_used == n - 1 else -1
-
-```
+![Kruskal MST Visual Walkthrough](./images/kruskal-mst-template-visual.png)
 
 ---
 
 ### Template 3: Topological Sort (Kahn's Algorithm)
 
-```python
-from collections import deque, defaultdict
-
-def topological_sort(n: int, edges: List[tuple[int, int]]) -> List[int]:
-    """
-    Kahn's algorithm for topological sorting.
-    
-    Args:
-        n: Number of nodes
-        edges: List of directed edges (u, v)
-    
-    Returns:
-        Topological order or empty list if cycle exists
-    
-    Time: O(V + E)
-    """
-    graph = defaultdict(list)
-    indegree = [0] * n
-    
-    for u, v in edges:
-        graph[u].append(v)
-        indegree[v] += 1
-    
-    queue = deque([i for i in range(n) if indegree[i] == 0])
-    result = []
-    
-    while queue:
-        u = queue.popleft()
-        result.append(u)
-        
-        for v in graph[u]:
-            indegree[v] -= 1
-            if indegree[v] == 0:
-                queue.append(v)
-    
-    return result if len(result) == n else []
-
-```
+![Kahn's Topological Sort Visual Walkthrough](./images/kahn-topo-template-visual.png)
 
 ---
 
 ### Template 4: Tarjan's SCC
 
-```python
-def tarjan_scc(graph: Dict[int, List[int]], n: int) -> List[List[int]]:
-    """
-    Tarjan's algorithm for finding strongly connected components.
-    
-    Time: O(V + E)
-    Space: O(V)
-    """
-    index_counter = [0]
-    stack = []
-    lowlinks = [0] * n
-    index = [0] * n
-    on_stack = [False] * n
-    index_initialized = [False] * n
-    sccs = []
-    
-    def strongconnect(v):
-        index[v] = index_counter[0]
-        lowlinks[v] = index_counter[0]
-        index_counter[0] += 1
-        index_initialized[v] = True
-        stack.append(v)
-        on_stack[v] = True
-        
-        for w in graph.get(v, []):
-            if not index_initialized[w]:
-                strongconnect(w)
-                lowlinks[v] = min(lowlinks[v], lowlinks[w])
-            elif on_stack[w]:
-                lowlinks[v] = min(lowlinks[v], index[w])
-        
-        if lowlinks[v] == index[v]:
-            scc = []
-            while True:
-                w = stack.pop()
-                on_stack[w] = False
-                scc.append(w)
-                if w == v:
-                    break
-            sccs.append(scc)
-    
-    for v in range(n):
-        if not index_initialized[v]:
-            strongconnect(v)
-    
-    return sccs
-
-```
+![Tarjan SCC Visual Walkthrough](./images/tarjan-scc-template-visual.png)
 
 ---
 
@@ -599,32 +427,15 @@ def tarjan_scc(graph: Dict[int, List[int]], n: int) -> List[List[int]]:
 
 ### Pattern 1: Graph Transformation
 
-```python
-# Transform problem into graph problem
-# Example: Course prerequisites → Directed graph
-def build_graph(n: int, prerequisites: List[List[int]]):
-    graph = defaultdict(list)
-    for a, b in prerequisites:
-        graph[b].append(a)  # b must come before a
-    return graph
-
-```
+![Graph Transformation Pattern](./images/graph-transformation-pattern.png)
 
 ### Pattern 2: State Space Search
 
-```python
-# Model states as nodes, transitions as edges
-# Example: Word ladder → BFS on transformation graph
-
-```
+![State Space Search Pattern](./images/state-space-search-pattern.png)
 
 ### Pattern 3: Binary Search + Graph
 
-```python
-# Binary search on answer + graph validation
-# Example: Minimum effort path → Binary search + BFS
-
-```
+![Binary Search Plus Graph Pattern](./images/binary-search-graph-pattern.png)
 
 ---
 
