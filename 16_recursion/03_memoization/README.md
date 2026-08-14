@@ -47,7 +47,6 @@ permalink: /16_recursion/03_memoization/
 | **Difficulty** | Medium |
 | **Problems** | 8+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
