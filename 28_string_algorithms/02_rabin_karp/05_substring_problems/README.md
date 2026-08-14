@@ -386,7 +386,7 @@ def find_substring_concatenation(s, words):
 
 ---
 
-## 🧩 LeetCode Problems
+## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty |
 |---|---------|------------|
@@ -427,6 +427,24 @@ def binary_search_hash_template(s):
     return result
 
 ```
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **String Hashing** | CP-Algorithms | [String hashing](https://cp-algorithms.com/string/string-hashing.html) |
+| **Substring Search** | USACO Guide | [String Hashing](https://usaco.guide/gold/string-hashing) |
+| **Rolling Hash** | GeeksforGeeks | [Rabin-Karp](https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching/) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | String tag | [Problems](https://leetcode.com/tag/string/) |
 
 ---
 
