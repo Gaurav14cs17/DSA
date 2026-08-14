@@ -150,23 +150,13 @@ where $\text{LSB}(i)$ = least significant bit = $i \& (-i)$
 
 **Update:** Add $\delta$ to index $i$
 
-```
-while i <= n:
-    BIT[i] += delta
-    i += LSB(i)  # Move to parent
+![BIT Update Operation](./images/bit-update-operation.png)
 
-```
 
 **Query:** Get prefix sum $[1, i]$
 
-```
-sum = 0
-while i > 0:
-    sum += BIT[i]
-    i -= LSB(i)  # Move to next range
-return sum
+![BIT Query Operation](./images/bit-query-operation.png)
 
-```
 
 **Range Query:** $\text{sum}(L, R) = \text{query}(R) - \text{query}(L-1)$
 
@@ -211,31 +201,8 @@ This isolates the rightmost set bit, determining which range each index stores.
 
 **Basic Fenwick Tree:**
 
-```python
-class FenwickTree:
-    def __init__(self, n):
-        self.n = n
-        self.tree = [0] * (n + 1)  # 1-indexed
-    
-    def update(self, i, delta):
-        """Add delta to index i."""
-        while i <= self.n:
-            self.tree[i] += delta
-            i += i & (-i)  # Add LSB
-    
-    def query(self, i):
-        """Return prefix sum [1, i]."""
-        s = 0
-        while i > 0:
-            s += self.tree[i]
-            i -= i & (-i)  # Remove LSB
-        return s
-    
-    def range_query(self, left, right):
-        """Return sum in range [left, right]."""
-        return self.query(right) - self.query(left - 1)
+![Fenwick Tree Quick Reference](./images/fenwick-tree-quick-reference.png)
 
-```
 
 ---
 
