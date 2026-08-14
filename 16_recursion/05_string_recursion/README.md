@@ -66,10 +66,12 @@ permalink: /16_recursion/05_string_recursion/
 
 Process string from index 0 to end:
 
-```
-f(s, i) → process s[i], then f(s, i+1)
+<div align="center">
 
-```
+<img src="./images/string-ltr-processing.png" alt="Left-to-Right String Recursion" width="100%">
+
+</div>
+
 
 **Pattern:** Action first, then recurse.
 
@@ -79,10 +81,12 @@ f(s, i) → process s[i], then f(s, i+1)
 
 Process string from end to start:
 
-```
-f(s, i) → f(s, i-1), then process s[i]
+<div align="center">
 
-```
+<img src="./images/string-rtl-processing.png" alt="Right-to-Left String Recursion" width="100%">
+
+</div>
+
 
 **Pattern:** Recurse first, then action.
 
@@ -92,10 +96,12 @@ f(s, i) → f(s, i-1), then process s[i]
 
 Process from both ends:
 
-```
-f(s, left, right) → process s[left] & s[right], then f(s, left+1, right-1)
+<div align="center">
 
-```
+<img src="./images/string-two-pointer.png" alt="Two-Pointer String Recursion" width="100%">
+
+</div>
+
 
 **Pattern:** Compare/swap ends, recurse inward.
 
@@ -105,10 +111,12 @@ f(s, left, right) → process s[left] & s[right], then f(s, left+1, right-1)
 
 Create new substrings:
 
-```
-f(s) → process s[0], then f(s[1:])
+<div align="center">
 
-```
+<img src="./images/string-substring-recursion.png" alt="Substring Recursion" width="100%">
+
+</div>
+
 
 **Note:** Creates new strings - O(n) per call.
 
@@ -549,25 +557,12 @@ def longestCommonPrefix(strs: list) -> str:
 
 ## 📊 Pattern Summary
 
-```
-String Recursion Patterns
-         |
-         +-- Left-to-Right
-         |   +-- Process s[i], recurse on i+1
-         |
-         +-- Right-to-Left  
-         |   +-- Recurse first, then process
-         |
-         +-- Two-Pointer
-         |   +-- Process both ends, recurse inward
-         |
-         +-- Substring Creation
-         |   +-- f(s[1:]) - creates new string
-         |
-         +-- Nested/Bracket
-             +-- Handle [...] with recursive call
+<div align="center">
 
-```
+<img src="./images/string-recursion-patterns.png" alt="String Recursion Patterns" width="100%">
+
+</div>
+
 
 ---
 
