@@ -241,7 +241,7 @@ class KthLargest:
         if len(self.heap) > self.k:
             heapq.heappop(self.heap)
         return self.heap[0]
-
+```
 
 ![💻 Code Implementations](./image/top_k_pattern.png)
 
