@@ -13,7 +13,6 @@ permalink: /09_heaps/02_top_k_problems/
 ### *🏆 Top K Problems*
 
 
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
@@ -243,44 +242,29 @@ class KthLargest:
             heapq.heappop(self.heap)
         return self.heap[0]
 
-```
 
+![💻 Code Implementations](./image/top_k_pattern.png)
+
+Top K Problem
+     |
 ---
 
 ## 🏆 LeetCode Problems
-
-### 🟢 Easy
-
-| # | Problem | Pattern | Time | Space |
-|:-:|---------|---------|:----:|:-----:|
-| 703 | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) | Min-Heap size k | O(log k) | O(k) |
 
 ### 🟡 Medium
 
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
-| 215 | [Kth Largest Element in Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Quickselect/Heap | O(n) avg | O(1) |
-| 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Bucket/Heap | O(n) | O(n) |
-| 451 | [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/) | Heap/Bucket | O(n) | O(n) |
+| 215 | [Kth Largest Element in Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Min-Heap | O(n log k) | O(k) |
+| 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Bucket Sort | O(n) | O(n) |
 | 692 | [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/) | Heap | O(n log k) | O(n) |
 | 973 | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/) | Max-Heap | O(n log k) | O(k) |
 
----
+### 🔴 Hard
 
-## 📊 Top K Pattern Selection
-
-```
-Top K Problem
-     |
-     +-- K largest → Min-Heap of size k
-     |
-     +-- K smallest → Max-Heap of size k
-     |
-     +-- K most frequent → Count + Heap or Bucket Sort
-     |
-     +-- Exact kth → Quickselect O(n) avg
-
-```
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 373 | [Find K Pairs with Smallest Sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/) | Min-Heap | O(k log k) | O(k) |
 
 ---
 
