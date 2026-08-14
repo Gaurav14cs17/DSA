@@ -28,8 +28,7 @@ nav_order: 4
 
 | | |
 |:---|:---|
-| **In one line** | 9 + 7
-        self.MOD2 = 10 |
+| **In one line** | Double hashing with moduli 10⁹+7 and 10⁹+9 makes Rabin-Karp collisions practically negligible. |
 | **Topics** | Hash Collisions, Double Hashing, Probabilistic Algorithms |
 
 {: .highlight }
