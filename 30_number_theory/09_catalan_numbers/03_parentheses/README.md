@@ -13,6 +13,9 @@ permalink: /30_number_theory/09_catalan_numbers/03_parentheses/
 
 ### *Generating All Valid Parentheses Combinations*
 
+![*Generating All Valid Parentheses Combinations*](./images/generating-all-valid-parentheses-combinations.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/LeetCode-22_32_678-blue?style=for-the-badge" alt="LeetCode">
@@ -39,29 +42,6 @@ permalink: /30_number_theory/09_catalan_numbers/03_parentheses/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| GENERATING PARENTHESES for n=2                                 |
-+-----------------------------------------------------------------+
-|                                                                 |
-|                         ""                                      |
-|                         |                                       |
-|                        "("                                      |
-|                       /   \                                     |
-|                    "(("   "()"                                  |
-|                     |       |                                   |
-|                   "(()"   "()("                                 |
-|                     |       |                                   |
-|                  "(())"  "()()"                                 |
-|                    ↓       ↓                                    |
-|                 VALID!   VALID!                                 |
-|                                                                 |
-| Decision at each step:                                          |
-|   - Add '(' if open < n                                        |
-|   - Add ')' if close < open                                    |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
