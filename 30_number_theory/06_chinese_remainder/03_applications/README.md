@@ -43,7 +43,6 @@ permalink: /30_number_theory/06_chinese_remainder/03_applications/
 | **In one line** | Practical Uses of the Chinese Remainder Theorem |
 | **Difficulty** | Medium to Hard |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
