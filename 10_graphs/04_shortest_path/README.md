@@ -13,27 +13,10 @@ permalink: /10_graphs/04_shortest_path/
 ### *🛤️ Shortest Path Algorithms*
 
 
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8+-blue?style=for-the-badge" alt="Problems">
 </p>
-
-</div>
-
----
-
-## 📊 Visual Overview
-
-<div align="center">
-
-![Dijkstra's Algorithm](./images/dijkstra.png)
-
-*Dijkstra's Algorithm - Shortest Path in Weighted Graphs*
-
-![Algorithm Comparison](./images/algorithm_comparison.png)
-
-*Shortest Path Algorithm Selection Guide*
 
 </div>
 
@@ -48,7 +31,7 @@ permalink: /10_graphs/04_shortest_path/
 | **Problems** | 8+ |
 
 {: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+> **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
 
@@ -114,6 +97,30 @@ $$D^{(k)}[i][j] = \min(D^{(k-1)}[i][j], D^{(k-1)}[i][k] + D^{(k-1)}[k][j])$$
 - Weight 1: add to back of deque
 
 $$T = O(V + E)$$
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Dijkstra's Algorithm](./images/dijkstra.png)
+
+*Dijkstra's Algorithm - Shortest Path in Weighted Graphs*
+
+![Algorithm Comparison](./images/algorithm_comparison.png)
+
+*Shortest Path Algorithm Selection Guide*
+
+</div>
+
+---
+
+## 📊 Algorithm Selection
+
+
+Shortest Path
+     |
 
 ---
 
@@ -261,7 +268,6 @@ def swimInWater(grid: list[list[int]]) -> int:
     
     return -1
 
-```
 
 ---
 
@@ -282,25 +288,6 @@ def swimInWater(grid: list[list[int]]) -> int:
 |:-:|---------|---------|:----:|:-----:|
 | 778 | [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/) | Modified Dijkstra | O(n² log n) | O(n²) |
 | 882 | [Reachable Nodes In Subdivided Graph](https://leetcode.com/problems/reachable-nodes-in-subdivided-graph/) | Dijkstra | O(E log V) | O(V) |
-
----
-
-## 📊 Algorithm Selection
-
-```
-Shortest Path
-     |
-     +-- Unweighted → BFS O(V+E)
-     |
-     +-- Non-negative weights → Dijkstra O((V+E) log V)
-     |
-     +-- Negative weights → Bellman-Ford O(VE)
-     |
-     +-- All pairs → Floyd-Warshall O(V³)
-     |
-     +-- 0-1 weights → 0-1 BFS O(V+E)
-
-```
 
 ---
 
