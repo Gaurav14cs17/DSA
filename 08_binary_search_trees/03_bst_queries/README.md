@@ -13,7 +13,6 @@ permalink: /08_binary_search_trees/03_bst_queries/
 ### *BST Queries*
 
 
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
@@ -39,27 +38,9 @@ permalink: /08_binary_search_trees/03_bst_queries/
 
 **Problem:** Find 3rd smallest in BST
 
-```
-BST:
-      20
-     /  \
-   10    30
-  /  \
- 5   15
 
-Inorder traversal with count:
-Step 1: Go left to 5
-        count = 1, value = 5
+![🔢 Walkthrough 1: Kth Smallest Element](./image/walkthrough-1-kth-smallest-element.png)
 
-Step 2: Back to 10
-        count = 2, value = 10
-
-Step 3: Go right to 15
-        count = 3, value = 15 ← ANSWER!
-
-Stop early! Don't need to visit 20 or 30.
-
-```
 
 **Optimization:** Stop at k-th element, don't traverse entire tree!
 
@@ -69,24 +50,9 @@ Stop early! Don't need to visit 20 or 30.
 
 **Problem:** Find successor of 10
 
-```
-BST:
-      20
-     /  \
-   10    30
-  /  \   / \
- 5   15 25 35
 
-Case 1: Node has right child (10 has right child)
-        Successor = min(right subtree) = 15
+![🔄 Walkthrough 2: Inorder Successor](./image/walkthrough-2-inorder-successor.png)
 
-Case 2: Node has no right child (15 has no right child)
-        Successor = first ancestor where we go left
-        
-        15 → 10 (we are right child)
-        10 → 20 (we are left child) ← Successor!
-
-```
 
 **Rule:**
 
@@ -100,25 +66,9 @@ Case 2: Node has no right child (15 has no right child)
 
 **Problem:** Find LCA of 5 and 15
 
-```
-BST:
-      20
-     /  \
-   10    30
-  /  \
- 5   15
 
-Step 1: At 20
-        5 < 20 AND 15 < 20 → go left
+![🎯 Walkthrough 3: LCA in BST](./image/bst_queries.png)
 
-Step 2: At 10
-        5 < 10 BUT 15 > 10 → SPLIT!
-        LCA = 10 ✓
-
-Why? 5 is in left subtree, 15 in right.
-10 is the lowest node with this split.
-
-```
 
 **O(h) vs O(n) for regular binary tree!**
 
@@ -126,40 +76,8 @@ Why? 5 is in left subtree, 15 in right.
 
 ### 💰 **Walkthrough 4: Convert to Greater Sum Tree**
 
-```
-Original BST:
-      4
-     / \
-    1   6
-   / \ / \
-  0  2 5  7
-        \   \
-         3   8
 
-Reverse Inorder (Right → Node → Left):
-Visit order: 8, 7, 6, 5, 4, 3, 2, 1, 0
-
-running_sum = 0
-Visit 8: sum = 0+8 = 8, node.val = 8
-Visit 7: sum = 8+7 = 15, node.val = 15
-Visit 6: sum = 15+6 = 21, node.val = 21
-Visit 5: sum = 21+5 = 26, node.val = 26
-Visit 4: sum = 26+4 = 30, node.val = 30
-Visit 3: sum = 30+3 = 33, node.val = 33
-Visit 2: sum = 33+2 = 35, node.val = 35
-Visit 1: sum = 35+1 = 36, node.val = 36
-Visit 0: sum = 36+0 = 36, node.val = 36
-
-Result:
-      30
-     /  \
-   36    21
-   / \   / \
- 36 35 26 15
-       \    \
-       33    8
-
-```
+![💰 Walkthrough 4: Convert to Greater Sum Tree](./image/bst-queries-decision-tree.png)
 
 
 ## 🎯 At a Glance
@@ -287,22 +205,8 @@ $$\text{closest} = \arg\min_{node \in BST} |node.val - target|$$
 
 ### Decision Tree
 
-```
-BST Query Problem
-    |
-    +-- k-th element? → Inorder with early stop
-    |
-    +-- Successor/Predecessor? → Check right/left, then ancestors
-    |
-    +-- LCA? → Use BST property (O(h) vs O(n))
-    |
-    +-- Range query? → Prune branches outside range
-    |
-    +-- Need sorted order? → Inorder traversal
-    |
-    +-- Closest to target? → Binary search with tracking
 
-```
+![Decision Tree](./image/bst-queries-decision-tree.png)
 
 
 ## 💻 Code Implementations
@@ -450,8 +354,6 @@ def closestValue(root: TreeNode, target: float) -> int:
         root = root.left if target < root.val else root.right
     
     return closest
-
-```
 
 
 ## 🏆 LeetCode Problems
@@ -785,23 +687,9 @@ $$\text{closest} = \arg\min_{node \in BST} |node.val - target|$$
 
 ### Decision Tree
 
-```
+
 BST Query Problem
     |
-    +-- k-th element? → Inorder with early stop
-    |
-    +-- Successor/Predecessor? → Check right/left, then ancestors
-    |
-    +-- LCA? → Use BST property (O(h) vs O(n))
-    |
-    +-- Range query? → Prune branches outside range
-    |
-    +-- Need sorted order? → Inorder traversal
-    |
-    +-- Closest to target? → Binary search with tracking
-
-```
-
 ---
 
 ## 💻 Code Implementations
@@ -950,7 +838,6 @@ def closestValue(root: TreeNode, target: float) -> int:
     
     return closest
 
-```
 
 ---
 
