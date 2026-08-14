@@ -39,7 +39,6 @@ permalink: /18_dynamic_programming/03_knapsack/
 | **Difficulty** | Medium |
 | **Problems** | 10+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
