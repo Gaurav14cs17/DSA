@@ -46,7 +46,6 @@ permalink: /30_number_theory/09_catalan_numbers/04_applications/
 | **In one line** | Real-World Problems Solved by Catalan Numbers |
 | **Difficulty** | Medium Hard |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
