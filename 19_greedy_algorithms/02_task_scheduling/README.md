@@ -43,7 +43,6 @@ permalink: /19_greedy_algorithms/02_task_scheduling/
 | **Difficulty** | Medium |
 | **Problems** | 8+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
