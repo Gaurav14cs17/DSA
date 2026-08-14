@@ -13,23 +13,10 @@ permalink: /10_graphs/07_mst/
 ### *🌲 Minimum Spanning Tree*
 
 
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-5+-blue?style=for-the-badge" alt="Problems">
 </p>
-
-</div>
-
----
-
-## 📊 Visual Overview
-
-<div align="center">
-
-![Kruskal's Algorithm](./images/kruskal_algorithm.png)
-
-*Kruskal's MST Algorithm with Union-Find*
 
 </div>
 
@@ -44,7 +31,7 @@ permalink: /10_graphs/07_mst/
 | **Problems** | 5+ |
 
 {: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+> **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
 
@@ -108,6 +95,26 @@ T = O(E + V \log V) \text{ with Fibonacci heap}$$
 **Theorem:** For any cut $(S, V-S)$, the minimum-weight edge crossing the cut is in some MST.
 
 **Proof:** If not, we can swap it with a heavier edge → lower weight tree. Contradiction. ∎
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Kruskal's Algorithm](./images/kruskal_algorithm.png)
+
+*Kruskal's MST Algorithm with Union-Find*
+
+</div>
+
+---
+
+## 📊 MST Algorithm Selection
+
+
+MST Problem
+     |
 
 ---
 
@@ -242,7 +249,6 @@ def minCostConnectPointsPrim(points: list[list[int]]) -> int:
     
     return total_cost
 
-```
 
 ---
 
@@ -261,21 +267,6 @@ def minCostConnectPointsPrim(points: list[list[int]]) -> int:
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 1489 | [Find Critical and Pseudo-Critical Edges](https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-mst/) | MST Analysis | O(E² log V) | O(E) |
-
----
-
-## 📊 MST Algorithm Selection
-
-```
-MST Problem
-     |
-     +-- Sparse graph (E ≈ V) → Kruskal's O(E log E)
-     |
-     +-- Dense graph (E ≈ V²) → Prim's O(V²)
-     |
-     +-- Edge-by-edge processing → Kruskal's with Union-Find
-
-```
 
 ---
 
