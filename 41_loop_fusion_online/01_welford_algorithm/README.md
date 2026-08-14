@@ -315,7 +315,7 @@ $$M_2(n) = M_2(n-1) + (x_n - \mu_{n-1})(x_n - \mu_n) \quad \blacksquare$$
 
 ---
 
-## 🎯 LeetCode Problems
+## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty | Pattern |
 |:-:|---------|-----------|---------|
@@ -358,7 +358,7 @@ Compare to naive approach:
 
 ---
 
-## 📚 Resources
+## 📚 References & Learning Resources
 
 | Resource | Link |
 |----------|------|
