@@ -21,15 +21,12 @@ This folder contains detailed step-by-step explanations of parser recursion prob
 **Input:** `"K4(ON(SO3)2)2"`  
 **Output:** `"K4N2O14S4"`
 
-```
-What you'll learn:
-+-- Grammar definition for chemical formulas
-+-- Parsing atoms (e.g., "Mg", "Fe")
-+-- Parsing numbers (e.g., "2", "12")
-+-- Handling nested parentheses with multipliers
-+-- Merging atom counts from recursive calls
+<div align="center">
 
-```
+<img src="./images/atoms-learn-topics.png" alt="Number of Atoms Topics" width="100%">
+
+</div>
+
 
 **Diagrams Included:**
 
@@ -48,15 +45,12 @@ What you'll learn:
 **Input:** `"3[a2[c]]"`  
 **Output:** `"accaccacc"`
 
-```
-What you'll learn:
-+-- Grammar for k[encoded_string]
-+-- Accumulating repeat counts
-+-- Nested bracket recursion
-+-- String concatenation with repetition
-+-- Return value propagation
+<div align="center">
 
-```
+<img src="./images/decode-string-learn.png" alt="Decode String Topics" width="100%">
+
+</div>
+
 
 ---
 
@@ -65,15 +59,12 @@ What you'll learn:
 **Input:** `"(1+(4+5+2)-3)+(6+8)"`  
 **Output:** `23`
 
-```
-What you'll learn:
-+-- Expression grammar with precedence
-+-- Handling + and - operators
-+-- Parenthesized sub-expressions
-+-- Unary operators (-, +)
-+-- Operator precedence through grammar
+<div align="center">
 
-```
+<img src="./images/basic-calculator-learn.png" alt="Basic Calculator Topics" width="100%">
+
+</div>
+
 
 ---
 
@@ -81,37 +72,21 @@ What you'll learn:
 
 ### When to RECURSE:
 
-```
-Number of Atoms:   Mg(OH)2
-                      ↑
-                    '(' → RECURSE
+<div align="center">
 
-Decode String:     3[a2[c]]
-                    ↑
-                   '[' → RECURSE
+<img src="./images/parser-when-recurse.png" alt="When to Recurse" width="100%">
 
-Basic Calculator:  (1+(4+5))
-                   ↑
-                  '(' → RECURSE
+</div>
 
-```
 
 ### When to RETURN:
 
-```
-Number of Atoms:   Mg(OH)2
-                       ↑
-                     ')' → RETURN counts
+<div align="center">
 
-Decode String:     3[a2[c]]
-                        ↑
-                       ']' → RETURN string
+<img src="./images/parser-when-return.png" alt="When to Return" width="100%">
 
-Basic Calculator:  (1+(4+5))
-                          ↑
-                         ')' → RETURN value
+</div>
 
-```
 
 ---
 
@@ -172,36 +147,23 @@ class Parser:
 
 **Recommended order:**
 
-```
-1. Decode String (easiest)
-   +-- Simpler grammar
-   +-- String result (easy to visualize)
-   +-- Good introduction to pattern
+<div align="center">
 
-2. Number of Atoms (medium)
-   +-- Dictionary merging
-   +-- Post-fix multipliers
-   +-- Multiple token types
+<img src="./images/parser-learning-path.png" alt="Parser Learning Path" width="100%">
 
-3. Basic Calculator (hardest)
-   +-- Operator precedence
-   +-- Multiple grammar rules
-   +-- Mutual recursion
+</div>
 
-```
 
 ---
 
 ## 📁 Folder Structure
 
-```
-examples/
-+-- README.md                          ← You are here
-+-- number_of_atoms_explained.md       ← LeetCode 726
-+-- decode_string_explained.md         ← LeetCode 394
-+-- basic_calculator_explained.md      ← LeetCode 224
+<div align="center">
 
-```
+<img src="./images/parser-examples-folder.png" alt="Examples Folder Structure" width="100%">
+
+</div>
+
 
 ---
 
