@@ -368,15 +368,13 @@ First values: $C_0=1, C_1=1, C_2=2, C_3=5, C_4=14, \ldots$
 
 ### Optimization Checklist
 
-```
-[ ] Can I solve with DFS instead of BFS (usually simpler)?
-[ ] Do I need to track global max (diameter, path sum)?
-[ ] Should I return multiple values (height + balanced)?
-[ ] Is this a construction problem (need hash map)?
-[ ] Can I use Morris traversal for O(1) space?
-[ ] Do I need parent pointers or can I solve without?
+- [ ] Can I solve with DFS instead of BFS (usually simpler)?
+- [ ] Do I need to track global max (diameter, path sum)?
+- [ ] Should I return multiple values (height + balanced)?
+- [ ] Is this a construction problem (need hash map)?
+- [ ] Can I use Morris traversal for O(1) space?
+- [ ] Do I need parent pointers or can I solve without?
 
-```
 
 ---
 
