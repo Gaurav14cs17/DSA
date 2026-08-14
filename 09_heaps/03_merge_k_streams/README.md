@@ -201,7 +201,7 @@ def smallestRange(nums: list[list[int]]) -> list[int]:
             break  # One list exhausted
     
     return result
-
+```
 
 ---
 
