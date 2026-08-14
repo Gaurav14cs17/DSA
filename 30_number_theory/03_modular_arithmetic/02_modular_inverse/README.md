@@ -34,8 +34,8 @@ view
 ## 🎯 At a Glance
 
 | | |
-|:---| **Topic** | Modular Inverse |
-|:---|
+|:---|:---|
+| **Topic** | Modular Inverse |
 | **Typical time** | O(log m) |
 | **Typical space** | O(1) iterative, O(log m) recursive |
 
