@@ -39,7 +39,6 @@ nav_order: 4
 | **Typical time** | O(log p) for inverse/exponentiation |
 | **Typical space** | O(1) |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
