@@ -41,7 +41,6 @@ permalink: /24_graph_algorithms/02_minimum_spanning_tree/
 | **Difficulty** | Medium |
 | **Problems** | 8+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
