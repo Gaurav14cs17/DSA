@@ -110,7 +110,7 @@ $$\text{count} = \sum_{c=0}^{2n-2} \text{palindromes from center}(c)$$
 
 **Augmented string:** Insert `#` between characters.
 
-$$S' = \#s_0\#s_1\#\ldots\#s_{n-1}\#$$
+$$S' = \\#s_0\\#s_1\\#\\ldots\\#s_{n-1}\\#$$
 
 **Property:** All palindromes become odd-length in $S'$.
 
@@ -254,7 +254,7 @@ def validPalindrome(s: str) -> bool:
         right -= 1
     
     return True
-
+```
 
 ---
 
