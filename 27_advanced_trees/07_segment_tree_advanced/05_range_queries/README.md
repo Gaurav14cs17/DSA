@@ -72,41 +72,13 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/05_range_queries/
 
 ### Range Minimum Query
 
-```python
-class SegmentTreeRMQ:
-    """Range Minimum Query"""
-    
-    def __init__(self, arr):
-        self.n = len(arr)
-        self.tree = [float('inf')] * (4 * self.n)
-        self._build(arr, 0, 0, self.n - 1)
-    
-    def _build(self, arr, node, start, end):
-        if start == end:
-            self.tree[node] = arr[start]
-        else:
-            mid = (start + end) // 2
-            self._build(arr, 2*node+1, start, mid)
-            self._build(arr, 2*node+2, mid+1, end)
-            self.tree[node] = min(self.tree[2*node+1], self.tree[2*node+2])
+![Range Min Query](./images/range-min-query.png)
 
-```
 
 ### Range GCD
 
-```python
-class SegmentTreeGCD:
-    """Range GCD Query"""
-    
-    def _gcd(self, a, b):
-        while b:
-            a, b = b, a % b
-        return a
-    
-    def _combine(self, left, right):
-        return self._gcd(left, right)
+![Range GCD and XOR Queries](./images/range-gcd-xor-queries.png)
 
-```
 
 ---
 
