@@ -25,25 +25,13 @@ permalink: /31_combinatorics/03_special_sequences/
 
 ## 📊 Visual Overview
 
-### Catalan Applications
+<div align="center">
 
-```
-n=3 Catalan = 5
+![Special Sequences Overview](./images/special-sequences-overview.png)
 
-Valid Parentheses:
-()()()  ()(())  (())()  (()())  ((()))
+*Catalan numbers: valid parentheses, BSTs, and triangulations (C₃ = 5)*
 
-Binary Search Trees (n=3 nodes: 1,2,3):
-  1        1          2        3      3
-   \        \        / \      /      /
-    2        3      1   3    1      2
-     \      /                 \    /
-      3    2                   2  1
-
-Triangulations of Pentagon:
-[5 different ways to divide pentagon into triangles]
-
-```
+</div>
 
 ---
 
