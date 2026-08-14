@@ -30,7 +30,6 @@ permalink: /10_graphs/04_shortest_path/
 | **Difficulty** | Medium to Hard |
 | **Problems** | 8+ |
 
-{: .highlight }
 > **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
@@ -274,7 +273,6 @@ def swimInWater(grid: list[list[int]]) -> int:
 ## 🏆 LeetCode Problems
 
 ### 🟡 Medium
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 743 | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | Dijkstra | O(E log V) | O(V) |
@@ -283,7 +281,6 @@ def swimInWater(grid: list[list[int]]) -> int:
 | 1514 | [Path with Maximum Probability](https://leetcode.com/problems/path-with-maximum-probability/) | Dijkstra | O(E log V) | O(V) |
 
 ### 🔴 Hard
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 778 | [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/) | Modified Dijkstra | O(n² log n) | O(n²) |
