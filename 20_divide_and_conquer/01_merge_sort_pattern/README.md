@@ -53,7 +53,6 @@ permalink: /20_divide_and_conquer/01_merge_sort_pattern/
 | **Difficulty** | Medium to Hard |
 | **Problems** | 8+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
