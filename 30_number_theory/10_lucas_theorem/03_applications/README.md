@@ -13,6 +13,9 @@ permalink: /30_number_theory/10_lucas_theorem/03_applications/
 
 ### *Advanced Problems Using Lucas' Theorem*
 
+![*Advanced Problems Using Lucas' Theorem*](./images/advanced-problems-using-lucas-theorem.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Large_n-10^18-red?style=for-the-badge" alt="Large">
@@ -39,26 +42,6 @@ permalink: /30_number_theory/10_lucas_theorem/03_applications/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| COMPUTING C(123, 45) mod 7                                     |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Step 1: Convert to base 7                                      |
-|   123 = 234₇  (2×49 + 3×7 + 4×1)                              |
-|   45  = 063₇  (0×49 + 6×7 + 3×1)                              |
-|                                                                 |
-| Step 2: Digit-by-digit comparison                              |
-|   Position 0: C(4, 3) = 4                                      |
-|   Position 1: C(3, 6) = 0 ← 6 > 3, so result is 0!            |
-|   Position 2: C(2, 0) = 1                                      |
-|                                                                 |
-| Result: C(123, 45) ≡ 0 (mod 7)                                 |
-|                                                                 |
-| Key insight: ANY r_digit > n_digit makes result 0!             |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
