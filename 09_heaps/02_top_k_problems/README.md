@@ -40,7 +40,6 @@ permalink: /09_heaps/02_top_k_problems/
 | **Difficulty** | Medium |
 | **Problems** | 10+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
@@ -243,7 +242,6 @@ class KthLargest:
         return self.heap[0]
 ```
 
-![💻 Code Implementations](./image/top_k_pattern.png)
 
 Top K Problem
      |
