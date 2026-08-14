@@ -13,7 +13,6 @@ permalink: /04_stacks/02_parentheses/
 ### *🔗 Parentheses Problems*
 
 
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-15+-blue?style=for-the-badge" alt="Problems">
@@ -27,27 +26,20 @@ permalink: /04_stacks/02_parentheses/
 
 <div align="center">
 
-### ✅ Valid Parentheses
+### Algorithm: Push opens, pop and match closes
+![Algorithm: Push opens, pop and match closes](./images/algorithm-push-opens-pop-and-match-closes.png)
 
-<img src="./images/valid_parentheses.png" alt="Valid Parentheses" width="850"/>
+### Algorithm: Track unmatched opens and closes
+![Algorithm: Track unmatched opens and closes](./images/algorithm-track-unmatched-opens-and-closes.png)
 
-*Stack-based matching for (), [], {} - LeetCode #20*
+### Algorithm: Stack stores indices of unmatched positions
+![Algorithm: Stack stores indices of unmatched positions](./images/algorithm-stack-stores-indices-of-unmatched-positi.png)
 
----
+### Decision Tree: At each node, decide to add '(' or ')'
+![Decision Tree: At each node, decide to add '(' or ')'](./images/decision-tree-at-each-node-decide-to-add-or.png)
 
-### 🌳 Generate Parentheses
-
-<img src="./images/generate_parentheses.png" alt="Generate Parentheses" width="900"/>
-
-*Backtracking with Catalan numbers: C₃ = 5 valid combinations - LeetCode #22*
-
----
-
-### 📏 Longest Valid Parentheses
-
-<img src="./images/longest_valid_parentheses.png" alt="Longest Valid Parentheses" width="850"/>
-
-*Stack stores indices of unmatched positions - LeetCode #32*
+### Strategy: Mark invalid brackets, then build result
+![Strategy: Mark invalid brackets, then build result](./images/strategy-mark-invalid-brackets-then-build-result.png)
 
 </div>
 
@@ -55,317 +47,40 @@ permalink: /04_stacks/02_parentheses/
 
 ### Valid Parentheses - Detailed Trace
 
-```
-Input: "({[]})"
 
-+--------------------------------------------------------------------+
+![Valid Parentheses - Detailed Trace](./images/valid_parentheses.png)
 
-|  Algorithm: Push opens, pop and match closes                       |
-+--------------------------------------------------------------------+
-|  Index 0: char = '('                                               |
-|  Action: Opening bracket → Push                                    |
-|  Stack: ['(']                                                      |
-|  Valid so far: ✓                                                   |
-+--------------------------------------------------------------------+
-
-|  Index 1: char = '{'                                               |
-|  Action: Opening bracket → Push                                    |
-|  Stack: ['(', '{']                                                 |
-|  Valid so far: ✓                                                   |
-+--------------------------------------------------------------------+
-
-|  Index 2: char = '['                                               |
-|  Action: Opening bracket → Push                                    |
-|  Stack: ['(', '{', '[']                                            |
-|  Valid so far: ✓                                                   |
-+--------------------------------------------------------------------+
-
-|  Index 3: char = ']'                                               |
-|  Action: Closing bracket → Check top                               |
-|  Top: '[', Matches? YES ✓                                          |
-|  Pop and continue                                                  |
-|  Stack: ['(', '{']                                                 |
-|  Valid so far: ✓                                                   |
-+--------------------------------------------------------------------+
-
-|  Index 4: char = '}'                                               |
-|  Action: Closing bracket → Check top                               |
-|  Top: '{', Matches? YES ✓                                          |
-|  Pop and continue                                                  |
-|  Stack: ['(']                                                      |
-|  Valid so far: ✓                                                   |
-+--------------------------------------------------------------------+
-
-|  Index 5: char = ')'                                               |
-|  Action: Closing bracket → Check top                               |
-|  Top: '(', Matches? YES ✓                                          |
-|  Pop and continue                                                  |
-|  Stack: []                                                         |
-|  Valid so far: ✓                                                   |
-+--------------------------------------------------------------------+
-
-|  End of string                                                      |
-|  Stack empty? YES ✓                                                |
-|  Result: VALID ✓                                                   |
-+--------------------------------------------------------------------+
-
-Counterexample - Invalid: "([)]"
-
-+--------------------------------------------------------------------+
-
-|  Index 0: '(' → Stack: ['(']                                       |
-|  Index 1: '[' → Stack: ['(', '[']                                  |
-|  Index 2: ')' → Top is '[', doesn't match! ✗                       |
-|  Result: INVALID ✗                                                 |
-+--------------------------------------------------------------------+
-
-```
 
 ---
 
 ### Minimum Add to Make Valid - Visual Trace
 
-```
-Input: "())"
 
-+--------------------------------------------------------------------+
+![Minimum Add to Make Valid - Visual Trace](./images/decision-tree-at-each-node-decide-to-add-or.png)
 
-|  Algorithm: Track unmatched opens and closes                       |
-+--------------------------------------------------------------------+
-|  Variables: unmatched_open = 0, unmatched_close = 0                |
-+--------------------------------------------------------------------+
-
-|  Index 0: char = '('                                               |
-|  Action: Opening bracket                                           |
-|  unmatched_open = 1                                                |
-+--------------------------------------------------------------------+
-
-|  Index 1: char = ')'                                               |
-|  Action: Closing bracket, have opens?                              |
-|  unmatched_open > 0? YES                                           |
-|  Match it: unmatched_open = 0                                      |
-+--------------------------------------------------------------------+
-
-|  Index 2: char = ')'                                               |
-|  Action: Closing bracket, have opens?                              |
-|  unmatched_open > 0? NO                                            |
-|  This close has no match!                                          |
-|  unmatched_close = 1                                               |
-+--------------------------------------------------------------------+
-
-|  End of string                                                      |
-|  unmatched_open = 0 (need 0 more ')')                              |
-|  unmatched_close = 1 (need 1 more '(')                             |
-|  Total additions = 0 + 1 = 1                                       |
-|                                                                    |
-|  Answer: 1 (add one '(' at the beginning)                         |
-|  Result: "(())" ✓                                                  |
-+--------------------------------------------------------------------+
-
-Another Example: "((("
-
-+--------------------------------------------------------------------+
-
-|  Process: ( → open=1, ( → open=2, ( → open=3                      |
-|  End: unmatched_open = 3, unmatched_close = 0                      |
-|  Total additions = 3                                               |
-|  Answer: 3 (add three ')' at the end)                             |
-|  Result: "((()))" ✓                                                |
-+--------------------------------------------------------------------+
-
-```
 
 ---
 
 ### Longest Valid Parentheses - Stack Method
 
-```
-Input: ")()())"
 
-+--------------------------------------------------------------------+
+![Longest Valid Parentheses - Stack Method](./images/longest_valid_parentheses.png)
 
-|  Algorithm: Stack stores indices of unmatched positions            |
-|  Key Insight: Valid substring = gap between unmatched positions    |
-+--------------------------------------------------------------------+
-
-|  Initialize: stack = [-1]  (base for length calculation)           |
-|              max_length = 0                                        |
-+--------------------------------------------------------------------+
-
-|  Index 0: char = ')'                                               |
-|  Stack: [-1]                                                       |
-|  Pop → stack empty!                                                |
-|  This ')' is unmatched, becomes new base                           |
-|  Push 0                                                            |
-|  Stack: [0]                                                        |
-|  max_length = 0                                                    |
-+--------------------------------------------------------------------+
-
-|  Index 1: char = '('                                               |
-|  Push index                                                        |
-|  Stack: [0, 1]                                                     |
-|  max_length = 0                                                    |
-+--------------------------------------------------------------------+
-
-|  Index 2: char = ')'                                               |
-|  Pop (matched with '(' at index 1)                                 |
-|  Stack: [0]                                                        |
-|  Length = 2 - 0 = 2                                                |
-|  max_length = 2                                                    |
-+--------------------------------------------------------------------+
-
-|  Index 3: char = '('                                               |
-|  Push index                                                        |
-|  Stack: [0, 3]                                                     |
-|  max_length = 2                                                    |
-+--------------------------------------------------------------------+
-
-|  Index 4: char = ')'                                               |
-|  Pop (matched with '(' at index 3)                                 |
-|  Stack: [0]                                                        |
-|  Length = 4 - 0 = 4                                                |
-|  max_length = 4  ← Updated!                                        |
-+--------------------------------------------------------------------+
-
-|  Index 5: char = ')'                                               |
-|  Pop → stack becomes empty                                         |
-|  This ')' is unmatched, becomes new base                           |
-|  Push 5                                                            |
-|  Stack: [5]                                                        |
-|  max_length = 4                                                    |
-+--------------------------------------------------------------------+
-
-|  End of string                                                      |
-|  Answer: 4 (substring "()()" from index 1 to 4)                   |
-|                                                                    |
-|  Visual:                                                           |
-|  ) ( ) ( ) )                                                       |
-|  0 1 2 3 4 5                                                       |
-|  x [-----] x                                                       |
-|    valid!                                                          |
-+--------------------------------------------------------------------+
-
-```
 
 ---
 
 ### Generate Parentheses - Backtracking Tree
 
-```
-n = 3 (generate all valid combinations with 3 pairs)
 
-+--------------------------------------------------------------------+
+![Generate Parentheses - Backtracking Tree](./images/generate_parentheses.png)
 
-|  Decision Tree: At each node, decide to add '(' or ')'             |
-|  Constraints: open < n, close < open                               |
-+--------------------------------------------------------------------+
-
-|                                                                    |
-|                          ""                                        |
-|                        (0, 0)                                      |
-|                          |                                         |
-|                    "(" (1, 0)                                      |
-|                     /       \                                      |
-|                    /         \                                     |
-|            "((" (2, 0)    "()" (1, 1)                             |
-|             /      \        /      \                               |
-|            /        \      /        \                              |
-|      "(((" (3,0) "(()" (2,1) "()(" (2,1) "(())" (1,2)            |
-|         |          |        |           ✓                         |
-|         |          |        |         DONE!                       |
-|         |          |        |                                     |
-|    "((())" "(()()" "()(()"                                         |
-|      (3,1)    (2,2)   (3,1)                                        |
-|        |       ✓       |                                          |
-|        |     DONE!     |                                          |
-|        |               |                                          |
-|   "((()))" "()(()"                                                 |
-|     (3,2)    (3,1)                                                 |
-|      |        |                                                   |
-|      |   "()(())"                                                 |
-|      |     (3,2)                                                  |
-|      |      |                                                     |
-|   "((()))" "()(())"                                                |
-|     (3,3)   (3,3)                                                  |
-|      ✓       ✓                                                    |
-|    DONE!   DONE!                                                  |
-|                                                                    |
-|  Continue right branch...                                         |
-|                                                                    |
-|  "()()(" (2,2)                                                     |
-|      |                                                             |
-|  "()()()" (3,3) ✓ DONE!                                           |
-+--------------------------------------------------------------------+
-
-|  All 5 valid combinations (C₃ = 5):                               |
-|  1. ((()))                                                        |
-|  2. (()())                                                        |
-|  3. (())()                                                        |
-|  4. ()(())                                                        |
-|  5. ()()()                                                        |
-+--------------------------------------------------------------------+
-
-Algorithm Logic:
-
-- Start with empty string, open=0, close=0
-- At each step:
-  * If open < n: can add '('
-  * If close < open: can add ')'
-
-- Base case: length == 2n → add to result
-
-```
 
 ---
 
 ### Minimum Remove to Make Valid - Two Pass
 
-```
-Input: "lee(t(c)o)de)"
 
-+--------------------------------------------------------------------+
-
-|  Strategy: Mark invalid brackets, then build result                |
-+--------------------------------------------------------------------+
-|  Pass 1: Mark unmatched closing brackets                          |
-|  --------------------------------------------------------------    |
-|  l  e  e  (  t  (  c  )  o  )  d  e  )                            |
-|  0  1  2  3  4  5  6  7  8  9 10 11 12                            |
-|                                       ↑                            |
-|                              unmatched! mark for removal           |
-|                                                                    |
-|  Stack trace for Pass 1:                                          |
-|  Index 3: '(' → stack = [3]                                        |
-|  Index 5: '(' → stack = [3, 5]                                     |
-|  Index 7: ')' → pop 5, stack = [3]                                 |
-|  Index 9: ')' → pop 3, stack = []                                  |
-|  Index 12: ')' → stack empty! Mark 12 for removal                  |
-|                                                                    |
-|  to_remove = {12}                                                 |
-+--------------------------------------------------------------------+
-
-|  Pass 2: Mark unmatched opening brackets                          |
-|  --------------------------------------------------------------    |
-|  Process right to left:                                           |
-|  Index 9: ')' → close = 1                                          |
-|  Index 7: ')' → close = 2                                          |
-|  Index 5: '(' → close > 0, close = 1                               |
-|  Index 3: '(' → close > 0, close = 0                               |
-|                                                                    |
-|  All opening brackets matched! No more to remove.                 |
-|  to_remove = {12}                                                 |
-+--------------------------------------------------------------------+
-
-|  Pass 3: Build result, skipping marked indices                    |
-|  --------------------------------------------------------------    |
-|  l  e  e  (  t  (  c  )  o  )  d  e  [)]  ← Skip                  |
-|  0  1  2  3  4  5  6  7  8  9 10 11  12                            |
-|  ✓  ✓  ✓  ✓  ✓  ✓  ✓  ✓  ✓  ✓  ✓  ✓   ✗                          |
-|                                                                    |
-|  Result: "lee(t(c)o)de" ✓                                          |
-+--------------------------------------------------------------------+
-
-```
+![Minimum Remove to Make Valid - Two Pass](./images/minimum-remove-to-make-valid-two-pass.png)
 
 
 ## 🎯 At a Glance
@@ -454,13 +169,11 @@ $$\boxed{\text{additions} = \text{unmatched\_open} + \text{unmatched\_close}}$$
 
 **Example:**
 
-```
 Input: "(()"
 Scan: ( → open=1, ( → open=2, ) → open=1
 Result: open=1, close=0
 Answer: 1 (need one more ')')
 
-```
 
 ---
 
@@ -812,8 +525,6 @@ def scoreOfParentheses(s: str) -> int:
     
     return stack[0]
 
-```
-
 
 ## 🏆 LeetCode Problems
 
@@ -990,7 +701,6 @@ if pairs[stack.pop()] != char:
 if not stack or pairs[stack.pop()] != char:
     return False
 
-```
 
 ### Pitfall 2: Forgetting Base Case
 
@@ -1001,7 +711,6 @@ stack = []  # Crash on first valid ')'
 # ✅ CORRECT: Base index
 stack = [-1]  # Enables length calculation
 
-```
 
 ### Pitfall 3: Wrong Backtracking Constraint
 
@@ -1014,175 +723,16 @@ if close_count <= n:  # Too permissive!
 if close_count < open_count:  # Always valid
     backtrack(current + ')')
 
-```
 
----
+![Pitfall 3: Wrong Backtracking Constraint](./images/generate_parentheses.png)
 
-<div align="center">
-
-### 🔗 Master Parentheses: From Validation to Generation
-
-*Stack matching, Catalan numbers, and backtracking - three pillars of parentheses problems*
-
-**Made with ❤️ by [Gaurav Goswami](https://github.com/Gaurav14cs17)**
-
-[⬅️ Basic Stack](../01_basic_stack/README.md) | [➡️ Monotonic Stack](../03_monotonic_stack/README.md)
-
----
-
-*"Balance is key: opens must precede closes, totals must match."*  
-*Start with Valid Parentheses (#20) today!* 🚀
-
-</div>
-
----
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Basic Stack](../01_basic_stack/README.md) | **02. Parentheses** | [03. Monotonic Stack →](../03_monotonic_stack/README.md) |
-
----
-
-## 📐 Mathematical Foundation
-### 1️⃣ Valid Parentheses Conditions
-
-For string $S$ with brackets:
-
-**Condition 1 (Balance):**
-
-$$\boxed{\sum_{i=0}^{n-1} \text{score}(S[i]) = 0}$$
-
-Where:
-
-- $\text{score}('(') = +1, \; \text{score}(')') = -1$
-
-- $\text{score}('[') = +1, \; \text{score}(']') = -1$
-
-- $\text{score}('\{') = +1, \; \text{score}('\}') = -1$
-
-**Condition 2 (Prefix Non-negative):**
-
-$$\boxed{\forall k \in [0, n-1]: \sum_{i=0}^{k} \text{score}(S[i]) \geq 0}$$
-
-**Proof:** If prefix sum becomes negative, we have more closing than opening brackets up to that point → invalid.
-
----
-
-### 2️⃣ Stack Matching Correctness Proof
-
-**Invariant:** Stack contains only unmatched opening brackets.
-
-**Theorem:** String $S$ is valid iff stack is empty after processing.
-
-**Proof by Induction:**
-
-**Base:** Empty string → empty stack → valid ✓
-
-**Inductive Step:**
-
-- If $S[i]$ is opening bracket:
-  - Push to stack → invariant maintained
-
-- If $S[i]$ is closing bracket:
-  - If stack empty → invalid (prefix sum would be negative)
-  - If stack top matches → pop → invariant maintained
-  - If stack top doesn't match → invalid (wrong type)
-
-**Termination:**
-
-- Valid string: all opens matched → empty stack
-
-- Invalid string: unmatched opens remain → non-empty stack ∎
-
----
-
-### 3️⃣ Minimum Additions Formula
-
-**Problem:** Minimum insertions to make string valid.
-
-$$\boxed{\text{additions} = \text{unmatched\_open} + \text{unmatched\_close}}$$
-
-**Proof:**
-
-- Each unmatched `(` needs a matching `)`
-- Each unmatched `)` needs a matching `(`
-- These are independent → sum them ∎
-
-**Example:**
-
-```
 Input: "(()"
 Scan: ( → open=1, ( → open=2, ) → open=1
 Result: open=1, close=0
 Answer: 1 (need one more ')')
 
-```
 
----
-
-### 4️⃣ Longest Valid Parentheses - DP Formula
-
-**Recurrence Relation:**
-
-$$\boxed{dp[i] = \begin{cases}
-0 & \text{if } S[i] = '(' \\
-dp[i-2] + 2 & \text{if } S[i-1] = '(' \text{ and } i \geq 1 \\
-dp[i-1] + 2 + dp[j] & \text{if } j = i - dp[i-1] - 2 \geq 0 \text{ and } S[j+1] = '('
-\end{cases}}$$
-
-Where:
-
-- $dp[i]$ = length of longest valid substring ending at index $i$
-
-- Case 1: Opening bracket can't end a valid substring
-
-- Case 2: Immediate pair `()`
-- Case 3: Nested case `(...)`
-
----
-
-### 5️⃣ Catalan Number Connection
-
-**Number of valid strings with $n$ pairs:**
-
-$$\boxed{C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)! \cdot n!}}$$
-
-**Recurrence Relation:**
-
-$$C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}$$
-
-**First few Catalan numbers:**
-
-| n | 0 | 1 | 2 | 3 | 4 | 5 |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| $C_n$ | 1 | 1 | 2 | 5 | 14 | 42 |
-
-**Examples for $n=3$ ($C_3 = 5$):**
-
-1. `((()))`
-2. `(()())`
-3. `(())()`
-4. `()(())`
-5. `()()()`
-
----
-
-### 6️⃣ Asymptotic Growth
-
-**Catalan Number Growth:**
-
-$$C_n \sim \frac{4^n}{n^{3/2}\sqrt{\pi}}$$
-
-This means generating all valid parentheses has exponential time complexity!
-
----
-
-## 💻 Code Implementations
-
+![3️⃣ Minimum Additions Formula](./images/decision-tree-at-each-node-decide-to-add-or.png)
 ```python
 def isValid(s: str) -> bool:
     """
@@ -1473,7 +1023,6 @@ def scoreOfParentheses(s: str) -> int:
     
     return stack[0]
 
-```
 
 ---
 
@@ -1659,7 +1208,6 @@ if pairs[stack.pop()] != char:
 if not stack or pairs[stack.pop()] != char:
     return False
 
-```
 
 ### Pitfall 2: Forgetting Base Case
 
@@ -1670,7 +1218,6 @@ stack = []  # Crash on first valid ')'
 # ✅ CORRECT: Base index
 stack = [-1]  # Enables length calculation
 
-```
 
 ### Pitfall 3: Wrong Backtracking Constraint
 
@@ -1683,7 +1230,6 @@ if close_count <= n:  # Too permissive!
 if close_count < open_count:  # Always valid
     backtrack(current + ')')
 
-```
 
 ---
 
