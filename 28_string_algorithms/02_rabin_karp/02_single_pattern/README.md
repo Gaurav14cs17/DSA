@@ -31,7 +31,6 @@ nav_order: 2
 | **Typical time** | O(n + m) average |
 | **Typical space** | O(1) |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
