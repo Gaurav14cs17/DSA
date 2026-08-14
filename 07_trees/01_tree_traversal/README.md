@@ -337,7 +337,7 @@ def morrisInorder(root: TreeNode) -> list[int]:
                 current = current.right
     
     return result
-
+```
 
 ## 🏆 LeetCode Problems
 
