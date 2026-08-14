@@ -13,6 +13,9 @@ permalink: /30_number_theory/04_divisors/01_count_divisors/
 
 ### *The Divisor Count Function τ(n)*
 
+![*The Divisor Count Function τ(n)*](./images/the-divisor-count-function-tau-n.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy-green?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Time-O(√n)-blue?style=for-the-badge" alt="Time">
@@ -39,31 +42,6 @@ permalink: /30_number_theory/04_divisors/01_count_divisors/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| COUNTING DIVISORS OF n = 60                                    |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Step 1: Prime Factorization                                    |
-|         60 = 2² × 3¹ × 5¹                                      |
-|                                                                 |
-| Step 2: Apply Formula                                          |
-|         τ(60) = (2+1) × (1+1) × (1+1)                         |
-|               = 3 × 2 × 2                                      |
-|               = 12                                             |
-|                                                                 |
-| Step 3: Verify by Listing                                      |
-|         Divisors of 60:                                        |
-|                                                                 |
-|         2⁰×3⁰×5⁰ = 1      2¹×3⁰×5⁰ = 2      2²×3⁰×5⁰ = 4     |
-|         2⁰×3¹×5⁰ = 3      2¹×3¹×5⁰ = 6      2²×3¹×5⁰ = 12    |
-|         2⁰×3⁰×5¹ = 5      2¹×3⁰×5¹ = 10     2²×3⁰×5¹ = 20    |
-|         2⁰×3¹×5¹ = 15     2¹×3¹×5¹ = 30     2²×3¹×5¹ = 60    |
-|                                                                 |
-|         Count = 12 ✓                                           |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
