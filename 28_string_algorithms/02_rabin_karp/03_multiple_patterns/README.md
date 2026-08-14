@@ -31,7 +31,6 @@ nav_order: 3
 | **Typical time** | O(n + km) where k = number of patterns |
 | **Typical space** | O(k) |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
