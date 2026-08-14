@@ -13,6 +13,9 @@ permalink: /30_number_theory/11_legendres_formula/01_factorial_zeros/
 
 ### *Counting Trailing Zeros in n! Without Computing n!*
 
+![*Counting Trailing Zeros in n! Without Computing n!*](./images/counting-trailing-zeros-in-n-without-computing-n.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Time-O(log_n)-blue?style=for-the-badge" alt="Time">
@@ -39,33 +42,6 @@ permalink: /30_number_theory/11_legendres_formula/01_factorial_zeros/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| COUNTING TRAILING ZEROS in 100!                                |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Which numbers from 1 to 100 contribute factors of 5?           |
-|                                                                 |
-| Divisible by 5:  5,10,15,20,25,30,35,40,45,50,                |
-|                  55,60,65,70,75,80,85,90,95,100                |
-|                  → 20 numbers (each gives at least one 5)      |
-|                                                                 |
-| Divisible by 25: 25, 50, 75, 100                               |
-|                  → 4 numbers (each gives an extra 5)           |
-|                                                                 |
-| Divisible by 125: none in 1-100                                |
-|                                                                 |
-| Total factors of 5: 20 + 4 = 24                                |
-|                                                                 |
-| Formula: ⌊100/5⌋ + ⌊100/25⌋ + ⌊100/125⌋ + ...                |
-|        = 20 + 4 + 0 + ...                                      |
-|        = 24 trailing zeros                                     |
-|                                                                 |
-| 100! = 933262154439...00000000000000000000000000               |
-|                        ↑ 24 zeros ↑                            |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
