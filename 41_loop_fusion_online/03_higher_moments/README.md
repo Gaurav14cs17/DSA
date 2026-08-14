@@ -384,7 +384,7 @@ print(f"  Kurtosis: {stats_uniform.get_kurtosis():.3f}")  # ≈ -1.2
 
 ---
 
-## 🎯 LeetCode Problems
+## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty | Pattern |
 |:-:|---------|-----------|---------|
@@ -419,7 +419,7 @@ All four moments computed in **single pass** with **constant space**!
 
 ---
 
-## 📚 Resources
+## 📚 References & Learning Resources
 
 | Resource | Link |
 |----------|------|
