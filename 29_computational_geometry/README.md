@@ -145,19 +145,9 @@ permalink: /29_computational_geometry/
 
 **Definition:** For vectors **u** = (u_x, u_y) and **v** = (v_x, v_y):
 
-```
-u × v = u_x · v_y - u_y · v_x
+![Cross Product](./images/cross-product.png)
 
-Geometric interpretation:
-
-- Magnitude: |u × v| = area of parallelogram formed by u and v
-
-- Sign: determines relative orientation
-  > 0: v is counter-clockwise from u
-  = 0: u and v are collinear
-  < 0: v is clockwise from u
-
-```
+*Cross product formula, parallelogram area, and orientation sign*
 
 **Applications:**
 
@@ -175,21 +165,9 @@ Geometric interpretation:
 
 **Definition:** For vectors **u** and **v**:
 
-```
-u · v = u_x · v_x + u_y · v_y
-     = |u| · |v| · cos(θ)
+![Dot Product](./images/dot-product.png)
 
-where θ is angle between vectors
-
-Properties:
-
-- u · v > 0: acute angle (< 90°)
-
-- u · v = 0: perpendicular (90°)
-
-- u · v < 0: obtuse angle (> 90°)
-
-```
+*Dot product formula, angle relationship, and sign properties*
 
 **Applications:**
 
@@ -207,33 +185,11 @@ Properties:
 
 **Problem:** Given three points P, Q, R, determine their orientation.
 
-**Formula:**
+**Formula and visualization:**
 
-```
-orientation(P, Q, R) = sign((Q - P) × (R - P))
-                     = sign((Q.x - P.x)(R.y - P.y) - (Q.y - P.y)(R.x - P.x))
+![Orientation Test](./images/orientation-test.png)
 
-Result:
-  > 0: Counter-clockwise (left turn)
-  = 0: Collinear (no turn)
-  < 0: Clockwise (right turn)
-
-```
-
-**Visual:**
-
-```
-    R
-   /
-  /
- Q----P    CCW: positive
-
- P----Q
-  \
-   \
-    R     CW: negative
-
-```
+*Orientation formula with CCW (positive) and CW (negative) turn examples*
 
 ---
 
@@ -249,15 +205,9 @@ Result:
 
 **Formula:**
 
-```
-Segments intersect if:
-  orientation(A, B, C) · orientation(A, B, D) < 0
-  AND
-  orientation(C, D, A) · orientation(C, D, B) < 0
+![Segment Intersection](./images/segment-intersection.png)
 
-Special case: Collinear segments require bounding box check
-
-```
+*Orientation-based segment intersection test with collinear special case*
 
 ---
 
@@ -265,26 +215,15 @@ Special case: Collinear segments require bounding box check
 
 **Ray Casting Algorithm:**
 
-```
-Cast ray from point to infinity
-Count intersections with polygon edges
-Odd count → inside
-Even count → outside
+![Ray Casting](./images/ray-casting.png)
 
-Mathematical basis: Jordan Curve Theorem
-
-```
+*Cast ray from point, count edge crossings — odd = inside (Jordan Curve Theorem)*
 
 **Winding Number:**
 
-```
-Sum of signed angles from point to each edge
-Non-zero → inside
-Zero → outside
+![Winding Number](./images/winding-number.png)
 
-More robust for complex polygons
-
-```
+*Sum of signed angles — non-zero = inside; more robust for complex polygons*
 
 ---
 
@@ -334,192 +273,27 @@ More robust for complex polygons
 
 ### Geometric Primitives
 
-```python
-from math import sqrt, atan2, pi
+![Geometric Primitives Implementation](./images/geometric-primitives-impl.png)
 
-class Point:
-    """2D Point representation"""
-    
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-    
-    def __sub__(self, other):
-        """Vector from other to self"""
-        return Point(self.x - other.x, self.y - other.y)
-    
-    def __repr__(self):
-        return f"Point({self.x}, {self.y})"
-    
-    def distance(self, other):
-        """Euclidean distance"""
-        dx = self.x - other.x
-        dy = self.y - other.y
-        return sqrt(dx * dx + dy * dy)
-    
-    def distance_squared(self, other):
-        """Squared distance (avoids sqrt for comparisons)"""
-        dx = self.x - other.x
-        dy = self.y - other.y
-        return dx * dx + dy * dy
-
-def cross_product(o, a, b):
-    """
-    Cross product of vectors OA and OB
-    
-    Returns: (A - O) × (B - O)
-    
-    Positive: B is counter-clockwise from A
-    Zero: O, A, B are collinear
-    Negative: B is clockwise from A
-    """
-    return (a.x - o.x) * (b.y - o.y) - (a.y - o.y) * (b.x - o.x)
-
-def dot_product(u, v):
-    """
-    Dot product of vectors u and v
-    
-    Returns: u · v
-    """
-    return u.x * v.x + u.y * v.y
-
-def orientation(p, q, r):
-    """
-    Find orientation of ordered triplet (p, q, r)
-    
-    Returns:
-     1: Counter-clockwise
-     0: Collinear
-    -1: Clockwise
-    """
-    val = cross_product(p, q, r)
-    
-    if abs(val) < 1e-9:  # Epsilon for floating point
-        return 0
-    
-    return 1 if val > 0 else -1
-
-```
+*Point class, cross product, dot product, and orientation test walkthrough*
 
 ### Convex Hull (Graham's Scan)
 
-```python
-def convex_hull_graham(points):
-    """
-    Compute convex hull using Graham's Scan
-    
-    Time: O(n log n)
-    Space: O(n)
-    
-    Returns: List of points on convex hull in counter-clockwise order
-    """
-    n = len(points)
-    if n < 3:
-        return points
-    
-    # Find bottom-most point (or leftmost if tie)
-    start = min(points, key=lambda p: (p.y, p.x))
-    
-    # Sort points by polar angle with respect to start point
-    def polar_angle_key(p):
-        if p == start:
-            return -pi, 0
-        angle = atan2(p.y - start.y, p.x - start.x)
-        dist = start.distance_squared(p)
-        return angle, dist
-    
-    sorted_points = sorted(points, key=polar_angle_key)
-    
-    # Build convex hull
-    hull = []
-    
-    for p in sorted_points:
-        # Remove points that make clockwise turn
-        while len(hull) >= 2 and cross_product(hull[-2], hull[-1], p) <= 0:
-            hull.pop()
-        
-        hull.append(p)
-    
-    return hull
+![Graham's Scan Implementation](./images/graham-scan-impl.png)
 
-```
+*Pivot selection, polar angle sorting, and stack-based hull construction*
 
 ### Line Segment Intersection
 
-```python
-def segments_intersect(p1, q1, p2, q2):
-    """
-    Check if line segments (p1, q1) and (p2, q2) intersect
-    
-    Time: O(1)
-    Space: O(1)
-    
-    Returns: True if segments intersect
-    """
-    def on_segment(p, q, r):
-        """Check if point q lies on segment pr (given collinear)"""
-        return (min(p.x, r.x) <= q.x <= max(p.x, r.x) and
-                min(p.y, r.y) <= q.y <= max(p.y, r.y))
-    
-    o1 = orientation(p1, q1, p2)
-    o2 = orientation(p1, q1, q2)
-    o3 = orientation(p2, q2, p1)
-    o4 = orientation(p2, q2, q1)
-    
-    # General case: different orientations
-    if o1 != o2 and o3 != o4:
-        return True
-    
-    # Special cases: collinear points
-    if o1 == 0 and on_segment(p1, p2, q1):
-        return True
-    if o2 == 0 and on_segment(p1, q2, q1):
-        return True
-    if o3 == 0 and on_segment(p2, p1, q2):
-        return True
-    if o4 == 0 and on_segment(p2, q1, q2):
-        return True
-    
-    return False
+![Segment Intersection Implementation](./images/segment-intersection-impl.png)
 
-```
+*Orientation-based intersection test with collinear edge cases*
 
 ### Point in Polygon (Ray Casting)
 
-```python
-def point_in_polygon(point, polygon):
-    """
-    Check if point is inside polygon using ray casting
-    
-    Time: O(n) where n = number of vertices
-    Space: O(1)
-    
-    Returns: True if point is inside polygon
-    """
-    n = len(polygon)
-    inside = False
-    
-    p1 = polygon[0]
-    
-    for i in range(1, n + 1):
-        p2 = polygon[i % n]
-        
-        # Check if point is on same horizontal level as edge
-        if point.y > min(p1.y, p2.y):
-            if point.y <= max(p1.y, p2.y):
-                if point.x <= max(p1.x, p2.x):
-                    # Compute x-intersection of ray with edge
-                    if p1.y != p2.y:
-                        x_intersection = (point.y - p1.y) * (p2.x - p1.x) / (p2.y - p1.y) + p1.x
-                    
-                    if p1.x == p2.x or point.x <= x_intersection:
-                        inside = not inside
-        
-        p1 = p2
-    
-    return inside
+![Point in Polygon Implementation](./images/point-in-polygon-impl.png)
 
-```
+*Ray casting algorithm with horizontal ray edge crossing logic*
 
 ---
 
@@ -583,29 +357,15 @@ This section contains **50+ problems** across **6 categories**:
 
 **Solution:** Use epsilon for equality checks
 
-```python
-EPS = 1e-9
+![Floating Point Epsilon](./images/floating-point-epsilon.png)
 
-def equals(a, b):
-    return abs(a - b) < EPS
-
-def compare(a, b):
-    if abs(a - b) < EPS:
-        return 0
-    return 1 if a > b else -1
-
-```
+*EPS-based equals/compare functions for reliable floating point comparisons*
 
 ### Cross Product Sign
 
-```
-Positive: Counter-clockwise turn (left turn)
-Zero: Collinear (straight)
-Negative: Clockwise turn (right turn)
+![Cross Product Sign](./images/cross-product-sign.png)
 
-Key for: Convex hull, orientation tests, polygon winding
-
-```
+*Positive = CCW left turn, zero = collinear, negative = CW right turn*
 
 ### Degeneracies
 
@@ -623,13 +383,9 @@ Key for: Convex hull, orientation tests, polygon winding
 
 ### Coordinate System
 
-```
-Standard: Origin at bottom-left, y increases upward
-Screen: Origin at top-left, y increases downward
+![Coordinate Systems](./images/coordinate-systems.png)
 
-Convert when needed for graphics applications
-
-```
+*Standard math coordinates (y up) vs screen coordinates (y down)*
 
 ---
 
@@ -646,3 +402,52 @@ Convert when needed for graphics applications
 5. [Polygon Operations →](./05_polygon_operations/)
 
 6. [Closest Pair →](./06_closest_pair/)
+
+---
+
+## 🏆 LeetCode Problems
+
+### 🟢 Easy
+
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 223 | [Rectangle Area](https://leetcode.com/problems/rectangle-area/) | Area formula | O(1) | O(1) |
+| 836 | [Rectangle Overlap](https://leetcode.com/problems/rectangle-overlap/) | Interval check | O(1) | O(1) |
+| 1030 | [Matrix Cells in Distance Order](https://leetcode.com/problems/matrix-cells-in-distance-order/) | Sort by dist | O(n² log n) | O(n²) |
+
+### 🟡 Medium
+
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 587 | [Erect the Fence](https://leetcode.com/problems/erect-the-fence/) | Convex hull | O(n log n) | O(n) |
+| 149 | [Max Points on a Line](https://leetcode.com/problems/max-points-on-a-line/) | Hash slopes | O(n²) | O(n) |
+| 356 | [Line Reflection](https://leetcode.com/problems/line-reflection/) | Hash midpoints | O(n) | O(n) |
+| 939 | [Minimum Area Rectangle](https://leetcode.com/problems/minimum-area-rectangle/) | Hash diagonals | O(n²) | O(n) |
+
+### 🔴 Hard
+
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 218 | [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/) | Sweep line | O(n log n) | O(n) |
+| 850 | [Rectangle Area II](https://leetcode.com/problems/rectangle-area-ii/) | Coordinate compression | O(n² log n) | O(n) |
+| 391 | [Perfect Rectangle](https://leetcode.com/problems/perfect-rectangle/) | Corner counting | O(n) | O(n) |
+| 972 | [Equal Rational Numbers](https://leetcode.com/problems/equal-rational-numbers/) | Fraction compare | O(log n) | O(1) |
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **Computational Geometry** | CP-Algorithms | [Geometry](https://cp-algorithms.com/geometry/) |
+| **Convex Hull** | GeeksforGeeks | [Graham scan](https://www.geeksforgeeks.org/convex-hull-algorithm/) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | Geometry tag | [Problems](https://leetcode.com/tag/geometry/) |
+
+---
