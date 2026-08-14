@@ -30,7 +30,6 @@ permalink: /01_arrays/01_basic_operations/
 | **Difficulty** | Easy to Medium |
 | **Problems** | 15+ |
 
-{: .highlight }
 > **How to use this page:** Scan **At a Glance**, then work through theory → visuals → code.
 
 
@@ -179,20 +178,14 @@ Sort then scan:         O(n log n) → Often good solution
 ---
 
 ### Remove Duplicates from Sorted Array
-
-
 ![Remove Duplicates from Sorted Array](./images/remove-duplicates-from-sorted-array.png)
 
 
 ### Rotate Array (Three Reversals)
-
-
 ![Rotate Array (Three Reversals)](./images/rotate-array-three-reversals.png)
 
 
 ### Dutch National Flag (Sort Colors)
-
-
 ![Dutch National Flag (Sort Colors)](./images/dutch_national_flag.png)
 
 
@@ -299,7 +292,6 @@ def findDuplicate(nums: list[int]) -> int:
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
-
 | # | Problem | Technique | Time | Space |
 |:-:|---------|-----------|:----:|:-----:|
 | 26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Two Pointers | O(n) | O(1) |
@@ -311,7 +303,6 @@ def findDuplicate(nums: list[int]) -> int:
 | 448 | [Find Disappeared Numbers](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/) | Index as Hash | O(n) | O(1) |
 
 ### 🟡 Medium
-
 | # | Problem | Technique | Time | Space |
 |:-:|---------|-----------|:----:|:-----:|
 | 75 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Dutch Flag | O(n) | O(1) |
@@ -321,7 +312,6 @@ def findDuplicate(nums: list[int]) -> int:
 | 287 | [Find Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Floyd's Cycle | O(n) | O(1) |
 
 ### 🔴 Hard
-
 | # | Problem | Technique | Time | Space |
 |:-:|---------|-----------|:----:|:-----:|
 | 41 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Index as Hash | O(n) | O(1) |
@@ -350,7 +340,6 @@ def findDuplicate(nums: list[int]) -> int:
 ## 🎓 Pattern Recognition Guide
 
 ### When to Use Each Technique
-
 | Pattern | When to Use | Example Problems |
 |---------|-------------|------------------|
 | **Two Pointers (opposite)** | Sorted array, find pair/triplet | Two Sum II, Container With Water |
@@ -364,7 +353,6 @@ def findDuplicate(nums: list[int]) -> int:
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
-
 | Resource | Description | Link |
 |----------|-------------|------|
 | **Two Pointers Technique** | Comprehensive guide | [GeeksforGeeks](https://www.geeksforgeeks.org/two-pointers-technique/) |
@@ -372,7 +360,6 @@ def findDuplicate(nums: list[int]) -> int:
 | **Floyd's Cycle Detection** | Tortoise and hare algorithm | [Wikipedia](https://en.wikipedia.org/wiki/Cycle_detection) |
 
 ### 🎥 Video Tutorials
-
 | Resource | Topic | Link |
 |----------|-------|------|
 | **NeetCode** | Two pointers explained | [YouTube](https://www.youtube.com/watch?v=cQ1Oz4ckceM) |
@@ -380,7 +367,6 @@ def findDuplicate(nums: list[int]) -> int:
 | **Tushar Roy** | Dutch national flag | [YouTube](https://www.youtube.com/watch?v=BOt1DAvR0zI) |
 
 ### 📝 Interactive Practice
-
 | Platform | Problem Set | Link |
 |----------|-------------|------|
 | **LeetCode** | Two pointers tag | [Problems](https://leetcode.com/tag/two-pointers/) |
@@ -388,7 +374,6 @@ def findDuplicate(nums: list[int]) -> int:
 | **InterviewBit** | Arrays problems | [Practice](https://www.interviewbit.com/courses/programming/topics/arrays/) |
 
 ### 🔬 Advanced Reading
-
 | Resource | Topic | Link |
 |----------|-------|------|
 | **Bentley's Programming Pearls** | Column 2: Aha! Algorithms | [PDF](https://www.cs.cmu.edu/~15451-f17/Handouts/bentley1984.pdf) |
@@ -398,7 +383,6 @@ def findDuplicate(nums: list[int]) -> int:
 ## 🎯 Practice Roadmap
 
 ### Beginner Level (Start Here!)
-
 1. **Remove Duplicates** (#26) - Learn two pointers
 
 2. **Move Zeroes** (#283) - Practice partitioning
@@ -406,7 +390,6 @@ def findDuplicate(nums: list[int]) -> int:
 3. **Merge Sorted Array** (#88) - Master reverse fill
 
 ### Intermediate Level
-
 4. **Rotate Array** (#189) - Understand reversals
 
 5. **Sort Colors** (#75) - Master Dutch Flag
@@ -414,7 +397,6 @@ def findDuplicate(nums: list[int]) -> int:
 6. **Remove Element** (#27) - Combine techniques
 
 ### Advanced Level
-
 7. **Find Duplicate** (#287) - Learn Floyd's algorithm
 
 8. **First Missing Positive** (#41) - Index as hash
@@ -422,7 +404,6 @@ def findDuplicate(nums: list[int]) -> int:
 9. **Trapping Rain Water** (#42) - Two pointers mastery
 
 ### Mastery Challenge
-
 - Solve each problem in < 15 minutes
 
 - Optimize to O(1) space
@@ -446,7 +427,6 @@ A: O(1) space vs O(n) space. Critical in memory-constrained environments.
 <div align="center">
 
 ### 🎓 Master This Section First!
-
 *Basic operations form the foundation for all advanced array techniques.*
 
 **Made with ❤️ by [Gaurav Goswami](https://github.com/Gaurav14cs17)**
