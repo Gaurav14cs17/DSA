@@ -13,7 +13,6 @@ permalink: /08_binary_search_trees/01_bst_operations/
 ### *BST Operations*
 
 
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
@@ -39,27 +38,9 @@ permalink: /08_binary_search_trees/01_bst_operations/
 
 **Problem:** Insert 15 into BST
 
-```
-Initial BST:
-      20
-     /  \
-   10    30
-  /  \
- 5    15
 
-Insert 15:
-Step 1: 15 < 20 → go left
-      20
-     /
-   10
-Step 2: 15 > 10 → go right
-   10
-     \
-      15 (existing, stop or handle duplicate)
+![🔍 Walkthrough 1: BST Insertion](./image/when-to-use-each-operation-bst.png)
 
-If 15 doesn't exist, it becomes right child of 10!
-
-```
 
 **Key Steps:**
 
@@ -75,40 +56,9 @@ If 15 doesn't exist, it becomes right child of 10!
 
 **Problem:** Delete 20 from BST
 
-```
-Initial BST:
-      20
-     /  \
-   10    30
-  /  \   / \
- 5   15 25 35
 
-Delete 20 (has 2 children):
+![🗑️ Walkthrough 2: BST Deletion (Two Children)](./image/when-to-use-each-operation-bst.png)
 
-Step 1: Find successor = min(right subtree) = 25
-      20
-        \
-        30
-       /
-      25 ← successor
-
-Step 2: Replace 20 with 25
-      25
-     /  \
-   10    30
-  /  \     \
- 5   15    35
-
-Step 3: Delete 25 from right subtree (one child case)
-
-Final:
-      25
-     /  \
-   10    30
-  /  \     \
- 5   15    35
-
-```
 
 **Why Successor?**
 
@@ -120,28 +70,9 @@ Final:
 
 ### ✂️ **Walkthrough 3: Trim BST to [10, 30]**
 
-```
-Original BST:
-       25
-      /  \
-     5    35
-    / \   / \
-   1  10 30 40
 
-Trim to [10, 30]:
+![✂️ Walkthrough 3: Trim BST to [10, 30]](./image/when-to-use-each-operation-bst.png)
 
-Step 1: Root 25 ∈ [10, 30] → keep, trim children
-Step 2: Left child 5 < 10 → prune left subtree, check right
-Step 3: 10 ∈ [10, 30] → keep
-Step 4: Right child 35 > 30 → prune right subtree, check left
-Step 5: 30 ∈ [10, 30] → keep
-
-Result:
-       25
-      /  \
-    10    30
-
-```
 
 **Pruning Logic:**
 
@@ -275,16 +206,8 @@ $$\text{trim}(node, L, R) = \begin{cases}
 
 ### When to Use Each Operation
 
-```
-Problem mentions:
-+-- "search for" → searchBST()
-+-- "add" / "insert" → insertIntoBST()
-+-- "remove" / "delete" → deleteNode()
-+-- "minimum" / "maximum" → findMin() / findMax()
-+-- "in range [L, R]" → trimBST() or range query
-+-- "valid BST?" → See validation section
 
-```
+![When to Use Each Operation](./image/when-to-use-each-operation-bst.png)
 
 
 ## 💻 Code Implementations
@@ -377,8 +300,6 @@ def trimBST(root: TreeNode, low: int, high: int) -> TreeNode:
     root.left = trimBST(root.left, low, high)
     root.right = trimBST(root.right, low, high)
     return root
-
-```
 
 
 ## 🏆 LeetCode Problems
@@ -663,27 +584,9 @@ $$\text{trim}(node, L, R) = \begin{cases}
 
 ## 🎯 Pattern Recognition Guide
 
-| Scenario | Pattern | Example |
-|----------|---------|---------|
-| **Need to find value** | Binary search on BST | Search #700 |
-| **Add new value** | Recursive insertion | Insert #701 |
-| **Remove value** | Three cases deletion | Delete #450 |
-| **Need min/max** | Go leftmost/rightmost | Find min/max |
-| **Filter by range** | Trim with pruning | Trim BST #669 |
-| **Modify subtree** | Recursive with base case | All operations |
-
 ### When to Use Each Operation
 
-```
-Problem mentions:
-+-- "search for" → searchBST()
-+-- "add" / "insert" → insertIntoBST()
-+-- "remove" / "delete" → deleteNode()
-+-- "minimum" / "maximum" → findMin() / findMax()
-+-- "in range [L, R]" → trimBST() or range query
-+-- "valid BST?" → See validation section
-
-```
+![When to Use Each Operation](./image/when-to-use-each-operation-bst.png)
 
 ---
 
@@ -778,7 +681,6 @@ def trimBST(root: TreeNode, low: int, high: int) -> TreeNode:
     root.right = trimBST(root.right, low, high)
     return root
 
-```
 
 ---
 
