@@ -39,7 +39,6 @@ nav_order: 1
 | **Typical space** | O(1) |
 | **Topics** | Vectors, Cross Product, Dot Product, Distances |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
