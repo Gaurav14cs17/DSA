@@ -30,7 +30,6 @@ permalink: /10_graphs/03_dfs_problems/
 | **Difficulty** | Medium |
 | **Problems** | 10+ |
 
-{: .highlight }
 > **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
@@ -250,7 +249,6 @@ def canVisitAllRooms(rooms: list[list[int]]) -> bool:
 ## 🏆 LeetCode Problems
 
 ### 🟡 Medium
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 130 | [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/) | Border DFS | O(mn) | O(mn) |
@@ -262,7 +260,6 @@ def canVisitAllRooms(rooms: list[list[int]]) -> bool:
 | 841 | [Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/) | DFS | O(V+E) | O(V) |
 
 ### 🔴 Hard
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 329 | [Longest Increasing Path](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | DFS + Memo | O(mn) | O(mn) |
