@@ -466,7 +466,7 @@ def getLength(head: ListNode) -> int:
         length += 1
         head = head.next
     return length
-
+```
 
 ## 🏆 LeetCode Problems
 
