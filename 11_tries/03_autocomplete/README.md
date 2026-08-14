@@ -299,18 +299,12 @@ class AutocompleteSystem:
 
 ## 📊 Autocomplete Patterns
 
-```
-Autocomplete
-     |
-     +-- Lexicographic top-k → Trie + Sorted DFS
-     |
-     +-- Frequency-based → Trie + Heap
-     |
-     +-- Prefix sum → Store cumulative weights
-     |
-     +-- Real-time input → Maintain current prefix
+<div align="center">
 
-```
+<img src="./image/autocomplete-pattern.png" alt="Autocomplete Patterns" width="100%">
+
+</div>
+
 
 ---
 
