@@ -28,19 +28,16 @@ permalink: /34_sqrt_decomposition/02_mos_algorithm/
 ## 📊 Visual Overview
 
 ### Mo's Algorithm Overview
-
 <div align="center">
 <img src="./images/mos-algorithm-overview.png" alt="Mo's Algorithm Overview" width="100%">
 </div>
 
 ### Pointer Movement Visualization
-
 <div align="center">
 <img src="./images/mos-pointer-movement.png" alt="Mo's Pointer Movement" width="100%">
 </div>
 
 ### Distinct Count Application
-
 <div align="center">
 <img src="./images/mos-distinct-count.png" alt="Mo's Distinct Count" width="100%">
 </div>
@@ -63,7 +60,6 @@ permalink: /34_sqrt_decomposition/02_mos_algorithm/
 | **In one line** | Offline Query Processing with Block Sorting |
 | **Difficulty** | Hard |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 
