@@ -134,16 +134,8 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/
 
 **Push operation:** Before accessing node, push lazy value to children.
 
-```python
-def push(node, start, end):
-    if lazy[node] != 0:
-        tree[node] += lazy[node] * (end - start + 1)
-        if start != end:  # Not leaf
-            lazy[2*node] += lazy[node]
-            lazy[2*node+1] += lazy[node]
-        lazy[node] = 0
+![Lazy Propagation Push](./images/lazy-propagation-push.png)
 
-```
 
 ### 2️⃣ 2D Segment Tree
 
@@ -216,85 +208,13 @@ def push(node, start, end):
 
 **Lazy Propagation Segment Tree:**
 
-```python
-class LazySegmentTree:
-    def __init__(self, n):
-        self.n = n
-        self.tree = [0] * (4 * n)
-        self.lazy = [0] * (4 * n)
-    
-    def push(self, node, start, end):
-        """Push lazy value to children."""
-        if self.lazy[node]:
-            self.tree[node] += self.lazy[node] * (end - start + 1)
-            if start != end:
-                self.lazy[2*node] += self.lazy[node]
-                self.lazy[2*node+1] += self.lazy[node]
-            self.lazy[node] = 0
-    
-    def update_range(self, node, start, end, l, r, val):
-        """Add val to range [l, r]."""
-        self.push(node, start, end)
-        if start > r or end < l:
-            return
-        if start >= l and end <= r:
-            self.lazy[node] += val
-            self.push(node, start, end)
-            return
-        mid = (start + end) // 2
-        self.update_range(2*node, start, mid, l, r, val)
-        self.update_range(2*node+1, mid+1, end, l, r, val)
-        self.push(2*node, start, mid)
-        self.push(2*node+1, mid+1, end)
-        self.tree[node] = self.tree[2*node] + self.tree[2*node+1]
-    
-    def query_range(self, node, start, end, l, r):
-        """Query sum in range [l, r]."""
-        if start > r or end < l:
-            return 0
-        self.push(node, start, end)
-        if start >= l and end <= r:
-            return self.tree[node]
-        mid = (start + end) // 2
-        left = self.query_range(2*node, start, mid, l, r)
-        right = self.query_range(2*node+1, mid+1, end, l, r)
-        return left + right
+![Lazy Segment Tree](./images/lazy-segment-tree.png)
 
-```
 
 **Dynamic Segment Tree:**
 
-```python
-class DynamicSegmentTree:
-    def __init__(self):
-        self.tree = {}
-        self.MIN_VAL = 0
-        self.MAX_VAL = 10**9
-    
-    def update(self, node, start, end, idx, val):
-        """Update index idx to val."""
-        if start == end:
-            self.tree[node] = self.tree.get(node, 0) + val
-            return
-        mid = (start + end) // 2
-        if idx <= mid:
-            self.update(2*node, start, mid, idx, val)
-        else:
-            self.update(2*node+1, mid+1, end, idx, val)
-        self.tree[node] = (self.tree.get(2*node, 0) + 
-                          self.tree.get(2*node+1, 0))
-    
-    def query(self, node, start, end, l, r):
-        """Query range [l, r]."""
-        if start > r or end < l:
-            return 0
-        if start >= l and end <= r:
-            return self.tree.get(node, 0)
-        mid = (start + end) // 2
-        return (self.query(2*node, start, mid, l, r) + 
-                self.query(2*node+1, mid+1, end, l, r))
+![Dynamic Segment Tree Reference](./images/dynamic-segment-tree-ref.png)
 
-```
 
 ---
 
