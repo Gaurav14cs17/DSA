@@ -637,7 +637,7 @@ def longest_palindrome_suffix_tree(text):
 
 ---
 
-## 🧩 LeetCode Problems
+## 🏆 LeetCode Problems
 
 ### Medium
 
@@ -781,6 +781,24 @@ Uses:
 - [Stanford CS166: Suffix Trees](https://web.stanford.edu/class/cs166/lectures/03/Small03.pdf)
 
 - [Visualization Tool](https://brenden.github.io/ukkonen-animation/)
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **Suffix Tree** | CP-Algorithms | [Ukkonen's algorithm](https://cp-algorithms.com/string/suffix-tree-ukkonen.html) |
+| **Ukkonen** | University of Helsinki | [Original paper](https://www.cs.helsinki.fi/u/ukkonen/SuffixT1withFigs.pdf) |
+| **Suffix Trees** | Stanford CS166 | [Lecture notes](https://web.stanford.edu/class/cs166/lectures/03/Small03.pdf) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | String tag | [Problems](https://leetcode.com/tag/string/) |
 
 ---
 
