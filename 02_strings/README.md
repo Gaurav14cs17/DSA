@@ -55,7 +55,6 @@ permalink: /02_strings/
 | **Subtopics** | 4 |
 | **Problems** | 50+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
@@ -159,7 +158,6 @@ $$\text{left} = \left\lfloor \frac{c}{2} \right\rfloor, \quad \text{right} = \le
 **Proof of Center Count:**
 
 
-![4️⃣ Palindrome Mathematics](./images/string-overview.png)
 
 
 ---
