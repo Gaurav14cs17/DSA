@@ -48,7 +48,6 @@ permalink: /20_divide_and_conquer/
 | **Subtopics** | 3 |
 | **Problems** | 20+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
