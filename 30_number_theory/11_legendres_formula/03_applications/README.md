@@ -13,6 +13,9 @@ permalink: /30_number_theory/11_legendres_formula/03_applications/
 
 ### *Real-World Problems Using Prime Factorization of Factorials*
 
+![*Real-World Problems Using Prime Factorization of Factorials*](./images/real-world-problems-using-prime-factorization-of-factorials.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Pattern-Divisibility-blue?style=for-the-badge" alt="Pattern">
@@ -39,25 +42,6 @@ permalink: /30_number_theory/11_legendres_formula/03_applications/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| ALTERNATIVE FORMULA: ν_p(n!) = (n - S_p(n)) / (p - 1)          |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Example: ν₅(100!)                                              |
-|                                                                 |
-| 100 in base 5: 400₅  (4×25 + 0×5 + 0×1)                       |
-| S₅(100) = 4 + 0 + 0 = 4                                        |
-|                                                                 |
-| ν₅(100!) = (100 - 4) / (5 - 1) = 96 / 4 = 24                  |
-|                                                                 |
-| Verify with standard formula:                                  |
-|   ⌊100/5⌋ + ⌊100/25⌋ + ⌊100/125⌋ = 20 + 4 + 0 = 24 ✓         |
-|                                                                 |
-| This formula is O(log n) but with smaller constant!            |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
