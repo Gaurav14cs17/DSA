@@ -35,7 +35,6 @@ nav_order: 4
 | **Topics** | Suffix Array, LCP, String Sorting |
 | **Prerequisites** | Sorting, Binary search, String basics |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
