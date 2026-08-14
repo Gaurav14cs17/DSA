@@ -38,17 +38,12 @@ permalink: /23_sliding_window/03_string_window/
 
 </div>
 
-### Minimum Window Substring
-
-
 ### Anagram Detection Flow
-
 ![Anagram Detection Flow](./images/anagram-detection-flow.png)
 
 
 
 ### Have vs Need State Machine
-
 ![Have vs Need State Machine](./images/have-vs-need-state-machine.png)
 
 
@@ -69,7 +64,6 @@ permalink: /23_sliding_window/03_string_window/
 
 ---
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
@@ -84,8 +78,6 @@ permalink: /23_sliding_window/03_string_window/
 
 ## 📐 Mathematical Foundation
 ### 1️⃣ Anagram Definition
-
-{: .highlight }
 > Two strings are **anagrams** if they have the same character frequencies.
 
 $$\text{Anagram}(s, t) \Leftrightarrow \forall c: \text{freq}_s[c] = \text{freq}_t[c]$$
@@ -101,7 +93,6 @@ A window is an anagram of pattern \(p\) if:
 ---
 
 ### 2️⃣ The "Have vs Need" Pattern
-
 {: .important }
 > For minimum window substring: track what you **have** vs what you **need**.
 
@@ -121,7 +112,6 @@ $$\text{Window valid} \Leftrightarrow \text{formed} = \text{required}$$
 ---
 
 ### 3️⃣ Match Counter Optimization
-
 {: .note }
 > Instead of comparing all 26 frequencies, track how many characters are "satisfied".
 
@@ -154,8 +144,6 @@ elif window[c] == pattern[c] + 1:  # Was matched, now over
 ---
 
 ### 4️⃣ Substring with Concatenation of All Words
-
-
 > For word-based windows, treat each word as a "character".
 
 #### The Approach
@@ -570,7 +558,6 @@ def numberOfSubstrings(s: str) -> int:
 ## 🏆 LeetCode Problems
 
 ### 🟡 Medium
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 159 | [Two Distinct](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/) | HashMap | O(n) | O(1) |
@@ -581,7 +568,6 @@ def numberOfSubstrings(s: str) -> int:
 | 1358 | [All Three Chars](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/) | Variable | O(n) | O(1) |
 
 ### 🔴 Hard
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 30 | [Concat Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/) | Word Window | O(n×m) | O(m) |
@@ -592,7 +578,6 @@ def numberOfSubstrings(s: str) -> int:
 ## 💡 Interview Tips
 
 ### Key Techniques
-
 | Technique | When to Use |
 |-----------|-------------|
 | **Count array [26]** | Only lowercase letters |
@@ -601,7 +586,6 @@ def numberOfSubstrings(s: str) -> int:
 | **Have/Need** | Minimum window problems |
 
 ### Common Mistakes
-
 | Mistake | Fix |
 |---------|-----|
 | Comparing arrays each time | Use match counter |
