@@ -24,13 +24,11 @@ permalink: /40_dp_optimizations/01_space_optimization/
 
 ---
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
 
 ### Two-Array Rolling
-
 <div align="center">
 
 ![Two-Array Rolling](./images/two-array-rolling.png)
@@ -39,7 +37,6 @@ permalink: /40_dp_optimizations/01_space_optimization/
 
 
 ### Single Array with Diagonal
-
 <div align="center">
 
 ![Single Array with Diagonal](./images/single-array-diagonal.png)
