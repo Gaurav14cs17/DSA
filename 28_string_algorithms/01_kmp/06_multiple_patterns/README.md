@@ -486,7 +486,7 @@ for pattern, matches in results.items():
 
 ---
 
-## 🧩 LeetCode Problems
+## 🏆 LeetCode Problems
 
 ### Medium
 
@@ -581,6 +581,24 @@ KMP for multiple patterns naturally leads to Aho-Corasick:
 - Patterns share common prefixes
 
 - Need optimal O(n + k) matching
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **Multiple Patterns** | CP-Algorithms | [Aho-Corasick](https://cp-algorithms.com/string/aho_corasick.html) |
+| **Pattern Matching** | GeeksforGeeks | [Multiple pattern search](https://www.geeksforgeeks.org/pattern-searching-set-6-efficient-construction-finite-automata/) |
+| **Multi-pattern** | USACO Guide | [String Search](https://usaco.guide/gold/string-search) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | String tag | [Problems](https://leetcode.com/tag/string/) |
 
 ---
 
