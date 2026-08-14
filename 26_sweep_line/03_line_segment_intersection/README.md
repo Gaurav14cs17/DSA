@@ -30,7 +30,6 @@ permalink: /26_sweep_line/03_line_segment_intersection/
 | **Difficulty** | Hard |
 | **Problems** | 8 |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
@@ -171,7 +170,6 @@ $$\text{collinear}(p, q, r) \land \min(p_x, q_x) \leq r_x \leq \max(p_x, q_x)
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy Problems
-
 | # | Problem | Difficulty | Solution Pattern |
 |---|---------|------------|------------------|
 | 1232 | [Check If Straight Line](https://leetcode.com/problems/check-if-it-is-a-straight-line/) | Easy | Cross product |
@@ -180,7 +178,6 @@ $$\text{collinear}(p, q, r) \land \min(p_x, q_x) \leq r_x \leq \max(p_x, q_x)
 ---
 
 ### 🟡 Medium Problems
-
 | # | Problem | Difficulty | Solution Pattern |
 |---|---------|------------|------------------|
 | 149 | [Max Points on a Line](https://leetcode.com/problems/max-points-on-a-line/) | Medium | Slope counting |
@@ -191,7 +188,6 @@ $$\text{collinear}(p, q, r) \land \min(p_x, q_x) \leq r_x \leq \max(p_x, q_x)
 ---
 
 ### 🔴 Hard Problems
-
 | # | Problem | Difficulty | Solution Pattern |
 |---|---------|------------|------------------|
 | 587 | [Erect the Fence](https://leetcode.com/problems/erect-the-fence/) | Hard | Convex hull (Graham scan) |
@@ -231,14 +227,12 @@ $$\text{collinear}(p, q, r) \land \min(p_x, q_x) \leq r_x \leq \max(p_x, q_x)
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
-
 | Resource | Description | Link |
 |----------|-------------|------|
 | **Line Segment Intersection** | GeeksforGeeks | [Intersection](https://www.geeksforgeeks.org/check-if-two-given-line-segments-intersect/) |
 | **Convex Hull** | Wikipedia | [Convex hull](https://en.wikipedia.org/wiki/Convex_hull) |
 
 ### 📝 Practice
-
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Geometry tag | [Problems](https://leetcode.com/tag/geometry/) |
