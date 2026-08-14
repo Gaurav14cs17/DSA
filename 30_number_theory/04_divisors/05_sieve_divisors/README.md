@@ -46,7 +46,6 @@ permalink: /30_number_theory/04_divisors/05_sieve_divisors/
 | **In one line** | Precomputing Divisor Functions Efficiently |
 | **Difficulty** | Medium |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
