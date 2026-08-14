@@ -569,7 +569,7 @@ print(f"Original: {inverse_bwt(bwt)}")
 
 ---
 
-## 🧩 LeetCode Problems
+## 🏆 LeetCode Problems
 
 ### Medium
 
@@ -718,6 +718,24 @@ class LCPQuery:
 - [Stanford CS166: Suffix Arrays](https://web.stanford.edu/class/cs166/)
 
 - [Kasai's Algorithm Paper](https://www.sciencedirect.com/science/article/pii/S0304397501000225)
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **Suffix Array** | CP-Algorithms | [Suffix array](https://cp-algorithms.com/string/suffix-array.html) |
+| **LCP Array** | Stanford CS166 | [Suffix Arrays](https://web.stanford.edu/class/cs166/) |
+| **Kasai's Algorithm** | GeeksforGeeks | [LCP array](https://www.geeksforgeeks.org/kasais-algorithm-for-construction-of-lcp-array-from-suffix-array/) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | String tag | [Problems](https://leetcode.com/tag/string/) |
 
 ---
 
