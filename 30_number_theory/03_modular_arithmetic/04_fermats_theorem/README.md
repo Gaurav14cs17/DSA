@@ -34,8 +34,8 @@ nav_order: 4
 ## 🎯 At a Glance
 
 | | |
-|:---| **Topic** | Fermat's Theorem |
-|:---|
+|:---|:---|
+| **Topic** | Fermat's Theorem |
 | **Typical time** | O(log p) for inverse/exponentiation |
 | **Typical space** | O(1) |
 
