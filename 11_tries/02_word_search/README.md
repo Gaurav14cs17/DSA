@@ -257,18 +257,12 @@ def wordBreak(s: str, wordDict: list[str]) -> bool:
 
 ## 📊 Word Search Pattern
 
-```
-Word Search Problem
-        |
-        +-- Single word in grid → Simple DFS
-        |
-        +-- Multiple words → Trie + DFS
-        |
-        +-- Wildcards → Trie + Branching
-        |
-        +-- Word segmentation → Trie + DP
+<div align="center">
 
-```
+<img src="./image/word-search-pattern.png" alt="Word Search Pattern" width="100%">
+
+</div>
+
 
 ---
 
