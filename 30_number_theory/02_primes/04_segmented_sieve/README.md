@@ -40,131 +40,25 @@ permalink: /30_number_theory/02_primes/04_segmented_sieve/
 
 ### Walkthrough 1: Segmented Sieve Concept
 
-```
-+-----------------------------------------------------------------+
-| PROBLEM: Find primes in range [100, 150]                       |
-+-----------------------------------------------------------------+
-| STEP 1: Generate small primes up to √150 ≈ 12                  |
-|                                                                 |
-|   Primes ≤ 12: [2, 3, 5, 7, 11]                                |
-|                                                                 |
-| STEP 2: Create array for range [100, 150]                      |
-|                                                                 |
-|   Index:    0   1   2   3   4   5   6   7   8   9  10         |
-|   Number: 100 101 102 103 104 105 106 107 108 109 110         |
-|   Prime?:  ✓   ✓   ✓   ✓   ✓   ✓   ✓   ✓   ✓   ✓   ✓         |
-|                                                                 |
-| STEP 3: Mark multiples of small primes                         |
-|                                                                 |
-|   p = 2: First multiple ≥ 100 is 100                           |
-|          Mark: 100, 102, 104, 106, 108, 110, ...               |
-|                                                                 |
-|   p = 3: First multiple ≥ 100 is 102                           |
-|          Mark: 102, 105, 108, 111, ...                         |
-|                                                                 |
-|   p = 5: First multiple ≥ 100 is 100                           |
-|          Mark: 100, 105, 110, 115, ...                         |
-|                                                                 |
-|   p = 7: First multiple ≥ 100 is 105                           |
-|          Mark: 105, 112, 119, ...                              |
-|                                                                 |
-|   p = 11: First multiple ≥ 100 is 110                          |
-|           Mark: 110, 121, 132, ...                             |
-|                                                                 |
-| RESULT after marking:                                           |
-|                                                                 |
-|   Number: 100 101 102 103 104 105 106 107 108 109 110         |
-|   Prime?:  ×   ✓   ×   ✓   ×   ×   ×   ✓   ×   ✓   ×          |
-|                                                                 |
-| PRIMES in [100, 150]:                                          |
-|   101, 103, 107, 109, 113, 127, 131, 137, 139, 149            |
-+-----------------------------------------------------------------+
+![Walkthrough 1: Segmented Sieve Concept](./images/walkthrough-1-segmented-sieve-concept.png)
 
-```
+
 
 ---
 
 ### Walkthrough 2: Finding First Multiple
 
-```
-+-----------------------------------------------------------------+
-| HOW TO FIND: First multiple of p ≥ L                           |
-+-----------------------------------------------------------------+
-|                                                                 |
-| EXAMPLE: p = 7, L = 100                                        |
-|                                                                 |
-| Method 1: Ceiling division                                     |
-|                                                                 |
-|   ⌈100/7⌉ = ⌈14.28...⌉ = 15                                   |
-|   First multiple = 15 × 7 = 105                                |
-|                                                                 |
-| Method 2: Formula (integer arithmetic)                         |
-|                                                                 |
-|   start = ((L + p - 1) // p) * p                               |
-|         = ((100 + 7 - 1) // 7) * 7                             |
-|         = (106 // 7) * 7                                       |
-|         = 15 * 7                                               |
-|         = 105                                                  |
-|                                                                 |
-| Method 3: Using modulo                                         |
-|                                                                 |
-|   remainder = L % p = 100 % 7 = 2                              |
-|   if remainder == 0: start = L                                 |
-|   else: start = L + (p - remainder) = 100 + 5 = 105           |
-|                                                                 |
-| SPECIAL CASE: If start == p, use start = 2*p                  |
-|                                                                 |
-|   Example: p = 101, L = 100                                    |
-|   start = 101 (which is prime p itself)                        |
-|   So use start = 202 instead                                   |
-+-----------------------------------------------------------------+
+![Walkthrough 2: Finding First Multiple](./images/walkthrough-2-finding-first-multiple.png)
 
-```
+
 
 ---
 
 ### Walkthrough 3: Block-Based Sieve
 
-```
-+-----------------------------------------------------------------+
-| GENERATING ALL PRIMES UP TO 10^9 WITH LIMITED MEMORY           |
-+-----------------------------------------------------------------+
-|                                                                 |
-| PARAMETERS:                                                     |
-|   n = 10^9                                                     |
-|   √n = 31623                                                   |
-|   Block size = 10^6                                            |
-|                                                                 |
-| PHASE 1: Generate primes up to √n                              |
-|                                                                 |
-|   Standard sieve for [2, 31623]                                |
-|   Memory: ~32 KB                                               |
-|   Primes found: 3,401                                          |
-|                                                                 |
-| PHASE 2: Process in blocks                                     |
-|                                                                 |
-|   +-----------------------------------------------------+      |
-|   | Block 1: [31624, 1031623]                          |      |
-|   |   Create 1M boolean array                           |      |
-|   |   Mark multiples of small primes                    |      |
-|   |   Extract primes from block                         |      |
-|   |   Free memory, repeat                               |      |
-|   +-----------------------------------------------------+      |
-|                                                                 |
-|   +-----------------------------------------------------+      |
-|   | Block 2: [1031624, 2031623]                        |      |
-|   |   ... same process ...                              |      |
-|   +-----------------------------------------------------+      |
-|                                                                 |
-|   ... repeat for 1000 blocks ...                               |
-|                                                                 |
-| MEMORY USAGE:                                                   |
-|   Small primes array: ~32 KB                                   |
-|   Block array: ~1 MB                                           |
-|   TOTAL: ~1 MB (vs 1 GB for standard sieve!)                   |
-+-----------------------------------------------------------------+
+![Walkthrough 3: Block-Based Sieve](./images/walkthrough-3-block-based-sieve.png)
 
-```
+
 
 
 ## 🎯 At a Glance
