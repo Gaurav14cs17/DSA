@@ -370,12 +370,30 @@ if len(found_patterns) == len(patterns):
 
 ---
 
-## 🧩 LeetCode Problems
+## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty |
 |---|---------|------------|
 | 3008 | [Find Beautiful Indices](https://leetcode.com/problems/find-beautiful-indices-in-the-given-array-i/) | 🟡 Medium |
 | 30 | [Substring with Concatenation](https://leetcode.com/problems/substring-with-concatenation-of-all-words/) | 🔴 Hard |
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **Rabin-Karp** | CP-Algorithms | [Rabin-Karp algorithm](https://cp-algorithms.com/string/rabin-karp.html) |
+| **Multiple Patterns** | GeeksforGeeks | [Multiple pattern search](https://www.geeksforgeeks.org/pattern-searching-set-2-rabin-karp-algorithm/) |
+| **Rolling Hash** | USACO Guide | [String Hashing](https://usaco.guide/gold/string-hashing) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | String tag | [Problems](https://leetcode.com/tag/string/) |
 
 ---
 
