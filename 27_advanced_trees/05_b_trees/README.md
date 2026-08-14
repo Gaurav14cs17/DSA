@@ -118,18 +118,8 @@ where:
 
 **Algorithm:**
 
-```
-1. Start at root
+![B-Tree Search](./images/b-tree-search.png)
 
-2. Binary search within node for key or range
-
-3. If found, return
-
-4. Otherwise, follow appropriate child pointer
-
-5. Repeat until found or reach leaf
-
-```
 
 **Time:** $O(\log_m n)$ disk accesses, $O(m \log m)$ comparisons per node
 
@@ -196,304 +186,12 @@ where:
 
 ## 💻 Code Implementations
 
-```python
-from typing import List, Optional, Tuple
-from bisect import bisect_left, bisect_right
+![B-Tree Implementations](./images/b-tree-implementations.png)
 
-# ==================== B-TREE NODE ====================
-
-class BTreeNode:
-    """Node in B-Tree."""
-    
-    def __init__(self, leaf: bool = False):
-        self.keys: List[int] = []
-        self.children: List[BTreeNode] = []
-        self.leaf = leaf
-    
-    def is_full(self, t: int) -> bool:
-        """Check if node is full (2t-1 keys)."""
-        return len(self.keys) >= 2 * t - 1
-
-class BTree:
-    """
-    B-Tree implementation.
-    
-    Order: 2t (minimum degree)
-    - Each node has at most 2t-1 keys
-    - Each node has at least t-1 keys (except root)
-    
-    All operations: O(log n)
-    """
-    
-    def __init__(self, t: int = 3):
-        """
-        Initialize B-Tree with minimum degree t.
-        
-        t = 2: 2-3-4 tree
-        t = 3: nodes have 2-5 keys
-        """
-        self.root = BTreeNode(leaf=True)
-        self.t = t  # Minimum degree
-    
-    # ==================== SEARCH ====================
-    
-    def search(self, key: int) -> bool:
-        """
-        Search for key in B-Tree.
-        
-        Time: O(t log_t n) = O(log n)
-        """
-        return self._search(self.root, key) is not None
-    
-    def _search(self, node: BTreeNode, key: int) -> Optional[BTreeNode]:
-        """Helper for search."""
-        # Binary search in current node
-        i = bisect_left(node.keys, key)
-        
-        # Check if key found
-        if i < len(node.keys) and node.keys[i] == key:
-            return node
-        
-        # If leaf, key not in tree
-        if node.leaf:
-            return None
-        
-        # Recurse to appropriate child
-        return self._search(node.children[i], key)
-    
-    # ==================== INSERT ====================
-    
-    def insert(self, key: int) -> None:
-        """
-        Insert key into B-Tree.
-        
-        Time: O(t log_t n) = O(log n)
-        """
-        root = self.root
-        
-        # If root is full, split it
-        if root.is_full(self.t):
-            new_root = BTreeNode(leaf=False)
-            new_root.children.append(self.root)
-            self._split_child(new_root, 0)
-            self.root = new_root
-        
-        self._insert_non_full(self.root, key)
-    
-    def _insert_non_full(self, node: BTreeNode, key: int) -> None:
-        """Insert into node that is not full."""
-        i = len(node.keys) - 1
-        
-        if node.leaf:
-            # Insert into sorted position
-            node.keys.append(None)
-            while i >= 0 and key < node.keys[i]:
-                node.keys[i + 1] = node.keys[i]
-                i -= 1
-            node.keys[i + 1] = key
-        else:
-            # Find child to insert into
-            while i >= 0 and key < node.keys[i]:
-                i -= 1
-            i += 1
-            
-            # Split child if full
-            if node.children[i].is_full(self.t):
-                self._split_child(node, i)
-                if key > node.keys[i]:
-                    i += 1
-            
-            self._insert_non_full(node.children[i], key)
-    
-    def _split_child(self, parent: BTreeNode, i: int) -> None:
-        """
-        Split full child at index i of parent.
-        
-        Time: O(t)
-        """
-        t = self.t
-        full_child = parent.children[i]
-        new_child = BTreeNode(leaf=full_child.leaf)
-        
-        # New child gets second half of keys
-        mid_index = t - 1
-        new_child.keys = full_child.keys[mid_index + 1:]
-        full_child.keys = full_child.keys[:mid_index]
-        
-        # If not leaf, split children too
-        if not full_child.leaf:
-            new_child.children = full_child.children[mid_index + 1:]
-            full_child.children = full_child.children[:mid_index + 1]
-        
-        # Move middle key up to parent
-        parent.keys.insert(i, full_child.keys[mid_index])
-        parent.children.insert(i + 1, new_child)
-    
-    # ==================== RANGE QUERY ====================
-    
-    def range_query(self, low: int, high: int) -> List[int]:
-        """
-        Find all keys in range [low, high].
-        
-        Time: O(log n + k) where k = result size
-        """
-        result = []
-        self._range_query(self.root, low, high, result)
-        return result
-    
-    def _range_query(self, node: BTreeNode, low: int, high: int, 
-                     result: List[int]) -> None:
-        """Helper for range query."""
-        # Find starting position
-        i = bisect_left(node.keys, low)
-        
-        while i < len(node.keys) and node.keys[i] <= high:
-            # Recurse left child
-            if not node.leaf and i < len(node.children):
-                self._range_query(node.children[i], low, high, result)
-            
-            # Add current key if in range
-            if low <= node.keys[i] <= high:
-                result.append(node.keys[i])
-            
-            i += 1
-        
-        # Recurse rightmost child
-        if not node.leaf and i < len(node.children):
-            self._range_query(node.children[i], low, high, result)
-    
-    # ==================== UTILITY ====================
-    
-    def inorder(self) -> List[int]:
-        """Inorder traversal."""
-        result = []
-        self._inorder(self.root, result)
-        return result
-    
-    def _inorder(self, node: BTreeNode, result: List[int]) -> None:
-        """Helper for inorder."""
-        i = 0
-        for i in range(len(node.keys)):
-            if not node.leaf:
-                self._inorder(node.children[i], result)
-            result.append(node.keys[i])
-        
-        if not node.leaf:
-            self._inorder(node.children[i + 1], result)
-
-# ==================== B+ TREE (SIMPLIFIED) ====================
-
-class BPlusTreeNode:
-    """Node in B+ Tree."""
-    
-    def __init__(self, leaf: bool = False):
-        self.keys: List[int] = []
-        self.children: List[BPlusTreeNode] = []
-        self.values: List[any] = []  # Only in leaf nodes
-        self.next_leaf: Optional[BPlusTreeNode] = None  # Link leaves
-        self.leaf = leaf
-
-class BPlusTree:
-    """
-    Simplified B+ Tree (all data in leaves).
-    
-    Better for range queries and sequential access.
-    """
-    
-    def __init__(self, t: int = 3):
-        self.root = BPlusTreeNode(leaf=True)
-        self.t = t
-        self.leftmost_leaf = self.root
-    
-    def range_query(self, low: int, high: int) -> List[Tuple[int, any]]:
-        """
-        Efficient range query using leaf links.
-        
-        Time: O(log n + k)
-        """
-        # Find starting leaf
-        leaf = self._find_leaf(low)
-        result = []
-        
-        # Scan leaves sequentially
-        while leaf:
-            for i, key in enumerate(leaf.keys):
-                if low <= key <= high:
-                    result.append((key, leaf.values[i]))
-                elif key > high:
-                    return result
-            leaf = leaf.next_leaf
-        
-        return result
-    
-    def _find_leaf(self, key: int) -> BPlusTreeNode:
-        """Find leaf that should contain key."""
-        node = self.root
-        
-        while not node.leaf:
-            i = bisect_right(node.keys, key)
-            if i == len(node.keys):
-                node = node.children[-1]
-            else:
-                node = node.children[i]
-        
-        return node
-
-# ==================== APPLICATIONS ====================
-
-class DatabaseIndex:
-    """
-    Simulate database index using B+ Tree.
-    """
-    
-    def __init__(self):
-        self.index = BPlusTree(t=100)  # Large branching factor
-    
-    def insert_record(self, key: int, record: dict) -> None:
-        """Insert record with key."""
-        # In real implementation, would insert into B+ tree
-        pass
-    
-    def find_record(self, key: int) -> Optional[dict]:
-        """Find record by key."""
-        # Search B+ tree
-        pass
-    
-    def range_scan(self, start_key: int, end_key: int) -> List[dict]:
-        """Efficient range scan using leaf links."""
-        return self.index.range_query(start_key, end_key)
-
-def my_calendar_btree():
-    """
-    LeetCode 729: My Calendar I using B-Tree
-    (Efficient for many bookings)
-    """
-    class MyCalendar:
-        def __init__(self):
-            self.tree = BTree(t=50)
-            self.intervals = []
-        
-        def book(self, start: int, end: int) -> bool:
-            # Check for overlap
-            overlapping = self.tree.range_query(start, end - 1)
-            if overlapping:
-                for interval_start in overlapping:
-                    # Check actual intervals
-                    for s, e in self.intervals:
-                        if s == interval_start and s < end and start < e:
-                            return False
-            
-            self.tree.insert(start)
-            self.intervals.append((start, end))
-            return True
-    
-    return MyCalendar
-
-```
 
 ---
 
-## 🎯 LeetCode Problems
+## 🏆 LeetCode Problems
 
 ### 🟡 Medium Problems
 
@@ -543,5 +241,22 @@ def my_calendar_btree():
 6. **B+ tree for DB:** All data in leaves, internal nodes pure index
 
 7. **Range queries:** B+ tree excels with leaf links
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **B-Trees** | Wikipedia | [B-tree](https://en.wikipedia.org/wiki/B-tree) |
+| **B+ Trees** | GeeksforGeeks | [B+ tree](https://www.geeksforgeeks.org/introduction-of-b-tree/) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | Tree tag | [Problems](https://leetcode.com/tag/tree/) |
 
 ---
