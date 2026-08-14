@@ -13,6 +13,9 @@ permalink: /30_number_theory/07_linear_diophantine/03_frobenius_number/
 
 ### *The Largest Non-Representable Number*
 
+![*The Largest Non-Representable Number*](./images/the-largest-non-representable-number.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Classic-Coin_Problem-green?style=for-the-badge" alt="Coin">
@@ -38,29 +41,6 @@ permalink: /30_number_theory/07_linear_diophantine/03_frobenius_number/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| FROBENIUS NUMBER FOR a=3, b=5                                  |
-+-----------------------------------------------------------------+
-|                                                                 |
-| g(3, 5) = 3×5 - 3 - 5 = 7                                      |
-|                                                                 |
-| Representable numbers (3x + 5y, x,y ≥ 0):                      |
-|   0 = 0×3 + 0×5 ✓                                              |
-|   3 = 1×3 + 0×5 ✓                                              |
-|   5 = 0×3 + 1×5 ✓                                              |
-|   6 = 2×3 + 0×5 ✓                                              |
-|   8 = 1×3 + 1×5 ✓                                              |
-|   9 = 3×3 + 0×5 ✓                                              |
-|   10 = 0×3 + 2×5 ✓                                             |
-|   ...all numbers ≥ 8 are representable                         |
-|                                                                 |
-| Non-representable: {1, 2, 4, 7}                                |
-| Largest = 7 ✓                                                  |
-| Count = 4 = (3-1)(5-1)/2 ✓                                     |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
