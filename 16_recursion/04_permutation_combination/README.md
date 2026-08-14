@@ -319,21 +319,12 @@ def letterCombinations(digits: str) -> list[str]:
 
 ## 📊 Pattern Decision Tree
 
-```
-Combinatorial Problem
-       |
-       +-- Order matters? --YES--→ PERMUTATION
-       |                           +-- Has duplicates? → Use visited + sort
-       |
-       +-- Order matters? --NO---→ COMBINATION / SUBSET
-       |                           +-- Fixed size k? → Combination C(n,k)
-       |                           +-- All sizes? → Subset (Power Set)
-       |
-       +-- Can reuse elements?
-           +-- YES → start from i (not i+1)
-           +-- NO  → start from i+1
+<div align="center">
 
-```
+<img src="./images/combinatorial-decision.png" alt="Combinatorial Pattern Decision" width="100%">
+
+</div>
+
 
 ---
 
