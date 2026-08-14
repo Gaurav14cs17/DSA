@@ -39,7 +39,6 @@ permalink: /41_loop_fusion_online/04_streaming_algorithms/
 | **Difficulty** | Hard |
 | **Problems** | 10+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
