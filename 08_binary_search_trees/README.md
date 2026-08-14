@@ -185,7 +185,6 @@ def searchBST(root: TreeNode, val: int) -> TreeNode:
     while root and root.val != val:
         root = root.left if val < root.val else root.right
     return root
-
 ```
 
 ### BST Insert
@@ -206,7 +205,6 @@ def insertIntoBST(root: TreeNode, val: int) -> TreeNode:
         root.right = insertIntoBST(root.right, val)
     
     return root
-
 ```
 
 ### BST Delete
@@ -242,8 +240,27 @@ def deleteNode(root: TreeNode, key: int) -> TreeNode:
         root.right = deleteNode(root.right, successor.val)
     
     return root
-
 ```
+
+![BST Delete](./images/bst-overview.png)
+
+```text
+BST Problem
+     |
+ Search    Insert    Delete    Validate
+```
+
+![📊 BST Pattern Decision](./images/bst-overview.png)
+
+### Pattern Checklist
+
+- [ ] Can I use BST property to eliminate half the search space?
+- [ ] Do I need inorder traversal (sorted order)?
+- [ ] Should I use iterative instead of recursive (space)?
+- [ ] Can I solve in O(h) instead of O(n)?
+- [ ] Do I need to augment nodes with extra info (size, height)?
+- [ ] Is this a balanced BST (guaranteed O(log n))?
+
 
 ---
 
@@ -253,220 +270,42 @@ def deleteNode(root: TreeNode, key: int) -> TreeNode:
 
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
-| 108 | [Convert Sorted Array to BST](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | Binary Split | O(n) | O(log n) |
-| 235 | [LCA of BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | BST Property | O(h) | O(1) |
-| 530 | [Minimum Absolute Difference](https://leetcode.com/problems/minimum-absolute-difference-in-bst/) | Inorder | O(n) | O(h) |
-| 700 | [Search in BST](https://leetcode.com/problems/search-in-a-binary-search-tree/) | Binary Search | O(h) | O(1) |
-| 783 | [Minimum Distance Between BST Nodes](https://leetcode.com/problems/minimum-distance-between-bst-nodes/) | Inorder | O(n) | O(h) |
+| 700 | [Search in BST](https://leetcode.com/problems/search-in-a-binary-search-tree/) | BST Search | O(h) | O(h) |
+| 938 | [Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/) | DFS | O(n) | O(h) |
+| 108 | [Convert Sorted Array to BST](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | Recursion | O(n) | O(n) |
 
 ### 🟡 Medium
 
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
-| 98 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | Range Check | O(n) | O(h) |
-| 173 | [BST Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | Controlled Inorder | O(1)* | O(h) |
-| 230 | [Kth Smallest Element](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Inorder | O(h+k) | O(h) |
-| 285 | [Inorder Successor in BST](https://leetcode.com/problems/inorder-successor-in-bst/) | BST Property | O(h) | O(1) |
-| 450 | [Delete Node in BST](https://leetcode.com/problems/delete-node-in-a-bst/) | Three Cases | O(h) | O(h) |
-| 501 | [Find Mode in BST](https://leetcode.com/problems/find-mode-in-binary-search-tree/) | Inorder | O(n) | O(1) |
-| 538 | [Convert BST to Greater Tree](https://leetcode.com/problems/convert-bst-to-greater-tree/) | Reverse Inorder | O(n) | O(h) |
-| 653 | [Two Sum IV - BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/) | Inorder + Two Pointers | O(n) | O(n) |
-| 669 | [Trim a BST](https://leetcode.com/problems/trim-a-binary-search-tree/) | Recursion | O(n) | O(h) |
-| 701 | [Insert into BST](https://leetcode.com/problems/insert-into-a-binary-search-tree/) | BST Property | O(h) | O(h) |
-| 1038 | [BST to Greater Sum Tree](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/) | Reverse Inorder | O(n) | O(h) |
+| 98 | [Validate BST](https://leetcode.com/problems/validate-binary-search-tree/) | Inorder/Bounds | O(n) | O(h) |
+| 230 | [Kth Smallest in BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Inorder | O(n) | O(h) |
+| 450 | [Delete Node in BST](https://leetcode.com/problems/delete-node-in-a-bst/) | BST Delete | O(h) | O(h) |
+| 501 | [Find Mode in BST](https://leetcode.com/problems/find-mode-in-binary-search-tree/) | Inorder | O(n) | O(h) |
 
 ### 🔴 Hard
 
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
-| 99 | [Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/) | Inorder Detect | O(n) | O(h) |
-
----
-
-## 📊 BST Pattern Decision
-
-```
-BST Problem
-     |
-     +-- Search/Insert/Delete → Use BST property (O(h))
-     |
-     +-- Sorted order needed → Inorder traversal
-     |
-     +-- Range queries → Validate with bounds
-     |
-     +-- Kth element → Inorder with count
-
-```
-
----
-
-## 💡 Key Insights & Pro Tips
-
-> **🎯 Inorder = Sorted:** BST inorder traversal gives sorted sequence. Key for validation, kth smallest!
-
-> **⚡ BST Property = Binary Search:** Compare with node, go left/right. O(log n) in balanced tree!
-
-> **🔄 Delete = 3 Cases:** Leaf (easy), one child (replace), two children (use successor)!
-
-> **📊 Validation Needs Bounds:** Not just left < node < right. Must check ENTIRE subtree ranges!
-
-> **🌊 Reverse Inorder = Descending:** Right → Node → Left gives descending order. Useful for greater sum tree!
-
----
-
-## 🧮 Quick Pattern Reference
-
-| Pattern in Problem | Technique | Example |
-|-------------------|-----------|---------|
-| "search in BST" | Binary search tree | #700 |
-| "insert into BST" | Recursive placement | #701 |
-| "delete from BST" | Three cases | #450 |
-| "validate BST" | Range checking | #98 |
-| "kth smallest" | Inorder with count | #230 |
-| "inorder successor" | BST navigation | #285 |
-| "convert to greater tree" | Reverse inorder | #538, #1038 |
-| "sorted array to BST" | Binary split | #108 |
-| "LCA in BST" | BST property | #235 |
-| "two sum in BST" | Inorder + pointers | #653 |
-
----
-
-## 🎯 Must-Solve Problems (Top 15)
-
-| # | Problem | Category | Difficulty | Why Important |
-|:-:|---------|----------|------------|---------------|
-| 1 | [Search in BST](https://leetcode.com/problems/search-in-a-binary-search-tree/) | Operations | 🟢 Easy | BST foundation |
-| 2 | [Insert into BST](https://leetcode.com/problems/insert-into-a-binary-search-tree/) | Operations | 🟡 Medium | Basic operation |
-| 3 | [Delete Node](https://leetcode.com/problems/delete-node-in-a-bst/) | Operations | 🟡 Medium | Three cases |
-| 4 | [Validate BST](https://leetcode.com/problems/validate-binary-search-tree/) | Validation | 🟡 Medium | Classic problem |
-| 5 | [Kth Smallest](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Queries | 🟡 Medium | Inorder pattern |
-| 6 | [LCA of BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | Queries | 🟢 Easy | BST property |
-| 7 | [Sorted Array to BST](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | Construction | 🟢 Easy | Build balanced |
-| 8 | [BST Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | Design | 🟡 Medium | Controlled inorder |
-| 9 | [Inorder Successor](https://leetcode.com/problems/inorder-successor-in-bst/) | Queries | 🟡 Medium | Navigation |
-| 10 | [Convert to Greater Tree](https://leetcode.com/problems/convert-bst-to-greater-tree/) | Transformation | 🟡 Medium | Reverse inorder |
-| 11 | [Two Sum IV](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/) | Queries | 🟢 Easy | Inorder + hash |
-| 12 | [Trim BST](https://leetcode.com/problems/trim-a-binary-search-tree/) | Operations | 🟡 Medium | Range pruning |
-| 13 | [Min Absolute Difference](https://leetcode.com/problems/minimum-absolute-difference-in-bst/) | Queries | 🟢 Easy | Consecutive inorder |
-| 14 | [Find Mode](https://leetcode.com/problems/find-mode-in-binary-search-tree/) | Queries | 🟡 Medium | Frequency tracking |
-| 15 | [Recover BST](https://leetcode.com/problems/recover-binary-search-tree/) | Validation | 🔴 Hard | Detect swapped |
+| 99 | [Recover BST](https://leetcode.com/problems/recover-binary-search-tree/) | Inorder | O(n) | O(h) |
 
 ---
 
 ## 📚 References & Learning Resources
 
-### 📖 Books & Courses
+### 📖 Core Concepts
 
 | Resource | Description | Link |
 |----------|-------------|------|
-| **CLRS Chapter 12** | Binary search trees | [MIT Press](https://mitpress.mit.edu/books/introduction-algorithms) |
-| **Algorithms 4th Edition** | BST implementations | [Book Site](https://algs4.cs.princeton.edu/) |
-| **Competitive Programming 3** | Chapter 2.3 - BST | [Book](https://cpbook.net/) |
+| **Binary Search Tree** | Wikipedia | [BST](https://en.wikipedia.org/wiki/Binary_search_tree) |
+| **GeeksforGeeks** | BST guide | [Tutorial](https://www.geeksforgeeks.org/binary-search-tree-data-structure/) |
+| **LeetCode Explore** | BST card | [Explore Card](https://leetcode.com/explore/learn/card/introduction-to-data-structure-binary-search-tree/) |
 
-### 🌐 Online Tutorials
-
-| Resource | Description | Link |
-|----------|-------------|------|
-| **GeeksforGeeks** | BST complete guide | [Tutorial](https://www.geeksforgeeks.org/binary-search-tree-data-structure/) |
-| **LeetCode Explore** | BST card | [Course](https://leetcode.com/explore/learn/card/introduction-to-data-structure-binary-search-tree/) |
-| **VisuAlgo** | Interactive BST | [Website](https://visualgo.net/en/bst) |
-| **HackerRank** | BST challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=trees) |
-
-### 📺 Video Resources
-
-| Resource | Topic | Link |
-|----------|-------|------|
-| **NeetCode** | BST playlist | [YouTube](https://www.youtube.com/playlist?list=PLot-Xpze53ldg4pN6PfzoJY7KsKcxF1jg) |
-| **Abdul Bari** | BST lectures | [YouTube](https://www.youtube.com/watch?v=pYT9F8_LFTM) |
-| **MIT OCW** | Binary search trees | [Lecture](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/) |
-| **Back To Back SWE** | BST problems | [YouTube](https://www.youtube.com/playlist?list=PLiQ766zSC5jND9vxch5-zT7GuMigiWaV_) |
-| **William Fiset** | BST algorithms | [YouTube](https://www.youtube.com/watch?v=JfSdGQdAzq8) |
-
-### 📝 Practice Platforms
+### 📝 Practice
 
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | BST tag | [Problems](https://leetcode.com/tag/binary-search-tree/) |
-| **HackerRank** | BST challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=trees) |
-| **Codeforces** | BST problems | [Problemset](https://codeforces.com/problemset?tags=trees) |
-| **CodeChef** | BST practice | [Practice](https://www.codechef.com/practice) |
-
-### 🔬 Advanced Topics
-
-| Topic | Description | Link |
-|-------|-------------|------|
-| **AVL Trees** | Self-balancing BST | [Tutorial](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/) |
-| **Red-Black Trees** | Another balanced BST | [Wikipedia](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree) |
-| **Splay Trees** | Self-adjusting BST | [Wikipedia](https://en.wikipedia.org/wiki/Splay_tree) |
-| **B-Trees** | Generalized BST | [Tutorial](https://www.geeksforgeeks.org/introduction-of-b-tree-2/) |
-| **Treap** | Randomized BST | [CP-Algorithms](https://cp-algorithms.com/data_structures/treap.html) |
-
-### 🎯 Problem Collections
-
-| Collection | Focus | Link |
-|-----------|-------|------|
-| **NeetCode 150** | Essential BST | [List](https://neetcode.io/practice) |
-| **Blind 75** | Core interview | [List](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-75-LeetCode-Questions-to-Save-Your-Time-OaM1orEU) |
-| **Grind 75** | Structured prep | [Guide](https://www.techinterviewhandbook.org/grind75) |
-| **Striver's SDE Sheet** | Must-do BST | [Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/) |
-
-### 📊 Visualization Tools
-
-| Tool | Purpose | Link |
-|------|---------|------|
-| **VisuAlgo** | BST operations | [Website](https://visualgo.net/en/bst) |
-| **Algorithm Visualizer** | BST algorithms | [Website](https://algorithm-visualizer.org/) |
-| **CS Animations** | BST visualizations | [Website](https://www.cs.usfca.edu/~galles/visualization/BST.html) |
-
-### 🏆 Competition Resources
-
-| Resource | Topic | Link |
-|----------|-------|------|
-| **USACO Guide** | BST guide | [Guide](https://usaco.guide/silver/intro-tree) |
-| **TopCoder** | BST tutorials | [Tutorials](https://www.topcoder.com/thrive/articles/) |
-| **Codeforces EDU** | Tree courses | [Course](https://codeforces.com/edu/course/2) |
-
----
-
-## 🎖️ Interview Success Tips
-
-### Common Mistakes to Avoid
-
-❌ **Don't:**
-
-- Validate BST by only checking immediate children
-
-- Forget to handle duplicate values (usually not allowed)
-
-- Use global variables for tracking state
-
-- Forget the three cases in deletion
-
-- Ignore that inorder gives sorted sequence
-
-✅ **Do:**
-
-- Validate with min/max bounds for entire subtree
-
-- Clarify if duplicates allowed (usually no)
-
-- Pass state through parameters or return values
-
-- Master deletion: leaf, one child, two children
-
-- Use inorder for sorted-order problems
-
-### Optimization Checklist
-
-```
-[ ] Can I use BST property to eliminate half the search space?
-[ ] Do I need inorder traversal (sorted order)?
-[ ] Should I use iterative instead of recursive (space)?
-[ ] Can I solve in O(h) instead of O(n)?
-[ ] Do I need to augment nodes with extra info (size, height)?
-[ ] Is this a balanced BST (guaranteed O(log n))?
-
-```
 
 ---
 
