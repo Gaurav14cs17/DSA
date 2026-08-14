@@ -13,6 +13,9 @@ permalink: /30_number_theory/06_chinese_remainder/
 
 ### *Solving Systems of Linear Congruences*
 
+![*Solving Systems of Linear Congruences*](./images/solving-systems-of-linear-congruences.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
@@ -28,32 +31,8 @@ permalink: /30_number_theory/06_chinese_remainder/
 
 ## 📊 Visual Overview
 
-```
-+-----------------------------------------------------------------+
-| PROBLEM: Solve x ≡ 2 (mod 3), x ≡ 3 (mod 5), x ≡ 2 (mod 7)   |
-+-----------------------------------------------------------------+
-| STEP 1: Compute M = 3 × 5 × 7 = 105                            |
-|                                                                 |
-| STEP 2: Compute M_i values                                     |
-|   M₁ = 105/3 = 35                                              |
-|   M₂ = 105/5 = 21                                              |
-|   M₃ = 105/7 = 15                                              |
-|                                                                 |
-| STEP 3: Compute modular inverses y_i                           |
-|   y₁ = 35⁻¹ (mod 3) = 2⁻¹ (mod 3) = 2                         |
-|   y₂ = 21⁻¹ (mod 5) = 1⁻¹ (mod 5) = 1                         |
-|   y₃ = 15⁻¹ (mod 7) = 1⁻¹ (mod 7) = 1                         |
-|                                                                 |
-| STEP 4: Compute x                                               |
-|   x = 2×35×2 + 3×21×1 + 2×15×1                                 |
-|     = 140 + 63 + 30                                            |
-|     = 233                                                      |
-|     = 233 mod 105 = 23                                         |
-|                                                                 |
-| VERIFY: 23 mod 3 = 2 ✓, 23 mod 5 = 3 ✓, 23 mod 7 = 2 ✓        |
-+-----------------------------------------------------------------+
+![Chinese Remainder Theorem Overview](./images/chinese-remainder-overview.png)
 
-```
 
 ---
 
