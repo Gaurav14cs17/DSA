@@ -43,7 +43,6 @@ permalink: /15_searching/03_binary_search_2d_array/
 | **Difficulty** | Medium |
 | **Problems** | 5+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
