@@ -63,14 +63,12 @@ $$dp[i][\text{state}] = \text{optimal value at position } i \text{ in state}$$
 
 ### 2️⃣ Stock Trading States
 
-```
-        buy          sell
-[rest] -----> [hold] -----> [sold]
-  ^                            |
-  |____________________________|
-              rest
+<div align="center">
 
-```
+<img src="./images/stock-trading-states.png" alt="Stock Trading States" width="100%">
+
+</div>
+
 
 ---
 
