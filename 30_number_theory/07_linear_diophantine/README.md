@@ -28,6 +28,8 @@ permalink: /30_number_theory/07_linear_diophantine/
 
 ## 📊 Visual Overview
 
+![Linear Diophantine Overview](./images/linear-diophantine-overview.png)
+
 > *Concept map and key formulas — dive into subtopics for detailed walkthroughs and code.*
 
 ---
