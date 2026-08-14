@@ -40,128 +40,25 @@ permalink: /30_number_theory/02_primes/02_sieve_eratosthenes/
 
 ### Walkthrough 1: Basic Sieve
 
-```
-+-----------------------------------------------------------------+
-| PROBLEM: Find all primes up to 30                              |
-+-----------------------------------------------------------------+
-| STEP 0: Initialize array                                       |
-|                                                                 |
-|   Index:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15      |
-|   Value:  ×  ×  ✓  ✓  ✓  ✓  ✓  ✓  ✓  ✓  ✓  ✓  ✓  ✓  ✓  ✓      |
-|                                                                 |
-|   Index: 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30         |
-|   Value:  ✓  ✓  ✓  ✓  ✓  ✓  ✓  ✓  ✓  ✓  ✓  ✓  ✓  ✓  ✓         |
-|                                                                 |
-| STEP 1: p = 2 (first prime)                                    |
-|   Mark multiples starting from 2² = 4: 4, 6, 8, 10, ...       |
-|                                                                 |
-|   Index:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15      |
-|   Value:  ×  ×  ✓  ✓  ×  ✓  ×  ✓  ×  ✓  ×  ✓  ×  ✓  ×  ✓      |
-|                                                                 |
-|   Index: 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30         |
-|   Value:  ×  ✓  ×  ✓  ×  ✓  ×  ✓  ×  ✓  ×  ✓  ×  ✓  ×         |
-|                                                                 |
-| STEP 2: p = 3 (next unmarked)                                  |
-|   Mark multiples starting from 3² = 9: 9, 12, 15, ...         |
-|   (Some already marked by 2)                                   |
-|                                                                 |
-|   Index:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15      |
-|   Value:  ×  ×  ✓  ✓  ×  ✓  ×  ✓  ×  ×  ×  ✓  ×  ✓  ×  ×      |
-|                                                                 |
-|   Index: 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30         |
-|   Value:  ×  ✓  ×  ✓  ×  ×  ×  ✓  ×  ✓  ×  ×  ×  ✓  ×         |
-|                                                                 |
-| STEP 3: p = 5 (next unmarked)                                  |
-|   Mark multiples starting from 5² = 25: 25, 30                |
-|                                                                 |
-|   Index: 25 26 27 28 29 30                                    |
-|   Value:  ×  ×  ×  ×  ✓  ×  (25 newly marked)                 |
-|                                                                 |
-| STEP 4: p = 7, but 7² = 49 > 30, so STOP                      |
-|                                                                 |
-| RESULT: Primes = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29}         |
-|         Count = 10 primes                                      |
-+-----------------------------------------------------------------+
+![Walkthrough 1: Basic Sieve](./images/walkthrough-1-basic-sieve.png)
 
-```
+
 
 ---
 
 ### Walkthrough 2: Why p² Optimization Works
 
-```
-+-----------------------------------------------------------------+
-| When processing p = 7, why start at 7² = 49?                   |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Multiples of 7 less than 49:                                   |
-|                                                                 |
-|   2 × 7 = 14  ← Already marked when p = 2                     |
-|   3 × 7 = 21  ← Already marked when p = 3                     |
-|   4 × 7 = 28  ← Already marked when p = 2 (4 = 2×2)           |
-|   5 × 7 = 35  ← Already marked when p = 5                     |
-|   6 × 7 = 42  ← Already marked when p = 2 (6 = 2×3)           |
-|                                                                 |
-| First NEW multiple to mark: 7 × 7 = 49                        |
-|                                                                 |
-| GENERAL RULE:                                                   |
-|   For prime p, any composite p × k where k < p                 |
-|   has a prime factor < p, so already marked.                   |
-|                                                                 |
-| SAVINGS:                                                        |
-|   Without optimization: mark n/p multiples                     |
-|   With optimization: mark n/p - p multiples                    |
-|                                                                 |
-|   For p = 7, n = 100:                                          |
-|   Without: 14 multiples (14, 21, 28, ..., 98)                 |
-|   With: 7 multiples (49, 56, 63, ..., 98)                     |
-|   50% fewer operations!                                        |
-+-----------------------------------------------------------------+
+![Walkthrough 2: Why p² Optimization Works](./images/walkthrough-2-why-p-squared-optimization-works.png)
 
-```
+
 
 ---
 
 ### Walkthrough 3: Linear Sieve Concept
 
-```
-+-----------------------------------------------------------------+
-| LINEAR SIEVE: Mark each composite exactly ONCE                 |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Key Idea: Mark i × p where p = smallest prime factor of i×p   |
-|                                                                 |
-| Example for n = 12:                                            |
-|                                                                 |
-| i=2: primes=[]                                                 |
-|   2 is prime → add to list, primes = [2]                       |
-|                                                                 |
-| i=3: primes=[2]                                                |
-|   3 is prime → add to list, primes = [2, 3]                    |
-|   Mark 2×3=6 with SPF=2                                        |
-|   Stop: 3 % 2 ≠ 0                                              |
-|                                                                 |
-| i=4: primes=[2,3]                                              |
-|   4 = 2×2, SPF[4]=2, not prime                                 |
-|   Mark 2×4=8 with SPF=2                                        |
-|   Stop: 4 % 2 = 0 (KEY! This prevents duplicate marking)       |
-|                                                                 |
-| i=5: primes=[2,3]                                              |
-|   5 is prime → add, primes = [2, 3, 5]                         |
-|   Mark 2×5=10 with SPF=2                                       |
-|   Stop: 5 % 2 ≠ 0, but 3×5=15 > 12                             |
-|                                                                 |
-| i=6: SPF[6]=2                                                  |
-|   Mark 2×6=12 with SPF=2                                       |
-|   Stop: 6 % 2 = 0                                              |
-|                                                                 |
-| Result: Each composite marked EXACTLY once by its SPF          |
-|   4 marked once, 6 marked once, 8 marked once, etc.           |
-|                                                                 |
-| TIME: O(n) - truly linear!                                     |
-+-----------------------------------------------------------------+
+![Walkthrough 3: Linear Sieve Concept](./images/walkthrough-3-linear-sieve-concept.png)
 
-```
+
 
 
 ## 🎯 At a Glance
