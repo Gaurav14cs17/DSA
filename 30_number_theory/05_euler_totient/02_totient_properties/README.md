@@ -45,7 +45,6 @@ permalink: /30_number_theory/05_euler_totient/02_totient_properties/
 | **In one line** | Key Identities and Theorems |
 | **Difficulty** | Medium |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
