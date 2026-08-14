@@ -40,7 +40,6 @@ permalink: /31_combinatorics/
 ---
 
 ### Pattern 1: Pascal's Triangle
-
 <div align="center">
 
 ![Pascal's Triangle](./images/pascal-triangle-pattern.png)
@@ -49,7 +48,6 @@ permalink: /31_combinatorics/
 
 
 ### Pattern 2: Catalan Numbers Visualization
-
 <div align="center">
 
 ![Catalan Numbers](./images/catalan-numbers-pattern.png)
@@ -67,7 +65,6 @@ permalink: /31_combinatorics/
 | **Subtopics** | 3 |
 | **Problems** | 50+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 
