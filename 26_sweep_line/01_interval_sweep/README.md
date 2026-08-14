@@ -30,7 +30,6 @@ permalink: /26_sweep_line/01_interval_sweep/
 | **Difficulty** | Medium |
 | **Problems** | 9 |
 
-{: .highlight }
 > **How to use this page:** Scan **At a Glance**, then work through theory → visuals → code.
 
 ---
@@ -184,7 +183,6 @@ $$\Delta[i] = A[i] - A[i-1]$$
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy Problems
-
 | # | Problem | Difficulty | Solution Pattern |
 |---|---------|------------|------------------|
 | 252 | [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) | Easy | Sort + check overlaps |
@@ -192,7 +190,6 @@ $$\Delta[i] = A[i] - A[i-1]$$
 ---
 
 ### 🟡 Medium Problems
-
 | # | Problem | Difficulty | Solution Pattern |
 |---|---------|------------|------------------|
 | 253 | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | Medium | Event sweep / Heap |
@@ -206,7 +203,6 @@ $$\Delta[i] = A[i] - A[i-1]$$
 ---
 
 ### 🔴 Hard Problems
-
 | # | Problem | Difficulty | Solution Pattern |
 |---|---------|------------|------------------|
 | 732 | [My Calendar III](https://leetcode.com/problems/my-calendar-iii/) | Hard | Sweep line count |
@@ -244,7 +240,6 @@ $$\Delta[i] = A[i] - A[i-1]$$
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
-
 | Resource | Description | Link |
 |----------|-------------|------|
 | **Sweep Line Algorithm** | GeeksforGeeks | [Line Sweep](https://www.geeksforgeeks.org/sweep-line-algorithm/) |
@@ -252,7 +247,6 @@ $$\Delta[i] = A[i] - A[i-1]$$
 | **CP-Algorithms** | Sweep line | [Tutorial](https://cp-algorithms.com/geometry/sweep-line.html) |
 
 ### 📝 Practice
-
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Sorting tag | [Problems](https://leetcode.com/tag/sorting/) |
