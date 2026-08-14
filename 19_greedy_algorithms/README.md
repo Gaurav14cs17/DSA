@@ -27,18 +27,6 @@ permalink: /19_greedy_algorithms/
 
 ---
 
-## 📊 Visual Overview
-
-<div align="center">
-
-![Greedy Algorithms Overview](./images/greedy-overview.png)
-
-*Greedy Algorithms Overview*
-
-</div>
-
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -113,6 +101,18 @@ If non-greedy choice exists, swap it with greedy choice → solution doesn't wor
 3. $O$ doesn't worsen (greedy ends earliest)
 
 4. By induction, $|A| = |O|$ ∎
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Greedy Algorithms Overview](./images/greedy-overview.png)
+
+*Greedy Algorithms Overview*
+
+</div>
 
 ---
 
@@ -209,20 +209,12 @@ def canJump(nums: list[int]) -> bool:
 
 ## 📊 Greedy Pattern Decision
 
-```
-Greedy Problem
-      |
-      +-- Intervals → Sort by end time
-      |
-      +-- Task scheduling → Frequency + idle slots
-      |
-      +-- Array optimization → Track running max/min
-      |
-      +-- Assignment → Sort both, match greedily
-      |
-      +-- Always verify greedy works!
+<div align="center">
 
-```
+<img src="./images/greedy-pattern-decision.png" alt="Greedy Pattern Decision" width="100%">
+
+</div>
+
 
 ---
 
