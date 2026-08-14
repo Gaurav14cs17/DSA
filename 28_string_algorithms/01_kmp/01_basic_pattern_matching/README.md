@@ -405,7 +405,7 @@ print(results)
 
 ---
 
-## 🧩 LeetCode Problems
+## 🏆 LeetCode Problems
 
 ### Easy
 
@@ -719,6 +719,24 @@ print(kmp_case_insensitive(text, pattern))  # [0, 13]
 4. **Overlapping vs Non-overlapping:**
    - Overlapping: use LPS after match
    - Non-overlapping: reset to 0 after match
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **KMP** | CP-Algorithms | [Knuth-Morris-Pratt](https://cp-algorithms.com/string/prefix-function.html) |
+| **String Matching** | VisuAlgo | [Visualization](https://visualgo.net/en/string) |
+| **Pattern Matching** | USACO Guide | [String Matching](https://usaco.guide/gold/string-search) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | String tag | [Problems](https://leetcode.com/tag/string/) |
 
 ---
 
