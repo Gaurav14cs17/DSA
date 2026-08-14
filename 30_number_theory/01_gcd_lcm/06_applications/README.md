@@ -43,7 +43,6 @@ permalink: /30_number_theory/01_gcd_lcm/06_applications/
 | **In one line** | Real-World Problems & Interview Patterns |
 | **Problems** | 25+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
