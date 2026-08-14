@@ -13,7 +13,6 @@ permalink: /04_stacks/03_monotonic_stack/
 ### *📈 Monotonic Stack*
 
 
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-12+-blue?style=for-the-badge" alt="Problems">
@@ -63,8 +62,6 @@ permalink: /04_stacks/03_monotonic_stack/
 
 ### Next Greater Element (#496)
 
-```
-Array: [2, 1, 2, 4, 3]
 
 Step-by-step (Decreasing Stack):
 i   nums[i]  Action          Stack      Result
@@ -76,11 +73,9 @@ i   nums[i]  Action          Stack      Result
 
 Final: [4, 2, 4, -1, -1]
 
-```
 
 ### Daily Temperatures (#739)
 
-```
 Temps: [73, 74, 75, 71, 69, 72, 76, 73]
 
 Decreasing stack (indices):
@@ -96,31 +91,11 @@ i  T[i]  Stack       Action              Result
 
 Final: [1, 1, 4, 2, 1, 1, 0, 0]
 
-```
 
 ### Largest Rectangle (#84)
 
-```
-Heights: [2, 1, 5, 6, 2, 3]
 
-Increasing stack approach:
-i  h[i]  Stack       Action              Max Area
-0   2    [0]         Push                0
-1   1    [1]         Pop 0, Push         2×1=2
-2   5    [1,2]       Push                2
-3   6    [1,2,3]     Push                2
-4   2    [1,4]       Pop 3,2, Push       10
-                     h=6, w=1 → 6
-                     h=5, w=2 → 10 ✓
-5   3    [1,4,5]     Push                10
-End      []          Pop all             10
-                     h=3, w=1 → 3
-                     h=2, w=4 → 8
-                     h=1, w=6 → 6
-
-Maximum: 10
-
-```
+![Largest Rectangle (#84)](./images/largest_rectangle_histogram.png)
 
 
 ## 🎯 At a Glance
@@ -163,8 +138,6 @@ $$\text{NGE}(i) = \min\{j : j > i \land A[j] > A[i]\}$$
 
 **Visual:**
 
-```
-Array:  [2, 1, 2, 4, 3]
 NGE:    [4, 2, 4, -1, -1]
 
 Index 0: A[0]=2, first greater is A[3]=4
@@ -173,7 +146,6 @@ Index 2: A[2]=2, first greater is A[3]=4
 Index 3: A[3]=4, no greater element
 Index 4: A[4]=3, no greater element
 
-```
 
 ---
 
@@ -205,7 +177,6 @@ Where:
 
 **Visual:**
 
-```
 Heights: [2, 1, 5, 6, 2, 3]
 
 For h[2]=5:
@@ -217,7 +188,6 @@ Area = 5 × 2 = 10
 Maximum rectangle: h[2]=5, h[3]=6
 Width=2, Height=5, Area=10
 
-```
 
 ---
 
@@ -383,8 +353,6 @@ def sumSubarrayMins(arr: list[int]) -> int:
     
     return result
 
-```
-
 
 ## 🏆 LeetCode Problems
 
@@ -418,20 +386,9 @@ def sumSubarrayMins(arr: list[int]) -> int:
 
 ## 📊 Pattern Selection Guide
 
-```
+
 Finding next/prev greater/smaller?
          |
-         +-- Next Greater → Decreasing Stack
-         +-- Next Smaller → Increasing Stack
-         +-- Prev Greater → Decreasing (right to left)
-         +-- Prev Smaller → Increasing (right to left)
-
-Area/Water problems?
-         |
-         +-- Find boundaries using monotonic stack
-
-```
-
 ### Quick Reference Table
 
 | Goal | Stack Type | Store | Direction |
@@ -621,8 +578,7 @@ $$\text{NGE}(i) = \min\{j : j > i \land A[j] > A[i]\}$$
 
 **Visual:**
 
-```
-Array:  [2, 1, 2, 4, 3]
+
 NGE:    [4, 2, 4, -1, -1]
 
 Index 0: A[0]=2, first greater is A[3]=4
@@ -631,39 +587,9 @@ Index 2: A[2]=2, first greater is A[3]=4
 Index 3: A[3]=4, no greater element
 Index 4: A[4]=3, no greater element
 
-```
 
----
+![2️⃣ Next Greater Element (NGE)](./images/next_greater_element.png)
 
-### 3️⃣ Why O(n) Complexity?
-
-**Theorem:** Monotonic stack processes $n$ elements in O(n).
-
-**Proof:**
-
-- Each element pushed at most once: $n$ pushes
-
-- Each element popped at most once: $\leq n$ pops
-
-- Total operations: $\leq 2n = O(n)$ ∎
-
----
-
-### 4️⃣ Largest Rectangle in Histogram
-
-**Area Formula:**
-
-$$\text{Area}(i) = h[i] \times (R[i] - L[i] - 1)$$
-
-Where:
-
-- $L[i]$ = index of first smaller bar on left (or -1)
-
-- $R[i]$ = index of first smaller bar on right (or n)
-
-**Visual:**
-
-```
 Heights: [2, 1, 5, 6, 2, 3]
 
 For h[2]=5:
@@ -675,44 +601,8 @@ Area = 5 × 2 = 10
 Maximum rectangle: h[2]=5, h[3]=6
 Width=2, Height=5, Area=10
 
-```
 
----
-
-### 5️⃣ Daily Temperatures
-
-**Problem:** Days until warmer temperature.
-
-$$\text{answer}[i] = \text{NGE\_index}(i) - i$$
-
----
-
-### 6️⃣ Sum of Subarray Minimums
-
-**Contribution Technique:**
-
-$$\text{contribution}(i) = A[i] \times \text{left\_count} \times \text{right\_count}$$
-
-Where:
-
-- $\text{left\_count}$ = subarrays where $A[i]$ is rightmost minimum
-
-- $\text{right\_count}$ = subarrays where $A[i]$ is leftmost minimum
-
----
-
-### 7️⃣ Trapping Rain Water
-
-**Water at position $i$:**
-
-$$\text{water}[i] = \min(\max_{j \leq i} h[j], \max_{j \geq i} h[j]) - h[i]$$
-
-**Stack approach:** Find bounded regions.
-
----
-
-## 💻 Code Implementations
-
+![4️⃣ Largest Rectangle in Histogram](./images/largest_rectangle_histogram.png)
 ```python
 def nextGreaterElement(nums: list[int]) -> list[int]:
     """
@@ -842,7 +732,6 @@ def sumSubarrayMins(arr: list[int]) -> int:
     
     return result
 
-```
 
 ---
 
@@ -879,20 +768,9 @@ def sumSubarrayMins(arr: list[int]) -> int:
 
 ## 📊 Pattern Selection Guide
 
-```
+
 Finding next/prev greater/smaller?
          |
-         +-- Next Greater → Decreasing Stack
-         +-- Next Smaller → Increasing Stack
-         +-- Prev Greater → Decreasing (right to left)
-         +-- Prev Smaller → Increasing (right to left)
-
-Area/Water problems?
-         |
-         +-- Find boundaries using monotonic stack
-
-```
-
 ### Quick Reference Table
 
 | Goal | Stack Type | Store | Direction |
