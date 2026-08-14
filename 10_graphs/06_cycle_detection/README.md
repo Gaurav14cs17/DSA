@@ -13,23 +13,10 @@ permalink: /10_graphs/06_cycle_detection/
 ### *🔄 Cycle Detection*
 
 
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-5+-blue?style=for-the-badge" alt="Problems">
 </p>
-
-</div>
-
----
-
-## 📊 Visual Overview
-
-<div align="center">
-
-![Cycle Detection](./images/cycle_detection.png)
-
-*DFS 3-Color Cycle Detection in Directed Graphs*
 
 </div>
 
@@ -44,7 +31,7 @@ permalink: /10_graphs/06_cycle_detection/
 | **Problems** | 5+ |
 
 {: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+> **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
 
@@ -100,6 +87,26 @@ Use BFS/DFS with distance tracking:
 $$\text{cycle length} = \text{dist}[u] + \text{dist}[v] + 1$$
 
 when back edge $(u, v)$ discovered.
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Cycle Detection](./images/cycle_detection.png)
+
+*DFS 3-Color Cycle Detection in Directed Graphs*
+
+</div>
+
+---
+
+## 📊 Cycle Detection Selection
+
+
+Cycle Detection
+     |
 
 ---
 
@@ -252,7 +259,6 @@ def eventualSafeNodes(graph: list[list[int]]) -> list[int]:
     
     return [i for i in range(n) if dfs(i)]
 
-```
 
 ---
 
@@ -272,21 +278,6 @@ def eventualSafeNodes(graph: list[list[int]]) -> list[int]:
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 685 | [Redundant Connection II](https://leetcode.com/problems/redundant-connection-ii/) | Union-Find | O(E) | O(V) |
-
----
-
-## 📊 Cycle Detection Selection
-
-```
-Cycle Detection
-     |
-     +-- Directed graph → DFS with 3 states
-     |
-     +-- Undirected graph → DFS with parent tracking
-     |
-     +-- Edge-by-edge → Union-Find
-
-```
 
 ---
 
