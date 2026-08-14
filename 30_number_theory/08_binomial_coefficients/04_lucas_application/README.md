@@ -13,6 +13,9 @@ permalink: /30_number_theory/08_binomial_coefficients/04_lucas_application/
 
 ### *C(n,k) mod p for Astronomically Large n, k*
 
+![*C(n,k) mod p for Astronomically Large n, k*](./images/cnk-mod-p-for-astronomically-large-n-k.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Large_n-10^18-red?style=for-the-badge" alt="Large">
@@ -39,28 +42,6 @@ permalink: /30_number_theory/08_binomial_coefficients/04_lucas_application/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| COMPUTING C(1000, 423) mod 7                                   |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Step 1: Convert to base 7                                      |
-|   1000 in base 7: 2626₇  (2×343 + 6×49 + 2×7 + 6×1)           |
-|   423 in base 7:  1146₇  (1×343 + 1×49 + 4×7 + 6×1)           |
-|                                                                 |
-| Step 2: Compute products                                       |
-|   C(2626₇, 1146₇) ≡ C(2,1) × C(6,1) × C(2,4) × C(6,6) (mod 7) |
-|                                                                 |
-| Step 3: Evaluate each                                          |
-|   C(2,1) = 2                                                   |
-|   C(6,1) = 6                                                   |
-|   C(2,4) = 0  ← n_i > m_i, so entire product = 0!             |
-|   C(6,6) = 1                                                   |
-|                                                                 |
-| Result: C(1000, 423) ≡ 0 (mod 7)                               |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
