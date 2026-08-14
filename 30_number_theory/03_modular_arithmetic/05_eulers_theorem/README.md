@@ -39,7 +39,6 @@ permalink: /30_number_theory/03_modular_arithmetic/05_eulers_theorem/
 ---
 
 ### 2️⃣ Euler's Totient Function
-
 **Definition:** $\phi(n)$ = count of integers from 1 to n that are coprime to n.
 
 **Formula for prime power:** $\phi(p^k) = p^{k-1}(p-1)$
@@ -51,7 +50,6 @@ $$\phi(n) = n \prod_{p|n}\left(1 - \frac{1}{p}\right)$$
 ---
 
 ### 3️⃣ RSA Algorithm
-
 **Key Generation:**
 
 1. Choose primes $p, q$
@@ -75,7 +73,6 @@ $$\phi(n) = n \prod_{p|n}\left(1 - \frac{1}{p}\right)$$
 | **In one line** | The Generalization of Fermat's Little Theorem |
 | **Difficulty** | Medium |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
