@@ -122,20 +122,20 @@ $$A[i] > S_{i-1} + A[i] \iff S_{i-1} < 0$$
 **State Definition:**
 
 $$\begin{aligned}
-\text{max\_prod}[i] &= \text{Maximum product ending at } i \\
-\text{min\_prod}[i] &= \text{Minimum product ending at } i
+\text{max prod}[i] &= \text{Maximum product ending at } i \\
+\text{min prod}[i] &= \text{Minimum product ending at } i
 \end{aligned}$$
 
 **Recurrence:**
 
-$$\boxed{\text{max\_prod}[i] = \max(A[i], \; A[i] \times \text{max\_prod}[i-1], \; A[i] \times \text{min\_prod}[i-1])}
-\boxed{\text{min\_prod}[i] = \min(A[i], \; A[i] \times \text{max\_prod}[i-1], \; A[i] \times \text{min\_prod}[i-1])}$$
+$$\boxed{\text{max prod}[i] = \max(A[i], \; A[i] \times \text{max prod}[i-1], \; A[i] \times \text{min prod}[i-1])}
+\boxed{\text{min prod}[i] = \min(A[i], \; A[i] \times \text{max prod}[i-1], \; A[i] \times \text{min prod}[i-1])}$$
 
 **Why track minimum?**
 
-- If $A[i] < 0$ and $\text{min\_prod}[i-1] < 0$
+- If $A[i] < 0$ and $\text{min prod}[i-1] < 0$
 
-- Then $A[i] \times \text{min\_prod}[i-1] > 0$ (potentially maximum!)
+- Then $A[i] \times \text{min prod}[i-1] > 0$ (potentially maximum!)
 
 ---
 
