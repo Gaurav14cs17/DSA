@@ -64,50 +64,8 @@ permalink: /27_advanced_trees/03_fenwick_tree/04_order_statistics/
 
 ### K Empty Slots (LeetCode 683)
 
-```python
-def kEmptySlots(bulbs: List[int], k: int) -> int:
-    """
-    LeetCode 683: K Empty Slots
-    
-    Time: O(n log n)
-    """
-    n = len(bulbs)
-    
-    class BIT:
-        def __init__(self, n):
-            self.n = n
-            self.tree = [0] * (n + 1)
-        
-        def update(self, i):
-            while i <= self.n:
-                self.tree[i] += 1
-                i += i & (-i)
-        
-        def query(self, i):
-            total = 0
-            while i > 0:
-                total += self.tree[i]
-                i -= i & (-i)
-            return total
-    
-    bit = BIT(n)
-    
-    for day, pos in enumerate(bulbs, 1):
-        bit.update(pos)
-        
-        # Check left neighbor
-        if pos - k - 1 >= 1:
-            if bit.query(pos - 1) - bit.query(pos - k - 2) == 1:
-                return day
-        
-        # Check right neighbor
-        if pos + k + 1 <= n:
-            if bit.query(pos + k + 1) - bit.query(pos) == 1:
-                return day
-    
-    return -1
+![Kth Smallest with BIT](./images/kth-smallest-bit.png)
 
-```
 
 ---
 
