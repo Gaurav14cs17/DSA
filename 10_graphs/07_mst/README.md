@@ -248,7 +248,7 @@ def minCostConnectPointsPrim(points: list[list[int]]) -> int:
                 min_dist[v] = min(min_dist[v], dist)
     
     return total_cost
-
+```
 
 ---
 
