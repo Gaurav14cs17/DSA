@@ -36,7 +36,6 @@ permalink: /06_hash_tables/
 | **Subtopics** | 3 |
 | **Problems** | 40+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
@@ -197,7 +196,6 @@ $$\text{freq}[x] = |\{i : a[i] = x\}|$$
 ## 🎯 Key Patterns
 
 ### Two Sum Template
-
 ```python
 def twoSum(nums: list[int], target: int) -> list[int]:
     """
@@ -220,7 +218,6 @@ def twoSum(nums: list[int], target: int) -> list[int]:
 ```
 
 ### Frequency Counter
-
 ```python
 from collections import Counter
 
@@ -235,7 +232,6 @@ def topKFrequent(nums: list[int], k: int) -> list[int]:
 ```
 
 ### Group Anagrams
-
 ```python
 def groupAnagrams(strs: list[str]) -> list[list[str]]:
     """
@@ -255,7 +251,7 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
     return list(groups.values())
 ```
 
-![Group Anagrams](./images/hash-table-overview.png)
+### Pattern Decision Tree
 
 ```text
               Hash Table Problem
@@ -265,10 +261,8 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
  Complement   Top-K, Anagram   Duplicates
 ```
 
-![📊 Pattern Decision Tree](./images/hash-table-overview.png)
 
 ### Pattern Checklist
-
 - [ ] Can I use complement/difference to avoid nested loops?
 - [ ] Do I need frequency counting (use Counter)?
 - [ ] Is this a grouping problem (use defaultdict)?
@@ -282,7 +276,6 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Hash Map | O(n) | O(n) |
@@ -291,7 +284,6 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
 | 387 | [First Unique Character](https://leetcode.com/problems/first-unique-character-in-a-string/) | Frequency | O(n) | O(1) |
 
 ### 🟡 Medium
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Hash Grouping | O(nk log k) | O(nk) |
@@ -300,7 +292,6 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
 | 128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Hash Set | O(n) | O(n) |
 
 ### 🔴 Hard
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 76 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Sliding Window + Map | O(n) | O(1) |
@@ -310,7 +301,6 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
-
 | Resource | Description | Link |
 |----------|-------------|------|
 | **Hash Table** | Wikipedia overview | [Hash table](https://en.wikipedia.org/wiki/Hash_table) |
@@ -318,7 +308,6 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
 | **LeetCode Explore** | Hash table card | [Explore Card](https://leetcode.com/explore/learn/card/hash-table/) |
 
 ### 📝 Practice
-
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Hash table tag | [Problems](https://leetcode.com/tag/hash-table/) |
@@ -346,7 +335,6 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
 <div align="center">
 
 ### 🌟 If this helped you, give it a ⭐ on GitHub! 🌟
-
 **Made with ❤️ for the coding community by [Gaurav Goswami](https://github.com/Gaurav14cs17)**
 
 [⬅️ Previous: Queues](../05_queues/README.md) | [🏠 Home](../README.md) | [Next: Trees ➡️](../07_trees/README.md)
