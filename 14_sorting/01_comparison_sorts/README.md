@@ -31,7 +31,6 @@ permalink: /14_sorting/01_comparison_sorts/
 | **Difficulty** | Medium |
 | **Problems** | 8+ |
 
-{: .highlight }
 > **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
@@ -249,7 +248,6 @@ def mergeLists(l1: 'ListNode', l2: 'ListNode') -> 'ListNode':
 ## 🏆 LeetCode Problems
 
 ### 🟡 Medium
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 147 | [Insertion Sort List](https://leetcode.com/problems/insertion-sort-list/) | Insertion Sort | O(n²) | O(1) |
@@ -258,7 +256,6 @@ def mergeLists(l1: 'ListNode', l2: 'ListNode') -> 'ListNode':
 | 912 | [Sort an Array](https://leetcode.com/problems/sort-an-array/) | Merge/Quick | O(n log n) | O(n) |
 
 ### 🔴 Hard
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 315 | [Count Smaller After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) | Merge Sort | O(n log n) | O(n) |
