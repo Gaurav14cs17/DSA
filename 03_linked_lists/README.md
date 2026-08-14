@@ -47,7 +47,6 @@ permalink: /03_linked_lists/
 | **Subtopics** | 3 |
 | **Problems** | 40+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
@@ -67,7 +66,6 @@ permalink: /03_linked_lists/
 ### 1️⃣ Node Structure
 
 
-![1️⃣ Node Structure](./images/1-node-structure.png)
 
 
 **Memory:** Each node requires $O(1)$ extra space for pointer.
@@ -217,7 +215,6 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
     return dummy.next
 ```
 
-![Dummy Node Pattern](./images/1-node-structure.png)
 
 ### Pattern Checklist
 
