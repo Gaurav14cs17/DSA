@@ -47,7 +47,6 @@ permalink: /16_recursion/02_tree_recursion/
 | **Difficulty** | Medium |
 | **Problems** | 6+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
