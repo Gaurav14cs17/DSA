@@ -45,7 +45,6 @@ permalink: /30_number_theory/07_linear_diophantine/02_extended_gcd_method/
 | **In one line** | Finding All Integer Solutions |
 | **Difficulty** | Medium |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
