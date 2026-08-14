@@ -37,7 +37,6 @@ has_children: true
 | **Topics** | Rolling Hash, Polynomial Hash, Pattern Matching |
 | **Prerequisites** | Modular arithmetic, Hashing, Number theory |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
