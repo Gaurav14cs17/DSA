@@ -36,7 +36,6 @@ permalink: /05_queues/
 | **Subtopics** | 3 |
 | **Problems** | 25+ |
 
-{: .highlight }
 > **How to use this page:** Scan **At a Glance**, then work through theory → visuals → code.
 
 ---
@@ -172,7 +171,6 @@ Inductive: If all vertices at distance $d$ are correctly computed, then vertices
 ## 🎯 Key Patterns
 
 ### Basic Queue Implementation
-
 ```python
 from collections import deque
 
@@ -194,7 +192,6 @@ class Queue:
 ```
 
 ### BFS Template
-
 ```python
 from collections import deque
 
@@ -220,7 +217,6 @@ def bfs(graph, start):
 ```
 
 ### Multi-source BFS
-
 ```python
 def multi_source_bfs(grid, sources):
     """
@@ -244,7 +240,7 @@ def multi_source_bfs(grid, sources):
     return distance
 ```
 
-![Multi-source BFS](./images/queue-overview.png)
+### Pattern Decision Tree
 
 ```text
               Queue Problem
@@ -254,10 +250,8 @@ Tree BFS      Graph BFS       Monotonic Deque
  Zigzag?      Multi-source?   Max/Min tracking
 ```
 
-![📊 Pattern Decision Tree](./images/queue-overview.png)
 
 ### Pattern Checklist
-
 - [ ] Can I use multi-source BFS instead of multiple single-source?
 - [ ] Do I need to track levels separately?
 - [ ] Is this a 0-1 weighted graph (use deque)?
@@ -271,7 +265,6 @@ Tree BFS      Graph BFS       Monotonic Deque
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 225 | [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) | Queue Rotation | O(n) push | O(n) |
@@ -280,7 +273,6 @@ Tree BFS      Graph BFS       Monotonic Deque
 | 933 | [Number of Recent Calls](https://leetcode.com/problems/number-of-recent-calls/) | Time Window | O(1)* | O(n) |
 
 ### 🟡 Medium
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 102 | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | BFS | O(n) | O(n) |
@@ -289,7 +281,6 @@ Tree BFS      Graph BFS       Monotonic Deque
 | 239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Monotonic Deque | O(n) | O(k) |
 
 ### 🔴 Hard
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 862 | [Shortest Subarray Sum ≥ K](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/) | Deque + Prefix | O(n) | O(n) |
@@ -299,7 +290,6 @@ Tree BFS      Graph BFS       Monotonic Deque
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
-
 | Resource | Description | Link |
 |----------|-------------|------|
 | **Queue ADT** | Wikipedia overview | [Queue (abstract data type)](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)) |
@@ -307,7 +297,6 @@ Tree BFS      Graph BFS       Monotonic Deque
 | **LeetCode Explore** | Queue & stack card | [Explore Card](https://leetcode.com/explore/learn/card/queue-stack/) |
 
 ### 📝 Practice
-
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | BFS tag | [Problems](https://leetcode.com/tag/breadth-first-search/) |
@@ -335,7 +324,6 @@ Tree BFS      Graph BFS       Monotonic Deque
 <div align="center">
 
 ### 🌟 If this helped you, give it a ⭐ on GitHub! 🌟
-
 **Made with ❤️ for the coding community by [Gaurav Goswami](https://github.com/Gaurav14cs17)**
 
 [⬅️ Previous: Stacks](../04_stacks/README.md) | [🏠 Home](../README.md) | [Next: Hash Tables ➡️](../06_hash_tables/README.md)
