@@ -156,86 +156,23 @@ a \oplus b &= b \oplus a \quad \text{(commutative)} \\
 
 ### Walkthrough 1: Classic Nim Example
 
-```
-+-----------------------------------------------------------------+
-| GAME: Piles [3, 4, 5]                                           |
-+-----------------------------------------------------------------+
-| STEP 1: Calculate Nim-Sum                                       |
-|                                                                  |
-|   3 = 011₂                                                       |
-|   4 = 100₂                                                       |
-|   5 = 101₂                                                       |
-|   ---------                                                      |
-| XOR = 010₂ = 2                                                   |
-|                                                                  |
-| Nim-Sum ≠ 0 → WINNING POSITION for first player!               |
-+-----------------------------------------------------------------+
+<div align="center">
 
-| STEP 2: Find Winning Move                                       |
-|                                                                  |
-| Goal: Make Nim-Sum = 0                                          |
-|                                                                  |
-| Highest bit in Nim-Sum = 2 (bit position 1)                     |
-| Find pile with bit 1 set: pile 3 (value 5 = 101₂)              |
-|                                                                  |
-| Target: 5 ⊕ 2 = 101₂ ⊕ 010₂ = 111₂ = 7                         |
-| But 7 > 5, so this doesn't work...                              |
-|                                                                  |
-| Try pile 1 (value 3 = 011₂):                                    |
-| Target: 3 ⊕ 2 = 011₂ ⊕ 010₂ = 001₂ = 1                         |
-| Yes! 1 < 3, so remove 2 stones from pile 1                      |
-|                                                                  |
-| New configuration: [1, 4, 5]                                    |
-| Verify: 1 ⊕ 4 ⊕ 5 = 001₂ ⊕ 100₂ ⊕ 101₂ = 000₂ = 0 ✓            |
-+-----------------------------------------------------------------+
+![Classic Nim Example](./images/nim-walkthrough-classic.png)
 
-| STEP 3: Opponent's Turn (Losing Position)                       |
-|                                                                  |
-| Current: [1, 4, 5], Nim-Sum = 0                                 |
-| Any move makes Nim-Sum ≠ 0                                      |
-| First player can always respond to make it 0 again              |
-|                                                                  |
-| RESULT: First player wins with optimal play! ✓                  |
-+-----------------------------------------------------------------+
+</div>
 
-```
 
 ---
 
 ### Walkthrough 2: Nim-Sum Pattern Recognition
 
-```
-+-----------------------------------------------------------------+
-| PATTERN: Single Pile Nim                                        |
-+-----------------------------------------------------------------+
-| Pile Size | Nim-Sum | Position | Strategy                       |
-|-----------+---------+----------+--------------------------------|
-|     0     |    0    |    L     | Lost (no moves)                |
-|     1     |    1    |    W     | Take all                       |
-|     2     |    2    |    W     | Take all                       |
-|     3     |    3    |    W     | Take all                       |
-|     4     |    4    |    W     | Take all                       |
-|                                                                  |
-| Single pile: Always winning (unless empty)                      |
-+-----------------------------------------------------------------+
+<div align="center">
 
-+-----------------------------------------------------------------+
+![Nim-Sum Patterns](./images/nim-sum-patterns.png)
 
-| PATTERN: Two Equal Piles                                        |
-+-----------------------------------------------------------------+
-|   Piles   | Nim-Sum | Position | Strategy                       |
-|-----------+---------+----------+--------------------------------|
-|   [0,0]   |    0    |    L     | Lost                           |
-|   [1,1]   |  1⊕1=0  |    L     | Mirror opponent                |
-|   [2,2]   |  2⊕2=0  |    L     | Mirror opponent                |
-|   [3,3]   |  3⊕3=0  |    L     | Mirror opponent                |
-|   [n,n]   |    0    |    L     | Mirror opponent                |
-|                                                                  |
-| Strategy: Whatever opponent takes from one pile,                |
-|           take same amount from other pile!                     |
-+-----------------------------------------------------------------+
+</div>
 
-```
 
 ---
 
