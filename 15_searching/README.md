@@ -266,22 +266,12 @@ def upperBound(arr: list[int], target: int) -> int:
 
 ## 📊 Binary Search Pattern Decision
 
-```
-Binary Search Problem
-        |
-        +-- Exact match → Standard template
-        |
-        +-- First/Last occurrence → Boundary template
-        |
-        +-- Rotated array → Find sorted half
-        |
-        +-- Minimize max / Maximize min → BS on answer
-        |
-        +-- 2D sorted matrix → Flatten or staircase
-        |
-        +-- Peak finding → Compare with neighbors
+<div align="center">
 
-```
+<img src="./images/binary-search-pattern.png" alt="Binary Search Pattern Decision" width="100%">
+
+</div>
+
 
 ---
 
