@@ -53,7 +53,6 @@ permalink: /20_divide_and_conquer/03_binary_search_dc/
 | **Difficulty** | Medium to Hard |
 | **Problems** | 6+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
