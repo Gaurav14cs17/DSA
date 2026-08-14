@@ -30,7 +30,6 @@ permalink: /26_sweep_line/05_rectangle_problems/
 | **Difficulty** | Medium to Hard |
 | **Problems** | 10 |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
@@ -141,7 +140,6 @@ $$\text{area}_i = \text{height}[i] \times (\text{right}_i - \text{left}_i - 1)$$
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy Problems
-
 | # | Problem | Difficulty | Solution Pattern |
 |---|---------|------------|------------------|
 | 836 | [Rectangle Overlap](https://leetcode.com/problems/rectangle-overlap/) | Easy | Overlap test |
@@ -150,7 +148,6 @@ $$\text{area}_i = \text{height}[i] \times (\text{right}_i - \text{left}_i - 1)$$
 ---
 
 ### 🟡 Medium Problems
-
 | # | Problem | Difficulty | Solution Pattern |
 |---|---------|------------|------------------|
 | 223 | [Rectangle Area](https://leetcode.com/problems/rectangle-area/) | Medium | Overlap calculation |
@@ -162,7 +159,6 @@ $$\text{area}_i = \text{height}[i] \times (\text{right}_i - \text{left}_i - 1)$$
 ---
 
 ### 🔴 Hard Problems
-
 | # | Problem | Difficulty | Solution Pattern |
 |---|---------|------------|------------------|
 | 84 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | Hard | Monotonic stack |
@@ -205,14 +201,12 @@ $$\text{area}_i = \text{height}[i] \times (\text{right}_i - \text{left}_i - 1)$$
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
-
 | Resource | Description | Link |
 |----------|-------------|------|
 | **Rectangle Union** | GeeksforGeeks | [Rectangle area](https://www.geeksforgeeks.org/find-total-coverage-of-all-rectangles-in-a-2d-plane/) |
 | **Histogram** | LeetCode discuss | [Largest rectangle](https://leetcode.com/problems/largest-rectangle-in-histogram/) |
 
 ### 📝 Practice
-
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Geometry tag | [Problems](https://leetcode.com/tag/geometry/) |
