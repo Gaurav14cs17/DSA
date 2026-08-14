@@ -13,7 +13,6 @@ permalink: /02_strings/01_basic_string/
 ### *🔤 Basic String Operations*
 
 
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy-green?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
@@ -160,7 +159,6 @@ def longestCommonPrefix(strs: list[str]) -> str:
     
     return strs[0]
 
-```
 
 ---
 
@@ -230,13 +228,12 @@ def longestCommonPrefix(strs: list[str]) -> str:
 
 ### Time Patterns
 
-```
+
 Single pass:           O(n)   → Most basic operations
 Vertical scan:         O(S)   → S = sum of all lengths
 Two passes:            O(n)   → Reverse + reverse
 With sorting:          O(n log n) → When order matters
 
-```
 
 ---
 
