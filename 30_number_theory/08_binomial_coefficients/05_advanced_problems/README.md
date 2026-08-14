@@ -43,7 +43,6 @@ permalink: /30_number_theory/08_binomial_coefficients/05_advanced_problems/
 | **In one line** | LeetCode & Competition Problems |
 | **Difficulty** | Medium to Hard |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
