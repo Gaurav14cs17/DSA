@@ -36,7 +36,6 @@ permalink: /22_two_pointers/01_opposite_direction/
 ![3Sum Algorithm](./images/three-sum.png)
 
 ### Two Sum Convergence
-
 ```
 Target = 9
 
@@ -57,7 +56,6 @@ Found: indices (0, 7)
 ```
 
 ### Container Area Visualization
-
 ```
     |
 8   |     █           █
@@ -79,7 +77,6 @@ Water fills up to height 7 (the shorter of 8 and 7)
 ```
 
 ### 3Sum Reduction Flow
-
 ![3Sum Reduction Flow](./images/3sum-reduction-flow.png)
 
 
@@ -100,7 +97,6 @@ Water fills up to height 7 (the shorter of 8 and 7)
 
 ---
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
@@ -115,8 +111,6 @@ Water fills up to height 7 (the shorter of 8 and 7)
 
 ## 📐 Mathematical Foundation
 ### 1️⃣ The Convergence Principle
-
-{: .highlight }
 > Two pointers start at opposite ends and move towards each other, eliminating search space at each step.
 
 #### Initial State
@@ -134,7 +128,6 @@ The loop ends when \(left \geq right\), having checked all necessary pairs.
 ---
 
 ### 2️⃣ Two Sum II — Complete Proof
-
 {: .important }
 > **Problem**: Given a **sorted** array and target, find two indices such that their values sum to target.
 
@@ -196,7 +189,6 @@ $$T(n) = O(n)$$
 ---
 
 ### 3️⃣ Container With Most Water — Optimality Proof
-
 {: .note }
 > **Problem**: Find two lines that together with x-axis form a container holding the most water.
 
@@ -264,8 +256,6 @@ Why moving L was correct:
 ---
 
 ### 4️⃣ Trapping Rain Water — The Dual-Maximum Insight
-
-
 > Water at position \(i\) depends on the **minimum** of the **maximum** heights on both sides.
 
 #### The Key Formula
@@ -322,7 +312,6 @@ Total water = 6 units
 ---
 
 ### 5️⃣ 3Sum Reduction
-
 {: .important }
 > Reduce 3Sum to 2Sum by fixing one element.
 
@@ -352,7 +341,6 @@ Skip duplicate \(b\) and \(c\) after finding a valid triplet.
 ---
 
 ### 6️⃣ kSum Generalization
-
 For \(k\)-Sum problem:
 
 $$T(k, n) = O(n^{k-1})$$
@@ -719,7 +707,6 @@ def reverseVowels(s: str) -> str:
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
-
 | # | Problem | Key Insight | Time | Space |
 |:-:|---------|-------------|:----:|:-----:|
 | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | Skip non-alnum, compare | O(n) | O(1) |
@@ -729,7 +716,6 @@ def reverseVowels(s: str) -> str:
 | 680 | [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/) | Skip one char | O(n) | O(1) |
 
 ### 🟡 Medium
-
 | # | Problem | Key Insight | Time | Space |
 |:-:|---------|-------------|:----:|:-----:|
 | 11 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Move shorter side | O(n) | O(1) |
@@ -739,7 +725,6 @@ def reverseVowels(s: str) -> str:
 | 611 | [Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/) | Fix largest, 2ptr | O(n²) | O(1) |
 
 ### 🔴 Hard
-
 | # | Problem | Key Insight | Time | Space |
 |:-:|---------|-------------|:----:|:-----:|
 | 42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | min(maxL, maxR) - h | O(n) | O(1) |
@@ -749,7 +734,6 @@ def reverseVowels(s: str) -> str:
 ## 💡 Interview Tips
 
 ### Common Variations
-
 | Variation | Modification |
 |-----------|--------------|
 | Target sum | Standard two-pointer |
@@ -758,7 +742,6 @@ def reverseVowels(s: str) -> str:
 | All pairs | Collect all, handle duplicates |
 
 ### Edge Cases
-
 | Case | How to Handle |
 |------|---------------|
 | Empty array | Return early |
