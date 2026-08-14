@@ -38,7 +38,6 @@ permalink: /25_tree_algorithms/10_link_cut_trees/
 | **Difficulty** | Very Hard |
 | **Problems** | 5+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
