@@ -51,7 +51,6 @@ permalink: /32_game_theory/02_minimax/
 | **In one line** | Optimal Decision Making in Adversarial Games |
 | **Difficulty** | Medium to Hard |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
