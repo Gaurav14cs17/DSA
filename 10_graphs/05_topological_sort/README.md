@@ -13,23 +13,10 @@ permalink: /10_graphs/05_topological_sort/
 ### *📋 Topological Sort*
 
 
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-6+-blue?style=for-the-badge" alt="Problems">
 </p>
-
-</div>
-
----
-
-## 📊 Visual Overview
-
-<div align="center">
-
-![Topological Sort](./images/topological_sort.png)
-
-*Kahn's Algorithm - Topological Sort with In-Degree*
 
 </div>
 
@@ -44,7 +31,7 @@ permalink: /10_graphs/05_topological_sort/
 | **Problems** | 6+ |
 
 {: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+> **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
 
@@ -96,6 +83,18 @@ For DAG with $n$ vertices and $e$ edges:
 $$\text{# of orders} \geq 1 \text{ if DAG}$$
 
 Can be exponentially many (e.g., independent vertices).
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Topological Sort](./images/topological_sort.png)
+
+*Kahn's Algorithm - Topological Sort with In-Degree*
+
+</div>
 
 ---
 
@@ -272,7 +271,6 @@ def alienOrder(words: list[str]) -> str:
     
     return "".join(result) if len(result) == len(in_degree) else ""
 
-```
 
 ---
 
