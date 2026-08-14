@@ -31,7 +31,6 @@ nav_order: 5
 | **Typical time** | O(n log n) typical (with binary search) |
 | **Typical space** | O(n) |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
