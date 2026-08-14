@@ -138,11 +138,11 @@ permalink: /34_sqrt_decomposition/
 
 **Block Size:**
 
-$$\text{block\_size} = \lceil \sqrt{n} \rceil$$
+$$\text{block size} = \lceil \sqrt{n} \rceil$$
 
 **Number of Blocks:**
 
-$$\text{num\_blocks} = \lceil \frac{n}{\text{block\_size}} \rceil \approx \sqrt{n}$$
+$$\text{num blocks} = \lceil \frac{n}{\text{block size}} \rceil \approx \sqrt{n}$$
 
 **Why √n?**
 

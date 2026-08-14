@@ -194,7 +194,7 @@ $$\text{neighbors}(x, y) = \{(x+dx, y+dy) : dx, dy \in \{-1, 0, 1\}, (dx, dy) \n
 
 For problems with additional state (e.g., keys collected):
 
-$$\text{state} = (\text{position}, \text{extra\_info})
+$$\text{state} = (\text{position}, \text{extra info})
 d[(x, y, state)] = \text{shortest path to } (x, y) \text{ with given state}$$
 
 

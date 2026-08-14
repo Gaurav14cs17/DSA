@@ -108,7 +108,7 @@ Valid orderings: `[A, B, C]`, `[B, A, C]`
 
 **Topological order = Reverse of finish order**
 
-$$\text{topo\_order} = \text{reverse}(\text{post\_order})$$
+$$\text{topo order} = \text{reverse}(\text{post order})$$
 
 **Proof:** If $(u, v) \in E$, then $\text{finish}[u] > \text{finish}[v]$ in DFS.
 

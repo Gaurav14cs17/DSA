@@ -136,8 +136,8 @@ At each step: `prev → ... ← current`
 
 **After reversal:**
 
-$$\text{new\_head} = \text{last\_node}
-\text{original\_head.next} = \text{None}$$
+$$\text{new head} = \text{last node}
+\text{original head.next} = \text{None}$$
 
 ---
 

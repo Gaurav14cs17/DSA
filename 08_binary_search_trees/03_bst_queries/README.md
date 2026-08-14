@@ -103,7 +103,7 @@ permalink: /08_binary_search_trees/03_bst_queries/
 
 **Using Inorder:**
 
-$$\text{kth\_smallest} = \text{inorder}[k-1]$$
+$$\text{kth smallest} = \text{inorder}[k-1]$$
 
 **Time:** O(H + k) where H = height.
 
@@ -584,7 +584,7 @@ def closestValue(root: TreeNode, target: float) -> int:
 
 **Using Inorder:**
 
-$$\text{kth\_smallest} = \text{inorder}[k-1]$$
+$$\text{kth smallest} = \text{inorder}[k-1]$$
 
 **Time:** O(H + k) where H = height.
 

@@ -190,7 +190,7 @@ $$\boxed{\text{reversals} = right - left}$$
 
 **Number of complete groups:**
 
-$$\text{complete\_groups} = \left\lfloor \frac{n}{k} \right\rfloor$$
+$$\text{complete groups} = \left\lfloor \frac{n}{k} \right\rfloor$$
 
 **Remaining nodes:**
 
@@ -198,7 +198,7 @@ $$\text{remaining} = n \mod k$$
 
 **Total reversals:**
 
-$$\text{total\_reversals} = \left\lfloor \frac{n}{k} \right\rfloor \times (k-1)$$
+$$\text{total reversals} = \left\lfloor \frac{n}{k} \right\rfloor \times (k-1)$$
 
 **Time Complexity:** $O(n)$ - each node visited once
 

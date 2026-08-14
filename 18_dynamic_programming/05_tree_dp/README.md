@@ -63,9 +63,9 @@ $$dp[node] = f(dp[left], dp[right], node.val)$$
 
 ### 2️⃣ House Robber III
 
-$$dp[node] = (\text{rob}, \text{not\_rob})
-\text{rob} = node.val + \text{not\_rob}_{left} + \text{not\_rob}_{right}
-\text{not\_rob} = \max(dp_{left}) + \max(dp_{right})$$
+$$dp[node] = (\text{rob}, \text{not rob})
+\text{rob} = node.val + \text{not rob}_{left} + \text{not rob}_{right}
+\text{not rob} = \max(dp_{left}) + \max(dp_{right})$$
 
 ---
 
