@@ -45,7 +45,6 @@ permalink: /30_number_theory/05_euler_totient/04_totient_sum/
 | **In one line** | Computing Sums of Totient Values |
 | **Difficulty** | Medium |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
