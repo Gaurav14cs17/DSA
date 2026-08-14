@@ -31,7 +31,6 @@ nav_order: 6
 | **Typical time** | O(n · k + m) where k = patterns |
 | **Typical space** | O(m) |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
