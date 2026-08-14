@@ -158,7 +158,7 @@ def longestCommonPrefix(strs: list[str]) -> str:
                 return strs[0][:i]
     
     return strs[0]
-
+```
 
 ---
 
