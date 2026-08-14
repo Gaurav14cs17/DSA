@@ -35,7 +35,6 @@ nav_order: 8
 | **Topics** | Hashing, Rolling Hash, Polynomial Hash |
 | **Prerequisites** | Modular arithmetic, Number theory basics |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
