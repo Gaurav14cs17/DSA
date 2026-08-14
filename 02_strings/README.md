@@ -26,6 +26,18 @@ permalink: /02_strings/
 
 ---
 
+
+## 📊 Visual Overview
+
+<div align="center">
+
+### String Problem Given
+![String Problem Given](./images/string-problem-given.png)
+
+</div>
+
+---
+
 ## 📊 Visual Overview
 
 ![Strings Overview](./images/string-overview.png)
@@ -89,7 +101,6 @@ $$\boxed{\frac{n(n+1)}{2} + 1}$$
 
 **Proof:**
 
-```
 Substrings starting at position 0: n choices
 Substrings starting at position 1: n-1 choices
 ...
@@ -98,7 +109,6 @@ Substrings starting at position n-1: 1 choice
 Total = n + (n-1) + ... + 1 = n(n+1)/2
 Plus 1 for empty string = n(n+1)/2 + 1 ∎
 
-```
 
 ---
 
@@ -148,12 +158,9 @@ $$\text{left} = \left\lfloor \frac{c}{2} \right\rfloor, \quad \text{right} = \le
 
 **Proof of Center Count:**
 
-```
-Odd-length: Center at each character → n centers
-Even-length: Center between each pair → n-1 centers
-Total: n + (n-1) = 2n - 1 ∎
 
-```
+![4️⃣ Palindrome Mathematics](./images/string-overview.png)
+
 
 ---
 
@@ -442,27 +449,9 @@ Total operations: $O(n)$ ∎
 
 ## 🎓 Pattern Recognition Flowchart
 
-```
-+-------------------------------------------------------------+
-|                    String Problem Given                     |
-+---------------------------+---------------------------------+
-                            |
-                +-----------+-----------+
-                |                       |
-        Check equality?           Find pattern?
-                |                       |
-        +-------+-------+       +-------+-------+
-       YES             NO       YES             NO
-        |               |        |               |
-   Same order?     Substring?  Fixed?      Transformation?
-        |               |        |               |
-   +----+----+    Sliding    KMP/Z         2D DP
-  YES       NO     Window   Rolling       (LCS/Edit)
-   |         |       |      Hash            |
-Two Ptr  Anagram   O(n)    O(n+m)         O(mn)
-Palindrome  Hash
 
-```
+![🎓 Pattern Recognition Flowchart](./images/strings-pattern-recognition-flowchart.png)
+
 
 ---
 
@@ -588,15 +577,13 @@ Palindrome  Hash
 
 ### Optimization Checklist
 
-```
-[ ] Can I use character array instead of HashMap?
-[ ] Is sliding window applicable?
-[ ] Should I use expand-around-center for palindromes?
-[ ] Is this a DP problem? (LCS, edit distance patterns)
-[ ] Can rolling hash optimize substring search?
-[ ] Am I avoiding O(n²) string concatenation?
+- [ ] Can I use character array instead of HashMap?
+- [ ] Is sliding window applicable?
+- [ ] Should I use expand-around-center for palindromes?
+- [ ] Is this a DP problem? (LCS, edit distance patterns)
+- [ ] Can rolling hash optimize substring search?
+- [ ] Am I avoiding O(n²) string concatenation?
 
-```
 
 ---
 
