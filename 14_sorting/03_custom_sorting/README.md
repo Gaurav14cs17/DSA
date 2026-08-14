@@ -31,7 +31,6 @@ permalink: /14_sorting/03_custom_sorting/
 | **Difficulty** | Medium |
 | **Problems** | 8+ |
 
-{: .highlight }
 > **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
@@ -254,14 +253,12 @@ def hIndex(citations: list[int]) -> int:
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 1122 | [Relative Sort Array](https://leetcode.com/problems/relative-sort-array/) | Custom Key | O(n log n) | O(n) |
 | 1356 | [Sort Integers by Bits](https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/) | Multi-Key | O(n log n) | O(n) |
 
 ### 🟡 Medium
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Sort + Merge | O(n log n) | O(n) |
