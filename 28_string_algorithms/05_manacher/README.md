@@ -35,7 +35,6 @@ nav_order: 5
 | **Topics** | Palindromes, Dynamic Programming, String Processing |
 | **Prerequisites** | String basics, Two pointers |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
