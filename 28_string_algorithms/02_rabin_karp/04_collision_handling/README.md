@@ -31,7 +31,6 @@ nav_order: 4
 | **In one line** | Double hashing with moduli 10⁹+7 and 10⁹+9 makes Rabin-Karp collisions practically negligible. |
 | **Topics** | Hash Collisions, Double Hashing, Probabilistic Algorithms |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
