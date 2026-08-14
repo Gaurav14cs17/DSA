@@ -24,18 +24,6 @@ permalink: /14_sorting/03_custom_sorting/
 
 ---
 
-## 📊 Visual Overview
-
-<div align="center">
-
-![Custom Sorting](./images/custom_sorting.png)
-
-*Custom Sorting*
-
-</div>
-
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -44,7 +32,7 @@ permalink: /14_sorting/03_custom_sorting/
 | **Problems** | 8+ |
 
 {: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+> **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
 
@@ -100,6 +88,29 @@ $$a \prec b \Leftrightarrow ab > ba \text{ (string comparison)}$$
 $$\text{key}(x) = (\text{key}_1(x), \text{key}_2(x), \ldots)$$
 
 Python: Use tuple as sort key.
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Custom Sorting](./images/custom_sorting.png)
+
+*Custom Sorting*
+
+</div>
+
+---
+
+## 📊 Custom Sorting Patterns
+
+<div align="center">
+
+<img src="./images/custom-sort-pattern.png" alt="Custom Sorting Patterns" width="100%">
+
+</div>
+
 
 ---
 
@@ -258,23 +269,6 @@ def hIndex(citations: list[int]) -> int:
 | 274 | [H-Index](https://leetcode.com/problems/h-index/) | Sort | O(n log n) | O(1) |
 | 451 | [Sort Characters by Frequency](https://leetcode.com/problems/sort-characters-by-frequency/) | Frequency | O(n log n) | O(n) |
 | 791 | [Custom Sort String](https://leetcode.com/problems/custom-sort-string/) | Custom Order | O(n log n) | O(n) |
-
----
-
-## 📊 Custom Sorting Patterns
-
-```
-Custom Sort
-     |
-     +-- Multiple keys → Tuple key
-     |
-     +-- String concatenation → cmp_to_key
-     |
-     +-- Relative order → Index mapping
-     |
-     +-- After sort merge → Sort then iterate
-
-```
 
 ---
 
