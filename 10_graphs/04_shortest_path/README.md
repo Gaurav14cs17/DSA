@@ -267,7 +267,7 @@ def swimInWater(grid: list[list[int]]) -> int:
                 heapq.heappush(pq, (max(time, grid[nr][nc]), nr, nc))
     
     return -1
-
+```
 
 ---
 
