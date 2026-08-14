@@ -64,53 +64,8 @@ permalink: /27_advanced_trees/03_fenwick_tree/05_dp_with_bit/
 
 ### Longest Increasing Subsequence II (LeetCode 2407)
 
-```python
-def lengthOfLIS(nums: List[int], k: int) -> int:
-    """
-    LeetCode 2407: LIS II with constraint |nums[i] - nums[j]| <= k
-    
-    Time: O(n log m), Space: O(m)
-    """
-    max_val = max(nums)
-    
-    class BITMax:
-        def __init__(self, n):
-            self.n = n
-            self.tree = [0] * (n + 1)
-        
-        def update(self, i, val):
-            while i <= self.n:
-                self.tree[i] = max(self.tree[i], val)
-                i += i & (-i)
-        
-        def query(self, i):
-            res = 0
-            while i > 0:
-                res = max(res, self.tree[i])
-                i -= i & (-i)
-            return res
-        
-        def range_max(self, l, r):
-            # Query max in range [l, r]
-            # For BIT, need different approach or segment tree
-            return self.query(r)
-    
-    bit = BITMax(max_val)
-    result = 0
-    
-    for num in nums:
-        # Query max LIS ending with value in [num-k, num-1]
-        max_len = 0
-        if num > 1:
-            max_len = bit.query(min(num - 1, num + k - 1))
-        
-        new_len = max_len + 1
-        bit.update(num, new_len)
-        result = max(result, new_len)
-    
-    return result
+![LIS II with BIT](./images/lis-ii-bit.png)
 
-```
 
 ---
 
