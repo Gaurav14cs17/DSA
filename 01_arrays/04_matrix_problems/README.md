@@ -50,7 +50,6 @@ permalink: /01_arrays/04_matrix_problems/
 | **Difficulty** | Medium to Hard |
 | **Problems** | 25+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
@@ -91,7 +90,6 @@ $$\text{Rotate 90°} = \text{Transpose} \circ \text{Reverse Each Row}$$
 **Proof by Example (3×3):**
 
 
-![2️⃣ Matrix Rotation Mathematics](./images/2-matrix-rotation-mathematics.png)
 
 
 **Rotation Angles:**
@@ -155,7 +153,6 @@ $$\boxed{T(m, n) = O(m + n)}$$
 ### 5️⃣ Visual: Matrix Rotation (90° Clockwise)
 
 
-![5️⃣ Visual: Matrix Rotation (90° Clockwise)](./images/5-visual-matrix-rotation-90-clockwise.png)
 
 
 ---
@@ -163,7 +160,6 @@ $$\boxed{T(m, n) = O(m + n)}$$
 ### 6️⃣ Visual: Spiral Matrix Traversal
 
 
-![6️⃣ Visual: Spiral Matrix Traversal](./images/5-visual-matrix-rotation-90-clockwise.png)
 
 
 ---
@@ -171,7 +167,6 @@ $$\boxed{T(m, n) = O(m + n)}$$
 ### 7️⃣ Visual: Search in Sorted Matrix (Staircase)
 
 
-![7️⃣ Visual: Search in Sorted Matrix (Staircase)](./images/5-visual-matrix-rotation-90-clockwise.png)
 
 
 ---
@@ -410,6 +405,7 @@ def transpose(matrix: list[list[int]]) -> list[list[int]]:
     
     return result
 
+```
 
 ---
 
@@ -523,8 +519,6 @@ Problem: Set Matrix Zeroes
    - Process inner matrix using markers
    - Handle first row/col separately
 
-```
-
 ---
 
 ## 🧮 Mathematical Deep Dive
@@ -588,7 +582,6 @@ for i in range(m):
         board[i][j] >>= 1
 ```
 
-![1 (01) -> remains alive: set to 3 (11)](./images/staircase-search-start-at-top-right-i0-j3.png)
 
 ### Diagonal Grouping
 
@@ -616,7 +609,7 @@ for i in range(m):
 |----------|-------------|------|
 | **Matrix Manipulation** | Comprehensive guide | [GeeksforGeeks](https://www.geeksforgeeks.org/matrix/) |
 | **Matrix Rotation** | All rotation techniques | [CP-Algorithms](https://cp-algorithms.com/) |
-| **2D Array Problems** | Pattern collection | [LeetCode Discuss](https://leetcode.com/discuss/study-guide/1374 wallowing/) |
+| **2D Array Problems** | Pattern collection | [LeetCode Discuss](https://leetcode.com/discuss/post/7487729/complete-matrix-2d-array-problem-sheet-2-agcc/) |
 
 ### 🎥 Video Tutorials
 
