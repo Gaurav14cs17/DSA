@@ -465,7 +465,7 @@ print(lyndon_factorization("banana"))  # ['b', 'an', 'an', 'a']
 
 ---
 
-## 🧩 LeetCode Problems
+## 🏆 LeetCode Problems
 
 ### Easy
 
@@ -579,6 +579,24 @@ print(f"Critical point: {critical_factorization(s)}")
 4. **Period Theorem:**
    - Two periods with sum ≤ n imply gcd period
    - Powerful tool for string analysis
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **String Period** | CP-Algorithms | [Period of a string](https://cp-algorithms.com/string/prefix-function.html) |
+| **Repeated Substring** | GeeksforGeeks | [Repeated Substring Pattern](https://www.geeksforgeeks.org/repeated-substring-pattern/) |
+| **Rotation** | USACO Guide | [String Periodicity](https://usaco.guide/gold/string-search) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | String tag | [Problems](https://leetcode.com/tag/string/) |
 
 ---
 
