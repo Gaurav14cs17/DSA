@@ -37,7 +37,6 @@ nav_order: 4
 | **Typical space** | O(1) |
 | **Topics** | Ray Casting, Winding Number, Point in Triangle |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 ## 🧭 Navigation
 
