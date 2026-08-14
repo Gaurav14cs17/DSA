@@ -216,7 +216,7 @@ def minWindow(s: str, t: str) -> str:
             left += 1
     
     return result
-
+```
 
 ---
 
