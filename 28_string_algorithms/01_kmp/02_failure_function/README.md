@@ -552,7 +552,7 @@ for idx, text in enumerate(texts):
 
 ---
 
-## 🧩 LeetCode Problems
+## 🏆 LeetCode Problems
 
 ### Medium
 
@@ -695,6 +695,24 @@ Therefore total operations = O(m)
 
 3. **Logarithmic average:**
    Average number of borders per position: O(log n)
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **Prefix Function** | CP-Algorithms | [Prefix function (LPS)](https://cp-algorithms.com/string/prefix-function.html) |
+| **Failure Function** | GeeksforGeeks | [LPS Array](https://www.geeksforgeeks.org/lps-array-construction/) |
+| **Borders** | Algorithms on Strings | [Border structure](https://www-igm.univ-mlv.fr/~lecroq/string/index.html) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | String tag | [Problems](https://leetcode.com/tag/string/) |
 
 ---
 
