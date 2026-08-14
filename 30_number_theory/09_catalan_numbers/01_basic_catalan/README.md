@@ -13,6 +13,9 @@ permalink: /30_number_theory/09_catalan_numbers/01_basic_catalan/
 
 ### *The Most Elegant Counting Sequence*
 
+![*The Most Elegant Counting Sequence*](./images/the-most-elegant-counting-sequence.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Time-O(n)_or_O(1)-blue?style=for-the-badge" alt="Time">
@@ -39,35 +42,6 @@ permalink: /30_number_theory/09_catalan_numbers/01_basic_catalan/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| CATALAN NUMBER C₃ = 5 counts:                                  |
-+-----------------------------------------------------------------+
-|                                                                 |
-| 1. BALANCED PARENTHESES with 3 pairs:                          |
-|    ((()))  (()())  (())()  ()(())  ()()()                      |
-|                                                                 |
-| 2. BINARY TREES with 3 internal nodes:                         |
-|      •         •        •        •         •                   |
-|     / \       / \      / \      / \       / \                  |
-|    •   •     •   •    •   •    •   •     •   •                 |
-|   /   / \     \   \    \   /   /   \   / \   \                |
-|  •   •   ·    •   •    •   •  ·   ·   ·   ·   ·               |
-|                                                                 |
-| 3. PATHS from (0,0) to (n,n) not crossing diagonal:           |
-|        .-.             .-.          etc.                       |
-|    .---' '-.       .---' '--.                                 |
-|    |       |       |        |                                  |
-|    '-------'       '--------'                                  |
-|                                                                 |
-| 4. TRIANGULATIONS of a polygon with n+2 sides:                 |
-|    Pentagon (n=2): 5 ways to triangulate                       |
-|                                                                 |
-| 5. FULL BINARY TREES with n+1 leaves:                          |
-|    5 different trees                                           |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
