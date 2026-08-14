@@ -36,7 +36,6 @@ permalink: /26_sweep_line/
 | **Subtopics** | 6 |
 | **Problems** | 45+ |
 
-{: .highlight }
 > **How to use this page:** Scan **At a Glance**, then work through theory → visuals → code.
 
 ---
@@ -60,7 +59,6 @@ permalink: /26_sweep_line/
 <td width="33%">
 
 ### [01. Interval Sweep](./01_interval_sweep/)
-
 - Meeting rooms
 
 - Overlapping intervals
@@ -73,7 +71,6 @@ permalink: /26_sweep_line/
 <td width="33%">
 
 ### [02. Coordinate Compression](./02_coordinate_compression/)
-
 - Rectangle area
 
 - Skyline problem
@@ -84,7 +81,6 @@ permalink: /26_sweep_line/
 <td width="33%">
 
 ### [03. Line Segment Intersection](./03_line_segment_intersection/)
-
 - Bentley-Ottmann
 
 - Orientation tests
@@ -97,7 +93,6 @@ permalink: /26_sweep_line/
 <td width="33%">
 
 ### [04. Angular Sweep](./04_angular_sweep/)
-
 - Radial sorting
 
 - Visibility problems
@@ -108,7 +103,6 @@ permalink: /26_sweep_line/
 <td width="33%">
 
 ### [05. Rectangle Problems](./05_rectangle_problems/)
-
 - Histogram rectangles
 
 - Perfect rectangle
@@ -119,7 +113,6 @@ permalink: /26_sweep_line/
 <td width="33%">
 
 ### [06. Closest Pair](./06_closest_pair/)
-
 - Divide & conquer
 
 - K-D trees
@@ -143,13 +136,11 @@ Sweep line processes **events sorted by coordinates**. Imagine a vertical line s
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 252 | [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) | Interval sweep | O(n log n) | O(n) |
 
 ### 🟡 Medium
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 253 | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | Min heap / sweep | O(n log n) | O(n) |
@@ -161,7 +152,6 @@ Sweep line processes **events sorted by coordinates**. Imagine a vertical line s
 | 1109 | [Corporate Flight Bookings](https://leetcode.com/problems/corporate-flight-bookings/) | Prefix diff | O(n) | O(n) |
 
 ### 🔴 Hard
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 218 | [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/) | Coordinate compression | O(n log n) | O(n) |
@@ -178,14 +168,12 @@ Sweep line processes **events sorted by coordinates**. Imagine a vertical line s
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
-
 | Resource | Description | Link |
 |----------|-------------|------|
 | **Sweep Line** | GeeksforGeeks | [Line sweep](https://www.geeksforgeeks.org/sweep-line-algorithm/) |
 | **Computational Geometry** | CP-Algorithms | [Geometry](https://cp-algorithms.com/geometry/) |
 
 ### 📝 Practice
-
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Geometry tag | [Problems](https://leetcode.com/tag/geometry/) |
