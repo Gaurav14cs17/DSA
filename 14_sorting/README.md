@@ -36,7 +36,6 @@ permalink: /14_sorting/
 | **Subtopics** | 3 |
 | **Problems** | 20+ |
 
-{: .highlight }
 > **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
@@ -163,7 +162,6 @@ Where $d$ = digits, $k$ = base (usually 10).
 ## 🎯 Key Implementations
 
 ### Quick Sort
-
 ```python
 def quickSort(arr: list[int], low: int, high: int) -> None:
     """
@@ -193,7 +191,6 @@ def partition(arr: list[int], low: int, high: int) -> int:
 ```
 
 ### Merge Sort
-
 ```python
 def mergeSort(arr: list[int]) -> list[int]:
     """
@@ -235,7 +232,6 @@ def merge(left: list[int], right: list[int]) -> list[int]:
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Two Pointers | O(n+m) | O(1) |
@@ -244,7 +240,6 @@ def merge(left: list[int], right: list[int]) -> list[int]:
 | 976 | [Largest Perimeter Triangle](https://leetcode.com/problems/largest-perimeter-triangle/) | Sort | O(n log n) | O(1) |
 
 ### 🟡 Medium
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Sort + Merge | O(n log n) | O(n) |
@@ -260,7 +255,6 @@ def merge(left: list[int], right: list[int]) -> list[int]:
 | 912 | [Sort an Array](https://leetcode.com/problems/sort-an-array/) | Merge/Quick | O(n log n) | O(n) |
 
 ### 🔴 Hard
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 164 | [Maximum Gap](https://leetcode.com/problems/maximum-gap/) | Bucket Sort | O(n) | O(n) |
