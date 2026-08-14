@@ -13,6 +13,9 @@ permalink: /30_number_theory/09_catalan_numbers/02_bst_counting/
 
 ### *Counting and Generating Unique BSTs*
 
+![*Counting and Generating Unique BSTs*](./images/counting-and-generating-unique-bsts.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/LeetCode-96_95-blue?style=for-the-badge" alt="LeetCode">
@@ -39,32 +42,6 @@ permalink: /30_number_theory/09_catalan_numbers/02_bst_counting/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| UNIQUE BSTs with n=3 nodes (values 1, 2, 3): C₃ = 5           |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Root = 1:         Root = 2:         Root = 3:                  |
-| Left: 0 nodes     Left: 1 node      Left: 2 nodes              |
-| Right: 2 nodes    Right: 1 node     Right: 0 nodes             |
-| Count: C₀×C₂=2    Count: C₁×C₁=1    Count: C₂×C₀=2            |
-|                                                                 |
-|     1                 2                 3                       |
-|      \               / \               /                        |
-|       2             1   3             2                         |
-|        \                             /                          |
-|         3                           1                           |
-|                                                                 |
-|     1                               3                           |
-|      \                             /                            |
-|       3                           1                             |
-|      /                             \                            |
-|     2                               2                           |
-|                                                                 |
-| Total: 2 + 1 + 2 = 5 = C₃ ✓                                   |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
