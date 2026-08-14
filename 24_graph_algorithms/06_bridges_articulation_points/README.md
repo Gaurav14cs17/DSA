@@ -41,7 +41,6 @@ permalink: /24_graph_algorithms/06_bridges_articulation_points/
 | **Difficulty** | Medium to Hard |
 | **Problems** | 8+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
