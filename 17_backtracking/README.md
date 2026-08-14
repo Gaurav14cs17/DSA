@@ -102,14 +102,12 @@ $$\text{If state invalid} \Rightarrow \text{return immediately}$$
 
 ### 4️⃣ State Space Tree
 
-```
-                    []
-         /     |     |     \
-       [1]    [2]   [3]    [4]
-      / | \   / \    |
-   [1,2][1,3][1,4]...
+<div align="center">
 
-```
+<img src="./images/backtracking-state-space.png" alt="Backtracking State Space Tree" width="100%">
+
+</div>
+
 
 Each path = one solution candidate.
 
@@ -253,20 +251,12 @@ def permute(nums: list[int]) -> list[list[int]]:
 
 ## 📊 Backtracking Pattern Decision
 
-```
-Backtracking Problem
-        |
-        +-- All subsets → Include/exclude each element
-        |
-        +-- All permutations → Swap or use remaining
-        |
-        +-- Combinations of size k → Track count
-        |
-        +-- Grid path → 4-directional with visited
-        |
-        +-- Constraint satisfaction → Prune invalid states
+<div align="center">
 
-```
+<img src="./images/backtracking-pattern-decision.png" alt="Backtracking Pattern Decision" width="100%">
+
+</div>
+
 
 ---
 
