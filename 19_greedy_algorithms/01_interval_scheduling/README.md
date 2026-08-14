@@ -31,7 +31,6 @@ permalink: /19_greedy_algorithms/01_interval_scheduling/
 | **Difficulty** | Medium |
 | **Problems** | 10+ |
 
-{: .highlight }
 > **How to use this page:** Scan **At a Glance**, then work through theory → visuals → code.
 
 ---
@@ -206,13 +205,11 @@ def partitionLabels(s: str) -> list[int]:
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 252 | [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) | Sort + Check | O(n log n) | O(1) |
 
 ### 🟡 Medium
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Sort + Merge | O(n log n) | O(n) |
