@@ -13,27 +13,10 @@ permalink: /10_graphs/02_bfs_problems/
 ### *🌊 BFS Problems*
 
 
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
 </p>
-
-</div>
-
----
-
-## 📊 Visual Overview
-
-<div align="center">
-
-![BFS Traversal](./images/bfs_traversal.png)
-
-*BFS Level-by-Level Exploration*
-
-![Multi-Source BFS](./images/multi_source_bfs.png)
-
-*Multi-Source BFS (Rotting Oranges)*
 
 </div>
 
@@ -48,7 +31,7 @@ permalink: /10_graphs/02_bfs_problems/
 | **Problems** | 10+ |
 
 {: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+> **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
 
@@ -101,6 +84,30 @@ $$\text{dist}[v] = \min_{s \in S} \text{dist}(s, v)$$
 BFS naturally gives level-order for trees:
 
 $$\text{Level } k = \{v : \text{dist}(\text{root}, v) = k\}$$
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![BFS Traversal](./images/bfs_traversal.png)
+
+*BFS Level-by-Level Exploration*
+
+![Multi-Source BFS](./images/multi_source_bfs.png)
+
+*Multi-Source BFS (Rotting Oranges)*
+
+</div>
+
+---
+
+## 📊 BFS Pattern Selection
+
+
+BFS Problem
+     |
 
 ---
 
@@ -230,7 +237,6 @@ def updateMatrix(mat: list[list[int]]) -> list[list[int]]:
     
     return result
 
-```
 
 ---
 
@@ -252,23 +258,6 @@ def updateMatrix(mat: list[list[int]]) -> list[list[int]]:
 |:-:|---------|---------|:----:|:-----:|
 | 127 | [Word Ladder](https://leetcode.com/problems/word-ladder/) | BFS | O(M²·N) | O(M²·N) |
 | 815 | [Bus Routes](https://leetcode.com/problems/bus-routes/) | BFS | O(N·S) | O(N·S) |
-
----
-
-## 📊 BFS Pattern Selection
-
-```
-BFS Problem
-     |
-     +-- Shortest unweighted path → Standard BFS
-     |
-     +-- Distance from multiple sources → Multi-source BFS
-     |
-     +-- Level-by-level processing → BFS with level tracking
-     |
-     +-- Bipartite check → BFS with 2-coloring
-
-```
 
 ---
 
