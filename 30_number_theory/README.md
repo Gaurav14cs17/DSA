@@ -47,7 +47,6 @@ permalink: /30_number_theory/
 | **Difficulty** | Medium to Hard |
 | **Problems** | 150+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
