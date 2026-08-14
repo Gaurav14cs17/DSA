@@ -361,7 +361,7 @@ for pos, mm in matches:
 
 ---
 
-## 🧩 LeetCode Problems
+## 🏆 LeetCode Problems
 
 ### Easy
 
@@ -505,6 +505,24 @@ if found_all_needed:
 ✗ Always verify!
 
 ```
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **Rabin-Karp** | CP-Algorithms | [Rabin-Karp algorithm](https://cp-algorithms.com/string/rabin-karp.html) |
+| **Rolling Hash** | USACO Guide | [String Hashing](https://usaco.guide/gold/string-hashing) |
+| **Pattern Search** | GeeksforGeeks | [Rabin-Karp](https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching/) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | String tag | [Problems](https://leetcode.com/tag/string/) |
 
 ---
 
