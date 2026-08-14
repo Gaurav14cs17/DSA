@@ -27,7 +27,6 @@ permalink: /04_stacks/04_expression_evaluation/
 <div align="center">
 
 ### 📝 Expression Notations
-
 <img src="./images/expression_notations.png" alt="Expression Notations" width="850"/>
 
 *Infix, Prefix (Polish), and Postfix (RPN) comparison*
@@ -35,7 +34,6 @@ permalink: /04_stacks/04_expression_evaluation/
 ---
 
 ### 🔢 Postfix (RPN) Evaluation
-
 <img src="./images/postfix_evaluation.png" alt="Postfix Evaluation" width="850"/>
 
 *Stack-based evaluation without precedence rules - LeetCode #150*
@@ -43,7 +41,6 @@ permalink: /04_stacks/04_expression_evaluation/
 ---
 
 ### 🔀 Shunting-Yard Algorithm
-
 <img src="./images/shunting_yard.png" alt="Shunting-Yard" width="900"/>
 
 *Dijkstra's algorithm: Infix → Postfix conversion*
@@ -51,7 +48,6 @@ permalink: /04_stacks/04_expression_evaluation/
 ---
 
 ### 🧮 Basic Calculator
-
 <img src="./images/basic_calculator.png" alt="Basic Calculator" width="850"/>
 
 *Handling +, - and nested parentheses - LeetCode #224*
@@ -61,7 +57,6 @@ permalink: /04_stacks/04_expression_evaluation/
 ---
 
 ### Evaluate RPN (#150)
-
 Input: ["2", "1", "+", "3", "*"]
 
 Stack trace:
@@ -76,14 +71,10 @@ Result: 9
 
 
 ### Basic Calculator II (#227)
-
-
 ![Basic Calculator II (#227)](./images/basic_calculator.png)
 
 
 ### Shunting-Yard Visualization
-
-
 ![Shunting-Yard Visualization](./images/shunting_yard.png)
 
 
@@ -95,7 +86,6 @@ Result: 9
 | **Difficulty** | Medium to Hard |
 | **Problems** | 8+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 
@@ -142,7 +132,6 @@ Result: 9
 **Example:**
 
 
-![3️⃣ Shunting-Yard Algorithm (Infix → Postfix)](./images/shunting_yard.png)
 
 
 ---
