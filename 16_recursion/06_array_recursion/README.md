@@ -47,7 +47,6 @@ permalink: /16_recursion/06_array_recursion/
 | **Difficulty** | Easy |
 | **Problems** | 15+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
