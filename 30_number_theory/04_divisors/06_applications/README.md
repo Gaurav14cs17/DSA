@@ -44,7 +44,6 @@ permalink: /30_number_theory/04_divisors/06_applications/
 | **Difficulty** | Easy to Hard |
 | **Problems** | 10+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
