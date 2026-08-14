@@ -13,8 +13,6 @@ permalink: /07_trees/04_path_problems/
 ### *Path Problems*
 
 
-
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
@@ -38,123 +36,17 @@ permalink: /07_trees/04_path_problems/
 
 ### Maximum Path Sum (#124)
 
-```
-Tree:
-      -10
-      /  \
-     9    20
-         /  \
-        15   7
-
-For each node, calculate:
-  gain = val + max(gain(left), gain(right), 0)
-  path_through = val + max(0, gain(left)) + max(0, gain(right))
-
-Node 9:
-  gain = 9
-  path_through = 9
-  max_so_far = 9
-
-Node 15:
-  gain = 15
-  path_through = 15
-  max_so_far = 15
-
-Node 7:
-  gain = 7
-  path_through = 7
-  max_so_far = 15
-
-Node 20:
-  gain(left) = 15, gain(right) = 7
-  gain = 20 + max(15, 7) = 35
-  path_through = 20 + 15 + 7 = 42 ✓
-  max_so_far = 42
-
-Node -10:
-  gain(left) = 9, gain(right) = 35
-  gain = -10 + 35 = 25
-  path_through = -10 + 9 + 35 = 34
-  max_so_far = 42
-
-Result: 42 (path: 15 → 20 → 7)
-
-```
 
 ### Path Sum III (#437)
 
-```
-Tree:      targetSum = 8
-      10
-     /  \
-    5   -3
-   / \    \
-  3   2   11
- / \   \
-3  -2   1
 
-Prefix sum approach:
-Current path: [10]
-  prefix_sum = 10
-  count += prefix_count[10-8=2] = 0
+![Path Sum III (#437)](./images/path-problems.png)
 
-Current path: [10, 5]
-  prefix_sum = 15
-  count += prefix_count[15-8=7] = 0
-
-Current path: [10, 5, 3]
-  prefix_sum = 18
-  count += prefix_count[18-8=10] = 1 ✓ (path: 5→3)
-
-Current path: [10, 5, 3, 3]
-  prefix_sum = 21
-  count += prefix_count[21-8=13] = 0
-
-Backtrack and explore other paths...
-
-Paths found:
-
-1. 10 → 5 → 3 (sum=18)... wait, we want exactly 8
-2. 5 → 3 (sum=8) ✓
-
-3. 10 → -3 → 11 (sum=18)... no
-
-4. -3 → 11 (sum=8) ✓
-
-Result: 3 paths with sum=8
-
-```
 
 ### Path Sum II (#113)
 
-```
-Tree:      targetSum = 22
-      5
-     / \
-    4   8
-   /   / \
-  11  13  4
- /  \      \
-7    2      1
 
-DFS with backtracking:
-
-Path 1: [5, 4, 11, 7]
-  sum = 27 ≠ 22 ✗
-
-Path 2: [5, 4, 11, 2]
-  sum = 22 ✓
-  Add to result
-
-Path 3: [5, 8, 13]
-  sum = 26 ≠ 22 ✗
-
-Path 4: [5, 8, 4, 1]
-  sum = 18 ≠ 22 ✗
-
-Result: [[5, 4, 11, 2]]
-
-```
+![Path Sum II (#113)](./images/path-problems.png)
 
 
 ## 🎯 At a Glance
@@ -392,8 +284,6 @@ def sumNumbers(root: TreeNode) -> int:
         return dfs(node.left, current_num) + dfs(node.right, current_num)
     
     return dfs(root, 0)
-
-```
 
 
 ## 🏆 LeetCode Problems
@@ -780,7 +670,6 @@ def sumNumbers(root: TreeNode) -> int:
     
     return dfs(root, 0)
 
-```
 
 ---
 
