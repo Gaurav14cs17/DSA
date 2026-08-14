@@ -13,7 +13,6 @@ permalink: /01_arrays/04_matrix_problems/
 ### *🎯 Matrix Problems*
 
 
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-25+-blue?style=for-the-badge" alt="Problems">
@@ -27,17 +26,17 @@ permalink: /01_arrays/04_matrix_problems/
 
 <div align="center">
 
-### Matrix Rotation 90° Clockwise
-![Matrix Rotation](./images/matrix_rotation.png)
+### Matrix Rotation Mathematics
+![Matrix Rotation Mathematics](./images/2-matrix-rotation-mathematics.png)
 
-### Spiral Matrix Traversal
-![Spiral Traverse](./images/spiral_traverse.png)
+### Visual: Matrix Rotation (90° Clockwise)
+![Visual: Matrix Rotation (90° Clockwise)](./images/5-visual-matrix-rotation-90-clockwise.png)
 
-### Staircase Search in Sorted Matrix
-![Staircase Search](./images/staircase_search.png)
+### Direction Sequence: Right → Down → Left → Up → Repeat
+![Direction Sequence: Right → Down → Left → Up → Repeat](./images/direction-sequence-right-down-left-up-repeat.png)
 
-### Spiral Traversal
-![Spiral Traversal](./images/spiral_traversal.png)
+### Staircase Search: Start at top-right (i=0, j=3)
+![Staircase Search: Start at top-right (i=0, j=3)](./images/staircase-search-start-at-top-right-i0-j3.png)
 
 </div>
 
@@ -91,21 +90,9 @@ $$\text{Rotate 90°} = \text{Transpose} \circ \text{Reverse Each Row}$$
 
 **Proof by Example (3×3):**
 
-```
-Original:           Transpose:          Reverse Rows:
-+---+---+---+      +---+---+---+      +---+---+---+
 
-| 1 | 2 | 3 |      | 1 | 4 | 7 |      | 7 | 4 | 1 |
-+---+---+---+  →   +---+---+---+  →   +---+---+---+
+![2️⃣ Matrix Rotation Mathematics](./images/2-matrix-rotation-mathematics.png)
 
-| 4 | 5 | 6 |      | 2 | 5 | 8 |      | 8 | 5 | 2 |
-+---+---+---+      +---+---+---+      +---+---+---+
-
-| 7 | 8 | 9 |      | 3 | 6 | 9 |      | 9 | 6 | 3 |
-+---+---+---+      +---+---+---+      +---+---+---+
-                                        (90° clockwise ✓)
-
-```
 
 **Rotation Angles:**
 
@@ -167,213 +154,25 @@ $$\boxed{T(m, n) = O(m + n)}$$
 
 ### 5️⃣ Visual: Matrix Rotation (90° Clockwise)
 
-```
-4×4 Matrix Rotation Process:
 
-Original Matrix:                   After Transpose:
-+----+----+----+----+             +----+----+----+----+
+![5️⃣ Visual: Matrix Rotation (90° Clockwise)](./images/5-visual-matrix-rotation-90-clockwise.png)
 
-|  1 |  2 |  3 |  4 |             |  1 |  5 |  9 | 13 |
-+----+----+----+----+             +----+----+----+----+
-
-|  5 |  6 |  7 |  8 |      →      |  2 |  6 | 10 | 14 |
-+----+----+----+----+             +----+----+----+----+
-
-|  9 | 10 | 11 | 12 |             |  3 |  7 | 11 | 15 |
-+----+----+----+----+             +----+----+----+----+
-
-| 13 | 14 | 15 | 16 |             |  4 |  8 | 12 | 16 |
-+----+----+----+----+             +----+----+----+----+
-
-Transpose: M[i][j] ↔ M[j][i]
-
-After Reverse Each Row:
-+----+----+----+----+
-
-| 13 |  9 |  5 |  1 |  ← Reversed row 0
-+----+----+----+----+
-
-| 14 | 10 |  6 |  2 |  ← Reversed row 1
-+----+----+----+----+
-
-| 15 | 11 |  7 |  3 |  ← Reversed row 2
-+----+----+----+----+
-
-| 16 | 12 |  8 |  4 |  ← Reversed row 3
-+----+----+----+----+
-
-Result: 90° Clockwise Rotation ✓
-
-Mathematical Verification:
-Original [0][3] = 4  →  New [3][3] = 4  ✓
-Original [3][0] = 13 →  New [0][0] = 13 ✓
-Formula: (i,j) → (j, n-1-i)
-
-```
 
 ---
 
 ### 6️⃣ Visual: Spiral Matrix Traversal
 
-```
-Input: m=4, n=4
 
-+--------------------------------------------------------------------+
+![6️⃣ Visual: Spiral Matrix Traversal](./images/5-visual-matrix-rotation-90-clockwise.png)
 
-|  Direction Sequence: Right → Down → Left → Up → Repeat            |
-+--------------------------------------------------------------------+
-|                                                                    |
-|  Boundaries: top=0, bottom=3, left=0, right=3                     |
-|                                                                    |
-|  Step 1: Go Right (top row)                                       |
-|  +----+----+----+----+                                            |
-|  | →1 | →2 | →3 | →4 |  top = 0                                   |
-|  +----+----+----+----+                                            |
-|  |  5 |  6 |  7 |  8 |                                            |
-|  +----+----+----+----+                                            |
-|  |  9 | 10 | 11 | 12 |                                            |
-|  +----+----+----+----+                                            |
-|  | 13 | 14 | 15 | 16 |                                            |
-|  +----+----+----+----+                                            |
-|  After: top++ → top=1                                             |
-|                                                                    |
-|  Step 2: Go Down (right column)                                   |
-|  +----+----+----+----+                                            |
-|  |  1 |  2 |  3 |  4 |                                            |
-|  +----+----+----+----+                                            |
-|  |  5 |  6 |  7 | ↓8 |  right = 3                                 |
-|  +----+----+----+----+                                            |
-|  |  9 | 10 | 11 |↓12 |                                            |
-|  +----+----+----+----+                                            |
-|  | 13 | 14 | 15 |↓16 |                                            |
-|  +----+----+----+----+                                            |
-|  After: right-- → right=2                                         |
-|                                                                    |
-|  Step 3: Go Left (bottom row)                                     |
-|  +----+----+----+----+                                            |
-|  |  1 |  2 |  3 |  4 |                                            |
-|  +----+----+----+----+                                            |
-|  |  5 |  6 |  7 |  8 |                                            |
-|  +----+----+----+----+                                            |
-|  |  9 | 10 | 11 | 12 |                                            |
-|  +----+----+----+----+                                            |
-|  |←13 |←14 |←15 | 16 |  bottom = 3                                |
-|  +----+----+----+----+                                            |
-|  After: bottom-- → bottom=2                                       |
-|                                                                    |
-|  Step 4: Go Up (left column)                                      |
-|  +----+----+----+----+                                            |
-|  |  1 |  2 |  3 |  4 |                                            |
-|  +----+----+----+----+                                            |
-|  | ↑5 |  6 |  7 |  8 |  left = 0                                  |
-|  +----+----+----+----+                                            |
-|  | ↑9 | 10 | 11 | 12 |                                            |
-|  +----+----+----+----+                                            |
-|  | 13 | 14 | 15 | 16 |                                            |
-|  +----+----+----+----+                                            |
-|  After: left++ → left=1                                           |
-|                                                                    |
-|  Continue with inner spiral...                                    |
-|  Result: [1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10]                 |
-+--------------------------------------------------------------------+
-
-```
 
 ---
 
 ### 7️⃣ Visual: Search in Sorted Matrix (Staircase)
 
-```
-Matrix: Each row sorted, each column sorted
-Search for target = 14
 
-+----+----+----+----+
+![7️⃣ Visual: Search in Sorted Matrix (Staircase)](./images/5-visual-matrix-rotation-90-clockwise.png)
 
-|  1 |  4 |  7 | 11 |
-+----+----+----+----+
-
-|  2 |  5 |  8 | 12 |
-+----+----+----+----+
-
-|  3 |  6 |  9 | 16 |
-+----+----+----+----+
-
-| 10 | 13 | 14 | 17 |
-+----+----+----+----+
-
-+--------------------------------------------------------------------+
-
-|  Staircase Search: Start at top-right (i=0, j=3)                   |
-+--------------------------------------------------------------------+
-|                                                                    |
-|  Step 1: Start at (0,3) = 11                                      |
-|  +----+----+----+----+                                            |
-|  |  1 |  4 |  7 |[11]|  ← 11 < 14, move down                      |
-|  +----+----+----+----+                                            |
-|  |  2 |  5 |  8 | 12 |                                            |
-|  +----+----+----+----+                                            |
-|  |  3 |  6 |  9 | 16 |                                            |
-|  +----+----+----+----+                                            |
-|  | 10 | 13 | 14 | 17 |                                            |
-|  +----+----+----+----+                                            |
-|                                                                    |
-|  Step 2: Move to (1,3) = 12                                       |
-|  +----+----+----+----+                                            |
-|  |  1 |  4 |  7 | 11 |                                            |
-|  +----+----+----+----+                                            |
-|  |  2 |  5 |  8 |[12]|  ← 12 < 14, move down                      |
-|  +----+----+----+----+                                            |
-|  |  3 |  6 |  9 | 16 |                                            |
-|  +----+----+----+----+                                            |
-|  | 10 | 13 | 14 | 17 |                                            |
-|  +----+----+----+----+                                            |
-|                                                                    |
-|  Step 3: Move to (2,3) = 16                                       |
-|  +----+----+----+----+                                            |
-|  |  1 |  4 |  7 | 11 |                                            |
-|  +----+----+----+----+                                            |
-|  |  2 |  5 |  8 | 12 |                                            |
-|  +----+----+----+----+                                            |
-|  |  3 |  6 |  9 |[16]|  ← 16 > 14, move left                      |
-|  +----+----+----+----+                                            |
-|  | 10 | 13 | 14 | 17 |                                            |
-|  +----+----+----+----+                                            |
-|                                                                    |
-|  Step 4: Move to (2,2) = 9                                        |
-|  +----+----+----+----+                                            |
-|  |  1 |  4 |  7 | 11 |                                            |
-|  +----+----+----+----+                                            |
-|  |  2 |  5 |  8 | 12 |                                            |
-|  +----+----+----+----+                                            |
-|  |  3 |  6 | [9]| 16 |  ← 9 < 14, move down                       |
-|  +----+----+----+----+                                            |
-|  | 10 | 13 | 14 | 17 |                                            |
-|  +----+----+----+----+                                            |
-|                                                                    |
-|  Step 5: Move to (3,2) = 14                                       |
-|  +----+----+----+----+                                            |
-|  |  1 |  4 |  7 | 11 |                                            |
-|  +----+----+----+----+                                            |
-|  |  2 |  5 |  8 | 12 |                                            |
-|  +----+----+----+----+                                            |
-|  |  3 |  6 |  9 | 16 |                                            |
-|  +----+----+----+----+                                            |
-|  | 10 | 13 |[14]| 17 |  ← FOUND! ✓                                |
-|  +----+----+----+----+                                            |
-|                                                                    |
-|  Total Steps: 5 (much less than 16!)                              |
-|  Time Complexity: O(m + n)                                        |
-+--------------------------------------------------------------------+
-
-Algorithm:
-
-- If current > target: move left (eliminate column)
-
-- If current < target: move down (eliminate row)
-
-- Each step eliminates one row or column!
-
-```
 
 ---
 
@@ -611,7 +410,6 @@ def transpose(matrix: list[list[int]]) -> list[list[int]]:
     
     return result
 
-```
 
 ---
 
@@ -656,21 +454,8 @@ def transpose(matrix: list[list[int]]) -> list[list[int]]:
 
 ## 📊 Pattern Decision Tree
 
-```
-                Matrix Problem?
-                      |
-       +--------------+--------------+
-       |              |              |
-   Traverse?      Modify?        Search?
-       |              |              |
-   +---+---+      +---+---+      +---+---+
-   |       |      |       |      |       |
- Spiral  Layer  Rotate  Zero  Sorted  Value
-   |       |      |       |      |       |
- Boundary Diagonal Trans- In-place Binary Staircase
- Tracking        pose  Markers  Search
+![Pattern Decision Tree](./images/matrix-pattern-decision-tree.png)
 
-```
 
 ---
 
@@ -726,7 +511,7 @@ def transpose(matrix: list[list[int]]) -> list[list[int]]:
 
 ### Space Optimization Techniques
 
-```
+
 Problem: Set Matrix Zeroes
 
 ❌ O(m+n) space: Store zero rows/cols in sets
@@ -738,7 +523,6 @@ Problem: Set Matrix Zeroes
    - Process inner matrix using markers
    - Handle first row/col separately
 
-```
 
 ---
 
@@ -801,19 +585,11 @@ For Game of Life (cell dies/lives based on neighbors):
 for i in range(m):
     for j in range(n):
         board[i][j] >>= 1
-
 ```
 
-### Diagonal Indexing
+![1 (01) -> remains alive: set to 3 (11)](./images/staircase-search-start-at-top-right-i0-j3.png)
 
-**Main diagonal:** $i = j$  
-**Anti-diagonal:** $i + j = \text{constant}$
-
-For $m \times n$ matrix:
-
-- Number of diagonals (main direction): $m + n - 1$
-
-- Diagonal $d$ contains elements where $i - j = d - (n-1)$
+### Diagonal Grouping
 
 ```python
 # Group by diagonal
@@ -827,7 +603,6 @@ for i in range(m):
         
         # Anti-diagonal: i + j
         # anti_diagonals[i + j].append(matrix[i][j])
-
 ```
 
 ---
