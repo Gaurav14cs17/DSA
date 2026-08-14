@@ -39,7 +39,6 @@ permalink: /18_dynamic_programming/07_bitmask_dp/
 | **Difficulty** | Hard |
 | **Problems** | 8+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
