@@ -13,6 +13,9 @@ permalink: /30_number_theory/12_wilsons_theorem/03_applications/
 
 ### *Theoretical Applications and Corollaries*
 
+![*Theoretical Applications and Corollaries*](./images/theoretical-applications-and-corollaries.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Pattern-Theoretical-blue?style=for-the-badge" alt="Pattern">
@@ -39,26 +42,6 @@ permalink: /30_number_theory/12_wilsons_theorem/03_applications/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| USING WILSON TO FIND √(-1) mod 13                              |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Since 13 ≡ 1 (mod 4), -1 is a quadratic residue mod 13.       |
-|                                                                 |
-| Key: ((p-1)/2)!² ≡ (p-1)! × (-1)^((p-1)/2) (mod p)            |
-|                                                                 |
-| For p = 13:                                                     |
-|   (12/2)! = 6! = 720 ≡ 720 mod 13 = 5                         |
-|                                                                 |
-| Check: 5² = 25 ≡ 25 - 26 = -1 (mod 13) ✓                      |
-|                                                                 |
-| So √(-1) ≡ 5 (mod 13)                                          |
-|                                                                 |
-| Verify: 5² = 25 = 2×13 - 1 = -1 (mod 13) ✓                    |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
