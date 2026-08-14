@@ -451,6 +451,8 @@ A: Use `max(0, gain)` when adding to path. Negative contributions can be ignored
 
 ---
 
+```
+
 ## 📐 Mathematical Foundation
 ### 1️⃣ Path Types
 
