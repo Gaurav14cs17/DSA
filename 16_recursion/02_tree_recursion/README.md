@@ -99,20 +99,12 @@ Each node visited exactly once.
 
 **Problem:** Overlapping subproblems cause redundant computation.
 
-```
-fib(5)
-+-- fib(4)
+<div align="center">
 
-|   +-- fib(3)
-|   |   +-- fib(2)
+<img src="./images/exponential_blowup.png" alt="Exponential Blowup" width="100%">
 
-|   |   +-- fib(1)
-|   +-- fib(2)  ← Computed again!
-+-- fib(3)      ← Computed again!
-    +-- fib(2)
-    +-- fib(1)
+</div>
 
-```
 
 **Solution:** Memoization or Dynamic Programming.
 
@@ -248,16 +240,12 @@ def numTrees(n: int) -> int:
 
 ## 📊 Tree Recursion Pattern
 
-```
-Tree Recursion
-      |
-      +-- Overlapping subproblems → Add memoization
-      |
-      +-- Generate all structures → Combine left × right
-      |
-      +-- Count structures → Catalan numbers
+<div align="center">
 
-```
+<img src="./images/tree-recursion-pattern.png" alt="Tree Recursion Pattern" width="100%">
+
+</div>
+
 
 ---
 
