@@ -200,6 +200,11 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+.cursor/
+.push-progress.log
+ascii_blocks_inventory.json
+ascii_blocks_refined.json
+scripts/
 
 # Marimo
 marimo/_static/
