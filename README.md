@@ -26,6 +26,29 @@
 
 ---
 
+## 📐 Complexity Cheat Sheet
+
+<div align="center">
+
+![Complexity Chart](./assets/images/complexity-chart.png)
+
+| Algorithm | Time | Space | When to Use |
+|:----------|:----:|:-----:|:------------|
+| **Binary Search** | `O(log n)` | `O(1)` | Sorted data, monotonic function |
+| **Two Pointers** | `O(n)` | `O(1)` | Sorted arrays, palindromes |
+| **Sliding Window** | `O(n)` | `O(k)` | Subarray/substring problems |
+| **BFS** | `O(V+E)` | `O(V)` | Shortest path (unweighted) |
+| **DFS** | `O(V+E)` | `O(V)` | Path finding, cycle detection |
+| **Dijkstra** | `O((V+E)log V)` | `O(V)` | Shortest path (weighted) |
+| **Merge Sort** | `O(n log n)` | `O(n)` | Stable sort needed |
+| **Quick Sort** | `O(n log n)` | `O(log n)` | General purpose sorting |
+| **DP (1D)** | `O(n)` | `O(n)` | Optimal substructure |
+| **DP (2D)** | `O(n²)` | `O(n²)` | Two-sequence problems |
+
+</div>
+
+---
+
 ## ✨ What Makes This Special?
 
 <table>
@@ -176,25 +199,7 @@
 
 <div align="center">
 
-```
-                              🎯 DSA MASTERY PATH 🎯
-
-    +-----------------------------------------------------------------+
-    |                                                                 |
-    |   WEEK 1-2          WEEK 3-4          WEEK 5-6         WEEK 7+  |
-    |   ---------         ---------         ---------        -------- |
-    |                                                                 |
-    |   📦 Arrays         🧮 Sorting        🌲 Trees         🔴 DP     |
-    |   📝 Strings        🔍 Binary         📊 Graphs        ⚡ Adv.   |
-    |   🔗 Lists            Search          🏔️ Heaps        📐 Math   |
-    |   #️⃣ Hash Maps     ↩️ Recursion      🔀 Union-Find            |
-    |                                                                 |
-    |   ------------------------------------------------------------ |
-    |   🟢 FOUNDATION     🟡 INTERMEDIATE   🔴 ADVANCED      ⭐ EXPERT |
-    |                                                                 |
-    +-----------------------------------------------------------------+
-
-```
+![DSA Learning Roadmap](./assets/images/dsa-learning-roadmap.png)
 
 </div>
 
@@ -210,29 +215,6 @@
 | **11-12** | Graphs | BFS, DFS, Shortest Path | Graph algorithms |
 | **13-16** | DP | 1D, 2D, Advanced DP | Dynamic programming |
 | **17+** | Advanced | Segment Trees, Number Theory | Competition level |
-
----
-
-## 📐 Complexity Cheat Sheet
-
-<div align="center">
-
-![Complexity Chart](./assets/images/complexity-chart.png)
-
-| Algorithm | Time | Space | When to Use |
-|:----------|:----:|:-----:|:------------|
-| **Binary Search** | `O(log n)` | `O(1)` | Sorted data, monotonic function |
-| **Two Pointers** | `O(n)` | `O(1)` | Sorted arrays, palindromes |
-| **Sliding Window** | `O(n)` | `O(k)` | Subarray/substring problems |
-| **BFS** | `O(V+E)` | `O(V)` | Shortest path (unweighted) |
-| **DFS** | `O(V+E)` | `O(V)` | Path finding, cycle detection |
-| **Dijkstra** | `O((V+E)log V)` | `O(V)` | Shortest path (weighted) |
-| **Merge Sort** | `O(n log n)` | `O(n)` | Stable sort needed |
-| **Quick Sort** | `O(n log n)` | `O(log n)` | General purpose sorting |
-| **DP (1D)** | `O(n)` | `O(n)` | Optimal substructure |
-| **DP (2D)** | `O(n²)` | `O(n²)` | Two-sequence problems |
-
-</div>
 
 ---
 
@@ -304,4 +286,3 @@ Contributions are welcome! Here's how you can help:
 *Comprehensive DSA Guide • 830+ Problems • 41 Topics*
 
 </div>
-
