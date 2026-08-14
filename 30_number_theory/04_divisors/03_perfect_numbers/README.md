@@ -13,6 +13,9 @@ permalink: /30_number_theory/04_divisors/03_perfect_numbers/
 
 ### *Numbers Equal to the Sum of Their Proper Divisors*
 
+![*Numbers Equal to the Sum of Their Proper Divisors*](./images/numbers-equal-to-the-sum-of-their-proper-divisors.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy-green?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/LeetCode-507-orange?style=for-the-badge" alt="LeetCode">
@@ -39,28 +42,6 @@ permalink: /30_number_theory/04_divisors/03_perfect_numbers/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| WHY 28 IS PERFECT                                              |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Proper divisors of 28: 1, 2, 4, 7, 14                          |
-|                                                                 |
-|       1                                                         |
-|     + 2                                                         |
-|     + 4                                                         |
-|     + 7                                                         |
-|    +14                                                          |
-|   ----                                                          |
-|     28  ✓                                                       |
-|                                                                 |
-| Using Euclid-Euler:                                             |
-|   28 = 2^(3-1) × (2³ - 1)                                      |
-|      = 4 × 7                                                    |
-|   7 is prime (Mersenne prime M₃) ✓                             |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
