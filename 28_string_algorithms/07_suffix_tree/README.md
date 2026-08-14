@@ -35,7 +35,6 @@ nav_order: 7
 | **Topics** | Suffix Tree, Ukkonen's Algorithm, String Indexing |
 | **Prerequisites** | Tries, Suffix arrays, Advanced data structures |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
