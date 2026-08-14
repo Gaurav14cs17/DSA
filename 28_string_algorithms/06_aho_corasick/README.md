@@ -35,7 +35,6 @@ nav_order: 6
 | **Topics** | Trie, Automaton, Multiple Pattern Matching |
 | **Prerequisites** | Trie, BFS, KMP failure function |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
