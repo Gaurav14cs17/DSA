@@ -36,7 +36,6 @@ permalink: /04_stacks/
 | **Subtopics** | 4 |
 | **Problems** | 35+ |
 
-{: .highlight }
 > **How to use this page:** Scan **At a Glance**, then work through theory → visuals → code.
 
 ---
@@ -184,7 +183,6 @@ $$\text{min at}[i] = \min(value[i], \text{min at}[i-1])$$
 ## 🎯 Key Patterns
 
 ### Basic Stack Operations
-
 ```python
 class Stack:
     def __init__(self):
@@ -204,7 +202,6 @@ class Stack:
 ```
 
 ### Monotonic Stack Template
-
 ```python
 def next_greater_element(nums: list[int]) -> list[int]:
     """
@@ -228,6 +225,8 @@ def next_greater_element(nums: list[int]) -> list[int]:
 
 ![Monotonic Stack Template](./images/stack-overview.png)
 
+### Pattern Decision Tree
+
 ```text
               Stack Problem
                    |
@@ -237,10 +236,8 @@ Parentheses   Monotonic Stack   Shunting-Yard
  Pop to match  Inc for NSE    + operand stack
 ```
 
-![📊 Pattern Decision Tree](./images/stack-overview.png)
 
 ### Pattern Checklist
-
 - [ ] Can I use monotonic stack for O(n)?
 - [ ] Do I need auxiliary stack for min/max?
 - [ ] Should I store indices or values?
@@ -254,7 +251,6 @@ Parentheses   Monotonic Stack   Shunting-Yard
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Stack Matching | O(n) | O(n) |
@@ -264,7 +260,6 @@ Parentheses   Monotonic Stack   Shunting-Yard
 | 844 | [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/) | Stack | O(n) | O(n) |
 
 ### 🟡 Medium
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 71 | [Simplify Path](https://leetcode.com/problems/simplify-path/) | Stack | O(n) | O(n) |
@@ -274,7 +269,6 @@ Parentheses   Monotonic Stack   Shunting-Yard
 | 901 | [Online Stock Span](https://leetcode.com/problems/online-stock-span/) | Monotonic Stack | O(1)* | O(n) |
 
 ### 🔴 Hard
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 84 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | Monotonic Stack | O(n) | O(n) |
@@ -286,7 +280,6 @@ Parentheses   Monotonic Stack   Shunting-Yard
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
-
 | Resource | Description | Link |
 |----------|-------------|------|
 | **Stack ADT** | Wikipedia overview | [Stack (abstract data type)](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) |
@@ -294,7 +287,6 @@ Parentheses   Monotonic Stack   Shunting-Yard
 | **LeetCode Explore** | Stack & queue card | [Explore Card](https://leetcode.com/explore/learn/card/queue-stack/) |
 
 ### 📝 Practice
-
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Stack tag | [Problems](https://leetcode.com/tag/stack/) |
@@ -322,7 +314,6 @@ Parentheses   Monotonic Stack   Shunting-Yard
 <div align="center">
 
 ### 🌟 If this helped you, give it a ⭐ on GitHub! 🌟
-
 **Made with ❤️ for the coding community by [Gaurav Goswami](https://github.com/Gaurav14cs17)**
 
 [⬅️ Previous: Linked Lists](../03_linked_lists/README.md) | [🏠 Home](../README.md) | [Next: Queues ➡️](../05_queues/README.md)
