@@ -541,7 +541,7 @@ Therefore: T ≤ n + (n-1) = O(n)
 
 ---
 
-## 🧩 LeetCode Problems
+## 🏆 LeetCode Problems
 
 ### Medium
 
@@ -703,6 +703,24 @@ def longest_common_prefix_multiple(strings):
 - [Codeforces Tutorial](https://codeforces.com/blog/entry/3107)
 
 - [Visualization Tool](https://personal.utdallas.edu/~besp/demo/John2010/z-algorithm.htm)
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **Z-Algorithm** | CP-Algorithms | [Z-function](https://cp-algorithms.com/string/z-function.html) |
+| **Z-Array** | Codeforces | [Tutorial](https://codeforces.com/blog/entry/3107) |
+| **Pattern Matching** | GeeksforGeeks | [Z-algorithm](https://www.geeksforgeeks.org/z-algorithm-linear-time-pattern-searching-algorithm/) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | String tag | [Problems](https://leetcode.com/tag/string/) |
 
 ---
 
