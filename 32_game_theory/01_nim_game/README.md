@@ -51,7 +51,6 @@ permalink: /32_game_theory/01_nim_game/
 | **In one line** | The Foundation of Combinatorial Game Theory |
 | **Difficulty** | Easy to Hard |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
