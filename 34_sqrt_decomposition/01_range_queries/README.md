@@ -28,19 +28,16 @@ permalink: /34_sqrt_decomposition/01_range_queries/
 ## 📊 Visual Overview
 
 ### Range Sum Query with Point Update
-
 <div align="center">
 <img src="./images/range-sum-query.png" alt="Range Sum Query" width="100%">
 </div>
 
 ### Range Minimum Query
-
 <div align="center">
 <img src="./images/range-min-query.png" alt="Range Min Query" width="100%">
 </div>
 
 ### Range Update with Lazy Propagation
-
 <div align="center">
 <img src="./images/range-update-lazy.png" alt="Range Update with Lazy" width="100%">
 </div>
@@ -54,7 +51,6 @@ permalink: /34_sqrt_decomposition/01_range_queries/
 | **In one line** | Efficient Range Operations Using Block Decomposition |
 | **Difficulty** | Medium |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
