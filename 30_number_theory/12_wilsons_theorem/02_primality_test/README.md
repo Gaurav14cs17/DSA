@@ -13,6 +13,9 @@ permalink: /30_number_theory/12_wilsons_theorem/02_primality_test/
 
 ### *A Theoretically Perfect but Practically Useless Test*
 
+![*A Theoretically Perfect but Practically Useless Test*](./images/a-theoretically-perfect-but-practically-useless-test.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Time-O(n)-yellow?style=for-the-badge" alt="Time">
@@ -39,31 +42,6 @@ permalink: /30_number_theory/12_wilsons_theorem/02_primality_test/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| COMPUTING (n-1)! mod n                                         |
-+-----------------------------------------------------------------+
-|                                                                 |
-| For n = 1,000,000:                                              |
-|                                                                 |
-| Wilson: 999,999 multiplications!                                |
-|   1 × 2 × 3 × ... × 999,999                                    |
-|   Each multiplication: O(log n) for big integers               |
-|   Total: O(n × log n) operations                               |
-|                                                                 |
-| Trial Division: √n = 1000 divisions                            |
-|   Check divisibility by 2, 3, 5, ..., 1000                     |
-|   Total: O(√n) operations                                      |
-|                                                                 |
-| Miller-Rabin: O(k log³ n) = O(log³ n)                          |
-|   k random witnesses, each O(log³ n)                           |
-|   Total: ~100 operations for any n!                            |
-|                                                                 |
-| Ratio: Wilson is 1000× slower than trial division              |
-|        and 10,000,000× slower than Miller-Rabin!               |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
