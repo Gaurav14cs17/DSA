@@ -250,7 +250,7 @@ def longestPalindrome(s: str) -> int:
             has_odd = True
     
     return length + (1 if has_odd else 0)
-
+```
 
 ## 🏆 LeetCode Problems
 
@@ -564,7 +564,7 @@ def longestPalindrome(s: str) -> int:
             has_odd = True
     
     return length + (1 if has_odd else 0)
-
+```
 
 ---
 
