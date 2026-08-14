@@ -181,24 +181,9 @@ then string has period (m - π[m-1])
 
 ### Example Computation
 
-```
-Pattern: "ABABCABAA"
-Index:    012345678
+![Example Computation](./images/example-computation.png)
 
-Step-by-step:
-i=0: π[0] = 0 (by definition)
-i=1: "AB" → no proper prefix = suffix → π[1] = 0
-i=2: "ABA" → "A" matches → π[2] = 1
-i=3: "ABAB" → "AB" matches → π[3] = 2
-i=4: "ABABC" → "AB" matches "AB" but C≠A → π[4] = 0
-i=5: "ABABCA" → "A" matches → π[5] = 1
-i=6: "ABABCAB" → "AB" matches → π[6] = 2
-i=7: "ABABCABA" → "ABA" matches → π[7] = 3
-i=8: "ABABCABAA" → "ABA" matches "ABA" but A≠C → π[8] = 1
 
-Result: π = [0, 0, 1, 2, 0, 1, 2, 3, 1]
-
-```
 
 ---
 
