@@ -13,6 +13,9 @@ permalink: /30_number_theory/04_divisors/02_sum_divisors/
 
 ### *The Divisor Sum Function σ(n)*
 
+![*The Divisor Sum Function σ(n)*](./images/the-divisor-sum-function-sigma-n.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy-green?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Time-O(√n)-blue?style=for-the-badge" alt="Time">
@@ -39,29 +42,6 @@ permalink: /30_number_theory/04_divisors/02_sum_divisors/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| COMPUTING σ(60)                                                |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Step 1: Prime Factorization                                    |
-|         60 = 2² × 3¹ × 5¹                                      |
-|                                                                 |
-| Step 2: Apply Formula for Each Prime                           |
-|                                                                 |
-|   For 2²: (1 + 2 + 4) = 7        or  (2³-1)/(2-1) = 7         |
-|   For 3¹: (1 + 3) = 4            or  (3²-1)/(3-1) = 4         |
-|   For 5¹: (1 + 5) = 6            or  (5²-1)/(5-1) = 6         |
-|                                                                 |
-| Step 3: Multiply                                               |
-|         σ(60) = 7 × 4 × 6 = 168                                |
-|                                                                 |
-| Step 4: Verify                                                 |
-|         Divisors: 1,2,3,4,5,6,10,12,15,20,30,60               |
-|         Sum = 1+2+3+4+5+6+10+12+15+20+30+60 = 168 ✓           |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
