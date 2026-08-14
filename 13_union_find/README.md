@@ -266,20 +266,12 @@ class WeightedUnionFind:
 
 ## 📊 Union-Find Pattern Decision
 
-```
-Connectivity Problem
-        |
-        +-- Count components → Track components
-        |
-        +-- Detect cycle → Union returns false
-        |
-        +-- Dynamic connectivity → Union-Find
-        |
-        +-- Weighted edges → Weighted Union-Find
-        |
-        +-- Grid connectivity → Virtual node for borders
+<div align="center">
 
-```
+<img src="./images/union-find-pattern.png" alt="Union-Find Pattern Decision" width="100%">
+
+</div>
+
 
 ---
 
