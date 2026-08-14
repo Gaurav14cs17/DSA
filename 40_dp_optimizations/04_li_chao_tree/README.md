@@ -24,7 +24,6 @@ permalink: /40_dp_optimizations/04_li_chao_tree/
 
 ---
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
