@@ -435,7 +435,7 @@ print(f"Merged: {s1 + s2[overlap:]}")
 
 ---
 
-## 🧩 LeetCode Problems
+## 🏆 LeetCode Problems
 
 ### Medium
 
@@ -591,6 +591,24 @@ print(min_chars_to_palindrome("aacecaaa"))  # "aacecaaa"
 4. **Overlap Finding:**
    - Essential for string merging
    - Used in bioinformatics
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **Prefix-Suffix** | CP-Algorithms | [Borders and prefix function](https://cp-algorithms.com/string/prefix-function.html) |
+| **Happy Prefix** | GeeksforGeeks | [Longest Prefix Suffix](https://www.geeksforgeeks.org/longest-prefix-also-suffix/) |
+| **String Overlap** | USACO Guide | [String Search](https://usaco.guide/gold/string-search) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | String tag | [Problems](https://leetcode.com/tag/string/) |
 
 ---
 
