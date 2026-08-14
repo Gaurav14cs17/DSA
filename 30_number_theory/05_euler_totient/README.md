@@ -28,6 +28,8 @@ permalink: /30_number_theory/05_euler_totient/
 
 ## 📊 Visual Overview
 
+![Euler Totient Overview](./images/euler-totient-overview.png)
+
 > *Concept map and key formulas — dive into subtopics for detailed walkthroughs and code.*
 
 ---
