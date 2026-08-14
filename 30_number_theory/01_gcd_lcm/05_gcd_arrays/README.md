@@ -46,7 +46,6 @@ permalink: /30_number_theory/01_gcd_lcm/05_gcd_arrays/
 | **Difficulty** | Medium |
 | **Problems** | 10+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
