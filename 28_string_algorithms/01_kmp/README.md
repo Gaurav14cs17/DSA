@@ -33,7 +33,6 @@ has_children: true
 | **Topics** | String Matching, Pattern Preprocessing, Failure Function |
 | **Prerequisites** | String basics, Arrays, Prefix analysis |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
