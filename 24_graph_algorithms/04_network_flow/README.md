@@ -41,7 +41,6 @@ permalink: /24_graph_algorithms/04_network_flow/
 | **Difficulty** | Hard |
 | **Problems** | 10+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
