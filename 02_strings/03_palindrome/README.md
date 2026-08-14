@@ -48,7 +48,6 @@ permalink: /02_strings/03_palindrome/
 
 ## 📐 Mathematical Foundation
 ### 1️⃣ Palindrome Definition
-
 **Definition:** String $S[0..n-1]$ is a palindrome if:
 
 $$\boxed{S = \text{reverse}(S)}$$
@@ -60,7 +59,6 @@ $$S[i] = S[n-1-i] \quad \forall i \in [0, \lfloor n/2 \rfloor]$$
 ---
 
 ### 2️⃣ Expand Around Center
-
 **Key Insight:** Every palindrome has a center.
 
 **Centers:**
@@ -81,7 +79,6 @@ $$\text{left} = c // 2
 ---
 
 ### 3️⃣ Longest Palindromic Substring DP
-
 **State:** $dp[i][j] = 1$ if $S[i..j]$ is palindrome
 
 **Recurrence:**
@@ -95,7 +92,6 @@ S[i] = S[j] \land dp[i+1][j-1] & \text{if } j > i + 1
 ---
 
 ### 4️⃣ Count Palindromic Substrings
-
 **Formula using expand around center:**
 
 $$\text{count} = \sum_{c=0}^{2n-2} \text{palindromes from center}(c)$$
@@ -105,7 +101,6 @@ $$\text{count} = \sum_{c=0}^{2n-2} \text{palindromes from center}(c)$$
 ---
 
 ### 5️⃣ Manacher's Algorithm
-
 **Key Idea:** Reuse palindrome information to skip redundant checks.
 
 **Augmented string:** Insert `#` between characters.
@@ -261,7 +256,6 @@ def validPalindrome(s: str) -> bool:
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
-
 | # | Problem | Technique | Time | Space |
 |:-:|---------|-----------|:----:|:-----:|
 | 9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Math | O(log n) | O(1) |
@@ -270,7 +264,6 @@ def validPalindrome(s: str) -> bool:
 | 680 | [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/) | Two Pointers | O(n) | O(1) |
 
 ### 🟡 Medium
-
 | # | Problem | Technique | Time | Space |
 |:-:|---------|-----------|:----:|:-----:|
 | 5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | Expand Center | O(n²) | O(1) |
@@ -279,7 +272,6 @@ def validPalindrome(s: str) -> bool:
 | 647 | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | Expand Center | O(n²) | O(1) |
 
 ### 🔴 Hard
-
 | # | Problem | Technique | Time | Space |
 |:-:|---------|-----------|:----:|:-----:|
 | 132 | [Palindrome Partitioning II](https://leetcode.com/problems/palindrome-partitioning-ii/) | DP | O(n²) | O(n) |
@@ -310,8 +302,6 @@ def validPalindrome(s: str) -> bool:
 ## 🎓 Pattern Recognition Guide
 
 ### Problem Type Decision Tree
-
-
 Palindrome Problem
         |
  Two Ptr  +-+--+
@@ -322,7 +312,6 @@ Palindrome Problem
             O(n²) O(n)
 
 
-![Problem Type Decision Tree](./images/problem-type-decision-tree.png)
 
 "aba" → "#a#b#a#"
 All palindromes become odd-length!
@@ -339,7 +328,6 @@ All palindromes become odd-length!
 ## 🎯 Complexity Comparison
 
 ### Approach Comparison
-
 | Approach | Time | Space | Difficulty | Interview |
 |----------|:----:|:-----:|:----------:|:---------:|
 | **Brute Force** | O(n³) | O(1) | Easy | ❌ Too slow |
@@ -348,8 +336,6 @@ All palindromes become odd-length!
 | **Manacher's** | O(n) | O(n) | Hard | ⚠️ Overkill |
 
 ### When Each Matters
-
-
 n < 100:     Any approach works
 n < 10,000:  Expand around center recommended
 n > 10,000:  Consider Manacher's
@@ -360,7 +346,6 @@ n > 10,000:  Consider Manacher's
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
-
 | Resource | Description | Link |
 |----------|-------------|------|
 | **Palindrome Algorithms** | Complete guide | [GeeksforGeeks](https://www.geeksforgeeks.org/longest-palindrome-substring-set-1/) |
@@ -369,7 +354,6 @@ n > 10,000:  Consider Manacher's
 | **Palindrome Properties** | Mathematical insights | [MathWorld](https://mathworld.wolfram.com/Palindrome.html) |
 
 ### 🎥 Video Tutorials
-
 | Resource | Topic | Link |
 |----------|-------|------|
 | **NeetCode** | Longest palindromic substring | [YouTube](https://www.youtube.com/watch?v=XYQecbcd6_c) |
@@ -379,7 +363,6 @@ n > 10,000:  Consider Manacher's
 | **Abdul Bari** | Palindrome partitioning | [YouTube](https://www.youtube.com/watch?v=fOTlBKBPNdQ) |
 
 ### 📝 Interactive Practice
-
 | Platform | Problem Set | Link |
 |----------|-------------|------|
 | **LeetCode** | Palindrome tag | [Problems](https://leetcode.com/tag/palindrome/) |
@@ -387,7 +370,6 @@ n > 10,000:  Consider Manacher's
 | **Codeforces** | Palindrome problems | [Problemset](https://codeforces.com/problemset?tags=strings,1200-1400) |
 
 ### 🔬 Advanced Topics
-
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Manacher's Algorithm** | Linear time implementation | [CP-Algorithms](https://cp-algorithms.com/string/manacher.html) |
@@ -396,7 +378,6 @@ n > 10,000:  Consider Manacher's
 | **Aho-Corasick Palindrome** | Multiple palindrome patterns | [Paper](https://www.sciencedirect.com/science/article/pii/0022000075900115) |
 
 ### 🎯 Problem Collections
-
 | Collection | Focus | Link |
 |-----------|-------|------|
 | **NeetCode 150** | Essential palindromes | [List](https://neetcode.io/practice) |
@@ -404,7 +385,6 @@ n > 10,000:  Consider Manacher's
 | **Striver's SDE Sheet** | Palindrome section | [Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/) |
 
 ### 📊 Visualization Tools
-
 | Tool | Purpose | Link |
 |------|---------|------|
 | **Palindrome Visualizer** | Interactive demo | [Tool](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html) |
@@ -415,7 +395,6 @@ n > 10,000:  Consider Manacher's
 ## 🎯 Practice Roadmap
 
 ### Beginner Level
-
 1. **Valid Palindrome** (#125) - Learn two pointers
 
 2. **Palindrome Number** (#9) - Integer variant
@@ -423,7 +402,6 @@ n > 10,000:  Consider Manacher's
 3. **Palindrome Linked List** (#234) - Apply to linked list
 
 ### Intermediate Level
-
 4. **Longest Palindromic Substring** (#5) - Master expand center
 
 5. **Palindromic Substrings** (#647) - Count all
@@ -431,7 +409,6 @@ n > 10,000:  Consider Manacher's
 6. **Valid Palindrome II** (#680) - With one deletion
 
 ### Advanced Level
-
 7. **Palindrome Partitioning** (#131) - Backtracking
 
 8. **Palindrome Partitioning II** (#132) - Min cuts DP
@@ -441,7 +418,6 @@ n > 10,000:  Consider Manacher's
 10. **Shortest Palindrome** (#214) - KMP application
 
 ### Expert Challenge
-
 - Implement Manacher's algorithm
 
 - Solve in O(n) time
@@ -469,7 +445,6 @@ A: No for worst case. But average case with hashing can be faster in practice.
 <div align="center">
 
 ### 🎯 2n-1 Centers: The Magic Number
-
 *Remember this formula, and palindrome problems become easy!*
 
 **Made with ❤️ by [Gaurav Goswami](https://github.com/Gaurav14cs17)**
