@@ -39,7 +39,6 @@ nav_order: 1
 | **Typical time** | O(1) per operation |
 | **Typical space** | O(1) |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
