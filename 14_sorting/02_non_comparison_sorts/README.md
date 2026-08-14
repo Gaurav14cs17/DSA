@@ -24,18 +24,6 @@ permalink: /14_sorting/02_non_comparison_sorts/
 
 ---
 
-## 📊 Visual Overview
-
-<div align="center">
-
-![Non-Comparison Sorts](./images/non_comparison_sorts.png)
-
-*Non-Comparison Sorts*
-
-</div>
-
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -44,7 +32,7 @@ permalink: /14_sorting/02_non_comparison_sorts/
 | **Problems** | 5+ |
 
 {: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+> **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
 
@@ -126,6 +114,29 @@ $$T = O(n), \quad S = O(1)$$
 - $[low, mid)$: all 1s
 
 - $[high+1, n)$: all 2s
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Non-Comparison Sorts](./images/non_comparison_sorts.png)
+
+*Non-Comparison Sorts*
+
+</div>
+
+---
+
+## 📊 Non-Comparison Sort Selection
+
+<div align="center">
+
+<img src="./images/non-comparison-sort-selection.png" alt="Non-Comparison Sort Selection" width="100%">
+
+</div>
+
 
 ---
 
@@ -303,23 +314,6 @@ def maximumGap(nums: list[int]) -> int:
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 164 | [Maximum Gap](https://leetcode.com/problems/maximum-gap/) | Bucket Sort | O(n) | O(n) |
-
----
-
-## 📊 Non-Comparison Sort Selection
-
-```
-Non-Comparison Sort
-        |
-        +-- Small range integers → Counting Sort
-        |
-        +-- Large range, limited digits → Radix Sort
-        |
-        +-- Uniform floats [0,1) → Bucket Sort
-        |
-        +-- 3 values (0,1,2) → Dutch Flag
-
-```
 
 ---
 
