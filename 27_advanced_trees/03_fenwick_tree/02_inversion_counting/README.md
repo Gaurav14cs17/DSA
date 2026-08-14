@@ -39,7 +39,6 @@ permalink: /27_advanced_trees/03_fenwick_tree/02_inversion_counting/
 | **Difficulty** | Hard |
 | **Problems** | 8 |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
