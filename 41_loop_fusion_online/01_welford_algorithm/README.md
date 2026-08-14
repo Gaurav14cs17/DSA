@@ -39,7 +39,6 @@ permalink: /41_loop_fusion_online/01_welford_algorithm/
 | **Difficulty** | Medium |
 | **Problems** | 5+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
