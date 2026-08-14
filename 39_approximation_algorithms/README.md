@@ -50,7 +50,6 @@ permalink: /39_approximation_algorithms/
 | **Subtopics** | 4 |
 | **Problems** | 20+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
