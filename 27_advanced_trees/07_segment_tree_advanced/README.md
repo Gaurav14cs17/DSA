@@ -41,7 +41,6 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/
 | **Subtopics** | 5 |
 | **Problems** | 40+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
