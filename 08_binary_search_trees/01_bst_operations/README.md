@@ -487,6 +487,8 @@ def trimBST(root: TreeNode, low: int, high: int) -> TreeNode:
 
 ---
 
+```
+
 ## 📐 Mathematical Foundation
 ### 1️⃣ Search Operation
 
