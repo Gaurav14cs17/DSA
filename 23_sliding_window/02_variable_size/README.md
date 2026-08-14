@@ -40,100 +40,15 @@ permalink: /23_sliding_window/02_variable_size/
 
 ### Longest Without Repeating Characters
 
-```
-String: "abcabcbb"
+![Longest Without Repeating Characters](./images/longest-without-repeating-characters.png)
 
-Step 1: Expand
-"a"      set={a}, len=1
-"ab"     set={a,b}, len=2
-"abc"    set={a,b,c}, len=3 ⭐
 
-Step 2: 'a' repeats! Shrink until valid
-+---+---+---+---+---+---+---+---+
-
-| a | b | c | a | b | c | b | b |
-+---+---+---+---+---+---+---+---+
-  L           R
-  ↓
-Remove 'a', move L
-+---+---+---+---+---+---+---+---+
-
-| a | b | c | a | b | c | b | b |
-+---+---+---+---+---+---+---+---+
-      L       R
-set = {b,c,a}, len=3
-
-Step 3: 'b' repeats!
-+---+---+---+---+---+---+---+---+
-
-| a | b | c | a | b | c | b | b |
-+---+---+---+---+---+---+---+---+
-      L           R
-Remove 'b', move L
-+---+---+---+---+---+---+---+---+
-
-| a | b | c | a | b | c | b | b |
-+---+---+---+---+---+---+---+---+
-          L       R
-set = {c,a,b}, len=3
-
-...continue...
-
-Maximum Length: 3
-
-```
 
 ### Minimum Size Subarray Sum ≥ 7
 
-```
-Array: [2, 3, 1, 2, 4, 3]   Target: 7
+![Minimum Size Subarray Sum ≥ 7](./images/minimum-size-subarray-sum-7.png)
 
-Expand until valid:
-+---+---+---+---+---+---+
 
-| 2 | 3 | 1 | 2 | 4 | 3 |
-+---+---+---+---+---+---+
-  L
-              R
-sum = 2+3+1+2 = 8 ≥ 7 ✓
-min_len = 4
-
-Shrink while valid:
-+---+---+---+---+---+---+
-
-| 2 | 3 | 1 | 2 | 4 | 3 |
-+---+---+---+---+---+---+
-      L
-              R
-sum = 8-2 = 6 < 7 ✗
-Stop shrinking, expand
-
-+---+---+---+---+---+---+
-
-| 2 | 3 | 1 | 2 | 4 | 3 |
-+---+---+---+---+---+---+
-      L
-                  R
-sum = 6+4 = 10 ≥ 7 ✓
-min_len = 4
-
-Shrink while valid:
-sum = 10-3 = 7 ≥ 7 ✓, min_len = 3
-sum = 7-1 = 6 < 7 ✗
-
-+---+---+---+---+---+---+
-
-| 2 | 3 | 1 | 2 | 4 | 3 |
-+---+---+---+---+---+---+
-              L
-                      R
-sum = 6+3 = 9 ≥ 7 ✓
-Shrink: sum = 9-2 = 7 ≥ 7 ✓, min_len = 2
-Shrink: sum = 7-4 = 3 < 7 ✗
-
-Answer: 2 (subarray [4, 3])
-
-```
 
 ### atMost(k) Counting
 
@@ -309,10 +224,9 @@ $$\text{atMost}(k) - \text{atMost}(k-1) = |S_k| = \text{exactly}(k)$$
 
 When window \([left, right]\) is valid, count subarrays ending at `right`:
 
-```
-\text{count} += right - left + 1
+$$\text{count} += right - left + 1$$
 
-$$This counts: \([right]\), \([right-1, right]\), ..., \([left, right]\)
+This counts: \([right]\), \([right-1, right]\), ..., \([left, right]\)
 
 ---
 
