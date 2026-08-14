@@ -13,7 +13,6 @@ permalink: /06_hash_tables/02_two_sum_pattern/
 ### *🎯 Two Sum Pattern*
 
 
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-12+-blue?style=for-the-badge" alt="Problems">
@@ -42,7 +41,6 @@ permalink: /06_hash_tables/02_two_sum_pattern/
 
 ### Two Sum (#1)
 
-```
 nums = [2, 7, 11, 15], target = 9
 
 Step-by-step:
@@ -52,58 +50,21 @@ i   num   complement   seen         Action
 
 Time: O(n), Space: O(n)
 
-```
 
 ### Three Sum (#15)
 
-```
-nums = [-1, 0, 1, 2, -1, -4], target = 0
 
-Step 1: Sort → [-4, -1, -1, 0, 1, 2]
+![Three Sum (#15)](image/three-sum-two-pointers.png)
 
-Step 2: For each i, two-pointer on remaining:
-
-i=0, nums[i]=-4, target=-(-4)=4
-  L=1, R=5: -1+2=1 < 4, L++
-  L=2, R=5: -1+2=1 < 4, L++
-  L=3, R=5: 0+2=2 < 4, L++
-  L=4, R=5: 1+2=3 < 4, L++
-  No triplet
-
-i=1, nums[i]=-1, target=1
-  L=2, R=5: -1+2=1 ✓ → [-1,-1,2]
-  L++, R--
-  L=3, R=4: 0+1=1 ✓ → [-1,0,1]
-  L++, R--
-
-Result: [[-1,-1,2], [-1,0,1]]
-
-```
 
 ### Four Sum II (#454)
 
-```
-A=[1,2], B=[-2,-1], C=[-1,2], D=[0,2]
 
-Step 1: All A+B sums
-  1+(-2)=-1 → count[-1]=1
-  1+(-1)=0  → count[0]=1
-  2+(-2)=0  → count[0]=2
-  2+(-1)=1  → count[1]=1
+![Four Sum II (#454)](image/two-sum-hashmap.png)
 
-Step 2: Count matching -(C+D)
-  C=-1, D=0: -(−1+0)=1 → count[1]=1 ✓
-  C=-1, D=2: -(−1+2)=-1 → count[-1]=1 ✓
-  C=2, D=0: -(2+0)=-2 → count[-2]=0
-  C=2, D=2: -(2+2)=-4 → count[-4]=0
-
-Total: 2 tuples
-
-```
 
 ### Subarray Sum = K (#560)
 
-```
 nums = [1, 1, 1], k = 2
 
 Prefix sums: [0, 1, 2, 3]
@@ -119,8 +80,6 @@ j   P[j]  P[j]-k  count[P[j]-k]  Result
 3    3       1          1           2 (subarray [1,2])
 
 Total: 2 subarrays
-
-```
 
 
 ## 🎯 At a Glance
@@ -326,8 +285,6 @@ def twoSumLessThanK(nums: list[int], k: int) -> int:
             right -= 1
     
     return max_sum
-
-```
 
 
 ## 🏆 LeetCode Problems
@@ -689,7 +646,6 @@ def twoSumLessThanK(nums: list[int], k: int) -> int:
     
     return max_sum
 
-```
 
 ---
 
