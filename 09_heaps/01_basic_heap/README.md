@@ -463,6 +463,8 @@ def lastStoneWeight(stones: list[int]) -> int:
 
 ---
 
+```
+
 ## 📐 Mathematical Foundation
 ### 1️⃣ Heap Property Maintenance
 
