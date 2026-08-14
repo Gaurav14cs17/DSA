@@ -372,14 +372,11 @@ By induction, $M[n]$ is the maximum subarray sum. $\blacksquare$
 
 At each position, ask: **"Should I extend the previous subarray or start fresh?"**
 
-```
-Position:  1    2    3    4    5    6    7    8    9
-Array:    -2    1   -3    4   -1    2    1   -5    4
-          ↓     ↓    ↓    ↓    ↓    ↓    ↓    ↓    ↓
-S[i]:     -2    1   -2    4    3    5    6    1    5
-Decision: new  new  ext  new  ext  ext  ext  ext  ext
+<div align="center">
 
-```
+![Kadane Proof Intuition](./images/kadane-proof-intuition.png)
+
+</div>
 
 **Why it works:**
 
@@ -429,7 +426,7 @@ Array: $[-2, 1, -3, 4, -1, 2, 1, -5, 4]$
 
 ---
 
-## 🎯 LeetCode Problems
+## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty | Pattern |
 |:-:|---------|-----------|---------|
@@ -468,7 +465,7 @@ Array: $[-2, 1, -3, 4, -1, 2, 1, -5, 4]$
 
 ---
 
-## 📚 Resources
+## 📚 References & Learning Resources
 
 | Resource | Link |
 |----------|------|
