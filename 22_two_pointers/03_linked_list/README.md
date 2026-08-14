@@ -37,71 +37,21 @@ permalink: /22_two_pointers/03_linked_list/
 
 ### Floyd's Detection in Action
 
-```
-List: 1 → 2 → 3 → 4 → 5 → 6
-                  ↑       ↓
-                  9 ← 8 ← 7
+![Floyd's Detection in Action](./images/floyds-detection-in-action.png)
 
-Initial:
-🐢🐇 at 1
 
-Step 1:  🐢→2    🐇→→3
-Step 2:  🐢→3    🐇→→5
-Step 3:  🐢→4    🐇→→7
-Step 4:  🐢→5    🐇→→9
-Step 5:  🐢→6    🐇→→5 (wrapped)
-Step 6:  🐢→7    🐇→→7
-
-🐢 = 🐇 at node 7! Cycle detected! ✓
-
-```
 
 ### Finding Cycle Start
 
-```
-After detection (meeting at 7):
+![Finding Cycle Start](./images/finding-cycle-start.png)
 
-Reset slow to head:
-🐢 at 1, 🐇 at 7
 
-Move both one step:
-Step 1: 🐢→2, 🐇→8
-Step 2: 🐢→3, 🐇→9
-Step 3: 🐢→4, 🐇→4
-
-🐢 = 🐇 at node 4! Cycle starts here! ✓
-
-Verification:
-μ = 3 (steps from 1 to 4)
-x = 3 (steps from 4 to 7 in cycle)
-λ = 6 (cycle: 4→5→6→7→8→9→4)
-μ + x = 6 = λ ✓
-
-```
 
 ### Finding Middle
 
-```
-List: 1 → 2 → 3 → 4 → 5 → 6 → 7
+![Finding Middle](./images/finding-middle.png)
 
-🐢=1, 🐇=1
-🐢→2, 🐇→→3
-🐢→3, 🐇→→5
-🐢→4, 🐇→→7
-🐇 reaches end!
 
-Middle = 🐢 = 4 ✓
-
-List: 1 → 2 → 3 → 4 → 5 → 6
-
-🐢=1, 🐇=1
-🐢→2, 🐇→→3
-🐢→3, 🐇→→5
-🐇.next is end (6.next = null)
-
-Middle = 🐢 = 4 (second of two middles) ✓
-
-```
 
 ### List Intersection
 
@@ -272,44 +222,6 @@ This is exactly the cycle start position! ∎
 
 #### 📊 Visual Proof
 
-```
-+--------------------------------------------------------------+
-|                  FLOYD'S CYCLE START PROOF                   |
-+--------------------------------------------------------------+
-|                                                              |
-|  Linked List with Cycle:                                     |
-|                                                              |
-|  HEAD --○--○--○--○--●                                       |
-|              ↙        ↖                                      |
-|           ↙            ↖                                     |
-|         ●    CYCLE      ●                                   |
-|          ↖            ↙                                      |
-|           ↖        ↙                                         |
-|              ●--●--●                                         |
-|                 ↑                                            |
-|            Meeting Point                                     |
-|                                                              |
-|  Key Relationship:                                           |
-|  -------------------                                         |
-|  μ = distance from head to cycle start                      |
-|  x = distance from cycle start to meeting point             |
-|  λ = cycle length                                           |
-|                                                              |
-|  At meeting: μ + x = kλ (some multiple of cycle length)     |
-|                                                              |
-|  After reset:                                                |
-|  • Pointer 1: starts at head, walks μ steps → cycle start   |
-|  • Pointer 2: starts at meeting, walks μ steps              |
-|    = walks (μ mod λ) in cycle                               |
-|    = walks (kλ - x) mod λ = λ - x from meeting point        |
-|    = x steps before meeting point                           |
-|    = cycle start!                                           |
-|                                                              |
-|  They meet at cycle start! ∎                                |
-|                                                              |
-+--------------------------------------------------------------+
-
-```
 
 ---
 
@@ -770,38 +682,7 @@ def sortList(head: ListNode) -> ListNode:
 
 ## 🧮 Floyd's Algorithm Complexity Analysis
 
-```
-+--------------------------------------------------------------+
-|              FLOYD'S ALGORITHM ANALYSIS                      |
-+--------------------------------------------------------------+
-|                                                              |
-|  Time Complexity:                                            |
-|  -----------------                                           |
-|  • Phase 1 (Detection):                                      |
-|    - Slow travels at most μ + λ steps                       |
-|    - Fast travels 2(μ + λ) steps                            |
-|    - Time: O(μ + λ) = O(n)                                  |
-|                                                              |
-|  • Phase 2 (Finding start):                                  |
-|    - Both travel μ steps                                    |
-|    - Time: O(μ) ⊆ O(n)                                      |
-|                                                              |
-|  Total: O(n)                                                 |
-|                                                              |
-|  Space Complexity: O(1)                                      |
-|  ---------------------                                       |
-|  Only two pointers used regardless of list size              |
-|                                                              |
-|  Comparison with Hash Set Approach:                          |
-|  -----------------------------------                         |
-|  | Approach    | Time   | Space |                           |
-|  +-------------+--------+-------+                           |
-|  | Floyd's     | O(n)   | O(1)  | ← Winner                  |
-|  | Hash Set    | O(n)   | O(n)  |                           |
-|                                                              |
-+--------------------------------------------------------------+
-
-```
+![Floyd Cycle Detection](./images/floyd-cycle-detection.png)
 
 ---
 
