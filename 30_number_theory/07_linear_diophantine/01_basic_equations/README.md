@@ -13,6 +13,9 @@ permalink: /30_number_theory/07_linear_diophantine/01_basic_equations/
 
 ### *Integer Solutions to ax + by = c*
 
+![*Integer Solutions to ax + by = c*](./images/integer-solutions-to-ax-by-c.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Time-O(log_n)-blue?style=for-the-badge" alt="Time">
@@ -38,27 +41,6 @@ permalink: /30_number_theory/07_linear_diophantine/01_basic_equations/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| SOLVE: 3x + 5y = 7                                             |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Step 1: Check existence                                        |
-|   gcd(3, 5) = 1                                                |
-|   1 | 7 ✓  Solution exists!                                    |
-|                                                                 |
-| Step 2: Extended GCD                                           |
-|   3(2) + 5(-1) = 1                                             |
-|   x₀ = 2, y₀ = -1                                              |
-|                                                                 |
-| Step 3: Scale by c/g = 7/1 = 7                                |
-|   x = 2 × 7 = 14                                               |
-|   y = -1 × 7 = -7                                              |
-|                                                                 |
-| Verify: 3(14) + 5(-7) = 42 - 35 = 7 ✓                         |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
