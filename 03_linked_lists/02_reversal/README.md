@@ -46,8 +46,6 @@ permalink: /03_linked_lists/02_reversal/
 ---
 
 ### Iterative Reversal - Complete Trace
-
-
 ![Iterative Reversal - Complete Trace](./images/iterative-reversal.png)
 
 
@@ -55,31 +53,23 @@ permalink: /03_linked_lists/02_reversal/
 
 ### Recursive Reversal - Call Stack Visualization
 
-
-![Recursive Reversal - Call Stack Visualization](./images/call-stack-building-phase.png)
-
+See **Call Stack Building Phase** in the visual overview — each recursive call pushes a frame until the tail is reached, then unwinds with pointer rewiring.
 
 ---
 
 ### Reverse Between Left and Right
-
-
 ![Reverse Between Left and Right](./images/reverse-between-left-and-right.png)
 
 
 ---
 
 ### Reverse in K-Groups
-
-
 ![Reverse in K-Groups](./images/reverse-in-k-groups.png)
 
 
 ---
 
 ### Swap Nodes in Pairs
-
-
 ![Swap Nodes in Pairs](./images/swap-nodes-in-pairs.png)
 
 
@@ -91,7 +81,6 @@ permalink: /03_linked_lists/02_reversal/
 | **Difficulty** | Easy to Hard |
 | **Problems** | 12+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 
@@ -451,7 +440,6 @@ def isPalindrome(head: ListNode) -> bool:
     return result
 ```
 
-![💻 Code Implementations](./images/swap-pattern-k2-special-case.png)
 
 ## 🧩 Common Pitfalls & Solutions
 
@@ -493,7 +481,6 @@ for _ in range(right - left):
     # Move nodes to front
 ```
 
-![Pitfall 3: Off-by-One in Partial Reversal](./images/strategy-move-nodes-one-by-one-to-front-of-section.png)
 
 ---
 
