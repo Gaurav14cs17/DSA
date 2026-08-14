@@ -27,18 +27,6 @@ permalink: /06_hash_tables/
 
 ---
 
-## 📊 Visual Overview
-
-<div align="center">
-
-![Hash Tables Overview](./images/hash-table-overview.png)
-
-*Hash Tables Overview*
-
-</div>
-
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -194,6 +182,18 @@ $$\text{freq}[x] = |\{i : a[i] = x\}|$$
 
 ---
 
+## 📊 Visual Overview
+
+<div align="center">
+
+![Hash Tables Overview](./images/hash-table-overview.png)
+
+*Hash Tables Overview*
+
+</div>
+
+---
+
 ## 🎯 Key Patterns
 
 ### Two Sum Template
@@ -217,7 +217,6 @@ def twoSum(nums: list[int], target: int) -> list[int]:
         seen[num] = i
     
     return []
-
 ```
 
 ### Frequency Counter
@@ -233,7 +232,6 @@ def topKFrequent(nums: list[int], k: int) -> list[int]:
     """
     freq = Counter(nums)
     return [x for x, _ in freq.most_common(k)]
-
 ```
 
 ### Group Anagrams
@@ -255,8 +253,29 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
         groups[key].append(s)
     
     return list(groups.values())
-
 ```
+
+![Group Anagrams](./images/hash-table-overview.png)
+
+```text
+              Hash Table Problem
+                     |
+   Two Sum     Counter/Map      HashSet
+      |              |              |
+ Complement   Top-K, Anagram   Duplicates
+```
+
+![📊 Pattern Decision Tree](./images/hash-table-overview.png)
+
+### Pattern Checklist
+
+- [ ] Can I use complement/difference to avoid nested loops?
+- [ ] Do I need frequency counting (use Counter)?
+- [ ] Is this a grouping problem (use defaultdict)?
+- [ ] Can prefix sum + hash solve subarray problem?
+- [ ] Should I use set for uniqueness check?
+- [ ] Do I need to track indices (use dict) or just existence (use set)?
+
 
 ---
 
@@ -266,237 +285,43 @@ def groupAnagrams(strs: list[str]) -> list[list[str]]:
 
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
-| 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Complement Map | O(n) | O(n) |
-| 136 | [Single Number](https://leetcode.com/problems/single-number/) | XOR / Hash | O(n) | O(1) |
-| 169 | [Majority Element](https://leetcode.com/problems/majority-element/) | Boyer-Moore | O(n) | O(1) |
-| 202 | [Happy Number](https://leetcode.com/problems/happy-number/) | Cycle Detection | O(log n) | O(log n) |
-| 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Set | O(n) | O(n) |
+| 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Hash Map | O(n) | O(n) |
+| 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Hash Set | O(n) | O(n) |
 | 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Frequency | O(n) | O(1) |
-| 290 | [Word Pattern](https://leetcode.com/problems/word-pattern/) | Bijection | O(n) | O(n) |
-| 349 | [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/) | Set | O(n+m) | O(n) |
-| 350 | [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/) | Counter | O(n+m) | O(n) |
-| 383 | [Ransom Note](https://leetcode.com/problems/ransom-note/) | Counter | O(n) | O(1) |
 | 387 | [First Unique Character](https://leetcode.com/problems/first-unique-character-in-a-string/) | Frequency | O(n) | O(1) |
-| 389 | [Find the Difference](https://leetcode.com/problems/find-the-difference/) | XOR / Count | O(n) | O(1) |
-| 409 | [Longest Palindrome](https://leetcode.com/problems/longest-palindrome/) | Frequency | O(n) | O(1) |
-| 771 | [Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/) | Set | O(n+m) | O(n) |
 
 ### 🟡 Medium
 
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
-| 3 | [Longest Substring Without Repeating](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Sliding + Hash | O(n) | O(k) |
-| 36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Set per Row/Col/Box | O(1) | O(1) |
 | 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Hash Grouping | O(nk log k) | O(nk) |
-| 128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Set | O(n) | O(n) |
-| 138 | [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) | Node Map | O(n) | O(n) |
-| 146 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | Hash + DLL | O(1) | O(n) |
-| 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Bucket Sort | O(n) | O(n) |
-| 380 | [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/) | Hash + Array | O(1) | O(n) |
-| 438 | [Find All Anagrams](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | Sliding Window | O(n) | O(1) |
-| 454 | [4Sum II](https://leetcode.com/problems/4sum-ii/) | Two-pair Hash | O(n²) | O(n²) |
-| 523 | [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) | Prefix + Mod | O(n) | O(min(n,k)) |
+| 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Bucket/Heap | O(n) | O(n) |
 | 560 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | Prefix + Hash | O(n) | O(n) |
-| 567 | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | Sliding Window | O(n) | O(1) |
-| 739 | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Monotonic Stack | O(n) | O(n) |
+| 128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Hash Set | O(n) | O(n) |
 
 ### 🔴 Hard
 
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
-| 41 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Index as Hash | O(n) | O(1) |
-| 76 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Sliding + Hash | O(n) | O(k) |
-| 460 | [LFU Cache](https://leetcode.com/problems/lfu-cache/) | Hash + DLL | O(1) | O(n) |
-
----
-
-## 📊 Pattern Decision Tree
-
-```
-              Hash Table Problem
-                     |
-      +--------------+--------------+
-      |              |              |
- Find pair?     Frequency?    Unique check?
-      |              |              |
-   Two Sum     Counter/Map      HashSet
-      |              |              |
- Complement   Top-K, Anagram   Duplicates
-
-```
-
----
-
-## 💡 Key Insights & Pro Tips
-
-> **🎯 Hash Table = O(1) Magic**  
-> Average O(1) lookup, insert, delete. The backbone of efficient algorithms!
-
-> **⚡ Two Sum Pattern**  
-> For each element, check if complement exists in hash. Reduces O(n²) to O(n)!
-
-> **🔄 Frequency Counting**  
-> Counter/HashMap for frequency. Enables anagram detection, top-k, majority element in O(n)!
-
-> **📊 Set Operations**  
-> Use HashSet for uniqueness, duplicates, intersection. O(1) membership test!
-
-> **🌊 Prefix Sum + Hash**  
-> For subarray sum problems: `P[j] - P[i] = k` → `P[i] = P[j] - k`. Store prefix sums in hash!
-
----
-
-## 🧮 Quick Pattern Reference
-
-| Pattern in Problem | Technique | Example |
-|-------------------|-----------|---------|
-| "find pair sum to target" | Complement hash | #1, #167 |
-| "count frequency" | Counter/HashMap | #347, #451 |
-| "group by property" | Hash grouping | #49 |
-| "check duplicates" | HashSet | #217, #219 |
-| "subarray sum = k" | Prefix + hash | #560, #523 |
-| "anagram detection" | Frequency map | #242, #438 |
-| "longest consecutive" | Set | #128 |
-| "intersection" | Set operations | #349, #350 |
-
----
-
-## 🎯 Must-Solve Problems (Top 15)
-
-| # | Problem | Category | Difficulty | Why Important |
-|:-:|---------|----------|------------|---------------|
-| 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Complement | 🟢 Easy | Hash foundation |
-| 2 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Grouping | 🟡 Medium | Hash grouping |
-| 3 | [Top K Frequent](https://leetcode.com/problems/top-k-frequent-elements/) | Frequency | 🟡 Medium | Bucket sort |
-| 4 | [Longest Consecutive](https://leetcode.com/problems/longest-consecutive-sequence/) | Set | 🟡 Medium | O(n) with set |
-| 5 | [Subarray Sum = K](https://leetcode.com/problems/subarray-sum-equals-k/) | Prefix sum | 🟡 Medium | Prefix + hash |
-| 6 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | Design | 🟡 Medium | Hash + DLL |
-| 7 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Frequency | 🟢 Easy | Counter pattern |
-| 8 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Set | 🟢 Easy | Basic set usage |
-| 9 | [4Sum II](https://leetcode.com/problems/4sum-ii/) | Two-pair | 🟡 Medium | Split technique |
-| 10 | [Longest Substring No Repeat](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Sliding + hash | 🟡 Medium | Window tracking |
-| 11 | [Majority Element](https://leetcode.com/problems/majority-element/) | Frequency | 🟢 Easy | Boyer-Moore |
-| 12 | [Find All Anagrams](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | Sliding window | 🟡 Medium | Window + freq |
-| 13 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Index hash | 🔴 Hard | O(1) space trick |
-| 14 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Sliding + hash | 🔴 Hard | Advanced window |
-| 15 | [Insert Delete GetRandom](https://leetcode.com/problems/insert-delete-getrandom-o1/) | Design | 🟡 Medium | Hash + array |
+| 76 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Sliding Window + Map | O(n) | O(1) |
 
 ---
 
 ## 📚 References & Learning Resources
 
-### 📖 Books & Courses
+### 📖 Core Concepts
 
 | Resource | Description | Link |
 |----------|-------------|------|
-| **CLRS Chapter 11** | Hash tables theory | [MIT Press](https://mitpress.mit.edu/books/introduction-algorithms) |
-| **Algorithms 4th Edition** | Hash table implementations | [Book Site](https://algs4.cs.princeton.edu/) |
-| **Competitive Programming 3** | Chapter 2.2 - Data structures | [Book](https://cpbook.net/) |
+| **Hash Table** | Wikipedia overview | [Hash table](https://en.wikipedia.org/wiki/Hash_table) |
+| **Hash Functions** | GeeksforGeeks | [Hashing](https://www.geeksforgeeks.org/hashing-data-structure/) |
+| **LeetCode Explore** | Hash table card | [Explore Card](https://leetcode.com/explore/learn/card/hash-table/) |
 
-### 🌐 Online Tutorials
-
-| Resource | Description | Link |
-|----------|-------------|------|
-| **GeeksforGeeks** | Hash table complete guide | [Tutorial](https://www.geeksforgeeks.org/hashing-data-structure/) |
-| **LeetCode Explore** | Hash table card | [Course](https://leetcode.com/explore/learn/card/hash-table/) |
-| **VisuAlgo** | Interactive hash visualization | [Website](https://visualgo.net/en/hashtable) |
-| **HackerRank** | Hash challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=hash-tables) |
-
-### 📺 Video Resources
-
-| Resource | Topic | Link |
-|----------|-------|------|
-| **NeetCode** | Hash table playlist | [YouTube](https://www.youtube.com/playlist?list=PLot-Xpze53lf0yCpSXBhXRCLu1ibZUGBU) |
-| **Abdul Bari** | Hashing lectures | [YouTube](https://www.youtube.com/watch?v=KyUTuwz_b7Q) |
-| **MIT OCW** | Hash functions | [Lecture](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/) |
-| **Back To Back SWE** | Hash problems | [YouTube](https://www.youtube.com/playlist?list=PLiQ766zSC5jM2OKVr8sooOuGgZkvnOCTI) |
-| **William Fiset** | Hash table theory | [YouTube](https://www.youtube.com/watch?v=2E54GqF0H4s) |
-
-### 📝 Practice Platforms
+### 📝 Practice
 
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Hash table tag | [Problems](https://leetcode.com/tag/hash-table/) |
-| **HackerRank** | Hash challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=hash-tables) |
-| **Codeforces** | Hash problems | [Problemset](https://codeforces.com/problemset) |
-| **CodeChef** | Hash practice | [Practice](https://www.codechef.com/practice) |
-
-### 🔬 Advanced Topics
-
-| Topic | Description | Link |
-|-------|-------------|------|
-| **Collision Resolution** | Chaining vs open addressing | [Tutorial](https://www.geeksforgeeks.org/hashing-set-2-separate-chaining/) |
-| **Perfect Hashing** | Zero collisions | [Wikipedia](https://en.wikipedia.org/wiki/Perfect_hash_function) |
-| **Rolling Hash** | String hashing | [CP-Algorithms](https://cp-algorithms.com/string/string-hashing.html) |
-| **Bloom Filters** | Probabilistic set | [Wikipedia](https://en.wikipedia.org/wiki/Bloom_filter) |
-| **Consistent Hashing** | Distributed systems | [Article](https://www.toptal.com/big-data/consistent-hashing) |
-
-### 🎯 Problem Collections
-
-| Collection | Focus | Link |
-|-----------|-------|------|
-| **NeetCode 150** | Essential hash problems | [List](https://neetcode.io/practice) |
-| **Blind 75** | Core interview | [List](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-75-LeetCode-Questions-to-Save-Your-Time-OaM1orEU) |
-| **Grind 75** | Structured prep | [Guide](https://www.techinterviewhandbook.org/grind75) |
-| **Striver's SDE Sheet** | Must-do hash | [Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/) |
-
-### 📊 Visualization Tools
-
-| Tool | Purpose | Link |
-|------|---------|------|
-| **VisuAlgo** | Hash table operations | [Website](https://visualgo.net/en/hashtable) |
-| **Algorithm Visualizer** | Hash functions | [Website](https://algorithm-visualizer.org/) |
-| **CS Animations** | Collision resolution | [Website](https://www.cs.usfca.edu/~galles/visualization/OpenHash.html) |
-
-### 🏆 Competition Resources
-
-| Resource | Topic | Link |
-|----------|-------|------|
-| **USACO Guide** | Hash maps guide | [Guide](https://usaco.guide/bronze/intro-sets) |
-| **TopCoder** | Hash tutorials | [Tutorials](https://www.topcoder.com/thrive/articles/) |
-| **Codeforces EDU** | Data structures | [Course](https://codeforces.com/edu/course/2) |
-
----
-
-## 🎖️ Interview Success Tips
-
-### Common Mistakes to Avoid
-
-❌ **Don't:**
-
-- Forget to check if key exists before accessing (use `.get()` or `in`)
-
-- Use hash when order matters (use OrderedDict or list)
-
-- Ignore hash collision worst case (O(n) in pathological cases)
-
-- Forget that Python dict is ordered (since 3.7+)
-
-- Use mutable objects as keys (lists, sets - use tuples instead)
-
-✅ **Do:**
-
-- Use `defaultdict` to avoid key existence checks
-
-- Use `Counter` for frequency counting
-
-- Consider space-time tradeoff (hash uses O(n) space)
-
-- Test with duplicate keys
-
-- Use tuple for multi-dimensional keys: `(row, col)`
-
-### Optimization Checklist
-
-```
-[ ] Can I use complement/difference to avoid nested loops?
-[ ] Do I need frequency counting (use Counter)?
-[ ] Is this a grouping problem (use defaultdict)?
-[ ] Can prefix sum + hash solve subarray problem?
-[ ] Should I use set for uniqueness check?
-[ ] Do I need to track indices (use dict) or just existence (use set)?
-
-```
 
 ---
 
