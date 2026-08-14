@@ -40,7 +40,6 @@ permalink: /32_game_theory/
 ---
 
 ### Pattern 1: Nim Game Decision Tree
-
 <div align="center">
 
 ![Nim Game Decision Tree](./images/nim-decision-tree-pattern.png)
@@ -49,7 +48,6 @@ permalink: /32_game_theory/
 
 
 ### Pattern 2: Grundy Numbers Visualization
-
 <div align="center">
 
 ![Grundy Numbers](./images/grundy-numbers-pattern.png)
@@ -67,7 +65,6 @@ permalink: /32_game_theory/
 | **Subtopics** | 3 |
 | **Problems** | 40+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 
