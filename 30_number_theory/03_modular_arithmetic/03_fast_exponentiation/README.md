@@ -32,8 +32,8 @@ lign="center">
 ## 🎯 At a Glance
 
 | | |
-|:---| **Topic** | Fast Exponentiation |
-|:---|
+|:---|:---|
+| **Topic** | Fast Exponentiation |
 | **Typical time** | O(log n) |
 | **Typical space** | O(1) iterative, O(log n) recursive |
 
