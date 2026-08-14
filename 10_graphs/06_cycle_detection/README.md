@@ -30,7 +30,6 @@ permalink: /10_graphs/06_cycle_detection/
 | **Difficulty** | Medium |
 | **Problems** | 5+ |
 
-{: .highlight }
 > **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
@@ -265,7 +264,6 @@ def eventualSafeNodes(graph: list[list[int]]) -> list[int]:
 ## 🏆 LeetCode Problems
 
 ### 🟡 Medium
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 207 | [Course Schedule](https://leetcode.com/problems/course-schedule/) | Cycle in DAG | O(V+E) | O(V) |
@@ -274,7 +272,6 @@ def eventualSafeNodes(graph: list[list[int]]) -> list[int]:
 | 802 | [Find Eventual Safe States](https://leetcode.com/problems/find-eventual-safe-states/) | DFS Coloring | O(V+E) | O(V) |
 
 ### 🔴 Hard
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 685 | [Redundant Connection II](https://leetcode.com/problems/redundant-connection-ii/) | Union-Find | O(E) | O(V) |
