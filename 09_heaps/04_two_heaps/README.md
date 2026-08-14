@@ -40,7 +40,6 @@ permalink: /09_heaps/04_two_heaps/
 | **Difficulty** | Hard |
 | **Problems** | 6+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
@@ -235,7 +234,6 @@ def medianSlidingWindow(nums: list[int], k: int) -> list[float]:
     return result
 ```
 
-![💻 Code Implementations](./image/two_heaps_pattern.png)
 
 Need dynamic median/partition?
            |
