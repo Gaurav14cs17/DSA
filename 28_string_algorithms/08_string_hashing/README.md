@@ -674,7 +674,7 @@ def match_with_wildcards(text, pattern):
 
 ---
 
-## 🧩 LeetCode Problems
+## 🏆 LeetCode Problems
 
 ### Easy
 
@@ -889,6 +889,24 @@ class IncrementalHash:
 - [Codeforces: Anti-Hash Tests](https://codeforces.com/blog/entry/4898)
 
 - [USACO Guide: Hashing](https://usaco.guide/gold/string-hashing)
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **String Hashing** | CP-Algorithms | [String hashing](https://cp-algorithms.com/string/string-hashing.html) |
+| **Rolling Hash** | USACO Guide | [String Hashing](https://usaco.guide/gold/string-hashing) |
+| **Hash Collisions** | Codeforces | [Anti-hash tests](https://codeforces.com/blog/entry/4898) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | String tag | [Problems](https://leetcode.com/tag/string/) |
 
 ---
 
