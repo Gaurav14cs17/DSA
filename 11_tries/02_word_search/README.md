@@ -43,7 +43,6 @@ permalink: /11_tries/02_word_search/
 | **Difficulty** | Medium to Hard |
 | **Problems** | 5+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
