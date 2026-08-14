@@ -477,6 +477,8 @@ A: Binary search on last level positions (log n). Each check follows path (log n
 
 ---
 
+```
+
 ## 📐 Mathematical Foundation
 ### 1️⃣ Tree Height
 
