@@ -224,26 +224,9 @@ $$\text{Order: } v_1, v_2, \ldots, v_n \text{ where } (v_i, v_j) \in E \Rightarr
 
 ## 📊 Graph Algorithm Selection
 
-```
-Graph Problem
-     |
-     +-- Shortest path (unweighted) → BFS
-     |
-     +-- Shortest path (weighted, no negative) → Dijkstra
-     |
-     +-- Shortest path (negative weights) → Bellman-Ford
-     |
-     +-- All pairs shortest path → Floyd-Warshall
-     |
-     +-- Connectivity → Union-Find or DFS
-     |
-     +-- Cycle detection → DFS with coloring
-     |
-     +-- Ordering dependencies → Topological Sort
-     |
-     +-- Minimum Spanning Tree → Kruskal's or Prim's
 
-```
+![📊 Graph Algorithm Selection](./images/graph-algorithm-selection.png)
+
 
 ---
 
@@ -420,16 +403,14 @@ Graph Problem
 
 ### Optimization Checklist
 
-```
-[ ] Is the graph sparse? Use adjacency list!
-[ ] Need shortest path? Unweighted→BFS, Weighted→Dijkstra!
-[ ] Have negative weights? Use Bellman-Ford!
-[ ] Checking connectivity? Union-Find is O(α(n))!
-[ ] Need ordering? Use topological sort on DAG!
-[ ] Detecting cycles? DFS with coloring!
-[ ] Multiple starting points? Multi-source BFS!
+- [ ] Is the graph sparse? Use adjacency list!
+- [ ] Need shortest path? Unweighted→BFS, Weighted→Dijkstra!
+- [ ] Have negative weights? Use Bellman-Ford!
+- [ ] Checking connectivity? Union-Find is O(α(n))!
+- [ ] Need ordering? Use topological sort on DAG!
+- [ ] Detecting cycles? DFS with coloring!
+- [ ] Multiple starting points? Multi-source BFS!
 
-```
 
 ---
 
