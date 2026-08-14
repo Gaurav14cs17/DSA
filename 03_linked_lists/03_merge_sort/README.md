@@ -178,7 +178,7 @@ def mergeKLists(lists: list[ListNode]) -> ListNode:
             heapq.heappush(heap, (node.next.val, i, node.next))
     
     return dummy.next
-
+```
 
 ## 🏆 LeetCode Problems
 
@@ -456,7 +456,7 @@ def mergeKLists(lists: list[ListNode]) -> ListNode:
             heapq.heappush(heap, (node.next.val, i, node.next))
     
     return dummy.next
-
+```
 
 ---
 
