@@ -34,14 +34,12 @@ permalink: /09_heaps/01_basic_heap/
 
 ### ⬆️ **Walkthrough 1: Heap Insert (Sift Up)**
 
-
 ---
 
 ### ⬇️ **Walkthrough 2: Heap Extract (Sift Down)**
 
 
 ![⬇️ Walkthrough 2: Heap Extract (Sift Down)](./image/heap_operations.png)
-
 
 ---
 
@@ -50,14 +48,7 @@ permalink: /09_heaps/01_basic_heap/
 
 ![🏗️ Walkthrough 3: Build Heap (Heapify)](./image/heap_operations.png)
 
-
 ---
-
-### 🪨 **Walkthrough 4: Last Stone Weight**
-
-
-![🪨 Walkthrough 4: Last Stone Weight](./image/heap_operations.png)
-
 
 ## 🎯 At a Glance
 
@@ -67,7 +58,6 @@ permalink: /09_heaps/01_basic_heap/
 | **Difficulty** | Medium |
 | **Problems** | 8+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 
@@ -99,9 +89,11 @@ $$\text{Time: } O(\log n)$$
 
 ### 2️⃣ Index Formulas (0-indexed)
 
-$$\text{parent}(i) = \lfloor (i-1)/2 \rfloor
-\text{left}(i) = 2i + 1
-\text{right}(i) = 2i + 2$$
+$$\begin{aligned}
+\text{parent}(i) &= \lfloor (i-1)/2 \rfloor \\
+\text{left}(i) &= 2i + 1 \\
+\text{right}(i) &= 2i + 2
+\end{aligned}$$
 
 ---
 
@@ -275,291 +267,8 @@ def lastStoneWeight(stones: list[int]) -> int:
     
     return -heap[0] if heap else 0
 
-
-## 🏆 LeetCode Problems
-
-### 🟢 Easy
-
-| # | Problem | Pattern | Time | Space |
-|:-:|---------|---------|:----:|:-----:|
-| 703 | [Kth Largest Element in Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) | Min-Heap | O(log k) | O(k) |
-| 1046 | [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/) | Max-Heap | O(n log n) | O(n) |
-
-### 🟡 Medium
-
-| # | Problem | Pattern | Time | Space |
-|:-:|---------|---------|:----:|:-----:|
-| 1167 | [Minimum Cost to Connect Sticks](https://leetcode.com/problems/minimum-cost-to-connect-sticks/) | Min-Heap | O(n log n) | O(n) |
-
-
-## 💡 Pro Tips & Common Mistakes
-
-### ✅ **Do's:**
-
-- ✓ Know build heap is O(n), not O(n log n)!
-
-- ✓ Use heapify() for bulk insertion
-
-- ✓ Remember peek is O(1), extract is O(log n)
-
-- ✓ For max-heap in Python: negate values
-
-- ✓ Heap is O(log n) for insert/delete, BST can be O(n)
-
-### ❌ **Don'ts:**
-
-- ✗ Don't insert n elements one by one when you can heapify
-
-- ✗ Don't confuse heap with BST (heap is NOT sorted!)
-
-- ✗ Don't forget to negate when using max-heap in Python
-
-- ✗ Don't assume heap gives sorted order (only top element)
-
-- ✗ Don't use heap when you only need min/max once (just use min()/max())
-
-### ⚡ **Optimization Tricks:**
-
-1. **heapify() > n×push():** O(n) vs O(n log n)
-
-2. **In-place heap sort:** O(1) space, better than merge sort
-
-3. **Custom comparator:** Use tuples (priority, value)
-
-4. **Heap vs Sorting:** Heap better when n >> k
-
-5. **Replace() operation:** More efficient than pop() + push()
-
-
-## 📚 References & Resources
-
-### 📖 Books & Courses
-
-| Resource | Description | Link |
-|----------|-------------|------|
-| **CLRS Chapter 6** | Heapsort & priority queues | [MIT Press](https://mitpress.mit.edu/books/introduction-algorithms) |
-| **Princeton Algorithms** | Priority queues chapter | [Coursera](https://www.coursera.org/learn/algorithms-part1) |
-| **Algorithm Design Manual** | Heap implementations | [Springer](https://www.algorist.com/) |
-
-### 🌐 Online Tutorials
-
-| Resource | Topic | Link |
-|----------|-------|------|
-| **GeeksforGeeks** | Binary heap basics | [Tutorial](https://www.geeksforgeeks.org/binary-heap/) |
-| **VisuAlgo** | Interactive heap | [Website](https://visualgo.net/en/heap) |
-| **Python heapq** | Module documentation | [Docs](https://docs.python.org/3/library/heapq.html) |
-| **Programiz** | Heap data structure | [Tutorial](https://www.programiz.com/dsa/heap-data-structure) |
-| **InterviewBit** | Heap tutorial | [Tutorial](https://www.interviewbit.com/tutorial/introduction-to-heap-data-structure/) |
-
-### 📺 Video Resources
-
-| Creator | Topic | Link |
-|---------|-------|------|
-| **Abdul Bari** | Heap insertion/deletion | [YouTube](https://www.youtube.com/watch?v=HqPJF2L5h9U) |
-| **MIT OCW** | Priority queues lecture | [Lecture](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/) |
-| **William Fiset** | Heap data structure | [YouTube](https://www.youtube.com/watch?v=t0Cq6tVNRBA) |
-| **NeetCode** | Heap problems | [YouTube](https://www.youtube.com/watch?v=B7hVxCmfPtM) |
-| **Tushar Roy** | Heap basics | [YouTube](https://www.youtube.com/watch?v=t0Cq6tVNRBA) |
-
-### 🔧 Interactive Tools
-
-| Tool | Purpose | Link |
-|------|---------|------|
-| **VisuAlgo Heap** | Visualize operations | [Website](https://visualgo.net/en/heap) |
-| **CS Animations** | Heap visualizations | [Website](https://www.cs.usfca.edu/~galles/visualization/Heap.html) |
-| **Algorithm Visualizer** | Heap algorithms | [Website](https://algorithm-visualizer.org/) |
-
-### 📝 Practice Platforms
-
-| Platform | Focus | Link |
-|----------|-------|------|
-| **LeetCode** | Heap/PQ tag | [Problems](https://leetcode.com/tag/heap-priority-queue/) |
-| **HackerRank** | Heap challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=heap) |
-| **CodeChef** | Heap problems | [Practice](https://www.codechef.com/practice) |
-
-
-## 🎯 Practice Roadmap
-
-### **Phase 1: Foundations (Week 1)**
-
-- [ ] Implement min-heap from scratch
-
-- [ ] Implement max-heap with negation
-
-- [ ] Understand sift up/down operations
-
-- [ ] Solve: #1046 Last Stone Weight
-
-### **Phase 2: Build & Heapify (Week 2)**
-
-- [ ] Understand O(n) build heap proof
-
-- [ ] Implement heapify from array
-
-- [ ] Implement heap sort
-
-- [ ] Solve: #703 Kth Largest in Stream
-
-### **Phase 3: Applications (Week 3)**
-
-- [ ] Huffman coding pattern
-
-- [ ] Priority scheduling
-
-- [ ] Solve: #1167 Minimum Cost to Connect Sticks
-
-- [ ] Practice custom comparators
-
-
-## ❓ Interview Deep-Dive Q&A
-
-**Q1: Why is build heap O(n), not O(n log n)?**
-
-- **A:** Most nodes are near leaves. Sum of heights converges: $\sum \frac{h}{2^h} = 2$. Sift down from bottom is faster!
-
-**Q2: When to use heap vs sorting?**
-
-- **A:** Heap if you need top-k from n items (O(n log k) vs O(n log n)). Sorting if you need all elements ordered.
-
-**Q3: How to implement max-heap in Python?**
-
-- **A:** heapq is min-heap only. Negate values: push(-x), then negate on pop: -heappop().
-
-**Q4: What's the difference between heap and BST?**
-
-- **A:** Heap: O(1) min/max, O(log n) insert. BST: O(log n) search, inorder gives sorted. Heap NOT for search!
-
-**Q5: Can you delete arbitrary element from heap?**
-
-- **A:** Yes, but O(n) to find it first. Replace with last, then sift up/down. Better to use indexed heap.
-
-**Q6: Is heap sort stable?**
-
-- **A:** No! Extract changes relative order of equal elements.
-
-**Q7: How to implement heap without heapq?**
-
-- **A:** Array-based: parent(i)=(i-1)//2, left(i)=2i+1, right(i)=2i+2. Implement sift_up/sift_down manually.
-
----
-
-<div align="center">
-
-### 🌟 Master heap basics — foundation for all heap problems! 🌟
-
-**Made with ❤️ for the coding community by [Gaurav Goswami](https://github.com/Gaurav14cs17)**
-
-</div>
-
----
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [🏠 Heaps Home](../README.md) | **01. Basic Heap** | [02. Top K Problems →](../02_top_k_problems/README.md) |
-
----
-
 ```
 
-## 📐 Mathematical Foundation
-### 1️⃣ Heap Property Maintenance
-
-**Insert (Sift Up):**
-
-Add at end → Bubble up until heap property restored
-
-$$\text{Time: } O(\log n)$$
-
-**Extract (Sift Down):**
-
-Replace root with last → Bubble down until heap property restored
-
-![1️⃣ Heap Property Maintenance](./image/heap_operations.png)
-
-![When to Use Each Operation](./image/when-to-use-each-operation-heap.png)
-
----
-
-## 💻 Code Implementations
-
-```python
-import heapq
-
-class MinHeap:
-    """
-    Min-Heap implementation using Python's heapq.
-    """
-    def __init__(self):
-        self.heap = []
-    
-    def push(self, val):
-        """Insert value. O(log n)"""
-        heapq.heappush(self.heap, val)
-    
-    def pop(self):
-        """Extract minimum. O(log n)"""
-        return heapq.heappop(self.heap)
-    
-    def peek(self):
-        """Get minimum. O(1)"""
-        return self.heap[0] if self.heap else None
-    
-    def __len__(self):
-        return len(self.heap)
-
-class MaxHeap:
-    """
-    Max-Heap using negation trick.
-    """
-    def __init__(self):
-        self.heap = []
-    
-    def push(self, val):
-        heapq.heappush(self.heap, -val)
-    
-    def pop(self):
-        return -heapq.heappop(self.heap)
-    
-    def peek(self):
-        return -self.heap[0] if self.heap else None
-
-def heapSort(arr: list[int]) -> list[int]:
-    """
-    Heap sort using heapify + extract.
-    
-    Time: O(n log n), Space: O(1) for in-place
-    """
-    heapq.heapify(arr)  # O(n)
-    return [heapq.heappop(arr) for _ in range(len(arr))]  # O(n log n)
-
-def lastStoneWeight(stones: list[int]) -> int:
-    """
-    Last Stone Weight - smash two heaviest.
-    
-    Use max-heap, repeatedly extract two largest.
-    
-    Time: O(n log n), Space: O(n)
-    """
-    # Convert to max-heap using negation
-    heap = [-s for s in stones]
-    heapq.heapify(heap)
-    
-    while len(heap) > 1:
-        first = -heapq.heappop(heap)
-        second = -heapq.heappop(heap)
-        
-        if first != second:
-            heapq.heappush(heap, -(first - second))
-    
-    return -heap[0] if heap else 0
-
-
----
-
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
@@ -575,7 +284,6 @@ def lastStoneWeight(stones: list[int]) -> int:
 |:-:|---------|---------|:----:|:-----:|
 | 1167 | [Minimum Cost to Connect Sticks](https://leetcode.com/problems/minimum-cost-to-connect-sticks/) | Min-Heap | O(n log n) | O(n) |
 
----
 
 ## 💡 Pro Tips & Common Mistakes
 
@@ -615,7 +323,6 @@ def lastStoneWeight(stones: list[int]) -> int:
 
 5. **Replace() operation:** More efficient than pop() + push()
 
----
 
 ## 📚 References & Resources
 
@@ -663,7 +370,6 @@ def lastStoneWeight(stones: list[int]) -> int:
 | **HackerRank** | Heap challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=heap) |
 | **CodeChef** | Heap problems | [Practice](https://www.codechef.com/practice) |
 
----
 
 ## 🎯 Practice Roadmap
 
@@ -697,7 +403,6 @@ def lastStoneWeight(stones: list[int]) -> int:
 
 - [ ] Practice custom comparators
 
----
 
 ## ❓ Interview Deep-Dive Q&A
 
