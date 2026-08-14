@@ -379,9 +379,6 @@ i=n-1: 1 choice
 Total = n + (n-1) + ... + 1 = n(n+1)/2
 
 
-    best_ever = max(best_ever, portfolio)
-```
-
 ![Why n(n+1)/2 Subarrays?](./images/options-3-326-326.png)
 
 ### The Power of Prefix Sums
