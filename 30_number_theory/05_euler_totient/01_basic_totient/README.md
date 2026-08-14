@@ -13,6 +13,9 @@ permalink: /30_number_theory/05_euler_totient/01_basic_totient/
 
 ### *Counting Numbers Coprime to n*
 
+![*Counting Numbers Coprime to n*](./images/counting-numbers-coprime-to-n.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Time-O(√n)-blue?style=for-the-badge" alt="Time">
@@ -39,25 +42,6 @@ permalink: /30_number_theory/05_euler_totient/01_basic_totient/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| COMPUTING φ(12)                                                |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Numbers 1 to 12:                                               |
-|   1  2  3  4  5  6  7  8  9  10  11  12                       |
-|   ✓  ✗  ✗  ✗  ✓  ✗  ✓  ✗  ✗   ✗   ✓   ✗                       |
-|                                                                 |
-| Coprime to 12: {1, 5, 7, 11}  → φ(12) = 4                     |
-|                                                                 |
-| Using formula:                                                  |
-|   12 = 2² × 3                                                  |
-|   φ(12) = 12 × (1 - 1/2) × (1 - 1/3)                          |
-|         = 12 × 1/2 × 2/3                                       |
-|         = 4 ✓                                                  |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
