@@ -36,7 +36,6 @@ permalink: /19_greedy_algorithms/
 | **Subtopics** | 3 |
 | **Problems** | 25+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
@@ -119,7 +118,6 @@ If non-greedy choice exists, swap it with greedy choice → solution doesn't wor
 ## 🎯 Key Patterns
 
 ### Interval Scheduling
-
 ```python
 def eraseOverlapIntervals(intervals: list[list[int]]) -> int:
     """
@@ -147,7 +145,6 @@ def eraseOverlapIntervals(intervals: list[list[int]]) -> int:
 ```
 
 ### Jump Game
-
 ```python
 def canJump(nums: list[int]) -> bool:
     """
@@ -173,7 +170,6 @@ def canJump(nums: list[int]) -> bool:
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 455 | [Assign Cookies](https://leetcode.com/problems/assign-cookies/) | Sort + Two Ptr | O(n log n) | O(1) |
@@ -181,7 +177,6 @@ def canJump(nums: list[int]) -> bool:
 | 1005 | [Maximize Sum After K Negations](https://leetcode.com/problems/maximize-sum-of-array-after-k-negations/) | Sort | O(n log n) | O(1) |
 
 ### 🟡 Medium
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 45 | [Jump Game II](https://leetcode.com/problems/jump-game-ii/) | BFS/Greedy | O(n) | O(1) |
@@ -197,7 +192,6 @@ def canJump(nums: list[int]) -> bool:
 | 1024 | [Video Stitching](https://leetcode.com/problems/video-stitching/) | Interval Cover | O(n log n) | O(1) |
 
 ### 🔴 Hard
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 135 | [Candy](https://leetcode.com/problems/candy/) | Two Pass | O(n) | O(n) |
