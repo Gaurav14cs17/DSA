@@ -235,7 +235,7 @@ class MyStack:
     
     def empty(self) -> bool:
         return len(self.queue) == 0
-
+```
 
 ## 🏆 LeetCode Problems
 
@@ -523,7 +523,7 @@ class MyStack:
     
     def empty(self) -> bool:
         return len(self.queue) == 0
-
+```
 
 ---
 
