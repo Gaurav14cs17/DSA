@@ -13,6 +13,9 @@ permalink: /30_number_theory/01_gcd_lcm/04_binary_gcd/
 
 ### *Faster GCD Using Only Bitwise Operations*
 
+![*Faster GCD Using Only Bitwise Operations*](./images/faster-gcd-using-only-bitwise-operations.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Operations-Bitwise-brightgreen?style=for-the-badge" alt="Operations">
@@ -38,33 +41,6 @@ permalink: /30_number_theory/01_gcd_lcm/04_binary_gcd/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| EXAMPLE: binary_gcd(48, 18)                                     |
-+-----------------------------------------------------------------+
-| Step 1: Find common power of 2                                  |
-|   48 = 110000₂ (even)                                           |
-|   18 = 010010₂ (even)                                           |
-|   Both even → divide by 2                                       |
-|   shift = 1                                                     |
-|   a = 24, b = 9                                                 |
-|                                                                  |
-| Step 2: Remove factors of 2 from a                              |
-|   24 = 11000₂ (even)                                            |
-|   a = 12 → 6 → 3 (now odd)                                      |
-|                                                                  |
-| Step 3: Main loop                                               |
-|   a = 3, b = 9 (both odd)                                       |
-|   b = 9 - 3 = 6                                                 |
-|   Remove 2s from b: 6 → 3                                       |
-|   a = 3, b = 3                                                  |
-|   b = 3 - 3 = 0                                                 |
-|                                                                  |
-| Step 4: Restore common factor                                   |
-|   result = 3 << 1 = 6  ✓                                        |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
