@@ -31,7 +31,6 @@ permalink: /14_sorting/02_non_comparison_sorts/
 | **Difficulty** | Medium |
 | **Problems** | 5+ |
 
-{: .highlight }
 > **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
@@ -302,7 +301,6 @@ def maximumGap(nums: list[int]) -> int:
 ## 🏆 LeetCode Problems
 
 ### 🟡 Medium
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 75 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Dutch Flag | O(n) | O(1) |
@@ -310,7 +308,6 @@ def maximumGap(nums: list[int]) -> int:
 | 451 | [Sort Characters by Frequency](https://leetcode.com/problems/sort-characters-by-frequency/) | Bucket Sort | O(n) | O(n) |
 
 ### 🔴 Hard
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 164 | [Maximum Gap](https://leetcode.com/problems/maximum-gap/) | Bucket Sort | O(n) | O(n) |
