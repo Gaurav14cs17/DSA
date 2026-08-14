@@ -45,7 +45,6 @@ permalink: /02_strings/04_subsequence/
 
 ## 📐 Mathematical Foundation
 ### 1️⃣ Subsequence Definition
-
 **Definition:** $T$ is a subsequence of $S$ if $T$ can be obtained by deleting zero or more characters from $S$ without changing the order.
 
 **Formal:** $T = S[i_1]S[i_2]\ldots S[i_k]$ where $0 \leq i_1 < i_2 < \ldots < i_k < n$
@@ -59,7 +58,6 @@ $$\boxed{2^n}$$
 ---
 
 ### 2️⃣ Longest Common Subsequence (LCS)
-
 **State:** $dp[i][j] =$ LCS length of $S[0..i-1]$ and $T[0..j-1]$
 
 **Recurrence:**
@@ -74,7 +72,6 @@ dp[i-1][j-1] + 1 & \text{if } S[i-1] = T[j-1] \\
 ---
 
 ### 3️⃣ Edit Distance (Levenshtein)
-
 **State:** $dp[i][j] =$ minimum operations to convert $S[0..i-1]$ to $T[0..j-1]$
 
 **Recurrence:**
@@ -93,7 +90,6 @@ dp[i-1][j-1] & \text{(replace)}
 ---
 
 ### 4️⃣ Distinct Subsequences
-
 **Problem:** Count distinct subsequences of $S$ that equal $T$.
 
 **State:** $dp[i][j] =$ ways to form $T[0..j-1]$ from $S[0..i-1]$
@@ -108,7 +104,6 @@ dp[i-1][j] & \text{otherwise}
 ---
 
 ### 5️⃣ Is Subsequence (Two Pointers)
-
 **Algorithm:** Greedy matching.
 
 For each character in $T$, find first matching character in remaining $S$.
@@ -219,13 +214,11 @@ def numDistinct(s: str, t: str) -> int:
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
-
 | # | Problem | Technique | Time | Space |
 |:-:|---------|-----------|:----:|:-----:|
 | 392 | [Is Subsequence](https://leetcode.com/problems/is-subsequence/) | Two Pointers | O(n) | O(1) |
 
 ### 🟡 Medium
-
 | # | Problem | Technique | Time | Space |
 |:-:|---------|-----------|:----:|:-----:|
 | 300 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | DP + Binary Search | O(n log n) | O(n) |
@@ -234,7 +227,6 @@ def numDistinct(s: str, t: str) -> int:
 | 1143 | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | DP | O(mn) | O(mn) |
 
 ### 🔴 Hard
-
 | # | Problem | Technique | Time | Space |
 |:-:|---------|-----------|:----:|:-----:|
 | 72 | [Edit Distance](https://leetcode.com/problems/edit-distance/) | DP | O(mn) | O(mn) |
@@ -265,8 +257,6 @@ def numDistinct(s: str, t: str) -> int:
 ## 🎓 Pattern Recognition Guide
 
 ### Problem Type Decision Tree
-
-
 Subsequence Problem
         |
  Greedy   +--+--+
@@ -278,7 +268,6 @@ Subsequence Problem
 
 
 ### When to Use Each Approach
-
 | Problem Type | Technique | Time | Space | Pattern |
 |-------------|-----------|:----:|:-----:|---------|
 | **Is subsequence?** | Two Pointers | O(n) | O(1) | Greedy matching |
@@ -292,7 +281,6 @@ Subsequence Problem
 ## 🧮 Mathematical Deep Dive
 
 ### Why Greedy Works for "Is Subsequence"
-
 **Theorem:** Matching earliest occurrence is optimal.
 
 **Proof by Exchange Argument:**
@@ -309,7 +297,6 @@ Can we replace $O$'s choice with $G$'s without loss?
 - Therefore $G$ is optimal ∎
 
 ### LCS Optimal Substructure
-
 **Theorem:** LCS has optimal substructure.
 
 **Proof:**
@@ -331,7 +318,6 @@ Let $L(i,j)$ = LCS length of $X[0..i-1]$ and $Y[0..j-1]$
 By induction, DP computes optimal solution ∎
 
 ### Edit Distance Triangle Inequality
-
 **Property:** $d(A,C) \leq d(A,B) + d(B,C)$
 
 **Proof:** 
@@ -349,7 +335,6 @@ By induction, DP computes optimal solution ∎
 ## 🎯 Complexity Comparison
 
 ### Space Optimization
-
 | Approach | Time | Space | Technique |
 |----------|:----:|:-----:|-----------|
 | **Standard 2D DP** | O(mn) | O(mn) | Full table |
@@ -358,7 +343,6 @@ By induction, DP computes optimal solution ∎
 | **Variables only** | O(mn) | O(1) | Possible for some |
 
 ### LCS Variants Complexity
-
 | Variant | Time | Space | Problem |
 |---------|:----:|:-----:|---------|
 | **Standard LCS** | O(mn) | O(mn) | Two strings |
@@ -371,7 +355,6 @@ By induction, DP computes optimal solution ∎
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
-
 | Resource | Description | Link |
 |----------|-------------|------|
 | **LCS Algorithm** | Complete guide with proof | [Wikipedia](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem) |
@@ -380,7 +363,6 @@ By induction, DP computes optimal solution ∎
 | **Subsequence vs Substring** | Key differences | [GeeksforGeeks](https://www.geeksforgeeks.org/subarraysubstring-vs-subsequence-and-programs-to-generate-them/) |
 
 ### 🎥 Video Tutorials
-
 | Resource | Topic | Link |
 |----------|-------|------|
 | **Abdul Bari** | LCS explained | [YouTube](https://www.youtube.com/watch?v=sSno9rV8Rhg) |
@@ -391,7 +373,6 @@ By induction, DP computes optimal solution ∎
 | **NeetCode** | Longest common subsequence | [YouTube](https://www.youtube.com/watch?v=Ua0GhsJSlWM) |
 
 ### 📝 Interactive Practice
-
 | Platform | Problem Set | Link |
 |----------|-------------|------|
 | **LeetCode** | Dynamic programming tag | [Problems](https://leetcode.com/tag/dynamic-programming/) |
@@ -400,7 +381,6 @@ By induction, DP computes optimal solution ∎
 | **CSES** | DP section | [Problemset](https://cses.fi/problemset/list/) |
 
 ### 🔬 Advanced Topics
-
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Hirschberg's Algorithm** | O(n) space LCS | [Wikipedia](https://en.wikipedia.org/wiki/Hirschberg%27s_algorithm) |
@@ -409,7 +389,6 @@ By induction, DP computes optimal solution ∎
 | **Sequence Alignment** | Bioinformatics application | [Wikipedia](https://en.wikipedia.org/wiki/Sequence_alignment) |
 
 ### 🎯 Problem Collections
-
 | Collection | Focus | Link |
 |-----------|-------|------|
 | **NeetCode 150** | Essential DP problems | [List](https://neetcode.io/practice) |
@@ -418,7 +397,6 @@ By induction, DP computes optimal solution ∎
 | **CSES DP Section** | Practice problems | [Problems](https://cses.fi/problemset/) |
 
 ### 📊 Visualization Tools
-
 | Tool | Purpose | Link |
 |------|---------|------|
 | **DP Visualizer** | See DP table fill | [Tool](https://algorithm-visualizer.org/) |
@@ -426,7 +404,6 @@ By induction, DP computes optimal solution ∎
 | **Edit Distance Viz** | Step-by-step operations | [Tool](https://planetcalc.com/1721/) |
 
 ### 🏆 Competition Resources
-
 | Resource | Topic | Link |
 |----------|-------|------|
 | **USACO Guide** | DP on strings | [Guide](https://usaco.guide/gold/string-search) |
@@ -434,7 +411,6 @@ By induction, DP computes optimal solution ∎
 | **Codeforces EDU** | DP course | [Course](https://codeforces.com/edu/course/2/lesson/5) |
 
 ### 📚 Research Papers
-
 | Paper | Topic | Link |
 |-------|-------|------|
 | **Wagner-Fischer (1974)** | Edit distance algorithm | [Paper](https://dl.acm.org/doi/10.1145/321796.321811) |
@@ -446,7 +422,6 @@ By induction, DP computes optimal solution ∎
 ## 🎯 Practice Roadmap
 
 ### Beginner Level
-
 1. **Is Subsequence** (#392) - Learn greedy approach
 
 2. **Longest Common Subsequence** (#1143) - Master 2D DP
@@ -454,7 +429,6 @@ By induction, DP computes optimal solution ∎
 3. **Delete Operation** (#583) - Apply LCS
 
 ### Intermediate Level
-
 4. **Edit Distance** (#72) - Three operations DP
 
 5. **Distinct Subsequences** (#115) - Count paths
@@ -462,7 +436,6 @@ By induction, DP computes optimal solution ∎
 6. **Minimum ASCII Delete Sum** (#712) - Weighted variant
 
 ### Advanced Level
-
 7. **Longest Increasing Subsequence** (#300) - O(n log n) with patience sorting
 
 8. **Distinct Subsequences II** (#940) - Handle duplicates
@@ -470,7 +443,6 @@ By induction, DP computes optimal solution ∎
 9. **Shortest Common Supersequence** (#1092) - Combine strings
 
 ### Expert Challenge
-
 - Implement Hirschberg's algorithm (O(n) space LCS)
 
 - Solve with space optimization
@@ -498,7 +470,6 @@ A: Edit distance = m + n - 2×LCS. Both can solve each other!
 <div align="center">
 
 ### 🧠 2D DP: The Ultimate Pattern
-
 *Master LCS and Edit Distance, unlock all DP on strings!*
 
 **Made with ❤️ by [Gaurav Goswami](https://github.com/Gaurav14cs17)**
