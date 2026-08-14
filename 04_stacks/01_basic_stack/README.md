@@ -40,24 +40,18 @@ permalink: /04_stacks/01_basic_stack/
 ---
 
 ### Stack Operations - Complete Trace
-
-
 ![Stack Operations - Complete Trace](./images/stack_operations.png)
 
 
 ---
 
 ### Min Stack - Detailed Visualization
-
-
 ![Min Stack - Detailed Visualization](./images/min_stack.png)
 
 
 ---
 
 ### Two Stacks for Queue - Amortized Analysis
-
-
 ![Two Stacks for Queue - Amortized Analysis](./images/two_stacks_queue.png)
 
 
@@ -69,7 +63,6 @@ permalink: /04_stacks/01_basic_stack/
 | **Difficulty** | Easy |
 | **Problems** | 12+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 
@@ -723,7 +716,6 @@ def dequeue(self):
     return self.s2.pop()
 ```
 
-![Pitfall 3: Inefficient Queue from Stacks](./images/two_stacks_queue.png)
 
 ---
 <div align="center">
