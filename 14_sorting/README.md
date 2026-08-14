@@ -27,18 +27,6 @@ permalink: /14_sorting/
 
 ---
 
-## 📊 Visual Overview
-
-<div align="center">
-
-![Sorting Overview](./images/sorting-overview.png)
-
-*Sorting Overview*
-
-</div>
-
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -49,7 +37,7 @@ permalink: /14_sorting/
 | **Problems** | 20+ |
 
 {: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+> **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
 
@@ -146,6 +134,29 @@ $$T = O(n + k), \quad S = O(k)$$
 $$T = O(d \cdot (n + k))$$
 
 Where $d$ = digits, $k$ = base (usually 10).
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Sorting Overview](./images/sorting-overview.png)
+
+*Sorting Overview*
+
+</div>
+
+---
+
+## 📊 Sorting Algorithm Selection
+
+<div align="center">
+
+<img src="./images/sorting-selection.png" alt="Sorting Algorithm Selection" width="100%">
+
+</div>
+
 
 ---
 
@@ -255,29 +266,6 @@ def merge(left: list[int], right: list[int]) -> list[int]:
 | 164 | [Maximum Gap](https://leetcode.com/problems/maximum-gap/) | Bucket Sort | O(n) | O(n) |
 | 315 | [Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) | Merge Sort | O(n log n) | O(n) |
 | 493 | [Reverse Pairs](https://leetcode.com/problems/reverse-pairs/) | Merge Sort | O(n log n) | O(n) |
-
----
-
-## 📊 Sorting Algorithm Selection
-
-```
-Sorting Problem
-     |
-     +-- Small n (< 50) → Insertion Sort
-     |
-     +-- General purpose → Quick Sort / Merge Sort
-     |
-     +-- Need stability → Merge Sort
-     |
-     +-- Limited memory → Heap Sort
-     |
-     +-- Integer range [0, k] → Counting Sort
-     |
-     +-- Digits/strings → Radix Sort
-     |
-     +-- Uniform distribution → Bucket Sort
-
-```
 
 ---
 
