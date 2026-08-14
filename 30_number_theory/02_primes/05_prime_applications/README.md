@@ -40,116 +40,25 @@ permalink: /30_number_theory/02_primes/05_prime_applications/
 
 ### Walkthrough 1: Generating Ugly Numbers
 
-```
-+-----------------------------------------------------------------+
-| PROBLEM: Generate first 10 ugly numbers                        |
-+-----------------------------------------------------------------+
-| ALGORITHM: Three-pointer dynamic programming                   |
-|                                                                 |
-| Initial: ugly = [1], i2=0, i3=0, i5=0                          |
-|                                                                 |
-| STEP 1:                                                         |
-|   Candidates: ugly[0]*2=2, ugly[0]*3=3, ugly[0]*5=5            |
-|   Min = 2 → ugly = [1, 2], i2=1                                |
-|                                                                 |
-| STEP 2:                                                         |
-|   Candidates: ugly[1]*2=4, ugly[0]*3=3, ugly[0]*5=5            |
-|   Min = 3 → ugly = [1, 2, 3], i3=1                             |
-|                                                                 |
-| STEP 3:                                                         |
-|   Candidates: ugly[1]*2=4, ugly[1]*3=6, ugly[0]*5=5            |
-|   Min = 4 → ugly = [1, 2, 3, 4], i2=2                          |
-|                                                                 |
-| STEP 4:                                                         |
-|   Candidates: ugly[2]*2=6, ugly[1]*3=6, ugly[0]*5=5            |
-|   Min = 5 → ugly = [1, 2, 3, 4, 5], i5=1                       |
-|                                                                 |
-| STEP 5:                                                         |
-|   Candidates: ugly[2]*2=6, ugly[1]*3=6, ugly[1]*5=10           |
-|   Min = 6 → ugly = [1, 2, 3, 4, 5, 6], i2=3, i3=2              |
-|   (Move BOTH pointers since 6 appears in both)                 |
-|                                                                 |
-| Continue...                                                     |
-|                                                                 |
-| RESULT: [1, 2, 3, 4, 5, 6, 8, 9, 10, 12]                       |
-+-----------------------------------------------------------------+
+![Walkthrough 1: Generating Ugly Numbers](./images/walkthrough-1-generating-ugly-numbers.png)
 
-```
+
 
 ---
 
 ### Walkthrough 2: Twin Prime Search
 
-```
-+-----------------------------------------------------------------+
-| FINDING TWIN PRIMES UP TO 100                                  |
-+-----------------------------------------------------------------+
-| STEP 1: Generate primes via sieve                              |
-|                                                                 |
-|   Primes: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37,         |
-|           41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97  |
-|                                                                 |
-| STEP 2: Check consecutive pairs with gap 2                     |
-|                                                                 |
-|   (2, 3): gap = 1 ✗                                            |
-|   (3, 5): gap = 2 ✓ TWIN PRIME!                                |
-|   (5, 7): gap = 2 ✓ TWIN PRIME!                                |
-|   (7, 11): gap = 4 ✗                                           |
-|   (11, 13): gap = 2 ✓ TWIN PRIME!                              |
-|   (13, 17): gap = 4 ✗                                          |
-|   (17, 19): gap = 2 ✓ TWIN PRIME!                              |
-|   (19, 23): gap = 4 ✗                                          |
-|   (23, 29): gap = 6 ✗                                          |
-|   (29, 31): gap = 2 ✓ TWIN PRIME!                              |
-|   ...                                                           |
-|   (41, 43): gap = 2 ✓ TWIN PRIME!                              |
-|   ...                                                           |
-|   (59, 61): gap = 2 ✓ TWIN PRIME!                              |
-|   ...                                                           |
-|   (71, 73): gap = 2 ✓ TWIN PRIME!                              |
-|                                                                 |
-| TWIN PRIMES ≤ 100:                                              |
-|   (3,5), (5,7), (11,13), (17,19), (29,31),                    |
-|   (41,43), (59,61), (71,73)                                    |
-|                                                                 |
-| COUNT: 8 pairs                                                  |
-+-----------------------------------------------------------------+
+![Walkthrough 2: Twin Prime Search](./images/walkthrough-2-twin-prime-search.png)
 
-```
+
 
 ---
 
 ### Walkthrough 3: Goldbach Partition
 
-```
-+-----------------------------------------------------------------+
-| FINDING GOLDBACH PARTITION FOR 100                             |
-+-----------------------------------------------------------------+
-| GOAL: Find primes p, q such that p + q = 100                  |
-|                                                                 |
-| STEP 1: Generate primes up to 100                              |
-|                                                                 |
-|   primes = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37,       |
-|             41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97}|
-|                                                                 |
-| STEP 2: For each prime p ≤ 50, check if 100-p is prime        |
-|                                                                 |
-|   p = 3:  100 - 3 = 97  ✓ (97 is prime!)                      |
-|   → FOUND: 100 = 3 + 97                                        |
-|                                                                 |
-| ALTERNATIVE PARTITIONS:                                         |
-|   p = 11: 100 - 11 = 89 ✓ → 100 = 11 + 89                     |
-|   p = 17: 100 - 17 = 83 ✓ → 100 = 17 + 83                     |
-|   p = 29: 100 - 29 = 71 ✓ → 100 = 29 + 71                     |
-|   p = 41: 100 - 41 = 59 ✓ → 100 = 41 + 59                     |
-|   p = 47: 100 - 47 = 53 ✓ → 100 = 47 + 53                     |
-|                                                                 |
-| RESULT: 100 has 6 Goldbach partitions!                         |
-|   Smallest: 3 + 97                                              |
-|   Most balanced: 47 + 53                                        |
-+-----------------------------------------------------------------+
+![Walkthrough 3: Goldbach Partition](./images/walkthrough-3-goldbach-partition.png)
 
-```
+
 
 
 ## 🎯 At a Glance
