@@ -27,6 +27,8 @@ permalink: /30_number_theory/03_modular_arithmetic/
 
 ## 📊 Visual Overview
 
+![Modular Arithmetic Overview](./images/modular-arithmetic-overview.png)
+
 > *Concept map and key formulas — dive into subtopics for detailed walkthroughs and code.*
 
 ---
