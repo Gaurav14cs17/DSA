@@ -258,7 +258,7 @@ def eventualSafeNodes(graph: list[list[int]]) -> list[int]:
         return True
     
     return [i for i in range(n) if dfs(i)]
-
+```
 
 ---
 
