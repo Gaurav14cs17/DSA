@@ -40,83 +40,17 @@ permalink: /30_number_theory/02_primes/06_applications/
 
 ### Walkthrough 1: Euler's Totient Sieve
 
-```
-+-----------------------------------------------------------------+
-| COMPUTE φ(n) FOR ALL n UP TO 12                                |
-+-----------------------------------------------------------------+
-| INITIAL: φ[i] = i for all i                                    |
-|                                                                 |
-|   n:    1  2  3  4  5  6  7  8  9 10 11 12                    |
-|   φ:    1  2  3  4  5  6  7  8  9 10 11 12                    |
-|                                                                 |
-| STEP 1: p = 2 (prime), update multiples                        |
-|   For j = 2, 4, 6, 8, 10, 12:                                  |
-|   φ[j] = φ[j] - φ[j]/2 = φ[j] × (1 - 1/2) = φ[j]/2           |
-|                                                                 |
-|   n:    1  2  3  4  5  6  7  8  9 10 11 12                    |
-|   φ:    1  1  3  2  5  3  7  4  9  5 11  6                    |
-|                                                                 |
-| STEP 2: p = 3 (prime), update multiples                        |
-|   For j = 3, 6, 9, 12:                                         |
-|   φ[j] = φ[j] - φ[j]/3 = φ[j] × (1 - 1/3) = φ[j] × 2/3       |
-|                                                                 |
-|   n:    1  2  3  4  5  6  7  8  9 10 11 12                    |
-|   φ:    1  1  2  2  5  2  7  4  6  5 11  4                    |
-|                                                                 |
-| STEP 3: p = 5 (prime), update multiples                        |
-|   For j = 5, 10:                                               |
-|   φ[j] = φ[j] × (1 - 1/5) = φ[j] × 4/5                        |
-|                                                                 |
-|   n:    1  2  3  4  5  6  7  8  9 10 11 12                    |
-|   φ:    1  1  2  2  4  2  6  4  6  4 10  4                    |
-|                                                                 |
-| Continue for 7, 11...                                          |
-|                                                                 |
-| FINAL:                                                          |
-|   φ:    1  1  2  2  4  2  6  4  6  4 10  4                    |
-|                                                                 |
-| VERIFICATION: φ(12) = 4                                         |
-|   Numbers coprime to 12: 1, 5, 7, 11 → count = 4 ✓             |
-+-----------------------------------------------------------------+
+![Walkthrough 1: Euler's Totient Sieve](./images/walkthrough-1-eulers-totient-sieve.png)
 
-```
+
 
 ---
 
 ### Walkthrough 2: Union-Find with Prime Factorization
 
-```
-+-----------------------------------------------------------------+
-| LEETCODE 952: Largest Component Size by Common Factor          |
-+-----------------------------------------------------------------+
-| PROBLEM: Connect numbers sharing a prime factor                |
-|                                                                 |
-| INPUT: nums = [4, 6, 15, 35]                                   |
-|                                                                 |
-| STEP 1: Factorize each number                                  |
-|   4 = 2²       → primes: {2}                                   |
-|   6 = 2 × 3    → primes: {2, 3}                                |
-|   15 = 3 × 5   → primes: {3, 5}                                |
-|   35 = 5 × 7   → primes: {5, 7}                                |
-|                                                                 |
-| STEP 2: Union numbers sharing primes                           |
-|                                                                 |
-|   4 and 6 share prime 2 → UNION(4, 6)                          |
-|   6 and 15 share prime 3 → UNION(6, 15)                        |
-|   15 and 35 share prime 5 → UNION(15, 35)                      |
-|                                                                 |
-|   Connections:                                                  |
-|     4 --- 6 --- 15 --- 35                                      |
-|      (2)   (3)    (5)                                          |
-|                                                                 |
-| STEP 3: Find largest component                                 |
-|   All 4 numbers are connected!                                 |
-|   Component size = 4                                           |
-|                                                                 |
-| RESULT: 4                                                       |
-+-----------------------------------------------------------------+
+![Walkthrough 2: Union-Find with Prime Factorization](./images/walkthrough-2-union-find-with-prime-factorization.png)
 
-```
+
 
 
 ## 🎯 At a Glance
