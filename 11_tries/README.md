@@ -258,20 +258,12 @@ class WordDictionary:
 
 ## 📊 Trie Pattern Decision
 
-```
-String Problem
-     |
-     +-- Prefix matching → Trie
-     |
-     +-- Autocomplete → Trie + DFS
-     |
-     +-- Wildcard search → Trie + Backtracking
-     |
-     +-- Maximum XOR → Binary Trie
-     |
-     +-- Dictionary lookup only → Hash Set
+<div align="center">
 
-```
+<img src="./images/trie-pattern-decision.png" alt="Trie Pattern Decision" width="100%">
+
+</div>
+
 
 ---
 
