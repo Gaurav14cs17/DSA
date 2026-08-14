@@ -38,7 +38,6 @@ permalink: /25_tree_algorithms/11_mos_algorithm_trees/
 | **Difficulty** | Hard |
 | **Problems** | 4+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
