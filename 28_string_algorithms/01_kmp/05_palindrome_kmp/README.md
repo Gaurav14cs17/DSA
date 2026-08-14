@@ -426,7 +426,7 @@ print(min_insertions_palindrome("leetcode"))  # 5
 
 ---
 
-## 🧩 LeetCode Problems
+## 🏆 LeetCode Problems
 
 ### Easy
 
@@ -534,6 +534,24 @@ class Solution:
    - KMP approach: O(n) for specific problems
    - General palindrome: Consider Manacher's O(n)
    - Multiple checks: Precompute with DP
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **KMP + Palindrome** | CP-Algorithms | [Prefix function](https://cp-algorithms.com/string/prefix-function.html) |
+| **Shortest Palindrome** | GeeksforGeeks | [KMP palindrome prefix](https://www.geeksforgeeks.org/shortest-palindrome/) |
+| **Palindrome** | USACO Guide | [String Search](https://usaco.guide/gold/string-search) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | String tag | [Problems](https://leetcode.com/tag/string/) |
 
 ---
 
