@@ -13,8 +13,6 @@ permalink: /07_trees/05_lca_ancestor/
 ### *LCA & Ancestor Problems*
 
 
-
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8+-blue?style=for-the-badge" alt="Problems">
@@ -38,89 +36,17 @@ permalink: /07_trees/05_lca_ancestor/
 
 ### LCA of Binary Tree (#236)
 
-```
-Tree:        Find LCA(5, 1)
-        3
-       / \
-      5   1
-     / \  / \
-    6  2 0  8
-      / \
-     7   4
-
-DFS Search:
-Start at 3:
-  Search left (5):
-    Found 5! Return 5
-  Search right (1):
-    Found 1! Return 1
-  Both left and right non-null → 3 is LCA!
-
-Result: 3
-
-Example 2: Find LCA(5, 4)
-  Search left (5):
-    Found 5! But continue checking subtree...
-    Search 5's left: found 6
-    Search 5's right: found 2, then 4
-    4 found in left subtree, return up
-  Since 5 itself is one target and 4 in its subtree
-  Result: 5 (ancestor can be the node itself!)
-
-```
 
 ### LCA of BST (#235)
 
-```
-BST:         Find LCA(2, 8)
-        6
-       / \
-      2   8
-     / \ / \
-    0  4 7  9
-      / \
-     3   5
 
-Using BST property:
-At 6: 2 < 6 < 8 → Split! LCA = 6
+![LCA of BST (#235)](./images/lca-ancestor.png)
 
-At 6: 2 < 6 and 4 < 6 → both left
-  Go left to 2
-At 2: 2 ≤ 2 ≤ 4 → Split! LCA = 2
-
-Time: O(h) - Only one path!
-
-```
 
 ### Binary Lifting for Kth Ancestor
 
-```
-Tree with parent pointers:
-        0
-       / \
-      1   2
-     / \
-    3   4
 
-Precompute 2^j ancestors:
-up[node][j] = 2^j-th ancestor of node
-
-up[3][0] = 1  (2^0 = 1st parent)
-up[3][1] = 0  (2^1 = 2nd ancestor)
-up[3][2] = -1 (doesn't exist)
-
-up[4][0] = 1
-up[4][1] = 0
-
-To find 3rd ancestor of node 4:
-  k = 3 = binary 11 = 2^1 + 2^0
-  Jump 2^0: 4 → up[4][0] = 1
-  Jump 2^1: 1 → up[1][1] = 0
-  Result: 0
-
-Time: O(log k) per query after O(n log n) preprocessing
-
-```
+![Binary Lifting for Kth Ancestor](./images/lca-ancestor.png)
 
 
 ## 🎯 At a Glance
@@ -343,8 +269,6 @@ def distanceBetweenNodes(root: TreeNode, p: TreeNode, q: TreeNode) -> int:
     lca = lowestCommonAncestor(root, p, q)
     return find_distance(lca, p, 0) + find_distance(lca, q, 0)
 
-```
-
 
 ## 🏆 LeetCode Problems
 
@@ -369,245 +293,10 @@ def distanceBetweenNodes(root: TreeNode, p: TreeNode, q: TreeNode) -> int:
 
 ## 📊 LCA Pattern Selection
 
-```
+
 LCA Problem
      |
-     +-- BST? → Use BST property (O(h))
-     |
-     +-- Has parent pointers? → Two pointer technique
-     |
-     +-- Multiple queries? → Binary Lifting
-     |
-     +-- Single query? → DFS recursive
-
-```
-
-### Complexity Comparison
-
-| Approach | Preprocessing | Query | Space | When to Use |
-|----------|--------------|-------|-------|-------------|
-| DFS Recursive | - | O(n) | O(h) | Single query |
-| BST Property | - | O(h) | O(1) | BST only |
-| Parent Pointers | - | O(h) | O(1) | Parents given |
-| Binary Lifting | O(n log n) | O(log n) | O(n log n) | Multiple queries |
-
-
-## 💡 Pattern Recognition Guide
-
-| Problem Keywords | Pattern | Example |
-|-----------------|---------|---------|
-| "LCA in binary tree" | DFS recursive | #236 |
-| "LCA in BST" | BST property | #235 |
-| "kth ancestor" | Binary lifting | #1483 |
-| "distance between nodes" | LCA + depths | - |
-| "LCA with parent pointers" | Two pointers | #1650 |
-| "LCA of deepest leaves" | DFS | #1123 |
-
-
-## 📚 References & Learning Resources
-
-### 📖 Core Concepts
-
-| Resource | Topic | Link |
-|----------|-------|------|
-| **Wikipedia** | LCA definition | [Article](https://en.wikipedia.org/wiki/Lowest_common_ancestor) |
-| **CP Algorithms** | Binary lifting | [Tutorial](https://cp-algorithms.com/graph/lca_binary_lifting.html) |
-| **GeeksforGeeks** | LCA in binary tree | [Tutorial](https://www.geeksforgeeks.org/lowest-common-ancestor-binary-tree-set-1/) |
-| **GeeksforGeeks** | LCA in BST | [Tutorial](https://www.geeksforgeeks.org/lowest-common-ancestor-in-a-binary-search-tree/) |
-
-### 📺 Video Tutorials
-
-| Creator | Topic | Link |
-|---------|-------|------|
-| **NeetCode** | LCA Binary Tree | [YouTube](https://www.youtube.com/watch?v=gs2LMfuOR9k) |
-| **NeetCode** | LCA of BST | [YouTube](https://www.youtube.com/watch?v=gs2LMfuOR9k) |
-| **William Fiset** | Binary lifting | [YouTube](https://www.youtube.com/watch?v=oib-XsjFa-M) |
-| **Back To Back SWE** | LCA problems | [YouTube](https://www.youtube.com/watch?v=13m9ZCB8gjw) |
-
-### 🎯 Practice Collections
-
-| Platform | Focus | Link |
-|----------|-------|------|
-| **LeetCode** | LCA problems | [Tag](https://leetcode.com/tag/lowest-common-ancestor/) |
-| **HackerRank** | Tree challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=trees) |
-
-### 🔬 Advanced Topics
-
-| Topic | Description | Link |
-|-------|-------------|------|
-| **Binary Lifting** | Fast ancestor queries | [CP-Algorithms](https://cp-algorithms.com/graph/lca_binary_lifting.html) |
-| **Tarjan's Algorithm** | Offline LCA | [Wikipedia](https://en.wikipedia.org/wiki/Tarjan%27s_off-line_lowest_common_ancestors_algorithm) |
-| **RMQ to LCA** | Reduction between problems | [Tutorial](https://www.geeksforgeeks.org/lca-using-rmq/) |
-
-### 📊 Visualization
-
-| Tool | Purpose | Link |
-|------|---------|------|
-| **VisuAlgo** | LCA visualization | [Website](https://visualgo.net/en/bst) |
-| **CS Animations** | Tree ancestors | [Website](https://www.cs.usfca.edu/~galles/visualization/BST.html) |
-
-
-## 💡 Pro Tips
-
-> **🎯 LCA = First Split:** Where paths to p and q diverge. If found in different subtrees, current node is LCA!
-
-> **⚡ BST Optimization:** Use BST property! If p,q < root, go left. If p,q > root, go right. Otherwise, current is LCA!
-
-> **🔍 Parent Pointers:** Move both to same depth, then move together until they meet!
-
-> **📊 Binary Lifting:** Precompute 2^j ancestors. Jump using binary representation of k!
-
-> **🌊 Distance Formula:** \( dist(p,q) = depth(p) + depth(q) - 2 \times depth(LCA) \)
-
-
-## 🎖️ Practice Roadmap
-
-**Week 1: Basic LCA**
-
-1. Solve #236 (LCA Binary Tree) - Master the pattern
-
-2. Solve #235 (LCA of BST) - BST optimization
-
-3. Solve #1650 (LCA with Parents) - Two pointers
-
-**Week 2: Advanced LCA**
-
-4. Solve #1123 (LCA Deepest Leaves) - Modified LCA
-
-5. Solve #1644 (LCA II) - Handle missing nodes
-
-6. Solve #1676 (LCA IV) - Multiple nodes
-
-**Week 3: Binary Lifting**
-
-7. Solve #1483 (Kth Ancestor) - Binary lifting
-
-8. Practice distance calculations
-
-9. Review all patterns
-
-
-## ❓ Interview Q&A
-
-**Q: What's the time complexity of LCA in binary tree?**  
-A: O(n) in worst case (skewed tree). O(log n) for balanced tree. Each node visited at most once.
-
-**Q: How is LCA in BST different?**  
-A: Use BST property! Only need to traverse one path from root. O(h) time, O(1) space iteratively.
-
-**Q: When to use binary lifting?**  
-A: When you have multiple ancestor queries. Preprocessing O(n log n), each query O(log n). Worth it for many queries!
-
-**Q: How to find distance between two nodes?**  
-A: Find LCA, then: `distance = depth(p) + depth(q) - 2 * depth(LCA)`
-
-**Q: Can LCA be one of the input nodes?**  
-A: Yes! A node can be ancestor of itself. If p is ancestor of q, LCA(p,q) = p.
-
-
-## 🔥 Key Insights
-
-- **Split Point:** LCA is where paths to p and q diverge
-
-- **BST Property:** Navigate using comparisons, O(h) time
-
-- **Parent Pointers:** Bring to same level, move together
-
-- **Binary Lifting:** Jump ancestors using powers of 2
-- **Node Can Be Its Own Ancestor:** LCA(p,q) can be p or q itself
-
----
-
-<div align="center">
-
-**Made with ❤️ for the coding community by [Gaurav Goswami](https://github.com/Gaurav14cs17)**
-
-</div>
-
----
-
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next Topic |
-|:------------|:----------:|--------:|
-| [← 04. Path Problems](../04_path_problems/README.md) | **05. LCA & Ancestor** | [🏠 Trees Home](../README.md) → [BST](../../08_binary_search_trees/README.md) |
-
----
-
-## 📐 Mathematical Foundation
-### 1️⃣ LCA Definition
-
-**Lowest Common Ancestor of nodes p and q:**
-
-$$\text{LCA}(p, q) = \text{deepest node that is ancestor of both } p \text{ and } q$$
-
-**Properties:**
-
-- $\text{LCA}(p, p) = p$
-
-- $\text{LCA}(p, q) = \text{LCA}(q, p)$
-
-- If $p$ is ancestor of $q$, then $\text{LCA}(p, q) = p$
-
----
-
-### 2️⃣ LCA Recursive Formula
-
-$$\text{LCA}(root, p, q) = \begin{cases}
-root & \text{if } root = p \text{ or } root = q \\
-root & \text{if } p \in T_L \text{ and } q \in T_R \\
-\text{LCA}(root.left, p, q) & \text{if } p, q \in T_L \\
-\text{LCA}(root.right, p, q) & \text{if } p, q \in T_R
-\end{cases}$$
-
----
-
-### 3️⃣ LCA in BST
-
-**Using BST property:**
-
-$$\text{LCA}_{BST}(root, p, q) = \begin{cases}
-root & \text{if } p.val \leq root.val \leq q.val \\
-\text{LCA}(root.left, p, q) & \text{if } p.val, q.val < root.val \\
-\text{LCA}(root.right, p, q) & \text{if } p.val, q.val > root.val
-\end{cases}$$
-
-**Time:** O(h) instead of O(n).
-
----
-
-### 4️⃣ Distance Between Nodes
-
-$$\text{dist}(p, q) = \text{dist}(root, p) + \text{dist}(root, q) - 2 \times \text{dist}(root, \text{LCA}(p, q))$$
-
----
-
-### 5️⃣ Binary Lifting (for multiple queries)
-
-**Precompute ancestors at powers of 2:**
-
-$$\text{ancestor}[i][j] = \text{ancestor}[\text{ancestor}[i][j-1]][j-1]$$
-
-Where $\text{ancestor}[i][j]$ = $2^j$-th ancestor of node $i$.
-
-**Query:** O(log n) per query after O(n log n) preprocessing.
-
----
-
-### 6️⃣ Kth Ancestor
-
-**Using binary representation of k:**
-
-$$k = \sum_{i} b_i \cdot 2^i$$
-
-Jump using precomputed $2^i$-th ancestors.
-
----
-
-## 💻 Code Implementations
-
+![📊 LCA Pattern Selection](./images/lca-ancestor.png)
 ```python
 def lowestCommonAncestor(root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
     """
@@ -739,7 +428,6 @@ def distanceBetweenNodes(root: TreeNode, p: TreeNode, q: TreeNode) -> int:
     lca = lowestCommonAncestor(root, p, q)
     return find_distance(lca, p, 0) + find_distance(lca, q, 0)
 
-```
 
 ---
 
@@ -767,19 +455,9 @@ def distanceBetweenNodes(root: TreeNode, p: TreeNode, q: TreeNode) -> int:
 
 ## 📊 LCA Pattern Selection
 
-```
+
 LCA Problem
      |
-     +-- BST? → Use BST property (O(h))
-     |
-     +-- Has parent pointers? → Two pointer technique
-     |
-     +-- Multiple queries? → Binary Lifting
-     |
-     +-- Single query? → DFS recursive
-
-```
-
 ### Complexity Comparison
 
 | Approach | Preprocessing | Query | Space | When to Use |
