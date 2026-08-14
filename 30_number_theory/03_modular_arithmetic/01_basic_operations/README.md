@@ -34,8 +34,8 @@ nav_order: 1
 ## 🎯 At a Glance
 
 | | |
-|:---| **Topic** | Basic Modular Operations |
-|:---|
+|:---|:---|
+| **Topic** | Basic Modular Operations |
 | **Typical time** | O(1) per operation |
 | **Typical space** | O(1) |
 
