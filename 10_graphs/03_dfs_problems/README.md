@@ -13,27 +13,10 @@ permalink: /10_graphs/03_dfs_problems/
 ### *🔍 DFS Problems*
 
 
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
 </p>
-
-</div>
-
----
-
-## 📊 Visual Overview
-
-<div align="center">
-
-![DFS Traversal](./images/dfs_traversal.png)
-
-*DFS Depth-First Exploration with 3-Color States*
-
-![Flood Fill](./images/flood_fill.png)
-
-*Number of Islands - DFS Flood Fill*
 
 </div>
 
@@ -48,7 +31,7 @@ permalink: /10_graphs/03_dfs_problems/
 | **Problems** | 10+ |
 
 {: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+> **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
 
@@ -97,6 +80,22 @@ $$\boxed{T(V, E) = O(V + E)}$$
 $$d[u] < d[v] < f[v] < f[u] \text{ (v is descendant of u)}$$
 
 **Parenthesis Theorem:** DFS forms valid nesting.
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![DFS Traversal](./images/dfs_traversal.png)
+
+*DFS Depth-First Exploration with 3-Color States*
+
+![Flood Fill](./images/flood_fill.png)
+
+*Number of Islands - DFS Flood Fill*
+
+</div>
 
 ---
 
@@ -245,7 +244,6 @@ def canVisitAllRooms(rooms: list[list[int]]) -> bool:
     dfs(0)
     return len(visited) == len(rooms)
 
-```
 
 ---
 
