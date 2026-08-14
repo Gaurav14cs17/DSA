@@ -30,7 +30,6 @@ permalink: /10_graphs/02_bfs_problems/
 | **Difficulty** | Medium |
 | **Problems** | 10+ |
 
-{: .highlight }
 > **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
@@ -243,7 +242,6 @@ def updateMatrix(mat: list[list[int]]) -> list[list[int]]:
 ## 🏆 LeetCode Problems
 
 ### 🟡 Medium
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 286 | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/) | Multi-source BFS | O(mn) | O(mn) |
@@ -253,7 +251,6 @@ def updateMatrix(mat: list[list[int]]) -> list[list[int]]:
 | 1091 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | BFS | O(n²) | O(n²) |
 
 ### 🔴 Hard
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 127 | [Word Ladder](https://leetcode.com/problems/word-ladder/) | BFS | O(M²·N) | O(M²·N) |
