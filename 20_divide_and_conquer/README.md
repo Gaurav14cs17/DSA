@@ -129,80 +129,11 @@ $$T(n) = cn \times \log n = O(n \log n)$$
 
 ### Merge Sort Pattern
 
-```python
-def mergeSort(arr: list[int]) -> list[int]:
-    """
-    Classic Merge Sort.
-    
-    Time: O(n log n), Space: O(n)
-    """
-    if len(arr) <= 1:
-        return arr
-    
-    mid = len(arr) // 2
-    left = mergeSort(arr[:mid])
-    right = mergeSort(arr[mid:])
-    
-    return merge(left, right)
-
-def merge(left: list[int], right: list[int]) -> list[int]:
-    result = []
-    i = j = 0
-    
-    while i < len(left) and j < len(right):
-        if left[i] <= right[j]:
-            result.append(left[i])
-            i += 1
-        else:
-            result.append(right[j])
-            j += 1
-    
-    result.extend(left[i:])
-    result.extend(right[j:])
-    return result
-
-```
+![Merge Sort Pattern Visual Walkthrough](./images/merge-sort-pattern-visual.png)
 
 ### Quick Select
 
-```python
-def quickSelect(arr: list[int], k: int) -> int:
-    """
-    Find kth smallest element.
-    
-    Average: O(n), Worst: O(n²)
-    """
-    import random
-    
-    def partition(left, right, pivot_idx):
-        pivot = arr[pivot_idx]
-        arr[pivot_idx], arr[right] = arr[right], arr[pivot_idx]
-        store = left
-        
-        for i in range(left, right):
-            if arr[i] < pivot:
-                arr[store], arr[i] = arr[i], arr[store]
-                store += 1
-        
-        arr[store], arr[right] = arr[right], arr[store]
-        return store
-    
-    left, right = 0, len(arr) - 1
-    
-    while left <= right:
-        pivot_idx = random.randint(left, right)
-        pivot_idx = partition(left, right, pivot_idx)
-        
-        if pivot_idx == k:
-            return arr[k]
-        elif pivot_idx < k:
-            left = pivot_idx + 1
-        else:
-            right = pivot_idx - 1
-    
-    return arr[k]
-
-```
+![Quick Select Visual Walkthrough](./images/quick-select-visual.png)
 
 ---
 
