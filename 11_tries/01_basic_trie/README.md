@@ -59,23 +59,12 @@ permalink: /11_tries/01_basic_trie/
 ## 📐 Mathematical Foundation
 ### 1️⃣ Trie Structure
 
-```
-Root (empty)
-+-- 'a'
+<div align="center">
 
-|   +-- 'p'
-|   |   +-- 'p' [end: "app"]
+<img src="./image/trie-structure-detail.png" alt="Trie Structure" width="100%">
 
-|   |   |   +-- 'l'
+</div>
 
-|   |   |       +-- 'e' [end: "apple"]
-
-|   +-- 'n'
-|       +-- 'd' [end: "and"]
-+-- 'b'
-    +-- 'e' [end: "be"]
-
-```
 
 ---
 
