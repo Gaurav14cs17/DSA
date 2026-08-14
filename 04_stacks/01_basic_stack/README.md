@@ -502,7 +502,7 @@ def baseball_game(operations: list[str]) -> int:
             stack.append(int(op))
     
     return sum(stack)
-
+```
 
 ## 🏆 LeetCode Problems
 
