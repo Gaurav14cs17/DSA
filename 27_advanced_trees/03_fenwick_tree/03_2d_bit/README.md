@@ -39,7 +39,6 @@ permalink: /27_advanced_trees/03_fenwick_tree/03_2d_bit/
 | **Difficulty** | Hard |
 | **Problems** | 5 |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
