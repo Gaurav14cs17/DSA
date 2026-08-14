@@ -66,14 +66,12 @@ permalink: /16_recursion/07_divide_conquer/
 
 Three steps:
 
-```
-1. DIVIDE:   Split problem into smaller subproblems
+<div align="center">
 
-2. CONQUER:  Solve subproblems recursively
+<img src="./images/divide-conquer-paradigm.png" alt="Divide and Conquer Paradigm" width="100%">
 
-3. COMBINE:  Merge subproblem solutions
+</div>
 
-```
 
 ---
 
@@ -539,22 +537,12 @@ def countInversions(arr: list) -> int:
 
 ## 📊 Pattern Summary
 
-```
-Divide and Conquer
-         |
-         +-- Binary Search
-         |   +-- T(n) = T(n/2) + O(1) = O(log n)
-         |
-         +-- Merge Sort
-         |   +-- T(n) = 2T(n/2) + O(n) = O(n log n)
-         |
-         +-- Quick Sort
-         |   +-- T(n) = 2T(n/2) + O(n) = O(n log n) avg
-         |
-         +-- Fast Power
-             +-- T(n) = T(n/2) + O(1) = O(log n)
+<div align="center">
 
-```
+<img src="./images/divide-conquer-patterns.png" alt="Divide and Conquer Patterns" width="100%">
+
+</div>
+
 
 ---
 
