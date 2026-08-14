@@ -13,6 +13,9 @@ permalink: /30_number_theory/11_legendres_formula/02_p_adic_valuation/
 
 ### *Measuring How Many Times a Prime Divides a Number*
 
+![*Measuring How Many Times a Prime Divides a Number*](./images/measuring-how-many-times-a-prime-divides-a-number.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Time-O(log_n)-blue?style=for-the-badge" alt="Time">
@@ -39,33 +42,6 @@ permalink: /30_number_theory/11_legendres_formula/02_p_adic_valuation/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| COMPUTING ν₂(C(10, 3)) using Kummer's Theorem                  |
-+-----------------------------------------------------------------+
-|                                                                 |
-| C(10, 3) = C(10, 3) where k=3, n-k=7                           |
-|                                                                 |
-| Add 3 + 7 in base 2:                                           |
-|                                                                 |
-|       0011  (3 in binary)                                      |
-|     + 0111  (7 in binary)                                      |
-|     ------                                                     |
-|       1010  (10 in binary)                                     |
-|                                                                 |
-| Carries:                                                       |
-|   Position 0: 1+1=2, carry 1  ←                                |
-|   Position 1: 1+1+1=3, carry 1  ←                              |
-|   Position 2: 0+1+1=2, carry 1  ←                              |
-|   Position 3: 0+0+1=1, no carry                                |
-|                                                                 |
-| Total carries: 3                                               |
-| ∴ ν₂(C(10,3)) = 3                                              |
-|                                                                 |
-| Verify: C(10,3) = 120 = 8 × 15 = 2³ × 15 ✓                     |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
