@@ -249,16 +249,12 @@ def findRotationCount(nums: list[int]) -> int:
 
 ## 📊 Rotated Array Decision
 
-```
-Rotated Array
-      |
-      +-- Search element → Find sorted half
-      |
-      +-- Find minimum → Compare mid with right
-      |
-      +-- With duplicates → Shrink when equal
+<div align="center">
 
-```
+<img src="./images/rotated-array-decision.png" alt="Rotated Array Decision" width="100%">
+
+</div>
+
 
 
 ## 📚 References
@@ -482,16 +478,12 @@ def findRotationCount(nums: list[int]) -> int:
 
 ## 📊 Rotated Array Decision
 
-```
-Rotated Array
-      |
-      +-- Search element → Find sorted half
-      |
-      +-- Find minimum → Compare mid with right
-      |
-      +-- With duplicates → Shrink when equal
+<div align="center">
 
-```
+<img src="./images/rotated-array-decision.png" alt="Rotated Array Decision" width="100%">
+
+</div>
+
 
 ---
 
