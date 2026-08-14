@@ -13,6 +13,9 @@ permalink: /30_number_theory/12_wilsons_theorem/
 
 ### *The Factorial Characterization of Primes*
 
+![*The Factorial Characterization of Primes*](./images/the-factorial-characterization-of-primes.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Type-Primality_Test-green?style=for-the-badge" alt="Type">
@@ -28,29 +31,8 @@ permalink: /30_number_theory/12_wilsons_theorem/
 
 ## 📊 Visual Overview
 
-```
-+-----------------------------------------------------------------+
-| WILSON'S THEOREM FOR p = 7                                     |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Compute (7-1)! mod 7 = 6! mod 7                                |
-|                                                                 |
-| 6! = 1 × 2 × 3 × 4 × 5 × 6 = 720                              |
-|                                                                 |
-| 720 = 102 × 7 + 6                                              |
-| 720 mod 7 = 6 = 7 - 1 ✓                                        |
-|                                                                 |
-| Why? Pair inverses:                                             |
-|   2 × 4 ≡ 1 (mod 7)                                            |
-|   3 × 5 ≡ 1 (mod 7)                                            |
-|   1 and 6 are self-inverse (6 ≡ -1)                            |
-|                                                                 |
-| So 6! ≡ 1 × 6 × (2×4) × (3×5) ≡ 1 × 6 × 1 × 1 ≡ 6 (mod 7)    |
-|                                                                 |
-| 6 ≡ -1 (mod 7) ✓ Prime confirmed!                              |
-+-----------------------------------------------------------------+
+![Wilson's Theorem Overview](./images/wilsons-theorem-overview.png)
 
-```
 
 ---
 
