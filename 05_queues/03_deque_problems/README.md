@@ -40,7 +40,6 @@ permalink: /05_queues/03_deque_problems/
 ---
 
 ### Sliding Window Maximum (#239)
-
 nums = [1, 3, -1, -3, 5, 3, 6, 7], k = 3
 
 Monotonic decreasing deque (stores indices):
@@ -90,7 +89,6 @@ i=7, num=7:
 
 
 ### Shortest Subarray Sum ≥ K (#862)
-
 nums = [2, -1, 2], k = 3
 
 Prefix sums: P = [0, 2, 1, 3]
@@ -119,12 +117,6 @@ j=3: P[3]=3
 Result: 3 (subarray [2, -1, 2])
 
 
-### 0-1 BFS Example
-
-
-![0-1 BFS Example](./image/zero_one_bfs.png)
-
-
 ## 🎯 At a Glance
 
 | | |
@@ -133,7 +125,6 @@ Result: 3 (subarray [2, -1, 2])
 | **Difficulty** | Medium to Hard |
 | **Problems** | 8+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 
@@ -367,6 +358,7 @@ def zeroOneBFS(graph: list[list[tuple]], n: int, start: int) -> list[int]:
     
     return dist
 
+```
 
 ## 🏆 LeetCode Problems
 
@@ -386,186 +378,11 @@ def zeroOneBFS(graph: list[list[tuple]], n: int, start: int) -> list[int]:
 | 1425 | [Constrained Subsequence Sum](https://leetcode.com/problems/constrained-subsequence-sum/) | DP + Deque | O(n) | O(n) |
 | 1499 | [Max Value of Equation](https://leetcode.com/problems/max-value-of-equation/) | Monotonic Deque | O(n) | O(n) |
 
-
 ## 📊 When to Use Deque
 
 
-Sliding Window Optimization?
-          |
 ![📊 When to Use Deque](./image/deque_operations.png)
-```python
-from collections import deque
 
-def maxSlidingWindow(nums: list[int], k: int) -> list[int]:
-    """
-    Sliding window maximum using monotonic deque.
-    
-    Deque stores indices in decreasing order of values.
-    Front is always the maximum of current window.
-    
-    Time: O(n), Space: O(k)
-    """
-    result = []
-    dq = deque()  # Stores indices
-    
-    for i, num in enumerate(nums):
-        # Remove indices outside window
-        while dq and dq[0] <= i - k:
-            dq.popleft()
-        
-        # Remove smaller elements (they'll never be max)
-        while dq and nums[dq[-1]] < num:
-            dq.pop()
-        
-        dq.append(i)
-        
-        # Start adding results once window is complete
-        if i >= k - 1:
-            result.append(nums[dq[0]])
-    
-    return result
-
-def minSlidingWindow(nums: list[int], k: int) -> list[int]:
-    """
-    Sliding window minimum using monotonic deque.
-    
-    Same as max but maintain increasing order.
-    
-    Time: O(n), Space: O(k)
-    """
-    result = []
-    dq = deque()
-    
-    for i, num in enumerate(nums):
-        while dq and dq[0] <= i - k:
-            dq.popleft()
-        
-        while dq and nums[dq[-1]] > num:  # Changed: > instead of <
-            dq.pop()
-        
-        dq.append(i)
-        
-        if i >= k - 1:
-            result.append(nums[dq[0]])
-    
-    return result
-
-def shortestSubarray(nums: list[int], k: int) -> int:
-    """
-    Shortest subarray with sum at least k.
-    
-    Use prefix sums and monotonic deque.
-    Find j - i minimum where P[j] - P[i] >= k.
-    
-    Time: O(n), Space: O(n)
-    """
-    n = len(nums)
-    
-    # Build prefix sums
-    prefix = [0] * (n + 1)
-    for i in range(n):
-        prefix[i + 1] = prefix[i] + nums[i]
-    
-    result = float('inf')
-    dq = deque()  # Stores indices with increasing prefix values
-    
-    for j in range(n + 1):
-        # Check if we can form valid subarray
-        while dq and prefix[j] - prefix[dq[0]] >= k:
-            result = min(result, j - dq.popleft())
-        
-        # Maintain monotonicity
-        while dq and prefix[j] <= prefix[dq[-1]]:
-            dq.pop()
-        
-        dq.append(j)
-    
-    return result if result != float('inf') else -1
-
-def constrainedSubsetSum(nums: list[int], k: int) -> int:
-    """
-    Constrained Subsequence Sum.
-    
-    dp[i] = max sum ending at i with gap at most k.
-    dp[i] = nums[i] + max(0, max(dp[i-k:i]))
-    
-    Use monotonic deque to find max in window.
-    
-    Time: O(n), Space: O(n)
-    """
-    n = len(nums)
-    dp = nums.copy()
-    dq = deque([0])  # Stores indices with decreasing dp values
-    
-    for i in range(1, n):
-        # Remove indices outside window
-        while dq and dq[0] < i - k:
-            dq.popleft()
-        
-        # dp[i] = nums[i] + max(0, dp[dq[0]])
-        dp[i] = nums[i] + max(0, dp[dq[0]])
-        
-        # Maintain decreasing order
-        while dq and dp[dq[-1]] <= dp[i]:
-            dq.pop()
-        
-        dq.append(i)
-    
-    return max(dp)
-
-def zeroOneBFS(graph: list[list[tuple]], n: int, start: int) -> list[int]:
-    """
-    0-1 BFS: Shortest path with edge weights 0 or 1.
-    
-    Use deque: weight 0 → front, weight 1 → back.
-    
-    Time: O(V + E), Space: O(V)
-    """
-    dist = [float('inf')] * n
-    dist[start] = 0
-    dq = deque([start])
-    
-    while dq:
-        u = dq.popleft()
-        
-        for v, weight in graph[u]:
-            if dist[u] + weight < dist[v]:
-                dist[v] = dist[u] + weight
-                if weight == 0:
-                    dq.appendleft(v)
-                else:
-                    dq.append(v)
-    
-    return dist
-
-
----
-
-## 🏆 LeetCode Problems
-
-### 🟡 Medium
-
-| # | Problem | Pattern | Time | Space |
-|:-:|---------|---------|:----:|:-----:|
-| 641 | [Design Circular Deque](https://leetcode.com/problems/design-circular-deque/) | Implementation | O(1) | O(k) |
-| 1696 | [Jump Game VI](https://leetcode.com/problems/jump-game-vi/) | Monotonic Deque | O(n) | O(k) |
-
-### 🔴 Hard
-
-| # | Problem | Pattern | Time | Space |
-|:-:|---------|---------|:----:|:-----:|
-| 239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Monotonic Deque | O(n) | O(k) |
-| 862 | [Shortest Subarray with Sum ≥ K](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/) | Prefix + Deque | O(n) | O(n) |
-| 1425 | [Constrained Subsequence Sum](https://leetcode.com/problems/constrained-subsequence-sum/) | DP + Deque | O(n) | O(n) |
-| 1499 | [Max Value of Equation](https://leetcode.com/problems/max-value-of-equation/) | Monotonic Deque | O(n) | O(n) |
-
----
-
-## 📊 When to Use Deque
-
-
-Sliding Window Optimization?
-          |
 ### Pattern Decision Table
 
 | Problem Type | Deque Type | Store | Maintain |
