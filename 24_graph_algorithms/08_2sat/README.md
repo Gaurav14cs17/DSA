@@ -41,7 +41,6 @@ permalink: /24_graph_algorithms/08_2sat/
 | **Difficulty** | Hard |
 | **Problems** | 5+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
