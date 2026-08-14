@@ -393,37 +393,37 @@ def phi(n):
 
 ---
 
-## 🏆 Must-Do Problems
+## 🏆 LeetCode Problems
 
-### 🟢 Easy (Beginner Friendly)
+### 🟢 Easy
 
-| Problem | Topic | Link |
-|---------|-------|------|
-| GCD of Array | GCD | [LeetCode 1979](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) |
-| Count Primes | Primes | [LeetCode 204](https://leetcode.com/problems/count-primes/) |
-| Power of Three | Modular | [LeetCode 326](https://leetcode.com/problems/power-of-three/) |
-| Perfect Number | Divisors | [LeetCode 507](https://leetcode.com/problems/perfect-number/) |
-| Add Digits | Modular | [LeetCode 258](https://leetcode.com/problems/add-digits/) |
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 1979 | [GCD of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/) | GCD | O(n) | O(1) |
+| 204 | [Count Primes](https://leetcode.com/problems/count-primes/) | Sieve | O(n log log n) | O(n) |
+| 326 | [Power of Three](https://leetcode.com/problems/power-of-three/) | Modular | O(log n) | O(1) |
+| 507 | [Perfect Number](https://leetcode.com/problems/perfect-number/) | Divisors | O(√n) | O(1) |
+| 258 | [Add Digits](https://leetcode.com/problems/add-digits/) | Digital root | O(log n) | O(1) |
 
-### 🟡 Medium (Core Concepts)
+### 🟡 Medium
 
-| Problem | Topic | Link |
-|---------|-------|------|
-| Pow(x, n) | Fast Exp | [LeetCode 50](https://leetcode.com/problems/powx-n/) |
-| Ugly Number II | Primes | [LeetCode 264](https://leetcode.com/problems/ugly-number-ii/) |
-| Nth Magical Number | GCD/LCM | [LeetCode 878](https://leetcode.com/problems/nth-magical-number/) |
-| Bulb Switcher | Divisors | [LeetCode 319](https://leetcode.com/problems/bulb-switcher/) |
-| Four Divisors | Divisors | [LeetCode 1390](https://leetcode.com/problems/four-divisors/) |
-| Super Pow | Modular | [LeetCode 372](https://leetcode.com/problems/super-pow/) |
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 50 | [Pow(x, n)](https://leetcode.com/problems/powx-n/) | Fast exp | O(log n) | O(1) |
+| 264 | [Ugly Number II](https://leetcode.com/problems/ugly-number-ii/) | Sieve / heap | O(n log n) | O(n) |
+| 878 | [Nth Magical Number](https://leetcode.com/problems/nth-magical-number/) | GCD/LCM | O(log n) | O(1) |
+| 319 | [Bulb Switcher](https://leetcode.com/problems/bulb-switcher/) | Divisors | O(1) | O(1) |
+| 1390 | [Four Divisors](https://leetcode.com/problems/four-divisors/) | Factor count | O(√n) | O(1) |
+| 372 | [Super Pow](https://leetcode.com/problems/super-pow/) | Modular exp | O(n log b) | O(1) |
 
-### 🔴 Hard (Advanced)
+### 🔴 Hard
 
-| Problem | Topic | Link |
-|---------|-------|------|
-| Smallest Good Base | Number Theory | [LeetCode 483](https://leetcode.com/problems/smallest-good-base/) |
-| Preimage Size of Factorial | Legendre | [LeetCode 793](https://leetcode.com/problems/preimage-size-of-factorial-zeroes-function/) |
-| K-th Smallest in Multiplication Table | Divisors | [LeetCode 668](https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/) |
-| Super Washing Machines | Number Theory | [LeetCode 517](https://leetcode.com/problems/super-washing-machines/) |
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 483 | [Smallest Good Base](https://leetcode.com/problems/smallest-good-base/) | Base search | O(n log n) | O(1) |
+| 793 | [Preimage Size of Factorial](https://leetcode.com/problems/preimage-size-of-factorial-zeroes-function/) | Legendre | O(log n) | O(1) |
+| 668 | [Kth Smallest in Multiplication Table](https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/) | Binary search | O(m log(mn)) | O(1) |
+| 517 | [Super Washing Machines](https://leetcode.com/problems/super-washing-machines/) | Greedy | O(n) | O(1) |
 
 ---
 
@@ -624,6 +624,25 @@ Week 7-8: Mastery
 ## 🎓 Certification Path
 
 Master all **12 topics** → Solve **100+ problems** → Become a **Number Theory Expert**
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **Number Theory** | CP-Algorithms | [Overview](https://cp-algorithms.com/algebra/) |
+| **Modular Arithmetic** | GeeksforGeeks | [Modular](https://www.geeksforgeeks.org/modular-arithmetic/) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | Math tag | [Problems](https://leetcode.com/tag/math/) |
+
+---
 
 [⬅️ Previous: Computational Geometry](../29_computational_geometry/README.md) | [🏠 Home](../README.md) | [Next: Combinatorics ➡️](../31_combinatorics/README.md)
 
