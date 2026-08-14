@@ -30,6 +30,8 @@ permalink: /30_number_theory/04_divisors/
 
 ## 📊 Visual Overview
 
+![Divisors Overview](./images/divisors-overview.png)
+
 > *Concept map and key formulas — dive into subtopics for detailed walkthroughs and code.*
 
 ---
