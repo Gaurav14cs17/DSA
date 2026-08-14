@@ -30,7 +30,6 @@ permalink: /26_sweep_line/06_closest_pair/
 | **Difficulty** | Hard |
 | **Problems** | 7 |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
@@ -162,7 +161,6 @@ $$d(p, q) = \max(|p_x - q_x|, |p_y - q_y|)$$
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy Problems
-
 | # | Problem | Difficulty | Solution Pattern |
 |---|---------|------------|------------------|
 | 1266 | [Minimum Time Visiting All Points](https://leetcode.com/problems/minimum-time-visiting-all-points/) | Easy | Chebyshev distance |
@@ -171,7 +169,6 @@ $$d(p, q) = \max(|p_x - q_x|, |p_y - q_y|)$$
 ---
 
 ### 🟡 Medium Problems
-
 | # | Problem | Difficulty | Solution Pattern |
 |---|---------|------------|------------------|
 | 973 | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/) | Medium | Heap / Quickselect |
@@ -215,14 +212,12 @@ $$d(p, q) = \max(|p_x - q_x|, |p_y - q_y|)$$
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
-
 | Resource | Description | Link |
 |----------|-------------|------|
 | **Closest Pair** | CP-Algorithms | [Closest pair](https://cp-algorithms.com/geometry/closest-pair.html) |
 | **Divide & Conquer** | GeeksforGeeks | [Closest pair](https://www.geeksforgeeks.org/closest-pair-of-points-onlogn-approach/) |
 
 ### 📝 Practice
-
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Geometry tag | [Problems](https://leetcode.com/tag/geometry/) |
