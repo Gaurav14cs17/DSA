@@ -48,7 +48,6 @@ permalink: /07_trees/
 | **Subtopics** | 5 |
 | **Problems** | 60+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
