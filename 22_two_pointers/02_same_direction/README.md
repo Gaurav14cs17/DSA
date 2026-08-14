@@ -36,19 +36,16 @@ permalink: /22_two_pointers/02_same_direction/
 ![Merge Sorted Arrays](./images/merge-sorted-arrays.png)
 
 ### Fast-Slow Pointer Model
-
 ![Fast-Slow Pointer Model](./images/fast-slow-pointer-model.png)
 
 
 
 ### Dutch National Flag Regions
-
 ![Dutch National Flag Regions](./images/dutch-national-flag-regions.png)
 
 
 
 ### Merge From End
-
 ```
 Initial:
 nums1 = [1, 3, 5, 0, 0, 0]  m = 3
@@ -102,7 +99,6 @@ Result: [1, 2, 3, 4, 5, 6] ✓
 
 ---
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
@@ -117,8 +113,6 @@ Result: [1, 2, 3, 4, 5, 6] ✓
 
 ## 📐 Mathematical Foundation
 ### 1️⃣ The Reader-Writer Model
-
-{: .highlight }
 > **Slow pointer** = Write position (builds result)  
 > **Fast pointer** = Read position (explores input)
 
@@ -148,7 +142,6 @@ return slow  # Length of result
 ---
 
 ### 2️⃣ Remove Duplicates — The Proof
-
 {: .important }
 > **Problem**: Remove duplicates from sorted array in-place. Return new length.
 
@@ -225,7 +218,6 @@ Result:  [1, 2, 3, 4, _, _, _, _]
 ---
 
 ### 3️⃣ Allow K Duplicates — Generalization
-
 {: .note }
 > Generalize to allow at most \(k\) copies of each element.
 
@@ -248,8 +240,6 @@ If we're keeping at most \(k\) copies:
 ---
 
 ### 4️⃣ Dutch National Flag — 3-Way Partition
-
-
 > Partition array into three regions in single pass: all 0s, all 1s, all 2s.
 
 #### State Definition
@@ -366,7 +356,6 @@ Result: [0, 0, 1, 1, 2, 2] ✓
 ---
 
 ### 5️⃣ Merge Sorted Arrays — From End
-
 {: .important }
 > Merge two sorted arrays into the first array (which has extra space).
 
@@ -408,7 +397,6 @@ Since \(p \geq p1\) always, we never overwrite unprocessed nums1 elements. ∎
 ---
 
 ### 6️⃣ Subsequence Check
-
 {: .note }
 > Check if string \(s\) is a subsequence of string \(t\).
 
@@ -699,7 +687,6 @@ def findMaxConsecutiveOnes(nums: list[int]) -> int:
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
-
 | # | Problem | Technique | Time | Space |
 |:-:|---------|-----------|:----:|:-----:|
 | 26 | [Remove Duplicates](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Slow-Fast | O(n) | O(1) |
@@ -710,7 +697,6 @@ def findMaxConsecutiveOnes(nums: list[int]) -> int:
 | 485 | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | Counter | O(n) | O(1) |
 
 ### 🟡 Medium
-
 | # | Problem | Technique | Time | Space |
 |:-:|---------|-----------|:----:|:-----:|
 | 75 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Dutch Flag | O(n) | O(1) |
@@ -723,7 +709,6 @@ def findMaxConsecutiveOnes(nums: list[int]) -> int:
 ## 💡 Interview Tips
 
 ### Pattern Recognition
-
 | Signal | Pattern to Use |
 |--------|----------------|
 | "in-place" | Same direction |
@@ -733,7 +718,6 @@ def findMaxConsecutiveOnes(nums: list[int]) -> int:
 | "subsequence" | Greedy matching |
 
 ### Common Mistakes
-
 | Mistake | Fix |
 |---------|-----|
 | Overwriting unread data | Process from appropriate end |
