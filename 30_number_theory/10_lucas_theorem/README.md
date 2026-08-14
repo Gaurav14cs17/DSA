@@ -26,12 +26,6 @@ permalink: /30_number_theory/10_lucas_theorem/
 
 ---
 
-## 📊 Visual Overview
-
-> *Concept map and key formulas — dive into subtopics for detailed walkthroughs and code.*
-
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -40,7 +34,7 @@ permalink: /30_number_theory/10_lucas_theorem/
 | **Difficulty** | Medium to Hard |
 
 {: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+> **How to use this page:** Scan **At a Glance**, then work through theory → visuals → code.
 
 ---
 
@@ -74,6 +68,14 @@ where $m = \sum m_i p^i$ and $n = \sum n_i p^i$ are base-p representations.
 ### 3️⃣ Sierpiński Triangle Connection
 
 The pattern of odd entries in Pascal's triangle forms a Sierpiński triangle - this is a direct consequence of Lucas' theorem with p = 2.
+
+---
+
+## 📊 Visual Overview
+
+![Lucas Theorem Overview](./images/lucas-theorem-overview.png)
+
+> *Concept map and key formulas — dive into subtopics for detailed walkthroughs and code.*
 
 ---
 
