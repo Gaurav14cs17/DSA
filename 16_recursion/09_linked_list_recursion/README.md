@@ -43,7 +43,6 @@ permalink: /16_recursion/09_linked_list_recursion/
 | **Difficulty** | Easy to Medium |
 | **Problems** | 10+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
