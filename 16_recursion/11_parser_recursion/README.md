@@ -129,13 +129,12 @@ A top-down parsing technique where:
 
 - Recursion handles nesting
 
-```
-Grammar:
-  Expression → Term (('+' | '-') Term)*
-  Term       → Factor (('*' | '/') Factor)*
-  Factor     → Number | '(' Expression ')'
+<div align="center">
 
-```
+<img src="./images/recursive-descent-grammar.png" alt="Recursive Descent Grammar" width="100%">
+
+</div>
+
 
 ---
 
@@ -155,14 +154,12 @@ Grammar:
 
 Handle by grammar structure:
 
-```
-Lowest precedence  → outermost rule (evaluated last)
-Highest precedence → innermost rule (evaluated first)
+<div align="center">
 
-1 + 2 * 3 = 1 + (2 * 3) = 7  ✓
-            NOT (1 + 2) * 3 = 9  ✗
+<img src="./images/operator-precedence.png" alt="Operator Precedence" width="100%">
 
-```
+</div>
+
 
 ---
 
@@ -866,26 +863,12 @@ def longestValidParentheses(s: str) -> int:
 
 ## 📊 Pattern Summary
 
-```
-Parser Recursion Patterns
-         |
-         +-- Expression Parsing
-         |   +-- Handle operator precedence
-         |   +-- Grammar: expr → term → factor
-         |
-         +-- Nested Structure Parsing
-         |   +-- [ ], ( ), { } matching
-         |   +-- Recursive call on '['
-         |
-         +-- Token-based Parsing
-         |   +-- Lex tokens first
-         |   +-- Parse token stream
-         |
-         +-- Grammar-driven Parsing
-             +-- One function per rule
-             +-- Mutual recursion between rules
+<div align="center">
 
-```
+<img src="./images/parser-recursion-patterns.png" alt="Parser Recursion Patterns" width="100%">
+
+</div>
+
 
 ---
 
