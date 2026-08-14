@@ -155,25 +155,42 @@ Advanced tree structures: **AVL Trees**, **Red-Black Trees**, **B-Trees**, **Spl
 
 ---
 
-## 🏆 Must-Do Problems
+## 🏆 LeetCode Problems
 
 ### 🟡 Medium
 
-| Problem | Link |
-|---------|------|
-| Balance a BST | [LeetCode 1382](https://leetcode.com/problems/balance-a-binary-search-tree/) |
-| All Elements in Two BSTs | [LeetCode 1305](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/) |
-| Range Sum Query - Mutable | [LeetCode 307](https://leetcode.com/problems/range-sum-query-mutable/) |
-| Count of Range Sum | [LeetCode 327](https://leetcode.com/problems/count-of-range-sum/) |
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 1382 | [Balance a BST](https://leetcode.com/problems/balance-a-binary-search-tree/) | AVL rebuild | O(n) | O(n) |
+| 1305 | [All Elements in Two BSTs](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/) | Merge | O(n log n) | O(n) |
+| 307 | [Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/) | Segment tree | O(log n) | O(n) |
+| 327 | [Count of Range Sum](https://leetcode.com/problems/count-of-range-sum/) | Merge sort | O(n log n) | O(n) |
 
 ### 🔴 Hard
 
-| Problem | Link |
-|---------|------|
-| Count of Smaller Numbers | [LeetCode 315](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) |
-| Reverse Pairs | [LeetCode 493](https://leetcode.com/problems/reverse-pairs/) |
-| Count Good Triplets | [LeetCode 2179](https://leetcode.com/problems/count-good-triplets-in-an-array/) |
-| Create Sorted Array | [LeetCode 1649](https://leetcode.com/problems/create-sorted-array-through-instructions/) |
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 315 | [Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) | BIT / merge | O(n log n) | O(n) |
+| 493 | [Reverse Pairs](https://leetcode.com/problems/reverse-pairs/) | Merge sort | O(n log n) | O(n) |
+| 2179 | [Count Good Triplets in an Array](https://leetcode.com/problems/count-good-triplets-in-an-array/) | BIT | O(n log n) | O(n) |
+| 1649 | [Create Sorted Array through Instructions](https://leetcode.com/problems/create-sorted-array-through-instructions/) | BIT | O(n log n) | O(n) |
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **AVL Trees** | GeeksforGeeks | [AVL](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/) |
+| **Red-Black Trees** | Wikipedia | [RBT](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | Tree tag | [Problems](https://leetcode.com/tag/tree/) |
 
 ---
 
