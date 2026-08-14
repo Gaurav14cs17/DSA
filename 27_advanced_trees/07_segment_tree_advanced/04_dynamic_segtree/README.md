@@ -64,48 +64,8 @@ permalink: /27_advanced_trees/07_segment_tree_advanced/04_dynamic_segtree/
 
 ## 💻 Implementation
 
-```python
-class DynamicSegTreeNode:
-    def __init__(self):
-        self.left = None
-        self.right = None
-        self.value = 0
+![Dynamic Segment Tree Operations](./images/dynamic-segtree-operations.png)
 
-class DynamicSegmentTree:
-    """
-    Dynamic (Sparse) Segment Tree.
-    
-    Space: O(q log C) for q operations
-    """
-    
-    def __init__(self, min_val=0, max_val=10**9):
-        self.root = DynamicSegTreeNode()
-        self.min_val = min_val
-        self.max_val = max_val
-    
-    def update(self, idx, val):
-        self._update(self.root, self.min_val, self.max_val, idx, val)
-    
-    def _update(self, node, start, end, idx, val):
-        if start == end:
-            node.value += val
-            return
-        
-        mid = (start + end) // 2
-        if idx <= mid:
-            if not node.left:
-                node.left = DynamicSegTreeNode()
-            self._update(node.left, start, mid, idx, val)
-        else:
-            if not node.right:
-                node.right = DynamicSegTreeNode()
-            self._update(node.right, mid+1, end, idx, val)
-        
-        left_val = node.left.value if node.left else 0
-        right_val = node.right.value if node.right else 0
-        node.value = left_val + right_val
-
-```
 
 ---
 
