@@ -13,7 +13,6 @@ permalink: /09_heaps/03_merge_k_streams/
 ### *🔀 Merge K Streams*
 
 
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-6+-blue?style=for-the-badge" alt="Problems">
@@ -203,7 +202,6 @@ def smallestRange(nums: list[list[int]]) -> list[int]:
     
     return result
 
-```
 
 ---
 
