@@ -13,7 +13,6 @@ permalink: /10_graphs/01_graph_representation/
 ### *🗺️ Graph Representation*
 
 
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
@@ -25,17 +24,19 @@ permalink: /10_graphs/01_graph_representation/
 
 ## 📊 Visual Overview
 
-### SVG Diagrams
-
 <div align="center">
 
-![Adjacency Comparison](./images/adjacency_comparison.png)
+### Adjacency Matrix Example
+![Adjacency Matrix Example](./images/adjacency-matrix-example.png)
 
-*Adjacency Matrix vs Adjacency List Comparison*
+### Adjacency List Example
+![Adjacency List Example](./images/adjacency-list-example.png)
 
-![Directed vs Undirected](./images/directed_undirected.png)
+### Weighted Graph Representation
+![Weighted Graph Representation](./images/weighted-graph-representation.png)
 
-*Directed vs Undirected Graph Representation*
+### Deep Clone Process (DFS Approach)
+![Deep Clone Process (DFS Approach)](./images/deep-clone-process-dfs-approach.png)
 
 </div>
 
@@ -43,260 +44,40 @@ permalink: /10_graphs/01_graph_representation/
 
 ### Adjacency Matrix Example
 
-```
-Graph:
-    0 ←→ 1
-    ↓ ╲  ↑
-    ↓  ╲ ↑
-    ↓   ╲↑
-    2 ←→ 3
 
-Adjacency Matrix (Undirected):
-     0  1  2  3
-  +------------+
-0 | 0  1  1  1 |  Row 0: neighbors of vertex 0
-1 | 1  0  0  1 |  Row 1: neighbors of vertex 1
-2 | 1  0  0  1 |  Row 2: neighbors of vertex 2
-3 | 1  1  1  0 |  Row 3: neighbors of vertex 3
-  +------------+
+![Adjacency Matrix Example](./images/adjacency-matrix-example.png)
 
-Matrix[i][j] = 1 if edge (i,j) exists
-Matrix[i][j] = 0 otherwise
-
-Space: O(V²) = O(16) for 4 vertices
-Even if graph has only 6 edges!
-
-Advantages:
-✓ O(1) edge lookup: Matrix[u][v]
-✓ Simple implementation
-✓ Good for dense graphs
-
-Disadvantages:
-✗ O(V²) space even for sparse graphs
-✗ O(V) to find all neighbors
-
-```
 
 ---
 
 ### Adjacency List Example
 
-```
-Same Graph:
-    0 ←→ 1
-    ↓ ╲  ↑
-    ↓  ╲ ↑
-    ↓   ╲↑
-    2 ←→ 3
 
-Adjacency List (Undirected):
-+---+
+![Adjacency List Example](./images/adjacency-list-example.png)
 
-| 0 | → [1] → [2] → [3] → null
-+---+
-| 1 | → [0] → [3] → null
-+---+
-
-| 2 | → [0] → [3] → null
-+---+
-| 3 | → [0] → [1] → [2] → null
-+---+
-
-Each vertex has a list of neighbors.
-
-Space: O(V + E) = O(4 + 12) = O(16)
-(4 vertices + 6 edges × 2 for undirected)
-
-Advantages:
-✓ O(V + E) space for sparse graphs
-✓ O(degree) to find neighbors
-✓ Efficient for traversals (BFS/DFS)
-
-Disadvantages:
-✗ O(degree) to check edge existence
-✗ More complex implementation
-
-```
 
 ---
 
 ### Directed vs Undirected Visual
 
-```
-UNDIRECTED GRAPH
-================
-    A ←→ B
-    ↑ ╲  ↑
-    ↑  ╲ ↑
-    ↑   ╲↑
-    C ←→ D
 
-Adjacency List:
-A: [B, C, D]
-B: [A, D]
-C: [A, D]
-D: [A, B, C]
+![Directed vs Undirected Visual](./images/directed_undirected.png)
 
-Each edge appears in BOTH adjacency lists.
-Edge (A,B) means:
-
-- A is in B's list
-
-- B is in A's list
-
-DIRECTED GRAPH
-==============
-    A → B
-    ↓ ╲ ↑
-    ↓  ╲↑
-    ↓   ╲
-    C → D
-
-Adjacency List:
-A: [B, C, D]  ← Out-edges from A
-B: []         ← No out-edges from B
-C: [D]        ← Out-edges from C
-D: [B]        ← Out-edges from D
-
-Edge (A,B) means:
-
-- B is in A's list (A→B)
-
-- A is NOT in B's list (no B→A)
-
-Key Difference:
-Undirected: |E| edges → 2|E| list entries
-Directed:   |E| edges → |E| list entries
-
-```
 
 ---
 
 ### Weighted Graph Representation
 
-```
-Weighted Graph:
-         5
-    A --------- B
-    |         / |
-   2|       /7  |3
-    |     /     |
-    C ---------  D
-         4
 
-Adjacency List (with weights):
-A: [(B, 5), (C, 2)]
-B: [(A, 5), (C, 7), (D, 3)]
-C: [(A, 2), (B, 7), (D, 4)]
-D: [(B, 3), (C, 4)]
+![Weighted Graph Representation](./images/weighted-graph-representation.png)
 
-Each entry: (neighbor, weight)
-
-Adjacency Matrix (with weights):
-     A  B  C  D
-  +------------+
-A | 0  5  2  ∞ |
-B | 5  0  7  3 |
-C | 2  7  0  4 |
-D | ∞  3  4  0 |
-  +------------+
-
-∞ means no edge exists
-0 on diagonal (no self-loops)
-
-Common weight representations:
-
-- Distance/Cost: positive numbers
-
-- No edge: ∞ or -1
-- Self-loops: typically 0
-
-```
 
 ---
 
 ### Graph Cloning Visualization
 
-```
-Original Graph:
-    1 ←→ 2
-    ↓    ↑
-    ↓    ↑
-    ↓    ↑
-    4 ←→ 3
 
-Node 1: neighbors = [2, 4]
-Node 2: neighbors = [1, 3]
-Node 3: neighbors = [2, 4]
-Node 4: neighbors = [1, 3]
-
-+--------------------------------------------------------------------+
-
-|  Deep Clone Process (DFS Approach)                                 |
-+--------------------------------------------------------------------+
-|  Step 1: Start at node 1                                           |
-|  Create clone of 1                                                 |
-|  original_map[1] = clone_1                                         |
-|                                                                    |
-|  Original:          Clone:                                         |
-|  [1]                [1']                                           |
-|                                                                    |
-|  Explore neighbors of 1: [2, 4]                                    |
-+--------------------------------------------------------------------+
-
-|  Step 2: Visit neighbor 2                                          |
-|  Create clone of 2                                                 |
-|  original_map[2] = clone_2                                         |
-|  Connect: clone_1.neighbors += [clone_2]                           |
-|                                                                    |
-|  Original:          Clone:                                         |
-|  [1] → [2]          [1'] → [2']                                    |
-|                                                                    |
-|  Explore neighbors of 2: [1, 3]                                    |
-|  - 1 already cloned, add connection                                |
-|  - 3 not cloned yet, recurse                                       |
-+--------------------------------------------------------------------+
-
-|  Step 3: Visit neighbor 3                                          |
-|  Create clone of 3                                                 |
-|  Connect: clone_2.neighbors += [clone_3]                           |
-|                                                                    |
-|  Original:          Clone:                                         |
-|  [1] → [2]          [1'] → [2']                                    |
-|         ↓                   ↓                                      |
-|        [3]                 [3']                                    |
-|                                                                    |
-|  Explore neighbors of 3: [2, 4]                                    |
-|  - 2 already cloned, add connection                                |
-|  - 4 not cloned yet, recurse                                       |
-+--------------------------------------------------------------------+
-
-|  Step 4: Visit neighbor 4                                          |
-|  Create clone of 4                                                 |
-|  Connect: clone_3.neighbors += [clone_4]                           |
-|                                                                    |
-|  Original:          Clone:                                         |
-|  [1] → [2]          [1'] → [2']                                    |
-|  ↓     ↓            ↓      ↓                                       |
-|  [4] → [3]          [4'] → [3']                                    |
-|                                                                    |
-|  Explore neighbors of 4: [1, 3]                                    |
-|  - Both already cloned, add connections                            |
-+--------------------------------------------------------------------+
-
-|  Final: Complete clone with all connections preserved              |
-|                                                                    |
-|  Clone Graph:                                                      |
-|  [1'] ←→ [2']                                                      |
-|   ↓       ↑                                                        |
-|   ↓       ↑                                                        |
-|  [4'] ←→ [3']                                                      |
-|                                                                    |
-|  Key Insight: HashMap prevents infinite recursion                 |
-|  on cycles and ensures each node cloned exactly once!              |
-+--------------------------------------------------------------------+
-
-```
+![Graph Cloning Visualization](./images/graph-cloning-visualization.png)
 
 
 ## 🎯 At a Glance
@@ -848,8 +629,6 @@ def can_finish(num_courses: int, prerequisites: List[List[int]]) -> bool:
     
     return True
 
-```
-
 
 ## 🏆 LeetCode Problems
 
@@ -1036,7 +815,6 @@ def clone(node):
         return clone
     return dfs(node)
 
-```
 
 ### Pitfall 2: Forgetting Reverse Edge
 
@@ -1050,7 +828,6 @@ def add_edge(u, v):
     adj_list[u].append(v)
     adj_list[v].append(u)  # Undirected!
 
-```
 
 ### Pitfall 3: Not Handling Disconnected Components
 
@@ -1067,7 +844,6 @@ def is_connected():
     dfs(0, visited)
     return len(visited) == n  # OK if all nodes reachable from 0
 
-```
 
 ---
 
@@ -1631,7 +1407,6 @@ def can_finish(num_courses: int, prerequisites: List[List[int]]) -> bool:
     
     return True
 
-```
 
 ---
 
@@ -1827,7 +1602,6 @@ def clone(node):
         return clone
     return dfs(node)
 
-```
 
 ### Pitfall 2: Forgetting Reverse Edge
 
@@ -1841,7 +1615,6 @@ def add_edge(u, v):
     adj_list[u].append(v)
     adj_list[v].append(u)  # Undirected!
 
-```
 
 ### Pitfall 3: Not Handling Disconnected Components
 
@@ -1858,7 +1631,6 @@ def is_connected():
     dfs(0, visited)
     return len(visited) == n  # OK if all nodes reachable from 0
 
-```
 
 ---
 
