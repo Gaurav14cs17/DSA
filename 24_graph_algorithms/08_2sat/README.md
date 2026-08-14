@@ -129,7 +129,7 @@ $$x_i \text{ and } \neg x_i \text{ are in different SCCs}$$
 
 **Space:** $O(V + E)$
 
-where $n$ = #variables, $m$ = #clauses
+where $n$ = number of variables, $m$ = number of clauses
 
 ---
 
