@@ -64,11 +64,12 @@ permalink: /16_recursion/10_advanced_recursion/
 
 Two or more functions call each other:
 
-```
-f(n) → g(n-1)
-g(n) → f(n-1)
+<div align="center">
 
-```
+<img src="./images/mutual_recursion.png" alt="Mutual Recursion" width="100%">
+
+</div>
+
 
 **Example:** isEven/isOdd, parser for grammar.
 
@@ -78,10 +79,12 @@ g(n) → f(n-1)
 
 Function calls itself through chain of other functions:
 
-```
-f → g → h → f
+<div align="center">
 
-```
+<img src="./images/indirect-recursion.png" alt="Indirect Recursion" width="100%">
+
+</div>
+
 
 ---
 
@@ -89,10 +92,12 @@ f → g → h → f
 
 Recursive call as argument to recursive call:
 
-```
-f(n) = f(f(n-1))
+<div align="center">
 
-```
+<img src="./images/nested_recursion.png" alt="Nested Recursion" width="100%">
+
+</div>
+
 
 **Example:** Ackermann function.
 
@@ -102,10 +107,12 @@ f(n) = f(f(n-1))
 
 Creates new subproblems (not just decomposition):
 
-```
-Problem → Generate new subproblems
+<div align="center">
 
-```
+<img src="./images/generative-recursion.png" alt="Generative Recursion" width="100%">
+
+</div>
+
 
 **Example:** Quick sort (pivot creates new partitions).
 
