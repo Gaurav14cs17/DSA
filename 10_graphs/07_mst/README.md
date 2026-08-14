@@ -30,7 +30,6 @@ permalink: /10_graphs/07_mst/
 | **Difficulty** | Medium to Hard |
 | **Problems** | 5+ |
 
-{: .highlight }
 > **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
@@ -255,7 +254,6 @@ def minCostConnectPointsPrim(points: list[list[int]]) -> int:
 ## 🏆 LeetCode Problems
 
 ### 🟡 Medium
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 1135 | [Connecting Cities With Minimum Cost](https://leetcode.com/problems/connecting-cities-with-minimum-cost/) | Kruskal/Prim | O(E log E) | O(V) |
@@ -263,7 +261,6 @@ def minCostConnectPointsPrim(points: list[list[int]]) -> int:
 | 1631 | [Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/) | Modified MST | O(mn log mn) | O(mn) |
 
 ### 🔴 Hard
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 1489 | [Find Critical and Pseudo-Critical Edges](https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-mst/) | MST Analysis | O(E² log V) | O(E) |
