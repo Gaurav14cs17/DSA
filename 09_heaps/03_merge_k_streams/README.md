@@ -40,7 +40,6 @@ permalink: /09_heaps/03_merge_k_streams/
 | **Difficulty** | Medium to Hard |
 | **Problems** | 6+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
