@@ -572,7 +572,7 @@ def maxProduct(s):
 
 ---
 
-## 🧩 LeetCode Problems
+## 🏆 LeetCode Problems
 
 ### Easy
 
@@ -742,6 +742,24 @@ def palindrome_density(s):
 - [CP-Algorithms: Manacher's](https://cp-algorithms.com/string/manacher.html)
 
 - [Visualization](https://www.hackerearth.com/practice/algorithms/string-algorithm/manachars-algorithm/tutorial/)
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **Manacher's** | CP-Algorithms | [Manacher's algorithm](https://cp-algorithms.com/string/manacher.html) |
+| **Palindromes** | GeeksforGeeks | [Manacher's algorithm](https://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromic-substring-part-1/) |
+| **Original Paper** | ScienceDirect | [1975 paper](https://doi.org/10.1016/0022-0000(75)90058-3) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | String tag | [Problems](https://leetcode.com/tag/string/) |
 
 ---
 
