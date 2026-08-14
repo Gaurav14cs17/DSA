@@ -25,7 +25,13 @@ permalink: /31_combinatorics/02_combinations/
 
 ## 📊 Visual Overview
 
-> *Combinations C(n,k) — choosing k items from n without regard to order.*
+<div align="center">
+
+![Combinations Overview](./images/combinations-overview.png)
+
+*Pascal's triangle, C(n,k) formula, and unordered selections*
+
+</div>
 
 ---
 
