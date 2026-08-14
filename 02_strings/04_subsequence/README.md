@@ -212,7 +212,7 @@ def numDistinct(s: str, t: str) -> int:
                 dp[i][j] += dp[i-1][j-1]  # Use s[i-1]
     
     return dp[m][n]
-
+```
 
 ---
 
