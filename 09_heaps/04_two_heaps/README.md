@@ -233,7 +233,7 @@ def medianSlidingWindow(nums: list[int], k: int) -> list[float]:
         result.append(get_median())
     
     return result
-
+```
 
 ![💻 Code Implementations](./image/two_heaps_pattern.png)
 
