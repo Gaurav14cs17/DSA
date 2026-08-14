@@ -28,6 +28,8 @@ permalink: /30_number_theory/08_binomial_coefficients/
 
 ## 📊 Visual Overview
 
+![Binomial Coefficients Overview](./images/binomial-coefficients-overview.png)
+
 > *Concept map and key formulas — dive into subtopics for detailed walkthroughs and code.*
 
 ---
