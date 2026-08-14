@@ -40,125 +40,18 @@ permalink: /23_sliding_window/03_string_window/
 
 ### Minimum Window Substring
 
-```
-S = "ADOBECODEBANC"   T = "ABC"
-
-Need: {A:1, B:1, C:1}   Required: 3
-
-Step 1: Expand until valid
-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-
-|A|D|O|B|E|C|O|D|E|B|A|N|C|
-+-+-+-+-+-+-+-+-+-+-+-+-+-+
- L         R
- 
-Have: {A:1}         formed=1
-...expand...
-Have: {A:1,D:1,O:1,B:1,E:1,C:1}   formed=3 ✓
-
-Window = "ADOBEC", length = 6
-
-Step 2: Shrink while valid
-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-
-|A|D|O|B|E|C|O|D|E|B|A|N|C|
-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-   L       R
-
-Remove A: Have={A:0,...} formed=2 ✗
-Invalid! Stop shrinking, expand again.
-
-...continue...
-
-Step 3: Final answer
-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-
-|A|D|O|B|E|C|O|D|E|B|A|N|C|
-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-                   L     R
-
-Window = "BANC", length = 4 ⭐
-
-Answer: "BANC"
-
-```
 
 ### Anagram Detection Flow
 
-```
-s = "cbaebabacd"   p = "abc"
+![Anagram Detection Flow](./images/anagram-detection-flow.png)
 
-Pattern: {a:1, b:1, c:1}
-Window size: 3
 
-Window 1: "cba"
-+-+-+-+-+-+-+-+-+-+-+
-
-|c|b|a|e|b|a|b|a|c|d|
-+-+-+-+-+-+-+-+-+-+-+
- +-----+
-freq: {c:1, b:1, a:1}
-Match? ✓  → Result: [0]
-
-Window 2: "bae" (slide: remove c, add e)
-+-+-+-+-+-+-+-+-+-+-+
-
-|c|b|a|e|b|a|b|a|c|d|
-+-+-+-+-+-+-+-+-+-+-+
-   +-----+
-freq: {b:1, a:1, e:1}
-Match? ✗
-
-Window 3: "aeb"
-freq: {a:1, e:1, b:1}
-Match? ✗
-
-...continue...
-
-Window 7: "bac"
-+-+-+-+-+-+-+-+-+-+-+
-
-|c|b|a|e|b|a|b|a|c|d|
-+-+-+-+-+-+-+-+-+-+-+
-             +-----+
-freq: {b:1, a:1, c:1}
-Match? ✓  → Result: [0, 6]
-
-Answer: [0, 6]
-
-```
 
 ### Have vs Need State Machine
 
-```
-+---------------------------------------------------------------+
-|                   HAVE vs NEED STATE                          |
-+---------------------------------------------------------------+
-|                                                               |
-|   Need: {A:1, B:2, C:1}   Required: 3 unique chars           |
-|                                                               |
-|   State 1: formed = 0                                        |
-|   Have: {}                                                    |
-|   Status: ✗ Need all                                         |
-|                                                               |
-|   State 2: formed = 1                                        |
-|   Have: {A:1, B:1}                                           |
-|   Status: ✗ A satisfied, B needs 1 more, C missing          |
-|                                                               |
-|   State 3: formed = 2                                        |
-|   Have: {A:2, B:2}                                           |
-|   Status: ✗ A,B satisfied, C missing                        |
-|                                                               |
-|   State 4: formed = 3 ✓                                      |
-|   Have: {A:2, B:2, C:1}                                      |
-|   Status: ✓ VALID WINDOW                                     |
-|                                                               |
-|   When formed == required → Window is VALID                  |
-|   Now shrink while still valid!                              |
-|                                                               |
-+---------------------------------------------------------------+
+![Have vs Need State Machine](./images/have-vs-need-state-machine.png)
 
-```
+
 
 ---
 
