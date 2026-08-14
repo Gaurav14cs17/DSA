@@ -360,29 +360,12 @@ def min_cost_split_array(arr):
 
 ### Visual Walkthrough
 
-```
-Lines in CHT:
+<div align="center">
 
-    y
-    |
-    |     Line 0: y = 0
- 20 +------------------
-    |      ╲
- 10 +       ╲ Line 1: y = -2x + 2
-    |        ╲╲
-  0 +---------╲╲-----
-    |          ╲╲╲╲
--10 +-----------╲╲╲╲--- Line 2: y = -6x + 14
-    |            ╲╲╲╲╲╲
--20 +-------------╲╲╲╲╲╲
-    +-------------------- x
-    0   1   2   3   4   5
+![CHT Visual Walkthrough](./images/cht-visual-walkthrough.png)
 
-Query at x=1: Line 0 is best (y=0)
-Query at x=3: Line 1 is best (y=-4)
-Query at x=6: Line 2 is best (y=-22)
+</div>
 
-```
 
 ---
 
