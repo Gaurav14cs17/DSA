@@ -285,6 +285,9 @@ print(comb.nCr(100, 50))
 
 ### Problem 2550: Count Collisions
 
+![Problem 2550: Count Collisions](./images/problem-2550-count-collisions.png)
+
+
 ```python
 class Solution:
     def monkeyMove(self, n: int) -> int:
@@ -313,21 +316,6 @@ Composite numbers that pass Fermat test for all a coprime to n:
 1105 = 5 × 13 × 17
 1729 = 7 × 13 × 19 (Ramanujan's taxi number!)
 
-```
-
-### 2. When to Use Fermat
-
-| Scenario | Use Fermat? |
-|----------|-------------|
-| p is prime, need inverse | Yes |
-| m is composite | No, use Extended GCD |
-| Primality testing | Yes, but prefer Miller-Rabin |
-
-### 3. Exponent Reduction
-
-For prime p and gcd(a, p) = 1:
-
-```
 a^(10^18) mod p = a^(10^18 mod (p-1)) mod p
 
 ```
