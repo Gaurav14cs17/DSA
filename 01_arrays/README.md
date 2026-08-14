@@ -55,7 +55,6 @@ permalink: /01_arrays/
 | **Subtopics** | 5 |
 | **Problems** | 50+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
@@ -99,7 +98,6 @@ $$\boxed{\text{Address}(A[i]) = B + i \times S}$$
 **Derivation:**
 
 
-![1️⃣ Memory Address Calculation](./images/array-overview.png)
 
 
 **Time Complexity Proof:**
@@ -356,7 +354,6 @@ Each subfolder contains **complete mini-courses** with:
 **Focus:** Basic Operations
 
 
-![Week 1-2: Foundations 🌱](./images/array-overview.png)
 
 
 **Expected Outcome:** ✅ Comfortable with O(1) space algorithms
@@ -367,7 +364,6 @@ Each subfolder contains **complete mini-courses** with:
 **Focus:** Subarray Problems
 
 
-![Week 3-4: Intermediate 📈](./images/array-overview.png)
 
 
 **Expected Outcome:** ✅ Can solve 90% of medium array problems
@@ -378,7 +374,6 @@ Each subfolder contains **complete mini-courses** with:
 **Focus:** Matrices & Intervals
 
 
-![Week 5-6: Advanced 🚀](./images/array-overview.png)
 
 
 **Expected Outcome:** ✅ Ready for hard problems
