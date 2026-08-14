@@ -30,7 +30,6 @@ permalink: /26_sweep_line/02_coordinate_compression/
 | **Difficulty** | Hard |
 | **Problems** | 5 |
 
-{: .highlight }
 > **How to use this page:** Scan **At a Glance**, then work through theory → visuals → code.
 
 ---
@@ -215,7 +214,6 @@ Given sorted intervals $[(s_1, e_1), (s_2, e_2), \ldots]$:
 ## 🏆 LeetCode Problems
 
 ### 🔴 Hard Problems
-
 | # | Problem | Difficulty | Solution Pattern |
 |---|---------|------------|------------------|
 | 218 | [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/) | Hard | Event sweep + max heap |
@@ -257,14 +255,12 @@ Given sorted intervals $[(s_1, e_1), (s_2, e_2), \ldots]$:
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
-
 | Resource | Description | Link |
 |----------|-------------|------|
 | **Coordinate Compression** | CP-Algorithms | [Compression](https://cp-algorithms.com/geometry/coordinate-compression.html) |
 | **Sweep Line** | GeeksforGeeks | [Line Sweep](https://www.geeksforgeeks.org/sweep-line-algorithm/) |
 
 ### 📝 Practice
-
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Sorting tag | [Problems](https://leetcode.com/tag/sorting/) |
