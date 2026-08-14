@@ -43,32 +43,24 @@ permalink: /03_linked_lists/01_basic_operations/
 ---
 
 ### Floyd's Cycle Detection - Detailed Trace
-
-
 ![Floyd's Cycle Detection - Detailed Trace](./images/floyd-cycle-detection.png)
 
 
 ---
 
 ### Middle Node - Fast-Slow Pattern
-
-
 ![Middle Node - Fast-Slow Pattern](./images/fast-slow-middle.png)
 
 
 ---
 
 ### Intersection of Two Lists - Visual Proof
-
-
 ![Intersection of Two Lists - Visual Proof](./images/intersection-two-lists.png)
 
 
 ---
 
 ### Nth Node from End - Gap Technique
-
-
 ![Nth Node from End - Gap Technique](./images/nth-from-end.png)
 
 
@@ -80,7 +72,6 @@ permalink: /03_linked_lists/01_basic_operations/
 | **Difficulty** | Easy |
 | **Problems** | 15+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 
@@ -97,7 +88,6 @@ permalink: /03_linked_lists/01_basic_operations/
 **Single Node:**
 
 
-![1️⃣ Node Structure & Memory Layout](./images/1-node-structure-memory-layout.png)
 
 
 **Memory overhead per node:**
@@ -225,7 +215,6 @@ They meet at intersection point after traveling equal distance! ∎
 **Visual proof:**
 
 
-![5️⃣ Intersection Point Mathematics](./images/intersection-two-lists.png)
 
 
 ## 💻 Code Implementations
@@ -683,7 +672,6 @@ def removeElements(head, val):
     return dummy.next
 ```
 
-![Pitfall 3: Not Using Dummy Node](./images/1-node-structure-memory-layout.png)
 
 ---
 
