@@ -41,7 +41,6 @@ permalink: /24_graph_algorithms/05_strongly_connected_components/
 | **Difficulty** | Medium to Hard |
 | **Problems** | 10+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
