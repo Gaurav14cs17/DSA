@@ -13,6 +13,9 @@ permalink: /30_number_theory/06_chinese_remainder/01_basic_crt/
 
 ### *Solving Systems of Linear Congruences*
 
+![*Solving Systems of Linear Congruences*](./images/solving-systems-of-linear-congruences.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Time-O(n_log_M)-blue?style=for-the-badge" alt="Time">
@@ -39,36 +42,6 @@ permalink: /30_number_theory/06_chinese_remainder/01_basic_crt/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| EXAMPLE: Solve x ≡ 2 (mod 3), x ≡ 3 (mod 5), x ≡ 2 (mod 7)   |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Step 1: Compute M = 3 × 5 × 7 = 105                            |
-|                                                                 |
-| Step 2: Compute M_i values                                     |
-|   M₁ = 105/3 = 35                                              |
-|   M₂ = 105/5 = 21                                              |
-|   M₃ = 105/7 = 15                                              |
-|                                                                 |
-| Step 3: Find modular inverses y_i = M_i⁻¹ (mod m_i)           |
-|   y₁ = 35⁻¹ (mod 3) = 2⁻¹ (mod 3) = 2  [2×2=4≡1]             |
-|   y₂ = 21⁻¹ (mod 5) = 1⁻¹ (mod 5) = 1  [21≡1]                |
-|   y₃ = 15⁻¹ (mod 7) = 1⁻¹ (mod 7) = 1  [15≡1]                |
-|                                                                 |
-| Step 4: Compute x = Σ aᵢ × Mᵢ × yᵢ                            |
-|   x = 2×35×2 + 3×21×1 + 2×15×1                                 |
-|     = 140 + 63 + 30                                            |
-|     = 233                                                      |
-|     = 233 mod 105 = 23                                         |
-|                                                                 |
-| Verify:                                                         |
-|   23 mod 3 = 2 ✓                                               |
-|   23 mod 5 = 3 ✓                                               |
-|   23 mod 7 = 2 ✓                                               |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
