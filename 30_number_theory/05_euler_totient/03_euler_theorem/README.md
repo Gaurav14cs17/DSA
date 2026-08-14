@@ -13,6 +13,9 @@ permalink: /30_number_theory/05_euler_totient/03_euler_theorem/
 
 ### *The Foundation of Modern Cryptography*
 
+![*The Foundation of Modern Cryptography*](./images/the-foundation-of-modern-cryptography.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Applications-RSA_Cryptography-red?style=for-the-badge" alt="Applications">
@@ -38,26 +41,6 @@ permalink: /30_number_theory/05_euler_totient/03_euler_theorem/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| WHY a^φ(n) ≡ 1 (mod n)                                        |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Let R = {r₁, r₂, ..., rₖ} be the reduced residue system       |
-| (all k = φ(n) elements coprime to n in [1, n])                 |
-|                                                                 |
-| Consider: aR = {ar₁, ar₂, ..., arₖ} (mod n)                   |
-|                                                                 |
-| Key observation: aR is a permutation of R!                      |
-| (because gcd(a, n) = 1)                                         |
-|                                                                 |
-| Therefore:                                                       |
-|   (ar₁)(ar₂)...(arₖ) ≡ r₁·r₂·...·rₖ (mod n)                  |
-|   a^φ(n) · (r₁r₂...rₖ) ≡ r₁r₂...rₖ (mod n)                   |
-|   a^φ(n) ≡ 1 (mod n) ✓                                        |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
