@@ -38,7 +38,6 @@ permalink: /25_tree_algorithms/05_centroid_decomposition/
 | **Difficulty** | Hard |
 | **Problems** | 6+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
