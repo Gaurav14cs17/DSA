@@ -24,18 +24,6 @@ permalink: /14_sorting/01_comparison_sorts/
 
 ---
 
-## 📊 Visual Overview
-
-<div align="center">
-
-![Comparison Sorts](./images/comparison_sorts.png)
-
-*Comparison Sorts*
-
-</div>
-
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -44,7 +32,7 @@ permalink: /14_sorting/01_comparison_sorts/
 | **Problems** | 8+ |
 
 {: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+> **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
 
@@ -98,6 +86,18 @@ $$\forall i \in [low, pivot): arr[i] \leq arr[pivot]
 **Extract max n times:** O(n log n)
 
 $$T = O(n) + O(n \log n) = O(n \log n)$$
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Comparison Sorts](./images/comparison_sorts.png)
+
+*Comparison Sorts*
+
+</div>
 
 ---
 
