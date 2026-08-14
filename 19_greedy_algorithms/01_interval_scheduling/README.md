@@ -24,18 +24,6 @@ permalink: /19_greedy_algorithms/01_interval_scheduling/
 
 ---
 
-## 📊 Visual Overview
-
-<div align="center">
-
-![Interval Scheduling](./images/interval_scheduling.png)
-
-*Interval Scheduling*
-
-</div>
-
----
-
 ## 🎯 At a Glance
 
 | | |
@@ -44,7 +32,7 @@ permalink: /19_greedy_algorithms/01_interval_scheduling/
 | **Problems** | 10+ |
 
 {: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+> **How to use this page:** Scan **At a Glance**, then work through theory → visuals → code.
 
 ---
 
@@ -80,6 +68,18 @@ $$\text{rooms} = \max(\text{concurrent intervals at any time})$$
 **Goal:** Minimum intervals to cover a range.
 
 **Greedy:** Pick interval that extends coverage furthest.
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+![Interval Scheduling](./images/interval_scheduling.png)
+
+*Interval Scheduling*
+
+</div>
 
 ---
 
