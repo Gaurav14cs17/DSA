@@ -1061,3 +1061,54 @@ def smallest_period(s):
 ```
 
 ---
+
+## 🏆 LeetCode Problems
+
+### 🟢 Easy
+
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 28 | [Find the Index of the First Occurrence](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | KMP / naive | O(n+m) | O(1) |
+| 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | Two pointers | O(n) | O(1) |
+| 344 | [Reverse String](https://leetcode.com/problems/reverse-string/) | In-place | O(n) | O(1) |
+| 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Counting | O(n) | O(1) |
+
+### 🟡 Medium
+
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | Manacher / expand | O(n) | O(n) |
+| 438 | [Find All Anagrams](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | Sliding window | O(n) | O(1) |
+| 647 | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | Manacher | O(n) | O(n) |
+| 76 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Sliding window | O(n) | O(k) |
+| 139 | [Word Break](https://leetcode.com/problems/word-break/) | DP / trie | O(n²) | O(n) |
+| 214 | [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) | KMP | O(n) | O(n) |
+
+### 🔴 Hard
+
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 72 | [Edit Distance](https://leetcode.com/problems/edit-distance/) | DP | O(nm) | O(nm) |
+| 2147 | [Number of Ways to Divide a Long Corridor](https://leetcode.com/problems/number-of-ways-to-divide-a-long-corridor/) | Combinatorics | O(n) | O(1) |
+| 1044 | [Longest Duplicate Substring](https://leetcode.com/problems/longest-duplicate-substring/) | Binary search + hash | O(n log n) | O(n) |
+| 1032 | [Stream of Characters](https://leetcode.com/problems/stream-of-characters/) | Aho-Corasick | O(n) | O(m) |
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **KMP** | CP-Algorithms | [KMP](https://cp-algorithms.com/string/prefix-function.html) |
+| **Suffix Arrays** | CP-Algorithms | [Suffix array](https://cp-algorithms.com/string/suffix-array.html) |
+| **Aho-Corasick** | GeeksforGeeks | [Aho-Corasick](https://www.geeksforgeeks.org/aho-corasick-algorithm-pattern-searching/) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | String tag | [Problems](https://leetcode.com/tag/string/) |
+
+---
