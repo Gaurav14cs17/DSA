@@ -50,7 +50,6 @@ permalink: /25_tree_algorithms/
 | **Subtopics** | 11 |
 | **Problems** | 70+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
