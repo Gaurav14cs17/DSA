@@ -90,30 +90,14 @@ where $size(x)$ = number of nodes in subtree rooted at $x$.
 
 **Zig-Zig (x and p are both left or both right children):**
 
-```
-      g           x
-     /           / \
-    p      =>   A   p
-   /               / \
-  x               B   g
- / \                 / \
-A   B               C   D
+![Zig-Zig Splay Rotation](./images/zig-zig-splay.png)
 
-```
 - Rotate p, then rotate x
 
 **Zig-Zag (x is left child, p is right child or vice versa):**
 
-```
-    g           x
-   /           / \
-  p      =>   p   g
-   \         / \ / \
-    x       A B C  D
-   / \
-  B   C
+![Zig-Zag Splay Rotation](./images/zig-zag-splay.png)
 
-```
 - Rotate x twice (like AVL LR/RL)
 
 **Key:** Zig-zig differs from naive "rotate to root"
@@ -162,372 +146,12 @@ After zig-zig:
 
 ## 💻 Code Implementations
 
-```python
-from typing import Optional, Tuple
+![Splay Tree Implementations](./images/splay-tree-implementations.png)
 
-# ==================== SPLAY TREE ====================
-
-class SplayNode:
-    """Node in Splay Tree."""
-    
-    def __init__(self, key: int):
-        self.key = key
-        self.left: Optional[SplayNode] = None
-        self.right: Optional[SplayNode] = None
-        self.parent: Optional[SplayNode] = None
-
-class SplayTree:
-    """
-    Splay Tree implementation.
-    
-    All operations: O(log n) amortized
-    """
-    
-    def __init__(self):
-        self.root: Optional[SplayNode] = None
-    
-    # ==================== ROTATIONS ====================
-    
-    def rotate_right(self, x: SplayNode) -> None:
-        """Right rotation at x."""
-        y = x.left
-        if not y:
-            return
-        
-        x.left = y.right
-        if y.right:
-            y.right.parent = x
-        
-        y.parent = x.parent
-        if not x.parent:
-            self.root = y
-        elif x == x.parent.right:
-            x.parent.right = y
-        else:
-            x.parent.left = y
-        
-        y.right = x
-        x.parent = y
-    
-    def rotate_left(self, x: SplayNode) -> None:
-        """Left rotation at x."""
-        y = x.right
-        if not y:
-            return
-        
-        x.right = y.left
-        if y.left:
-            y.left.parent = x
-        
-        y.parent = x.parent
-        if not x.parent:
-            self.root = y
-        elif x == x.parent.left:
-            x.parent.left = y
-        else:
-            x.parent.right = y
-        
-        y.left = x
-        x.parent = y
-    
-    # ==================== SPLAY OPERATION ====================
-    
-    def splay(self, x: SplayNode) -> None:
-        """
-        Splay node x to root.
-        
-        Time: O(log n) amortized
-        """
-        while x.parent:
-            p = x.parent
-            g = p.parent
-            
-            if not g:
-                # Zig: x is child of root
-                if x == p.left:
-                    self.rotate_right(p)
-                else:
-                    self.rotate_left(p)
-            elif (x == p.left) == (p == g.left):
-                # Zig-Zig: x and p are both left or both right
-                if x == p.left:
-                    self.rotate_right(g)
-                    self.rotate_right(p)
-                else:
-                    self.rotate_left(g)
-                    self.rotate_left(p)
-            else:
-                # Zig-Zag: x is left and p is right, or vice versa
-                if x == p.left:
-                    self.rotate_right(p)
-                    self.rotate_left(g)
-                else:
-                    self.rotate_left(p)
-                    self.rotate_right(g)
-    
-    # ==================== SEARCH ====================
-    
-    def search(self, key: int) -> bool:
-        """
-        Search for key (splays if found).
-        
-        Time: O(log n) amortized
-        """
-        node = self._search_node(key)
-        if node:
-            self.splay(node)
-            return node.key == key
-        return False
-    
-    def _search_node(self, key: int) -> Optional[SplayNode]:
-        """Helper: find node with key or last accessed node."""
-        current = self.root
-        last = None
-        
-        while current:
-            last = current
-            if key == current.key:
-                return current
-            elif key < current.key:
-                current = current.left
-            else:
-                current = current.right
-        
-        if last:
-            self.splay(last)
-        return last
-    
-    # ==================== INSERT ====================
-    
-    def insert(self, key: int) -> None:
-        """
-        Insert key into tree.
-        
-        Time: O(log n) amortized
-        """
-        if not self.root:
-            self.root = SplayNode(key)
-            return
-        
-        # Find insertion point
-        node = self._search_node(key)
-        
-        if node and node.key == key:
-            # Key already exists, just splay
-            return
-        
-        # Create new node
-        new_node = SplayNode(key)
-        
-        if key < node.key:
-            new_node.right = node
-            new_node.left = node.left
-            if node.left:
-                node.left.parent = new_node
-            node.left = None
-            node.parent = new_node
-        else:
-            new_node.left = node
-            new_node.right = node.right
-            if node.right:
-                node.right.parent = new_node
-            node.right = None
-            node.parent = new_node
-        
-        self.root = new_node
-    
-    # ==================== DELETE ====================
-    
-    def delete(self, key: int) -> bool:
-        """
-        Delete key from tree.
-        
-        Time: O(log n) amortized
-        """
-        node = self._search_node(key)
-        
-        if not node or node.key != key:
-            return False
-        
-        # Splay node to root
-        self.splay(node)
-        
-        # Now node is root, delete it
-        if not node.left:
-            self.root = node.right
-            if self.root:
-                self.root.parent = None
-        elif not node.right:
-            self.root = node.left
-            if self.root:
-                self.root.parent = None
-        else:
-            # Two children: find max in left subtree
-            left_tree = node.left
-            left_tree.parent = None
-            
-            # Find max in left subtree
-            max_node = left_tree
-            while max_node.right:
-                max_node = max_node.right
-            
-            # Splay max to root of left subtree
-            self.root = left_tree
-            self.splay(max_node)
-            
-            # Attach right subtree
-            max_node.right = node.right
-            if node.right:
-                node.right.parent = max_node
-            
-            self.root = max_node
-        
-        return True
-    
-    # ==================== ADVANCED OPERATIONS ====================
-    
-    def split(self, key: int) -> Tuple[Optional['SplayTree'], Optional['SplayTree']]:
-        """
-        Split tree into two: keys < key and keys >= key.
-        
-        Time: O(log n) amortized
-        """
-        if not self.root:
-            return None, None
-        
-        # Search for key (or closest)
-        node = self._search_node(key)
-        
-        if node.key < key:
-            # All keys in tree are < key
-            right_tree = SplayTree()
-            right_tree.root = node.right
-            if node.right:
-                node.right.parent = None
-                node.right = None
-            
-            left_tree = SplayTree()
-            left_tree.root = self.root
-            
-            return left_tree, right_tree
-        else:
-            # Node.key >= key
-            left_tree = SplayTree()
-            left_tree.root = node.left
-            if node.left:
-                node.left.parent = None
-                node.left = None
-            
-            right_tree = SplayTree()
-            right_tree.root = self.root
-            
-            return left_tree, right_tree
-    
-    def join(self, other: 'SplayTree') -> None:
-        """
-        Join two trees (all keys in self < all keys in other).
-        
-        Time: O(log n) amortized
-        """
-        if not self.root:
-            self.root = other.root
-            return
-        
-        if not other.root:
-            return
-        
-        # Find max in self
-        max_node = self.root
-        while max_node.right:
-            max_node = max_node.right
-        
-        # Splay max to root
-        self.splay(max_node)
-        
-        # Attach other as right subtree
-        self.root.right = other.root
-        other.root.parent = self.root
-    
-    # ==================== UTILITY ====================
-    
-    def inorder(self) -> list:
-        """Inorder traversal."""
-        result = []
-        self._inorder(self.root, result)
-        return result
-    
-    def _inorder(self, node: Optional[SplayNode], result: list) -> None:
-        if node:
-            self._inorder(node.left, result)
-            result.append(node.key)
-            self._inorder(node.right, result)
-
-# ==================== LEETCODE APPLICATIONS ====================
-
-class LRUCache:
-    """
-    LeetCode 146: LRU Cache
-    Can be implemented with Splay Tree (though hash + doubly linked list is simpler).
-    
-    Splay tree automatically brings recently accessed items to top!
-    """
-    
-    def __init__(self, capacity: int):
-        self.capacity = capacity
-        self.tree = SplayTree()
-        self.cache = {}  # key -> (value, timestamp)
-        self.time = 0
-    
-    def get(self, key: int) -> int:
-        if key not in self.cache:
-            return -1
-        
-        value, _ = self.cache[key]
-        self.time += 1
-        self.cache[key] = (value, self.time)
-        self.tree.search(self.time)  # Splay to root
-        return value
-    
-    def put(self, key: int, value: int) -> None:
-        self.time += 1
-        
-        if key in self.cache:
-            self.cache[key] = (value, self.time)
-            self.tree.search(self.time)
-        else:
-            if len(self.cache) >= self.capacity:
-                # Remove LRU item (find min timestamp in tree)
-                # In practice, maintain separate structure for this
-                pass
-            
-            self.cache[key] = (value, self.time)
-            self.tree.insert(self.time)
-
-def contains_nearby_duplicate(nums: list, k: int) -> bool:
-    """
-    LeetCode 219: Contains Duplicate II
-    Using Splay Tree for window.
-    
-    Time: O(n log k) amortized
-    """
-    tree = SplayTree()
-    
-    for i, num in enumerate(nums):
-        if tree.search(num):
-            return True
-        
-        tree.insert(num)
-        
-        if i >= k:
-            tree.delete(nums[i - k])
-    
-    return False
-
-```
 
 ---
 
-## 🎯 LeetCode Problems
+## 🏆 LeetCode Problems
 
 ### 🟡 Medium Problems
 
@@ -577,5 +201,22 @@ def contains_nearby_duplicate(nums: list, k: int) -> bool:
 6. **Simpler than AVL/RB:** Less bookkeeping, easier to implement
 
 7. **Good for sequential access:** Recently accessed items are fast
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **Splay Trees** | Wikipedia | [Splay tree](https://en.wikipedia.org/wiki/Splay_tree) |
+| **Amortized Analysis** | GeeksforGeeks | [Splay](https://www.geeksforgeeks.org/splay-tree-set-1-insert/) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | Tree tag | [Problems](https://leetcode.com/tag/tree/) |
 
 ---
