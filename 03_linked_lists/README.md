@@ -31,9 +31,8 @@ permalink: /03_linked_lists/
 
 <div align="center">
 
-![Linked Lists Overview](./images/linked-list-overview.png)
-
-*Linked Lists Overview*
+### Node Structure
+![Node Structure](./images/1-node-structure.png)
 
 </div>
 
@@ -67,13 +66,9 @@ permalink: /03_linked_lists/
 
 ### 1️⃣ Node Structure
 
-```
-+---------+---------+
 
-|  data   |  next   |------►  next node
-+---------+---------+
+![1️⃣ Node Structure](./images/1-node-structure.png)
 
-```
 
 **Memory:** Each node requires $O(1)$ extra space for pointer.
 
@@ -179,7 +174,6 @@ def hasCycle(head: ListNode) -> bool:
         if slow == fast:
             return True
     return False
-
 ```
 
 ### Reversal
@@ -197,7 +191,6 @@ def reverseList(head: ListNode) -> ListNode:
         prev = head
         head = next_node
     return prev
-
 ```
 
 ### Dummy Node Pattern
@@ -222,8 +215,19 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
     
     current.next = l1 or l2
     return dummy.next
-
 ```
+
+![Dummy Node Pattern](./images/1-node-structure.png)
+
+### Pattern Checklist
+
+- [ ] Can I use dummy node to simplify?
+- [ ] Is fast-slow pointers applicable?
+- [ ] Should I use two pointers with gap?
+- [ ] Can I reverse in-place?
+- [ ] Do I need to restore the list after?
+- [ ] Am I handling all null pointer cases?
+
 
 ---
 
@@ -231,209 +235,46 @@ def mergeTwoLists(l1: ListNode, l2: ListNode) -> ListNode:
 
 ### 🟢 Easy
 
-| # | Problem | Technique | Time | Space |
-|:-:|---------|-----------|:----:|:-----:|
-| 21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Dummy Node | O(n+m) | O(1) |
-| 83 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Linear Scan | O(n) | O(1) |
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Reversal | O(n) | O(1) |
 | 141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Floyd's | O(n) | O(1) |
-| 160 | [Intersection of Two Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Two Pointers | O(n+m) | O(1) |
-| 203 | [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) | Dummy Node | O(n) | O(1) |
-| 206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Iterative | O(n) | O(1) |
-| 234 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | Fast-Slow + Reverse | O(n) | O(1) |
-| 876 | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) | Fast-Slow | O(n) | O(1) |
+| 876 | [Middle of Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) | Fast-Slow | O(n) | O(1) |
+| 21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Merge | O(n) | O(1) |
 
 ### 🟡 Medium
 
-| # | Problem | Technique | Time | Space |
-|:-:|---------|-----------|:----:|:-----:|
-| 2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Carry | O(n) | O(1) |
-| 19 | [Remove Nth Node From End](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Two Pointers | O(n) | O(1) |
-| 24 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | Recursion | O(n) | O(n) |
-| 61 | [Rotate List](https://leetcode.com/problems/rotate-list/) | Connect Tail | O(n) | O(1) |
-| 82 | [Remove Duplicates II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) | Dummy + Skip | O(n) | O(1) |
-| 92 | [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/) | In-place | O(n) | O(1) |
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 92 | [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/) | Partial Reverse | O(n) | O(1) |
+| 143 | [Reorder List](https://leetcode.com/problems/reorder-list/) | Reverse + Merge | O(n) | O(1) |
+| 234 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | Reverse Half | O(n) | O(1) |
 | 142 | [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) | Floyd's | O(n) | O(1) |
-| 143 | [Reorder List](https://leetcode.com/problems/reorder-list/) | Split + Reverse | O(n) | O(1) |
-| 148 | [Sort List](https://leetcode.com/problems/sort-list/) | Merge Sort | O(n log n) | O(log n) |
-| 328 | [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/) | Two Lists | O(n) | O(1) |
 
 ### 🔴 Hard
 
-| # | Problem | Technique | Time | Space |
-|:-:|---------|-----------|:----:|:-----:|
-| 23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Min Heap | O(n log k) | O(k) |
-| 25 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Group Reverse | O(n) | O(1) |
-
----
-
-## 💡 Key Insights & Pro Tips
-
-> **🎯 Dummy Node Magic**  
-> Use dummy node to simplify edge cases. Return `dummy.next` instead of tracking head changes.
-
-> **⚡ Fast-Slow Pointers**  
-> Universal pattern: find middle, detect cycle, check palindrome. When fast reaches end, slow is at middle.
-
-> **🔄 Reversal Template**  
-> Three pointers: prev, current, next. Save next, reverse link, advance all three.
-
-> **📊 Two Pointers for Distance**  
-> Gap of k nodes: advance first pointer k steps, then move both together. First reaches end → second at target.
-
-> **🔍 Cycle Detection Proof**  
-> Meeting point mathematics: μ + k = mλ. From meeting to start = from head to start.
-
----
-
-## 🧮 Quick Pattern Reference
-
-| Pattern in Problem | Technique | Example |
-|-------------------|-----------|---------|
-| "middle of list" | Fast-Slow Pointers | #876 |
-| "cycle detection" | Floyd's Algorithm | #141, #142 |
-| "reverse" | Iterative 3-pointer | #206, #92 |
-| "merge sorted" | Dummy Node | #21, #23 |
-| "nth from end" | Two Pointers with gap | #19 |
-| "palindrome" | Fast-Slow + Reverse | #234 |
-| "intersection" | Length difference | #160 |
-| "sort list" | Merge Sort | #148 |
-
----
-
-## 🎯 Must-Solve Problems (Top 15)
-
-| # | Problem | Category | Difficulty | Why Important |
-|:-:|---------|----------|------------|---------------|
-| 1 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Reversal | 🟢 Easy | Foundation |
-| 2 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Cycle | 🟢 Easy | Floyd's basics |
-| 3 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Merge | 🟢 Easy | Core pattern |
-| 4 | [Remove Nth From End](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Two Pointers | 🟡 Medium | Gap technique |
-| 5 | [Middle of Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) | Fast-Slow | 🟢 Easy | Essential |
-| 6 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | Multiple | 🟢 Easy | Combines patterns |
-| 7 | [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) | Cycle | 🟡 Medium | Floyd's advanced |
-| 8 | [Intersection of Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Two Pointers | 🟢 Easy | Length trick |
-| 9 | [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/) | Reversal | 🟡 Medium | Partial reverse |
-| 10 | [Reorder List](https://leetcode.com/problems/reorder-list/) | Multiple | 🟡 Medium | Split+Reverse+Merge |
-| 11 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Math | 🟡 Medium | Carry handling |
-| 12 | [Sort List](https://leetcode.com/problems/sort-list/) | Merge Sort | 🟡 Medium | O(n log n) |
-| 13 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | Reversal | 🟡 Medium | Pair operations |
-| 14 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Heap | 🔴 Hard | Priority queue |
-| 15 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Reversal | 🔴 Hard | Group reverse |
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 25 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | K-Group Reverse | O(n) | O(1) |
+| 23 | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Merge | O(n log k) | O(k) |
 
 ---
 
 ## 📚 References & Learning Resources
 
-### 📖 Books & Courses
+### 📖 Core Concepts
 
 | Resource | Description | Link |
 |----------|-------------|------|
-| **CLRS Chapter 10** | Linked lists fundamentals | [MIT Press](https://mitpress.mit.edu/books/introduction-algorithms) |
-| **Algorithms 4th Edition** | Sedgewick & Wayne | [Book Site](https://algs4.cs.princeton.edu/) |
-| **Competitive Programming 3** | Chapter 2.2 - Data structures | [Book](https://cpbook.net/) |
+| **Linked List** | Wikipedia | [Linked list](https://en.wikipedia.org/wiki/Linked_list) |
+| **Floyd's Cycle** | Cycle detection | [Wikipedia](https://en.wikipedia.org/wiki/Cycle_detection) |
+| **LeetCode Explore** | Linked list card | [Explore Card](https://leetcode.com/explore/learn/card/linked-list/) |
 
-### 🌐 Online Tutorials
-
-| Resource | Description | Link |
-|----------|-------------|------|
-| **GeeksforGeeks** | Complete linked list guide | [Tutorial](https://www.geeksforgeeks.org/data-structures/linked-list/) |
-| **LeetCode Explore** | Linked list card | [Course](https://leetcode.com/explore/learn/card/linked-list/) |
-| **VisuAlgo** | Interactive visualizations | [Website](https://visualgo.net/en/list) |
-| **HackerRank** | Linked list challenges | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=linked-lists) |
-
-### 📺 Video Resources
-
-| Resource | Topic | Link |
-|----------|-------|------|
-| **NeetCode** | Linked list playlist | [YouTube](https://www.youtube.com/playlist?list=PLot-Xpze53leU0Ec0VkBhnf4npMRFiNcB) |
-| **Abdul Bari** | Linked list lectures | [YouTube](https://www.youtube.com/watch?v=NobHlGUjV3g&list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&index=6) |
-| **Back To Back SWE** | Linked list problems | [YouTube](https://www.youtube.com/playlist?list=PLiQ766zSC5jM2OKVr8sooOuGgZkvnOCTI) |
-| **William Fiset** | Data structures series | [YouTube](https://www.youtube.com/watch?v=RBSGKlAvoiM) |
-| **MIT OCW 6.006** | Lecture on pointers | [MIT](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/) |
-
-### 📝 Practice Platforms
+### 📝 Practice
 
 | Platform | Focus | Link |
 |----------|-------|------|
-| **LeetCode** | Interview problems | [Linked List Tag](https://leetcode.com/tag/linked-list/) |
-| **HackerRank** | Data structures cert | [Practice](https://www.hackerrank.com/domains/data-structures?filters%5Bsubdomains%5D%5B%5D=linked-lists) |
-| **Codeforces** | Competitive problems | [Problemset](https://codeforces.com/problemset) |
-| **CodeChef** | Practice section | [Problems](https://www.codechef.com/practice) |
-
-### 🔬 Advanced Topics
-
-| Topic | Description | Link |
-|-------|-------------|------|
-| **Floyd's Cycle Detection** | Tortoise and hare | [Wikipedia](https://en.wikipedia.org/wiki/Cycle_detection) |
-| **XOR Linked List** | Memory-efficient doubly linked | [GeeksforGeeks](https://www.geeksforgeeks.org/xor-linked-list-a-memory-efficient-doubly-linked-list-set-1/) |
-| **Skip List** | Probabilistic data structure | [Wikipedia](https://en.wikipedia.org/wiki/Skip_list) |
-| **Unrolled Linked List** | Cache-friendly variant | [Wikipedia](https://en.wikipedia.org/wiki/Unrolled_linked_list) |
-
-### 🎯 Problem Collections
-
-| Collection | Focus | Link |
-|-----------|-------|------|
-| **NeetCode 150** | Essential problems | [List](https://neetcode.io/practice) |
-| **Blind 75** | Core interview questions | [List](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-75-LeetCode-Questions-to-Save-Your-Time-OaM1orEU) |
-| **Grind 75** | Structured preparation | [Guide](https://www.techinterviewhandbook.org/grind75) |
-| **Striver's SDE Sheet** | Must-do problems | [Sheet](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/) |
-
-### 📊 Visualization Tools
-
-| Tool | Purpose | Link |
-|------|---------|------|
-| **VisuAlgo** | Interactive linked list ops | [Website](https://visualgo.net/en/list) |
-| **Algorithm Visualizer** | Step-by-step execution | [Website](https://algorithm-visualizer.org/) |
-| **CS Animations** | Data structure animations | [Website](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html) |
-
-### 🏆 Competition Resources
-
-| Resource | Topic | Link |
-|----------|-------|------|
-| **USACO Guide** | Data structures guide | [Guide](https://usaco.guide/) |
-| **TopCoder Tutorials** | Advanced techniques | [Tutorials](https://www.topcoder.com/thrive/articles/) |
-| **Codeforces EDU** | Educational courses | [Course](https://codeforces.com/edu/course/2) |
-
----
-
-## 🎖️ Interview Success Tips
-
-### Common Mistakes to Avoid
-
-❌ **Don't:**
-
-- Forget to check for null pointers
-
-- Lose reference to head when modifying
-
-- Forget dummy node for edge cases
-
-- Modify list while iterating without saving next
-
-- Skip drawing diagrams
-
-✅ **Do:**
-
-- Always check `if not head` or `if not head.next`
-- Use dummy node for insertions/deletions
-
-- Draw small examples (3-5 nodes)
-
-- Test with empty list, single node, two nodes
-
-- Verify pointer updates carefully
-
-### Optimization Checklist
-
-```
-[ ] Can I use dummy node to simplify?
-[ ] Is fast-slow pointers applicable?
-[ ] Should I use two pointers with gap?
-[ ] Can I reverse in-place?
-[ ] Do I need to restore the list after?
-[ ] Am I handling all null pointer cases?
-
-```
+| **LeetCode** | Linked list tag | [Problems](https://leetcode.com/tag/linked-list/) |
 
 ---
 
