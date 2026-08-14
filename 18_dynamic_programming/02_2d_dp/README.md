@@ -39,7 +39,6 @@ permalink: /18_dynamic_programming/02_2d_dp/
 | **Difficulty** | Medium |
 | **Problems** | 12+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
