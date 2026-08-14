@@ -13,7 +13,6 @@ permalink: /05_queues/02_bfs_queue/
 ### *🌊 BFS Queue Problems*
 
 
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-15+-blue?style=for-the-badge" alt="Problems">
@@ -39,73 +38,12 @@ permalink: /05_queues/02_bfs_queue/
 
 ### Level-Order Traversal (#102)
 
-```
-Tree:
-       3
-      / \
-     9  20
-       /  \
-      15   7
-
-BFS with level tracking:
-
-Initial: queue = [3], result = []
-
-Level 0:
-  size = 1
-  Process: 3 → level = [3]
-  Add children: 9, 20
-  queue = [9, 20]
-  result = [[3]]
-
-Level 1:
-  size = 2
-  Process: 9 → level = [9]
-  Process: 20 → level = [9, 20]
-  Add children: 15, 7
-  queue = [15, 7]
-  result = [[3], [9, 20]]
-
-Level 2:
-  size = 2
-  Process: 15 → level = [15]
-  Process: 7 → level = [15, 7]
-  queue = []
-  result = [[3], [9, 20], [15, 7]]
-
-```
 
 ### Number of Islands (#200)
 
-```
-Grid:
-1 1 0
-0 1 0
-0 0 1
-
-BFS from each unvisited '1':
-
-Island 1: Start (0,0)
-  Queue: [(0,0)]
-  Visit (0,0) → mark 0, add neighbors
-  Queue: [(0,1), (1,0)]
-  Visit (0,1) → mark 0, add (1,1)
-  Visit (1,0) → already 0
-  Visit (1,1) → mark 0
-  Count = 1
-
-Island 2: Start (2,2)
-  Queue: [(2,2)]
-  Visit (2,2) → mark 0
-  Count = 2
-
-Result: 2 islands
-
-```
 
 ### Rotting Oranges (#994)
 
-```
 Grid (2=rotten, 1=fresh):
 2 1 1
 1 1 0
@@ -138,11 +76,9 @@ Time 4: Process (1,2)
 
 Result: 4 minutes
 
-```
 
 ### Open the Lock (#752)
 
-```
 Start: "0000", Target: "0202", Deadends: ["0201"]
 
 BFS on state space:
@@ -158,8 +94,6 @@ Turn 2-5: Continue exploring...
 Turn 6: Reach "0202"
   Path: 0000 → 1000 → 1100 → 1200 → 1201 → 1202 → 0202
   Result: 6 turns
-
-```
 
 
 ## 🎯 At a Glance
@@ -224,13 +158,11 @@ $$\text{Level } k = \{v : \text{dist}(root, v) = k\}$$
 
 **Processing:** Separate levels by tracking queue size.
 
-```
 Level 0: [root]
 Level 1: [children of root]
 Level 2: [grandchildren]
 ...
 
-```
 
 ---
 
@@ -429,8 +361,6 @@ def openLock(deadends: list[str], target: str) -> int:
                     queue.append((new_combo, turns + 1))
     
     return -1
-
-```
 
 
 ## 🏆 LeetCode Problems
@@ -678,51 +608,14 @@ $$\text{Level } k = \{v : \text{dist}(root, v) = k\}$$
 
 **Processing:** Separate levels by tracking queue size.
 
-```
+
 Level 0: [root]
 Level 1: [children of root]
 Level 2: [grandchildren]
 ...
 
-```
 
----
-
-### 4️⃣ Multi-Source BFS
-
-**Problem:** Find shortest distance to nearest source.
-
-**Initialization:** Enqueue all sources with distance 0.
-
-**Formula:**
-
-$$d[v] = \min_{s \in \text{sources}} \text{dist}(s, v)$$
-
----
-
-### 5️⃣ Grid BFS
-
-**4-directional movement:**
-
-$$\text{neighbors}(x, y) = \{(x±1, y), (x, y±1)\}$$
-
-**8-directional movement:**
-
-$$\text{neighbors}(x, y) = \{(x+dx, y+dy) : dx, dy \in \{-1, 0, 1\}, (dx, dy) \neq (0, 0)\}$$
-
----
-
-### 6️⃣ Shortest Path with State
-
-For problems with additional state (e.g., keys collected):
-
-$$\text{state} = (\text{position}, \text{extra\_info})
-d[(x, y, state)] = \text{shortest path to } (x, y) \text{ with given state}$$
-
----
-
-## 💻 Code Implementations
-
+![3️⃣ Level-Order Traversal](./image/level_order_tree.png)
 ```python
 from collections import deque
 
@@ -885,7 +778,6 @@ def openLock(deadends: list[str], target: str) -> int:
     
     return -1
 
-```
 
 ---
 
