@@ -13,6 +13,9 @@ permalink: /30_number_theory/08_binomial_coefficients/02_combinations/
 
 ### *Computing C(n, k) Efficiently*
 
+![*Computing C(n, k) Efficiently*](./images/computing-cn-k-efficiently.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Time-O(k)-blue?style=for-the-badge" alt="Time">
@@ -39,23 +42,6 @@ permalink: /30_number_theory/08_binomial_coefficients/02_combinations/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| STARS AND BARS: Distribute n=3 items into k=5 bins             |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Represent as: ★★★ and 4 bars (dividers)                        |
-|                                                                 |
-| Example arrangements:                                           |
-|   ★★★||||  → (3,0,0,0,0) - all in first bin                   |
-|   ★|★|★||  → (1,1,1,0,0) - one in each of first 3             |
-|   ||★★★||  → (0,0,3,0,0) - all in third bin                   |
-|   |★||★|★  → (0,1,0,1,1) - distributed                        |
-|                                                                 |
-| Total arrangements = C(n + k - 1, k - 1) = C(7, 4) = 35        |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
