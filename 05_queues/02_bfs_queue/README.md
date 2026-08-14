@@ -361,7 +361,7 @@ def openLock(deadends: list[str], target: str) -> int:
                     queue.append((new_combo, turns + 1))
     
     return -1
-
+```
 
 ## 🏆 LeetCode Problems
 
@@ -777,7 +777,7 @@ def openLock(deadends: list[str], target: str) -> int:
                     queue.append((new_combo, turns + 1))
     
     return -1
-
+```
 
 ---
 
