@@ -43,7 +43,6 @@ permalink: /30_number_theory/07_linear_diophantine/04_coin_problems/
 | **In one line** | Making Change with Diophantine Equations |
 | **Difficulty** | Medium |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
