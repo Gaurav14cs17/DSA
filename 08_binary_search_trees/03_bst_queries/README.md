@@ -579,6 +579,8 @@ def closestValue(root: TreeNode, target: float) -> int:
 
 ---
 
+```
+
 ## 📐 Mathematical Foundation
 ### 1️⃣ Kth Smallest Element
 
