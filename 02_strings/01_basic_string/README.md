@@ -25,19 +25,16 @@ permalink: /02_strings/01_basic_string/
 ## 📊 Visual Overview
 
 ### String Reversal - Two Pointer Approach
-
 <p align="center">
   <img src="./images/string_reversal.png" alt="String Reversal Algorithm" width="700"/>
 </p>
 
 ### Character Frequency Array
-
 <p align="center">
   <img src="./images/frequency_array.png" alt="Frequency Array Visualization" width="700"/>
 </p>
 
 ### First Unique Character
-
 <p align="center">
   <img src="./images/first_unique_char.png" alt="First Unique Character Algorithm" width="700"/>
 </p>
@@ -52,7 +49,6 @@ permalink: /02_strings/01_basic_string/
 | **Difficulty** | Easy |
 | **Problems** | 10+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
