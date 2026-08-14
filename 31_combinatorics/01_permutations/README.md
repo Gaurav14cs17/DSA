@@ -27,90 +27,25 @@ permalink: /31_combinatorics/01_permutations/
 
 ## 📊 Visual Overview
 
+<div align="center">
+
+![Permutations Overview](./images/permutations-overview.png)
+
+*Backtracking tree and next-permutation algorithm*
+
+</div>
+
 ### Pattern: Generate All Permutations (Backtracking)
 
-```
-+----------------------------------------------------------------+
-| PROBLEM: Generate all permutations of [1,2,3]                  |
-+----------------------------------------------------------------+
-| STEP-BY-STEP BACKTRACKING TREE:                                |
-|                                                                 |
-|                         []                                      |
-|                    ╱    |    ╲                                  |
-|                  1      2      3                                |
-|                ╱  ╲   ╱  ╲   ╱  ╲                               |
-|              12   13  21  23  31  32                            |
-|              |    |   |   |   |   |                             |
-|             123  132 213 231 312 321                            |
-|                                                                 |
-| Execution Trace:                                                |
-|                                                                 |
-| path=[], remaining=[1,2,3]                                      |
-|   Choose 1: path=[1], remaining=[2,3]                           |
-|     Choose 2: path=[1,2], remaining=[3]                         |
-|       Choose 3: path=[1,2,3], remaining=[] → OUTPUT: [1,2,3]    |
-|       Backtrack                                                 |
-|     Choose 3: path=[1,3], remaining=[2]                         |
-|       Choose 2: path=[1,3,2], remaining=[] → OUTPUT: [1,3,2]    |
-|       Backtrack                                                 |
-|   Choose 2: path=[2], remaining=[1,3]                           |
-|     ... (similar process)                                       |
-|                                                                 |
-| Total permutations: 3! = 6                                      |
-| Time complexity: O(n×n!)                                        |
-|   - n! permutations                                             |
-|   - Each takes O(n) to construct                                |
-+----------------------------------------------------------------+
-
-```
-
----
+<p align="center">
+  <img src="./images/permutations-backtracking.png" alt="Backtracking Permutations" width="100%">
+</p>
 
 ### Pattern: Next Permutation Algorithm
 
-```
-+----------------------------------------------------------------+
-| PROBLEM: Find next lexicographically greater permutation       |
-| INPUT: [1, 5, 8, 4, 7, 6, 5, 3, 1]                            |
-+----------------------------------------------------------------+
-
-| STEP 1: Find Pivot (rightmost i where arr[i] < arr[i+1])      |
-|                                                                 |
-|  [1, 5, 8, 4, 7, 6, 5, 3, 1]                                   |
-|           ↑   ↑                                                 |
-|           4 < 7  (pivot found at index 3)                       |
-|                                                                 |
-|  Why? Everything after pivot is descending                      |
-|  [7, 6, 5, 3, 1] is in reverse order                           |
-+----------------------------------------------------------------+
-
-| STEP 2: Find Successor (rightmost j where arr[j] > pivot)     |
-|                                                                 |
-|  [1, 5, 8, 4, 7, 6, 5, 3, 1]                                   |
-|           ↑       ↑                                             |
-|         pivot=4  successor=5                                    |
-|                                                                 |
-|  Scan from right: 1<4, 3<4, 5>4 ✓ (found!)                     |
-+----------------------------------------------------------------+
-
-| STEP 3: Swap pivot and successor                               |
-|                                                                 |
-|  [1, 5, 8, 5, 7, 6, 4, 3, 1]                                   |
-|           ↑       ↑                                             |
-|        swapped these                                            |
-+----------------------------------------------------------------+
-
-| STEP 4: Reverse suffix (after pivot position)                  |
-|                                                                 |
-|  Suffix: [7, 6, 4, 3, 1]                                       |
-|  Reversed: [1, 3, 4, 6, 7]                                     |
-|                                                                 |
-|  Result: [1, 5, 8, 5, 1, 3, 4, 6, 7]                           |
-|                                                                 |
-| Why reverse? To get smallest arrangement of suffix             |
-+----------------------------------------------------------------+
-
-```
+<p align="center">
+  <img src="./images/next-permutation.png" alt="Next Permutation Algorithm" width="100%">
+</p>
 
 ---
 
