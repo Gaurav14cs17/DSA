@@ -27,101 +27,17 @@ permalink: /30_number_theory/01_gcd_lcm/
 
 ## 📊 Visual Overview
 
-### Walkthrough 1: Euclidean Algorithm$$
+![GCD & LCM Overview](./images/gcd-lcm-overview.png)
 
-+-----------------------------------------------------------------+
+### Walkthrough 1: Euclidean Algorithm
 
-| PROBLEM: Find gcd(48, 18)                                       |
-+-----------------------------------------------------------------+
-| STEP-BY-STEP EXECUTION:                                         |
-|                                                                  |
-| Step 1: gcd(48, 18)                                             |
-|   48 = 2 × 18 + 12                                              |
-|   → gcd(48, 18) = gcd(18, 12)                                   |
-|                                                                  |
-|   Visual:                                                        |
-|   48: ████████████████████ (remainder = 12)                     |
-|   18: █████████                                                  |
-|        █████████                                                 |
-|        remainder: ██████                                         |
-|                                                                  |
-| Step 2: gcd(18, 12)                                             |
-|   18 = 1 × 12 + 6                                               |
-|   → gcd(18, 12) = gcd(12, 6)                                    |
-|                                                                  |
-|   Visual:                                                        |
-|   18: █████████                                                  |
-|   12: ██████                                                     |
-|        remainder: ███                                            |
-|                                                                  |
-| Step 3: gcd(12, 6)                                              |
-|   12 = 2 × 6 + 0                                                |
-|   → gcd(12, 6) = gcd(6, 0) = 6                                  |
-|                                                                  |
-|   Visual:                                                        |
-|   12: ██████                                                     |
-|    6: ███                                                        |
-|       ███                                                        |
-|       remainder: 0 ✓                                             |
-|                                                                  |
-| RESULT: gcd(48, 18) = 6                                         |
-|                                                                  |
-| Verification:                                                    |
-|   48 = 6 × 8  ✓                                                 |
-|   18 = 6 × 3  ✓                                                 |
-|   gcd(8, 3) = 1  ✓ (coprime)                                    |
-+-----------------------------------------------------------------+
-
-```
+![Walkthrough 1: Standard Example](./01_euclidean_algorithm/images/walkthrough-1-standard-example.png)
 
 ---
 
 ### Walkthrough 2: Extended GCD
 
-```
-+-----------------------------------------------------------------+
-| PROBLEM: Find integers x, y such that 35x + 15y = gcd(35, 15)  |
-+-----------------------------------------------------------------+
-| FORWARD PHASE (Standard Euclidean):                             |
-|                                                                  |
-| 35 = 2 × 15 + 5   → gcd(35, 15) = gcd(15, 5)                   |
-| 15 = 3 × 5 + 0    → gcd(15, 5) = gcd(5, 0) = 5                 |
-|                                                                  |
-| So gcd(35, 15) = 5                                              |
-+-----------------------------------------------------------------+
-
-| BACKWARD PHASE (Finding coefficients):                          |
-|                                                                  |
-| Base: 5 = 1 × 5 + 0 × 0   (x₀ = 1, y₀ = 0)                     |
-|                                                                  |
-| Step 1: Express 5 in terms of 15 and 5                          |
-|   5 = 15 - 3 × 5                                                |
-|   5 = 1 × 15 + (-3) × 5                                         |
-|                                                                  |
-| Step 2: Express 5 in terms of 35 and 15                         |
-|   From earlier: 5 = 35 - 2 × 15                                 |
-|   Substitute into equation from Step 1:                         |
-|   5 = 1 × 15 + (-3) × (35 - 2 × 15)                             |
-|   5 = 1 × 15 + (-3) × 35 + 6 × 15                               |
-|   5 = (-3) × 35 + 7 × 15                                        |
-|                                                                  |
-| RESULT: x = -3, y = 7                                           |
-|                                                                  |
-| Verification:                                                    |
-|   35 × (-3) + 15 × 7 = -105 + 105 = 0  ✗                       |
-|   Wait, let me recalculate...                                   |
-|                                                                  |
-|   From 35 = 2 × 15 + 5:                                         |
-|   5 = 35 - 2 × 15                                               |
-|   5 = 1 × 35 + (-2) × 15                                        |
-|                                                                  |
-| CORRECT RESULT: x = 1, y = -2                                   |
-|                                                                  |
-| Verification:                                                    |
-|   35 × 1 + 15 × (-2) = 35 - 30 = 5  ✓                          |
-+-----------------------------------------------------------------+
-
-```
+![Extended GCD Algorithm](./02_extended_gcd/images/extended_gcd.png)
 
 ---
 
@@ -255,22 +171,21 @@ $$\text{lcm}(a, b) = d \cdot x \cdot y = \frac{(d \cdot x) \cdot (d \cdot y)}{d}
 
 **Theorem:** If $a = p_1^{a_1} \cdot p_2^{a_2} \cdots p_k^{a_k}$ and $b = p_1^{b_1} \cdot p_2^{b_2} \cdots p_k^{b_k}$, then:
 
-```
-\begin{align}
+$$\begin{align}
 \gcd(a, b) &= p_1^{\min(a_1, b_1)} \cdot p_2^{\min(a_2, b_2)} \cdots p_k^{\min(a_k, b_k)} \\
 \text{lcm}(a, b) &= p_1^{\max(a_1, b_1)} \cdot p_2^{\max(a_2, b_2)} \cdots p_k^{\max(a_k, b_k)}
-\end{align}
+\end{align}$$
 
-$$**Example:**$$
+**Example:**
 
-\begin{align}
+$$\begin{align}
 12 &= 2^2 \cdot 3^1 \\
 18 &= 2^1 \cdot 3^2 \\
 \gcd(12, 18) &= 2^{\min(2,1)} \cdot 3^{\min(1,2)} = 2^1 \cdot 3^1 = 6 \\
 \text{lcm}(12, 18) &= 2^{\max(2,1)} \cdot 3^{\max(1,2)} = 2^2 \cdot 3^2 = 36
-\end{align}
+\end{align}$$
 
-$$---
+---
 
 ## 💻 Core Implementations
 
