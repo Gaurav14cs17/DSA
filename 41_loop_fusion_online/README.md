@@ -302,7 +302,7 @@ def reservoir_sample(stream, k: int) -> list:
 
 ---
 
-## 🎯 LeetCode Problems
+## 🏆 LeetCode Problems
 
 ### 📊 Loop Fusion & Online Computation (6 problems)
 
@@ -590,17 +590,6 @@ where $M_2(n) = \sum_{i=1}^{n} (x_i - \mu_n)^2$ and $\sigma^2 = M_2(n) / n$.
 
 ---
 
-## 📚 Resources
-
-| Resource | Link |
-|----------|------|
-| **Welford's Paper (1962)** | [Technometrics](https://www.jstor.org/stable/1266577) |
-| **Kadane's Algorithm** | [Programming Pearls](https://en.wikipedia.org/wiki/Maximum_subarray_problem) |
-| **Streaming Algorithms** | [Stanford Lecture Notes](http://theory.stanford.edu/~tim/s15/l/l1.pdf) |
-| **Online Algorithms Book** | [Borodin & El-Yaniv](https://www.cs.toronto.edu/~bor/Papers/book.pdf) |
-
----
-
 ## 🏆 Practice Roadmap
 
 ### Week 1: Foundations
@@ -626,6 +615,23 @@ where $M_2(n) = \sum_{i=1}^{n} (x_i - \mu_n)^2$ and $\sigma^2 = M_2(n) / n$.
 - [ ] Count-Min Sketch
 
 - [ ] HyperLogLog
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **Welford's Algorithm** | Wikipedia | [Online variance](https://en.wikipedia.org/wiki/Algorithms_for_calculating_variance#Welford's_online_algorithm) |
+| **Kadane's Algorithm** | GeeksforGeeks | [Maximum subarray](https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | Array tag | [Problems](https://leetcode.com/tag/array/) |
 
 ---
 
