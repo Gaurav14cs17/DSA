@@ -40,7 +40,6 @@ permalink: /34_sqrt_decomposition/
 ---
 
 ### Step-by-Step Breakdown
-
 <div align="center">
 
 ![Sqrt Decomposition Walkthrough](./images/sqrt-decomp-walkthrough.png)
@@ -58,7 +57,6 @@ permalink: /34_sqrt_decomposition/
 | **Subtopics** | 2 |
 | **Problems** | 20+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 
