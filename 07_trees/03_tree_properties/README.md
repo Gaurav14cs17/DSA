@@ -13,8 +13,6 @@ permalink: /07_trees/03_tree_properties/
 ### *Tree Properties*
 
 
-
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Easy_to_Medium-green?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-12+-blue?style=for-the-badge" alt="Problems">
@@ -38,129 +36,23 @@ permalink: /07_trees/03_tree_properties/
 
 ### Diameter of Binary Tree (#543)
 
-```
-Tree:
-      1
-     / \
-    2   3
-   / \
-  4   5
-
-Diameter = longest path between any two nodes
-
-For each node, calculate:
-  path_through_node = height(left) + height(right)
-
-Node 1:
-  height(left=2) = 2
-  height(right=3) = 0
-  diameter through 1 = 2 + 0 = 2
-
-Node 2:
-  height(left=4) = 0
-  height(right=5) = 0
-  diameter through 2 = 0 + 0 = 0
-
-Node 3: diameter = 0
-Node 4: diameter = 0
-Node 5: diameter = 0
-
-Global maximum diameter = 2
-Path: 4 → 2 → 1 (length 2 edges)
-
-```
 
 ### Balanced Binary Tree (#110)
 
-```
-Tree:
-      3
-     / \
-    9  20
-      /  \
-     15   7
 
-Check balance (bottom-up):
+![Balanced Binary Tree (#110)](./images/tree-properties.png)
 
-Node 9: height = 0, balanced ✓
-Node 15: height = 0, balanced ✓
-Node 7: height = 0, balanced ✓
-
-Node 20:
-  left_height = 0 (15)
-  right_height = 0 (7)
-  diff = |0-0| = 0 ≤ 1 ✓
-  height = 1
-
-Node 3:
-  left_height = 0 (9)
-  right_height = 1 (20)
-  diff = |0-1| = 1 ≤ 1 ✓
-  height = 2
-
-Result: Balanced ✓
-
-```
 
 ### Symmetric Tree (#101)
 
-```
-Tree:
-      1
-     / \
-    2   2
-   / \ / \
-  3  4 4  3
 
-Check mirror symmetry:
+![Symmetric Tree (#101)](./images/tree-properties.png)
 
-Level 1: Compare left(2) vs right(2) ✓
-
-Level 2:
-  Compare left.left(3) vs right.right(3) ✓
-  Compare left.right(4) vs right.left(4) ✓
-
-All nodes match in mirror positions → Symmetric ✓
-
-Non-symmetric example:
-      1
-     / \
-    2   2
-     \   \
-      3   3
-
-left.right(3) vs right.right(3) ✗
-Not mirror positions → Not symmetric
-
-```
 
 ### Count Complete Tree Nodes (#222)
 
-```
-Complete tree (all levels full except last):
-        1
-       / \
-      2   3
-     / \ /
-    4  5 6
 
-Height = 2 (leftmost path)
-Last level can have 1 to 4 nodes (2² positions)
-
-Binary search on last level:
-Check if position exists by path encoding:
-  Position 0 (00): L,L → node 4 exists ✓
-  Position 1 (01): L,R → node 5 exists ✓
-  Position 2 (10): R,L → node 6 exists ✓
-  Position 3 (11): R,R → doesn't exist ✗
-
-Nodes in complete levels: 2^h - 1 = 3
-Nodes in last level: 3
-Total: 3 + 3 = 6
-
-Time: O(log²n) - O(log n) binary search × O(log n) path check
-
-```
+![Count Complete Tree Nodes (#222)](./images/tree-properties.png)
 
 
 ## 🎯 At a Glance
@@ -411,8 +303,6 @@ def countNodes(root: TreeNode) -> int:
             right = mid - 1
     
     return 2**depth - 1 + left
-
-```
 
 
 ## 🏆 LeetCode Problems
@@ -819,7 +709,6 @@ def countNodes(root: TreeNode) -> int:
     
     return 2**depth - 1 + left
 
-```
 
 ---
 
