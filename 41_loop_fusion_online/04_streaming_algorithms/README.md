@@ -162,9 +162,7 @@ $$P(\text{stay}) = \left(1 - \frac{k}{i}\right) + \frac{k}{i} \cdot \frac{k-1}{k
 
 Therefore:
 
-$$P(j \text{ in reservoir after } i) = \frac{k}{i-1} \cdot \frac{i-1}{i} = \frac{k}{i}
-
-$$ ✓
+$$P(j \text{ in reservoir after } i) = \frac{k}{i-1} \cdot \frac{i-1}{i} = \frac{k}{i} \quad \checkmark$$
 
 By induction, after $n$ elements, each has probability $k/n$. $\blacksquare$
 
@@ -184,7 +182,9 @@ Imagine a game where you're picking $k$ people from a line of $n$ people:
 
 ---
 
-### 2. Count-Min Sketch$$python
+### 2. Count-Min Sketch
+
+```python
 import hashlib
 
 class CountMinSketch:
@@ -261,51 +261,49 @@ print(f"Frequency of 'fox': {sketch.estimate('fox')}")  # 2
 
 With $w = \lceil e/\epsilon \rceil$ and $d = \lceil \ln(1/\delta) \rceil$:
 
-```
-P(\hat{f}_i \leq f_i + \epsilon \|\mathbf{f}\|_1) \geq 1 - \delta
+$$P(\hat{f}_i \leq f_i + \epsilon \|\mathbf{f}\|_1) \geq 1 - \delta$$
 
-$$**Proof:**
+**Proof:**
 
 **Step 1: Analyze single hash function**
 
-For hash function $h_j$ and item $i$:$$
+For hash function $h_j$ and item $i$:
 
-C[j][h_j(i)] = f_i + \sum_{k: h_j(k) = h_j(i), k \neq i} f_k
+$$C[j][h_j(i)] = f_i + \sum_{k: h_j(k) = h_j(i), k \neq i} f_k$$
 
-$$The error is the collision sum:$$
+The error is the collision sum:
 
-\text{Error}_j = \sum_{k \neq i} f_k \cdot \mathbb{1}[h_j(k) = h_j(i)]
+$$\text{Error}_j = \sum_{k \neq i} f_k \cdot \mathbb{1}[h_j(k) = h_j(i)]$$
 
-$$**Step 2: Expected error**
+**Step 2: Expected error**
 
-By pairwise independence of hash functions:$$
+By pairwise independence of hash functions:
 
-E[\text{Error}_j] = \sum_{k \neq i} f_k \cdot P(h_j(k) = h_j(i)) = \sum_{k \neq i} f_k \cdot \frac{1}{w}
-= \frac{1}{w} \sum_{k \neq i} f_k \leq \frac{\|\mathbf{f}\|_1}{w}
+$$E[\text{Error}_j] = \sum_{k \neq i} f_k \cdot P(h_j(k) = h_j(i)) = \sum_{k \neq i} f_k \cdot \frac{1}{w} = \frac{1}{w} \sum_{k \neq i} f_k \leq \frac{\|\mathbf{f}\|_1}{w}$$
 
-$$**Step 3: Apply Markov's inequality**$$
+**Step 3: Apply Markov's inequality**
 
-P(\text{Error}_j > \epsilon \|\mathbf{f}\|_1) \leq \frac{E[\text{Error}_j]}{\epsilon \|\mathbf{f}\|_1} \leq \frac{1}{w\epsilon}
+$$P(\text{Error}_j > \epsilon \|\mathbf{f}\|_1) \leq \frac{E[\text{Error}_j]}{\epsilon \|\mathbf{f}\|_1} \leq \frac{1}{w\epsilon}$$
 
-$$With $w = e/\epsilon$:$$
+With $w = e/\epsilon$:
 
-P(\text{Error}_j > \epsilon \|\mathbf{f}\|_1) \leq \frac{1}{e}
+$$P(\text{Error}_j > \epsilon \|\mathbf{f}\|_1) \leq \frac{1}{e}$$
 
-$$**Step 4: Multiple hash functions**
+**Step 4: Multiple hash functions**
 
-We take minimum over $d$ independent hash functions:$$
+We take minimum over $d$ independent hash functions:
 
-P(\text{all } d \text{ hash functions fail}) \leq \left(\frac{1}{e}\right)^d
+$$P(\text{all } d \text{ hash functions fail}) \leq \left(\frac{1}{e}\right)^d$$
 
-$$With $d = \ln(1/\delta)$:$$
+With $d = \ln(1/\delta)$:
 
-P(\text{all fail}) \leq e^{-d} = e^{-\ln(1/\delta)} = \delta
+$$P(\text{all fail}) \leq e^{-d} = e^{-\ln(1/\delta)} = \delta$$
 
-$$Therefore:$$
+Therefore:
 
-P(\hat{f}_i \leq f_i + \epsilon \|\mathbf{f}\|_1) \geq 1 - \delta \quad \blacksquare
+$$P(\hat{f}_i \leq f_i + \epsilon \|\mathbf{f}\|_1) \geq 1 - \delta \quad \blacksquare$$
 
-$$---
+---
 
 **💡 Intuition:**
 
@@ -329,7 +327,9 @@ $$---
 
 ---
 
-### 3. HyperLogLog$$python
+### 3. HyperLogLog
+
+```python
 import math
 import hashlib
 
@@ -500,8 +500,9 @@ print(f"\nFalse positive rate: {bloom.false_positive_rate():.4f}")
 
 ```
 p \approx \left(1 - e^{-kn/m}\right)^k
+```
 
-$$Optimal $k$: $k^* = \frac{m}{n} \ln 2 \approx 0.693 \frac{m}{n}$
+**Optimal $k$:** $k^* = \frac{m}{n} \ln 2 \approx 0.693 \frac{m}{n}$
 
 ---
 
