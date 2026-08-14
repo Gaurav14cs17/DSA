@@ -29,7 +29,6 @@ nav_order: 6
 |:---|:---|
 | **Topics** | 2D Hashing, Document Similarity, Plagiarism Detection |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
