@@ -669,7 +669,7 @@ def reverse_complement(seq):
 
 ---
 
-## 🧩 LeetCode Problems
+## 🏆 LeetCode Problems
 
 ### Medium
 
@@ -765,6 +765,24 @@ def reverse_complement(seq):
 - [CP-Algorithms: Aho-Corasick](https://cp-algorithms.com/string/aho_corasick.html)
 
 - [Visualization](https://www.cs.uku.fi/~kilpelai/BSA05/lectures/slides04.pdf)
+
+---
+
+## 📚 References & Learning Resources
+
+### 📖 Core Concepts
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **Aho-Corasick** | CP-Algorithms | [Aho-Corasick](https://cp-algorithms.com/string/aho_corasick.html) |
+| **Multi-pattern** | GeeksforGeeks | [Aho-Corasick](https://www.geeksforgeeks.org/aho-corasick-algorithm-pattern-searching/) |
+| **Original Paper** | ACM | [1975 paper](https://doi.org/10.1145/360825.360855) |
+
+### 📝 Practice
+
+| Platform | Focus | Link |
+|----------|-------|------|
+| **LeetCode** | String tag | [Problems](https://leetcode.com/tag/string/) |
 
 ---
 
