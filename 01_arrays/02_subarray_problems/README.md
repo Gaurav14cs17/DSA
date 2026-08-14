@@ -41,7 +41,6 @@ permalink: /01_arrays/02_subarray_problems/
 | **Difficulty** | Medium |
 | **Problems** | 15+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
@@ -379,7 +378,6 @@ i=n-1: 1 choice
 Total = n + (n-1) + ... + 1 = n(n+1)/2
 
 
-![Why n(n+1)/2 Subarrays?](./images/options-3-326-326.png)
 
 ### The Power of Prefix Sums
 
