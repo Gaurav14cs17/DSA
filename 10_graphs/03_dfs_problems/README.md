@@ -243,7 +243,7 @@ def canVisitAllRooms(rooms: list[list[int]]) -> bool:
     
     dfs(0)
     return len(visited) == len(rooms)
-
+```
 
 ---
 
