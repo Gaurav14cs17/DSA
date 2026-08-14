@@ -110,63 +110,12 @@ $$\text{If } \alpha \geq \beta \text{, prune remaining branches}$$
 
 ## 📝 Visual Walkthrough
 
-```
-+-----------------------------------------------------------------+
-| MINIMAX TREE: Tic-Tac-Toe Example                              |
-+-----------------------------------------------------------------+
-|                                                                  |
-|                      Current State                               |
-|                         MAX (X)                                  |
-|                         eval: ?                                  |
-|                   +-------+-------+                              |
-|                   |       |       |                              |
-|              Move A   Move B   Move C                            |
-|              MIN (O)  MIN (O)  MIN (O)                           |
-|            +--+--+  +--+--+  +--+--+                           |
-|            |  |  |  |  |  |  |  |  |                            |
-|           -1  0 +1 +1 -1  0 -1  0 +1                            |
-|                                                                  |
-| MIN layer picks minimum:                                         |
-|     A: min(-1,0,+1) = -1                                        |
-|     B: min(+1,-1,0) = -1                                        |
-|     C: min(-1,0,+1) = -1                                        |
-|                                                                  |
-| MAX layer picks maximum:                                         |
-|     max(-1, -1, -1) = -1                                        |
-|                                                                  |
-| Best move: Any (all lead to same evaluation)                    |
-+-----------------------------------------------------------------+
+<div align="center">
 
-+-----------------------------------------------------------------+
+![Minimax and Alpha-Beta Pruning](./images/minimax-alpha-beta-walkthrough.png)
 
-| ALPHA-BETA PRUNING Example                                      |
-+-----------------------------------------------------------------+
-|                                                                  |
-|                      MAX (α=-∞, β=+∞)                           |
-|                   +--------+--------+                           |
-|                MIN(α=-∞,β=+∞)    MIN(α=-∞,β=+∞)                 |
-|              +----+----+        +----+----+                     |
-|             3          12       8         2                      |
-|             ↓                   ↓                                |
-|          Returns 3          Returns 8                            |
-|                                                                  |
-| At first MIN: β = 3                                             |
-| At MAX level: α = 3                                             |
-| At second MIN: Found 8 > α=3                                    |
-|                β = 8                                             |
-|                Found 2 < β=8, update β=2                        |
-|                But 2 < α=3, so no pruning yet                   |
-|                                                                  |
-| Result: MAX chooses max(3, 2) = 3                              |
-|                                                                  |
-| ✂️  Pruning Example:                                            |
-| If right subtree had 15 instead of 8:                           |
-|   α=3, and 15 > 3, so no update to second MIN                  |
-|   But if next value was 1 < β=15:                               |
-|   Since this won't beat α=3, prune remaining!                   |
-+-----------------------------------------------------------------+
+</div>
 
-```
 
 ---
 
