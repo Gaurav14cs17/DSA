@@ -34,21 +34,6 @@ permalink: /07_trees/05_lca_ancestor/
 
 ---
 
-### LCA of Binary Tree (#236)
-
-
-### LCA of BST (#235)
-
-
-![LCA of BST (#235)](./images/lca-ancestor.png)
-
-
-### Binary Lifting for Kth Ancestor
-
-
-![Binary Lifting for Kth Ancestor](./images/lca-ancestor.png)
-
-
 ## 🎯 At a Glance
 
 | | |
@@ -56,7 +41,6 @@ permalink: /07_trees/05_lca_ancestor/
 | **Difficulty** | Medium |
 | **Problems** | 8+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 
@@ -269,6 +253,7 @@ def distanceBetweenNodes(root: TreeNode, p: TreeNode, q: TreeNode) -> int:
     lca = lowestCommonAncestor(root, p, q)
     return find_distance(lca, p, 0) + find_distance(lca, q, 0)
 
+```
 
 ## 🏆 LeetCode Problems
 
@@ -293,171 +278,14 @@ def distanceBetweenNodes(root: TreeNode, p: TreeNode, q: TreeNode) -> int:
 
 ## 📊 LCA Pattern Selection
 
-
+```text
 LCA Problem
      |
-![📊 LCA Pattern Selection](./images/lca-ancestor.png)
-```python
-def lowestCommonAncestor(root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
-    """
-    LCA in binary tree.
-    
-    If both p and q found in different subtrees, root is LCA.
-    Otherwise, LCA is in the subtree where both are found.
-    
-    Time: O(n), Space: O(h)
-    """
-    if not root or root == p or root == q:
-        return root
-    
-    left = lowestCommonAncestor(root.left, p, q)
-    right = lowestCommonAncestor(root.right, p, q)
-    
-    if left and right:
-        return root  # p and q are in different subtrees
-    
-    return left if left else right
+  BST?     Parent ptrs?    Multiple queries?
+   |            |                |
+BST LCA    Two Pointers      Binary Lifting
+```
 
-def lowestCommonAncestorBST(root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
-    """
-    LCA in BST (use BST property for efficiency).
-    
-    Time: O(h), Space: O(1) iterative
-    """
-    while root:
-        if p.val < root.val and q.val < root.val:
-            root = root.left
-        elif p.val > root.val and q.val > root.val:
-            root = root.right
-        else:
-            return root
-    return None
-
-def lowestCommonAncestorWithParent(p: 'Node', q: 'Node') -> 'Node':
-    """
-    LCA when nodes have parent pointers.
-    
-    Find depths, bring to same level, move up together.
-    
-    Time: O(h), Space: O(1)
-    """
-    def get_depth(node):
-        depth = 0
-        while node:
-            node = node.parent
-            depth += 1
-        return depth
-    
-    depth_p = get_depth(p)
-    depth_q = get_depth(q)
-    
-    # Bring to same level
-    while depth_p > depth_q:
-        p = p.parent
-        depth_p -= 1
-    while depth_q > depth_p:
-        q = q.parent
-        depth_q -= 1
-    
-    # Move up together
-    while p != q:
-        p = p.parent
-        q = q.parent
-    
-    return p
-
-def getKthAncestor(node: TreeNode, k: int) -> TreeNode:
-    """
-    Find kth ancestor (simple version without binary lifting).
-    
-    Time: O(k), Space: O(1)
-    """
-    current = node
-    for _ in range(k):
-        if not current:
-            return None
-        current = current.parent
-    return current
-
-class TreeAncestor:
-    """
-    Binary Lifting for kth ancestor queries.
-    
-    Preprocessing: O(n log n)
-    Query: O(log n)
-    """
-    def __init__(self, n: int, parent: list[int]):
-        self.LOG = 20  # Supports trees up to 2^20 nodes
-        self.up = [[-1] * self.LOG for _ in range(n)]
-        
-        # Initialize 2^0 (immediate parent)
-        for i in range(n):
-            self.up[i][0] = parent[i]
-        
-        # Build 2^j ancestors
-        for j in range(1, self.LOG):
-            for i in range(n):
-                if self.up[i][j-1] != -1:
-                    self.up[i][j] = self.up[self.up[i][j-1]][j-1]
-    
-    def getKthAncestor(self, node: int, k: int) -> int:
-        for j in range(self.LOG):
-            if k & (1 << j):
-                node = self.up[node][j]
-                if node == -1:
-                    break
-        return node
-
-def distanceBetweenNodes(root: TreeNode, p: TreeNode, q: TreeNode) -> int:
-    """
-    Distance between two nodes = sum of depths - 2 * LCA depth.
-    
-    Time: O(n), Space: O(h)
-    """
-    def find_distance(node, target, dist):
-        if not node:
-            return -1
-        if node == target:
-            return dist
-        
-        left = find_distance(node.left, target, dist + 1)
-        if left != -1:
-            return left
-        return find_distance(node.right, target, dist + 1)
-    
-    lca = lowestCommonAncestor(root, p, q)
-    return find_distance(lca, p, 0) + find_distance(lca, q, 0)
-
-
----
-
-## 🏆 LeetCode Problems
-
-### 🟢 Easy
-
-| # | Problem | Pattern | Time | Space |
-|:-:|---------|---------|:----:|:-----:|
-| 235 | [LCA of BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | BST Property | O(h) | O(1) |
-
-### 🟡 Medium
-
-| # | Problem | Pattern | Time | Space |
-|:-:|---------|---------|:----:|:-----:|
-| 236 | [LCA of Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | DFS | O(n) | O(h) |
-| 1026 | [Maximum Difference Between Node and Ancestor](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/) | Track Min/Max | O(n) | O(h) |
-| 1123 | [LCA of Deepest Leaves](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/) | DFS | O(n) | O(h) |
-| 1483 | [Kth Ancestor of a Tree Node](https://leetcode.com/problems/kth-ancestor-of-a-tree-node/) | Binary Lifting | O(log n) | O(n log n) |
-| 1644 | [LCA of Binary Tree II](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/) | DFS + Verify | O(n) | O(h) |
-| 1650 | [LCA of Binary Tree III](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/) | Parent Pointers | O(h) | O(1) |
-| 1676 | [LCA of Binary Tree IV](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iv/) | Set Match | O(n) | O(n) |
-
----
-
-## 📊 LCA Pattern Selection
-
-
-LCA Problem
-     |
 ### Complexity Comparison
 
 | Approach | Preprocessing | Query | Space | When to Use |
