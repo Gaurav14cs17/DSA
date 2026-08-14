@@ -40,107 +40,25 @@ permalink: /30_number_theory/02_primes/01_primality_testing/
 
 ### Walkthrough 1: Trial Division
 
-```
-+-----------------------------------------------------------------+
-| PROBLEM: Is 97 prime?                                          |
-+-----------------------------------------------------------------+
-| STEP 1: Calculate bound                                        |
-|   √97 ≈ 9.85                                                   |
-|   Check divisors: 2, 3, 4, 5, 6, 7, 8, 9                       |
-|                                                                 |
-| STEP 2: Apply optimizations                                    |
-|   Skip even numbers after 2                                    |
-|   Actually check: 2, 3, 5, 7, 9                                |
-|                                                                 |
-|   Even better with 6k±1:                                       |
-|   Check: 2, 3, 5, 7 (only primes ≤ √97)                        |
-|                                                                 |
-| STEP 3: Test each divisor                                      |
-|                                                                 |
-|   97 ÷ 2 = 48.5     ✗ (not integer)                           |
-|   97 ÷ 3 = 32.33... ✗ (not integer)                           |
-|   97 ÷ 5 = 19.4     ✗ (not integer)                           |
-|   97 ÷ 7 = 13.86... ✗ (not integer)                           |
-|                                                                 |
-| RESULT: No divisors found → 97 is PRIME ✓                     |
-+-----------------------------------------------------------------+
+![Walkthrough 1: Trial Division](./images/walkthrough-1-trial-division.png)
 
-```
+
 
 ---
 
 ### Walkthrough 2: 6k±1 Pattern
 
-```
-+-----------------------------------------------------------------+
-| PATTERN: All primes > 3 are of form 6k±1                       |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Numbers by remainder when divided by 6:                         |
-|                                                                 |
-|   6k + 0:  6, 12, 18, 24, 30, ...  (divisible by 6)           |
-|   6k + 1:  7, 13, 19, 25, 31, ...  ← CANDIDATES               |
-|   6k + 2:  8, 14, 20, 26, 32, ...  (divisible by 2)           |
-|   6k + 3:  9, 15, 21, 27, 33, ...  (divisible by 3)           |
-|   6k + 4: 10, 16, 22, 28, 34, ...  (divisible by 2)           |
-|   6k + 5: 11, 17, 23, 29, 35, ...  ← CANDIDATES (= 6k-1)      |
-|                                                                 |
-| So we only need to check numbers at positions 5, 7, 11, 13...  |
-| Pattern: i, i+2, i+6, i+8, i+12, i+14, ... where i=5           |
-|          = 5, 7, 11, 13, 17, 19, 23, 25, ...                   |
-|                                                                 |
-| SAVINGS: Only check 1/3 of candidates!                         |
-|                                                                 |
-| Implementation: Start at 5, alternate +2 and +4                |
-|   for i in 5, 7, 11, 13, 17, 19, ...                           |
-|     check if n % i == 0 or n % (i+2) == 0                      |
-|     i += 6                                                      |
-+-----------------------------------------------------------------+
+![Walkthrough 2: 6k±1 Pattern](./images/walkthrough-2-6k1-pattern.png)
 
-```
+
 
 ---
 
 ### Walkthrough 3: Miller-Rabin Test
 
-```
-+-----------------------------------------------------------------+
-| PROBLEM: Test if n = 221 is prime using Miller-Rabin          |
-+-----------------------------------------------------------------+
-| STEP 1: Write n-1 = 2^r × d where d is odd                    |
-|                                                                 |
-|   n - 1 = 220 = 4 × 55 = 2² × 55                              |
-|   r = 2, d = 55                                                |
-|                                                                 |
-| STEP 2: Choose witness a = 174                                 |
-|                                                                 |
-|   Compute x = a^d mod n = 174^55 mod 221                       |
-|   x = 47                                                       |
-|                                                                 |
-| STEP 3: Check conditions                                       |
-|                                                                 |
-|   Is x = 1? No (x = 47)                                        |
-|   Is x = n-1 = 220? No                                         |
-|                                                                 |
-|   Square r-1 = 1 more time:                                    |
-|     x = 47² mod 221 = 2209 mod 221 = 220                       |
-|                                                                 |
-|   Is x = 220? Yes! ✓                                           |
-|                                                                 |
-| STEP 4: Try another witness a = 137                            |
-|                                                                 |
-|   x = 137^55 mod 221 = 188                                     |
-|   Is x = 1 or 220? No                                          |
-|                                                                 |
-|   x = 188² mod 221 = 35344 mod 221 = 205                       |
-|   Is x = 220? No                                               |
-|                                                                 |
-|   Neither condition met → 221 is COMPOSITE!                    |
-|                                                                 |
-| VERIFICATION: 221 = 13 × 17 ✓                                  |
-+-----------------------------------------------------------------+
+![Walkthrough 3: Miller-Rabin Test](./images/walkthrough-3-miller-rabin-test.png)
 
-```
+
 
 
 ## 🎯 At a Glance
