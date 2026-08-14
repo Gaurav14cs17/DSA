@@ -223,26 +223,12 @@ def longestCommonSubsequence(text1: str, text2: str) -> int:
 
 ## 📊 DP Pattern Decision
 
-```
-DP Problem
-    |
-    +-- Single sequence → 1D DP
-    |
-    +-- Two sequences → 2D DP (LCS, Edit Distance)
-    |
-    +-- Items with weight/value → Knapsack
-    |
-    +-- String matching → String DP
-    |
-    +-- Tree structure → Tree DP
-    |
-    +-- Multiple states (buy/sell) → State Machine
-    |
-    +-- Subset selection → Bitmask DP
-    |
-    +-- Counting with constraints → Digit DP
+<div align="center">
 
-```
+<img src="./images/dp-pattern-decision.png" alt="DP Pattern Decision" width="100%">
+
+</div>
+
 
 ---
 
