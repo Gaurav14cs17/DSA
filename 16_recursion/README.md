@@ -142,23 +142,12 @@ $$T(n) = T(n-1) + T(n-2) + \ldots$$
 
 ## 🎯 Recursion Types Overview
 
-```
-                           RECURSION TYPES
-                                 |
-        +------------------------+------------------------+
-        |                        |                        |
-   +----▼----+            +------▼------+           +-----▼-----+
-   | LINEAR  |            |    TREE     |           | ADVANCED  |
-   +----+----+            +------+------+           +-----+-----+
-        |                        |                        |
-   +----▼------------+    +------▼----------+      +------▼----------+
-   | • Factorial     |    | • Fibonacci     |      | • Mutual        |
-   | • String ops    |    | • Subset sum    |      | • Nested        |
-   | • Linked list   |    | • Permutations  |      | • Indirect      |
-   | • Tail recursion|    | • Combinations  |      | • Generative    |
-   +-----------------+    +-----------------+      +-----------------+
+<div align="center">
 
-```
+<img src="./images/recursion-types-overview.png" alt="Recursion Types Overview" width="100%">
+
+</div>
+
 
 ---
 
@@ -308,30 +297,12 @@ def power(x: float, n: int) -> float:
 
 ## 📊 Recursion Pattern Decision
 
-```
-Recursion Problem
-       |
-       +-- Single subproblem → Linear recursion O(n)
-       |   +-- Examples: factorial, linked list ops
-       |
-       +-- Two subproblems (same size) → Divide & Conquer
-       |   +-- Examples: merge sort, binary search
-       |
-       +-- Multiple overlapping subproblems → Add memoization
-       |   +-- Examples: Fibonacci, coin change
-       |
-       +-- Process string char by char → String recursion
-       |   +-- Examples: reverse, decode, palindrome
-       |
-       +-- Explore all possibilities → Backtracking
-       |   +-- Examples: permutations, subsets
-       |
-       +-- Functions call each other → Mutual recursion
-       |   +-- Examples: parser, state machine
-       |
-       +-- Deep recursion → Consider iterative + stack
+<div align="center">
 
-```
+<img src="./images/recursion-pattern-decision.png" alt="Recursion Pattern Decision" width="100%">
+
+</div>
+
 
 ---
 
