@@ -26,6 +26,18 @@ permalink: /01_arrays/
 
 ---
 
+
+## 📊 Visual Overview
+
+<div align="center">
+
+### Array Problem Given
+![Array Problem Given](./images/array-problem-given.png)
+
+</div>
+
+---
+
 ## 📊 Visual Overview
 
 ![Arrays Overview](./images/array-overview.png)
@@ -86,14 +98,9 @@ $$\boxed{\text{Address}(A[i]) = B + i \times S}$$
 
 **Derivation:**
 
-```
-Element 0: B + 0×S = B
-Element 1: B + 1×S = B + S  
-Element 2: B + 2×S = B + 2S
-...
-Element i: B + i×S
 
-```
+![1️⃣ Memory Address Calculation](./images/array-overview.png)
+
 
 **Time Complexity Proof:**
 
@@ -348,27 +355,9 @@ Each subfolder contains **complete mini-courses** with:
 ### Week 1-2: Foundations 🌱
 **Focus:** Basic Operations
 
-```
-Day 1-2: Two Pointers
-+- Read: 01_basic_operations/README.md (Two Pointers section)
-+- Watch: NeetCode Two Pointers video
-+- Solve: #26, #283, #88
 
-Day 3-4: Array Rotation
-+- Learn: Three Reversal Algorithm
-+- Understand: Mathematical proof
-+- Solve: #189, #27
+![Week 1-2: Foundations 🌱](./images/array-overview.png)
 
-Day 5-6: Dutch Flag
-+- Study: 3-way partitioning
-+- Practice: #75, #80
-+- Review: Invariant maintenance
-
-Day 7: Review & Practice
-+- Solve: 5 random easy problems
-+- Explain one algorithm to a friend
-
-```
 
 **Expected Outcome:** ✅ Comfortable with O(1) space algorithms
 
@@ -377,25 +366,9 @@ Day 7: Review & Practice
 ### Week 3-4: Intermediate 📈
 **Focus:** Subarray Problems
 
-```
-Day 1-3: Kadane's Algorithm
-+- Study: Maximum Subarray with proof
-+- Understand: When to restart vs extend
-+- Solve: #53, #121, #152
-+- Master: Maximum product variant
 
-Day 4-6: Prefix Sum + Hash
-+- Learn: Prefix sum technique
-+- Master: Subarray sum = k pattern
-+- Solve: #560, #974, #525
-+- Practice: 2D prefix sum #304
+![Week 3-4: Intermediate 📈](./images/array-overview.png)
 
-Day 7-8: Sliding Window
-+- Understand: Variable vs fixed window
-+- Solve: #209, #713, #1004
-+- Review: All patterns
-
-```
 
 **Expected Outcome:** ✅ Can solve 90% of medium array problems
 
@@ -404,26 +377,9 @@ Day 7-8: Sliding Window
 ### Week 5-6: Advanced 🚀
 **Focus:** Matrices & Intervals
 
-```
-Day 1-2: Matrix Transformations
-+- Learn: Rotation formulas
-+- Master: Transpose + Reverse
-+- Solve: #48, #54, #73
-+- Understand: Spiral traversal
 
-Day 3-4: Matrix Search
-+- Study: Binary search in 2D
-+- Master: Staircase algorithm
-+- Solve: #74, #240
-+- Practice: Set matrix zeroes
+![Week 5-6: Advanced 🚀](./images/array-overview.png)
 
-Day 5-7: Interval Problems
-+- Learn: Overlap conditions
-+- Master: Greedy interval selection
-+- Solve: #56, #57, #253, #435
-+- Understand: Line sweep
-
-```
 
 **Expected Outcome:** ✅ Ready for hard problems
 
@@ -529,33 +485,9 @@ Solve these first for maximum interview impact:
 
 Use this flowchart to quickly identify which technique to apply:
 
-```
-+-------------------------------------------------------------+
-|                    Array Problem Given                      |
-+-------------------------------+-----------------------------+
-                                |
-                +---------------+---------------+
-                |                               |
-        Is array sorted?                  Need range queries?
-                |                               |
-        +-------+-------+               +-------+-------+
-       YES             NO              YES             NO
-        |               |                |               |
-        |               |                |               |
-   Two Pointers    Is it about      Prefix Sum     Is it about
-   Binary Search   subarrays?           |          matrices?
-        |               |                |               |
-        |       +-------+-------+        |       +-------+-------+
-        |      YES             NO        |      YES             NO
-        |       |               |         |       |               |
-        |  Max/Min sum?   Intervals?     |   Rotation?    Intervals?
-        |       |               |         |       |               |
-        |   Kadane's       Sort by   2D Prefix  Transpose    Line Sweep
-        |   Sliding Wnd    end time   or Sum     + Reverse    Greedy
-        |       |               |         |       |               |
-        +-------+---------------+---------+-------+---------------+
 
-```
+![🎯 Pattern Recognition Flowchart](./images/pattern-recognition-flowchart.png)
+
 
 ---
 
@@ -729,16 +661,14 @@ Use this flowchart to quickly identify which technique to apply:
 
 ### Optimization Checklist
 
-```
-[ ] Can I use two pointers instead of nested loops?
-[ ] Would sorting help? (Cost: O(n log n))
-[ ] Can I use hash map for O(n) solution?
-[ ] Is there a mathematical formula?
-[ ] Can I preprocess with prefix sums?
-[ ] Is there a greedy approach?
-[ ] Can I use constant extra space?
+- [ ] Can I use two pointers instead of nested loops?
+- [ ] Would sorting help? (Cost: O(n log n))
+- [ ] Can I use hash map for O(n) solution?
+- [ ] Is there a mathematical formula?
+- [ ] Can I preprocess with prefix sums?
+- [ ] Is there a greedy approach?
+- [ ] Can I use constant extra space?
 
-```
 
 ---
 
