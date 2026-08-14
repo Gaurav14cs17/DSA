@@ -104,16 +104,7 @@ This increases matching size by 1.
 
 **Algorithm:**
 
-```
-1. Start with empty matching M = ∅
-
-2. For each unmatched vertex u in L:
-    3. Try to find augmenting path starting from u using DFS
-    4. If found, augment matching M
-
-5. Return M
-
-```
+![Hungarian Algorithm Steps](./images/hungarian-algorithm-steps.png)
 
 **Key Insight:** Each augmenting path increases matching size by 1.
 
@@ -155,236 +146,19 @@ $$\text{Maximum Matching} = \text{Minimum Vertex Cover}$$
 
 ### Check if Bipartite
 
-```python
-from collections import deque
-
-def is_bipartite(n, edges):
-    """
-    Check if graph is bipartite using BFS coloring.
-    
-    Args:
-        n: Number of vertices
-        edges: List of edges [[u, v], ...]
-    
-    Returns:
-        (is_bipartite, partition) where partition = (L, R)
-    """
-    graph = [[] for _ in range(n)]
-    for u, v in edges:
-        graph[u].append(v)
-        graph[v].append(u)
-    
-    color = [-1] * n
-    partition_L = []
-    partition_R = []
-    
-    for start in range(n):
-        if color[start] != -1:
-            continue
-        
-        queue = deque([start])
-        color[start] = 0
-        
-        while queue:
-            u = queue.popleft()
-            
-            for v in graph[u]:
-                if color[v] == -1:
-                    color[v] = 1 - color[u]
-                    queue.append(v)
-                elif color[v] == color[u]:
-                    return False, ([], [])
-    
-    for i in range(n):
-        if color[i] == 0:
-            partition_L.append(i)
-        else:
-            partition_R.append(i)
-    
-    return True, (partition_L, partition_R)
-
-```
+![Check if Bipartite Visual Walkthrough](./images/bipartite-check-visual.png)
 
 ### Maximum Bipartite Matching (Hungarian/Kuhn)
 
-```python
-def max_bipartite_matching(L, R, edges):
-    """
-    Find maximum matching in bipartite graph.
-    
-    Args:
-        L: Left partition vertices (list)
-        R: Right partition vertices (list)
-        edges: List of edges [[u, v], ...] where u in L, v in R
-    
-    Returns:
-        Dictionary {left_vertex: right_vertex} representing matching
-    """
-    # Build adjacency list
-    graph = {u: [] for u in L}
-    for u, v in edges:
-        if u in graph:
-            graph[u].append(v)
-    
-    match_L = {}  # L -> R
-    match_R = {}  # R -> L
-    
-    def dfs(u, visited):
-        """Try to find augmenting path from u."""
-        for v in graph[u]:
-            if v in visited:
-                continue
-            visited.add(v)
-            
-            # If v is unmatched or we can find augmenting path from match[v]
-            if v not in match_R or dfs(match_R[v], visited):
-                match_L[u] = v
-                match_R[v] = u
-                return True
-        
-        return False
-    
-    # Try to find augmenting path from each vertex in L
-    for u in L:
-        visited = set()
-        dfs(u, visited)
-    
-    return match_L
-
-# Example usage
-L = [0, 1, 2]
-R = [3, 4, 5]
-edges = [[0,3], [0,4], [1,4], [1,5], [2,5]]
-matching = max_bipartite_matching(L, R, edges)
-print(f"Maximum Matching: {matching}")
-print(f"Matching size: {len(matching)}")
-
-```
+![Maximum Bipartite Matching Visual Walkthrough](./images/max-bipartite-matching-visual.png)
 
 ### Hopcroft-Karp Algorithm
 
-```python
-from collections import deque
-
-def hopcroft_karp(L, R, edges):
-    """
-    Maximum bipartite matching using Hopcroft-Karp algorithm.
-    Time: O(E√V)
-    """
-    graph = {u: [] for u in L}
-    for u, v in edges:
-        if u in graph:
-            graph[u].append(v)
-    
-    match_L = {}
-    match_R = {}
-    
-    def bfs():
-        """Find shortest augmenting paths using BFS."""
-        queue = deque()
-        dist = {}
-        
-        # Start from all unmatched vertices in L
-        for u in L:
-            if u not in match_L:
-                dist[u] = 0
-                queue.append(u)
-        
-        dist[None] = float('inf')
-        
-        while queue:
-            u = queue.popleft()
-            if u is not None and dist[u] < dist[None]:
-                for v in graph[u]:
-                    w = match_R.get(v)
-                    if w not in dist:
-                        dist[w] = dist[u] + 1
-                        queue.append(w)
-        
-        return dist[None] != float('inf'), dist
-    
-    def dfs(u, dist):
-        """Find augmenting path using DFS."""
-        if u is None:
-            return True
-        
-        for v in graph[u]:
-            w = match_R.get(v)
-            if w not in dist or dist[w] != dist[u] + 1:
-                continue
-            
-            if dfs(w, dist):
-                match_L[u] = v
-                match_R[v] = u
-                return True
-        
-        dist[u] = float('inf')
-        return False
-    
-    # Repeatedly find and augment shortest paths
-    while True:
-        found, dist = bfs()
-        if not found:
-            break
-        
-        for u in L:
-            if u not in match_L:
-                dfs(u, dist)
-    
-    return match_L
-
-```
+![Hopcroft-Karp Algorithm Visual Walkthrough](./images/hopcroft-karp-visual.png)
 
 ### Minimum Vertex Cover (König's Theorem)
 
-```python
-def min_vertex_cover(L, R, edges):
-    """
-    Find minimum vertex cover in bipartite graph.
-    Uses König's theorem: min vertex cover = max matching
-    """
-    # Find maximum matching
-    matching = max_bipartite_matching(L, R, edges)
-    
-    # Build residual graph
-    graph = {u: [] for u in L}
-    for u, v in edges:
-        if u in graph:
-            graph[u].append(v)
-    
-    # Find vertices reachable from unmatched L vertices via alternating paths
-    matched_L = set(matching.keys())
-    unmatched_L = set(L) - matched_L
-    
-    visited_L = set()
-    visited_R = set()
-    
-    def dfs(u, from_R):
-        if from_R:
-            if u in visited_L:
-                return
-            visited_L.add(u)
-            # From R vertex, follow matching edge to L
-            for l in L:
-                if matching.get(l) == u:
-                    dfs(l, False)
-        else:
-            # From L vertex, follow non-matching edges to R
-            for v in graph[u]:
-                if v not in visited_R:
-                    visited_R.add(v)
-                    dfs(v, True)
-    
-    # Start DFS from unmatched L vertices
-    for u in unmatched_L:
-        dfs(u, False)
-    
-    # Vertex cover = (L \ visited_L) ∪ visited_R
-    cover = (set(L) - visited_L) | visited_R
-    
-    return list(cover)
-
-```
+![Minimum Vertex Cover Visual Walkthrough](./images/min-vertex-cover-visual.png)
 
 ---
 
