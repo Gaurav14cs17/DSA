@@ -505,7 +505,7 @@ $$Optimal $k$: $k^* = \frac{m}{n} \ln 2 \approx 0.693 \frac{m}{n}$
 
 ---
 
-## 🎯 LeetCode Problems
+## 🏆 LeetCode Problems
 
 | # | Problem | Difficulty | Pattern |
 |:-:|---------|-----------|---------|
@@ -543,7 +543,7 @@ $$Optimal $k$: $k^* = \frac{m}{n} \ln 2 \approx 0.693 \frac{m}{n}$
 
 ---
 
-## 📚 Resources
+## 📚 References & Learning Resources
 
 | Resource | Link |
 |----------|------|
