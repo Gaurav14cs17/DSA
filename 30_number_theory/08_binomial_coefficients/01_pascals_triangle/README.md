@@ -45,7 +45,6 @@ permalink: /30_number_theory/08_binomial_coefficients/01_pascals_triangle/
 | **In one line** | The Foundation of Combinatorics |
 | **Difficulty** | Easy |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
