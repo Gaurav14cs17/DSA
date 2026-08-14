@@ -40,7 +40,6 @@ permalink: /33_matrix_exponentiation/
 ---
 
 ### Walkthrough 1: Fibonacci Matrix Exponentiation
-
 <div align="center">
 
 ![Fibonacci Matrix Exponentiation](./images/fibonacci-matrix-walkthrough.png)
@@ -51,7 +50,6 @@ permalink: /33_matrix_exponentiation/
 ---
 
 ### Walkthrough 2: Counting Paths in Graph
-
 <div align="center">
 
 ![Counting Paths in Graph](./images/matrix-path-counting-walkthrough.png)
@@ -69,7 +67,6 @@ permalink: /33_matrix_exponentiation/
 | **Subtopics** | 2 |
 | **Problems** | 25+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 
