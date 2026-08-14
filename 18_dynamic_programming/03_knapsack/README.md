@@ -226,11 +226,12 @@ def lastStoneWeightII(stones: list[int]) -> int:
 
 ## 📊 Knapsack Pattern
 
-```
-0/1 Knapsack: for j in range(target, num-1, -1)  # Reverse
-Unbounded:    for j in range(num, target+1)      # Forward
+<div align="center">
 
-```
+<img src="./images/knapsack-loop-direction.png" alt="Knapsack Loop Direction" width="100%">
+
+</div>
+
 
 ---
 
