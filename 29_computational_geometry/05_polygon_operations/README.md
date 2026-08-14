@@ -37,7 +37,6 @@ nav_order: 5
 | **Typical space** | O(n) |
 | **Topics** | Area, Perimeter, Triangulation, Boolean Operations |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 ## 🧭 Navigation
 
