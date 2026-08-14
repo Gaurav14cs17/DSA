@@ -13,6 +13,9 @@ permalink: /30_number_theory/09_catalan_numbers/
 
 ### *The Magic Sequence That Counts Everything*
 
+![*The Magic Sequence That Counts Everything*](./images/the-magic-sequence-that-counts-everything.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-15+-blue?style=for-the-badge" alt="Problems">
@@ -28,25 +31,8 @@ permalink: /30_number_theory/09_catalan_numbers/
 
 ## 📊 Visual Overview
 
-```
-+-----------------------------------------------------------------+
-| CATALAN NUMBERS AND BST COUNTING                               |
-+-----------------------------------------------------------------+
-|                                                                 |
-| n = 3: C₃ = 5 unique BSTs with nodes {1, 2, 3}                |
-|                                                                 |
-|     1         1           2           3       3                 |
-|      \         \         / \         /       /                  |
-|       2         3       1   3       2       1                   |
-|        \       /                   /         \                  |
-|         3     2                   1           2                 |
-|                                                                 |
-| Recurrence: C₃ = C₀×C₂ + C₁×C₁ + C₂×C₀                        |
-|                = 1×2 + 1×1 + 2×1                               |
-|                = 2 + 1 + 2 = 5 ✓                               |
-+-----------------------------------------------------------------+
+![Catalan Numbers Overview](./images/catalan-numbers-overview.png)
 
-```
 
 ---
 
