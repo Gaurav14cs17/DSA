@@ -22,23 +22,6 @@ permalink: /21_bit_manipulation/01_basic_operations/
 
 ---
 
-## 📊 Visual Overview
-
-<div align="center">
-
-### Brian Kernighan's Algorithm
-<img src="./images/brian-kernighan.png" alt="Brian Kernighan Algorithm" width="100%">
-
-### Power of Two Detection
-<img src="./images/power-of-two.png" alt="Power of Two Detection" width="100%">
-
-### Reverse Bits
-<img src="./images/reverse-bits.png" alt="Reverse Bits Algorithm" width="100%">
-
-</div>
-
----
-
 ## 🎯 At a Glance
 - Count set bits using Brian Kernighan's Algorithm
 
@@ -53,7 +36,7 @@ permalink: /21_bit_manipulation/01_basic_operations/
 ---
 
 {: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+> **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 ---
 
@@ -351,6 +334,35 @@ Result: 1 << 2 = 4 ✓
 
 ---
 
+## 📊 Visual Overview
+
+<div align="center">
+
+### Brian Kernighan's Algorithm
+<img src="./images/brian-kernighan.png" alt="Brian Kernighan Algorithm" width="100%">
+
+### Power of Two Detection
+<img src="./images/power-of-two.png" alt="Power of Two Detection" width="100%">
+
+### Reverse Bits
+<img src="./images/reverse-bits.png" alt="Reverse Bits Algorithm" width="100%">
+
+</div>
+
+---
+
+## 🎨 Pattern Visualization
+
+### Brian Kernighan Flow
+
+![Brian Kernighan Algorithm](./images/brian-kernighan.png)
+
+### Power Detection Decision Tree
+
+![Power of Two Detection](./images/power-of-two.png)
+
+---
+
 ## 💻 Code Implementations
 
 ```python
@@ -538,58 +550,6 @@ def rangeBitwiseAndAlt(left: int, right: int) -> int:
     while left < right:
         right &= (right - 1)  # Clear lowest set bit
     return right
-
-```
-
----
-
-## 🎨 Pattern Visualization
-
-### Brian Kernighan Flow
-
-```
-+--------------------------------------------------------+
-|                 BRIAN KERNIGHAN                        |
-+--------------------------------------------------------+
-|                                                        |
-|     n = 52 (110100)                                   |
-|         |                                              |
-|         ▼                                              |
-|     +--------------+                                  |
-|     | n & (n - 1)  | --→ 48 (110000), count = 1      |
-|     +--------------+                                  |
-|         |                                              |
-|         ▼                                              |
-|     +--------------+                                  |
-|     | n & (n - 1)  | --→ 32 (100000), count = 2      |
-|     +--------------+                                  |
-|         |                                              |
-|         ▼                                              |
-|     +--------------+                                  |
-|     | n & (n - 1)  | --→ 0 (000000), count = 3       |
-|     +--------------+                                  |
-|         |                                              |
-|         ▼                                              |
-|     Return 3 ✓                                        |
-|                                                        |
-+--------------------------------------------------------+
-
-```
-
-### Power Detection Decision Tree
-
-```
-              Is n a power of?
-                    |
-        +-----------+-----------+
-        ▼           ▼           ▼
-    Power of 2  Power of 4  Power of 8
-        |           |           |
-        ▼           ▼           ▼
-    n & (n-1)   (Power of 2)  (Power of 2)
-      == 0           AND         AND
-        |      n & 0x55555555  n & 0x49249249
-        |         == n           == n
 
 ```
 
