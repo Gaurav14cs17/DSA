@@ -35,7 +35,6 @@ permalink: /09_heaps/
 | **Peek** | O(1) · **Insert / extract** | O(log n) · **Build heap** | O(n) |
 | **Python tip** | `heapq` is min-heap; negate values for max-heap |
 
-{: .highlight }
 > **Interview lens:** If the problem says *k largest*, *k smallest*, *merge k lists*, *running median*, or *next task by priority* — think heap first.
 
 ---
@@ -159,7 +158,6 @@ Each element: insert once, extract once → 2 × O(log k).
 ## 🎯 Key Patterns
 
 ### Min-Heap in Python
-
 ```python
 import heapq
 
@@ -174,7 +172,6 @@ peek = heap[0]  # 5 (next minimum)
 ```
 
 ### Max-Heap (Negate Values)
-
 ```python
 # Max-heap using negation
 max_heap = []
@@ -186,7 +183,6 @@ max_val = -heapq.heappop(max_heap)  # 7
 ```
 
 ### Heap with Custom Key
-
 ```python
 # Heap of tuples (priority, value)
 heap = []
@@ -197,7 +193,7 @@ heapq.heappush(heap, (3, "task C"))
 priority, task = heapq.heappop(heap)  # (1, "task A")
 ```
 
-![Heap with Custom Key](./images/heap-overview.png)
+### Pattern Decision Tree
 
 ```text
 Heap Problem
@@ -205,10 +201,8 @@ Heap Problem
  Top K    Merge K    Two Heaps
 ```
 
-![📊 Heap Pattern Decision](./images/heap-overview.png)
 
 ### Pattern Checklist
-
 - [ ] Can I use heap instead of sorting? (O(n log k) vs O(n log n))
 - [ ] Is this a Top K problem? (Use opposite heap!)
 - [ ] Is this a merge K problem? (Heap of k pointers)
@@ -222,14 +216,12 @@ Heap Problem
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 703 | [Kth Largest Element in Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) | Min-Heap | O(log k) | O(k) |
 | 1046 | [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/) | Max-Heap | O(n log n) | O(n) |
 
 ### 🟡 Medium
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 215 | [Kth Largest Element in Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Heap/Quickselect | O(n) avg | O(1) |
@@ -239,7 +231,6 @@ Heap Problem
 | 23 | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Min-Heap | O(n log k) | O(k) |
 
 ### 🔴 Hard
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 502 | [IPO](https://leetcode.com/problems/ipo/) | Two Heaps | O(n log n) | O(n) |
@@ -249,7 +240,6 @@ Heap Problem
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
-
 | Resource | Description | Link |
 |----------|-------------|------|
 | **Binary Heap** | Wikipedia overview | [Heap (data structure)](https://en.wikipedia.org/wiki/Heap_(data_structure)) |
@@ -257,7 +247,6 @@ Heap Problem
 | **LeetCode Explore** | Heap card | [Explore Card](https://leetcode.com/explore/learn/card/heap/) |
 
 ### 📝 Practice
-
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Heap tag | [Problems](https://leetcode.com/tag/heap-priority-queue/) |
@@ -285,7 +274,6 @@ Heap Problem
 <div align="center">
 
 ### 🌟 If this helped you, give it a ⭐ on GitHub! 🌟
-
 **Made with ❤️ for the coding community by [Gaurav Goswami](https://github.com/Gaurav14cs17)**
 
 [⬅️ Previous: BST](../08_binary_search_trees/README.md) | [🏠 Home](../README.md) | [Next: Graphs ➡️](../10_graphs/README.md)
