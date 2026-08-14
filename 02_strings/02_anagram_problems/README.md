@@ -45,7 +45,6 @@ permalink: /02_strings/02_anagram_problems/
 
 ## 📐 Mathematical Foundation
 ### 1️⃣ Anagram Definition
-
 **Definition:** Two strings $S$ and $T$ are anagrams if:
 
 $$\boxed{\forall c \in \Sigma: \text{count}_S(c) = \text{count}_T(c)}$$
@@ -61,7 +60,6 @@ $$\boxed{\forall c \in \Sigma: \text{count}_S(c) = \text{count}_T(c)}$$
 ---
 
 ### 2️⃣ Frequency Vector Representation
-
 For lowercase alphabet ($|\Sigma| = 26$):
 
 $$\vec{f}(S) = [f_a, f_b, \ldots, f_z] \in \mathbb{Z}^{26}$$
@@ -73,7 +71,6 @@ $$H(S) = \text{tuple}(\text{sorted}(S)) \quad \text{or} \quad H(S) = \text{tuple
 ---
 
 ### 3️⃣ Sliding Window for Anagrams
-
 **Problem:** Find all anagrams of $P$ in $S$.
 
 **Window Invariant:**
@@ -90,7 +87,6 @@ $$\vec{f}_{\text{window}}[S[i]] += 1 \quad \text{(add right)}
 ---
 
 ### 4️⃣ Minimum Window Substring
-
 **Problem:** Find minimum window in $S$ containing all characters of $T$.
 
 **Condition:**
@@ -223,14 +219,12 @@ def minWindow(s: str, t: str) -> str:
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
-
 | # | Problem | Technique | Time | Space |
 |:-:|---------|-----------|:----:|:-----:|
 | 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Counter | O(n) | O(1) |
 | 383 | [Ransom Note](https://leetcode.com/problems/ransom-note/) | Counter | O(n) | O(1) |
 
 ### 🟡 Medium
-
 | # | Problem | Technique | Time | Space |
 |:-:|---------|-----------|:----:|:-----:|
 | 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | Hash + Sort | O(nk log k) | O(nk) |
@@ -238,7 +232,6 @@ def minWindow(s: str, t: str) -> str:
 | 567 | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | Sliding Window | O(n) | O(1) |
 
 ### 🔴 Hard
-
 | # | Problem | Technique | Time | Space |
 |:-:|---------|-----------|:----:|:-----:|
 | 76 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Sliding Window | O(n) | O(k) |
@@ -267,7 +260,6 @@ def minWindow(s: str, t: str) -> str:
 ## 🎓 Pattern Recognition Guide
 
 ### When to Use Each Approach
-
 | Problem Type | Technique | Time | Space |
 |-------------|-----------|:----:|:-----:|
 | **Check if anagram** | Sort or Count | O(n log n) or O(n) | O(1) or O(n) |
@@ -281,7 +273,6 @@ def minWindow(s: str, t: str) -> str:
 ## 🧮 Mathematical Deep Dive
 
 ### Why Sorting Works for Anagrams
-
 **Theorem:** Two strings are anagrams ⟺ their sorted forms are identical.
 
 **Proof:**
@@ -291,7 +282,6 @@ def minWindow(s: str, t: str) -> str:
 - (⇐) If sorted forms equal, same chars at same positions → same frequencies → anagrams ∎
 
 ### Sliding Window Correctness
-
 **Invariant:** Window of size |p| contains anagram ⟺ window frequency = p frequency
 
 **Proof of O(n) time:**
@@ -309,7 +299,6 @@ def minWindow(s: str, t: str) -> str:
 ## 🎯 Complexity Comparison
 
 ### Anagram Detection Methods
-
 | Method | Time | Space | Pros | Cons |
 |--------|:----:|:-----:|------|------|
 | **Sort both** | O(n log n) | O(n) | Simple | Slower |
@@ -319,7 +308,6 @@ def minWindow(s: str, t: str) -> str:
 *O(1) for fixed alphabet size (26 letters)
 
 ### Group Anagrams Methods
-
 | Method | Time | Space | Hash Key |
 |--------|:----:|:-----:|----------|
 | **Sort as key** | O(n·k log k) | O(nk) | `tuple(sorted(s))` |
@@ -331,7 +319,6 @@ def minWindow(s: str, t: str) -> str:
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
-
 | Resource | Description | Link |
 |----------|-------------|------|
 | **Anagram Algorithms** | Complete guide | [GeeksforGeeks](https://www.geeksforgeeks.org/check-whether-two-strings-are-anagram-of-each-other/) |
@@ -340,7 +327,6 @@ def minWindow(s: str, t: str) -> str:
 | **Permutation vs Anagram** | Key differences | [StackOverflow](https://stackoverflow.com/questions/6470089/what-is-the-difference-between-permutation-and-anagram) |
 
 ### 🎥 Video Tutorials
-
 | Resource | Topic | Link |
 |----------|-------|------|
 | **NeetCode** | Valid anagram explained | [YouTube](https://www.youtube.com/watch?v=9UtInBqnCgA) |
@@ -350,7 +336,6 @@ def minWindow(s: str, t: str) -> str:
 | **Tushar Roy** | Sliding window technique | [YouTube](https://www.youtube.com/watch?v=jM2dhDPYMQM) |
 
 ### 📝 Interactive Practice
-
 | Platform | Problem Set | Link |
 |----------|-------------|------|
 | **LeetCode** | Sliding window tag | [Problems](https://leetcode.com/tag/sliding-window/) |
@@ -359,7 +344,6 @@ def minWindow(s: str, t: str) -> str:
 | **CodeSignal** | Anagram challenges | [Arcade](https://app.codesignal.com/) |
 
 ### 🔬 Advanced Topics
-
 | Topic | Description | Link |
 |-------|-------------|------|
 | **Rolling Hash** | For fast string comparison | [CP-Algorithms](https://cp-algorithms.com/string/string-hashing.html) |
@@ -367,7 +351,6 @@ def minWindow(s: str, t: str) -> str:
 | **Perfect Hashing** | Anagram detection in O(1) | [Wikipedia](https://en.wikipedia.org/wiki/Perfect_hash_function) |
 
 ### 🎯 Problem Collections
-
 | Collection | Focus | Link |
 |-----------|-------|------|
 | **LeetCode Patterns** | Sliding window section | [Guide](https://seanprashad.com/leetcode-patterns/) |
@@ -379,7 +362,6 @@ def minWindow(s: str, t: str) -> str:
 ## 🎯 Practice Roadmap
 
 ### Beginner Level
-
 1. **Valid Anagram** (#242) - Learn frequency counting
 
 2. **Ransom Note** (#383) - Apply same concept
@@ -387,7 +369,6 @@ def minWindow(s: str, t: str) -> str:
 3. **Group Anagrams** (#49) - Use hash map
 
 ### Intermediate Level
-
 4. **Find All Anagrams** (#438) - Master sliding window
 
 5. **Permutation in String** (#567) - Similar pattern
@@ -395,7 +376,6 @@ def minWindow(s: str, t: str) -> str:
 6. **Minimum Window** (#76) - Advanced window
 
 ### Pro Tips
-
 - Start with fixed window problems (#438, #567)
 
 - Then move to variable window (#76)
@@ -423,7 +403,6 @@ A: Permutation = all possible arrangements. Anagram = specific arrangement that 
 <div align="center">
 
 ### 🧠 Sliding Window = The Key Pattern
-
 *Master the window technique here, use it everywhere!*
 
 **Made with ❤️ by [Gaurav Goswami](https://github.com/Gaurav14cs17)**
