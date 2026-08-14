@@ -13,7 +13,6 @@ permalink: /09_heaps/04_two_heaps/
 ### *⚖️ Two Heaps Pattern*
 
 
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Hard-red?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-6+-blue?style=for-the-badge" alt="Problems">
@@ -74,7 +73,6 @@ $$|left| = |right| \text{ or } |left| = |right| + 1
 
 $$\text{median} = \begin{cases}
 \max(left) & \text{if } |left| > |right| \\
-\frac{\max(left) + \min(right)}{2} & \text{if } |left| = |right|
 \end{cases}$$
 
 ---
@@ -83,14 +81,12 @@ $$\text{median} = \begin{cases}
 
 After insertion, if heaps are unbalanced:
 
-```
 If |left| > |right| + 1:
     Move max(left) to right
 
 If |right| > |left|:
     Move min(right) to left
 
-```
 
 ---
 
@@ -238,34 +234,27 @@ def medianSlidingWindow(nums: list[int], k: int) -> list[float]:
     
     return result
 
-```
 
+![💻 Code Implementations](./image/two_heaps_pattern.png)
+
+Need dynamic median/partition?
+           |
 ---
 
 ## 🏆 LeetCode Problems
+
+### 🟡 Medium
+
+| # | Problem | Pattern | Time | Space |
+|:-:|---------|---------|:----:|:-----:|
+| 295 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | Two Heaps | O(log n) | O(n) |
+| 480 | [Sliding Window Median](https://leetcode.com/problems/sliding-window-median/) | Two Heaps | O(n log k) | O(k) |
 
 ### 🔴 Hard
 
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
-| 295 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | Two Heaps | O(log n) | O(n) |
-| 480 | [Sliding Window Median](https://leetcode.com/problems/sliding-window-median/) | Two Heaps + Lazy Delete | O(n log k) | O(k) |
 | 502 | [IPO](https://leetcode.com/problems/ipo/) | Two Heaps | O(n log n) | O(n) |
-
----
-
-## 📊 Two Heaps Pattern
-
-```
-Need dynamic median/partition?
-           |
-           +-- Stream of numbers → Two Heaps
-           |
-           +-- Sliding window → Two Heaps + Lazy Delete
-           |
-           +-- Maximize with constraints → Two Heaps (available/unavailable)
-
-```
 
 ---
 
