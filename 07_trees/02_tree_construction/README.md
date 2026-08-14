@@ -13,8 +13,6 @@ permalink: /07_trees/02_tree_construction/
 ### *Tree Construction*
 
 
-
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-yellow?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8+-blue?style=for-the-badge" alt="Problems">
@@ -24,133 +22,6 @@ permalink: /07_trees/02_tree_construction/
 
 ---
 
-## 📊 Visual Overview
-
-<div align="center">
-
-![Tree Construction Diagram](./images/tree-construction.png)
-
-*Tree Construction Diagram*
-
-</div>
-
----
-
-### Construct from Preorder + Inorder (#105)
-
-```
-Preorder: [3, 9, 20, 15, 7]
-Inorder:  [9, 3, 15, 20, 7]
-
-Step 1: Preorder[0] = 3 is root
-Find 3 in inorder → index 1
-
-Inorder splits:
-Left subtree:  [9]       (index 0-0)
-Right subtree: [15,20,7] (index 2-4)
-
-      3
-     / \
-    ?   ?
-
-Step 2: Build left subtree
-Preorder: [9]
-Inorder:  [9]
-Root = 9 (leaf)
-
-      3
-     / \
-    9   ?
-
-Step 3: Build right subtree
-Preorder: [20, 15, 7]
-Inorder:  [15, 20, 7]
-Root = 20, find in inorder → index 1
-
-      3
-     / \
-    9  20
-      /  \
-     ?    ?
-
-Step 4: Build 20's children
-Left:  preorder=[15], inorder=[15] → 15
-Right: preorder=[7],  inorder=[7]  → 7
-
-Final tree:
-      3
-     / \
-    9  20
-      /  \
-     15   7
-
-```
-
-### Catalan Number - Count Unique BSTs (#96)
-
-```
-n = 3, find C₃
-
-For each i as root (0 ≤ i < n):
-  Left subtree: i nodes → Cᵢ ways
-  Right subtree: (n-1-i) nodes → Cₙ₋₁₋ᵢ ways
-  Total: Cᵢ × Cₙ₋₁₋ᵢ
-
-C₃ = C₀×C₂ + C₁×C₁ + C₂×C₀
-   = 1×2 + 1×1 + 2×1
-   = 2 + 1 + 2
-   = 5
-
-5 unique structures:
-
-1.  1         2.    1        3.    2        4.    3        5.    3
-     \             \            /  \            /              /
-      2             3          1    3          1             2
-       \           /                          /               /
-        3         2                          2               1
-
-```
-
-### Serialize/Deserialize (#297)
-
-```
-Original tree:
-      1
-     / \
-    2   3
-       / \
-      4   5
-
-Preorder serialization with # for null:
-[1, 2, #, #, 3, 4, #, #, 5, #, #]
-
-Deserialization (consume one by one):
-val=1 → create node(1)
-  left = deserialize()
-    val=2 → create node(2)
-      left = deserialize()
-        val=# → null
-      right = deserialize()
-        val=# → null
-    return node(2)
-  right = deserialize()
-    val=3 → create node(3)
-      left = deserialize()
-        val=4 → create node(4)
-          left = # → null
-          right = # → null
-        return node(4)
-      right = deserialize()
-        val=5 → create node(5)
-          left = # → null
-          right = # → null
-        return node(5)
-    return node(3)
-return node(1)
-
-```
-
-
 ## 🎯 At a Glance
 
 | | |
@@ -159,7 +30,7 @@ return node(1)
 | **Problems** | 8+ |
 
 {: .highlight }
-> **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
+> **How to use this page:** Scan **At a Glance**, work through theory → visuals → code.
 
 
 ## 🧭 Navigation
@@ -192,11 +63,9 @@ return node(1)
 
 **Recurrence:**
 
-```
 preorder = [root] + preorder(left) + preorder(right)
 inorder  = inorder(left) + [root] + inorder(right)
 
-```
 
 **Time:** O(n) with hash map for root lookup.
 
@@ -242,7 +111,6 @@ Use "#" for null nodes.
 
 **Example:**
 
-```
      1
     / \
    2   3
@@ -251,8 +119,65 @@ Use "#" for null nodes.
 
 Serialized: "1,2,#,#,3,4,#,#,5,#,#"
 
-```
 
+## 📊 Visual Overview
+
+<div align="center">
+
+![Tree Construction Diagram](./images/tree-construction.png)
+
+*Tree Construction Diagram*
+
+</div>
+
+---
+
+### Construct from Preorder + Inorder (#105)
+
+
+### Catalan Number - Count Unique BSTs (#96)
+
+
+![Catalan Number - Count Unique BSTs (#96)](./images/tree-construction.png)
+
+
+### Serialize/Deserialize (#297)
+
+Original tree:
+      1
+     / \
+    2   3
+       / \
+      4   5
+
+Preorder serialization with # for null:
+[1, 2, #, #, 3, 4, #, #, 5, #, #]
+
+Deserialization (consume one by one):
+val=1 → create node(1)
+  left = deserialize()
+    val=2 → create node(2)
+      left = deserialize()
+        val=# → null
+      right = deserialize()
+        val=# → null
+    return node(2)
+  right = deserialize()
+    val=3 → create node(3)
+      left = deserialize()
+        val=4 → create node(4)
+          left = # → null
+          right = # → null
+        return node(4)
+      right = deserialize()
+        val=5 → create node(5)
+          left = # → null
+          right = # → null
+        return node(5)
+    return node(3)
+return node(1)
+
+---
 
 ## 💻 Code Implementations
 
@@ -409,8 +334,6 @@ class Codec:
             return node
         
         return build()
-
-```
 
 
 ## 🏆 LeetCode Problems
@@ -580,19 +503,6 @@ A: Can't for general binary tree! BST can use preorder only (BST property helps)
 
 ---
 
----
-
-## 🧭 Navigation
-
-| ⬅️ Previous | 📂 Current | ➡️ Next |
-|:------------|:----------:|--------:|
-| [← 01. Tree Traversal](../01_tree_traversal/README.md) | **02. Tree Construction** | [03. Tree Properties →](../03_tree_properties/README.md) |
-
----
-
-## 📐 Mathematical Foundation
-### 1️⃣ Unique Binary Tree from Traversals
-
 **Theorem:** A binary tree is uniquely determined by:
 
 - Preorder + Inorder
@@ -613,57 +523,13 @@ A: Can't for general binary tree! BST can use preorder only (BST property helps)
 
 **Recurrence:**
 
-```
+
 preorder = [root] + preorder(left) + preorder(right)
 inorder  = inorder(left) + [root] + inorder(right)
 
-```
 
-**Time:** O(n) with hash map for root lookup.
+![2️⃣ Construction from Preorder + Inorder](./images/tree-construction.png)
 
----
-
-### 3️⃣ Construction from Postorder + Inorder
-
-**Key Insight:**
-
-- Postorder[-1] = root
-
-- Find root in inorder → splits left and right subtrees
-
-**Process right subtree before left** (postorder is LRN).
-
----
-
-### 4️⃣ Catalan Number - BST Count
-
-Number of structurally unique BSTs with $n$ nodes:
-
-$$\boxed{C_n = \frac{1}{n+1}\binom{2n}{n} = \frac{(2n)!}{(n+1)!n!}}$$
-
-**Recurrence:**
-
-$$C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}$$
-
-**Interpretation:** Choose root $i$, left subtree has $i$ nodes, right has $n-1-i$.
-
-| n | 0 | 1 | 2 | 3 | 4 | 5 |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| $C_n$ | 1 | 1 | 2 | 5 | 14 | 42 |
-
----
-
-### 5️⃣ Serialization
-
-**Preorder with Null Markers:**
-
-$$\text{serialize}(T) = \text{val} + \text{serialize}(T_L) + \text{serialize}(T_R)$$
-
-Use "#" for null nodes.
-
-**Example:**
-
-```
      1
     / \
    2   3
@@ -672,7 +538,6 @@ Use "#" for null nodes.
 
 Serialized: "1,2,#,#,3,4,#,#,5,#,#"
 
-```
 
 ---
 
@@ -832,7 +697,6 @@ class Codec:
         
         return build()
 
-```
 
 ---
 
