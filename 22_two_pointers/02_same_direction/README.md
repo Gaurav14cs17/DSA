@@ -37,64 +37,15 @@ permalink: /22_two_pointers/02_same_direction/
 
 ### Fast-Slow Pointer Model
 
-```
-+-------------------------------------------------------------+
-|           SAME DIRECTION POINTER MODEL                      |
-+-------------------------------------------------------------+
-|                                                             |
-|   Array: [a, b, c, d, e, f, g, h, i, j]                    |
-|                                                             |
-|   Phase 1: Initial                                          |
-|   [a, b, c, d, e, f, g, h, i, j]                           |
-|    ↑                                                        |
-|   S,F                                                       |
-|                                                             |
-|   Phase 2: Processing                                       |
-|   [✓, ✓, ✓, _, _, _, g, h, i, j]                          |
-|             ↑        ↑                                      |
-|             S        F                                      |
-|   Valid     |        |                                      |
-|   result ---+        +-- Exploring                         |
-|                                                             |
-|   Phase 3: Complete                                         |
-|   [✓, ✓, ✓, ✓, ✓, _, _, _, _, _]                          |
-|                   ↑                 ↑                       |
-|                   S                 F (done)                |
-|                                                             |
-|   Return S = length of valid result                        |
-|                                                             |
-+-------------------------------------------------------------+
+![Fast-Slow Pointer Model](./images/fast-slow-pointer-model.png)
 
-```
+
 
 ### Dutch National Flag Regions
 
-```
-+-------------------------------------------------------------+
-|                 DUTCH NATIONAL FLAG                         |
-+-------------------------------------------------------------+
-|                                                             |
-|   Array State:                                              |
-|                                                             |
-|   [0, 0, 0 | 1, 1, 1 | ?, ?, ? | 2, 2, 2]                  |
-|    _____/   _____/   _____/   _____/                   |
-|      0s        1s      unknown     2s                       |
-|                                                             |
-|   Pointers:                                                 |
-|            ↑         ↑         ↑                            |
-|           low       mid       high                          |
-|                                                             |
-|   Invariants:                                               |
-|   • [0, low)     → all 0s                                  |
-|   • [low, mid)   → all 1s                                  |
-|   • [mid, high]  → unknown (to process)                    |
-|   • (high, n)    → all 2s                                  |
-|                                                             |
-|   When mid > high, unknown region empty → DONE             |
-|                                                             |
-+-------------------------------------------------------------+
+![Dutch National Flag Regions](./images/dutch-national-flag-regions.png)
 
-```
+
 
 ### Merge From End
 
