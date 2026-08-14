@@ -30,7 +30,6 @@ permalink: /01_arrays/05_interval_problems/
 | **Difficulty** | Medium to Hard |
 | **Problems** | 20+ |
 
-{: .highlight }
 > **How to use this page:** Scan **At a Glance**, then work through theory → visuals → code for each problem pattern.
 
 
@@ -457,7 +456,7 @@ def employeeFreeTime(schedule: list[list[list[int]]]) -> list[list[int]]:
     return free_time
 ```
 
-![💻 Code Implementations](./images/interval-problems-cheat-sheet.png)
+## 🎯 Pattern Selection Guide
 
 ```text
               Interval Problem?
@@ -468,7 +467,7 @@ start           |              Two
                Line
 ```
 
-![📊 Pattern Decision Tree](./images/interval-problems-cheat-sheet.png)
+### Sort Strategy Matters
 
 **Problem: Minimum arrows to burst balloons**
 
@@ -483,7 +482,6 @@ start           |              Two
 
 **Lesson:** Right sort strategy simplifies problem!
 
-![Sorting Strategy Impact](./images/interval-problems-cheat-sheet.png)
 
 ```python
 def maxConcurrentIntervals(intervals: list[list[int]]) -> int:
@@ -515,7 +513,6 @@ def maxConcurrentIntervals(intervals: list[list[int]]) -> int:
 ```
 
 ### Interval Tree (Advanced Data Structure)
-
 For dynamic interval queries:
 
 ```python
@@ -539,10 +536,8 @@ class IntervalTreeNode:
 # Used in problems like Range Module (#715)
 ```
 
-![Full implementation omitted for brevity](./images/interval-problems-cheat-sheet.png)
 
 ### Pitfall 1: Overlap vs Touching
-
 ```python
 # ❌ WRONG: Strict inequality
 if prev_end > curr_start:  # Misses touching intervals
@@ -552,7 +547,6 @@ if prev_end >= curr_start:  # [1,3] and [3,5] overlap!
 ```
 
 ### Pitfall 2: Forgetting to Sort
-
 ```python
 # ❌ WRONG: Assuming input is sorted
 for i in range(1, len(intervals)):
@@ -565,7 +559,6 @@ for i in range(1, len(intervals)):
 ```
 
 ### Pitfall 3: Not Handling Edge Cases
-
 ```python
 # ❌ WRONG: Crashes on empty input
 merged = [intervals[0]]
@@ -581,13 +574,11 @@ merged = [intervals[0]]
 ## 🏆 LeetCode Problems
 
 ### 🟢 Easy
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 252 | [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) | Sort + Check | O(n log n) | O(1) |
 
 ### 🟡 Medium
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Sort + Merge | O(n log n) | O(n) |
@@ -597,7 +588,6 @@ merged = [intervals[0]]
 | 986 | [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/) | Two Pointers | O(m+n) | O(1) |
 
 ### 🔴 Hard
-
 | # | Problem | Pattern | Time | Space |
 |:-:|---------|---------|:----:|:-----:|
 | 759 | [Employee Free Time](https://leetcode.com/problems/employee-free-time/) | Merge + Gaps | O(n log n) | O(n) |
@@ -608,7 +598,6 @@ merged = [intervals[0]]
 ## 📚 References & Learning Resources
 
 ### 📖 Core Concepts
-
 | Resource | Description | Link |
 |----------|-------------|------|
 | **Interval Scheduling** | Wikipedia | [Interval scheduling](https://en.wikipedia.org/wiki/Interval_scheduling) |
@@ -616,7 +605,6 @@ merged = [intervals[0]]
 | **LeetCode** | Interval problems | [Discussion Guide](https://leetcode.com/discuss/general-discussion/1088255/) |
 
 ### 📝 Practice
-
 | Platform | Focus | Link |
 |----------|-------|------|
 | **LeetCode** | Sorting tag | [Problems](https://leetcode.com/tag/sorting/) |
@@ -625,14 +613,12 @@ merged = [intervals[0]]
 
 ## 📋 Cheat Sheet
 
-![📋 Cheat Sheet](./images/interval-problems-cheat-sheet.png)
 
 ---
 
 <div align="center">
 
 ### ⏱️ Master Intervals: From Chaos to Order
-
 *Sort first, ask questions later. The key to interval problems is choosing the right sort order.*
 
 **Made with ❤️ by [Gaurav Goswami](https://github.com/Gaurav14cs17)**
