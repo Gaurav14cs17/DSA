@@ -13,6 +13,9 @@ permalink: /30_number_theory/11_legendres_formula/
 
 ### *Counting Prime Factors in Factorials*
 
+![*Counting Prime Factors in Factorials*](./images/counting-prime-factors-in-factorials.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-10+-blue?style=for-the-badge" alt="Problems">
@@ -28,24 +31,8 @@ permalink: /30_number_theory/11_legendres_formula/
 
 ## 📊 Visual Overview
 
-```
-+-----------------------------------------------------------------+
-| TRAILING ZEROS IN 100!                                         |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Count multiples of 5, 25, 125, ...                             |
-|                                                                 |
-| ⌊100/5⌋   = 20  (multiples of 5: 5,10,15,...,100)             |
-| ⌊100/25⌋  = 4   (multiples of 25: 25,50,75,100)               |
-| ⌊100/125⌋ = 0   (no multiples of 125 ≤ 100)                   |
-|                                                                 |
-| Total = 20 + 4 + 0 = 24 trailing zeros                         |
-|                                                                 |
-| Verification: 100! = ...00000000000000000000000                |
-|                      +------- 24 zeros -------+                 |
-+-----------------------------------------------------------------+
+![Legendre Formula Overview](./images/legendre-formula-overview.png)
 
-```
 
 ---
 
