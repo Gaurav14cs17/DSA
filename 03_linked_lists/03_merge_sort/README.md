@@ -13,7 +13,6 @@ permalink: /03_linked_lists/03_merge_sort/
 ### *🔀 Merge & Sort Linked Lists*
 
 
-
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_to_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Problems-8+-blue?style=for-the-badge" alt="Problems">
@@ -22,97 +21,6 @@ permalink: /03_linked_lists/03_merge_sort/
 </div>
 
 ---
-
-## 📊 Visual Overview
-
-<div align="center">
-
-### Merge Sort on Linked List
-![Merge Sort Linked List](./images/merge-sort-linked-list.png)
-
-### Merge Two Sorted Lists
-![Merge Two Sorted Lists](./images/merge-two-sorted-lists.png)
-
-### Merge K Sorted Lists
-![Merge K Sorted Lists](./images/merge-k-sorted-lists.png)
-
-</div>
-
----
-
-### Merge Sort on Linked List
-
-```
-Original: 4 → 2 → 1 → 3
-
-Step 1: Split using fast-slow pointers
-        4 → 2 → 1 → 3
-        ↓         ↓
-     [4 → 2]   [1 → 3]
-
-Step 2: Recursively split
-     [4 → 2]     [1 → 3]
-      ↓   ↓       ↓   ↓
-     [4] [2]     [1] [3]
-
-Step 3: Merge back up
-     [4] [2]     [1] [3]
-       ↓ ↓         ↓ ↓
-     [2 → 4]   [1 → 3]
-
-Step 4: Final merge
-     [2 → 4]   [1 → 3]
-          ↓ ↓
-     [1 → 2 → 3 → 4] ✓
-
-Time: O(n log n), Space: O(log n) for recursion
-
-```
-
-### Merge Two Sorted Lists - Dummy Node Pattern
-
-```
-L1: 1 → 3 → 5
-L2: 2 → 4 → 6
-
-dummy → ? (result will be dummy.next)
-  ↓
- null
-
-Step 1: Compare 1 vs 2, take 1
-dummy → 1 → ?
-        ↑
-     current
-
-Step 2: Compare 3 vs 2, take 2
-dummy → 1 → 2 → ?
-            ↑
-         current
-
-Continue until one list exhausted...
-
-Final: dummy → 1 → 2 → 3 → 4 → 5 → 6
-Return dummy.next ✓
-
-```
-
-### Merge K Lists - Min Heap Strategy
-
-```
-Lists: [1→4→5], [1→3→4], [2→6]
-
-Heap initially: [(1,0), (1,1), (2,2)]
-                 val,listIdx
-
-Step 1: Pop (1,0), add 1 to result, push 4 from list 0
-Step 2: Pop (1,1), add 1 to result, push 3 from list 1
-Step 3: Pop (2,2), add 2 to result, push 6 from list 2
-...continue...
-
-Time: O(n log k) where n=total nodes, k=lists
-
-```
-
 
 ## 🎯 At a Glance
 
@@ -165,6 +73,48 @@ L_2 \to \text{merge}(L_1, L_2.\text{next}) & \text{otherwise}
 $$O(n \log k)$$
 
 Where $n$ = total elements, $k$ = number of lists.
+
+---
+
+## 📊 Visual Overview
+
+<div align="center">
+
+### Merge Sort on Linked List
+![Merge Sort Linked List](./images/merge-sort-linked-list.png)
+
+### Merge Two Sorted Lists
+![Merge Two Sorted Lists](./images/merge-two-sorted-lists.png)
+
+### Merge K Sorted Lists
+![Merge K Sorted Lists](./images/merge-k-sorted-lists.png)
+
+</div>
+
+---
+
+### Merge Sort on Linked List
+
+
+### Merge Two Sorted Lists - Dummy Node Pattern
+
+
+![Merge Two Sorted Lists - Dummy Node Pattern](./images/merge-two-sorted-lists.png)
+
+
+### Merge K Lists - Min Heap Strategy
+
+Lists: [1→4→5], [1→3→4], [2→6]
+
+Heap initially: [(1,0), (1,1), (2,2)]
+                 val,listIdx
+
+Step 1: Pop (1,0), add 1 to result, push 4 from list 0
+Step 2: Pop (1,1), add 1 to result, push 3 from list 1
+Step 3: Pop (2,2), add 2 to result, push 6 from list 2
+...continue...
+
+Time: O(n log k) where n=total nodes, k=lists
 
 
 ## 💻 Code Implementations
@@ -228,8 +178,6 @@ def mergeKLists(lists: list[ListNode]) -> ListNode:
             heapq.heappush(heap, (node.next.val, i, node.next))
     
     return dummy.next
-
-```
 
 
 ## 🏆 LeetCode Problems
@@ -406,12 +354,6 @@ Linked list merge sort: O(log n) stack only! ∎
 
 </div>
 
----
-
----
-
-## 🧭 Navigation
-
 | ⬅️ Previous | 📂 Current | ➡️ Next Topic |
 |:------------|:----------:|--------:|
 | [← 02. Reversal](../02_reversal/README.md) | **03. Merge & Sort** | [🏠 Linked Lists Home](../README.md) → [Stacks](../../04_stacks/README.md) |
@@ -515,7 +457,6 @@ def mergeKLists(lists: list[ListNode]) -> ListNode:
     
     return dummy.next
 
-```
 
 ---
 
