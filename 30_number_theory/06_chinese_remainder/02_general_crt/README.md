@@ -13,6 +13,9 @@ permalink: /30_number_theory/06_chinese_remainder/02_general_crt/
 
 ### *CRT for Non-Coprime Moduli*
 
+![*CRT for Non-Coprime Moduli*](./images/crt-for-non-coprime-moduli.png)
+
+
 <p>
   <img src="https://img.shields.io/badge/Difficulty-Medium_Hard-orange?style=for-the-badge" alt="Difficulty">
   <img src="https://img.shields.io/badge/Non_Coprime_Moduli-Supported-green?style=for-the-badge" alt="Non-Coprime">
@@ -38,28 +41,6 @@ permalink: /30_number_theory/06_chinese_remainder/02_general_crt/
 
 ---
 
-```
-+-----------------------------------------------------------------+
-| EXAMPLE: x ≡ 3 (mod 6), x ≡ 5 (mod 10)                        |
-+-----------------------------------------------------------------+
-|                                                                 |
-| Check existence:                                                |
-|   gcd(6, 10) = 2                                               |
-|   3 mod 2 = 1                                                   |
-|   5 mod 2 = 1                                                   |
-|   1 = 1 ✓  Solution exists!                                    |
-|                                                                 |
-| Solution is unique mod lcm(6, 10) = 30                         |
-|                                                                 |
-| x ≡ 3 (mod 6): candidates = 3, 9, 15, 21, 27, ...             |
-| x ≡ 5 (mod 10): candidates = 5, 15, 25, ...                   |
-|                                                                 |
-| Common: x = 15 (mod 30)                                        |
-|                                                                 |
-| Verify: 15 mod 6 = 3 ✓, 15 mod 10 = 5 ✓                       |
-+-----------------------------------------------------------------+
-
-```
 
 
 ## 🎯 At a Glance
