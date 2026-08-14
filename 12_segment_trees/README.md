@@ -153,19 +153,12 @@ $$f(f(a, b), c) = f(a, f(b, c))$$
 
 ## 📈 Visual Representation
 
-```
-Array: [1, 3, 5, 7, 9, 11]
+<div align="center">
 
-Segment Tree (Sum):
-                36 [0-5]
-               /          \
-         9 [0-2]          27 [3-5]
-         /    \           /      \
-    4 [0-1]  5[2]    16[3-4]   11[5]
-    /    \           /    \
-  1[0]  3[1]      7[3]   9[4]
+<img src="./images/segment-tree-structure.png" alt="Segment Tree Visual Representation" width="100%">
 
-```
+</div>
+
 
 ---
 
@@ -368,20 +361,6 @@ class RangeMinQuery:
 <img src="./images/segment-tree-patterns.png" alt="Segment Tree Patterns Decision Tree" width="100%">
 </div>
 
-```
-Range Query Problem
-        |
-        +-- Static array → Sparse Table / Prefix Sum
-        |
-        +-- Point update + Range query → Basic Segment Tree
-        |
-        +-- Range update + Range query → Lazy Propagation
-        |
-        +-- 2D queries → 2D Segment Tree
-        |
-        +-- Persistence needed → Persistent Segment Tree
-
-```
 
 ---
 
