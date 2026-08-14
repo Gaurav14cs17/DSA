@@ -45,7 +45,6 @@ permalink: /30_number_theory/04_divisors/04_divisor_properties/
 | **In one line** | Multiplicative Functions and Divisor Identities |
 | **Difficulty** | Medium |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
