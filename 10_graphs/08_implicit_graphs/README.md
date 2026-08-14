@@ -752,6 +752,8 @@ Problem without "graph" keywords + Relationships = Hidden Graph
 
 ---
 
+```
+
 ## 📐 Mathematical Foundation
 ### 1️⃣ Definition: Implicit Graph
 
