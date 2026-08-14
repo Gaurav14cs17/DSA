@@ -40,121 +40,25 @@ permalink: /30_number_theory/02_primes/03_prime_factorization/
 
 ### Walkthrough 1: Trial Division Factorization
 
-```
-+-----------------------------------------------------------------+
-| PROBLEM: Factorize 360                                         |
-+-----------------------------------------------------------------+
-| ALGORITHM: Divide by smallest prime repeatedly                 |
-|                                                                 |
-| STEP 1: Try d = 2                                              |
-|   +-----------------------------------------------------+      |
-|   | 360 ÷ 2 = 180   factors: {2: 1}                    |      |
-|   | 180 ÷ 2 = 90    factors: {2: 2}                    |      |
-|   |  90 ÷ 2 = 45    factors: {2: 3}                    |      |
-|   |  45 ÷ 2 = 22.5  ✗ (not divisible)                  |      |
-|   +-----------------------------------------------------+      |
-|   Remaining: 45                                                 |
-|                                                                 |
-| STEP 2: Try d = 3                                              |
-|   +-----------------------------------------------------+      |
-|   | 45 ÷ 3 = 15     factors: {2: 3, 3: 1}              |      |
-|   | 15 ÷ 3 = 5      factors: {2: 3, 3: 2}              |      |
-|   |  5 ÷ 3 = 1.67   ✗ (not divisible)                  |      |
-|   +-----------------------------------------------------+      |
-|   Remaining: 5                                                  |
-|                                                                 |
-| STEP 3: Try d = 4, 5, ...                                      |
-|   d = 4: Skip (4² = 16 > 5? No, but 5 % 4 ≠ 0)                |
-|   d² = 16 > 5: STOP, remaining 5 is prime                      |
-|                                                                 |
-| RESULT: 360 = 2³ × 3² × 5¹                                     |
-|         factors = {2: 3, 3: 2, 5: 1}                           |
-|                                                                 |
-| VERIFICATION:                                                   |
-|   2³ = 8, 3² = 9, 5¹ = 5                                       |
-|   8 × 9 × 5 = 72 × 5 = 360 ✓                                  |
-+-----------------------------------------------------------------+
+![Walkthrough 1: Trial Division Factorization](./images/walkthrough-1-trial-division-factorization.png)
 
-```
+
 
 ---
 
 ### Walkthrough 2: Divisor Count Formula
 
-```
-+-----------------------------------------------------------------+
-| PROBLEM: Count divisors of 360                                 |
-+-----------------------------------------------------------------+
-| STEP 1: Factorize                                              |
-|   360 = 2³ × 3² × 5¹                                           |
-|                                                                 |
-| STEP 2: Apply formula τ(n) = ∏(aᵢ + 1)                         |
-|                                                                 |
-|   τ(360) = (3+1) × (2+1) × (1+1)                               |
-|          = 4 × 3 × 2                                            |
-|          = 24                                                   |
-|                                                                 |
-| WHY IT WORKS:                                                   |
-|   Each divisor has form 2^a × 3^b × 5^c                        |
-|   where 0 ≤ a ≤ 3, 0 ≤ b ≤ 2, 0 ≤ c ≤ 1                       |
-|                                                                 |
-|   Choices for a: 0, 1, 2, 3     → 4 choices                    |
-|   Choices for b: 0, 1, 2        → 3 choices                    |
-|   Choices for c: 0, 1           → 2 choices                    |
-|                                                                 |
-|   Total combinations: 4 × 3 × 2 = 24                           |
-|                                                                 |
-| DIVISORS OF 360:                                               |
-|   1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18,                     |
-|   20, 24, 30, 36, 40, 45, 60, 72, 90, 120, 180, 360           |
-|                                                                 |
-|   Count: 24 ✓                                                   |
-+-----------------------------------------------------------------+
+![Walkthrough 2: Divisor Count Formula](./images/walkthrough-2-divisor-count-formula.png)
 
-```
+
 
 ---
 
 ### Walkthrough 3: Factorization with SPF
 
-```
-+-----------------------------------------------------------------+
-| FAST FACTORIZATION using Smallest Prime Factor (SPF)           |
-+-----------------------------------------------------------------+
-| PRECOMPUTATION: SPF array (computed via linear sieve)          |
-|                                                                 |
-|   Number:   2  3  4  5  6  7  8  9 10 11 12 ...               |
-|   SPF:      2  3  2  5  2  7  2  3  2 11  2 ...               |
-|                                                                 |
-| FACTORIZE 360:                                                  |
-|                                                                 |
-|   n = 360, SPF[360] = 2                                        |
-|   → Factor: 2, n = 360 ÷ 2 = 180                               |
-|                                                                 |
-|   n = 180, SPF[180] = 2                                        |
-|   → Factor: 2, n = 180 ÷ 2 = 90                                |
-|                                                                 |
-|   n = 90, SPF[90] = 2                                          |
-|   → Factor: 2, n = 90 ÷ 2 = 45                                 |
-|                                                                 |
-|   n = 45, SPF[45] = 3                                          |
-|   → Factor: 3, n = 45 ÷ 3 = 15                                 |
-|                                                                 |
-|   n = 15, SPF[15] = 3                                          |
-|   → Factor: 3, n = 15 ÷ 3 = 5                                  |
-|                                                                 |
-|   n = 5, SPF[5] = 5                                            |
-|   → Factor: 5, n = 5 ÷ 5 = 1                                   |
-|                                                                 |
-|   n = 1: DONE                                                   |
-|                                                                 |
-| RESULT: [2, 2, 2, 3, 3, 5] → {2: 3, 3: 2, 5: 1}               |
-|                                                                 |
-| TIME: O(log n) - only 6 steps for 360!                         |
-|       (vs O(√n) ≈ 19 steps for trial division)                 |
-+-----------------------------------------------------------------+
+![Walkthrough 3: Factorization with SPF](./images/walkthrough-3-factorization-with-spf.png)
 
-```
+
 
 
 ## 🎯 At a Glance
