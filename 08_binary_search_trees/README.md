@@ -50,7 +50,6 @@ permalink: /08_binary_search_trees/
 | **Subtopics** | 3 |
 | **Problems** | 25+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
@@ -242,7 +241,7 @@ def deleteNode(root: TreeNode, key: int) -> TreeNode:
     return root
 ```
 
-![BST Delete](./images/bst-overview.png)
+### Pattern Decision Tree
 
 ```text
 BST Problem
@@ -250,7 +249,6 @@ BST Problem
  Search    Insert    Delete    Validate
 ```
 
-![📊 BST Pattern Decision](./images/bst-overview.png)
 
 ### Pattern Checklist
 
