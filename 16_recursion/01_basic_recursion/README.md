@@ -47,7 +47,6 @@ permalink: /16_recursion/01_basic_recursion/
 | **Difficulty** | Easy |
 | **Problems** | 8+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
