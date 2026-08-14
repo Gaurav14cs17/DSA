@@ -39,7 +39,6 @@ view
 | **Typical time** | O(log m) |
 | **Typical space** | O(1) iterative, O(log m) recursive |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
