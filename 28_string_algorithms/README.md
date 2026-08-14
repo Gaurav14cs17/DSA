@@ -47,7 +47,6 @@ permalink: /28_string_algorithms/
 | **Subtopics** | 8 |
 | **Problems** | 70+ |
 
-{: .highlight }
 > **How to use this page:** Start with the visual overview, scan **At a Glance**, then work through theory → walkthroughs → code.
 
 ---
