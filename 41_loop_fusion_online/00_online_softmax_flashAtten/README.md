@@ -33,7 +33,7 @@ Path: **Basics (what you need first)** → warm-ups → matrix accumulation → 
   ① Running average      ──┐
   ② Welford variance     ──┤
   ③ Kadane max-subarray  ──┼──►  ⑤ Matrix accumulation  ──►  ⑥ Online softmax  ──►  ⑦ FlashAttention
-  ④ Top-2 maximum        ──┘      (O ← O + contribution)       (fuse max + d)         (fuse m, d', o')
+  ④ Top-2 maximum        ──┘      (S^(k)←S^(k-1)+…)          (fuse max + d)         (fuse m, d', o')
 ```
 
 | Stage | Topic | Goal |
@@ -43,7 +43,7 @@ Path: **Basics (what you need first)** → warm-ups → matrix accumulation → 
 | **Warm-up** | [② Welford variance](#2-welfords-online-variance) | Correct a dependent state when another statistic moves |
 | **Warm-up** | [③ Kadane](#3-maximum-subarray-sum--kadanes-algorithm) | Keep two coupled running values (local + global) |
 | **Warm-up** | [④ Top-2 max](#4-first--second-maximum-in-one-pass) | Maintain a running max and react when it changes |
-| **Bridge** | [⑤ Matrix accumulation](#5-matrix-accumulation-online-output) | Build $`O`$ online: $`O_i = O_{i-1} + A_i B`$ |
+| **Bridge** | [⑤ Matrix accumulation](#5-matrix-accumulation-online-output) | Derive $`S^{(k)}=S^{(k-1)}+A_{i,k}B_{k,j}`$ from the definition |
 | **Core** | [⑥ Online safe softmax](#6-online-safe-softmax) | Fuse find-max + denominator into one pass |
 | **Goal** | [⑦ FlashAttention](#7-flashattention--fusing-softmax-and-av) | Fuse softmax and $`AV`$ into one streaming update |
 
@@ -187,7 +187,7 @@ s_i = s_{i-1} + t_i,\qquad s_0 = 0
 | $`\sum x_i`$ | $`x_i`$ | mean / totals |
 | $`\sum e^{x_i-m}`$ | $`e^{x_i-m}`$ (with rescale) | Softmax denominator |
 | $`\sum a_i v_i`$ | $`a_i v_i`$ | Attention output $`O`$ |
-| $`O_i = O_{i-1} + A_i B`$ | $`A_i B`$ | [§5 Matrix accumulation](#5-matrix-accumulation-online-output) |
+| $`S^{(k)}=S^{(k-1)}+A_{i,k}B_{k,j}`$ | $`A_{i,k}B_{k,j}`$ | [§5 Matrix accumulation](#5-matrix-accumulation-online-output) |
 
 **You need this idea:** FlashAttention’s $`o_i = o_{i-1} + \ldots`$ is just **accumulate**, plus Softmax corrections.
 
@@ -438,289 +438,221 @@ For the prefix $`X_{(i-1)} = \{x_1,\ldots,x_{i-1}\}`$ keep:
 
 ## 5. Matrix Accumulation (Online Output)
 
-Before Softmax / Attention, we need one building block: **how matrix multiplication is really a sum**, and how any sum becomes a **running formula**.
-
-We do **not** start from $`O_i = O_{i-1} + \ldots`$.  
-We **derive** that formula from the definition of $AB$.
+Before Softmax / Attention, we derive the **running formula** for matrix multiplication.  
+We do **not** assume a recurrence — we start from the definition and derive it.
 
 <p align="center">
-  <img src="assert/00_matrix_accumulation.jpeg" alt="Matrix Accumulation (Online Output Update)" width="920"/>
+  <img src="assert/00_matrix_accumulation.jpeg" alt="Matrix Accumulation: Deriving the Recurrence" width="920"/>
 </p>
 
-<p align="center"><em>Figure 5 — Matrix accumulation (visual). Derivation is written out below.</em></p>
+<p align="center"><em>Figure 5 — From definition → partial sum → recurrence \(S^{(k)}=S^{(k-1)}+A_{i,k}B_{k,j}\).</em></p>
 
 ---
 
-### 5.1 Original matrices
+### 5.1 Start with the matrices
 
 ```math
-A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
-```
-
-```math
+A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix},
+\qquad
 B = \begin{bmatrix} 5 & 6 & 7 & 8 \\ 9 & 10 & 11 & 12 \end{bmatrix}
 ```
 
-Plain-text form (always readable if math fails):
+The output is $`O = AB`$, with shape $`2 \times 4`$.
 
 ```text
-A = [[1, 2],
-     [3, 4]]          # shape 2x2
-
-B = [[5,  6,  7,  8],
-     [9, 10, 11, 12]] # shape 2x4
-
-O = A B               # shape 2x4
+A = [[1, 2], [3, 4]]
+B = [[5, 6, 7, 8], [9, 10, 11, 12]]
+O = A B    # shape 2x4
 ```
-
-Goal: understand `O = AB` (shape 2×4), then turn it into a running update.
 
 ---
 
-### 5.2 Start from the definition (not from a running formula)
+### 5.2 Start from the definition of matrix multiplication
 
-By definition of matrix multiplication, each entry is a **dot product**:
-
-```math
-O[i,j] = \sum_{k=1}^{2} A[i,k]\, B[k,j]
-```
-
-So the **whole $i$-th output row** is:
+By definition, each output element is the **dot product** of a row of $`A`$ and a column of $`B`$:
 
 ```math
-O[i,:]
-= \sum_{k=1}^{2} A[i,k]\cdot B[k,:]
+O_{i,j} = \sum_{k=1}^{2} A_{i,k} B_{k,j}
 ```
 
-In words:
+Expand the summation:
 
-> One output row = **sum of (scalar from $A$) × (one row of $B$)**.
+```math
+O_{i,j} = A_{i,1} B_{1,j} + A_{i,2} B_{2,j}
+```
 
-That sum is the key. A running algorithm is just this sum written step by step.
+For the first row, $`i = 1`$:
+
+```math
+O_{1,j} = A_{1,1} B_{1,j} + A_{1,2} B_{2,j}
+```
+
+Substituting the actual values gives:
+
+```math
+O_{1,j} = 1 \cdot B_{1,j} + 2 \cdot B_{2,j}
+```
+
+This is the **original definition**, not yet a recurrence relation.
 
 ---
 
-### 5.3 Expand the first output row as a sum
+### 5.3 Introduce a partial sum
 
-Focus on row $i=1$ of $A$:
-
-```math
-A[1,:] = \begin{bmatrix} 1 & 2 \end{bmatrix}
-```
-
-Rows of B:
+Instead of computing both terms simultaneously, define a **partial sum** that contains only the first $`k`$ terms:
 
 ```math
-B[1,:] = \begin{bmatrix} 5 & 6 & 7 & 8 \end{bmatrix}
+S_{i,j}^{(k)} = \sum_{t=1}^{k} A_{i,t} B_{t,j}
 ```
+
+Here, $`k`$ tells us how many terms have been included.
+
+For $`k = 0`$, no terms have been included, so define:
 
 ```math
-B[2,:] = \begin{bmatrix} 9 & 10 & 11 & 12 \end{bmatrix}
+S_{i,j}^{(0)} = 0
 ```
 
-Apply the definition (one line at a time):
+For $`k = 1`$:
 
 ```math
-O[1,:] = A[1,1] \cdot B[1,:] + A[1,2] \cdot B[2,:]
+S_{i,j}^{(1)} = A_{i,1} B_{1,j}
 ```
+
+For $`k = 2`$:
 
 ```math
-O[1,:] = 1 \cdot \begin{bmatrix} 5 & 6 & 7 & 8 \end{bmatrix} + 2 \cdot \begin{bmatrix} 9 & 10 & 11 & 12 \end{bmatrix}
+S_{i,j}^{(2)} = A_{i,1} B_{1,j} + A_{i,2} B_{2,j}
 ```
+
+Notice that:
 
 ```math
-O[1,:] = \begin{bmatrix} 5 & 6 & 7 & 8 \end{bmatrix} + \begin{bmatrix} 18 & 20 & 22 & 24 \end{bmatrix}
+S_{i,j}^{(2)} = O_{i,j}
 ```
 
-```math
-O[1,:] = \begin{bmatrix} 23 & 26 & 29 & 32 \end{bmatrix}
-```
-
-```text
-# same numbers without LaTeX
-O[1,:] = 1*[5,6,7,8] + 2*[9,10,11,12]
-       = [5,6,7,8] + [18,20,22,24]
-       = [23, 26, 29, 32]
-```
-
-So far we only used the **definition** of $AB$. No running formula yet.
+So when $`k`$ reaches the full inner dimension, the partial sum **is** the output entry.
 
 ---
 
-### 5.4 Turn any sum into a running update
+### 5.4 Derive the recurrence relation
 
-In general, a sum
-
-```math
-S = t_1 + t_2 + \cdots + t_m
-```
-
-can always be computed online:
+Consider the partial sum at step $`k`$:
 
 ```math
-\begin{aligned}
-S_0 &= 0 \\
-S_1 &= S_0 + t_1 \\
-S_2 &= S_1 + t_2 \\
-&\;\;\vdots \\
-S_m &= S_{m-1} + t_m
-\end{aligned}
+S_{i,j}^{(k)} = \sum_{t=1}^{k} A_{i,t} B_{t,j}
 ```
 
-One line:
+Separate the **final term** from the summation:
 
 ```math
-S_k = S_{k-1} + t_k,\qquad S_0 = 0
+S_{i,j}^{(k)}
+=
+\sum_{t=1}^{k-1} A_{i,t} B_{t,j}
++
+A_{i,k} B_{k,j}
 ```
 
-This is the **only** new idea. Everything below is this pattern with a concrete $`t_k`$.
+The sum up to $`k-1`$ is exactly the partial sum from the previous step:
+
+```math
+\sum_{t=1}^{k-1} A_{i,t} B_{t,j} = S_{i,j}^{(k-1)}
+```
+
+Therefore we derive:
+
+```math
+S_{i,j}^{(k)} = S_{i,j}^{(k-1)} + A_{i,k} B_{k,j}
+```
+
+**Final recurrence** (this is the running formula):
+
+```math
+S_{i,j}^{(k)} = S_{i,j}^{(k-1)} + A_{i,k} B_{k,j},
+\qquad
+S_{i,j}^{(0)} = 0
+```
+
+It follows directly from separating the last term of the summation — not from assuming a running update in advance.
 
 ---
 
-### 5.5 Derive the running formula for one output row
+### 5.5 Worked numbers (first output row, $`i=1`$)
 
-For output row 1, the terms in the sum were:
-
-```math
-t_1 = A[1,1] \cdot B[1,:] = 1 \cdot \begin{bmatrix} 5 & 6 & 7 & 8 \end{bmatrix}
-```
-
-```math
-t_2 = A[1,2] \cdot B[2,:] = 2 \cdot \begin{bmatrix} 9 & 10 & 11 & 12 \end{bmatrix}
-```
-
-Plug into $`S_k = S_{k-1} + t_k`$:
+Apply the recurrence for each column $`j`$, or equivalently for the whole row at once.
 
 **Init**
 
 ```math
-O_0 = \begin{bmatrix} 0 & 0 & 0 & 0 \end{bmatrix}
+S_{1,:}^{(0)} = \begin{bmatrix} 0 & 0 & 0 & 0 \end{bmatrix}
 ```
 
-**Step k=1** — add first contribution
+**Step $`k=1`$** — add $`A_{1,1} B_{1,:}`$
 
 ```math
-O_1 = O_0 + A[1,1] \cdot B[1,:] = \begin{bmatrix} 5 & 6 & 7 & 8 \end{bmatrix}
+S_{1,:}^{(1)}
+=
+S_{1,:}^{(0)} + 1 \cdot \begin{bmatrix} 5 & 6 & 7 & 8 \end{bmatrix}
+=
+\begin{bmatrix} 5 & 6 & 7 & 8 \end{bmatrix}
 ```
 
-**Step k=2** — add second contribution
+**Step $`k=2`$** — add $`A_{1,2} B_{2,:}`$
 
 ```math
-O_2 = O_1 + A[1,2] \cdot B[2,:] = \begin{bmatrix} 23 & 26 & 29 & 32 \end{bmatrix}
+S_{1,:}^{(2)}
+=
+S_{1,:}^{(1)} + 2 \cdot \begin{bmatrix} 9 & 10 & 11 & 12 \end{bmatrix}
+=
+\begin{bmatrix} 23 & 26 & 29 & 32 \end{bmatrix}
 ```
 
 ```text
-O_0 = [0, 0, 0, 0]
-O_1 = O_0 + 1*[5,6,7,8]     = [5, 6, 7, 8]
-O_2 = O_1 + 2*[9,10,11,12]  = [23, 26, 29, 32]
+S^(0) = [0, 0, 0, 0]
+S^(1) = S^(0) + 1*[5, 6, 7, 8]      = [5, 6, 7, 8]
+S^(2) = S^(1) + 2*[9, 10, 11, 12]   = [23, 26, 29, 32] = O[1,:]
 ```
-
-`O_2` matches `O[1,:]` from §5.3. So the running process is correct.
-
-**General running rule** (for a fixed output row `i`):
-
-```math
-O_k = O_{k-1} + A[i,k] \cdot B[k,:], \quad O_0 = 0
-```
-
-This is **derived**, not assumed:
-
-```math
-O[i,:] = \sum_k A[i,k] B[k,:]
-\quad \Longrightarrow \quad
-O_k = O_{k-1} + A[i,k] B[k,:]
-```
-
-(definition of `AB` → running form of that sum)
 
 ---
 
-### 5.6 Same derivation for the second output row
-
-```math
-O[2,:] = 3 \cdot \begin{bmatrix} 5 & 6 & 7 & 8 \end{bmatrix} + 4 \cdot \begin{bmatrix} 9 & 10 & 11 & 12 \end{bmatrix}
-```
-
-```math
-O[2,:] = \begin{bmatrix} 51 & 58 & 65 & 72 \end{bmatrix}
-```
-
-Running view:
+### 5.6 Second output row ($`i=2`$)
 
 ```text
-O_0 = [0, 0, 0, 0]
-O_1 = O_0 + 3*[5,6,7,8]     = [15, 18, 21, 24]
-O_2 = O_1 + 4*[9,10,11,12]  = [51, 58, 65, 72]
+S^(0) = [0, 0, 0, 0]
+S^(1) = S^(0) + 3*[5, 6, 7, 8]      = [15, 18, 21, 24]
+S^(2) = S^(1) + 4*[9, 10, 11, 12]   = [51, 58, 65, 72] = O[2,:]
+```
+
+Full result:
+
+```math
+O = AB = \begin{bmatrix} 23 & 26 & 29 & 32 \\ 51 & 58 & 65 & 72 \end{bmatrix}
 ```
 
 ---
 
-### 5.7 Full matrix $O = AB$
+### 5.7 Why this matters for Attention / FlashAttention
 
-Stack the finished rows:
-
-```math
-O = AB =
-\begin{bmatrix}
-23 & 26 & 29 & 32 \\
-51 & 58 & 65 & 72
-\end{bmatrix}
-```
-
----
-
-### 5.8 Optional view: whole row of $A$ at once
-
-You can also group the inner sum as one row×matrix product:
+Attention output for one query is the same kind of sum:
 
 ```math
-A_1 B = \begin{bmatrix} 1 & 2 \end{bmatrix}
-\begin{bmatrix} 5 & 6 & 7 & 8 \\ 9 & 10 & 11 & 12 \end{bmatrix}
-= \begin{bmatrix} 23 & 26 & 29 & 32 \end{bmatrix}
+o = \sum_{i=1}^{N} a_i v_i
 ```
 
-Then, starting from zero:
+Define the partial sum $`o^{(k)} = \sum_{t=1}^{k} a_t v_t`$ with $`o^{(0)} = 0`$.  
+Separate the last term exactly as in §5.4:
 
 ```math
-O_1 = O_0 + A_1 B
+o^{(k)} = o^{(k-1)} + a_k v_k
 ```
 
-is just the same sum, with **all $k$ terms added in one shot**.  
-§5.5 is the clearer “how it runs” view (add one $k$ at a time).
+| Matrix accumulation | Attention |
+|---------------------|-----------|
+| $`S_{i,j}^{(k)} = S_{i,j}^{(k-1)} + A_{i,k} B_{k,j}`$ | $`o^{(k)} = o^{(k-1)} + a_k v_k`$ |
+| reduce over inner index $`k`$ | reduce over sequence index $`k`$ |
+| final $`S^{(K)} = O_{i,j}`$ | final $`o^{(N)} = o`$ |
 
----
-
-### 5.9 Why this matters for Attention / FlashAttention
-
-Attention output for one query is also a sum:
-
-```math
-o = \sum_{i=1}^{N} a_i\, v_i
-```
-
-Same rewrite as §5.4–§5.5:
-
-```math
-\begin{aligned}
-o_0 &= 0 \\
-o_1 &= o_0 + a_1 v_1 \\
-o_2 &= o_1 + a_2 v_2 \\
-&\;\;\vdots \\
-o_N &= o_{N-1} + a_N v_N
-\end{aligned}
-```
-
-```math
-o_i = o_{i-1} + a_i\, v_i,\qquad o_0 = 0
-```
-
-| Matrix accumulation (§5.5) | Attention |
-|----------------------------|-----------|
-| term $`t_k = A[i,k]\cdot B[k,:]`$ | term $`t_i = a_i\, v_i`$ |
-| $`O_k = O_{k-1} + t_k`$ | $`o_i = o_{i-1} + t_i`$ |
-| reduce over inner index $`k`$ | reduce over sequence index $`i`$ |
-
-**Takeaway:** the running formula is only “sum → fold.” FlashAttention streams $`a_i v_i`$ into $o$ this way; Softmax’s $(m,d')$ corrections keep the $`a_i`$ correct online.
+**Takeaway:** the running formula is derived by writing a partial sum and splitting off the last term. FlashAttention streams $`a_k v_k`$ into $`o`$ this way; Softmax’s $`(m, d')`$ corrections keep the weights correct online.
 
 ---
 
@@ -865,7 +797,7 @@ O = AV
 ```
 
 with scores $`x_i = q\,k_i^\top`$. We never want to materialize the full $`N\times N`$ matrix $A$.  
-The output product $O = AV$ is exactly the **matrix accumulation** from §5, with $`a_i`$ playing the role of $`A_i`$ and $`v_i`$ the role of a row of $B$.
+The output product $`O = AV`$ uses the same recurrence derived in §5: $`o^{(k)} = o^{(k-1)} + a_k v_k`$, analogous to $`S^{(k)} = S^{(k-1)} + A_{i,k} B_{k,j}`$.
 
 ### 7.1 Attention + online softmax (setup)
 
@@ -988,6 +920,6 @@ This is the algorithmic heart of **FlashAttention-style loop fusion** (the produ
 | Variance | $`(\mu_{n-1}, M_{n-1})`$ | update $`\mu`$, then $`M`$ with $`(x-\mu_{\text{old}})(x-\mu_{\text{new}})`$ |
 | Kadane | $`(S_{i-1}, G_{i-1})`$ | extend or restart local max |
 | Top-2 | $`(m_1, m_2)`$ | case split on where $`x_i`$ sits |
-| Matrix accum. | $`O_{i-1}`$ | $`O_i = O_{i-1} + A_i B`$ |
+| Matrix accum. | $`S^{(k-1)}`$ | $`S^{(k)}=S^{(k-1)}+A_{i,k}B_{k,j}`$ |
 | Softmax | $`(m_{i-1}, d_{i-1})`$ | multiply $`d`$ by $`e^{m_{i-1}-m_i}`$ |
 | Attention | $`(m, d', o')`$ | rescale **both** $`d'`$ and $`o'`$, then add new $`v_i`$ |
