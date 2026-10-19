@@ -4,13 +4,15 @@
 
 All diagrams: [`assert/`](https://github.com/Gaurav14cs17/DSA/tree/main/41_loop_fusion_online/00_online_softmax_flashAtten/assert)
 
+> **GitHub math tip:** display math uses fenced `math` code blocks. Inline math with subscripts uses the `$` + backtick form so Markdown does not eat `_`.
+
 ---
 
 ## Why this matters
 
-Standard softmax / attention needs **several full passes** over the sequence (find max → sum exps → normalize → multiply by $V$). Each pass burns memory bandwidth.
+Standard softmax / attention needs **several full passes** over the sequence (find max → sum exps → normalize → multiply by V). Each pass burns memory bandwidth.
 
-An **online algorithm** keeps only a tiny **running state**. When a new value $x_i$ arrives, it applies a **correction factor** and updates that state — no re-read of past data.
+An **online algorithm** keeps only a tiny **running state**. When a new value $`x_i`$ arrives, it applies a **correction factor** and updates that state — no re-read of past data.
 
 ```text
   state(i-1)  +  x_i  +  correction  →  state(i)
@@ -41,9 +43,9 @@ Path: **Basics (what you need first)** → warm-ups → matrix accumulation → 
 | **Warm-up** | [② Welford variance](#2-welfords-online-variance) | Correct a dependent state when another statistic moves |
 | **Warm-up** | [③ Kadane](#3-maximum-subarray-sum--kadanes-algorithm) | Keep two coupled running values (local + global) |
 | **Warm-up** | [④ Top-2 max](#4-first--second-maximum-in-one-pass) | Maintain a running max and react when it changes |
-| **Bridge** | [⑤ Matrix accumulation](#5-matrix-accumulation-online-output) | Build $O$ online: $O_i = O_{i-1} + A_i B$ |
+| **Bridge** | [⑤ Matrix accumulation](#5-matrix-accumulation-online-output) | Build $`O`$ online: $`O_i = O_{i-1} + A_i B`$ |
 | **Core** | [⑥ Online safe softmax](#6-online-safe-softmax) | Fuse find-max + denominator into one pass |
-| **Goal** | [⑦ FlashAttention](#7-flashattention--fusing-softmax-and-av) | Fuse softmax and $AV$ into one streaming update |
+| **Goal** | [⑦ FlashAttention](#7-flashattention--fusing-softmax-and-av) | Fuse softmax and $`AV`$ into one streaming update |
 
 ---
 
@@ -61,10 +63,10 @@ If someone is learning **running / online algorithms** (and later FlashAttention
 
 | | **Offline (multi-pass)** | **Online (running / single-pass)** |
 |--|--------------------------|-------------------------------------|
-| How data is used | May scan $x_1\ldots x_N$ **many times** | See each $x_i$ **once** (a stream) |
+| How data is used | May scan $`x_1\ldots x_N`$ **many times** | See each $`x_i`$ **once** (a stream) |
 | What you store | Often the full array (or re-read it) | Only a small **running state** |
 | When you finish | After all passes complete | After the last element, state is the answer |
-| Example | Softmax: find max → sum exp → normalize | Softmax: update $(m, d)$ as each $x_i$ arrives |
+| Example | Softmax: find max → sum exp → normalize | Softmax: update $`(m, d)`$ as each $`x_i`$ arrives |
 
 ```text
 Offline:   [==== Pass 1 ====] [==== Pass 2 ====] [==== Pass 3 ====]
@@ -79,19 +81,19 @@ Online:    x1 → x2 → x3 → … → xN
 
 ### 0.2 Running state + update rule
 
-At step $i-1$ you hold some state $S_{i-1}$.  
-When $x_i$ arrives:
+At step $i-1$ you hold some state $`S_{i-1}`$.  
+When $`x_i`$ arrives:
 
-$$
+```math
 S_i = \mathrm{Update}(S_{i-1},\ x_i)
-$$
+```
 
-| Example | Running state $S$ | Update idea |
+| Example | Running state $`S`$ | Update idea |
 |---------|-------------------|-------------|
-| Average | $A_{i-1}$ | $A_i = A_{i-1} + (x_i - A_{i-1})/i$ |
-| Top-1 max | $m_{i-1}$ | $m_i = \max(m_{i-1}, x_i)$ |
-| Softmax | $(m_{i-1}, d_{i-1})$ | update max, then rescale + add |
-| Attention out | $o_{i-1}$ | $o_i = o_{i-1} + a_i v_i$ |
+| Average | $`A_{i-1}`$ | $`A_i = A_{i-1} + (x_i - A_{i-1})/i`$ |
+| Top-1 max | $`m_{i-1}`$ | $`m_i = \max(m_{i-1}, x_i)`$ |
+| Softmax | $`(m_{i-1}, d_{i-1})`$ | update max, then rescale + add |
+| Attention out | $`o_{i-1}`$ | $`o_i = o_{i-1} + a_i v_i`$ |
 
 **You need this idea:** design *what* to remember, then write *how* one new value changes it.
 
@@ -103,9 +105,9 @@ An **invariant** is a property that must stay true after every update.
 
 Examples:
 
-- After $i$ steps, $A_i$ **equals** the true average of $x_1\ldots x_i$
-- After $i$ steps, $d_i = \sum_{k=1}^{i} e^{x_k - m_i}$ (true safe-softmax denominator for the prefix)
-- After $i$ steps, $o_i = \sum_{k=1}^{i} a_k v_k$ (true weighted sum so far)
+- After $i$ steps, $`A_i`$ **equals** the true average of $`x_1\ldots x_i`$
+- After $i$ steps, $`d_i = \sum_{k=1}^{i} e^{x_k - m_i}`$ (true safe-softmax denominator for the prefix)
+- After $i$ steps, $`o_i = \sum_{k=1}^{i} a_k v_k`$ (true weighted sum so far)
 
 ```text
   Assume invariant true at i-1
@@ -120,27 +122,27 @@ Examples:
 
 ### 0.4 Correction factor (the key trick)
 
-Sometimes state depends on a **shared parameter** (mean $\mu$, max $m$, denominator $d$).  
+Sometimes state depends on a **shared parameter** (mean $`\mu`$, max $m$, denominator $d$).  
 When that parameter changes, **old contributions become wrong** — you must rescale them.
 
 Most important identity for Softmax / FlashAttention:
 
-$$
+```math
 e^{x - m_{\text{new}}}
 = e^{x - m_{\text{old}}}\cdot e^{m_{\text{old}} - m_{\text{new}}}
-$$
+```
 
 So an old sum of exps updates as:
 
-$$
-d_{\text{new}} = d_{\text{old}}\cdot \underbrace{e^{m_{\text{old}} - m_{\text{new}}}}_{\text{correction}} + e^{x_i - m_{\text{new}}}
-$$
+```math
+d_{\text{new}} = d_{\text{old}} \cdot e^{m_{\text{old}} - m_{\text{new}}} + e^{x_i - m_{\text{new}}}
+```
 
 | Where you will see it | What changes | Correction |
 |-----------------------|--------------|------------|
-| Welford variance | mean $\mu$ | product of deviations |
-| Online Softmax | max $m$ | multiply $d$ by $e^{m_{i-1}-m_i}$ |
-| FlashAttention | $m$ and $d'$ | rescale **both** $d'$ and $o'$ |
+| Welford variance | mean $`\mu`$ | product of deviations |
+| Online Softmax | max $`m`$ | multiply $`d`$ by $`e^{m_{i-1}-m_i}`$ |
+| FlashAttention | $`m`$ and $`d'`$ | rescale **both** $`d'`$ and $`o'`$ |
 
 **You need this idea:** *correction* = “fix the past so it matches the new parameter.”
 
@@ -150,22 +152,22 @@ $$
 
 **Unsafe Softmax:**
 
-$$
+```math
 a_i = \frac{e^{x_i}}{\sum_{k=1}^{N} e^{x_k}}
-$$
+```
 
-Problem: large $x_i$ → $e^{x_i}$ **overflows**.
+Problem: large $`x_i`$ → $`e^{x_i}`$ **overflows**.
 
 **Safe Softmax** (subtract max):
 
-$$
+```math
 m = \max_k x_k,\qquad
 a_i = \frac{e^{x_i - m}}{\sum_{k=1}^{N} e^{x_k - m}}
-$$
+```
 
 Same answers (max cancels algebraically), but exponents stay ≤ 0, so no overflow.
 
-Naive code needs **3 passes**: (1) max, (2) sum of $e^{x-m}$, (3) divide.  
+Naive code needs **3 passes**: (1) max, (2) sum of $`e^{x-m}`$, (3) divide.  
 Online Softmax fuses (1)+(2) using the correction in §0.4.
 
 **You need this idea:** safe Softmax = Softmax + running max + exp rescale.
@@ -176,18 +178,18 @@ Online Softmax fuses (1)+(2) using the correction in §0.4.
 
 Any sum can be written online:
 
-$$
+```math
 s_i = s_{i-1} + t_i,\qquad s_0 = 0
-$$
+```
 
-| Sum | Term $t_i$ | Used in |
+| Sum | Term $`t_i`$ | Used in |
 |-----|------------|---------|
-| $\sum x_i$ | $x_i$ | mean / totals |
-| $\sum e^{x_i-m}$ | $e^{x_i-m}$ (with rescale) | Softmax denominator |
-| $\sum a_i v_i$ | $a_i v_i$ | Attention output $O$ |
-| $O_i = O_{i-1} + A_i B$ | $A_i B$ | [§5 Matrix accumulation](#5-matrix-accumulation-online-output) |
+| $`\sum x_i`$ | $`x_i`$ | mean / totals |
+| $`\sum e^{x_i-m}`$ | $`e^{x_i-m}`$ (with rescale) | Softmax denominator |
+| $`\sum a_i v_i`$ | $`a_i v_i`$ | Attention output $`O`$ |
+| $`O_i = O_{i-1} + A_i B`$ | $`A_i B`$ | [§5 Matrix accumulation](#5-matrix-accumulation-online-output) |
 
-**You need this idea:** FlashAttention’s $o_i = o_{i-1} + \ldots$ is just **accumulate**, plus Softmax corrections.
+**You need this idea:** FlashAttention’s $`o_i = o_{i-1} + \ldots`$ is just **accumulate**, plus Softmax corrections.
 
 ---
 
@@ -195,20 +197,20 @@ $$
 
 For one query row:
 
-$$
+```math
 x_i = q\cdot k_i^\top,\qquad
 a = \mathrm{Softmax}(x),\qquad
 o = \sum_{i=1}^{N} a_i\, v_i
-$$
+```
 
 | Symbol | Meaning | Basic skill needed |
 |--------|---------|-------------------|
-| $q, k_i, v_i$ | vectors | dot product |
-| $x_i$ | score | $q\cdot k_i$ |
-| $a_i$ | weight | Softmax (§0.5) |
-| $o$ | output | accumulation (§0.6) |
+| $`q, k_i, v_i`$ | vectors | dot product |
+| $`x_i`$ | score | $`q\cdot k_i`$ |
+| $`a_i`$ | weight | Softmax (§0.5) |
+| $`o`$ | output | accumulation (§0.6) |
 
-**You need this idea:** FlashAttention = online safe Softmax **fused with** online accumulation of $a_i v_i$.
+**You need this idea:** FlashAttention = online safe Softmax **fused with** online accumulation of $`a_i v_i`$.
 
 ---
 
@@ -217,11 +219,11 @@ $$
 Before §1–§7, you should be comfortable with:
 
 - [ ] One pass vs many passes over an array  
-- [ ] Keeping a small state and updating it with each new $x_i$  
+- [ ] Keeping a small state and updating it with each new $`x_i`$  
 - [ ] What an **invariant** is (state stays “correct” for the prefix)  
-- [ ] Why Softmax subtracts $\max x$ (stability)  
-- [ ] The identity $e^{x-m'} = e^{x-m}\,e^{m-m'}$  
-- [ ] Writing a sum as $s \leftarrow s + t$ (accumulation)  
+- [ ] Why Softmax subtracts $`\max x`$ (stability)  
+- [ ] The identity $`e^{x-m'} = e^{x-m}\,e^{m-m'}`$  
+- [ ] Writing a sum as $`s \leftarrow s + t`$ (accumulation)  
 - [ ] Attention as Softmax scores × values  
 
 If yes → start at [§1 Running average](#1-running-average-cumulative-mean).  
@@ -235,7 +237,7 @@ Every algorithm section uses the same four boxes:
 
 1. **Multi-pass problem** — what a naive algorithm does (and why it hurts)
 2. **Running state** — what we store after seeing $i-1$ elements
-3. **Correction / update** — how $x_i$ changes that state (restore the invariant)
+3. **Correction / update** — how $`x_i`$ changes that state (restore the invariant)
 4. **Single-pass result** — the final recurrence (time $O(N)$, usually space $O(1)$)
 
 ---
@@ -252,37 +254,37 @@ Every algorithm section uses the same four boxes:
 
 To get the average you normally need the whole sum first:
 
-$$
+```math
 A_N = \frac{1}{N}\sum_{i=1}^{N} x_i
-$$
+```
 
-That means either buffer all $x_i$, or make a dedicated sum pass before you can report $A_N$.
+That means either buffer all $`x_i`$, or make a dedicated sum pass before you can report $`A_N`$.
 
 ### Running state
 
 After $i-1$ values we only keep the current average:
 
-$$
+```math
 A_{i-1} = \frac{1}{i-1}\sum_{j=1}^{i-1} x_j
 \quad\Longleftrightarrow\quad
 \sum_{j=1}^{i-1} x_j = (i-1)\,A_{i-1}
-$$
+```
 
 ### Correction (derivation sketch)
 
-$$
+```math
 A_i
 = \frac{1}{i}\Big[(i-1)A_{i-1} + x_i\Big]
 = A_{i-1} + \frac{x_i - A_{i-1}}{i}
-$$
+```
 
 Intuition: take the old average and add the new point’s **deviation**, spread over $i$ samples.
 
 ### Single-pass result
 
-$$
-\boxed{A_i = A_{i-1} + \dfrac{x_i - A_{i-1}}{i}}
-$$
+```math
+A_i = A_{i-1} + \frac{x_i - A_{i-1}}{i}
+```
 
 **Takeaway:** this is the template for every later algorithm — *old state + scaled correction*.
 
@@ -294,7 +296,7 @@ $$
   <img src="assert/01.jpeg" alt="Calculating Variance with Welford's Algorithm" width="920"/>
 </p>
 
-<p align="center"><em>Figure 2 — Two-pass variance → Welford single-pass updates for $\mu$ and $M$.</em></p>
+<p align="center"><em>Figure 2 — Two-pass variance → Welford single-pass updates for $`\mu`$ and $M$.</em></p>
 
 ### Multi-pass problem
 
@@ -302,41 +304,39 @@ Classic variance needs two scans:
 
 | Pass | Formula |
 |------|---------|
-| 1 — mean | $\displaystyle \mu = \frac{1}{n}\sum_{k=1}^{n} x_k$ |
-| 2 — sum of squares | $\displaystyle M_n = \sum_{k=1}^{n}(x_k - \mu)^2$ |
+| 1 — mean | $`\displaystyle \mu = \frac{1}{n}\sum_{k=1}^{n} x_k`$ |
+| 2 — sum of squares | $`\displaystyle M_n = \sum_{k=1}^{n}(x_k - \mu)^2`$ |
 
-You must store or re-stream every $x_k$.
+You must store or re-stream every $`x_k`$.
 
 ### Running state (after $n-1$ points)
 
 - count: $n-1$
-- mean: $\mu_{n-1}$
-- sum of squared deviations: $M_{n-1} = \sum_{k=1}^{n-1}(x_k - \mu_{n-1})^2$
+- mean: $`\mu_{n-1}`$
+- sum of squared deviations: $`M_{n-1} = \sum_{k=1}^{n-1}(x_k - \mu_{n-1})^2`$
 
 ### Correction
 
-When $x_n$ arrives, the mean moves, so every old $(x_k - \mu)$ is wrong. After expanding and simplifying, the net change collapses to a product of two deviations (old mean vs new mean):
+When $`x_n`$ arrives, the mean moves, so every old $`(x_k - \mu)`$ is wrong. After expanding and simplifying, the net change collapses to a product of two deviations (old mean vs new mean):
 
-$$
+```math
 \mu_n = \mu_{n-1} + \frac{x_n - \mu_{n-1}}{n}
-$$
+```
 
-$$
+```math
 M_n = M_{n-1} + (x_n - \mu_{n-1})(x_n - \mu_n)
-$$
+```
 
 ### Single-pass result
 
-$$
-\boxed{
+```math
 \begin{aligned}
-\mu_n &= \mu_{n-1} + \frac{x_n - \mu_{n-1}}{n} \\[4pt]
+\mu_n &= \mu_{n-1} + \frac{x_n - \mu_{n-1}}{n} \\
 M_n &= M_{n-1} + (x_n - \mu_{n-1})(x_n - \mu_n)
 \end{aligned}
-}
-$$
+```
 
-**Takeaway:** when a summary statistic depends on another running quantity (here $\mu$), the update must **correct** the dependent state — same idea as rescaling the softmax denominator when the max changes.
+**Takeaway:** when a summary statistic depends on another running quantity (here $`\mu`$), the update must **correct** the dependent state — same idea as rescaling the softmax denominator when the max changes.
 
 ---
 
@@ -352,41 +352,40 @@ $$
 
 Find the contiguous subarray with largest sum:
 
-$$
+```math
 G_N = \max_{1\le j\le k\le N}\sum_{m=j}^{k} x_m
-$$
+```
 
-- Naive: $O(N^3)$
-- Better prefix tricks: still $O(N^2)$
+- Naive: $`O(N^3)`$
+- Better prefix tricks: still $`O(N^2)`$
 
 ### Running state
 
 | Symbol | Meaning |
 |--------|---------|
-| $S_{i-1}$ | best sum among subarrays **ending at** $i-1$ |
-| $G_{i-1}$ | best sum among **all** subarrays in the prefix |
+| $`S_{i-1}`$ | best sum among subarrays **ending at** $`i-1`$ |
+| $`G_{i-1}`$ | best sum among **all** subarrays in the prefix |
 
 ### Correction
 
 A subarray ending at $i$ either starts fresh at $i$, or extends the best ending at $i-1$:
 
-$$
+```math
 S_i = \max(x_i,\ S_{i-1} + x_i),\qquad
 G_i = \max(G_{i-1},\ S_i)
-$$
+```
 
 ### Single-pass result
 
-$$
-\boxed{
+```math
 \begin{aligned}
 S_i &= \max(x_i,\ S_{i-1}+x_i) \\
 G_i &= \max(G_{i-1},\ S_i)
 \end{aligned}
-}
+
 \qquad
 \text{Time }O(N),\ \text{Space }O(1)
-$$
+```
 
 **Takeaway:** two coupled running values (local + global) already feel like Softmax’s $(m, d)$ pair.
 
@@ -398,42 +397,40 @@ $$
   <img src="assert/04.jpeg" alt="Finding the First and Second Maximum Elements" width="920"/>
 </p>
 
-<p align="center"><em>Figure 4 — Two-pass top-2 → one-pass piecewise update of $(m_1, m_2)$.</em></p>
+<p align="center"><em>Figure 4 — Two-pass top-2 → one-pass piecewise update of $`(m_1, m_2)`$.</em></p>
 
 ### Multi-pass problem
 
-1. Pass 1: $M_1 = \max(X)$
-2. Pass 2: $M_2 = \max(X\setminus\{M_1\})$
+1. Pass 1: $`M_1 = \max(X)`$
+2. Pass 2: $`M_2 = \max(X\setminus\{M_1\})`$
 
 Still $O(N)$, but **two full scans** and about $2N$ comparisons.
 
 ### Running state
 
-For the prefix $X_{(i-1)} = \{x_1,\ldots,x_{i-1}\}$ keep:
+For the prefix $`X_{(i-1)} = \{x_1,\ldots,x_{i-1}\}`$ keep:
 
-- $m_{(1,i-1)}$ — current first max  
-- $m_{(2,i-1)}$ — current second max  
+- $`m_{(1,i-1)}`$ — current first max  
+- $`m_{(2,i-1)}`$ — current second max  
 
-### Correction (three cases for $x_i$)
+### Correction (three cases for $`x_i`$)
 
-| Case | Condition | New $(m_1,\ m_2)$ |
+| Case | Condition | New $`(m_1,\ m_2)`$ |
 |------|-----------|-------------------|
-| 1 | $x_i > m_{(1,i-1)}$ | $(x_i,\ m_{(1,i-1)})$ — old max demoted |
-| 2 | $m_{(2,i-1)} < x_i \le m_{(1,i-1)}$ | $(m_{(1,i-1)},\ x_i)$ |
-| 3 | $x_i \le m_{(2,i-1)}$ | unchanged |
+| 1 | $`x_i > m_{(1,i-1)}`$ | $`(x_i,\ m_{(1,i-1)})`$ — old max demoted |
+| 2 | $`m_{(2,i-1)} < x_i \le m_{(1,i-1)}`$ | $`(m_{(1,i-1)},\ x_i)`$ |
+| 3 | $`x_i \le m_{(2,i-1)}`$ | unchanged |
 
 ### Single-pass result
 
-$$
-\boxed{
+```math
 (m_{(1,i)}, m_{(2,i)}) =
 \begin{cases}
 (x_i,\ m_{(1,i-1)}) & x_i > m_{(1,i-1)} \\
 (m_{(1,i-1)},\ x_i) & m_{(2,i-1)} < x_i \le m_{(1,i-1)} \\
 (m_{(1,i-1)},\ m_{(2,i-1)}) & x_i \le m_{(2,i-1)}
 \end{cases}
-}
-$$
+```
 
 **Takeaway:** maintaining a **running maximum** (and reacting when it changes) is exactly the skill Online Softmax needs.
 
@@ -443,7 +440,7 @@ $$
 
 Before Softmax / Attention, we need one building block: **how matrix multiplication is really a sum**, and how any sum becomes a **running formula**.
 
-We do **not** start from $O_i = O_{i-1} + \ldots$.  
+We do **not** start from $`O_i = O_{i-1} + \ldots`$.  
 We **derive** that formula from the definition of $AB$.
 
 <p align="center">
@@ -456,21 +453,27 @@ We **derive** that formula from the definition of $AB$.
 
 ### 5.1 Original matrices
 
-$$
-A =
-\begin{bmatrix}
-1 & 2 \\
-3 & 4
-\end{bmatrix}
-,\qquad
-B =
-\begin{bmatrix}
-5 & 6 & 7 & 8 \\
-9 & 10 & 11 & 12
-\end{bmatrix}
-$$
+```math
+A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
+```
 
-Goal: understand $O = AB$ (shape $2 \times 4$), then turn it into a running update.
+```math
+B = \begin{bmatrix} 5 & 6 & 7 & 8 \\ 9 & 10 & 11 & 12 \end{bmatrix}
+```
+
+Plain-text form (always readable if math fails):
+
+```text
+A = [[1, 2],
+     [3, 4]]          # shape 2x2
+
+B = [[5,  6,  7,  8],
+     [9, 10, 11, 12]] # shape 2x4
+
+O = A B               # shape 2x4
+```
+
+Goal: understand `O = AB` (shape 2×4), then turn it into a running update.
 
 ---
 
@@ -478,16 +481,16 @@ Goal: understand $O = AB$ (shape $2 \times 4$), then turn it into a running upda
 
 By definition of matrix multiplication, each entry is a **dot product**:
 
-$$
+```math
 O[i,j] = \sum_{k=1}^{2} A[i,k]\, B[k,j]
-$$
+```
 
 So the **whole $i$-th output row** is:
 
-$$
+```math
 O[i,:]
 = \sum_{k=1}^{2} A[i,k]\cdot B[k,:]
-$$
+```
 
 In words:
 
@@ -501,33 +504,44 @@ That sum is the key. A running algorithm is just this sum written step by step.
 
 Focus on row $i=1$ of $A$:
 
-$$
+```math
 A[1,:] = \begin{bmatrix} 1 & 2 \end{bmatrix}
-$$
+```
 
-Rows of $B$:
+Rows of B:
 
-$$
-B[1,:] = \begin{bmatrix} 5 & 6 & 7 & 8 \end{bmatrix},
-\qquad
+```math
+B[1,:] = \begin{bmatrix} 5 & 6 & 7 & 8 \end{bmatrix}
+```
+
+```math
 B[2,:] = \begin{bmatrix} 9 & 10 & 11 & 12 \end{bmatrix}
-$$
+```
 
-Apply the definition:
+Apply the definition (one line at a time):
 
-$$
-\begin{aligned}
-O[1,:]
-&= A[1,1]\cdot B[1,:] \;+\; A[1,2]\cdot B[2,:] \\[6pt]
-&= 1\cdot\begin{bmatrix} 5 & 6 & 7 & 8 \end{bmatrix}
- \;+\;
- 2\cdot\begin{bmatrix} 9 & 10 & 11 & 12 \end{bmatrix} \\[6pt]
-&= \begin{bmatrix} 5 & 6 & 7 & 8 \end{bmatrix}
- \;+\;
- \begin{bmatrix} 18 & 20 & 22 & 24 \end{bmatrix} \\[6pt]
-&= \begin{bmatrix} 23 & 26 & 29 & 32 \end{bmatrix}
-\end{aligned}
-$$
+```math
+O[1,:] = A[1,1] \cdot B[1,:] + A[1,2] \cdot B[2,:]
+```
+
+```math
+O[1,:] = 1 \cdot \begin{bmatrix} 5 & 6 & 7 & 8 \end{bmatrix} + 2 \cdot \begin{bmatrix} 9 & 10 & 11 & 12 \end{bmatrix}
+```
+
+```math
+O[1,:] = \begin{bmatrix} 5 & 6 & 7 & 8 \end{bmatrix} + \begin{bmatrix} 18 & 20 & 22 & 24 \end{bmatrix}
+```
+
+```math
+O[1,:] = \begin{bmatrix} 23 & 26 & 29 & 32 \end{bmatrix}
+```
+
+```text
+# same numbers without LaTeX
+O[1,:] = 1*[5,6,7,8] + 2*[9,10,11,12]
+       = [5,6,7,8] + [18,20,22,24]
+       = [23, 26, 29, 32]
+```
 
 So far we only used the **definition** of $AB$. No running formula yet.
 
@@ -537,13 +551,13 @@ So far we only used the **definition** of $AB$. No running formula yet.
 
 In general, a sum
 
-$$
+```math
 S = t_1 + t_2 + \cdots + t_m
-$$
+```
 
 can always be computed online:
 
-$$
+```math
 \begin{aligned}
 S_0 &= 0 \\
 S_1 &= S_0 + t_1 \\
@@ -551,15 +565,15 @@ S_2 &= S_1 + t_2 \\
 &\;\;\vdots \\
 S_m &= S_{m-1} + t_m
 \end{aligned}
-$$
+```
 
 One line:
 
-$$
-\boxed{S_k = S_{k-1} + t_k,\qquad S_0 = 0}
-$$
+```math
+S_k = S_{k-1} + t_k,\qquad S_0 = 0
+```
 
-This is the **only** new idea. Everything below is this pattern with a concrete $t_k$.
+This is the **only** new idea. Everything below is this pattern with a concrete $`t_k`$.
 
 ---
 
@@ -567,90 +581,77 @@ This is the **only** new idea. Everything below is this pattern with a concrete 
 
 For output row 1, the terms in the sum were:
 
-$$
-t_1 = A[1,1]\cdot B[1,:]
-= 1\cdot\begin{bmatrix}5&6&7&8\end{bmatrix},
-\qquad
-t_2 = A[1,2]\cdot B[2,:]
-= 2\cdot\begin{bmatrix}9&10&11&12\end{bmatrix}
-$$
+```math
+t_1 = A[1,1] \cdot B[1,:] = 1 \cdot \begin{bmatrix} 5 & 6 & 7 & 8 \end{bmatrix}
+```
 
-Plug into $S_k = S_{k-1} + t_k$:
+```math
+t_2 = A[1,2] \cdot B[2,:] = 2 \cdot \begin{bmatrix} 9 & 10 & 11 & 12 \end{bmatrix}
+```
+
+Plug into $`S_k = S_{k-1} + t_k`$:
 
 **Init**
 
-$$
+```math
 O_0 = \begin{bmatrix} 0 & 0 & 0 & 0 \end{bmatrix}
-$$
+```
 
-**Step $k=1$** — add first contribution
+**Step k=1** — add first contribution
 
-$$
-\begin{aligned}
-O_1
-&= O_0 + A[1,1]\cdot B[1,:] \\
-&= \begin{bmatrix}0&0&0&0\end{bmatrix}
- + \begin{bmatrix}5&6&7&8\end{bmatrix}
-= \begin{bmatrix}5&6&7&8\end{bmatrix}
-\end{aligned}
-$$
+```math
+O_1 = O_0 + A[1,1] \cdot B[1,:] = \begin{bmatrix} 5 & 6 & 7 & 8 \end{bmatrix}
+```
 
-**Step $k=2$** — add second contribution
+**Step k=2** — add second contribution
 
-$$
-\begin{aligned}
-O_2
-&= O_1 + A[1,2]\cdot B[2,:] \\
-&= \begin{bmatrix}5&6&7&8\end{bmatrix}
- + \begin{bmatrix}18&20&22&24\end{bmatrix}
-= \boxed{\begin{bmatrix}23&26&29&32\end{bmatrix}}
-\end{aligned}
-$$
+```math
+O_2 = O_1 + A[1,2] \cdot B[2,:] = \begin{bmatrix} 23 & 26 & 29 & 32 \end{bmatrix}
+```
 
-$O_2$ matches $O[1,:]$ from §5.3. So the running process is correct.
+```text
+O_0 = [0, 0, 0, 0]
+O_1 = O_0 + 1*[5,6,7,8]     = [5, 6, 7, 8]
+O_2 = O_1 + 2*[9,10,11,12]  = [23, 26, 29, 32]
+```
 
-**General running rule** (for a fixed output row $i$):
+`O_2` matches `O[1,:]` from §5.3. So the running process is correct.
 
-$$
-\boxed{
-O_k = O_{k-1} + A[i,k]\cdot B[k,:],
-\qquad O_0 = \mathbf{0}
-}
-$$
+**General running rule** (for a fixed output row `i`):
+
+```math
+O_k = O_{k-1} + A[i,k] \cdot B[k,:], \quad O_0 = 0
+```
 
 This is **derived**, not assumed:
 
-$$
-\underbrace{O[i,:] = \sum_k A[i,k]\,B[k,:]}_{\text{definition of }AB}
-\;\Longrightarrow\;
-\underbrace{O_k = O_{k-1} + A[i,k]\,B[k,:]}_{\text{running form of that sum}}
-$$
+```math
+O[i,:] = \sum_k A[i,k] B[k,:]
+\quad \Longrightarrow \quad
+O_k = O_{k-1} + A[i,k] B[k,:]
+```
+
+(definition of `AB` → running form of that sum)
 
 ---
 
 ### 5.6 Same derivation for the second output row
 
-$$
-\begin{aligned}
-O[2,:]
-&= A[2,1]\cdot B[1,:] + A[2,2]\cdot B[2,:] \\
-&= 3\cdot\begin{bmatrix}5&6&7&8\end{bmatrix}
- + 4\cdot\begin{bmatrix}9&10&11&12\end{bmatrix} \\
-&= \begin{bmatrix}15&18&21&24\end{bmatrix}
- + \begin{bmatrix}36&40&44&48\end{bmatrix}
-= \begin{bmatrix}51&58&65&72\end{bmatrix}
-\end{aligned}
-$$
+```math
+O[2,:] = 3 \cdot \begin{bmatrix} 5 & 6 & 7 & 8 \end{bmatrix} + 4 \cdot \begin{bmatrix} 9 & 10 & 11 & 12 \end{bmatrix}
+```
+
+```math
+O[2,:] = \begin{bmatrix} 51 & 58 & 65 & 72 \end{bmatrix}
+```
 
 Running view:
 
-$$
-\begin{aligned}
-O_0 &= \begin{bmatrix}0&0&0&0\end{bmatrix} \\
-O_1 &= O_0 + 3\cdot B[1,:] = \begin{bmatrix}15&18&21&24\end{bmatrix} \\
-O_2 &= O_1 + 4\cdot B[2,:] = \boxed{\begin{bmatrix}51&58&65&72\end{bmatrix}}
-\end{aligned}
-$$
+```text
+O_0 = [0, 0, 0, 0]
+O_1 = O_0 + 3*[5,6,7,8]     = [15, 18, 21, 24]
+O_2 = O_1 + 4*[9,10,11,12]  = [51, 58, 65, 72]
+```
 
 ---
 
@@ -658,13 +659,13 @@ $$
 
 Stack the finished rows:
 
-$$
+```math
 O = AB =
 \begin{bmatrix}
 23 & 26 & 29 & 32 \\
 51 & 58 & 65 & 72
 \end{bmatrix}
-$$
+```
 
 ---
 
@@ -672,23 +673,17 @@ $$
 
 You can also group the inner sum as one row×matrix product:
 
-$$
-A_1 B
-=
-\begin{bmatrix}1&2\end{bmatrix}
-\begin{bmatrix}
-5&6&7&8\\
-9&10&11&12
-\end{bmatrix}
-=
-\begin{bmatrix}23&26&29&32\end{bmatrix}
-$$
+```math
+A_1 B = \begin{bmatrix} 1 & 2 \end{bmatrix}
+\begin{bmatrix} 5 & 6 & 7 & 8 \\ 9 & 10 & 11 & 12 \end{bmatrix}
+= \begin{bmatrix} 23 & 26 & 29 & 32 \end{bmatrix}
+```
 
 Then, starting from zero:
 
-$$
+```math
 O_1 = O_0 + A_1 B
-$$
+```
 
 is just the same sum, with **all $k$ terms added in one shot**.  
 §5.5 is the clearer “how it runs” view (add one $k$ at a time).
@@ -699,13 +694,13 @@ is just the same sum, with **all $k$ terms added in one shot**.
 
 Attention output for one query is also a sum:
 
-$$
+```math
 o = \sum_{i=1}^{N} a_i\, v_i
-$$
+```
 
 Same rewrite as §5.4–§5.5:
 
-$$
+```math
 \begin{aligned}
 o_0 &= 0 \\
 o_1 &= o_0 + a_1 v_1 \\
@@ -713,19 +708,19 @@ o_2 &= o_1 + a_2 v_2 \\
 &\;\;\vdots \\
 o_N &= o_{N-1} + a_N v_N
 \end{aligned}
-$$
+```
 
-$$
-\boxed{o_i = o_{i-1} + a_i\, v_i,\qquad o_0 = 0}
-$$
+```math
+o_i = o_{i-1} + a_i\, v_i,\qquad o_0 = 0
+```
 
 | Matrix accumulation (§5.5) | Attention |
 |----------------------------|-----------|
-| term $t_k = A[i,k]\cdot B[k,:]$ | term $t_i = a_i\, v_i$ |
-| $O_k = O_{k-1} + t_k$ | $o_i = o_{i-1} + t_i$ |
-| reduce over inner index $k$ | reduce over sequence index $i$ |
+| term $`t_k = A[i,k]\cdot B[k,:]`$ | term $`t_i = a_i\, v_i`$ |
+| $`O_k = O_{k-1} + t_k`$ | $`o_i = o_{i-1} + t_i`$ |
+| reduce over inner index $`k`$ | reduce over sequence index $`i`$ |
 
-**Takeaway:** the running formula is only “sum → fold.” FlashAttention streams $a_i v_i$ into $o$ this way; Softmax’s $(m,d')$ corrections keep the $a_i$ correct online.
+**Takeaway:** the running formula is only “sum → fold.” FlashAttention streams $`a_i v_i`$ into $o$ this way; Softmax’s $(m,d')$ corrections keep the $`a_i`$ correct online.
 
 ---
 
@@ -733,13 +728,13 @@ $$
 
 Safe softmax subtracts the global max before `exp` so large logits do not overflow:
 
-$$
+```math
 a_i = \frac{e^{x_i - m_N}}{\sum_{k=1}^{N} e^{x_k - m_N}},\qquad m_N = \max_k x_k
-$$
+```
 
 Naive code → **3 passes**. Online code fuses the first two.
 
-### 6.1 Whiteboard derivation (step $i-1$ → $i$)
+### 6.1 Whiteboard derivation (step i-1 → i)
 
 <p align="center">
   <img src="assert/05.jpeg" alt="Online Safe Softmax Denominator — time step by step" width="920"/>
@@ -749,21 +744,21 @@ Naive code → **3 passes**. Online code fuses the first two.
 
 **State at $i-1$:**
 
-$$
+```math
 m_{i-1} = \max_{j\le i-1} x_j,\qquad
 d_{i-1} = \sum_{k=1}^{i-1} e^{x_k - m_{i-1}}
-$$
+```
 
-**Goal at $i$:** $m_i = \max(m_{i-1}, x_i)$ and $d_i = \sum_{k=1}^{i} e^{x_k - m_i}$.
+**Goal at $i$:** $`m_i = \max(m_{i-1}, x_i)`$ and $`d_i = \sum_{k=1}^{i} e^{x_k - m_i}`$.
 
-Rewrite old terms with the identity $x_k - m_i = (x_k - m_{i-1}) + (m_{i-1} - m_i)$:
+Rewrite old terms with the identity $`x_k - m_i = (x_k - m_{i-1}) + (m_{i-1} - m_i)`$:
 
-$$
+```math
 d_i
 = e^{m_{i-1}-m_i}\,d_{i-1} + e^{x_i - m_i}
-$$
+```
 
-If $m_i = m_{i-1}$, the factor is $1$ (no rescale). If $m_i = x_i > m_{i-1}$, every old contribution is multiplied by $e^{m_{i-1}-m_i} < 1$.
+If $`m_i = m_{i-1}`$, the factor is $1$ (no rescale). If $`m_i = x_i > m_{i-1}`$, every old contribution is multiplied by $`e^{m_{i-1}-m_i} < 1`$.
 
 ---
 
@@ -777,11 +772,11 @@ If $m_i = m_{i-1}$, the factor is $1$ (no rescale). If $m_i = x_i > m_{i-1}$, ev
 
 | | Multi-pass | Online |
 |--|------------|--------|
-| Pass 1 | find $m_N$ | — |
-| Pass 2 | sum $e^{x_k-m_N}$ | fused with max |
-| Init | — | $m_0=-\infty$, $d_0=0$ |
-| Update | — | $m_i=\max(m_{i-1},x_i)$<br>$d_i=d_{i-1}e^{m_{i-1}-m_i}+e^{x_i-m_i}$ |
-| Complexity | $O(N)$ time, **2+ scans** | $O(N)$ time, **1 scan**, $O(1)$ space |
+| Pass 1 | find $`m_N`$ | — |
+| Pass 2 | sum $`e^{x_k-m_N}`$ | fused with max |
+| Init | — | $`m_0=-\infty`$, $`d_0=0`$ |
+| Update | — | $`m_i=\max(m_{i-1},x_i)`$<br>$`d_i=d_{i-1}e^{m_{i-1}-m_i}+e^{x_i-m_i}`$ |
+| Complexity | $`O(N)`$ time, **2+ scans** | $`O(N)`$ time, **1 scan**, $`O(1)`$ space |
 
 ---
 
@@ -791,7 +786,7 @@ If $m_i = m_{i-1}$, the factor is $1$ (no rescale). If $m_i = x_i > m_{i-1}$, ev
   <img src="assert/05_b.png" alt="Softmax offline three-pass algorithm and online derivation" width="920"/>
 </p>
 
-<p align="center"><em>Figure 6c — Left: classic 3-pass Softmax. Right: why $d'_i$ can track the true denominator online.</em></p>
+<p align="center"><em>Figure 6c — Left: classic 3-pass Softmax. Right: why $`d'_i`$ can track the true denominator online.</em></p>
 
 ```text
 # Pass 1 — global max
@@ -809,11 +804,11 @@ for i = 1 .. N:
     a_i = exp(x_i - m_N) / d_N
 ```
 
-Online view uses a **local** sum $d'_i = \sum_{j=1}^{i} e^{x_j - m_i}$. At the end $d'_N = d_N$, and:
+Online view uses a **local** sum $`d'_i = \sum_{j=1}^{i} e^{x_j - m_i}`$. At the end $`d'_N = d_N`$, and:
 
-$$
+```math
 d'_i = d'_{i-1}\,e^{m_{i-1}-m_i} + e^{x_i-m_i}
-$$
+```
 
 ---
 
@@ -823,13 +818,13 @@ $$
   <img src="assert/05_c.png" alt="Safe Softmax vs Online Softmax recurrence" width="920"/>
 </p>
 
-<p align="center"><em>Figure 6d — Safe Softmax passes (left) and the online recurrence for $d'_i$ (right).</em></p>
+<p align="center"><em>Figure 6d — Safe Softmax passes (left) and the online recurrence for $`d'_i`$ (right).</em></p>
 
 Key definitions:
 
-- $d_i$ — partial sum using the **final** global max $m_N$ (needs a future value)
-- $d'_i$ — partial sum using the **current** max $m_i$ (computeable online)
-- At $i = N$: $d'_N = d_N$ ✓
+- $`d_i`$ — partial sum using the **final** global max $`m_N`$ (needs a future value)
+- $`d'_i`$ — partial sum using the **current** max $`m_i`$ (computeable online)
+- At $i = N$: $`d'_N = d_N`$ ✓
 
 ---
 
@@ -863,14 +858,14 @@ for i = 1 .. N:
 
 For one query row:
 
-$$
+```math
 S = QK^\top,\quad
 A = \mathrm{Softmax}(S),\quad
 O = AV
-$$
+```
 
-with scores $x_i = q\,k_i^\top$. We never want to materialize the full $N\times N$ matrix $A$.  
-The output product $O = AV$ is exactly the **matrix accumulation** from §5, with $a_i$ playing the role of $A_i$ and $v_i$ the role of a row of $B$.
+with scores $`x_i = q\,k_i^\top`$. We never want to materialize the full $`N\times N`$ matrix $A$.  
+The output product $O = AV$ is exactly the **matrix accumulation** from §5, with $`a_i`$ playing the role of $`A_i`$ and $`v_i`$ the role of a row of $B$.
 
 ### 7.1 Attention + online softmax (setup)
 
@@ -878,9 +873,9 @@ The output product $O = AV$ is exactly the **matrix accumulation** from §5, wit
   <img src="assert/05_e.png" alt="Attention definitions with online softmax updates" width="920"/>
 </p>
 
-<p align="center"><em>Figure 7a — $S=QK^\top$, $A=\mathrm{Softmax}(S)$, $O=AV$, plus online $(m,d')$ updates.</em></p>
+<p align="center"><em>Figure 7a — $`S=QK^\top`$, $`A=\mathrm{Softmax}(S)`$, $O=AV$, plus online $(m,d')$ updates.</em></p>
 
-Initializations: $m_0 = -\infty$, $d'_0 = 0$, and later $o'_0 = 0$.
+Initializations: $`m_0 = -\infty`$, $`d'_0 = 0`$, and later $`o'_0 = 0`$.
 
 ---
 
@@ -890,7 +885,7 @@ Initializations: $m_0 = -\infty$, $d'_0 = 0$, and later $o'_0 = 0$.
   <img src="assert/05_f.png" alt="Two-pass online softmax attention algorithm" width="920"/>
 </p>
 
-<p align="center"><em>Figure 7b — Pass 1 collects $(m_N, d'_N)$; Pass 2 builds $o_N = \sum a_i v_i$.</em></p>
+<p align="center"><em>Figure 7b — Pass 1 collects $`(m_N, d'_N)`$; Pass 2 builds $`o_N = \sum a_i v_i`$.</em></p>
 
 ```text
 # Pass 1 — scores + running max/denominator
@@ -918,40 +913,38 @@ Still two passes over $V$ (or you must buffer scores). FlashAttention’s insigh
   <img src="assert/05_g.png" alt="Deriving the partial output rescaling for online attention" width="920"/>
 </p>
 
-<p align="center"><em>Figure 7c — Algebra that inserts the rescale so old $v_j$ stay correct under new $(m_i, d'_i)$.</em></p>
+<p align="center"><em>Figure 7c — Algebra that inserts the rescale so old $`v_j`$ stay correct under new $`(m_i, d'_i)`$.</em></p>
 
 Partial output after $i$ tokens (normalized with **current** stats):
 
-$$
+```math
 o'_i = \sum_{j=1}^{i}\frac{e^{x_j - m_i}}{d'_i}\,v_j
-$$
+```
 
 When $(m,d')$ change, previous weights must be multiplied by the same correction that was applied to the denominator.
 
 ---
 
-### 7.4 Clean recurrence for $o'_i$
+### 7.4 Clean recurrence for o'_i
 
 <p align="center">
   <img src="assert/05_h.png" alt="Online output update from o'_{i-1} to o'_i" width="920"/>
 </p>
 
-<p align="center"><em>Figure 7d — Highlighted $o'_{i-1}$ term and the closed-form online update.</em></p>
+<p align="center"><em>Figure 7d — Highlighted $`o'_{i-1}`$ term and the closed-form online update.</em></p>
 
-$$
-\boxed{
+```math
 o'_i
 =
 o'_{i-1}\cdot\frac{d'_{i-1}}{d'_i}\,e^{m_{i-1}-m_i}
 \;+\;
 \frac{e^{x_i-m_i}}{d'_i}\,v_i
-}
-$$
+```
 
 Two pieces:
 
-1. **Rescale** everything already accumulated ($o'_{i-1}$)
-2. **Add** the new contribution from $v_i$
+1. **Rescale** everything already accumulated ($`o'_{i-1}`$)
+2. **Add** the new contribution from $`v_i`$
 
 ---
 
@@ -961,7 +954,7 @@ Two pieces:
   <img src="assert/05_i.png" alt="Fully fused single-pass online Softmax attention" width="920"/>
 </p>
 
-<p align="center"><em>Figure 7e — One loop updates $m$, $d'$, and $o'$ together; return $o'_N$.</em></p>
+<p align="center"><em>Figure 7e — One loop updates $m$, $d'$, and $o'$ together; return $`o'_N`$.</em></p>
 
 ```text
 m_0 = -∞;  d'_0 = 0;  o'_0 = 0
@@ -978,9 +971,9 @@ return o'_N
 
 | Property | Standard attention | Fused online update |
 |----------|--------------------|---------------------|
-| Store full $A$ | Yes ($N\times N$) | No |
-| Passes over $K,V$ | Several | **One** (per tile / stream) |
-| Extra state / query | — | Only $(m,\ d',\ o')$ |
+| Store full $`A`$ | Yes ($`N\times N`$) | No |
+| Passes over $`K,V`$ | Several | **One** (per tile / stream) |
+| Extra state / query | — | Only $`(m,\ d',\ o')`$ |
 | Numerical stability | Needs global max | Running max + rescale |
 
 This is the algorithmic heart of **FlashAttention-style loop fusion** (the production kernels also tile for GPU SRAM; the math above is the online core).
@@ -991,10 +984,10 @@ This is the algorithmic heart of **FlashAttention-style loop fusion** (the produ
 
 | Topic | Running state | Correction idea |
 |-------|---------------|-----------------|
-| Mean | $A_{i-1}$ | add $(x_i-A_{i-1})/i$ |
-| Variance | $(\mu_{n-1}, M_{n-1})$ | update $\mu$, then $M$ with $(x-\mu_{\text{old}})(x-\mu_{\text{new}})$ |
-| Kadane | $(S_{i-1}, G_{i-1})$ | extend or restart local max |
-| Top-2 | $(m_1, m_2)$ | case split on where $x_i$ sits |
-| Matrix accum. | $O_{i-1}$ | $O_i = O_{i-1} + A_i B$ |
-| Softmax | $(m_{i-1}, d_{i-1})$ | multiply $d$ by $e^{m_{i-1}-m_i}$ |
-| Attention | $(m, d', o')$ | rescale **both** $d'$ and $o'$, then add new $v_i$ |
+| Mean | $`A_{i-1}`$ | add $`(x_i-A_{i-1})/i`$ |
+| Variance | $`(\mu_{n-1}, M_{n-1})`$ | update $`\mu`$, then $`M`$ with $`(x-\mu_{\text{old}})(x-\mu_{\text{new}})`$ |
+| Kadane | $`(S_{i-1}, G_{i-1})`$ | extend or restart local max |
+| Top-2 | $`(m_1, m_2)`$ | case split on where $`x_i`$ sits |
+| Matrix accum. | $`O_{i-1}`$ | $`O_i = O_{i-1} + A_i B`$ |
+| Softmax | $`(m_{i-1}, d_{i-1})`$ | multiply $`d`$ by $`e^{m_{i-1}-m_i}`$ |
+| Attention | $`(m, d', o')`$ | rescale **both** $`d'`$ and $`o'`$, then add new $`v_i`$ |
