@@ -441,19 +441,18 @@ $$
 
 ## 5. Matrix Accumulation (Online Output)
 
-Before Softmax / Attention, one more building block: **how a matrix product can be built by accumulating contributions**, starting from zero.
+Before Softmax / Attention, we need one building block: **how matrix multiplication is really a sum**, and how any sum becomes a **running formula**.
 
-This is the same pattern FlashAttention uses for the output:
-
-$$
-o_i = o_{i-1} + a_i\, v_i
-$$
+We do **not** start from $O_i = O_{i-1} + \ldots$.  
+We **derive** that formula from the definition of $AB$.
 
 <p align="center">
   <img src="assert/00_matrix_accumulation.jpeg" alt="Matrix Accumulation (Online Output Update)" width="920"/>
 </p>
 
-<p align="center"><em>Figure 5 — Row-wise matrix accumulation: $O_i = O_{i-1} + A_i B$.</em></p>
+<p align="center"><em>Figure 5 — Matrix accumulation (visual). Derivation is written out below.</em></p>
+
+---
 
 ### 5.1 Original matrices
 
@@ -471,85 +470,193 @@ B =
 \end{bmatrix}
 $$
 
-Goal: compute $O = AB$ (shape $2\times 4$) **one row at a time**, using a running output.
+Goal: understand $O = AB$ (shape $2 \times 4$), then turn it into a running update.
 
-### 5.2 Running state
+---
 
-Start with a zero row (for the row we are currently building):
+### 5.2 Start from the definition (not from a running formula)
+
+By definition of matrix multiplication, each entry is a **dot product**:
+
+$$
+O[i,j] = \sum_{k=1}^{2} A[i,k]\, B[k,j]
+$$
+
+So the **whole $i$-th output row** is:
+
+$$
+O[i,:]
+= \sum_{k=1}^{2} A[i,k]\cdot B[k,:]
+$$
+
+In words:
+
+> One output row = **sum of (scalar from $A$) × (one row of $B$)**.
+
+That sum is the key. A running algorithm is just this sum written step by step.
+
+---
+
+### 5.3 Expand the first output row as a sum
+
+Focus on row $i=1$ of $A$:
+
+$$
+A[1,:] = \begin{bmatrix} 1 & 2 \end{bmatrix}
+$$
+
+Rows of $B$:
+
+$$
+B[1,:] = \begin{bmatrix} 5 & 6 & 7 & 8 \end{bmatrix},
+\qquad
+B[2,:] = \begin{bmatrix} 9 & 10 & 11 & 12 \end{bmatrix}
+$$
+
+Apply the definition:
+
+$$
+\begin{aligned}
+O[1,:]
+&= A[1,1]\cdot B[1,:] \;+\; A[1,2]\cdot B[2,:] \\[6pt]
+&= 1\cdot\begin{bmatrix} 5 & 6 & 7 & 8 \end{bmatrix}
+ \;+\;
+ 2\cdot\begin{bmatrix} 9 & 10 & 11 & 12 \end{bmatrix} \\[6pt]
+&= \begin{bmatrix} 5 & 6 & 7 & 8 \end{bmatrix}
+ \;+\;
+ \begin{bmatrix} 18 & 20 & 22 & 24 \end{bmatrix} \\[6pt]
+&= \begin{bmatrix} 23 & 26 & 29 & 32 \end{bmatrix}
+\end{aligned}
+$$
+
+So far we only used the **definition** of $AB$. No running formula yet.
+
+---
+
+### 5.4 Turn any sum into a running update
+
+In general, a sum
+
+$$
+S = t_1 + t_2 + \cdots + t_m
+$$
+
+can always be computed online:
+
+$$
+\begin{aligned}
+S_0 &= 0 \\
+S_1 &= S_0 + t_1 \\
+S_2 &= S_1 + t_2 \\
+&\;\;\vdots \\
+S_m &= S_{m-1} + t_m
+\end{aligned}
+$$
+
+One line:
+
+$$
+\boxed{S_k = S_{k-1} + t_k,\qquad S_0 = 0}
+$$
+
+This is the **only** new idea. Everything below is this pattern with a concrete $t_k$.
+
+---
+
+### 5.5 Derive the running formula for one output row
+
+For output row 1, the terms in the sum were:
+
+$$
+t_1 = A[1,1]\cdot B[1,:]
+= 1\cdot\begin{bmatrix}5&6&7&8\end{bmatrix},
+\qquad
+t_2 = A[1,2]\cdot B[2,:]
+= 2\cdot\begin{bmatrix}9&10&11&12\end{bmatrix}
+$$
+
+Plug into $S_k = S_{k-1} + t_k$:
+
+**Init**
 
 $$
 O_0 = \begin{bmatrix} 0 & 0 & 0 & 0 \end{bmatrix}
 $$
 
-### 5.3 Step 1 — first row of $A$
-
-Take the first row of $A$:
-
-$$
-A_1 = \begin{bmatrix} 1 & 2 \end{bmatrix}
-$$
-
-Multiply by $B$:
-
-$$
-A_1 B =
-\begin{bmatrix} 1 & 2 \end{bmatrix}
-\begin{bmatrix}
-5 & 6 & 7 & 8 \\
-9 & 10 & 11 & 12
-\end{bmatrix}
-=
-\begin{bmatrix} 23 & 26 & 29 & 32 \end{bmatrix}
-$$
-
-(Check: $1\cdot5 + 2\cdot9 = 23$, $1\cdot6 + 2\cdot10 = 26$, $1\cdot7 + 2\cdot11 = 29$, $1\cdot8 + 2\cdot12 = 32$.)
-
-Accumulate onto the running output:
+**Step $k=1$** — add first contribution
 
 $$
 \begin{aligned}
 O_1
-&= O_0 + A_1 B \\
-&= \begin{bmatrix} 0 & 0 & 0 & 0 \end{bmatrix}
- + \begin{bmatrix} 23 & 26 & 29 & 32 \end{bmatrix} \\
-&= \boxed{\begin{bmatrix} 23 & 26 & 29 & 32 \end{bmatrix}}
+&= O_0 + A[1,1]\cdot B[1,:] \\
+&= \begin{bmatrix}0&0&0&0\end{bmatrix}
+ + \begin{bmatrix}5&6&7&8\end{bmatrix}
+= \begin{bmatrix}5&6&7&8\end{bmatrix}
 \end{aligned}
 $$
 
-$O_1$ is exactly the **first row** of $AB$.
-
-### 5.4 Step 2 — second row of $A$
-
-Same idea for row 2 (fresh zero state for this output row, or write into row 2 of a matrix $O$):
-
-$$
-A_2 = \begin{bmatrix} 3 & 4 \end{bmatrix}
-$$
-
-$$
-A_2 B =
-\begin{bmatrix} 3 & 4 \end{bmatrix}
-\begin{bmatrix}
-5 & 6 & 7 & 8 \\
-9 & 10 & 11 & 12
-\end{bmatrix}
-=
-\begin{bmatrix} 51 & 58 & 65 & 72 \end{bmatrix}
-$$
-
-(Check: $3\cdot5 + 4\cdot9 = 51$, $3\cdot6 + 4\cdot10 = 58$, …)
+**Step $k=2$** — add second contribution
 
 $$
 \begin{aligned}
-O^{(2)}
-&= O_0 + A_2 B \\
-&= \boxed{\begin{bmatrix} 51 & 58 & 65 & 72 \end{bmatrix}}
+O_2
+&= O_1 + A[1,2]\cdot B[2,:] \\
+&= \begin{bmatrix}5&6&7&8\end{bmatrix}
+ + \begin{bmatrix}18&20&22&24\end{bmatrix}
+= \boxed{\begin{bmatrix}23&26&29&32\end{bmatrix}}
 \end{aligned}
 $$
 
-### 5.5 Full result
+$O_2$ matches $O[1,:]$ from §5.3. So the running process is correct.
 
-Stack the rows:
+**General running rule** (for a fixed output row $i$):
+
+$$
+\boxed{
+O_k = O_{k-1} + A[i,k]\cdot B[k,:],
+\qquad O_0 = \mathbf{0}
+}
+$$
+
+This is **derived**, not assumed:
+
+$$
+\underbrace{O[i,:] = \sum_k A[i,k]\,B[k,:]}_{\text{definition of }AB}
+\;\Longrightarrow\;
+\underbrace{O_k = O_{k-1} + A[i,k]\,B[k,:]}_{\text{running form of that sum}}
+$$
+
+---
+
+### 5.6 Same derivation for the second output row
+
+$$
+\begin{aligned}
+O[2,:]
+&= A[2,1]\cdot B[1,:] + A[2,2]\cdot B[2,:] \\
+&= 3\cdot\begin{bmatrix}5&6&7&8\end{bmatrix}
+ + 4\cdot\begin{bmatrix}9&10&11&12\end{bmatrix} \\
+&= \begin{bmatrix}15&18&21&24\end{bmatrix}
+ + \begin{bmatrix}36&40&44&48\end{bmatrix}
+= \begin{bmatrix}51&58&65&72\end{bmatrix}
+\end{aligned}
+$$
+
+Running view:
+
+$$
+\begin{aligned}
+O_0 &= \begin{bmatrix}0&0&0&0\end{bmatrix} \\
+O_1 &= O_0 + 3\cdot B[1,:] = \begin{bmatrix}15&18&21&24\end{bmatrix} \\
+O_2 &= O_1 + 4\cdot B[2,:] = \boxed{\begin{bmatrix}51&58&65&72\end{bmatrix}}
+\end{aligned}
+$$
+
+---
+
+### 5.7 Full matrix $O = AB$
+
+Stack the finished rows:
 
 $$
 O = AB =
@@ -559,38 +666,66 @@ O = AB =
 \end{bmatrix}
 $$
 
-### 5.6 Single-pass accumulation rule
+---
 
-For each output row $i$:
+### 5.8 Optional view: whole row of $A$ at once
+
+You can also group the inner sum as one row×matrix product:
 
 $$
-\boxed{O_i = O_{i-1} + A_i B}
+A_1 B
+=
+\begin{bmatrix}1&2\end{bmatrix}
+\begin{bmatrix}
+5&6&7&8\\
+9&10&11&12
+\end{bmatrix}
+=
+\begin{bmatrix}23&26&29&32\end{bmatrix}
 $$
 
-with $O_0 = \mathbf{0}$.
+Then, starting from zero:
 
-### 5.7 Why this matters for Attention / FlashAttention
+$$
+O_1 = O_0 + A_1 B
+$$
 
-In attention, for **one query**, the output is a **weighted sum of value rows**:
+is just the same sum, with **all $k$ terms added in one shot**.  
+§5.5 is the clearer “how it runs” view (add one $k$ at a time).
+
+---
+
+### 5.9 Why this matters for Attention / FlashAttention
+
+Attention output for one query is also a sum:
 
 $$
 o = \sum_{i=1}^{N} a_i\, v_i
-= (((0 + a_1 v_1) + a_2 v_2) + \cdots) + a_N v_N
 $$
 
-Online form (same accumulation pattern):
+Same rewrite as §5.4–§5.5:
+
+$$
+\begin{aligned}
+o_0 &= 0 \\
+o_1 &= o_0 + a_1 v_1 \\
+o_2 &= o_1 + a_2 v_2 \\
+&\;\;\vdots \\
+o_N &= o_{N-1} + a_N v_N
+\end{aligned}
+$$
 
 $$
 \boxed{o_i = o_{i-1} + a_i\, v_i,\qquad o_0 = 0}
 $$
 
-| Matrix view | Attention view |
-|-------------|----------------|
-| $A_i$ — one row of $A$ | $a_i$ — one softmax weight (scalar) |
-| $B$ — full right matrix | $v_i$ — one value vector |
-| $O_i = O_{i-1} + A_i B$ | $o_i = o_{i-1} + a_i v_i$ |
+| Matrix accumulation (§5.5) | Attention |
+|----------------------------|-----------|
+| term $t_k = A[i,k]\cdot B[k,:]$ | term $t_i = a_i\, v_i$ |
+| $O_k = O_{k-1} + t_k$ | $o_i = o_{i-1} + t_i$ |
+| reduce over inner index $k$ | reduce over sequence index $i$ |
 
-**Takeaway:** FlashAttention does not need the full attention matrix in memory — it **streams** contributions into $o$ exactly like this accumulation, while Softmax’s $(m, d')$ rescale keeps those weights correct online.
+**Takeaway:** the running formula is only “sum → fold.” FlashAttention streams $a_i v_i$ into $o$ this way; Softmax’s $(m,d')$ corrections keep the $a_i$ correct online.
 
 ---
 
